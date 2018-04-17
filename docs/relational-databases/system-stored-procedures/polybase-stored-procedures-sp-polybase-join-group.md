@@ -1,39 +1,39 @@
 ---
 title: sp_polybase_join_group | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_polybase_join_group
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-caps.latest.revision: 
+caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f6e4a77e5ce1341269bf9220c5d2a5305b4c314
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: df16b8fe607e908be5700f2004e507a3bec06bf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="polybase-stored-procedures---sppolybasejoingroup"></a>PolyBase 저장 프로시저-sp_polybase_join_group
+# <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   PolyBase 규모 확장 계산에 대 한 그룹에는 계산 노드로만 SQL Server 인스턴스를 추가합니다.  
   
- SQL Server 인스턴스에 있어야는 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있습니다.  PolyBase는 Hadoop 및 Azure blob 저장소 등의 SQL Server 이외 데이터 원본에 통합할 수 있습니다. 참고 항목 [sp_polybase_leave_group &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ SQL Server 인스턴스에 있어야는 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능이 설치 되어 있습니다.  PolyBase는 Hadoop 및 Azure blob 저장소 등의 SQL Server 이외 데이터 원본에 통합할 수 있습니다. 참고 항목 [sp_polybase_leave_group &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
   
 ## <a name="arguments"></a>인수  
  *@head_node_address* = N'*head_node_address*'  
- PolyBase 규모 확장 그룹의 헤드 노드 SQL Server를 호스팅하는 컴퓨터의 이름입니다. *@head_node_address*nvarchar (255)가입니다.  
+ PolyBase 규모 확장 그룹의 헤드 노드 SQL Server를 호스팅하는 컴퓨터의 이름입니다. *@head_node_address* nvarchar (255)가입니다.  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- 헤드 노드에서 PolyBase 데이터 이동 서비스에 대 한 컨트롤 채널 실행 되 고 있는 포트입니다. *@dms_control_channel_port*부호 없는 __int16이입니다. 기본값은 **16450**합니다.  
+ *@dms_control_channel_port* dms_control_channel_port =  
+ 헤드 노드에서 PolyBase 데이터 이동 서비스에 대 한 컨트롤 채널 실행 되 고 있는 포트입니다. *@dms_control_channel_port* 부호 없는 __int16이입니다. 기본값은 **16450**합니다.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- PolyBase 확장 그룹의 헤드 노드에 SQL Server 인스턴스의 이름입니다. *@head_node_sql_server_instance_name*nvarchar(16)가입니다.  
+ *@head_node_sql_server_instance_name* head_node_sql_server_instance_name =  
+ PolyBase 확장 그룹의 헤드 노드에 SQL Server 인스턴스의 이름입니다. *@head_node_sql_server_instance_name* nvarchar(16)가입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

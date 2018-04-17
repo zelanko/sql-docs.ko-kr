@@ -1,7 +1,7 @@
 ---
 title: sp_addsubscription (Transact SQL) | Microsoft Docs
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  시스템 테이블 및 데이터는 항상 전송됩니다.  
   
- [ @status=] '*status*'  
+ [ @status=] '*상태*'  
  동기화 상태입니다. *상태* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수를 명시적으로 설정하지 않으면 복제 시 자동으로 다음 값 중 하나로 설정됩니다.  
   
 |Value|Description|  
@@ -205,7 +205,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  실행할 선택적 명령 프롬프트입니다. *optional_command_line* 은 **nvarchar (4000)**, 기본값은 NULL입니다.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*예약*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -252,7 +252,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype* 은 경우에 사용 *sync_method*initialize_with_backup으로 설정 됩니다.  
   
- [ @backupdevicename= ] '*backupdevicename*'  
+ [ @backupdevicename=] '*backupdevicename*'  
  백업에서 구독자를 초기화할 때 사용되는 장치의 이름을 지정합니다. *backupdevicename* 은 **nvarchar (1000)**, 기본값은 NULL입니다.  
   
  [ @mediapassword=] '*mediapassword*'  
@@ -261,19 +261,19 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*암호*'  
  백업을 만들 때 암호를 설정한 경우 백업의 암호를 지정합니다. *암호*은 **sysname**, 기본값은 NULL입니다.  
   
  [ @fileidhint= ] *fileidhint*  
  복원할 백업 세트의 서수 값을 식별합니다. *fileidhint* 은 **int**, 기본값은 NULL입니다.  
   
- [ @unload= ] *unload*  
+ [ @unload=] *언로드*  
  백업으로 초기화를 완료한 후 테이프 백업 장치를 언로드할지 여부를 지정합니다. *언로드* 은 **비트**, 기본값은 1입니다. 1는 테이프를 언로드하도록 지정 합니다. *언로드* 은 경우에 사용 *backupdevicetype* 테이프가 합니다.  
   
- [ @subscriptionlsn= ] *subscriptionlsn*  
+ [ @subscriptionlsn=] *subscriptionlsn*  
  구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. 함께 사용 된 @sync_type initialize from lsn 모든 관련 트랜잭션이 새 노드에 복제 되도록의 값입니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
- [ @subscriptionstreams= ] *subscriptionstreams*  
+ [ @subscriptionstreams=] *subscriptionstreams*  
  단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. *subscriptionstreams* 은 **tinyint**, 기본값은 NULL입니다. 1에서 64 사이의 값 범위가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자, Oracle 게시자 또는 피어 투 피어 구독의 경우 이 매개 변수가 지원되지 않습니다. 구독 스트림을 사용할 때마다 agent_id가 NULL로 설정된 상태로 추가 행이 msreplication_subscriptions 테이블(스트림당 1개)에 추가됩니다.  
   
 > [!NOTE]  

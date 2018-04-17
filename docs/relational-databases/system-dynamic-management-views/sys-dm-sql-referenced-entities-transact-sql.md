@@ -1,16 +1,16 @@
 ---
 title: sys.dm_sql_referenced_entities (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *schema_name*. ] *referencing_entity_name*  
+ [ *schema_name*합니다. ] *referencing_entity_name*  
  참조 엔터티의 이름입니다. *schema_name* 은 참조 클래스가 개체인 경우 필요 합니다.  
   
  *schema_name.referencing_entity_name* 은 **nvarchar (517)**합니다.  
@@ -86,7 +87,7 @@ sys.dm_sql_referenced_entities (
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|참조 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.|  
-|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하십시오. [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 네 부분으로 된 이름 지정 없이 엔터티가 참조된 비스키마 바운드 종속성의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
+|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하십시오. [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분으로 된 이름 지정 없이 엔터티가 참조된 비스키마 바운드 종속성의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
 |referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
 |referenced_schema_name|**sysname**|참조된 엔터티가 속한 스키마입니다.<br /><br /> 스키마 이름 지정 없이 엔터티가 참조되는 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 참조의 경우 NULL일 수 없습니다.|  
 |referenced_entity_name|**sysname**|참조된 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
@@ -128,12 +129,12 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
 |보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 * *|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
 |CLR 저장 프로시저|아니요|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수(user-defined function)|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
 |CLR 사용자 정의 함수|아니요|예|  
 |CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거(DML trigger)|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
 |확장 저장 프로시저|아니요|예|  
@@ -143,7 +144,7 @@ sys.dm_sql_referenced_entities (
 |XML 스키마 컬렉션|아니요|예|  
 |파티션 함수|아니요|예|  
   
- \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \* 한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   

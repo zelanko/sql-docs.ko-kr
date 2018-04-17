@@ -1,16 +1,16 @@
 ---
-title: "UPDATE, DELETE 및 INSERT 문을 | Microsoft Docs"
-ms.custom: 
+title: UPDATE, DELETE 및 INSERT 문을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1b590f45a6cb7bb3e80b5b52835bd7fd65ba27af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
@@ -37,15 +37,15 @@ SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 �
   
  **UPDATE**  *table-name*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **설정** *열 식별자* **=** {*식* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [**,** *열 식별자* **=** {*식* &#124; **NULL**}]...  
   
  [**WHERE** *search-condition*]  
   
  **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
   
- **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
+ **INSERT INTO** *테이블 이름*[**(* * * 열 식별자* [* *,** *열 식별자*]... **)**]  
   
  {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *,** *삽입 값*]... **)**}  
   

@@ -2,7 +2,7 @@
 title: SQLSetConnectAttrForDbcInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 함수
 **규칙**  
@@ -47,13 +47,13 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  [입력] 토큰 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 설정할 특성입니다. 유효한 특성 목록에는 특정 드라이버와 동일 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)합니다.  
   
  *ValuePtr*  
  [입력] 연결 된 값에 대 한 포인터 *특성*합니다. 값에 따라 *특성*, *ValuePtr* 32 비트 부호 없는 정수 값 또는 null로 끝나는 문자열을 가리킵니다. 되는 경우는 *특성* 인수는 드라이버 관련 값, 값에 *ValuePtr* 부호 있는 정수를 수 있습니다.  
   
- *StringLength*  
+ *stringLength*  
  [입력] 경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 합니다 **ValuePtr*합니다. 문자 문자열 데이터에 대 한이 인수는 문자열의 바이트 수를 포함 해야 합니다.  
   
  경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 정수 이면 *StringLength* 는 무시 됩니다.  

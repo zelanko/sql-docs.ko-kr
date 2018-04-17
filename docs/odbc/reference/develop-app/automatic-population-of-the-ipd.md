@@ -1,15 +1,16 @@
 ---
-title: "IPD의 자동 채우기를 | Microsoft Docs"
-ms.custom: 
+title: IPD의 자동 채우기를 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD의 자동 채우기
 일부 드라이버 매개 변수가 있는 쿼리를 준비한 후은 IPD 필드를 설정할 수 있습니다. 설명자 필드 데이터 형식, 정밀도, 배율, 및 기타 특성을 포함 하 여 매개 변수에 대 한 정보로 자동으로 채워집니다. 지 원하는 동일 **SQLDescribeParam**합니다. 이 정보를 응용 프로그램에 대해 알지 못하는 하는 매개 변수는 임시 쿼리 수행 될 때와 같은 검색할 수 있는 다른 방법이 때 응용 프로그램에 특히 유용 수 있습니다.  

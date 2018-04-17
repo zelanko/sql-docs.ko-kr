@@ -1,16 +1,16 @@
 ---
 title: sp_changemergearticle (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-caps.latest.revision: 
+caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c2b4b07b79b061b85e50cd51c4716173f073a6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1c50e76d1ecb9dbdf7c4f08e1d12c3a6d7aa1433
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  아티클이 있는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
@@ -77,10 +77,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246 개가 넘는 열이 있는 테이블을 게시할 때는 열 수준 추적에 사용할 수 없습니다.|  
 ||**false**|열 수준 추적을 해제하고 행 수준에서 충돌 감지를 유지합니다. 테이블 아티클에만 적용됩니다.|  
 |**compensate_for_errors**|**true**|동기화 중 오류가 발생하면 보정 동작을 수행합니다. 자세한 내용은 참조 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.|  
-||**false**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 참조 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.<br /><br /> **\*\*중요 한 \* \***  영향을 받는 행의에서 데이터를 나타날 수 있지만 오류를 해결 하는 즉시 수렴 되지를 변경할 수 있습니다 및 데이터 수렴 됩니다. 아티클의 원본 테이블이 이미 다른 게시 한 후의 값에 게시 된 경우 *compensate_for_errors* 두 아티클에 대해 동일 해야 합니다.|  
+||**false**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 참조 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.<br /><br /> **\*\* 중요 한 \* \***  영향을 받는 행의에서 데이터를 나타날 수 있지만 오류를 해결 하는 즉시 수렴 되지를 변경할 수 있습니다 및 데이터 수렴 됩니다. 아티클의 원본 테이블이 이미 다른 게시 한 후의 값에 게시 된 경우 *compensate_for_errors* 두 아티클에 대해 동일 해야 합니다.|  
 |**creation_script**||구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**delete_tracking**|**true**|DELETE 문을 복제합니다(기본 동작).|  
-||**false**|DELETE 문을 복제하지 않습니다.<br /><br /> **\*\*중요 한 \* \***  설정 **delete_tracking** 를 **false** 불일치가 및 삭제 된 행에는 결과 수동으로 제거 해야 합니다.|  
+||**false**|DELETE 문을 복제하지 않습니다.<br /><br /> **\*\* 중요 한 \* \***  설정 **delete_tracking** 를 **false** 불일치가 및 삭제 된 행에는 결과 수동으로 제거 해야 합니다.|  
 |**설명**||아티클에 대한 설명 항목입니다.|  
 |**destination_owner**||그렇지 않은 경우 구독 데이터베이스에 있는 개체의 소유자의 이름 **dbo**합니다.|  
 |**identity_range**||**bigint** 경우 기술 자료 문서에 새 id 값을 지정할 때 사용할 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **자동** 또는 **auto_identity_ 범위** 로 설정 **true**합니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하십시오. [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
@@ -95,11 +95,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**2**|아티클을 필터링하면 겹치지 않는 파티션이 생성되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.|  
 ||**3**|아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.<br /><br /> 참고: 값을 지정 하는 경우 **3** 에 대 한 **partition_options**, 구독이 하나만 각 파티션에 대 한 해당 문서의 데이터의 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.|  
 |**pre_creation_command**|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
-||**삭제**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
+||**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
 ||**drop**|테이블을 다시 만들기 전에 삭제합니다.|  
 ||**truncate**|대상 테이블을 자릅니다.|  
 |**processing_order**||**int** 병합 게시에서 아티클의 처리 순서를 나타내는입니다.|  
-|**pub_identity_range**||**bigint** 기술 자료 문서에 있는 경우 서버 구독이 있는 구독자에 할당 되는 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **자동** 또는 **자동 _identity_range** 로 설정 **true**합니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하십시오. [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
+|**pub_identity_range**||**bigint** 기술 자료 문서에 있는 경우 서버 구독이 있는 구독자에 할당 되는 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **자동** 또는 **auto_ identity_range** 로 설정 **true**합니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하십시오. [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
 |**published_in_tran_pub**|**true**|아티클을 트랜잭션 게시에도 게시합니다.|  
 ||**false**|아티클을 트랜잭션 게시에 게시하지 않습니다.|  
 |**resolver_info**||사용자 지정 해결 프로그램에 필요한 추가 정보를 지정하는 데 사용합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해결 프로그램에는 입력으로 제공되는 열이 필요합니다. **resolver_info** 은 **nvarchar (255)**, 기본값은 NULL입니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.|  
@@ -139,20 +139,20 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 ||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 [실행 스크립트 전과 후의 스냅숏 적용](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)합니다.<br /><br /> 관련된 옵션 참조 **0x100000000**합니다.|  
 ||**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 변환 **varbinary (max)** 형식의 열을 실행 하는 구독자에 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.|  
-||**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40; Transact SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)합니다.|  
 ||**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
 ||**0x8000000000**|변환 된 **geography** 및 **기 하 도형** 데이터 형식을 **varbinary (max)** 를실행하는구독자에이러한형식의열을복제할수있도록[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|형식의 열에 인덱스를 복제 **geography** 및 **geometry**합니다.|  
 ||NULL|시스템에서 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다.|  
 |**상태**|**활성**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 ||**unsynced**|스냅숏 에이전트가 다음에 실행될 때 테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
-|**stream_blob_columns**|**true**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용합니다. 그러나 논리적 레코드와 같은 특정 병합 복제 기능은 스트림 최적화를 사용할 수 없도록 합니다. *stream_blob_columns* 활성화 되어 있는 경우 true로 설정 됩니다. 그러면 FILESTREAM 데이터 복제가 최적의 방식으로 수행되고 메모리 활용률이 낮아집니다. Blob 스트리밍을 사용 하지 않도록 FILESTREAM 테이블 아티클에서 설정 *stream_blob_columns* 를 false입니다.<br /><br /> **\*\*중요 한 \* \***  이 메모리 최적화를 설정 하면 동기화 중에 병합 에이전트의 성능이 저하 될 수 있습니다. MB 단위의 데이터가 포함된 열을 복제할 때만 이 옵션을 사용해야 합니다.|  
+|**stream_blob_columns**|**true**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용합니다. 그러나 논리적 레코드와 같은 특정 병합 복제 기능은 스트림 최적화를 사용할 수 없도록 합니다. *stream_blob_columns* 활성화 되어 있는 경우 true로 설정 됩니다. 그러면 FILESTREAM 데이터 복제가 최적의 방식으로 수행되고 메모리 활용률이 낮아집니다. Blob 스트리밍을 사용 하지 않도록 FILESTREAM 테이블 아티클에서 설정 *stream_blob_columns* 를 false입니다.<br /><br /> **\*\* 중요 한 \* \***  이 메모리 최적화를 설정 하면 동기화 중에 병합 에이전트의 성능이 저하 될 수 있습니다. MB 단위의 데이터가 포함된 열을 복제할 때만 이 옵션을 사용해야 합니다.|  
 ||**false**|BLOB 열을 복제할 때 최적화를 사용하지 않습니다.|  
 |**subscriber_upload_options**|**0**|클라이언트 구독이 있는 구독자에서 수행되는 업데이트에 제한이 없으며 변경 내용이 게시자로 업로드됩니다. 이 속성을 변경하려면 기존 구독자를 다시 초기화해야 합니다.|  
 ||**1**|클라이언트 구독이 있는 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.|  
 ||**2**|클라이언트 구독이 있는 구독자에서 변경이 허용되지 않습니다.|  
-|**subset_filterclause**||행 필터링을 지정하는 WHERE 절입니다. 테이블 아티클에만 적용됩니다.<br /><br /> **\*\*중요 한 \* \***  는 적용 하지 않는 함수에 매개 변수가 있는 행 필터 절의 열 이름에에서 같은 좋습니다 성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`합니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 필터 절에 HOST_NAME 값 재정의 사용 하 여 데이터 형식을 변환 해야 할 수 있습니다 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이 경우에 대 한 모범 사례에 대 한 자세한 내용은 "host_name () 값 재정의" 섹션을 참조 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)합니다.|  
-|**임계값**||실행 하는 구독자에 사용 되는 백분율 값 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. **임계값** 병합 에이전트가 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. 경우에 사용 **identityrangemanagementoption** 로 설정 된 **자동** 또는 **auto_identity_range** 로 설정 된 **true**합니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하십시오. [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
+|**subset_filterclause**||행 필터링을 지정하는 WHERE 절입니다. 테이블 아티클에만 적용됩니다.<br /><br /> **\*\* 중요 한 \* \***  는 적용 하지 않는 함수에 매개 변수가 있는 행 필터 절의 열 이름에에서 같은 좋습니다 성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`합니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 필터 절에 HOST_NAME 값 재정의 사용 하 여 데이터 형식을 변환 해야 할 수 있습니다 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이 경우에 대 한 모범 사례에 대 한 자세한 내용은 "host_name () 값 재정의" 섹션을 참조 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)합니다.|  
+|**threshold**||실행 하는 구독자에 사용 되는 백분율 값 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. **임계값** 병합 에이전트가 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. 경우에 사용 **identityrangemanagementoption** 로 설정 된 **자동** 또는 **auto_identity_range** 로 설정 된 **true**합니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하십시오. [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
 |**verify_resolver_signature**|**1**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인합니다|  
 ||**0**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인을 하지 않습니다.|  
 |NULL(기본값)||에 대 한 지원 되는 값의 목록을 반환 *속성*합니다.|  
@@ -254,7 +254,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [아티클 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

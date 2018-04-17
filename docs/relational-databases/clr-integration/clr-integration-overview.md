@@ -1,15 +1,15 @@
 ---
-title: "CLR 통합 개요 | Microsoft Docs"
-ms.custom: 
+title: CLR 통합 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e0dd551de6b8ac7c9174d6cbccdb8378d195854
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration---overview"></a>CLR 통합 기능 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  자세한 내용은 .NET Framework SDK를 참조하십시오.  
+  CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  자세한 내용은 .NET Framework SDK를 참조하십시오.  
   
  Microsoft SQL Server에 호스팅된 CLR(CLR 통합이라고 함)을 사용하면 관리 코드로 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계를 작성할 수 있습니다. 관리 코드는 실행 전에 네이티브 코드로 컴파일되므로 일부 시나리오에서 성능이 훨씬 향상될 수 있습니다.  
   
  관리 코드는 CAS(Code Access Security)를 사용하여 어셈블리에서 특정 작업을 수행할 수 없도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CAS를 사용하여 관리 코드의 보안을 유지하고 운영 체제나 데이터베이스 서버의 손상을 방지합니다.  
   
 ## <a name="advantages-of-clr-integration"></a>CLR 통합의 장점  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 직접 데이터 액세스 및 데이터베이스에는 조작 특별히 설계 않았습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]은 데이터 액세스 및 관리 기능이 뛰어나지만 모든 기능을 갖춘 프로그래밍 언어는 아닙니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 배열, 컬렉션, for-each 루프, 비트 시프트 또는 클래스를 지원하지 않습니다. 이러한 구문 중 일부는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 시뮬레이션할 수 있지만 관리 코드에 해당 구문에 대한 통합 지원이 있습니다. 시나리오에 따라 이러한 기능을 위해 특정 데이터베이스 기능을 관리 코드로 구현해야 할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]은 특히 데이터베이스의 데이터에 직접 액세스하고 조작할 수 있도록 설계되었습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]은 데이터 액세스 및 관리 기능이 뛰어나지만 모든 기능을 갖춘 프로그래밍 언어는 아닙니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 배열, 컬렉션, for-each 루프, 비트 시프트 또는 클래스를 지원하지 않습니다. 이러한 구문 중 일부는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 시뮬레이션할 수 있지만 관리 코드에 해당 구문에 대한 통합 지원이 있습니다. 시나리오에 따라 이러한 기능을 위해 특정 데이터베이스 기능을 관리 코드로 구현해야 할 수 있습니다.  
   
  Microsoft Visual Basic .NET 및 Microsoft Visual C#은 캡슐화, 상속 및 다형성과 같은 개체 지향 기능을 제공합니다. 이제 관련된 코드를 클래스와 네임스페이스로 쉽게 구성할 수 있으므로 많은 서버 코드에서 작업하는 경우 코드를 쉽게 구성하고 유지 관리할 수 있습니다.  
   

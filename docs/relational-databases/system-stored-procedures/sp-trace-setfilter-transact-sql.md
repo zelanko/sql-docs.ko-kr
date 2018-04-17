@@ -1,16 +1,16 @@
 ---
 title: sp_trace_setfilter (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  추적에 필터를 적용합니다. **sp_trace_setfilter** 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* 은 **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 저장된 프로시저 않거나 존재 하지 않는 추적에서 실행 되는 경우 오류가 반환 *상태* 않습니다 **0**합니다.  
+  추적에 필터를 적용합니다. **sp_trace_setfilter** 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* 은 **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저 않거나 존재 하지 않는 추적에서 실행 되는 경우 오류가 반환 *상태* 않습니다 **0**합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 확장 이벤트를 대신 사용하세요.  
@@ -59,7 +59,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
  [ **@columnid=** ] *column_id*  
  필터를 적용한 열의 ID입니다 *column_id* 은 **int**, 기본값은 없습니다. 경우 *column_id* 이 NULL 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 된 추적에 대 한 모든 필터를 지웁니다.  
   
- [ **@logical_operator** = ] *logical_operator*  
+ [ **@logical_operator** =] *logical_operator*  
  지정 하는지 여부를 AND (**0**) 또는 OR (**1**) 연산자가 적용 됩니다. *logical_operator* 은 **int**, 기본값은 없습니다.  
   
  [ **@comparison_operator=** ] *comparison_operator*  

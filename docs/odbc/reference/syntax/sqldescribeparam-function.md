@@ -2,7 +2,7 @@
 title: SQLDescribeParam 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df8d1653e158f19abf92eb1a650425213cbe393d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e24072d64d441540e93db3f489a218e515679c8b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 함수(SQLDescribeParam Function)
 **규칙**  
@@ -90,7 +90,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDescribeParam** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDescribeParam** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07009|잘못 된 설명자 인덱스입니다.|인수에 대해 지정 된 값 (DM) *ParameterNumber* 1 보다 작으면 합니다.<br /><br /> 인수에 대해 지정 된 값 *ParameterNumber* 연결 된 SQL 문의 매개 변수 개수 보다 큽니다.<br /><br /> 매개 변수 표식이 아닌 DML 문의 일부입니다.<br /><br /> 매개 변수 표식의 일부 였던는 **선택** 목록입니다.|  
@@ -107,7 +107,7 @@ SQLRETURN SQLDescribeParam(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  매개 변수 표식은 SQL 문의 순서 대로 1부터 시작 증가 매개 변수 순서에 번호가 지정 됩니다.  
   
  **SQLDescribeParam** SQL 문에서 매개 변수 유형 (입력, 입/출력 또는 출력)를 반환 하지 않습니다. 제외에 대 한 호출 프로시저에서 SQL 문의 모든 매개 변수에 입력된 매개 변수입니다. 를 프로시저에 대 한 호출에서 각 매개 변수의 형식을 확인 하려면 응용 프로그램이 호출 **SQLProcedureColumns**합니다.  

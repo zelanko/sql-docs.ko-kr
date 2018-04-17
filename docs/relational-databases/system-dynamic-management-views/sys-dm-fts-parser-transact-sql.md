@@ -1,16 +1,16 @@
 ---
 title: sys.dm_fts_parser (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,15 +77,15 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사람이 읽을 수, 되지 않지만 등의 전체 텍스트 인덱스의 내용을 반환 하는 다른 동적 관리 뷰에 의해 반환 된 출력에 지정 된 키워드와 관련 된에 대 한 유용 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 및 [ sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)합니다.<br /><br /> **참고:** OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |group_id|**int**|지정된 용어가 생성된 논리 그룹을 차별화하는 데 유용한 정수 값을 포함합니다. 예를 들어 '`Server AND DB OR FORMSOF(THESAURUS, DB)"`'는 다음 group_id 값을 영어로 생성합니다.<br /><br /> 1: 서버<br />2: DB<br />3: DB|  
-|phrase_id|**int**|단어 분리기에서 full-text와 같은 복합 단어의 대체 형태가 실행되는 경우를 차별화하는 데 유용한 정수 값을 포함합니다. 경우에 따라 복합 단어('multi-million')가 있으면 단어 분리기에서 대체 형태가 실행되기도 하는데, 이러한 대체 형태(구)는 차별화해야 하는 경우가 있습니다.<br /><br /> 예를 들어 '`multi-million`'은 다음 phrase_id 값을 영어로 생성합니다.<br /><br /> 에 대 한 1`multi`<br />에 대 한 1`million`<br />에 대 한 2`multimillion`|  
-|occurrence|**int**|구문 분석 결과에 있는 각 용어의 순서를 나타냅니다. 예를 들어 "`SQL Server query processor`" 구의 경우 occurrence에 이 구의 용어에 대해 다음 occurrence 값이 영어로 포함될 수 있습니다.<br /><br /> 에 대 한 1`SQL`<br />에 대 한 2`Server`<br />에 대 한 3`query`<br />에 대 한 4`processor`|  
+|phrase_id|**int**|단어 분리기에서 full-text와 같은 복합 단어의 대체 형태가 실행되는 경우를 차별화하는 데 유용한 정수 값을 포함합니다. 경우에 따라 복합 단어('multi-million')가 있으면 단어 분리기에서 대체 형태가 실행되기도 하는데, 이러한 대체 형태(구)는 차별화해야 하는 경우가 있습니다.<br /><br /> 예를 들어 '`multi-million`'은 다음 phrase_id 값을 영어로 생성합니다.<br /><br /> 에 대 한 1 `multi`<br />에 대 한 1 `million`<br />에 대 한 2 `multimillion`|  
+|occurrence|**int**|구문 분석 결과에 있는 각 용어의 순서를 나타냅니다. 예를 들어 "`SQL Server query processor`" 구의 경우 occurrence에 이 구의 용어에 대해 다음 occurrence 값이 영어로 포함될 수 있습니다.<br /><br /> 에 대 한 1 `SQL`<br />에 대 한 2 `Server`<br />에 대 한 3 `query`<br />에 대 한 4 `processor`|  
 |special_term|**nvarchar(4000)**|단어 분리기에서 실행되는 용어의 특징에 대한 정보를 포함합니다. 예를 들면 다음과 같습니다.<br /><br /> 정확히 일치<br /><br /> 의미 없는 단어<br /><br /> 문장의 끝<br /><br /> 단락의 끝<br /><br /> 장의 끝|  
 |display_term|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식을 포함합니다. 전체 텍스트 인덱스의 내용에 액세스하도록 디자인된 함수를 사용하기 때문에 표시된 용어가 비정규화 제한으로 인해 원래 용어와 동일하지 않을 수 있지만, 원래 입력에서 식별할 수 있을 만큼은 정확해야 합니다.|  
 |expansion_type|**int**|지정된 용어의 확장 특성에 대한 정보를 포함합니다. 예를 들면 다음과 같습니다.<br /><br /> 0 = 단일 단어<br /><br /> 2 = 활용 형태상의 확장<br /><br /> 4 = 동의어 사전 확장/대체<br /><br /> 예를 들어 동의어 사전이 다음과 같이 run을 `jog`의 확장으로 정의하는 경우를 고려해 보십시오.<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> `FORMSOF (FREETEXT, run)` 용어는 다음 출력을 생성합니다.<br /><br /> `run`, expansion_type=0<br /><br /> `runs`, expansion_type=2<br /><br /> `running`, expansion_type=2<br /><br /> `ran`, expansion_type=2<br /><br /> `jog`, expansion_type=4|  
-|source_term|**nvarchar(4000)**|지정된 용어가 생성되거나 구문 분석되는 용어 또는 구입니다. 예를 들어 '"`word breakers" AND stemmers'`에 대한 쿼리는 다음 source_term 값을 영어로 생성합니다.<br /><br /> `word breakers`display_term에 대 한`word`<br />`word breakers`display_term에 대 한`breakers`<br />`stemmers`display_term에 대 한`stemmers`|  
+|source_term|**nvarchar(4000)**|지정된 용어가 생성되거나 구문 분석되는 용어 또는 구입니다. 예를 들어 '"`word breakers" AND stemmers'`에 대한 쿼리는 다음 source_term 값을 영어로 생성합니다.<br /><br /> `word breakers` display_term에 대 한`word`<br />`word breakers` display_term에 대 한`breakers`<br />`stemmers` display_term에 대 한`stemmers`|  
   
 ## <a name="remarks"></a>주의  
- **sys.dm_fts_parser** 와 같은 구문 및 전체 텍스트 조건자의 기능을 지 원하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), 및 함수와 같은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)합니다.  
+ **sys.dm_fts_parser** 와 같은 구문 및 전체 텍스트 조건자의 기능을 지 원하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), 및 함수와 같은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)합니다.  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>유니코드를 사용하여 특수 문자 구문 분석  
  쿼리 문자열을 구문 분석 하면 **sys.dm_fts_parser** 쿼리 문자열을 유니코드로 지정 하지 않는 한, 연결 되어 있는 데이터베이스의 데이터 정렬을 사용 합니다. 따라서 ü 또는 ç 같은 특수 문자가 포함 된 비유니코드 문자열에 대 한 출력 못할 수도 있습니다는 데이터베이스의 데이터 정렬에 따라 예상 합니다. 데이터베이스 데이터 정렬과 별도로 쿼리 문자열을 처리 하려면 문자열 앞 `N`, 즉, `N'` *query_string*`'`합니다.  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [구성 하 고 전체 텍스트 검색에 대 한 동의어 사전 파일을 관리 합니다.](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

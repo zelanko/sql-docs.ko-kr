@@ -1,31 +1,32 @@
 ---
-title: "간결 하 게 함수를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 간결 하 게 함수를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fecf227f991a3c9c6edfb1ce29f5b3b781898e45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 84e1a884406e4060b957279078b8bfb106b92661
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-concise-functions"></a>간결 하 게 함수를 사용 하 여
 일부 ODBC 함수 설명자를 암시적으로 액세스할을 수 있습니다. 응용 프로그램 작성자 사실을 알 수 있을 호출 보다 편리 하 게 **SQLSetDescField** 또는 **SQLGetDescField**합니다. 이 함수가 호출 될 *간결한* 다양 한을 설정 하거나 가져오기 설명자 필드를 비롯 한 함수를 수행 하기 때문에 작동 합니다. 일부 간결 하 게 함수를 사용 하는 응용 프로그램을 설정 하거나 단일 함수 호출에서 여러 관련된 설명자 필드를 검색 합니다.  

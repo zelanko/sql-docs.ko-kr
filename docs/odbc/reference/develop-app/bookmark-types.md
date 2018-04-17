@@ -1,15 +1,16 @@
 ---
-title: "형식에 책갈피 | Microsoft Docs"
-ms.custom: 
+title: 형식에 책갈피 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], bookmarks
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - fixed-length bookmarks [ODBC]
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ae130125c99e6ff87fd3b2d6fa8563c75f7e6ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df609d905923200f7eda7477fb5bc941f8af12cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmark-types"></a>책갈피 형식
 ODBC 3에서 모든 책갈피*.x* 가변 길이 책갈피가 합니다. 이렇게 하면 기본 키 또는 책갈피도 사용할 테이블에 연결 된 고유 인덱스가 있습니다. 책갈피 수도 있습니다는 32 비트 값 ODBC 2에 사용 되었습니다. *x*합니다. 커서를 ODBC 3 책갈피 사용 되도록 지정 하려면*.x* 응용 프로그램 SQL_UB_VARIABLE를 SQL_ATTR_USE_BOOKMARK 문 특성을 설정 합니다. 가변 길이 책갈피 자동으로 사용 됩니다.  

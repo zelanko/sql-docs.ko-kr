@@ -1,16 +1,16 @@
 ---
 title: sys.dm_filestream_file_io_requests (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35d32705c8bce23a9cd46c5844fdc1a20c0cf7c3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0e2115473a557df341cb1e1244d4b6378a69c15b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 |**request_id**|**int**|드라이버가 이 요청에 할당한 고유한 요청 ID를 표시합니다. Null을 허용하지 않습니다.|  
 |**irp_id**|**int**|고유한 IRP ID를 표시합니다. 지정된 IRP와 관련된 모든 I/O 요청을 식별하는 데 유용합니다. Null을 허용하지 않습니다.|  
 |**handle_id**|**int**|네임스페이스 핸들 ID를 나타냅니다. NSO 관련 ID이며 인스턴스에서 고유합니다. Null을 허용하지 않습니다.|  
-|**client_thread_id**|**varbinary(8)**|요청을 시작한 클라이언트 응용 프로그램의 스레드 ID를 표시합니다.<br /><br /> **\*\*경고 \* \***  이 클라이언트 응용 프로그램은 SQL Server와 동일한 컴퓨터에서 실행 되는 경우에 의미가 있습니다. 클라이언트 응용 프로그램은 원격으로 실행 하는 경우는 **client_thread_id** 원격 클라이언트 대신 작동 하는 일부 시스템 프로세스의 스레드 ID를 표시 합니다.<br /><br /> Null을 허용합니다.|  
+|**client_thread_id**|**varbinary(8)**|요청을 시작한 클라이언트 응용 프로그램의 스레드 ID를 표시합니다.<br /><br /> **\*\* 경고 \* \***  이 클라이언트 응용 프로그램은 SQL Server와 동일한 컴퓨터에서 실행 되는 경우에 의미가 있습니다. 클라이언트 응용 프로그램은 원격으로 실행 하는 경우는 **client_thread_id** 원격 클라이언트 대신 작동 하는 일부 시스템 프로세스의 스레드 ID를 표시 합니다.<br /><br /> Null을 허용합니다.|  
 |**client_process_id**|**varbinary(8)**|클라이언트 응용 프로그램이 SQL Server와 동일한 컴퓨터에서 실행되는 경우 해당 클라이언트 응용 프로그램의 프로세스 ID를 표시합니다. 원격 클라이언트일 경우 해당 클라이언트 대신 작동하는 시스템 프로세스의 ID를 표시합니다. Null을 허용합니다.|  
 |**handle_context_address**|**varbinary(8)**|클라이언트의 핸들과 연결된 내부 NSO 구조의 주소를 표시합니다. Null을 허용합니다.|  
 |**filestream_transaction_id**|**varbinary(128)**|지정된 핸들과 연결된 트랜잭션의 ID 및 이 핸들과 연결된 모든 요청을 표시합니다. 반환 된 값은 고 **get_filestream_transaction_context** 함수입니다. Null을 허용합니다.|  
@@ -56,6 +56,6 @@ ms.lasthandoff: 02/03/2018
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Filestream 및 FileTable 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Filestream 및 FileTable 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

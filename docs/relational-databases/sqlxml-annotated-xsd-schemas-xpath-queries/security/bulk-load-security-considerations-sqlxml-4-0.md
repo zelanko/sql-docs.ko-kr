@@ -1,16 +1,16 @@
 ---
-title: "대량 로드 보안 고려 사항 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 대량 로드 보안 고려 사항 (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - security [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], security
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70249f5b10d684f569f6491be0796d542a6f0bbe
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6704bf4d97cd21097906db43305595ecc862a5a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>대량 로드 보안 고려 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  
+  다음은 XML 대량 로드를 사용하기 위한 보안 지침입니다.  
   
 -   대량 로드 작업을 트랜잭션으로 수행 하는 것을 사용 하는 지정 하는 경우는 **TempFilePath** 속성을 통해 임시 파일을 만들 폴더를 지정 합니다.  
   
@@ -62,6 +63,6 @@ ms.lasthandoff: 02/12/2018
 -   사용자가 SQLXML에서 오류를 기록할 오류 로그 파일을 설정하는 경우 대량 로드를 실행할 때마다 이 파일이 마지막 대량 로드 프로세스의 데이터로 덮어쓰여집니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 데이터 &#40; 대량 로드 수행 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML 데이터 & #40; 대량 로드 수행 SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

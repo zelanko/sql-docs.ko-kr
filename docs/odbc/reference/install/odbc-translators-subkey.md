@@ -1,36 +1,37 @@
 ---
-title: "ODBC 변환기가 하위 키 | Microsoft Docs"
-ms.custom: 
+title: ODBC 변환기가 하위 키 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translator subkey [ODBC]
 - subkeys [ODBC], translator subkey
 - registry entries for components [ODBC], translator subkey
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e94cd3cd2313b98376e32c8775ec38c3c8ddb268
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ede16122078aa53d3eeb0799678537746e3fcf12
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기가 하위 키
 설치 된 변환기가 ODBC 변환기 하위 키 아래 값을 나열합니다. 이러한 값의 서식은 다음 표에 표시 됩니다.  
   
-|속성|데이터 형식|data|  
+|이름|데이터 형식|Data|  
 |----------|---------------|----------|  
 |*변환기 desc*|REG_SZ|**설치**|  
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.database_connection_stats (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sys.database_connection_stats (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,26 +23,27 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 이벤트, 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. 연결 이벤트에 대 한 자세한 내용은 이벤트 유형을 참조 [sys.event_log &#40; Azure SQL 데이터베이스 &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 이벤트, 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. 연결 이벤트에 대 한 자세한 내용은 이벤트 유형을 참조 [sys.event_log &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
 |통계|형식|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들어<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 예를 들어:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 은 항상 정확히 5 분 후 해당 보다 **start_time** 같은 행에 있습니다.|  
 |**success_count**|**int**|성공한 연결 수:|  
 |**total_failure_count**|**int**|실패한 연결의 총 수입니다. 이 값은 합계의 **connection_failure_count**, **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>간격 start_time 및 end_time  
- 이벤트가 발생할 때 이벤트는 집계 간격에 포함 된 *에* 또는 *후***start_time** 및 *전에*  **end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트가 발생할 때 이벤트는 집계 간격에 포함 된 *에* 또는 *후 * * * start_time** 및 *하기 전에 * * * end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```  
   
@@ -80,7 +81,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>포함되지 않은 오류  
  이 뷰에는 일부 연결 및 오류 정보가 포함되지 않을 수 있습니다.  
   
--   이 보기 일부가 포함 되지 않은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스의 이벤트 유형에 지정 된만 발생할 수 있는 오류가 [sys.event_log &#40; Azure SQL 데이터베이스 &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   이 보기 일부가 포함 되지 않은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스의 이벤트 유형에 지정 된만 발생할 수 있는 오류가 [sys.event_log &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 센터 내에서 시스템 오류가 발생할 경우 논리적 서버에 대한 소량의 데이터가 이벤트 테이블에서 누락될 수 있습니다.  
   

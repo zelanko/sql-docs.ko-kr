@@ -1,30 +1,31 @@
 ---
-title: "2 단계: 응용 프로그램을 초기화 | Microsoft Docs"
-ms.custom: 
+title: '2 단계: 응용 프로그램을 초기화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - initializing applications [ODBC]
 - application process [ODBC], initializing applications
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64ef3dea2a8403af43cc03a3deeee47ff16dd2b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf8cf5a5d697b1e8c52da84d93ccf23c6e127c3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-initialize-the-application"></a>2 단계: 응용 프로그램 초기화
 다음 그림에 나와 있는 것 처럼 응용 프로그램을 초기화 하는 두 번째 단계가입니다. 정확 하 게 수행 되는 동작과 여기 응용 프로그램에 따라 달라 집니다.  

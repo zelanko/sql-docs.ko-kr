@@ -2,7 +2,7 @@
 title: SQLReadFileDSN 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a21a11c4b7b0ba3991df73e5e3e0860e5d4042b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1db13b239a2cf9e1f121336e792333b70f042ed8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 함수
 **규칙**  
@@ -80,7 +80,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>진단  
  때 **SQLReadFileDSN** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*lpszString* 에 NULL 인수가 있습니다.<br /><br /> *cbString* 0 보다 작거나 같은 인수 했습니다.|  
@@ -90,7 +90,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_OUTPUT_STRING_TRUNCATED|출력 문자열 잘림|반환 되는 문자열  *\*lpszString* 때문에 잘렸습니다 값 *cbString* 값 보다 작습니다  *\*pcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|요청이 실패 했습니다.|키워드 파일 DSN에에서 존재 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  ODBC 연결 정보를 저장 하는 섹션 이름 [ODBC]가 보유 합니다. 이 섹션에 대 한 예약 된 키워드에서 연결 문자열에 대 한 예약 된 것으로 동일 **SQLDriverConnect**합니다. (자세한 내용은 참조는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.)  
   
  응용 프로그램 이러한 예약 된 키워드를 사용 하 여 파일 DSN의 정보를 읽을 수 있습니다. 응용 프로그램에서 호출할 수 있는 파일 DSN와 관련 된 DSN 없는 연결 문자열 확인 하려는 경우 **SQLReadFileDSN** [ODBC] 섹션에서 예약 된 연결 문자열 키워드에 대 한 합니다. DSN 없는 연결 되는 전체 연결 문자열은 키워드 (예약 된 문자와 드라이버별) [ODBC] 섹션에 있는 모든의 조합입니다.  

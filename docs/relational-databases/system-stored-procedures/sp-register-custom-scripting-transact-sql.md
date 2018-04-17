@@ -1,16 +1,16 @@
 ---
 title: sp_register_custom_scripting (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16274b71d1ce14b2a143e5d6ce723bcb64cbaebd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@type**  =] **'***형식***'**  
+ [ **@type** =] **'***형식***'**  
  등록되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 은 **varchar (16)**이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**삽입**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
+|**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**업데이트**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
-|**삭제**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
+|**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거의 끝에 실행되는 스크립트입니다.|  
   
- [  **@value** =] **'***값***'**  
+ [ **@value**=] **'***값***'**  
  등록되는 저장 프로시저의 이름 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 이름과 정규화된 경로입니다. *값* 은 **nvarchar (1024)**, 기본값은 없습니다.  
   
 > [!NOTE]  
@@ -67,10 +67,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  때의 값 *형식* 은 **custom_script**, 이름 및의 전체 경로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일이 있어야 합니다. 그렇지 않으면 *값* 등록 된 저장된 프로시저의 이름 이어야 합니다.  
   
- [  **@publication** =] **'***게시***'**  
+ [ **@publication**=] **'***게시***'**  
  사용자 지정 저장 프로시저 또는 스크립트가 등록되는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **NULL**합니다.  
   
- [  **@article** =] **'***문서***'**  
+ [ **@article**=] **'***문서***'**  
  사용자 지정 저장 프로시저 또는 스크립트가 등록되는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **NULL**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -85,6 +85,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  구성원만는 **sysadmin** 고정 서버 역할의 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ register_custom_scripting**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_unregister_custom_scripting &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [sp_unregister_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

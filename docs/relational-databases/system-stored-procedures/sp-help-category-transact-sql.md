@@ -1,16 +1,16 @@
 ---
 title: sp_help_category (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7e013914fea52e8325acdb76d4aee10d7edd9ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +55,8 @@ sp_help_category [ [ @class = ] 'class' ]
 |Value|Description|  
 |-----------|-----------------|  
 |**JOB**|작업 범주에 관한 정보를 제공합니다.|  
-|**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
-|**OPERATOR**|운영자 범주에 관한 정보를 제공합니다.|  
+|**경으십시오**|경고 범주에 관한 정보를 제공합니다.|  
+|**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
   
  [ **@type=** ] **'***type***'**  
  정보를 요청한 대상 범주의 유형입니다. *형식* 은 **varchar(12)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
@@ -64,7 +64,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|로컬 작업 범주입니다.|  
-|**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
+|**다중-서버**|다중 서버 작업 범주입니다.|  
 |**NONE**|이외의 다른 클래스에 대 한 범주 **작업**합니다.|  
   
  [ **@name=** ] **'***name***'**  
@@ -77,15 +77,15 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 때  **@suffix**  은 **0**, **sp_help_category** 다음 결과 집합을 반환 합니다.  
+ 때 **@suffix** 은 **0**, **sp_help_category** 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
-|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = Local<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
+|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
- 때  **@suffix**  은 **1**, **sp_help_category** 다음 결과 집합을 반환 합니다.  
+ 때 **@suffix** 은 **1**, **sp_help_category** 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -137,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_add_category &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

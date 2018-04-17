@@ -1,31 +1,32 @@
 ---
-title: "데이터 버퍼 주소 | Microsoft Docs"
-ms.custom: 
+title: 데이터 버퍼 주소 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - address of data buffers [ODBC]
 - buffers [ODBC], data
 - data buffers [ODBC], address
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 863f6dda23748fc2c7c46cee40344f5e7acf4602
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41cc8c1e8a89c4253578ae4fccf222793ad2c0b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-buffer-address"></a>데이터 버퍼 주소입니다.
 응용 프로그램이 종종 명명 된 인수에서 드라이버를 데이터 버퍼의 주소를 전달 *ValuePtr* 또는 비슷한 이름입니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, 응용 프로그램의 주소를 지정 된 *날짜* 변수:  

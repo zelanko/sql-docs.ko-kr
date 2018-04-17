@@ -1,8 +1,8 @@
 ---
-title: ODBC 프로그래머 &#39; s 참조 | Microsoft Docs
+title: ODBC 프로그래머&#39;s 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머 &#39; s 참조
+# <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;s 참조
 *ODBC Programmer's Reference* 다음 섹션이 포함 되어 있습니다.  
   
 -   [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) Windows 8 SDK에 추가 된 새로운 ODBC 기능을 설명 합니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 |------------|--------------|  
 |선택 *에서|대문자 문자 SQL 문, 매크로 이름 및 운영 체제 명령 수준에서 사용 되는 용어를 나타냅니다.|  
 |`RETCODE SQLFetch(hdbc)`|고정 폭 글꼴은 예제 명령줄 및 프로그램 코드에 사용 됩니다.|  
-|*인수*|기울임꼴은은 프로그래밍 방식으로 인수, 사용자 또는 응용 프로그램이를 제공 해야 합니다 또는 강조 단어 정보를 나타냅니다.|  
+|*argument*|기울임꼴은은 프로그래밍 방식으로 인수, 사용자 또는 응용 프로그램이를 제공 해야 합니다 또는 강조 단어 정보를 나타냅니다.|  
 |**SQLEndTran**|굵은 글꼴을 나타냄 구문은 함수 이름을 포함 하 여 표시 된 대로 정확히 입력 해야 합니다.|  
 |&#124;|세로 막대 구문 줄에서 상호 배타적인 선택할 수 있는 두 가지를 구분합니다.|  
 |...|가변 인수 수 여러 번 반복할 수를 나타냅니다.|  

@@ -1,16 +1,16 @@
 ---
 title: sp_dsninfo (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4882ce3dd87c60f4fceaeb2b770c8879fadf3b78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aa1403655e8ad134f8d214cffcecf916c881bb40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@infotype =**] **'***info_type***'**  
  반환되는 정보의 유형입니다. 경우 *info_type* 지정 하지 않으면 NULL을 지정 하는 경우에 모든 정보 유형이 반환 됩니다. *info_type* 은 **varchar (128)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|데이터 원본의 공급업체 이름을 나타냅니다.|  
 |**DBMS_VERSION**|데이터 원본의 버전을 나타냅니다.|  
-|**A S E _**|데이터베이스 이름을 나타냅니다.|  
+|**DATABASE_NAME**|데이터베이스 이름을 나타냅니다.|  
 |**SQL_SUBSCRIBER**|데이터 원본이 구독자가 될 수 있는지를 나타냅니다.|  
   
- [  **@login =**] **'***로그인***'**  
+ [ **@login =**] **'***login***'**  
  데이터 원본의 로그인입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *로그인*은 **varchar (128)**, 기본값은 NULL입니다.  
   
  [  **@password =**] **'***암호***'**  
@@ -72,7 +72,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *dso_type*  
  데이터 원본 유형입니다. *dso_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|ODBC 데이터 원본|  
 |**3**|OLE DB 데이터 원본|  
@@ -96,7 +96,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_dsninfo**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_enumdsn &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

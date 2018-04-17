@@ -1,16 +1,16 @@
 ---
 title: sp_setsubscriptionxactseqno (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ec407d84267e8a2a03d2a6774e7c86cc469af94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**원래 XACT_SEQNO**|**varbinary (16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
-|**업데이트 된 XACT_SEQNO**|**varbinary (16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
+|**원래 XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
+|**업데이트 된 XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
 |**구독 스트림 수**|**int**|마지막 동기화 중에 사용된 구독 스트림의 수입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -80,7 +80,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno** 피어 투 피어 트랜잭션 복제 토폴로지에 사용할 수 없습니다.  
   
- **sp_setsubscriptionxactseqno** 에서 오류가 발생 하는 특정 트랜잭션을 건너뛸 데 사용할 수 있습니다 때 구독자에서 적용 됩니다. 실패 하 고 배포 에이전트가 중지 된 후 호출 [sp_helpsubscriptionerrors &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 배포자 실패 한 트랜잭션의 xact_seqno 값을 검색 한 다음 호출에서 **sp_setsubscriptionxactseqno**에 대 한이 값을 전달 *xact_seqno*합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
+ **sp_setsubscriptionxactseqno** 에서 오류가 발생 하는 특정 트랜잭션을 건너뛸 데 사용할 수 있습니다 때 구독자에서 적용 됩니다. 실패 하 고 배포 에이전트가 중지 된 후 호출 [sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 실패 한 트랜잭션의 xact_seqno 값을 검색 하 고 를호출하는배포자에서**sp_setsubscriptionxactseqno**에 대 한이 값을 전달 *xact_seqno*합니다. 그러면 이 LSN 이후의 명령만 처리됩니다.  
   
  값을 지정 **0** 에 대 한 *xact_seqno* 구독자에 배포 데이터베이스에 모든 보류 중인 명령을 제공 합니다.  
   

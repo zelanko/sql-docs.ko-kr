@@ -2,7 +2,7 @@
 title: sys.soap_endpoints (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-catalog-views
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38bc05ab3d49716f2c4fc484098c4ff838bc634e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d3f4367b7e399e13addda748a8688bfa579076ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/10/2018
  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**< inherited columns>**||이 뷰가 상속 하는 열 목록은 참조 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
+|**< 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED 옵션이 지정되었으므로 임시 SQL 일괄 처리가 끝점에서 허용됩니다.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|이 메서드를 구현하는 저장 프로시저의 세 부분으로 된 이름입니다.<br /><br /> 메서드의 이름은 정확히 세 부분으로 구성된 구문이어야 합니다. 한 부분, 두 부분 또는 네 부분으로 된 이름은 허용되지 않습니다.|  
 |**default_database**|**sysname**|DATABASE = 옵션에 지정된 기본 데이터베이스의 이름입니다.<br /><br /> NULL = DEFAULT가 지정되었습니다.|  

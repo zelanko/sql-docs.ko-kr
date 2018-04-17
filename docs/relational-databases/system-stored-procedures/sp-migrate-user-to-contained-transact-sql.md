@@ -1,16 +1,16 @@
 ---
 title: sp_migrate_user_to_contained (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_migrate_user_to_contained
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5630fe30f2841932a87293e3dd371b1a591e4223
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@username =** ] **N'***사용자***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑된 현재 포함된 데이터베이스의 사용자 이름입니다. 값은 **sysname**, 기본값은 **NULL**합니다.  
   
- [ **@rename =** ] **N'***copy_login_name***'** | **N'** *keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
  사용 하 여 로그인 기반 데이터베이스 사용자 로그인 이름이 아닌 다른 사용자 이름이 *keep_name* 마이그레이션하는 동안 데이터베이스 사용자 이름을 유지 합니다. 사용 하 여 *copy_login_name* 사용자 대신 로그인의 이름으로 새 포함 된 데이터베이스 사용자를 만들려고 합니다. 로그인 기반 데이터베이스 사용자의 사용자 이름이 로그인 이름과 같으면 두 옵션 모두 이름을 변경하지 않고 포함된 데이터베이스 사용자를 만듭니다.  
   
- [ **@disablelogin =** ] **N'***disable_login***'** | **N'** *do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
  *disable_login* master 데이터베이스의 로그인을 사용 하지 않도록 설정 합니다. 로그인이 해제 된 경우에 연결 하려면 연결으로 포함 된 데이터베이스 이름을 제공 해야는 **초기 카탈로그** 연결 문자열의 일부로 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -2,7 +2,7 @@
 title: 설명자 필드의 값을 검색할 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37efd70ccd8fa0ad5c6d4bb573eb1c158a3ec35b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b9b00624f9d327e4c561c2d7272e7459e3ed176
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>설명자 필드에 값 검색
 응용 프로그램에서 호출할 수 **SQLGetDescField** 설명자 레코드의 단일 필드를 가져올 수 있습니다. **SQLGetDescField** ODBC에 정의 된 모든 설명자 필드에 시작 및 끝 드라이버에서 정의 된 필드에도 응용 프로그램 액세스를 제공 합니다.  

@@ -1,31 +1,32 @@
 ---
-title: "ODBC의 이스케이프 시퀀스 | Microsoft Docs"
-ms.custom: 
+title: ODBC의 이스케이프 시퀀스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08ee3939b280ba284f0387d3ccfd4c2db0bf0a1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="escape-sequences-in-odbc"></a>Odbc에서 이스케이프 시퀀스
 다양 한 외부 조인 및 스칼라 함수 호출 등의 언어 기능을 일반적으로 Dbms 구현 합니다. 그러나 이러한 기능에 대 한 구문 경향이 DBMS 관련 표준 구문을 다양 한 표준 기관에서 정의 된 경우에 있습니다. 이 인해 ODBC는 다음 언어 기능에 대 한 표준 구문을 포함 하는 이스케이프 시퀀스를 정의 합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  이스케이프 시퀀스를 인식 하 고 드라이버 특정 DBMS 문법으로 이스케이프 시퀀스를 대체 하 여 구문 분석 합니다. 이스케이프 시퀀스 구문에 대 한 자세한 내용은 참조 [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 부록 c: SQL 문법에 있습니다.  
   
 > [!NOTE]  
->  Odbc 2. *x*, 이것은 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (***공급 업체 이름***), 제품 (** *제품 이름***)***확장*  **\*)-**  
+>  Odbc 2. *x*, 이것은 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (***공급 업체 이름***), 제품 (***제품 이름***) * * * 확장*  **\*)--**  
 >   
 >  이 구문은 외에도 축약형 구문을 폼의 정의 된: **{***확장***}**  
 >   

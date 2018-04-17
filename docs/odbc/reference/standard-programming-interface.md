@@ -1,15 +1,16 @@
 ---
-title: "표준 프로그래밍 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 표준 프로그래밍 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - standardizing database access [ODBC], programming interface
 - programming interface standardization [ODBC]
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c91448833c6dacecaadfa4b0c11892e1a0c5e439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="standard-programming-interface"></a>표준 프로그래밍 인터페이스
 가장 확실 한 후보 표준화에 대 한 프로그래밍 인터페이스가입니다. 사실, ODBC 개발 시 ANSI 및 ISO 이미 제공 된 표준 포함 된 SQL 및 SQL에 대 한 모듈입니다. CLI의 SQL 액세스 그룹 데이터베이스에 대 한 없는 표준 있었지만-데이터베이스 공급 업체는 업계 컨소시엄-; 만들 것인지를 고려할 되었습니다 ODBC의 일부를 나중에 작업에 대 한 기본 업체가 되었습니다.  

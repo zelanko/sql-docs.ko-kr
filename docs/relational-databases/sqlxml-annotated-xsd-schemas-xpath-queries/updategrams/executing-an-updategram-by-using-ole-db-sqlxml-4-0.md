@@ -1,16 +1,16 @@
 ---
-title: "OLE DB (SQLXML 4.0)를 사용 하 여 Updategram 실행 | Microsoft Docs"
-ms.custom: 
+title: OLE DB (SQLXML 4.0)를 사용 하 여 Updategram 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ICommandStream interface
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3ce470a52fea5f6f5bc8cc105e9e0fcfd98ec29
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 425948eeefb9ad0081b0c6b405e9675e1e5b21c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 updategram을 실행 하는 DB usingOLE의 작업 예제를 제공 합니다.  
+  이 항목에서는 updategram을 실행 하는 DB usingOLE의 작업 예제를 제공 합니다.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream을 사용하여 XML 명령 설정  
  OLE DB (버전 2.6 이상) ICommandStream 인터페이스 문자열 대신 스트림 개체로 명령을 전달합니다.  

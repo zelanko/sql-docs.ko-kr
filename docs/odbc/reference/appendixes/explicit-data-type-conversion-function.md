@@ -1,31 +1,32 @@
 ---
-title: "명시적 데이터 형식 변환 함수 | Microsoft Docs"
-ms.custom: 
+title: 명시적 데이터 형식 변환 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e86113ed304bc0876ce961e4c8691f53e9065d1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환이 SQL 데이터 형식 정의 기준으로 지정 됩니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  형식은 **변환** 함수는:  
   
- **변환 (** *value_exp*, *data_type***)**  
+ **변환 (** *value_exp*, *data_type * * *)**  
   
  함수에 지정 된 값을 반환 *value_exp* 지정 된 변환 *data_type*여기서 *data_type* 다음 키워드 중 하나입니다.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  명시적 데이터 형식 변환 함수에 대 한 ODBC 구문을 변환 형식 사양을 지원 하지 않습니다. 명시적 형식 지정 데이터 원본으로 사용할 수, 드라이버 기본값을 지정 하거나 형식 지정을 구현 해야 합니다.  
   
- 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 인수 *value_exp* 열 이름, 결과 다른 스칼라 함수 이거나 숫자 또는 문자열 리터럴일 수 있습니다. 예를 들어:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

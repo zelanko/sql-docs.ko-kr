@@ -1,36 +1,37 @@
 ---
-title: "SQLTables (Excel 드라이버) | Microsoft Docs"
-ms.custom: 
+title: SQLTables (Excel 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC], SQLTables
 - SQLTables function [ODBC], Excel Driver
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 083f0813418dc366f14acc11be79c9eb68f5550d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f7dbfc5174b832b5878096868bc2498105ae212
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltables-excel-driver"></a>SQLTables (Excel 드라이버)
 > [!NOTE]  
 >  이 항목에서는 Excel 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
-|인수|주석|  
+|인수|설명|  
 |--------------|--------------|  
 |*szTableOwner*|에 대 한 유효한 인수 *szTableOwner* 소유자 이름을 지 원하는 드라이버의 없기 때문에 NULL입니다. 와 *szTableOwner* NULL로 설정 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
 |*szTableQualifier*|Microsoft Excel 3.0 또는 4.0 드라이버 사용 되는 경우를 호출 하는 경우 **SQLTables** 에 값이 있는 *szTableQualifier* 기존 테이블의 이름을 즉, 드라이버는 해당 이름의 테이블이 만들어집니다.<br /><br /> TABLE_QUALIFIER 열에서 **SQLTables** 디렉터리 경로 반환 합니다.|  

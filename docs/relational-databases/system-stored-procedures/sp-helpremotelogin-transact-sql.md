@@ -1,16 +1,16 @@
 ---
 title: sp_helpremotelogin (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b34842bc6265d9a1615cb1f2e45d727b257a5c90
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1c47b54288d561377444ed8797b2e493c483f8bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @remoteserver  **=**  ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'***remoteserver***'**  
  원격 로그인 정보를 반환할 대상이 되는 원격 서버입니다. *remoteserver* 은 **sysname**, 기본값은 NULL입니다. 경우 *remoteserver* 은 지정 하지 않으면 로컬 서버에 정의 된 모든 원격 서버에 대 한 정보가 반환 됩니다.  
   
- [ @remotename  **=**  ] **'***remote_name***'**  
+ [ @remotename **=** ] **'***remote_name***'**  
  원격 서버의 특정 원격 로그인입니다. *remote_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *remote_name* 를 지정 하지 않으면 모든 원격 사용자에 대 한 정보에 대해 정의 된 *remoteserver* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -91,10 +91,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_addremotelogin&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_addremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_stored_procedures (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c71f292c8d6d1b93e73b028ed6d2fc75e944386c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@sp_name =** ] **'***이름***'**  
+ [ **@sp_name =** ] **'***name***'**  
  카탈로그 정보를 반환하는 데 사용되는 프로시저의 이름입니다. *이름* 은 **nvarchar(390)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
  [  **@sp_owner =** ] **'***스키마***'**  
@@ -64,7 +64,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   현재 데이터베이스의 **dbo** 스키마  
   
  [  **@qualifier =** ] **'***한정자***'**  
- 프로시저 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블 형식에 대 한 세 부분으로 구성 된 이름 (*한정자***.** *스키마***.** *이름*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 프로시저 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블 형식에 대 한 세 부분으로 구성 된 이름 (*한정자***.*** 스키마***.*** 이름*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  밑줄(_), 백분율(%), 대괄호([ ])가 와일드카드 문자로 인식되는지 여부를 결정합니다. *fUsePattern* 은 **비트**, 기본값은 1입니다.  
@@ -74,7 +74,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = 패턴 일치가 설정 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -120,7 +120,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [카탈로그 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [카탈로그 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_changesubstatus (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fb31421c8f9398e259b41f652d13a5ff8d565b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,19 +73,19 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은  **%** 합니다. 경우 *게시* 을 지정 하지 않으면 모든 게시에 적용 됩니다.  
+ [ **@publication=**] **'***publication***'**  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**합니다. 경우 *게시* 을 지정 하지 않으면 모든 게시에 적용 됩니다.  
   
  [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. 이 이름은 게시에 대해 고유해야 합니다. *문서* 은 **sysname**, 기본값은  **%** 합니다. 경우 *문서* 을 지정 하지 않으면 모든 아티클에 적용 됩니다.  
+ 아티클의 이름입니다. 이 이름은 게시에 대해 고유해야 합니다. *문서* 은 **sysname**, 기본값은 **%**합니다. 경우 *문서* 을 지정 하지 않으면 모든 아티클에 적용 됩니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
- 상태를 변경할 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은  **%** 합니다. 경우 *구독자* 를 지정 하지 않으면 지정 된 아티클에 모든 구독자에 대 한 상태가 변경 합니다.  
+ 상태를 변경할 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%**합니다. 경우 *구독자* 를 지정 하지 않으면 지정 된 아티클에 모든 구독자에 대 한 상태가 변경 합니다.  
   
  [  **@status =**] **'***상태***'**  
  구독 상태는 **syssubscriptions** 테이블입니다. *상태* 은 **sysname**, 기본값은 없고 수와 이러한 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**활성**|구독자가 동기화되어 데이터를 받습니다.|  
 |**비활성**|구독이 없는 구독자 항목이 있습니다.|  
@@ -95,7 +95,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  구독의 이전 상태입니다. *previous_status* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수를 사용 하면 특정 구독 집합에 그룹 함수를 허용 하므로 해당 상태에 현재 있는 모든 구독을 변경할 수 있습니다 (예를 들어 모든 활성 설정 구독을 다시 **구독**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은  **%** 합니다.  
+ 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은 **%**합니다.  
   
  [  **@frequency_type=**] *frequency_type*  
  배포 태스크를 예약하는 빈도입니다. *frequency_type* 은 **int**, 기본값은 NULL입니다.  
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  배포 태스크 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 32 (매월 상대적)로 설정 됩니다. *frequency_relative_interval* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|첫째|  
 |**2**|둘째|  
@@ -121,7 +121,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_subday=**] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도(분)입니다. *frequency_subday* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|둘째|  
@@ -164,25 +164,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  원격 에이전트 활성화는 더 이상 사용되지 않으며 지원되지 않습니다. 이 매개 변수는 이전 버전 스크립트와의 호환성을 유지하기 위한 목적으로만 지원됩니다. 설정 *remote_agent_server_name* NULL이 아닌 값에 오류가 발생 합니다.  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. *dts_package_name* 는 **sysname**, 기본값은 NULL입니다. 패키지에 대 한 예를 들어 **DTSPub_Package** 지정 `@dts_package_name = N'DTSPub_Package'`합니다.  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  패키지 암호를 지정합니다. *dts_package_password* 은 **sysname** 기본값은 NULL 이며 암호 속성이 남아 있을 것 이라는 것을 지정 하는 변경 되지 않습니다.  
   
 > [!NOTE]  
 >  DTS 패키지에는 암호가 있어야 합니다.  
   
- [  **@dts_package_location** =] *dts_package_location*  
+ [ **@dts_package_location**=] *dts_package_location*  
  패키지 위치를 지정합니다. *dts_package_location* 는 **int**, 기본값은 **0**합니다. 경우 **0**, 배포자가 패키지 위치가 됩니다. 경우 **1**, 구독자가 패키지 위치가 됩니다. 패키지의 위치 일 수 있습니다 **배포자** 또는 **구독자**합니다.  
   
- [  **@skipobjectactivation** =] *skipobjectactivation*  
+ [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
  배포 작업의 이름입니다. *distribution_job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  지정 된 비-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -200,10 +200,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  구성원만는 **sysadmin** 고정 서버 역할, **db_owner** 고정된 데이터베이스 역할 또는 구독의 작성자 실행할 수 **sp_changesubstatus**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_addsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

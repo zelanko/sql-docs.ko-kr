@@ -2,7 +2,7 @@
 title: managed_backup.sp_get_backup_diagnostics (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088d3232ef47888c0615e7b8a7638eb26f2817a2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: fc8d877b260a86cb3d00b132813ccea62c34f17f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ||||  
 |-|-|-|  
 |열 이름|데이터 형식|Description|  
-|event_type|NVARCHAR(512)|확장 이벤트 유형|  
-|이벤트|NVARCHAR(512)|이벤트 로그의 요약입니다.|  
+|event_type|NVARCHAR (512)|확장 이벤트 유형|  
+|이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
 |타임스탬프|TIMESTAMP|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  

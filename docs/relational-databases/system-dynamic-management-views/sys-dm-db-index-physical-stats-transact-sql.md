@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_index_physical_stats (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_physical_stats
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 
+caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048961489aee9c369c8b01a04a083eba32d255dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]
 > 쿼리 하는 경우 **sys.dm_db_index_physical_stats** Always On을 호스팅하는 서버 인스턴스에서 [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), REDO 차단 문제가 발생할 수 있습니다. 이는 이 동적 관리 뷰가 지정된 사용자 테이블 또는 뷰에 대한 IS 잠금을 획득하여 REDO 스레드에서의 해당 사용자 테이블 또는 뷰에 대한 X 잠금 요청이 차단되기 때문입니다.  
   
- **sys.dm_db_index_physical_stats** 메모리 액세스에 최적화 된 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 액세스에 최적화 된 인덱스 사용에 대 한 정보를 참조 하십시오. [sys.dm_db_xtp_index_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **sys.dm_db_index_physical_stats** 메모리 액세스에 최적화 된 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 액세스에 최적화 된 인덱스 사용에 대 한 정보를 참조 하십시오. [sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -80,7 +81,7 @@ sys.dm_db_index_physical_stats (
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*, NULL을 지정 해야 *partition_number*합니다.  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* | NULL | 0 | 기본값  
  개체의 파티션 번호입니다. *partition_number* 은 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
@@ -116,7 +117,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|평균 레코드 크기(바이트)입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균 레코드 크기가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 평균 레코드 크기입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 평균 레코드 크기입니다.<br /><br /> 인 경우 NULL *모드* = LIMITED입니다.|  
 |forwarded_record_count|**bigint**|다른 데이터 위치로의 전달 포인터가 있는 힙의 레코드 수입니다. 이 상태는 업데이트하는 동안 원본 위치에 새 행을 저장할 공간이 충분하지 않은 경우에 발생합니다.<br /><br /> 힙의 IN_ROW_DATA 할당 단위 이외의 모든 할당 단위에 대해 NULL입니다.<br /><br /> 에 대 한 NULL 경우 힙에 *모드* = LIMITED입니다.|  
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
-|hobt_id|bigint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합은 저장으로 데이터 힙 또는 이진 트리 합니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 참조 [sys.internal_partitions&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Null 인 경우|  
+|hobt_id|bigint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합은 저장으로 데이터 힙 또는 이진 트리 합니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 참조 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)합니다.<br /><br /> Null 인 경우|  
 |column_store_delete_buffer_state|tinyint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = 열기<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 =를 사용 중지<br /><br /> 5 = 준비|  
 |column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – 부모 인덱스는 columnstore 인덱스가 아닙니다.<br /><br /> OPEN – deleters 스캐너 사용 합니다.<br /><br /> 드레이닝 – deleters 드레이닝하는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시 – 버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 버퍼가 아직 잘리지 않은 스캐너 여전히 사용 되 때문에 있지만. 새 스캐너 버퍼를 사용 하 여 사용 하지 않도록 설정 열기 버퍼는 충분 하기 때문에 필요 하지 않습니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 되었습니다.|  
   
@@ -183,7 +184,7 @@ GO
   
  **논리적 조각화**  
   
- 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가의 페이지를 인덱스에 할당 된 다음 물리적 페이지가 잘못 된 다음 pag 가리키는 페이지는*e* 현재 리프 페이지에 대 한 포인터입니다.  
+ 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.  
   
  **익스텐트 조각화**  
   
@@ -240,7 +241,7 @@ GO
   
  VIEW DATABASE STATE를 거부하면 특정 개체에 대해 허용된 CONTROL 권한에 관계없이 데이터베이스의 모든 개체가 반환되지 않습니다. 또한, 데이터베이스 와일드 카드 @*database_id*= NULL을 지정 하면 해당 데이터베이스가 생략 됩니다.  
   
- 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40; Transact SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -300,7 +301,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>4. 스크립트에 sys.dm_db_index_physical_stats를 사용하여 인덱스를 다시 작성하거나 다시 구성  
- 다음 예에서는 데이터베이스에서 평균 조각화가 10%를 넘는 모든 파티션을 자동으로 다시 구성하거나 다시 작성합니다. 이 쿼리를 실행하려면 VIEW DATABASE STATE 권한이 필요합니다. 이 예에서는 데이터베이스 이름을 지정하지 않고 `DB_ID`를 첫 번째 매개 변수로 지정합니다. 현재 데이터베이스의 호환성 수준이 80 이하이면 오류가 발생합니다. 오류를 해결하려면 `DB_ID()`를 올바른 데이터베이스 이름으로 대체합니다. 데이터베이스 호환성 수준에 대 한 자세한 내용은 참조 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ 다음 예에서는 데이터베이스에서 평균 조각화가 10%를 넘는 모든 파티션을 자동으로 다시 구성하거나 다시 작성합니다. 이 쿼리를 실행하려면 VIEW DATABASE STATE 권한이 필요합니다. 이 예에서는 데이터베이스 이름을 지정하지 않고 `DB_ID`를 첫 번째 매개 변수로 지정합니다. 현재 데이터베이스의 호환성 수준이 80 이하이면 오류가 발생합니다. 오류를 해결하려면 `DB_ID()`를 올바른 데이터베이스 이름으로 대체합니다. 데이터베이스 호환성 수준에 대 한 자세한 내용은 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)합니다.  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -433,10 +434,10 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [시스템 뷰 &#40; Transact SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

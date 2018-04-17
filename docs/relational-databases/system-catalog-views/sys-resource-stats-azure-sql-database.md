@@ -28,11 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f1b2719813ecc58cc68477b47141a215f4880be
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7b8087839e5ea151d69a18cdf46d19fa5c917e66
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/08/2018
 |start_time|**datetime**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |database_name|**varchar**|사용자 데이터베이스의 이름입니다.|  
-|sku|**varchar**|데이터베이스의 서비스 계층입니다. 가능한 값은 다음과 같습니다.<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />일반 용도<br /><br />중요 한 비즈니스|  
+|sku|**varchar**|데이터베이스의 서비스 계층입니다. 가능한 값은 다음과 같습니다.<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />범용<br /><br />중요 비즈니스용|  
 |storage_in_megabytes|**float**|메가바이트 데이터베이스 데이터, 인덱스, 저장된 프로시저 및 메타 데이터를 포함 하 여 시간 간격에 대 한 최대 저장소 크기입니다.|  
 |avg_cpu_percent|**numeric**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
 |avg_data_io_percent|**numeric**|서비스 계층 한도를 기준으로 하는 평균 I/O 활용률입니다.|  

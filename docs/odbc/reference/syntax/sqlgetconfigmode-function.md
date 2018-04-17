@@ -2,7 +2,7 @@
 title: SQLGetConfigMode 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca766c5cb2e619672193888c791d4dee13a029e8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c00416f664f8c4e6049b37ee8c408c7c7563a11f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 함수
 **규칙**  
@@ -64,11 +64,11 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetConfigMode** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  이 함수는 위치를 확인 DSN 값을 나열 하는 Odbc.ini 항목 시스템 정보에 사용 됩니다. 경우  *\*pwConfigMode* ODBC_USER_DSN, DSN은 DSN이 사용자 이며 HKEY_CURRENT_USER에 Odbc.ini 항목에서 함수를 읽습니다. ODBC_SYSTEM_DSN 이면 DSN은 시스템 DSN 고 함수 Odbc.ini 항목 HKEY_LOCAL_MACHINE에서 읽습니다. ODBC_BOTH_DSN 이면 HKEY_CURRENT_USER 시도 되 면 하 고 실패 한 경우 HKEY_LOCAL_MACHINE 사용 됩니다.  
   
  기본적으로 **SQLGetConfigMode** ODBC_BOTH_DSN를 반환 합니다. 사용자 DSN 또는 시스템 DSN 만들어질 때 호출 하 여 **SQLConfigDataSource**, ODBC_USER_DSN 또는 ODBC_SYSTEM_DSN DSN을 수정 하는 동안 사용자 및 시스템 Dsn을 구분 하기 위해 구성 모드를 설정 하는 함수입니다. 를 반환 하기 전에 **SQLConfigDataSource** 구성 모드 ODBC_BOTH_DSN을 기본값으로 다시 설정 합니다.  

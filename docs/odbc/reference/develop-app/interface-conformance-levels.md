@@ -1,15 +1,16 @@
 ---
-title: "받는 규칙 수준 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 받는 규칙 수준 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be780023002dba4422a6523f57866661fde593b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 받는 규칙 수준
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. 함수 기반 평준화 체계 충분히이 목표를 달성 하지 않습니다. Odbc 3. *x*, 드라이버는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 기능; 포함 될 수 있습니다. 반환 된 정보 유형에 대해 지원 되는 설명자 필드, 문 특성, "Y" 값을 포함할 수 **SQLGetInfo**등입니다.  

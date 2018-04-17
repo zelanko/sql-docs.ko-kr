@@ -1,16 +1,16 @@
 ---
 title: sp_copysubscription (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9feaac9bb5dfd23bbdd4422f3ad9908663bc64c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a8a6a53bc7f9b793dfef4b685c4d55033657a152
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@filename =**] **'***file_name***'**  
+ [ **@filename =**] **'***file_name***'**  
  파일 이름을 포함한 전체 경로를 지정하는 문자열이며 데이터 파일(.mdf)의 사본을 저장할 위치에 해당합니다. *파일 이름* 은 **nvarchar (260)**, 기본값은 없습니다.  
   
  [  **@temp_dir=**] **'***temp_dir***'**  
  임시 파일이 포함된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)**, 기본값은 NULL입니다. NULL 인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리를 사용 합니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
  [  **@overwrite_existing_file=**] **'***overwrite_existing_file***'**  
- 에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그  **@filename** 합니다. *overwrite_existing_file*은 **비트**, 기본값은 **0**합니다. 경우 **1**, 지정 된 파일을 덮어씁니다  **@filename** 있는 경우. 경우 **0**, 파일이 있는지, 그리고 덮어쓰지 않고 저장된 프로시저가 실패 합니다.  
+ 에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그 **@filename**합니다. *overwrite_existing_file*은 **비트**, 기본값은 **0**합니다. 경우 **1**, 지정 된 파일을 덮어씁니다 **@filename**있는 경우. 경우 **0**, 파일이 있는지, 그리고 덮어쓰지 않고 저장된 프로시저가 실패 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

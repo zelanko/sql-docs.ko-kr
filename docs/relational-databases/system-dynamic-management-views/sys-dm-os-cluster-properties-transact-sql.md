@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_cluster_properties (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_properties_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71ac8027fa835a1d087c9914b73b8a1e4c0ead34
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3e6ddcfa2a72ade2a6102ef35a02f5c2860ec764
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 
 |열 이름|속성|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|SQL Server 장애 조치(failover) 클러스터에 대한 로깅 수준입니다. 자세한 로깅을 설정하여 오류 로그에 문제 해결을 위한 추가 정보를 제공할 수 있습니다. 다음 값 중 하나입니다.<br /><br /> 0  -  로깅이 해제됩니다(기본값).<br /><br /> 1  -  오류만 로깅됩니다.<br /><br /> 2  -  오류 및 경고가 로깅됩니다.<br /><br /> 자세한 내용은 참조 [ALTER SERVER configuration&#40; Transact SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|bigint|SQL Server 장애 조치(failover) 클러스터에 대한 로깅 수준입니다. 자세한 로깅을 설정하여 오류 로그에 문제 해결을 위한 추가 정보를 제공할 수 있습니다. 다음 값 중 하나입니다.<br /><br /> 0  -  로깅이 해제됩니다(기본값).<br /><br /> 1  -  오류만 로깅됩니다.<br /><br /> 2  -  오류 및 경고가 로깅됩니다.<br /><br /> 자세한 내용은 참조 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)합니다.|  
 |SqlDumperDumpFlags|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성되는 덤프 파일의 형식을 결정하는 SQLDumper 덤프 플래그입니다. 기본 설정은 0입니다.|  
 |SqlDumperDumpPath|nvarchar(260)|SQLDumper 유틸리티에서 덤프 파일을 생성하는 위치입니다.|  
 |SqlDumperDumpTimeOut|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 시 SQLDumper 유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0입니다.|  

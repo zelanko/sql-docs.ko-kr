@@ -1,16 +1,16 @@
 ---
 title: sp_sequence_get_range (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad7851a091b531c0f13980023e22f4f2d545163b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -57,29 +58,29 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@sequence_name**  =] **N**'*시퀀스*'  
+ [ **@sequence_name** =] **N**'*시퀀스*'  
  시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar(776)**합니다.  
   
- [ **@range_size** = ] *range_size*  
- 시퀀스에서 인출할 값의 수입니다. **@range_size****bigint**합니다.  
+ [ **@range_size** =] *range_size*  
+ 시퀀스에서 인출할 값의 수입니다. **@range_size** **bigint**합니다.  
   
- [ **@range_first_value** = ] *range_first_value*  
- 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 첫 번째(최소 또는 최대) 값을 반환합니다. **@range_first_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
+ [ **@range_first_value** =] *range_first_value*  
+ 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 첫 번째(최소 또는 최대) 값을 반환합니다. **@range_first_value** **sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [ **@range_last_value** = ] *range_last_value*  
- 선택적 출력 매개 변수는 요청한 범위의 마지막 값을 반환합니다. **@range_last_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
+ [ **@range_last_value** =] *range_last_value*  
+ 선택적 출력 매개 변수는 요청한 범위의 마지막 값을 반환합니다. **@range_last_value** **sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [  **@range_cycle_count**  =] range_cycle_count  
- 선택적 출력 매개 변수는 시퀀스 개체가 요청한 범위를 반환하기 위해 순환한 횟수를 반환합니다. **@range_cycle_count****int**합니다.  
+ [ **@range_cycle_count** =] range_cycle_count  
+ 선택적 출력 매개 변수는 시퀀스 개체가 요청한 범위를 반환하기 위해 순환한 횟수를 반환합니다. **@range_cycle_count** **int**합니다.  
   
- [  **@sequence_increment**  =] *sequence_increment*  
- 선택적 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 증분을 반환합니다. **@sequence_increment****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
+ [ **@sequence_increment** =] *sequence_increment*  
+ 선택적 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 증분을 반환합니다. **@sequence_increment** **sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [  **@sequence_min_value**  =] *sequence_min_value*  
- 선택적 출력 매개 변수는 시퀀스 개체의 최소값을 반환합니다. **@sequence_min_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
+ [ **@sequence_min_value** =] *sequence_min_value*  
+ 선택적 출력 매개 변수는 시퀀스 개체의 최소값을 반환합니다. **@sequence_min_value** **sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- 선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환합니다. **@sequence_max_value****sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
+ [ **@sequence_max_value** =] *sequence_max_value*  
+ 선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환합니다. **@sequence_max_value** **sql_variant** 요청에 사용 되는 시퀀스 개체의 것과 동일한 기본 형식을 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -195,10 +196,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Sequence&#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER sequence&#40; Transact SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP sequence&#40; Transact SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [다음 값을 &#40; Transact SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

@@ -1,34 +1,35 @@
 ---
-title: "영향을 받는 행 수를 결정할 | Microsoft Docs"
-ms.custom: 
+title: 영향을 받는 행 수를 결정할 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data [ODBC], number of rows affected
 - number of rows affected by update [ODBC]
 - data updates [ODBC], number of rows affected
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac4b30fc9bbbb2e289ca53094d5050f0808b3ec1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86408e2c18eb18ef9119d1fa11172e6eb1d674a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-the-number-of-affected-rows"></a>영향을 받는 행 수를 결정합니다.
-응용 프로그램 업데이트, 삭제 또는 행을 삽입, 후 호출할 수 **SQLRowCount** 행의 수가 영향을 받았는지 확인 합니다. **SQLRowCount** 여부 행 된 업데이트, 삭제 또는 삽입을 실행 하 여이 값을 반환 합니다.는 **업데이트**, **삭제**, 또는 **삽입** 위치 지정된 update 또는 delete 문을 실행 하 여 또는 호출 하 여 문에서 **SQLSetPos**합니다.  
+응용 프로그램 업데이트, 삭제 또는 행을 삽입, 후 호출할 수 **SQLRowCount** 행의 수가 영향을 받았는지 확인 합니다. **SQLRowCount** 여부 행 된 업데이트, 삭제 또는 삽입을 실행 하 여이 값을 반환 합니다.는 **업데이트**, **삭제**, 또는 **삽입** 문 실행 위치를 지정 하 여 업데이트 또는 delete 문의 하거나 호출 **SQLSetPos**합니다.  
   
  SQL 문의 일괄 처리를 실행 하는 경우 일괄 처리의 모든 문에 대 한 총 개수 또는 일괄 처리의 각 문에 대 한 개별 개수 영향을 받는 행의 수 수 있습니다. 자세한 내용은 참조 [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [여러 결과](../../../odbc/reference/develop-app/multiple-results.md)합니다.  
   

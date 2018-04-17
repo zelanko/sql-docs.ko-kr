@@ -1,16 +1,16 @@
 ---
 title: sys.column_store_row_groups (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.column_store_row_groups_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea17802f24a60df24fdc4107f52a5170ca4f0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 74dad9d3d3ee2db8c53d8f95d208afb1c6628b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**row_group_id**|**int**|이 행 그룹과 연결된 행 그룹 번호입니다. 이 번호는 파티션 내에서 고유합니다.<br /><br /> -1 = 메모리 내 테이블의 꼬리.|  
 |**delta_store_hobt_id**|**bigint**|델타 저장소의 열린 행 그룹에 대 한 hobt_id 합니다.<br /><br /> 델타 저장소에 행 그룹이 없는 경우 NULL입니다.<br /><br /> 메모리 내 테이블의 마지막 부분에 대 한 NULL입니다.|  
 |**상태**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = 열기<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 삭제 표시|  
-|**state_description**|**nvarchar (60)**|행 그룹의 영구 상태 설명:<br /><br /> INVISIBLE – 델타 저장소의 데이터에서 만들어지고 있는 숨겨진 압축된 세그먼트입니다. 읽기 작업은 표시되지 않은 압축된 세그먼트가 완료될 때까지 델타 저장소를 사용합니다. 그런 다음 새 세그먼트가 표시되고 원본 델타 저장소가 제거됩니다.<br /><br /> OPEN – 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED – 값은 채워졌지만 아직 tuple mover 프로세스에 의해 압축되지 않은 행 그룹입니다.<br /><br /> COMPRESSED – 값이 채워지고 압축된 행 그룹입니다.|  
+|**state_description**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> INVISIBLE – 델타 저장소의 데이터에서 만들어지고 있는 숨겨진 압축된 세그먼트입니다. 읽기 작업은 표시되지 않은 압축된 세그먼트가 완료될 때까지 델타 저장소를 사용합니다. 그런 다음 새 세그먼트가 표시되고 원본 델타 저장소가 제거됩니다.<br /><br /> OPEN – 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED – 값은 채워졌지만 아직 tuple mover 프로세스에 의해 압축되지 않은 행 그룹입니다.<br /><br /> COMPRESSED – 값이 채워지고 압축된 행 그룹입니다.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|행 그룹에서 삭제된 것으로 표시된 총 행 수입니다. 델타 행 그룹에서는 항상 0입니다.|  
 |**size_in_bytes**|**bigint**|이 행 그룹에서 DELTA 및 COLUMNSTORE 행 그룹의 모든 데이터 크기(바이트 단위, 메타데이터 또는 공유 사전 제외)입니다.|  
@@ -84,14 +84,14 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [개체 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md)     
- [sys.column_store_dictionaries&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   

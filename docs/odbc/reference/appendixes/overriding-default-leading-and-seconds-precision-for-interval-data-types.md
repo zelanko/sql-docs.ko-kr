@@ -1,15 +1,16 @@
 ---
-title: "선행 및 초의 전체 자릿수가 Interval 데이터 형식에 대 한 재정의 | Microsoft Docs"
-ms.custom: 
+title: 선행 및 초의 전체 자릿수가 Interval 데이터 형식에 대 한 재정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], interval data types
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70ae232ed09ab7bd04a2474b5798dd4ed581df39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0336aa9334195a706ef59edd7beb1ec482a590d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>기본 선행 및 초의 전체 자릿수가 Interval 데이터 형식에 대 한 재정의
 호출 하 여는 카드가의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 된 경우 **SQLBindCol** 또는 **SQLSetDescField**의 SQL_DESC_PRECISION 필드 (간격 (초)을 포함 합니다. 전체 자릿수)는 다음과 같은 기본값으로 설정 됩니다.  

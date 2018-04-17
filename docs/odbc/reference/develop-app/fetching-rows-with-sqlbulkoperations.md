@@ -1,15 +1,16 @@
 ---
-title: "SQLBulkOperations 가진 행을 인출 | Microsoft Docs"
-ms.custom: 
+title: SQLBulkOperations 가진 행을 인출 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b3af3d83d9d0dab4735842621bbcb49fab69a4c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 764320d44ac0844b96f0c2873213909b1b1e4ddd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations 가진 행을 인출합니다.
 에를 호출 하 여 책갈피를 사용 하 여 행 집합에 데이터를 따라 다시 인출 수 수 **SQLBulkOperations 합니다.** 가져와야 하는 행 바인딩된 책갈피 열에 있는 책갈피로 식별 됩니다. 열 값이 SQL_COLUMN_IGNORE는 페치 되지 않습니다.  

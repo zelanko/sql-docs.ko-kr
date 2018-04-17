@@ -1,40 +1,41 @@
 ---
-title: "데이터 원본 사양 하위 키 | Microsoft Docs"
-ms.custom: 
+title: 데이터 원본 사양 하위 키 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f3080d85b2c01491d94ecb75b956d6c67bc061b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-specification-subkeys"></a>데이터 원본에 대 한 사양 하위 키
 ODBC 데이터 소스 하위 키에 나열 된 각 데이터 원본 자체의 하위 키를 있습니다. 이 하위 키에 ODBC 데이터 원본 하위 키 아래에서 해당 값과 동일한 이름이 있습니다. 이 하위 키 아래 값 드라이버 DLL을 나열 해야 하 고 데이터 원본에 대 한 설명을 나열할 수 있습니다. 드라이버에서 변환기를 지 원하는 경우 기본 변환기, DLL, 기본 변환 및 기본 변환 옵션의 이름 값에 나열할 수 있습니다. 값은 데이터 원본에 연결 하는 드라이버에 필요한 기타 정보를 나열할 수 있습니다. 예를 들어, 드라이버는 서버 이름, 데이터베이스 이름 또는 스키마 이름이 필요할 수 있습니다.  
   
  다음 표에 표시 된은 값의 형식입니다. 드라이버 값만이 필요 합니다.  
   
-|속성|데이터 형식|data|  
+|이름|데이터 형식|Data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*설명*|  
+|Description|REG_SZ|*description*|  
 |드라이버|REG_SZ|*드라이버 DLL 경로*|  
 |TranslationDLL|REG_SZ|*변환기 DLL 경로*|  
 |TranslationName|REG_SZ|*변환기 이름*|  

@@ -1,16 +1,16 @@
 ---
 title: sp_addarticle (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-caps.latest.revision: 
+caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db34c4936cb02aaf65bd1c8117f54ad3b769f158
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bc5ed5d56541436e80eeafdccb1b1cdfe3ec6c9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ sp_addarticle [ @publication = ] 'publication'
  *이 매개 변수는 Oracle 게시자에 대해서는 지원 되지 않습니다.*  
   
  [  **@destination_table =** ] **'***destination_table***'**  
- 와 다른 경우 대상 (구독) 테이블의 이름인 *source_table*또는 저장된 프로시저입니다. *destination_table* 은 **sysname**, null 기본값, 즉 *source_table* equals *destination_table**합니다.*  
+ 와 다른 경우 대상 (구독) 테이블의 이름인 *source_table*또는 저장된 프로시저입니다. *destination_table* 은 **sysname**, null 기본값, 즉 *source_table* equals *destination_table * *입니다.*  
   
  [  **@vertical_partition =** ] **'***vertical_partition***'**  
  테이블 아티클에 열 필터링을 사용하거나 사용하지 않도록 합니다. *vertical_partition* 은 **nchar(5)**, 기본값은 FALSE입니다.  
@@ -98,10 +98,10 @@ sp_addarticle [ @publication = ] 'publication'
   
  **true** 모든 열을 제외한 선언 된 기본 키 열, 기본값은 없고 null 허용 열 및 고유 키 열을 지웁니다. 사용 하 여 열을 추가할 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)합니다.  
   
- [  **@type =** ] **'***형식***'**  
+ [ **@type =** ] **'***type***'**  
  아티클의 유형입니다. *형식* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**집계 스키마 전용**|스키마가 있는 집계 함수 전용입니다.|  
 |**func 스키마 전용**|스키마가 있는 함수 전용입니다.|  
@@ -128,10 +128,10 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@ins_cmd =** ] **'***ins_cmd***'**  
  이 아티클에 대한 삽입을 복제할 때 사용하는 복제 명령 유형입니다. *ins_cmd* 은 **nvarchar (255)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**NONE**|아무 동작도 수행되지 않습니다.|  
-|**CALL sp_MSins_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSins_*테이블** * 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `CALL sp_MSins_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 구독자 업데이트에 대 한 지원 되지 않습니다.|  
+|**CALL sp_MSins_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSins_ * 테이블*** 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `CALL sp_MSins_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 구독자 업데이트에 대 한 지원 되지 않습니다.|  
 |**SQL** 또는 NULL|INSERT 문을 복제합니다. INSERT 문에는 아티클에 게시된 모든 열에 대한 값이 제공됩니다. 삽입에서 다음 명령이 복제됩니다.<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
@@ -139,10 +139,10 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@del_cmd =**] **'***del_cmd***'**  
  이 아티클에 대한 삭제를 복제할 때 사용하는 복제 명령 유형입니다. *del_cmd* 은 **nvarchar (255)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**NONE**|아무 동작도 수행되지 않습니다.|  
-|**CALLsp_MSdel_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSdel_*테이블** * 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `CALL sp_MSdel_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 구독자 업데이트에 대 한 지원 되지 않습니다.|  
+|**CALLsp_MSdel_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSdel_ * 테이블*** 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `CALL sp_MSdel_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 구독자 업데이트에 대 한 지원 되지 않습니다.|  
 |**XCALL sp_MSdel_**<br /> ***table***<br /><br /> -또는-<br /><br /> **XCALL custom_stored_procedure_name**|XCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**SQL** 또는 NULL|DELETE 문을 복제합니다. DELETE 문에는 모든 기본 키 열 값이 제공됩니다. 삭제에서 다음 명령이 복제됩니다.<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
@@ -151,12 +151,12 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@upd_cmd =**] **'***upd_cmd***'**  
  이 아티클에 대한 업데이트를 복제할 때 사용하는 복제 명령 유형입니다. *upd_cmd* 은 **nvarchar (255)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**NONE**|아무 동작도 수행되지 않습니다.|  
 |**Sp_MSupd_ 호출**<br /> ***table***<br /><br /> -또는-<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면.|  
-|**MCALL sp_MSupd_**<br /> ***table***<br /><br /> -또는-<br /><br /> **MCALL custom_stored_procedure_name**|MCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSupd_*테이블** * 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `MCALL sp_MSupd_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
-|**SCALL sp_MSupd_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **SCALL custom_stored_procedure_name**|SCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSupd_*테이블** * 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `SCALL sp_MSupd_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
+|**MCALL sp_MSupd_**<br /> ***table***<br /><br /> -또는-<br /><br /> **MCALL custom_stored_procedure_name**|MCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSupd_ * 테이블*** 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `MCALL sp_MSupd_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
+|**SCALL sp_MSupd_**<br /> ***테이블*** (기본값)<br /><br /> -또는-<br /><br /> **SCALL custom_stored_procedure_name**|SCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. **sp_MSupd_ * 테이블*** 대신 대상 테이블의 이름을 포함 된 *_table* 부분입니다. 때 *destination_owner* 지정 앞 대상 테이블 이름에 추가 됩니다. 예를 들어는 **ProductCategory** 테이블 소유한는 **프로덕션** 구독자에서 스키마에는 매개 변수를 지정할 `SCALL sp_MSupd_ProductionProductCategory`합니다. 피어 투 피어 복제 토폴로지에서 아티클에 대 한 *_table* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**XCALL sp_MSupd_**<br /> ***table***<br /><br /> -또는-<br /><br /> **XCALL custom_stored_procedure_name**|XCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 사용 하 여 *schema_option* 아티클의 각 구독자의 대상 데이터베이스에서 지정한 저장된 프로시저를 만들거나, 저장된 프로시저의 자동으로 만들도록 지정 하려면. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**SQL** 또는 NULL|UPDATE 문을 복제합니다. UPDATE 문에는 모든 열 값 및 기본 키 열 값이 제공됩니다. 업데이트에서 다음 명령이 복제됩니다.<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
@@ -166,16 +166,16 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@creation_script =**] **'***creation_script***'**  
  구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다. *creation_script* 은 **nvarchar (255)**, 기본값은 NULL입니다.  
   
- [  **@description =**] **'***설명***'**  
+ [ **@description =**] **'***description***'**  
  아티클에 대한 설명 항목입니다. *설명* 은 **nvarchar (255)**, 기본값은 NULL입니다.  
   
  [  **@pre_creation_cmd =**] **'***pre_creation_cmd***'**  
  해당 아티클에 대한 스냅숏을 적용할 때 구독자에서 같은 이름의 기존 개체가 검색될 경우 시스템이 할 일을 지정합니다. *pre_creation_cmd* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**없음**|명령을 사용하지 않습니다.|  
-|**삭제**|스냅숏을 적용하기 전에 대상 테이블에서 데이터를 삭제합니다. 아티클이 행 필터링되면 필터 절에서 지정한 열에 있는 데이터만 삭제됩니다. 행 필터를 정의하면 Oracle 게시자에 대해서는 지원되지 않습니다.|  
+|**delete**|스냅숏을 적용하기 전에 대상 테이블에서 데이터를 삭제합니다. 아티클이 행 필터링되면 필터 절에서 지정한 열에 있는 데이터만 삭제됩니다. 행 필터를 정의하면 Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**drop** (기본값)|대상 테이블을 삭제합니다.|  
 |**truncate**|대상 테이블을 자릅니다. ODBC 또는 OLE DB 구독자에는 유효하지 않습니다.|  
   
@@ -188,7 +188,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  이 값이 NULL인 경우 시스템은 다른 아티클 속성에 따라 이 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다. **기본 스키마 옵션** 테이블 설명에는 아티클 유형과 복제 유형의 조합을 기반으로 선택할 수 있는 값을 보여 줍니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0x00**|스냅숏 에이전트의 스크립팅을 사용할 수 없고 사용 *creation_script*합니다.|  
 |**0x01**|개체 만들기 스크립트(CREATE TABLE, CREATE PROCEDURE 등)를 생성합니다. 이 값은 저장 프로시저 아티클에 대한 기본값입니다.|  
@@ -228,7 +228,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 |**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 [실행 스크립트 전과 후의 스냅숏 적용](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)합니다.<br /><br /> 관련된 옵션 참조 **0x100000000**합니다.|  
 |**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 8000 바이트를 초과 하는 변환 **varbinary (max)** 형식의 열을 실행 하는 구독자에 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.|  
-|**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40; Transact SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)합니다.|  
 |**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
 |**0x8000000000**|변환 된 **geography** 및 **기 하 도형** 데이터 형식을 **varbinary (max)** 를실행하는구독자에이러한형식의열을복제할수있도록[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|형식의 열에 인덱스를 복제 **geography** 및 **geometry**합니다.|  
@@ -255,7 +255,7 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@status=**] *상태*  
  아티클이 활성 상태인지 여부와 변경 내용 전파 방법에 대한 추가 옵션을 지정합니다. *상태* 은 **tinyint**, 수 및는 [| (비트 OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음이 값 중 하나 이상의 제품입니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|아티클이 활성 상태입니다.|  
 |**8**|INSERT 문에 열 이름을 포함합니다.|  
@@ -283,7 +283,7 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@auto_identity_range =** ] **'***auto_identity_range***'**  
  게시를 생성할 때 자동 ID 범위 처리를 게시에 사용하거나 사용하지 않도록 합니다. *auto_identity_range* 은 **nvarchar (5)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|자동 ID 범위 처리를 사용합니다.|  
 |**false**|자동 ID 범위 처리를 사용하지 않습니다.|  
@@ -323,7 +323,7 @@ sp_addarticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption =** ] *identityrangemanagementoption*  
  아티클에 대해 ID 범위 관리를 처리하는 방법을 지정합니다. *identityrangemanagementoption* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**없음**|복제에서 ID 범위 관리를 명시적으로 수행하지 않습니다. 이 옵션은 이전 버전 SQL Server와의 호환성을 위해서만 사용하는 것이 좋습니다. 피어 복제에 대해서는 허용되지 않습니다.|  
 |**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
@@ -436,11 +436,11 @@ sp_addarticle [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
- [sp_articleview &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

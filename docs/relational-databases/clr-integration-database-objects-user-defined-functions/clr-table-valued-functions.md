@@ -1,15 +1,15 @@
 ---
-title: "CLR 테이블 반환 함수 | Microsoft Docs"
-ms.custom: 
+title: CLR 테이블 반환 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 
+caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b190703907114b477fd244fb1c019c185854a592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-테이블 반환 함수는 테이블을 반환하는 사용자 정의 함수입니다.  
+  테이블 반환 함수는 테이블을 반환하는 사용자 정의 함수입니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 관리 언어에서 테이블 반환 함수를 정의할 수 있도록 하여 테이블 반환 함수의 기능을 확장하고 있습니다. 데이터를 통해 테이블 반환 함수에서 반환 되는 **IEnumerable** 또는 **IEnumerator** 개체입니다.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
  CLR 테이블 반환 함수에 대 한 자세한 내용은 체크 아웃 MSSQLTips' [소개 SQL Server CLR 테이블 반환된 함수!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL과 CLR 테이블 반환 함수의 차이  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 중간 테이블로 함수 호출의 결과 구체화 합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수는 함수 호출의 결과를 중간 테이블로 구체화합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
   
  반면 CLR 테이블 반환 함수는 스트리밍 방식을 사용합니다. 전체 결과 집합을 단일 테이블로 구체화할 필요가 없습니다. **IEnumerable** 는 결과 사용 하 여 증분 방식에서 및 관리 되는 함수에서 반환 된 개체를 직접 테이블 반환 함수를 호출 하는 쿼리의 실행 계획에서 호출 됩니다. 이 스트리밍 모델은 전체 테이블이 채워질 때까지 기다리지 않고 첫 번째 행을 사용할 수 있게 된 직후부터 결과를 사용할 수 있도록 합니다. 반환되는 행의 수가 매우 많은 경우에도 이러한 행을 메모리에서 전체적으로 구체화할 필요가 없는 이 방법이 더 효율적입니다. 예를 들어 관리 테이블 반환 함수는 텍스트 파일을 구문 분석하고 각 줄을 하나의 행으로 반환하는 데 사용할 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
  테이블 반환 함수를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리 클래스의 메서드로 구현합니다. 테이블 반환 함수 코드를 구현 해야 합니다는 **IEnumerable** 인터페이스입니다. **IEnumerable** 인터페이스는.NET Framework에서 정의 됩니다. 나타내는 형식의 배열 및.NET Framework에서에서 컬렉션에 이미 구현 된 **IEnumerable** 인터페이스입니다. 따라서 컬렉션 또는 배열을 결과 집합으로 변환하는 테이블 반환 함수를 손쉽게 작성할 수 있습니다.  
   
 ## <a name="table-valued-parameters"></a>테이블 반환 매개 변수  
- 테이블 반환 매개 변수는 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식이며 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. 테이블 반환 매개 변수는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. 또한 테이블 반환 매개 변수는 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 테이블 반환 매개 변수로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)합니다.  
+ 테이블 반환 매개 변수는 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식이며 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. 테이블 반환 매개 변수는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. 또한 테이블 반환 매개 변수는 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 테이블 반환 매개 변수로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)합니다.  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>출력 매개 변수와 테이블 반환 함수  
  테이블 반환 함수에서 출력 매개 변수를 사용하여 정보를 반환할 수 있습니다. 구현 코드의 테이블 반환 함수에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic은 Visual C#과 같은 방식으로 출력 매개 변수를 지원하지 않습니다. 적용 하 고 참조로 매개 변수를 지정 해야는 \<out () > 특성을 다음과 같이 출력 매개 변수를 나타냅니다.  
@@ -63,7 +63,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어  
+ CLR 테이블 반환 함수를 정의 하기 위한 구문은 유사 하지만 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 추가 하 여 테이블 반환 함수는 **외부 이름** 절. 예를 들어:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -184,7 +184,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>예제: SQL Server 쿼리 결과 반환  
- 다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 쿼리하는 테이블 반환 함수를 보여줍니다. 이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 AdventureWorks Light 데이터베이스를 사용합니다. 참조 [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks 다운로드에 대 한 자세한 내용은 합니다.  
+ 다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 쿼리하는 테이블 반환 함수를 보여줍니다. 이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 AdventureWorks Light 데이터베이스를 사용합니다. 참조 [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks 다운로드에 대 한 자세한 내용은 합니다.  
   
  원본 코드 파일 FindInvalidEmails.cs 또는 FindInvalidEmails.vb를 지정하십시오.  
   

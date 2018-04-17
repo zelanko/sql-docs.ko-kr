@@ -1,16 +1,16 @@
 ---
 title: sys.triggers (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - triggers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.triggers catalog view
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab5788614af71fe9fa4cab1a4f22e81d5a19a6d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9649e579c74ee745b7649e7a812c39a6ce8557f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 11/21/2017
 |**name**|**sysname**|트리거 이름입니다. DML 트리거 이름은 스키마 범위입니다. DDL 트리거 이름은 부모 엔터티에 따라 범위가 결정됩니다.|  
 |**object_id**|**int**|개체 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**parent_class**|**tinyint**|트리거 부모의 클래스입니다.<br /><br /> 0 = DDL 트리거의 데이터베이스<br /><br /> 1 = DML 트리거의 개체 또는 열|  
-|**parent_class_desc**|**nvarchar (60)**|트리거 부모 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_class_desc**|**nvarchar(60)**|트리거 부모 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|트리거 부모의 ID로 다음과 같습니다.<br /><br /> 0 = 데이터베이스가 부모인 트리거<br /><br /> 이것이 DML 트리거는 **object_id** 된 테이블의 DML 트리거가 정의 된 보기입니다.|  
-|**유형**|**char(2)**|개체 유형:<br /><br /> TA = 어셈블리(CLR) 트리거<br /><br /> TR = SQL 트리거|  
-|**type_desc**|**nvarchar (60)**|개체 유형에 대한 설명입니다.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|개체 유형:<br /><br /> TA = 어셈블리(CLR) 트리거<br /><br /> TR = SQL 트리거|  
+|**type_desc**|**nvarchar(60)**|개체 유형에 대한 설명입니다.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|트리거를 만든 날짜입니다.|  
 |**modify_date**|**datetime**|ALTER 문을 사용하여 개체를 마지막으로 수정한 날짜입니다.|  
 |**is_ms_shipped**|**bit**|내부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용자 대신 만든 트리거입니다.|  

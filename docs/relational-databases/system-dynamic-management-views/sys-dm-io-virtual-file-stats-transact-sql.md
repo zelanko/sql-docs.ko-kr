@@ -1,16 +1,16 @@
 ---
 title: sys.dm_io_virtual_file_stats (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_io_virtual_file_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6b704b626969110929436663fc5b8aadc0932e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -63,7 +64,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **적용 대상:** (2008부터 시작) 하는 SQL Server, Azure SQL 데이터베이스
+ **적용 대상:** SQL Server(2008부터), Azure SQL Database
 
  데이터베이스의 ID입니다. *database_id* 은 int 이며 기본값은 없습니다. 올바른 입력은 데이터베이스의 ID 번호 또는 NULL입니다. NULL을 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스가 반환됩니다.  
   
@@ -71,7 +72,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**적용 대상:** (2008부터 시작) 하는 SQL Server, Azure SQL 데이터베이스
+**적용 대상:** SQL Server(2008부터), Azure SQL Database
  
 파일의 ID입니다. *file_id* 은 int 이며 기본값은 없습니다. 올바른 입력은 파일의 ID 번호 또는 NULL입니다. NULL을 지정하면 데이터베이스의 모든 파일이 반환됩니다.  
   
@@ -94,13 +95,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|사용자가 파일에 대한 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**size_on_disk_bytes**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅숏에 사용된 디스크의 실제 바이트 수입니다.|  
 |**file_handle**|**varbinary**|이 파일에 대한 Windows 파일 핸들입니다.|  
-|**io_stall_queued_read_ms**|**bigint**|**에 적용 되지 않습니다:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**에 적용 되지 않습니다:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 참조 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)합니다.|  
 |**io_stall_queued_write_ms**|**bigint**|**에 적용 되지 않습니다:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br />  쓰기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다.|
 |**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>분포에 대 한 노드의 식별자입니다.
  
   
 ## <a name="permissions"></a>Permissions  
- VIEW SERVER STATE 권한이 필요합니다. 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40; Transact SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ VIEW SERVER STATE 권한이 필요합니다. 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.  
   
 ## <a name="examples"></a>예  
 
@@ -127,7 +128,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [동적 관리 뷰 및 함수 &#40; 관련 O I Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [O I 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

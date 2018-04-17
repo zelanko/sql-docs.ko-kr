@@ -1,16 +1,16 @@
 ---
 title: sp_changemergepublication (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f1798cd29ac1ee4afc0d7323866e37711291851
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@property=**] **'***속성***'**  
@@ -61,7 +61,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|익명 구독을 허용합니다.|  
 ||**false**|익명 구독을 허용하지 않습니다.|  
@@ -113,11 +113,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Active Directory에서 게시 정보를 제거합니다.|  
 |**replicate_ddl**|**1**|게시자에서 실행되는 DDL(데이터 정의 언어) 문이 복제됩니다.|  
 ||**0**|DDL 문은 복제되지 않습니다.|  
-|**보존**||이 한 **int** 의 수를 나타내는 *retention_period_unit* 지정된 된 게시에 대 한 변경 내용을 저장 하는 단위입니다. 보존 기간 내에 구독이 동기화되지 않고 구독이 받은 보류 중인 변경 내용이 배포자에서 정리 작업에 의해 제거되었으면 구독은 만료되며 다시 초기화해야 합니다. 허용되는 최대 보존 기간은 현재 날짜부터 9999년 12월 31일까지의 일 수입니다.<br /><br /> 참고: 병합 게시에 대 한 보존 기간에 서로 다른 시간대에 구독자를 수용 하기 위해 24 시간의 유예 기간에 있습니다.|  
-|**retention_period_unit**|**일**|보존 기간(일)을 지정합니다.|  
-||**주**|보존 기간(주)을 지정합니다.|  
-||**월**|보존 기간(월)을 지정합니다.|  
-||**연도**|보존 기간(년)을 지정합니다.|  
+|**retention**||이 한 **int** 의 수를 나타내는 *retention_period_unit* 지정된 된 게시에 대 한 변경 내용을 저장 하는 단위입니다. 보존 기간 내에 구독이 동기화되지 않고 구독이 받은 보류 중인 변경 내용이 배포자에서 정리 작업에 의해 제거되었으면 구독은 만료되며 다시 초기화해야 합니다. 허용되는 최대 보존 기간은 현재 날짜부터 9999년 12월 31일까지의 일 수입니다.<br /><br /> 참고: 병합 게시에 대 한 보존 기간에 서로 다른 시간대에 구독자를 수용 하기 위해 24 시간의 유예 기간에 있습니다.|  
+|**retention_period_unit**|**day**|보존 기간(일)을 지정합니다.|  
+||**week**|보존 기간(주)을 지정합니다.|  
+||**month**|보존 기간(월)을 지정합니다.|  
+||**year**|보존 기간(년)을 지정합니다.|  
 |**snapshot_in_defaultfolder**|**true**|스냅숏 파일이 기본 스냅숏 폴더에 저장됩니다.|  
 ||**false**|스냅숏 파일에 지정 된 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정할 수 있습니다.|  
 |**snapshot_ready**|**true**|게시에 대한 스냅숏을 사용할 수 있습니다.|  
@@ -125,7 +125,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**상태**|**활성**|게시가 활성 상태입니다.|  
 ||**비활성**|게시가 비활성 상태입니다.|  
 |**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
-||**문자**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
+||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
 |**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후 사용 하 여 되돌릴 **setupbelongs**, 설정 및 **use_partition_groups = false** 에 **changemergearticle**, 사용 하지 않을 스냅숏을 생성 한 후에 제대로 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 상태를 비활성으로 설정, 수정 하는 **use_partition_groups**, 상태를 활성으로 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
 |**validate_subscriber_info**||구독자 정보를 검색하는 데 사용할 함수를 나열하고 구독자가 정보가 일관성 있게 분할되는지 확인하기 위해 사용하는 동적 필터링 조건의 유효성을 검사합니다.|  
@@ -203,8 +203,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

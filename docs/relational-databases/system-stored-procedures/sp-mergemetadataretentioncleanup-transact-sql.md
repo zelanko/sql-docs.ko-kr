@@ -1,16 +1,16 @@
 ---
 title: sp_mergemetadataretentioncleanup (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5ddc3ccb31599685dc9b41e383f29422b8b74e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 32a8e2654428569f189efd111839fbde7c6258f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>주의  
   
 > [!IMPORTANT]  
->  데이터베이스에 게시가 여러 개 있고 이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하 여, 실행 **sp_mergemetadataretentioncleanup** 병합 복제 변경 내용 추적 정리 하지 않습니다 데이터베이스에 대 한 메타 데이터입니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지를 확인 하려면 실행 [sp_helpmergepublication &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 게시자에서 결과의 모든 게시의 값을 사용 하 여 설정 **0** 에 대 한 **보존**합니다.  
+>  데이터베이스에 게시가 여러 개 있고 이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하 여, 실행 **sp_mergemetadataretentioncleanup** 병합 복제 변경 내용 추적 정리 하지 않습니다 데이터베이스에 대 한 메타 데이터입니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지를 확인 하려면 실행 [sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 게시자에서 결과의 모든 게시의 값을 사용 하 여 설정 **0** 에 대 한 **보존**합니다.  
   
 ## <a name="permissions"></a>Permissions  
  구성원만는 **db_owner** 고정 데이터베이스 역할 또는 게시 액세스 목록에 사용자가 실행할 수 있는 게시 된 데이터베이스에 대 한 **sp_mergemetadataretentioncleanup**합니다.  

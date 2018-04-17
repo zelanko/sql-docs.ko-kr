@@ -1,16 +1,16 @@
 ---
 title: sys.dm_xtp_gc_stats (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2440605950721a0b3a0555bebd250344b19d2cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 가비지 수집 프로세스의 현재 동작에 대한 정보(전체 통계)를 제공합니다.  
   
- 행은 정기적인 트랜잭션 처리의 일부로 또는 유휴 작업자라고 하는 기본 가비지 수집 스레드에서 수집되는 가비지입니다. 가비지 수집 큐에서 작업 항목 큐에서 사용자 트랜잭션이 커밋될 때 ([sys.dm_xtp_gc_queue_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 가비지 수집될 수 있지만 기본 사용자 트랜잭션에 의해 액세스되지 않는 모든 행은 불량 영역 검색(더 적게 액세스되는 인덱스 영역 검색)의 일부로 유휴 작업자에 의해 가비지 수집됩니다.  
+ 행은 정기적인 트랜잭션 처리의 일부로 또는 유휴 작업자라고 하는 기본 가비지 수집 스레드에서 수집되는 가비지입니다. 가비지 수집 큐에서 작업 항목 큐에서 사용자 트랜잭션이 커밋될 때 ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). 가비지 수집될 수 있지만 기본 사용자 트랜잭션에 의해 액세스되지 않는 모든 행은 불량 영역 검색(더 적게 액세스되는 인덱스 영역 검색)의 일부로 유휴 작업자에 의해 가비지 수집됩니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
@@ -78,6 +78,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

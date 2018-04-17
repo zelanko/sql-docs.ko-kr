@@ -1,16 +1,16 @@
 ---
 title: sys.sql_expression_dependencies (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에 코드 및 기타 고유 하 게 컴파일된 스칼라 사용자 정의 함수 간 종속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모듈입니다. 한 엔터티의 호출 될 때 두 엔터티 간의 종속성 만들어집니다는 *엔터티를 참조*, 라는 다른 엔터티의 영구 SQL 식에 이름별으로 나타나는 *참조 엔터티*합니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
   
- 자세한 내용은 참조 [메모리 내 OLTP에 대 한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)합니다.  
+ 자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
  이 카탈로그 뷰를 사용하여 다음 엔터티에 대한 종속성 정보를 보고할 수 있습니다.  
   
@@ -57,11 +58,11 @@ ms.lasthandoff: 11/21/2017
 |referencing_id|**int**|참조 엔터티의 ID입니다. Null을 허용하지 않습니다.|  
 |referencing_minor_id|**int**|참조 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.|  
 |referencing_class|**tinyint**|참조 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 12 = 데이터베이스 DDL 트리거<br /><br /> 13 = 서버 DDL 트리거<br /><br /> Null을 허용하지 않습니다.|  
-|referencing_class_desc|**nvarchar (60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Null을 허용하지 않습니다.|  
+|referencing_class_desc|**nvarchar(60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Null을 허용하지 않습니다.|  
 |is_schema_bound_reference|**bit**|1 = 참조된 엔터티가 스키마 바운드입니다.<br /><br /> 0 = 참조된 엔터티가 비스키마 바운드입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수<br /><br /> Null을 허용하지 않습니다.|  
-|referenced_class_desc|**nvarchar (60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Null을 허용하지 않습니다.|  
-|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하십시오. [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 네 부분 이름을 지정하지 않고 엔터티가 참조되는 비스키마 바운드 엔터티의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
+|referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Null을 허용하지 않습니다.|  
+|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하십시오. [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분 이름을 지정하지 않고 엔터티가 참조되는 비스키마 바운드 엔터티의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
 |referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분을 사용 하 여 있기 때문에 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
 |referenced_schema_name|**sysname**|참조된 엔터티가 속한 스키마입니다.<br /><br /> 스키마 이름 지정 없이 엔터티가 참조되는 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 엔터티는 두 부분 이름을 사용하여 정의 및 참조되어야 하므로 스키마 바운드 참조의 경우 NULL이 될 수 없습니다.|  
 |referenced_entity_name|**sysname**|참조된 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
 |XML 스키마 컬렉션|아니요|예|  
 |파티션 함수|아니요|예|  
   
- \*한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \* 한 테이블에서 참조 하는 경우에 참조 엔터티로 추적 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
  ** 필터 조건자에 사용된 각 열은 참조 엔터티로 추적됩니다.  
   

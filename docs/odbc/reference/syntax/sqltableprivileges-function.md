@@ -2,7 +2,7 @@
 title: SQLTablePrivileges 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 함수
 **규칙**  
@@ -66,7 +66,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [입력] 문자 길이 **CatalogName*합니다.  
   
- *SchemaName*  
+ *schemaName*  
  [입력] 스키마 이름에 대 한 문자열 검색 패턴입니다. 드라이버 일부 테이블에 대 한 있지만 대 한 드라이버 다른 Dbms, 빈 문자열에서에서 데이터를 검색 하는 경우 등의 다른 스키마를 지 원하는 경우 ("") 스키마가 없는 테이블을 나타냅니다.  
   
  SQL_ATTR_METADATA_ID 문 특성, SQL_TRUE로 설정 되어 있으면 *SchemaName* 식별자로 처리 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 이면 *SchemaName* 패턴 값 인수; 리터럴로 취급 됩니다이 고 해당 대/소문자는 중요 합니다.  
@@ -74,7 +74,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength2*  
  [입력] 문자 길이 **SchemaName*합니다.  
   
- *테이블 이름*  
+ *TableName*  
  [입력] 테이블 이름에 대 한 문자열 검색 패턴입니다.  
   
  SQL_ATTR_METADATA_ID 문 특성, SQL_TRUE로 설정 되어 있으면 *TableName* 식별자로 처리 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 이면 *TableName* 패턴 값 인수; 리터럴로 취급 됩니다이 고 해당 대/소문자는 중요 합니다.  
@@ -88,7 +88,7 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="diagnostics"></a>진단  
  때 **SQLTablePrivileges** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLTablePrivileges** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞 드라이버 관리자에서 반환 된 Sqlstate의 설명 . 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -110,7 +110,7 @@ SQLRETURN SQLTablePrivileges(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  *SchemaName* 및 *TableName* 인수 검색 패턴에 동의 합니다. 올바른 검색 패턴에 대 한 자세한 내용은 참조 [패턴 값 인수](../../../odbc/reference/develop-app/pattern-value-arguments.md)합니다.  
   
  **SQLTablePrivileges** TABLE_CAT, table_schem 순으로 정렬, TABLE_NAME, 권한 및 피부 여자에 게 순으로 정렬 하 여 표준 결과 집합으로 결과 반환 합니다.  
@@ -129,9 +129,9 @@ SQLRETURN SQLTablePrivileges(
   
  다음 표에서 결과 집합의 열을 나열합니다. 드라이버에 의해 열 (IS_GRANTABLE) 7 이후의 추가 열을 정의할 수 있습니다. 응용 프로그램 명시적는 서 수 위치를 지정 하지 않고 결과 집합의 끝부터 계산 하 여 드라이버 관련 열에 액세스 해야 합니다. 자세한 내용은 참조 [카탈로그 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)합니다.  
   
-|열 이름|열 번호|데이터 형식|주석|  
+|열 이름|열 번호|데이터 형식|설명|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
+|TABLE_CAT (ODBC 1.0)|1.|Varchar|카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
 |TABLE_SCHEM 순으로 정렬 (ODBC 1.0)|2|Varchar|스키마 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 지 원하는 스키마만, 하지만 일부 테이블에 대 한 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 스키마가 없는 해당 테이블에 대 한 합니다.|  
 |TABLE_NAME (ODBC 1.0)|3|NULL이 아닌 Varchar|테이블 이름입니다.|  
 |GRANTOR (ODBC 1.0)|4|Varchar|권한 부여는 사용자의 이름 데이터 원본에 적용할 수 없는 경우 NULL입니다.<br /><br /> 피부 여자에 게 열에 있는 값의 개체의 소유자는 모든 행에 대해 GRANTOR 열은 "(_s)"를 됩니다.|  

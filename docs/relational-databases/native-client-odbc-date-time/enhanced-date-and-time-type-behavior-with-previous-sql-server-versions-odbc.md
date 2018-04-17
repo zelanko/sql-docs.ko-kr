@@ -1,29 +1,30 @@
 ---
-title: "향상 된 날짜 및 시간 형식을 이전 버전 SQL Server (ODBC)에 대 한 동작 | Microsoft Docs"
-ms.custom: 
+title: 향상 된 날짜 및 시간 형식을 이전 버전 SQL Server (ODBC)에 대 한 동작 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2acc8c52d6e16cf17c05cc421faf5ea52b20e71
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ca69cfb2db83f221e4071b8ba9a3e8b0ff40af89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
  하위 수준 클라이언트 응용 프로그램에 대해 실행 되는 경우는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (또는 이상) 날짜/시간에는 스키마 변경 내용에 형식을 적용 된 서버에 예상 되는 동작은 다음과 같습니다.  
   
-|SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](이상) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
+|SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (이상) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
 |날짜/시간|날짜|SQL_C_TYPE_DATE|확인|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
@@ -118,6 +119,6 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 서버 인스턴스에 연결되어 있는 경우 새로운 서버 형식 또는 관련된 메타데이터 코드 및 설명자 필드를 사용하려고 하면 SQL_ERROR가 반환됩니다. SQLSTATE HY004 및 "연결에서 서버 버전의 SQL 데이터 형식이 잘못되었습니다."라는 메시지가 포함된 진단 레코드 또는 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

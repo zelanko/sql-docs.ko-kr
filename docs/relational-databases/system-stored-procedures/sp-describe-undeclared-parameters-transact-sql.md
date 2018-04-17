@@ -1,16 +1,16 @@
 ---
 title: sp_describe_undeclared_parameters (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  선언 되지 않은 매개 변수에 대 한 메타 데이터가 포함 된 결과 집합 반환을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 사용 되는 각 매개 변수에 고려는  **@tsql**  일괄 처리에서 선언 되지 않은 하지만  **@params** 합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. 경우 빈 결과 집합을 반환 하는 프로시저는  **@tsql**  입력된 일괄 처리에서 선언 된 매개 변수만  **@params** 합니다.  
+  선언 되지 않은 매개 변수에 대 한 메타 데이터가 포함 된 결과 집합 반환을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 사용 되는 각 매개 변수에 고려는 **@tsql** 일괄 처리에서 선언 되지 않은 하지만 **@params**합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. 경우 빈 결과 집합을 반환 하는 프로시저는 **@tsql** 입력된 일괄 처리에서 선언 된 매개 변수만 **@params**합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ sp_describe_undeclared_parameters
  하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
   
  [  **@params =** ] **N'***매개 변수***'**  
- @params에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql 유사 하 게 작동 합니다. *매개 변수* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
+ @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql 유사 하 게 작동 합니다. *매개 변수* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
   
  정의에 포함 된 모든 매개 변수를 포함 하는 하나의 문자열 *Transact SQL_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Transact SQL 문 또는 문의 일괄 처리에 매개 변수가 없는 경우 @params 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
@@ -71,7 +72,7 @@ sp_describe_undeclared_parameters
 |**name**|**sysname NOT NULL**|매개 변수의 이름을 포함합니다.|  
 |**suggested_system_type_id**|**int NOT NULL**|포함 된 **system_type_id** 데이터 형식의 경우 sys.types에 지정 된 대로 매개 변수입니다.<br /><br /> CLR 형식에 대 한도 **system_type_name** 열 NULL을 반환 하므로,이 열은 값 240을 반환 합니다.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|데이터 형식 이름을 포함합니다. 매개 변수의 데이터 형식에 지정된 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 데이터 형식인 경우 이 열에 NULL이 반환됩니다. 매개 변수의 형식을 추론할 수 없는 경우 NULL이 반환됩니다.|  
-|**suggested_max_length**|**smallint NOT NULL**|Sys.columns를 참조 하십시오. 에 대 한 **max_length** 열 설명 합니다.|  
+|**suggested_max_length**|**NULL이 아닌 Smallint**|Sys.columns를 참조 하십시오. 에 대 한 **max_length** 열 설명 합니다.|  
 |**suggested_precision**|**tinyint NOT NULL**|Sys.columns를 참조 하십시오. 참조하세요.|  
 |**suggested_scale**|**tinyint NOT NULL**|Sys.columns를 참조 하십시오. 참조하세요.|  
 |**suggested_user_type_id**|**int NULL**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -172,7 +173,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   단순 추론  
   
-     경우 E (@p) = @p 및 TT (@p) 경우 즉, 있는 @p 인수 2 단계의 형식 추론 알고리즘의 시작 부분에 나열 된 식 중 하나를 추론의 데이터 형식을 직접은 @p TT (되도록@p). 예를 들어  
+     경우 E (@p) = @p 및 TT (@p) 경우 즉, 있는 @p 인수 2 단계의 형식 추론 알고리즘의 시작 부분에 나열 된 식 중 하나를 추론의 데이터 형식을 직접은 @p TT (되도록@p). 예를 들어:  
   
     ```  
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -203,7 +204,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, 및 **nvarchar (max)** -다른 문자열 데이터 형식 (예: **텍스트**, **char (8000)**, **nvarchar (30)**등)는 고려 되지 않습니다.  
   
-    -   **varbinary (8000)** 및 **varbinary (max)** -다른 이진 데이터 형식 고려 되지 않습니다 (예: **이미지**, **binary(8000)**,  **varbinary(30)**등.).  
+    -   **varbinary (8000)** 및 **varbinary (max)** -다른 이진 데이터 형식 고려 되지 않습니다 (예: **이미지**, **binary(8000)**, **varbinary (30)** 등.).  
   
     -   **날짜**, **time (7)**, **smalldatetime**, **datetime**, **datetime2 (7)**, **(7)**  -다른 날짜 및 시간 형식, 같은 **time(4)**, 간주 되지 않습니다.  
   
@@ -220,7 +221,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  가장 작은 E에 암시적으로 변환할 수에서 생성 하는 데이터 형식 (@p)을 선택 합니다. 특정 데이터 형식이 E에 대 한 데이터 형식을 생성 하는 경우 (@p)와 TT 다른 (@p), 형식 추론 알고리즘 E ()의 데이터 형식에서의 추가 암시적 변환으로 간주 (@p) TT를 (@p).  
   
-     예를 들어  
+     예를 들어:  
   
     ```  
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     이 경우 **int** 및 **smallint** 하나의 변환을 생성 합니다. 다른 모든 데이터 형식은 두 번 이상 변환을 생성합니다. 때문에 **int** 우선 **smallint**, **int** 에 사용 되 @p합니다. 데이터 형식 우선 순위에 대 한 자세한 내용은 참조 하십시오. [데이터 형식 우선 순위 &#40; Transact SQL &#41; ](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     이 경우 **int** 및 **smallint** 하나의 변환을 생성 합니다. 다른 모든 데이터 형식은 두 번 이상 변환을 생성합니다. 때문에 **int** 우선 **smallint**, **int** 에 사용 되 @p합니다. 데이터 형식 우선 순위에 대 한 자세한 내용은 참조 [데이터 형식 우선 순위 &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)합니다.  
   
      이 규칙은 규칙 1에 따라 연결된 모든 데이터 형식과 우선 순위가 가장 높은 데이터 형식 간에 암시적 변환이 있는 경우에만 적용됩니다. 암시적 변환이 없으면 데이터 형식 추론이 오류와 함께 실패합니다. 예를 들어 쿼리에서 `SELECT @p FROM t`, 데이터 형식에 대 한 모든 데이터 형식 추론이 실패 @p 동일 합니다. 예를 들어는에서 암시적 변환이 **int** 를 **xml**합니다.  
   
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_describe_first_result_set &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: sp_configure (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: ''
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
-ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81e174922753ed4a40111caba8aa34efd359e866
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -173,7 +174,7 @@ EXEC sp_configure @configname='hadoop connectivity';
  Hadoop 연결 설정 하려면 sp_configure를 실행 하는 것 외에도 몇 가지 추가 단계가 필요 합니다. 전체 프로시저에 대 한 참조 [외부 데이터 원본 만들기 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reconfigure&#40; Transact SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [Reconfigure& #40; Transact SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

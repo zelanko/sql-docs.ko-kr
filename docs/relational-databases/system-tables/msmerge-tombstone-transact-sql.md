@@ -1,16 +1,16 @@
 ---
 title: MSmerge_tombstone (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55644aa0543de70ca4ec11ee65a446d073ce3556
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 24aed42066963852fe7850caaebd54328d53f407
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|행 식별자입니다.|  
 |**tablenick**|**int**|테이블의 애칭입니다.|  
-|**유형**|**tinyint**|삭제의 유형입니다.<br /><br /> 1 = 사용자 삭제입니다.<br /><br /> 5 = 행이 더 이상 필터링된 파티션에 속하지 않습니다.<br /><br /> 6 = 시스템 삭제입니다.|  
+|**type**|**tinyint**|삭제의 유형입니다.<br /><br /> 1 = 사용자 삭제입니다.<br /><br /> 5 = 행이 더 이상 필터링된 파티션에 속하지 않습니다.<br /><br /> 6 = 시스템 삭제입니다.|  
 |**계보**|**varbinary(249)**|삭제된 레코드의 버전과 삭제될 때 알려진 업데이트를 표시합니다. 한 구독자에서 행이 삭제되는 동안 다른 구독자가 해당 행을 업데이트하는 경우 충돌을 일관성 있게 해결하기 위해 필요한 규칙을 허용합니다.|  
-|**생성**|**int**|행을 삭제할 때 할당됩니다. 구독자가 generation N을 요청하는 경우 >= N인 generation의 삭제 표시만 보내집니다.|  
+|**generation**|**int**|행을 삭제할 때 할당됩니다. 구독자가 generation N을 요청하는 경우 >= N인 generation의 삭제 표시만 보내집니다.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|삭제된 행이 속한 논리적 레코드를 식별합니다.|  
-|**logical_record_lineage**|**Varbinary(501)**|이 행이 속한 논리적 레코드에 대한 삭제 기록을 유지 관리하기 위해 사용하는 구독자 애칭과 버전 번호 쌍입니다.|  
+|**logical_record_lineage**|**varbinary(501)**|이 행이 속한 논리적 레코드에 대한 삭제 기록을 유지 관리하기 위해 사용하는 구독자 애칭과 버전 번호 쌍입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

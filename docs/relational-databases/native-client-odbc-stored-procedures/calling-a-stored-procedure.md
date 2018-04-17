@@ -1,15 +1,15 @@
 ---
-title: "저장된 프로시저를 호출 | Microsoft Docs"
-ms.custom: 
+title: 저장된 프로시저를 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.lasthandoff: 01/25/2018
   
  프로시저는 0개 이상의 매개 변수를 가질 수 있고 값(구문 시작에 나오는 선택적 매개 변수 표식인 ?=로 표시됨)을 반환할 수도 있습니다. 매개 변수가 입력 또는 입/출력 매개 변수인 경우 리터럴 또는 매개 변수 표식을 사용할 수 있습니다. 매개 변수가 출력 매개 변수인 경우에는 출력을 알 수 없기 때문에 매개 변수 표식을 사용해야 합니다. 매개 변수 표식에 바인딩되어야 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 프로시저 호출 하기 전에 문이 실행 됩니다.  
   
- 입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 예를 들어  
+ 입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 예를 들어:  
   
- {**call** *procedure_name***( )**}  
+ {**호출** * procedure_name ***()**}  
   
- 프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 예를 들어  
+ 프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 예를 들어:  
   
  {**call** *procedure_name*}  
   

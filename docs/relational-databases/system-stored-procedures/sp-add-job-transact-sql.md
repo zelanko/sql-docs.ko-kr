@@ -2,7 +2,7 @@
 title: sp_add_job (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@job_name =** ] **'***job_name***'**  
  작업의 이름입니다. 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 (**%**) 문자. *job_name*은 **nvarchar (128)**, 기본값은 없습니다.  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ] *사용 하도록 설정*  
  추가된 작업의 상태를 나타냅니다. *활성화*은 **tinyint**, 기본값은 1 (사용). 그러나 경우 **0**, 실행할 수 있습니다 수동으로; 작업이 사용 되지 않으며 일정에 따라 실행 되지 않습니다.  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'***설명***'**  
  작업에 대한 설명입니다. *설명* 은 **nvarchar (512)**, 기본값은 NULL입니다. 경우 *설명* 은 생략 하면 "설명이 없습니다"가 사용 됩니다.  
   
  [ **@start_step_id =** ] *step_id*  
  작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*은 **int**, 기본값은 1입니다.  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'***범주***'**  
  작업의 범주입니다. *범주*은 **sysname**, 기본값은 NULL입니다.  
   
  [ **@category_id =** ] *category_id*  

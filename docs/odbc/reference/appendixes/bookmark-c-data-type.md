@@ -1,15 +1,16 @@
 ---
-title: "C 데이터 형식에 책갈피 | Microsoft Docs"
-ms.custom: 
+title: C 데이터 형식에 책갈피 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e1547dd65d0a604e36f4a11280cfc3d38ee88f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 43a9c02694e121eb653d70693587d5728931f747
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmark-c-data-type"></a>책갈피 C 데이터 형식
 책갈피 C 데이터 형식에는 응용을 프로그램이 책갈피를 검색할 수 있습니다. 책갈피 C 형식; 길이가 가변적 일 수 있는 책갈피 값을 검색 하는 데에 사용 됩니다. 또한 다른 데이터 형식으로 변환 되지 해야 합니다. 응용 프로그램 검색 결과의 열 0에서 사용 하 여 설정 하는 책갈피 **SQLBulkOperations** (작업과 SQL_ADD의), **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData**합니다. 자세한 내용은 참조 [책갈피](../../../odbc/reference/develop-app/bookmarks-odbc.md)합니다.  

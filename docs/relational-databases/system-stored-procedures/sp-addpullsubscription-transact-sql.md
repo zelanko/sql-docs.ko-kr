@@ -1,16 +1,16 @@
 ---
 title: sp_addpullsubscription (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b6c772cc91d922ceb8acd5c205c9b19dc67d50d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4e5b6dd001beca704248c23f764086efeb56f2b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
+ [ **@publisher=**] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. *publisher_db* Oracle 게시자에 의해 무시 됩니다.  
   
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@independent_agent=**] **'***independent_agent***'**  
@@ -74,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [  **@update_mode=**] **'***update_mode***'**  
  업데이트의 유형입니다. *update_mode* 은 **nvarchar (30)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**읽기 전용** (기본값)|구독이 읽기 전용입니다. 구독자에서의 변경 내용이 게시자로 다시 전달되지 않습니다. 구독자에서 업데이트가 수행되지 않을 때 사용해야 합니다.|  
 |**synctran**|즉시 업데이트 구독에 대한 지원을 설정합니다.|  
@@ -94,7 +94,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  지연 업데이트 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 구독자에 연결하고 각 구독자로의 연결에는 다른 계정을 지정합니다. 지연 업데이트를 지원하는 끌어오기 구독을 만드는 경우 복제는 항상 Windows 인증을 사용하도록 연결을 설정합니다. 끌어오기 구독에서 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 데 필요한 메타데이터를 구독자에서 액세스할 수 없습니다. 이 경우 실행 해야 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 사용 하도록 연결을 변경 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독을 구성한 후에 인증 합니다.  
   
- 경우는 [MSreplication_subscriptions &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 구독자의 테이블이 존재 하지 않는 **sp_addpullsubscription** 을 만듭니다. 또한 행이 추가 [MSreplication_subscriptions &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블입니다. 끌어오기 구독의 경우 [sp_addsubscription &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 먼저 게시자에서 호출 되어야 합니다.  
+ 경우는 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 구독자의 테이블이 존재 하지 않는 **sp_addpullsubscription** 을 만듭니다. 또한 행이 추가 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블입니다. 끌어오기 구독의 경우 [sp_addsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 먼저 게시자에서 호출 되어야 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
@@ -103,13 +103,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_addpullsubscription**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription_agent&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
- [sp_change_subscription_properties &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

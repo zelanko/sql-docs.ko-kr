@@ -1,16 +1,16 @@
 ---
 title: sys.fn_trace_gettable (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 461807f1d79032c85316551adb5229d02aa67b06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ fn_trace_gettable ( 'filename' , number_files )
  읽을 롤오버 파일의 수를 지정합니다. 이 수에 지정 된 초기 파일이 포함 됩니다 *filename*합니다. *number_files* 는 **int**합니다.  
   
 ## <a name="remarks"></a>주의  
- 경우 *number_files* 로 지정 된 **기본**, **fn_trace_gettable** 추적 끝에 도달할 때까지 모든 롤오버 파일을 읽습니다. **fn_trace_gettable** 지정된 된 추적에 대 한 유효한 모든 열이 있는 테이블을 반환 합니다. 자세한 내용은 참조 [sp_trace_setevent &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ 경우 *number_files* 로 지정 된 **기본**, **fn_trace_gettable** 추적 끝에 도달할 때까지 모든 롤오버 파일을 읽습니다. **fn_trace_gettable** 지정된 된 추적에 대 한 유효한 모든 열이 있는 테이블을 반환 합니다. 자세한 내용은 참조 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)합니다.  
   
  Fn_trace_gettable 함수 롤오버 파일 로드 되지 것입니다 수 (사용 하 여이 옵션을 지정 하는 경우는 *number_files* 인수)는 원래 추적 파일 이름이 밑줄과 숫자 값으로 끝나는 합니다. 이는 파일이 롤오버될 때 자동으로 추가된 밑줄과 숫자에는 적용되지 않습니다. 추적 파일의 이름을 변경하여 원래 파일 이름에서 밑줄을 제거하면 이 문제를 해결할 수 있습니다. 예를 들어 원래 파일 이름이 **Trace_Oct_5.trc** 롤오버 파일 이름이 고 **Trace_Oct_5_1.trc**, 파일 이름을 바꿀 수 있습니다 **TraceOct5.trc** 및  **TraceOct5_1.trc**합니다.  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_trace_generateevent&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

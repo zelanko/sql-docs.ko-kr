@@ -1,16 +1,16 @@
 ---
 title: sp_addmergesubscription (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db2e319393afd6d3751b5eeb6ee58fd4d84fd6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc7b47a0253b47e9c8e1a75131ae3003fce2ac33
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
   
  [  **@subscriber =**] **'***구독자***'**  
@@ -88,7 +88,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  구독자의 유형입니다. *subscriber_type*은 **nvarchar (15)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**로컬** (기본값)|게시자에게만 알려진 구독자입니다.|  
 |**전역**|모든 서버에 알려진 구독자입니다.|  
@@ -107,7 +107,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  병합 에이전트가 실행될 시기를 나타내는 값입니다. *frequency_type* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|일별|  
@@ -120,7 +120,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_interval=**] *frequency_interval*  
  병합 에이전트가 실행되는 요일입니다. *frequency_interval* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|일요일|  
 |**2**|월요일|  
@@ -137,7 +137,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  예약된 병합이 빈도 간격에 따라 매월 실행되는 시기입니다. *frequency_relative_interval* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|첫째|  
 |**2**|둘째|  
@@ -152,7 +152,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  에 대 한 단위 *frequency_subday_interval*합니다. *frequency_subday* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|둘째|  
@@ -197,13 +197,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  대화형 해결을 허용하는 모든 아티클에 대해 충돌을 대화형으로 해결할 수 있도록 합니다. *use_interactive_resolver* 은 **nvarchar (5)**, 기본값은 FALSE입니다.  
   
  [  **@merge_job_name=** ] **'***merge_job_name***'**  
- *@merge_job_name*  매개 변수는 사용 되지 않으며 설정할 수 없습니다. *merge_job_name* 은 **sysname**, 기본값은 NULL입니다.  
+ *@merge_job_name* 매개 변수는 사용 되지 않으며 설정할 수 없습니다. *merge_job_name* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@hostname** =] **'***hostname***'**  
+ [ **@hostname**=] **'***hostname***'**  
  반환 된 값을 재정의 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 이 함수는 매개 변수가 있는 필터의 WHERE 절에 사용 되는 경우. *호스트 이름* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
->  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 필터 절에 HOST_NAME 값 재정의 사용 하 여 데이터 형식을 변환 해야 할 수도 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)로 확장합니다.  
+>  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 필터 절에 HOST_NAME 값 재정의 사용 하 여 데이터 형식을 변환 해야 할 수도 [변환](../../t-sql/functions/cast-and-convert-transact-sql.md)합니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "HOST_NAME() 값 재정의" 섹션을 참조하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -211,7 +211,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>주의  
  **sp_addmergesubscription** 병합 복제에 사용 됩니다.  
   
- 때 **sp_addmergesubscription** 의 멤버에 의해 실행 되는 **sysadmin** 고정 서버 역할 밀어넣기 구독을 만들려면 병합 에이전트 작업이 암시적으로 생성 되어 있고에서 실행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정입니다. 실행 하는 것이 좋습니다 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 계정의 다른 에이전트 특정 Windows에 대 한 자격 증명을 지정 하 고  **@job_login**  및  **@job_password** . 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+ 때 **sp_addmergesubscription** 의 멤버에 의해 실행 되는 **sysadmin** 고정 서버 역할 밀어넣기 구독을 만들려면 병합 에이전트 작업이 암시적으로 생성 되어 있고에서 실행 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정입니다. 실행 하는 것이 좋습니다 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 계정의 다른 에이전트 특정 Windows에 대 한 자격 증명을 지정 하 고 **@job_login** 및 **@job_password**. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -221,11 +221,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
  [대화형 충돌 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

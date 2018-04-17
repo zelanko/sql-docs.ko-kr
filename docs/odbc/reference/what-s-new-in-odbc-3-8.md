@@ -1,29 +1,30 @@
 ---
-title: "기능 &#39; ODBC 3.8의 새로운 s | Microsoft Docs"
-ms.custom: 
+title: 어떤&#39;ODBC 3.8의 새로운 s | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 463da92c55e4d00285d5348eabb7d8480e3cc073
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19e8cddd2224bf487a48391ec1e92d2b63ddfd56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-odbc-38"></a>기능 &#39;의 새로운 ODBC 3.8
+# <a name="what39s-new-in-odbc-38"></a>어떤&#39;의 새로운 ODBC 3.8
 Windows 8에는 업데이트 된 버전의 ODBC 3.8 포함 되어 있습니다. Windows 8에서 ODBC 3.8는 다음과 같은 기능이 포함 되어 있습니다.  
   
 -   [드라이버 인식 연결 풀링](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  

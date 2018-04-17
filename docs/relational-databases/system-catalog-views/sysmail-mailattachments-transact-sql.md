@@ -1,16 +1,16 @@
 ---
 title: sysmail_mailattachments (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 028ecfcb41a46c1a218d63fcb298dd2af9719678
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0f6a196b41a9fe768023969637841d20d7a843b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 메일로 제출된 각 첨부 파일당 한 개의 행을 포함합니다. 이 뷰를 사용하여 데이터베이스 메일 첨부 파일에 대한 정보를 볼 수 있습니다. 데이터베이스 메일을 사용 하 여 처리 하는 모든 전자 메일을 검토 하려면 [sysmail_allitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
+  데이터베이스 메일로 제출된 각 첨부 파일당 한 개의 행을 포함합니다. 이 뷰를 사용하여 데이터베이스 메일 첨부 파일에 대한 정보를 볼 수 있습니다. 데이터베이스 메일을 사용 하 여 처리 하는 모든 전자 메일을 검토 하려면 [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -55,10 +55,10 @@ ms.lasthandoff: 02/03/2018
  에 부여 된 **sysadmin** 고정된 서버 역할 및 **DatabaseMailUserRole** 데이터베이스 역할입니다. 멤버에 의해 실행 된 **sysadmin** 이 뷰는 모든 첨부 파일이 표시 고정 서버 역할입니다. 다른 모든 사용자는 자신이 제출한 메시지의 첨부 파일만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sysmail_allitems&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+ [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "상호 운용할 수 있는 SQL 문을 구성 | Microsoft Docs"
-ms.custom: 
+title: 상호 운용할 수 있는 SQL 문을 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9419a3e242510a0c65ac87f2c1601c59fdafbd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용할 수 있는 SQL 문 구성
 이전 섹션에서 설명 했 듯이 상호 운용 가능한 응용 프로그램에서 ODBC SQL 문법을 사용 해야 합니다. 그러나이 문법을 사용 하 여 다음 다양 한 추가 문제 상호 운용 가능한 응용 프로그램에서 직면 됩니다. 예를 들어 응용 프로그램이 수행 하는 모든 데이터 원본에서 지원 되지 않는 외부 조인과 같은 기능을 사용 하려는 경우  

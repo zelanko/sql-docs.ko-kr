@@ -1,16 +1,16 @@
 ---
 title: sys.fn_get_sql (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   지정된 SQL 핸들에 대한 SQL 문의 텍스트를 반환합니다.  
   
 > [!IMPORTANT]  
->  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 참조 [sys.dm_exec_sql_text &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Microsoft SQL Server의 이후 버전에서는 이 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. sys.dm_exec_sql_text를 대신 사용하십시오. 자세한 내용은 참조 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
   
  
   
@@ -67,11 +67,11 @@ sys.fn_get_sql ( SqlHandle )
 |dbid|**smallint**|데이터베이스 ID입니다. 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |objectid|**int**|데이터베이스 개체의 ID입니다. 임시 SQL 문의 경우 NULL입니다.|  
 |number|**smallint**|프로시저가 그룹화된 경우 그룹의 번호를 나타냅니다.<br /><br /> 0  =  항목이 프로시저가 아닙니다.<br /><br /> NULL = 임시 SQL 문입니다.|  
-|encrypted|**bit**|개체가 암호화되었는지 여부를 나타냅니다.<br /><br /> 0 = 암호화되지 않음<br /><br /> 1 = 암호화 됨|  
+|encrypted|**bit**|개체가 암호화되었는지 여부를 나타냅니다.<br /><br /> 0 = 암호화되지 않음<br /><br /> 1 = 암호화됨|  
 |text|**text**|SQL 문의 텍스트입니다. 암호화된 개체의 경우 NULL입니다.|  
   
 ## <a name="remarks"></a>주의  
- Sql_handle 열에서 유효한 SQL 핸들을 가져올 수 있습니다는 [sys.dm_exec_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 동적 관리 뷰.  
+ Sql_handle 열에서 유효한 SQL 핸들을 가져올 수 있습니다는 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 동적 관리 뷰.  
   
  Fn_get_sq 캐시에 있는 핸들 전달 하는 더 이상 경우**l** 빈 결과 집합을 반환 합니다. 유효하지 않은 핸들을 전달하는 경우 일괄 처리가 중지되고 오류 메시지가 반환됩니다.  
   
@@ -101,8 +101,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [DBCC INPUTBUFFER &#40; Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses&#40; Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [DBCC INPUTBUFFER &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

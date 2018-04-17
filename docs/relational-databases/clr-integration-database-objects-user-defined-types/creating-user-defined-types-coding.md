@@ -1,15 +1,15 @@
 ---
-title: "사용자 정의 형식 코딩 | Microsoft Docs"
-ms.custom: 
+title: 사용자 정의 형식 코딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>사용자 정의 형식-코딩 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-UDT(사용자 정의 형식) 정의를 코딩하는 경우 UDT를 클래스 또는 구조로 구현할지 여부와 선택한 형식 및 직렬화 옵션에 따라 다양한 기능을 구현해야 합니다.  
+  UDT(사용자 정의 형식) 정의를 코딩하는 경우 UDT를 클래스 또는 구조로 구현할지 여부와 선택한 형식 및 직렬화 옵션에 따라 다양한 기능을 구현해야 합니다.  
   
  구현은이 섹션의 예는 **지점** 으로 UDT는 **구조체** (또는 **구조** Visual basic에서). **지점** UDT은 X 및 Y 좌표도 구현 된 속성 프로시저입니다.  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>특성 지정  
  특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
   
- **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 가 필요 합니다. **Serializable** 특성은 선택 사항입니다. 지정할 수 있습니다는 **Microsoft.SqlServer.Server.SqlFacetAttribute** UDT의 반환 형식에 대 한 정보를 제공 합니다. 자세한 내용은 참조 [CLR 루틴에 대 한 사용자 지정 특성](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)합니다.  
+ **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 가 필요 합니다. **Serializable** 특성은 선택 사항입니다. 지정할 수 있습니다는 **Microsoft.SqlServer.Server.SqlFacetAttribute** UDT의 반환 형식에 대 한 정보를 제공 합니다. 자세한 내용은 [CLR 루틴용 사용자 지정 특성](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)을 참조하세요.  
   
 ### <a name="point-udt-attributes"></a>Point UDT 특성  
  **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 의 저장소 형식을 설정 하는 **지점** UDT를 **네이티브**합니다. **IsByteOrdered** 로 설정 된 **true**, 비교의 결과가 동일한 지 SQL Server에서 동일한 비교가 관리 코드에서 수행 했 마치 보장 합니다. UDT를 구현 하는 **System.Data.SqlTypes.INullable** null을 인식 하도록 하는 인터페이스입니다.  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  라는 속성이 만들어야 **IsNull**, CLR 코드 내에서 null 값이 있는지 확인 하는 데 필요한 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 UDT의 Null 인스턴스를 찾으면 일반적인 Null 처리 메서드를 사용하여 UDT가 유지됩니다. 서버는 필요하지 않은 경우 UDT 직렬화 또는 역직렬화하는 데 시간을 낭비하지 않으며 Null UDT를 저장하는 공간을 낭비하지 않습니다. 이 Null 검사는 CLR에서 UDT를 가져올 때마다 수행되므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] IS NULL 구문을 사용한 Null UDT 검사가 항상 작동해야 합니다. **IsNull** 속성은 또한 인스턴스가 null 인지 여부를 테스트 서버에서 사용 됩니다. 서버에서 UDT가 Null임을 확인하면 기본 Null 처리를 사용할 수 있습니다.  
   
- **get ()** 방식의 **IsNull** 특별 하 게 처리 어떤 방식으로든에서 않습니다. 경우는 **지점** 변수  **@p**  은 **Null**, 다음  **@p.IsNull**  은 기본적으로 "NULL"을 평가 하지 않습니다: "1". ¿¡´는 **SqlMethod(OnNullCall)** 특성에는 **IsNull get ()** 메서드 기본값은 false입니다. 개체는 **Null**개체가 역직렬화 되지 되, 메서드는, 및 "NULL"의 기본값이 반환 됩니다 속성이 요청 될 때입니다.  
+ **get ()** 방식의 **IsNull** 특별 하 게 처리 어떤 방식으로든에서 않습니다. 경우는 **지점** 변수 **@p** 은 **Null**, 다음 **@p.IsNull** 은 기본적으로 "NULL"을 평가 하지 않습니다: "1". ¿¡´는 **SqlMethod(OnNullCall)** 특성에는 **IsNull get ()** 메서드 기본값은 false입니다. 개체는 **Null**개체가 역직렬화 되지 되, 메서드는, 및 "NULL"의 기본값이 반환 됩니다 속성이 요청 될 때입니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서 `is_Null` 변수는 전용이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. UDT 이라는 정적 속성이 있어야 **Null** UDT의 null 값 인스턴스를 반환 하는 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  

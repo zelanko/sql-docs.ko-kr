@@ -1,16 +1,16 @@
 ---
-title: "(SQLXML 4.0) Updategram의 데이터베이스 동시성 문제를 처리 합니다. | Microsoft Docs"
-ms.custom: 
+title: (SQLXML 4.0) Updategram의 데이터베이스 동시성 문제를 처리 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategram에서 이러한 스냅숏 값이 없으면는  **\<하기 전에 >** 은 updategram의 블록입니다. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 확인는  **\<하기 전에 >** 블록 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값과 비교 합니다.  
+  다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. Updategram에서 이러한 스냅숏 값이 없으면는  **\<하기 전에 >** 은 updategram의 블록입니다. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 확인는  **\<하기 전에 >** 블록 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값과 비교 합니다.  
   
  낙관적 동시성 제어는 updategram에 낮음(없음), 중간, 높음이라는 세 가지 보호 수준을 제공합니다. Updategram을 적절하게 지정하여 필요한 보호 수준을 결정할 수 있습니다.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 02/12/2018
   
  기본 키 열에서 업데이트 하는 열을 지정 하 여이 보호 수준을 얻을 수는  **\<하기 전에 >** 블록입니다.  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<하기 전에 >** 블록 지정는 **전화** 특성을 특성 값이 업데이트 된 값을 적용 하기 전에 데이터베이스에 해당 하는 열에서 값과 일치 하는지 확인 .  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다.  **\<하기 전에 >** 블록 지정는 **전화** 특성을 특성 값이 업데이트 된 값을 적용 하기 전에 데이터베이스에 해당 하는 열에서 값과 일치 하는지 확인 .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -195,6 +196,6 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Updategram 보안 고려 사항 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

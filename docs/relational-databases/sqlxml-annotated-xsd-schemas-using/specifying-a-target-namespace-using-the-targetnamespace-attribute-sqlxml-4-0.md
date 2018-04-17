@@ -1,16 +1,16 @@
 ---
-title: "대상 Namespace를 사용 하 여 targetNamespace 특성 (SQLXML 4.0)를 지정 하 | Microsoft Docs"
-ms.custom: 
+title: 대상 Namespace를 사용 하 여 targetNamespace 특성 (SQLXML 4.0)를 지정 하 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,20 +22,21 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNamespace** 특성 대상 네임 스페이스를 지정 합니다. 이 항목에서는 설명 어떻게 XSD **targetNamespace**, **elementFormDefault**, 및 **attributeFormDefault** 특성이 작동 되는 XML 인스턴스에 미치는 영향 생성 된 네임 스페이스와 XPath 쿼리를 지정 하는 방법 및 합니다.  
+  XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNamespace** 특성 대상 네임 스페이스를 지정 합니다. 이 항목에서는 설명 어떻게 XSD **targetNamespace**, **elementFormDefault**, 및 **attributeFormDefault** 특성이 작동 되는 XML 인스턴스에 미치는 영향 생성 된 네임 스페이스와 XPath 쿼리를 지정 하는 방법 및 합니다.  
   
  사용할 수는 **xsd: targetnamespace** 을 기본 네임 스페이스의 요소와 특성을 다른 네임 스페이스에 배치할 특성입니다. 또한 로컬로 선언된 스키마 요소 및 특성을 접두사를 사용하여 명시적으로 또는 암시적으로(기본 설정) 네임스페이스에서 정규화된 것으로 표시할지 여부를 지정할 수도 있습니다. 사용할 수는 **elementFormDefault** 및 **attributeFormDefault** 특성은  **\<xsd: schema >** 전체적으로 지정 하는 요소는 로컬 요소 및 특성 또는 사용자의 자격을 사용할 수는 **양식** 특성을 개별 요소와 특성을 개별적으로 지정 합니다.  
   
@@ -85,7 +86,7 @@ XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNames
   
 -   **CustomerType** 및 **OrderType** 형식 선언은 전역, 따라서 스키마의 대상 네임 스페이스에 포함 됩니다. 이러한 종류의 선언에서 참조 되는 경우에 결과적으로,  **\<고객 >** 요소 및 해당  **\<순서 >** 자식 요소에 연결 된 접두사가 지정 됩니다 대상 네임 스페이스입니다.  
   
--   **\<고객 >** 스키마에서 전역 요소 이기 때문에 스키마의 대상 네임 스페이스에 요소도 포함 되어 있습니다.  
+-    **\<고객 >** 스키마에서 전역 요소 이기 때문에 스키마의 대상 네임 스페이스에 요소도 포함 되어 있습니다.  
   
  스키마에 대해 다음 XPath 쿼리를 실행합니다.  
   
@@ -108,7 +109,7 @@ XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNames
   
  이 인스턴스 문서 urn: MyNamespace 네임 스페이스를 정의 하 고 접두사 (y0)를을 연결 합니다. 접두사에만 적용 되는  **\<고객 >** 전역 요소입니다. (의 자식으로 선언 되어 있어이 요소는 전역  **\<xsd: schema >** 스키마의 요소입니다.)  
   
- 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다 값 **elementFormDefault** 및 **attributeFormDefault** 특성으로 설정 되어 **"unqualified"**스키마에 있습니다. **\<순서 >** 요소는 해당 선언의 자식으로 표시 되기 때문에 로컬는  **\<complexType >** 정의 하는 요소는  **\< CustomerType >** 요소입니다. 마찬가지로, 해당 특성 (**CustomerID**, **OrderID**, 및 **ContactName**)은 로컬, 전역이 아니라 합니다.  
+ 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다 값 **elementFormDefault** 및 **attributeFormDefault** 특성으로 설정 되어 **"unqualified"**스키마에 있습니다.  **\<순서 >** 요소는 해당 선언의 자식으로 표시 되기 때문에 로컬는  **\<complexType >** 정의 하는 요소는  **\< CustomerType >** 요소입니다. 마찬가지로, 해당 특성 (**CustomerID**, **OrderID**, 및 **ContactName**)은 로컬, 전역이 아니라 합니다.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>이 스키마의 작업 예제를 만들려면  
   

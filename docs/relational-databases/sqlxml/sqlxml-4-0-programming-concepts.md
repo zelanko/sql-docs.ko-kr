@@ -1,37 +1,38 @@
 ---
-title: "SQLXML 4.0 프로그래밍 개념 | Microsoft Docs"
-ms.custom: 
+title: SQLXML 4.0 프로그래밍 개념 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99780e4985f2406d5f0a394ae427ad6342106bb6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4c318ef19e47b461f023ff8f7deb9e378ff72a20
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  
+  SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에 도입 된 새로운 기능을 수용 하기 위해 제공 된 추가 업데이트 및 SQLXML 3.0과 같은 기능을 제공 하는 SQLXML 4.0에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 SQLXML 3.0과 동일한 기능뿐 아니라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 새로운 기능을 수용하기 위해 제공된 추가 업데이트를 제공하는 SQLXML 4.0을 소개했습니다.  
   
  이 섹션에서는 SQLXML 4.0에 대한 정보를 제공합니다.  
   
@@ -50,7 +51,7 @@ SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기�
  [SQLXML 예 실행을 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  제공된 SQLXML 예에서 작업 예제를 만들기 위한 요구 사항에 대해 설명합니다.  
   
- [클라이언트 쪽 및 서버 쪽 서식 지정 &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [클라이언트 쪽 및 서버 쪽 서식 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  XML 문서 구성을 위한 FOR XML 명령을 비롯하여 클라이언트 쪽 및 서버 쪽 형식 지정을 비교하고 정보를 제공합니다.  
   
  [SQLXML 4.0의 주석이 추가된 XSD 스키마](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -62,7 +63,7 @@ SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기�
  [Updategram을 사용 하 여 SQLXML 4.0에서에서 데이터를 수정 하려면](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  주석이 추가된 XSD(또는 XDR) 스키마가 제공하는 XML 뷰에서 작업하여 데이터베이스의 데이터를 수정하는 Updategram에 대한 정보를 제공합니다.  
   
- [XML 데이터 &#40; 대량 로드 수행 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML 데이터 & #40; 대량 로드 수행 SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  SQLXML 4.0에서 XML을 대량 로드하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 데이터 액세스 구성 요소](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -71,7 +72,7 @@ SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기�
  [SQLXML 4.0.NET Framework 지원](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  .NET Framework에 대한 SQLXML 4.0 지원을 설명합니다.  
   
- [템플릿, XSL 및 스키마 &#40; 캐싱 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [템플릿, XSL 및 스키마 캐싱 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  성능 향상을 위해 SQLXML에서 제공되는 캐싱 기능에 대해 설명합니다.  
   
  [SQLXML 4.0 보안 고려 사항](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  

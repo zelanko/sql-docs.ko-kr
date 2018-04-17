@@ -1,31 +1,32 @@
 ---
-title: "SQL Server 및 Azure SQL 데이터베이스를 사용 하 여 처리 하는 그래프 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 및 Azure SQL 데이터베이스를 사용 하 여 처리 하는 그래프 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, overview
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b30234e0527252b01b3d0e88d7679255acc214fd
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: cc6951aa90bf71cb415770f30352120a529bcde1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL 데이터베이스를 사용 하 여 처리 하는 그래프
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 노드 및 가장자리 테이블로 저장 됩니다.  
 
 ### <a name="query-language-extensions"></a>쿼리 언어 확장  
-새 `MATCH` 절 패턴 일치와 그래프를 통해 다중 홉 탐색을 지원 하기 위해 도입 됩니다. `MATCH` 함수 패턴 일치에 대 한 ASCII 아트 스타일 구문을 사용 합니다. 예를 들어  
+새 `MATCH` 절 패턴 일치와 그래프를 통해 다중 홉 탐색을 지원 하기 위해 도입 됩니다. `MATCH` 함수 패턴 일치에 대 한 ASCII 아트 스타일 구문을 사용 합니다. 예를 들어:  
 
 ```   
 -- Find friends of John

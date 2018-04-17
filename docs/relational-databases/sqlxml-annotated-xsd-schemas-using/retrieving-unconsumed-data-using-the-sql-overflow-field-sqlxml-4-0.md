@@ -1,16 +1,16 @@
 ---
-title: "사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-(SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 사용 되지 않은 데이터를 사용 하 여 sql:overflow 검색-(SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c82c157d5d76a2b6dfd005bf7984bd3e60cb69e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-[!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색할 때 지정할 수 있습니다는 **sql:overflow-필드** 오버플로 데이터가 저장 되어 있는 테이블의 열을 식별 하는 특성입니다. **sql:overflow-필드** 특성에 지정할 수 있으며  **\<요소 >**합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색할 때 지정할 수 있습니다는 **sql:overflow-필드** 오버플로 데이터가 저장 되어 있는 테이블의 열을 식별 하는 특성입니다. **sql:overflow-필드** 특성에 지정할 수 있으며  **\<요소 >**합니다.  
   
  이 데이터는 다음과 같은 방법으로 검색할 수 있습니다.  
   

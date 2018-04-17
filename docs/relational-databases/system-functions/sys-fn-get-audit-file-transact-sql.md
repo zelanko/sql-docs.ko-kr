@@ -2,7 +2,7 @@
 title: sys.fn_get_audit_file (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-functions
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6dc30f57484714d70c7777a30ee43246c5980fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 감사 파일 집합에서 여러 파일을 수집 하도록 단일 별표 (*)를 사용할 수 있습니다. 예를 들어  
+    이 인수에는 경로와 파일 이름이 모두 포함되어야 합니다. 드라이브 문자나 네트워크 공유를 경로로 사용할 수 있으며, 파일 이름에 와일드카드를 사용할 수 있습니다. 감사 파일 집합에서 여러 파일을 수집 하도록 단일 별표 (*)를 사용할 수 있습니다. 예를 들어:  
   
     -   **\<경로 >\\ \***  수집-모든 지정 된 위치에 있는 파일을 감사 합니다.  
   
@@ -65,7 +66,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL 데이터베이스**:
  
-    (저장소 끝점 및 컨테이너 포함) blob URL을 지정 하려면이 인수가 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 동안에이 접두사로 시작 하는 여러 파일 (blob)을 수집 하도록 전체 blob 이름) (대신 부분 (blob) 파일 이름 접두사를 사용할 수 있습니다. 예를 들어
+    (저장소 끝점 및 컨테이너 포함) blob URL을 지정 하려면이 인수가 사용 됩니다. 별표 와일드 카드를 지원 하지 않는 동안에이 접두사로 시작 하는 여러 파일 (blob)을 수집 하도록 전체 blob 이름) (대신 부분 (blob) 파일 이름 접두사를 사용할 수 있습니다. 예를 들어:
  
       - **\<Storage_endpoint\>/\<컨테이너\>/\<ServerName\>/\<DatabaseName\> /**  -특정 데이터베이스에 대 한 모든 감사 파일 (blob)을 수집 합니다.    
       

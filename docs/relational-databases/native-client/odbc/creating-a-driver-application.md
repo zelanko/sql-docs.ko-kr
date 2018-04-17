@@ -1,15 +1,15 @@
 ---
-title: "SQL Server Native Client ODBC 드라이버 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Native Client ODBC 드라이버 응용 프로그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, architecture
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da19702624b06775bd63dc3dc7d12bf6b7cd7a14
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 61fa9d1d5d8fb848f508aef50c9e6d3ea996eaec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-driver-application"></a>드라이버 응용 프로그램 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,19 +86,19 @@ ms.lasthandoff: 01/25/2018
   
  포함 하 여 대부분의 ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 ODBC 확장을 제공 합니다. 활용 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 확장, 응용 프로그램에 sqlncli.h 헤더 파일이 포함 되어야 합니다. 이 헤더 파일에는 다음과 같은 항목이 들어 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 연결 특성입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 연결 특성입니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 문 특성  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 문 특성  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 열 특성입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버별 열 특성입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 데이터 형식  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 사용자 정의 데이터 형식  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버 관련 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 형식입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 형식입니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버 진단 필드  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 진단 필드  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]별 진단 동적 함수 코드  
   
@@ -125,6 +126,6 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
 -   [다중 스레드 응용 프로그램](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server Native Client &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client & #40; ODBC & #41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

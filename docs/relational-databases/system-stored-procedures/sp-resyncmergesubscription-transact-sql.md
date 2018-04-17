@@ -2,7 +2,7 @@
 title: sp_resyncmergesubscription (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 93c48af023d34b5c73f1ea69c8bb6e26538cd8d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  [ **@publisher_db** = ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 게시 데이터베이스의 게시자에서 실행될 경우 유효합니다. 저장 프로시저를 구독자에서 실행할 경우 게시자를 지정해야 합니다.  
   
- [ **@publication** = ] **'***publication***'**  
+ [ **@publication** =] **'***게시***'**  
  게시의 이름입니다. *게시*은 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **'***구독자***'**  
  구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 구독자에서 실행될 경우 유효합니다. 저장 프로시저를 게시자에서 실행할 경우 구독자를 지정해야 합니다.  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  

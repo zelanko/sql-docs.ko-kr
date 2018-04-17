@@ -1,16 +1,16 @@
 ---
-title: "주석이 추가 된 XSD 스키마 (SQLXML 4.0) 소개 | Microsoft Docs"
-ms.custom: 
+title: 주석이 추가 된 XSD 스키마 (SQLXML 4.0) 소개 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  
+  XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  
   
  XML 스키마는 XML 문서의 구조뿐만 아니라 문서 내의 데이터에 대한 다양한 제약 조건을 설명합니다. 스키마에 대해 XPath 쿼리를 지정하면 XPath 쿼리가 실행되는 스키마에 따라 반환되는 XML 문서의 구조가 결정됩니다.  
   
@@ -52,7 +53,7 @@ XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰�
 </xsd:schema>  
 ```  
   
- **\<xsd: schema >** 요소는 http://www.w3.org/2001/XMLSchema에 XML 스키마 네임 스페이스 사양에서 파생 됩니다.  
+  **\<xsd: schema >** 요소에 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema합니다.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 스키마에 주석 추가  
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  
@@ -75,7 +76,7 @@ XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰�
  사용된 네임스페이스 접두사는 임의로 지정되었습니다. 이 설명서에는 **sql** 접두사는 주석 네임 스페이스를 나타내고이 네임 스페이스의 주석을 다른 네임 스페이스에 있는 구분 하기 위해 사용 됩니다.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>주석이 추가된 XSD 스키마 예  
- 다음 예제에서는 XSD 스키마를 사용 하는 구성의 되어는  **\<Person.Contact >** 요소입니다. **\<직원 >** 요소에는 **ContactID** 특성 및  **\<FirstName >** 및  **\< LastName >** 자식 요소:  
+ 다음 예제에서는 XSD 스키마를 사용 하는 구성의 되어는  **\<Person.Contact >** 요소입니다.  **\<직원 >** 요소에는 **ContactID** 특성 및  **\<FirstName >** 및  **\< LastName >** 자식 요소:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -126,18 +127,18 @@ XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰�
 ## <a name="other-resources"></a>기타 리소스  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  
   
--   XML 스키마 0 부: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 스키마 0 부: Primer, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 스키마 1 부: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 스키마 1 부: 구조, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes, W3C Recommendation(http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XPath(XML Path Language)(http://www.w3.org/TR/xpath)  
+-   XML 경로 언어 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSLT(XSL Transformation)(http://www.w3.org/TR/xslt)  
+-   XSL 변환 (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>관련 항목:  
- [주석된 스키마 보안 고려 사항 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [주석이 추가 된 XDR 스키마 &#40;에서 사용 되지 않는 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [주석 스키마 보안 고려 사항 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서에서 사용 되지 않습니다&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_replqueuemonitor (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d996f735cb105215deb6de44cc56533a42fe6c3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +50,22 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다. 해당 서버는 반드시 게시용으로 구성되어야 합니다. 모든 게시자에 대해 NULL입니다.  
   
- [  **@publisherdb**  =] **'***publisher_db***'** ]  
+ [ **@publisherdb** =] **'***publisher_db***'** ]  
  게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. 모든 게시 데이터베이스에 대해 NULL입니다.  
   
- [  **@publication**  =] **'***게시***'** ]  
+ [ **@publication** =] **'***게시***'** ]  
  게시의 이름입니다. *게시*은 **sysname**, 기본값은 NULL입니다. 모든 게시에 대해 NULL입니다.  
   
- [  **@tranid**  =] **'***tranid***'** ]  
+ [ **@tranid** =] **'***tranid***'** ]  
  트랜잭션 ID입니다. *tranid*은 **sysname**, 기본값은 NULL입니다. 모든 트랜잭션에 대해 NULL입니다.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  트랜잭션을 저장하는 큐의 유형입니다. *queuetype* 은 **tinyint** 기본값인 **0**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|모든 유형의 큐입니다.|  
 |**1**|메시지 큐|  

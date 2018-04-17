@@ -1,15 +1,16 @@
 ---
-title: "동적 SQL | Microsoft Docs"
-ms.custom: 
+title: 동적 SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0dab9c38b5fe567664455462f0d229a8235ba99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 다양 한 상황에서 잘 작동 하는 정적 SQL 이지만 한 응용 프로그램에는 데이터 액세스 확인할 수 없는 사전에 있습니다. 예를 들어 스프레드시트 스프레드시트 보냅니다는 DBMS에 데이터를 검색 하는 쿼리를 입력할 수 있습니다. 이 쿼리 내용 분명히 알 수 없으므로 프로그래머에 게 스프레드시트 프로그램 기록 되는 경우.  

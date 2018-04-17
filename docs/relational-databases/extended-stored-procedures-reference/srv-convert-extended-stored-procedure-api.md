@@ -1,16 +1,16 @@
 ---
-title: "srv_convert(확장 저장 프로시저 API) | Microsoft Docs"
-ms.custom: 
+title: srv_convert(확장 저장 프로시저 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_convert
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_convert
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15833b00d82ddb6451309b517a779b10ee5eb4fb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 1feb6b6071958b6bbf73bcb2b50d785dffc1a87e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  한 데이터 형식에서 다른 데이터 형식으로 데이터를 변경합니다.  
   
@@ -96,7 +96,7 @@ destlen
 ## <a name="returns"></a>반환 값  
  데이터 형식 변환에 성공할 경우 변환된 데이터의 길이(바이트)입니다. **srv_convert**에서 지원하지 않는 변환 요청을 발견하면 개발자가 제공한 오류 처리기(있는 경우)를 호출하며, 전역 오류 번호를 설정하고 -1을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  **srv_willconvert** 함수는 특정 변환의 허용 여부를 결정합니다.  
   
  근사치 데이터 형식 SRVFLT4 또는 SRVFLT8로 변환하면 전체 자릿수 손실이 발생할 수 있습니다. 근사치 데이터 형식 SRVFLT4 또는 SRVFLT8을 SRVCHAR 또는 SRVTEXT로 변환하는 경우에도 전체 자릿수 손실이 발생할 수 있습니다.  
@@ -120,7 +120,7 @@ destlen
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [srv_setutype(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   

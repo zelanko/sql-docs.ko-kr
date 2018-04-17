@@ -1,16 +1,16 @@
 ---
 title: sp_droparticle (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c2d3ec47a41e2783bc5bab5a5eaaf1a4cedd3de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 87bcaa9cc9a30460dd2618e0f9a25b45fbfb9adf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  삭제할 아티클이 포함된 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
@@ -67,13 +67,13 @@ sp_droparticle [ @publication= ] 'publication'
   
  **1** 는 아티클에 대 한 변경 유효 하려면 스냅숏을 무효화를 의미 하며 새 스냅숏이 필요한 기존 구독이 있는 경우에 사용 되지 않는 것으로 표시 될 기존 스냅숏과 새 스냅숏을 생성할 권한을 부여 하도록 지정 합니다.  
   
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  지정 된 비-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에서 아티클 속성을 변경 하는 경우 사용할 수 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@from_drop_publication** =] *from_drop_publication*  
+ [ **@from_drop_publication**=] *from_drop_publication*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -82,7 +82,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>주의  
  **sp_droparticle** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
- 행 필터링 된 아티클에 대 한 **sp_droparticle** 검사는 **형식** 의 문서를 열 여 [sysarticles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블을 삭제할지 여부를 뷰 또는 필터도 결정 합니다. 뷰 또는 필터가 자동으로 생성된 경우에는 아티클과 함께 삭제됩니다. 수동으로 만든 경우에는 삭제되지 않습니다.  
+ 행 필터링 된 아티클에 대 한 **sp_droparticle** 검사는 **형식** 의 문서를 열은 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블 뷰 또는 필터가 해야도 삭제할지 여부를 결정 합니다. 뷰 또는 필터가 자동으로 생성된 경우에는 아티클과 함께 삭제됩니다. 수동으로 만든 경우에는 삭제되지 않습니다.  
   
  실행 **sp_droparticle** 게시에서 아티클을 삭제 하려면에서 제거 되지는 않습니다 개체 게시 데이터베이스나 구독 데이터베이스에서 해당 하는 개체입니다. 필요한 경우 `DROP <object>`를 사용하여 이러한 개체를 수동으로 제거합니다.  
   
@@ -95,10 +95,10 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [아티클 삭제](../../relational-databases/replication/publish/delete-an-article.md)   
  [기존 게시에 대한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addarticle &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_publisherproperty (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 782dada24606bdd5ece4057bb47b7df6a6a9a9db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7446f507b688010f3044ff237d778f9b31b54fe8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher**  =] **'***게시자***'**  
+ [**@publisher** =] **'***게시자***'**  
  유형이 다른 게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [ **@propertyname**  =] **'***propertyname***'**  
+ [**@propertyname** =] **'***propertyname***'**  
  설정할 속성 이름입니다. *propertyname* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**xactsetbatching**|후속 작업에 대해 게시자에서 트랜잭션을 일관성 있는 트랜잭션 세트(Xactset)로 그룹화할지 여부입니다. 값이 **활성화** 는 Xactset를 만들 수, 기본값을 의미 합니다. 값이 **비활성화** 기존 Xactset 없는 새 Xactset로 처리 하는 수단 만들어집니다.|  
 |**xactsetjob**|Xactset를 만드는 데 Xactset 작업을 사용할지 여부입니다. 값이 **활성화** 게시자에서 Xactset를 만들기 위해 Xactset 작업 정기적으로 실행 됨을 의미 합니다. 값이 **비활성화** Xactset만 만들어졌는지 로그 판독기 에이전트에서 변경 내용에 대 한 게시자를 폴링할 때 것을 의미 합니다.|  
@@ -62,7 +62,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  때 *propertyname* 를 생략 하면 설정할 수 있는 모든 속성이 반환 됩니다.  
   
- [ **@propertyvalue**  =] **'***propertyvalue***'**  
+ [**@propertyvalue** =] **'***propertyvalue***'**  
  속성 설정의 새 값입니다. *propertyvalue* 은 **sysname**, 기본값은 NULL입니다. 때 *propertyvalue* 를 생략 하면 반환 되는 속성에 대 한 현재 설정 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  

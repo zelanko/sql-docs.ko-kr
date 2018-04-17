@@ -1,16 +1,16 @@
 ---
 title: sp_apply_job_to_targets (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a9b3cca205dc3af412ae9c0dfd426b18c05a4fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,14 +64,14 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@target_servers=** ] **'***target_servers***'**  
  지정된 작업을 적용할 대상 서버의 쉼표로 구분된 목록입니다. *target_servers*은 **nvarchar (2048)**, 기본값은 NULL입니다.  
   
- [ **@operation=** ]  **'***operation***'**  
+ [  **@operation=** ] **'***작업***'**  
  지정된 대상 서버 또는 대상 서버 그룹에서 지정된 작업을 적용할지 아니면 제거할지 여부를 나타냅니다. *작업*은 **varchar(7)**, 기본값은 APPLY입니다. 올바른 작업은 **적용** 및 **제거**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>주의  
- **sp_apply_job_to_targets** 다중 대상 서버에서 적용 (또는 제거) 작업을 하는 쉬운 방법을 제공 하 고 호출 하는 대신 **sp_add_jobserver** (또는 **sp_delete_jobserver** ) 필요한 각 대상 서버에 대해 한 번씩입니다.  
+ **sp_apply_job_to_targets** 다중 대상 서버에서 적용 (또는 제거) 작업을 하는 쉬운 방법을 제공 하 고 호출 하는 대신 **sp_add_jobserver** (또는 **sp_delete_jobserver**) 필요한 각 대상 서버에 대해 한 번  
   
 ## <a name="permissions"></a>Permissions  
  구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
@@ -91,9 +91,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_add_jobserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_add_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

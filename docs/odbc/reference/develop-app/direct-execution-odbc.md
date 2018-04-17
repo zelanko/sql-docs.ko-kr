@@ -1,31 +1,32 @@
 ---
-title: "직접 실행 ODBC | Microsoft Docs"
-ms.custom: 
+title: 직접 실행 ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], direct execution
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 058dada1c14b901b32f721bc2d42f3cc24434f07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09ea0f6d6046a6deb24431dd29d0f91f78226120
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-execution-odbc"></a>ODBC 직접 실행
 직접 실행은 문을 실행 하는 가장 간단한 방법은 합니다. 문이 실행을 위해 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 해당 액세스 계획을 실행 합니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_cursor_list (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope=] *cursor_scope*  
  보고할 커서 수준을 지정합니다. *cursor_scope* 은 **int**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
-|값|설명|  
+|Value|Description|  
 |-----------|-----------------|  
 |1.|모든 로컬 커서를 보고합니다.|  
 |2|모든 전역 커서를 보고합니다.|  
 |3|로컬과 전역 커서 모두를 보고합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  sp_cursor_list는 결과 집합이 아니라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 출력 매개 변수를 반환합니다. 따라서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거가 한 번에 하나의 출력 행을 처리할 수 있습니다. 이는 데이터베이스 API 함수에서 직접 프로시저를 호출할 수 없음을 의미하기도 합니다. cursor 출력 매개 변수는 반드시 프로그램 변수에 바인딩되어야 하지만 데이터베이스 API는 cursor 매개 변수 또는 변수의 바인딩을 지원하지 않기 때문입니다.  

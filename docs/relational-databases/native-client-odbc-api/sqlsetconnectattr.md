@@ -1,30 +1,31 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68049b848f3a347e64133c811fbd68b69671be0
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e26bea1dff6f5ba6bc06f786a88f9265a1677d8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +100,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
  연결 풀링을 사용할 경우 sql_copt_ss_ansi_npw는 SQLSetConnectAttr 아니라 연결 문자열에서 설정 되어야 합니다. 연결 풀링을 사용할 경우 연결이 설정된 후 이 특성을 변경하려고 시도하면 자동으로 실패합니다.  
   
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite**합니다. 예를 들어  
+ 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 가능한 값은 **Readonly** 및 **ReadWrite**합니다. 예를 들어:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -193,10 +194,10 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|기본. MARS(Multiple Active Result Sets)를 사용하지 않습니다.|  
 |SQL_MARS_ENABLED_YES|MARS를 사용합니다.|  
   
- MARS에 대 한 자세한 내용은 참조 하세요. [Multiple Active Result Sets를 사용 하 여 &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+ MARS에 대 한 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)합니다.  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어  
+ 응용 프로그램이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
@@ -312,12 +313,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SPN에 대한 SQLSetConnectAttr 지원  
  SQLSetConnectAttr 용도 SQL_COPT_SS_SERVER_SPN과 sql_copt_ss_failover_partner_spn을 인식 하 여 새 연결 특성의 값을 설정 합니다. 이러한 특성은 연결이 열려 있는 상태에서는 설정할 수 없습니다. 연결이 열려 있을 때 이러한 특성을 설정하려고 하면 "작업을 현재 사용할 수 없습니다."라는 메시지와 함께 HY011 오류가 반환됩니다. (SQLSetConnectOption 데도 사용할 수 있습니다 이러한 값을 설정 합니다.)  
   
- Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40; Spn &#41; 클라이언트 연결 &#40; ODBC &#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 & #40; Spn & #41; 클라이언트 연결 & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  이 특성은 읽기 전용입니다.  
   
- SQL_COPT_SS_CONNECTION_DEAD에 대 한 자세한 내용은 참조 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 및 [데이터 원본 &#40; ODBC &#41;에 연결](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)합니다.  
+ SQL_COPT_SS_CONNECTION_DEAD에 대 한 자세한 내용은 참조 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 및 [데이터 원본에 연결할 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 성능 데이터를 로깅합니다.  
@@ -371,7 +372,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
  [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET quoted_identifier&#40; Transact SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET quoted_identifier& #40; Transact SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_adddynamicsnapshot_job (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3b2201611c5b58b795063dd06ecc7c0918c57f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6590dad37937cb5b937ac49e541e2264a266de8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  필터링된 데이터 스냅숏 작업이 추가될 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@suser_sname** =] **'***suser_sname***'**  
+ [ **@suser_sname**=] **'***suser_sname***'**  
  값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 사용 되는 값은는 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자에는 함수입니다. *suser_sname* 은 **sysname**, 기본값은 없습니다. *suser_sname* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
   
- [  **@host_name** =] **'***host_name***'**  
+ [ **@host_name**=] **'***host_name***'**  
  값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 사용 되는 값은는 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자에는 함수입니다. *host_name* 은 **sysname**, 기본값은 없습니다. *host_name* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
   
- [  **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
  만들어진 필터링된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname* 은 **sysname**, 기본값은 null 이며 선택적 출력 매개 변수입니다. 를 지정 하는 경우 *dynamic_snapshot_jobname* 배포자에서 고유한 작업을 확인 해야 합니다. 지정하지 않은 경우 작업 이름이 자동으로 생성되고 결과 집합에 반환됩니다. 생성되는 이름은 다음과 같습니다.  
   
 ```  
@@ -84,13 +84,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  동적 스냅숏 작업 이름을 생성할 때 표준 스냅숏 작업 이름을 잘라낼 수 있습니다.  
   
- [  **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
  만들어진 필터링된 데이터 스냅숏 작업에 대한 식별자입니다. *dynamic_snapshot_jobid* 은 **uniqueidentifier**, 기본값은 null 이며 선택적 출력 매개 변수입니다.  
   
  [  **@frequency_type=**] *frequency_type*  
  필터링된 데이터 스냅숏 작업을 예약하는 빈도입니다. *frequency_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|요청 시|  
@@ -108,16 +108,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* 는 사용 되지 않습니다.|  
 |**4** (기본값)|모든 *frequency_interval* 기본값 매일 일입니다.|  
-|**8**|*frequency_interval* 은 다음 중 하나 이상을 (함께 [&#124; &#40; 비트 OR &#41; &#40; Transact SQL &#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자).<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **4** = 화요일 &#124; **8** = 수요일 &#124; **16** = 목요일 &#124; **32** = 금요일 &#124; **64** = 토요일|  
+|**8**|*frequency_interval* 은 다음 중 하나 이상을 (함께 [ &#124; &#40;비트 OR&#41; &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자).<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **4** = 화요일 &#124; **8** = 수요일 &#124; **16** = 목요일 &#124; **32** = 금요일 &#124; **64** = 토요일|  
 |**16**|에 *frequency_interval* 해당 월의 일 합니다.|  
-|**32**|*frequency_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **3** = 화요일 &#124; **4** = 수요일 &#124; **5** = 목요일 &#124; **6** = 금요일 &#124; **7** = 토요일 &#124; **8** = 하루 &#124; **9** = 평일 &#124; **10** = 주말|  
+|**32**|*frequency_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일 &#124; **2** = 월요일 &#124; **3** = 화요일 &#124; **4** = 수요일 &#124; **5** = 목요일 &#124; **6** = 금요일 &#124; **7** = 토요일 &#124; **8** = 일 &#124; **9** = 평일 &#124; **10** = 주말|  
 |**64**|*frequency_interval* 는 사용 되지 않습니다.|  
 |**128**|*frequency_interval* 는 사용 되지 않습니다.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
  단위를 지정 *frequency_subday_interval*합니다. *frequency_subday* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|둘째|  
@@ -130,7 +130,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  각 월에 필터링된 데이터 스냅숏 작업이 발생하는 빈도입니다. 이 매개 변수는 때 *frequency_type* 로 설정 된 **32** (매월 상대)입니다. *frequency_relative_interval* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|둘째|  
@@ -155,7 +155,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|필터링 된 데이터 스냅숏 작업에서 식별 된 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블입니다.|  
 |**dynamic_snapshot_jobname**|**sysname**|필터링된 데이터 스냅숏 작업의 이름입니다.|  
@@ -176,7 +176,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [매개 변수가 있는 필터로 병합 게시에 대 한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

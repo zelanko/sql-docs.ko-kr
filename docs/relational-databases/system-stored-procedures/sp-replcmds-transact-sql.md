@@ -1,16 +1,16 @@
 ---
 title: sp_replcmds (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 279d002e0a088386440cd978410476dee8def3ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28b41af867b956f64391a2332a95015b46db823f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
 |**명령**|**varbinary(1024)**|명령 값입니다.|  
 |**xactid**|**binary(10)**|트랜잭션 ID입니다.|  
-|**xact_seqno**|**varbinary (16)**|트랜잭션 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|트랜잭션 시퀀스 번호입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
 |**command_id**|**int**|명령 ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)합니다.|  
 |**command_type**|**int**|명령의 유형입니다.|  
@@ -69,7 +69,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|내부적으로만 사용됩니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
-|**originator_lsn**|**varbinary (16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
+|**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
   
 ## <a name="remarks"></a>주의  
  **sp_replcmds** 트랜잭션 복제에서 로그 판독기 프로세스에 의해 사용 됩니다.  
@@ -90,9 +90,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>관련 항목:  
  [오류 메시지](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "Dataadapter로 UDT 열 업데이트 | Microsoft Docs"
-ms.custom: 
+title: Dataadapter로 UDT 열 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Dataadapter로 UDT 열을 업데이트 하는 사용자 정의 형식-액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-사용자 정의 형식 (Udt)를 사용 하 여 사용할 수는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
+  사용자 정의 형식 (Udt)를 사용 하 여 사용할 수는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
   
 ## <a name="populating-a-dataset"></a>데이터 집합 채우기  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 집합을 채울 수 있습니다. 다음 예제에서는 있다고 가정 합니다.는 **포인트** 테이블은 다음과 같은 구조와 예제 데이터를 사용 하 여 정의 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다는 **포인트** 테이블 및 행을 몇 개 삽입 합니다.  
@@ -92,7 +92,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  다음 ADO.NET 예에는 두 개의 메서드가 있습니다.  
   
--   **UserProvidedCommands**를 제공 하는 방법을 보여 주는 **InsertCommand**, **UpdateCommand**, 및 **DeleteCommand** 업데이트 하기 위한 개체는 **지점** 에서 UDT는 **포인트** 테이블 (포함 하지 않는 한 **타임 스탬프** 열)입니다.  
+-   **UserProvidedCommands**를 제공 하는 방법을 보여 주는 **InsertCommand**, **UpdateCommand**, 및 **DeleteCommand** 는 업데이트에대한개체 **지점** 에서 UDT는 **포인트** 테이블 (포함 하지 않는 한 **타임 스탬프** 열)입니다.  
   
 -   **CommandBuilder**를 사용 하는 방법을 보여 주는 **SqlCommandBuilder** 에 **Points_ts** 포함 된 테이블의 **타임 스탬프** 열입니다.  
   

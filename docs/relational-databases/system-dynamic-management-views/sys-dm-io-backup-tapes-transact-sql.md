@@ -1,16 +1,16 @@
 ---
 title: sys.dm_io_backup_tapes (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_backup_tapes
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3ac436bf8cecfd0f1c255e769dcfcd9b7420cc84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**spid**|**int**|세션 ID입니다. 테이프의 사용자를 식별합니다. Null을 허용합니다.|  
 |**명령**|**int**|백업을 수행하는 명령입니다. Null을 허용합니다.|  
 |**command_desc**|**nvarchar(120)**|명령에 대한 설명입니다. Null을 허용합니다.|  
-|**media_family_id**|**int**|미디어 패밀리의 인덱스 (1... *n* ),  *n*  미디어 세트의 미디어 패밀리 수입니다. Null을 허용합니다.|  
+|**media_family_id**|**int**|미디어 패밀리의 인덱스 (1... *n*), *n* 미디어 세트의 미디어 패밀리 수입니다. Null을 허용합니다.|  
 |**media_set_name**|**nvarchar(256)**|미디어 세트를 만들 때 MEDIANAME 옵션으로 지정한 미디어 세트의 이름(있는 경우)입니다. Null을 허용합니다.|  
 |**media_set_guid**|**uniqueidentifier**|미디어 세트를 고유하게 식별하는 식별자입니다. Null을 허용합니다.|  
 |**media_sequence_number**|**int**|미디어 패밀리 내 볼륨의 인덱스 (1... *n*). Null을 허용합니다.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [동적 관리 뷰 및 함수 &#40; 관련 O I Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [O I 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

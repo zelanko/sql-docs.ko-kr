@@ -1,31 +1,32 @@
 ---
-title: "이진에서 데이터를 전송 | Microsoft Docs"
-ms.custom: 
+title: 이진에서 데이터를 전송 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], transferring in binary form
 - transferring data in binary form [ODBC]
 - binary data transfers [ODBC]
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7241124d7297dd661c3aef08701af0cc15d77d1e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 489ce7115a312a8f2d171d839393b9ead695ef48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Binary에서 데이터 전송
 안전 하 게 응용 프로그램 같은 DBMS와 하드웨어 플랫폼을 사용 하는 두 개의 데이터 원본 간에 데이터 (지정 된 DBMS에 의해 사용 되는 내부 형식)를 전송할 수 있습니다. 지정된 된 데이터 부분에 대 한 원본 및 대상 데이터 원본에서 동일한 SQL 데이터 형식 이어야 합니다. C 데이터 형식은 SQL_C_BINARY 합니다.  

@@ -1,30 +1,31 @@
 ---
 title: sys.pdw_database_mappings (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2af7a56997955f12770157cfd3a89fe5ee9ac943
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9d4254b9c5603cfe459d008ea56cf4406e02b2ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 02/03/2018
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar(36)**|계산 노드의 데이터베이스에 대 한 물리적 이름입니다.<br /><br /> **physical_name** 및 **database_id** 이 보기에 대 한 키를 형성 합니다.||  
-|database_id|**int**|데이터베이스에 대 한 개체 ID입니다. 참조 [sys.databases&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** 및 **database_id** 이 보기에 대 한 키를 형성 합니다.||  
+|database_id|**int**|데이터베이스에 대 한 개체 ID입니다. 참조 [sys.databases &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)합니다.<br /><br /> **physical_name** 및 **database_id** 이 보기에 대 한 키를 형성 합니다.||  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
  다음 예제에서는 sys.pdw_database_mappings 데이터베이스 매핑되는 방법을 표시 하려면 다른 시스템 테이블에 조인 됩니다.  
   
 ```  
@@ -51,9 +52,9 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL 데이터 웨어하우스 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_table_mappings &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_nodes_pdw_physical_databases &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+ [sys.pdw_index_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys.pdw_table_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys.pdw_nodes_pdw_physical_databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

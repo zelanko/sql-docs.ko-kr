@@ -1,16 +1,16 @@
 ---
 title: dbo.sysschedules (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysschedules_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e402dfb4c7643c0f52965cfb69414810c0db21c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 15c683b263b8026503754e137d91d72e5ee7f0ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ ms.lasthandoff: 02/03/2018
 |**4** (매일)|모든 **freq_interval** (일)|  
 |**8** (매주)|**freq_interval** 은 다음 중 하나 이상을:<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **4** = 화요일<br /><br /> **8** = 수요일<br /><br /> **16** = 목요일<br /><br /> **32** = 금요일<br /><br /> **64** = 토요일|  
 |**16** (매월)|에 **freq_interval** 월의 일|  
-|**32** (월별, 상대)|**freq_interval** 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = Weekday<br /><br /> **10** = 주말|  
+|**32** (월별, 상대)|**freq_interval** 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
 |**64** (SQL Server 에이전트 서비스가 시작 될 때 시작)|**freq_interval** 는 사용 되지 않습니다 (**0**)|  
 |**128** (컴퓨터가 유휴 상태일 때 실행)|**freq_interval** 는 사용 되지 않습니다 (**0**)|  
   
 ## <a name="see-also"></a>참고 항목  
- [dbo.sysjobschedules &#40; Transact SQL &#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules & #40; Transact SQL & #41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_publication_validation (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c08dc184475526abd962ab97f52ccfbb8c405e8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0a2bca31164d91186426895fe4a25d0661400b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'***게시 '*  
+ [**@publication=**] **' * * * 게시 '*  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [**@rowcount_only=**] *rowcount_only*  
  테이블에 대해 행 개수만 반환할 것인지 여부입니다. *rowcount_only* 은 **smallint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클을 행 필터링 되는 행 개수 작업이 체크섬 작업 대신 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
@@ -65,7 +65,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [**@full_or_fast=**] *full_or_fast*  
  행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 은 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|빠른 계산 **sysindexes.rows**합니다. 행 개수 계산 [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 실제 테이블에서의 행 계산 보다 훨씬 빠릅니다. 그러나 때문에 [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 는 늦게 업데이트 행 개수가 아닐 정확 하 게 합니다.|  
@@ -74,7 +74,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  유효성 검사가 종료되면 배포 에이전트가 즉시 종료되어야 하는지 여부입니다. *shutdown_agent* 은 **비트**, 기본값은 **0**합니다. 경우 **0**, 복제 에이전트가 종료 되지는 않습니다. 경우 **1**, 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 합니다.  
   
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -95,8 +95,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [구독자에서 데이터 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

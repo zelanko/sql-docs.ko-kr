@@ -1,16 +1,16 @@
 ---
 title: sp_refresh_log_shipping_monitor (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cda4f72387da9f35824fe4747eb31a0d5ec454d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* 은 **tinyint** NULL 일 수 없습니다.  
   
- [ **@database=** ] **'***database***'**  
+ [  **@database=** ] **'***데이터베이스***'**  
  백업 에이전트나 복원 에이전트가 기록하는 데 사용하는 주 데이터베이스 또는 보조 데이터베이스입니다.  
   
  [ **@mode** ] *n*  
@@ -81,7 +81,7 @@ sp_refresh_log_shipping_monitor
  없음  
   
 ## <a name="remarks"></a>주의  
- **sp_refresh_log_shipping_monitor** 새로 고치는 **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_ 세부 정보**, 및 **log_shipping_monitor_error_detail** 아직 전송 되지 않은 모든 세션 정보로 테이블입니다. 이렇게 하면 잠시 동안 모니터가 동기화되지 않는 동안에도 모니터 서버를 주 서버 또는 보조 서버와 동기화할 수 있습니다. 또한 필요하면 모니터 서버에서 모니터 정보를 지울 수 있습니다.  
+ **sp_refresh_log_shipping_monitor** 새로 고치는 **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , 및 **log_shipping_monitor_error_detail** 아직 전송 되지 않은 모든 세션 정보로 테이블입니다. 이렇게 하면 잠시 동안 모니터가 동기화되지 않는 동안에도 모니터 서버를 주 서버 또는 보조 서버와 동기화할 수 있습니다. 또한 필요하면 모니터 서버에서 모니터 정보를 지울 수 있습니다.  
   
  **sp_refresh_log_shipping_monitor** 에서 실행 되어야 합니다는 **마스터** 기본 또는 보조 서버에서 데이터베이스.  
   
@@ -89,7 +89,7 @@ sp_refresh_log_shipping_monitor
  구성원만는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

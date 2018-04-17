@@ -1,30 +1,31 @@
 ---
-title: "3 단계: 작성 하 고 SQL 문을 실행 하 | Microsoft Docs"
-ms.custom: 
+title: '3 단계: 작성 하 고 SQL 문을 실행 하 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>작성 하 고 SQL 문을 실행 하는 3 단계:
 다음 그림에 나와 있는 것 처럼 작성 하 고 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 메서드는 매우 달라 집니다. 응용 프로그램 사용자 입력에 따라 SQL 문을 작성, SQL 문을 입력 하 라는 하거나 하드 코드 된 SQL 문을 사용 될 수 있습니다. 자세한 내용은 참조 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  

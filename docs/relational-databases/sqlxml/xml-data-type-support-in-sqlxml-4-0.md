@@ -1,44 +1,45 @@
 ---
-title: "xml 데이터 형식 지원 SQLXML 4.0에서 | Microsoft Docs"
-ms.custom: 
+title: xml 데이터 형식 지원 SQLXML 4.0에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 XML 데이터를 사용 하 여 입력의 **xml** 데이터 형식입니다. 이 항목에서는 SQLXML 4.0의 인스턴스를 인식 하는 방법에 대 한 정보는 **xml** 데이터 형식과 구현 지원 합니다.  
+  부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 XML 데이터를 사용 하 여 입력의 **xml** 데이터 형식입니다. 이 항목에서는 SQLXML 4.0의 인스턴스를 인식 하는 방법에 대 한 정보는 **xml** 데이터 형식과 구현 지원 합니다.  
   
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  구현 하는 SQL 테이블을 사용 하는 방법에 대 한 자세한 **xml** 데이터 형식 열을 다음과 같은 예가 제공 됩니다.  
   
 |태스크|예제|항목|  
 |----------|-------------|-----------|  
-|매핑하고 포함 하는 방법 한 **xml** XML 보기에서 열|"XML 요소를 XML 데이터 형식 열에 매핑"|[테이블 및 열 &#40; 데 XSD 요소 및 특성의 기본 매핑 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|데이터를 삽입 하는 방법 한 **xml** updategram으로 열|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategram &#40;를 사용 하 여 데이터 삽입 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|에 대 한 XML 데이터 대량 로드는 **xml** 열|"xml 데이터 형식 열에 대량 로드"|[XML 대량 로드 예 &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|매핑하고 포함 하는 방법 한 **xml** XML 보기에서 열|"XML 요소를 XML 데이터 형식 열에 매핑"|[테이블 및 열에 XSD 요소와 특성의 기본 매핑이 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|데이터를 삽입 하는 방법 한 **xml** updategram으로 열|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategram을 사용 하 여 데이터 삽입 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|에 대 한 XML 데이터 대량 로드는 **xml** 열|"xml 데이터 형식 열에 대량 로드"|[XML 대량 로드 예 & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>지침 및 제한 사항  
   

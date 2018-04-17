@@ -1,15 +1,15 @@
 ---
-title: "CLR 통합 프로그래밍 모델 제한 사항 | Microsoft Docs"
-ms.custom: 
+title: CLR 통합 프로그래밍 모델 제한 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체 작성 하는 경우 없는 코드 검사 수행 하 여 특정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 것으로 간주 해야 하는 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에 대 한 검사를 수행 합니다. 사용 하는 **CREATE ASSEMBLY** 문, 하며 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항을으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 **안전**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**, **안전한** 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
+  관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체 작성 하는 경우 없는 코드 검사 수행 하 여 특정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 것으로 간주 해야 하는 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에 대 한 검사를 수행 합니다. 사용 하는 **CREATE ASSEMBLY** 문, 하며 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항을으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 **안전**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**, **안전한** 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
   
  관리 코드 어셈블리에 적용되는 제한뿐 아니라 부여되는 코드 보안 권한도 있습니다. CLR(공용 언어 런타임)은 관리 코드에 대해 CAS(코드 액세스 보안)라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. **안전**, **EXTERNAL_ACCESS**, 및 **UNSAFE** 어셈블리 서로 다른 CAS 권한이 있습니다. 자세한 내용은 참조 [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)합니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_helprotect (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>인수  
  [  **@name =** ] **'***object_statement***'**  
- 보고서에 대한 사용 권한을 가진 현재 데이터베이스에 있는 개체 또는 문의 이름입니다. *object_statement* 은 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름은 형식에서 소유자의 한정자를 포함할 수 있습니다 *소유자***.** *개체*합니다.  
+ 보고서에 대한 사용 권한을 가진 현재 데이터베이스에 있는 개체 또는 문의 이름입니다. *object_statement* 은 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름은 형식에서 소유자의 한정자를 포함할 수 있습니다 *소유자***.*** 개체*합니다.  
   
  경우 *object_statement* 는 문 CREATE 문일 수 있습니다.  
   
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
  [  **@grantorname =** ] **'***grantor***'**  
  사용 권한을 부여한 보안 주체의 이름입니다. *grantor* 은 **sysname**, 기본값은 NULL 반환 하는 보안 주체는 데이터베이스에 의해 부여 된 권한에 대 한 모든 정보입니다.  
   
- [  **@permissionarea =** ] **'***형식***'**  
+ [ **@permissionarea =** ] **'***type***'**  
  개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 은 **varchar (10)**, 기본값은 **os**합니다. *형식* 의 조합이 포함 될 수 **o** 및 **s**, 하거나 사용 하지 않고 쉼표 또는 사이 공백을 **o** 및 **s**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -79,8 +79,8 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**개체**|**sysname**|개체 이름입니다.|  
 |**피부 여자에 게**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
-|**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
-|**동작**|**nvarchar (60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
+|**ProtectType**|**nvarchar(10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
+|**작업**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
 |**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -143,7 +143,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보안 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

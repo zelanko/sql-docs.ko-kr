@@ -1,16 +1,16 @@
 ---
 title: sysreplicationalerts (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46550c4b3cca05eb6d3c434562970084530d4063
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b3cbb8ee462007f59eac4aea41a10e0253651b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ ms.lasthandoff: 11/21/2017
 |**publication_type**|**int**|게시의 유형입니다.<br /><br /> **0** = 스냅숏 합니다.<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합 합니다.|  
 |**subscriber**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 구독자의 이름입니다.|  
 |**subscriber_db**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 구독자 데이터베이스 이름입니다.|  
-|**문서**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 아티클의 이름입니다.|  
+|**article**|**sysname**|이 경고를 발생시킨 에이전트와 관련된 아티클의 이름입니다.|  
 |**destination_object**|**sysname**|이 경고와 관련된 구독 테이블의 이름입니다.|  
 |**source_object**|**sysname**|이 경고와 관련된 게시된 테이블의 이름입니다.|  
 |**alert_error_text**|**ntext**|경고의 텍스트입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
+  이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>클라이언트 쪽 서식에서 지원되지 않는 여러 행 집합 쿼리  
  클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. 고려는 두 개의 SELECT 문이이 예제 서식 파일에는  **\<sql:query >** 블록:  
@@ -221,8 +222,8 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 -   지정 하는 경우 **클라이언트 쪽 xml = "1"** (true)에서 서식 파일을 요청 하는 클라이언트 쪽 XML 서식 지정 합니다. 이 경우 FOR XML NESTED를 지정할 수 있습니다. FOR XML AUTO를 지정 하면 XML 서식이 서버 쪽에서 있지만 **클라이언트 쪽 xml = "1"** 서식 파일에 지정 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [FOR XML 보안 고려 사항 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [클라이언트 쪽 XML 서식 지정 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [서버 쪽 XML 서식 지정 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [XML 보안 고려 사항에 대 한 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [클라이언트 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [서버 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

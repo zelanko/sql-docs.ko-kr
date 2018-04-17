@@ -2,7 +2,7 @@
 title: SQLSetDescField 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 **규칙**  
@@ -86,10 +86,10 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetDescField** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 SQL_HANDLE_DESC 및 *처리* 의 *DescriptorHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLSetDescField** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다  *\*ValuePtr* (경우 *ValuePtr* 는 포인터) 값과 *ValuePtr* (경우 *ValuePtr*  이 정수 값), 또는  *\*ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건 때문에 잘못 되었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다  *\*ValuePtr* (경우 *ValuePtr* 는 포인터) 값과 *ValuePtr* (경우 *ValuePtr*  이 정수 값), 또는  *\*ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건 때문에 잘못 되었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07009|잘못 된 설명자 인덱스입니다.|*FieldIdentifier* 레코드 필드에 인수가 *RecNumber* 되었습니다. 0, 인수 및 *DescriptorHandle* IPD 핸들에 인수를 참조 합니다.<br /><br /> *RecNumber* 에 0 보다 작은 인수가 및 *DescriptorHandle* 인수는 카드가 또는 APD을 참조 합니다.<br /><br /> *RecNumber* 인수 열 또는 매개 변수를 데이터 원본에서 지원할 수 있는 최대 수보다 큽니다. 및 *DescriptorHandle* 인수 APD 또는 참조 합니다.<br /><br /> DM ()는 *FieldIdentifier* SQL_DESC_COUNT, 되었습니다 및  *\*ValuePtr* 인수가 0 보다 작습니다.<br /><br /> *RecNumber* 0에 인수가 및 *DescriptorHandle* 암시적으로 할당 된 APD 인수 라고 합니다. (명시적으로 할당 된 응용 프로그램 설명자를 사용 하 여이 오류가 발생 하지 않으면 되므로 명시적으로 할당 된 응용 프로그램 설명자 APD 또는까지 카드가 인지 알 수 없습니다 실행 시간.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|*FieldIdentifier* SQL_DESC_NAME, 되었습니다 및 *BufferLength* SQL_MAX_IDENTIFIER_LEN 보다 큰 값 되었습니다.|  
@@ -107,7 +107,7 @@ SQLRETURN SQLSetDescField(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *DescriptorHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  응용 프로그램에서 호출할 수 **SQLSetDescField** 한 번에 하나의 설명자 필드를 설정할 수 있습니다. 한 번 호출 **SQLSetDescField** 단일 설명자의 단일 필드를 설정 합니다. 이 함수 설명자 형식에서 모든 필드를 설정 하기 위해 호출, 필드를 설정할 수 있습니다 제공 될 수 있습니다. (이 섹션 뒷부분에 나오는 표 참조).  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  헤더 필드를 초기화 하는 다음 표에서으로 둘러싸여 있습니다.  
   
-|헤더 필드 이름|형식|R/W|Default|  
+|헤더 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|카드가: R APD: R IRD: R IPD: R|카드가:에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> APD:에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: [1] APD: [1] IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 
   
  레코드 필드를 초기화 하는 다음 표에 표시 된 것과 같이입니다.  
   
-|레코드 필드 이름|형식|R/W|Default|  
+|레코드 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  

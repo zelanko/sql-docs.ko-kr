@@ -1,16 +1,16 @@
 ---
 title: sp_helppullsubscription (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e121aacbf65adc239f5474af32a863fc5d65f1f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54c20f748133b02604a59c96ae75004e7bbc6a93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
- 원격 서버의 이름입니다. *게시자* 은 **sysname**, 기본값은  **%** , 모든 게시자에 대 한 정보를 반환 하는 합니다.  
+ [ **@publisher=**] **'***publisher***'**  
+ 원격 서버의 이름입니다. *게시자* 은 **sysname**, 기본값은 **%**, 모든 게시자에 대 한 정보를 반환 하는 합니다.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은  **%** 를 반환 하는 모든 게시자 데이터베이스입니다.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 **%**를 반환 하는 모든 게시자 데이터베이스입니다.  
   
- [  **@publication=**] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은  **%** 를 반환 하는 모든 게시 합니다. 이 매개 변수 모두 끌어오기 구독만 independent_agent와 같은 = **0** 반환 됩니다.  
+ [ **@publication=**] **'***publication***'**  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**를 반환 하는 모든 게시 합니다. 이 매개 변수 모두 끌어오기 구독만 independent_agent와 같은 = **0** 반환 됩니다.  
   
  [  **@show_push=**] **'***show_push***'**  
  모든 밀어넣기 구독을 반환할지 여부입니다. *show_push*은 **nvarchar (5)**, 기본값은 FALSE 반환 하지 않는 밀어넣기 구독입니다.  
@@ -68,18 +68,18 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**게시자 데이터베이스**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**게시**|**sysname**|게시의 이름입니다.|  
-|**독립 에이전트**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
+|**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
 |**구독 유형**|**int**|게시에 대한 구독 유형입니다.|  
-|**배포 에이전트**|**nvarchar (100)**|구독을 처리하는 배포 에이전트입니다.|  
+|**배포 에이전트**|**nvarchar(100)**|구독을 처리하는 배포 에이전트입니다.|  
 |**게시 설명**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**마지막 업데이트 시간**|**date**|구독 정보가 업데이트된 시각입니다. 이는 ISO 날짜(114) + ODBC 시간(121)의 유니코드 문자열입니다. 형식은 yyyymmdd hh:mi:sss.mmm이며 여기서 'yyyy'는 연도, 'mm'은 월, 'dd'는 날짜, 'hh'는 시간, 'mi'는 분, 'sss'는 초, 'mmm'은 밀리초에 해당합니다.|  
 |**구독 이름**|**varchar(386)**|구독의 이름입니다.|  
-|**마지막 트랜잭션 타임 스탬프**|**varbinary (16)**|마지막으로 복제된 트랜잭션의 타임스탬프입니다.|  
+|**마지막 트랜잭션 타임 스탬프**|**varbinary(16)**|마지막으로 복제된 트랜잭션의 타임스탬프입니다.|  
 |**업데이트 모드**|**tinyint**|허용되는 업데이트 유형입니다.|  
 |**배포 에이전트 job_id**|**int**|배포 에이전트의 작업 ID입니다.|  
 |**enabled_for_synmgr**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부입니다.|  
-|**구독 guid**|**binary (16)**|게시에 대한 구독 버전의 전역 식별자입니다.|  
-|**subid**|**binary (16)**|익명 구독의 전역 식별자입니다.|  
+|**구독 guid**|**binary(16)**|게시에 대한 구독 버전의 전역 식별자입니다.|  
+|**subid**|**binary(16)**|익명 구독의 전역 식별자입니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
 |**게시자 로그인**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**게시자 암호**|**nvarchar (524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
@@ -116,8 +116,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helppullsubscription** 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_addpullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

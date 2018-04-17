@@ -1,16 +1,16 @@
 ---
-title: "SQLXML 4.0 데이터 액세스 구성 요소 | Microsoft Docs"
-ms.custom: 
+title: SQLXML 4.0 데이터 액세스 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQLXML]
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - providers [SQLXML]
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce0a5f172f049ac841cacac7fb041e4dda944cfd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8881b4ebbc40c8ff9bcd8d1f0e00f84ec586a51b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXMLOLEDB 공급자-SQLXML 4.0 데이터 액세스 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0의 데이터베이스에서 XML 데이터를 검색 하 고 XML 데이터를 삽입할 수 있는 세 가지 데이터 공급자도 포함 되어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스에 XML 데이터를 삽입하고 검색할 수 있는 다음 3개의 데이터 공급자가 포함되어 있습니다.  
   
 -   SQLXMLOLEDB 공급자  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/12/2018
      MDAC(Microsoft Data Access Components)의 현재 버전을 확장하고 보완하는 새 데이터 액세스 기술을 통해 SQLXML 4.0 기능을 노출합니다. SQLNCLI11은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 기능을 완벽하게 지원합니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SQLXMLOLEDB 공급자 &#40; SQLXML 4.0 &#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [SQLXMLOLEDB 공급자 &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  SQLXMLOLEDB 공급자를 설명하고 사용법을 보여 줍니다.  
   
   

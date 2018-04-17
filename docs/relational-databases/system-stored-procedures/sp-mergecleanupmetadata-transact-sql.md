@@ -1,16 +1,16 @@
 ---
 title: sp_mergecleanupmetadata (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [  **@publication =** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은  **%** , 모든 게시에 대 한 메타 데이터를 정리 하는 합니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**, 모든 게시에 대 한 메타 데이터를 정리 하는 합니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
   
  [  **@reinitialize_subscriber =** ] **'***구독자***'**  
  구독자를 다시 초기화할지 여부를 지정합니다. *구독자* 은 **nvarchar (5)**, 수 **TRUE** 또는 **FALSE**, 기본값은 **TRUE**합니다. 경우 **TRUE**, 구독 다시 초기화 되도록 표시 됩니다. 경우 **FALSE**, 구독 다시 초기화 되도록 표시 되지 않습니다.  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  데이터베이스에 게시가 여러 개 및 이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 (**@retention**=**0**)에서 실행 되며,  **sp_mergecleanupmetadata** 병합 복제 변경 내용 추적 데이터베이스에 대 한 메타 데이터 정리 하지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오.  
   
- 이 저장 프로시저 실행 시를 설정 하 여 구독자를 다시 초기화할 지 여부를 선택할 수 있습니다는  **@reinitialize_subscriber**  매개 변수를 **TRUE** (기본값) 또는 **FALSE**. 경우 **sp_mergecleanupmetadata** 로 실행 되는  **@reinitialize_subscriber**  매개 변수 설정 **TRUE**, 구독 된 경우에 구독자에서 스냅숏을 다시 적용 됩니다 초기 스냅숏 (예를 들어 경우 스냅숏 데이터와 스키마 수동으로 적용 되었거나 이미 구독자에 존재 됩니다) 없이 만들어집니다. 이 매개 변수 설정 **FALSE** 게시가 다시 초기화 되지 않습니다 경우 게시자와 구독자의 데이터가 동기화 되었는지 확인 해야 하기 때문에, 주의 해 서 사용 해야 합니다.  
+ 이 저장 프로시저 실행 시를 설정 하 여 구독자를 다시 초기화할 지 여부를 선택할 수 있습니다는 **@reinitialize_subscriber** 매개 변수를 **TRUE** (기본값) 또는 **FALSE**. 경우 **sp_mergecleanupmetadata** 로 실행 되는 **@reinitialize_subscriber** 매개 변수 설정 **TRUE**, 구독 된 경우에 구독자에서 스냅숏을 다시 적용 됩니다 초기 스냅숏 (예를 들어 경우 스냅숏 데이터와 스키마 수동으로 적용 되었거나 이미 구독자에 존재 됩니다) 없이 만들어집니다. 이 매개 변수 설정 **FALSE** 게시가 다시 초기화 되지 않습니다 경우 게시자와 구독자의 데이터가 동기화 되었는지 확인 해야 하기 때문에, 주의 해 서 사용 해야 합니다.  
   
- 값에 관계 없이  **@reinitialize_subscriber** , **sp_mergecleanupmetadata** 병합 게시자 또는 재게시 구독자에서 변경 내용을 업로드 하는 프로세스 실패 작업이 진행 중 저장된 프로시저가 호출 되는 시간입니다.  
+ 값에 관계 없이 **@reinitialize_subscriber**, **sp_mergecleanupmetadata** 병합 게시자 또는 재게시 구독자에서 변경 내용을 업로드 하는 프로세스 실패 작업이 진행 중 저장된 프로시저가 호출 되는 시간입니다.  
   
  **Sp_mergecleanupmetadata를 실행 @reinitialize_subscriber = TRUE.**  
   
@@ -127,8 +127,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  이 저장 프로시저를 사용하려면 게시자는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]을 실행해야 합니다. 구독자에서 실행 해야 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 서비스 팩 2입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MSmerge_genhistory &#40; Transact SQL &#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40; Transact SQL &#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40; Transact SQL &#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

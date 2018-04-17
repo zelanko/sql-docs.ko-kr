@@ -1,16 +1,16 @@
 ---
 title: sp_helptracertokenhistory (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ad9a67f66222ff87753056ea1b27b2ad83e6e8d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1763672f446560e06686c46af3cc060045500ed8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  추적 프로그램 토큰이 삽입된 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@tracer_id=** ] *tracer_id*  
- 추적 프로그램 토큰의 id는 [MStracer_tokens &#40; Transact SQL &#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) 테이블 기록에 대 한 정보가 반환 됩니다. *tracer_id* 은 **int**, 기본값은 없습니다.  
+ 추적 프로그램 토큰의 id는 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) 테이블 기록에 대 한 정보가 반환 됩니다. *tracer_id* 은 **int**, 기본값은 없습니다.  
   
  [  **@publisher=** ] **'***게시자***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
@@ -80,7 +80,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>주의  
  **sp_helptracertokenhistory** 트랜잭션 복제에 사용 됩니다.  
   
- 실행 [sp_helptracertokens &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 게시에 대 한 추적 프로그램 토큰의 목록을 가져올 수 있습니다.  
+ 실행 [sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 게시에 대 한 추적 프로그램 토큰의 목록을 가져올 수 있습니다.  
   
  결과 집합의 NULL 값은 대기 시간 통계를 계산할 수 없음을 나타냅니다. 이것은 배포자 또는 구독자 중 하나에서 추적 프로그램 토큰을 받지 못했기 때문입니다.  
   
@@ -92,6 +92,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "커밋 및 트랜잭션을 롤백하면 | Microsoft Docs"
-ms.custom: 
+title: 커밋 및 트랜잭션을 롤백하면 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>커밋 및 트랜잭션 롤백
 응용 프로그램이 호출 커밋하거나 수동 커밋 모드에서 트랜잭션을 롤백하려면 **SQLEndTran**합니다. 실행 하 여이 함수를 구현 하는 트랜잭션을 지 원하는 일반적으로 Dbms에 대 한 드라이버는 **커밋** 또는 **롤백** 문을 합니다. 드라이버 관리자가 호출 하지 않으면 **SQLEndTran** 자동 커밋 모드에 연결 된 경우 단순히 반환 SQL_SUCCESS, 응용 프로그램에서 트랜잭션을 하려고 하는 경우에 합니다. 구현 하거나 수 트랜잭션을 지원 하지 않는 Dbms에 대 한 드라이버가 자동 커밋 모드에서 항상 되므로 **SQLEndTran** 아무 작업도 수행 하지 않고 관계 없이 SQL_SUCCESS를 반환 하거나 전혀 구현 하지 않습니다.  

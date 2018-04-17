@@ -1,15 +1,15 @@
 ---
-title: "SQL Server의 사용자 정의 형식을 등록 | Microsoft Docs"
-ms.custom: 
+title: SQL Server의 사용자 정의 형식을 등록 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -35,20 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
+  사용자 정의 형식 (UDT)를 사용 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 등록 해야 합니다. UDT를 등록하려면 해당 형식을 사용할 데이터베이스에 어셈블리를 등록하고 형식을 만듭니다. UDT는 범위가 단일 데이터베이스로 한정되며, 데이터베이스마다 동일한 어셈블리와 UDT를 등록하지 않는 한 여러 데이터베이스에 사용할 수 없습니다. UDT 어셈블리가 등록되고 형식이 만들어지면 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 클라이언트 코드에 UDT를 사용할 수 있습니다. 자세한 내용은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio를 사용하여 UDT 배포  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio를 사용하면 UDT를 간편하게 배포할 수 있습니다. 그러나 배포 시나리오가 복잡하거나 높은 유연성이 요구되는 경우에는 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 5.  **빌드** 메뉴 선택 **배포**합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리가 등록되고 형식이 만들어집니다.  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL을 사용하여 UDT 배포  
- UDT를 사용할 데이터베이스에 어셈블리를 등록할 때는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 구문을 사용합니다. 등록된 어셈블리는 파일 시스템에 외부적으로 저장되는 것이 아니라 데이터베이스 시스템 테이블에 내부적으로 저장됩니다. UDT가 외부 어셈블리에 종속되어 있는 경우 해당 어셈블리도 데이터베이스에 로드해야 합니다. UDT를 사용할 데이터베이스에 UDT를 만들 때는 CREATE TYPE 문을 사용합니다. 자세한 내용은 참조 [CREATE assembly&#40; Transact SQL &#41; ](../../t-sql/statements/create-assembly-transact-sql.md) 및 [type&#40; 만들기 Transact SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ UDT를 사용할 데이터베이스에 어셈블리를 등록할 때는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 구문을 사용합니다. 등록된 어셈블리는 파일 시스템에 외부적으로 저장되는 것이 아니라 데이터베이스 시스템 테이블에 내부적으로 저장됩니다. UDT가 외부 어셈블리에 종속되어 있는 경우 해당 어셈블리도 데이터베이스에 로드해야 합니다. UDT를 사용할 데이터베이스에 UDT를 만들 때는 CREATE TYPE 문을 사용합니다. 자세한 내용은 참조 [CREATE assembly& #40; Transact SQL & #41; ](../../t-sql/statements/create-assembly-transact-sql.md) 및 [type& #40; 만들기 Transact SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY 사용  
  CREATE ASSEMBLY 구문은 UDT를 사용할 데이터베이스에 어셈블리를 등록하는 데 사용됩니다. 등록된 어셈블리에는 종속성이 없습니다.  
@@ -99,7 +99,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  CREATE TYPE 구문은 네이티브 작성용는 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 별칭 데이터 형식, 및 대체 하기 위한 **sp_addtype** 별칭 데이터 형식을 만들기 위한 수단으로 합니다. CREATE TYPE 구문의 일부 선택적 인수는 UDT 만들기와 관련이 있으며 기본 유형과 같은 별칭 데이터 형식을 만드는 데 사용할 수 없습니다.  
   
- 자세한 내용은 참조 [CREATE type&#40; Transact SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ 자세한 내용은 참조 [CREATE type& #40; Transact SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>예제  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다는 **지점** 유형입니다. 두 부분으로 이루어진 명명 구문을 사용 하 여 외부 이름을 지정 *AssemblyName*. *UDTName*합니다.  
@@ -154,7 +154,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 만든 UDT는 수정할 수 없습니다. 단, 해당 형식의 기반이 되는 어셈블리는 변경할 수 있습니다. 대부분의 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 문을 사용하여 데이터베이스에서 UDT를 제거하고 기본 어셈블리를 변경한 다음 ALTER ASSEMBLY 문을 사용하여 다시 로드해야 합니다. 그런 다음 UDT와 모든 종속 개체를 다시 만들어야 합니다.  
   
 ### <a name="example"></a>예제  
- UDT 어셈블리의 원본 코드를 변경하여 다시 컴파일한 후에는 ALTER ASSEMBLY 문이 사용됩니다. 이 문은 .dll 파일을 서버에 복사하고 새 어셈블리에 다시 바인딩합니다. 전체 구문을 참조 하십시오. [ALTER assembly&#40; Transact SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ UDT 어셈블리의 원본 코드를 변경하여 다시 컴파일한 후에는 ALTER ASSEMBLY 문이 사용됩니다. 이 문은 .dll 파일을 서버에 복사하고 새 어셈블리에 다시 바인딩합니다. 전체 구문을 참조 하십시오. [ALTER assembly& #40; Transact SQL & #41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 문은 디스크의 지정된 위치에서 Point.dll 어셈블리를 다시 로드합니다.  
   

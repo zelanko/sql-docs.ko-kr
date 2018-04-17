@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 함수
 **규칙**  
@@ -58,13 +58,13 @@ SQLRETURN SQLSetConnectAttr(
  *ConnectionHandle*  
  [입력] 연결 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 특성을 설정 하려면 "설명"에 나열 된  
   
  *ValuePtr*  
  [입력] 연결 된 값에 대 한 포인터 *특성*합니다. 값에 따라 *특성*, *ValuePtr* 부호 없는 정수 값 또는 null로 끝나는 문자열을 가리킵니다. 정수 계열 형식이 고 *특성* 인수 길이가 고정 될 수 있습니다 세부 정보에 대 한 설명 섹션을 참조 합니다.  
   
- *StringLength*  
+ *stringLength*  
  [입력] 경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 합니다 **ValuePtr*합니다. 문자 문자열 데이터에 대 한이 인수는 문자열의 바이트 수를 포함 해야 합니다.  
   
  경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 정수 이면 *StringLength* 는 무시 됩니다.  
@@ -87,10 +87,10 @@ SQLRETURN SQLSetConnectAttr(
   
  드라이버는 옵션을 설정할 때의 결과 대 한 정보를 제공 하는 SQL_SUCCESS_WITH_INFO를 반환할 수 있습니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08002|사용 중인 연결 이름|*특성* 인수 SQL_ATTR_ODBC_CURSORS, 였으며 드라이버는 데이터 원본에 이미 연결 되었습니다.|  
 |08003|연결이 열려 있지 않습니다|DM ()는 *특성* 열려 있는 연결을 필요로 하는 값이 지정 되지만 *ConnectionHandle* 가 연결 된 상태가 아닙니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -120,7 +120,7 @@ SQLRETURN SQLSetConnectAttr(
   
  때 *특성* 문 특성은 **SQLSetConnectAttr** 에서 반환 된 Sqlstate를 반환할 수 **SQLSetStmtAttr**합니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  연결 특성에 대 한 일반 정보를 참조 하십시오. [연결 특성](../../../odbc/reference/develop-app/connection-attributes.md)합니다.  
   
  현재 정의 된 특성 및 이러한 기능이 도입 된 ODBC 버전입니다;이 섹션의 뒷부분에 나오는 표에 표시 됩니다. 다른 데이터 원본 활용 하기 위해 더 많은 특성을 정의할는 사용할 수 있습니다. 특성의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 드라이버 관련 사용을 위해 값을 예약 해야 합니다.  
@@ -134,7 +134,7 @@ SQLRETURN SQLSetConnectAttr(
   
  연결 된; 전에만 일부 연결 특성을 설정할 수 있습니다. 다른 사용자를 연결한 후에 설정할 수 있습니다. 다음 표에서 이전 또는 이후에 연결에 설정 해야 하는 해당 연결 특성을 나타냅니다. *어느* 앞 이나 뒤 연결 특성을 설정할 수 있도록 나타냅니다.  
   
-|attribute|하기 전이나 후 연결 설정|  
+|Attribute|하기 전이나 후 연결 설정|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|모두|  
@@ -174,7 +174,7 @@ SQLRETURN SQLSetConnectAttr(
   
  *StringLength* 인수 길이 특성으로 정의 되어 있으면 ODBC 2에 도입 된 모든 특성의 경우 처럼*.x* 또는 이전 버전입니다.  
   
-|*Attribute*|*ValuePtr* 내용|  
+|*특성*|*ValuePtr* 내용|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1.0)|SQLUINTEGER 값입니다. SQL_MODE_READ_ONLY는 드라이버 또는 데이터 소스에서 연결이 필요 하지 않은 업데이트를 수행할 발생 하는 SQL 문을 지원 하기 위해 표시기로 사용 됩니다. 이 모드를 사용 하 여 잠금 전략, 트랜잭션 관리 또는 드라이버 또는 데이터 원본에 따라 다른 영역 최적화할 수 있습니다. 드라이버는 데이터 원본에 전송 되지 않도록 이러한 문을 실행할 필요가 없습니다. 드라이버 및 데이터 원본 읽기 전용은 읽기 전용 연결 하는 동안 SQL 문을 처리 하도록 요청 될 때의 동작은 구현 시 정의 합니다. SQL_MODE_READ_WRITE 기본값입니다.|  
 |SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|이벤트 핸들에 해당 하는 대 SQLPOINTER 값입니다.<br /><br /> 비동기 함수의 완료 알림을 호출 하 여 **SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 특성과 이벤트 핸들을 지정 하를 사용 합니다. **참고:** 알림 방법을 커서 라이브러리와 함께 사용할 수 없습니다. 응용 프로그램 알림 방법을 사용 하도록 설정한 경우 SQLSetConnectAttr 통해 커서 라이브러리를 사용 하도록 설정 하려고 하면 오류 메시지가 표시 됩니다.|  

@@ -2,7 +2,7 @@
 title: 맞춤 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alignment"></a>맞춤
 ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응용 프로그램에 보다 합니다. 즉, 대부분의 ODBC 응용 프로그램 문제가 없거나 거의 맞춤. 주소 정렬 되어 있지 않기에 의해 엄격히 규제 되어 하드웨어 및 운영 체제와 다르며 성능이 약간 저하 같은 사소한 문제로 또는 런타임 오류로 같이 주요 될 수 있습니다. 따라서 ODBC 응용 프로그램 및 휴대용 ODBC 응용 프로그램, 특히 주의 해야 데이터를 제대로 정렬 합니다.  

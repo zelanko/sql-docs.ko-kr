@@ -1,16 +1,16 @@
 ---
 title: sys.syslanguages (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syslanguages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03708a28eb0cdd1a961035f95d89cc9476cfbd63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,8 +51,8 @@ ms.lasthandoff: 02/09/2018
 |months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
 |shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
 |일|**nvarchar(217)**|월요일에서 일요일까지의 순서로 쉼표로 구분된 요일 이름의 목록이며 각 이름은 30자까지 사용할 수 있습니다.|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 언어의 Windows 로캘 ID입니다.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 id입니다.|  
+|lcid|**int**|해당 언어용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로캘 ID입니다.|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 ID입니다.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 설치된 언어는 다음과 같습니다.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/09/2018
 |태국어|1054|1054|  
   
 ## <a name="see-also"></a>관련 항목:  
- [호환성 뷰 &#40; Transact SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [시스템 뷰 &#40; 시스템 테이블 매핑 Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [호환성 뷰 &#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

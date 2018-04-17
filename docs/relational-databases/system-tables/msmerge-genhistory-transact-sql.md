@@ -1,16 +1,16 @@
 ---
 title: MSmerge_genhistory (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_genhistory system table
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0408dd3ecc87598117466c03d7b474c23f1ce514
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fefa84a7b6d13dcc1c3bc935e493a98c36f00720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergegenhistory-transact-sql"></a>MSmerge_genhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|구독자에서 generation에 의해 식별되는 변경 사항의 전역 식별자입니다.|  
 |**pubid**|**uniqueidentifier**|게시 식별자입니다.|  
-|**생성**|**bigint**|생성 값입니다.|  
+|**generation**|**bigint**|생성 값입니다.|  
 |**art_nick**|**int**|아티클의 애칭입니다.|  
 |**애칭**|**varbinary(1001)**|이미 이 generation이 있음이 알려진 다른 구독자의 애칭 목록입니다. 이미 해당되는 변경 사항을 알고 있는 구독자에게 generation을 보내는 것을 방지하는 데 사용합니다. 애칭 목록의 애칭은 검색을 더욱 효과적으로 하기 위해 정렬된 순서로 유지 관리됩니다. 이 필드에 수용할 수 있는 것보다 애칭 수가 많은 경우에는 이러한 최적화가 도움이 되지 않습니다.|  
 |**coldate**|**datetime**|현재 generation이 테이블에 추가된 날짜입니다.|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |**changecount**|**int**|지정된 generation에 반영된 변경 횟수입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

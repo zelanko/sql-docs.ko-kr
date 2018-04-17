@@ -1,16 +1,16 @@
 ---
 title: sp_attach_single_file_db (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 
+caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53b3e03d87ff8efb9be90b8cd85b9ce0951c0f40
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 57c9194019652552f84611977006fa91710092cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  [ **@dbname=** ] **'***dbname***'**  
  서버에 연결될 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**, 기본값은 NULL입니다.  
   
- [ **@physname=** ] **'***physical_name***'**  
+ [  **@physname=** ] **'***physical_name***'**  
  경로를 포함한 데이터베이스 파일의 물리적 이름입니다. *physical_name* 은 **nvarchar (260)**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  복제 데이터베이스에는 이 프로시저를 사용하지 마십시오.  
   
 ## <a name="permissions"></a>Permissions  
- 데이터베이스가 연결 될 때 사용 권한을 처리 되는 방법에 대 한 정보를 참조 하십시오. [CREATE database&#40; SQL Server transact-sql&#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ 데이터베이스가 연결 될 때 사용 권한을 처리 되는 방법에 대 한 정보를 참조 하십시오. [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 분리한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 파일 하나를 현재 서버에 연결합니다.  
@@ -97,8 +97,8 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

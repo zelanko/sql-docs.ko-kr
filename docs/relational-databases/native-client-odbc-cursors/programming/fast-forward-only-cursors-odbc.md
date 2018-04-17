@@ -1,15 +1,15 @@
 ---
-title: "빠른 정방향 전용 커서 (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 빠른 정방향 전용 커서 (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de4f780218dcb665f4a4a1336e5557615bcc1cd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04cde52abf320d7fa99d4cb748d491e63bc0eb50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>빠른 정방향 전용 커서(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 01/24/2018
   
  응용 프로그램에서는 각 드라이버에 맞는 문 특성 SQL_SOPT_SS_CURSOR_OPTIONS를 사용하여 빠른 정방향 전용 커서를 요청합니다. SQL_CO_FFO로 설정하면 자동 인출 없이 빠른 정방향 전용 커서를 활성화합니다. SQL_CO_FFO_AF로 설정하면 자동 인출 옵션도 활성화됩니다. 자동 인출 하는 방법에 대 한 자세한 내용은 참조 [ODBC 커서로 자동 인출 사용 하 여](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)합니다.  
   
- 자동 인출 기능을 사용하는 빠른 정방향 전용 커서는 서버 왕복을 하나만 포함하는 작은 결과 집합을 검색하는 데 사용할 수 있습니다. 이 단계에서는  *n*  반환할 행 수입니다.  
+ 자동 인출 기능을 사용하는 빠른 정방향 전용 커서는 서버 왕복을 하나만 포함하는 작은 결과 집합을 검색하는 데 사용할 수 있습니다. 이 단계에서는 *n* 반환할 행 수입니다.  
   
 1.  SQL_SOPT_SS_CURSOR_OPTIONS를 SQL_CO_FFO_AF로 설정합니다.  
   
-2.  SQL_ATTR_ROW_ARRAY_SIZE 설정  *n*  + 1입니다.  
+2.  SQL_ATTR_ROW_ARRAY_SIZE 설정 *n* + 1입니다.  
   
-3.  배열에 결과 열을 바인딩합니다  *n*  + 1 개 요소 (안전할 경우  *n*  + 1 행이 실제로 인출).  
+3.  배열에 결과 열을 바인딩합니다 *n* + 1 개 요소 (안전할 경우 *n* + 1 행이 실제로 인출).  
   
 4.  커서를 사용 하 여 열 **SQLExecDirect** 또는 **SQLExecute**합니다.  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/24/2018
 -   행 집합 크기를 결과 집합의 행 수보다 1개 많은 수로 설정했으므로 서버가 커서의 끝을 발견하고 커서를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [커서 프로그래밍 정보 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [커서 프로그래밍 정보 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

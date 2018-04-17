@@ -1,16 +1,16 @@
 ---
-title: "srv_paramset(확장 저장 프로시저 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramset(확장 저장 프로시저 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramset
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6b781d289ec3420ff83f2cc344005627e93d0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  원격 저장 프로시저 호출 반환 매개 변수의 값을 설정합니다. 이 함수는 **srv_paramsetoutput** 함수로 대체되었습니다.  
   
@@ -74,7 +74,7 @@ len
  반환할 데이터의 실제 길이를 지정합니다. 매개 변수의 데이터 형식이 상수 길이이고 Null 값을 허용하지 않는 경우(예: *srvbit* 또는 *srvint1*) *len*이 무시됩니다.  
   
 ## <a name="returns"></a>반환 값  
- 매개 변수 값이 성공적으로 설정된 경우 SUCCEED이고, 그렇지 않으면 FAIL입니다. 현재 원격 저장 프로시저가 없는 경우, *n*번째 원격 저장 프로시저 매개 변수가 없는 경우, 매개 변수가 반환 매개 변수가 아닌 경우 및 *len* 인수가 유효하지 않은 경우 FAIL이 반환됩니다.  
+ 매개 변수 값이 성공적으로 설정된 경우 SUCCEED이고, 그렇지 않으면 FAIL입니다. 없는 경우 현재 원격 저장된 프로시저가 없으면 경우 FAIL이 반환 되지 *n*매개 변수가 반환 매개 변수가 아닌 경우 번째 원격 저장 프로시저, 매개 변수는 *len* 인수가 아닙니다 법적 합니다.  
   
  *len*이 0이면 NULL이 반환됩니다. *len*을 0으로 설정해야만 클라이언트에 NULL이 반환됩니다.  
   
@@ -94,7 +94,7 @@ len
 |IG = 값이 무시됨||  
 |valid = 데이터에 대한 유효한 포인터||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  매개 변수에는 원격 저장 프로시저를 사용하여 클라이언트와 응용 프로그램 간에 전달되는 데이터가 포함되어 있습니다. 클라이언트는 특정 매개 변수를 반환 매개 변수로 지정할 수 있습니다. 이러한 반환 매개 변수에는 개방형 Data Services 서버 응용 프로그램이 다시 클라이언트에 전달하는 값이 포함될 수 있습니다. 반환 매개 변수를 사용하는 것은 참조로 매개 변수를 전달하는 것과 유사합니다.  
   
  반환 매개 변수로 호출되지 않은 매개 변수에 대해서는 반환 값을 설정할 수 없습니다. **srv_paramstatus**를 사용하여 매개 변수가 호출된 방법을 확인할 수 있습니다.  
@@ -106,7 +106,7 @@ len
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [srv_paramsetoutput(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

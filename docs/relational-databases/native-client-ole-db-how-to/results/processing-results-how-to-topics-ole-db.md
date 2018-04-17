@@ -1,29 +1,30 @@
 ---
-title: "결과 처리 방법 도움말 항목 (OLE DB) | Microsoft Docs"
-ms.custom: 
+title: 결과 처리 방법 도움말 항목 (OLE DB) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa01beef8f63de415cf273e89797b4808a22d87
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0e5d09d324facb9d15964a1586d2bf76f2060925
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +34,13 @@ ms.lasthandoff: 01/24/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [저장된 프로시저 &#40; 실행 ODBC CALL 구문 &#41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 &#40; OLE db&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [저장된 프로시저 & #40; 실행 ODBC CALL 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [저장된 프로시저 &#40; 실행 RPC 구문 &#41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 &#40; OLE db&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [저장된 프로시저 & #40; 실행 RPC 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [사용자 정의 함수를 실행 하 고 반환 코드 &#40; OLE db&#41;를 처리 합니다.](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [사용자 정의 함수를 실행 하 고 반환 코드 & #40; OLE db& #41;를 처리 합니다.](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [결과 집합 &#40; OLE db&#41;에서 행 인출](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [결과 집합 & #40; OLE db& #41;에서 행 인출](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [OLE DB 방법 도움말 항목](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

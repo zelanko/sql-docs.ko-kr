@@ -2,7 +2,7 @@
 title: ODBC 대답 인지 확인 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="is-odbc-the-answer"></a>ODBC 대답 인지 확인 합니다.
 상호 운용성에 대 한 문제를 살펴보기 전에 먼저 다음과 같은 질문을 고려해: 응용 프로그램은 ODBC 전혀 사용? ODBC에 대 한 지침을 이상한 질문 것 처럼 보일 수 있지만, 실제로 합법적인 쿼리에. ODBC Api, 네이티브 데이터베이스를 완전히 바꾸기 하도록 설계 되지 않았습니다도 모든 상황에서 데이터베이스 액세스를 제공 하도록 설계 되었습니다. 데이터베이스에 공통 인터페이스를 제공 하도록 디자인 된 하 고를 확인 하 고 여러 데이터베이스에 대 한 링크를 유지 관리 하지 않아도 응용 프로그램 프로그래머를 해제 합니다.  

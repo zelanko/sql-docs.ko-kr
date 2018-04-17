@@ -1,31 +1,32 @@
 ---
-title: "행 단위 바인딩은 | Microsoft Docs"
-ms.custom: 
+title: 행 단위 바인딩은 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>행 단위 바인딩
 행 단위 바인딩은 사용할 경우 응용 프로그램 하나 또는 두 개가 포함 된 구조체를 정의 또는 경우에 따라 3 개의 데이터 반환 되는 각 열에 대 한 요소입니다. 첫 번째 요소는 데이터 값을 보유 하 고 두 번째 요소가 고 길이/표시기 버퍼입니다. 표시기 및 길이 값에에서 저장할 수 별도 버퍼 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드; 있는 다른 값을 설정 하 여 이 도구를 실행 하는 경우 구조는 세 번째 요소를 포함 합니다. 그런 다음 응용 프로그램은 행 집합의 행이 더 많은 요소를 포함 하는 이러한 구조 배열을 할당 합니다.  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  여기서 행은 행 집합의 크기에 1부터 매겨집니다. (1에서 뺍니다 행 번호 배열 인덱싱 C에는 0부터 시작 하므로.) 다음 그림에서는 어떻게 행 단위 바인딩의 작동 보여 줍니다. 일반적으로 연결 되는 열에만 구조에 포함 됩니다. 구조는 결과 집합 열의에 연결 되지 않은 필드를 포함할 수 있습니다. 열 순서에 관계 없이 구조에 배치할 수 있습니다 하지만 쉽게 구별할 수 있도록 순서 대로 표시 됩니다.  
   
- ![행 표시 &#45; 현명한 바인딩](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![에서는 행&#45;현명한 바인딩](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  예를 들어 다음 코드를 반환할 OrderID, 영업 사원, 및 상태 열에 대 한 데이터와 영업 사원 및 상태 열에 대 한 길이/표시기에서 요소는 구조를 만듭니다. 이러한 구조를 10를 할당 하 고 OrderID, 영업 사원, 및 상태 열에 바인딩합니다.  
   

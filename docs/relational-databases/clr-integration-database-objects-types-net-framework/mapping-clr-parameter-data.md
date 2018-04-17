@@ -1,15 +1,15 @@
 ---
-title: "CLR 매개 변수 데이터 매핑 | Microsoft Docs"
-ms.custom: 
+title: CLR 매개 변수 데이터 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 공용 언어 런타임 (CLR)에서 동등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 **System.Data.SqlTypes** 네임 스페이스 및 기본 CLR 상응 하는 에서[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework입니다.  
+  다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 공용 언어 런타임 (CLR)에서 동등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 **System.Data.SqlTypes** 네임 스페이스 및 기본 CLR 상응 하는 에서[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework입니다.  
   
 ||||  
 |-|-|-|  
@@ -55,23 +55,23 @@ ms.lasthandoff: 02/09/2018
 |**datetime**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
 |**datetime2**|InclusionThresholdSetting|**DateTime, Nullable\<DateTime>**|  
 |**DATETIMEOFFSET**|**없음**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
-|**decimal**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**decimal**|**SqlDecimal**|**10 진수, null은 허용\<10 진수 >**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
 |**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** SQL Server와 함께 설치 되어 있고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|InclusionThresholdSetting|  
 |**image**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
-|**money**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**money**|**SqlMoney**|**10 진수, null은 허용\<10 진수 >**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
 |**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
-|**numeric**|**SqlDecimal**|**Decimal, Nullable\<Decimal>**|  
+|**numeric**|**SqlDecimal**|**10 진수, null은 허용\<10 진수 >**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** 데이터 전송 및 액세스에 대 한 더 일치 되 고 **SQLString** 더 적합 한 문자열 작업 수행에 대 한 합니다.|**String, Char[]**|  
 |**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char[], Nullable\<char>**|  
 |**real**|**그러나 SqlSingle** (범위 **SqlSingle**, 보다 크면 **실제**)|**Single, Nullable\<Single>**|  
 |**rowversion**|InclusionThresholdSetting|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, Nullable\<Int16>**|  
-|**smallmoney**|**SqlMoney**|**Decimal, Nullable\<Decimal>**|  
+|**smallmoney**|**SqlMoney**|**10 진수, null은 허용\<10 진수 >**|  
 |**sql_variant**|InclusionThresholdSetting|**개체**|  
 |**table**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
@@ -117,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 데이터 형식 (SQL Server)**|**SQL Server 데이터 형식**|  
-|**Decimal**|smallmoney|  
+|**10 진수**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**10 진수**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

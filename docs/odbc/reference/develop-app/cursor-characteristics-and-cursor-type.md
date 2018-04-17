@@ -1,31 +1,32 @@
 ---
-title: "커서 특성 및 커서 유형을 | Microsoft Docs"
-ms.custom: 
+title: 커서 특성 및 커서 유형을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>커서 특성 및 커서 유형
 응용 프로그램 (정방향 전용, 정적, 키 집합 커서 또는 동적) 커서 유형을 지정 하는 대신 커서의 특징을 지정할 수 있습니다. 이 위해 응용 프로그램 선택 (으로 SQL_ATTR_CURSOR_SCROLLABLE 문 특성 설정) 커서의 스크롤 가능 여부 및 민감도 (으로 SQL_ATTR_CURSOR_SENSITIVITY 문 특성 설정) 문에서 커서를 열기 전에 핸들입니다. 드라이버는 다음 있는 특성을 가장 효율적으로 제공 하는 커서 유형을 요청한 응용 프로그램을 선택 합니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_help_downloadlist (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b891780620de40d8541b7fc42e100b575e6ad7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@operation=** ] **'***operation***'**  
+ [  **@operation=** ] **'***작업***'**  
  지정된 작업에 유효한 작업입니다. *작업* 은 **varchar(64)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |Value|Description|  
@@ -72,13 +72,13 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INSERT**|전체 작업을 추가하거나 기존 작업을 새로 고치는 작업의 수행입니다. 여기에는 적용되는 모든 작업 단계 및 일정이 포함됩니다.|  
 |**RE-ENLIST**|서버 작업이 대상 서버로 하여금 폴링 간격 및 다중 서버 도메인에 대한 표준 시간대를 포함하여 포함 정보를 다시 전달하도록 합니다. 대상 서버를 다시 다운로드도 **MSXOperator** 세부 정보입니다.|  
 |**SET-POLL**|대상 서버가 다중 서버 도메인을 폴링하는 간격(초)을 설정하는 서버 작업입니다. 를 지정 하는 경우 *값* 필요한 간격 값으로 해석 되 고의 값 수 **10** 를 **28,800**합니다.|  
-|**START**|작업 실행 시작을 요청하는 작업의 수행입니다.|  
-|**STOP**|작업 실행 중지를 요청하는 작업의 수행입니다.|  
+|**시작**|작업 실행 시작을 요청하는 작업의 수행입니다.|  
+|**중지**|작업 실행 중지를 요청하는 작업의 수행입니다.|  
 |**SYNC-TIME**|대상 서버로 하여금 시스템 시계와 다중 서버 도메인을 동기화하도록 하는 서버 작업입니다. 이 작업은 비용이 많이 필요하므로 자주 실행하지 않고 제한적으로 실행합니다.|  
 |**UPDATE**|만 업데이트 하는 작업은 **sysjobs** 작업, 작업 단계 나 아닌 일정에 대 한 정보입니다. 자동으로 호출한 **sp_update_job**합니다.|  
   
  [ **@object_type=** ] **'***object_type***'**  
- 지정된 작업에 대한 개체의 유형입니다. *object_type* 은 **varchar(64)**, 기본값은 NULL입니다. *object_type* JOB 이나 SERVER 일 수 있습니다. 유효한에 대 한 자세한 내용은 *object_type*값, 참조 [sp_add_category &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ 지정된 작업에 대한 개체의 유형입니다. *object_type* 은 **varchar(64)**, 기본값은 NULL입니다. *object_type* JOB 이나 SERVER 일 수 있습니다. 유효한에 대 한 자세한 내용은 *object_type*값, 참조 [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)합니다.  
   
  [ **@object_name=** ] **'***object_name***'**  
  개체 이름입니다. *object_name* 은 **sysname**, 기본값은 NULL입니다. 경우 *object_type* 이 JOB 인 *object_name*작업의 이름입니다. 경우 *object_type*서버인 경우 *object_name*서버 이름입니다.  
@@ -89,7 +89,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@has_error=** ] *has_error*  
  작업이 오류를 승인해야 하는지 여부입니다. *has_error* 은 **tinyint**, 기본값은 NULL 나타내는입니다 없음 오류를 승인 해야 합니다. **1** 모든 오류를 승인 해야 있는지를 나타냅니다.  
   
- [ **@status=** ] *status*  
+ [  **@status=** ] *상태*  
  작업의 상태입니다. *상태* 은 **tinyint**, 기본값은 NULL입니다.  
   
  [ **@date_posted=** ] *date_posted*  

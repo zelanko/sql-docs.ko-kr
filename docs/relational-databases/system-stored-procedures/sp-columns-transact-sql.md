@@ -2,7 +2,7 @@
 title: sp_columns (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ sp_columns [ @table_name = ] object
  [ **@table_name=**] *object*  
  카탈로그 정보를 반환하는 데 사용되는 개체의 이름입니다. *개체* 테이블, 뷰 또는 테이블 반환 함수 같은 열이 있는 다른 개체 일 수 있습니다. *개체* 은 **nvarchar(384)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [ **@table_owner****=**] *owner*  
+ [  **@table_owner* * * =**] *소유자*  
  카탈로그 정보를 반환하는 데 사용되는 개체의 개체 소유자입니다. *소유자* 은 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 경우 *소유자* 을 지정 하지 않으면 기본 DBMS의 기본 개체 표시 규칙이 적용 됩니다.  
   
  현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자가 지정 된 개체를 소유 하지 및 *개체*, **sp_columns** 지정 된 개체를 찾습니다  *개체* 데이터베이스 소유자가 소유 합니다. 개체가 있으면 개체의 열이 반환됩니다.  
@@ -62,7 +63,7 @@ sp_columns [ @table_name = ] object
  [ **@table_qualifier****=**] *qualifier*  
  개체 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 개체에 대 한 세 부분으로 구성 된 이름 (*한정자***.*** 소유자***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ **@column_name=**] *column*  
+ [  **@column_name=**] *열*  
  카탈로그 정보 중 한 열만을 사용하고자 할 때 지정하는 단일 열입니다. *열* 은 **nvarchar(384)**, 기본값은 NULL입니다. 경우 *열* 은 지정 하지 않으면 모든 열 반환 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *열* 에 나열 된 열 이름을 나타냅니다는 **syscolumns** 테이블입니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
   
  [ **@ODBCVer=**] *ODBCVer*  
@@ -85,9 +86,9 @@ sp_columns [ @table_name = ] object
 |**PRECISION**|**int**|유효 자릿수입니다. 에 대 한 반환 값은 **정밀도** 열이 정수는 10에서입니다.|  
 |**LENGTH**|**int**|데이터의 크기를 전송 합니다. <sup>1</sup>|  
 |**크기 조정**|**smallint**|소수점 오른쪽 자릿수입니다.|  
-|**RADIX**|**smallint**|숫자 데이터 형식의 기수입니다.|  
+|**기 수**|**smallint**|숫자 데이터 형식의 기수입니다.|  
 |**NULLABLE**|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL을 사용할 수 있습니다.<br /><br /> 0 = NULL을 사용할 수 없습니다.|  
-|**REMARKS**|**varchar(254)**|이 필드는 항상 NULL을 반환합니다.|  
+|**설명**|**varchar(254)**|이 필드는 항상 NULL을 반환합니다.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|열의 기본값입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시되는 SQL 데이터 형식의 값입니다. 이 열은 동일는 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 sql-92 **간격** 데이터 형식입니다. 이 열은 항상 값을 반환합니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|하위 형식에 대 한 코드 **datetime** 및 sql-92 **간격** 데이터 형식입니다. 이 열은 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  

@@ -1,16 +1,16 @@
 ---
 title: sp_OACreate (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OACreate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36d46482582d877241d5ec621896d8aa4206fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>인수  
  *progid*  
- 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 및 형식은: **'***OLEComponent***.** *개체***'**  
+ 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 및 형식은: **'***OLEComponent***. ***개체***'**  
   
  *OLEComponent* OLE 자동화 서버의 구성 요소 이름 및 *개체* OLE 개체의 이름입니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다는 **IDispatch** 인터페이스입니다.  
   
@@ -61,7 +61,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *objecttoken* **출력**  
  반환 된 개체 토큰이 며 데이터 형식의 지역 변수 이어야 합니다 **int**합니다. 이 개체 토큰은 만들어진 OLE 개체를 식별하고 다른 OLE Automation 저장 프로시저 호출에 사용됩니다.  
   
- *컨텍스트*  
+ *context*  
  새로 만든 OLE 개체가 실행되는 실행 컨텍스트를 지정합니다. 지정되는 경우 다음 값 중 하나여야 합니다.  
   
  **1** = in-process (.dll) OLE 서버만 합니다.  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLE 자동화 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE 자동화 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures 서버 구성 옵션](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

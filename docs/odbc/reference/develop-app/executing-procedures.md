@@ -1,30 +1,31 @@
 ---
-title: "프로시저 실행 | Microsoft Docs"
-ms.custom: 
+title: 프로시저 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5faf7f71d56ea6a1f6a8d4de436937dd96c03cec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2f0e289a395aba599afabf07d17416f126d75ce7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-procedures"></a>프로시저 실행
 ODBC는 프로시저를 실행 하기 위한 표준 이스케이프 시퀀스를 정의 합니다. 이 시퀀스 및이 사용 하는 코드 예제에서는 구문에 대 한 참조 [프로시저 호출](../../../odbc/reference/develop-app/procedure-calls.md)합니다.  

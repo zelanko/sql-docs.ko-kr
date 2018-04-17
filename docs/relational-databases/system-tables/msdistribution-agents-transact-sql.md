@@ -1,16 +1,16 @@
 ---
 title: MSdistribution_agents (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,26 +22,26 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f71cc1c79f36dcc14980ce4a04b1079fba6a8ee9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfaf9388efc32949540731d0b311ac4f42c9110
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_agents** 테이블은 로컬 배포자에서 실행 중인 각 배포 에이전트당 한 개의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|배포 에이전트의 ID입니다.|  
-|**name**|**nvarchar (100)**|배포 에이전트의 이름입니다.|  
+|**name**|**nvarchar(100)**|배포 에이전트의 이름입니다.|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/21/2017
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기 합니다.<br /><br /> **1** = 끌어오기 합니다.<br /><br /> **2** = 익명입니다.|  
 |**local_job**|**bit**|로컬 배포자에 SQL Server 에이전트 작업이 있는지 여부를 나타냅니다.|  
-|**job_id**|**binary (16)**|작업 ID입니다.|  
-|**subscription_guid**|**binary (16)**|이 에이전트의 구독 ID입니다.|  
-|**profile_id**|**int**|구성 ID는 [MSagent_profiles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 테이블입니다.|  
+|**job_id**|**binary(16)**|작업 ID입니다.|  
+|**subscription_guid**|**binary(16)**|이 에이전트의 구독 ID입니다.|  
+|**profile_id**|**int**|구성 ID는 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 테이블입니다.|  
 |**anonymous_subid**|**uniqueidentifier**|익명 에이전트의 ID입니다.|  
 |**subscriber_name**|**sysname**|익명 에이전트에서만 사용하는 구독자의 이름입니다.|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

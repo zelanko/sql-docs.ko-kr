@@ -1,16 +1,16 @@
 ---
 title: sp_change_users_login (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_users_login
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207272f7644ab39055b7c6bb330faf6053353601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 065126113e8914d1f22959bbfacc3e341d8855c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  기존 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑합니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]사용 하 여 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 대신 합니다.  
+  기존 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑합니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) 대신 합니다.  
   
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action=] '*동작*'  
  프로시저로 수행할 동작에 대해 설명합니다. *동작* 은 **varchar (10)**합니다. *동작* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|현재 데이터베이스의 sys.database_principals 시스템 카탈로그 뷰에 있는 사용자 항목을 동일한 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결합니다. 동일한 이름의 로그인이 없으면 자동으로 생성됩니다. 결과를 조사는 **Auto_Fix** 올바른 링크가 실제로 생성 되었는지 확인 하는 문입니다. 사용 하지 않도록 **Auto_Fix** 보안이 중요 한 경우에 합니다.<br /><br /> 사용 하는 경우 **Auto_Fix**를 지정 해야 *사용자* 및 *암호* 로그인이 아직 없는 경우 지정 해야 *사용자*하지만 *암호* 무시 됩니다. *로그인* NULL 이어야 합니다. *사용자* 현재 데이터베이스에서 유효한 사용자 여야 합니다. 로그인에는 다른 사용자가 매핑될 수 없습니다.|  
 |**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*, 및 *암호* NULL 이거나 지정 되지 않았습니다.<br /><br /> 시스템 테이블을 사용 하는 쿼리의 보고서 옵션을 유지 하려면의 항목과 비교 **sys.server_prinicpals** 의 항목과 함께 **sys.database_principals**합니다.|  
@@ -64,7 +64,7 @@ sp_change_users_login [ @Action = ] 'action'
  현재 데이터베이스에 있는 사용자의 이름입니다. *사용자* 은 **sysname**, 기본값은 NULL입니다.  
   
  [ @LoginName=] '*로그인*'  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *로그인* 은 **sysname**, 기본값은 NULL입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
  [ @Password=] '*암호*'  
  새 할당 된 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 하 여 만든 사람의 로그인 정보 **Auto_Fix**합니다. 사용자와 로그인이 매핑되고 일치 하는 로그인에 이미 있으면 및 *암호* 는 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login 새로 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 할당 *암호* 새 로그인 암호와 합니다. *암호* 은 **sysname**, NULL이 아니어야 합니다.  
@@ -127,10 +127,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보안 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

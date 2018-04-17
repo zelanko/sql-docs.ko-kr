@@ -2,7 +2,7 @@
 title: SQLGetDescRec 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 569a3708c13a4182e651c902ce7e1f1f9c7711dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f38ea81cf7eac8d670548382d8ffb4c0b79d503b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 함수
 **규칙**  
@@ -104,7 +104,7 @@ SQLRETURN SQLGetDescRec(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetDescRec** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_DESC 및 *처리* 의 *DescriptorHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetDescRec** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *이름* 충분히 전체 설명자 필드를 반환할 수 없습니다. 따라서 필드가 잘렸습니다. 잘리지 않은 설명자 필드의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -119,7 +119,7 @@ SQLRETURN SQLGetDescRec(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버와 관련 된 *DescriptorHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  응용 프로그램에서 호출할 수 **SQLGetDescRec** 단일 열 또는 매개 변수 설명자 필드의 값을 검색 합니다.  
   
 -   SQL_DESC_NAME  

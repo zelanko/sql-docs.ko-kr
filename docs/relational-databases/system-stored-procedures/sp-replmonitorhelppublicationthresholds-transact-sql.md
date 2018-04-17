@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorhelppublicationthresholds (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62f7770bb8127beba19170a6ee60369f83a11c02
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fd9a16067e4a7a1f670d0d50e1b44ea949208e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db** =] **'***publisher_db***'**  
+ [ **@publisher_db**=] **'***publisher_db***'**  
  게시된 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publication** =] **'***게시***'**  
+ [ **@publication**=] **'***게시***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publication_type** =] *publication_type*  
+ [ **@publication_type**=] *publication_type*  
  게시의 유형입니다. *publication_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
 |**1**|스냅숏 게시|  
@@ -75,7 +75,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|복제 성능 메트릭의 ID이며 다음 중 하나가 될 수 있습니다.<br /><br /> **1expiration** -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **2latency** -한 트랜잭션 게시에 대 한 구독의 성능 모니터링 합니다.<br /><br /> **4mergeexpiration** -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **5mergeslowrunduration** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **6mergefastrunduration** -고대역폭 (LAN) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **7mergefastrunspeed** -고대역폭 (LAN) 연결을 통한 병합 동기화의 동기화 속도 모니터링 합니다.<br /><br /> **8mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도 모니터링 합니다.|  
 |**title**|**sysname**|복제 성능 메트릭의 이름입니다.|  
-|**값**|**int**|복제 성능 메트릭의 임계값입니다.|  
+|**value**|**int**|복제 성능 메트릭의 임계값입니다.|  
 |**shouldalert**|**bit**|에 대 한 메트릭을;이 게시에 대해 정의 된 임계값을 초과 하는 경우 경고를 생성할지 여부는 값이 **1** 경고는 발생 수를 나타냅니다.|  
 |**isenabled**|**bit**|이 게시에 대 한 해당 복제 성능 메트릭에 대해 모니터링이 활성화 하는 경우에 값이 **1** 모니터링이 활성화 되었음을 나타냅니다.|  
   

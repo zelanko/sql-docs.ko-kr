@@ -2,7 +2,7 @@
 title: sp_addmergepublication (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,10 +99,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@sync_mode =** ] **'***sync_mode***'**  
  게시에 대한 구독자의 초기 동기화 모드입니다. *sync_mode* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**네이티브** (기본값)|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다.|  
-|**문자**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 지 원하는 데 필요한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.|  
+|**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 지 원하는 데 필요한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
  지정된 게시에 대해 밀어넣기 구독을 만들 수 있는지 여부를 지정합니다. *allow_push* 은 **nvarchar (5)**, 기본값은 TRUE와에서 허용 하는 밀어넣기 구독의 경우 게시 합니다.  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@use_partition_groups =** ] **'***use_partition_groups***'**  
  동기화 프로세스를 최적화하는 데 사전 계산 파티션을 사용하도록 지정합니다. *use_partition_groups* 은 **nvarchar (5)**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 |**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
@@ -211,7 +211,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@publication_compatibility_level =** ] *backward_comp_level*  
  게시의 이전 버전과의 호환성을 나타냅니다. *backward_comp_level* 은 **nvarchar(6)**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|버전|  
+|Value|버전|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -245,12 +245,12 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
  기간으로 설정한 보존에 대 한 단위 *보존*합니다. *retention_period_unit* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|버전|  
+|Value|버전|  
 |-----------|-------------|  
 |**일** (기본값)|보존 기간(일)을 지정합니다.|  
-|**주**|보존 기간(주)을 지정합니다.|  
-|**월**|보존 기간(월)을 지정합니다.|  
-|**연도**|보존 기간(년)을 지정합니다.|  
+|**week**|보존 기간(주)을 지정합니다.|  
+|**month**|보존 기간(월)을 지정합니다.|  
+|**year**|보존 기간(년)을 지정합니다.|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다. *generation_leveling_threshold* 은 **int**, 기본값은 1000입니다.  
@@ -264,7 +264,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_logging =** ] **'***conflict_logging***'**  
  충돌 레코드를 저장할 위치를 지정합니다. *conflict_logging* 은 **nvarchar (15)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**publisher**|충돌 레코드가 게시자에 저장됩니다.|  
 |**subscriber**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 대해서는 지원되지 않습니다.|  
@@ -283,7 +283,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  에 대 한 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자의 값 *alternate_snapshot_folder* 은 경우에 사용 값 *snapshot_in_default_folder* 은 **false**합니다.  
   
- DDL 복제가 설정 된 (*replicate_ddl***= 1**)는 게시에 대 한 복제 하지 않을 DDL 변경 내용을 적용 하려면 게시에 [sp_changemergepublication &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 설정 하려면 먼저 실행 해야 *replicate_ddl* 를 **0**합니다. 복제 되지 않는 DDL 문을 발급 된 후 **sp_changemergepublication** DDL 복제를 다시 설정 하려면 다시 실행할 수 있습니다.  
+ DDL 복제가 설정 된 (* replicate_ddl ***= 1**)는 게시에 대 한 복제 하지 않을 DDL 변경 내용을 적용 하려면 게시에 [sp_changemergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)설정 하려면 먼저 실행 해야 *replicate_ddl* 를 **0**합니다. 복제 되지 않는 DDL 문을 발급 된 후 **sp_changemergepublication** DDL 복제를 다시 설정 하려면 다시 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
@@ -295,7 +295,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_addsynctriggers (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf7770a9388c18922aeb551246c314caba5860fe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e99ea52a8bd206da42168f1aed59589561de47e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@sub_table_owner=**] **'***sub_table_owner***'**  
  구독자 테이블의 소유자 이름입니다. *sub_table_owner* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher=**] **'***게시자***'**  
+ [ **@publisher=**] **'***publisher***'**  
  게시자 서버의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다. NULL인 경우 현재 데이터베이스가 사용됩니다.  
   
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@ins_proc=**] **'***ins_proc***'**  
@@ -117,7 +117,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@distributor =** ] **'***배포자***'**  
  배포자의 이름입니다. *배포자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@pubversion** =] *pubversion*  
+ [ **@pubversion**=] *pubversion*  
  게시자의 버전을 나타냅니다. *pubversion* 은 **int**, 기본값은 1입니다. **1** 게시자 버전이 의미 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 2 이전; **2** 게시자가 있다는 것을 의미 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 3 (SP3) 이상. *pubversion* 으로 명시적으로 설정 되어 있어야 **2** 게시자 버전은 때 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 이상.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -131,7 +131,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 ## <a name="see-also"></a>관련 항목:  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

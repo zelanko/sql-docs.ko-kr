@@ -1,16 +1,16 @@
 ---
-title: "Sql: 사용 하 여 키 열 식별-필드 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 'Sql: 사용 하 여 키 열 식별-필드 (SQLXML 4.0) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 지정 하는 **sql:-필드** 주석은의 적절 한 계층이 생성 됩니다.  
+  XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 중첩을 얻으려면 대부분 키 정보가 필요합니다. 지정 하는 **sql:-필드** 주석은의 적절 한 계층이 생성 됩니다.  
   
 > [!NOTE]  
 >  올바른 중첩을 보장 하려면 것이 좋습니다 지정 하는 **sql:-필드** 테이블에 매핑되는 요소에 대 한 합니다. 기본 결과 집합의 순서가 생성되는 XML에 중요합니다. 경우 **sql:-필드** 을 지정 하지 않으면 생성 된 XML 제대로 구성할 수 있습니다.  
@@ -54,7 +55,7 @@ XSD 스키마에 대해 XPath 쿼리가 지정된 경우 결과에서 올바른 
   
  다음과 같은 스키마를 살펴 보십시오. 간의 계층을 지정 하는 스키마는  **\<순서 >** 및  **\<고객 >** 요소가 들어는  **\<순서 >**요소는 부모 및  **\<고객 >** 는 자식 요소입니다.  
   
- **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 에 제공 된 정보  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 **sql:-필드** 주석을 생성 되는 계층은 정확 합니다.  
+  **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 에 제공 된 정보  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 **sql:-필드** 주석을 생성 되는 계층은 정확 합니다.  
   
  와 **sql:-필드** 에 지정 된  **\<순서 >**주석은 부모 (Sales.SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소 아래에 표시는 부모입니다.  
   

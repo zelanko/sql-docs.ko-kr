@@ -1,16 +1,16 @@
 ---
 title: sp_requestpeerresponse (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d0a4009c5a6615a000989e2d41f2902ac37535f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 339f3ddd78d506e256b995d3458ac0212e32e720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication** =] **'***게시***'**  
+ [ **@publication**=] **'***게시***'**  
  상태를 확인할 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@description** =] **'***설명***'**  
+ [ **@description**= ] **'***description***'**  
  개별 상태 요청을 식별하는 데 사용할 수 있는 사용자 정의 정보입니다. *설명* 은 **nvarchar (4000)**, 기본값은 NULL입니다.  
   
- [  **@request_id**  =] *request_id*  
- 새 요청의 ID를 반환합니다. *request_id* 은 **int** 이며 출력 매개 변수입니다. 실행할 때이 값을 사용할 수 있습니다 [sp_helppeerresponses &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 상태 요청에 대 한 모든 응답을 볼 수 있습니다.  
+ [ **@request_id** =] *request_id*  
+ 새 요청의 ID를 반환합니다. *request_id* 은 **int** 이며 출력 매개 변수입니다. 실행할 때이 값을 사용할 수 있습니다 [sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 상태 요청에 대 한 모든 응답을 볼 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -71,7 +71,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_requestpeerresponse**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_deletepeerrequesthistory &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

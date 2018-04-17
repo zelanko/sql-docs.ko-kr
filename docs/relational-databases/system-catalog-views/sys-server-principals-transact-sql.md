@@ -1,16 +1,16 @@
 ---
 title: sys.server_principals (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_principals catalog view
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a37a7a41cfb219ec584c03b932cfe450cead48c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3705caa0221d2e0f4a6b93b6d2ffffb9b2fcb9e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,8 +44,8 @@ ms.lasthandoff: 11/21/2017
 |**name**|**sysname**|보안 주체의 이름입니다. 서버 내에서 고유합니다.|  
 |**principal_id**|**int**|보안 주체의 ID 번호입니다. 서버 내에서 고유합니다.|  
 |**sid**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
-|**유형**|**char(1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> K = 비대칭 키에 매핑된 로그인|  
-|**type_desc**|**nvarchar (60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> K = 비대칭 키에 매핑된 로그인|  
+|**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 로그인을 사용할 수 없습니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
 |**modify_date**|**datetime**|보안 주체 정의가 마지막으로 수정된 시간입니다.|  

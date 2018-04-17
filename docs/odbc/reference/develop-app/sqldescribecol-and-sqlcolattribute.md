@@ -1,15 +1,16 @@
 ---
-title: "SQLDescribeCol 및 SQLColAttribute | Microsoft Docs"
-ms.custom: 
+title: SQLDescribeCol 및 SQLColAttribute | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a79fa6a02a5c17be0180b0593e28c7827e751bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f3e09d40f81753029de94a480519540ebe6ef07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 및 SQLColAttribute
 **SQLDescribeCol** 및 **SQLColAttribute** 결과 집합 메타 데이터를 검색 하는 데 사용 됩니다. 이 두 기능 간의 차이점은 **SQLDescribeCol** 정보 (열 이름, 데이터 형식, 정밀도, 배율 및 null 허용 여부)을 하는 동안 동일한 5 가지 구성 요소는 항상 반환 **SQLColAttribute** 는 단일 응용 프로그램에서 요청 된 정보를 반환 합니다. 그러나 **SQLColAttribute** 반환할 메타 데이터를 열의 대/소문자 구분을 포함 하 여 보다 다양 한 선택, 크기, 업데이트 가능성 및 검색 기능은 표시 수 있습니다.  

@@ -1,16 +1,16 @@
 ---
 title: MSlogreader_history (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 191f696f65d744b66d2aa41b8841c24097bf6434
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c1b119040efebb1724b026cdb213cfdb9389a0d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**time**|**datetime**|메시지가 기록되는 시간입니다.|  
 |**duration**|**int**|메시지 세션의 기간(초)입니다.|  
 |**주석**|**nvarchar(255)**|메시지 텍스트입니다.|  
-|**xact_seqno**|**varbinary (16)**|마지막에 처리된 트랜잭션 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|마지막에 처리된 트랜잭션 시퀀스 번호입니다.|  
 |**delivery_time**|**int**|트랜잭션이 처음 전달된 시간입니다.|  
 |**delivered_transactions**|**int**|세션 중에 전달된 총 트랜잭션 수입니다.|  
 |**delivered_commands**|**int**|세션 중에 전달된 총 명령 수입니다.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**updateable_row**|**bit**|로 설정 **1** 기록 행을 덮어쓸 수 있는 경우.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

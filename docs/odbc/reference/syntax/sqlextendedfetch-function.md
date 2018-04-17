@@ -2,7 +2,7 @@
 title: SQLExtendedFetch 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 함수
 **규칙**  
@@ -81,7 +81,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>진단  
  때 **SQLExtendedFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLError**합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLExtendedFetch** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 하나의 열에 오류가 발생 한 경우 **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER;에서 오류가 발생 하는 열을 확인 하 고  **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 해당 열이 포함 된 행을 결정 하는 SQL_DIAG_ROW_NUMBER 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 열에 대해 반환 된 이진 데이터의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다. 숫자 값을 숫자의 소수 부분이 잘렸습니다.  (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -112,7 +112,7 @@ SQLRETURN SQLExtendedFetch(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  동작 **SQLExtendedFetch** 의 동일 **SQLFetchScroll**, 다음을 제외:  
   
 -   **SQLExtendedFetch** 및 **SQLFetchScroll** 다양 한 방법을 사용 하 여 인출 된 행 수를 반환 합니다. **SQLExtendedFetch** 에 인출 된 행 수를 반환  *\*RowCountPtr*; **SQLFetchScroll** SQL_ATTR_ROWS_FETCHED_PTR 가리키는 버퍼에 직접 가져온 행 수를 반환 합니다. 자세한 내용은 참조는 *RowCountPtr* 인수입니다.  

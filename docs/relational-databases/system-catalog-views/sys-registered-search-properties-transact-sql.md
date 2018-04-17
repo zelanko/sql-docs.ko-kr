@@ -1,16 +1,16 @@
 ---
 title: sys.registered_search_properties (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.registered_search_properties
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aee06ae6a5be4cf7c0aa6e37288dc71aee8a108
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e9ae52577d2e48adefc033b99ec4ca8be4f98650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/03/2018
 |**property_id**|**int**|로 식별 되는 검색 속성 목록 내에서 검색 속성의 내부 속성 ID는 **property_list_id** 값입니다.<br /><br /> 지정된 속성이 지정된 검색 속성 목록에 추가되면 전체 텍스트 엔진이 속성을 등록하고 속성 목록에 고유한 내부 속성 ID를 할당합니다. 지정된 검색 속성 목록에 고유한 내부 속성 ID이며 정수입니다. 지정된 속성이 여러 검색 속성 목록에 대해 등록된 경우 검색 속성 목록마다 서로 다른 내부 속성 ID가 할당될 수 있습니다.<br /><br /> 참고: 내부 속성 ID는 검색 속성 목록에 속성을 추가할 때 지정 된 속성 정수 식별자는 다릅니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.<br /><br /> 전체 텍스트 인덱스의 모든 속성 관련 내용을 보려면: <br />                  [sys.dm_fts_index_keywords_by_property&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>주의  
- 검색 속성 목록에 대 한 자세한 내용은 참조 [검색 속성 목록으로 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)합니다.  
+ 검색 속성 목록에 대한 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  사용자가 소유하고 있거나 일부 REFERENCE 권한이 부여된 검색 속성 목록에 있는 검색 속성의 경우에만 검색 속성의 메타데이터를 볼 수 있도록 제한됩니다.  
@@ -72,7 +73,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [sys.fulltext_indexes&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

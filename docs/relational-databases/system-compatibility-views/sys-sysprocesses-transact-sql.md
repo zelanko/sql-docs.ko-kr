@@ -1,16 +1,16 @@
 ---
 title: sys.sysprocesses (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprocesses_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56a8fecff1c129a210766fa4820ee90a11ff2dbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 id입니다.|  
+|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 ID입니다.|  
 |kpid|**smallint**|Windows 스레드 ID입니다.|  
 |blocked|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
 |waittype|**binary(2)**|예약되어 있습니다.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 |last_batch|**datetime**|클라이언트 프로세스가 원격 저장 프로시저 호출 또는 EXECUTE 문을 마지막으로 실행한 시간입니다.|  
 |ecid|**smallint**|단일 프로세스 대신 작업하고 있는 하위 스레드를 고유하게 식별하는 데 사용하는 실행 컨텍스트 ID입니다.|  
 |open_tran|**smallint**|프로세스의 열려 있는 트랜잭션 수입니다.|  
-|상태|**nchar(30)**|프로세스 ID 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 세션을 다시 설정 합니다.<br /><br /> **실행** = 세션이 실행 되는 일괄 처리를 하나 이상 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **배경** = 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행 합니다.<br /><br /> **롤백** = 세션에서 트랜잭션 롤백을 진행 합니다.<br /><br /> **보류 중인** =는 세션에서 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한** = 세션에서 작업이 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐입니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock을 기다리고 있습니다.<br /><br /> **일시 중단** = 세션이 I/O가 완료 등의 이벤트에 대 한 대기 합니다.|  
+|상태|**nchar(30)**|프로세스 ID 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 세션을 다시 설정 합니다.<br /><br /> **실행** = 세션이 실행 되는 일괄 처리를 하나 이상 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **배경** = 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행 합니다.<br /><br /> **롤백** = 세션에서 트랜잭션 롤백을 진행 합니다.<br /><br /> **보류 중인** =는 세션에서 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한** = 세션에서 작업이 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐입니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock을 기다리고 있습니다.<br /><br /> **일시 중단** = 세션이 I/O가 완료 등의 이벤트에 대 한 대기 합니다.|  
 |sid|**binary(86)**|사용자의 GUID(Globally Unique Identifier)입니다.|  
 |hostname|**nchar(128)**|워크스테이션의 이름입니다.|  
 |program_name|**nchar(128)**|응용 프로그램의 이름입니다.|  
@@ -81,8 +81,8 @@ ms.lasthandoff: 02/09/2018
  사용자가 서버에 대한 VIEW SERVER STATE 권한을 가지고 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 현재 세션만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [시스템 뷰 &#40; 시스템 테이블 매핑 Transact SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

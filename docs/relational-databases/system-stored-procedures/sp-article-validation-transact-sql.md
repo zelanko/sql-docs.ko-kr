@@ -1,16 +1,16 @@
 ---
 title: sp_article_validation (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9bf6e4375c3b7afb18ffa938ae29e8d1e9e48e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8bfe42f440f6311bf9a2badc368b8fd13811c91e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  아티클이 있는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
  유효성을 검사할 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
+ [ **@rowcount_only=**] *type_of_check_requested*  
  테이블의 행 개수만 반환되는지 지정합니다. *type_of_check_requested* 은 **smallint**, 기본값은 **1**합니다.  
   
  경우 **0**, 수행할 행 개수 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬.  
@@ -71,7 +71,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 은 **tinyint**, 다음이 값 중 하나일 수 있습니다.  
   
-|**Value**|**Description**|  
+|**Value**|**설명**|  
 |---------------|---------------------|  
 |**0**|COUNT(*)를 사용하여 전체 개수를 계산합니다.|  
 |**1**|빠른 계산을 수행 **sysindexes.rows**합니다. 행 개수 계산 **sysindexes** 실제 테이블에서의 행 계산 보다 빠릅니다. 그러나 **sysindexes** 는 느리게 업데이트 되므로 행 개수가 정확 하 게 되지 않을 수 있습니다.|  
@@ -80,13 +80,13 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  유효성 검사가 종료되면 배포 에이전트가 즉시 종료되어야 하는지 여부를 지정합니다. *shutdown_agent* 은 **비트**, 기본값은 **0**합니다. 경우 **0**, 배포 에이전트가 종료 되지는 않습니다. 경우 **1**, 아티클의 유효성을 검사 한 후 배포 에이전트를 종료 합니다.  
   
- [  **@subscription_level=**] *subscription_level*  
+ [ **@subscription_level=**] *subscription_level*  
  구독자 집합에 의해 유효성 검사가 선택되는지 여부를 지정합니다. *subscription_level* 은 **비트**, 기본값은 **0**합니다. 경우 **0**, 유효성 검사가 모든 구독자에 적용 됩니다. 경우 **1**, 유효성 검사를 호출 하 여 지정 된 구독자 하위 집합에만 적용 됩니다 **sp_marksubscriptionvalidation** 현재 열린 트랜잭션에서 합니다.  
   
  [  **@reserved=**] *예약*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  지정 된 비-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -105,9 +105,9 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [복제 된 데이터 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)   
- [sp_marksubscriptionvalidation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_helpsrvrolemember (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsrvrolemember
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36c1ac793a550b453508928b6544e95ed20b37b5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91e88ec91181cff6e7129a5af41c3476604f7c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  모든 로그인은 public의 멤버입니다. sp_helpsrvrolemember 때문에 public 역할을 인식 하지 않으므로 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] public 역할로 구현 하지 않습니다.  
   
- 추가 서버 역할에서 제거 된 멤버 참조 또는 [ALTER SERVER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ 추가 서버 역할에서 제거 된 멤버 참조 또는 [ALTER SERVER ROLE &#40;Transact SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
   
- sp_helpsrvrolemember는 사용자 정의 서버 역할을 인수로 사용 하지 않습니다. 사용자 정의 서버 역할의 멤버를 확인 하려면의 예제를 참조 [ALTER SERVER role&#40; Transact SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember는 사용자 정의 서버 역할을 인수로 사용 하지 않습니다. 사용자 정의 서버 역할의 멤버를 확인 하려면의 예제를 참조 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
   
 ## <a name="permissions"></a>Permissions  
  public 역할의 멤버 자격이 필요합니다.  
@@ -93,10 +93,10 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_helprole&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [보안 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

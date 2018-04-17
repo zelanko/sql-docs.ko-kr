@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergealternatepublisher (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c1b6cdc6bc5d7a19a6b7c27fc282233310da658
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902acd858e4c2147c50e385b8130173efc7fa3a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
+ [ **@publisher=**] **'***publisher***'**  
  대체 게시자의 이름이입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  게시 데이터베이스의 이름이입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름이입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -64,7 +64,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publication**|**sysname**|게시의 이름입니다.|  
 |**alternate_distributor**|**sysname**|배포자의 이름입니다.|  
 |**friendly_name**|**nvarchar(255)**|대체 게시자에 관한 설명입니다.|  
-|**사용 하도록 설정**|**bit**|서버가 대체 게시자인지 여부를 지정합니다. **1** 게시자가 동기화 대상이 대체 게시자로 활성화 되어 있는지를 지정 합니다. **0** 사용 하지 않음을 지정 합니다.|  
+|**enabled**|**bit**|서버가 대체 게시자인지 여부를 지정합니다. **1** 게시자가 동기화 대상이 대체 게시자로 활성화 되어 있는지를 지정 합니다. **0** 사용 하지 않음을 지정 합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

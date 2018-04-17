@@ -1,16 +1,16 @@
 ---
 title: sp_mergearticlecolumn (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 083d6d27d9417a76f9cafc1c3726e3f7c10df6d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 383b9a3f9994fa8ad627e143b59beac666248596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [  **@column =**] **'***열***'**  
  수직 분할을 만들 열을 식별합니다. *열* 은 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업* 로 설정 된 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 및 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 위치에서 *문서*.  
   
- [  **@operation =**] **'***작업***'**  
+ [ **@operation =**] **'***operation***'**  
  복제 상태입니다. *작업* 은 **nvarchar (4)**, 기본값은 ADD입니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 은 열을 지웁니다.  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
@@ -77,7 +77,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1** 병합 아티클에 대 한 변경 유효 하려면 스냅숏을 무효화 하 지정 되는 경우에는 값의 경우 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
   
- [  **@force_reinit_subscription =]***force_reinit_subscription*  
+ [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
  구독 다시 초기화 기능을 설정하거나 해제합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 구독이 다시 초기화 되지 않도록 지정 합니다.  
@@ -104,7 +104,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정 | Microsoft 문서](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

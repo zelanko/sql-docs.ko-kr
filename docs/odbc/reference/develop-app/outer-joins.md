@@ -1,39 +1,40 @@
 ---
-title: "외부 조인 | Microsoft Docs"
-ms.custom: 
+title: 외부 조인 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350621a056226653a2f9906dbf3931dfdfccec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 sql-92 left, right 및 완전 외부 조인 구문을 지원합니다. 외부 조인에 대 한 이스케이프 시퀀스는  
   
- **{oj** *외부 조인***}**  
+ **{oj** *외부-조인 * * *을 (를)**  
   
  여기서 *외부 조인* 은  
   
- *테이블 참조* {**왼쪽 &#124; 오른쪽 &#124; (를) FULL OUTER JOIN** {*테이블 참조* &#124; *외부 조인*} **ON** *검색 조건*  
+ *테이블 참조* {**왼쪽 &#124; 오른쪽 &#124; 전체을 (를) 외부 조인** {*테이블 참조* &#124; *외부 조인*} **ON**  *검색 조건*  
   
  *테이블 참조* 테이블 이름을 지정 하 고 *검색 조건* 간의 조인 조건을 지정는 *테이블 참조*합니다.  
   

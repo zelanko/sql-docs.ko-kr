@@ -1,16 +1,16 @@
 ---
 title: sys.dm_repl_articles (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdelcmd**|**nvarchar(510)**|삭제에 사용된 명령 또는 저장 프로시저입니다.|  
 |**cmdTypeDel**|**int**|삭제 저장 프로시저에 대한 호출 구문이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = 없음<br /><br /> **7** = 알 수 없음|  
 |**wszArtupdcmd**|**nvarchar(510)**|업데이트에 사용된 명령 또는 저장 프로시저입니다.|  
-|**cmdTypeUpd**|**int**|업데이트 저장 프로시저에 대한 호출 구문이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = 없음<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 알 수 없음|  
+|**cmdTypeUpd**|**int**|업데이트 저장 프로시저에 대한 호출 구문이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = 없음<br /><br /> **4** MCALL =<br /><br /> **5** VCALL =<br /><br /> **6** = SCALL<br /><br /> **7** = 알 수 없음|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|부분 업데이트에 사용된 명령 또는 저장 프로시저입니다.|  
 |**cmdTypePartialUpd**|**int**|부분 업데이트 저장 프로시저에 대한 호출 구문이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|열 필터링된 아티클에 대한 파티션의 열 수입니다.|  
-|**artcmdtype**|**tinyint**|현재 복제 중인 명령의 유형이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = 업데이트<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 없음<br /><br /> **6** = 내부 전용<br /><br /> **7** = 내부 전용<br /><br /> **8** = 부분 UPDATE|  
+|**artcmdtype**|**tinyint**|현재 복제 중인 명령의 유형이며 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = 삽입<br /><br /> **2** = 삭제<br /><br /> **3** = 업데이트<br /><br /> **4** UPDATETEXT =<br /><br /> **5** = 없음<br /><br /> **6** = 내부 전용<br /><br /> **7** = 내부 전용<br /><br /> **8** = 부분 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|아티클에 포함된 열을 기반으로 하는 INSERT 명령 템플릿입니다.|  
 |**artgendelcmd**|**nvarchar(510)**|사용한 호출 구문에 따라 기본 키 또는 아티클의 열을 포함할 수 있는 DELETE 명령 템플릿입니다.|  
 |**artgenupdcmd**|**nvarchar(510)**|사용한 호출 구문에 따라 기본 키, 업데이트된 열 또는 전체 열 목록을 포함할 수 있는 UPDATE 명령 템플릿입니다.|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [복제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [복제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

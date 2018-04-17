@@ -1,16 +1,16 @@
 ---
 title: sp_releaseapplock (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_releaseapplock_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5eb17b39125209ca15214356e84f832e2f8cbc73
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 503bfd0c13054852aeab822e3ec93d56a04bb4c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +54,15 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 리소스가 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. *resource_name* 은 이진 비교 되므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
   
  [ @LockOwner=] '*lock_owner*'  
- 가 있는 잠금 소유자는 *lock_owner* 잠금이 요청 된 값입니다. *lock_owner* 은 **nvarchar (32)**합니다. 값일 수 **트랜잭션** (기본값) 또는 **세션**합니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)**입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
   
  [ @DbPrincipal=] '*데이터베이스 _ 보안 주체*'  
- 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수의 호출자의 멤버 여야 합니다. *데이터베이스 _ 보안 주체*, 함수를 성공적으로 호출 하려면 dbo 또는 db_owner 고정 데이터베이스 역할. 기본값은 public입니다.  
+ 데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수를 성공적으로 호출하려면 이 함수의 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다. 기본값은 public입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  \>= 0 (성공) 또는 < 0 (실패)  
   
-|값|결과|  
+|Value|결과|  
 |-----------|------------|  
 |0|잠금이 성공적으로 해제되었습니다.|  
 |-999|매개 변수 유효성 검사 또는 다른 호출에서 오류가 발생했음을 나타냅니다.|  
@@ -87,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [APPLOCK_MODE &#40; Transact SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40; Transact SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_getapplock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

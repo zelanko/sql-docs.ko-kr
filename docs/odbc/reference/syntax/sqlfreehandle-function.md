@@ -2,7 +2,7 @@
 title: SQLFreeHandle 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
@@ -81,18 +81,18 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>진단  
  때 **SQLFreeHandle** 핸들에 대 한 진단 데이터 구조에서 가져올 수는 관련 된 SQLSTATE 값 SQL_ERROR를 반환 하는 **SQLFreeHandle** 확보 하려고 하지만 찾지 못했습니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLFreeHandle** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_ENV, 한 연결이 하나 이상 할당 또는 연결 된 상태 였습니다. **SQLDisconnect** 및 **SQLFreeHandle** 와 *HandleType* sql_handle_dbc 라는의 호출 하기 전에 각 연결에 대해 호출 되어야 합니다 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_ENV입니다.<br /><br /> DM ()는 *HandleType* 인수 sql_handle_dbc 라는, 였으며 함수가 호출 하기 전에 호출 된 **SQLDisconnect** 연결에 대 한 합니다.<br /><br /> DM ()는 *HandleType* sql_handle_dbc 라는 되었습니다. 비동기적으로 실행 중인 함수를 호출 했습니다 *처리* 함수를 호출 되었을 때 여전히 실행 하 고 있습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 문 핸들을 사용 하 여 호출 였으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. 문 핸들에서 또는 관련 된 연결 핸들에 대 한 비동기적으로 실행 중인 함수가 호출 된 하 고이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> DM ()는 *HandleType* SQL_HANDLE_DESC 되었습니다. 관련된 연결 핸들에서 비동기적으로 실행 중인 함수 호출 된 및이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> (DM) 모든 자회사 핸들 및 기타 리소스가 릴리스되지 않았기 전에 **SQLFreeHandle** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *처리* 및 *HandleType* 여로 설정 된 또는 SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_ENV, 한 연결이 하나 이상 할당 또는 연결 된 상태 였습니다. **SQLDisconnect** 및 **SQLFreeHandle** 와 *HandleType* sql_handle_dbc 라는의 호출 하기 전에 각 연결에 대해 호출 되어야 합니다 **SQLFreeHandle** 으로 *HandleType* SQL_HANDLE_ENV입니다.<br /><br /> DM ()는 *HandleType* 인수 sql_handle_dbc 라는, 였으며 함수가 호출 하기 전에 호출 된 **SQLDisconnect** 연결에 대 한 합니다.<br /><br /> DM ()는 *HandleType* sql_handle_dbc 라는 되었습니다. 비동기적으로 실행 중인 함수를 호출 했습니다 *처리* 함수를 호출 되었을 때 여전히 실행 하 고 있습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 문 핸들을 사용 하 여 호출 였으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. 문 핸들에서 또는 관련 된 연결 핸들에 대 한 비동기적으로 실행 중인 함수가 호출 된 하 고이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> DM ()는 *HandleType* SQL_HANDLE_DESC 되었습니다. 관련된 연결 핸들에서 비동기적으로 실행 중인 함수 호출 된 및이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> (DM) 모든 자회사 핸들 및 기타 리소스가 릴리스되지 않았기 전에 **SQLFreeHandle** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *처리* 및 *HandleType* 여로 설정 된 또는 SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|*HandleType* 인수 여 되었거나 SQL_HANDLE_DESC, 및 기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY017|자동으로 할당 된 설명자 핸들 사용이 잘못 되었습니다.|DM ()는 *처리* 인수는 자동으로 할당 된 설명자에 대 한 핸들을 설정 했습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 이며 드라이버는 ODBC 2*.x* 드라이버입니다.<br /><br /> DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  **SQLFreeHandle** 다음 섹션에 설명 된 대로 환경, 연결, 문 및 설명자에 대 한 핸들을 해제 하는 데 사용 됩니다. 핸들에 대 한 일반 정보를 참조 하십시오. [핸들](../../../odbc/reference/develop-app/handles.md)합니다.  
   
  응용 프로그램 해제; 된 후 핸들을 사용 하지 않아야 드라이버 관리자는 함수 호출에 대 한 핸들의 유효성을 검사 하지 않습니다.  

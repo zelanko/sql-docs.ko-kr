@@ -1,16 +1,16 @@
 ---
 title: sp_helpdistpublisher (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e01aca1558894f52f575aba642cd4079c22f21f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ce3c9b89c29bb9e387819ddbc15996d6d072b979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="arguments"></a>인수  
  [  **@publisher=** ] **'***게시자***'**  
- 속성이 반환되는 게시자입니다. *게시자* 은 **sysname**, 기본값은  **%** 합니다.  
+ 속성이 반환되는 게시자입니다. *게시자* 은 **sysname**, 기본값은 **%**합니다.  
   
  [  **@check_user=** ] *check_user*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -60,8 +60,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**name**|**sysname**|게시자의 이름입니다.|  
 |**distribution_db**|**sysname**|지정된 게시자에 대한 배포 데이터베이스입니다.|  
 |**security_mode**|**int**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
-|**로그인**|**sysname**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 로그인 이름입니다.|  
-|**암호**|**nvarchar (524)**|간단히 암호화된 형식으로 반환되는 암호입니다. 암호는 NULL 사용자가 아닌 다른 **sysadmin**합니다.|  
+|**login**|**sysname**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 로그인 이름입니다.|  
+|**password**|**nvarchar (524)**|간단히 암호화된 형식으로 반환되는 암호입니다. 암호는 NULL 사용자가 아닌 다른 **sysadmin**합니다.|  
 |**활성**|**bit**|원격 게시자가 배포자로 로컬 서버를 사용하는지 여부를 지정합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**working_directory**|**nvarchar(255)**|작업 디렉터리의 이름입니다.|  
 |**신뢰할 수 있는**|**bit**|게시자가 배포자에 연결할 때 암호가 필요한지 여부입니다. 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이후 버전에서는이 항상 반환 **0**, 즉, 암호가 필요 합니다.|  
@@ -82,8 +82,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="see-also"></a>관련 항목:  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

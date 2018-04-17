@@ -1,15 +1,16 @@
 ---
-title: "드라이버 관리자의 역할 | Microsoft Docs"
-ms.custom: 
+title: 드라이버 관리자의 역할 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 89d4b99deb3599765dfec30c5d2ec28975c8f875
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-of-the-driver-manager"></a>드라이버 관리자의 역할
 드라이버 관리자를 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다. 특히 레코드 가장 높은 순위 개이고 먼저 반환 될 결정 합니다. 드라이버는 상태 레코드 생성 하는 순서를 지정 합니다. 상태 레코드 드라이버 관리자와 드라이버에 게시 하는 경우 드라이버 관리자는 순서를 지정 하는 일을 담당 합니다. 자세한 내용은 참조 [상태 레코드의 시퀀스](../../../odbc/reference/develop-app/sequence-of-status-records.md)합니다.  

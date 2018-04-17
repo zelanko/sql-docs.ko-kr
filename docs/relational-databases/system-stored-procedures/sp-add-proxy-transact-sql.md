@@ -1,16 +1,16 @@
 ---
 title: sp_add_proxy (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_proxy
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE PROXY statement
 - sp_add_proxy
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bc9f2a111a69be48a2fb4f67cd4ec6e48f27926
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 30bc146258fadeec366c392b43bcfd65fa693300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ sp_add_proxy
  [ **@proxy_name**= ] **'***proxy_name***'**  
  만들 프록시의 이름입니다. *proxy_name* 은 **sysname**, 기본값은 NULL입니다. 경우는 *proxy_name* NULL 또는 빈 문자열인 경우에 기본 프록시 이름은 *user_name* 제공 합니다.  
   
- [ **@enabled** = ] *is_enabled*  
+ [ **@enabled** =] *is_enabled*  
  프록시 활성화 여부를 지정합니다. *is_enabled* 플래그는 **tinyint**, 기본값은 1입니다. 때 *is_enabled* 은 **0**, 프록시는 사용 되지 않으며 작업 단계에서 사용할 수 없습니다.  
   
  [ **@description**= ] **'***description***'**  
  프록시에 대한 설명입니다. 설명은 **nvarchar (512)**, 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+ [ **@credential_name** =] **'***credential_name***'**  
  프록시에 대한 자격 증명의 이름입니다. *credential_name* 은 **sysname**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
  [ **@credential_id** = ] *credential_id*  
  프록시에 대한 자격 증명의 ID입니다. *credential_id* 은 **int**, 기본값은 NULL입니다. 어느 *credential_name* 또는 *credential_id* 지정 해야 합니다.  
   
- [ **@proxy_id**= ] *id* OUTPUT  
+ [ **@proxy_id**=] *id* 출력  
  프록시를 성공적으로 만든 경우 프록시에 할당되는 프록시 ID입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -85,10 +85,10 @@ sp_add_proxy
 ## <a name="permissions"></a>Permissions  
  구성원만는 **sysadmin** 고정된 보안 역할에서이 프로시저를 실행할 수 있습니다.  
   
- 멤버는 **sysadmin** 고정된 보안 역할 모든 프록시를 사용 하는 작업 단계를 만들 수 있습니다. 저장된 프로시저를 사용 하 여 [sp_grant_login_to_proxy &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) 프록시에 다른 로그인 액세스 권한을 부여할 수 있습니다.  
+ 멤버는 **sysadmin** 고정된 보안 역할 모든 프록시를 사용 하는 작업 단계를 만들 수 있습니다. 저장된 프로시저를 사용 하 여 [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) 프록시에 다른 로그인 액세스 권한을 부여할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 자격 증명 `CatalogApplicationCredential`에 대한 프록시를 만듭니다. 이 코드는 자격 증명이 이미 있는 것으로 가정합니다. 자격 증명에 대 한 자세한 내용은 참조 하세요. [CREATE credential&#40; Transact SQL &#41; ](../../t-sql/statements/create-credential-transact-sql.md).  
+ 다음 예에서는 자격 증명 `CatalogApplicationCredential`에 대한 프록시를 만듭니다. 이 코드는 자격 증명이 이미 있는 것으로 가정합니다. 자격 증명에 대 한 자세한 내용은 참조 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)합니다.  
   
 ```  
 USE msdb ;  
@@ -104,7 +104,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_grant_login_to_proxy &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

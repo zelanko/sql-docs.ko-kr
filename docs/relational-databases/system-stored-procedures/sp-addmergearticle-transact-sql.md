@@ -1,16 +1,16 @@
 ---
 title: sp_addmergearticle (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd9d9ead2695338116dd3da6a60285756cb433c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,10 +91,10 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@source_object=** ] **'***source_object***'**  
  게시할 데이터베이스 개체입니다. *source_object* 은 **sysname**, 기본값은 없습니다. 병합 복제를 사용 하 여 게시할 수 있는 개체의 형식에 대 한 자세한 내용은 참조 [게시 데이터 및 데이터베이스 개체](../../relational-databases/replication/publish/publish-data-and-database-objects.md)합니다.  
   
- [  **@type=** ] **'***형식***'**  
+ [ **@type=** ] **'***type***'**  
  아티클의 유형입니다. *형식* 은 **sysname**, 기본값은 **테이블**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**테이블** (기본값)|스키마와 데이터가 있는 테이블입니다. 복제는 테이블을 모니터링하여 복제할 데이터를 결정합니다.|  
 |**func 스키마 전용**|스키마가 있는 함수 전용입니다.|  
@@ -118,10 +118,10 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
  스냅숏 적용 시 구독자에 테이블이 있는 경우 시스템이 수행할 작업을 지정합니다. *pre_creation_cmd* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
-|**삭제**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
+|**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
 |**drop** (기본값)|테이블을 다시 만들기 전에 삭제합니다. 지 원하는 데 필요한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.|  
 |**truncate**|대상 테이블을 자릅니다.|  
   
@@ -134,7 +134,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@schema_option=** ] *schema_option*  
  지정한 아티클에 대한 스키마 생성 옵션의 비트맵입니다. *schema_option* 은 **binary (8)**, 수 및는 [| (비트 OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음이 값 중 하나 이상의 제품입니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0x00**|스냅숏 에이전트의 스크립팅을 사용 하지 않도록 설정 하 고에 정의 된 제공 된 스키마 사전 작성 스크립트를 사용 하 여 *creation_script*합니다.|  
 |**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등). 이는 저장 프로시저 아티클에 대한 기본값입니다.|  
@@ -171,7 +171,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 |**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 [실행 스크립트 전과 후의 스냅숏 적용](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)합니다.<br /><br /> 관련된 옵션 참조 **0x100000000**합니다.|  
 |**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 변환 **varbinary (max)** 형식의 열을 실행 하는 구독자에 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.|  
-|**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40; Transact SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0 x 2000000000**|변환는 **hierarchyid** 데이터 형식을 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)합니다.|  
 |**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
 |**0x8000000000**|변환 된 **geography** 및 **기 하 도형** 데이터 형식을 **varbinary (max)** 를실행하는구독자에이러한형식의열을복제할수있도록[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|형식의 열에 인덱스를 복제 **geography** 및 **geometry**합니다.|  
@@ -232,7 +232,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1** 지정 하는 시그니처를 확인 하 출처를 신뢰할 수 있는지 확인 하십시오.  
   
  [  **@destination_object=** ] **'***destination_object***'**  
- 구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 은 **sysname**, 기본 값에 포함 된 내용으로  **@source_object** 합니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정 된 값의 테이블 아티클에 경우  *@source_object*  의 값을 재정의 *destination_object*합니다.  
+ 구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 은 **sysname**, 기본 값에 포함 된 내용으로 **@source_object**합니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정 된 값의 테이블 아티클에 경우 *@source_object* 의 값을 재정의 *destination_object*합니다.  
   
  [  **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
  아티클에서 대화형 해결 프로그램을 사용하거나 사용하지 않도록 합니다. *allow_interactive_resolver* 은 **nvarchar (5)**, 기본값은 FALSE입니다. **true** ; 아티클에서 대화형 해결 프로그램을 사용 하도록 설정 **false** 사용 되지 않습니다.  
@@ -246,7 +246,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@check_permissions=** ] *check_permissions*  
  병합 에이전트가 변경 사항을 게시자에 적용할 때 확인할 테이블 수준 권한의 비트맵입니다. 병합 프로세스가 사용하는 게시자 로그인/사용자 계정에 올바른 테이블 사용 권한이 없는 경우 잘못된 변경은 충돌로 기록됩니다. *check_permissions* 은 **int**, 수 및는 [| (비트 OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) 다음 값 중 하나 이상의 제품입니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0x00** (기본값)|사용 권한을 확인하지 않습니다.|  
 |**0x10**|구독자에서 실행한 삽입 작업이 업로드되기 전에 게시자에서 사용 권한을 확인합니다.|  
@@ -293,7 +293,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@partition_options=** ] *partition_options*  
  아티클의 데이터 분할 방식을 정의합니다. 데이터를 분할하면 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능을 최적화할 수 있습니다. *partition_options* 은 **tinyint**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|아티클에 대한 필터링이 정적이거나, 각 파티션에 대해 고유한 데이터 하위 집합을 생성하지 않습니다. 즉, "겹치는" 파티션입니다.|  
 |**1**|파티션이 겹치며 구독자에서 DML(데이터 조작 언어) 업데이트를 수행해도 행이 속한 파티션이 변경되지 않습니다.|  
@@ -309,13 +309,13 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  구독 유형이 클라이언트 구독인 구독자에서 수행되는 업데이트에 대한 제한을 정의합니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요. *subscriber_upload_options* 은 **tinyint**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|제한이 없습니다. 구독자의 변경 내용이 게시자에 업로드됩니다.|  
 |**1**|구독자에서 변경이 허용되지만 변경 내용이 게시자에 업로드되지 않습니다.|  
 |**2**|구독자에서 변경이 허용되지 않습니다.|  
   
- 변경 *subscriber_upload_options* 호출 하 여 다시 초기화 하려면 구독 [sp_reinitmergepullsubscription &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
+ 변경 *subscriber_upload_options* 호출 하 여 다시 초기화 하려면 구독 [sp_reinitmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)합니다.  
   
 > [!NOTE]  
 >  아티클의 원본 테이블이 이미 다른 게시의 값에 게시 된 경우 *subscriber_upload_options* 두 아티클에 대해 동일 해야 합니다.  
@@ -323,7 +323,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
  아티클에 대해 ID 범위 관리를 처리하는 방법을 지정합니다. *identityrangemanagementoption* 은 **nvarchar (10)**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**없음**|ID 범위 관리를 사용하지 않습니다.|  
 |**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  

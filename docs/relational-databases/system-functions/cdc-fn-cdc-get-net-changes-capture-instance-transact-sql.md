@@ -1,16 +1,16 @@
 ---
 title: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eef147e95d841605c01fa8a0597aae1d32cc831
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1fc46b0a9c671c82b03e9a4d4166513dc77315da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   에 대 한 지정된 된 로그 시퀀스 번호 (LSN) 범위 내에서 변경 된 각 원본 행당 하나의 순 변경 행을 반환 합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  원본 행에 있는 LSN 범위 동안 여러 번 변경 된 경우 행의 최종 내용을 반영 하는 단일 행 아래에 설명 된 열거 함수에 의해 반환 됩니다. 예를 들어 트랜잭션이 원본 테이블의 행을 삽입 하 고 LSN 범위 내의 후속 트랜잭션이 해당 행의 하나 이상의 열을 업데이트, 함수 반환만 **하나의** 업데이트 된 열 값을 포함 하는 행이 있습니다.  
   
- 이 열거 함수는 원본 테이블에 변경 데이터 캡처를 사용하도록 설정되어 있고 순 변경 추적이 지정된 경우에 생성됩니다. 순 변경 추적을 사용하려면 원본 테이블에 기본 키 또는 고유 인덱스가 있어야 합니다. 함수 이름을 파생 되 고 형식 cdc.fn_cdc_get_net_changes_를 사용 하 여*capture_instance*여기서 *capture_instance* 원본 테이블이 때 캡처 인스턴스에 대해 지정 된 값이 변경 데이터 캡처를 사용할 수 있습니다. 자세한 내용은 참조 [sys.sp_cdc_enable_table&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ 이 열거 함수는 원본 테이블에 변경 데이터 캡처를 사용하도록 설정되어 있고 순 변경 추적이 지정된 경우에 생성됩니다. 순 변경 추적을 사용하려면 원본 테이블에 기본 키 또는 고유 인덱스가 있어야 합니다. 함수 이름을 파생 되 고 형식 cdc.fn_cdc_get_net_changes_를 사용 하 여*capture_instance*여기서 *capture_instance* 원본 테이블이 때 캡처 인스턴스에 대해 지정 된 값이 변경 데이터 캡처를 사용할 수 있습니다. 자세한 내용은 참조 [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,12 +62,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *from_lsn*  
  결과 집합에 포함할 LSN 범위의 하위 끝점을 나타내는 LSN입니다. *from_lsn* 은 **binary (10)**합니다.  
   
- 행만 [cdc. &#91; capture_instance& &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 보다 크거나 __ $start_lsn의 값이 있는 테이블을 변경 *from_lsn* 결과 집합에 포함 됩니다.  
+ 행만 [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 보다 크거나 __ $start_lsn의 값이 있는 테이블을 변경 *from_lsn* 결과 집합에 포함 됩니다.  
   
  *to_lsn*  
  결과 집합에 포함할 LSN 범위의 상위 끝점을 나타내는 LSN입니다. *to_lsn* 은 **binary (10)**합니다.  
   
- 행만 [cdc. &#91; capture_instance& &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) __ $start_lsn의 작은 보다 작거나 값이 있는 테이블을 변경 *from_lsn* 같음 *to_lsn* 됩니다 결과 집합에 포함 되어 있습니다.  
+ 행만 [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) __ $start_lsn의 작은 보다 작거나 값이 있는 테이블을 변경 *from_lsn* 같음 *to_lsn* 결과 집합에 포함 됩니다.  
   
  *< row_filter_option >* :: = {모든 | 마스크가 포함 된 모두 | 병합을 통해 모든}  
  결과 집합에 반환되는 행과 메타데이터 열의 내용을 제어하는 옵션입니다. 다음 옵션 중 하나를 사용할 수 있습니다.  
@@ -101,7 +101,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>예  
  다음 예제에서는 함수를 사용 하 여 `cdc.fn_cdc_get_net_changes_HR_Department` 원본 테이블에 대 한 순 변경을 보고를 `HumanResources.Department` 특정 시간 간격 동안 합니다.  
   
- 먼저 `GETDATE` 함수를 사용하여 시간 간격의 시작을 표시합니다. 원본 테이블에 여러 DML 문이 적용된 후 `GETDATE` 함수를 다시 호출하여 시간 간격의 끝을 식별합니다. 함수 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) LSN 값에 의해 제한 변경 데이터 캡처 쿼리 범위에 시간 간격을 매핑할 사용 됩니다. 마지막으로 `cdc.fn_cdc_get_net_changes_HR_Department` 함수를 쿼리하여 원본 테이블에서 해당 시간 간격에 수행된 순 변경을 가져옵니다. 삽입된 후 삭제된 행은 함수가 반환하는 결과 집합에 나타나지 않습니다. 쿼리 창 내에서 추가된 후 삭제된 행은 원본 테이블에서 시간 간격 동안 순 변경을 생성하지 않기 때문입니다. 이 예제를 실행 하기 전에 먼저의 예제 B를 실행 해야 [sys.sp_cdc_enable_table&#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ 먼저 `GETDATE` 함수를 사용하여 시간 간격의 시작을 표시합니다. 원본 테이블에 여러 DML 문이 적용된 후 `GETDATE` 함수를 다시 호출하여 시간 간격의 끝을 식별합니다. 함수 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) LSN 값에 의해 제한 변경 데이터 캡처 쿼리 범위에 시간 간격을 매핑할 사용 됩니다. 마지막으로 `cdc.fn_cdc_get_net_changes_HR_Department` 함수를 쿼리하여 원본 테이블에서 해당 시간 간격에 수행된 순 변경을 가져옵니다. 삽입된 후 삭제된 행은 함수가 반환하는 결과 집합에 나타나지 않습니다. 쿼리 창 내에서 추가된 후 삭제된 행은 원본 테이블에서 시간 간격 동안 순 변경을 생성하지 않기 때문입니다. 이 예제를 실행 하기 전에 먼저의 예제 B를 실행 해야 [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -131,10 +131,10 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [cdc.fn_cdc_get_all_changes_&#60; capture_instance& &#62;  &#40; Transact SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

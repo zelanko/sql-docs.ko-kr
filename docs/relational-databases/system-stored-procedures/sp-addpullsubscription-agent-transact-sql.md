@@ -1,16 +1,16 @@
 ---
 title: sp_addpullsubscription_agent (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ca6f7bda4d6d9e0387dcbd98a09040be4d0a0d0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
+ [ **@publisher=**] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'***publisher_db'*  
+ [  **@publisher_db=**] **' * * * publisher_db'*  
  게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 NULL입니다. *publisher_db* Oracle 게시자에 의해 무시 됩니다.  
   
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
@@ -154,7 +154,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  배포 에이전트를 예약하는 빈도입니다. *frequency_type* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2** (기본값)|요청 시|  
@@ -174,7 +174,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  배포 에이전트의 날짜입니다. 이 매개 변수는 때 *frequency_type* 로 설정 된 **32** (매월 상대)입니다. *frequency_relative_interval* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|둘째|  
@@ -188,7 +188,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_subday=**] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 은 **int**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|한 번|  
 |**2**|둘째|  
@@ -210,7 +210,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *active_end_date*  
  배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 은 **int**, 기본값은 **0**합니다.  
   
- [  **@distribution_jobid =**] *distribution_jobid***출력**  
+ [  **@distribution_jobid =**] *distribution_jobid * * * 출력**  
  이 작업의 배포 에이전트 ID입니다. *distribution_jobid* 은 **binary (16)**, 기본값은 null 이며 출력 매개 변수입니다.  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
@@ -231,48 +231,48 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@ftp_password=**] **'***ftp_password***'**  
  이전 버전과의 호환성을 위해서만 지원됩니다.  
   
- [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder'*  
+ [  **@alt_snapshot_folder=** ] **' * * * alternate_snapshot_folder'*  
  스냅숏의 대체 폴더 위치를 지정합니다. *alternate_snapshot_folder* 은 **nvarchar (255)**, 기본값은 NULL입니다.  
   
- [  **@working_directory** =] **'***working_director***'**  
+ [ **@working_directory**=] **'***working_director***'**  
  게시용 데이터 및 스키마 파일을 저장하기 위해 사용하는 작업 디렉터리의 이름입니다. *working_directory* 은 **nvarchar (255)**, 기본값은 NULL입니다. 이름은 UNC 형식으로 지정해야 합니다.  
   
- [  **@use_ftp** =] **'***use_ftp***'**  
+ [ **@use_ftp**=] **'***use_ftp***'**  
  일반 프로토콜 대신 FTP를 사용하여 스냅숏을 검색하도록 지정합니다. *use_ftp* 은 **nvarchar (5)**, 기본값은 FALSE입니다.  
   
- [  **@publication_type** =] *publication_type*  
+ [ **@publication_type**=] *publication_type*  
  게시의 복제 유형을 지정합니다. *publication_type* 는 **tinyint** 기본값인 **0**합니다. 경우 **0**, 게시는 트랜잭션 유형입니다. 경우 **1**, 게시는 스냅숏 유형입니다. 경우 **2**, 게시는 병합 유형입니다.  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  DTS 패키지의 이름을 지정합니다. *dts_package_name* 는 **sysname** 기본값은 NULL입니다. 예를 들어 `DTSPub_Package`의 패키지를 지정하려면 매개 변수가 `@dts_package_name = N'DTSPub_Package'`여야 합니다.  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  패키지의 암호를 지정합니다. *dts_package_password* 은 **sysname** 이며 기본값은 NULL 의미 하는 패키지에 암호가 없습니다.  
   
 > [!NOTE]  
 >  경우에 암호를 지정 해야 *dts_package_name* 지정 됩니다.  
   
- [  **@dts_package_location** =] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'***dts_package_location***'**  
  패키지 위치를 지정합니다. *dts_package_location* 는 **nvarchar (12)**, 기본값은 **구독자**합니다. 패키지의 위치 일 수 있습니다 **배포자** 또는 **구독자**합니다.  
   
- [  **@reserved** =] **'***예약***'**  
+ [ **@reserved**=] **'***예약***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@offloadagent** =] '*remote_agent_activation*'  
+ [ **@offloadagent**=] '*remote_agent_activation*'  
  > [!NOTE]  
 >  원격 에이전트 활성화는 더 이상 사용되지 않으며 지원되지 않습니다. 이 매개 변수는 이전 버전 스크립트와의 호환성을 유지하기 위한 목적으로만 지원됩니다. 설정 *remote_agent_activation* 이외의 다른 값으로 **false** 오류가 생성 됩니다.  
   
- [  **@offloadserver** =] '*remote_agent_server_name*'  
+ [ **@offloadserver**=] '*remote_agent_server_name*'  
  > [!NOTE]  
 >  원격 에이전트 활성화는 더 이상 사용되지 않으며 지원되지 않습니다. 이 매개 변수는 이전 버전 스크립트와의 호환성을 유지하기 위한 목적으로만 지원됩니다. 설정 *remote_agent_server_name* NULL이 아닌 값으로 오류가 생성 됩니다.  
   
- [  **@job_name** =] '*job_name*'  
+ [ **@job_name**=] '*job_name*'  
  기존 에이전트 작업의 이름입니다. *job_name* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 구독이 동기화될 경우에만 지정됩니다. 구성원이 아닌 경우는 **sysadmin** 고정 서버 역할을 지정 해야 *job_login* 및 *job_password* 지정 하는 경우 *job_name*.  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  에이전트 실행에 사용되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 구독자에 연결할 때 항상 사용됩니다.  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 은 **sysname**, 기본값은 없습니다.  
   
 > [!IMPORTANT]  
@@ -291,12 +291,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_addpullsubscription_agent**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

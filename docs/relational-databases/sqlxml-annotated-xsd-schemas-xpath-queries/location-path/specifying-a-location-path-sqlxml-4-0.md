@@ -1,16 +1,16 @@
 ---
-title: "위치 경로 (SQLXML 4.0)를 지정 합니다. | Microsoft Docs"
-ms.custom: 
+title: 위치 경로 (SQLXML 4.0)를 지정 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 있습니다. 위치 경로는 컨텍스트 노드에 상대적인 노드 집합을 선택하는 식이고 위치 경로에 대한 평가 결과는 노드 집합입니다.  
+  XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 있습니다. 위치 경로는 컨텍스트 노드에 상대적인 노드 집합을 선택하는 식이고 위치 경로에 대한 평가 결과는 노드 집합입니다.  
   
 ## <a name="types-of-location-paths"></a>위치 경로 유형  
  위치 경로는 다음 중 한 가지 형식으로 지정할 수 있습니다.  
@@ -46,7 +47,7 @@ XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 
      상대 위치 경로는 문서의 컨텍스트 노드에서 시작되고 슬래시 표시(/)로 구분된 하나 이상의 위치 단계의 시퀀스로 구성됩니다. 각 단계는 컨텍스트 노드에 상대적인 노드 집합을 선택합니다. 초기 단계 시퀀스는 컨텍스트 노드에 상대적인 노드 집합을 선택합니다. 이 집합의 각 노드는 다음 단계에 대한 컨텍스트 노드로 사용됩니다. 해당 단계로 식별되는 노드 집합은 서로 조인되어 있습니다. 예를 들어 **child:: order/child::OrderDetail** 선택은  **\<OrderDetail >** 요소 자식을  **\<순서 >** 요소 컨텍스트 노드의 자식입니다.  
   
     > [!NOTE]  
-    >  SQLXML 4.0의 XPath 구현에서는 명시적으로 절대 XPath가 아닌 XPath까지 포함하여 모든 XPath 쿼리가 루트 컨텍스트에서 시작됩니다. 예를 들어 "Customer"로 시작하는 XPath 쿼리는 "/Customer"로 처리됩니다. XPath 쿼리에서 **Customer [Order]**, Customer는 루트 컨텍스트에서 시작 되지만 Order는 Customer 컨텍스트에서 시작 합니다. 자세한 내용은 참조 [XPath 쿼리를 사용 하 여 &#40; 소개 SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  SQLXML 4.0의 XPath 구현에서는 명시적으로 절대 XPath가 아닌 XPath까지 포함하여 모든 XPath 쿼리가 루트 컨텍스트에서 시작됩니다. 예를 들어 "Customer"로 시작하는 XPath 쿼리는 "/Customer"로 처리됩니다. XPath 쿼리에서 **Customer [Order]**, Customer는 루트 컨텍스트에서 시작 되지만 Order는 Customer 컨텍스트에서 시작 합니다. 자세한 내용은 참조 [XPath 쿼리를 사용 하 여 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)합니다.  
   
 ## <a name="location-steps"></a>위치 단계  
  위치 경로(절대 또는 상대)는 다음의 세 부분을 포함하는 위치 단계로 구성됩니다.  
@@ -68,13 +69,13 @@ XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 
      위치 단계의 구문은 두 개의 콜론(::)으로 구분된 축 이름과 노드 테스트, 그리고 각각 대괄호로 묶인 0개 이상의 식으로 구성됩니다. 예를 들어, XPath 식 (위치 경로) **:: customer [@CustomerID= 'ALFKI']** 모든 선택은  **\<고객 >** 컨텍스트 노드의 요소 자식을 합니다. 조건자의 테스트가 노드 집합을만 반환 하는에 적용 됩니다는  **\<고객 >** 특성을 가진 요소 노드의 값을 'ALFKI' 해당 **CustomerID** 특성입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [축 &#40;를 지정합니다. SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
+ [축 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  축을 지정하는 예를 제공합니다.  
   
- [위치 경로 &#40;에서 노드 테스트 지정 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [위치 경로에서 노드 테스트 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  노드 테스트를 지정하는 예를 제공합니다.  
   
- [위치 경로 &#40;에서 선택 조건자 지정 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [위치 경로에서 선택 조건자 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  선택 조건자를 지정하는 예를 제공합니다.  
   
   

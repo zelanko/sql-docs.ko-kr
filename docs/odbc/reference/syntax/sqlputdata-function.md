@@ -2,7 +2,7 @@
 title: SQLPutData 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 함수
 **규칙**  
@@ -74,7 +74,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>진단  
  때 **SQLPutData** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLPutData** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 이진 데이터에 대 한 출력 매개 변수 반환 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -105,8 +105,8 @@ SQLRETURN SQLPutData(
   
  경우 **SQLPutData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE  **SQLBulkOperations** 또는 **SQLSetPos**합니다.  
   
-## <a name="comments"></a>주석  
- **SQLPutData** 두 가지 용도 대 한 데이터 실행 시 데이터를 제공 하기 위해 호출할 수:에 대 한 호출에 사용할 매개 변수 데이터 **SQLExecute** 또는 **SQLExecDirect**, 또는 행이 때 사용 되는 데이터 열 업데이트 하거나 호출 하 여 추가할 **SQLBulkOperations** 에 대 한 호출에 의해 업데이트 될 **SQLSetPos**합니다.  
+## <a name="comments"></a>설명  
+ **SQLPutData** 두 가지 용도 대 한 데이터 실행 시 데이터를 제공 하기 위해 호출할 수:에 대 한 호출에 사용할 매개 변수 데이터 **SQLExecute** 또는 **SQLExecDirect**, 또는 행이 업데이트 될 때 사용할 데이터 열 호출 하 여 추가 또는 **SQLBulkOperations** 에 대 한 호출에 의해 업데이트 될 **SQLSetPos**합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLParamData** 데이터 결정을 보내야, 드라이버는 응용 프로그램 매개 변수 데이터를 보낼 결정 하는 데 사용할 수 있는 또는 열 데이터를 찾을 수 있는 표시를 반환 합니다. 또한 호출 해야 하는 응용 프로그램을 나타내는 sql_need_data가 반환 **SQLPutData** 데이터를 보내려고 합니다. 에 *DataPtr* 인수를 **SQLPutData**, 응용 프로그램 매개 변수 또는 열에 대 한 실제 데이터를 포함 하는 버퍼에 대 한 포인터를 전달 합니다.  
   

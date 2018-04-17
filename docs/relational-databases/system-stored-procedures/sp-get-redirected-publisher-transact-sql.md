@@ -1,16 +1,16 @@
 ---
 title: sp_get_redirected_publisher (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -18,16 +18,16 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdd0079a3af3ae647c66ea7106e79fb6f9a93ef9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 746f55b0230bf75ac835be901432d0e8eae278d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@original_publisher**  =] **'***original_publisher***'**  
+ [ **@original_publisher** =] **'***original_publisher***'**  
  게시할 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  게시할 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
@@ -73,7 +73,7 @@ sp_get_redirected_publisher
   
  유효성 검사가 요청 되지 또는 게시자 및 게시 데이터베이스에 대 한 항목이 없는 경우 *error_number* 및 *error_severity* 0을 반환 하 고 *error_message* null을 반환합니다.  
   
- 유효성 검사 저장 프로시저 유효성 검사를 요청한 경우 [sp_validate_redirected_publisher &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 리디렉션 대상이 게시 데이터베이스에 대 한 적절 한 호스트 인지 확인 하기 위해 호출 됩니다. 유효성 검사에 성공한 경우 **sp_get_redirected_publisher** 0에 대 한 리디렉션된 게시자 이름을 반환 된 *error_number* 및 *error_severity* 열 및에 null *error_message* 열입니다.  
+ 유효성 검사 저장 프로시저 유효성 검사를 요청한 경우 [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 리디렉션 대상이 게시에 적합 한 호스트 인지 확인 하기 위해 호출 데이터베이스입니다. 유효성 검사에 성공한 경우 **sp_get_redirected_publisher** 0에 대 한 리디렉션된 게시자 이름을 반환 된 *error_number* 및 *error_severity* 열 및에 null *error_message* 열입니다.  
   
  요청된 유효성 검사에 실패한 경우에는 리디렉션된 게시자 이름이 오류 정보와 함께 반환됩니다.  
   
@@ -82,8 +82,8 @@ sp_get_redirected_publisher
   
 ## <a name="see-also"></a>관련 항목:  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

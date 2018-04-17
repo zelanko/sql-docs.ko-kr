@@ -1,16 +1,16 @@
 ---
 title: MSrepl_commands (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee2da8ec88cc85128e13ef502c083358c623c92f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6818b0189cc4c7effdbf19485ba2ee1a98f4a32d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +41,19 @@ ms.lasthandoff: 11/21/2017
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
-|**xact_seqno**|**varbinary (16)**|트랜잭션 시퀀스 번호입니다.|  
-|**유형**|**int**|명령 유형입니다.|  
+|**xact_seqno**|**varbinary(16)**|트랜잭션 시퀀스 번호입니다.|  
+|**type**|**int**|명령 유형입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**originator_id**|**int**|원게시자의 ID입니다.|  
 |**command_id**|**int**|명령의 ID입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
 |**명령**|**varbinary(1024)**|명령 값입니다.|  
 |**hashkey**|**int**|내부적으로만 사용됩니다.|  
-|**originator_lsn**|**varbinary (16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
+|**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [복제 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replcmds &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_replcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

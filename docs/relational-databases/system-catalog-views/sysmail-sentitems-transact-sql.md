@@ -1,16 +1,16 @@
 ---
 title: sysmail_sentitems (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_sentitems_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5545beff62c4c5e46664bcfe570f5cb147122744
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f65f33de438152843839853d9e53dff9154f7ae7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 메일에서 보내는 각 메시지당 한 개의 행을 포함합니다. 사용 하 여 **sysmail_sentitems** 성공적으로 보낸 메시지를 확인 하려는 경우.  
   
- 데이터베이스 메일이 처리 하는 모든 메시지를 보려면 사용 [sysmail_allitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). 실패 상태의 메시지만 보려면 [sysmail_faileditems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). 보내지 않은을 보거나 사용 하 여 메시지를 다시 시도 하려면 [sysmail_unsentitems &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). 전자 메일 첨부 파일을 보려면 사용 [sysmail_mailattachments &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
+ 데이터베이스 메일이 처리 하는 모든 메시지를 보려면 사용 [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)합니다. 실패 상태의 메시지만 보려면 [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)합니다. 보내지 않은을 보거나 사용 하 여 메시지를 다시 시도 하려면 [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)합니다. 전자 메일 첨부 파일을 보려면 사용 [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/03/2018
 |**query_result_header**|**bit**|값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다.|  
 |**query_result_width**|**int**|**query_result_width** 메시지의 매개 변수입니다.|  
 |**query_result_separator**|**char(1)**|쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다.|  
-|**exclude_query_output**|**bit**|**exclude_query_output** 메시지의 매개 변수입니다. 자세한 내용은 참조 [sp_send_dbmail &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|**exclude_query_output** 메시지의 매개 변수입니다. 자세한 내용은 참조 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)합니다.|  
 |**append_query_error**|**bit**|**append_query_error** 메시지의 매개 변수입니다. 0은 쿼리에 오류가 있을 때 데이터베이스 메일이 전자 메일 메시지를 보내지 않음을 나타냅니다.|  
 |**send_request_date**|**datetime**|메시지가 메일 큐에 추가된 날짜와 시간입니다.|  
 |**send_request_user**|**sysname**|메시지를 보낸 사용자입니다. 메시지의 보낸 사람: 필드가 아니라 데이터베이스 메일 프로시저의 사용자 컨텍스트입니다.|  

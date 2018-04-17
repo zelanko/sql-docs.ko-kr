@@ -1,15 +1,16 @@
 ---
-title: "데이터 길이, 버퍼 길이 및 잘림 | Microsoft Docs"
-ms.custom: 
+title: 데이터 길이, 버퍼 길이 및 잘림 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6934769c4f78063e24a393877112c2219121740
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>데이터 길이, 버퍼 길이 및 잘림
 *데이터 길이* 작업은 데이터의 바이트 길이 응용 프로그램의 데이터 버퍼에 저장 될 것으로 그다지 데이터 원본에 저장 됩니다. 데이터 원본에 보다 데이터 버퍼에 서로 다른 형식에는 데이터는 대개 저장 되므로 이러한 구분은 중요 합니다. 따라서 데이터 원본에 전송 되는 데이터, 데이터 원본 형식으로 변환 하기 전에 데이터의 바이트 길이 이것이입니다. 데이터 원본에서 검색 중인 데이터, 데이터 버퍼 종류와 잘림을 모두 수행 되기 전의 변환 후 데이터의 바이트 길이입니다.  

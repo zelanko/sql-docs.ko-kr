@@ -1,16 +1,16 @@
 ---
 title: sp_kill_filestream_non_transacted_handles (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb1054ec1ce9bab7311417e109ac0cece16c9c88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c6f91b4c4483facda94d5aea74b422aa4704b6c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>Filestream 및 FileTable-sp_kill_filestream_non_transacted_handles
+# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   FileTable 데이터에 대한 비트랜잭션 핸들 파일을 닫습니다.  
@@ -51,7 +51,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  값에 대해 NULL을 전달할 수 *table_name* 를 닫으려면 열려 있는 모든 비트랜잭션 핸들 현재 데이터베이스의 모든 Filetable에 대 한 합니다. 기본값은 NULL입니다.  
   
  *handle_id*  
- 닫을 개별 핸들의 선택적 ID입니다. 가져올 수는 *handle_id* 에서 [sys.dm_filestream_non_transacted_handles&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 동적 관리 뷰. 각 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고유해야 합니다. 지정 하는 경우 *handle_id*에 대 한 값을 제공 해야 한다면 *table_name*합니다.  
+ 닫을 개별 핸들의 선택적 ID입니다. 가져올 수는 *handle_id* 에서 [sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 동적 관리 뷰. 각 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고유해야 합니다. 지정 하는 경우 *handle_id*에 대 한 값을 제공 해야 한다면 *table_name*합니다.  
   
  값에 대해 NULL을 전달할 수 *handle_id* 를 닫으려면 열려 있는 모든 비트랜잭션 핸들에서 지정한 FileTable에 대 한 *table_name*합니다. 기본값은 NULL입니다.  
   
@@ -67,7 +67,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  자세한 내용은 [FileTables 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 열려 있는 비트랜잭션 파일 핸들에 대 한 내용은 동적 관리 뷰를 쿼리하려면 [sys.dm_filestream_non_transacted_handles&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ 열려 있는 비트랜잭션 파일 핸들에 대 한 내용은 동적 관리 뷰를 쿼리하려면 [sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)합니다.  
   
 ## <a name="security"></a>보안  
   
@@ -103,5 +103,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [FileTable 관리](../../relational-databases/blob/manage-filetables.md)  
-  
+ [Filestream 및 FileTable 동적 관리 뷰 (Transact SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+ <br>[Filestream 및 FileTable 카탈로그 뷰 (Transact SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+ <br>[sp_filestream_force_garbage_collection (TRANSACT-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

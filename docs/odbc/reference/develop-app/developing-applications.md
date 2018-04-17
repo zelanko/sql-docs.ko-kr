@@ -1,31 +1,32 @@
 ---
-title: "응용 프로그램 개발 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 개발 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application development [ODBC]
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 975bc25d1f4b9e1b8830149f33d970a3b6930a7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fd104072cbcb3810a6b6b7f7d321dd5eb9050dd7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-applications"></a>응용 프로그램 개발
 이 섹션에는 드라이버는 ODBC 인터페이스와 구현 하는 드라이버를 사용 하는 응용 프로그램을 개발 하는 방법에 대 한 정보가 포함 되어 있습니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [설명자](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [의](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [트랜잭션](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [진단](../../../odbc/reference/develop-app/diagnostics.md)  
   

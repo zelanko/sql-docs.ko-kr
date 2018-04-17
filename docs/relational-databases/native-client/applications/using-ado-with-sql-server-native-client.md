@@ -1,15 +1,15 @@
 ---
-title: "SQL Server Native Client와 함께 ADO 사용 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Native Client와 함께 ADO 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, ADO
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - ADO [SQL Server Native Client]
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13978b8eb01fda4b9478111a3bef3e36c76f8e58
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4153097e55d2cdcf77fcfdf880ec7a0181e3d9e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client와 함께 ADO 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  새 응용 프로그램을 개발하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 대신 ADO.NET 및 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하여 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 모든 새 기능에 액세스하는 것이 좋습니다. .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 ADO.NET에 대한 .NET Framework SDK 설명서를 참조하십시오.  
   
- ADO에서 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용할 수 있도록 OLE DB의 주요 기능이 확장된 것을 비롯해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 기능이 향상되었습니다. 이러한 개선 사항을 통해 사용 하도록 ADO 응용 프로그램을 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능 및에 도입 된 형식에서는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** 및 **udt**합니다. 이러한 향상 된이 기능에 대 한 향상도 악용 하는 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client는 DBPROPSET_SQLSERVERDBINIT 속성 집합에 사용 하 여 ADO 응용 프로그램에서 새 데이터 형식이 ADO와 맞는 방식으로 노출 됩니다에 SSPROP_INIT_DATATYPECOMPATIBILITY 초기화 속성을 추가 합니다. 또한는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 또한 라는 새로운 연결 문자열 키워드 정의 **DataTypeCompatibility** 연결 문자열에 설정 된 합니다.  
+ ADO에서 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용할 수 있도록 OLE DB의 주요 기능이 확장된 것을 비롯해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 기능이 향상되었습니다. 이러한 개선 사항을 통해 사용 하도록 ADO 응용 프로그램을 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능 및에 도입 된 형식에서는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** 및 **udt**합니다. 이러한 향상 된이 기능에 대 한 향상도 악용 하는 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERDBINIT 속성 집합에 사용 하 여 ADO 응용 프로그램에서 새 데이터 형식이 ADO와 맞는 방식으로 노출 됩니다에 SSPROP_INIT_DATATYPECOMPATIBILITY 초기화 속성을 추가 합니다. 또한는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 또한 라는 새로운 연결 문자열 키워드 정의 **DataTypeCompatibility** 연결 문자열에 설정 된 합니다.  
   
 > [!NOTE]  
 >  기존 ADO 응용 프로그램은 SQLOLEDB 공급자를 사용하여 XML, UDT, 큰 값 텍스트 및 이진 필드 값을 액세스하고 업데이트할 수 있습니다. 새 큰 **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)** 데이터 형식은 ADO 형식으로 반환 됩니다 **adLongVarChar**, **adLongVarWChar** 및 **adLongVarBinary** 각각. XML 열으로 반환 됩니다 **adLongVarChar**, UDT 열으로 반환 되 고 **adVarBinary**합니다. 그러나 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설정 되었는지 확인 해야 하는 SQLOLEDB 대신 Native Client OLE DB 공급자 (SQLNCLI11)는 **DataTypeCompatibility** 키워드를 "80" ADO 데이터에 새 데이터 형식이 올바르게 매핑되는지 있도록 형식입니다.  

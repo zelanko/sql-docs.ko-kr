@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorsubscriptionpendingcmds (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c135e779e1d1f6fd0b5da12f3b9a24f2ade96eea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4b4ff275583ac65fe3588e5fd0c0f41931da74f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,25 +51,25 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  게시된 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publication**  =] **'***게시***'**  
+ [ **@publication** =] **'***게시***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber**  =] **'***구독자***'**  
+ [ **@subscriber** =] **'***구독자***'**  
  구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber_db**  =] **'***subscriber_db***'**  
+ [ **@subscriber_db** = ] **'***subscriber_db***'**  
  구독 데이터베이스의 이름입니다. *subscriber_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@subscription_type**  =] *subscription_type*  
+ [ **@subscription_type** =] *subscription_type*  
  구독 유형입니다. *publication_type* 은 **int**, 기본값은 없으며 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|밀어넣기 구독|  
 |**1**|끌어오기 구독|  

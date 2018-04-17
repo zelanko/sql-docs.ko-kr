@@ -1,29 +1,30 @@
 ---
-title: "큰 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs"
-ms.custom: 
+title: 큰 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25a6a8fe27093f70ac84da9a6b32f4cb72b31761
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 OLE DB 변경 내용에 대해 설명합니다.  
   
- 큰 CLR Udt에 대 한 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client를 [Large CLR User-Defined 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)합니다. 샘플을 보려면 [큰 CLR Udt 사용 &#40; OLE db&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)합니다.  
+ 큰 CLR Udt에 대 한 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client를 [Large CLR User-Defined 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)합니다. 샘플을 보려면 [사용 큰 CLR Udt &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)합니다.  
   
 ## <a name="data-format"></a>데이터 형식  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 ~0을 사용하여 LOB(Large Object) 형식에 대해 무제한 크기인 값의 길이를 나타냅니다. ~0은 8,000바이트보다 큰 CLR UDT 크기도 나타냅니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
 |SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE] (바이트 배열\)|132 (oledb.h)|  
   
  UDT 값은 바이트 배열로 나타납니다. 16진수 문자열로의 변환 및 그 반대의 변환이 지원됩니다. 리터럴 값은 접두사 "0x"를 사용하여 16진수 문자열로 나타납니다. 16진수 문자열은 밑수가 16인 이진 데이터의 텍스트 표현입니다. 예제는 서버 유형으로 변환 되기 **varbinary(10)** 를 DBTYPE_STR로 줄어들고 결과적 모든 문자 쌍이 단일 바이트를 나타내는 20 자의 16 진수 표현입니다.  
   

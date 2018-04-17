@@ -1,15 +1,16 @@
 ---
-title: "드라이버 관리자 &#39; 연결 과정 중에 역할 s | Microsoft Docs"
-ms.custom: 
+title: 드라이버 관리자&#39;연결 과정 중에 역할 s | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>드라이버 관리자 &#39; 연결 과정에서 s 역할
+# <a name="driver-manager39s-role-in-the-connection-process"></a>드라이버 관리자&#39;연결 과정에서 s 역할
 응용 프로그램 직접 호출 하지 않습니다 드라이버 기능인 기억 합니다. 대신, 동일한 이름 가진 드라이버 관리자 함수를 호출 하 고 드라이버 관리자 드라이버 함수를 호출 합니다. 일반적으로 거의 즉시 전파 됩니다. 예를 들어 응용 프로그램 호출 **SQLExecute** 드라이버 관리자를 호출 하는 드라이버 관리자와 후 몇 가지 오류 검사 **SQLExecute** 드라이버에서입니다.  
   
  연결 프로세스는 다릅니다. 응용 프로그램 호출 하는 경우 **SQLAllocHandle** 함수 SQL_HANDLE_ENV 및 sql_handle_dbc 라는 옵션 드라이버 관리자에만 핸들을 할당 합니다. 드라이버 관리자를 호출 하는 드라이버를 알지 못하므로 드라이버에서이 함수를 호출 하지 않습니다. 마찬가지로, 응용 프로그램에 대 한 연결 되지 않은 연결의 핸들을 전달 하는 경우 **SQLSetConnectAttr** 또는 **SQLGetConnectAttr**함수를 실행 하는 드라이버 관리자만 필요 합니다. 저장 하거나 처리 하 고 특성에 대 한 값을 가져올 설정 되지 않은 경우 및는 odbc SQLSTATE 08003 (열려 있지 않습니다. 연결)를 반환 하는 연결에서 특성 값을 가져옵니다 기본값을 정의 하지 않습니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_special_columns (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_special_columns_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 911828ded03593503026c573c0f921398cf5da43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @col_type=] '*col_type*'  
  열 유형입니다. *col_type* 은 **char (**1**)**, 기본값은 R 유형은 최적 열 또는 열 집합을 반환 된 열 또는 열에서 값을 검색 하 여,의 지정 된 모든 행에 대해 허용 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
   
- [ @scope=] '*범위*'  
+ [ @scope=] '*scope*'  
  ROWID에 필요한 최소 범위입니다. *범위* 은 **char (**1**)**, c 기본값 지정는 ROWID가 해당 행에 있는 경우에 유효 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
   
  [ @nullable=] '*nullable*'  
@@ -82,12 +83,12 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|행 ID의 실제 범위로 0, 1 또는 2가 될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]항상 0을 반환 합니다. 이 필드는 항상 값을 반환합니다.<br /><br /> 0 = SQL_SCOPE_CURROW. 행 ID는 해당 행에 있는 동안에만 유효하도록 보장됩니다. 행 ID를 사용하여 나중에 다시 선택하는 경우 행이 업데이트되거나 다른 트랜잭션에 의해 삭제되면 그 행을 반환하지 않을 수도 있습니다.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. 행 ID는 현재 트랜잭션 기간 동안 유효하도록 보장됩니다.<br /><br /> 2 = SQL_SCOPE_SESSION. 행 ID는 트랜잭션 경계와 상관없이 세션 기간 동안 유효하도록 보장됩니다.|  
+|SCOPE|**smallint**|행 ID의 실제 범위로 0, 1 또는 2가 될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항상 0을 반환 합니다. 이 필드는 항상 값을 반환합니다.<br /><br /> 0 = SQL_SCOPE_CURROW. 행 ID는 해당 행에 있는 동안에만 유효하도록 보장됩니다. 행 ID를 사용하여 나중에 다시 선택하는 경우 행이 업데이트되거나 다른 트랜잭션에 의해 삭제되면 그 행을 반환하지 않을 수도 있습니다.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. 행 ID는 현재 트랜잭션 기간 동안 유효하도록 보장됩니다.<br /><br /> 2 = SQL_SCOPE_SESSION. 행 ID는 트랜잭션 경계와 상관없이 세션 기간 동안 유효하도록 보장됩니다.|  
 |COLUMN_NAME|**sysname**|각 열에 대 한 열 이름에서 *테이블*반환 합니다. 이 필드는 항상 값을 반환합니다.|  
 |DATA_TYPE|**smallint**|ODBC SQL 데이터 형식입니다.|  
 |TYPE_NAME|**sysname**|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어 **char**, **varchar**, **money**, 또는 **텍스트**합니다.|  
-|PRECISION|**정수**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
-|LENGTH|**정수**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (**10**)**, 4에 대 한 **정수**, 2 **smallint** .|  
+|PRECISION|**Int**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
+|LENGTH|**Int**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (**10**)**, 4에 대 한 **정수**, 2 **smallint** .|  
 |SCALE|**smallint**|데이터 원본의 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |PSEUDO_COLUMN|**smallint**|열이 의사(pseudo) 열인지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 1을 반환합니다.<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
@@ -108,7 +109,7 @@ EXEC sp_special_columns @table_name = 'Department'
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [카탈로그 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [카탈로그 저장된 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

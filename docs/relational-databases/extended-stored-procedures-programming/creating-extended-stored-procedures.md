@@ -1,15 +1,15 @@
 ---
-title: "확장 저장 프로시저 만들기 | Microsoft Docs"
-ms.custom: 
+title: 확장 저장 프로시저 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f70abd5174790d445e4b3854bcb6efd8576ff83
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f7669ac3c34d1b388ed077dd61e6b493b30ff580
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,6 +81,6 @@ __declspec(dllexport) ULONG __GetXpVersion()
  확장 저장 프로시저 DLL을 디버깅하려면 DLL을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 디렉터리에 복사합니다. 디버깅 세션에 대 한 실행 파일을 지정 하려면의 경로 파일 이름을 입력 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일 (예: C:\Program Files\Microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)입니다. Sqlservr 인수에 대 한 정보를 참조 하십시오. [sqlservr 응용 프로그램](../../tools/sqlservr-application.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [srv_got_attention &#40; 확장 저장된 프로시저 API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
+ [srv_got_attention &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

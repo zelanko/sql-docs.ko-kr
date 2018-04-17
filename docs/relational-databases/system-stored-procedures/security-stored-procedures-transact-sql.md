@@ -1,16 +1,16 @@
 ---
-title: "보안 저장 프로시저 (Transact SQL) | Microsoft Docs"
-ms.custom: 
+title: 보안 저장 프로시저 (Transact SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - stored procedures [SQL Server], security
 - security [SQL Server], stored procedures
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59a87a888f23e722857952d6cdacb6165a092805
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b894dd2099e41a2a0718cd443c079444cc18d475
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-stored-procedures-transact-sql"></a>보안 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 시스템 보안을 관리 하는 데 사용 되는 프로시저를 저장 합니다. 이러한 저장된 프로시저 중 일부는 사용 되지 않지만 이전 버전과 호환성을 지원 하기 위해 사용할 수 있도록 계속 합니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 보안을 관리 하는 데 사용 되는 프로시저를 저장 합니다. 이러한 저장된 프로시저 중 일부는 사용 되지 않지만 이전 버전과 호환성을 지원 하기 위해 사용할 수 있도록 계속 합니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
 
 |||  
 |-|-|  

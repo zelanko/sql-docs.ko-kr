@@ -1,16 +1,16 @@
 ---
 title: sp_msx_defect (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf63da8bfb0ac882e3d3949a91b848ba689985a6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e1ff62980554c0b6c8593b119520ae2e32da89b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@forced_defection =**] *forced_defection*  
+ [  **@forced_defection =**] *forced_defection*  
  강제 제거 마스터 SQLServerAgent 손실 된 경우에 영구적으로 복구할 수 없을 정도로 손상으로 인해 발생 여부를 지정 **msdb** 데이터베이스나 아니요 **msdb** 데이터베이스 백업 합니다. *forced_defection*은 **비트**, 기본값은 **0**를 강제로 제거할 발생 않아야 함을 나타냅니다. 값이 **1** 하면 강제 제거 합니다.  
   
  실행 하 여 제거를 강제로 후 **sp_msx_defect**의 멤버는 **sysadmin** 마스터 SQLServerAgent에서 고정된 서버 역할 제거를 완료 하려면 다음 명령을 실행 해야 합니다.  
@@ -71,7 +71,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_msx_enlist &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+ [sp_msx_enlist &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_check_join_filter (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab650e6465ac5c872e90acc890a83d17f286b446
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fb8f08e4b52debeba4e71011750733a2c760df1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@filtered_table** =] **'***filtered_table***'**  
+ [ **@filtered_table**=] **'***filtered_table***'**  
  필터링된 테이블의 이름입니다. *filtered_table* 은 **nvarchar (400)**, 기본값은 없습니다.  
   
- [  **@join_table** =] **'***join_table***'**  
+ [ **@join_table**=] **'***join_table***'**  
  에 조인 될 테이블의 이름인 *filtered_table*합니다. *join_table* 은 **nvarchar (400)**, 기본값은 없습니다.  
   
- [  **@join_filterclause**  =] **'***join_filterclause***'**  
+ [ **@join_filterclause** =] **'***join_filterclause***'**  
  테스트할 조인 필터 절입니다. *join_filterclause* 은 **nvarchar (1000)**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -69,7 +69,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|게시에서 사전 계산된 파티션을;에 대 한 사전은 여기서 **1** 나타내고 파티션을 사용할 수 있음을 의미 하 고 **0** 있습니다 사용할 수 없음을 의미 합니다.|  
 |**has_dynamic_filters**|**bit**|매개 변수가 있는 필터링 함수가 하나 이상; 제공 된 필터 절에 포함 되어 있으면 여기서 **1** 매개 변수가 있는 필터링 함수가 사용 한다는 의미 및 **0** 이러한 함수는 사용 되지 않음을 의미 합니다.|  
-|**dynamic_filters_function_list**|**nvarchar (500)**|필터 절에서 아티클에 대해 매개 변수가 있는 필터를 정의하는 함수 목록입니다. 여기서 각 함수는 세미콜론으로 구분됩니다.|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|필터 절에서 아티클에 대해 매개 변수가 있는 필터를 정의하는 함수 목록입니다. 여기서 각 함수는 세미콜론으로 구분됩니다.|  
 |**uses_host_name**|**bit**|경우는 [host_name ()](../../t-sql/functions/host-name-transact-sql.md) 필터 절에 함수를 사용 하는 여기서 **1** 이 함수에 표시 됩니다.|  
 |**uses_suser_sname**|**bit**|경우는 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 필터 절에 함수를 사용 하는 여기서 **1** 이 함수에 표시 됩니다.|  
   

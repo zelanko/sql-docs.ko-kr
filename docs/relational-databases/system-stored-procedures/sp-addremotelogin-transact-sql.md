@@ -1,16 +1,16 @@
 ---
 title: sp_addremotelogin (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addremotelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addremotelogin
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5024781fdcfb26420432e3eae914dc1ae6c1f958
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 79aa28e1704e38fccd63027d0389f6da83f4a909
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @remoteserver  **=**  ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'***remoteserver***'**  
  원격 로그인을 적용할 원격 서버의 이름입니다. *remoteserver* 은 **sysname**, 기본값은 없습니다. 경우에 *remoteserver* 지정 된 모든 사용자에 게 *remoteserver* 로컬 서버에 동일한 이름의 기존 로그인에 매핑됩니다. 서버는 로컬 서버에서 인식할 수 있어야 합니다. 이 특성은 sp_addserver를 사용 하 여 추가 합니다. 때 사용자에 게 *remoteserver* 실행 하는 로컬 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원격 저장된 프로시저를 실행 하려면 해당 로그인에 일치 하는 로컬 로그인으로 연결 *remoteserver* . *remoteserver* 원격 프로시저 호출을 시작 하는 서버입니다.  
   
- [ @loginame  **=**  ] **'***로그인***'**  
- 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *로그인* 은 **sysname**, 기본값은 NULL입니다. *로그인*의 로컬 인스턴스에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 경우 *로그인* 지정 된 모든 사용자에 게 *remoteserver* 특정 로컬 로그인에 매핑됩니다. 때 사용자에 게 *remoteserver* 의 로컬 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결로 원격 저장된 프로시저를 실행 하려면 *로그인*합니다.  
+ [ @loginame **=** ] **'***로그인***'**  
+ 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인*의 로컬 인스턴스에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 경우 *로그인* 지정 된 모든 사용자에 게 *remoteserver* 특정 로컬 로그인에 매핑됩니다. 때 사용자에 게 *remoteserver* 의 로컬 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결로 원격 저장된 프로시저를 실행 하려면 *로그인*합니다.  
   
- [ @remotename  **=**  ] **'***remote_name***'**  
+ [ @remotename **=** ] **'***remote_name***'**  
  원격 서버에 있는 사용자의 로그인 ID입니다. *remote_name* 은 **sysname**, 기본값은 NULL입니다. *remote_name* 에 존재 해야 *remoteserver*합니다. 경우 *remote_name* 지정 된 특정 사용자 *remote_name* 에 매핑된 *로그인* 로컬 서버에 있습니다. 때 *remote_name* 에 *remoteserver* 의 로컬 인스턴스에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결로 원격 저장된 프로시저를 실행 하려면 *로그인*합니다. 로그인 ID *remote_name* 원격 서버의 로그인 ID와 달라도 *로그인*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -95,14 +95,14 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_addlinkedsrvlogin&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_helpremotelogin &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_helpremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver& #40; Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [sp_revokelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

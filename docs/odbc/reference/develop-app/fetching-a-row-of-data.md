@@ -1,15 +1,16 @@
 ---
-title: "데이터의 행을 인출 | Microsoft Docs"
-ms.custom: 
+title: 데이터의 행을 인출 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLFetch function [ODBC], fetching a row of data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 81fff470f916155e9b6d85571db46c46d9e63454
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-a-row-of-data"></a>데이터 행을 인출합니다.
 데이터의 행을 인출 하는 응용 프로그램 호출 **SQLFetch**합니다. **SQLFetch** 모든 종류의 커서를 호출할 수 있지만 앞 으로만 이동 가능한 방향으로 행 집합 커서를 이동 합니다. **SQLFetch** 다음 행으로 커서를 이동 하 고 호출 하 여 바인딩된 열에 대 한 데이터를 반환 **SQLBindCol**합니다. 커서는 결과의 끝에 도달 하면 때 설정 **SQLFetch** SQL_NO_DATA를 반환 합니다. 호출에 대 한 예제 **SQLFetch**, 참조 [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.  

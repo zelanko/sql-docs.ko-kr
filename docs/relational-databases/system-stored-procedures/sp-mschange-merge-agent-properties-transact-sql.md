@@ -2,7 +2,7 @@
 title: sp_MSchange_merge_agent_properties (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3563086e662ceb1dbe5cb8e8ea5b96b0c9430cc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 421b8dc45dff0124f7bc9b6ce9471102fb7b1917
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
@@ -73,7 +73,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  이 테이블에서는 변경할 수 있는 병합 에이전트 작업의 속성 및 해당 속성 값의 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|Value|Description|  
 |--------------|-----------|-----------------|  
 |**설명**||구독에 대한 간단한 설명입니다.|  
 |**merge_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
@@ -102,7 +102,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  구성원만는 **sysadmin** 고정된 서버 역할이 배포자에서 실행할 수 있는 **sp_MSchange_merge_agent_properties**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_addmergepushsubscription_agent &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

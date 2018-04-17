@@ -1,16 +1,16 @@
 ---
-title: "XML 대량 로드 예 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: XML 대량 로드 예 (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-다음 예에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 XML 대량 로드 기능을 보여 줍니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
+  다음 예에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 XML 대량 로드 기능을 보여 줍니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>대량 로더 스크립트(ValidateAndBulkload.vbs)  
  작성 된 다음 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) 로드는 XML 문서를 XML dom; 스키마에 대해 유효성을 검사 하 고, 문서가 유효한 경우 실행 XML 대량 부하를 부하에 XML을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블입니다. 이 스크립트는 이 항목의 뒷부분에서 이 스크립트를 참조하는 각 개별 예와 함께 사용할 수 있습니다.  
@@ -234,7 +235,7 @@ End Function
   
  두 테이블에 XML 데이터에 대 한이 예제에서는 대량 로드 **Cust** 및 **CustOrder**:  
   
--   Cust(CustomerID, CompanyName, City)  
+-   고객 (CustomerID, CompanyName 시)  
   
 -   CustOrder(OrderID, CustomerID)  
   
@@ -390,7 +391,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다. **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
+ 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다.  **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
   
  이 스키마를 사용하여 XML 문서를 대량 로드하는 경우 Ord, Product 및 OrderDetail 테이블에 레코드가 추가됩니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_trace_setevent (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bf4e3f645a8480104fcb6f67790563fbb05d0480
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 ODBC, OLE DB 또는 DB-Library에 의해 이전에 열린 커서가 닫혔습니다.|  
 |79|Missing Column Statistics|최적화 프로그램에 사용하는 열 통계를 사용할 수 없습니다.|  
 |80|Missing Join Predicate|조인 술어가 없는 쿼리가 실행 중입니다. 이 결과 실행 시간이 긴 쿼리가 나타날 수 있습니다.|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용이 증가 또는 감소 1 메가바이트 (MB) 또는 최대 서버 메모리의 5% 중 더 큰 합니다.|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 1MB와 최대 서버 메모리의 5%에 해당하는 값 중 큰 값만큼 증가 또는 감소했습니다.|  
 |82-91|User Configurable(0-9)|사용자가 정의한 이벤트 데이터입니다.|  
 |92|Data File Auto Grow|데이터 파일이 서버에 의해 자동으로 확장되었음을 나타냅니다.|  
 |93|Log File Auto Grow|로그 파일이 서버에 의해 자동으로 확장되었음을 나타냅니다.|  
@@ -262,7 +262,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|요청을 처음에 시작한 클라이언트 컴퓨터의 이름입니다.|  
 |9|**ClientProcessID**|클라이언트 응용 프로그램이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트의 로그인 이름입니다.|  
+|11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  
 |13|**기간**|이벤트에 의해 사용된 경과 시간(마이크로초)입니다. 이 데이터 열은 Hash Warning 이벤트로 채워지지 않습니다.|  
 |14|**StartTime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|  
@@ -280,7 +280,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|인스턴스 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 어느 *servername* 또는 *servername\instancename*, 추적 되 고 있는 합니다.|  
 |27|**EventClass**|기록되고 있는 이벤트 클래스의 유형입니다.|  
 |28|**ObjectType**|개체 유형(테이블, 함수 또는 저장 프로시저 등)|  
-|29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. 참조 [@@NESTLEVEL &#40; Transact SQL &#41; ](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|이 저장 프로시저가 실행하고 있는 중첩 수준입니다. 참조 [@@NESTLEVEL &#40;Transact SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)합니다.|  
 |30|**State**|오류 발생 시의 서버 상태입니다.|  
 |31|**오류**|오류 번호입니다.|  
 |32|**모드**|획득된 잠금의 잠금 모드입니다. 이 열은 채워지지 않습니다는 **잠금: 출시** 이벤트입니다.|  
@@ -291,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|참조된 개체의 소유자 이름입니다.|  
 |38|**RoleName**|문의 대상이 되는 데이터베이스 또는 서버 차원 역할의 이름입니다.|  
 |39|**TargetUserName**|일부 동작 대상의 사용자 이름입니다.|  
-|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트의 데이터베이스 사용자 이름입니다.|  
+|40|**DBUserName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 이름입니다.|  
 |41|**LoginSid**|로그인한 사용자의 SID(보안 ID)입니다.|  
 |42|**TargetLoginName**|일부 동작 대상의 로그인 이름입니다.|  
 |43|**TargetLoginSid**|일부 동작 대상의 로그인 SID입니다.|  
@@ -324,7 +324,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  경우 *에* 로 설정 된 **0**, 및 *column_id* 가 NULL 이면 변경 됩니다 OFF 고 모든 열이 지워집니다. 경우 *column_id* 는 열이 활성화 한 다음 null이 OFF입니다.  
   
- 이 테이블 간의 상호 작용을 보여 줍니다.  **@on**  및  **@columnid** 합니다.  
+ 이 테이블 간의 상호 작용을 보여 줍니다. **@on** 및 **@columnid**합니다.  
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자가 실행 해야 **sp_trace_setevent** 각 이벤트에 대해 추가 된 각 열에 대 한 합니다. 각 실행 하는 동안 경우  **@on**  로 설정 된 **1**, **sp_trace_setevent** 추적의 이벤트 목록에 지정된 된 이벤트를 추가 합니다. 경우  **@on**  로 설정 된 **0**, **sp_trace_setevent** 목록에서 지정된 된 이벤트를 제거 합니다.  
+ 사용자가 실행 해야 **sp_trace_setevent** 각 이벤트에 대해 추가 된 각 열에 대 한 합니다. 각 실행 하는 동안 경우 **@on** 로 설정 된 **1**, **sp_trace_setevent** 추적의 이벤트 목록에 지정된 된 이벤트를 추가 합니다. 경우 **@on** 로 설정 된 **0**, **sp_trace_setevent** 목록에서 지정된 된 이벤트를 제거 합니다.  
   
  모든 SQL 추적의 매개 변수 저장 프로시저 (**sp_trace_xx**) 엄격 하 게 지정 합니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
   
@@ -367,9 +367,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.fn_trace_geteventinfo&#40; Transact SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   

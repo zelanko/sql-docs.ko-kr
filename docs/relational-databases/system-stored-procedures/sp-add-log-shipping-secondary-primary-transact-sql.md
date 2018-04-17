@@ -1,16 +1,16 @@
 ---
 title: sp_add_log_shipping_secondary_primary (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,28 +63,28 @@ sp_add_log_shipping_secondary_primary
  [ **@primary_server** = ] '*primary_server*'  
  기본 인스턴스 이름을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다. *primary_server* 은 **sysname** NULL 일 수 없습니다.  
   
- [  **@primary_database**  =] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  주 서버의 데이터베이스 이름입니다. *primary_database* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*'  
+ [ **@backup_source_directory** =] '*backup_source_directory*'  
  주 서버의 트랜잭션 로그 백업 파일이 저장되는 디렉터리입니다. *backup_source_directory* 은 **nvarchar (500)** NULL 일 수 없습니다.  
   
- [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*'  
  백업 파일이 복사되는 보조 서버의 디렉터리입니다. *backup_destination_directory* 은 **nvarchar (500)** NULL 일 수 없습니다.  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
+ [ **@copy_job_name** =] '*copy_job_name*'  
  트랜잭션 로그 백업을 보조 서버에 복사하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 생성하는 데 사용할 이름입니다. *copy_job_name* 은 **sysname** NULL 일 수 없습니다.  
   
- [ **@restore_job_name** = ] '*restore_job_name*'  
+ [ **@restore_job_name** =] '*restore_job_name*'  
  이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보조 데이터베이스에 백업을 복원 하는 보조 서버의 에이전트 작업입니다. *restore_job_name* 은 **sysname** NULL 일 수 없습니다.  
   
- [  **@file_retention_period**  =] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*file_retention_period*'  
  시간 (분)로 지정 된 경로에서 보조 서버에서 유지 되는 백업 파일의 길이 @backup_destination_directory 삭제 하기 전에 매개 변수입니다. *history_retention_period* 은 **int**, 기본값은 NULL입니다. 값이 지정되지 않으면 14420이 사용됩니다.  
   
- [  **@monitor_server**  =] '*monitor_server*'  
+ [ **@monitor_server** =] '*monitor_server*'  
  모니터 서버의 이름입니다. *Monitor_server* 은 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@monitor_server_security_mode**  =] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  모니터 서버 연결에 사용되는 보안 모드입니다.  
   
  1 = Windows 인증  
@@ -93,19 +93,19 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* 은 **비트** NULL 일 수 없습니다.  
   
- [ **@monitor_server_login** = ] '*monitor_server_login*'  
+ [ **@monitor_server_login** =] '*monitor_server_login*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*'  
  모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
   
- [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
+ [ **@copy_job_id** =] '*copy_job_id*' 출력  
  보조 서버의 복사 작업과 연관된 ID입니다. *copy_job_id* 은 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** =] '*restore_job_id*' 출력  
  보조 서버의 복원 작업과 연관된 ID입니다. *restore_job_id* 은 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [  **@secondary_id**  =] '*secondary_id*' 출력  
+ [ **@secondary_id** =] '*secondary_id*' 출력  
  로그 전달 구성의 보조 서버의 ID입니다. *secondary_id* 은 **uniqueidentifier** NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

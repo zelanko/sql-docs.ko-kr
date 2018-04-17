@@ -1,27 +1,28 @@
 ---
-title: "새로운 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB) | Microsoft Docs"
-ms.custom: 
+title: 새로운 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63d848005d0a1745070caf209f52f49dd80db1d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7f5e7bdd599222eb0c37f851901a59f663cc2658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>새로운 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,12 +168,12 @@ ms.lasthandoff: 01/25/2018
  버퍼 유형에서 연결의 서버 버전의 서버 유형으로 지원되는 클라이언트 변환이 있는 경우 모든 클라이언트 버퍼 유형을 사용할 수 있습니다. 이 컨텍스트에서 *서버 유형* icommandwithparameters:: Setparameterinfo를로 지정 된 사용 권한에 포함 된 버퍼 유형 icommandwithparameters:: Setparameterinfo 호출 되지 않은 경우 또는 유형을 의미 합니다. 이는 하위 수준 서버에서, 또는 DataTypeCompatibility=80일 때 지원되는 서버 유형에 대한 클라이언트 변환이 성공할 경우 DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET을 사용할 수 있음을 의미합니다. 물론 서버 유형이 잘못된 경우 서버는 실제 서버 유형으로 암시적 변환을 수행하지 못하면 여전히 오류를 보고할 수 있습니다.  
   
 ## <a name="sspropinitdatatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 동작  
- SSPROP_INIT_DATATYPECOMPATIBILITY SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000로 설정 되 면 새로운 날짜/시간 형식 및 관련된 메타 데이터 표시를 클라이언트 하위 수준 클라이언트에 대 한 표시 된 대로에 설명 된 대로 [에 대 한 대량 복사 변경 사항 향상 된 날짜 및 시간 형식 &#40; OLE DB 및 ODBC &#41; ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ SSPROP_INIT_DATATYPECOMPATIBILITY SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000로 설정 되 면 새로운 날짜/시간 형식 및 관련된 메타 데이터 표시를 클라이언트 하위 수준 클라이언트에 대 한 표시 된 대로에 설명 된 대로 [에 대 한 대량 복사 변경 사항 향상 된 날짜 및 시간 형식 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 비교  
  새 날짜/시간 형식은 날짜/시간 형식이 아니라 문자열 형식으로 표시되기 때문에 이러한 형식에 대해서는 모든 비교 연산자를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

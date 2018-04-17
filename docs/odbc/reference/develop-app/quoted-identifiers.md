@@ -1,31 +1,32 @@
 ---
-title: "따옴표 붙은 식별자 | Microsoft Docs"
-ms.custom: 
+title: 따옴표 붙은 식별자 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a530e24368339305fc510a3a3f6fc9a6193e694
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d91e7eb44bbdec36a3b1411e90f33e118fda2035
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quoted-identifiers"></a>따옴표 붙은 식별자
 SQL 문 특수 문자 또는 일치 키워드를 포함 하는 식별자에 포함 되어야 합니다 *식별자 인용 문자*; 이러한 문자로 묶인 식별자 라고 *따옴표 붙은 식별자*(라고도 *구분 식별자* s Q l-92에). Accounts Payable 식별자 다음에 인용 된 예를 들어 **선택** 문:  

@@ -2,7 +2,7 @@
 title: SQLBindParameter 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 **규칙**  
@@ -101,7 +101,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBindParameter** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLBindParameter** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|으로 식별 되는 데이터 형식에서 *ValueType* 인수에서 식별 되는 데이터 형식으로 변환할 수 없습니다는 *ParameterType* 인수입니다. 이 오류를 반환할 수 있습니다는 **SQLExecDirect**, **SQLExecute**, 또는 **SQLPutData** 순서가 아니라 실행 시 **SQLBindParameter**.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLBindParameter(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  응용 프로그램이 호출 **SQLBindParameter** 하는 SQL 문의 각 매개 변수 표식을 바인딩합니다. 바인딩은 응용 프로그램 호출할 때까지 적용 되지 않고 **SQLBindParameter** 다시 호출 **SQLFreeStmt** SQL_RESET_PARAMS 옵션 또는 호출 **SQLSetDescField** 를 APD의 SQL_DESC_COUNT 헤더 필드를 0으로 설정 합니다.  
   
  매개 변수에 대 한 자세한 내용은 참조 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다. 매개 변수 데이터 형식 및 매개 변수 표식에 대 한 자세한 내용은 참조 [매개 변수 데이터 형식](../../../odbc/reference/appendixes/parameter-data-types.md) 및 [매개 변수 표식을](../../../odbc/reference/appendixes/parameter-markers.md) 부록 c: SQL 문법에 있습니다.  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  경우 *ParameterNumber* 에 대 한 호출에서 **SQLBindParameter** SQL_DESC_COUNT의 값 보다 크면 **SQLSetDescField** SQL_DESC_의 값 늘리기 위해 호출 됩니다 카운트를 *ParameterNumber*합니다.  
   
 ## <a name="inputoutputtype-argument"></a>InputOutputType 인수  
- *InputOutputType* 매개 변수 형식의 인수를 지정 합니다. 이 인수는 IPD의 DESC_PARAMETER_TYPE 필드를 설정 합니다. 와 같은 프로시저를 호출 하지 않는 SQL 문의 모든 매개 변수에 **삽입** 문의 *입력**매개 변수*합니다. 프로시저 호출에서 매개 변수 입력 될 수, 입/출력 또는 출력 매개 변수입니다. (응용 프로그램이 호출 **SQLProcedureColumns** ; 프로시저 호출에서 매개 변수의 형식을 확인 하려면 해당 유형을 확인할 수 없는 매개 변수 입력된 매개 변수를 것으로 간주 됩니다.)  
+ *InputOutputType* 매개 변수 형식의 인수를 지정 합니다. 이 인수는 IPD의 DESC_PARAMETER_TYPE 필드를 설정 합니다. 와 같은 프로시저를 호출 하지 않는 SQL 문의 모든 매개 변수에 **삽입** 문의 *입력 * * 매개 변수*합니다. 프로시저 호출에서 매개 변수 입력 될 수, 입/출력 또는 출력 매개 변수입니다. (응용 프로그램이 호출 **SQLProcedureColumns** ; 프로시저 호출에서 매개 변수의 형식을 확인 하려면 해당 유형을 확인할 수 없는 매개 변수 입력된 매개 변수를 것으로 간주 됩니다.)  
   
  *InputOutputType* 인수는 다음 값 중 하나입니다.  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      하지 않는 한 드라이버의 응용 프로그램에 데이터 매개 변수를 반환 후 문이 실행 되는 *ParameterValuePtr* 및 *StrLen_or_IndPtr* 인수는 모두 null 포인터인 경우는 드라이버는 출력 값을 삭제 합니다. 드라이버를 설정 하는 데이터 원본에 대 한 출력 매개 변수 값을 반환 하지 않으면는 **StrLen_or_IndPtr* SQL_NULL_DATA로 버퍼입니다.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM 합니다. 입력/출력 매개 변수를 스트리밍할 수 있는지를 나타냅니다. **SQLGetData** 부분에 매개 변수 값을 읽을 수 있습니다. *BufferLength* 는 버퍼 길이의 함수가 호출 될 때 결정 됩니다 때문에 무시 됩니다. **SQLGetData**합니다. 값은 *StrLen_or_IndPtr* 버퍼 SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC로 또는 SQL_LEN_DATA_AT_EXEC 매크로의 결과 포함 해야 합니다. 출력에서 스트리밍되는 경우 입력 데이터 실행 시 (디지털 오디오) 매개 변수로 매개 변수를 바인딩해야 합니다. *ParameterValuePtr* null이 아닌 포인터 값으로 반환 될 수 있지만 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr* 두 입력에 대 한 및 출력을 추가 합니다. 자세한 내용은 참조 [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM 합니다. 입력/출력 매개 변수를 스트리밍할 수 있는지를 나타냅니다. **SQLGetData** 부분에 매개 변수 값을 읽을 수 있습니다. *BufferLength* 는 버퍼 길이의 함수가 호출 될 때 결정 됩니다 때문에 무시 됩니다. **SQLGetData**합니다. 값은 *StrLen_or_IndPtr* 버퍼 SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC로 또는 SQL_LEN_DATA_AT_EXEC 매크로의 결과 포함 해야 합니다. 출력에서 스트리밍되는 경우 입력 데이터 실행 시 (디지털 오디오) 매개 변수로 매개 변수를 바인딩해야 합니다. *ParameterValuePtr* null이 아닌 포인터 값으로 반환 될 수 있지만 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr* 두 입력에 대 한 및 출력입니다. 자세한 내용은 참조 [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
   
 -   SQL_PARAM_OUTPUT_STREAM 합니다. 출력 매개 변수에 대해 SQL_PARAM_INPUT_OUTPUT_STREAM와 동일 합니다. **StrLen_or_IndPtr* 입력에서 무시 됩니다.  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|입력에는 무시 됩니다.|스트리밍된 출력|*ParameterValuePtr* 반환할는 포인터 값이 될 수 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr*합니다.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC|입력된에 파트 및 바인딩된 출력 버퍼|*ParameterValuePtr* 는 출력 버퍼에서 반환할 수도 주소 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr*합니다.|  
 |SQL_PARAM_INPUT_OUTPUT|하지 SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC|입력 버퍼와 출력 바인딩된 버퍼 바인딩했습니다|*ParameterValuePtr* 공유 입/출력 버퍼의 주소입니다.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC|입력된에 파트 및 스트리밍된 출력|*ParameterValuePtr* 반환할는 null이 아닌 포인터 값이 될 수 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr* 모두에 대 한 입력 및 출력 합니다.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC|입력된에 파트 및 스트리밍된 출력|*ParameterValuePtr* 반환할는 null이 아닌 포인터 값이 될 수 **SQLParamData** 와 함께 전달 된 사용자 정의 값을 토큰으로 *ParameterValuePtr* 두 입력에 대 한 및 출력을 추가 합니다.|  
   
 > [!NOTE]  
 >  드라이버는 응용 프로그램 바인딩할 출력 또는 입력-출력 매개 변수 처럼 스트리밍할 때 허용 되는 SQL 형식을 결정 해야 합니다. 드라이버 관리자에서 잘못 된 SQL 형식에 대 한 오류를 생성 하지 않습니다.  

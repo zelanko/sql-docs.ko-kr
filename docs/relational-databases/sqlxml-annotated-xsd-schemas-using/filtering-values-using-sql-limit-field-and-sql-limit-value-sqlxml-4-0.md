@@ -1,16 +1,16 @@
 ---
-title: "사용 하 여 값 필터링-필드 및 sql:-(SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 사용 하 여 값 필터링-필드 및 sql:-(SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16f6ae44bce9828525e10c49604ab224bc402446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. **sql:-필드** 및 **sql:-값** 주석은 제한 값이 포함 된 데이터베이스 열을 식별 하 고 데이터를 필터링 하는 데 사용할 특정 제한 값을 지정 하는 데 사용 반환 됩니다.  
+  데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. **sql:-필드** 및 **sql:-값** 주석은 제한 값이 포함 된 데이터베이스 열을 식별 하 고 데이터를 필터링 하는 데 사용할 특정 제한 값을 지정 하는 데 사용 반환 됩니다.  
   
  **sql:-필드** 주석은 제한 값이 포함 된 열을 식별 하는 데 사용은; 각 매핑된 요소나 특성에서 허용 됩니다.  
   
@@ -313,9 +314,9 @@ ms.lasthandoff: 02/12/2018
     ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [float 및 real &#40; Transact SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar 및 nvarchar&#40; Transact SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar 및 nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [주석이 추가 된 XSD 스키마 쿼리 &#40;에서 사용 하 여 SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [주석이 추가 된 XSD 스키마 쿼리에서 사용 하 여 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

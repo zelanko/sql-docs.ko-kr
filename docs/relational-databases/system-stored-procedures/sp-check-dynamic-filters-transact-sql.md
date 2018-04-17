@@ -1,16 +1,16 @@
 ---
 title: sp_check_dynamic_filters (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -31,16 +31,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 096c6ff70b712b283191afeddbb7e9d9c6afd36a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2ef3aff82bb8cb2223d77beaf7eb3ba72b3700be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication** =] **'***게시***'**  
+ [ **@publication**=] **'***게시***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -66,8 +66,8 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|게시에서 사전 계산된 파티션을 사용 하기 위한 사전은 여기서 **1** precomputed 파티션을 사용할 수 있다는 것을 의미 하 고 **0** 있습니다 사용할 수 없음을 의미 합니다.|  
 |**has_dynamic_filters**|**bit**|게시;에서 하나 이상의 매개 변수가 있는 행 필터 정의 된 경우 여기서 **1** 하나 이상의 매개 변수가 있는 행 필터가 존재 하는 방법 및 **0** 동적 필터가 존재 함을 의미 합니다.|  
-|**dynamic_filters_function_list**|**nvarchar (500)**|게시에서 아티클을 필터링하는 데 사용하는 함수의 목록입니다. 목록에서 각 함수는 세미콜론으로 구분되어 있습니다.|  
-|**validate_subscriber_info**|**nvarchar (500)**|게시에서 아티클을 필터링하는 데 사용하는 함수의 목록입니다. 목록에서 각 함수는 더하기 기호(+)로 구분되어 있습니다.|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|게시에서 아티클을 필터링하는 데 사용하는 함수의 목록입니다. 목록에서 각 함수는 세미콜론으로 구분되어 있습니다.|  
+|**validate_subscriber_info**|**nvarchar(500)**|게시에서 아티클을 필터링하는 데 사용하는 함수의 목록입니다. 목록에서 각 함수는 더하기 기호(+)로 구분되어 있습니다.|  
 |**uses_host_name**|**bit**|경우는 [host_name ()](../../t-sql/functions/host-name-transact-sql.md) 함수가 매개 변수가 있는 행 필터에 사용 될 여기서 **1** 이 함수가 동적 필터링에 사용 됨을 의미 합니다.|  
 |**uses_suser_sname**|**bit**|경우는 [suser_sname ()](../../t-sql/functions/suser-sname-transact-sql.md) 함수가 매개 변수가 있는 행 필터에 사용 될 여기서 **1** 이 함수가 동적 필터링에 사용 됨을 의미 합니다.|  
   
@@ -86,7 +86,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>관련 항목:  
  [매개 변수가 있는 필터로 병합 게시에 대 한 파티션 관리](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

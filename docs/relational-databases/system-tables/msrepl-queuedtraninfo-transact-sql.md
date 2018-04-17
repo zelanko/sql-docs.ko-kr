@@ -1,16 +1,16 @@
 ---
 title: MSrepl_queuedtraninfo (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d7caf6825e7bcb3f17f4824b07ca931ee083998
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 819c810f99fb0a526c260a3a7e25114a6984412e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
 |**게시**|**sysname**|게시의 이름입니다.|  
-|**tranid**|**sysname**|대기 중인 명령이 실행된 트랜잭션 ID입니다.|  
+|**Tranid**|**sysname**|대기 중인 명령이 실행된 트랜잭션 ID입니다.|  
 |**maxorderkey**|**bigint**|내부적으로만 사용됩니다.|  
 |**commandcount**|**bigint**|내부적으로만 사용됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [복제 테이블 &#40; Transact SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

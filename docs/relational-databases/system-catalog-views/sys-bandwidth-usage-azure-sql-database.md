@@ -1,16 +1,16 @@
 ---
-title: "sys.bandwidth_usage (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sys.bandwidth_usage (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**time**|대역폭을 소비하는 시간입니다. 이 뷰의 행은 시간당 기준입니다. 예를 들어 2009-09-19 02:00:00.000은 2009년 9월 19일 오전 2시부터 오전 3시까지 소비한 대역폭을 의미합니다.|  
 |**database_name**|대역폭을 사용한 데이터베이스의 이름입니다.|  
 |**방향**|사용된 대역폭의 유형은 다음 중 하나입니다.<br /><br /> 수신:로 이동 하는 데이터는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> 송신:가 중 이동 데이터는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|  
-|**클래스**|사용된 대역폭의 클래스는 다음 중 하나입니다.<br />내부: 데이터는 Azure 플랫폼 내에서 이동입니다.<br />외부: 데이터는 Azure 플랫폼에서 나가는입니다.<br /><br /> 이 클래스는 데이터베이스가 지역 간의 연속 복사 관계에 참여 하는 경우에 반환 됩니다 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). 지정된 데이터베이스가 연속 복사 관계에 참여하지 않는 경우에는 “Interlink” 행이 반환되지 않습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
+|**class**|사용된 대역폭의 클래스는 다음 중 하나입니다.<br />내부: 데이터는 Azure 플랫폼 내에서 이동입니다.<br />외부: 데이터는 Azure 플랫폼에서 나가는입니다.<br /><br /> 이 클래스는 데이터베이스가 지역 간의 연속 복사 관계에 참여 하는 경우에 반환 됩니다 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). 지정된 데이터베이스가 연속 복사 관계에 참여하지 않는 경우에는 “Interlink” 행이 반환되지 않습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
 |**time_period**|사용이 발생 한 시간 동안에는 최고 또는 사용량이입니다. 피크 시간은 서버 제조 지역을 기준으로 합니다. 예를 들어, 'US_Northwest' 지역에서 만든 서버인 경우 피크 시간은 태평양 표준시로 오전 10시에서 오후 6시 사이로 정의됩니다.|  
 |**수량**|사용된 대역폭 양입니다(KB).|  
   

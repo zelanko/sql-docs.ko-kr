@@ -1,30 +1,31 @@
 ---
-title: "키 집합 커서 | Microsoft Docs"
-ms.custom: 
+title: 키 집합 커서 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acc3a757493c935d5b37c278eb77b9b849f85873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keyset-driven-cursors"></a>키 집합 구동 커서
 변경 내용을 검색 하는 기능에는 정적 및 동적 커서 사이 있는 키 집합 커서입니다. 정적 커서와 같은 검색 되지 않으면 항상의 멤버 자격과 결과 집합의 순서를 변경 합니다. 동적 커서 등 결과 (영향 SQL_ATTR_TXN_ISOLATION 연결 특성에서 설정한 대로 트랜잭션의 격리 수준) 집합의 값 행의 변경 내용을 검색지 않습니다 것.  

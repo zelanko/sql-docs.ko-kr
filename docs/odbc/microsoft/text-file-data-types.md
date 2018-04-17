@@ -1,15 +1,16 @@
 ---
-title: "텍스트 파일 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: 텍스트 파일 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], data types
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c946e2d253ae80e0fe0ccbb97dba5994c9c1d386
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-file-data-types"></a>텍스트 파일 데이터 형식
 다음 표에서 텍스트 데이터 형식은 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. 참고 일부 ODBC SQL 데이터 형식이 텍스트 ODBC 드라이버에서 지원 됩니다.  

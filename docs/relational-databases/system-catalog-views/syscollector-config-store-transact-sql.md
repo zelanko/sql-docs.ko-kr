@@ -1,16 +1,16 @@
 ---
 title: syscollector_config_store (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_config_store_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b637834db24c769284380f8d6edde923143f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 61c692aa5b41218b44f392b21107fb63e2b6c1c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |속성 이름|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|수집기 유형 패키지가 임시 정보를 저장하는 파일 시스템의 디렉터리 이름입니다.<br /><br /> NULL = 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.|  
-|CacheWindow|실패한 데이터 업로드를 위한 캐시 디렉터리의 데이터 보존 정책을 나타냅니다.<br /><br /> -1 = 실패한 모든 업로드의 데이터를 보존합니다.<br /><br /> 0 = 실패한 업로드의 데이터를 보존하지 않습니다.<br /><br /> *n*= 데이터를 보존  *n*  실패 한 이전 업로드 여기서  *n*  > = 1입니다.<br /><br /> 이 값을 변경하려면 sp_syscollector_set_cache_window 저장 프로시저를 사용하십시오.|  
+|CacheWindow|실패한 데이터 업로드를 위한 캐시 디렉터리의 데이터 보존 정책을 나타냅니다.<br /><br /> -1 = 실패한 모든 업로드의 데이터를 보존합니다.<br /><br /> 0 = 실패한 업로드의 데이터를 보존하지 않습니다.<br /><br /> *n* = 데이터를 보존 *n* 실패 한 이전 업로드 여기서 *n* > = 1입니다.<br /><br /> 이 값을 변경하려면 sp_syscollector_set_cache_window 저장 프로시저를 사용하십시오.|  
 |CollectorEnabled|데이터 수집기의 상태를 나타냅니다.<br /><br /> 0 = 사용 안 함<br /><br /> 1 = 사용<br /><br /> 이 값을 변경하려면 sp_syscollector_enable_collector 또는 sp_syscollector_disable_collector 저장 프로시저를 사용하십시오.|  
 |MDWDatabase|관리 데이터 웨어하우스의 이름입니다. 이 값을 변경하려면 sp_syscollector_set_warehouse_database_name 저장 프로시저를 사용하십시오.|  
 |MDWInstance|관리 데이터 웨어하우스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. 이 값을 변경하려면 sp_syscollector_set_warehouse_instance_name 저장 프로시저를 사용하십시오.|  
@@ -70,8 +70,8 @@ FROM msdb.dbo.syscollector_config_store;
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
- [sp_syscollector_set_warehouse_database_name&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
- [sp_syscollector_set_warehouse_instance_name&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_database_name &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
+ [sp_syscollector_set_warehouse_instance_name &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
  [sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sys.master_files (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.master_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0ee418f8b04c8a549fb107698bd1f2df5648b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d56dde664eba328a74db87d7c3ce22aef014ff6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,13 +44,13 @@ ms.lasthandoff: 11/21/2017
 |database_id|**int**|이 파일을 적용할 데이터베이스의 ID입니다. masterdatabase_id은 항상 1입니다.|  
 |file_id|**int**|데이터베이스 내 파일의 ID입니다. 주 file_id는 항상 1입니다.|  
 |file_guid|**uniqueidentifier**|파일의 고유 식별자입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드되었습니다.|  
-|형식|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
-|type_desc|**nvarchar (60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그)|  
+|유형|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
+|type_desc|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그)|  
 |data_space_id|**int**|이 파일이 속한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹입니다.<br /><br /> 0 = 로그 파일|  
 |name|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
-|physical_name|**nvarchar (260)**|운영 체제 파일 이름입니다.|  
+|physical_name|**nvarchar(260)**|운영 체제 파일 이름입니다.|  
 |state|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|state_desc|**nvarchar (60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 참조 [파일 상태](../../relational-databases/databases/file-states.md)합니다.|  
+|state_desc|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
 |크기|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다. 데이터베이스 스냅숏의 경우 size는 스냅숏이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> 참고:이 필드는 FILESTREAM 컨테이너에 대 한 0으로 채워집니다. 쿼리는 *sys.database_files* 카탈로그 뷰 FILESTREAM 컨테이너의 실제 크기에 대 한 합니다.|  
 |max_size|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> 참고: 무제한 로그 파일 크기와 업그레이드 된 데이터베이스에 로그 파일의 최대 크기에 대 한-1을 보고 합니다.|  
 |growth|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> >0 = 파일이 자동으로 증가합니다.<br /><br /> is_percent_growth = 0일 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  

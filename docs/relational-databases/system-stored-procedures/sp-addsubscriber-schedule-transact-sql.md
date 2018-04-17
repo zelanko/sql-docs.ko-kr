@@ -1,16 +1,16 @@
 ---
 title: sp_addsubscriber_schedule (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a84145ac6088d56df3ad08eeff6aac2da038654
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4dd092a18fb8265e6ce8d29fe68d2f3b13445cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@agent_type =** ] *agent_type*  
  에이전트의 유형입니다. *agent_type* 은 **smallint**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|배포 에이전트|  
 |**1**|병합 에이전트|  
@@ -72,7 +72,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_type =** ] *frequency_type*  
  배포 에이전트를 예약하는 빈도입니다. *frequency_type* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|요청 시|  
@@ -89,7 +89,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  배포 에이전트의 날짜입니다. 이 매개 변수는 때 *frequency_type* 로 설정 된 **32** (매월 상대)입니다. *frequency_relative_interval* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|둘째|  
@@ -103,7 +103,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@frequency_subday =** ] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 은 **int**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|둘째|  
@@ -119,10 +119,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  하루 중에서 배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day*은 **int**, 오후 11시 59분: 59 235959 기본값, 즉 235959입니다.  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 은 **int**, 기본값은 **0**합니다.  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 은 **int**, 99991231 기본값은 9999 의미 하는 12 월 31 일입니다.  
   
  [  **@publisher =** ] **'***게시자***'**  
@@ -141,7 +141,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  구성원만는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_addsubscriber_schedule**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_changesubscriber_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

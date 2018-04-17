@@ -1,16 +1,16 @@
 ---
-title: "클라이언트 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: 클라이언트 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FOR XML clause, formatting
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1024bf5d057d2a5a5480592817827c21b423b0f3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: db7fd97f0b1151990ce2f8f947652b790b072f38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  
+  이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  
   
 > [!NOTE]  
 >  이 항목에서는 이미 FOR XML 절에 익숙한 사용자를 대상으로 클라이언트 쪽의 FOR XML 절 사용에 대한 추가 정보를 제공합니다. FOR XML에 대 한 자세한 내용은 참조 [For를 사용 하 여 XML](../../../relational-databases/xml/for-xml-sql-server.md)합니다.  
@@ -120,7 +121,7 @@ AS
   
 -   향상된 XML 템플릿 지원  
   
--   SqlXmlCommand.ClientSideXml property  
+-   SqlXmlCommand.ClientSideXml 속성  
   
      SQLXML 관리되는 클래스의 이 속성을 true로 설정하여 클라이언트 쪽 서식 지정을 지정할 수 있습니다.  
   
@@ -131,13 +132,13 @@ AS
 >  SQLXMLOLEDB 공급자를 사용 하는 ADO 응용 프로그램에서 XML 템플릿을 실행 하 고 모두를 지정 하는 경우는 **클라이언트 쪽 xml** 특성 템플릿과 ClientSideXML 속성에 지정 된 값 공급자에는 서식 파일 우선 적용 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [클라이언트 쪽 및 서버 쪽 XML 서식 지정 &#40;의 아키텍처 SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [Xml&#40;에 대 한 SQL Server &#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
- [FOR XML 보안 고려 사항 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [XML에 대 한 &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
+ [XML 보안 고려 사항에 대 한 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [xml SQLXML 4.0의 데이터 형식 지원](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
  [SQLXML 관리 되는 클래스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
- [클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [SqlXmlCommand 개체 &#40; SQLXML 관리 되는 클래스 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [클라이언트 쪽 XPath와 서버 쪽 XML 서식을 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
+ [SqlXmlCommand 개체 & #40; SQLXML 관리 되는 클래스 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [XML 데이터&#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

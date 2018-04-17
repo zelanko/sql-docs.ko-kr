@@ -1,30 +1,31 @@
 ---
-title: "드라이버 관리자 오류 및 경고 확인 | Microsoft Docs"
-ms.custom: 
+title: 드라이버 관리자 오류 및 경고 확인 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], driver manager error checking
 - driver manager [ODBC], error checking
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d61068526b0f15b7de5ba58c09675f1d9b75e9e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f212af4169b4c0be2a840f6ff8d7310abb40f53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 확인
 드라이버 관리자는 완전히 또는 부분적으로 다양 한 기능을 구현 하 고 오류 및 해당 함수에는 경고의 전체 또는 일부 따라서 검사 합니다.  

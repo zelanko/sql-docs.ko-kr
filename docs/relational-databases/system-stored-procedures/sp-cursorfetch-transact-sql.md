@@ -1,16 +1,16 @@
 ---
 title: sp_cursorfetch (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b33361094966dc180939f0cdf92ac951922139
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3a018fe2a3ebf5aaa53e1ed5f04112f0b512c712
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  인출할 커서 버퍼를 지정합니다. *fetchtype* 다음 정수 입력된 값 중 하나 필요로 하는 선택적 매개 변수입니다.  
   
-|값|이름|Description|  
+|Value|이름|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|첫 번째 버퍼를 인출 *nrows* 행. 경우 *nrows* 0 커서는 결과 집합 앞에 배치 하 고 아무 행도 반환 합니다.|  
 |0x0002|NEXT|다음 버퍼를 인출 *nrows* 행.|  
@@ -140,7 +140,7 @@ sp_cursorfetch cursor
   
  RPC 상태 매개 변수는 다음 표에 나와 있는 값 중 하나로 설정됩니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|프로시저가 실행되었습니다.|  
 |0x0001|프로시저가 실패했습니다.|  
@@ -149,7 +149,7 @@ sp_cursorfetch cursor
   
  행이 일반적인 결과 집합, 즉 열 형식(0x2a), 행(0xd1), 완료(0xfd) 순으로 반환됩니다. 메타 데이터 토큰, sp_cursoropen에 대해 지정 된 대로 동일한 형식 즉 전송 됩니다: 0x81, 0xa5 및 0xa4 SQL Server 7.0 사용자 및 기타 등등. 행 상태 표시기는 BROWSE 모드와 비슷하게 각 행 끝에 숨겨진 열로 전송됩니다. 열 이름은 rowstat이고 데이터 형식은 INT4입니다. 이 rowstat 열은 다음 표에 있는 값 중 하나를 포함할 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -199,7 +199,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_cursoropen &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

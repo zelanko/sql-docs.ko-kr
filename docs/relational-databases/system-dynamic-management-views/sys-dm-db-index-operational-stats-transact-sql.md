@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_index_operational_stats (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed586d131f7cca843f3b43605496ab2c1ab02fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/03/2018
  메모리 액세스에 최적화된 인덱스는 이 DMV에 나타나지 않습니다.    
     
 > [!NOTE]    
->  **sys.dm_db_index_operational_stats** 메모리 액세스에 최적화 된 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 액세스에 최적화 된 인덱스 사용에 대 한 정보를 참조 하십시오. [sys.dm_db_xtp_index_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **sys.dm_db_index_operational_stats** 메모리 액세스에 최적화 된 인덱스에 대 한 정보를 반환 하지 않습니다. 메모리 액세스에 최적화 된 인덱스 사용에 대 한 정보를 참조 하십시오. [sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)합니다.    
         
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -77,7 +78,7 @@ sys.dm_db_index_operational_stats (
     
  기본 테이블 또는 뷰의 모든 인덱스에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*, NULL을 지정 해야 *partition_number*합니다.    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* | NULL | 0 | 기본값    
  개체의 파티션 번호입니다. *partition_number* 은 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  인덱스 또는 힙의 모든 파티션에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다.    
@@ -91,7 +92,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|데이터베이스 ID입니다.|    
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
 |**index_id**|**int**|인덱스 또는 힙의 ID입니다.<br /><br /> 0 = 힙|    
-|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합의 ID입니다.<br /><br /> NULL –이 내부 columnstore 행 집합 아닙니다.<br /><br /> 자세한 내용은 참조 하십시오. [sys.internal_partitions&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합의 ID입니다.<br /><br /> NULL –이 내부 columnstore 행 집합 아닙니다.<br /><br /> 자세한 내용은 참조 하십시오. [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.|    
 |**leaf_insert_count**|**bigint**|리프 수준 삽입의 누적 횟수입니다.|    
 |**leaf_delete_count**|**bigint**|리프 수준 삭제의 누적 횟수입니다. 먼저 고스트로 표시 되지 않는 삭제 된 레코드에 대 한 leaf_delete_count만 증가 됩니다. 먼저, 보이더라도 삭제 된 레코드에 대 한 **leaf_ghost_count** 대신 증가 됩니다.|    
@@ -181,12 +182,12 @@ sys.dm_db_index_operational_stats (
  व र ी **lob_fetch_in_pages** 및 **lob_fetch_in_bytes** 포괄된 열으로 하나 이상의 LOB 열이 포함 된 비클러스터형 인덱스의 경우 0 보다 클 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요. 마찬가지로, व र ी **row_overflow_fetch_in_pages** 및 **row_overflow_fetch_in_bytes** 밀어넣을 수 있는 열을 포함 하는 경우 비클러스터형 인덱스는 0 보다 클 수 있습니다 행 외부에 있습니다.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>메타데이터 캐시의 카운터를 다시 설정하는 방법    
- 반환한 데이터 **sys.dm_db_index_operational_stats** 만으로 힙 또는 인덱스를 나타내는 메타 데이터 캐시 개체를 사용할 수 있습니다. 이 데이터는 영구적이지도 않고 트랜잭션 측면에서 일관되지도 않습니다. 즉, 이러한 카운터로는 인덱스가 사용되었는지 여부나 인덱스가 마지막으로 사용된 시기를 확인할 수 없습니다. 이 대 한 정보를 참조 하십시오. [sys.dm_db_index_usage_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ 반환한 데이터 **sys.dm_db_index_operational_stats** 만으로 힙 또는 인덱스를 나타내는 메타 데이터 캐시 개체를 사용할 수 있습니다. 이 데이터는 영구적이지도 않고 트랜잭션 측면에서 일관되지도 않습니다. 즉, 이러한 카운터로는 인덱스가 사용되었는지 여부나 인덱스가 마지막으로 사용된 시기를 확인할 수 없습니다. 이 대 한 정보를 참조 하십시오. [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)합니다.    
     
  힙 또는 인덱스에 대한 메타데이터를 메타데이터 캐시로 가져갈 때마다 각 열의 값이 0으로 설정되며 메타데이터 캐시에서 캐시 개체가 제거될 때까지 통계가 누적됩니다. 따라서 활성 힙 또는 인덱스의 메타데이터가 항상 캐시에 있으며 누적값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 작업을 반영합니다. 덜 활성화된 힙 또는 인덱스에 대한 메타데이터는 사용될 때 캐시에 들어왔다 나가기를 반복합니다. 따라서 사용 가능한 값이 있을 수도 있고 없을 수도 있습니다. 인덱스를 삭제하면 해당 통계가 메모리에서 제거되고 더 이상 보고되지 않습니다. 인덱스에 대한 다른 DDL 작업으로 인해 통계의 값이 0으로 다시 설정될 수도 있습니다.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>시스템 함수를 사용하여 매개 변수 값 지정    
- 사용할 수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 및 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 에 대 한 값을 지정 하는 *database_id* 및 *object_id* 매개 변수입니다. 그러나 이러한 함수에 유효하지 않은 값을 전달하면 의도하지 않은 결과가 발생할 수 있습니다. DB_ID 또는 OBJECT_ID를 사용할 때는 항상 유효한 ID가 반환되는지 확인합니다. 자세한 내용은 주의 섹션을 참조 하십시오. [sys.dm_db_index_physical_stats&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ 사용할 수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 및 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 에 대 한 값을 지정 하는 *database_id* 및 *object_id* 매개 변수입니다. 그러나 이러한 함수에 유효하지 않은 값을 전달하면 의도하지 않은 결과가 발생할 수 있습니다. DB_ID 또는 OBJECT_ID를 사용할 때는 항상 유효한 ID가 반환되는지 확인합니다. 자세한 내용은 주의 섹션을 참조 하십시오. [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)합니다.    
     
 ## <a name="permissions"></a>Permissions    
  다음 사용 권한이 필요합니다.    
@@ -201,7 +202,7 @@ sys.dm_db_index_operational_stats (
     
  VIEW DATABASE STATE를 거부하면 특정 개체에 대해 허용된 CONTROL 권한에 관계없이 데이터베이스의 모든 개체가 반환되지 않습니다. 또한, 데이터베이스 와일드 카드 @*database_id*= NULL을 지정 하면 해당 데이터베이스가 생략 됩니다.    
     
- 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40; Transact SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ 자세한 내용은 참조 [동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)합니다.    
     
 ## <a name="examples"></a>예    
     
@@ -209,7 +210,7 @@ sys.dm_db_index_operational_stats (
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스 및 파티션에 대한 정보를 반환합니다. 이 쿼리를 실행하려면 적어도 `Person.Address` 테이블에 대한 CONTROL 권한이 필요합니다.    
     
 > [!IMPORTANT]    
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 DB_ID 및 OBJECT_ID를 사용해 매개 변수 값이 반환된 경우 유효한 ID가 반환되는지 항상 확인합니다. 존재하지 않는 이름을 입력하거나 철자를 잘못 입력하는 등의 이유로 데이터베이스 또는 개체 이름을 찾을 수 없으면 두 함수 모두 NULL을 반환합니다. **sys.dm_db_index_operational_stats** 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정 하는 와일드 카드 값으로 해석 합니다. 이는 의도하지 않은 결과일 수 있으므로 이 섹션의 예에서는 안전하게 데이터베이스 및 개체 ID를 확인하는 방법을 보여 줍니다.    
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 DB_ID 및 OBJECT_ID를 사용해 매개 변수 값이 반환된 경우 유효한 ID가 반환되는지 항상 확인합니다. 존재하지 않는 이름을 입력하거나 철자를 잘못 입력하는 등의 이유로 데이터베이스 또는 개체 이름을 찾을 수 없으면 두 함수 모두 NULL을 반환합니다. **sys.dm_db_index_operational_stats** 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정하는 와일드카드 값으로 해석합니다. 이는 의도하지 않은 결과일 수 있으므로 이 섹션의 예에서는 안전하게 데이터베이스 및 개체 ID를 확인하는 방법을 보여 줍니다.    
     
 ```    
 DECLARE @db_id int;    
@@ -246,10 +247,10 @@ GO
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
- [sys.dm_os_latch_stats &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

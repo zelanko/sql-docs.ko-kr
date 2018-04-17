@@ -1,15 +1,16 @@
 ---
 title: SQL_NO_DATA | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL_NO_DATA [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - compatibility [ODBC], SQL_NO_DATA
 - upgrading applications [ODBC], SQL_NO_DATA
 ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da9e5ffc19d884d2cb182190e11ba4dcf0a915bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 48e50a556f5d1caa05170772d95a702d436d1722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnodata"></a>SQL_NO_DATA
 때 ODBC 3. *x* 응용 프로그램 호출 **SQLExecDirect**, **SQLExecute**, 또는 **SQLParamData** ODBC 2에서. *x* 드라이버 데이터 소스의 모든 행에 영향을 미치지 않는 문을 삭제 하거나 검색 결과 업데이트를 실행 하는 드라이버 하지 SQL_NO_DATA 관계 없이 SQL_SUCCESS를 반환 해야 합니다. 경우는 ODBC 2. *x* 또는 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 3. *x* 드라이버 호출 **SQLExecDirect**, **SQLExecute**, 또는 **SQLParamData** 와 동일한 결과 ODBC 3. *x* 드라이버는 SQL_NO_DATA를 반환 해야 합니다.

@@ -1,16 +1,16 @@
 ---
 title: sp_filestream_force_garbage_collection (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b567ffa4ac9b56074742999c602914ebe7d3934d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 및 FileTable-sp_filestream_force_garbage_collection
+# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   FILESTREAM 가비지 수집기를 실행하고 불필요한 FILESTREAM 파일을 삭제합니다.  
@@ -56,7 +56,7 @@ sp_filestream_force_garbage_collection
 >  *dbname* 은 **sysname**합니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
   
  **@filename** = *logical_file_name*  
- 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. **@filename**선택 사항입니다. 없는 논리적 파일 이름을 지정 하는 경우 가비지 수집기는 지정한 데이터베이스에 FILESTREAM 컨테이너를 모두 정리 합니다.  
+ 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. **@filename** 선택 사항입니다. 없는 논리적 파일 이름을 지정 하는 경우 가비지 수집기는 지정한 데이터베이스에 FILESTREAM 컨테이너를 모두 정리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
   
@@ -113,6 +113,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 2008의에서 FILESTREAM 저장소](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Filestream 및 FileTable 동적 관리 뷰 (Transact SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream 및 FileTable 카탈로그 뷰 (Transact SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

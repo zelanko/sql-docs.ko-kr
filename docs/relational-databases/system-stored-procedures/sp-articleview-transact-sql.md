@@ -1,16 +1,16 @@
 ---
 title: sp_articleview (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 165f494482aaac169eef7137bd0b45c0fa8b55d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fbf7f9ae65894464935bf0a89d9566624321a714
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  아티클을 포함하는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
@@ -84,37 +84,37 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** 를 문서에 대 한 변경 하면 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  지정 된 비-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에서 게시할 때 사용할 수 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@refreshsynctranprocs**  =] *refreshsynctranprocs*  
+ [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
  복제를 동기화하는 데 사용된 저장 프로시저가 자동으로 다시 생성되는지 여부입니다. *refreshsynctranprocs* 은 **비트**, 기본값은 1입니다.  
   
  **1** 저장된 프로시저 다시 생성 됨을 의미 합니다.  
   
  **0** 저장된 프로시저 다시 생성 됨을 의미 합니다.  
   
- [  **@internal** =] *내부*  
+ [ **@internal**=] *내부*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>주의  
- **sp_articleview** 게시 된 아티클을 정의 하 고이 보기에 ID를 삽입 하는 뷰를 만듭니다는 **sync_objid** 의 열은 [sysarticles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블을 마우스에 제한 절의 텍스트를 삽입 하는 **filter_clause** 열입니다. 모든 열이 복제 되 고 없는 경우 없는 **filter_clause**, **sync_objid** 에 [sysarticles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 기본 테이블의 ID와 사용으로 설정 되어 **sp_articleview** 필요 하지 않습니다.  
+ **sp_articleview** 게시 된 아티클을 정의 하 고이 보기에 ID를 삽입 하는 뷰를 만듭니다는 **sync_objid** 의 열은 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블을 마우스에 제한 절의 텍스트를 삽입 하는 **filter_clause** 열입니다. 모든 열이 복제 되 고 없습니다 **filter_clause**, **sync_objid** 에 [sysarticles &#40;Transact SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블의 ID로 설정 되는 사용 하 여 기본 테이블 **sp_articleview** 필요 하지 않습니다.  
   
- 열 필터링 된 테이블을 게시 하려면 (즉, 열) 먼저 실행 하 여 **sp_addarticle** 없이 *sync_object* 실행 매개 변수 [sp_articlecolumn &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) (열 필터 정의)를 복제 하 고 다음 실행을 각 열에 대해 한 번씩 **sp_articleview** 게시 된 아티클을 정의 하는 뷰를 만듭니다.  
+ 열 필터링 된 테이블을 게시 하려면 (즉, 열) 먼저 실행 하 여 **sp_addarticle** 없이 *sync_object* 실행 매개 변수 [sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) (열 필터 정의)를 복제 하 고 다음 실행을 각 열에 대해 한 번씩 **sp_articleview** 게시 된 아티클을 정의 하는 뷰를 만듭니다.  
   
- 행 필터링 된 테이블을 게시 하려면 (즉, 행 필터링) 실행 [sp_addarticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *필터* 매개 변수입니다. 실행 [sp_articlefilter &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 비롯 한 모든 매개 변수 *filter_clause*합니다. 그러고 나 서 **sp_articleview**, 모든 매개 변수를 포함 하 여 동일한 *filter_clause*합니다.  
+ 행 필터링 된 테이블을 게시 하려면 (즉, 행 필터링) 실행 [sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *필터* 매개 변수입니다. 실행 [sp_articlefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 비롯 한 모든 매개 변수 *filter_clause*합니다. 그러고 나 서 **sp_articleview**, 모든 매개 변수를 포함 하 여 동일한 *filter_clause*합니다.  
   
- 세로 및 가로로 필터링된 된 테이블을 게시 하려면 실행 [sp_addarticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *sync_object* 또는 *필터* 매개 변수입니다. 실행 [sp_articlecolumn &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 다음을 실행 하 고 복제 된 각 열에 대해 한 번씩 [sp_articlefilter &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 및 **sp_articleview**합니다.  
+ 세로 및 가로로 필터링된 된 테이블을 게시 하려면 실행 [sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *sync_object* 또는 *필터* 매개 변수입니다. 실행 [sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 다음을 실행 하 고 복제 된 각 열에 대해 한 번씩 [sp_articlefilter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) 및 **sp_ articleview**합니다.  
   
- 문서에 이미 게시 된 아티클을 정의 하는 보기 경우 **sp_articleview** 기존 뷰를 삭제 하 고 새 브러시를 자동으로 만듭니다. 뷰를 수동으로 만든 경우 (**형식** 에 [sysarticles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 은 **5**), 기존 보기 삭제 되지 않습니다.  
+ 문서에 이미 게시 된 아티클을 정의 하는 보기 경우 **sp_articleview** 기존 뷰를 삭제 하 고 새 브러시를 자동으로 만듭니다. 뷰를 수동으로 만든 경우 (**형식** 에 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 은 **5**), 기존 보기 삭제 되지 않습니다.  
   
- 사용자 지정 필터 저장 프로시저와 게시 아티클을 수동으로 정의 하는 보기를 만들면 실행 되지 않고 **sp_articleview**합니다. 대신이 방법으로 제공 된 *필터* 및 *sync_object* 매개 변수를 [sp_addarticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), 적절 한 함께 *형식* 값입니다.  
+ 사용자 지정 필터 저장 프로시저와 게시 아티클을 수동으로 정의 하는 보기를 만들면 실행 되지 않고 **sp_articleview**합니다. 대신이 방법으로 제공 된 *필터* 및 *sync_object* 매개 변수를 [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), 적절 한 함께*형식* 값입니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
@@ -125,7 +125,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [정적 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

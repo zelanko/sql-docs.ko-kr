@@ -2,7 +2,7 @@
 title: SQLGetConnectAttr 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bdc72acac47f44f65b5902c56e1436f5c647341
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 함수(SQLGetConnectAttr Function)
 **규칙**  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetConnectAttr(
  *ConnectionHandle*  
  [입력] 연결 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 검색할 특성입니다.  
   
  *ValuePtr*  
@@ -89,7 +89,7 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetConnectAttr** 호출 하 여 진단 데이터 구조에서 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 얻을 수 있습니다 **SQLGetDiagRec** 는 와*HandleType* sql_handle_dbc 라는의 및 *처리* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetConnectAttr** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞 드라이버 관리자에서 반환 된 Sqlstate의 설명 . 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|반환 되는 데이터 \* *ValuePtr* 되도록 잘렸습니다 *BufferLength* null 종결 문자 길이 뺀 값입니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -107,7 +107,7 @@ SQLRETURN SQLGetConnectAttr(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *ConnectionHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  연결 특성에 대 한 일반 정보를 참조 하십시오. [연결 특성](../../../odbc/reference/develop-app/connection-attributes.md)합니다.  
   
  목록이 설정할 수 있는 특성에 대 한 참조 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)합니다. 표시 되는 경우 *특성* 는 문자열을 반환 하는 특성을 지정 *ValuePtr* 문자열에 대 한 버퍼에 대 한 포인터 여야 합니다. Null 종료 문자를 포함 하 여 반환된 된 문자열의 최대 길이 됩니다 *BufferLength* 바이트입니다.  

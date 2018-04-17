@@ -1,16 +1,16 @@
 ---
 title: sys.dm_resource_governor_workload_groups (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588bbcb915873ba8a121432a83579b5877df8454
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1836223ec409b0b10b66e6b5df298b52029b6575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |queued_request_count|**int**|현재 지연된 요청 수입니다. Null을 허용하지 않습니다.|  
 |total_cpu_limit_violation_count|**bigint**|CPU 제한을 초과하는 요청의 누적 수입니다. Null을 허용하지 않습니다.|  
 |total_cpu_usage_ms|**bigint**|이 작업 그룹의 누적된 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.|  
-|max_request_cpu_time_ms|**bigint**|단일 요청에 대한 최대 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 이것은 request_max_cpu_time_sec, 달리 측정값 구성 가능한 설정 합니다. 자세한 내용은 참조 [CPU 임계값을 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)합니다.|  
+|max_request_cpu_time_ms|**bigint**|단일 요청에 대한 최대 CPU 사용량(밀리초)입니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 이것은 request_max_cpu_time_sec, 달리 측정값 구성 가능한 설정 합니다. 자세한 내용은 [CPU Threshold Exceeded 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)를 참조하세요.|  
 |blocked_task_count|**int**|현재 차단된 태스크의 수입니다. Null을 허용하지 않습니다.|  
 |total_lock_wait_count|**bigint**|발생한 잠금 대기의 누적 횟수입니다. Null을 허용하지 않습니다.|  
 |total_lock_wait_time_ms|**bigint**|잠금이 설정된 후 경과된 시간(밀리초)의 누적 합계입니다. Null을 허용하지 않습니다.|  
@@ -81,8 +82,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_resource_pools &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys.resource_governor_workload_groups &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_workload_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

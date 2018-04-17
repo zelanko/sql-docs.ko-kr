@@ -1,30 +1,31 @@
 ---
-title: "매개 변수 배열을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수 배열을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-arrays-of-parameters"></a>매개 변수 배열을 사용 하 여
 매개 변수를 호출 하 여 응용 프로그램의 배열을 사용 하 **SQLSetStmtAttr** 와 *특성* SQL_ATTR_PARAMSET_SIZE 매개 변수 집합의 수를 지정할 수의 인수입니다. 호출 **SQLSetStmtAttr** 와 *특성* SQL_ATTR_PARAMS_PROCESSED_PTR 드라이버 처리 하는 매개 변수 집합의 수를 반환할 수 있는 변수의 주소를 지정할 수의 인수 포함 하 여 오류를 설정합니다. 호출 **SQLSetStmtAttr** 와 *특성* 매개 변수 값의 각 행에 대 한 상태 정보를 반환 하는 배열을 가리키는 SQL_ATTR_PARAM_STATUS_PTR의 인수입니다. 드라이버는 이러한 주소 문에 대 한 유지 관리 하는 구조에 저장 합니다.  

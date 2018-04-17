@@ -1,16 +1,16 @@
 ---
 title: sp_helpreplfailovermode (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dd85f6f45b7104c73b83b08d6fc434eb14e9c70b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'***게시자***'**  
+ [ **@publisher=**] **'***publisher***'**  
  이 구독자의 업데이트에 참여하고 있는 게시자 이름입니다. *게시자* 은 **sysname**, 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  이 구독자의 업데이트에 참여하고 있는 게시 이름입니다. *게시*은 **sysname**, 기본값은 없습니다.  
   
  [  **@failover_mode_id=**] **'***failover_mode_id***' 출력**  
@@ -65,7 +65,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **'***failover_mode***' 출력**  
  구독자에서 데이터가 수정되는 모드를 반환합니다. *failover_mode* 는 **nvarchar (10)** 기본값은 NULL입니다. 이 **출력** 매개 변수입니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**직접 실행**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
 |**큐에 대기**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
@@ -80,6 +80,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpreplfailovermode**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_setreplfailovermode &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

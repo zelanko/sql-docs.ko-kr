@@ -1,15 +1,15 @@
 ---
-title: "MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트 | Microsoft Docs"
-ms.custom: 
+title: MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 
+caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC에서 SQL Server Native Client로 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 이전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 액세스를 지원합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 XML 통합이 포함되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 선택 하는 중... XML 쿼리, 하지만 다른 XML 기능은 지원 하지 않습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서는 **xml** 에 도입 된 데이터 형식 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 XML 통합이 포함되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 선택 하는 중... XML 쿼리, 하지만 다른 XML 기능은 지원 하지 않습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서는 **xml** 에 도입 된 데이터 형식 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 연결 문자열 특성만 사용하여 클라이언트 쪽 네트워크 라이브러리 구성을 지원합니다. 보다 완전한 네트워크 라이브러리 구성이 필요한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용해야 합니다.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에 연결되어 있으면 서버 오류 16947이 SQL_ERROR로 반환됩니다. 이 오류는 현재 위치 업데이트나 삭제 시 행이 업데이트 또는 삭제되지 않을 때 발생합니다. 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 MDAC를 사용할 경우 서버 오류 16947이 경고(SQL_SUCCESS_WITH_INFO)로 반환됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client를 구현 하는 **IDBDataSourceAdmin** 인터페이스에 이전에 구현 되지 않은 선택적 OLE DB 인터페이스인는 **CreateDataSource** 이 선택적 메서드 인터페이스 구현 됩니다. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 구현 하는 **IDBDataSourceAdmin** 인터페이스에 이전에 구현 되지 않은 선택적 OLE DB 인터페이스인는 **CreateDataSource** 이 선택적 메서드 인터페이스 구현 됩니다. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 TABLE_TYPE이 SYNONYM으로 설정된 TABLES 및 TABLE_INFO 스키마 행 집합에 동의어를 반환합니다.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/25/2018
   
 -   ODBC 또는 OLE DB 호출을 사용하여 트랜잭션을 시작하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC 사이에 동작 차이가 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하면 트랜잭션이 즉시 시작되지만 MDAC를 사용하면 첫 번째 데이터베이스 액세스 후에 트랜잭션이 시작됩니다. 이 수에 영향을 줄 저장된 프로시저 및 일괄 처리의 동작 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @ 필요@TRANCOUNT 일괄 처리 또는 저장된 프로시저 실행을 일괄 처리 또는 저장된 프로시저를 시작할 때 끝낸 후 동일 해야 합니다.  
   
--   와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ITransactionLocal::BeginTransaction 인해 트랜잭션이 즉시 시작 됩니다. MDAC를 사용할 경우 응용 프로그램이 암시적 트랜잭션 모드의 트랜잭션이 필요한 문을 실행할 때까지 트랜잭션 시작이 지연되었습니다. 자세한 내용은 참조 [SET implicit_transactions&#40; Transact SQL &#41; ](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ITransactionLocal::BeginTransaction 인해 트랜잭션이 즉시 시작 됩니다. MDAC를 사용할 경우 응용 프로그램이 암시적 트랜잭션 모드의 트랜잭션이 필요한 문을 실행할 때까지 트랜잭션 시작이 지연되었습니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)를 참조하세요.  
   
 -   사용 하는 경우 오류가 발생할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] System.Data.Odbc 액세스를 사용 하 여 Native Client 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 새로 만들기를 노출 하는 서버 컴퓨터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-관련 데이터 형식이 나 기능입니다. System.Data.Odbc는 일반 ODBC 구현을 제공 하며 이후에 노출 하지 공급 업체별 기능이 나 확장 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 드라이버는 기본적으로 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 지원하도록 업데이트됩니다. 문제를 해결 하려면이 문제를 MDAC로 되돌릴 하거나 System.Data.SqlClient를 마이그레이션합니다.  
   

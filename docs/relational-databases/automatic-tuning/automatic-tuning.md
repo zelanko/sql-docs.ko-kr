@@ -3,7 +3,7 @@ title: 자동 튜닝 | Microsoft Docs
 description: SQL Server 및 Azure SQL 데이터베이스의 자동 튜닝 하는 방법에 대 한 자세한 내용은
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,6 +75,8 @@ ms.lasthandoff: 04/05/2018
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잘못 된 계획을 대신 사용 해야 하는 계획을 포함 한 모든 잠재적 계획 선택 재발을 자동으로 검색 합니다.
 경우는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 마지막 적용 알려진 좋은 계획을 자동으로 모니터링 하 여 강제 계획의 성능입니다. 새 계획을 강제 됩니다 강제 계획을 이전 상태로 되돌아간된 계획 보다 더 나은 없으면 및 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 새로운 계획이 컴파일됩니다. 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 확인 강제 계획은 이전 상태로 되돌아간된 것 보다 더 나은, 강제 계획 이전 상태로 되돌아간된 계획 보다 더 나은 경우 (예를 들어 다음 통계 또는 스키마 변경)에 다시 컴파일 될 때까지 유지 됩니다.
+
+참고: 강제 계획 자동 모든 SQL Server 인스턴스를 다시 시작에 persit 하지 않습니다.
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>자동 계획 선택 보정을 사용 하도록 설정
 
@@ -135,13 +138,15 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | 스크립트(script) | query\_id | 현재 계획\_id | 계획 권장\_id | 예상\_얻을 | 오류\_발생 하기 쉬운
+| reason | score | 스크립트(script) | 쿼리\_id | 현재 계획\_id | 계획 권장\_id | 예상\_얻을 | 오류\_발생 하기 쉬운
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 3 ms에서 46 ms로 변경 하는 CPU 시간 | 36 | EXEC sp\_쿼리\_저장\_강제로\_계획 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
 `estimated_gain` 현재 계획 하는 대신 실행 되는 권장된 계획 저장 하는 시간 (초)의 예상된 수를 나타냅니다. 이득이 작을 10 초 보다 큰 경우 현재 계획 하는 대신 권장된 계획을 강제로 해야 합니다. 에 있는 경우 더 많은 오류가 (예를 들어 시간 제한 또는 중단 된 실행) 보다 현재 계획에서 권장 되는 계획을 열 `error_prone` 값으로 설정 됩니다 `YES`합니다. 오류가 발생 하기 쉬운 계획은 현재 항목 대신 권장된 계획을 강제로 하는 이유는 또 다른 이유입니다.
 
 하지만 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 식별 계획 선택 재발; 지속적인 모니터링 및 성능 문제를 수정 하는 데 필요한 모든 정보 지루한 과정 수도 제공 합니다. 자동 튜닝 하면 훨씬 쉽게이 프로세스입니다.
+
+참고:이 DMV에는 데이터가 SQL Server 인스턴스를 다시 시작한 후 유지 되지 않습니다.
 
 ## <a name="automatic-index-management"></a>자동 인덱스 관리
 

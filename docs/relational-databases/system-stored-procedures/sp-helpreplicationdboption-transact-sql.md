@@ -1,16 +1,16 @@
 ---
 title: sp_helpreplicationdboption (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53bf08bf26d8682093d72e55f290701d0b3c625
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 050eb8a82a7c4e9b3204af812072ea83fec7ecea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=**] **'***dbname***'**  
- 데이터베이스의 이름입니다. *dbname* 은 **sysname**, 기본값은  **%** 합니다. 경우  **%** , 다음 결과 집합에 게시자에서 모든 데이터베이스가 포함 되지만, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
+ [ **@dbname=**] **'***dbname***'**  
+ 데이터베이스의 이름입니다. *dbname* 은 **sysname**, 기본값은 **%**합니다. 경우 **%**, 다음 결과 집합에 게시자에서 모든 데이터베이스가 포함 되지만, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
   
  [  **@type=**] **'***형식***'**  
  결과 집합에 데이터베이스만 포함 되도록 제한 지정한 복제 옵션인 *형식* 값이 설정 된 합니다. *형식* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**게시**|트랜잭션 복제가 허용됩니다.|  
 |**병합 게시**|병합 복제가 허용됩니다.|  
@@ -86,7 +86,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있는 **sp_helpreplicationdboption** 모든 데이터베이스에 대 한 합니다. 멤버는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_helpreplicationdboption** 해당 데이터베이스에 대 한 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_replicationdboption &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

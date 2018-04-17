@@ -1,15 +1,15 @@
 ---
-title: "행 집합 속성 및 동작 | Microsoft Docs"
-ms.custom: 
+title: 행 집합 속성 및 동작 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|R/w: 읽기 전용<br /><br /> 기본값: DBPROPVAL_BMK_NUMERIC<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 숫자 책갈피만 구현 합니다. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 책갈피는 DBTYPE_UI4 형식의 32 비트 부호 없는 정수입니다.|  
 |DBPROP_CACHEDEFERRED|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 뒤로 인출 및 스크롤 비순차적 행 집합에서 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_CANFETCHBACKWARDS 또는 DBPROP_CANSCROLLBACKWARDS가 VARIANT_TRUE Native Client OLE DB 공급자 커서 지원 행 집합을 만듭니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.|  
-|DBPROP_CANHOLDROWS|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 기본적으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합의 현재에 존재 하는 동안 보류 중인 변경 내용이 행 집합에 대 한 더 많은 행을 가져오려고 하면 소비자 DB_E_ROWSNOTRELEASED를 반환 합니다. 이 동작은 수정할 수 있습니다.<br /><br /> DBPROP_CANHOLDROWS 및 DBPROP_IRowsetChange를 모두 VARIANT_TRUE로 설정할 경우 이는 책갈피가 표시된 행 집합을 의미합니다. 두 속성이 모두 VARIANT_TRUE 인 경우는 **IRowsetLocate** 인터페이스는 행 집합에서 사용할 수 있으며 DBPROP_BOOKMARKS 및 DBPROP_LITERALBOOKMARKS는 모두 VARIANT_TRUE입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]책갈피를 포함 하는 native Client OLE DB 공급자 행 집합에서 지원 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서입니다.|  
+|DBPROP_CANHOLDROWS|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 기본적으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합의 현재에 존재 하는 동안 보류 중인 변경 내용이 행 집합에 대 한 더 많은 행을 가져오려고 하면 소비자 DB_E_ROWSNOTRELEASED를 반환 합니다. 이 동작은 수정할 수 있습니다.<br /><br /> DBPROP_CANHOLDROWS 및 DBPROP_IRowsetChange를 모두 VARIANT_TRUE로 설정할 경우 이는 책갈피가 표시된 행 집합을 의미합니다. 두 속성이 모두 VARIANT_TRUE 인 경우는 **IRowsetLocate** 인터페이스는 행 집합에서 사용할 수 있으며 DBPROP_BOOKMARKS 및 DBPROP_LITERALBOOKMARKS는 모두 VARIANT_TRUE입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 책갈피를 포함 하는 native Client OLE DB 공급자 행 집합에서 지원 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서입니다.|  
 |DBPROP_CHANGEINSERTEDROWS|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:이 속성을 variant_true로 행 집합에서 키 집합 커서를 사용 하는 경우.|  
 |DBPROP_COLUMNRESTRICT|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 소비자가 행 집합의 열을 변경할 수 없는 경우 속성을 variant_true로 설정 합니다. 행 집합의 다른 열은 업데이트될 수 있으며 행 자체는 삭제될 수 있습니다.<br /><br /> 소비자 검사 하는 속성이 VARIANT_TRUE 이면는 *dwFlags* 여부는 개별 열의 값을 쓸 수 있는지 여부를 결정 하는 DBCOLUMNINFO 구조의 멤버입니다. 수정할 수 있는 열에 대 한 *dwFlags* DBCOLUMNFLAGS_WRITE 유효 합니다.|  
 |DBPROP_COMMANDTIMEOUT|R/w: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 기본적으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 시간이 제한 되지 않습니다는 **icommand:: Execute** 메서드.|  
@@ -75,8 +76,8 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_MEMORYUSAGE|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_NOTIFICATIONGRANULARITY|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
-|DBPROP_NOTIFICATIONPHASES|R/w: 읽기 전용<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 알림 단계를 모두 지원 합니다.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: 읽기 전용<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 알림 단계는 표시 된 행 집합 수정을 하려고 하기 전에 취소할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 시도가 완료 된 후 단계 취소를 지원 하지 않습니다.|  
+|DBPROP_NOTIFICATIONPHASES|R/w: 읽기 전용<br /><br /> 기본값: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 알림 단계를 모두 지원 합니다.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: 읽기 전용<br /><br /> 기본값: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 알림 단계는 표시 된 행 집합 수정을 하려고 하기 전에 취소할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 시도가 완료 된 후 단계 취소를 지원 하지 않습니다.|  
 |DBPROP_ORDEREDBOOKMARKS|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 설정은 변경 표시 유형 속성 원인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서를 행 집합을 지원 합니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.|  
 |DBPROP_QUICKRESTART|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: VARIANT_TRUE로 설정 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합에 대 한 서버 커서를 사용 하려고 합니다.|  
@@ -98,15 +99,15 @@ ms.lasthandoff: 01/24/2018
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|열: ColumnID<br /><br /> R/w: 읽기 전용<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 현재 내에서 COMPUTE 절 결과 열의 서 수 위치 (1부터 시작)를 나타내는 정수 값의 배열 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 ODBC SQL_CA_SS_COLUMN_ID 특성에 해당 합니다.|  
+|SSPROP_COLUMN_ID|열: ColumnID<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_U12 &#124; VT_ARRAY<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 현재 내에서 COMPUTE 절 결과 열의 서 수 위치 (1부터 시작)를 나타내는 정수 값의 배열 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 ODBC SQL_CA_SS_COLUMN_ID 특성에 해당 합니다.|  
 |SSPROP_DEFERPREPARE|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: VARIANT_TRUE: 준비 된 실행 명령 준비 될 때까지 지연 됩니다 **icommand:: Execute** 호출 되거나 메타 속성 작업이 수행 됩니다. 속성 설정에 따른 동작은 다음과 같습니다.<br /><br /> VARIANT_FALSE: 문을 준비할 때 **icommandprepare:: Prepare** 실행 됩니다.|  
 |SSPROP_IRowsetFastLoad|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:이 속성을 통해 빠른 로드 행 집합을 VARIANT_TRUE로 설정 **iopenrowset:: Openrowset**합니다. 이 속성을 설정할 수 없습니다 **icommandproperties:: Setproperties**합니다.|  
 |SSPROP_ISSAsynchStatus|열: 아니요.<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:이 속성을 variant_true를 사용 하 여 비동기 작업을 사용 하도록 설정 된 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스입니다.|  
 |SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환 하는 텍스트의 크기를 제한 하지 않습니다 및 속성 값이 해당 최대값으로 설정 합니다. 2147483647).<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 SELECT 문에서 반환 하는 이진 BLOB (large object) 데이터의 길이 제한 하는 SET TEXTSIZE 문을 실행 합니다.|  
 |SSPROP_NOCOUNT_STATUS|열: NoCount<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: SET NOCOUNT on/off에서의 상태를 나타내는 부울 값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: SET NOCOUNT ON인 경우<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF인 경우|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR (1-2000 자 허용)<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 메시지의 메시지 텍스트입니다. 사용자가 정의하며 정의된 형식은 없습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어<br /><br /> `service=mySSBService;local database=mydb`|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> Type: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 초<br /><br /> 최대: 2 ^31-1 초<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지 되는 시간 (초) 수입니다.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 초<br /><br /> 최대: 2 ^31-1 초<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지 되는 시간 (초) 수입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [행 집합](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  

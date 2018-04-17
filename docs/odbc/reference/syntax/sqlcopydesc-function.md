@@ -2,7 +2,7 @@
 title: SQLCopyDesc 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8f857ee82ffb9d715e0e408715c9c56353687fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 함수
 **규칙**  
@@ -66,7 +66,7 @@ SQLRETURN SQLCopyDesc(
   
  때문에 **SQLCopyDesc** 호출 하 여 구현 될 수 있습니다 **SQLGetDescField** 및 **SQLSetDescField**, **SQLCopyDesc** 반환할 수 있습니다 반환 된 Sqlstate **SQLGetDescField** 또는 **SQLSetDescField**합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -82,7 +82,7 @@ SQLRETURN SQLCopyDesc(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *SourceDescHandle* 또는 *TargetDescHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  에 대 한 호출 **SQLCopyDesc** 복사본 원본 설명자 필드 대상 설명자 핸들에 대 한 핸들입니다. 필드는 IPD 또는 응용 프로그램 설명자에만 속하지만 IRD에 복사할 수 있습니다. 응용 프로그램이 나 구현 설명자에서 필드를 복사할 수 있습니다.  
   
  문 핸들 준비 또는 실행 된 상태 이면 있을 경우에 IRD에서 필드를 복사할 수 있습니다. 그렇지 않으면 함수가 반환 SQLSTATE HY007 (관련 된 문이 준비 되지 않았습니다.).  

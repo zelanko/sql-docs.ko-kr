@@ -2,7 +2,7 @@
 title: SQLColumns 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86cf72d9a0f061b4cdec3416df315c1e8f9fe91b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 함수
 **규칙**  
@@ -69,7 +69,7 @@ SQLRETURN SQLColumns(
  *NameLength1*  
  [입력] 문자 길이 **CatalogName*합니다.  
   
- *SchemaName*  
+ *schemaName*  
  [입력] 스키마 이름에 대 한 문자열 검색 패턴입니다. 드라이버 일부 테이블에 대 한 있지만 대 한 드라이버 다른 Dbms, 빈 문자열에서에서 데이터를 검색 하는 경우 등의 다른 스키마를 지 원하는 경우 ("") 스키마가 없는 테이블을 나타냅니다.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  [입력] 문자 길이 **SchemaName*합니다.  
   
- *테이블 이름*  
+ *TableName*  
  [입력] 테이블 이름에 대 한 문자열 검색 패턴입니다.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [입력] 문자 길이 **TableName*합니다.  
   
- *열 이름*  
+ *ColumnName*  
  [입력] 열 이름에 대 한 문자열 검색 패턴입니다.  
   
 > [!NOTE]  
@@ -102,7 +102,7 @@ SQLRETURN SQLColumns(
 ## <a name="diagnostics"></a>진단  
  때 **SQLColumns** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLColumns** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -125,7 +125,7 @@ SQLRETURN SQLColumns(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  이 함수 일반적으로 사용 됩니다 문 실행 하기 전에 데이터 원본 카탈로그에서 테이블 또는 테이블에 대 한 열에 대 한 정보를 검색 합니다. **SQLColumns** 는 모든 유형의에서 반환 된 항목에 대 한 데이터를 검색 하는 데 사용할 수 **SQLTables**합니다. 기본 테이블 외에도이 포함 될 수 있습니다 (그러나에 국한 되지 않음) 뷰, 동의어, 시스템 테이블 및 등입니다. 이와 반대로 함수 **SQLColAttribute** 및 **SQLDescribeCol** 함수 및 결과 집합의 열을 설명 **SQLNumResultCols** 의 수를 반환 합니다. 결과 집합의 열입니다. 자세한 내용은 참조 [카탈로그 데이터의 사용 하 여](../../../odbc/reference/develop-app/uses-of-catalog-data.md)합니다.  
   
 > [!NOTE]  
@@ -164,9 +164,9 @@ SQLRETURN SQLColumns(
   
  다음 표에서 결과 집합의 열을 나열합니다. 드라이버에서 18 (IS_NULLABLE) 열 추가 열을 정의할 수 있습니다. 응용 프로그램 결과 명시적 서 수 위치를 지정 하는 대신 집합의 끝부터 계산 하 여 드라이버 관련 열에 액세스 해야 합니다. 자세한 내용은 참조 [카탈로그 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)합니다.  
   
-|열 이름|Column<br /><br /> number|데이터 형식|주석|  
+|열 이름|열<br /><br /> number|데이터 형식|설명|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|1|Varchar|카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
+|TABLE_CAT (ODBC 1.0)|1.|Varchar|카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 테이블을 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 이러한 테이블에 대 한 합니다.|  
 |TABLE_SCHEM 순으로 정렬 (ODBC 1.0)|2|Varchar|스키마 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 지 원하는 스키마만, 하지만 일부 테이블에 대 한 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 스키마가 없는 해당 테이블에 대 한 합니다.|  
 |TABLE_NAME (ODBC 1.0)|3|NULL이 아닌 Varchar|테이블 이름입니다.|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|열 이름입니다. 드라이버는 이름이 없는 열에 대 한 빈 문자열을 반환 합니다.|  

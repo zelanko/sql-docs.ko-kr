@@ -2,7 +2,7 @@
 title: SQLNumResultCols 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9210256473f8f7bb3822d7d28e4e46978e27118
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88ee7ca6c4d348d58b2cc63425086a1faec71667
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols 함수
 **규칙**  
@@ -62,7 +62,7 @@ SQLRETURN SQLNumResultCols(
 ## <a name="diagnostics"></a>진단  
  때 **SQLNumResultCols** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLNumResultCols** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -79,7 +79,7 @@ SQLRETURN SQLNumResultCols(
   
  **SQLNumResultCols** 에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 **SQLPrepare** 또는 **SQLExecute** 호출 **SQLPrepare** 하기전에 **SQLExecute**데이터 원본 문과 연결 된 SQL 문을 계산 하는 경우에 따라 합니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  **SQLNumResultCols** 문을 준비, 실행, 또는 위치 지정 상태에 있을 때에 성공적으로 호출할 수 있습니다.  
   
  와 관련 된 문이 *StatementHandle* 열을 반환 하지 않는 **SQLNumResultCols** 설정 **ColumnCountPtr* 을 0으로 합니다.  

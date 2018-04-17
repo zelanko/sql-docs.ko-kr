@@ -1,16 +1,16 @@
 ---
-title: "관계를 사용 하 여 s q l: (SQLXML 4.0)를 지정 합니다. | Microsoft Docs"
-ms.custom: 
+title: '관계를 사용 하 여 s q l: (SQLXML 4.0)를 지정 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048b90bb17952147d254e0dc89a28dc58fe9532c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  
+  XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  
   
  예를 들어 XSD 스키마에에서는  **\<고객 >** 요소에 포함 되어  **\<순서 >** 자식 요소입니다. 스키마가 AdventureWorks 데이터베이스에 매핑될 때는  **\<고객 >** 요소는 Sales.Customer 테이블에 매핑됩니다 및  **\<순서 >** 요소가 매핑되는 Sales.SalesOrderHeader 테이블입니다. 이러한 기본 테이블인 Sales.Customer와 Sales.SalesOrderHeader는 고객 주문과 관련하여 서로 관련되어 있습니다. Sales.SalesOrderHeader 테이블의 CustomerID는 Sales.Customer 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다. 사용 하 여 매핑 스키마 요소 간에 이러한 관계를 설정할 수는 **sql: relationship** 주석입니다.  
   
@@ -73,7 +74,7 @@ XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 �
  **child-key**  
  부모의 부모 키를 참조하는 자식의 자식 키를 지정합니다. 자식 키가 여러 특성(열)으로 구성된 경우 자식 키 값은 사이에 공백을 두고 지정합니다. 여러 열로 구성된 키에 대해 지정된 값과 해당 부모 키에 지정된 값 간에는 위치 매핑이 있습니다.  
   
- **Inverse**  
+ **역 수**  
  이 특성에 지정 된  **\<sql: relationship >** updategram에서 사용 됩니다. 자세한 내용은 참조 [sql: inverse Attribute on sql: relationship 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)합니다.  
   
  **sql:-필드** 있는 자식 요소를 포함 하는 요소에 주석을 지정 해야는  **\<sql: relationship >** 요소와 자식 간에 정의 하 고 수행 하는 부모 요소에 지정 된 테이블의 기본 키를 제공 하지 않습니다. 스키마 지정 하지 않는 경우에  **\<sql: relationship >**를 지정 해야 합니다 **sql:-필드** 를 적절 한 계층을 생성 합니다. 자세한 내용은 참조 [sql:를 사용 하 여 키 열 식별-필드](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)합니다.  
@@ -84,11 +85,11 @@ XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 �
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1. 요소에 sql:relationship 주석 지정  
- 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어  **\<고객 >** 및  **\<순서 >** 요소입니다. **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다.  
+ 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어  **\<고객 >** 및  **\<순서 >** 요소입니다.  **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다.  
   
  스키마에는 **sql: relationship** 에 주석을 지정는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체는  **\<xsd:appinfo >** 요소입니다.  
   
- **\<관계 >** 요소는 Sales.Customer 테이블의 CustomerID 기본 키를 참조 하는 외래 키로 Sales.SalesOrderHeader 테이블의 CustomerID를 식별 합니다. 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** 요소입니다.  
+  **\<관계 >** 요소는 Sales.Customer 테이블의 CustomerID 기본 키를 참조 하는 외래 키로 Sales.SalesOrderHeader 테이블의 CustomerID를 식별 합니다. 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** 요소입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -392,9 +393,9 @@ XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 �
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4. 여러 요소에 대해 sql:relationship 지정  
  이 예에서는 주석이 추가 된 XSD 스키마 포함는  **\<고객 >**,  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
   
- **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 되어는  **\<순서 >** 자식 요소로 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
+  **\<순서 >** 의 자식 요소는  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 되어는  **\<순서 >** 자식 요소로 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
   
- **\<순서 >** 요소에 포함 됩니다는  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 되어  **\<OrderDetail >** 자식 요소에 따라서 주문에 속하는 주문 정보를 자식 요소로 표시  **\<순서 >**  요소입니다.  
+  **\<순서 >** 요소에 포함 됩니다는  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 되어  **\<OrderDetail >** 자식 요소에 따라서 주문에 속하는 주문 정보를 자식 요소로 표시 **\<순서 >** 요소입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

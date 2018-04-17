@@ -1,15 +1,16 @@
 ---
-title: "유니코드 응용 프로그램 | Microsoft Docs"
-ms.custom: 
+title: 유니코드 응용 프로그램 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], compiling as Unicode application
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bc4228f693f2d5753c3b04cf6e2cd48e18a591b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce235380abcbc2d793f1d5ce0e9e487eca904fdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unicode-applications"></a>유니코드 응용 프로그램
 두 가지 방법 중 하나에서 유니코드 응용 프로그램으로 응용 프로그램을 다시 컴파일할 수 있습니다.  

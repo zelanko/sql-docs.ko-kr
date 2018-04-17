@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_sys_memory (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_sys_memory
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ac5e7d7fad2ceabdbfbfe30b73529ffb8d960d2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d7700bbb7aff6af5ef192509530664421a374e7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**kernel_nonpaged_pool_kb**|**bigint**|페이징되지 않은 커널 풀의 총 공간(KB)입니다.|  
 |**system_high_memory_signal_state**|**bit**|시스템 고용량 메모리 리소스 상태 알림입니다. 값이 1이면 Windows에서 고용량 메모리 신호가 설정된 것입니다. 자세한 내용은 참조 [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN 라이브러리에서.|  
 |**system_low_memory_signal_state**|**bit**|시스템 저용량 메모리 리소스 상태 알림입니다. 값이 1이면 Windows에서 저용량 메모리 신호가 설정된 것입니다. 자세한 내용은 참조 [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN 라이브러리에서.|  
-|**system_memory_state_desc**|**nvarchar(256)**|메모리 상태에 대한 설명입니다. 아래 표를 참조 합니다.|  
+|**system_memory_state_desc**|**nvarchar(256)**|메모리 상태에 대한 설명입니다. 아래 표를 참조하세요.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 |조건|Value|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

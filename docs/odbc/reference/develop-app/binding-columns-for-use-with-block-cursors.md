@@ -1,15 +1,16 @@
 ---
-title: "블록 커서와 함께 사용 하기 위해 열을 바인딩 | Microsoft Docs"
-ms.custom: 
+title: 블록 커서와 함께 사용 하기 위해 열을 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c527c2e89ab9acd0218a1b7f88112a81d537b780
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbe734fa37ece0609a24527162c061298294d4ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>블록 커서와 함께 사용 하기 위해 열 바인딩
 블록 커서 여러 행을 반환 하므로 사용 하는 응용 프로그램을 사용 하 여 변수의 배열을 단일 변수 대신 각 열에 바인딩해야 합니다. 이러한 배열은 이라고 통칭는 *행 집합 버퍼*합니다. 바인딩의 두 가지 스타일은 다음과 같습니다.  

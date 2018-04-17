@@ -1,16 +1,16 @@
 ---
 title: sp_help_publication_access (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1568ded984bcb38c6633fdf5ceddfb2b960df41b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b9fb4ee142f179c4570fb24516a891e41045fd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  액세스할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@return_granted=**] **'***return_granted***'**  
  로그인 ID입니다. *return_granted* 은 **비트**, 기본값은 1입니다. 경우 **0** 지정 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용 되는 배포자 게시자에 있는 사용 가능한 로그인 반환 됩니다. 경우 **0** 지정 및 Windows 인증이 사용 되는, 하나에 액세스 거부 되지 않은 로그인 게시자 또는 배포자가 반환 됩니다.  
   
  [  **@login=**] **'***로그인***'**  
- 표준 보안 로그인 ID입니다. *로그인* 은 **sysname**, 기본값은  **%** 합니다.  
+ 표준 보안 로그인 ID입니다. *로그인* 은 **sysname**, 기본값은 **%**합니다.  
   
  [  **@initial_list =**] *initial_list*  
  게시 액세스 권한이 있는 모든 멤버를 반환할지 또는 목록에 새 멤버가 추가되기 전에 액세스 권한을 가졌던 멤버만 반환할지 지정합니다. *initial_list* 는 bit 이며 기본값은 **0**합니다.  
@@ -85,8 +85,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_help_publication_access**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_grant_publication_access &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

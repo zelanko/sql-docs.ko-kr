@@ -2,7 +2,7 @@
 title: SQLBrowseConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -118,7 +118,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 인수  
  찾아보기 요청 연결 문자열에는 다음 구문을 가집니다.  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *연결 문자열* :: = *특성*[`;`] &#124; *특성* `;` *연결 문자열*;<br>
  *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
  *attribute-value* ::= *character-string*<br>
@@ -133,11 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 인수  
  찾아보기 결과 연결 문자열은 연결 특성의 목록. 연결 특성 특성 키워드와 해당 특성 값으로 구성 됩니다. 찾아보기 결과 연결 문자열에는 다음 구문을 가집니다.  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *연결 문자열* :: = *특성*[`;`] &#124; *특성* `;` *연결 문자열*<br>
  *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
- *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *ODBC 특성-키워드* = {`UID` &#124; `PWD`} [`:`*지역화 식별자*] *드라이버-정의-속성-키워드* :: =*식별자*[`:`*지역화 식별자*] *특성-값* :: = `{` *특성 값 목록* `}` &#124; `?` (중괄호는 리터럴, 드라이버에 의해 반환 됩니다.)<br>
+ *특성 값 목록* :: = *문자열* [`:`*지역화 된 문자열*] &#124; *문자열* [`:` *지역화 된 문자열*] `,` *특성-값-목록*<br>
   
  여기서 *문자열* 및 *지역화 된 문자열* 0 개 이상의 문자가; *식별자* 및 *지역화 식별자* 하나 이상의 문자가; *특성 키워드* 를 구분 하 고 *특성-값* 대/소문자 구분 될 수 있습니다. 연결으로 인해 문자열 및 초기화 파일 문법, 키워드, 지역화 된 식별자 및 특성 값을 문자를 포함 하는 **{} (),? \*=! @** 피해 야 합니다. 시스템 정보에 대 한 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자.  
   

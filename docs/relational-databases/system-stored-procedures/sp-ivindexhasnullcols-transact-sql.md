@@ -1,16 +1,16 @@
 ---
 title: sp_ivindexhasnullcols (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dbdbe2a627eb49dbd2ab71bef5bc102f1b157d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b69b3557009b72579e579e9ca0400b1639d3787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@viewname** =] **'***view_name***'**  
+ [ **@viewname**=] **'***view_name***'**  
  확인할 뷰의 이름입니다. *view_name* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@fhasnullcols** =] *field_has_null_columns* 출력  
+ [ **@fhasnullcols**=] *field_has_null_columns* 출력  
  뷰 인덱스에 NULL을 허용하는 열이 있는지 여부를 표시하는 플래그입니다. *view_name* 은 **sysname**, 기본값은 없습니다. 값을 반환 **1** 뷰 인덱스에 열이 NULL을 허용 하는 경우. 값을 반환 **0** 보기에 NULL을 허용 하는 열이 포함 되어 있지 않으면입니다.  
   
 > [!NOTE]  

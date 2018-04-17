@@ -2,7 +2,7 @@
 title: ConfigDriver 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56825fd24bd452365d5c3279c6aa68db83bd2470
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configdriver-function"></a>ConfigDriver 함수
 **규칙**  
@@ -55,7 +55,7 @@ BOOL ConfigDriver(
 ```  
   
 ## <a name="arguments"></a>인수  
- *창은*  
+ *hwndParent*  
  [입력] 부모 창 핸들입니다. 핸들 null 이면 함수는 모든 대화 상자 표시 되지 않습니다.  
   
  *문제점과*  
@@ -90,7 +90,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>진단  
  때 **ConfigDriver** 관련 FALSE를 반환  *\*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError** 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|*창은* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|*문제점과* 인수는 다음 중 하나 였습니다.<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> 드라이버 관련 옵션 ODBC_CONFIG_DRIVER_MAX 보다 작거나 했습니다.|  
@@ -98,7 +98,7 @@ BOOL ConfigDriver(
 |ODBC_ERROR_REQUEST_FAILED|*요청* 실패|요청한 작업을 수행할 수 없습니다는 *문제점과* 인수입니다.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|드라이버 또는 변환기 관련 오류|정의 된 ODBC 설치 관리자 오류가 없는 드라이버 관련 오류가 발생 했습니다. *SzError* 에 대 한 호출의 인수는 **SQLPostInstallerError** 함수에는 드라이버 특정 오류 메시지가 포함 되어 있어야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
   
 ### <a name="driver-specific-options"></a>드라이버 관련 옵션  
  응용 프로그램 사용 하 여 드라이버에 의해 노출 되는 드라이버 관련 기능을 요청할 수는 *문제점과* 인수입니다. *문제점과* 첫 번째 옵션 1을 더한 ODBC_CONFIG_DRIVER_MAX 됩니다 및 추가 옵션을 해당 값에서 1 씩 증가 합니다. 전달 된 null로 끝나는 문자열에 제공 해야 해당 함수에 대 한 드라이버에 필요한 모든 인수는 *lpszArgs* 인수입니다. 이러한 기능을 제공 하는 드라이버는 드라이버 관련 옵션의 테이블을 유지 해야 합니다. 옵션은 드라이버 설명서의 완전히 문서화 해야 합니다. 드라이버 관련 옵션을 사용 하는 응용 프로그램 작성자는 이렇게 하면 응용 프로그램 덜 상호 운용 가능한 알고 있어야 합니다.  

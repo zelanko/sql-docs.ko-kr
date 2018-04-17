@@ -1,30 +1,31 @@
 ---
-title: "ODBC 테이블 반환 매개 변수를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: ODBC 테이블 반환 매개 변수를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050d0e33419b2f73fba8e5e7fd011d786fcb9f21
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dc60cd2dba6917fca0d2836112801a7a1477ecf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 테이블 반환 매개 변수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/24/2018
   
  응용 프로그램에서 동적 SQL에 테이블 반환 매개 변수가 사용되어 테이블 반환 매개 변수의 형식 이름을 반드시 제공해야 하는 경우도 있습니다. 이 경우 테이블 반환 매개 변수는 연결에 대 한 현재 기본 스키마에 정의 되지 않은 경우 SQL_CA_SS_TYPE_CATALOG_NAME 및 SQL_CA_SS_TYPE_SCHEMA_NAME SQLSetDescField를 사용 하 여 설정 되어야 합니다. 테이블 형식 정의와 테이블 반환 매개 변수는 동일한 데이터베이스에 있어야 하므로 응용 프로그램에서 테이블 반환 매개 변수를 사용하는 경우 SQL_CA_SS_TYPE_CATALOG_NAME을 설정해서는 안 됩니다. 그렇지 않으면 SQLSetDescField 오류를 보고 합니다.  
   
- 이 시나리오에 대 한 예제 코드는 프로시저는 `demo_fixed_TVP_binding` 에 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
+ 이 시나리오에 대 한 예제 코드는 프로시저는 `demo_fixed_TVP_binding` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>행 스트리밍을 사용하는 테이블 반환 매개 변수(실행 시 데이터를 사용하여 TVP로 데이터 전송)  
  이 시나리오에서 응용 프로그램은 드라이버가 요청하면 행을 제공하며 제공된 행은 서버로 스트리밍됩니다. 따라서 모든 행을 메모리에 버퍼링할 필요가 없습니다. 이는 대량 삽입/업데이트 시나리오를 나타냅니다. 테이블 반환 매개 변수는 매개 변수 배열과 대량 복사의 중간 정도 수준에 해당하는 성능을 제공합니다. 즉, 테이블 반환 매개 변수는 매개 변수 배열만큼 프로그래밍하기 쉬우면서도 서버에서 더 뛰어난 융통성을 제공합니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/24/2018
   
  테이블 반환 매개 변수 열이 모두 처리되면 드라이버가 다시 테이블 반환 매개 변수로 돌아와서 테이블 반환 매개 변수 데이터의 행을 추가로 처리하기 시작합니다. 따라서 실행 시 데이터 테이블 반환 매개 변수의 경우 드라이버가 바인딩된 매개 변수를 순차적으로 검색하는 일반적인 방식을 따르지 않습니다. SQLPutData로 호출 될 때까지 바인딩된 테이블 반환 매개 변수를 폴링지 것입니다 *StrLen_Or_IndPtr* 0 될 때 드라이버가 테이블 반환 매개 변수 열을 건너뛰고 다음 실제 저장된 프로시저 매개 변수를 이동 합니다.  SQLPutData 표시기 값을 전달 하는 1 보다 크거나, 경우 드라이버가 테이블 반환 매개 변수 열 및 행 순서 대로 처리 모든 바운드 행 및 열에 대 한 값이 될 때까지 합니다. 그런 다음 드라이버는 테이블 반환 매개 변수로 돌아갑니다. SQLParamData에서 테이블 반환 매개 변수에 대 한 토큰을 수신 하 고 테이블 반환 매개 변수에 대 한 SQLPutData (hstmt, NULL, n)를 호출 사이의 응용 프로그램 설정 해야 테이블 반환 매개 변수 구성 열 데이터와 표시기에 대 한 버퍼 내용을 다음 행 또는 행이 서버에 전달 합니다.  
   
- 이 시나리오에 대 한 예제 코드는 루틴에 `demo_variable_TVP_binding` 에 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
+ 이 시나리오에 대 한 예제 코드는 루틴에 `demo_variable_TVP_binding` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>시스템 카탈로그에서 테이블 반환 매개 변수 메타데이터 검색  
  응용 프로그램이 테이블 반환 매개 변수의 매개 변수가 있는 프로시저에 대 한 SQLProcedureColumns 호출, DATA_TYPE SQL_SS_TABLE TYPE_NAME은 테이블 반환 매개 변수에 대 한 테이블 형식의 이름으로 반환 됩니다. 두 개의 추가 열 SQLProcedureColumns에서 반환 된 결과 집합에 추가 됩니다: SS_TYPE_CATALOG_NAME 여기서 테이블 반환 매개 변수의 테이블 형식이 정의 하 고 ss_type_schema_name은 스키마의 이름을 반환 하는 카탈로그의 이름을 반환 위치는 여기서는 테이블 반환 매개 변수의 테이블 유형에 정의 됩니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버 관련 열 앞에, 그리고 ODBC 자체에서 위임한 모든 열 뒤에 표시됩니다.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/24/2018
   
  SQLColumns를 사용 하 여 영구 테이블 하지만 먼저 SQL_SOPT_SS_NAME_SCOPE를 실제 테이블이 아니라 테이블 형식으로 작동 하는지 나타내는 설정 해야 듯이 내에서 테이블 형식에 대 한 열을 결정 하는 응용 프로그램. SQLPrimaryKeys는 테이블 형식에 SQL_SOPT_SS_NAME_SCOPE를 사용 하 여 다시 사용할 수도 있습니다.  
   
- 이 시나리오에 대 한 예제 코드는 루틴에 `demo_metadata_from_catalog_APIs` 에 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
+ 이 시나리오에 대 한 예제 코드는 루틴에 `demo_metadata_from_catalog_APIs` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>준비된 문에서 테이블 반환 매개 변수 메타데이터 검색  
  이 시나리오에서는 응용 프로그램 및 사용 하 여 SQLNumParameters SQLDescribeParam 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 합니다.  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/24/2018
   
  응용 프로그램 SQLDescribeParam 열은 테이블 반환 매개 변수 열에 대 한 메타 데이터를 반환 하지 않으므로,이 시나리오에서는 테이블 반환 매개 변수에 대 한 열 메타 데이터를 검색할 SQLColumns를 사용 합니다.  
   
- 이 사용 사례에 대 한 예제 코드는 루틴에 `demo_metadata_from_prepared_statement` 에 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
+ 이 사용 사례에 대 한 예제 코드는 루틴에 `demo_metadata_from_prepared_statement` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 반환 매개 변수 사용 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

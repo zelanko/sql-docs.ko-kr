@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_windows_info (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_windows_info
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac000ce78154d6650c388709257178f4576161cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Windows 운영 체제 버전 정보를 표시하는 행을 반환합니다.  
   
-  Windows에서 실행 되는 SQL Server에만 적용 됩니다. Linux와 같은 비-Windows 호스트에서 실행 중인 SQL Server에 대 한 유사한 정보를 보려면 사용 [sys.dm_os_host_info &#40; Transact SQL &#41; ](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  Windows에서 실행 되는 SQL Server에만 적용 됩니다. Linux와 같은 비-Windows 호스트에서 실행 중인 SQL Server에 대 한 유사한 정보를 보려면 사용 [sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)합니다. 
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 Sys.dm_os_windows_info 대 한 SELECT 권한이 기본적으로 public 역할에 부여 됩니다. 취소 하는 경우에 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
-Linux와 같은 비-Windows 호스트에서 실행 되는 SQL에 대 한 정보를 보려면 사용 [sys.dm_os_host_info &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Linux와 같은 비-Windows 호스트에서 실행 되는 SQL에 대 한 정보를 보려면 사용 [sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)합니다. 
   
 ## <a name="examples"></a>예  
  다음 예에서는 모든 열을 반환 된 **sys.dm_os_windows_info** 보기.  

@@ -1,16 +1,16 @@
 ---
 title: sp_deletemergeconflictrow (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e085a7010f25f40b95a45d8ddd0c7b455d7266c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c29bd82383b4df740dc3aac6c64529c8c8aafb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  충돌 테이블에서 행을 삭제 또는 [MSmerge_conflicts_info &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다. 이 저장 프로시저는 충돌 테이블이 저장된 컴퓨터의 모든 데이터베이스에서 실행될 수 있습니다.  
+  충돌 테이블에서 행을 삭제 또는 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다. 이 저장 프로시저는 충돌 테이블이 저장된 컴퓨터의 모든 데이터베이스에서 실행될 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
   
 ## <a name="arguments"></a>인수  
  [  **@conflict_table=**] **'***conflict_table***'**  
- 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은  **%** 합니다. 경우는 *conflict_table* NULL로 지정 되어 또는  **%** , 삭제 충돌 하 고 일치 하는 행이 되도록 간주 되며 *rowguid* 및 *origin_datasource* 및 *source_object* 에서 삭제 되 고 [MSmerge_conflicts_info &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
+ 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은 **%**합니다. 경우는 *conflict_table* NULL로 지정 되어 또는 **%**, 삭제 충돌 하 고 일치 하는 행이 되도록 간주 되며 *rowguid* 및 *origin_datasource* 및 *source_object* 에서 삭제 되는 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
   
  [  **@source_object=**] **'***source_object***'**  
  원본 테이블의 이름입니다. *source_object* 은 **nvarchar (386)**, 기본값은 NULL입니다.  
@@ -71,7 +71,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>주의  
  **sp_deletemergeconflictrow** 병합 복제에 사용 됩니다.  
   
- [MSmerge_conflicts_info &#40; Transact SQL &#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블은 시스템 테이블 및 비어 있는 경우에 데이터베이스에서 삭제 되지 않습니다.  
+ [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블은 시스템 테이블 및 비어 있는 경우에 데이터베이스에서 삭제 되지 않습니다.  
   
 ## <a name="permissions"></a>Permissions  
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_deletemergeconflictrow**합니다.  

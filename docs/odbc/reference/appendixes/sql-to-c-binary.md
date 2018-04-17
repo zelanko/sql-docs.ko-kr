@@ -1,15 +1,16 @@
 ---
-title: "C: 이진 SQL | Microsoft Docs"
-ms.custom: 
+title: 'C: 이진 SQL | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], binary
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 293c18d2206d1b034eadc532f8850c6599e904e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36f1faed079da9dd8b3d04f659bc079583abd044
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-binary"></a>C: 이진 SQL
 이진 ODBC SQL 데이터 형식에 대 한 식별자는.  
@@ -41,9 +42,9 @@ ms.lasthandoff: 12/21/2017
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(데이터의 바이트 길이) \* 2 < *BufferLength*<br /><br /> (데이터의 바이트 길이) \* 2 > = *BufferLength*|data<br /><br /> 잘린된 데이터|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|(문자 데이터의 길이) \* 2 < *BufferLength*<br /><br /> (문자 데이터의 길이) \* 2 > = *BufferLength*|data<br /><br /> 잘린된 데이터|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 잘린된 데이터|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|(데이터의 바이트 길이) \* 2 < *BufferLength*<br /><br /> (데이터의 바이트 길이) \* 2 > = *BufferLength*|Data<br /><br /> 잘린된 데이터|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이|n/a<br /><br /> 01004|  
+|SQL_C_WCHAR|(문자 데이터의 길이) \* 2 < *BufferLength*<br /><br /> (문자 데이터의 길이) \* 2 > = *BufferLength*|Data<br /><br /> 잘린된 데이터|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이|n/a<br /><br /> 01004|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|Data<br /><br /> 잘린된 데이터|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이|n/a<br /><br /> 01004|  
   
  이진 SQL 데이터를 C 문자 데이터로 변환 되 면 원본 데이터의 각 바이트 (8 비트)는 두 개의 ASCII 문자로 표시 됩니다. 이러한 문자는 16 진수 형식으로 숫자의 ASCII 문자 표현 합니다. 예를 들어 "01" 이진 00000001은 변환 하 고 이진 11111111 "FF"로 변환 됩니다.  
   

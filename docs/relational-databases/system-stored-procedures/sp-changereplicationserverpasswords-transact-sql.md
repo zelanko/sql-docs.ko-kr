@@ -1,16 +1,16 @@
 ---
 title: sp_changereplicationserverpasswords (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5a6e71440f8b167af8c875873f60da183ff3572
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,31 +49,31 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@login_type**  =] *login_type*  
+ [ **@login_type** =] *login_type*  
  제공한 자격 증명의 인증 유형입니다. *login_type* 은 **tinyint**, 기본값은 없습니다.  
   
  **1** = Windows 통합된 인증  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
   
- [  **@login**  =] **'***로그인***'**  
+ [ **@login** =] **'***로그인***'**  
  변경할 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *로그인* 은 **nvarchar (257)**, 기본값은 없습니다  
   
- [  **@password**  =] **'***암호***'**  
+ [ **@password** =] **'***암호***'**  
  새 암호를 저장할 수는 지정 된 *로그인*합니다. *암호* 은 **sysname**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
   
- [  **@server**  =] **'***서버***'**  
+ [ **@server** =] **'***서버***'**  
  저장된 암호를 변경할 서버 연결입니다. *서버* 은 **sysname**, 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**배포자**|배포자에 대한 모든 에이전트 연결입니다.|  
 |**publisher**|게시자에 대한 모든 에이전트 연결입니다.|  
 |**subscriber**|구독자에 대한 모든 에이전트 연결입니다.|  
-|**%**(기본값)|복제 토폴로지의 모든 서버에 대한 모든 에이전트 연결입니다.|  
+|**%** (기본값)|복제 토폴로지의 모든 서버에 대한 모든 에이전트 연결입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

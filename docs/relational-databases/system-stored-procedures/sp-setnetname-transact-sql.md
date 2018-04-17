@@ -1,16 +1,16 @@
 ---
 title: sp_setnetname (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2a0cc53bb8b4ef3c5c12c7154edc57b02c07a656
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>인수  
- **@server= '** *서버* **'**  
+ **@server = '** *서버* **'**  
  사용자가 코드화한 원격 저장 프로시저 호출 구문에서 참조되는 원격 서버의 이름입니다. 에 정확히 한 행 **sys.servers** 이 하에 이미 존재 해야 *서버*합니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
- **@netname='** *network_name* **'**  
+ **@netname ='** *network_name* **'**  
  원격 저장 프로시저 호출이 수행되는 컴퓨터의 네트워크 이름입니다. *network_name* 은 **sysname**, 기본값은 없습니다.  
   
  이 이름은 반드시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 컴퓨터 이름과 일치해야 하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 사용할 수 없는 문자를 포함할 수 있습니다.  
@@ -60,7 +60,7 @@ sp_setnetname
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>주의  
  컴퓨터 이름에 잘못된 식별자가 있는 경우 Windows 컴퓨터에 일부 원격 저장 프로시저를 호출하면 문제가 발생할 수 있습니다.  
@@ -95,9 +95,9 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

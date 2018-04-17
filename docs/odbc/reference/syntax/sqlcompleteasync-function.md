@@ -2,7 +2,7 @@
 title: SQLCompleteAsync 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,13 +20,13 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93a6362bf0a0f7870d1fed5dfeafa5cdf1885cd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 함수
 **규칙**  
@@ -79,7 +79,7 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: 알림 모드에서 비동기 작업이 진행 중에서 되었거나 드라이버 관리자가 응용 프로그램 알림을 받지 않습니다. 폴링 모드에서는 비동기 작업이 진행 중에 있지 않습니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  폴링 기반 비동기 처리 모드에서 *AsyncRetCodePtr* SQL_STILL_EXECUTING을 수 있습니다 때 **SQLCompleteAsync** 관계 없이 SQL_SUCCESS를 반환 합니다. 응용 프로그램까지 폴링 유지 해야 *AsyncRetCodePtr* SQL_STILL_EXECUTING 않습니다. 알림 기반 비동기 처리 모드에서 *AsyncRetCodePtr* SQL_STILL_EXECUTING 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  

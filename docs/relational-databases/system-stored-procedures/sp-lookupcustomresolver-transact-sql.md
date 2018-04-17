@@ -1,16 +1,16 @@
 ---
 title: sp_lookupcustomresolver (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df262bcf0d12d99b2c16b7eeff18cbc80c151ad8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] **'***article_resolver***'**  
  등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정합니다. *article_resolver* 은 **nvarchar (255)**, 기본값은 없습니다. 제거할 비즈니스 논리가 COM 구성 요소이면 이 매개 변수는 해당 구성 요소의 이름이며 비즈니스 논리가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리이면 이 매개 변수는 어셈블리의 이름입니다.  
   
- [  **@resolver_clsid** =] **'***resolver_clsid***'** 출력  
+ [ **@resolver_clsid**=] **'***resolver_clsid***'** 출력  
  에 지정 된 사용자 지정 비즈니스 논리의 이름과 연결 된 COM 개체의 CLSID 값은 *article_resolver* 매개 변수입니다. *resolver_clsid* 은 **nvarchar (50)**, 기본값은 NULL입니다.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** 출력  
@@ -87,8 +87,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클 해결 프로그램 지정](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

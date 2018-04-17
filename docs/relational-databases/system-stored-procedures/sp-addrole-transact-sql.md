@@ -1,16 +1,16 @@
 ---
 title: sp_addrole (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrole
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrole
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 070e1d0e71b49689e547dc29300bf5a5476d17ec
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551ac618a2643fabfed717677e0892c8781f52e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>주의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 이름에는 문자, 기호 및 숫자 등을 포함하여 1자에서 128자까지의 문자를 사용할 수 있습니다. 데이터베이스 역할의 이름에는: 백슬래시 문자를 포함 (\\), null, null 또는 빈 문자열 (**'**).  
   
- 데이터베이스 역할을 추가한 후 사용 하 여 [sp_addrolemember &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 역할에 보안 주체를 추가 합니다. GRANT, DENY 또는 REVOKE 문을 사용하여 데이터베이스 역할에 사용 권한을 부여하는 경우 데이터베이스 역할의 멤버는 사용 권한이 자신의 계정에 직접 적용되는 것처럼 사용 권한을 상속합니다.  
+ 데이터베이스 역할을 추가한 후 사용 하 여 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 역할에 보안 주체를 추가 합니다. GRANT, DENY 또는 REVOKE 문을 사용하여 데이터베이스 역할에 사용 권한을 부여하는 경우 데이터베이스 역할의 멤버는 사용 권한이 자신의 계정에 직접 적용되는 것처럼 사용 권한을 상속합니다.  
   
 > [!NOTE]  
 >  새 서버 역할은 만들 수 없습니다. 역할은 데이터베이스 수준에서만 만들 수 있습니다.  
@@ -80,7 +80,7 @@ EXEC sp_addrole 'Managers';
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [보안 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

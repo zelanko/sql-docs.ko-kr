@@ -1,16 +1,16 @@
 ---
 title: sp_reinitmergepullsubscription (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d6f906cf3335079618629c03cc5503debd9a519
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4ec51ae6cffe1ebc95212c5a77e16be344577164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher**  =] **'***게시자***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 모든의 기본값입니다.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 모든의 기본값입니다.  
   
- [  **@publication**  =] **'***게시***'**  
+ [ **@publication** =] **'***게시***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 모든의 기본값입니다.  
   
- [  **@upload_first**  =] **'***upload_first***'**  
+ [ **@upload_first** =] **'***upload_first***'**  
  구독을 다시 초기화하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 은 **nvarchar (5)**, 기본값은 FALSE입니다. 경우 **true**, 구독이 다시 초기화 하기 전에 변경 내용이 업로드 됩니다. 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

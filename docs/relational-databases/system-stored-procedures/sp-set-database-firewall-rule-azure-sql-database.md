@@ -1,16 +1,16 @@
 ---
-title: "sp_set_database_firewall_rule (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sp_set_database_firewall_rule (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_database_firewall_rule
 - firewall_rules, setting database rules
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c83057218c015eb9d3488ea730e507ab795ddade
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 33ba0433400c5848cc3e96dd0afad6e8c402660d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address**  =] '*start_ip_address*'  
  데이터베이스 수준의 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다. *start_ip_address* 은 **varchar (50)** 기본값은 없습니다.  
   
- [ **@end_ip_address**  =] '*end_ip_address*'  
+ [**@end_ip_address** =] '*end_ip_address*'  
  데이터베이스 수준의 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다. *end_ip_address* 은 **varchar (50)** 기본값은 없습니다.  
   
  다음 표에서 지원 되는 인수를 보여 줍니다. 및 옵션에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.  
@@ -70,7 +71,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  시작 및 끝 IP 주소를 일치 하는 데이터베이스 수준 방화벽 설정을 추가 하면 `0.0.0.0`, 데이터베이스에 대 한 액세스를 사용 하면는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure 리소스에서는 서버입니다. 값을 제공 된 *이름* 데 도움이 되는 매개 변수는 방화벽 설정을 기억할에 대 한 합니다.  
   
 ## <a name="permissions"></a>Permissions  
- 필요한 **제어** 데이터베이스에 대 한 권한이 있습니다.  
+ 데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 코드에서는 데이터베이스 수준 방화벽 설정에서 호출 `Allow Azure` Azure에서 데이터베이스에 액세스할 수 있도록 합니다.  
@@ -95,8 +96,8 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ## <a name="see-also"></a>관련 항목:  
  [Azure SQL 데이터베이스 방화벽](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [방법: 방화벽 설정 구성 (Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule&#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sp_set_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

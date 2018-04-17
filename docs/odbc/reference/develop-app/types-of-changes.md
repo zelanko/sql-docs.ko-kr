@@ -1,30 +1,31 @@
 ---
-title: "변경 내용 유형의 | Microsoft Docs"
-ms.custom: 
+title: 변경 내용 유형의 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7801d7bf8e7add5425ee6a8a97c4b1b17c556674
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3db03bfda3e464ebc422cbbc009c586e83863b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="types-of-changes"></a>유형의 변경
 ODBC 3에서 세 가지 유형의 변경 내용 수행 됩니다. *x* (및 ODBC의 모든 버전). 이러한 각 이전 버전과 호환성을 다르게 영향을 받으며를 다른 방식으로 처리 됩니다. 이러한 변경 내용은 다음 표에 설명 되어 있습니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_help_log_shipping_monitor (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d48e5d889890c9ab657733aec2d564bb1c2f7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +61,8 @@ sp_help_log_shipping_monitor
 |**database_name**|**sysname**|데이터베이스 이름입니다.|  
 |**time_since_last_backup**|**int**|마지막 로그 백업 이후에 경과한 시간(분)입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
 |**last_backup_file**|**nvarchar(500)**|마지막 로그 백업 파일의 이름입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
-|**backup_threshold**|**int**|마지막 백업 후 threshold_alert 오류가 발생하기까지의 시간(분)입니다. **backup_threshold** 은 **int**, 기본값은 **60 분**합니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.<br /><br /> 사용 하 여이 값을 변경할 수 있습니다 [sp_add_log_shipping_primary_database &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**is_backup_alert_enabled**|**bit**|경고는 되는지 여부를 지정 발생 시기 **backup_threshold** 을 초과 합니다. 하나의 값 (**1**), 기본값을 의미 하는 경고가 발생 합니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.<br /><br /> 사용 하 여이 값을 변경할 수 있습니다 [sp_add_log_shipping_primary_database &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**backup_threshold**|**int**|마지막 백업 후 threshold_alert 오류가 발생하기까지의 시간(분)입니다. **backup_threshold** 은 **int**, 기본값은 **60 분**합니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.<br /><br /> 사용 하 여이 값을 변경할 수 있습니다 [sp_add_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)합니다.|  
+|**is_backup_alert_enabled**|**bit**|경고는 되는지 여부를 지정 발생 시기 **backup_threshold** 을 초과 합니다. 하나의 값 (**1**), 기본값을 의미 하는 경고가 발생 합니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.<br /><br /> 사용 하 여이 값을 변경할 수 있습니다 [sp_add_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)합니다.|  
 |**time_since_last_copy**|**int**|마지막 로그 백업을 복사한 이후에 경과한 시간(분)입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
 |**last_copied_file**|**nvarchar(500)**|마지막으로 복사한 로그 백업 파일의 이름입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
 |**time_since_last_restore**|**int**|마지막 로그 백업을 복원한 이후에 경과한 시간(분)입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.|  
@@ -78,7 +78,7 @@ sp_help_log_shipping_monitor
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

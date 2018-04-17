@@ -2,7 +2,7 @@
 title: sp_posttracertoken (Transact SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedur+I741es
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79102a0a4c9e0b2122b23f01a7e7808c0d610967
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b020aa95aa4f07732843cf360048e63f1d99f7cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,8 @@ sp_posttracertoken [ @publication = ] 'publication'
  [ **@publication**=] **'***게시***'**  
  대기 시간을 측정할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@tracer_token_id=** ] *tracer_token_id***출력**  
- 삽입된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 가 출력 매개 변수 이며 기본값은 NULL입니다. 실행 하려면이 값을 사용할 수 있습니다 [sp_helptracertokenhistory &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) 또는 [sp_deletetracertokenhistory &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) 먼저 실행 하지 않고 [sp_helptracertokens &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+ [  **@tracer_token_id=** ] *tracer_token_id * * * 출력**  
+ 삽입된 추적 프로그램 토큰의 ID입니다. *tracer_token_id* 은 **int** 가 출력 매개 변수 이며 기본값은 NULL입니다. 실행 하려면이 값을 사용할 수 있습니다 [sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) 또는 [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) 먼저 실행 하지 않고 [sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)합니다.  
   
  [  **@publisher=** ] **'***게시자***'**  
  지정 된 비-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 은 **sysname**, 기본값은 NULL 지정 하지 않아야 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

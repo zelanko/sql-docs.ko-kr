@@ -1,16 +1,16 @@
 ---
 title: sp_expired_subscription_cleanup (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_expired_subscription_cleanup
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b2da325d403d6a7965cf6a211c07a4809598bdf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6f4f285d64aec7e90174381c5fe8bafc209863eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexpiredsubscriptioncleanup-transact-sql"></a>sp_expired_subscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,14 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>주의  
  **sp_expired_subscription_cleanup** 모든 유형의 복제에 사용 됩니다.  
   
- **sp_expired_subscription_cleanup** 검색 하 고 24 시간 마다 게시 데이터베이스에서 만료 된 구독을 제거 하는 만료 된 구독 정리 작업에 의해 실행 됩니다. 구독이 최신이 아닌 경우 즉, 보존 기간 동안 게시자와 동기화하지 않은 경우 게시가 만료된 것으로 선언되며 게시자에서 구독의 추적이 정리됩니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
+ **sp_expired_subscription_cleanup** 검색 하 고 24 시간 마다 게시 데이터베이스에서 만료 된 구독을 제거 하는 만료 된 구독 정리 작업에 의해 실행 됩니다. 구독이 최신이 아닌 경우 즉, 보존 기간 동안 게시자와 동기화하지 않은 경우 게시가 만료된 것으로 선언되며 게시자에서 구독의 추적이 정리됩니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)을 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_expired_subscription_cleanup**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_mergesubscription_cleanup &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_mergesubscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,31 +1,32 @@
 ---
-title: "런타임 시 구성 하는 SQL 문을 | Microsoft Docs"
-ms.custom: 
+title: 런타임 시 구성 하는 SQL 문을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d9463795697584be0dc1d6f96845cf810857292
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 976c70eca55b34eccf5e06282eed67aeaa7e550a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>런타임 시 구성 하는 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 런타임 시 SQL 문을 작성 합니다. 예를 들어 스프레드시트에서 데이터를 검색할 열을 선택 하는 사용자를 허용 수 있습니다.:  

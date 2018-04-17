@@ -1,15 +1,15 @@
 ---
-title: "초기화 및 권한 부여 속성 | Microsoft Docs"
-ms.custom: 
+title: 초기화 및 권한 부여 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - authorization [OLE DB]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, authorization properties
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c2658d15a374a4cd971eb0236d5a45dca2c9752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_INIT_ENCRYPT|형식: VT_BOOL<br /><br /> R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 네트워크를 통해 이동 하는 데이터를 암호화 하려면 SSPROP_INIT_ENCRYPT 속성이 VARIANT_TRUE로 설정 됩니다.<br /><br /> 프로토콜 암호화 사용이 설정된 경우 SSPROP_INIT_ENCRYPT 설정에 관계없이 항상 암호화가 수행됩니다. 프로토콜 암호화 사용이 해제되고 SSPROP_INIT_ENCRYPT가 VARIANT_TRUE로 설정된 경우 암호화가 수행됩니다.<br /><br /> 프로토콜 암호화 사용이 해제되고 SSPROP_INIT_ENCRYPT가 VARIANT_FALSE로 설정된 경우 암호화가 수행되지 않습니다.|  
 |SSPROP_INIT_FAILOVERPARTNER|유형: VT_BSTR<br /><br /> R/w: 읽기/쓰기<br /><br /> 설명: 데이터베이스 미러링에 대 한 장애 조치 파트너의 이름을 지정합니다. 이는 초기화 속성이며 초기화 전에만 설정할 수 있습니다. 초기화 후에는 주 서버에 의해 반환된 장애 조치(Failover) 파트너가 있는 경우 이를 반환합니다.<br /><br /> 이를 통해 지능형 응용 프로그램은 가장 최근에 확인된 백업 서버를 캐시할 수 있지만 이러한 응용 프로그램은 연결이 처음 설정될 때(또는 풀링된 경우 다시 설정될 때)만 정보가 업데이트되므로 장시간 연결에서는 정보가 최신 상태가 아닐 수 있음을 인식해야 합니다.<br /><br /> 연결을 설정한 후 응용 프로그램은 이 특성을 쿼리하여 장애 조치(Failover) 파트너의 ID를 확인할 수 있습니다. 주 서버에 장애 조치(failover) 파트너가 없는 경우 이 속성은 빈 문자열을 반환합니다. 자세한 내용은 참조 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)합니다.|  
 |SSPROP_INIT_FILENAME|유형: VT_BSTR<br /><br /> R/w: 읽기/쓰기<br /><br /> 설명: 연결할 수 있는 데이터베이스의 주 파일 이름을 지정합니다. 이 데이터베이스는 연결되어 해당 연결에 대한 기본 데이터베이스가 됩니다. SSPROP_INIT_FILENAME을 사용하려면 데이터베이스 이름을 DBPROP_INIT_CATALOG 초기화 속성의 값으로 지정해야 합니다. 데이터베이스 이름이 없으면 SSPROP_INIT_FILENAME에 지정된 주 파일 이름을 찾고 해당 데이터베이스를 DBPROP_INIT_CATALOG에 지정된 이름에 연결합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이를 다시 연결하지 않습니다.|  
-|SSPROP_INIT_MARSCONNECTION|형식: VT_BOOL<br /><br /> R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 결과 집합 MARS (Multiple Active) 연결에 대해 활성화 여부를 지정 합니다. 데이터베이스에 연결을 설정하기 전에 이 옵션을 true로 설정해야 합니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|형식: VT_BOOL<br /><br /> R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 결과 집합 MARS (Multiple Active) 연결에 대해 활성화 여부를 지정 합니다. 데이터베이스에 연결을 설정하기 전에 이 옵션을 true로 설정해야 합니다. 자세한 내용은 참조 [Multiple Active Result Sets를 사용 하 여 & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|유형: VT_BSTR<br /><br /> R/w: 읽기/쓰기<br /><br /> 설명:의 인스턴스를 실행 중인 서버의 네트워크 주소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_INIT_DATASOURCE 속성으로 지정 합니다.|  
 |SSPROP_INIT_NETWORKLIBRARY|유형: VT_BSTR<br /><br /> R/w: 읽기/쓰기<br /><br /> 설명:의 인스턴스와 통신 하는 데 사용 되는 networklibrary (DLL) 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이름에는 경로 또는 .dll 파일 확장명이 포함되면 안 됩니다.<br /><br /> 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 구성 유틸리티를 사용하여 사용자 지정할 수 있습니다.<br /><br /> 참고: TCP 및 명명 된 파이프만이 속성에서 지원 됩니다. 이 속성은 내부적으로 접두사를 생성하는 데 사용되므로 이 속성을 접두사와 함께 사용하는 경우 이중 접두사로 인해 오류가 발생합니다.|  
 |SSPROP_INIT_PACKETSIZE|형식: VT_I4<br /><br /> R/w: 읽기/쓰기<br /><br /> 설명: 네트워크 패킷 크기 (바이트)에서입니다. 패킷 크기 속성 값은 512에서 32,767 사이여야 합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 네트워크 패킷 크기는 4,096입니다.|  
@@ -94,6 +95,6 @@ Server=MyServer;UID=MyUserName;
  사용할 수 있는 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 참조 [Connection String Keywords with SQL Server Native Client를 사용 하 여](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 원본 개체 &#40; OLE db&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [데이터 원본 개체 & #40; OLE db& #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

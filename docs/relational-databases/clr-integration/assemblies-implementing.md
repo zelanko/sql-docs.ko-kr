@@ -1,33 +1,33 @@
 ---
-title: "어셈블리 구현 | Microsoft Docs"
-ms.custom: 
+title: 어셈블리 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e295b80f737bbfcb3c9184974eb82e043da9b0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---implementing"></a>어셈블리-구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
+  이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
   
 -   어셈블리 만들기  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 02/09/2018
   
  **SQL Server Management Studio를 사용 하 여 어셈블리를 만들려면**  
   
--   [어셈블리 속성 &#40; 일반 페이지 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [어셈블리 속성 &#40;일반 페이지&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>어셈블리 수정  
  어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 문을 사용하여 수정하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 수정합니다. 다음을 수행할 때 어셈블리를 수정할 수 있습니다.  
   
 -   새로운 버전의 어셈블리 바이너리를 업로드하여 어셈블리 구현을 변경합니다. 자세한 내용은 참조 [어셈블리 버전 관리](#_managing) 이 항목의 뒷부분에 나오는 합니다.  
   
--   어셈블리의 권한 집합을 변경합니다. 자세한 내용은 참조 [어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)합니다.  
+-   어셈블리의 권한 집합을 변경합니다. 자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하세요.  
   
 -   어셈블리의 표시 여부를 변경합니다. 표시되는 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 참조할 때 사용할 수 있습니다. 표시되지 않는 어셈블리는 데이터베이스에 업로드했더라도 사용할 수 없습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드된 어셈블리가 표시됩니다.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
  **SQL Server Management Studio를 사용 하 여 어셈블리를 수정 하려면**  
   
--   [어셈블리 속성 &#40; 일반 페이지 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [어셈블리 속성 &#40;일반 페이지&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>어셈블리 삭제, 해제 및 설정  
  어셈블리는 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY 문이나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 삭제합니다.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>어셈블리 버전 관리  
+##  <a name="_managing"></a> 어셈블리 버전 관리  
  어셈블리가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 업로드되면 데이터베이스 시스템 카탈로그에 저장되어 이 카탈로그에서 관리됩니다. 에 있는 어셈블리의 정의에 대 한 변경 내용을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터베이스 카탈로그에 저장 되어 있는 어셈블리로 전파 되어야 합니다.  
   
  어셈블리를 수정해야 할 경우 ALTER ASSEMBLY 문을 실행하여 데이터베이스의 어셈블리를 업데이트해야 합니다. 이렇게 하면 어셈블리가 해당 구현을 보유하고 있는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트됩니다.  
@@ -93,14 +93,14 @@ ms.lasthandoff: 02/09/2018
   
 -   어셈블리에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수나 메서드를 통해 직접 또는 간접적으로 메서드를 참조하는 지속형 계산 열  
   
--   구성 요소의 어셈블리 및 형식 구현에 종속 된 CLR 사용자 정의 형식의 열을 **UserDefined** (비-**네이티브**) serialization 형식입니다.  
+-   어셈블리에 종속된 CLR 사용자 정의 유형의 열 - 이 유형은 **UserDefined**(비**네이티브**) 직렬화 형식을 구현합니다.  
   
 > [!CAUTION]  
 >  WITH UNCHECKED DATA를 지정하지 않으면 새 어셈블리 버전이 테이블, 인덱스 또는 다른 영구 사이트의 기존 데이터에 영향을 주는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ASSEMBLY를 실행하지 못하도록 합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR 어셈블리를 업데이트할 때 계산 열, 인덱스, 인덱싱된 뷰 또는 식이 기본 루틴 및 유형과 일치하도록 보장하지는 않습니다. ALTER ASSEMBLY를 실행할 때는 어셈블리에 저장된 이 식을 기반으로 하는 값과 식의 결과가 일치하는지 주의해서 확인하십시오.  
   
  구성원만는 **db_owner** 및 **db_ddlowner** 고정된 데이터베이스 역할 WITH UNCHECKED DATA 절을 사용 하 여 ALTER ASSEMBLY를 실행할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 어셈블리 테이블에 검사 하지 않은 데이터로 수정 되었다는 사실을 Windows 응용 프로그램 이벤트 로그에 메시지를 게시 합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. **has_unchecked_assembly_data** 의 열은 **sys.tables** 카탈로그 뷰에 선택 되지 않은 데이터 및 검사 하지 않은 데이터가 없는 테이블에 대해 0이 포함 된 테이블에 대 한 값 1을 포함 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 응용 프로그램 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. **has_unchecked_assembly_data** 의 열은 **sys.tables** 카탈로그 뷰에 선택 되지 않은 데이터 및 검사 하지 않은 데이터가 없는 테이블에 대해 0이 포함 된 테이블에 대 한 값 1을 포함 합니다.  
   
  검사 되지 않은 데이터의 무결성을 해결 하려면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS를 실행 된 각 테이블에 대해 검사 되지 않은 데이터입니다. 오류가 발생 하면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 하거나 잘못 된 하거나 문제를 해결 하는 어셈블리 코드를 수정 하는 테이블 행을 삭제 하며 다음 추가 ALTER ASSEMBLY 문을 실행 합니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 02/09/2018
 -   [ALTER ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [어셈블리 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [어셈블리에 대 한 정보 가져오기](../../relational-databases/clr-integration/assemblies-getting-information.md)  
+ [어셈블리 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [어셈블리에 대한 정보 가져오기](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

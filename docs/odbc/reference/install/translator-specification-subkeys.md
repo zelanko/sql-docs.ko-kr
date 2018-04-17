@@ -1,15 +1,16 @@
 ---
-title: "변환기 사양 하위 키 | Microsoft Docs"
-ms.custom: 
+title: 변환기 사양 하위 키 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translator subkey [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - translator specification subkeys [ODBC]
 - subkeys [ODBC], translator specification subkeys
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ba311eb458c1128a611b6d1cc2ed1c71329d3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: de1d072bf36203fd8755726f5a06edbb786d7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translator-specification-subkeys"></a>변환기 사양 하위 키
 ODBC 변환기 하위 키에 나열 된 각 변환기 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 변환기 하위 키 아래에서 해당 값으로 동일한 이름을 있습니다. 이 하위 키 아래의 값 변환기 및 변환기 설치 Dll 및 사용 횟수의 전체 경로 나열합니다. 다음 표에 표시 된은 값의 형식입니다.  
   
-|속성|데이터 형식|data|  
+|이름|데이터 형식|Data|  
 |----------|---------------|----------|  
 |변환기|REG_SZ|*변환기 DLL 경로*|  
 |설치 프로그램|REG_SZ|*설치 프로그램 DLL 경로*|  

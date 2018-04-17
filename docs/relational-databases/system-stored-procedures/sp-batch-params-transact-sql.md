@@ -1,16 +1,16 @@
 ---
 title: sp_batch_params (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 227cd0de3f89c7cbde4c5cb401edb60294a19940
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b9843453dce8234e97b40e3ca3be45ed1e48d7c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
  포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 되는 매개 변수 정보는 되도록 합니다. *tsqlbatch* 은 **nvarchar (max)** 으로 암시적으로 변환할 또는 **nvarchar (max)**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -60,11 +60,11 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|이 필드는 다음 값 중 하나를 반환합니다.<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> 이 열은 항상 0입니다.|  
 |**DATA_TYPE**|**smallint**|매개 변수의 데이터 형식(ODBC 데이터 형식에 대한 정수 코드)입니다. 이 데이터 형식을 ISO 형식에 매핑할 수 없는 경우 값은 NULL입니다. 네이티브 데이터 형식 이름이 반환 됩니다는 **TYPE_NAME** 열입니다. 이 값은 항상 NULL입니다.|  
 |**TYPE_NAME**|**sysname**|원본으로 사용하는 DBMS에 의해 제시된 데이터 형식의 문자열 표시입니다. 이 값은 NULL입니다.|  
-|**전체 자릿수**|**int**|유효 자릿수입니다. 에 대 한 반환 값은 **정밀도** 열이 정수는 10에서입니다.|  
+|**PRECISION**|**int**|유효 자릿수입니다. 에 대 한 반환 값은 **정밀도** 열이 정수는 10에서입니다.|  
 |**LENGTH**|**int**|데이터의 전송 크기입니다. 이 값은 NULL입니다.|  
 |**크기 조정**|**smallint**|소수점 오른쪽 자릿수입니다. 이 값은 NULL입니다.|  
 |**기 수**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
-|**NULL 허용**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 매개 변수 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.<br /><br /> 이 값은 NULL입니다.|  
+|**NULLABLE**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 매개 변수 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.<br /><br /> 이 값은 NULL입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 값입니다. 이 열은 동일는 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 ISO **간격** 데이터 형식입니다. 이 열은 항상 값을 반환합니다. 이 값은 NULL입니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|**datetime** 또는 ISO **간격** 하위 코드의 값 **SQL_DATA_TYPE** 이 SQL_DATETIME 또는 sql_interval 인 합니다. 이외의 다른 데이터 형식의 **datetime** 및 ISO **간격**,이 열은 NULL입니다. 이 값은 NULL입니다.|  
 |**CHAR_OCTET_LENGTH**|**int**|바이트의 최대 길이 **문자** 또는 **이진** 데이터 형식 매개 변수입니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다. 이 값은 항상 NULL입니다.|  
@@ -87,7 +87,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## <a name="see-also"></a>관련 항목:  
  [저장된 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [실행 저장 프로시저 방법 도움말 항목 &#40; ODBC &#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
- [실행 저장 프로시저 &#40; OLE db&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
+ [저장된 프로시저 방법 도움말 항목 실행 &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [실행 저장 프로시저 & #40; OLE db& #41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

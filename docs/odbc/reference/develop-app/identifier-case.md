@@ -1,31 +1,32 @@
 ---
-title: "식별자 대/소문자 | Microsoft Docs"
-ms.custom: 
+title: 식별자 대/소문자 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - identifiers [ODBC], case
 - interoperability of SQL statements [ODBC], identifier case
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70dd6c9c30b4ded4a96f6cdaa001c67fe3229134
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122f4dfdfab25f246858b36f7753413d25f2eea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identifier-case"></a>식별자 대/소문자
 SQL 문 및 카탈로그 함수 인수 식별자와 따옴표 붙은 식별자 일 수 대/소문자 구분 또는 응용 프로그램이 호출 하 여 확인할 수 있는, **SQLGetInfo** SQL_IDENTIFIER_CASE 및 SQL_QUOTED_ IDENTIFIER_CASE 옵션입니다.  

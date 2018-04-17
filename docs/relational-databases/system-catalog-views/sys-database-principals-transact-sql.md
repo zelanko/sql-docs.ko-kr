@@ -1,16 +1,16 @@
 ---
 title: sys.database_principals (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_principals catalog view
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d6d3cd64336d3374e74e5df05310e2e337ded062
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터베이스 내에서 고유한 보안 주체의 이름입니다.|  
 |**principal_id**|**int**|데이터베이스 내에서 고유한 보안 주체의 ID입니다.|  
-|**유형**|**char(1)**|보안 주체 유형입니다.<br /><br /> A = 응용 프로그램 역할<br /><br /> C = 인증서로 매핑된 사용자<br /><br /> E = Azure Active Directory에서 외부 사용자<br /><br /> G = Windows 그룹<br /><br /> K = 비대칭 키로 매핑된 사용자<br /><br /> R = 데이터베이스 역할<br /><br /> S = SQL 사용자<br /><br /> U = Windows 사용자<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램에서 외부 그룹|  
-|**type_desc**|**nvarchar (60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
+|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> A = 응용 프로그램 역할<br /><br /> C = 인증서로 매핑된 사용자<br /><br /> E = Azure Active Directory에서 외부 사용자<br /><br /> G = Windows 그룹<br /><br /> K = 비대칭 키로 매핑된 사용자<br /><br /> R = 데이터베이스 역할<br /><br /> S = SQL 사용자<br /><br /> U = Windows 사용자<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램에서 외부 그룹|  
+|**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|SQL 이름이 스키마를 지정하지 않을 때 사용되는 이름입니다. S, U 또는 A 유형의 보안 주체의 경우 Null입니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
 |**modify_date**|**datetime**|보안 주체가 마지막으로 수정된 시간입니다.|  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
 |**sid**|**varbinary(85)**|보안 주체의 SID(보안 식별자)입니다.  SYS 및 INFORMATION SCHEMAS의 경우 NULL입니다.|  
 |**is_fixed_role**|**bit**|1 이면이 행은 고정된 데이터베이스 역할 중 하나에 대 한 항목: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter 합니다.|  
 |**authentication_type**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형을 나타냅니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 0: 인증 안 함<br />1: 인스턴스 인증<br />2: 데이터베이스 인증<br />3: Windows 인증|  
-|**authentication_type_desc**|**nvarchar (60)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형에 대한 설명입니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> NONE: 인증 없음<br />인스턴스 인증 인스턴스:<br />데이터베이스 인증: 데이터베이스<br />WINDOWS: Windows 인증|  
+|**authentication_type_desc**|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형에 대한 설명입니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> NONE: 인증 없음<br />인스턴스 인증 인스턴스:<br />데이터베이스 인증: 데이터베이스<br />WINDOWS: Windows 인증|  
 |**default_language_name**|**sysname**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 보안 주체의 기본 언어를 나타냅니다.|  
 |**default_language_lcid**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 보안 주체의 기본 LCID를 나타냅니다.|  
-|**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다.<br /><br /> 대량 복사 작업에서 서버에 대 한 암호화 메타 데이터 검사를 표시 하지 않습니다. 데이터를 대량 복사를 사용 하 여 상시 암호화, 테이블 또는 데이터베이스 간에 데이터를 해독 하지 않고 암호화 된 사용자 수 있습니다. 기본값은 OFF입니다. |      
+|**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 데이터를 대량 복사를 사용 하 여 상시 암호화, 테이블 또는 데이터베이스 간에 데이터를 해독 하지 않고 암호화 된 사용자 수 있습니다. 기본값은 OFF입니다. |      
   
 ## <a name="remarks"></a>주의  
  *PasswordLastSetTime* 속성은 SQL Server의 지원 되는 모든 구성에서 사용할 수 있지만 SQL Server는 Windows Server 2003 이상 및 CHECK_POLICY 및 모두 CHECK_에서 실행 되는 다른 속성은만 사용할 수 만료 활성화 됩니다. 참조 [암호 정책](../../relational-databases/security/password-policy.md) 자세한 정보에 대 한 합니다.  
@@ -94,7 +95,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: 데이터베이스 보안 주체의 모든 사용 권한 나열  
  다음 쿼리는 데이터베이스 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  

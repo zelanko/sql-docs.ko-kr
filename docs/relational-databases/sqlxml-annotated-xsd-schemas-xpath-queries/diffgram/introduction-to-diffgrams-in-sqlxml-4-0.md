@@ -1,35 +1,36 @@
 ---
-title: "SQLXML 4.0의에서 DiffGrams 소개 | Microsoft Docs"
-ms.custom: 
+title: SQLXML 4.0의에서 DiffGrams 소개 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5743cbab13add72e27351c74424e09bc028496d9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3c3fadf12229847961842162130a8dbdfe21d40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 DiffGrams에 대해 간략하게 소개합니다.  
+  이 항목에서는 DiffGrams에 대해 간략하게 소개합니다.  
   
 ## <a name="diffgram-format"></a>DiffGram 형식  
  일반 DiffGram 형식은 다음과 같습니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/12/2018
  이 특성의 요소와 쌍으로 연결을 사용 하 여  **\<하기 전에 >** 및  **\<DataInstance >** 블록입니다.  
   
  **hasChanges**  
- 삽입 또는 업데이트 작업에 대 한 DiffGram이 특성을 지정 해야이 값을 가진 **삽입** 또는 **수정**합니다. 이 특성이 없으면의 해당 요소는  **\<DataInstance >** 처리를 통해 무시 논리 및 업데이트가 수행 됩니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+ 삽입 또는 업데이트 작업에 대 한 DiffGram이 특성을 지정 해야이 값을 가진 **삽입** 또는 **수정**합니다. 이 특성이 없으면의 해당 요소는  **\<DataInstance >** 처리를 통해 무시 논리 및 업데이트가 수행 됩니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.  
   
  **parentID**  
  이 특성은 DiffGram에서 요소 간의 부모-자식 관계를 지정하는 데 사용됩니다. 이 특성에만 표시 됩니다는 \<하기 전에 > 블록입니다. SQLXML에서 업데이트를 적용할 때 사용됩니다. 부모-자식 관계는 DiffGram에서 요소가 처리되는 순서를 결정하는 데 사용됩니다.  
@@ -81,9 +82,9 @@ ms.lasthandoff: 02/12/2018
   
 |연산|Description|  
 |---------------|-----------------|  
-|Insert|DiffGram에서 요소가 표시 될 때 삽입 작업을 나타냅니다는  **\<DataInstance >** 블록에는 있지만 해당  **\<하기 전에 >** 블록과 **diffgr: haschanges** 특성이 지정 된 (**diffgr: haschanges = inserted**) 요소에 있습니다. DiffGram에 지정 된 레코드 인스턴스를 삽입 하는 경우에  **\<DataInstance >** 데이터베이스에는 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 특성이 지정 되지 않은, 요소가 처리 논리에서 무시 되 고 없는 삽입을 수행 합니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
-|Update|DiffGram에서 요소가 없는 경우 업데이트 작업을 나타냅니다는 \<하기 전에 >의 해당 요소는 블록의  **\<DataInstance >** 블록 (즉, 두 요소 모두는 **diffgr: id** 동일한 값을 가진 특성이) 및 **diffgr: haschanges** 특성의 값이 지정 **수정** 의 요소에는  **\<DataInstance >** 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 에서 요소 특성을 지정 하지 않으면는  **\<DataInstance >** 블록 처리 논리에서 오류가 반환 됩니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드 업데이트 되는 순서가 결정 됩니다.|  
-|Delete|DiffGram에서 요소가 표시 될 때 삭제 작업을 나타냅니다는  **\<하기 전에 >** 블록에는 있지만 해당  **\<DataInstance >** 블록입니다. DiffGram에 지정 된 레코드 인스턴스를 삭제 하는 경우에  **\<하기 전에 >** 데이터베이스에서 블록입니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드가 삭제 되는 순서를 결정 합니다.|  
+|Insert|DiffGram에서 요소가 표시 될 때 삽입 작업을 나타냅니다는  **\<DataInstance >** 블록에는 있지만 해당  **\<하기 전에 >** 블록과 **diffgr: haschanges** 특성이 지정 된 (**diffgr: haschanges = inserted**) 요소에 있습니다. DiffGram에 지정 된 레코드 인스턴스를 삽입 하는 경우에  **\<DataInstance >** 데이터베이스에는 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 특성이 지정 되지 않은, 요소가 처리 논리에서 무시 되 고 없는 삽입을 수행 합니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.|  
+|Update|DiffGram에서 요소가 없는 경우 업데이트 작업을 나타냅니다는 \<하기 전에 >의 해당 요소는 블록의  **\<DataInstance >** 블록 (즉, 두 요소 모두는 **diffgr: id** 동일한 값을 가진 특성이) 및 **diffgr: haschanges** 특성의 값이 지정 **수정** 의 요소에는  **\<DataInstance >** 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 에서 요소 특성을 지정 하지 않으면는  **\<DataInstance >** 블록 처리 논리에서 오류가 반환 됩니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드 업데이트 되는 순서가 결정 됩니다.|  
+|Delete|DiffGram에서 요소가 표시 될 때 삭제 작업을 나타냅니다는  **\<하기 전에 >** 블록에는 있지만 해당  **\<DataInstance >** 블록입니다. DiffGram에 지정 된 레코드 인스턴스를 삭제 하는 경우에  **\<하기 전에 >** 데이터베이스에서 블록입니다. 작업 예제를 참조 하십시오. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드가 삭제 되는 순서를 결정 합니다.|  
   
 > [!NOTE]  
 >  DiffGrams에 매개 변수를 전달할 수는 없습니다.  

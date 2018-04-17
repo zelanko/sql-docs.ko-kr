@@ -1,16 +1,16 @@
 ---
 title: sysdac_history_internal (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6a6c3f5690f60fb1343df27db377af42938da805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>데이터 계층 응용 프로그램 테이블 sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|동작의 식별자입니다.|  
 |**sequence_id**|**int**|동작 내의 단계를 식별합니다.|  
-|**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열에 조인할 수는 **instance_id** 열에 [dbo.sysdac_instances &#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열에 조인할 수는 **instance_id** 열에 [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)합니다.|  
 |**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = 배포<br /><br /> **1** = 만들기<br /><br /> **2** = 이름 바꾸기<br /><br /> **3** = 분리<br /><br /> **4** = 삭제|  
 |**action_type_name**|**varchar(19)**|동작 유형의 이름입니다.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** dacpac =<br /><br /> **1** = 로그인<br /><br /> **2** = 데이터베이스|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**필수**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
 |**dac_object_name_pretran**|**sysname**|동작이 포함된 트랜잭션이 커밋되기 전의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
 |**dac_object_name_posttran**|**sysname**|동작이 포함된 트랜잭션이 커밋된 후의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
-|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 또는 로그인에서 동작을 구현 하는 스크립트입니다.|  
+|**sqlscript**|**nvarchar(max)**|데이터베이스 또는 로그인에서 동작을 구현하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트입니다.|  
 |**payload**|**varbinary(max)**|인코딩된 이진 문자열에 저장된 DAC 패키지 정의입니다.|  
 |**주석**|**varchar(max)**|DAC 업그레이드 시 잠재적인 데이터 손실을 허용한 사용자의 로그인을 기록합니다.|  
 |**error_string**|**nvarchar(max)**|동작에 오류가 발생한 경우 생성되는 오류 메시지입니다.|  
@@ -88,7 +88,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40; Transact SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

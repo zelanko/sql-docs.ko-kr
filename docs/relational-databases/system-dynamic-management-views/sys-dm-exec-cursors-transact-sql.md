@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_cursors (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3765face3d65bbb56f65bd9383aa21f62225e79d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|이 커서를 보유하는 세션의 ID입니다.|  
 |**cursor_id**|**int**|커서 개체의 ID입니다.|  
 |**name**|**nvarchar(256)**|사용자가 정의한 커서의 이름입니다.|  
-|**properties**|**nvarchar(256)**|커서의 속성을 지정합니다. 다음 속성의 값은 이 열의 값을 구성하도록 연결됩니다.<br />선언 인터페이스<br />커서 유형 <br />커서 동시성<br />커서 범위<br />커서 중첩 수준<br /><br /> 예,이 열에 반환 된 값 "TSQL &#124; 될 수 있습니다. 동적 &#124; 낙관적 &#124; Global (0) "입니다.|  
+|**속성**|**nvarchar(256)**|커서의 속성을 지정합니다. 다음 속성의 값은 이 열의 값을 구성하도록 연결됩니다.<br />선언 인터페이스<br />커서 유형 <br />커서 동시성<br />커서 범위<br />커서 중첩 수준<br /><br /> 예를 들어,이 열에 반환 된 값 수 있습니다 "TSQL &#124; 동적 &#124; Optimistic &#124; Global (0)"입니다.|  
 |**sql_handle**|**varbinary(64)**|커서를 선언한 일괄 처리의 텍스트에 대한 핸들입니다.|  
 |**statement_start_offset**|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. 와 함께 사용할 수는 **sql_handle**, **statement_end_offset**, 및 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 검색 하려면 동적 관리 함수는 현재 요청에 대 한 명령문을 실행 합니다.|  
 |**statement_end_offset**|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. 와 함께 사용할 수는 **sql_handle**, **statement_start_offset**, 및 **sys.dm_exec_sql_text** 검색 하려면 동적 관리 함수는 현재 요청에 대 한 명령문을 실행 합니다.|  
@@ -126,7 +126,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   

@@ -1,29 +1,30 @@
 ---
-title: "데이터 실행 시 (ODBC)를 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs"
-ms.custom: 
+title: 데이터 실행 시 (ODBC)를 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102763d09848c21902ffd2226a98d70039072ea4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dee56dc4d2de518c3154dd426aefc680252594a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/24/2018
 
   이 비슷합니다는 [메모리에서](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저, 테이블 반환 매개 변수에 대 한 하지만 실행 시 데이터를 사용 합니다.  
   
- 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
+ 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
  이 예제에서는 SQLExecute 또는 SQLExecDirect를 호출할 때 드라이버 SQL_NEED_DATA를 반환 합니다. 그런 다음 응용 프로그램 드라이버 sql_need_data가 아닌 값을 반환할 때까지 SQLParamData 반복적으로 호출 합니다. 드라이버가 반환 *ParameterValuePtr* 되는 매개 변수 데이터를 요청은 응용 프로그램 알리는 합니다. 응용 프로그램에 대 한 호출 SQLPutData SQLParamData 다음 호출 전 매개 변수 데이터를 제공 합니다. 테이블 반환 매개 변수에 대 한 SQLPutData에 대 한 호출 (이 예에서는 항상 1)의 드라이버에 대 한 준비 않은 행의 수를 나타냅니다. 테이블 반환의 모든 행이 드라이버로 전달 되 면 SQLPutData 0 개의 행을 사용할 수 있는지를 나타내기 위해 호출 됩니다.  
   

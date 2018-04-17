@@ -1,16 +1,16 @@
 ---
-title: "Sql: relationship (SQLXML 4.0)에 sql: inverse 특성 지정 | Microsoft Docs"
-ms.custom: 
+title: 'Sql: relationship (SQLXML 4.0)에 sql: inverse 특성 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - updategrams [SQLXML], relationships
 - sql:inverse
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3344b7d83e98b5410dbb24fa5d8a023d4f6f705d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c71271c88cdae1d62e429232039d64d77eedfb81
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>sql:relationship에 sql:inverse 특성 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**sql: inverse** 특성은 사용한 경우에 XSD 스키마는 대량 로드 용이나 updategram에서 유용 합니다. **sql: inverse** 특성에 지정할 수 있습니다는  **\<sql: relationship >** 요소입니다. Updategram에서 updategram 논리는 스키마를 해석하여 updategram 작업으로 업데이트되는 테이블 및 열을 결정합니다. 스키마에 지정하는 부모-자식 관계에 따라 레코드가 수정(삽입 또는 삭제)되는 순서가 결정됩니다.  
+  **sql: inverse** 특성은 사용한 경우에 XSD 스키마는 대량 로드 용이나 updategram에서 유용 합니다. **sql: inverse** 특성에 지정할 수 있습니다는  **\<sql: relationship >** 요소입니다. Updategram에서 updategram 논리는 스키마를 해석하여 updategram 작업으로 업데이트되는 테이블 및 열을 결정합니다. 스키마에 지정하는 부모-자식 관계에 따라 레코드가 수정(삽입 또는 삭제)되는 순서가 결정됩니다.  
   
  부모-자식 관계가 해당 데이터베이스 열 간의 기본 키/외래 키 관계의 역순으로 지정된 XSD 스키마가 있는 경우 기본 키/외래 키 위반 때문에 삽입 또는 삭제 Updategram 작업이 실패합니다. 이러한 경우에는 **sql: inverse** 특성이 지정 된 (**sql: inverse = "true"**)에  **\<sql: relationship >** 요소 및 updategram 논리 반대로 스키마에 지정 된 부모-자식 관계의 해석 합니다.  
   
@@ -45,6 +46,6 @@ ms.lasthandoff: 02/12/2018
  사용 하 여 작업 예제에 대 한는 **sql: inverse** 주석을 참조 [Updategram에 주석이 추가 된 매핑 스키마 지정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Sql: relationship을 사용 하 여 관계 &#40;를 지정합니다. SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ [Sql: relationship을 사용 하 여 관계 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
   
   

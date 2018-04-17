@@ -1,31 +1,32 @@
 ---
-title: "DBMS 기반 드라이버 | Microsoft Docs"
-ms.custom: 
+title: DBMS 기반 드라이버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - drivers [ODBC], DBMS-based drivers
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c841b4404132e4fe385c9c3aa6fd12bdd2eb8a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9094b46014bad912dfa9f83de90cef0c25df1b9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbms-based-drivers"></a>DBMS 기반 드라이버
 드라이버가 DBMS 기반 드라이버에 대 한 독립 실행형 데이터베이스 엔진을 제공 하는 Oracle 또는 SQL Server와 같은 데이터 원본 사용 됩니다. 이러한 드라이버는 독립 실행형 엔진; 통해 실제 데이터에 액세스 즉, SQL 문을 제출 하며 엔진에서 결과 검색 합니다.  
@@ -36,4 +37,4 @@ ms.lasthandoff: 12/21/2017
   
  다음은 DBMS 기반 드라이버의 세 가지 구성입니다. 첫 번째 구성 드라이버와 데이터 원본이 동일한 컴퓨터에 상주합니다. 두 번째, 드라이버 및 데이터 원본의 서로 다른 컴퓨터에 상주합니다. 세 번째, 드라이버 및 데이터 원본에 서로 다른 컴퓨터 있으며 게이트웨이 또 다른 시스템에 있는 해당 사이 배치 합니다.  
   
- ![DBMS에 대 한 세 가지 구성 &#45; 기반된 드라이버](../../odbc/reference/media/pr07.gif "pr07")
+ ![DBMS에 대 한 세 가지 구성&#45;드라이버 기반](../../odbc/reference/media/pr07.gif "pr07")

@@ -1,16 +1,16 @@
 ---
-title: "XPath 쿼리 (SQLXMLOLEDB 공급자)를 포함 하는 템플릿 실행 | Microsoft Docs"
-ms.custom: 
+title: XPath 쿼리 (SQLXMLOLEDB 공급자)를 포함 하는 템플릿 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing template files
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - Mapping Schema property
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 996cf6eb51bc216ce71cce41324ea53f07550823
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3eb0423a5c24fb472a13b489a4e7df25cc89ffa7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
+  이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
   
 -   ClientSideXML  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/12/2018
   
 -   매핑 스키마  
   
- 이 예제 ADO 응용 프로그램에서는 XPath 쿼리 (루트)로 구성 된 XML 템플릿을에서 설명 하는 XSD 매핑 스키마 (MySchema.xml)에 대해 지정 [XPath 쿼리 실행 &#40; SQLXMLOLEDB 공급자 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ 이 예제 ADO 응용 프로그램에서는 XPath 쿼리 (루트)로 구성 된 XML 템플릿을에서 설명 하는 XSD 매핑 스키마 (MySchema.xml)에 대해 지정 [XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
  매핑 스키마 속성은 XPath 쿼리가 실행 되는 XSD 매핑 스키마를 제공 합니다. Base Path 속성 매핑 스키마를 파일 경로 제공합니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_control_plan_guide (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f093a05ebbfe14a0d9436b0b2a9503aadc5b6440
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  에 지정 된 계획 지침 삭제 *plan_guide_name*합니다. 계획 지침이 삭제된 후 이전에 이 계획 지침에 맞춘 쿼리를  실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DROP ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N'***plan_guide_name* DROP ALL이 지정 되 면 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N' * * * plan_guide_name* DROP ALL이 지정 되 면 지정할 수 없습니다.  
   
  DISABLE  
  에 지정 된 계획 지침을 사용 하지 않도록 설정 *plan_guide_name*합니다. 계획 지침이 비활성화된 후 이전에 이 계획 지침에 맞춘 쿼리를 실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DISABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N'***plan_guide_name* 모두 사용 안 함 지정 된 경우 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N' * * * plan_guide_name* 모두 사용 안 함 지정 된 경우 지정할 수 없습니다.  
   
  ENABLE  
  로 지정 된 계획 지침을 활성화 *plan_guide_name*합니다. 계획 지침을 활성화하면 적합한 쿼리에 맞출 수 있습니다. 기본적으로 계획 지침은 만들어질 때 활성화됩니다.  
@@ -141,7 +141,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터베이스 엔진 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

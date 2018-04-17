@@ -1,30 +1,31 @@
 ---
-title: "ODBC의 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: ODBC의 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9e56fd3649c95bcf826d89841a07511b7145d88
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6be1e147ad1e2b59f8742f7656ca24c86c055f2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-in-odbc"></a>ODBC의 데이터 형식
 두 데이터 형식 집합을 사용 하 여 ODBC: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식은 데이터 원본에 사용 됩니다 하 고 응용 프로그램의 C 코드에서 C 데이터 형식은 사용 됩니다.  

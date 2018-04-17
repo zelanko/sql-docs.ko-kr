@@ -1,31 +1,32 @@
 ---
-title: "부록 a: ODBC 오류 코드 | Microsoft Docs"
-ms.custom: 
+title: '부록 a: ODBC 오류 코드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59a42d5183add7c67b8d6f506b79f860248478dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-a-odbc-error-codes"></a>부록 a: ODBC 오류 코드
 이 항목에서는 ODBC 3에 대 한 SQLSTATE 값을 설명 합니다. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)합니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  함수의 실행이 성공 SQL_SUCCESS 반환 값이 표시 됩니다, 있지만 00000 SQLSTATE는 또한 성공을 나타냅니다.  
   
-|SQLSTATE|Error|반환 될 수 있습니다.|  
+|SQLSTATE|오류|반환 될 수 있습니다.|  
 |--------------|-----------|--------------------------|  
 |01000|일반 경고|제외한 모든 ODBC 함수가:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|커서 작업이 충돌 합니다.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |01007|권한이 부여 되지 않았습니다|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01S00|잘못 된 연결 문자열 특성입니다.|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
 |01S01|행 하는 동안 오류가 발생 했습니다.|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
-|01 S 02|옵션 값이 변경 됨|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
+|01S02|옵션 값이 변경 됨|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |01S06|결과 집합은 첫 번째 행을 반환 하기 전에 반입 하려고 합니다.|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
 |01S07|일부가 잘렸습니다.|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01S08|파일 DSN을 저장할 수 없습니다.|**SQLDriverConnect**|  

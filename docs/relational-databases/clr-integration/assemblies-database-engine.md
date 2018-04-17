@@ -1,35 +1,35 @@
 ---
-title: "어셈블리 (데이터베이스 엔진) | Microsoft Docs"
-ms.custom: 
+title: 어셈블리 (데이터베이스 엔진) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7e6626da65db973b6d8726518be357985a164b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aebb2c3aaadbae1a9c4ff158f8747624459b5eb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies-database-engine"></a>어셈블리(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 섹션의 항목에서는 어셈블리를 이해하고 어셈블리를 디자인 및 구현하는 데 도움이 되는 정보를 제공합니다.  
+  이 섹션의 항목에서는 어셈블리를 이해하고 어셈블리를 디자인 및 구현하는 데 도움이 되는 정보를 제공합니다.  
   
  어셈블리는 DLL 파일의 인스턴스에 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수, 저장된 프로시저, 트리거, 사용자 정의 집계 및로 호스팅되는 관리 코드 언어 중 하나에 작성 된 사용자 정의 형식을 배포 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 대신에 공용 언어 런타임 (CLR) [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/09/2018
 |-----------|-----------------|  
 |[어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)|어셈블리를 만들기 전에 고려해야 하는 항목에 대해 설명합니다. 여기에는 어셈블리 패키지, 코드 액세스 권한 및 기타 제한 사항이 포함됩니다.|  
 |[어셈블리 구현](../../relational-databases/clr-integration/assemblies-implementing.md)|어셈블리를 만들고 삭제하는 방법, 어셈블리 수정 방법 및 시기, 어셈블리에 대한 메타데이터 검색 방법에 대해 설명합니다.|  
-|[어셈블리에 대 한 정보 가져오기](../../relational-databases/clr-integration/assemblies-getting-information.md)|어셈블리에 대한 메타데이터를 쿼리할 수 있는 카탈로그 뷰 및 함수를 나열합니다.|  
+|[어셈블리에 대한 정보 가져오기](../../relational-databases/clr-integration/assemblies-getting-information.md)|어셈블리에 대한 메타데이터를 쿼리할 수 있는 카탈로그 뷰 및 함수를 나열합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

@@ -1,16 +1,16 @@
 ---
 title: sp_replshowcmds (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7e949d3372266ca3857204e5d6bc5e35111855a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d684722c0112dcadac5484aa21ca5c84226d479d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@maxtrans**  =] *maxtrans*  
+ [ **@maxtrans** =] *maxtrans*  
  정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**, 기본값은 **1**, 복제를 보류 중인 트랜잭션의 최대 수를 지정 하는 **sp_replshowcmds** 정보를 반환 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -58,8 +58,8 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**originator_id**|**int**|항상 명령 보낸 사람의 ID **0**합니다.|  
 |**publisher_database_id**|**int**|항상 게시자 데이터베이스의 ID **0**합니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
-|**유형**|**int**|명령의 유형입니다.|  
-|**명령**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
+|**type**|**int**|명령의 유형입니다.|  
+|**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
   
 ## <a name="remarks"></a>주의  
  **sp_replshowcmds** 트랜잭션 복제에 사용 됩니다.  
@@ -79,9 +79,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="see-also"></a>관련 항목:  
  [오류 메시지](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "srv_describe(확장 저장 프로시저 API) | Microsoft Docs"
-ms.custom: 
+title: srv_describe(확장 저장 프로시저 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_describe
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_describe
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c063e9a18fdb819077e866676f6b68b0abd36d78
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 184061f0637aa5f4f17921623c02886fde1c58e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  행의 특정 열에 대해 열 이름과 원본 및 대상 데이터 형식을 정의합니다.  
   
@@ -108,7 +108,7 @@ srcdata
 ## <a name="returns"></a>반환 값  
  설명되는 열 번호입니다. 첫 번째 열은 열 1입니다. 오류가 발생하면 0이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  **srv_sendrow**를 처음 호출하기 전에 행의 각 열에 대해 한 번씩, **srv_describe** 함수를 호출해야 합니다. 순서에 관계없이 행의 열을 설명할 수 있습니다.  
   
  전체 결과 집합이 전송되기 전에 열 행의 원본 데이터 위치와 길이를 변경하려면 각각 **srv_setcoldata** 및 **srv_setcollen**을 사용합니다.  
@@ -120,7 +120,7 @@ srcdata
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [srv_sendrow(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

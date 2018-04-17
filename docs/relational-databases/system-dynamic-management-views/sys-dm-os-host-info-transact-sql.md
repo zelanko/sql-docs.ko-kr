@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_host_info (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_os_host_info
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23adfb73309f54720889b7eb3350bc6b5062f60
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e8e36375f534a187c749bbd4217fddd0a98f8fb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |운영 체제의 유형: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제의 설명입니다. |
-|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스 (버전 번호)입니다. 값 및 설명 목록은 참조 하세요. [운영 체제 버전 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)합니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
+|**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스(버전 번호)입니다. 값 및 설명 목록은 참조 하세요. [운영 체제 버전 (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx)합니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 운영 체제의 서비스 팩 수준입니다. <br> Linux 용 빈 문자열을 반환 합니다. |  
 |**host_sku**|**int**|Windows SKU(Stock Keeping Unit) ID입니다. SKU Id 및 설명의 목록에 대 한 참조 [GetProductInfo 함수](http://msdn.microsoft.com/library/ms724358.aspx)합니다. Null을 허용합니다. <br> Linux에서 NULL을 반환합니다. |  
 |**os_language_version**|**int**|운영 체제의 Windows LCID(로캘 ID)입니다. LCID 값 및 설명의 목록에 대 한 참조 [Microsoft에서 할당 한 로캘 Id](http://go.microsoft.com/fwlink/?LinkId=208080)합니다. null일 수 없습니다.|  
@@ -72,7 +73,7 @@ Windows에 설정 하는 예제 결과 다음과 같습니다.
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |창   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Linux에서 설정 하는 예제 결과 다음과 같습니다.
  

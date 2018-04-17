@@ -1,15 +1,16 @@
 ---
-title: "연결을 설정 | Microsoft Docs"
-ms.custom: 
+title: 연결을 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], making a connection
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b782f94bb67580308c844a653389800fb0ff7af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 80de9f41bf4c535f7d9daa34b7b14d0377ab2383
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="establishing-a-connection"></a>연결 설정
 환경 및 연결 핸들을 할당 하 고 모든 연결 특성 설정, 후 응용 프로그램 데이터 원본이 나 드라이버에 연결할 준비가 되었습니다. 세 가지 다른 함수가이 작업을 수행 하는 응용 프로그램 צ ְ ײ: **SQLConnect** (인터페이스 규칙 수준은 기본), **SQLDriverConnect** (기본), 및 **SQLBrowseConnect**(수준 1). 세 개의 각 옵션은 서로 다른 시나리오에에서 사용할 하도록 설계 되었습니다. 에 연결 하기 전에 응용 프로그램을 사용할 수 있는 이러한 함수 중 확인할 수는 **ConnectFunctions** 반환한 키워드 **SQLDrivers**합니다.  

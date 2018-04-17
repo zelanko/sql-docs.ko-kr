@@ -1,16 +1,16 @@
 ---
 title: sp_xml_preparedocument (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xml_preparedocument_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86d05a3148d84622fb454bd83d25fee7875c1eb5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 911d6dd9613803aff79187a22f4ebf6bc0b7a4cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ OUTPUT
 >  **sp_xml_preparedocument** 텍스트 또는 형식화 되지 않은 XML만 처리할 수 있습니다. 입력으로 사용할 항목의 값이 형식화된 XML인 경우에는 먼저 형식화되지 않은 새로운 XML 항목 또는 문자열로 캐스팅한 다음 해당 값을 입력으로 전달합니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
  [ *xpath_namespaces* ]  
- OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 텍스트 매개 변수: **char**, **nchar**, **varchar**, **nvarchar**, **텍스트** , **ntext** 또는 **xml**합니다.  
+ OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 텍스트 매개 변수: **char**, **nchar**, **varchar**, **nvarchar**, **텍스트**, **ntext** 또는 **xml**합니다.  
   
  기본값은  **\<xmlns:mp 루트 = ":-microsoft-com:xml-metaprop" >**합니다. *xpath_namespaces* 올바른 형식의 XML 문서를 사용 하 여 OPENXML의 XPath 식에 사용 되는 접두사에 대 한 네임 스페이스 Uri를 제공 합니다. *xpath_namespaces* 네임 스페이스를 참조 하는 데 사용 해야 하는 접두사를 선언 **:-microsoft-com:xml-metaprop**;이 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. 접두사 **mp** 여전히 유효한 **:-microsoft-com:xml-metaprop** 경우에 *xpath_namespaces* 이러한 선언이 없는 포함 합니다.  
   
@@ -160,9 +160,10 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_xml_removedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
- [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)  
+ <br>[XML 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[시스템 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (TRANSACT-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

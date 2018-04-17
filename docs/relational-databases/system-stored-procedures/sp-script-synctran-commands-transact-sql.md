@@ -1,16 +1,16 @@
 ---
 title: sp_script_synctran_commands (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0897995f56614edcef86b9b7bb63c168d774108c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e8e724f9a787d54f1143472f5823cd5b34962eb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication**  =] **'***게시***'**  
+ [ **@publication** =] **'***게시***'**  
  스크립팅할 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@article**  =] **'***문서***'**  
+ [ **@article** =] **'***문서***'**  
  스크립팅할 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **모든**는 모든 아티클을 스크립팅 하도록 지정 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -68,8 +68,8 @@ sp_script_synctran_commands [@publication = ] 'publication'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_script_synctran_commands**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_addsynctriggers &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,31 +1,32 @@
 ---
-title: "결과 (기본) 검색 | Microsoft Docs"
-ms.custom: 
+title: 결과 (기본) 검색 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], about result sets
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0762d7f70becf8c6bdbd86bee524bc964676f59
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7b9dc4f399a5fe95bd2450574eb03509b2bbb4c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-results-basic"></a>결과 (기본) 검색
 A *결과 집합* 는 특정 조건에 일치 하는 데이터 원본에 있는 행의 집합입니다. 해당 하는 쿼리 생성 되며를 테이블 형식으로 응용 프로그램에 사용할 수 있는 개념적 테이블입니다. **선택** 문, 카탈로그 함수 및 일부 절차 결과 집합을 만듭니다. 다음 예제에서는 첫 번째 SQL 문을 모든 행 및 Orders 테이블의 모든 열을 포함 한 결과 집합을 만든 두 번째 SQL 문은 Orders 테이블의 행에 대 한 OrderID, 영업 사원, 및 상태 열을 포함 한 결과 집합을 만듭니다. 상태는 OPEN입니다.  

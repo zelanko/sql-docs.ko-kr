@@ -2,7 +2,7 @@
 title: SQLExecute 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 함수
 **규칙**  
@@ -58,7 +58,7 @@ SQLRETURN SQLExecute(
 ## <a name="diagnostics"></a>진단  
  때 **SQLExecute** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 여는 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLExecute** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01001|커서 작업이 충돌 합니다.|와 연결 된 준비 된 문을 *StatementHandle* 포함 한 위치 지정 업데이트 또는 delete 문의 및 둘 이상의 행 또는 행이 없는 업데이트 하거나 삭제 합니다. (둘 이상의 행에 대 한 업데이트에 대 한 자세한 내용은 참조는 SQL_ATTR_SIMULATE_CURSOR에 대 한 설명을 *특성* 에 **SQLSetStmtAttr**.)<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -66,9 +66,9 @@ SQLRETURN SQLExecute(
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 이진 데이터에 대 한 출력 매개 변수 반환 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01006|권한이 취소 되지 않았습니다|와 연결 된 준비 된 문을 *StatementHandle* 가 **해지** 문과 사용자 지정된 권한을 있지 않은 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01007|권한이 부여 되지 않았습니다|와 관련 된 준비 된 문에 *StatementHandle* 했습니다는 **GRANT** 문과 사용자 충족 시킬 수 없는 지정 된 권한을 합니다.|  
-|01 S 02|옵션 값이 변경 됨|지정 된 문 특성 유사한 값에 일시적으로 대체 하므로 구현 작업 조건 때문에 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 시점 문 특성 되돌아갑니다 이전 값입니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, 및 SQL_ATTR_SIMULATE_CURSOR 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|지정 된 문 특성 유사한 값에 일시적으로 대체 하므로 구현 작업 조건 때문에 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 시점 문 특성 되돌아갑니다 이전 값입니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, 및 SQL_ATTR_SIMULATE_CURSOR 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S07|일부가 잘렸습니다.|입력/출력에 대해 반환 되는 데이터 또는 숫자 데이터 형식의 소수 부분이 잘린 있거나의 시간 구성 요소는 시간, 타임 스탬프 또는 간격 데이터 형식의 소수 부분이 잘린 되도록 출력 매개 변수 잘렸습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|07002|잘못 된 수 필드|에 지정 된 매개 변수 개수 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 작습니다 \* *StatementText*합니다.<br /><br /> **SQLBindParameter** 로 호출 했습니다 *ParameterValuePtr* null 포인터를 설정 *StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC로 설정 하지 및  *InputOutputType* 에 지정 된 매개 변수 수 있도록 SQL_PARAM_OUTPUT,으로 설정 되지 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 큰 **StatementText*합니다.|  
+|07002|잘못 된 수 필드|에 지정 된 매개 변수 개수 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 작습니다 \* *StatementText*합니다.<br /><br /> **SQLBindParameter** 로 호출 했습니다 *ParameterValuePtr* null 포인터를 설정 *StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC로 설정 하지 및 *InputOutputType*  에 지정 된 매개 변수 수 있도록 SQL_PARAM_OUTPUT,으로 설정 되지 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 큰 **StatementText* .|  
 |07006|제한 된 데이터 형식 특성 위반|데이터 값으로 식별 된 *ValueType* 인수에 **SQLBindParameter** 바인딩된 매개 변수에서 식별 되는 데이터 형식 변환 하지 못했습니다에 대 한는 *ParameterType*인수 **SQLBindParameter**합니다.<br /><br /> SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT 하지 변환 못했습니다으로 식별 되는 데이터 형식으로 바인딩된 매개 변수에 대해 반환 되는 데이터 값의 *ValueType* 인수 **SQLBindParameter**합니다.<br /><br /> (하나 이상의 행에 대 한 데이터 값을 변환할 수 없는 하지만 성공적으로 반환 된 하나 이상의 행을이 함수 SQL_SUCCESS_WITH_INFO를 반환 합니다.)|  
 |07007|제한 된 매개 변수 값 위반|부분에서 데이터를 송수신 하는 매개 변수의 매개 변수 형식 SQL_PARAM_INPUT_OUTPUT_STREAM만 사용 됩니다. 이 매개 변수 형식에 대해 바인딩된 입력된 버퍼를 허용 되지 않습니다.<br /><br /> 매개 변수 형식이 SQL_PARAM_INPUT_OUTPUT, 경우에이 오류가 발생 합니다는 \* *StrLen_or_IndPtr* 에 지정 된 **SQLBindParameter** SQL_NULL_DATA에 SQL_DEFAULT_과 같지 않은 PARAM, SQL_LEN_DATA_AT_EXEC(len), 또는 SQL_DATA_AT_EXEC입니다.|  
 |07S01|기본 매개 변수를 잘못 사용 했습니다.|매개 변수 값을 사용 하 여 설정 **SQLBindParameter**SQL_DEFAULT_PARAM으로 되어 해당 매개 변수의 ODBC 정식 프로시저 호출에 매개 변수가 없습니다.|  
@@ -108,7 +108,7 @@ SQLRETURN SQLExecute(
   
  **SQLExecute** 에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 **SQLPrepare**데이터 원본 문과 연결 된 SQL 문을 계산 하는 경우에 따라 합니다.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  **SQLExecute** 여 준비 된 문을 실행 **SQLPrepare**합니다. 응용 프로그램 처리 하거나에 대 한 호출의 결과 삭제 한 후 **SQLExecute**, 응용 프로그램에서 호출할 수 **SQLExecute** 새 매개 변수 값을 사용 하 여 다시 합니다. 준비 된 실행에 대 한 자세한 내용은 참조 [실행 준비](../../../odbc/reference/develop-app/prepared-execution-odbc.md)합니다.  
   
  실행 하는 **선택** 응용 프로그램에서 호출 해야 문을 두 번 이상 **SQLCloseCursor** 종료할지 하기 전에 **선택** 문.  

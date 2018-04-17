@@ -1,16 +1,16 @@
 ---
-title: "XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된 | Microsoft Docs"
-ms.custom: 
+title: 'XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,20 +25,21 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 지정할 수는 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 XML에 표시 되지 않는 XSD 스키마에 요소를 만들 하려는 경우는 **sql: 매핑된** 주석입니다.  
+  기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 지정할 수는 데이터베이스 테이블 (뷰) 또는 열에 매핑되지 않는 및 XML에 표시 되지 않는 XSD 스키마에 요소를 만들 하려는 경우는 **sql: 매핑된** 주석입니다.  
   
  **sql: 매핑된** 주석은 스키마를 수정할 수 없습니다 또는 스키마에서 XML 유효성 검사를 사용 하는 경우 다른 원본 아직 데이터를 포함 하며 데이터베이스에 저장 되지 않은 경우에 특히 유용 합니다. **sql: 매핑된** 주석에서와 다른 **sql:은 상수** 점에서 XML 문서에 매핑되지 않은 요소 및 특성이 표시 되지 않습니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
   
  이 XSD 스키마를 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑하 **sql: 매핑된** 에 지정 된 **HomeAddress** Employees 테이블의 홈을 저장 하지 않으므로 특성 직원의 주소입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에 같은 이름의 열에 매핑됩니다.  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다.  **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에 같은 이름의 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -112,6 +113,6 @@ ms.lasthandoff: 02/12/2018
  ContactID, FirstName 및 LastName은 있지만 HomeAddress는 매핑 스키마 지정에 대 한 0 때문이 아니라 참고는 **sql: 매핑된** 특성입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 및 열 &#40; 데 XSD 요소 및 특성의 기본 매핑 SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [테이블 및 열에 XSD 요소와 특성의 기본 매핑이 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

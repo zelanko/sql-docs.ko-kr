@@ -1,16 +1,16 @@
 ---
 title: sys.server_event_notifications (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_event_notifications
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bd455fe1fed954f3e6b4d81b8b5bd47121b6c97
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 94af1bc2f9288f09855f4bb06ea8ae929b9cb757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 |**name**|**sysname**|서버 이벤트 알림의 이름이며 전체 서버 수준 이벤트 알림에 걸쳐 고유합니다.|  
 |**object_id**|**int**|개체 ID입니다. 내에서 고유는 **마스터** 데이터베이스입니다.|  
 |**parent_class**|**tinyint**|부모 클래스입니다. 항상 100 = Server입니다.|  
-|**parent_class_desc**|**nvarchar (60)**|부모 클래스에 대한 설명입니다. 항상 SERVER입니다.|  
+|**parent_class_desc**|**nvarchar(60)**|부모 클래스에 대한 설명입니다. 항상 SERVER입니다.|  
 |**parent_id**|**int**|항상 0입니다.|  
 |**create_date**|**datetime**|만든 날짜입니다.|  
 |**modify_date**|**datetime**|ALTER 문을 사용하여 개체를 마지막으로 수정한 날짜입니다.|  
 |**service_name**|**nvarchar(256)**|알림을 보낸 대상 서비스의 이름입니다.|  
-|**broker_instance**|**nvarchar (128)**|명명된 대상 서비스가 정의되는 Service Broker입니다.|  
+|**broker_instance**|**nvarchar(128)**|명명된 대상 서비스가 정의되는 Service Broker입니다.|  
 |**creator_sid**|**varbinary(85)**|이벤트 알림을 만드는 문을 실행하는 로그인의 SID입니다. 이벤트 알림 정의에서 WITH FAN_IN을 지정하지 않으면 NULL이 됩니다.|  
 |**principal_id**|**int**|이를 소유하는 서버 보안 주체의 ID입니다.|  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [개체 카탈로그 뷰 &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

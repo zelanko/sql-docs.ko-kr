@@ -1,16 +1,16 @@
 ---
 title: sp_adddistributiondb (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**] *데이터베이스 '*  
  만들 배포 데이터베이스의 이름입니다. *데이터베이스* 은 **sysname**, 기본값은 없습니다. 지정한 데이터베이스가 이미 존재하지만 아직 배포 데이터베이스로 표시되지 않은 경우 배포를 활성화하는 데 필요한 개체가 설치되고 데이터베이스가 배포 데이터베이스로 표시됩니다. 지정한 데이터베이스가 이미 배포 데이터베이스로 활성화된 경우 오류가 반환됩니다.  
   
- [  **@data_folder=**] **'***data_folder'*  
+ [  **@data_folder=**] **' * * * data_folder'*  
  배포 데이터베이스 데이터 파일을 저장하는 데 사용되는 디렉터리의 이름입니다. *data_folder* 은 **nvarchar (255)**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 대한 데이터 디렉터리(예: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)가 사용됩니다.  
   
  [  **@data_file=**] **'***data_file***'**  
@@ -94,7 +94,7 @@ sp_adddistributiondb [ @database= ] 'database'
  배포자에 연결하는 데 사용할 보안 모드입니다. *security_mode* 은 **int**, 기본값은 1입니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증; **1** Windows 통합 인증을 지정 합니다.  
   
  [  **@login=**] **'***로그인***'**  
- 배포 데이터베이스를 만들기 위해 배포자에 연결할 때 사용하는 로그인 이름입니다. 이 소프트웨어가 필요 *security_mode* 로 설정 된 **0**합니다. *로그인* 은 **sysname**, 기본값은 NULL입니다.  
+ 배포 데이터베이스를 만들기 위해 배포자에 연결할 때 사용하는 로그인 이름입니다. 이 소프트웨어가 필요 *security_mode* 로 설정 된 **0**합니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
  [  **@password=**] **'***암호***'**  
  배포자에 연결할 때 사용하는 암호입니다. 이 소프트웨어가 필요 *security_mode* 로 설정 된 **0**합니다. *암호* 은 **sysname**, 기본값은 NULL입니다.  
@@ -102,7 +102,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@createmode=**] *createmode*  
  *createmode* 은 **int**, 기본값은 1, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|설명|  
+|Value|설명|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (기본값)|CREATE DATABASE 또는 기존 데이터베이스에 있으며 다음 적용 **instdist.sql** 파일을 배포 데이터베이스에서 복제 개체를 만듭니다.|  
@@ -182,8 +182,8 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)  

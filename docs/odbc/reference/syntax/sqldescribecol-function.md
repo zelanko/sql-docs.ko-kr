@@ -2,7 +2,7 @@
 title: SQLDescribeCol 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -63,7 +63,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [입력] 결과 데이터의 열 번호 1에서 시작 증가 열 순서로 순차적으로 정렬 합니다. *ColumnNumber* 인수 수 책갈피 열을 설명 하기 위해도 0으로 설정 하는 수입니다.  
   
- *열 이름*  
+ *ColumnName*  
  [출력] 열 이름을 반환 하는 null로 끝나는 버퍼에 대 한 포인터입니다. IRD의 SQL_DESC_NAME 필드에서이 값을 읽습니다. 해당 열이 명명 된 열 이름을 확인할 수 없는 경우 드라이버는 빈 문자열을 반환 합니다.  
   
  경우 *ColumnName* 이 NULL 이면 *NameLengthPtr* 는 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는 버퍼에서 반환할 수 *ColumnName*합니다.  
@@ -104,7 +104,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDescribeCol** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDescribeCol** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *ColumnName* 충분히 열 이름이 잘렸습니다 하므로 전체 열 이름을 반환할 수 없습니다. 잘리지 않은 열 이름의 길이에서 **NameLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -123,11 +123,11 @@ SQLRETURN SQLDescribeCol(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
- **SQLDescribeCol** 에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 **SQLPrepare** 또는 **SQLExecute** 호출 **SQLPrepare** 하기전에 **SQLExecute**데이터 원본 문 핸들에 연결 된 SQL 문을 계산 하는 경우에 따라 합니다.  
+ **SQLDescribeCol** 에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 **SQLPrepare** 또는 **SQLExecute** 호출 **SQLPrepare** 하기전에**SQLExecute**데이터 원본 문 핸들에 연결 된 SQL 문을 계산 하는 경우에 따라 합니다.  
   
  성능상의 이유로 응용 프로그램 호출 하지 않아야 **SQLDescribeCol** 문을 실행 하기 전에.  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  응용 프로그램에서 일반적으로 호출 **SQLDescribeCol** 를 호출한 후 **SQLPrepare** 이전 또는 관련된 호출 후 및 **SQLExecute**합니다. 응용 프로그램 호출 또한 수 **SQLDescribeCol** 를 호출한 후 **SQLExecDirect**합니다. 자세한 내용은 참조 [결과 집합 메타 데이터](../../../odbc/reference/develop-app/result-set-metadata.md)합니다.  
   
  **SQLDescribeCol** 열 이름, 형식 및 길이 의해 생성 된 검색 한 **선택** 문. 열이 식 **ColumnName* 은 빈 문자열 또는 드라이버에서 정의 된 이름이 있습니다.  

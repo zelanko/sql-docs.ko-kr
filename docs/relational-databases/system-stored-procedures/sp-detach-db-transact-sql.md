@@ -1,16 +1,16 @@
 ---
 title: sp_detach_db (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  분리되는 데이터베이스와 연결된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제되지 않도록 지정합니다. *KeepFulltextIndexFile* 는 **nvarchar (10)** 값 이며 기본값은 **true**합니다. 경우 *KeepFulltextIndexFile* 은 **false**, 데이터베이스와 관련 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용으로 설정 하지 않으면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile**  매개 변수는 나중 버전의에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  
+>  **@keepfulltextindexfile** 매개 변수는 나중 버전의에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -76,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  데이터베이스가 분리되면 모든 해당 메타데이터가 삭제됩니다. 데이터베이스 로그인 계정의 기본 데이터베이스 경우 **마스터** 해당 계정의 기본 데이터베이스가 됩니다.  
   
 > [!NOTE]  
->  모든 로그인 계정의 기본 데이터베이스를 확인 하는 방법에 대 한 정보를 참조 하십시오. [sp_helplogins &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). 필요한 권한이 있는 경우 사용할 수 있습니다 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 새 기본 데이터베이스 로그인에 할당할 수 있습니다.  
+>  모든 로그인 계정의 기본 데이터베이스를 확인 하는 방법에 대 한 정보를 참조 하십시오. [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)합니다. 필요한 권한이 있는 경우 사용할 수 있습니다 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) 새 기본 데이터베이스 로그인에 할당할 수 있습니다.  
   
 ## <a name="restrictions"></a>제한 사항  
  다음 중 하나라도 해당하는 경우 데이터베이스를 분리할 수 없습니다.  

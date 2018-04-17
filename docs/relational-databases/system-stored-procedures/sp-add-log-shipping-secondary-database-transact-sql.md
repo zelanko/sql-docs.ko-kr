@@ -1,16 +1,16 @@
 ---
 title: sp_add_log_shipping_secondary_database (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c2cc8460059274458016d24e106e554f78394618
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +60,22 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@secondary_database**  =] '*secondary_database*'  
+ [ **@secondary_database** =] '*secondary_database*'  
  보조 데이터베이스의 이름입니다. *secondary_database* 은 **sysname**, 기본값은 없습니다.  
   
  [ **@primary_server** = ] '*primary_server*'  
  기본 인스턴스 이름을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성의 합니다. *primary_server* 은 **sysname** NULL 일 수 없습니다.  
   
- [  **@primary_database**  =] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  주 서버의 데이터베이스 이름입니다. *primary_database* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@restore_delay**  =] '*restore_delay*'  
+ [ **@restore_delay** =] '*restore_delay*'  
  보조 서버가 지정된 백업 파일을 복원하기 전에 대기하는 시간(분)입니다. *restore_delay* 은 **int** NULL 일 수 없습니다. 기본값은 0입니다.  
   
- [  **@restore_all**  =] '*restore_all*'  
+ [ **@restore_all** =] '*restore_all*'  
  1로 설정될 경우 보조 서버는 복원 작업 실행 시 모든 사용 가능한 트랜잭션 백업을 복원합니다. 그렇지 않으면 파일 한 개를 복원한 후 중지됩니다. *restore_all* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@restore_mode**  =] '*restore_mode*'  
+ [ **@restore_mode** =] '*restore_mode*'  
  보조 데이터베이스의 복원 모드입니다.  
   
  0 = NORECOVERY로 로그 복원  
@@ -84,28 +84,28 @@ sp_add_log_shipping_secondary_database
   
  *복원* 은 **비트** NULL 일 수 없습니다.  
   
- [  **@disconnect_users**  =] '*disconnect_users*'  
+ [ **@disconnect_users** =] '*disconnect_users*'  
  1로 설정될 경우 복원 작업 수행 시 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값 = 0 *연결 끊기* users **비트** NULL 일 수 없습니다.  
   
- [  **@block_size**  =] '*block_size*'  
+ [ **@block_size** =] '*block_size*'  
  백업 장치의 블록 크기로 사용되는 크기(바이트)입니다. *block_size* 은 **int** 기본값은-1입니다.  
   
- [ **@buffer_count** = ] '*buffer_count*'  
+ [ **@buffer_count** =] '*buffer_count*'  
  백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다. *buffer_count* 은 **int** 기본값은-1입니다.  
   
- [ **@max_transfer_size** = ] '*max_transfer_size*'  
+ [ **@max_transfer_size** =] '*max_transfer_size*'  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 장치로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다. *max_transfersize* 은 **int** NULL 일 수 있습니다.  
   
- [  **@restore_threshold**  =] '*restore_threshold*'  
+ [ **@restore_threshold** =] '*restore_threshold*'  
  복원 작업 간 허용되는 시간(분)입니다. 이 시간이 지나면 경고가 발생합니다. *restore_threshold* 은 **int** NULL 일 수 없습니다.  
   
- [  **@threshold_alert**  =] '*threshold_alert*'  
+ [ **@threshold_alert** =] '*threshold_alert*'  
  백업 임계값이 초과될 때 발생하는 경고입니다. *threshold_alert* 은 **int**, 기본값은 14, 420입니다.  
   
- [  **@threshold_alert_enabled**  =] '*threshold_alert_enabled*'  
+ [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
  경고가 발생 하는지 여부를 지정 하면 *backup_threshold* 을 초과 합니다. 기본값인 1은 경고가 발생된다는 의미입니다. *threshold_alert_enabled* 은 **비트**합니다.  
   
- [ **@history_retention_period** = ] '*history_retention_period*'  
+ [ **@history_retention_period** =] '*history_retention_period*'  
  기록이 보존되는 기간(분)입니다. *history_retention_period* 은 **int**, 기본값은 NULL입니다. 지정된 값이 없으면 14420을 사용합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [로그 전달 &#40;에 대 한 SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 & #40;에 대 한 SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

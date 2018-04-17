@@ -1,16 +1,16 @@
 ---
-title: "sp_set_firewall_rule (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sp_set_firewall_rule (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_firewall_rule
 - firewall_rules, setting server rules
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38ef5788aba91bfde21df091321a69dbacbeb8e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: ebfeaead5a1cce95aa2378f15f8ffaa73410509d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -63,7 +64,7 @@ sp_set_firewall_rule [@name =] 'name',
   
  시작 및 끝 IP 주소를 일치 하는 서버 수준 방화벽 설정을 추가 하면 `0.0.0.0`에 대 한 액세스를 사용 하도록 설정 하면 프로그램 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure에서 서버입니다. 값을 제공 된 *이름* 데 도움이 되는 매개 변수는 서버 수준 방화벽 설정을 기억할에 대 한 합니다.  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)], 한 연결을 인증 하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시 됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 데이터베이스에 최신 버전의 로그인 테이블에 있는지 확인 하려면 실행할 [DBCC FLUSHAUTHCACHE &#40; Transact SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 연결을 인증하는 데 필요한 로그인 데이터 및 서버 수준 방화벽 규칙은 각 데이터베이스에 일시적으로 캐시됩니다. 이 캐시는 주기적으로 새로 고쳐집니다. 인증 캐시 새로 고침을 강제 실행하고 데이터베이스에 최신 버전의 로그인 테이블이 있는지 확인하려면 [DBCC FLUSHAUTHCACHE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)를 실행합니다.  
   
 ## <a name="permissions"></a>Permissions  
  서버 수준 보안 주체 로그인만 프로 비전 프로세스에서 생성 또는 관리 만들거나 서버 수준 방화벽 규칙을 수정할 수로 할당 된 Azure Active Directory 사용자입니다. 사용자는 sp_set_firewall_rule을 실행 하려면 master 데이터베이스에 연결 되어야 합니다.  
@@ -91,4 +92,4 @@ exec sp_set_firewall_rule N'Example setting 1', '0.0.0.2', '0.0.0.4';
 ## <a name="see-also"></a>관련 항목:  
  [Azure SQL 데이터베이스 방화벽](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [방법: 방화벽 설정 구성 (Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sys.firewall_rules &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)
+ [sys.firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)

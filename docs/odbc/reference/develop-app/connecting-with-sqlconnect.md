@@ -1,15 +1,16 @@
 ---
-title: "SQLConnect를 사용 하 여 연결 | Microsoft Docs"
-ms.custom: 
+title: SQLConnect를 사용 하 여 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd3644acb609a041c53232a757fa27fc5b5a4bf1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect를 사용 하 여 연결
 **SQLConnect** 가장 단순한 연결 함수입니다. 데이터 원본 이름이 필요 하 고 선택적 사용자 ID와 암호를 허용 합니다. 하드 코딩의 데이터 원본 이름 및 사용자 ID 또는 암호가 필요 하지 않은 응용 프로그램에 대 한 잘 작동 합니다. 또한 하려는 응용 프로그램에 자신의 "디자인"을 제어 하거나 사용자 인터페이스가 없는 있는 대해 잘 작동 합니다. 이러한 응용 프로그램에 사용 하 여 데이터 원본 목록을 작성할 수 **SQLDataSources**사용자에 게 데이터 원본, 사용자 ID 및 암호를 묻고 호출 **SQLConnect**합니다.  

@@ -1,30 +1,31 @@
 ---
-title: "큰 CLR 사용자 정의 형식 (ODBC) | Microsoft Docs"
-ms.custom: 
+title: 큰 CLR 사용자 정의 형식 (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed85a2386d3d02df2af2e22805cea464cf2d130d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|지원 *|  
   
- \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
+ \* 이진 데이터가 16 진수 문자열로 변환 됩니다.  
   
  C에서 SQL 데이터 형식으로 지원되는 변환은 다음과 같습니다.  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|지원 *|  
   
- \*16 진수 문자열에서 이진 데이터 변환이 발생합니다.  
+ \* 16 진수 문자열에서 이진 데이터 변환이 발생합니다.  
   
 ## <a name="sqlvariant-support-for-udts"></a>UDT에 대한 SQL_VARIANT 지원  
  UDT는 SQL_VARIANT 열에서 지원되지 않습니다.  

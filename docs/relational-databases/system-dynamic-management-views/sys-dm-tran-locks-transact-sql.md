@@ -2,7 +2,7 @@
 title: sys.dm_tran_locks (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/05/2018
   
  한 세션에서 실행되는 여러 커서는 서로 구분되지 않으므로 하나의 엔터티로 간주됩니다.  
   
- 세션 ID 값과 연결되지 않은 분산 트랜잭션은 분리된 트랜잭션이며 -2의 세션 ID 값이 할당됩니다. 자세한 내용은 참조 [kill&#40; Transact SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ 세션 ID 값과 연결되지 않은 분산 트랜잭션은 분리된 트랜잭션이며 -2의 세션 ID 값이 할당됩니다. 자세한 내용은 참조 [kill& #40; Transact SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>리소스 정보  
  다음 표에서에서 표현 되는 리소스를 나열는 **resource_associated_entity_id** 열입니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_articlefilter (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8979cdc3cb382aa290148e560d8eb72db94b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ca25ec698e928ef247148be55d65c3ea37f59be8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  아티클을 포함하는 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
@@ -92,9 +92,9 @@ sp_articlefilter [ @publication = ] 'publication'
   
  실행 **sp_articlefilter** 을 사용 하려면 기존 구독이 있는 아티클에 대 한 구독 다시 초기화 해야 합니다.  
   
- **sp_articlefilter** 는 필터를 만들고 삽입 하는 필터 저장 프로시저의 ID는 **필터** 의 열은 [sysarticles &#40; Transact SQL &#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블을 선택한 다음에 제한 절의 텍스트를 삽입는 **filter_clause** 열입니다.  
+ **sp_articlefilter** 는 필터를 만들고 필터 저장 프로시저의 ID를 삽입는 **필터** 의 열은 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블, 한 다음 에 제한 절의 텍스트를 삽입 하는 **filter_clause** 열입니다.  
   
- 행 필터를 사용 하 여 문서를 만들려면 실행 [sp_addarticle &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *필터* 매개 변수입니다. 실행 **sp_articlefilter**를 비롯 한 모든 매개 변수 *filter_clause*, 다음 실행 [sp_articleview &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), 모든 매개 변수를 포함 하 여 동일한 *filter_clause*합니다. 필터가 이미 존재 하는 경우는 **형식** 에 **sysarticles** 은 **1** (로그 기반 아티클) 이면 이전 필터가 삭제 되 고 새 필터가 작성 됩니다.  
+ 행 필터를 사용 하 여 문서를 만들려면 실행 [sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *필터* 매개 변수입니다. 실행 **sp_articlefilter**를 비롯 한 모든 매개 변수 *filter_clause*, 다음 실행 [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), 모든 매개 변수를 포함 하 여 동일한 *filter_clause*합니다. 필터가 이미 존재 하는 경우는 **형식** 에 **sysarticles** 은 **1** (로그 기반 아티클) 이면 이전 필터가 삭제 되 고 새 필터가 작성 됩니다.  
   
  경우 *filter_name* 및 *filter_clause* 를 제공 하지 않은 이전 필터가 삭제 되 고 필터 ID로 설정 되어 **0**합니다.  
   
@@ -107,8 +107,8 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="see-also"></a>관련 항목:  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [정적 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

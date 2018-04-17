@@ -1,15 +1,15 @@
 ---
-title: "메시지를 생성 하는 문 처리 | Microsoft Docs"
-ms.custom: 
+title: 메시지를 생성 하는 문 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-error-messages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - PRINT statement
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a9deaa7c1890c327de38663e99e83f6ce526491
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c1f7e84dc79bce17ffe1764ea2e9aa972d0e6eaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-statements-that-generate-messages"></a>메시지를 생성하는 문 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +106,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>PRINT 및 RAISERROR 문 사용  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]PRINT 및 RAISERROR 문의 호출 하 여 데이터를 반환할 수도 **SQLGetDiagRec**합니다. 인쇄 문은 SQL_SUCCESS_WITH_INFO를 및 후속 호출을 반환 하는 SQL 문 실행 **SQLGetDiagRec** 반환는 *SQLState* 01000 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 실행이 SQL_ERROR를 및 후속 호출을 반환 하는 심각도 11 이상인 RAISERROR가 발생 하면 **SQLGetDiagRec** 반환 *SQLState* 42000 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT 및 RAISERROR 문의 호출 하 여 데이터를 반환할 수도 **SQLGetDiagRec**합니다. 인쇄 문은 SQL_SUCCESS_WITH_INFO를 및 후속 호출을 반환 하는 SQL 문 실행 **SQLGetDiagRec** 반환는 *SQLState* 01000 합니다. 심각도가 10 이하인 RAISERROR는 PRINT와 동일하게 동작합니다. 실행이 SQL_ERROR를 및 후속 호출을 반환 하는 심각도 11 이상인 RAISERROR가 발생 하면 **SQLGetDiagRec** 반환 *SQLState* 42000 합니다. 예를 들어 다음 문은 SQL_SUCCESS_WITH_INFO를 반환합니다.  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

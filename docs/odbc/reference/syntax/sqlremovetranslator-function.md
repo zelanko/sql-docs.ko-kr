@@ -2,7 +2,7 @@
 title: SQLRemoveTranslator 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b076c209964110d2253681d97252ece25610ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6eef32c1e9a1497294cfbfddda0449423c2c04a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 함수
 **규칙**  
@@ -62,7 +62,7 @@ BOOL SQLRemoveTranslator(
 ## <a name="diagnostics"></a>진단  
  때 **SQLRemoveTranslator** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생에 대 한 셈이 특정 설치 관리자 오류가 있습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|구성 요소 레지스트리에서 찾을 수 없습니다|설치 관리자를 제거할 수 없습니다 변환기 정보 레지스트리에 없습니다. 또는 레지스트리에서 찾을 수 없습니다.|  
@@ -70,7 +70,7 @@ BOOL SQLRemoveTranslator(
 |ODBC_ERROR_USAGE_UPDATE_FAILED|증가 하거나 구성 요소 사용 횟수를 감소 시킬 수 없습니다.|드라이버의 사용 횟수를 감소 시키기 위해는 설치 프로그램이 실패 했습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 프로그램의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  **SQLRemoveTranslator** 보완는 [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md) 시스템 정보에는 구성 요소 사용을 계산 함수 및 업데이트 합니다. 이 함수는 설치 응용 프로그램 에서만에서 호출 되어야 합니다.  
   
  **SQLRemoveTranslator** 구성 요소의 사용 횟수가 1 씩 감소 됩니다. 구성 요소의 사용 횟수가 0이 되 면 시스템 정보에 변환기 항목 제거 됩니다. 변환기가 항목은 시스템 정보 변환기 이름 아래에 다음 위치에:  

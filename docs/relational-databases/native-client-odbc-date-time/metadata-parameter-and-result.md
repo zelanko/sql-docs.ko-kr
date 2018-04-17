@@ -1,29 +1,30 @@
 ---
-title: "매개 변수 및 결과 메타 데이터 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수 및 결과 메타 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 788f1a9835ca2a50274699a6c13701d9bb8ee7ea
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 84bcee1d3ad21b34060b4f73936fd0a77a472994
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata---parameter-and-result"></a>메타 데이터-매개 변수 및 결과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
  값 범위가 연속되지 않을 수도 있습니다. 예를 들어 8,10..16에서는 9가 누락되어 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
- **datetime2** 의 typename로 반환 **smalldatetime** 및 **datetime** 드라이버를 사용 하므로이 공용 형식으로 모든 전송을 위한 **SQL_TYPE_TIMESTAMP**  값을 서버입니다.  
+ **datetime2** 의 typename로 반환 **smalldatetime** 및 **datetime** 드라이버를 사용 하므로이 공용 형식으로 모든 전송을 위한 **SQL_TYPE_TIMESTAMP** 값을 서버입니다.  
   
  SQL_CA_SS_VARIANT_SQL_TYPE은 새 설명자 필드입니다. 이 필드와 연결 된 값 유형을 지정 하는 응용 프로그램을 사용 하도록 설정 하려면 IRD 및 IPD에 추가 된 **sqlvariant** (SQL_SSVARIANT) 열 및 매개 변수  
   
@@ -102,6 +103,6 @@ ms.lasthandoff: 01/25/2018
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>관련 항목:  
- [메타 데이터 &#40; ODBC &#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [메타 데이터 &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

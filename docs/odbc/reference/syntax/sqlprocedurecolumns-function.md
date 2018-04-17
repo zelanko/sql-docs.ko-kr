@@ -2,7 +2,7 @@
 title: SQLProcedureColumns 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c509d2e02535a7bb30a167eba3ee1f93c70c234
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 함수(SQLProcedureColumns Function)
 **규칙**  
@@ -68,7 +68,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength1*  
  [입력] 문자 길이 **CatalogName*합니다.  
   
- *SchemaName*  
+ *schemaName*  
  [입력] 프로시저 스키마 이름에 대 한 문자열 검색 패턴입니다. 드라이버는 일부 프로시저 있지만 대 한 드라이버 다른 Dbms, 빈 문자열에서에서 데이터를 검색 하는 경우 등의 다른 스키마에서 지 원하는 경우 ("") 스키마가 없는 이러한 프로시저를 나타냅니다.  
   
  SQL_ATTR_METADATA_ID 문 특성, SQL_TRUE로 설정 되어 있으면 *SchemaName* 식별자로 처리 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 이면 *SchemaName* 패턴 값 인수; 리터럴로 취급 됩니다이 고 해당 대/소문자는 중요 합니다.  
@@ -84,7 +84,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength3*  
  [입력] 문자 길이 **ProcName*합니다.  
   
- *열 이름*  
+ *ColumnName*  
  [입력] 열 이름에 대 한 문자열 검색 패턴입니다.  
   
  SQL_ATTR_METADATA_ID 문 특성, SQL_TRUE로 설정 되어 있으면 *ColumnName* 식별자로 처리 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 이면 *ColumnName* 패턴 값 인수; 리터럴로 취급 됩니다이 고 해당 대/소문자는 중요 합니다.  
@@ -98,7 +98,7 @@ SQLRETURN SQLProcedureColumns(
 ## <a name="diagnostics"></a>진단  
  때 **SQLProcedureColumns** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLProcedureColumns** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버에 의해 반환 된 Sqlstate 설명 관리자입니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -119,7 +119,7 @@ SQLRETURN SQLProcedureColumns(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  이 함수는 대개 프로시저 매개 변수 및 있는 경우 결과 집합 또는 프로시저에서 반환 된 집합을 구성 하는 열에 대 한 정보를 검색할 문 실행 하기 전에 사용 됩니다. 자세한 내용은 참조 [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)합니다.  
   
 > [!NOTE]  
@@ -161,9 +161,9 @@ SQLRETURN SQLProcedureColumns(
   
  다음 표에서 결과 집합의 열을 나열합니다. 드라이버에서 19 (IS_NULLABLE) 열 추가 열을 정의할 수 있습니다. 응용 프로그램 명시적는 서 수 위치를 지정 하지 않고 결과 집합의 끝부터 계산 하 여 드라이버 관련 열에 액세스 해야 합니다. 자세한 내용은 참조 [카탈로그 함수에서 반환 된 데이터](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)합니다.  
   
-|열 이름|열 번호|데이터 형식|주석|  
+|열 이름|열 번호|데이터 형식|설명|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|프로시저 카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 절차에 대 한 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 해당 프로시저에 대 한 합니다.|  
+|PROCEDURE_CAT (ODBC 2.0)|1.|Varchar|프로시저 카탈로그 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버 카탈로그 일부 절차에 대 한 지원 하지만 지원만, 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 카탈로그를 갖지 않는 해당 프로시저에 대 한 합니다.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|프로시저 스키마 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 드라이버가 지 원하는 스키마만, 하지만 몇 가지 절차에 대 한 빈 문자열을 반환 다른 Dbms에서 데이터를 검색 하는 드라이버와 같은 경우 ("") 스키마가 없는 해당 프로시저에 대 한 합니다.|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL이 아닌 Varchar|프로시저 이름입니다. 프로시저의 경우 이름 없는 빈 문자열이 반환 됩니다.|  
 |COLUMN_NAME (ODBC 2.0)|4|NULL이 아닌 Varchar|프로시저 열 이름입니다. 드라이버는 이름 없는 프로시저 열에 대 한 빈 문자열을 반환 합니다.|  

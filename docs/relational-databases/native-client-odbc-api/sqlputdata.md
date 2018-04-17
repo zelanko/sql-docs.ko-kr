@@ -1,30 +1,31 @@
 ---
 title: SQLPutData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-caps.latest.revision: 
+caps.latest.revision: 49
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf27150c9e6c0da3f32cd3295c358c80da44b767
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8d9dffe53e18bf63951f6204435bd684844adc61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/24/2018
   
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
-|22026|문자열 데이터, 길이가 일치하지 않음|보낼 바이트에 데이터의 길이가 지정 된 경우 응용 프로그램에서 예를 들어 SQL_LEN_DATA_AT_EXEC로 (*n*) 여기서  *n*  총 수가 0 보다 크면 SQLPutData 통해 응용 프로그램에 의해 지정 된 바이트는 지정된 된 길이 일치 해야 합니다.|  
+|22026|문자열 데이터, 길이가 일치하지 않음|보낼 바이트에 데이터의 길이가 지정 된 경우 응용 프로그램에서 예를 들어 SQL_LEN_DATA_AT_EXEC로 (*n*) 여기서 *n* 총을 통해 응용 프로그램에서 제공 하는 바이트 수가 0 보다 크면 SQLPutData 지정 된 길이 일치 해야 합니다.|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 및 테이블 반환 매개 변수  
  SQLPutData 가변 행 바인딩을 테이블 반환 매개 변수와 함께 사용 하는 경우 응용 프로그램에서 사용 됩니다. *StrLen_Or_Ind* 매개 변수 행이 더 이상를 사용할 수 있는지 또는 다음 행 또는 테이블 반환 매개 변수 데이터의 행에 대 한 데이터를 수집 하도록 드라이버에 대 한 준비가 되었음을 나타냅니다.  
@@ -61,15 +62,15 @@ ms.lasthandoff: 01/24/2018
   
  경우 *StrLen_Or_Ind* 이 0과 SQL_PARAMSET_SIZE 사이의 숫자 또는 SQL_DEFAULT_PARAM 이외의 값 (즉,는 *ColumnSize* SQLBindParameter의 매개 변수), 오류가 발생 합니다. 이 오류가 발생 하면 SQLPutData에서 SQL_ERROR: SQLSTATE = HY090, "잘못 된 문자열 또는 버퍼 길이"입니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 사용 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 [테이블 반환 매개 변수 사용 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLPutData 지원  
  날짜/시간 형식의 매개 변수 값에 설명 된 대로 변환 됩니다 [C에서 SQL로 변환을](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)합니다.  
   
- 자세한 내용은 참조 [날짜 및 시간 기능 향상 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+ 자세한 내용은 참조 [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLPutData 지원  
- **SQLPutData** 큰 CLR 사용자 정의 형식 (Udt)을 지원 합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
+ **SQLPutData** 큰 CLR 사용자 정의 형식 (Udt)을 지원 합니다. 자세한 내용은 참조 [Large CLR User-Defined 형식 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLPutData 함수](http://go.microsoft.com/fwlink/?LinkId=59365)   

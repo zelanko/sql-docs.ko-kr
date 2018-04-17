@@ -1,16 +1,16 @@
 ---
 title: sp_helpdatatypemap (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d22a2c19f5824ef0a1cb5e0a145afd72492289df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e594c9b1d13730df2ccc93bf04d0348a5d2175b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,37 +52,37 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@source_dbms** =] **'***source_dbms***'**  
+ [ **@source_dbms**=] **'***source_dbms***'**  
  데이터 형식이 매핑된 DBMS의 이름입니다. *source_dbms* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
   
- [  **@source_version** =] **'***source_version***'**  
+ [ **@source_version**=] **'***source_version***'**  
  원본 DBMS의 제품 버전입니다. *source_version*은 **varchar (10)**, 데이터 형식 DBMS 반환 원본의 모든 버전에 대 한 매핑을 지정 하지 않으면 합니다. 결과 집합을 DBMS 원본 버전으로 필터링하도록 설정합니다.  
   
- [  **@source_type** =] **'***source_type***'**  
+ [ **@source_type**=] **'***source_type***'**  
  원본 DBMS에 나열된 데이터 형식입니다. *source_type* 은 **sysname**를 지정 하지 않으면 하는 경우 원본 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 원본 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
- [  **@destination_dbms**  =] **'***destination_dbms***'**  
+ [ **@destination_dbms** =] **'***destination_dbms***'**  
  대상 DBMS의 이름입니다. *destination_dbms* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
 |**DB2**|대상은 IBM DB2 데이터베이스입니다.|  
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
   
- [  **@destination_version** =] **'***destination_version***'**  
+ [ **@destination_version**=] **'***destination_version***'**  
  대상 DBMS의 제품 버전입니다. *destination_version*은 **varchar (10)**를 지정 하지 않으면 하는 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
   
- [  **@destination_type** =] **'***destination_type***'**  
+ [ **@destination_type**=] **'***destination_type***'**  
  대상 DBMS에 나열된 데이터 형식입니다. *destination_type*은 **sysname**를 지정 하지 않으면 하는 경우 대상 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 대상 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
- [  **@defaults_only** =] *defaults_only*  
+ [ **@defaults_only**=] *defaults_only*  
  기본 데이터 형식 매핑만 반환되는지 여부입니다. *defaults_only* 은 **비트**, 기본값은 **0**합니다. **1** 의미의 기본 데이터 형식 매핑이 반환 됩니다. **0** 의미 기본 및 모든 사용자 정의 데이터 형식 매핑이 반환 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -108,7 +108,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  구성원만는 **sysadmin** 고정된 서버 역할의 멤버나 배포자는 **db_owner** 배포 데이터베이스의 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_getdefaultdatatypemapping &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "Update 및 Delete 문을 배치 시뮬레이션 | Microsoft Docs"
-ms.custom: 
+title: Update 및 Delete 문을 배치 시뮬레이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 116f99d1a2dd5e904586978de4345111df278dab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문을 시뮬레이션
 데이터 원본 위치 지정된 업데이트를 지원 하지 않으며 delete 문의 하는 경우 이러한 드라이버 시뮬레이션할 수 있습니다. 예를 들어 ODBC 커서 라이브러리 시뮬레이션 위치 지정된 update 및 delete 문을 합니다. 위치 지정된 update 및 delete 문을 시뮬레이트하기 위한 일반적인 전략 검색 결과 프로토콜로 위치 지정 된 문을 변환 하는 것입니다. 대체 하 여 이렇게는 **WHERE CURRENT OF** 절은 검색 결과를 **여기서** 현재 행을 식별 하는 절.  

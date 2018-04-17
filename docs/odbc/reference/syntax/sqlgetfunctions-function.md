@@ -2,7 +2,7 @@
 title: SQLGetFunctions 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a38bc5d8e071efee286f726d75f6949243cbb77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
@@ -74,7 +74,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetFunctions** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* 의 Sql_handle_dbc 라는 및 *처리* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetFunctions** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------|-----|-----------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
@@ -86,7 +86,7 @@ SQLRETURN SQLGetFunctions(
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  **SQLGetFunctions** 항상 반환 하는 **SQLGetFunctions**, **SQLDataSources**, 및 **SQLDrivers** 지원 됩니다. 이러한 함수는 드라이버 관리자는 구현 않기 때문에이 없습니다. 드라이버 관리자는 ANSI 함수에 매핑됩니다 해당 유니코드 함수에서는 Unicode 함수가 존재 하 고 ANSI 함수가 있는 경우 유니코드 함수는 해당 ANSI 함수에 매핑합니다. 응용 프로그램 사용 하는 방법에 대 한 내용은 **SQLGetFunctions**, 참조 [인터페이스 받는 규칙 수준](../../../odbc/reference/develop-app/interface-conformance-levels.md)합니다.  
   
  다음은에 대 한 유효한 값 목록이 *FunctionId* ISO 92 표준-준수 수준을를 준수 하는 함수:  

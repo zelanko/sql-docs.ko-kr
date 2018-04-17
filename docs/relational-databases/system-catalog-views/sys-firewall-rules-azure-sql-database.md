@@ -1,16 +1,16 @@
 ---
-title: "sys.firewall_rules (Azure SQL 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: sys.firewall_rules (Azure SQL 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.firewall_rules
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f06eef87553a1a97851a3252faaf0f8057158c2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 3f3f25541c1c60e4a9dad3dcfdaff037c7a7bcde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  `sys.firewall_rules` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|서버 수준 방화벽 설정의 식별자입니다.|  
 |name|**NVARCHAR (128)**|서버 수준 방화벽 설정을 설명하고 구분하기 위해 선택한 이름입니다.|  
@@ -51,14 +52,14 @@ ms.lasthandoff: 11/21/2017
 |modify_date|**날짜/시간**|서버 수준 방화벽 설정이 마지막 수정된 UTC 날짜 및 시간입니다.|  
   
 ## <a name="remarks"></a>주의  
- 데이터베이스 방화벽 규칙을 제거 하려면 [sp_delete_firewall_rule &#40; Azure SQL 데이터베이스 &#41; ](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). 단일 데이터베이스에 대 한 방화벽 규칙을 설정 하려면 참조 [sys.database_firewall_rules &#40; Azure SQL 데이터베이스 &#41; ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). 기존 방화벽 규칙에 대 한 정보를 반환 하려면 sys.firewall_rules (Azure SQL 데이터베이스)를 쿼리 합니다.  
+ 데이터베이스 방화벽 규칙을 제거 하려면 [sp_delete_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)합니다. 단일 데이터베이스에 대 한 방화벽 규칙을 설정 하려면 참조 [sys.database_firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)합니다. 기존 방화벽 규칙에 대 한 정보를 반환 하려면 sys.firewall_rules (Azure SQL 데이터베이스)를 쿼리 합니다.  
   
 ## <a name="permissions"></a>Permissions  
  이 보기에 읽기 전용 액세스는 연결할 수 있는 권한이 있는 모든 사용자가 사용할 수는 **마스터** 데이터베이스입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sys.database_firewall_rules &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_set_firewall_rule&#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
+ [sp_set_firewall_rule &#40;Azure SQL 데이터베이스&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [FILESTREAM 액세스를 위한 방화벽 구성](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
  [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   

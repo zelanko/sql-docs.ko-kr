@@ -1,15 +1,16 @@
 ---
-title: "상대 및 절대 스크롤 | Microsoft Docs"
-ms.custom: 
+title: 상대 및 절대 스크롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
-대부분의 스크롤 옵션의 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음 인출 지원 이전, 첫 번째 및 마지막 행 집합으로도 같이 상대 인출 (행 집합을 인출할  *n*  현재 행 집합의 시작 부분부터 행)과 절대 인출 (fetch는 행에서 시작 하는 행 집합  *n* ). 경우  *n*  는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행으로 시작 하는 행 집합을 인출 하는 – 1 행의 절대 인출을 의미 합니다.  
+대부분의 스크롤 옵션의 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음 인출 지원 이전, 첫 번째 및 마지막 행 집합으로도 같이 상대 인출 (행 집합을 인출할 *n* 현재 행 집합의 시작 부분부터 행)과 절대 인출 (페치를 시작 하는 행 집합 행에서 *n*). 경우 *n* 는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행으로 시작 하는 행 집합을 인출 하는 – 1 행의 절대 인출을 의미 합니다.  
   
  동적 커서에 삽입 하 고이 느려질 수는 결과 집합의 시작 부분부터 읽기 이외의 특정 숫자에서 행을 검색 하는 동적 커서에 대 한 쉬운 방법이 있으면 되므로 결과 집합에서 삭제 된 행을 검색 합니다. 또한, 절대 인출은 그다지 유용 하지 동적 커서에서 행을 삽입 / 삭제 행 번호 변경 때문에 따라서 연속적으로 동일한 행 수를 가져오는 다른 행 양도할 수 있습니다.  
   

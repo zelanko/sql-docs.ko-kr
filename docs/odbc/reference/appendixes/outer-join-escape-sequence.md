@@ -1,31 +1,32 @@
 ---
-title: "외부 조인 이스케이프 시퀀스 | Microsoft Docs"
-ms.custom: 
+title: 외부 조인 이스케이프 시퀀스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a2621b150980c5053d62ddae1a03bcf180daf81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71205972831d4a0370a0905aeaa8f94d9639894e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-join-escape-sequence"></a>외부 조인 이스케이프 시퀀스
 ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -43,7 +44,7 @@ ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 
   
  *외부 조인* :: = *테이블 이름* [*상관 관계 이름*] {왼쪽 &#124; 오른쪽 &#124; 전체}  
   
- OUTER JOIN {*테이블 이름* [*상관 관계 이름*] &#124; *외부 조인*} ON  
+ 외부 조인 {*테이블 이름* [*상관 관계 이름*] &#124; *외부 조인*} ON  
   
  *검색-*  
   

@@ -1,29 +1,30 @@
 ---
-title: "전체 텍스트 검색 구현 | Microsoft Docs"
-ms.custom: 
+title: 전체 텍스트 검색 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe4843e762233eae4e85be8662b1291b794c59a7
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e88214b6fbed3b5622b0e9f5d7be70cdbf1ad9a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-full-text-search"></a>전체 텍스트 검색 구현
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/12/2018
  먼저, <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 생성자를 호출하고 카탈로그 이름을 지정하여 데이터베이스에 전체 텍스트 카탈로그를 만듭니다. 그런 다음 생성자를 호출하고 저장할 테이블을 지정하여 전체 텍스트 인덱스를 만듭니다. 그리고 나서 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 개체를 사용하여 테이블의 열 이름을 지정하면 전체 텍스트 인덱스에 대한 인덱스 열을 추가할 수 있습니다. 그런 다음 생성한 카탈로그에 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 속성을 설정합니다. 마지막으로, <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 메서드를 호출하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 전체 텍스트 인덱스를 만듭니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Visual Basic에서 전체 텍스트 검색 서비스 만들기  
  이 코드 예제에서는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 `ProductCategory` 테이블에 대한 전체 텍스트 검색 카탈로그를 만듭니다. 그런 다음 `ProductCategory` 테이블의 이름 열에 전체 텍스트 검색 인덱스를 만듭니다. 전체 텍스트 검색 인덱스를 사용하려면 해당 열에 이미 고유 인덱스가 정의되어 있어야 합니다.  

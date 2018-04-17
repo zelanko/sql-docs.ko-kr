@@ -1,16 +1,16 @@
 ---
 title: sys.dm_fts_semantic_similarity_population (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3ad5ff1a253c702f28f73e8b3e684e716e90bb9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b98333366f5c929d6324d103e5638b7e69ff1d56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   연결된 의미 체계 인덱스가 있는 각 테이블의 각 유사성 인덱스에 대해 문서 유사성 인덱스 채우기와 관련된 상태 정보가 들어 있는 하나의 행을 반환합니다.  
   
- 채우기 단계는 추출 단계 이후에 수행됩니다. 유사성 추출 단계에 대 한 상태 정보를 참조 하십시오. [sys.dm_fts_index_population&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ 채우기 단계는 추출 단계 이후에 수행됩니다. 유사성 추출 단계에 대 한 상태 정보를 참조 하십시오. [sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)합니다.  
     
 ||||  
 |-|-|-|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/03/2018
  자세한 내용은 참조 [검색 관리 및 모니터링 의미 체계](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
   
 ## <a name="metadata"></a>메타데이터  
- 쿼리 의미 체계 인덱싱의 상태에 대 한 자세한 내용은 [sys.dm_fts_index_population&#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ 쿼리 의미 체계 인덱싱의 상태에 대 한 자세한 내용은 [sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)합니다.  
   
 ## <a name="security"></a>보안  
   

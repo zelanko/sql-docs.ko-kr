@@ -1,34 +1,34 @@
 ---
-title: "어셈블리 디자인 | Microsoft Docs"
-ms.custom: 
+title: 어셈블리 디자인 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 769c0aa7f6d9593ab3e2360a0e26876f23f16b41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---designing"></a>어셈블리-디자인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 어셈블리를 디자인할 때 고려해야 할 다음 요소들에 대해 설명합니다.  
+  이 항목에서는 어셈블리를 디자인할 때 고려해야 할 다음 요소들에 대해 설명합니다.  
   
 -   어셈블리 패키징  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  코드를 어셈블리에 패키징할 때는 다음을 고려해야 합니다.  
   
--   CLR 사용자 정의 함수에 의존하는 CLR 사용자 정의 유형 및 인덱스는 영구 데이터가 어셈블리에 의존하는 데이터베이스에 포함되도록 만들 수 있습니다. 어셈블리의 코드를 수정하면 데이터베이스에 있는 어셈블리에 의존하는 영구 데이터가 있는 경우 보다 복잡해지는 경우가 많습니다. 따라서 일반적으로 사용자 정의 유형과 사용자 정의 함수를 사용하는 인덱스와 같이 영구 데이터 종속 관계에 의존하는 코드를 이러한 영구 데이터 종속 관계가 없는 코드와 구분하는 것이 좋습니다. 자세한 내용은 참조 [구현 어셈블리](../../relational-databases/clr-integration/assemblies-implementing.md) 및 [ALTER assembly&#40; Transact SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR 사용자 정의 함수에 의존하는 CLR 사용자 정의 유형 및 인덱스는 영구 데이터가 어셈블리에 의존하는 데이터베이스에 포함되도록 만들 수 있습니다. 어셈블리의 코드를 수정하면 데이터베이스에 있는 어셈블리에 의존하는 영구 데이터가 있는 경우 보다 복잡해지는 경우가 많습니다. 따라서 일반적으로 사용자 정의 유형과 사용자 정의 함수를 사용하는 인덱스와 같이 영구 데이터 종속 관계에 의존하는 코드를 이러한 영구 데이터 종속 관계가 없는 코드와 구분하는 것이 좋습니다. 자세한 내용은 참조 [구현 어셈블리](../../relational-databases/clr-integration/assemblies-implementing.md) 및 [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)합니다.  
   
 -   관리 코드의 조각에 더 높은 사용 권한이 필요한 경우 해당 코드를 높은 사용 권한이 필요하지 않은 코드와 별개의 어셈블리로 구분하는 것이 좋습니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/09/2018
  또한 UNSAFE를 지정하면 어셈블리에 있는 코드에서 CLR 확인 프로그램에 의해 안전하지 않은 유형으로 간주되는 작업을 수행할 수 있습니다. 이러한 작업은 제어되지 않는 방식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 메모리 버퍼에 액세스할 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. UNSAFE 권한은 숙련된 개발자 또는 관리자가 가장 신뢰할 수 있는 어셈블리에만 부여해야 합니다. 구성원만는 **sysadmin** 고정된 서버 역할에서 안전 하지 않은 어셈블리를 만들 수 있습니다.  
   
 ## <a name="restrictions-on-assemblies"></a>어셈블리에 대한 제한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 제한 사항을 안정적이 고 확장 가능한 방식으로 실행할 수 있는지 확인 하는 어셈블리에 관리 코드에 배치 합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
   
 ### <a name="disallowed-custom-attributes"></a>허용되지 않는 사용자 지정 특성  
  다음과 같은 사용자 지정 특성으로는 어셈블리에 주석을 지정할 수 없습니다.  
@@ -124,7 +124,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [어셈블리 &#40; 데이터베이스 엔진 &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [어셈블리 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

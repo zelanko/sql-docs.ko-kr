@@ -2,7 +2,7 @@
 title: SQLDriverConnect 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
@@ -104,12 +104,12 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDriverConnect** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *fHandleType*sql_handle_dbc 라는의 및 *hHandle* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLDriverConnect** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutConnectionString* 충분히 연결 문자열이 잘림 하므로 전체 연결 문자열을 반환할 수 없습니다. 잘리지 않은 연결 문자열의 길이에서 **StringLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S00|잘못 된 연결 문자열 특성입니다.|잘못 된 특성 키워드는 연결 문자열에 지정 되었습니다 (*InConnectionString*), 했지만 드라이버 그래도 데이터 원본에 연결할 수 있습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01 S 02|옵션 값이 변경 됨|드라이버에서 가리키는 지정된 된 값을 지원 하지 않았습니다 고 *ValuePtr* 인수에 **SQLSetConnectAttr** 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|드라이버에서 가리키는 지정된 된 값을 지원 하지 않았습니다 고 *ValuePtr* 인수에 **SQLSetConnectAttr** 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S08|파일 DSN을 저장할 수 없습니다.|문자열에  *\*InConnectionString* 포함 한 **FILEDSN** 키워드, 하지만.dsn 파일 저장 되지 않았습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S09|잘못 된 키워드|(DM)에 있는 문자열  *\*InConnectionString* 포함 한 **SAVEFILE** 키워드 하지 않고는 **드라이버** 또는 **FILEDSN** 키워드입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08001|클라이언트 연결을 설정할 수 없습니다.|드라이버는 데이터 원본과 연결을 설정할 수 없습니다.|  
@@ -148,18 +148,18 @@ SQLRETURN SQLDriverConnect(
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
 |S1118|드라이버는 비동기 알림을 지원 하지 않습니다.|드라이버는 비동기 알림을 지원 하지 않습니다, SQL_ATTR_ASYNC_DBC_EVENT 또는 SQL_ATTR_ASYNC_DBC_RETCODE_PTR 설정할 수 없습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  연결 문자열에는 다음 구문을 가집니다.  
   
  *연결 문자열* :: = *빈 문자열*[;] &#124; *특성*[;] &#124; *특성*; *연결 문자열*  
   
- *빈 문자열* :: =*특성* :: = *특성 키워드*=*특성-값* &#124; 드라이버 [{}] =*특성-값*[}]  
+ *빈 문자열* :: =*특성* :: = *특성 키워드*=*특성-값* &#124; 드라이버 [{}] = *특성-값*[}]  
   
- *특성 키워드* :: = DSN &#124; UID &#124; PWD &#124; *드라이버-정의-속성-키워드*  
+ *특성 키워드* :: DSN = &#124; UID &#124; PWD &#124; *드라이버-정의-속성-키워드*  
   
- *특성-값* :: = *문자열*  
+ *attribute-value* ::= *character-string*  
   
- *드라이버-정의-속성-키워드* :: = *식별자*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  여기서 *문자열* 에 0 개 이상의 문자가; *식별자* 에 하나 이상의 문자가; *특성 키워드*  /소문자를 구분 하지 않습니다 *특성-값* 대/소문자 구분; 수 있습니다의 값은 **DSN** 키워드 공백의로 구성 되어 있지 않습니다.  
   

@@ -1,15 +1,16 @@
 ---
-title: "다른 드라이버 아키텍처 | Microsoft Docs"
-ms.custom: 
+title: 다른 드라이버 아키텍처 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - drivers [ODBC], heterogeneous join engines
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2e19371142140c7f084b6179b509a1c524c36266
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="other-driver-architectures"></a>다른 드라이버 아키텍처
 일부 ODBC 드라이버에는 앞에서 설명한 아키텍처 엄격 하 게 준수 하지 않는 합니다. 드라이버는 기존의 ODBC 드라이버의 이외의 상의 임무를 수행할 또는 일반적인 의미에서 드라이버가 아닌 때문일 수 있습니다.  

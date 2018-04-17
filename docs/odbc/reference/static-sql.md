@@ -1,15 +1,16 @@
 ---
-title: "정적 SQL | Microsoft Docs"
-ms.custom: 
+title: 정적 SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - static SQL [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - embedded SQL [ODBC]
 - SQL [ODBC], static SQL
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 249d3114af6631b56dd5d5106564f3912072ab29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 392cf843734bcc668c88f6408227b20df97d43ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="static-sql"></a>정적 SQL
 에 표시 된 포함 된 SQL [포함 된 SQL 예제](../../odbc/reference/embedded-sql-example.md) 정적 SQL 라고 합니다. 프로그램의 SQL 문에 정적; 정적 SQL 라고 즉, 프로그램 실행 될 때마다를 변경 하지 마십시오. 이전 섹션에서 설명한 대로 이러한 문은 프로그램의 나머지를 컴파일할 때 컴파일됩니다.  

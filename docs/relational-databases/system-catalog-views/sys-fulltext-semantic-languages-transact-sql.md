@@ -1,16 +1,16 @@
 ---
 title: sys.fulltext_semantic_languages (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fulltext_semantic_languages
@@ -22,35 +22,35 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_semantic_languages catalog view
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 109bd4b37a3cd6b243fb1ce8bf05ba33e6c71ea1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 433f7e25dcb95fd35d41bd2eccc5ca2173bdc16f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 의미 체계 모델이 등록된 언어마다 하나의 행을 반환합니다. 언어 모델을 등록하면 의미 체계 인덱싱에 해당 언어를 사용하도록 설정됩니다.  
   
- 이 카탈로그 뷰는 비슷합니다 [sys.fulltext_languages&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ 이 카탈로그 뷰는 비슷합니다 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)합니다.  
     
 ||||  
 |-|-|-|  
 |**열 이름**|**형식**|**설명**|  
 |lcid|int|언어의 Microsoft Windows LCID(로캘 ID)입니다.|  
-|name|sysname|별칭 값 이거나 [sys.syslanguages&#40; Transact SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 의 값에 해당 하 **lcid**, 또는 숫자로 된 LCID의 문자열 표현입니다.|  
+|name|sysname|별칭 값 이거나 [sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 의 값에 해당 하 **lcid**, 또는 숫자로 된 LCID의 문자열 표현입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 의미 체계 인덱싱을 지원 하기 위해 설치 된 의미 체계 언어 통계 데이터베이스에 대 한 자세한 내용은 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database&#40; Transact SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ 의미 체계 인덱싱을 지원 하기 위해 설치 된 의미 체계 언어 통계 데이터베이스에 대 한 자세한 내용은 카탈로그 뷰를 쿼리 [sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>보안  
   

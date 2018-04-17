@@ -1,16 +1,16 @@
 ---
 title: sp_add_alert (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  만 **sysmessages** Microsoft Windows 응용 프로그램 로그에 오류가 기록 된 경고를 보내도록 발생할 수 있습니다.  
   
- [ **@severity =** ] *severity*  
+ [  **@severity =** ] *심각도*  
  심각도 수준 (에서 **1** 통해 **25**) 경고를 정의 하는 합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장 된 메시지는 **sysmessages** 테이블에 전송 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 표시 된 심각도로 Windows 응용 프로그램 로그에 경고를 전송 하면 합니다. *심각도* 은 **int**, 기본값은 0입니다. 경우 *message_id* 경고를 정의 하는 데 사용 *심각도* 해야 **0**합니다.  
   
  [  **@enabled =** ] *사용 하도록 설정*  
  경고의 현재 상태를 나타냅니다. *활성화* 은 **tinyint**, 기본값은 1 (사용). 경우 **0**, 경고가 활성화 되지 않으며 발생 하지 않습니다.  
   
- [ **@delay_between_responses =** ] *delay_between_responses*  
+ [  **@delay_between_responses =** ] *delay_between_responses*  
  경고에 대한 응답에 걸리는 대기 시간(초)입니다. *delay_between_responses*은 **int**, 기본값은 **0**, 있으며 응답 (각 경고의 발생 응답을 생성 함)에 걸리는 대기 시간이 없음 않음을 의미 합니다. 응답은 다음 두 가지 형식 중 한 가지 또는 두 가지 모두를 사용할 수 있습니다.  
   
 -   전자 메일 또는 호출기를 통해 전달된 한 개 이상의 알림  
@@ -118,16 +118,16 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0에서는 구현되지 않습니다. *raise_snmp_trap* 은 **tinyint**, 기본값은 0입니다.  
   
- [ **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'***performance_condition***'**  
  형식으로 표시 되는 값 '*itemcomparatorvalue*'. *performance_condition* 은 **nvarchar (512)** 기본값은 NULL 이며이 요소로 구성 됩니다.  
   
 |형식 요소|Description|  
 |--------------------|-----------------|  
 |*항목*|성능 개체, 성능 카운터 또는 카운터의 명명된 인스턴스|  
-|*Comparator*|이러한 연산자 중 하나: >, <, 또는 =|  
+|*비교 연산자*|이러한 연산자 중 하나: >, <, 또는 =|  
 |*Value*|카운터의 숫자 값|  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'***범주***'**  
  경고 범주의 이름입니다. *범주* 은 **sysname**, 기본값은 NULL입니다.  
   
  [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
@@ -190,12 +190,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_add_notification &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo&#40; Transact SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

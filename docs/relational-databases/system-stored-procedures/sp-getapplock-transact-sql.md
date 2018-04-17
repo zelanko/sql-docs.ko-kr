@@ -1,16 +1,16 @@
 ---
 title: sp_getapplock (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +62,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  응용 프로그램 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode=] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode* 은 **nvarchar (32)** 및 기본값은 없습니다. 값 중 하나일 수 있습니다: **Shared**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **단독** .  
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)**이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **Shared**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **단독** .  
   
  [ @LockOwner=] '*lock_owner*'  
- 가 있는 잠금 소유자는 *lock_owner* 잠금이 요청 된 값입니다. *lock_owner* 은 **nvarchar (32)**합니다. 값일 수 **트랜잭션** (기본값) 또는 **세션**합니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)**입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
   
  [ @LockTimeout=] '*값*'  
  잠금 제한 시간 값(밀리초)입니다. 기본값은에서 반환 된 값과 같으면@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 잠금 요청이 대기하지 않고 오류를 반환하도록 하려면 0을 지정하세요.  
@@ -75,7 +76,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  \>= 0 (성공) 또는 < 0 (실패)  
   
-|값|결과|  
+|Value|결과|  
 |-----------|------------|  
 |0|동기식으로 잠금을 허가하는 데 성공했습니다.|  
 |1.|호환되지 않는 다른 잠금이 해제되기를 기다린 다음 성공적으로 잠금을 허가하였습니다.|  
@@ -170,8 +171,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [APPLOCK_MODE &#40; Transact SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40; Transact SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

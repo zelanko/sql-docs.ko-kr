@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_incremental_stats_properties (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**int**|통계 개체의 속성을 반환하는 개체(테이블)의 ID입니다.|  
 |stats_id|**int**|통계 개체의 ID입니다. 테이블 내에서 고유합니다. 자세한 내용은 [sys의 RTM 버전에는 이 보기가 포함되지 않습니다.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)의 RTM 버전에는 이 보기가 포함되지 않습니다.|
 |partition_number|**int**|테이블의 일부를 포함하는 파티션 수입니다.|  
-|last_updated|**datetime2**|통계 개체가 마지막으로 업데이트된 날짜와 시간입니다. 자세한 내용은 참조는 [주의](#Remarks) 이 페이지의 섹션입니다.|  
+|last_updated|**datetime2**|통계 개체가 마지막으로 업데이트된 날짜와 시간입니다. 자세한 내용은 이 페이지의 [주의](#Remarks) 섹션을 참조하세요.|  
 |rows|**bigint**|통계가 마지막으로 업데이트되었을 때 테이블의 전체 행 수입니다. 통계가 필터링되거나 필터링된 인덱스에 해당하는 경우 행 수가 테이블의 행 수보다 적을 수 있습니다.|  
 |rows_sampled|**bigint**|통계 계산을 위해 샘플링된 전체 행 수입니다.|  
 |단계|**int**|히스토그램의 총 단계 수입니다. 자세한 내용은 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)의 RTM 버전에는 이 보기가 포함되지 않습니다.|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  이 동작은 `sys.dm_db_incremental_stats_properties` 및 `sys.objects` 와 같은 뷰의 행에 교차 적용될 때 `sys.stats`를 안전하게 사용할 수 있습니다. 이 메서드는 각 파티션에 해당하는 통계에 대한 속성을 반환할 수 있습니다. 모든 파티션에서 결합되어 병합된 통계에 대한 속성을 보려면 sys.dm_db_stats_properties를 대신 사용합니다. 
 
-통계 업데이트 날짜에 저장 되는 [통계 blob 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) 와 함께 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density), 메타 데이터에 없습니다. 통계 blob 만들어지지 않습니다, 날짜를 사용할 수 없으면 통계 데이터를 생성할 수 없는 데이터를 읽으면 및 *last_updated* 열은 NULL입니다. 이 경우 조건자를 반환 하지 않는 모든 행에 대 한 또는 새로운 빈 테이블에 대 한 필터링 된 통계에 대 한 합니다.
+통계 업데이트 날짜는 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 및 [밀도 벡터](../../relational-databases/statistics/statistics.md#density)와 함께 메타데이터가 아닌 [통계 BLOB 개체](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)에 저장됩니다. 통계 blob 만들어지지 않습니다, 날짜를 사용할 수 없으면 통계 데이터를 생성할 수 없는 데이터를 읽으면 및 *last_updated* 열은 NULL입니다. 이 경우는 조건자가 행을 반환하지 않는 필터링된 통계 또는 빈 테이블에 대해 필터링된 통계에 해당하는 경우입니다.
 
 ## <a name="permissions"></a>Permissions  
  사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.  

@@ -1,41 +1,43 @@
 ---
-title: "생성, 변경 및 사용자 정의 함수 제거 | Microsoft Docs"
-ms.custom: 
+title: 생성, 변경 및 사용자 정의 함수 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79a796d469d9e5ccd686a526f18bb16ed972cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 03700168dc8531c438a6814463a20bbf9fb51a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>사용자 정의 함수 생성, 변경 및 제거
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체에서 사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있게 해 주는 기능을 제공 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체에서 사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있게 해 주는 기능을 제공 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]저장된 프로시저 내 사용할 수 있으려면 먼저 데이터베이스 내에서 등록할 수 있도록 어셈블리, 사용자 정의 함수, 트리거 및 사용자 정의 데이터 형식이 필요 합니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에서 이 기능을 지원합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장된 프로시저 내 사용할 수 있으려면 먼저 데이터베이스 내에서 등록할 수 있도록 어셈블리, 사용자 정의 함수, 트리거 및 사용자 정의 데이터 형식이 필요 합니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에서 이 기능을 지원합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체가 사용 하 여.NET 어셈블리 참조는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, 및 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> 속성입니다.  
   
  경우는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> .NET 어셈블리를 참조 하는 개체를 만들어 어셈블리를 등록 해야는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에 추가 하는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 에 속한 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체입니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [만들기 Visual C & #35; Visual Studio.NET에서에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 응용 프로그램을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 참조 [Visual C를 만들&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic에서 스칼라 사용자 정의 함수 만들기  
  이 코드 예제에서는 만들고에 입력 하는 스칼라 사용자 정의 함수를 제거 하는 방법을 보여 줍니다. <xref:System.DateTime> 개체 매개 변수와 정수 반환 형식을 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]합니다. 사용자 정의 함수에 생성 됩니다는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이 예에서는 날짜 인수를 사용하여 ISO 주 번호를 계산하는 ISOweek라는 사용자 정의 함수를 만듭니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 DATEFIRST 옵션을 1로 설정해야 합니다.  

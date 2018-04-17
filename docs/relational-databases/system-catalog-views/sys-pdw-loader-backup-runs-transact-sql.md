@@ -1,35 +1,36 @@
 ---
 title: sys.pdw_loader_backup_runs (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc42a27de363d0c1f3e62a4b3f69b8b9fbb95de
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 97f8e1daef758d82f2e4dbbbc4cc4b9f15a6740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  진행 중인 시간 및 완료 된 백업 및 복원 작업에 대 한 정보가 들어 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 및 지속적인 시간 및 완료 된 백업, 복원 및 로드 작업에서 하는 방법에 대 한 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 정보는 시스템을 다시 시작 유지합니다.  
+  진행 중인 시간 및 완료 된 백업 및 복원 작업에 대 한 정보가 들어 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 및 지속적인 시간 및 완료 된 백업, 복원 및 로드 작업에서 하는 방법에 대 한 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
@@ -44,8 +45,8 @@ ms.lasthandoff: 02/03/2018
 |database_name|**nvarchar(255)**|이 작업의 컨텍스트는 데이터베이스의 이름||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|작업을 요청 하는 사용자의 ID입니다.||  
-|session_id|**nvarchar(32)**|작업을 수행 하는 세션의 ID입니다.|세션 id를 참조 하십시오. [sys.dm_pdw_exec_sessions &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|작업을 수행 하는 요청의 ID입니다. 로드에 대 한이 부하와 관련 된 현재 또는 마지막 요청입니다.|참조에서 request_id [sys.dm_pdw_exec_requests &#40; Transact SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|작업을 수행 하는 세션의 ID입니다.|세션 id를 참조 하십시오. [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)합니다.|  
+|request_id|**nvarchar(32)**|작업을 수행 하는 요청의 ID입니다. 로드에 대 한이 부하와 관련 된 현재 또는 마지막 요청입니다.|참조에서 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |상태|**nvarchar(16)**|실행의 상태입니다.|'취소',' 완료 ', '실패', '대기', '실행 중|  
 |진행 중|**int**|완료율입니다.|0에서 100|  
 |command|**nvarchar(4000)**|전체 텍스트 사용자가 제출한 명령입니다.|한 (개 공백) 4000 자 보다 긴 경우 잘립니다.|  

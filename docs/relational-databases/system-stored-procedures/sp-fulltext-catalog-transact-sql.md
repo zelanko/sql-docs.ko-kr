@@ -1,16 +1,16 @@
 ---
 title: sp_fulltext_catalog (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_catalog_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3dc2f734fd22d937c403dd63071e17430742ab3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3a247eaed97236d1605aada894c6ba3fa7c228bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  전체 텍스트 카탈로그의 이름입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 은 **sysname**합니다.  
   
- [ **@action=**] **'***action***'**  
+ [  **@action=**] **'***동작***'**  
  수행할 동작입니다. *동작* 은 **varchar (20)**, 다음이 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
@@ -72,7 +73,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@path=**] **'***root_directory***'**  
  에 대 한 폴더의 루트 디렉터리 (하지의 전체 실제 경로)는 **만들** 동작 합니다. *root_directory* 은 **nvarchar (100)** 하며 설치 시 지정 된 기본 위치를 사용 하도록 하는 null 기본값입니다. 이; Mssql 디렉터리의 Ftdata 하위 디렉터리 예를 들어, C:\Program Files\Microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\MSSQL\FTData 합니다. 지정된 루트 디렉터리는 반드시 같은 컴퓨터의 드라이브에 있어야 하며 드라이브 문자 및 다른 문자로 구성되어야 하고 상대 경로가 될 수 없습니다. 네트워크 드라이브, 이동식 드라이브, 플로피 디스크 및 UNC 경로는 지원하지 않습니다. 전체 텍스트 카탈로그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 로컬 하드 드라이브에 만들어야 합니다.  
   
- **@path**경우에 유효한 *동작* 은 **만들**합니다. 외의 동작에 대 한 **만들** (**중지**, **다시 작성**등),  **@path**  생략 하거나 NULL 이어야 합니다.  
+ **@path** 경우에 유효한 *동작* 은 **만들**합니다. 외의 동작에 대 한 **만들** (**중지**, **다시 작성**등), **@path** 생략 하거나 NULL 이어야 합니다.  
   
  클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 가상 서버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 의존하는 공유 디스크 드라이브에 있는 카탈로그 디렉터리를 지정해야 합니다. 경우 @path 을 지정 하지 않으면 기본 카탈로그 디렉터리의 위치는 공유 디스크 드라이브의 가상 서버를 설치할 때 지정 된 디렉터리에 있습니다.  
   
@@ -85,7 +86,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>주의  
  **start_full** 작업의 전체 텍스트 데이터의 완전 한 스냅숏을 만드는 데 사용 되 *fulltext_catalog_name*합니다. **start_incremental** 작업은 데이터베이스에만 변경 된 행의 인덱스를 다시 하는 데 사용 됩니다. 증분 채우기는 테이블 형식의 열에 있는 경우에 적용할 수 **타임 스탬프**합니다. 전체 텍스트 카탈로그의 테이블에에서는 형식의 열이 없으면 **타임 스탬프**, 테이블에 전체 채우기가 수행 합니다.  
   
- 전체 텍스트 카탈로그 및 인덱스 데이터는 전체 텍스트 카탈로그 디렉터리에서 만들어진 파일에 저장됩니다. 전체 텍스트 카탈로그 디렉터리에 지정 된 디렉터리의 하위 디렉터리가으로 만들어집니다.  **@path**  또는 서버의 기본 전체 텍스트 카탈로그 디렉터리의 경우  **@path**  않습니다 지정 합니다. 전체 텍스트 카탈로그 디렉터리의 이름은 해당 서버에서 고유한 이름이 되도록 생성됩니다. 따라서 서버의 모든 전체 텍스트 카탈로그 디렉터리는 같은 경로를 공유할 수 있습니다.  
+ 전체 텍스트 카탈로그 및 인덱스 데이터는 전체 텍스트 카탈로그 디렉터리에서 만들어진 파일에 저장됩니다. 전체 텍스트 카탈로그 디렉터리에 지정 된 디렉터리의 하위 디렉터리가으로 만들어집니다. **@path** 또는 서버의 기본 전체 텍스트 카탈로그 디렉터리의 경우 **@path** 않습니다 지정 합니다. 전체 텍스트 카탈로그 디렉터리의 이름은 해당 서버에서 고유한 이름이 되도록 생성됩니다. 따라서 서버의 모든 전체 텍스트 카탈로그 디렉터리는 같은 경로를 공유할 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  
  호출자의 멤버 여야 필요는 **db_owner** 역할입니다. 요청 된 동작에 따라 호출자에 게 거부 되어서는 안 ALTER 또는 CONTROL 권한 (있는 **db_owner** 가) 대상 전체 텍스트 카탈로그에 있습니다.  
@@ -143,10 +144,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [FULLTEXTCATALOGPROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY & #40; Transact SQL & #41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [sp_fulltext_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   

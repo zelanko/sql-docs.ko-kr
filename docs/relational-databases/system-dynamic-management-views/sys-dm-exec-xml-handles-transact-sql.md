@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_xml_handles (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_xml_handles
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5a136adca5f9c44c763d8acbe82e933ec68954ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +73,7 @@ dm_exec_xml_handles (session_id | 0 )
  수명을 **sql_handles** 호출을 실행 하는 SQL 텍스트를 검색 하는 데 **sp_xml_preparedocument** 쿼리를 실행 하는 데 사용 되는 캐시 된 계획을 더 이상 사용할 없는 합니다. 캐시에서 쿼리 텍스트를 사용할 수 없는 경우에는 함수 결과에 제공된 정보를 사용하여 데이터를 검색할 수 없습니다. 많은 대용량 일괄 처리를 실행할 때 이러한 문제가 발생할 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  
- 호출자가 소유하지 않은 세션 또는 세션 ID를 모두 보려면 서버에 대한 VIEW SERVER STATE 권한이 필요합니다. 호출자는 항상 자신의 현재 세션 ID를 볼 수 있습니다.  
+ 호출자가 소유하지 않은 세션 또는 세션 ID를 모두 보려면 서버에 대한 VIEW SERVER STATE 권한이 필요합니다. 호출자는 항상 자신의 현재 세션 ID를 볼 수 있습니다.      
   
 ## <a name="examples"></a>예  
  다음 예에서는 활성 핸들을 모두 선택합니다.  
@@ -82,7 +83,12 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [실행 관련 동적 관리 뷰 및 함수 &#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ <br>[동적 관리 뷰 및 함수 (TRANSACT-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[실행 관련 동적 관리 뷰 및 함수 (Transact SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+
+
+ 
   
   

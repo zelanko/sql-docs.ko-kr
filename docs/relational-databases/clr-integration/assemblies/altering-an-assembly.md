@@ -1,15 +1,15 @@
 ---
-title: "어셈블리 변경 | Microsoft Docs"
-ms.custom: 
+title: 어셈블리 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - altering assemblies
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89d3058d2359ab5b7ec0f159d3f63f93e5b7c950
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8de2f53e2ccbf082a057ebc35e92fe08f3c76b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="altering-an-assembly"></a>어셈블리 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록된 어셈블리를 ALTER ASSEMBLY 문을 사용하여 최신 버전에서 업데이트할 수 있습니다. 어셈블리를 업데이트하려면 ALTER ASSEMBLY 문을 다음 구문과 함께 사용합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록된 어셈블리를 ALTER ASSEMBLY 문을 사용하여 최신 버전에서 업데이트할 수 있습니다. 어셈블리를 업데이트하려면 ALTER ASSEMBLY 문을 다음 구문과 함께 사용합니다.  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY는 해당 어셈블리를 사용하는 현재 실행 중인 프로세스를 중단하지 않습니다. 이러한 프로세스는 변경되지 않은 어셈블리를 사용하여 계속해서 실행됩니다. 트리거, 저장 프로시저, 집계 함수 및 CLR(공용 언어 런타임) 함수의 서명을 변경하는 데는 ALTER ASSEMBLY를 사용할 수 없습니다. 새 공용 메서드를 어셈블리에 추가하고 전용 메서드를 수정할 수 있으며 서명이나 특성을 변경하지 않는 범위에서 공용 메서드를 수정할 수도 있습니다. 데이터 멤버 또는 기본 클래스를 비롯하여 기본적으로 직렬화된 사용자 정의 형식에 포함된 필드는 ALTER ASSEMBLY를 사용하여 변경할 수 없습니다. 다른 모든 변경은 지원되지 않습니다. 자세한 내용은 참조 [ALTER assembly&#40; Transact SQL &#41; ](../../../t-sql/statements/alter-assembly-transact-sql.md).  
+ ALTER ASSEMBLY는 해당 어셈블리를 사용하는 현재 실행 중인 프로세스를 중단하지 않습니다. 이러한 프로세스는 변경되지 않은 어셈블리를 사용하여 계속해서 실행됩니다. 트리거, 저장 프로시저, 집계 함수 및 CLR(공용 언어 런타임) 함수의 서명을 변경하는 데는 ALTER ASSEMBLY를 사용할 수 없습니다. 새 공용 메서드를 어셈블리에 추가하고 전용 메서드를 수정할 수 있으며 서명이나 특성을 변경하지 않는 범위에서 공용 메서드를 수정할 수도 있습니다. 데이터 멤버 또는 기본 클래스를 비롯하여 기본적으로 직렬화된 사용자 정의 형식에 포함된 필드는 ALTER ASSEMBLY를 사용하여 변경할 수 없습니다. 다른 모든 변경은 지원되지 않습니다. 자세한 내용은 참조 [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)합니다.  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>어셈블리의 권한 집합 변경  
  ALTER ASSEMBLY 문을 사용하여 어셈블리의 권한 집합도 변경할 수 있습니다. 다음 문은 SQLCLRTest 어셈블리의 권한 집합을 변경 **EXTERNAL_ACCESS**합니다.  

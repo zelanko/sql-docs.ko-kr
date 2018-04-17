@@ -1,16 +1,16 @@
 ---
-title: "데이터 형식 강제 변환 및 sql: datatype 주석 (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: '데이터 형식 강제 변환 및 sql: datatype 주석 (SQLXML 4.0) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -24,25 +24,26 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8a2dc2c3d91eea67e9e08a87d5aa7735a1b45b1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데이터 형식을 지정 합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  
+  XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데이터 형식을 지정 합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  
   
  XSD 형식 스키마에서를 지정 하는 것 외에도 지정할 수도 있습니다는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여는 **sql: datatype** 주석입니다. **xsd: type** 및 **sql: datatype** 특성에 XSD 데이터 형식 간의 매핑을 제어 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 특성  
- 사용할 수는 **xsd: type** 특성의 특성 또는 요소는 열에 매핑되는 XML 데이터 형식을 지정 합니다. **xsd: type** 서버 뿐만 아니라 실행 되는 XPath 쿼리에도에서 반환 되는 문서에 영향을 줍니다. 포함 된 매핑 스키마에 대해 XPath 쿼리가 실행 되 면 **xsd: type**, XPath 쿼리를 처리할 때 지정된 된 데이터 형식에 사용 합니다. XPath 사용 하는 방법에 대 한 자세한 내용은 **xsd: type**, 참조 [XSD 데이터 형식을 XPath 데이터 형식 &#40;에 매핑 SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
+ 사용할 수는 **xsd: type** 특성의 특성 또는 요소는 열에 매핑되는 XML 데이터 형식을 지정 합니다. **xsd: type** 서버 뿐만 아니라 실행 되는 XPath 쿼리에도에서 반환 되는 문서에 영향을 줍니다. 포함 된 매핑 스키마에 대해 XPath 쿼리가 실행 되 면 **xsd: type**, XPath 쿼리를 처리할 때 지정된 된 데이터 형식에 사용 합니다. XPath 사용 하는 방법에 대 한 자세한 내용은 **xsd: type**, 참조 [XSD 데이터 형식을 XPath 데이터 형식에 매핑 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)합니다.  
   
  반환된 문서에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식은 문자열 표현으로 변환됩니다. 일부 데이터 형식에는 추가적인 변환이 필요합니다. 다음 표에서 다양 한에 사용 되는 변환 작업을 보여 **xsd: type** 값입니다.  
   
@@ -64,7 +65,7 @@ XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데�
   
 |SQL Server 데이터 형식|XSD 데이터 형식|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
+|**bigint**|**긴**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**문자열**|  
@@ -198,6 +199,6 @@ XSD 스키마에서는 **xsd: type** 특성은 요소 또는 특성의 XSD 데�
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>2. sql:datatype을 사용하여 SQL 데이터 형식 지정  
- 작업 예제의 경우에 7 번 예를 참조 하십시오. [XML 대량 로드 예 &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예제에서 스키마 지정 **sql: datatype** 식별 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을으로 **uniqueidentifier**합니다. 이 예에서는 설명 때 **sql: datatype** 스키마에 지정 해야 합니다.  
+ 작업 예제의 경우에 7 번 예를 참조 하십시오. [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)합니다. 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예제에서 스키마 지정 **sql: datatype** 식별 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을으로 **uniqueidentifier**합니다. 이 예에서는 설명 때 **sql: datatype** 스키마에 지정 해야 합니다.  
   
   

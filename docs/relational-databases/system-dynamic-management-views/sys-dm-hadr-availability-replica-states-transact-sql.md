@@ -1,16 +1,16 @@
 ---
 title: sys.dm_hadr_availability_replica_states (TRANSACT-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_hadr_availability_replica_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9adddf8b74848948bfdd45fdf93813ed7489d40a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2d5e82f9da96f1831d7f0b76b92f469ec567a508
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 02/03/2018
 |**is_local**|**bit**|복제본이 로컬 인지 중 하나:<br /><br /> 0 = 주 복제본이 로컬 서버 인스턴스에 의해 호스팅되는 가용성 그룹의 원격 보조 복제본을 나타냅니다. 이 값은 주 복제본 위치에서만 발생합니다.<br /><br /> 1 = 로컬 복제본을 나타냅니다. 보조 복제본에서는 복제본이 속하는 가용성 그룹에 대해 이 값만 사용할 수 있습니다.|  
 |**role**|**tinyint**|현재 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 로컬 복제 또는 중 하나는 연결 된 원격 복제본의 역할:<br /><br /> 0 = 확인 중<br /><br /> 1 = 주<br /><br /> 2 = 보조<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 역할에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.|  
 |**role_desc**|**nvarchar(60)**|에 대 한 설명 **역할**이며 다음 중 하나입니다.<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
-|**operational_state**|**tinyint**|중 하나는 복제본의 현재 작동 상태:<br /><br /> 0 = 장애 조치(Failover) 보류 중<br /><br /> 1 = 보류 중<br /><br /> 2 = Online<br /><br /> 3 = 오프 라인<br /><br /> 4 = 실패<br /><br /> 5 = 실패, 쿼럼 없음<br /><br /> NULL = 복제본이 로컬이 아닙니다.<br /><br /> 자세한 내용은 참조 [역할 및 작동 상태](#RolesAndOperationalStates)이 항목의 뒷부분에 나오는 합니다.|  
+|**operational_state**|**tinyint**|중 하나는 복제본의 현재 작동 상태:<br /><br /> 0 = 장애 조치(Failover) 보류 중<br /><br /> 1 = 보류 중<br /><br /> 2 = 온라인<br /><br /> 3 = 오프 라인<br /><br /> 4 = 실패<br /><br /> 5 = 실패, 쿼럼 없음<br /><br /> NULL = 복제본이 로컬이 아닙니다.<br /><br /> 자세한 내용은 참조 [역할 및 작동 상태](#RolesAndOperationalStates)이 항목의 뒷부분에 나오는 합니다.|  
 |**operational\_state\_desc**|**nvarchar(60)**|에 대 한 설명 **operational\_상태**이며 다음 중 하나입니다.<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**recovery\_health**|**tinyint**|롤업을 **데이터베이스\_상태** 의 열은 [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 0: 진행 중에서입니다.  하나 이상의 조인 된 데이터베이스의 데이터베이스 상태가 online (**데이터베이스\_상태** 는 0이 아닌).<br /><br /> 1 : Online. 모든 조인 된 데이터베이스의 온라인 데이터베이스 상태에 있는 (**database_state** 은 0).<br /><br /> NULL : **is_local** = 0|  
+|**recovery\_health**|**tinyint**|롤업을 **데이터베이스\_상태** 의 열은 [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 0: 진행 중에서입니다.  하나 이상의 조인 된 데이터베이스의 데이터베이스 상태가 online (**데이터베이스\_상태** 는 0이 아닌).<br /><br /> 1: 온라인입니다. 모든 조인 된 데이터베이스의 온라인 데이터베이스 상태에 있는 (**database_state** 은 0).<br /><br /> NULL : **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|에 대 한 설명 **recovery_health**이며 다음 중 하나입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**synchronization\_health**|**tinyint**|데이터베이스 동기화 상태에 대 한 롤업을 반영 (**synchronization_state**)의 모든 가용성 데이터베이스 조인 (라고도 *복제본*) 및 복제본 (의 가용성 모드 동기-커밋 또는 비동기-커밋 모드). 롤업을 복제 데이터베이스에 최소 정상 누적된 상태는 데이터베이스를 반영 합니다. 다음은 가능한 값 및 해당 설명을 보려면입니다.<br /><br /> 0: 정상 상태가 아닙니다.   하나 이상의 조인된 데이터베이스가 NOT SYNCHRONIZING 상태입니다.<br /><br /> 1: 부분적으로 정상입니다. 일부 복제본 대상 동기화 상태에 있지 않은: 동기-커밋 복제본을 동기화 해야 하 고 비동기-커밋 복제본을 동기화 해야 합니다.<br /><br /> 2: 정상입니다. 모든 복제본이 대상 동기화 상태: 동기-커밋 복제본이 동기화 되 고 비동기-커밋 복제본은 동기화가 수행 합니다.|  
 |**synchronization_health_desc**|**nvarchar(60)**|에 대 한 설명 **synchronization_health**이며 다음 중 하나입니다.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/03/2018
 |**last_connect_error_description**|**nvarchar(1024)**|텍스트는 **last_connect_error_number** 메시지입니다.|  
 |**last_connect_error_timestamp**|**datetime**|시간을 나타내는 날짜 및 시간 타임 스탬프는 **last_connect_error_number** 오류가 발생 했습니다.|  
   
-##  <a name="RolesAndOperationalStates"></a>역할 및 작동 상태  
+##  <a name="RolesAndOperationalStates"></a> 역할 및 작동 상태  
  역할, **역할**, 지정된 된 가용성 복제본의 상태와 작동 상태를 반영 **operational_state**, 복제본이 모두에 대 한 클라이언트 요청을 처리할 준비가 되었는지 여부를 설명 합니다.는 가용성 복제본의 데이터베이스입니다. 다음은 각 역할에 대해 가능한 작동 상태에 대 한 요약: 확인 하 고, 기본 및 보조 합니다.  
   
  **RESOLVING:** 가능한 작동 상태는 다음 표에 나와 있는 것 처럼 가용성 복제본이 RESOLVING 역할인 경우.  

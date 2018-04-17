@@ -1,15 +1,16 @@
 ---
-title: "상호 운용 가능한 응용 프로그램 작성 | Microsoft Docs"
-ms.custom: 
+title: 상호 운용 가능한 응용 프로그램 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-an-interoperable-application"></a>상호 운용 가능한 응용 프로그램 작성
 응용 프로그램 둘 이상의 드라이버에 대해 동일한 코드를 사용할 때마다 해당 코드 드라이버만 간에 상호 운용 가능 해야 합니다. 대부분의 경우 쉬운 일입니다. 예를 들어, 정방향 전용 커서와 함께 행을 인출 하는 코드에 대 한 모든 드라이버 같습니다. 경우에 따라이 어려울 수 있습니다. 예를 들어 SQL 문에서 사용에 대 한 식별자를 생성 하는 코드는 식별자의 대/소문자, 인용 부호를 및 한 부분, 두 부분 및 세 부분으로 이루어진 명명 규칙을 고려해 야 합니다.  

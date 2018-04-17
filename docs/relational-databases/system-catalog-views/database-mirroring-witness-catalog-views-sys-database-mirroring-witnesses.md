@@ -1,16 +1,16 @@
 ---
 title: sys.database_mirroring_witnesses (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_witnesses
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 42d31f59d652e7f92f4051dab3af741c6f161c73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>데이터베이스 미러링 모니터 카탈로그 뷰-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**family_guid**|**uniqueidentifier**|데이터베이스 백업 패밀리의 식별자입니다. 일치하는 복원 상태를 찾는 데 사용됩니다.|  
 |**is_suspended**|**bit**|데이터베이스 미러링이 일시 중지됩니다.|  
 |**is_suspended_sequence_number**|**int**|시퀀스 번호 설정에 대 한 **is_suspended**합니다.|  
-|**partner_sync_state**|**tinyint**|미러링 세션의 동기화 상태<br /><br /> 5 = 파트너가 동기화 합니다. 장애 조치를 수행할 수 있습니다. 장애 조치 참조에 대 한 요구 사항에 대 한 내용은 [세션 중 역할 전환는 데이터베이스 미러링 &#40; SQL Server &#41; ](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = 파트너가 동기화 되지 않습니다. 지금은 장애 조치를 수행할 수 없습니다.|  
+|**partner_sync_state**|**tinyint**|미러링 세션의 동기화 상태<br /><br /> 5 = 파트너가 동기화 합니다. 장애 조치를 수행할 수 있습니다. 장애 조치 참조에 대 한 요구 사항에 대 한 내용은 [세션 중 역할 전환는 데이터베이스 미러링 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)합니다.<br /><br /> 6 = 파트너가 동기화 되지 않습니다. 지금은 장애 조치를 수행할 수 없습니다.|  
 |**partner_sync_state_desc**|**nvarchar(60)**|미러링 세션의 동기화 상태 설명<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Permissions  
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -1,31 +1,32 @@
 ---
-title: "간격 데이터 형식 길이 | Microsoft Docs"
-ms.custom: 
+title: 간격 데이터 형식 길이 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - length of data types [ODBC]
 - interval data type [ODBC], length
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e588cb2457099cad698d3cc34265f26bc639972
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67cfccf9823f59e02ece652acc35f26b07e3ce89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-data-type-length"></a>간격 데이터 형식의 길이입니다.
 다음 규칙은 문자에서 간격 데이터 형식의 길이 확인 하는 데 사용 됩니다. 길이 문자 수로 표시 됩니다. 바이트 수가 경우 문자 집합에 따라 달라 집니다. 길이 함께 추가 하는 다음 값에 포함 됩니다.  

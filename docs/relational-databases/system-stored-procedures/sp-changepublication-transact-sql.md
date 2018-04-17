@@ -1,16 +1,16 @@
 ---
 title: sp_changepublication (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정된 된 게시에 대 한 익명 구독을 만들 수 있습니다 및 *immediate_sync* 수도 있어야 **true**합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
@@ -98,7 +98,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**ftp_subdirectory**||게시가 FTP를 사용하여 스냅숏 전파를 지원하는 경우 스냅숏 파일이 생성되는 위치를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 |**immediate_sync**|**true**|스냅숏 에이전트가 실행될 때마다 게시에 대한 동기화 파일이 생성되거나 다시 생성됩니다. 구독 전에 스냅숏 에이전트가 완료된 경우 구독자는 구독 후에 바로 동기화 파일을 받을 수 있습니다. 새 구독은 스냅숏 에이전트를 가장 최근에 실행하여 생성된 최신 동기화 파일을 가져옵니다. *independent_agent* 수도 있어야 **true**합니다. 에 대 한 자세한 내용은 아래 설명 부분을 참조 하십시오. **immediate_sync**합니다.|  
 ||**false**|새 구독이 있는 경우에만 동기화 파일이 만들어집니다. 구독자는 스냅숏 에이전트가 시작되어 완료될 때까지는 구독 이후의 동기화 파일을 받을 수 없습니다.|  
-|**독립 에이전트**|**true**|게시에는 전용 배포 에이전트가 있습니다.|  
+|**independent_agent**|**true**|게시에는 전용 배포 에이전트가 있습니다.|  
 ||**false**|게시는 공유 배포 에이전트를 사용하며 게시/구독 데이터베이스 쌍마다 공유 에이전트가 있습니다.|  
 |**p2p_continue_onconflict**|**true**|충돌이 감지되면 배포 에이전트에서 변경 내용을 계속 처리합니다.<br /> **주의:** 의 기본값을 사용 하는 것이 좋습니다 `FALSE`합니다. 이 옵션 설정 된 경우 `TRUE`, 배포 에이전트에서 가장 높은 송신자 ID를 가집니다. 노드에서 충돌 행을 적용 하 여 토폴로지의 데이터를 일치 시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
 ||**false**|충돌이 감지되면 배포 에이전트에서 변경 내용 처리를 중지합니다.|  
@@ -113,13 +113,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**0**|DDL 문은 복제되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다. 피어 투 피어 복제를 사용할 때는 스키마 변경 내용의 복제를 해제할 수 없습니다.|  
 |**replicate_partition_switch**|**true**|게시된 데이터베이스에 대해 실행되는 ALTER TABLE…SWITCH 문을 구독자에 복제해야 합니다. 이 옵션은 사용할 경우에만 *allow_partition_switch* 가 TRUE로 설정 합니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
 ||**false**|ALTER TABLE…SWITCH 문을 구독자에 복제하면 안 됩니다.|  
-|**보존**||**int** 구독 작업에 대 한 시간 동안 보존 기간을 나타내는입니다. 구독이 보존 기간 동안 활성화되지 않으면 제거됩니다.|  
+|**retention**||**int** 구독 작업에 대 한 시간 동안 보존 기간을 나타내는입니다. 구독이 보존 기간 동안 활성화되지 않으면 제거됩니다.|  
 |**snapshot_in_defaultfolder**|**true**|스냅숏 파일이 기본 스냅숏 폴더에 저장됩니다. 경우 *alt_snapshot_folder*옵션도 지정 된 경우에 스냅숏 파일이 기본 및 대체 위치에 저장 됩니다.|  
 ||**false**|로 지정한 대체 위치에 스냅숏 파일이 저장 됩니다 *alt_snapshot_folder*합니다.|  
 |**상태**|**활성**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**비활성**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-|**sync_method**|**네이티브**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
-||**문자**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
+|**sync_method**|**native**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
+||**character**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
 ||**동시**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 ||**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 |**taskid**||이 속성은 더 이상 사용되지 않으며 지원되지 않습니다.|  
@@ -138,7 +138,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** 문서에 대 한 변경으로 인해 구독이 다시 초기화 해야 하지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 아티클의 변경이 아티클에 기존 구독이 다시 초기화 해야 할 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-[  **@publisher**  =] **'***게시자***'**  
+[ **@publisher** = ] **'***publisher***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
   > [!NOTE]  
@@ -180,8 +180,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>관련 항목:  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

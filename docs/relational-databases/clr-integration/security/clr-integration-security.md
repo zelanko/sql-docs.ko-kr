@@ -1,15 +1,15 @@
 ---
-title: "CLR 통합 보안 | Microsoft Docs"
-ms.custom: 
+title: CLR 통합 보안 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 
+caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc6038395a2a4206095da0d7a2a3ecf8ab5f72cc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bcf484ba9d27cf430797271ae157b120d41ba7ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 통합에 대한 보안 모델에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 실행되는 서로 다른 유형의 CLR 개체와 CLR이 아닌 개체 간의 액세스를 관리하고 보호합니다. 이러한 개체는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 서버에서 실행되는 다른 CLR 개체에서 호출할 수 있습니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 통합에 대한 보안 모델에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 실행되는 서로 다른 유형의 CLR 개체와 CLR이 아닌 개체 간의 액세스를 관리하고 보호합니다. 이러한 개체는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 서버에서 실행되는 다른 CLR 개체에서 호출할 수 있습니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
   
  CLR 통합 보안 모델의 목표는 다음과 같습니다.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   사용자 정의 코드가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행된다는 것 때문에 시스템 리소스에 무단으로 액세스할 수 있게 되면 안 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이제 사용자 기반 보안 모델은 통합 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR의 코드 액세스 기반 보안 모델로 합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 사용자 기반 모델과 CLR의 코드 액세스 기반 보안 모델을 통합합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   

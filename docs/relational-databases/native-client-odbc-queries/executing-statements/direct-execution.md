@@ -1,15 +1,15 @@
 ---
-title: "직접 실행 | Microsoft Docs"
-ms.custom: 
+title: 직접 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, statements
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b0dbe099a36f7571f024e34838337f38b5ddef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff1baa498a99f9e9279d1c104df179fa34cbea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-execution"></a>직접 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다중 사용자 환경에서 자주 실행되는 문의 직접 실행 성능이 크게 향상되었으며, 자주 실행되는 SQL 문에 대한 매개 변수 표식과 SQLExecDirect를 함께 사용하여 준비된 실행의 효율성을 높일 수 있습니다.  
   
- 인스턴스에 연결 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용 하 여 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) SQL 문 또는 일괄 처리에 지정 된 전송 하는 데 **SQLExecDirect**합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL 문 신속 하 게 결정 하는 논리 했거나이 사용 하 여 일괄 처리 실행 **sp_executesql** 문 또는 메모리에 이미 있는 실행 계획을 생성 하는 일괄 처리와 일치 합니다. 일치하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 새 계획을 컴파일하는 대신 기존 계획을 다시 사용합니다. 이 즉, 자주 실행 되는 SQL 문을 사용 하 여 실행 **SQLExecDirect** 있는 많은 사용자가 시스템에서 이익을 얻을 여러 에서만 의이전버전에서저장된프로시저에가능했던계획다시사용이점[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ 인스턴스에 연결 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용 하 여 [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) SQL 문 또는 일괄 처리에 지정 된 전송 하는 데 **SQLExecDirect**합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL 문 신속 하 게 결정 하는 논리 했거나이 사용 하 여 일괄 처리 실행 **sp_executesql** 문 또는 메모리에 이미 있는 실행 계획을 생성 하는 일괄 처리와 일치 합니다. 일치하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 새 계획을 컴파일하는 대신 기존 계획을 다시 사용합니다. 이 즉, 자주 실행 되는 SQL 문을 사용 하 여 실행 **SQLExecDirect** 있는 많은 사용자가 시스템에서 이익을 얻을 여러 에서만 의이전버전에서저장된프로시저에가능했던계획다시사용이점[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  실행 계획을 다시 사용하는 데 따른 이러한 이점은 여러 사용자가 동일한 SQL 문 또는 일괄 처리를 실행하는 경우에만 얻을 수 있습니다. 여러 클라이언트에서 실행되는 SQL 문에서 실행 계획의 다시 사용 가능성을 높이려면 다음 코딩 규칙을 따르십시오.  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 01/25/2018
  모든 문이 실행 되는 경우 **SQLExecDirect** 은 이러한 규칙을 사용 하 여 코딩 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 기회가 있을 때 실행 계획을 재사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [실행 중인 문 &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [실행 중인 문 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

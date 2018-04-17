@@ -2,7 +2,7 @@
 title: 데이터베이스 기능 사용을 고려 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a980d3f10b95af3f75945ad945bd5afd78ed5edf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="considering-database-features-to-use"></a>데이터베이스 기능 사용을 고려합니다.
 기본 수준의 상호 운용성 파악 한 후에 응용 프로그램에서 사용 되는 데이터베이스 기능을 고려 되어야 합니다. 예를 들어 SQL 문을 응용 프로그램이 실행 됩니다. 스크롤 가능 커서를 사용 하 여 응용 프로그램은? 트랜잭션을? 프로시저? Long 데이터? 어떤 기능에 대 한 아이디어를 모든 Dbms에서 지원 되지 않는, 참조는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명과 [ 부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 일부 Dbms 대상 Dbms의 목록에서 응용 프로그램에 필요한 기능을 제거할 수도 있습니다. 또한 응용 프로그램을 여러 Dbms 대상 쉽게 수 보여 수도 있습니다.  

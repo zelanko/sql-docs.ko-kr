@@ -1,31 +1,32 @@
 ---
-title: "수직 응용 프로그램 | Microsoft Docs"
-ms.custom: 
+title: 수직 응용 프로그램 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], vertical applications
 - vertical applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81f0b9b75a1431b071e20425ba7f0386fe7a1b00
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c53a7541757bb1f9dc6c9c21cf2fd56461ffa1c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vertical-applications"></a>수직 응용 프로그램
 수직 응용 프로그램에는 일반적으로 단일 DBMS에 대해 잘 정의 된 작업을 수행합니다. 예를 들어 주문 입력 응용 프로그램 회사의 주문을 추적 합니다. 어떻게 이러한 유형의 응용 프로그램의 공통점은 데이터베이스 스키마는 일반적으로 응용 프로그램 개발자가 설계, 단일 고객에 대 한 단일 DBMS와 함께 작동 응용 프로그램 수 다양 한 다른 Dbms 사용 하는 동안입니다.  

@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geometry_index_xml (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b345a5b87ffc78c47052210a055ab3ee157effc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 75d4a07808aa47e748a0bd814587d19d34f74ce3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  NULL 값이 포함된 속성은 XML 반환 집합에 포함되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `sp_help_spatial_geometry_index_xml` 공간 인덱스를 조사 하려면 **SIndx_SpatialTable_geometry_col2** 테이블에 정의 된 **geometry_col** 지정된 쿼리 샘플에 대 한  **@qs** . 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
+ 다음 예제에서는 `sp_help_spatial_geometry_index_xml` 공간 인덱스를 조사 하려면 **SIndx_SpatialTable_geometry_col2** 테이블에 정의 된 **geometry_col** 지정된 쿼리 샘플에 대 한 **@qs**. 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
   
  [XQuery](../../xquery/xquery-basics.md) 그런 다음 특정 속성이 반환 하는 결과 집합에서 실행 됩니다.  
   

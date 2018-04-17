@@ -1,15 +1,15 @@
 ---
-title: "SQL Server Native Client 기능 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Native Client 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f86438187351bfe36409c34c3a4193ac0120a777
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  [유효성 검사 없이 암호화 사용](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하여 인증서 유효성을 검사하지 않고 서버에 전송된 데이터를 암호화하는 방법을 설명합니다.  
   
- [테이블 반환 매개 변수 사용 &#40; SQL Server Native Client &#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
  테이블 반환 매개 변수에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 지원을 설명합니다.  
   
  [큰 CLR 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)  
  에 대해 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 향상된 된 FILESTREAM 기능에 대 한 Native Client 지원 합니다.  
   
- [서비스 사용자 이름 &#40; SPN &#41; 클라이언트 연결의 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  
   
  [SQL Server Native Client의 스파스 열 지원](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  

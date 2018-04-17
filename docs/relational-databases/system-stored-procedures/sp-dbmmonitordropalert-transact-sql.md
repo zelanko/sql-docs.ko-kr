@@ -1,16 +1,16 @@
 ---
 title: sp_dbmmonitordropalert (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0d44857fac9113592a14dd3dd41f85abfe95fdf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7daa0de1b18d6e34e9dab2880ffb07401f575b7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_dbmmonitordropalert database_name
 > [!NOTE]  
 >  이 프로시저를 사용 하 여 지정 된 여부에 관계 없이 경고 임계값을 삭제 **sp_dbmmonitorchangealert** 또는 데이터베이스 미러링 모니터입니다.  
   
- 경고에 해당 하는 이벤트 Id에 대 한 정보를 참조 하십시오. [미러링 성능 메트릭에 &#40;에 대해 사용 하 여 경고 임계값 및 경고 SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ 경고에 해당 하는 이벤트 Id에 대 한 정보를 참조 하십시오. [미러링 성능 메트릭에 대해 사용 하 여 경고 임계값 및 경고 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  InclusionThresholdSetting  

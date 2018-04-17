@@ -1,16 +1,16 @@
 ---
 title: sp_check_for_sync_trigger (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 586498365ee695ee5dc92252af47ad7706e1adfb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38dfc81498173fe6024095889d06d222d4d98201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [ **@trigger_op =** ] '*trigger_output_parameters*' 출력  
  출력 매개 변수에서 호출되고 있는 트리거 유형을 반환할지 여부를 지정합니다. *trigger_output_parameters* 은 **char (10)** 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**기능**|INSERT 트리거|  
 |**Upd**|UPDATE 트리거|  
@@ -65,7 +65,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  저장 프로시저를 실행하는 위치를 지정합니다. *fonpublisher* 은 **비트**을 기본값인 0으로 합니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되는 형식에서 반환 되는 트리거를 1 나타냅니다  *@trigger_op* 합니다.  
+ 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되는 형식에서 반환 되는 트리거를 1 나타냅니다 *@trigger_op*합니다.  
   
 ## <a name="remarks"></a>주의  
  **sp_check_for_sync_trigger** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  

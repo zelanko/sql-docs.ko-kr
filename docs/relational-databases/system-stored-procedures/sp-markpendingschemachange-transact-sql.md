@@ -1,16 +1,16 @@
 ---
 title: sp_markpendingschemachange (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1712e646a8efda1fdc4f06d912a1021a0beaff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fb7bcbed7f49c4b48adb5317f2e418f37d5264e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@schemaversion=** ] *스키마 버전*  
- 보류 중인 스키마 변경 내용을 식별합니다. *schemaversion* 은 **int**의 기본값은 **0**합니다. 사용 하 여 [sp_enumeratependingschemachanges &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 게시에 대 한 보류 중인 스키마 변경 내용 나열 합니다.  
+ 보류 중인 스키마 변경 내용을 식별합니다. *schemaversion* 은 **int**의 기본값은 **0**합니다. 사용 하 여 [sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 게시에 대 한 보류 중인 스키마 변경 내용 나열 합니다.  
   
  [  **@status=** ] **'***상태***'**  
  보류 중인 스키마 변경 내용을 건너뛸 것인지 여부입니다. *상태* 은 **nvarchar (10)** 의 기본값은 **활성**합니다. 하는 경우의 값 *상태* 은 **건너뛴**, 다음 선택한 스키마 변경 복제 되지 것입니다.  
@@ -70,6 +70,6 @@ sp_markpendingschemachange [@publication = ] 'publication'
  구성원만는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있는 **sp_markpendingschemachange**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [sysmergeschemachange &#40; Transact SQL &#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

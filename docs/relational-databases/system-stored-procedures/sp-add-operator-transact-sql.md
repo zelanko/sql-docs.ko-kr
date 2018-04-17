@@ -1,16 +1,16 @@
 ---
 title: sp_add_operator (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c91f79397a84f6277f4bb891144a5fceb40d02ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ sp_add_operator [ @name = ] 'name'
  [ **@name=** ] **'***name***'**  
  운영자(알림 수신자)의 이름입니다. 이 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 (**%**) 문자. *이름* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@enabled=** ] *사용 하도록 설정*  
+ [ **@enabled=** ] *enabled*  
  운영자의 현재 상태를 나타냅니다. *활성화* 은 **tinyint**, 기본값은 **1** (사용). 경우 **0**, 연산자는 사용 되지 않으며 알림을 받지 않습니다.  
   
  [ **@email_address=** ] **'***email_address***'**  
  운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)**, 기본값은 NULL입니다.  
   
- 실제 전자 메일 주소 또는 별칭을 지정할 수 있습니다 *email_address*합니다. 예를 들어  
+ 실제 전자 메일 주소 또는 별칭을 지정할 수 있습니다 *email_address*합니다. 예를 들어:  
   
  '**jdoe**'또는'**jdoe@xyz.com**'  
   
@@ -112,7 +112,7 @@ sp_add_operator [ @name = ] 'name'
  [ **@netsend_address=** ] **'***netsend_address***'**  
  네트워크 메시지가 전송되는 운영자의 네트워크 주소입니다. *netsend_address*은 **nvarchar (100)**, 기본값은 NULL입니다.  
   
- [ **@category_name=** ] **'***category***'**  
+ [  **@category_name=** ] **'***범주***'**  
  이 운영자에 대한 범주 이름입니다. *범주* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -150,9 +150,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_delete_operator &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

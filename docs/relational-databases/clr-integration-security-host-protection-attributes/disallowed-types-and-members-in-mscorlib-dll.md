@@ -1,34 +1,34 @@
 ---
-title: "형식 및 멤버 mscorlib.dll에 허용 되지 않는 | Microsoft Docs"
-ms.custom: 
+title: 형식 및 멤버 mscorlib.dll에 허용 되지 않는 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - host protection attributes [CLR integration]
 - common language runtime [SQL Server], host protection attributes
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 020650c3ba8789a71f6d433174dc59a7c1dc27cc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cfd7193336a3063d028495622ecc3e7001f8bf53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>mscorlib.dll에 허용되지 않는 유형 및 멤버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]공용 언어 통합 (CLR) 프로그래밍 형식 또는 멤버를 사용할 수 없게 하는 **HostProtectionAttribute** 지정 하는 **System.Security.Permissions.HostProtectionResource** 열거형의 값을 가진 **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **: SharedState**, **동기화** 또는 **UI**합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 mscorlib.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 통합 (CLR) 프로그래밍 형식 또는 멤버를 사용할 수 없게 하는 **HostProtectionAttribute** 지정 하는 **System.Security.Permissions.HostProtectionResource** 열거형의 값을 가진 **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **: SharedState**, **동기화**, 또는 **UI**합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 mscorlib.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  

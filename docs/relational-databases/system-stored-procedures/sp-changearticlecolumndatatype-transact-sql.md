@@ -1,16 +1,16 @@
 ---
 title: sp_changearticlecolumndatatype (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1defb009948d01147e4b8f9e333cdd108c8bbba9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08ed5f6f79b78dcb251ebd632f0cf6c70ffec1ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [  **@article =** ] **'***문서***'**  
  아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@column** =] **'***열***'**  
+ [ **@column**=] **'***열***'**  
  데이터 형식 매핑을 변경할 열 이름입니다. *열* 은 **sysname**, 기본값은 없습니다.  
   
- [  **@type**  =] **'***형식***'**  
+ [ **@type** =] **'***형식***'**  
  이름인는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 열의 데이터 형식이 있습니다. *형식* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@length**  =] *길이*  
+ [ **@length** =] *길이*  
  대상 열에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 길이입니다. *길이* 은 **bigint**, 기본값은 NULL입니다.  
   
- [  **@precision** =] *정밀도*  
+ [ **@precision**=] *정밀도*  
  대상 열에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 전체 자릿수입니다. *정밀도* 은 **bigint**, 기본값은 NULL입니다.  
   
- [  **@publisher** =] **'***게시자***'**  
+ [ **@publisher**=] **'***게시자***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

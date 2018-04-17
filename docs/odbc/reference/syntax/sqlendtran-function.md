@@ -2,7 +2,7 @@
 title: SQLEndTran 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
@@ -71,7 +71,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>진단  
  때 **SQLEndTran** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 는 적절 한 *HandleType*및 *처리*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLEndTran** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다|DM ()는 *HandleType* sql_handle_dbc 라는, 되었습니다 및 *처리* 가 연결 된 상태가 아닙니다.|  
@@ -96,7 +96,7 @@ SQLRETURN SQLEndTran(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  Odbc 3. *x* 드라이버 경우 *HandleType* SQL_HANDLE_ENV은 및 *처리* 다음 드라이버 관리자가 호출 됩니다는 한 유효한 환경 핸들 **SQLEndTran**는 환경에 연결 된 각 드라이버에 있습니다. *처리* 드라이버에 대 한 호출에 대 한 인수는 드라이버의 환경 핸들 됩니다. Odbc 2. *x* 드라이버 경우 *HandleType* SQL_HANDLE_ENV은 및 *처리* 은 잘못 된 환경 핸들 및 해당 환경에서 연결된 된 상태에 대 한 연결이 여러 개 다음 드라이버 관리자는 호출 **SQLTransact** 해당 환경에서 연결된 된 상태에서 각 연결에 대해 한 번씩 드라이버에서 합니다. *처리* 각 호출의 인수에는 연결의 핸들 수 있습니다. 두 경우 모두 드라이버는 하려고 값에 따라 트랜잭션을 커밋하거나 *CompletionType*, 해당 환경에서 연결된 된 상태에 있는 모든 연결에 대해 합니다. 연결이 활성화 되지 않은 트랜잭션을 영향을 주지 않습니다.  
   
 > [!NOTE]  
@@ -113,9 +113,9 @@ SQLRETURN SQLEndTran(
   
  트랜잭션 작업이 커서에 미치는 영향을 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_CURSOR_ROLLBACK_BEHAVIOR 및 SQL_CURSOR_COMMIT_BEHAVIOR 옵션입니다. 자세한 내용은 다음 단락을 참조 하십시오. 및 참조도 [커서 및 준비 된 문에서 영향의 트랜잭션을](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)합니다.  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR 또는 SQL_CURSOR_COMMIT_BEHAVIOR 값 SQL_CB_DELETE, 절과 같을 경우 **SQLEndTran** 닫습니다 및 연결과 관련 된 모든 문이 열려 있는 모든 커서를 삭제 하 고, 모든 보류 중인 결과 무시 합니다. **SQLEndTran** 할당 된 (준비) 상태 이면에 있는 모든 문을 벗어날 응용 프로그램이 후속 SQL 요청에 다시 사용할 수 나 호출할 수 **SQLFreeStmt** 또는 **SQLFreeHandle** 와 *HandleType* 이러한 할당을 취소 하 여의 합니다.  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR 또는 SQL_CURSOR_COMMIT_BEHAVIOR 값 SQL_CB_DELETE, 절과 같을 경우 **SQLEndTran** 닫습니다 및 연결과 관련 된 모든 문이 열려 있는 모든 커서를 삭제 하 고, 모든 보류 중인 결과 무시 합니다. **SQLEndTran** 할당 된 (준비) 상태 이면에 있는 모든 문을 벗어날 응용 프로그램이 후속 SQL 요청에 다시 사용할 수 나 호출할 수 **SQLFreeStmt** 또는 **SQLFreeHandle** 와 *HandleType* 이러한 할당을 취소 하 여입니다.  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR 또는 SQL_CURSOR_COMMIT_BEHAVIOR 값 SQL_CB_CLOSE, 절과 같을 경우 **SQLEndTran** 연결과 관련 된 모든 문에서 열려 있는 모든 커서가 닫힙니다. **SQLEndTran** 준비 된 상태 이면에 있는 모든 문을 벗어날 응용 프로그램에서 호출할 수 **SQLExecute** 먼저 호출 하지 않고 연결과 관련 된 문에 대 한 **SQLPrepare** .  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR 또는 SQL_CURSOR_COMMIT_BEHAVIOR 값 SQL_CB_CLOSE, 절과 같을 경우 **SQLEndTran** 연결과 관련 된 모든 문에서 열려 있는 모든 커서가 닫힙니다. **SQLEndTran** 준비 된 상태 이면에 있는 모든 문을 벗어날 응용 프로그램에서 호출할 수 **SQLExecute** 먼저 호출 하지 않고 연결과 관련 된 문에 대 한 **SQLPrepare**합니다.  
   
  SQL_CURSOR_ROLLBACK_BEHAVIOR 또는 SQL_CURSOR_COMMIT_BEHAVIOR 값 SQL_CB_PRESERVE, 절과 같을 경우 **SQLEndTran** 연결과 관련 된 열려 있는 커서에는 영향을 주지 않습니다. 커서는 계속 호출 하기 전에 가리키는 행 **SQLEndTran**합니다.  
   

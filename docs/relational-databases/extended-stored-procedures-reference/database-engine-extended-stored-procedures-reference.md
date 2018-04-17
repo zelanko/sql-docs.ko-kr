@@ -1,36 +1,36 @@
 ---
-title: "확장 저장 프로시저 프로그래머 참조 | Microsoft Docs"
-ms.custom: 
+title: 확장 저장 프로시저 프로그래머 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], listed
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b01374dd2432bff534a6a795a15382d2a7ef494
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d0035bdc69a5ccc8b5e5baef0c3590b54b614e2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>데이터베이스 엔진 확장 저장 프로시저 - 참조
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  이전에 개방형 Data Services의 일부였던 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장 저장 프로시저 API는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 확장하기 위한 서버 기반 API(응용 프로그래밍 인터페이스)를 제공합니다. API는 응용 프로그램을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_help_schedule (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_schedule
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59223cb9ba6fd0a7129966fa49aef4d8e7e67eb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c29f9e803884778a4bc4222eec29feb40e867996
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ sp_help_schedule
  [ **@schedule_name =** ] **'***schedule_name***'**  
  나열할 일정의 이름입니다. *schedule_name* 은 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 또는 *schedule_name* 지정할 수 있습니다.  
   
- [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
+ [ **@attached_schedules_only** =] *attached_schedules_only* ]  
  작업이 연결되어 있는 일정만 표시할지 여부를 지정합니다. *attached_schedules_only* 은 **비트**, 기본값은 **0**합니다. 때 *attached_schedules_only* 은 **0**, 모든 일정이 표시 됩니다. 때 *attached_schedules_only* 은 **1**, 결과 집합을 작업에 연결 되어 있는 일정만 포함 합니다.  
   
- [ **@include_description** = ] *include_description*  
+ [ **@include_description** =] *include_description*  
  결과 집합에 설명을 포함할지 여부를 지정합니다. *include_description* 은 **비트**, 기본값은 **0**합니다. 때 *include_description* 은 **0**, *schedule_description* 자리 표시자를 포함 하는 결과 집합의 열입니다. 때 *include_description* 은 **1**는 일정 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -74,11 +74,11 @@ sp_help_schedule
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
 |**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 됩니다.|  
-|**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 **freq_type**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 실행 사이 발생 하는 기간. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|작업 발생 횟수의 예약 된 **freq_interval** 각 월에 합니다. 자세한 내용은 참조 [sp_add_schedule &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 한 번<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** 기준으로 = 매월는 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 됩니다.|  
+|**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 **freq_type**합니다. 자세한 내용은 참조 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
+|**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 참조 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
+|**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 실행 사이 발생 하는 기간. 자세한 내용은 참조 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
+|**freq_relative_interval**|**int**|작업 발생 횟수의 예약 된 **freq_interval** 각 월에 합니다. 자세한 내용은 참조 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_recurrence_factor**|**int**|작업의 예정된 실행 간의 개월 수입니다.|  
 |**active_start_date**|**int**|일정을 활성화하는 날짜입니다.|  
 |**active_end_date**|**int**|일정을 종료하는 날짜입니다.|  
@@ -130,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [sp_add_schedule&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule&#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

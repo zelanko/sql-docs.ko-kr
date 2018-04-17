@@ -1,30 +1,31 @@
 ---
-title: "제품 주기의 길이 | Microsoft Docs"
-ms.custom: 
+title: 제품 주기의 길이 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab57383e7702b981566b67a6c1b21f3e9f767de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 마지막 문의 시간입니다. 일반적으로 상호 운용 가능한 응용 프로그램을 개발 noninteroperable 하나 개발 보다 오래 걸립니다. 이유는 응용 프로그램 해야 DBMS 기능을 확인, 다른 Dbms에 대 한 동일한 작업을 다르게 수행, 다른 하지만 일부 Dbms에서 지 원하는 기능을 해결 등입니다.  

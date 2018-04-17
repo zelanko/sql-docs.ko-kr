@@ -2,7 +2,7 @@
 title: SQLGetCursorName 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69a0da5196c5724284c2da75dc6c7deb3c3cedcd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 함수(SQLGetCursorName Function)
 **규칙**  
@@ -55,7 +55,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *M e*  
+ *m e*  
  [출력] 커서 이름을 반환 하는 버퍼에 대 한 포인터입니다.  
   
  경우 *m e* 이 NULL 이면 *NameLengthPtr* 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는 버퍼에서 반환할 수 *M e*합니다.  
@@ -72,7 +72,7 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetCursorName** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLGetCursorName** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *m e* 충분히 커서 이름이 잘렸습니다 하므로 전체 커서 이름을 반환할 수 없습니다. 잘리지 않은 커서 이름의 길이가 반환 됩니다 **NameLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -86,7 +86,7 @@ SQLRETURN SQLGetCursorName(
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  커서 이름은 위치 지정된 업데이트에만 사용 되며 및 delete 문 (예를 들어 **업데이트** *테이블 이름* ... **WHERE CURRENT OF** *커서 이름을*). 자세한 내용은 참조 [배치 Update 및 Delete 문이](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않는 **SQLSetCursorName** 커서 이름을 정의 하려면 드라이버는 이름을 생성 합니다. 이 이름은 SQL_CUR 문자로 시작합니다.  
   
 > [!NOTE]  

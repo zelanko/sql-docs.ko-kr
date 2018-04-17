@@ -1,16 +1,16 @@
 ---
 title: sp_addmessage (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [ **@msgnum****=** ] *msg_id*  
  메시지 ID입니다. *msg_id* 은 **int** 기본값은 NULL입니다. *msg_id* 사용자 정의 오류에 대 한 메시지 50,001 2,147,483,647 사이의 정수일 수 있습니다. 조합의 *msg_id* 및 *언어* 고유; 지정 된 언어 ID가 이미 존재 하는 경우 오류가 반환 됩니다.  
   
- [ **@severity =** ]*severity*  
+ [  **@severity =** ]*심각도*  
  오류의 심각도입니다. *심각도* 은 **smallint** 기본값은 NULL입니다. 유효한 수준은 0에서 25까지입니다. 심각도에 대한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)를 참조하세요.  
   
  [ **@msgtext =** ] **'***msg***'**  
  오류 메시지의 텍스트입니다. *msg* 은 **nvarchar (255)** 기본값은 NULL입니다.  
   
- [ **@lang =** ] **'***language***'**  
+ [  **@lang =** ] **'***언어***'**  
  이 메시지의 언어입니다. *언어* 은 **sysname** 기본값은 NULL입니다. 여러 언어를 동일한 서버에 설치할 수 있으므로 *언어* 각 메시지 작성 되는 언어를 지정 합니다. 때 *언어* 은 생략 하면 언어는 기본 언어는 세션에 대 한 합니다.  
   
- [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- 오류가 발생할 때 Windows 응용 프로그램 로그에 기록할지 여부입니다. **@with_log****varchar(5)** 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 구성원만는 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
+ [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ 오류가 발생할 때 Windows 응용 프로그램 로그에 기록할지 여부입니다. **@with_log** **varchar(5)** 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 구성원만는 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
- [ **@replace** *=* ] **'***replace***'**  
+ [ **@replace** *=* ] **'***대체***'**  
  문자열로 지정 된 경우 *대체*, 새 메시지 텍스트와 심각도 수준으로 기존 오류 메시지를 덮어씁니다. *대체* 은 **varchar(7)** 기본값은 NULL입니다. 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 영어(미국)로 작성된 메시지 심각도 수준이 동일한 다른 모든 언어의 모든 메시지에 대 한 대체 됩니다 *msg_id*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -171,8 +171,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>관련 항목:  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "데이터 원본 (ODBC)에 연결 | Microsoft Docs"
-ms.custom: 
+title: 데이터 원본 (ODBC)에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-communication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - checking connection states
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88fb99a39ca8050c72622e1c4d6a99bc041561e6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3a1b963b0b59b3361ff1daeae3c808976c962ab0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>데이터 원본에 연결(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,6 +122,6 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
  오류 처리에 대 한 응용 프로그램의 함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 호출 해야 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다. 사용 되지 않는 모든 메시지에는 적용 한 다음 해야는 *pfNative* 코드가 5701 또는 5703 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server &#40; ODBC &#41;와 통신](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [SQL Server와 통신 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

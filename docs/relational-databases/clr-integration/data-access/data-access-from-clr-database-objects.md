@@ -1,15 +1,15 @@
 ---
-title: "CLR 데이터베이스 개체에서 데이터 액세스 | Microsoft Docs"
-ms.custom: 
+title: CLR 데이터베이스 개체에서 데이터 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a1132744c7d58581c1d5d60b5fca1cbd5e9fc66
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 34a3fba5d3026601994d8c258ea35b87cbf5d4bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-공용 언어 런타임 (CLR) 루틴의 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 실행 되 원격 인스턴스에 저장 된 데이터 뿐만 아니라 합니다. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. 에 대 한.NET Framework Data Provider를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]하며, **SqlClient**합니다. 이 공급자는 관리 클라이언트 및 중간 계층 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터에 액세스하는 개발자가 사용하는 것과 동일한 공급자입니다. 이 인해 ADO.NET에 대 한 지식을 활용할 수 있습니다 및 **SqlClient** 클라이언트 및 중간 계층 응용 프로그램에 있습니다.  
+  공용 언어 런타임 (CLR) 루틴의 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 실행 되 원격 인스턴스에 저장 된 데이터 뿐만 아니라 합니다. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. 에 대 한.NET Framework Data Provider를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]하며, **SqlClient**합니다. 이 공급자는 관리 클라이언트 및 중간 계층 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터에 액세스하는 개발자가 사용하는 것과 동일한 공급자입니다. 이 인해 ADO.NET에 대 한 지식을 활용할 수 있습니다 및 **SqlClient** 클라이언트 및 중간 계층 응용 프로그램에 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 사용자 정의 형식 메서드 및 사용자 정의 함수를 사용하여 데이터 액세스를 수행할 수는 없습니다. 설정 해야 합니다는 **DataAccess** 속성 **SqlMethodAttribute** 또는 **SqlFunctionAttribute** 를 **DataAccessKind.Read** 사용 하도록 설정 하려면 사용자 정의 함수 또는 사용자 정의 형식 (UDT) 방법 중에서 읽기 전용 데이터 액세스 합니다. 데이터 수정 작업은 UDT 또는 사용자 정의 함수를 통해 수행할 수 없으며 이를 시도할 경우 실행 시에 예외가 throw됩니다.  

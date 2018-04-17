@@ -1,16 +1,16 @@
 ---
 title: sys.sp_rda_test_connection (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9cd981a64ea452c64e24f6578e33d171fd51559
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 45ba48abca5372cde0e303bce431ef66b6e299df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
--   에 대 한 값을 제공 하는 경우  **@database_name** , 지정된 된 데이터베이스는 스트레치 지원 하지 않습니다 다음에 대 한 값을 제공 해야 하지만  **@server_address** 합니다.  
+-   에 대 한 값을 제공 하는 경우 **@database_name**, 지정된 된 데이터베이스는 스트레치 지원 하지 않습니다 다음에 대 한 값을 제공 해야 하지만 **@server_address**합니다.  
   
--   에 대 한 값을 제공 하는 경우  **@database_name** , 지정한 데이터베이스는 스트레치 사용 하 고 다음 값을 제공 하지 않아도  **@server_address** 합니다. 에 대 한 값을 제공 하는 경우  **@server_address** , 저장된 프로시저를 무시 하 고 스트레치 사용 데이터베이스와 연결 된 기존 Azure 서버를 이미 사용 하 여 합니다.  
+-   에 대 한 값을 제공 하는 경우 **@database_name**, 지정한 데이터베이스는 스트레치 사용 하 고 다음 값을 제공 하지 않아도 **@server_address**합니다. 에 대 한 값을 제공 하는 경우 **@server_address**, 저장된 프로시저를 무시 하 고 스트레치 사용 데이터베이스와 연결 된 기존 Azure 서버를 이미 사용 하 여 합니다.  
   
  @azure_username = N'*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  
@@ -66,7 +66,7 @@ EXECUTE sys.sp_rda_test_connection
  @azure_password = N'*azure_password*'  
  원격 Azure 서버에 대 한 암호입니다.  
   
- @credential_name= N'*credential_name*'  
+ @credential_name = N'*credential_name*'  
  사용자 이름 및 암호를 제공 하는 대신 스트레치 사용 데이터베이스에 저장 된 자격 증명의 이름을 제공할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -79,7 +79,7 @@ EXECUTE sys.sp_rda_test_connection
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |link_state|int|에 대 한 값에 해당 하는 다음 값 중 하나 **link_state_desc**합니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -   HEALTHY<br />     SQL Server와 원격 Azure 서버는 정상 상태입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server가 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 실패 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제가 없는 오류 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.|  
+|link_state_desc|varchar(32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버는 정상 상태입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-ERROR_NO_CONNECTION<br />     SQL Server가 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 실패 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제가 없는 오류 때문에 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.|  
 |error_number|int|오류의 수입니다. 오류가 없으면 이면이 필드는 NULL입니다.|  
 |error_message|nvarchar(1024)|오류 메시지. 오류가 없으면 이면이 필드는 NULL입니다.|  
   

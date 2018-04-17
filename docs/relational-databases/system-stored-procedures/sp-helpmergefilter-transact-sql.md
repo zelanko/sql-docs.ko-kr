@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergefilter (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ec2500e3fc16c2f6c78473fb97a6b1bf757ef52
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 35e478a3eb65b030d61f32ea57ed23510d1eb994
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'***게시***'**  
+ [ **@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은  **%** , 모든 아티클의 이름을 반환 하는 합니다.  
+ 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 하는 합니다.  
   
  [  **@filtername=**] **'***filtername***'**  
- 정보를 반환할 필터의 이름입니다. *filtername* 은 **sysname**, 기본값은  **%** , 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
+ 정보를 반환할 필터의 이름입니다. *filtername* 은 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

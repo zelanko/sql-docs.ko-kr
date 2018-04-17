@@ -1,15 +1,15 @@
 ---
-title: "Null 허용 여부 및 3 값 논리 비교 | Microsoft Docs"
-ms.custom: 
+title: Null 허용 여부 및 3 값 논리 비교 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abef06c62b28aa2e25f61127d8dd23551652b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2765043127179ee7578cd4258e909351198e727
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 허용 여부 및 3개의 값 논리 비교
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-에 대해 잘 알고 있다면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식, 비슷한 의미 체계와 정확 하 게 찾을 수 있습니다는 **System.Data.SqlTypes** 네임 스페이스에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]합니다. 그러나 약간의 차이가 있으며 이 항목에서는 이러한 차이 중 가장 중요한 점에 대해 설명합니다.  
+  에 대해 잘 알고 있다면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식, 비슷한 의미 체계와 정확 하 게 찾을 수 있습니다는 **System.Data.SqlTypes** 네임 스페이스에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]합니다. 그러나 약간의 차이가 있으며 이 항목에서는 이러한 차이 중 가장 중요한 점에 대해 설명합니다.  
   
 ## <a name="null-values"></a>NULL 값  
  기본 CLR(공용 언어 런타임) 데이터 형식과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 간의 주된 차이점은 전자에서는 NULL 값을 허용하지 않는 반면 후자에서는 완전한 NULL 의미 체계를 제공한다는 것입니다.  

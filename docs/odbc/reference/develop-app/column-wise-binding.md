@@ -1,38 +1,39 @@
 ---
-title: "열 단위 바인딩은 | Microsoft Docs"
-ms.custom: 
+title: 열 단위 바인딩은 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>열 단위 바인딩
 열 단위 바인딩을 사용할 때 응용 프로그램 하나 또는 두 개 또는 경우에 따라 배열이 세, 데이터 반환 되는 각 열에 바인딩합니다. 첫 번째 배열을 데이터 값을 보유 하 고 두 번째 배열 길이/표시기 버퍼를 저장 합니다. 표시기 및 길이 값에에서 저장할 수 별도 버퍼 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드; 있는 다른 값을 설정 하 여 이 도구를 실행 하는 경우 세 번째 배열이 바인딩되어 있습니다. 각 배열 행 집합의 행이 더 많은 요소를 포함 합니다.  
   
  응용 프로그램 SQL_ATTR_ROW_BIND_TYPE 문 특성을 가진 열 단위 바인딩을 사용 함을 선언 버퍼 설정 매개 변수 대신 행 집합 버퍼에 대 한 바인딩 종류를 결정 합니다. 드라이버는 연속 된 각 배열의 요소에 각 행에 대 한 데이터를 반환합니다. 다음 그림에서는 어떻게 열 단위 바인딩의 작동 보여 줍니다.  
   
- ![열 &#45; 세 열의 열 단위 바인딩](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![열&#45;세 열의 열 단위 바인딩](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  예를 들어 다음 코드 OrderID, 영업 사원, 및 상태 열에 10 개 요소 배열에 바인딩합니다.  
   

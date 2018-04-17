@@ -1,15 +1,16 @@
 ---
-title: "Interval 데이터 형식을 | Microsoft Docs"
-ms.custom: 
+title: Interval 데이터 형식을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-data-types"></a>Interval 데이터 형식
 간격은 두 날짜 및 시간 간의 차이로 정의 됩니다. 간격으로 두 가지 방법 중 하나로 표현 됩니다. 하나는 *년-월* 간격 연도 및 월의 정수가 측면에서 표현 하는 간격입니다. 다른 하나는 한 *하루 시간* 간격 (일), 분 및 초 측면에서 표현 하는 간격입니다. 이러한 두 가지 유형의 간격으로 고유 하 고 월 일 수가 다양 한 여러 있을 수 있으므로 혼합할 수 없습니다.  

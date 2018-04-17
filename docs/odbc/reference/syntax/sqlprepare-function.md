@@ -2,7 +2,7 @@
 title: SQLPrepare 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 함수
 **규칙**  
@@ -66,10 +66,10 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>진단  
  때 **SQLPrepare** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 관련된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 와 *HandleType* SQL_의 HANDLE_STMT 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLPrepare** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01 S 02|옵션 값이 변경 됨|지정 된 문 특성 유사한 값에 일시적으로 대체 하므로 구현 작업 조건 때문에 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|지정 된 문 특성 유사한 값에 일시적으로 대체 하므로 구현 작업 조건 때문에 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합는 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |21S01|삽입 값 목록이 열 목록과 일치 하지 않습니다.|\**StatementText* 포함 된 프로그램 **삽입** 문과 개수 값을 삽입할 수 정도 파생된 테이블의 일치 하지 않습니다.|  
 |21S02|파생된 테이블의 수준이 열 목록과 일치 하지 않습니다.|\**StatementText* 포함 된 한 **CREATE VIEW** 문과 지정 된 이름의 수 쿼리 사양에 정의 된 파생 테이블로 동일한도 않습니다.|  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|인덱스가 이미 있습니다.|\**StatementText* 포함 한 **CREATE INDEX** 문과 지정 된 인덱스 이름이 이미 존재 합니다.|  
 |42S12|인덱스를 찾을 수 없음|\**StatementText* 포함 한 **DROP INDEX** 문과 지정 된 인덱스 이름이 존재 하지 않습니다.|  
 |42S21|열이 이미 있습니다.|\**StatementText* 포함 된 프로그램 **ALTER TABLE** 문과에 지정 된 열은 **추가** 절 고유 하지 않거나 기본 테이블의 기존 열을 식별 합니다.|  
-|42S22|열이 없습니다|\**StatementText* 포함 한 **CREATE INDEX** 문, 하나 이상의 열 목록에 지정 된 이름이 없습니다. 열입니다.<br /><br /> \**StatementText* 포함 된 한 **GRANT** 또는 **해지** 문과 지정한 열 이름이 존재 하지 않습니다.<br /><br /> \**StatementText* 포함 한 **선택**, **삭제**, **삽입**, 또는 **업데이트** 문 및 지정된 된 열 이름이 존재 하지 않습니다.<br /><br /> \**StatementText* 포함 한 **CREATE TABLE** 문과 (참조 테이블 이외의 생성 되 고) 제약 조건에 지정 된 열이 없는 것입니다.|  
+|42S22|열이 없습니다|\**StatementText* 포함 한 **CREATE INDEX** 문, 하나 이상의 열 목록에 지정 된 이름이 없습니다. 열입니다.<br /><br /> \**StatementText* 포함 된 한 **GRANT** 또는 **해지** 문과 지정한 열 이름이 존재 하지 않습니다.<br /><br /> \**StatementText* 포함 한 **선택**, **삭제**, **삽입**, 또는 **업데이트** 문 및 지정된 된 열 이름 존재 하지 않습니다.<br /><br /> \**StatementText* 포함 한 **CREATE TABLE** 문과 (참조 테이블 이외의 생성 되 고) 제약 조건에 지정 된 열이 없는 것입니다.|  
 |HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*, 함수가 호출 후 및 다시는 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  응용 프로그램 호출 **SQLPrepare** 준비에 대 한 데이터 원본에는 SQL 문을 보내야 합니다. 준비 된 실행에 대 한 자세한 내용은 참조 [실행 준비](../../../odbc/reference/develop-app/prepared-execution-odbc.md)합니다. 응용 프로그램은 SQL 문에서 하나 이상의 매개 변수 표식을 포함할 수 있습니다. 응용 프로그램 매개 변수 표식에 포함 하려면 적절 한 위치에 SQL 문자열에 물음표 (?)를 포함 시킵니다. 매개 변수에 대 한 정보를 참조 하십시오. [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.  
   
 > [!NOTE]  

@@ -1,15 +1,15 @@
 ---
-title: "클라이언트 연결의 서비스 사용자 이름 (SPN) 지원 | Microsoft Docs"
-ms.custom: 
+title: 클라이언트 연결의 서비스 사용자 이름 (SPN) 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0670bbb967a10d2d14750f2a32a321cc912fce
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9281aae9e4e6aef2a48c0f99362689512613b405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 
   부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], 모든 프로토콜에서 상호 인증을 사용 하도록 서비스 사용자 이름 (Spn)에 대 한 지원이 확장 되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Spn 대해서만 지원 되었습니다 Kerberos TCP를 통한 때 기본에 대 한 SPN의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Active Directory에 등록 된 인스턴스가 있습니다.  
   
- Spn을 사용 하는 인증 프로토콜에 의해 결정 되는 계정을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행 합니다. 인스턴스 계정이 알려진 경우 Kerberos 인증을 사용하여 클라이언트와 서버에 의한 상호 인증을 제공할 수 있습니다. 인스턴스 계정이 알려지지 않은 경우 서버에 의한 클라이언트 인증만 제공하는 NTLM 인증이 사용됩니다. 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 인스턴스 이름과 네트워크 연결 속성에서 SPN을 파생 시켜 인증 조회를 수행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스는 시작 시 Spn 등록을 시도 하거나 수동으로 등록할 수 있습니다. SPN을 등록하려고 시도하는 계정에 액세스 권한이 충분하지 않은 경우 등록은 실패하게 됩니다.  
+ Spn을 사용 하는 인증 프로토콜에 의해 결정 되는 계정을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행 합니다. 인스턴스 계정이 알려진 경우 Kerberos 인증을 사용하여 클라이언트와 서버에 의한 상호 인증을 제공할 수 있습니다. 인스턴스 계정이 알려지지 않은 경우 서버에 의한 클라이언트 인증만 제공하는 NTLM 인증이 사용됩니다. 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 인스턴스 이름과 네트워크 연결 속성에서 SPN을 파생 시켜 인증 조회를 수행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 시작 시 Spn 등록을 시도 하거나 수동으로 등록할 수 있습니다. SPN을 등록하려고 시도하는 계정에 액세스 권한이 충분하지 않은 경우 등록은 실패하게 됩니다.  
   
- 도메인 및 컴퓨터 계정은 Active Directory에 자동으로 등록됩니다. 이러한 계정을 SPN으로 사용할 수 있고 관리자가 직접 자신의 SPN을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]보안 인증의 좀 더 관리 및 신뢰할 수 있는 클라이언트가 사용할 SPN을 직접 지정 하도록 허용 하 여 만듭니다.  
+ 도메인 및 컴퓨터 계정은 Active Directory에 자동으로 등록됩니다. 이러한 계정을 SPN으로 사용할 수 있고 관리자가 직접 자신의 SPN을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 인증의 좀 더 관리 및 신뢰할 수 있는 클라이언트가 사용할 SPN을 직접 지정 하도록 허용 하 여 만듭니다.  
   
 > [!NOTE]  
 >  클라이언트 응용 프로그램에서 지정한 SPN은 Windows 통합 보안으로 연결이 설정되는 경우에만 사용됩니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.   
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결 된 서버를 만들면는  **@provstr**  의 매개 변수 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 서버 및 장애 조치 파트너 Spn 지정 데 사용할 수 있습니다. 이렇게 하는 경우의 장점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
+ 연결 된 서버를 만들면는 **@provstr** 의 매개 변수 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 서버 및 장애 조치 파트너 Spn 지정 데 사용할 수 있습니다. 이렇게 하는 경우의 장점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPN을 지원하는 ODBC 및 OLE DB 구문  
  구문별 정보는 다음 항목을 참조하십시오.  
   
--   [서비스 사용자 이름 &#40; Spn &#41; 클라이언트 연결 &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [서비스 사용자 이름 &#40; Spn &#41; 클라이언트 연결 &#40; OLE db&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 기능 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   

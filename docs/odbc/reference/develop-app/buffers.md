@@ -1,15 +1,16 @@
 ---
-title: "버퍼 | Microsoft Docs"
-ms.custom: 
+title: 버퍼 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input buffers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffers"></a>버퍼
 버퍼는 드라이버 및 응용 프로그램 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리의 일부입니다. 예를 들어 응용 프로그램 버퍼에 연결할 수 있는, 또는 *하면서 바인딩된* 결과 집합으로 열 **SQLBindCol**합니다. 각 행을 인출할 때 이러한 버퍼에 각 열에 대 한 데이터가 반환 됩니다. *입력 버퍼* 드라이버;에 응용 프로그램에서 데이터를 전달 하는 데 사용 됩니다 *출력 버퍼* 응용 프로그램에는 드라이버에서 데이터를 반환 하는 데 사용 됩니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  일반적으로 이러한 버퍼 쌍으로 제공 합니다. *데이터 버퍼* 는 자체 데이터를 전달 하는 데 사용 *길이/표시기 버퍼* 데이터가 NULL 인지 여부를 나타내는 SQL_NULL_DATA 같은 특수 값 또는 데이터 버퍼에 있는 데이터의 길이 전달 하는 데 사용 됩니다. 데이터 버퍼에 있는 데이터의 길이 자체 데이터 버퍼의 길이와 다릅니다. 다음 그림은 데이터 버퍼 및 길이/표시기 버퍼 간의 관계를 보여 줍니다.  
   
- ![데이터 버퍼 및 길이 &#47; 표시기 버퍼](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![데이터 버퍼 및 길이&#47;표시기 버퍼](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  길이/표시기 버퍼는 데이터 버퍼에는 문자 또는 이진 데이터 등의 가변 길이 데이터가 포함 될 때마다 필요 합니다. 데이터 버퍼에는 정수 또는 날짜 구조를 같은 고정 길이 데이터를 포함 하는 경우에 길이/표시기 버퍼 데이터의 길이 이미 알려져 있으므로 표시기 값을 받는 데만 필요 합니다. 고정 길이 데이터로 길이/표시기 버퍼를 사용 하는 응용 프로그램, 드라이버에 전달 된 길이 무시 합니다.  
   

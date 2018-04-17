@@ -1,15 +1,15 @@
 ---
-title: "확장 저장된 프로시저 프로그래밍 | Microsoft Docs"
-ms.custom: 
+title: 확장 저장된 프로시저 프로그래밍 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - gateway applications [SQL Server]
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - Open Data Services [SQL Server]
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30b49631c0d0c3f487dfd97e21fc1b670e652f47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a372ac6b678903b435c682bcb6bf21c76637488f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>데이터베이스 엔진 확장 저장된 프로시저-프로그래밍
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
- 이전에는 개방형 Data Services를 사용하여 SQL Server가 아닌 데이터베이스 환경에 대한 게이트웨이와 같은 서버 응용 프로그램을 작성했습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개방형 데이터 서비스 API의 사용 되지 않는 부분을 지원 하지 않습니다. 원래 개방형 Data Services API 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여전히 지원되는 부분은 확장 저장 프로시저뿐이므로 API의 이름이 확장 저장 프로시저 API로 바뀌었습니다.  
+ 이전에는 개방형 Data Services를 사용하여 SQL Server가 아닌 데이터베이스 환경에 대한 게이트웨이와 같은 서버 응용 프로그램을 작성했습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개방형 데이터 서비스 API의 사용 되지 않는 부분을 지원 하지 않습니다. 원래 개방형 Data Services API 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여전히 지원되는 부분은 확장 저장 프로시저뿐이므로 API의 이름이 확장 저장 프로시저 API로 바뀌었습니다.  
   
  분산 쿼리 및 CLR 통합과 같은 보다 강력한 최신 기술이 등장하면서 확장 저장 프로시저 API 응용 프로그램의 필요성이 크게 바뀌었습니다.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 XP(확장 저장 프로시저)는 데이터베이스 응용 프로그램 개발자가 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 표현하기 어렵거나 작성할 수 없는 서버 쪽 논리를 작성할 수 있었던 유일한 메커니즘을 제공했습니다. CLR Integration은 이러한 저장 프로시저를 작성하는 보다 강력한 대체 방법을 제공합니다. 또한 CLR 통합을 사용할 경우 저장 프로시저의 형태로 작성되던 논리를 보다 효율적인 테이블 반환 함수로 표현할 수 있습니다. 테이블 반환 함수를 통해 함수에서 생성된 결과를 FROM 절에 포함하여 SELECT 문으로 쿼리할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [공용 언어 런타임 &#40; CLR &#41; 통합 개요](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
+ [공용 언어 런타임 &#40;CLR&#41; 통합 개요](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
  [CLR 테이블 반환 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   
   
