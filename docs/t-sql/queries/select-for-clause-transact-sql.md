@@ -1,16 +1,16 @@
 ---
-title: "FOR 절(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: FOR 절(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FOR
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 085a9c7f6422c70cc43086d2174a5c7aa485040e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 15eb6f5f9be81551bf0ce36c3826948c77c0a37d
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ JSON
  쿼리 결과를 XML 문서로 반환하도록 지정합니다. 다음 XML 모드 중 하나를 지정해야 합니다. RAW, AUTO, EXPLICIT. FOR XML 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
   
  RAW [ **('***ElementName***')** ]  
- 쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML 출력은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md) 및 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
+ 쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML 출력은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.
   
  AUTO  
  단순하게 중첩된 XML 트리로 쿼리 결과를 반환합니다. 최소한 한 개의 열이 SELECT 절에 나열되는 FROM 절의 각 테이블은 XML 요소로 표시됩니다. SELECT 절에 나열되는 열은 해당 요소의 특성에 매핑됩니다. 자세한 내용은 [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)을 참조하세요.  
@@ -259,7 +259,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  단일 최상위 요소를 JSON 출력에 추가하려면 **FOR JSON** 절을 사용하여 **ROOT** 옵션을 지정합니다. **ROOT** 옵션을 지정하지 않은 경우 JSON 출력에는 루트 요소가 없습니다. 자세한 내용 및 예제는 [ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가&#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
- 기본적으로 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **FOR JSON** 절을 사용하여 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 옵션을 지정하지 않으면 JSON 출력은 대괄호로 묶입니다. 단일 JSON 객체를 출력으로 생성하려면  **WITHOUT_ARRAY_WRAPPER**  옵션을 사용합니다.  자세한 내용은 [WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 JSON 출력에서 대괄호 제거&#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md).  
+ 기본적으로 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **FOR JSON** 절을 사용하여 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 옵션을 지정하지 않으면 JSON 출력은 대괄호로 묶입니다. 단일 JSON 객체를 출력으로 생성하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 사용합니다.  자세한 내용은 [WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 JSON 출력에서 대괄호 제거&#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md).  
   
  자세한 내용은 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정&#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   

@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기)를 사용 하 여 데이터베이스 백업 및 복원 | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기)를 사용 하 여 데이터베이스 백업 및 복원 하는 방법을 알아봅니다"
+title: SQL Operations Studio (preview) 를 사용 하 여 데이터베이스 백업 및 복원 | Microsoft Docs
+description: SQL Operations Studio (preview) 를 사용 하 여 데이터베이스 백업 및 복원 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

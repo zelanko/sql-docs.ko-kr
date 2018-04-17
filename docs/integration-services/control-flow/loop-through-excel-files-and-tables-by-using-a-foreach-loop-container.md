@@ -1,37 +1,40 @@
 ---
-title: "Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
+title: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8344f5e7ec975af0dea3b35a218347b8c1d6224f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3a6bda13eb448dd8071908de58206b31fc003181
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
-  
-### <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Foreach File 열거자를 사용하여 Excel 파일을 루핑하려면  
+
+> [!IMPORTANT]
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
+ 
+## <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Foreach File 열거자를 사용하여 Excel 파일을 루핑하려면  
   
 1.  루프 반복마다 현재 Excel 경로와 파일 이름을 받을 문자열 변수를 만듭니다. 유효성 검사 문제를 방지하려면 변수의 초기 값으로 유효한 Excel 경로 및 파일 이름을 할당하십시오. 이 절차의 뒷부분에 나오는 예제 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 02/15/2018
   
 11. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 파일 위치 및 패턴과 일치하는 각 Excel 통합 문서에 같은 작업을 수행합니다.  
   
-### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
+## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
 1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
@@ -98,6 +101,7 @@ ms.lasthandoff: 02/15/2018
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
+ [SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)  
  [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)   

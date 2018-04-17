@@ -1,6 +1,6 @@
 ---
-title: "Insights 및 SQL 작업 Studio (미리 보기)의 일반적인 작업을 신속 하 게 액세스할 | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기)에서 통찰력 위젯을 표시 하는 방법을 알아봅니다."
+title: Insights 및 SQL Operations Studio (preview) 의 일반적인 작업을 신속 하 게 액세스할 | Microsoft Docs
+description: SQL Operations Studio (preview) 에서 통찰력 위젯을 표시 하는 방법을 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기) 이란? | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기)는 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스; 관리 하기 위한 창, macOS 등 및 Linux에서 실행 되는 무료, 간단한 도구 실행 중인 아무 곳에 나 있습니다."
+title: SQL Operations Studio (preview) 이란? | Microsoft Docs
+description: SQL Operations Studio (preview) 는 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스; 관리 하기 위한 창, macOS 등 및 Linux에서 실행 되는 무료, 간단한 도구 실행 중인 아무 곳에 나 있습니다.
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

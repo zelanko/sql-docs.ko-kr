@@ -1,81 +1,41 @@
 ---
-title: "보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/27/2015
+title: 보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b713cbe4afa9a54e9753e3347d4b2e6b85d91144
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f80aebe1158d3ac4d64bd49c683b43719ab1a6f3
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
-  이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RS.exe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
-  
-  
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 
-  
-## <a name="in-this-topic"></a>항목 내용  
-  
--   [ssrs_migration.rss 스크립트를 다운로드하려면](#bkmk_download_script)  
-  
--   [지원되는 시나리오](#bkmk_supported_scenarios)  
-  
--   [스크립트가 마이그레이션하는 항목 및 리소스](#bkmk_what_is_migrated)  
-  
--   [필요한 권한](#bkmk_required_permissions)  
-  
--   [스크립트 사용 방법](#bkmk_how_to_use_the_script)  
-  
--   [매개 변수 설명](#bkmk_parameter_description)  
-  
--   [추가 예제](#bkmk_more_examples)  
-  
-    -   [기본 모드 보고서 서버에서 기본 모드 보고서 서버로](#bkmk_native_2_native)  
-  
-    -   [기본 모드에서 SharePoint 모드로 - 루트 사이트](#bkmk_native_2_sharepoint_root)  
-  
-    -   [기본 모드에서 SharePoint 모드로 - 'bi' 사이트 모음](#bkmk_native_2_sharepoint_with_site)  
-  
-    -   [SharePoint 모드에서 SharePoint 모드로 - ‘bi’ 사이트 모음](#bkmk_sharepoint_2_sharepoint)  
-  
-    -   [기본 모드에서 기본 모드로 – Windows Azure 가상 컴퓨터](#bkmk_native_to_native_Azure_vm)  
-  
-    -   [SharePoint 모드 – ‘bi’ 사이트 모음에서 Windows Azure 가상 컴퓨터의 기본 모드로 서버로](#bkmk_sharepoint_site_to_native_Azure_vm)  
-  
--   [확인](#bkmk_verification)  
-  
--   [문제 해결](#bkmk_troubleshoot)  
-  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
+
+이 항목에는 **RS.exe** 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트가 포함되며, 이에 대해 설명합니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
+
 ##  <a name="bkmk_download_script"></a> ssrs_migration.rss 스크립트를 다운로드하려면  
- 스크립트를 CodePlex 사이트 [Reporting Services RS.exe 스크립트 마이그레이션 콘텐츠](https://azuresql.codeplex.com/releases/view/115207) 에서 로컬 폴더로 다운로드합니다. 자세한 내용은 이 항목의 [스크립트 사용 방법](#bkmk_how_to_use_the_script) 섹션을 참조하세요.  
+ 스크립트를 GitHub 사이트 [Reporting Services RS.exe 마이그레이션 스크립트](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/reporting-services/ssrs-migration-rss)에서 로컬 폴더로 다운로드합니다. 자세한 내용은 이 문서의 [스크립트 사용 방법](#bkmk_how_to_use_the_script) 섹션을 참조하세요.  
   
 ##  <a name="bkmk_supported_scenarios"></a> 지원되는 시나리오  
- 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다. 스크립트에는 다음과 같은 서버 버전이 지원됩니다.  
+ 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다. 스크립트는 보고서 서버 버전 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 이상 및 Power BI Report Server를 지원합니다.  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
-  
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
-  
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
- 스크립트를 사용하면 동일한 모드 또는 서로 다른 모드의 보고서 서버 사이에 콘텐츠를 복사할 수 있습니다. 예를 들어 스크립트를 실행해서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 기본 모드 보고서 서버에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 모드 보고서 서버로 콘텐츠를 복사할 수 있습니다. 스크립트는 RS.exe가 설치된 모든 서버에서 실행할 수 있습니다. 예를 들어 배포에서 다음 작업을 수행할 수 있습니다.  
+스크립트를 사용하면 동일한 모드 또는 서로 다른 모드의 보고서 서버 사이에 콘텐츠를 복사할 수 있습니다. 예를 들어 스크립트를 실행해서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 기본 모드 보고서 서버에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 모드 보고서 서버로 콘텐츠를 복사할 수 있습니다. 스크립트는 RS.exe가 설치된 모든 서버에서 실행할 수 있습니다. 예를 들어 배포에서 다음 작업을 수행할 수 있습니다.  
   
 -   서버 A **상에서** RS.exe 및 스크립트를 실행합니다.  
   
@@ -97,11 +57,11 @@ ms.lasthandoff: 01/09/2018
 |항목|마이그레이션|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |암호|**아니요**|**아니요**|암호는 마이그레이션되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다. 예: 저장된 자격 증명이 포함된 데이터 원본.|  
-|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 "내 보고서"는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목은 스크립트로 복사되지 않습니다.<br /><br /> 이 스크립트를 사용해서 "내 보고서" 폴더에 있는 콘텐츠를 마이그레이션하려면 다음을 수행합니다.<br /><br /> 1.  보고서 관리자에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  "내 보고서" 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  보고서 관리자에서 **내 보고서** 폴더를 클릭합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 클릭합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  보고서 관리자 도구 모음에서 **이동**을 클릭합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
+|내 보고서|**아니오**|**아니요**|기본 모드의 "내 보고서" 기능은 개별 사용자 로그인을 기반으로 하므로, 스크립팅 서비스가 rss 스크립트를 실행하는 데 사용된 **–u** 매개 변수 이외에는 사용자에 대해 "내 보고서" 폴더의 콘텐츠에 대한 액세스 권한을 갖지 않습니다. 또한 “내 보고서”는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 기능이 아니며, 폴더의 항목을 SharePoint 환경으로 복사할 수 없습니다. 따라서 원본 기본 모드 보고서 서버에서 "내 보고서" 폴더에 있는 보고서 항목은 스크립트로 복사되지 않습니다.<br /><br /> 이 스크립트를 사용해서 “내 보고서” 폴더에 있는 콘텐츠를 마이그레이션하려면 다음 단계를 완료합니다.<br /><br /> 1.  보고서 관리자에서 새 폴더를 만듭니다. 필요에 따라 각 사용자에 대해 폴더 또는 하위 폴더를 만들 수 있습니다.<br />2.  “내 보고서” 콘텐츠가 있는 사용자 중 하나로 로그인합니다.<br />3.  보고서 관리자에서 **내 보고서** 폴더를 클릭합니다.<br />4.  폴더에 대한 **세부 정보** 보기를 클릭합니다.<br />5.  복사하려는 각 보고서를 선택합니다.<br />6.  보고서 관리자 도구 모음에서 **이동**을 클릭합니다.<br />7.  원하는 대상 폴더를 선택합니다.<br />8.  각 사용자에 대해 2-7단계를 반복합니다.<br />9. 스크립트를 실행합니다.|  
 |기록|**아니요**|**아니요**||  
 |기록 설정|예|예|기록 설정이 마이그레이션되지만 기록 세부 정보는 마이그레이션되지 않습니다.|  
-|일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 '부모 권한 상속' 플래그가 TRUE로 설정된 항목이 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)항목에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 "오류" 메시지를 만들고 다른 항목의 마이그레이션을 계속 수행합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
+|일정|예|예|일정을 마이그레이션하려면 대상 서버에서 SQL Server 에이전트가 실행 중이어야 합니다. SQL Server 에이전트가 대상에서 실행 중이 아니면 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|역할 및 시스템 정책|예|예|기본적으로 스크립트에서는 서버 사이에 사용자 지정 권한 스키마가 복사되지 않습니다. 기본 동작에 따르면 ‘부모 권한 상속’ 플래그가 TRUE로 설정된 항목이 대상 서버로 복사됩니다. 스크립트가 개별 항목의 권한을 복사하도록 하려면 SECURITY 스위치를 사용합니다.<br /><br /> 원본 및 대상 서버가 **동일한 보고서 서버 모드가 아니고**(예: 기본 모드에서 SharePoint 모드로), SECURITY 스위치를 사용하는 경우, 스크립트는 [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md) 문서에 설명된 비교 방법을 기준으로 기본 역할 및 그룹을 매핑하려고 시도합니다. 사용자 지정 역할 및 그룹은 대상 서버로 복사되지 않습니다.<br /><br /> **동일한 모드**의 서버 사이에 스크립트를 복사하고 SECURITY 스위치를 사용하는 경우에는 스크립트가 새 역할(기본 모드) 또는 그룹(SharePoint 모드)을 대상 서버에 만듭니다.<br /><br /> 역할이 대상 서버에 이미 있을 경우 스크립트는 다음과 비슷한 “오류” 메시지를 만들고 다른 항목의 마이그레이션을 계속 수행합니다. 스크립트가 완료되면 대상 서버의 역할이 사용자 요구에 맞게 구성되었는지 확인합니다. 마이그레이션 역할: 8개 항목이 발견되었습니다.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.<br /><br /> **참고:** 원본 서버에 있는 사용자가 대상 서버에 없을 경우 스크립트가 역할 지정을 대상 서버에 적용할 수 없고, SECURITY 스위치가 사용되었어도 스크립트가 역할 지정을 적용할 수 없습니다.|  
 |공유 데이터 원본|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 자격 증명이 데이터 원본의 일부로서 복사되지 **않습니다** . 콘텐츠 항목이 마이그레이션된 다음에는 대상 서버에서 자격 증명 정보를 업데이트합니다.|  
 |공유 데이터 집합|예|예||  
 |Folder|예|예|스크립트가 대상 서버에 있는 기존 항목을 덮어쓰지 않습니다. 대상 서버에 있는 항목이 동일한 이름으로 존재할 경우 다음과 비슷한 오류 메시지가 표시됩니다.<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -116,7 +76,7 @@ ms.lasthandoff: 01/09/2018
 |보고서 파트|예|예||  
   
 ##  <a name="bkmk_required_permissions"></a> 필요한 권한  
- 항목 및 리소스 읽기 또는 쓰기에 필요한 권한이 스크립트에 사용된 모든 메서드와 동일하지 않습니다. 다음 표에서는 각 항목 또는 리소스에 사용된 메서드 및 관련 내용에 대한 링크를 요약해서 보여줍니다. 필요한 권한을 보려면 개별 항목으로 이동하세요. 예를 들어 ListChildren 메서드 항목에는 다음과 같은 필요 권한이 설명됩니다.  
+ 항목 및 리소스를 읽거나 쓰는 데 필요한 권한이 스크립트에 사용된 모든 메서드와 동일하지 않습니다. 다음 표에서는 각 항목 또는 리소스에 사용된 메서드 및 관련 내용에 대한 링크를 요약해서 보여줍니다. 필요한 권한을 보려면 개별 항목으로 이동하세요. 예를 들어 ListChildren 메서드 항목에는 다음과 같은 필요 권한이 설명됩니다.  
   
 -   **기본 모드에 필요한 권한:** 항목의 ReadProperties  
   
@@ -256,7 +216,7 @@ ms.lasthandoff: 01/09/2018
 |**-v ts**="TARGET_URL"|'대상 RS 서버의 URL'||  
 |**-v tu**="domain\username" **-v tp**="password"|'대상 서버의 자격 증명입니다.'|선택 사항입니다. 누락된 경우 기본 자격 증명이 사용됩니다. **참고:** 사용자가 공유 일정의 "생성자"로 나열되고 대상 서버에서 보고서 항목의 계정에 따라 "수정"됩니다.|  
 |**-v tst**="SITE"||선택 사항입니다. 이 매개 변수는 SharePoint 모드 보고서 서버에서만 사용됩니다.|  
-|**-v tf** ="TARGETFOLDER"|'루트 수준으로 마이그레이션하려면 "/"로 설정합니다. 존재하는 항목으로 복사하려면 "/folder/subfolder"의 형식으로 설정합니다. "SOURCEFOLDER" 안의 모든 항목이 "TARGETFOLDER"에 복사됩니다.|선택 사항입니다. 기본값은 "/"입니다.|  
+|**-v tf** ="TARGETFOLDER"|'루트 수준으로 마이그레이션하려면 "/"로 설정합니다. 존재하는 폴더로 복사하려면 “/folder/subfolder”로 설정합니다. "SOURCEFOLDER" 안의 모든 항목이 "TARGETFOLDER"에 복사됩니다.|선택 사항입니다. 기본값은 "/"입니다.|  
 |**-v security**= "True/False"|“False”로 설정된 경우 대상 카탈로그 항목은 대상 시스템의 설정에 따라 보안 설정을 상속합니다. 이 설정은 기본 모드에서 SharePoint 모드로의 마이그레이션과 같이 서로 다른 보고서 서버 유형 사이의 마이그레이션에 대해 권장되는 설정입니다. “True”로 설정된 경우 스크립트가 보안 설정을 마이그레이션하려고 시도합니다.|선택 사항입니다. 기본값은 "False"입니다.|  
   
 ##  <a name="bkmk_more_examples"></a> 추가 예제  
@@ -306,7 +266,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   기본 모드 보고서 서버 **SourceServer**에서  
   
--   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer** 는 **SourceServer** 의 도메인에 가입하지 않으며, **User2** 는 Windows Azure 가상 컴퓨터 **TargetServer**의 관리자입니다.  
+-   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -320,7 +280,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  
   
--   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer** 는 **SourceServer** 의 도메인에 가입하지 않으며, **User2** 는 Windows Azure 가상 컴퓨터 **TargetServer**의 관리자입니다.  
+-   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

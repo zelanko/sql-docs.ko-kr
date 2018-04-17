@@ -1,28 +1,28 @@
 ---
-title: "임시 테이블 | Microsoft Docs"
-ms.custom: 
+title: 임시 테이블 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 
+caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ecb95a2087d7946d4298176f32f88e278b4b6828
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -155,9 +155,6 @@ SELECT * FROM Employee
   
 > [!NOTE]  
 >  필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM***\<table>* 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

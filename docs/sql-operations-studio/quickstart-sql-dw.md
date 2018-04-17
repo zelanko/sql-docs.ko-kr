@@ -1,6 +1,6 @@
 ---
-title: "빠른 시작: 연결 하 고 SQL 작업 Studio (미리 보기)를 사용 하는 Azure SQL 데이터 웨어하우스를 쿼리 하 | Microsoft Docs"
-description: "이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다."
+title: '빠른 시작: 연결 하 고 SQL Operations Studio (preview) 를 사용 하는 Azure SQL 데이터 웨어하우스를 쿼리 하 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL Operations Studio (preview) 를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -56,7 +56,7 @@ SQL 데이터 웨어하우스를 모를 경우 참조 [SQL 데이터 웨어하�
 
    ![새 연결 상태 아이콘](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 서버에 연결 하려면 SQL 작업 Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
+3. 서버에 연결 하려면 SQL Operations Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
 
    ![새 방화벽 규칙](media/quickstart-sql-dw/firewall.png)  
 

@@ -1,16 +1,16 @@
 ---
-title: "공간 인덱스 만들기, 수정 및 삭제 | Microsoft 문서"
-ms.custom: 
+title: 공간 인덱스 만들기, 수정 및 삭제 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-공간 인덱스는 **geometry** 또는 **geography** 데이터 형식의 열( *공간 열*)에서 특정 작업을 좀 더 효율적으로 수행할 수 있습니다. 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
+  공간 인덱스는 **geometry** 또는 **geography** 데이터 형식의 열( *공간 열*)에서 특정 작업을 좀 더 효율적으로 수행할 수 있습니다. 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
   
  공간 인덱스를 만드는 작업에 대한 제한 사항이 많이 있습니다. 자세한 내용은 이 항목의 [공간 인덱스의 제한 사항](#restrictions) 을 참조하십시오.  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/23/2018
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에 도입된 공간 분할(tessellation)은 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]로 복제할 수 없습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 데이터베이스와의 호환성이 요구되는 경우 공간 인덱스에는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 분할을 사용해야 합니다.  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

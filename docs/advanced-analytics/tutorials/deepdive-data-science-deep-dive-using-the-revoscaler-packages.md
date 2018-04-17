@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
 ---
-# <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>RevoScaleR 패키지와 SQL server를 이용한 데이터 과학 심층 분석
+# <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>RevoScaleR 패키지와 SQL server를 이용한 데이터 과학 심층 분석와 함께
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서에는 고성능 빅 데이터 분석을 위한 계산 컨텍스트로 서버를 사용함으로써 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 에서 제공하는 향상된 R 패키지를 사용하여 SQL Server 데이터를 작업하고 확장 가능한 R 솔루션을 만드는 방법을 보여줍니다.
@@ -39,6 +39,7 @@ ms.lasthandoff: 04/04/2018
 > + [Hadoop MapReduce에 ScaleR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
 
 ## <a name="overview"></a>개요
+RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
 RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
 
 + 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.

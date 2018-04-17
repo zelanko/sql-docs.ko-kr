@@ -1,16 +1,16 @@
 ---
-title: "Excel 원본 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Excel 원본 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Excel 원본
   Excel 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다.  
-  
+
+> [!IMPORTANT]
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
+
+## <a name="access-mode"></a>액세스 모드
  Excel 원본은 데이터 추출을 위한 4가지 데이터 액세스 모델을 제공합니다.  
   
 -   테이블 또는 뷰  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   SQL 문의 결과 쿼리는 매개 변수가 있는 쿼리일 수 있습니다.  
   
 -   변수에 저장된 SQL 문의 결과  
-  
-> [!IMPORTANT]  
->  Excel에서 워크시트나 범위는 테이블 또는 뷰에 해당합니다. Excel 원본 및 대상 편집기의 사용 가능한 테이블 목록은 기존 워크시트(Sheet1$와 같이 워크시트 이름에 $ 기호가 붙음)와 명명된 범위(MyRange와 같이 $ 기호가 없음)를 표시합니다. 자세한 내용은 "사용 시 고려 사항" 섹션을 참조하십시오.  
   
  Excel 원본은 Excel 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자가 사용할 통합 문서 파일을 지정합니다. 자세한 내용은 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)를 참조하세요.  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
-  
--   hrvoje.piasevoli.com의 블로그 항목 - [SSIS의 64비트 Excel에서 데이터 가져오기](http://go.microsoft.com/fwlink/?LinkId=217673)  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 1부: 연결 및 구성 요소](http://go.microsoft.com/fwlink/?LinkId=217674)  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 2부: 표 및 데이터 형식](http://go.microsoft.com/fwlink/?LinkId=217675)  
-  
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](http://go.microsoft.com/fwlink/?LinkId=217676)  
-  
-  
+[SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)
+[Excel 대상](excel-destination.md)  
+[Excel 연결 관리자](../connection-manager/excel-connection-manager.md)

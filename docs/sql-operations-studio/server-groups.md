@@ -1,6 +1,6 @@
 ---
-title: "서버 그룹에서 SQL 작업 Studio (미리 보기) | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기)에서 서버 그룹에 알아봅니다."
+title: 서버 그룹에서 SQL Operations Studio (preview) | Microsoft Docs
+description: SQL Operations Studio (preview) 에서 서버 그룹에 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

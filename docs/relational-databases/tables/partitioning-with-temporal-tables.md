@@ -1,28 +1,28 @@
 ---
-title: "임시 테이블을 사용하여 분할 | Microsoft 문서"
-ms.custom: 
+title: 임시 테이블을 사용하여 분할 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/26/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a231d7b2b3290747d37faf4eb6fe4c46f0d1f174
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e072b55707cc1aa80d24b92e56dacf01b0552dff
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="partitioning-with-temporal-tables"></a>임시 테이블을 사용하여 분할
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,6 @@ ms.lasthandoff: 01/18/2018
     -   **SYSTEM_VERSIONING** 이 **ON** 인 동안 기록 테이블에서 **SWITCH OUT** 을 수행하여 더 이상 관련이 없는 기록 데이터 부분을 제거할 수 있습니다.  
   
     -   **SWITCH IN** 은 임시 데이터 일관성을 무효화할 수 있으므로 **SYSTEM_VERSIONING** 이 **ON** 인 동안 허용되지 않습니다.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Partitioning%20with%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   

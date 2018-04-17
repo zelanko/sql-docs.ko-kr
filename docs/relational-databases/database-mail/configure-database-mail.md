@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 메일 구성 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 메일 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,22 +42,22 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
+  이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
@@ -225,7 +225,7 @@ ms.lasthandoff: 02/12/2018
  **기본 인증**  
  SMTP 서버에 필요한 사용자 이름과 암호를 지정합니다.  
   
- **User name**  
+ **사용자 이름**  
  데이터베이스 메일에서 SMTP 서버에 로그인하는 데 사용하는 사용자 이름을 확인하거나 업데이트합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.  
   
  **암호**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 02/12/2018
   
  프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail** 은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail** 은 오류를 반환합니다.  
   
- **User name**  
+ **사용자 이름**  
  **msdb** 데이터베이스에서 사용자 또는 역할 이름을 선택합니다.  
   
  **액세스 권한**  

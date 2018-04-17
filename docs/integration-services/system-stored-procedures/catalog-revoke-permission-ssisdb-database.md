@@ -1,31 +1,31 @@
 ---
-title: "catalog.revoke_permission(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.revoke_permission(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  InclusionThresholdSetting  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   개체에 대한 ASSIGN_PERMISSIONS 권한  
@@ -82,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   **sysadmin** 서버 역할에 대한 멤버 자격  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  permission_type을 지정한 경우 저장 프로시저는 개체의 보안 주체에 명시적으로 할당된 사용 권한을 제거합니다. 해당 인스턴스가 없는 경우에도 프로시저에서 성공 코드 값(`0`)을 반환합니다. permission_type을 생략한 경우에는 저장 프로시저에서 개체의 보안 주체에 대한 모든 사용 권한을 제거합니다.  
   
 > [!NOTE]  

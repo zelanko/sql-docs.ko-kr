@@ -1,29 +1,26 @@
 ---
-title: "SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서"
-ms.custom: 
-ms.date: 06/12/2017
+title: SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +87,10 @@ SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동
 
 이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로*처리합니다.
 
+> [!NOTE]
+> Azure SQL Database는 ETW 대상을 지원하지 않습니다. Azure SQL Database 관리되는 인스턴스도 지원하지 않습니다.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +153,12 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - 선택한 파일 이름은 시스템에서 date-time 기반 긴 정수가 추가되는 접두사로 사용되며, 이어서 .xel 확장이 나타납니다.
+
+> [!NOTE]
+> Azure SQL Database는 **event_file** 대상을 지원하지만 출력에 대한 Azure Storage의 blob을 사용하는 경우에만 해당합니다. SQL Database는 로컬 하드 드라이브의 파일에 이벤트 출력을 저장할 수 없습니다.
+> SQL Database(및 SQL Database 관리되는 인스턴스)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>**event_file** 대상을 사용하는 CREATE EVENT SESSION

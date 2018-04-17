@@ -1,30 +1,30 @@
 ---
-title: "원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: 원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: 
+caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
   전체 테이블을 복사할지 여부를 지정한 후나 쿼리를 입력하고 나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **원본 테이블 및 뷰 선택**을 표시합니다. 이 페이지에서는 복사할 기존 테이블 및 뷰를 선택합니다. 그런 다음 원본 테이블을 새 대상 테이블 또는 기존 대상 테이블에 매핑합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.
@@ -73,6 +73,9 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="select-source-and-destination-tables-for-excel"></a>Excel에 대한 원본 및 대상 테이블 선택
 
+> [!IMPORTANT]
+> Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.
+
 ### <a name="excel-source-tables"></a>Excel 원본 테이블
 Excel 데이터 원본에 대한 원본 테이블 및 뷰 목록에는 두 가지 유형의 Excel 개체가 포함됩니다.
 -   **워크시트**. 워크시트 이름 뒤에는 달러 기호($)가 옵니다(예: **'Sheet1$ '**).
@@ -80,41 +83,21 @@ Excel 데이터 원본에 대한 원본 테이블 및 뷰 목록에는 두 가�
 
 명명되지 않는 특정 셀 범위(예: **[Sheet1$A1:B4]**)에서 또는 해당 범위로 데이터를 로드하려면 쿼리를 작성해야 합니다. **테이블 복사 또는 쿼리 지정** 페이지로 돌아가서 **전송 데이터를 지정할 쿼리 작성**을 선택합니다.
 
-#### <a name="prepare-the-excel-source-data"></a>Excel 원본 데이터 준비
-워크시트 또는 범위를 원본 테이블로 지정하면 드라이버는 워크시트 또는 범위의 가장 왼쪽에서 비어 있지 않은 첫 번째 셀부터 *인접한* 블록의 셀을 읽습니다. 따라서 원본 데이터에 빈 행이 있으면 안 됩니다. 예를 들어 열 머리글과 데이터 행 사이에 빈 행이 있으면 안 됩니다. 워크시트 맨 위에서 데이터 위에 제목 다음에 빈 행이 있으면 워크시트를 쿼리할 수 없습니다. Excel에서 데이터의 범위에 이름을 할당하고 워크시트 대신 명명된 범위를 쿼리해야 합니다.
-
 ### <a name="excel-destination-tables"></a>Excel 대상 테이블
 Excel로 데이터를 내보내는 경우에 다음 세 가지 방법 중 하나로 대상을 지정할 수 있습니다.
 -   **워크시트.** 워크시트를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]**).
 -   **명명된 범위.** 명명된 범위를 지정하려면 범위 이름을 사용하면 됩니다(예: **MyDataRange**).
 -   **명명되지 않은 범위.** 명명하지 않은 셀의 범위를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$A1:B4]**).
 
-## <a name="special-considerations-for-excel-sources-and-destinations"></a>Excel 원본 및 대상에 대한 특별 고려 사항
-Excel을 원본 또는 대상으로 사용하는 경우 **매핑 편집** 을 클릭하고 **열 매핑** 페이지에서 데이터 형식 매핑을 검토하는 것이 좋습니다. 
-
-**Excel 통합 문서의 데이터 형식**. Excel 일반적인 데이터베이스가 아닙니다. 열의 데이터 형식이 고정되어 있지 않습니다. 마법사는 Excel에서 제한된 데이터 형식 집합(숫자, 통화, 부울, 날짜/시간, 문자열(255자 미만), 메모(255자 이상))만 인식합니다. 마법사는 Excel 데이터 원본에서 특정 개수의 행(기본값: 처음 8개 행)을 샘플링하여 각 열의 데이터 형식을 추측합니다.
-
-마법사가 Excel에서 또는 Excel로 데이터를 로드하기 위해 명시적 데이터 형식 변환을 수행해야 하는 경우 일반적으로 이러한 변환을 검토할 수 있는 **데이터 형식 매핑 검토** 페이지가 표시됩니다. 이러한 변환에는 다음이 포함될 수 있습니다.
--   배정밀도 Excel 숫자 열과 다른 유형의 숫자 열 간 변환
--   255자 Excel 문자열 열과 길이가 다른 문자열 열 간 변환
--   유니코드 Excel 문자열 열과 특정 코드 페이지를 사용하는 비유니코드 문자열 열 간 변환
-
-### <a name="special-considerations-for-excel-sources"></a>Excel 원본에 대한 특별 고려 사항
-**가져온 데이터의 null 값 또는 누락된 값**. 마법사에서 샘플링한 처음 8개 행의 Excel 열에 혼합된 데이터 형식(예: 숫자 값과 텍스트 값의 혼합)이 있는 것으로 나타나는 경우, 마법사는 대다수의 데이터 형식을 열의 데이터 형식으로 선택하고 다른 형식의 데이터를 포함하는 셀에 대해서는 null 값을 반환합니다. 마법사의 이 동작은 변경할 수 없습니다.
-
-**가져온 데이터의 잘린 문자열**. Excel 열에 텍스트 데이터가 포함된 경우 마법사는 첫 번째 8개 행에서 샘플링하는 가장 긴 값을 기준으로 열의 데이터 형식(string 또는 memo)를 선택합니다. 마법사가 샘플링하는 행에서 255자보다 긴 값을 찾지 못하는 경우 열을 메모 열이 아니라 255자 문자열 열로 간주하고 255자보다 긴 값을 자릅니다. 메모 열에서 잘림 없이 데이터를 가져오려면 메모 열에 마법사에서 샘플링한 처음 8개 행에 255자보다 긴 값이 하나 이상 포함되어 있는지 확인해야 합니다.
-
-### <a name="special-considerations-for-excel-destinations"></a>Excel 대상에 대한 특별 고려 사항
-**기존 범위 지정**. 기존 범위를 대상으로 지정하는 경우 범위가 원본 데이터의 *열 수*보다 적으면 오류가 발생합니다. 그러나 지정하는 범위가 원본 데이터의 *행 수*보다 적으면 마법사에서 행 쓰기를 계속하고 범위 정의를 새 행 수와 일치하도록 확장합니다.
-
-**메모(ntext) 데이터 저장**. 255자보다 긴 문자열을 Excel 열에 저장하려면 마법사에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다.
--   대상 테이블에 이미 데이터 행이 포함되어 있는 경우 마법사에서 샘플링한 처음 8개 행의 메모 열에 255자보다 긴 값이 있는 행이 하나 이상 포함되어 있어야 합니다.
--   마법사에서 대상 테이블을 만드는 경우 **CREATE TABLE** 문은 메모 열의 데이터 형식으로 **LONGTEXT**(또는 해당 동의어 중 하나)를 사용해야 합니다. 필요한 경우 **열 매핑** 페이지의 **대상 테이블 만들기** 옵션 옆에 있는 **SQL 편집**을 클릭하여 **CREATE TABLE** 문을 확인하고 수정합니다.
+> [!TIP]
+> Excel을 원본 또는 대상으로 사용하는 경우 **매핑 편집** 을 클릭하고 **열 매핑** 페이지에서 데이터 형식 매핑을 검토하는 것이 좋습니다. 
 
 ## <a name="whats-next"></a>다음 단계  
  대상에 복사 및 매핑할 기존 테이블 및 뷰를 선택한 후 다음 페이지는 **패키지 저장 및 실행**입니다. 이 페이지에서는 복사 작업을 즉시 실행할지 여부를 지정합니다. 구성에 따라 마법사에서 만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 저장하여 사용자 지정하고 나중에 다시 사용할 수도 있습니다. 자세한 내용은 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.
  
  ## <a name="see-also"></a>관련 항목:
-[가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드](../load-data-to-from-excel-with-ssis.md)
+
 
 

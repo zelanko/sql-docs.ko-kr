@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_uncontained_entities (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 21a11895ad0d618f9466572edc213aa0d217d8ef
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/03/2018
 |**열 이름**|**형식**|**설명**|  
 |*class*|**int**|1 = 개체 또는 열(모듈, XP, 뷰, 동의어 및 테이블 포함)<br /><br /> 4 = 데이터베이스 보안 주체<br /><br /> 5 = 어셈블리<br /><br /> 6 = 형식<br /><br /> 7 = 인덱스(전체 텍스트 인덱스)<br /><br /> 12 = 데이터베이스 DDL 트리거<br /><br /> 19 = 경로<br /><br /> 30 = 감사 사양|  
 |*class_desc*|**nvarchar(120)**|엔터티의 클래스에 대한 설명입니다. 클래스와 일치 하려면 다음 중 하나입니다.<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|엔터티의 ID입니다.<br /><br /> 경우 *클래스* 1, object_id =<br /><br /> 경우 *클래스* = 4, 다음 sys.database_principals.principal_id 합니다.<br /><br /> 경우 *클래스* = 5, sys.assemblies.assembly_id 합니다.<br /><br /> 경우 *클래스* = 6, sys.types.user_type_id 합니다.<br /><br /> 경우 *클래스* = 7, sys.indexes.index_id 합니다.<br /><br /> 경우 *클래스* = 12, sys.triggers.object_id 합니다.<br /><br /> 경우 *클래스* = 19, sys.routes.route_id입니다.<br /><br /> 경우 *클래스* = 30 인 sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|엔터티의 ID입니다.<br /><br /> 경우 *클래스* 1, object_id =<br /><br /> If *class* = 4, then sys.database_principals.principal_id.<br /><br /> 경우 *클래스* = 5, sys.assemblies.assembly_id 합니다.<br /><br /> 경우 *클래스* = 6, sys.types.user_type_id 합니다.<br /><br /> 경우 *클래스* = 7, sys.indexes.index_id 합니다.<br /><br /> 경우 *클래스* = 12, sys.triggers.object_id 합니다.<br /><br /> 경우 *클래스* = 19, sys.routes.route_id입니다.<br /><br /> 경우 *클래스* = 30 인 sys. database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|클래스가 모듈인 경우 포함되지 않은 용도가 있는 줄 번호를 반환합니다.  그렇지 않으면 값이 Null입니다.|  
 |*statement_ offset_begin*|**int**|클래스가 모듈인 경우 포함되지 않은 용도의 시작 위치(0으로 시작되는 바이트)를 나타냅니다. 그렇지 않으면 반환 값이 Null입니다.|  
 |*statement_ offset_end*|**int**|클래스가 모듈인 경우 포함되지 않은 용도의 끝 위치(0으로 시작되는 바이트)를 나타냅니다. 값이 -1인 경우 모듈의 끝을 나타냅니다. 그렇지 않으면 반환 값이 Null입니다.|  

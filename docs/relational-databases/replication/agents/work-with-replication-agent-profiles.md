@@ -1,16 +1,16 @@
 ---
-title: "복제 에이전트 프로필 작업 | Microsoft 문서"
-ms.custom: 
+title: 복제 에이전트 프로필 작업 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 
+caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189377d1812914df0f71ec844cd9fca0127a4a9c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d593b1bb98508fa17bcc9be4bce1bdf448494dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  배포자에서 [sp_help_agent_parameter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)를 실행합니다. **@profile_id**에 1단계에서 얻은 프로필 식별자를 지정합니다. 그러면 해당 프로필의 모든 매개 변수가 반환됩니다. 프로필에서 수정하거나 제거할 매개 변수의 이름을 확인합니다.  
   
-3.  프로필의 매개 변수 값을 변경하려면 [sp_change_agent_profile&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)을 실행합니다. **@profile_id**에 1단계에서 얻은 프로필 식별자를 지정하고 **@property**에 변경할 매개 변수의 이름을 지정한 후 **@value**에 매개 변수의 새 값을 지정합니다.  
+3.  프로필에서 매개 변수의 값을 변경하려면 [sp_change_agent_parameter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)를 실행합니다. **@profile_id**에 1단계에서 얻은 프로필 식별자를 지정하고 **@parameter_name**에 변경할 매개 변수의 이름을 지정한 후 **@parameter_value**에 매개 변수의 새 값을 지정합니다.  
   
     > [!NOTE]  
     >  기존 에이전트 프로필은 에이전트의 기본 프로필이 되도록 변경할 수 없습니다. 대신 이전 절차에서와 같이 새 프로필을 기본 프로필로 만들어야 합니다.  

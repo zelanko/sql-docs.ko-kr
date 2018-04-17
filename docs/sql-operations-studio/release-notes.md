@@ -1,6 +1,6 @@
 ---
-title: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs
-description: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보
+title: Microsoft SQL Operations Studio (preview) 릴리스 정보 | Microsoft Docs
+description: Microsoft SQL Operations Studio (preview) 릴리스 정보
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
+# <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 릴리스 정보
 
 **[년 3 월 공개 미리 보기 다운로드](download.md)**
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 - Insights 탭된 및 창 구성 지원 하기 위해 대시보드 확장성 모델을 향상 시킵니다.
    - 확장 관리자에서 확장의 간단한 취득이 있습니다.
    - sp_whoisactive에 대 한 대시보드 확장 [whoisactive.com](http://www.whoisactive.com)합니다.
-   - 자세한 내용은 참조 [SQL 작업 Studio의 기능을 확장할](extensions.md)합니다.
+   - 자세한 내용은 참조 [SQL Operations Studio 의 기능을 확장할](extensions.md)합니다.
 - 더 추가 [연결 및 개체 탐색기에 대 한 확장성 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) 관리 합니다.
 - 영향을 미치는 중요 한 고객을 해결 하려면 계속 [GitHub 문제](https://github.com/Microsoft/sqlopsstudio/issues)합니다.
 

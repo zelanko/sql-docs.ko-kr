@@ -1,6 +1,6 @@
 ---
-title: "Linux에서 SQL Server 관리 | Microsoft Docs"
-description: "이 문서에서는 Linux에서 실행 중인 SQL Server에 대 한 일반 관리 작업 및 도구에 대 한 링크 합니다."
+title: Linux에서 SQL Server 관리 | Microsoft Docs
+description: 이 문서에서는 Linux에서 실행 중인 SQL Server에 대 한 일반 관리 작업 및 도구에 대 한 링크 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ SQL Server 2017 linux를 관리 하는 방법은 여러 가지가 있습니다. 
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server 작업 Studio (미리 보기)
 
-새 Microsoft SQL 작업 Studio (미리 보기)는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 참조 [Microsoft SQL 작업 Studio (미리 보기)](../sql-operations-studio/what-is.md)합니다.
+새 Microsoft SQL Operations Studio (preview) 는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 참조 [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)합니다.
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows에서 SQL Server Management Studio
 

@@ -1,28 +1,28 @@
 ---
-title: "시스템 버전 임시 테이블 만들기 | Microsoft 문서"
-ms.custom: 
+title: 시스템 버전 임시 테이블 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 
+caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9980d3617c66d3d000af32cfbe4c50b957bcc24
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 501fcd308babf3703c4d7372fb53c1339c65d5e5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -216,9 +216,7 @@ ALTER TABLE ProjectTaskCurrent
   
 -   기존 데이터에 대해 임시 일관성 검사를 적용하기 위해 **DATA_CONSISTENCY_CHECK = ON** 을 사용하여 **SYSTEM_VERSIONING** 을 설정하는 것이 좋습니다.  
   
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page)  
-  
+ 
 ## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

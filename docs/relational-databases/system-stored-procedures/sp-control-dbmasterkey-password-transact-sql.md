@@ -1,16 +1,16 @@
 ---
 title: sp_control_dbmasterkey_password (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8564e7fc3ab9f9e6419ebe7ff140408cb1940b29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ```  
   
 ## <a name="arguments"></a>인수  
- @db_name= N'*database_name*'  
+ @db_name=N'*database_name*'  
  이 자격 증명에 연결된 데이터베이스의 이름을 지정합니다. 시스템 데이터베이스일 수 없습니다. *a s e _* 은 **nvarchar**합니다.  
   
- @password= N'*암호*'  
+ @password=N'*password*'  
  마스터 키의 암호를 지정합니다. *암호* 은 **nvarchar**합니다.  
   
- @action= N'add'  
+ @action=N'add'  
  지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에 추가되도록 지정합니다. 자격 증명에는 데이터베이스 마스터 키의 암호가 포함됩니다. 에 전달 된 값 @action 은 **nvarchar**합니다.  
   
- @action= N'drop'  
+ @action=N'drop'  
  지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 에 전달 된 값 @action 은 **nvarchar**합니다.  
   
 ## <a name="remarks"></a>주의  
@@ -108,7 +108,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [보안 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [자격 증명&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  

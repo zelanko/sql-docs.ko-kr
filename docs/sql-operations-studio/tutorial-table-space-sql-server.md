@@ -1,6 +1,6 @@
 ---
-title: "자습서: SQL 작업 Studio (미리 보기)에서 테이블 공간 사용량 샘플 통찰력 위젯을 사용 하도록 설정 | Microsoft Docs"
-description: "이 자습서에는 테이블 공간 사용량 샘플 통찰력 위젯 SQL 작업 Studio (미리 보기) 데이터베이스를 사용 하도록 설정 하는 방법을 보여 줍니다."
+title: '자습서: SQL Operations Studio (preview) 에서 테이블 공간 사용량 샘플 통찰력 위젯을 사용 하도록 설정 | Microsoft Docs'
+description: 이 자습서에는 테이블 공간 사용량 샘플 통찰력 위젯 SQL Operations Studio (preview) 데이터베이스를 사용 하도록 설정 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

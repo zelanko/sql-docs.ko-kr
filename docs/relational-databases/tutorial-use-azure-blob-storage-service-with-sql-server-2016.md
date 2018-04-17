@@ -1,30 +1,30 @@
 ---
-title: "자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | Microsoft 문서"
-ms.custom: 
+title: '자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | Microsoft 문서'
+ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26c6376594efc1b34e50f2c058578387b6f8b7f0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 132e4242b7d9484fb0ce22e6628e07fc77adc8b3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,6 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
   
 **[9단원: 백업 세트 및 파일-스냅숏 백업 관리](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)**  
 이 단원에서는 불필요한 백업 세트를 삭제하고 분리된 파일 스냅숏 백업(있는 경우)을 삭제하는 방법을 알아봅니다.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
-어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
   
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  

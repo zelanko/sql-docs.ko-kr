@@ -1,6 +1,6 @@
 ---
-title: "빠른 시작: 연결 하 고 SQL 작업 Studio (미리 보기)를 사용 하 여 Azure SQL 데이터베이스를 쿼리 하 | Microsoft Docs"
-description: "이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다."
+title: '빠른 시작: 연결 하 고 SQL Operations Studio (preview) 를 사용 하 여 Azure SQL 데이터베이스를 쿼리 하 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL Operations Studio (preview) 를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작:를 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL 데이터베이스 쿼리
 
-이 빠른 시작 사용 방법을 보여 줍니다.  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  하는 Azure SQL 데이터베이스에 연결 하 고 TRANSACT-SQL (T-SQL) 문을 만드는 데 사용할는 *TutorialDB* 에 사용 된 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
+이 빠른 시작 사용 방법을 보여 줍니다. *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 하는 Azure SQL 데이터베이스에 연결 하 고 TRANSACT-SQL (T-SQL) 문을 만드는 데 사용할는 *TutorialDB* 에 사용 된 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -59,7 +59,7 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
 
    ![새 연결 상태 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 서버에 연결 하려면 SQL 작업 Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
+3. 서버에 연결 하려면 SQL Operations Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
 
    ![새 방화벽 규칙](media/quickstart-sql-database/firewall.png)  
 

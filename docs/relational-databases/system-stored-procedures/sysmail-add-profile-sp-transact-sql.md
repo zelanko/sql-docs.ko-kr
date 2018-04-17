@@ -1,16 +1,16 @@
 ---
 title: sysmail_add_profile_sp (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>주의  
- 데이터베이스 메일 프로필에는 여러 개의 데이터베이스 메일 계정이 있습니다. 데이터베이스 메일 저장 프로시저는 해당 프로시저에서 생성된 프로필 이름이나 프로필 ID로 프로필을 참조할 수 있습니다. 프로필에 계정을 추가 하는 방법에 대 한 자세한 내용은 참조 [sysmail_add_profileaccount_sp &#40; Transact SQL &#41; ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+ 데이터베이스 메일 프로필에는 여러 개의 데이터베이스 메일 계정이 있습니다. 데이터베이스 메일 저장 프로시저는 해당 프로시저에서 생성된 프로필 이름이나 프로필 ID로 프로필을 참조할 수 있습니다. 프로필에 계정을 추가 하는 방법에 대 한 자세한 내용은 참조 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)합니다.  
   
  저장된 프로시저와 함께 프로필 이름과 설명을 변경할 수 있습니다 **sysmail_update_profile_sp**프로필 id 프로필의 수명 기간 동안 일정 하 게 유지 하는 반면, 합니다.  
   
@@ -102,6 +102,6 @@ SELECT @profileId ;
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [데이터베이스 메일 저장 프로시저 &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [데이터베이스 메일 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

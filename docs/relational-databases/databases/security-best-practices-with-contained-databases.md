@@ -1,30 +1,30 @@
 ---
-title: "포함된 데이터베이스의 보안 모범 사례 | Microsoft 문서"
-ms.custom: 
+title: 포함된 데이터베이스의 보안 모범 사례 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>AUTO_CLOSE를 통한 서비스 거부  
  포함된 데이터베이스가 자동으로 닫히도록 구성하지 마십시오. 데이터베이스가 닫히면 사용자를 인증하기 위해 데이터베이스를 여는 데 추가 리소스가 소비되며 서비스 거부 공격이 발생할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
  [부분적으로 포함된 데이터베이스로 마이그레이션](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

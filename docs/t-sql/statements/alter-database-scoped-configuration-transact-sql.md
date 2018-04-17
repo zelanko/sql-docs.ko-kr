@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 명령문은 **개별 데이터베이스** 수준에서 다양한 데이터베이스 구성 설정을 활성화합니다. 이 명령문은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 해당 설정은 다음과 같습니다.  
+  이 명령문은 **개별 데이터베이스** 수준에서 다양한 데이터베이스 구성 설정을 활성화합니다. 이 명령문은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 해당 설정은 다음과 같습니다.  
   
 - 프로시저 캐시를 지웁니다.  
 - 주 데이터베이스의 경우 MAXDOP 매개 변수를 해당 데이터베이스에 가장 적합한 임의 값(1,2, ...)으로 설정하고 사용되는 보조 데이터베이스(예: 보고 쿼리용)에는 다른 값(예: 0)을 설정합니다.  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - 데이터베이스 수준에서 매개 변수 스니핑을 사용하거나 사용하지 않도록 설정합니다.
 - 데이터베이스 수준에서 쿼리 최적화 프로그램 핫픽스를 사용하거나 사용하지 않도록 설정합니다.
 - 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다.
-- 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다.    
+- 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다.  
+- 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
   
  ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ CLEAR PROCEDURE_CACHE
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**적용 대상:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**적용 대상:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다. 기본값은 **ON**입니다. ID 캐싱은 ID 열이 있는 테이블에서 INSERT 성능을 개선하기 위해 사용됩니다. 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)되는 경우에 ID 열의 값이 차이 나지 않도록 IDENTITY_CACHE 옵션을 비활성화합니다. 이 옵션은 서버 수준에서만이 아니라 데이터베이스 수준에서 설정될 수 있다는 점을 제외하고 기존 [추적 플래그 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)와 비슷합니다.   
 
@@ -142,13 +145,31 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다. 기본값은 OFF입니다. 데이터베이스 범위 구성 OPTIMIZE_FOR_AD_HOC_WORKLOADS가 데이터베이스에 대해 활성화되면 컴파일된 계획 스텁은 일괄 처리가 처음으로 컴파일될 때 캐시에 저장됩니다. 계획 스텁은 전체 컴파일된 계획의 크기에 비해 작은 메모리 사용 공간을 갖습니다.  일괄 처리가 컴파일되거나 다시 실행되는 경우 컴파일된 계획 스텁은 제거되고 전체 컴파일된 계획으로 대체됩니다.
 
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 모듈 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)에 반영됩니다.
+
+고유하게 컴파일된 T-SQL 모듈에 대한 모듈 수준 실행 통계는 이 옵션이 켜져 있거나 통계 수집이 [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)를 통해 활성화된 경우 수집됩니다.
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 명령문 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 및 [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에 반영됩니다.
+
+고유하게 컴파일된 T-SQL 모듈에 대한 명령문 수준 실행 통계는 이 옵션이 켜져 있거나 통계 수집이 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 통해 활성화된 경우 수집됩니다.
+
+고유하게 컴파일된 T-SQL 모듈의 성능 모니터링에 대한 자세한 내용은 [고유하게 컴파일된 저장 프로시저의 성능 모니터링](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)을 참조하세요.
+
 ##  <a name="Permissions"></a> Permissions  
- 데이터베이스에서 ALTER ANY DATABASE SCOPE CONFIGURATION이 필요합니다.   
-on the database. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.  
+ 데이터베이스에 ALTER ANY DATABASE SCOPE CONFIGURATION이   
+필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  보조 데이터베이스가 해당 기본 데이터베이스와 서로 다른 범위 구성 설정을 갖도록 구성할 수도 있지만 모든 보조 데이터베이스는 동일한 구성을 사용합니다. 개별 보조에 대해 서로 다른 설정을 구성할 수 없습니다.  
@@ -197,8 +218,8 @@ on the database. 이 사용 권한은 데이터베이스에서 CONTROL 권한이
   
 ### <a name="a-grant-permission"></a>1. 사용 권한 부여  
 
-이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 [Joe]에게 부여합니다.     
-to user [Joe].  
+이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을     
+사용자 [Joe]에게 부여합니다.  
   
 ```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  

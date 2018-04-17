@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기) FAQ | Microsoft Docs"
-description: "질문과 대답 (FAQ) SQL 작업 Studio (미리 보기)에 대 한 대답입니다."
+title: SQL Operations Studio (preview) FAQ | Microsoft Docs
+description: 질문과 대답 (FAQ) SQL Operations Studio (preview) 에 대 한 대답입니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

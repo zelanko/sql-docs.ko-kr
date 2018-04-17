@@ -1,6 +1,6 @@
 ---
-title: "업데이트됨 - 관계형 데이터베이스 문서 | Microsoft Docs"
-description: "관계형 데이터베이스 설명서에서 최근에 변경된 업데이트된 콘텐츠의 일부를 표시합니다."
+title: 업데이트됨 - 관계형 데이터베이스 문서 | Microsoft Docs
+description: 관계형 데이터베이스 설명서에서 최근에 변경된 업데이트된 콘텐츠의 일부를 표시합니다.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: relational-databases
 ms.date: 02/03/2018
-ms.openlocfilehash: 38f9ee55137c54adddb07fbe9f3b74dd43d51a3a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f30e38adef7faedb273dbd1b22c4ac9d3e8223b4
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>새로 추가되었거나 최근에 업데이트됨: 관계형 데이터베이스 문서
 
@@ -550,7 +550,7 @@ Python 코드에 사용된 열 머리글은 SQL Server로 출력되지 않으므
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../samples/new-updated-samples.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)

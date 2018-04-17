@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  지정된 열에 대해 ROWGUIDCOL 속성을 추가하거나 삭제하도록 지정합니다. ROWGUIDCOL은 열이 행 GUID 열임을 나타냅니다. 테이블당 하나의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 지정할 수 있고 ROWGUIDCOL 속성은 하나의 **uniqueidentifier** 열에만 할당할 수 있습니다. ROWGUIDCOL은 사용자 정의 데이터 형식의 열에 지정할 수 없습니다.  
   
- ROWGUIDCOL은 열에 저장된 값이 고유하도록 설정하지 않으며 테이블에 삽입된 새 행의 값을 자동으로 생성하지 않습니다. 각 열에 대해 고유한 값을 생성하려면 INSERT 문에 NEWID 함수를 사용하거나 NEWID 함수를 열의 기본값으로 지정합니다.  
+ ROWGUIDCOL은 열에 저장된 값이 고유하도록 설정하지 않으며 테이블에 삽입된 새 행의 값을 자동으로 생성하지 않습니다. 각 열에 고유한 값을 생성하려면 INSERT 문에 NEWID 또는 NEWSEQUENTIALID 함수를 사용하거나 열에 대한 기본값으로 NEWID 또는 NEWSEQUENTIALID 함수를 사용하십시오.  
   
  [ {ADD | DROP} PERSISTED ]  
  지정된 열에 대해 PERSISTED 속성을 추가하거나 삭제하도록 지정합니다. 이 열은 결정적인 식으로 정의된 계산 열이어야 합니다. PERSISTED로 지정된 열인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트될 때 해당 값을 업데이트합니다. 계산 열을 PERSISTED로 표시하면 결정적이지만 정확하지는 않은 식에 정의된 계산 열에 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.  

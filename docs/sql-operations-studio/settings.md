@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기) 사용자와 작업 영역 설정 | Microsoft Docs"
-description: "SQL 작업 Studio (미리 보기) 사용자 및 작업 영역 설정을 수정 하는 방법."
+title: SQL Operations Studio (preview) 사용자와 작업 영역 설정 | Microsoft Docs
+description: SQL Operations Studio (preview) 사용자 및 작업 영역 설정을 수정 하는 방법.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>핫 종료
 
-기본적으로 종료할 때 SQL 작업 Studio 파일에 저장 되지 않은 변경을 기억 합니다. 이 Visual Studio Code에서 핫 종료 기능와 동일 합니다.
+기본적으로 종료할 때 SQL Operations Studio 파일에 저장 되지 않은 변경을 기억 합니다. 이 Visual Studio Code에서 핫 종료 기능와 동일 합니다.
 
 핫 종료는 기본적으로 해제 되어 있습니다. 실행 부하 과다 사용을 편집 하 여 종료는 `files.hotExit` 설정 합니다. 자세한 내용은 참조 [(Visual Studio Code 설명서)에서 핫 종료](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)합니다.
 

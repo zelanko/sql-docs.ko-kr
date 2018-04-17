@@ -1,16 +1,16 @@
 ---
 title: BACKUP(Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/22/2018
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -48,21 +48,23 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 
+caps.latest.revision: 275
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하여 데이터베이스 백업을 만들거나 데이터베이스의 파일 하나 이상 또는 파일 그룹을 백업하여 파일 백업(BACKUP DATABASE)을 만듭니다. 또한 전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스의 트랜잭션 로그를 백업하여 로그 백업(BACKUP LOG)을 만듭니다.  
+  전체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하여 데이터베이스 백업을 만들거나 데이터베이스의 파일 하나 이상 또는 파일 그룹을 백업하여 파일 백업(BACKUP DATABASE)을 만듭니다. 또한 전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스의 트랜잭션 로그를 백업하여 로그 백업(BACKUP LOG)을 만듭니다. 
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +75,8 @@ Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
+  [ WITH { DIFFERENTIAL -- Not supporterd in SQL Database Managed Instance
+           | <general_WITH_options> [ ,...n ] } ]  
 [;]  
   
 Backing Up Specific Files or Filegroups  
@@ -93,7 +96,8 @@ BACKUP DATABASE { database_name | @database_name_var }
 [;]  
   
 Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG { database_name | @database_name_var }   
+BACKUP LOG -- Not supported in SQL Database Managed Instance
+  { database_name | @database_name_var }  
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
   [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]  
@@ -102,7 +106,9 @@ BACKUP LOG { database_name | @database_name_var }
 <backup_device>::=   
  {  
    { logical_device_name | @logical_device_name_var }   
- | { DISK | TAPE | URL} =   
+ | {   DISK -- Not supported in SQL Database Managed Instance
+     | TAPE -- Not supported in SQL Database Managed Instance
+     | URL } =   
      { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
@@ -120,13 +126,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 <general_WITH_options> [ ,...n ]::=   
 --Backup Set Options  
-   COPY_ONLY   
+   COPY_ONLY -- Only backup set option supported by SQL Database Managed Instance  
  | { COMPRESSION | NO_COMPRESSION }   
  | DESCRIPTION = { 'text' | @text_variable }   
  | NAME = { backup_set_name | @backup_set_name_var }   
  | CREDENTIAL  
  | ENCRYPTION  
- | FILE_SNAPSHOT  
+ | FILE_SNAPSHOT  --Not supported in SQL Database Managed Instance
  | { EXPIREDATE = { 'date' | @date_var }   
         | RETAINDAYS = { days | @days_var } }   
   
@@ -152,11 +158,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 --Monitoring Options  
    STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. These are not supported in SQL Database Managed Instance
    { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
---Log-specific Options  
+--Log-specific Options. These are not supported in SQL Database Managed Instance 
    { NORECOVERY | STANDBY = undo_file_name }  
  | NO_TRUNCATE  
   
@@ -166,7 +172,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 ```  
   
 ## <a name="arguments"></a>인수  
- DATABASE  
+
+DATABASE  
  전체 데이터베이스 백업을 지정합니다. 파일 및 파일 그룹의 목록이 지정되어 있으면 해당 파일 및 파일 그룹만 백업됩니다. 전체 또는 차등 데이터베이스 백업 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 백업을 복원할 때 일관성 있는 데이터베이스를 생성하기 위해 충분한 트랜잭션 로그를 백업합니다.  
   
  BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다. 백업 내의 특정 시간이나 트랜잭션으로는 로그 백업만 복원할 수 있습니다.  
@@ -174,7 +181,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 > 전체 데이터베이스 백업만 **master** 데이터베이스에서 수행할 수 있습니다.  
   
- LOG  
+LOG **적용 대상:** SQL Server
+
  트랜잭션 로그만 백업하도록 지정합니다. 성공적으로 실행된 마지막 로그 백업에서 현재 로그의 끝에 로그가 백업됩니다. 첫 로그 백업을 만들려면 먼저 전체 백업을 만들어야 합니다.  
   
  [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) 문에 `WITH STOPAT`, `STOPATMARK` 또는 `STOPBEFOREMARK`를 지정하면 백업 내의 특정 시간이나 트랜잭션으로 로그 백업을 복원할 수 있습니다.  
@@ -223,12 +231,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.  
   
-\<backup_device> 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
+\<backup_device> **적용 대상:** SQL Server, 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
   
- { *logical_device_name* | **@***logical_device_name_var* } 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 장치 이름은 문자열 상수(@*logical_device_name_var***=** 논리적 백업 장치 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ { *logical_device_name* | **@***logical_device_name_var* } **적용 대상:** SQL Server, 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 장치 이름은 문자열 상수(@*logical_device_name_var***=** 논리적 백업 장치 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }  
- 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스로 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **적용 대상:** 디스크, 테이프 및 URL, SQL Server에 적용합니다. URL만 SQL Database 관리되는 인스턴스에 적용하며, 디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스로 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
 
 > [!NOTE] 
 > NUL 디스크 장치는 전송된 모든 정보를 버리고 테스트용으로만 사용해야 합니다. 프로덕션용이 아닙니다.
@@ -236,7 +243,7 @@ TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../re
 > [!IMPORTANT]  
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 장치로만 백업할 수 있습니다. URL로 백업할 때 여러 장치에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
-**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
+**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database 관리되는 인스턴스.  
   
  BACKUP 문에 지정되기 전에는 디스크 장치가 없어도 됩니다. 물리적 장치가 존재하고 BACKUP 문에서 INIT 옵션이 지정되지 않은 경우에는 백업이 장치에 추가됩니다.  
  
@@ -272,17 +279,15 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
  백업 작업에 사용할 옵션을 지정합니다.  
   
  CREDENTIAL  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2) 및 SQL Database 관리되는 인스턴스.  
  Windows Azure Blob 저장소 서비스로 백업을 만들 때에만 사용됩니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
-  
- FILE_SNAPSHOT  
+ FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
+
  Azure Blob 저장소 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
-  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
+    
  DIFFERENTIAL  
- BACKUP DATABASE와 함께만 사용되며 데이터베이스 또는 파일 백업이 마지막 전체 백업 이후 변경된 데이터베이스 또는 파일 부분으로만 구성되도록 지정합니다. 일반적으로 차등 백업은 전체 백업보다 적은 공간을 사용합니다. 마지막 전체 백업 이후 수행된 개별 로그 백업 중 일부를 적용할 필요가 없도록 하려면 이 옵션을 사용합니다.  
+**적용 대상:** SQL Server, BACKUP DATABASE하고만 사용되며 데이터베이스 또는 파일 백업이 마지막 전체 백업 이후 변경된 데이터베이스 또는 파일 부분으로만 구성되도록 지정합니다. 일반적으로 차등 백업은 전체 백업보다 적은 공간을 사용합니다. 마지막 전체 백업 이후 수행된 개별 로그 백업 중 일부를 적용할 필요가 없도록 하려면 이 옵션을 사용합니다.  
   
 > [!NOTE]  
 > 기본적으로 `BACKUP DATABASE`는 전체 백업을 만듭니다.  
@@ -313,8 +318,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
 > [!NOTE]  
 > 복원 작업에 백업 세트를 지정하려면 `FILE = <backup_set_file_number>` 옵션을 사용합니다. 백업 세트를 지정하는 방법에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.
   
- COPY_ONLY  
- 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 복사 전용 백업(*copy-only backup*)임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.  
+ COPY_ONLY **적용 대상:** SQL Server 및 SQL Database 관리되는 인스턴스, 백업이 정상적인 백업 시퀀스에 영향을 주지 않는 *복사 전용 백업*임을 지정합니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.  
   
  복사 전용 백업은 온라인 파일을 복원하기 전에 로그를 백업하는 것과 같은 특별한 목적을 위해 백업을 수행할 때 사용됩니다. 일반적으로 복사 전용 로그 백업은 한 번만 사용된 후 삭제됩니다.  
   
@@ -501,15 +505,13 @@ STATS [ **=** *percentage* ]
 STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.  
   
 **테이프 옵션**  
-  
+**적용 대상:** SQL Server  
 이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용할 경우 이러한 옵션은 무시됩니다.  
   
 { **REWIND** | NOREWIND }  
-REWIND  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이프를 해제한 다음, 되감도록 지정합니다. 기본값은 REWIND입니다.  
+REWIND **적용 대상:** SQL Server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이프를 해제한 다음, 되감도록 지정합니다. 기본값은 REWIND입니다.  
   
-NOREWIND  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 작업 후에 테이프를 열어 놓도록 지정합니다. 테이프에 여러 개의 백업 작업을 수행할 때 이 옵션을 사용하면 성능을 향상시킬 수 있습니다.  
+NOREWIND **적용 대상:** SQL Server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 작업 후에 테이프를 열어 놓도록 지정합니다. 테이프에 여러 개의 백업 작업을 수행할 때 이 옵션을 사용하면 성능을 향상시킬 수 있습니다.  
   
 NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 BACKUP 문 내에서 호환되지 않습니다.  
   
@@ -517,33 +519,33 @@ NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 BACKUP 문 내에서 �
 > `NOREWIND`를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 `REWIND` 또는 `UNLOAD` 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
 { **UNLOAD** | NOUNLOAD }    
-
+**적용 대상:** SQL Server 
 > [!NOTE]  
 > `UNLOAD` 및 `NOUNLOAD`는 세션 기간 동안이나 다른 옵션을 지정하여 다시 설정할 때까지 유지되는 세션 설정입니다.  
   
-UNLOAD  
+UNLOAD **적용 대상:** SQL Server   
  백업이 끝나면 테이프를 자동으로 되감고 언로드되도록 지정합니다. UNLOAD는 세션 시작 시의 기본값입니다. 
   
-NOUNLOAD  
- BACKUP 작업 후에 테이프가 테이프 드라이브에 로드된 상태로 남아 있도록 지정합니다.  
+NOUNLOAD **적용 대상:** SQL Server, BACKUP 작업 후에 테이프가 테이프 드라이브에 로드된 상태로 남아 있도록 지정합니다.  
   
 > [!NOTE]  
 > 테이프 백업 장치에 백업하는 경우 `BLOCKSIZE` 옵션은 백업 작업의 성능에 영향을 줍니다. 이 옵션은 일반적으로 테이프 장치에 쓰는 경우에만 성능에 영향을 줍니다.  
   
 **로그 관련 옵션**  
-  
+**적용 대상:** SQL Server  
 이러한 옵션은 `BACKUP LOG`와 함께만 사용됩니다.  
   
 > [!NOTE]  
 > 로그 백업을 수행하지 않으려면 단순 복구 모델을 사용합니다. 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY  
+  NORECOVERY **적용 대상:** SQL Server   
   비상 로그를 백업하고 데이터베이스를 RESTORING 상태로 유지합니다. NORECOVERY는 보조 데이터베이스로 장애 조치(failover)하거나 RESTORE 작업에 앞서 비상 로그를 저장할 때 유용합니다.  
   
   로그 잘림을 건너뛰는 최상의 로그 백업을 수행한 다음, 데이터베이스를 자동으로 다시 RESTORING 상태로 되돌리려면 `NO_TRUNCATE` 및 `NORECOVERY` 옵션을 함께 사용하십시오.  
   
-  STANDBY **=** *standby_file_name*  
+  STANDBY **=** *standby_file_name* 
+**적용 대상:** SQL Server   
   비상 로그를 백업하고 데이터베이스를 읽기 전용 및 STANDBY 상태로 유지합니다. STANDBY 절은 대기 데이터를 쓰고 롤백을 수행하지만 추가 복원 옵션을 사용해야 합니다. STANDBY 옵션 사용은 BACKUP LOG WITH NORECOVERY를 사용한 다음 RESTORE WITH STANDBY를 사용하는 것과 동일합니다.  
   
   대기 모드를 사용하려면 *standby_file_name*으로 지정하는 대기 파일이 필요합니다. 이 파일의 위치는 데이터베이스의 로그에 저장됩니다. 지정한 파일이 이미 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 파일을 덮어쓰고 파일이 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 파일을 만듭니다. 대기 파일은 데이터베이스의 일부가 됩니다.  
@@ -551,6 +553,7 @@ NOUNLOAD
   이 파일에는 롤백된 변경 내용이 저장되는데 다음에 RESTORE LOG를 적용하려는 경우 이 변경 내용은 취소해야 합니다. 커밋되지 않은 트랜잭션을 롤백하여 수정된 데이터베이스의 고유한 페이지가 모두 들어갈 수 있도록 대기 파일이 증가되므로 디스크 공간이 충분히 있어야 합니다.  
   
 NO_TRUNCATE  
+**적용 대상:** SQL Server  
 로그가 잘리지 않도록 지정하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 데이터베이스 상태에 관계없이 백업을 시도하도록 합니다. 따라서 `NO_TRUNCATE` 옵션으로 수행된 백업의 메타데이터는 완전하지 않을 수 있습니다. 이 옵션을 사용하면 데이터베이스가 손상된 경우에도 로그를 백업할 수 있습니다.  
   
 BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 지정하는 것과 같습니다.  
@@ -700,7 +703,8 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 > [!NOTE]  
 > TDE로 암호화된 데이터베이스에 최적화된 압축 알고리즘은 다음과 같은 경우에 자동으로 사용됩니다.
-> * URL로 백업이 사용되는 경우 기본 `MAXTRANSFERSIZE`가 1048576(1MB)로 변경되고 더 낮은 값으로 강제 적용되지 않는 경우
+> * 
+>  기본 `MAXTRANSFERSIZE`가 1048576(1MB)으로 변경되고 더 낮은 값으로 강제 적용되지 않는 경우에 사용됩니다.
 > * 데이터베이스에 여러 데이터 파일이 있을 때, 기본 `MAXTRANSFERSIZE`가 65536(64KB)의 배수로 변경되고 더 낮은 값(예: `MAXTRANSFERSIZE = 65536`)으로 변경되지 않는 경우 
   
 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
@@ -715,7 +719,16 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 -   데이터베이스 축소 또는 파일 축소 작업. 자동 축소 작업도 포함됩니다.  
   
 백업 작업이 파일 관리 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업이 설정한 잠금 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
-  
+
+## <a name="limitations-for-sql-database-managed-instance"></a>SQL Database 관리되는 인스턴스의 제한 사항
+SQL Database 관리되는 인스턴스는 데이터베이스를 스트라이프가 최대 32개인 백업으로 백업할 수 있습니다. 이는 백업 압축을 사용하는 경우 최대 4TB의 데이터베이스에 충분합니다.
+
+최대 백업 스트라이프 크기는 195GB(최대 blob 크기)입니다. 개별 스트라이프 크기를 줄이고 이 제한 내로 유지하려면 백업 명령에서 스트라이프 수를 늘립니다.
+
+> [!NOTE]
+> 온-프레미스에서 이 제한 사항을 해결하려면 `URL`에 백업하는 대신 `DISK`에 백업하고, blob에 백업 파일을 업로드한 다음, 복원합니다. 다른 blob 유형이 사용되므로 복원은 더 큰 파일을 지원합니다.
+
+ 
 ## <a name="metadata"></a>메타데이터  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 백업 작업을 추적하는 다음과 같은 백업 기록 테이블이 있습니다.  
   
@@ -740,7 +753,8 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 -   1. [전체 데이터베이스 백업](#backing_up_db)  
 -   2. [데이터베이스 및 로그 백업](#backing_up_db_and_log)  
--   3. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)  
+-   3. [보조 파일 그룹의 전체 파일 백업 만들기](#full_
+-   file_backup)  
 -   4. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)  
 -   5. [미러된 단일 패밀리 미디어 세트 만들기 및 백업](#create_single_family_mirrored_media_set)  
 -   6. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  

@@ -1,16 +1,16 @@
 ---
-title: "로그인 만들기 | Microsoft 문서"
-ms.custom: 
+title: 로그인 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
  **데이터베이스 역할 멤버 자격:**  *database_name*  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
-### <a name="securables"></a>보안 개체  
+### <a name="securables"></a>Securables  
  **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **상단 표**  
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 **특정 개체...**, **선택한 유형의 모든 개체...**또는 **서버***server_name*옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  에 **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택: **특정 개체...** , **유형의 모든 개체...** , 또는 **서버 * * * server_name*합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **참고:** **서버***server_name* 을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
+    > **참고:** Selecting **서버 * * * server_name* 자동으로 상단 표에 해당 서버의 보안 개체의 모든 채워집니다.  
   
 3.  **특정 개체...**를 선택한 경우:  
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 12/06/2017
   
 -   로그인에 사용 권한을 부여하려면 [보안 주체에 사용 권한 부여](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

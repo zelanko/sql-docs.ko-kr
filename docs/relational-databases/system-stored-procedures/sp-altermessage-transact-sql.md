@@ -1,16 +1,16 @@
 ---
 title: sp_altermessage (Transact SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_altermessage_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0922bc2c5365b31c1f4b385e43b10302f6465c52
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  변경할 메시지의 오류 번호는 **sys.messages**합니다. *message_number* 은 **int** 기본값은 없습니다.  
   
  [ **@parameter =** ] **'***write_to_log*'  
- 와 함께 사용 되  **@parameter_value**  메시지에 쓸 임을 나타내기 위해는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *write_to_log* 은 **sysname** 기본값은 없습니다. *write_to_log* WITH_LOG 또는 NULL로 설정 해야 합니다. 경우 *write_to_log* WITH_LOG 또는 NULL와에 대 한 값으로 설정 된  **@parameter_value**  은 **true**, Windows 응용 프로그램 로그에 메시지가 기록 됩니다. 경우 *write_to_log* WITH_LOG 또는 NULL 값을로 설정 되어  **@parameter_value**  은 **false**, 메시지는 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 수 있습니다 오류 발생 방식에 따라 기록 합니다. 경우 *write_to_log* 지정 된 값에 대 한  **@parameter_value**  도 지정 해야 합니다.  
+ 와 함께 사용 되 **@parameter_value** 메시지에 쓸 임을 나타내기 위해는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *write_to_log* 은 **sysname** 기본값은 없습니다. *write_to_log* WITH_LOG 또는 NULL로 설정 해야 합니다. 경우 *write_to_log* WITH_LOG 또는 NULL와에 대 한 값으로 설정 된 **@parameter_value** 은 **true**, Windows 응용 프로그램 로그에 메시지가 기록 됩니다. 경우 *write_to_log* WITH_LOG 또는 NULL 값을로 설정 되어 **@parameter_value** 은 **false**, 메시지는 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 수 있습니다 오류 발생 방식에 따라 기록 합니다. 경우 *write_to_log* 지정 된 값에 대 한 **@parameter_value** 도 지정 해야 합니다.  
   
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
- [  **@parameter_value =** ] **' * * * 값*'  
- 와 함께 사용 되  **@parameter**  에 쓰려고 오류 임을 나타내기 위해는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *값* 은 **varchar(5)**, 기본값은 없습니다. 경우 **true**, 오류가 항상 Windows 응용 프로그램 로그에 기록 됩니다. 경우 **false**, 오류가 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 오류 발생 방식에 따라 기록 될 수 있습니다. 경우 *값* 지정 된 *write_to_log* 에 대 한  **@parameter**  도 지정 해야 합니다.  
+ [ **@parameter_value =** ]**'***value*'  
+ 와 함께 사용 되 **@parameter** 에 쓰려고 오류 임을 나타내기 위해는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그입니다. *값* 은 **varchar(5)**, 기본값은 없습니다. 경우 **true**, 오류가 항상 Windows 응용 프로그램 로그에 기록 됩니다. 경우 **false**, 오류가 항상 Windows 응용 프로그램 로그에 기록 되지는 않지만 오류 발생 방식에 따라 기록 될 수 있습니다. 경우 *값* 지정 된 *write_to_log* 에 대 한 **@parameter** 도 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -84,8 +84,8 @@ GO
   
 ## <a name="see-also"></a>관련 항목:  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

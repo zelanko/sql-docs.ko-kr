@@ -1,26 +1,27 @@
 ---
-title: "Always On 가용성 그룹 자동 초기화 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
+title: Always On 가용성 그룹 자동 초기화 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ FROM sys.dm_hadr_automatic_seeding
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+두 열 *total_disk_io_wait_time_ms* 및 *total_network_wait_time_ms*는 자동 시드 프로세스에서 성능 병목 상태를 확인하는 데 사용할 수 있습니다. 또한 두 열은 확장된 이벤트 *hadr_physical_seeding_progress*에 존재합니다.
+
+**total_disk_io_wait_time_ms**는 디스크에서 대기하는 동안 백업/복원 스레드에서 소요된 시간을 나타냅니다. 이 값은 시드 작업이 시작된 이후 누적됩니다. 디스크가 백업 스트림을 읽거나 쓰는 데 준비되지 않은 경우 백업/복원 스레드가 절전 상태로 전환되고 디스크가 준비되었는지 확인하기 위해 1초 간격으로 다시 시작합니다.
+        
+**total_network_wait_time_ms**는 주 복제본과 보조 복제본에 대해 다르게 해석됩니다. 주 복제본에서 이 카운터는 네트워크 흐름 제어 시간을 나타냅니다. 보조 복제본에서는 메시지가 디스크를 쓸 수 있을 때까지 복원 스레드가 대기하는 시간을 나타냅니다.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>오류 로그에서 자동 시드를 사용 중인 데이터베이스 초기화 진단
 

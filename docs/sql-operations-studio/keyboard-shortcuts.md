@@ -1,6 +1,6 @@
 ---
-title: "만들기 및 SQL 작업 Studio (미리 보기)의 바로 가기 키 사용자 지정 | Microsoft Docs"
-description: "만들기 및 SQL 작업 Studio (미리 보기)의 바로 가기 키 사용자 지정 하는 방법에 알아봅니다."
+title: 만들기 및 SQL Operations Studio (preview) 의 바로 가기 키 사용자 지정 | Microsoft Docs
+description: 만들기 및 SQL Operations Studio (preview) 의 바로 가기 키 사용자 지정 하는 방법에 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

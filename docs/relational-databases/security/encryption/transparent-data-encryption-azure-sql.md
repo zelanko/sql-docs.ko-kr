@@ -1,28 +1,27 @@
 ---
-title: "Azure SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화 | Microsoft Docs"
-description: "SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화에 대해 간략히 설명합니다. 이 문서에서는 서비스 관리 투명한 데이터 암호화 및 Bring Your Own Key를 비롯하여 구성에 대한 장점과 옵션에 대해 설명합니다."
-keywords: 
+title: Azure SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화 | Microsoft Docs
+description: SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화에 대해 간략히 설명합니다. 이 문서에서는 서비스 관리 투명한 데이터 암호화 및 Bring Your Own Key를 비롯하여 구성에 대한 장점과 옵션에 대해 설명합니다.
+keywords: ''
 author: becczhang
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.custom: 
+ms.custom: ''
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

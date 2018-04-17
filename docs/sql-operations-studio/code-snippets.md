@@ -1,6 +1,6 @@
 ---
-title: "SQL 작업 Studio (미리 보기)에서 코드 조각을 만드는 | Microsoft Docs"
-description: "만들기 및 SQL 작업 Studio (미리 보기)에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다"
+title: SQL Operations Studio (preview) 에서 코드 조각을 만드는 | Microsoft Docs
+description: 만들기 및 SQL Operations Studio (preview) 에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
