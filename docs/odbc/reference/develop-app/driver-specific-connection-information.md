@@ -1,15 +1,16 @@
 ---
-title: "드라이버 관련 연결 정보 | Microsoft Docs"
-ms.custom: 
+title: 드라이버 관련 연결 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-connection-information"></a>드라이버 관련 연결 정보
 **SQLConnect** 가정 하는 데이터 원본 이름, 사용자 ID 및 암호는 데이터 원본에 연결 하기에 충분 하 고 다른 모든 연결 정보는 시스템에 저장할 수 있습니다. 이 경우가 자주 있습니다. 예를 들어 한 사용자 ID와 암호 DBMS에 로그온 하는 서버 및 다른 사용자 ID 및 암호에 로그온 할 수는 드라이버 해야 합니다. 때문에 **SQLConnect** 단일 사용자 ID와 암호를 허용 합니다. 즉,는 다른 사용자 ID와 암호를 저장 해야 시스템에 데이터 소스 정보로 **SQLConnect** 사용할 합니다. 잠재적인 보안 위반 이며 암호를 암호화 하지 않는 한 피해 야 합니다.  

@@ -1,27 +1,17 @@
 ---
 title: SQL Server와 함께 MicrosoftML 패키지를 사용 하 여 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/23/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 4f94d2eaaaa9fc70014e5d333dede4919ca198f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>SQL Server MicrosoftML 패키지 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,13 +20,13 @@ ms.lasthandoff: 04/04/2018
 
 SQL Server 2017 CTP 2.0에서 Python 언어에 대 한 지원이 추가 되었습니다. **microsoftml** r MicrosoftML 패키지에 동일한 함수를 포함 하는 Python에 대 한 패키지 
 
-+ **MicrosoftML for R**
++ **R에 대 한 MicrosoftML**
 
     소개 및 패키지 참조: [MicrosoftML: 기계 학습 R 알고리즘](https://docs.microsoft.com/en-us/r-server/r-reference/microsoftml/microsoftml-package)
 
     대/소문자 구분 R 이므로 참조할 수 있는 이름을 올바르게 패키지를 로드할 때 있는지 확인 합니다.
 
-+ **Python 용 microsoftml**
++ **Python 용 Microsoftml**
 
     소개 및 패키지 참조: [microsoftml (Python에 대 한 함수 라이브러리)](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)합니다. 
 

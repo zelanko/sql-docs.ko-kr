@@ -1,31 +1,32 @@
 ---
-title: "커서를 블록 | Microsoft Docs"
-ms.custom: 
+title: 커서를 블록 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors"></a>블록 커서
 대부분의 응용 프로그램에 네트워크를 통해 데이터를 가져오는 하는 시간이 많이 소비 해야 합니다. 이 이번의 일부는 네트워크를 통해 데이터를 실제로 가져오는 데 걸리는 및 데이터의 행을 요청 하려면 드라이버에 의해 만들어진 호출과 같은 일부 라도 네트워크 오버 헤드를 소비 됩니다. 응용 프로그램이 효율적으로 사용 하는 경우 두 번째 시간을 줄일 수 있습니다 *블록* 또는 *fat* *커서,* 한 번에 둘 이상의 행을 반환할 수 있는 합니다.  

@@ -1,8 +1,8 @@
 ---
-title: ODBC Driver for Oracle 사용자 &#39; s 가이드 | Microsoft Docs
+title: Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bf95ae6474a0f9a02763020282b4cce38991baa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88fcc5a433522a8ae51a7d8045da336465af9323
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle 사용자 &#39; s 가이드
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  
 >  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. Oracle에서 제공 하는 ODBC 드라이버를 사용 하십시오.  
   

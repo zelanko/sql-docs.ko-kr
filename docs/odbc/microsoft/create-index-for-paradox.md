@@ -1,30 +1,31 @@
 ---
-title: "에는 인덱스를 만들 | Microsoft Docs"
-ms.custom: 
+title: 에는 인덱스를 만들 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef256444ea5fe613b92c6d504e9fb972325803ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-for-paradox"></a>에는 인덱스 만들기
 ODBC Paradox 드라이버에 대 한 CREATE INDEX 문의 구문은 다음과 같습니다.  
@@ -51,7 +52,7 @@ ODBC Paradox 드라이버에 대 한 CREATE INDEX 문의 구문은 다음과 같
   
 -   *인덱스 이름* 기본 인덱스에 대 한 인수 Paradox 요구에 따라 테이블의 기본 이름과 동일 해야 합니다.  
   
- 경우 키워드 **UNIQUE** 은 생략 하면 ODBC Paradox 드라이버 만들어집니다 비고유 인덱스입니다. 이 주기 라는 Paradox 보조 인덱스 위해 *테이블 이름*합니다. X *nn*  및 *테이블 이름*합니다. Y*nn*여기서  *nn*  테이블의 열 수입니다. 고유 하지 않은 인덱스 다음과 같은 제한 사항이 적용 됩니다.  
+ 경우 키워드 **UNIQUE** 은 생략 하면 ODBC Paradox 드라이버 만들어집니다 비고유 인덱스입니다. 이 주기 라는 Paradox 보조 인덱스 위해 *테이블 이름*합니다. X*nn* 및 *테이블 이름*합니다. Y*nn*여기서 *nn* 테이블의 열 수입니다. 고유 하지 않은 인덱스 다음과 같은 제한 사항이 적용 됩니다.  
   
 -   테이블에 대해 고유 하지 않은 인덱스를 만들 수 있습니다, 전에 해당 테이블에 대 한 기본 인덱스 존재 해야 합니다.  
   

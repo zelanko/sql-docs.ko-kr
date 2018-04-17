@@ -1,41 +1,30 @@
 ---
 title: SQL Server Python 자습서 | Microsoft Docs
-titleSuffix: SQL Server
-ms.custom: ''
-ms.date: 03/06/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 690d27faac3fff53c72abc80690899117d8ea9ce
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: c99e5605dad537fddef20fbd091a61cc4e711471
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-python-tutorials"></a>SQL Server Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 자습서 및 SQL Server 2017와 Python의 사용을 보여 주는 샘플의 목록을 제공 합니다. 이러한 샘플 및 데모를 통해에 대해 설명 합니다.
+이 문서에서는 자습서 및 SQL Server 2017와 Python의 사용을 보여 주는 샘플의 목록을 제공 합니다. 이러한 샘플 및 데모를 통해 다음을 배우게 됩니다.
 
 + T-SQL에서 Python을 실행 하는 방법
 + 원격 및 로컬 컴퓨팅 컨텍스트 및 SQL Server 컴퓨터를 사용 하 여 Python 코드를 실행할 수 있습니다 어떻게 이란
 + 저장된 프로시저에서 Python 코드의 래핑 방법
 + SQL 프로덕션 환경에 대 한 Python 코드를 최적화합니다.
-+ 기계 학습 응용 프로그램에 포함 하기 위한 실제 시나리오
++ 응용 프로그램에서 기계 학습을 위한 실제 시나리오
 
-요구 사항 및 설치 하는 방법에 대 한 정보를 참조 하십시오. [필수 구성 요소](#bkmk_Prerequisites)합니다.
+요구 사항 및 설치 방법은 [필수 구성 요소](#bkmk_Prerequisites)를 참고합니다.
 
 ## <a name="bkmk_pythontutorials"></a>Python 자습서
 

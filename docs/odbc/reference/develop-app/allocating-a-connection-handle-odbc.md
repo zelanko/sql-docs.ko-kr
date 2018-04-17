@@ -1,15 +1,16 @@
 ---
-title: "ODBC 연결 핸들 할당 | Microsoft Docs"
-ms.custom: 
+title: ODBC 연결 핸들 할당 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - allocating connection handles [ODBC]
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd1f07d35356efda77edeaf08d851ad4d7d9bcb0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33aad1fdd9b707847d7a122d56ba5207e0074f01
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>ODBC 연결 핸들 할당
 응용 프로그램은 데이터 원본이 나 드라이버에 연결할 수, 먼저 다음과 같이 연결 핸들을 할당 해야 합니다.  
   
-1.  응용 프로그램 SQLHDBC 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수를 sql_handle_dbc 라는 옵션 및 연결을 할당 하는 환경 핸들의 주소를 전달 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+1.  응용 프로그램 SQLHDBC 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수를 sql_handle_dbc 라는 옵션 및 연결을 할당 하는 환경 핸들의 주소를 전달 합니다. 예를 들어:  
   
     ```  
     SQLHDBC hdbc1;  

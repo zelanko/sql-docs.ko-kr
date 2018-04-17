@@ -1,15 +1,16 @@
 ---
-title: "여러 결과 | Microsoft Docs"
-ms.custom: 
+title: 여러 결과 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], multiple results
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e537a1a767d0789333659d1aa26e57e11c42195e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e408c76354f6a4c958ebd209bc3778d0175dcef0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 문제가 원본에서 반환 되는 데이터는 문이 실행 된 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합을 행 합니다. *행* 는 업데이트에 의해 영향을 받는 행의 수, 삭제 또는 insert 문이 됩니다. 에 설명 된 일괄 처리, [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 개의 결과 생성할 수 있습니다.  

@@ -1,30 +1,31 @@
 ---
-title: "숫자 함수 | Microsoft Docs"
-ms.custom: 
+title: 숫자 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6bcf73b63e6fdf5dc61209ed990955c19e7851
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="numeric-functions"></a>숫자 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 숫자 함수를 설명 합니다. 호출 하 여 **SQLGetInfo** 와 *정보 유형* SQL_NUMERIC_FUNCTIONS의 응용 프로그램이 드라이버를 통해 지원 되는 숫자 함수 확인할 수 있습니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 |**ACOS (** *float_exp* **)** (ODBC 1.0)|아크코사인을 반환 *float_exp* 각도를 라디안으로 표현 됩니다.|  
 |**ASIN (** *float_exp* **)** (ODBC 1.0)|아크사인을 반환 *float_exp* 각도를 라디안으로 표현 됩니다.|  
 |**ATAN (** *float_exp* **)** (ODBC 1.0)|아크탄젠트를 반환 *float_exp* 각도를 라디안으로 표현 됩니다.|  
-|**ATAN2 (** *float_exp1*, *float_exp2***)** (ODBC 2.0)|아크탄젠트를 반환 된 *x* 및 *y* 으로 지정 된 좌표 *float_exp1* 및 *float_exp2*각각 각도 라디안으로 표현 됩니다.|  
+|**ATAN2 (** *float_exp1*, *float_exp2 * * *)** (ODBC 2.0)|아크탄젠트를 반환 된 *x* 및 *y* 으로 지정 된 좌표 *float_exp1* 및 *float_exp2*각각 각도 라디안으로 표현 됩니다.|  
 |**CEILING (** *numeric_exp* **)** (ODBC 1.0)|보다 크거나 같은 최소 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
 |**COS (** *float_exp* **)** (ODBC 1.0)|코사인을 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**COT (** *float_exp* **)** (ODBC 1.0)|코탄젠트를 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
@@ -54,14 +55,14 @@ ms.lasthandoff: 12/21/2017
 |**FLOOR (** *numeric_exp* **)** (ODBC 1.0)|보다 작거나 같은 최대 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
 |**로그 (** *float_exp* **)** (ODBC 1.0)|자연 로그를 반환 *float_exp*합니다.|  
 |**LOG10 (** *float_exp* **)** (ODBC 2.0)|반환 밑수 10 로그 *float_exp*합니다.|  
-|**MOD (** *integer_exp1*, *integer_exp2***)** (ODBC 1.0)|나머지 (나머지)를 반환 *integer_exp1* 나눈 *integer_exp2*합니다.|  
+|**MOD (** *integer_exp1*, *integer_exp2 * * *)** (ODBC 1.0)|나머지 (나머지)를 반환 *integer_exp1* 나눈 *integer_exp2*합니다.|  
 |**PI ()** (ODBC 1.0)|부동 소수점 값으로 pi의 상수 값을 반환합니다.|  
-|**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|값을 반환 *numeric_exp* 의 *integer_exp*합니다.|  
+|**POWER (** *numeric_exp*, *integer_exp * * *)** (ODBC 2.0)|값을 반환 *numeric_exp* 의 *integer_exp*합니다.|  
 |**RADIANS (** *numeric_exp* **)** (ODBC 2.0)|변환 된 라디안의 수를 반환 *numeric_exp* 도 합니다.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|사용 하 여 부동 소수점 난수를 반환 *integer_exp* 선택적 시드 값으로.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 &#124; *integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|  
+|**ROUND (** *numeric_exp*, *integer_exp * * *)** (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|  
 |**기호 (** *numeric_exp* **)** (ODBC 1.0)|부호의 표시를 반환 *numeric_exp*합니다. 경우 *numeric_exp* 은 0,-1 보다 작은 반환 됩니다. 경우 *numeric_exp* = 0, 0이 반환 됩니다. 경우 *numeric_exp* 0 보다 큰 1이 반환 됩니다.|  
 |**SIN (** *float_exp* **)** (ODBC 1.0)|사인을 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|제곱근을 반환 *float_exp*합니다.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|탄젠트를 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|
+|**TRUNCATE (** *numeric_exp*, *integer_exp * * *)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|

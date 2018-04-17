@@ -1,51 +1,35 @@
 ---
-title: "연결 문자열 속성 (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: 연결 문자열 속성 (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>연결 문자열 속성(Analysis Services) 
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
+  이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 응용 프로그램에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   
   
  응용 프로그램 코드에서 사용자 지정 연결 문자열을 작성하는 개발자는 ADOMD.NET 클라이언트에 대한 API 설명서를 검토하여 더 자세한 목록( <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- 이 항목에서 설명하는 속성은 Analysis Services 클라이언트 라이브러리인 ADOMD.NET, AMO 및 Analysis Services OLE DB 공급자에서 사용됩니다. 대부분의 연결 문자열 속성은 이러한 세 클라이언트 라이브러리와 함께 사용할 수 있습니다. 예외는 설명에 명시되어 있습니다.  
-  
- 이 항목은 다음과 같은 섹션으로 구성됩니다.  
-  
- [일반적으로 사용되는 연결 매개 변수](#bkmk_common)  
-  
- [인증 및 보안](#bkmk_auth)  
-  
- [특수한 용도의 매개 변수](#bkmk_special)  
-  
- [나중에 사용하도록 예약됨](#bkmk_reserved)  
-  
- [연결 문자열 예](#bkmk_examples)  
-  
- [Analysis Services에서 사용되는 연결 문자열 형식](#bkmk_supportedstrings)  
-  
- [연결 문자열 암호화](#bkmk_encrypt)  
+ 이 항목에서 설명하는 속성은 Analysis Services 클라이언트 라이브러리인 ADOMD.NET, AMO 및 Analysis Services OLE DB 공급자에서 사용됩니다. 대부분의 연결 문자열 속성은 이러한 세 클라이언트 라이브러리와 함께 사용할 수 있습니다. 예외는 설명에 명시되어 있습니다.
   
 > [!NOTE]  
 >  속성을 설정할 때 실수로 동일한 속성을 두 번 설정하면 연결 문자열에서 마지막 속성이 사용됩니다.  

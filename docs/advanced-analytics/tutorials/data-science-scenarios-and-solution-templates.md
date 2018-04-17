@@ -1,26 +1,17 @@
 ---
-title: 데이터 과학 시나리오 및 솔루션 템플릿을 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: 데이터 과학 시나리오 및 솔루션 템플릿 (SQL Server 기계 학습) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ SQL 저장 프로시저는 해당 하는 경우 및 각 솔루션에는 예제 �
 
 ## <a name="fraud-detection"></a>사기 검색
 
-[온라인 사기 감지 템플릿 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[온라인 사기 감지 템플릿 (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **:** 사기성이 있는 트랜잭션을 감지 하는 기능은 온라인 비즈니스에 중요 합니다. 환불 손실을 줄이기 위해 비즈니스 도난된 지불 수단 또는 자격 증명을 사용 하 여 트랜잭션을 신속 하 게 식별 해야 합니다. 사기성 거래가 발견되면 비즈니스는 일반적으로 추가 손실을 방지하기 위해 조치를 취하여 특정 계정을 최대한 빨리 차단합니다. 이 시나리오에서는 가능성이 사기 행위 확인 하기 온라인 구매 트랜잭션에서 데이터를 사용 하는 방법에 설명 합니다.
 

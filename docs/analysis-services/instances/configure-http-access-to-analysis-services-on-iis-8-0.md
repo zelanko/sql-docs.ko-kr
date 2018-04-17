@@ -1,31 +1,31 @@
 ---
-title: "IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성 | Microsoft Docs"
-ms.custom: 
+title: IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
+  이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 끝점을 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 응용 프로그램 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
   
 -   클라이언트 액세스가 인터넷 또는 엑스트라넷 연결을 통해 이루어집니다(설정할 수 있는 포트에 대한 제한 사항 있음)  
   
@@ -42,22 +42,6 @@ ms.lasthandoff: 02/15/2018
  HTTP 액세스 설정은 설치 후 작업입니다. HTTP 액세스를 위해 Analysis Services를 구성하려면 Analysis Services가 이미 설치되어 있어야 합니다. Analysis Services 관리자는 HTTP 액세스를 허용하기 위해 먼저 Windows 계정에 사용 권한을 부여해야 합니다. 또한 서버를 구성하기 전에 설치가 유효한지 검사하여 완전히 작동하는지 확인하는 것이 좋습니다. HTTP 액세스를 구성한 후에는 TCP/IP를 통해 HTTP 끝점과 서버의 일반 네트워크 이름을 모두 사용할 수 있습니다. HTTP 액세스를 설정한다고 해서 다른 데이터 액세스 방법을 사용할 수 없는 것은 아닙니다.  
   
  MSMDPUMP 구성을 계속 진행할 때 client-to-IIS, IIS-to-SSAS의 두 가지 연결을 고려할 수 있습니다. 이 문서의 지침은 IIS-SSAS에 대한 것입니다. 클라이언트 응용 프로그램에서 IIS에 연결하려면 먼저 추가 구성이 필요할 수 있습니다. SSL을 사용할 것인지 또는 바인딩을 구성하는 방법과 같은 사항은 이 문서에서 다루지 않습니다. IIS에 대한 자세한 내용은 [웹 서버(IIS)](http://technet.microsoft.com/library/hh831725.aspx) 를 참조하세요.  
-  
- 이 항목은 다음과 같은 섹션으로 구성됩니다.  
-  
--   [개요](#bkmk_overview)  
-  
--   [필수 구성 요소](#bkmk_prereq)  
-  
--   [웹 서버의 폴더로 MSMDPUMP.dll 복사](#bkmk_copy)  
-  
--   [IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기](#bkmk_appPool)  
-  
--   [IIS 인증 구성 및 확장 추가](#bkmk_auth)  
-  
--   [MSMDPUMP.INI 파일을 편집하여 대상 서버 설정](#bkmk_edit)  
-  
--   [구성 테스트](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> 개요  
  MSMDPUMP는 IIS에 로드되는 ISAPI 확장 프로그램으로, 로컬 또는 원격 Analysis Services 인스턴스에 대한 리디렉션을 제공합니다. 이 ISAPI 확장을 구성하여 Analysis Services 인스턴스에 대한 HTTP 끝점을 만들 수 있습니다.  
@@ -261,7 +245,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |익명|IIS의 **익명 인증 자격 증명 편집** 에서 지정한 계정을 멤버 자격 목록에 추가합니다. 자세한 내용은 [익명 인증](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)을 참조하세요.|  
 |Windows 인증|가장 또는 위임을 통해 Analysis Services 데이터를 요청하는 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> Kerberos 제한 위임이 사용될 경우 사용 권한이 필요한 유일한 계정은 액세스를 요청하는 Windows 사용자 및 그룹 계정입니다. 응용 프로그램 풀 ID에 필요한 권한은 없습니다.|  
-|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 **EffectiveUserName** 을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 마우스 오른쪽 단추로 클릭 인스턴스 &#124; **속성** &#124; **보안** &#124; **추가**합니다. 응용 프로그램 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.")|  
+|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 **EffectiveUserName** 을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 &#124; **속성** &#124; **보안** &#124; **추가**합니다. 응용 프로그램 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "AppPoolIdentity 계정을 입력 하는 방법을 보여 줍니다.")|  
   
  사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(영문)을 참조하세요.  
   

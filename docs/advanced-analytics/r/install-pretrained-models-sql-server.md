@@ -1,28 +1,22 @@
 ---
 title: 미리 학습 된 기계 학습 모델을 SQL Server에 설치 | Microsoft Docs
-ms.date: 03/14/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c9895584e53f488c0db15ad533ba4a2230ae60c4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 설치 된 SQL Server 컴퓨터 학습 서비스 설명 합니다. 
+이 문서에서는 방법을 (In-database) 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R Services 또는 SQL Server 컴퓨터 학습 서비스 설치를 설명 합니다. 
 
 미리 학습 된 모델을 감성 분석 이나 이미지 기능 생성 등의 작업을 수행 해야 하는 하지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스 없는 고객에 게 유용한 존재 합니다. 컴퓨터 학습 서버 팀 생성 하 고 텍스트와 이미지 프로세스를 효율적으로 시작할 수 있도록 이러한 모델을 학습 합니다. 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션.
 
@@ -194,8 +188,8 @@ SQL Server 2017 설치 프로그램을 사용 하 여 컴퓨터 학습 서버를
 
 각 네트워크의 구성 된 다음 참조 구현이 기반으로 합니다.
 
-+ ResNet-18
-+ ResNet-50
++ ResNet 18
++ ResNet 50
 + ResNet-101
 + AlexNet
 

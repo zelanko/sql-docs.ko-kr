@@ -1,23 +1,17 @@
 ---
 title: SQL Server 컴퓨터 학습 및 R Services (In-database) | Microsoft Docs
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 컴퓨터 학습 및 R Services (In-database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +98,7 @@ T-SQL 스크립트 내에서 Python 또는 R 함수를 호출 합니다.
 
 + **RevoScaleR**:이 R 패키지에 일부 병렬 처리 및 확장성을 제공 하도록 다시 설계 하는 가장 인기 있는 R 함수를 구현 합니다. 또한 일반적으로는 훨씬 큰 메모리와 계산력을 갖춘 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 계산을 푸시하여 성능과 확장을 더 증대하는 함수도 포함되어 있습니다.
 
-+ **revoscalepy**. SQL Server 2017 년 1에서 사용할 수 있는이 Python 라이브러리 RevoScaleR에서 원격 계산 컨텍스트 등 가장 인기 있는 함수를 구현 하 고 여러 알고리즘을 지 원하는 분산 처리 합니다.
++ **revoscalepy**합니다. SQL Server 2017 년 1에서 사용할 수 있는이 Python 라이브러리 RevoScaleR에서 원격 계산 컨텍스트 등 가장 인기 있는 함수를 구현 하 고 여러 알고리즘을 지 원하는 분산 처리 합니다.
 
 **리소스**
 

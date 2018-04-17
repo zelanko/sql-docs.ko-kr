@@ -1,16 +1,16 @@
 ---
-title: "레지스트리 항목 (ODBC 드라이버 Visual FoxPro) | Microsoft Docs"
-ms.custom: 
+title: 레지스트리 항목 (ODBC 드라이버 Visual FoxPro) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - registry keys [ODBC]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b1ade1fb23e07a25a903b7e04beb8def84900fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>레지스트리 항목 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버를 설치할 때 설치 프로그램이 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini Microsoft Visual FoxPro 드라이버 라는 새 키를 추가 하려면 레지스트리 키에서 시스템의 레지스트리를 업데이트 합니다. 해당 키 아래에 다음 표에 설명 된 값이 추가 됩니다.  

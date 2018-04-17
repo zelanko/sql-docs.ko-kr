@@ -1,36 +1,37 @@
 ---
-title: "SQLStatistics (텍스트 파일 드라이버) | Microsoft Docs"
-ms.custom: 
+title: SQLStatistics (텍스트 파일 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Text File Driver
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1228d60c046d2633e46f93e162684365d84c3c47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 162eb8302416664a65ddc767e817dfe70ae932a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (텍스트 파일 드라이버)
 > [!NOTE]  
 >  이 항목에서는 텍스트 파일 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
-|Column|주석|  
+|열|설명|  
 |------------|--------------|  
 |TABLE_QUALIFIER|디렉터리 경로입니다.<br /><br /> 패턴 일치에서 지원 되지 않습니다는 *szTableQualifier* 인수입니다.|  
 |TABLE_OWNER|소유자 이름입니다. 지원 되지 않으므로이 열에 NULL이 반환 됩니다.|  

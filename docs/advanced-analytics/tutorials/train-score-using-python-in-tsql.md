@@ -1,28 +1,17 @@
 ---
 title: 학습 및 점수 매기기에 대 한 SQL에서 사용 하 여 Python 모델 | Microsoft Docs
-titleSuffix: SQL Server
-ms.custom: ''
-ms.date: 02/28/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 976ccb21ed125bb65ba52eb05fd8b08664061a31
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b7f5883356ff6878f869ee10f915bcb93a2dba17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-python-model-in-sql-for-training-and-scoring"></a>SQL에서 Python 모델을 학습 및 점수 매기기에 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,9 +96,9 @@ ms.lasthandoff: 04/04/2018
 
     |model_name | model |
     |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes 1 월 1 일 2018 오전 9시 39분 | 0x800363736B6C656172... |
-    | Naive Bayes 2 월 1 일 2018 오전 10시 51분 | 0x800363736B6C656172... |
+    | Naive Bayes | 0x800363736B6C656172 중... |
+    | Naive Bayes 1 월 1 일 2018 오전 9시 39분 | 0x800363736B6C656172 중... |
+    | Naive Bayes 2 월 1 일 2018 오전 10시 51분 | 0x800363736B6C656172 중... |
 
 ## <a name="generate-scores-from-the-model"></a>모델에서 점수를 생성 합니다.
 

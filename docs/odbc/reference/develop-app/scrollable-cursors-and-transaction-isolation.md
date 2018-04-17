@@ -1,15 +1,16 @@
 ---
-title: "스크롤 가능 커서 및 트랜잭션 격리 | Microsoft Docs"
-ms.custom: 
+title: 스크롤 가능 커서 및 트랜잭션 격리 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68517f733dcb10f75669341bdef861b035b79a72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>스크롤 가능 커서 및 트랜잭션 격리
 다음 표에서 변경 내용 표시를 제어 하는 요소를 나열 합니다.  
@@ -46,17 +47,17 @@ ms.lasthandoff: 12/21/2017
 |커서 type\action|자체|소유<br /><br /> Txn|기타<br /><br /> Txn<br /><br /> (RU[a])|기타<br /><br /> Txn<br /><br /> (RC[a])|기타<br /><br /> Txn<br /><br /> (RR[a])|기타<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |정적|||||||  
-|Insert|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
-|Update|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
-|DELETE|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
+|Insert|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
+|Update|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
+|Delete|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
 |키 집합|||||||  
-|Insert|Maybe [b]|아니오|아니오|아니오|아니오|아니오|  
-|Update|예|예|예|예|아니오|아니오|  
-|DELETE|Maybe [b]|예|예|예|아니오|아니오|  
+|Insert|Maybe [b]|아니요|아니오|아니오|아니오|아니요|  
+|Update|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|아니요|  
+|Delete|Maybe [b]|예|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|아니요|  
 |Dynamic|||||||  
-|Insert|예|예|예|예|예|아니오|  
-|Update|예|예|예|예|아니오|아니오|  
-|DELETE|예|예|예|예|아니오|아니오|  
+|Insert|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|  
+|Update|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|아니요|  
+|Delete|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요|아니요|  
   
  [a] 괄호로 문자 나타냅니다는 커서를 포함 하는 트랜잭션의 격리 수준 (에 변경) 다른 트랜잭션 격리 수준을 관련이 없습니다.  
   

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 자습서 6 단원: 측정값 만들기 | Microsoft Docs"
-description: "Analysis Services tutorial 프로젝트에서 측정값을 만드는 방법을 설명 합니다."
+title: 'Analysis Services 자습서 6 단원: 측정값 만들기 | Microsoft Docs'
+description: Analysis Services tutorial 프로젝트에서 측정값을 만드는 방법을 설명 합니다.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b4de99f18366afefaeb5411e0fc5454d378b87f7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d37b1c5a307ea7f9c90fa29c83536a4b3d8ef0bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-measures"></a>측정값 만들기
 

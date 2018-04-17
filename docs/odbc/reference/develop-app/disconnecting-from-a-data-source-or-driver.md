@@ -1,15 +1,16 @@
 ---
-title: "데이터에서 연결을 끊으면 원본이 나 드라이버 | Microsoft Docs"
-ms.custom: 
+title: 데이터에서 연결을 끊으면 원본이 나 드라이버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disconnecting from driver [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], disconnecting
 - ODBC drivers [ODBC], disconnecting
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70c26fdf840b9e4cae6cced3453c2444d1007
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a1e0e89632c1c39df415c8db3a9f29c9c724c2d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>데이터에서 연결을 끊으면 원본이 나 드라이버
 호출 응용 프로그램 데이터 원본을 사용 하 여 완료 되 면 **SQLDisconnect**합니다. **SQLDisconnect** 연결에 할당 되는 모든 문을 해제 하 고 데이터 원본에서 드라이버 연결을 끊습니다. 트랜잭션을 진행 중인 경우 오류를 반환 합니다.  

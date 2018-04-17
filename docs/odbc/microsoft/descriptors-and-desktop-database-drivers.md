@@ -1,15 +1,16 @@
 ---
-title: "데이터베이스 드라이버 설명자 및 바탕 화면 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 드라이버 설명자 및 바탕 화면 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], descriptors
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 136c037cbf6d6d40335350e1c6cb9136d9bf8f0c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3c1cf39e841e57e4ef836f042cea41240f7f7bfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>설명자 및 데스크톱 데이터베이스 드라이버
 설명자는 동적 매개 변수 또는 열 데이터에 대 한 정보를 보유 하는 데이터 구조입니다. **SQLGetDescField** 는 아래에 나열 된 지원 되는 설명자를 검색 하는 데 사용할 수 있습니다. 구현 매개 변수 설명자 IPD ()는 자동으로 채워지지 때문에 **SQLDescribeParam** 지원 되지 않습니다. 설명자 필드 (예: SQL_DESC_BASE_TABLE_NAME) Jet을 통해 사용할 수 없는 지원 되지 않습니다.  

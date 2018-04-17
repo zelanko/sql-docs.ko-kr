@@ -2,7 +2,7 @@
 title: SQL 명령 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>SQL 명령 선택
 하나 이상의 테이블에서 데이터를 검색합니다.  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A *하위 쿼리*, 다음 인수에서 참조 하는 SELECT 내에서 선택 및 괄호로 묶어야 합니다. 동일한 수준에 최대 두 개의 하위 쿼리를 사용할 수 있습니다 (안에 있는 경우)는 WHERE 절에 있습니다. (해당 섹션에는 인수 참조). 하위 쿼리는 조인 조건이 여러 개 포함할 수 있습니다.  
   
- [모든 &#124; DISTINCT] [*별칭*.] *Select_Item* [AS *Column_Name*] [, [*별칭*.] *Select_Item* [AS *Column_Name*]...]  
+ [모든 &#124; DISTINCT]   [*별칭*.] *Select_Item* [AS *Column_Name*] [, [*별칭*.] *Select_Item* [AS *Column_Name*]...]  
  SELECT 절에는 필드, 상수 및 쿼리 결과에 표시 되는 식을 지정 합니다.  
   
  기본적으로 쿼리 결과의 모든 행을 표시 모든 합니다.  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* 에 명명 된 테이블에 대 한 임시 이름을 지정 *테이블*합니다. 로컬 별칭을 지정 하면 SELECT 문의 전체 테이블 이름 대신 로컬 별칭을 사용 해야 합니다. 로컬 별칭 Visual FoxPro 환경에 영향을 주지 않습니다.  
   
- 여기서 *joincondition이* [AND *joincondition이* ...]    [및 &#124; 또는 *FilterCondition* [AND &#124; 또는 *FilterCondition* ...]]  
+ 여기서 *joincondition이* [AND *joincondition이* ...]    [AND &#124; 또는 *FilterCondition* [AND &#124; 또는 *FilterCondition* ...]]  
  Visual FoxPro 쿼리 결과에 특정 레코드만 포함 하도록 지시 합니다. 여러 테이블에서 데이터를 검색 하는 데 필요한 경우.  
   
  *Joincondition이* FROM 절에서 테이블을 연결 하는 필드를 지정 합니다. 쿼리에서 둘 이상의 테이블을 포함 하는 경우 첫 번째 후 모든 테이블에 대 한 조인 조건을 지정 해야 합니다.  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  필터 조건에 모두 포함, 필드의 레코드가 쿼리 결과에 포함 되기 전에 하위 쿼리에 의해 생성 된 모든 값에 대 한 비교 조건을 만족 해야 합니다.  
   
- **예 4** *FieldName 비교* 모든 &#124; 일부 (*하위 쿼리*)  
+ **예 4** *FieldName 비교* ANY &#124; SOME (*하위 쿼리*)  
   
  `company < ANY ;`  
   

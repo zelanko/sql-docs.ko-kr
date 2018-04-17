@@ -1,31 +1,32 @@
 ---
-title: "설명자를 명시적으로 할당 | Microsoft Docs"
-ms.custom: 
+title: 설명자를 명시적으로 할당 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - explicitly allocated descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 791d7620afc4f952ccb99c80cad980ebd2e2e9ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f92ad0615047da9fd775ec8faa491e8d9a4ba79
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicitly-allocated-descriptors"></a>명시적으로 할당 된 설명자
 응용 프로그램에서 언제 든 지 데이터베이스에 연결 되어 연결 된 응용 프로그램 설명자를 할당할 명시적으로 수 있습니다. 사용 하 여 처리 하는 문 특성 처럼이 설명자 핸들을 지정 하 여 **SQLSetStmtAttr**, 응용 프로그램 지시 드라이버에 해당 하는 대신 해당 설명자 암시적으로 응용 프로그램 할당 설명자입니다. 응용 프로그램 대체 구현을 설명자를 지정할 수 없습니다.  

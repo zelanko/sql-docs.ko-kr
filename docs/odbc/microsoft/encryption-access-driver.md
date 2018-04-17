@@ -1,30 +1,31 @@
 ---
-title: "암호화 (Access 드라이버) | Microsoft Docs"
-ms.custom: 
+title: 암호화 (Access 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], encryption
 - encryption [ODBC]
 ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f47b322ffac97d6c0882ebe0aa4c44129b0962d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b841a06305e55865689d1d512bab3a4130c02cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryption-access-driver"></a>암호화 (Access 드라이버)
 (이 컨트롤의 경우에만 사용할 수 있는 버전 4입니다. *x* 형식이 선택 되어 있습니다.)  

@@ -1,15 +1,16 @@
 ---
-title: "데이터 형식 식별자 및 설명자 | Microsoft Docs"
-ms.custom: 
+title: 데이터 형식 식별자 및 설명자 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f54638aa02c885ee0e6fe8d14310d319dafb11c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9d36c0308ae7afb12541a0f33f4d2b417dfb15e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>데이터 형식 식별자 및 설명자
 데이터 형식에 나열 된는 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 및 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 이 부록 앞부분의 섹션은 "간결한" 데이터 형식: 각 식별자 단일 데이터 형식을 참조 합니다. 식별자 및 데이터 형식 간의 한 일 대응이 됩니다. 하지만 설명자는 작업을 수행할에 있지 않은 모든 경우 데이터 형식을 식별 하는 단일 값을 사용 합니다. 일부 경우에는 "verbose" 데이터 형식 및 형식 하위 코드 사용 합니다. 날짜/시간 및 간격 데이터 형식 제외한 모든 데이터 형식에 대 한 자세한 정보 표시 형식 식별자가 있는 간결한 형식 식별자와 동일 하 고 값을 SQL_DESC_DATETIME_INTERVAL_CODE의 값은 0과 같습니다. 그러나 날짜/시간 및 간격 데이터 형식의 SQL_DESC_TYPE에 저장 됩니다 (SQL_DATETIME 또는 sql_interval 인) 자세한 정보 표시 유형, SQL_DESC_CONCISE_TYPE, 간결한 형식은 저장 됩니다 및 각 간결한 형식에 대 한 하위 코드 값을 SQL_DESC_DATETIME_INTERVAL_CODE에 저장 됩니다. 이러한 필드 중 하나를 설정 다른 영향을 줍니다. 이러한 필드에 대 한 자세한 내용은 참조는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명 합니다.  

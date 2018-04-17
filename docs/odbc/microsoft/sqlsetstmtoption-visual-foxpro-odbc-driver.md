@@ -2,7 +2,7 @@
 title: SQLSetStmtOption (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: beceecda58550532d8c4b1a867fee5ed6393078e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a97b0097cc8bc59721160347d7bd8af05a906f79
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  문 핸들에 관련 된 옵션 설정 *hstmt*합니다.  
   
-|*fOption*|허용된 값|주석|  
+|*fOption*|허용된 값|설명|  
 |---------------|--------------------|--------------|  
 |SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|이 설정 하려고 하면 *fOption*, 드라이버는 오류를 반환 합니다.: "드라이버를 사용할 수 없습니다."입니다. Visual FoxPro 비동기 실행을 지원 하지 않습니다.|  
 |SQL_BIND_TYPE|SQL_BIND_BY_COLUMN 또는 결과에 열이 바인딩될 버퍼 인스턴스나 구조의 길이 나타내는 32 비트 값입니다.||  

@@ -1,15 +1,16 @@
 ---
-title: "C: 날짜-시간 간격으로 SQL | Microsoft Docs"
-ms.custom: 
+title: 'C: 날짜-시간 간격으로 SQL | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], day-time intervals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b7952543ea1a014555b1227336355a2d6c31563
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9df3ee4fdd01d5296e547bb445f3e4e47cee3561
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL에서 c: 날짜-시간 간격
 주간 시간 간격 ODBC SQL 데이터 형식에 대 한 식별자는.  
@@ -55,11 +56,11 @@ ms.lasthandoff: 12/21/2017
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|모든 하루 시간 C 간격 유형|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 보유할 만큼 크지 않습니다 대상의 전체 자릿수를 유도|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|[B] [b] [b] [b] [b] [b] [b] [b] SQL_C_BIGINT SQL_C_NUMERIC SQL_C_ULONG SQL_C_SLONG SQL_C_SHORT SQL_C_USHORT SQL_C_UTINYINT SQL_C_STINYINT|간격 정밀도 단일 필드 였으며 잘림 없이 데이터 변환<br /><br /> 간격 정밀도 단일 필드 였으며 잘린 소수 자릿수<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 간격 정밀도 단일 필드 없습니다.|data<br /><br /> 잘린된 데이터<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 데이터의 길이<br /><br /> 데이터의 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|모든 하루 시간 C 간격 유형|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 보유할 만큼 크지 않습니다 대상의 전체 자릿수를 유도|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|[B] [b] [b] [b] [b] [b] [b] [b] SQL_C_BIGINT SQL_C_NUMERIC SQL_C_ULONG SQL_C_SLONG SQL_C_SHORT SQL_C_USHORT SQL_C_UTINYINT SQL_C_STINYINT|간격 정밀도 단일 필드 였으며 잘림 없이 데이터 변환<br /><br /> 간격 정밀도 단일 필드 였으며 잘린 소수 자릿수<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 간격 정밀도 단일 필드 없습니다.|Data<br /><br /> 잘린된 데이터<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 데이터의 길이<br /><br /> 데이터의 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|Data<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
   
  SQL 유형 [a] A 하루 시간 간격을 일 시간 간격 C 형식으로 변환할 수 있습니다.  
   

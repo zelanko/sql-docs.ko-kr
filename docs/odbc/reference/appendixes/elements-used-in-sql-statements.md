@@ -1,31 +1,32 @@
 ---
-title: "SQL 문에서 사용 되는 요소 | Microsoft Docs"
-ms.custom: 
+title: SQL 문에서 사용 되는 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f619ebbbc3bb7c0ebbc90025a65c7f0530e3e4e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 60e0bf5d464b85aeca56d89fa130553f8114b813
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 문에서 사용 되는 요소
 다음과 같은 요소가 앞에 나열 된 SQL 문에서 사용 됩니다.  
@@ -53,39 +54,39 @@ ms.lasthandoff: 12/21/2017
   
  *데이터 형식* :: = *문자 문자열 형식* (*문자 문자열 형식* SQLGetTypeInfo가 반환 되는 결과 집합에 있는 "" DATA_TYPE"" 열의입니다 하거나 SQL_CHAR 데이터 형식인 또는 SQL_VARCHAR입니다.)  
   
- *자리* :: 0 &#124; 1 &#124; = 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *자리* :: 0 = &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
  *동적 매개 변수* :: =?  
   
- *식* :: = 용어 &#124; 식 {+ &#124; –} 용어  
+ *식* :: 용어 = &#124; 식 {+&#124;–} 용어  
   
- *비율* :: = [*+*&#124; *–*]*기본*  
+ *비율* :: = [*+*&#124;*–*]*기본*  
   
  *삽입 값* :: =  
   
  *동적 매개 변수*  
   
- &#124; *리터럴*  
+ &#124;*리터럴*  
   
- &#124; NULL  
+ &AMP;#124;NULL  
   
- &#124; 사용자  
+ &AMP;#124;사용자  
   
  *문자* :: = *lower case 편지 &#124; 위 대/소문자 문자*  
   
  *리터럴* :: = *문자 문자열 리터럴*  
   
- *lower case 편지* :: =는 &#124; b &#124; &#124; d &#124; e &#124; &#124; &#124; h &#124; &#124; j &#124; k &#124; l &#124; m &#124; 아니요 &#124; &#124; p &#124; q &#124; r &#124; &#124; &#124; &#124; v &#124; &#124; x &#124; y &#124; z  
+ *lower case 편지* :: =는 &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
  *order by 절* :: ORDER BY = *정렬 사양* [, *정렬 사양*]...  
   
  *기본* :: = *열 이름*  
   
- &#124; *동적 매개 변수*  
+ &#124;*동적 매개 변수*  
   
- &#124; *리터럴*  
+ &#124;*리터럴*  
   
- &#124; ( *식* )  
+ &#124;( *식* )  
   
  *검색 조건* :: = *부울 용어* [또는 *검색 조건*]  
   
@@ -103,10 +104,10 @@ ms.lasthandoff: 12/21/2017
   
  *테이블 참조 목록* :: = *테이블 참조* [,*테이블 참조*]...  
   
- *용어* :: = *비율* &#124; *용어* {\*&#124; */* } *비율*  
+ *용어* :: = *비율* &#124; *용어* {\*&#124;*/*} *비율*  
   
  *부호 없는 정수* :: = {*자리*}  
   
- *위 사례 편지* :: = *&#124; &#124; &#124; D &#124; E &#124; &#124; &#124; H &#124; &#124; J &#124; K &#124; L &#124; M &#124; &#124; &#124; P &#124; Q &#124; &#124; &#124; &#124; &#124; V &#124; &#124; X &#124; Y &#124; Z*  
+ *위 사례 편지* :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; I &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
  *사용자 정의 이름* :: = *문자로*[*자리* &#124; *문자로* &#124; *_*]...

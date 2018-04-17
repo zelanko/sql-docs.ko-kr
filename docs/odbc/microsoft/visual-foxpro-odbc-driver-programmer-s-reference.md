@@ -1,32 +1,33 @@
 ---
-title: "Visual FoxPro ODBC 드라이버 프로그래머 &#39; s 참조 | Microsoft Docs"
-ms.custom: 
+title: Visual FoxPro ODBC 드라이버 프로그래머&#39;s 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], technical reference
 - FoxPro ODBC driver [ODBC], technical reference
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e626d433ae1546eb346c53708086c32f58e5096b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a95322aad17e46e87175247fec9eb2b018e8daf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 드라이버 프로그래머 &#39; s 참조
+# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 드라이버 프로그래머&#39;s 참조
 Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 포함 됩니다.  
   
 -   [책갈피 지원](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  
@@ -35,7 +36,7 @@ Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 �
   
 -   [커서 모델 지원](../../odbc/microsoft/supported-cursor-model-visual-foxpro-odbc-driver.md)  
   
--   [지원되는 데이터 형식](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)  
+-   [지원 되는 데이터 형식](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)  
   
 -   [다국어 기능 지원](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)  
   

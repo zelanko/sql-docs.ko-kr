@@ -1,31 +1,32 @@
 ---
-title: "데스크톱 데이터베이스 드라이버 아키텍처 | Microsoft Docs"
-ms.custom: 
+title: 데스크톱 데이터베이스 드라이버 아키텍처 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>데스크톱 데이터베이스 드라이버 아키텍처
 이러한 드라이버는 사용 하 여 Microsoft Windows 95 이상 또는 Windows NT 4.0 및 Windows 2000 위한 것입니다. Windows 95 이상; 32 비트 응용 프로그램만 지원 됩니다. 16 비트 및 32 비트 응용 프로그램은 Windows NT 4.0 및 Windows 2000에서 지원 됩니다.  
@@ -37,13 +38,13 @@ ms.lasthandoff: 12/21/2017
   
  다음은 Windows 95 이상 응용 프로그램/드라이버 아키텍처가입니다.  
   
- ![응용 프로그램 &#47; 드라이버 아키텍처: Windows 95 이상](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![응용 프로그램&#47;드라이버 아키텍처: Windows 95 이상](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  Windows 95에서 16 비트 응용 프로그램에서 이들이 드라이버를 사용 하는 지원 되지 않습니다.  
   
  다음은 Windows NT 4.0 및 Windows 2000에서 응용 프로그램/드라이버 아키텍처가입니다.  
   
- ![응용 프로그램 &#47; 드라이버 아키텍처: NT 4.0 및 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![응용 프로그램&#47;드라이버 아키텍처: NT 4.0 및 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  데스크톱 데이터베이스 드라이버는 2 계층 드라이버. 2 계층 구성에서 드라이버는 구문 분석, 유효성 검사, 최적화 및 쿼리를 실행 하는 과정을 수행 하지 않습니다. 대신, Microsoft Jet는 이러한 작업을 수행합니다. ODBC API 호출을 처리 하 고 SQL 엔진으로 작동 합니다. Microsoft Jet 드라이버에서 정수 계열, 분리 불가능 부분이 되었습니다: 드라이버와 함께 제공 하 고 컴퓨터에서 다른 응용 프로그램에서 사용 하는 경우에 된 드라이버와 함께 상주 합니다.  
   

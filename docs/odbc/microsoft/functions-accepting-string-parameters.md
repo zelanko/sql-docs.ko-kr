@@ -1,15 +1,16 @@
 ---
-title: "문자열 매개 변수를 수락 하는 함수 | Microsoft Docs"
-ms.custom: 
+title: 문자열 매개 변수를 수락 하는 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], string parameters
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 576257a8d9cdd38d0209c618aa82d6178d9d0689
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ffd7de35f7104b311852c9b7e750bedd8a9cb72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="functions-accepting-string-parameters"></a>문자열 매개 변수를 수락 하는 함수
 문자열 매개 변수를 사용 하는 모든 함수를 유니코드로 변환 됩니다. ("W"에 대 한 형식의 함수를 내보냅니다.) 바이트 수는 해당 되는 ODBC Api에 대 한 문자의 수로 변환 됩니다. 이 다음 기능에 적용 됩니다.  

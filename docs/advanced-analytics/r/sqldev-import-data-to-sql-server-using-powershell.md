@@ -1,29 +1,17 @@
 ---
-title: '2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기 | Microsoft Docs'
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.author: heidist
+title: Lesson 2 PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: tutorial
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 77709eedd7659fb833bcf2f046611d3bda1929ec
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 6dbd1af581865d44c1636a6bac5acc02ae68532b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +44,7 @@ ms.lasthandoff: 04/04/2018
   
     - 인스턴스의 계정에 대한 사용자 이름 및 암호. 계정에는 데이터베이스를 만들 테이블 및 저장된 프로시저를 만들고 테이블에 데이터를 업로드 하는 권한이 있어야 합니다. 사용자 이름 및 암호를 제공 하지 않으면 Windows id에 SQL Server 로그인에 사용 됩니다.
   
-    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어
+    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

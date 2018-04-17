@@ -2,7 +2,7 @@
 title: SET 빈도로 명령을 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba3689fb9d70418d546d9583a537b2112a65a71b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fb1ee7ee957ef5a7872a87a47d5615f1d241aa6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-reprocess-command"></a>SET 빈도로 명령
 실패 한 잠금 시도 후 파일이 나 레코드를 잠그는 수 시간 또는 방법에 대 한 long을 지정 합니다.  

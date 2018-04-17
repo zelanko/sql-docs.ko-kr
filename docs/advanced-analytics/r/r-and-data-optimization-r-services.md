@@ -1,24 +1,17 @@
 ---
-title: R Services-데이터 최적화에 대 한 성능 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server R Services-데이터 최적화에 대 한 성능 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -167,7 +160,7 @@ RevoScaleR의 최적화에서 추가 지침은 다음이 문서를 참조 합니
 
 + 함수에 대 한 참조 [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>Use MicrosoftML
+### <a name="use-microsoftml"></a>MicrosoftML 사용
 
 또한 좋습니다 새 보면 **MicrosoftML** 계산 컨텍스트 및 RevoScaleR에서 제공 하는 변환에 사용할 수 있는 확장 가능한 기계 학습 알고리즘을 제공 하는 패키지입니다.
 

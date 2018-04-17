@@ -1,30 +1,31 @@
 ---
-title: "키 집합 커서를 사용 하 여의 제한 사항 | Microsoft Docs"
-ms.custom: 
+title: 키 집합 커서를 사용 하 여의 제한 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], cursors
 - keyset-driven cursors [ODBC]
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6ecdac0639264140feb29cbe5023f81b407d231
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6661ca9104e683cdac84cb3d533736d3a02f42f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>키 집합 커서를 사용 하 여의 제한 사항
 > [!IMPORTANT]  

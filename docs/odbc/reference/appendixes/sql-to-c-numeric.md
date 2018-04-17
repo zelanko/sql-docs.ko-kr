@@ -1,31 +1,32 @@
 ---
-title: "SQL에서 c: 숫자 | Microsoft Docs"
-ms.custom: 
+title: 'SQL에서 c: 숫자 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], numeric
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f09af0c145da9d435bce70619a5388f1cecb581
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 48158aa2b41d61a5fa4031582f9b6be8c631acca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-numeric"></a>SQL에서 c: 숫자
 숫자 ODBC SQL 데이터 형식에 대 한 식별자는.  
@@ -50,13 +51,13 @@ ms.lasthandoff: 12/21/2017
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|[A] 잘림 없이 데이터 변환<br /><br /> 데이터 잘림 [a] 소수 자릿수로 변환<br /><br /> 데이터 변환 [a] (소수) 대비 전체 자릿수 손실 될 수 있습니다.|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22003|  
-_C_FLOAT<br /><br /> SQL_C_DOUBLE|데이터는 숫자를 변환 하는 데이터 형식 범위 내에서 [a]<br /><br /> 데이터 숫자를 변환 하는 데이터 형식의 범위를 벗어났습니다 [a]|data<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_BIT|데이터는 0 또는 1 [a]<br /><br /> 데이터 0, 2, 보다 작음 및 [a] 1과 같지 않은 보다 큽니다.<br /><br /> 데이터는 0 보다 작거나 또는 [a] 2 보다 크거나|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|1 [b]<br /><br /> 1 [b]<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c + +] SQL_C_INTERVAL_YEAR [c + +] [c + +] SQL_C_INTERVAL_DAY SQL_C_INTERVAL_HOUR [c + +] [c + +] SQL_C_INTERVAL_MINUTE SQL_C_INTERVAL_SECOND [c + +]|잘리지 데이터<br /><br /> 잘린 소수 부분<br /><br /> 잘릴 숫자의 정수 부분|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 < *BufferLength*<br /><br /> (소수) 대비 전체 자릿수 > = *BufferLength*|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|[A] 잘림 없이 데이터 변환<br /><br /> 데이터 잘림 [a] 소수 자릿수로 변환<br /><br /> 데이터 변환 [a] (소수) 대비 전체 자릿수 손실 될 수 있습니다.|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22003|  
+_C_FLOAT<br /><br /> SQL_C_DOUBLE|데이터는 숫자를 변환 하는 데이터 형식 범위 내에서 [a]<br /><br /> 데이터 숫자를 변환 하는 데이터 형식의 범위를 벗어났습니다 [a]|Data<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_BIT|데이터는 0 또는 1 [a]<br /><br /> 데이터 0, 2, 보다 작음 및 [a] 1과 같지 않은 보다 큽니다.<br /><br /> 데이터는 0 보다 작거나 또는 [a] 2 보다 크거나|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|1 [b]<br /><br /> 1 [b]<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|Data<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [c + +] SQL_C_INTERVAL_YEAR [c + +] [c + +] SQL_C_INTERVAL_DAY SQL_C_INTERVAL_HOUR [c + +] [c + +] SQL_C_INTERVAL_MINUTE SQL_C_INTERVAL_SECOND [c + +]|잘리지 데이터<br /><br /> 잘린 소수 부분<br /><br /> 잘릴 숫자의 정수 부분|Data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
 _C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|잘릴 숫자의 정수 부분|정의되지 않음|정의되지 않음|22015|  
   
  [a]의 값 *BufferLength* 이 변환에 대해 무시 됩니다. 드라이버를 가정 하는 크기 **TargetValuePtr* C 데이터 형식 크기입니다.  

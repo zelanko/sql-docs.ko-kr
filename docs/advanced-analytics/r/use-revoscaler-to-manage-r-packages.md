@@ -1,25 +1,17 @@
 ---
 title: SQL Server에서 패키지를 찾거나 R 설치 RevoScaleR 함수를 사용 하는 방법 | Microsoft Docs
-ms.custom: ''
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 65bfbe18ddc6a39bb1d27bf4babab1d4dd3cf0de
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5e2fd6276e3429b7a59dc0729ce8901a984ec694
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에서 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +106,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-서버를 찾으면 및 보안 모델에 따라 SQL 로그인을 사용 하거나 연결 문자열에 도메인 및 서브넷 사양을 제공 할 수 있습니다. 예를 들어
+서버를 찾으면 및 보안 모델에 따라 SQL 로그인을 사용 하거나 연결 문자열에 도메인 및 서브넷 사양을 제공 할 수 있습니다. 예를 들어:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -131,7 +123,7 @@ print(sqlPackagePaths)
 
 **결과**
 
-"C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
+"C: / Program 파일/Microsoft SQL Server/MSSQL14 합니다. MSSQLSERVER/R_SERVICES/라이브러리/RevoScaleR "
 
 > [!TIP]
 > 앞에 오는 함수에서 상태 메시지 SQL 콘솔 출력을 참조 하는 옵션을 사용 하는 경우 발생할 수 있습니다는 `print` 문. 코드 테스트를 완료 한 후 설정 `consoleOutput` 메시지를 제거 하기 위해 계산 컨텍스트 생성자에서 FALSE로 합니다.

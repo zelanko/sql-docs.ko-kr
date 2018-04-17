@@ -1,29 +1,17 @@
-﻿---
+---
 title: RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체를 만들 | Microsoft Docs
-ms.custom: ''
-ms.date: 12/14/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 84413df820a415ede57a029b24e16abf4181e54f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e15c3e7c13c1be4f524c25bb1cec6da3c8e20c7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>RxSqlServerData (SQL과 R 심층 분석)를 사용 하 여 SQL Server 데이터 개체 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +29,7 @@ ms.lasthandoff: 04/04/2018
 > [!TIP]
 > R Tools for Visual Studio를 사용하는 경우, 도구 모음에서 **R Tools**를 선택하고 **Windows** 를 클릭하여 R 변수 디버깅 및 보기에 대한 옵션을 표시하세요.
 
-### <a name="create-the-training-data-table"></a>훈련 데이터 테이블 만들기
+### <a name="create-the-training-data-table"></a>학습 데이터 테이블 만들기
 
 1. 데이터베이스 연결 문자열이 R 변수에 저장 합니다. 다음은 SQL Server에 대 한 유효한 ODBC 연결 문자열의 두 가지 예제: Windows 통합된 인증에 대 한 개와 SQL 로그인을 사용 하 여 합니다.
 
@@ -141,7 +129,7 @@ ms.lasthandoff: 04/04/2018
   
     *colClasses* 인수가 중요합니다. 이 인수를 사용하여 텍스트 파일에서 로드된 데이터의 각 열에 할당할 데이터 형식을 나타냅니다. 이 예제에서는 정수로 처리되는 명명된 열을 제외하고 모든 열이 텍스트로 처리됩니다.
   
-3. 이 시점에서 잠시 멈추고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 볼 수 있습니다. 데이터베이스의 테이블 목록을 새로 고칩니다.
+3. 이 시점에서 잠시 멈추고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 볼 수 있습니다.  데이터베이스의 테이블 목록을 새로 고칩니다.
   
     즉, 로컬 작업 영역에서 R 데이터 개체를 만든 있지만 테이블 만들지 않은에서 볼 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 또한, 텍스트 파일에서 R 변수에 데이터가 로드되지 않았습니다.
   
@@ -209,4 +197,4 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="previous-step"></a>이전 단계
 
-[R을 사용하여 SQL Server 데이터 작업](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)
+[R을 사용하여 SQL Server 데이터 작업하기](../../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md)

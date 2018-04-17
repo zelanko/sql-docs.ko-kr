@@ -1,15 +1,16 @@
 ---
-title: "환경 핸들 할당 | Microsoft Docs"
-ms.custom: 
+title: 환경 핸들 할당 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 모든 ODBC 응용 프로그램에 대 한 첫 번째 작업은 드라이버 관리자; 로드 이 과정은 운영 체제 따라 다릅니다. 예를 들어 Microsoft® Windows NT® 서버/Windows 2000 Server, Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98을 실행 하는 컴퓨터에서 응용 프로그램 중 하나에 연결 드라이버 관리자 라이브러리 또는 호출  **LoadLibrary** 드라이버 관리자 DLL을 로드할 수 있습니다.  
   
  다음 태스크에서는 응용 프로그램이 다른 ODBC 함수를 호출할 수 전에 수행 해야, ODBC 환경을 초기화 다음과 같이 환경 핸들을 할당 하는 것입니다.  
   
-1.  응용 프로그램 SQLHENV 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수 및 SQL_HANDLE_ENV 옵션의 주소를 전달 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+1.  응용 프로그램 SQLHENV 형식의 변수를 선언합니다. 그런 다음 연속 호출 **SQLAllocHandle** 하 고이 변수 및 SQL_HANDLE_ENV 옵션의 주소를 전달 합니다. 예를 들어:  
   
     ```  
     SQLHENV henv1;  

@@ -1,28 +1,22 @@
 ---
-title: Revoscalepy 소개 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 기계 학습에서 Python 패키지 revoscalepy 소개 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>Revoscalepy 소개
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>SQL Server 기계 학습에서 revoscalepy 소개
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy** 분산 컴퓨팅을 지원 하기 위해 microsoft에서 원격 계산 컨텍스트 및 고성능 알고리즘 Python에 대 한 제공 된 새 라이브러리입니다.
+**revoscalepy** 분산 컴퓨팅을 지원 하기 위해 microsoft에서 원격 계산 컨텍스트 및 고성능 알고리즘 Python 개발자에 대 한 제공 된 새 Python 라이브러리입니다.
 
 에 따라 결정 된 **RevoScaleR** Microsoft R Server 및 SQL Server R Services와 동일한 기능을 제공 하는 것을 목표로의 제공 된 R에 대 한 패키지:
 
@@ -53,7 +47,7 @@ Revoscalepy의 최신 버전을 알아보려면 SQL Server 2017에 대 한 누�
 
 + [Python 용 revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [Python 용 microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Python 용 Microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### <a name="data-types-data-sources-and-compute-contexts"></a>데이터 형식, 데이터 원본 및 계산 컨텍스트
 
@@ -163,7 +157,7 @@ SQL Server에서 Python 코드를 실행 하려면 먼저 설치 해야 SQL Serv
 
 이러한 Api에 대 한 전체 설명서는 제품 해제 될 때 사용할 수 있습니다. 한편, RevoScaleR 또는 MicrosoftML 라이브러리에는 해당 함수가 참조 하는 것이 좋습니다.
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler)합니다.
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 모듈을 내보내고 다음 호출 하는 모든 Python 함수에 도움말을 가져와서 `help()`합니다. 예를 들면 `help(revoscalepy)` Python IDE에서 모든 함수 목록이 revoscalepy 모듈 서명으로 반환 합니다.

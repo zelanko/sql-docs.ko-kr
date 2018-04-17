@@ -1,15 +1,16 @@
 ---
-title: "Visual FoxPro 명령 및 함수를 지원 하지 않는 | Microsoft Docs"
-ms.custom: 
+title: Visual FoxPro 명령 및 함수를 지원 하지 않는 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원 되지 않는 Visual FoxPro 명령 및 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버에서 지원 되지 않지만 Microsoft® Visual FoxPro®에서 사용할 수 있는 FoxPro 명령 및 함수를 나열 합니다.  
@@ -38,8 +39,8 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|# #UNDEF DEFINE...|#IF... #ENDIF 전처리기 지시문|#IFDEF &#124; #IFNDEF|  
-|#INCLUDE 전처리기 지시문|:: 범위 결정 연산자|! 명령 (실행 &#124; 참조 하십시오. 명령)|  
+|# #UNDEF DEFINE...|#IF... #ENDIF 전처리기 지시문|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE 전처리기 지시문|:: 범위 결정 연산자|! 명령 (실행 참조 &#124; ! 명령)|  
 |? &#124; ?? Command|??? Command|\ &#124; \\\ 명령|  
 |@ ... 상자 명령|@ ... 명령 클래스|@ ... 지우기 명령|  
 |@ ... 편집-상자 명령 편집|@ ... 명령 채우기|@ ... GET|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/21/2017
 |화면 명령 만들기|SQL 보기 명령 만들기|트리거 명령 만들기|  
 |만들기 뷰 명령|CREATEOBJECT () 함수|CURDIR () 함수|  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 12/21/2017
 |연결 명령 이름 바꾸기|명령 테이블 이름 바꾸기|명령에서 복원|  
 |보고서 명령|REQUERY () 함수|복원 명령 창|  
 |복원 명령 매크로|화면 명령 복원|RGBSCHEME () 함수|  
-|다시 시작 명령|RGB () 함수|실행 &#124;! Command|  
+|다시 시작 명령|RGB () 함수|실행 &AMP;#124; ! Command|  
 |RMDIR 명령|ROW () 함수||  
 |RUNSCRIPT 명령|RDLEVEL () 함수||  
   

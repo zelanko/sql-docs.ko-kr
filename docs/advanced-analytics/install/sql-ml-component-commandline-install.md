@@ -1,26 +1,17 @@
 ---
-title: "명령 프롬프트의 SQL Server 컴퓨터에 대 한 학습 구성 요소 설치 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: 명령 프롬프트의 SQL Server 컴퓨터에 대 한 학습 구성 요소 설치 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>명령줄에서 SQL Server 컴퓨터에 대 한 학습 구성 요소를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,8 +46,8 @@ ms.lasthandoff: 03/21/2018
 
 | 인수 | Description |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 데이터베이스의 버전을 설치: SQL Server 2017 컴퓨터 학습 Services (In-database) 또는 SQL Server 2016 R Services (In-database).  |
-| /FEATURES = SQL_INST_MR | SQL Server 2017만 적용 됩니다. 쌍으로 연결 AdvancedAnalytics 합니다. Microsoft R Open 및 독점 R 패키지를 포함 하 여 (In-database) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 릴리스에 대 한 매개 변수가 없습니다.|
+| / 기능 AdvancedAnalytics = | 데이터베이스의 버전을 설치: SQL Server 2017 컴퓨터 학습 Services (In-database) 또는 SQL Server 2016 R Services (In-database).  |
+| / 기능 SQL_INST_MR = | SQL Server 2017만 적용 됩니다. 쌍으로 연결 AdvancedAnalytics 합니다. Microsoft R Open 및 독점 R 패키지를 포함 하 여 (In-database) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 릴리스에 대 한 매개 변수가 없습니다.|
 | / 기능 SQL_INST_MPY = | SQL Server 2017만 적용 됩니다. 쌍으로 연결 AdvancedAnalytics 합니다. Anaconda 및 소유 Python 패키지를 포함 하 여 Python (In-database) 기능을 설치 합니다. |
 | / 기능 SQL_SHARED_MR = | 독립 실행형 버전에 대 한 R 기능을 설치: SQL Server 2017 컴퓨터 학습 Server (독립 실행형) 또는 SQL Server 2016 R 서버 (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되어 있지 "공유 기능"입니다.|
 | / 기능 SQL_SHARED_MPY = | SQL Server 2017만 적용 됩니다. 독립 실행형 버전에 대 한 Python 기능을 설치: SQL Server 2017 컴퓨터 학습 서버 (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되어 있지 "공유 기능"입니다.|

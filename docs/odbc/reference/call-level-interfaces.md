@@ -1,15 +1,16 @@
 ---
-title: "호출 수준 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 호출 수준 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 253a322e200f0da9046f5928385c5892265cbc19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="call-level-interfaces"></a>호출 수준 인터페이스
 DBMS SQL 문을 보내기 위한 final 기술은 호출 수준 인터페이스 (CLI)를 통해는 합니다. 호출 수준 인터페이스 응용 프로그램에서 호출할 수 있는 DBMS 함수 라이브러리를 제공 합니다. 따라서 다른 프로그래밍 언어와 SQL 결합을 하려고 하지 않고 호출 수준 인터페이스가 비슷합니다를 사용 하 여 문자열, I/O, 또는 3. note embedded SQL을 지 원하는 해당 Dbms 수학 라이브러리와 같은 대부분의 프로그래머가 쉽게는 대개 일상적인 라이브러리 호출 프리에 의해 생성 된 경우 호출 수준 인터페이스를 이미 있습니다. 그러나 이러한 호출은 문서화 되지 않은 정보 및 예 고 없이 변경 될 수 있습니다.  

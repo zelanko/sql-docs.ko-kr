@@ -2,7 +2,7 @@
 title: SQLGetTypeInfo (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c69f1e0c2a2dd9c67b5f36776f945d8aa06d6a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_BIGINT|지원되지 않습니다. 64 비트 Visual FoxPro 형식이 없습니다.|  
 |SQL_BIT|논리|  
 |SQL_CHAR|문자|  
-|SQL_DATE|date|  
+|SQL_DATE|날짜|  
 |SQL_DECIMAL|숫자|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_REAL|Double|  
 |SQL_SMALLINT|정수|  
 |SQL_TIME|지원되지 않습니다. Visual FoxPro 없습니다는 *시간* 유형입니다.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|과 같이 지원되는|  
 |SQL_TINYINT|정수|  
 |SQL_VARBINARY|메모 (이진) *, 일반|  
 |SQL_VARCHAR|문자|  

@@ -2,7 +2,7 @@
 title: SQLGetFunctions (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46227b813a6798a2fac36e87a91e0e8dc8061a50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -40,22 +40,22 @@ ms.lasthandoff: 12/21/2017
   
 |*함수*|지원됨|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|아니오|  
-|SQL_API_SQLCOLUMNPRIVELEGES|아니오|  
+|SQL_API_SQLBROWSECONNECT|아니요|  
+|SQL_API_SQLCOLUMNPRIVELEGES|아니요|  
 |SQL_API_SQLDATASOURCES|예|  
-|SQL_API_SQLDESCRIBEPARAM|아니오|  
+|SQL_API_SQLDESCRIBEPARAM|아니요|  
 |SQL_API_SQLDRIVERS|예|  
 |SQL_API_SQLEXTENDEDFETCH|예|  
-|SQL_API_SQLFOREIGNKEYS|아니오|  
+|SQL_API_SQLFOREIGNKEYS|아니요|  
 |SQL_API_SQLMORERESULTS|예|  
-|SQL_API_SQLNATIVESQL|아니오|  
+|SQL_API_SQLNATIVESQL|아니요|  
 |SQL_API_SQLNUMPARAMS|예|  
 |SQL_API_SQLPARAMOPTIONS|예|  
 |SQL_API_SQLPRIMARYKEYS|예|  
-|SQL_API_SQLPROCEDURECOLUMNS|아니오|  
-|SQL_API_SQLPROCEDURES|아니오|  
+|SQL_API_SQLPROCEDURECOLUMNS|아니요|  
+|SQL_API_SQLPROCEDURES|아니요|  
 |SQL_API_SQLSETPOS|예|  
 |SQL_API_SQLSETSCROLLOPTIONS|예|  
-|SQL_API_SQLTABLEPRIVILEGES|아니오|  
+|SQL_API_SQLTABLEPRIVILEGES|아니요|  
   
  자세한 내용은 참조 [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) 에 *ODBC Programmer's Reference*합니다.

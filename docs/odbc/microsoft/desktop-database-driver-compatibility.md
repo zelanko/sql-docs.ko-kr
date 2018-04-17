@@ -1,15 +1,16 @@
 ---
-title: "데스크톱 데이터베이스 드라이버 호환성 | Microsoft Docs"
-ms.custom: 
+title: 데스크톱 데이터베이스 드라이버 호환성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcb8ad39a2ba24890394bb05cb30f1ddb5b63d2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 557a7254e9cea7476ee3de706da86519f9ef1fec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>데스크톱 데이터베이스 드라이버 호환성
 유니코드는 소프트웨어 문자 인코딩 메서드는 2 바이트의 고정된 폭을 가진 것으로 모든 문자를 처리 합니다. 이 메서드는 1 바이트의 문자를 나타내기 때문에 256 자로 제한 Windows ANSI 문자 인코딩을 하는 대신 사용 됩니다. 해당 문자가 표현 되지 않는 많은 언어를 수용 유니코드 65000 개 문자를 나타낼 수 있습니다, 때문에 ANSI 인코딩으로 합니다.  

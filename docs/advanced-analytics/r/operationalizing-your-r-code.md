@@ -1,25 +1,17 @@
 ---
-title: R 코드 (컴퓨터 학습 서비스)를 운영 화 | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 컴퓨터 학습 서비스에서 R 코드를 운영 화 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>R 코드 (컴퓨터 학습 서비스)를 운영 화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>SQL Server의 R 코드 시작
 
-일반적으로 컴퓨터 학습 솔루션의 통합에 성능 및 통합을 지원 하기 위해 광범위 한 기록이 의미 합니다. 그러나 R 및 Python 코드를 프로덕션 환경에 SQL Server에서 코드를 실행할 수 있기 때문에 Microsoft 컴퓨터 학습 서비스에서 훨씬 쉬운 경우도 및 사용 하 여 호출 이동 하는 저장 프로시저입니다. R 개발 환경을 설치할 필요가 없습니다 고 계속 친숙 한 도구를 사용할 수 있습니다. 
+일반적으로 컴퓨터 학습 솔루션의 통합에 성능 및 통합을 지원 하기 위해 광범위 한 기록이 의미 합니다. 그러나 R 및 Python 코드를 프로덕션 환경에 SQL Server에서 코드를 실행할 수 있기 때문에 SQL Server 컴퓨터 학습 서비스에서 훨씬 쉬운 경우도 및 사용 하 여 호출 이동 하는 저장 프로시저입니다. R 개발 환경을 설치할 필요가 없습니다 고 계속 친숙 한 도구를 사용할 수 있습니다. 
 
 기본 구문에 대 한 자세한 내용은 다음을 참조 합니다.
 

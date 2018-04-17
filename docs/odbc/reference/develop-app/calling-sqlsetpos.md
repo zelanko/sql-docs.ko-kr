@@ -1,15 +1,16 @@
 ---
-title: "SQLSetPos 호출 | Microsoft Docs"
-ms.custom: 
+title: SQLSetPos 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos 호출
 Odbc 2. *x*, 행 상태 배열이에 대 한 포인터를 인수 했습니다 **SQLExtendedFetch**합니다. 호출 하 여 나중에 수정한 행 상태 배열이 **SQLSetPos**합니다. 일부 드라이버가이 배열 간에 변경 되지 않으므로 있다는 사실을 했었다면 **SQLExtendedFetch** 및 **SQLSetPos**합니다. Odbc 3. *x*, 상태 배열에 대 한 포인터는 설명자 필드를 이며 따라서 응용 프로그램이 쉽게 변경할 수 있습니다 다른 배열로 가리키도록 합니다. 이 경우 ODBC 3 문제가 될 수 있습니다. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 호출 하는 있지만 **SQLSetStmtAttr** 배열 상태 포인터가 설정 하려면 하며 호출 **SQLFetchScroll** 데이터를 인출 합니다. 드라이버 관리자에 대 한 호출의 시퀀스로 매핑합니다 **SQLExtendedFetch**합니다. 다음 코드에서 오류가 일반적으로 발생 드라이버 관리자는 두 번째 매핑할 때 **SQLSetStmtAttr** ODBC 2 작업 시 호출할*.x* 드라이버:  

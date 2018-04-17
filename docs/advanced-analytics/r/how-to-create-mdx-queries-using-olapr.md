@@ -1,28 +1,19 @@
 ---
-title: OlapR를 사용 하 여 만드는 MDX 쿼리 하는 방법 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/29/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: OlapR를 사용 하 여 SQL Server 기계 학습의 R에서 쿼리를 MDX를 만드는 방법 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 76602c41fd6f8d300c240a6072f2a6decec18e3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-create-mdx-queries-using-olapr"></a>OlapR를 사용 하 여 MDX 쿼리를 만드는 방법
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR를 사용 하 여 R에서 MDX 쿼리를 작성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 패키지 SQL Server Analysis Services에서 호스트 되는 큐브에 대해 MDX 쿼리를 지원 합니다. 기존 큐브에 대 한 쿼리를 작성 하 고, 차원 및 기타 큐브 개체를 탐색 하 고, 데이터를 검색 하는 기존 MDX 쿼리에 붙여 넣는 수 있습니다.

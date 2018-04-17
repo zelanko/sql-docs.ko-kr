@@ -1,23 +1,17 @@
 ---
 title: SQL Server 기계 학습에 대 한 사용자 계정 풀 수정 | Microsoft Docs
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>SQL Server 기계 학습에 대 한 사용자 계정 풀 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ Windows 계정 그룹이 만들어집니다 [!INCLUDE[ssNoVersion](../../include
 -   기본 인스턴스에서 그룹 이름은 **SQLRUserGroup**입니다. R, Python 또는 둘 다 사용 하 여 이름을 같습니다.
 -   명명된 인스턴스에서 기본 그룹 이름에는 인스턴스 이름이 접미사로 추가됩니다(예: **SQLRUserGroupMyInstanceName**).
 
-기본적으로 사용자 계정 풀에는 20개의 사용자 계정이 포함됩니다. 대부분의 경우에서 20 개 이상의 기계 학습 작업을 지원 하기 위해 적절 한 이지만 계정의 수를 변경할 수 있습니다.
+기본적으로 사용자 계정 풀에는 20개의 사용자 계정이 포함됩니다. 대부분의 경우에서 20 개 이상의 기계 학습 작업을 지원 하기 위해 적절 한 이지만 계정의 수를 변경할 수 있습니다. 계정의 최대 수는 100입니다.
 -  기본 인스턴스에서 개별 계정은 **MSSQLSERVER01**~**MSSQLSERVER20**으로 이름이 지정됩니다.
 -   명명된 인스턴스의 경우 인스턴스 이름 뒤에 개별 계정 이름이 지정됩니다(예: **MyInstanceName01**~**MyInstanceName20**).
 
@@ -50,7 +44,7 @@ Windows 계정 그룹이 만들어집니다 [!INCLUDE[ssNoVersion](../../include
 1. SQL Server 구성 관리자를 열고 **SQL Server Services**를 선택합니다.
 2. SQL Server 실행 패드 서비스를 두 번 클릭하고 실행 중인 경우 서비스를 중지합니다.
 3.  **서비스** 탭에서 시작 모드가 자동으로 설정되어 있는지 확인합니다. 외부 스크립트 실행 패드를 실행 중이지 않을 때 시작할 수 없습니다.
-4.  **고급** 탭을 클릭하고 필요한 경우 **외부 사용자 수**의 값을 편집합니다. 이 설정은 제어 얼마나 많은 다른 SQL 사용자 세션을 실행할 수 외부 스크립트 동시에 합니다. 기본값은 20 계정.
+4.  **고급** 탭을 클릭하고 필요한 경우 **외부 사용자 수**의 값을 편집합니다. 이 설정은 제어 얼마나 많은 다른 SQL 사용자 세션을 실행할 수 외부 스크립트 동시에 합니다. 기본값은 20 계정. 최대 사용자 수가 100입니다.
 5. 암호를 주기적으로 변경해야 하는 정책이 조직에 있는 경우 선택적으로 **외부 사용자 암호 다시 설정** 옵션을 _예_로 설정할 수 있습니다. 이렇게 하면 실행 패드가 사용자 계정용으로 유지 관리하는 암호화된 암호가 다시 생성됩니다. 자세한 내용은 [암호 정책 강제 적용](#bkmk_EnforcePolicy)을 참조하세요.
 6.  실행 패드 서비스를 다시 시작 합니다.
 

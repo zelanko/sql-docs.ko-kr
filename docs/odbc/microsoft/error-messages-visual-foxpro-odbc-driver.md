@@ -1,15 +1,16 @@
 ---
-title: "오류 메시지 (Visual FoxPro ODBC 드라이버) | Microsoft Docs"
-ms.custom: 
+title: 오류 메시지 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0d8bb313af52507b1b14cd085044c334f3e664f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>오류 메시지 (Visual FoxPro ODBC 드라이버)
 오류가 발생 하면 Visual FoxPro 드라이버에서 다음 정보를 반환 합니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 표에 정의 된 대로 대괄호 ()는 접두사 오류의 출처를 식별 합니다.  
   
-|데이터 원본|접두사|값|  
+|데이터 원본|접두사|Value|  
 |-----------------|------------|-----------|  
 |드라이버 관리자|[공급 업체]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC 드라이버 관리자]<br />해당 사항 없음|  
 |Visual FoxPro 드라이버|공급 업체]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Visual FoxPro ODBC 드라이버]<br />해당 사항 없음|  

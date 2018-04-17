@@ -1,31 +1,32 @@
 ---
-title: "SQL 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: SQL 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버 관련된 DBMS 정의 하는 SQL 데이터 유형만 표시 합니다. ODBC 정의 SQL 형식 식별자에 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL가 입력 하 고 호출을 통해 반환 되는 드라이버 매핑되는 방법을 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자 **SQLGetTypeInfo**합니다. 열 및 매개 변수를 호출 하 여 데이터 형식을 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
@@ -42,24 +43,24 @@ ms.lasthandoff: 12/21/2017
   
 |SQL 유형 식별자 [1]|일반적인 SQL 데이터<br /><br /> [2] 유형|일반적인 형식 설명|  
 |------------------------------|------------------------------------|------------------------------|  
-|SQL_CHAR|CHAR (*n*)|고정된 문자열 길이의 문자열을 문자  *n* 합니다.|  
-|SQL_VARCHAR|VARCHAR (*n*)|최대 문자열 길이가 가변 길이 문자열  *n* 합니다.|  
+|SQL_CHAR|CHAR (*n*)|고정된 문자열 길이의 문자열을 문자 *n*합니다.|  
+|SQL_VARCHAR|VARCHAR (*n*)|최대 문자열 길이가 가변 길이 문자열 *n*합니다.|  
 |SQL_LONGVARCHAR|LONG VARCHAR|가변 길이 문자 데이터입니다. 최대 길이 데이터 소스에 따라 다릅니다. [9]|  
-|SQL_WCHAR|WCHAR (*n*)|고정된 문자열 길이의 유니코드 문자열*n*|  
-|SQL_WVARCHAR|VARWCHAR (*n*)|유니코드 가변 길이 문자열 최대 문자열 길이*n*|  
+|SQL_WCHAR|WCHAR (*n*)|고정된 문자열 길이의 유니코드 문자열 *n*|  
+|SQL_WVARCHAR|VARWCHAR (*n*)|유니코드 가변 길이 문자열 최대 문자열 길이 *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|유니코드 가변 길이 문자 데이터입니다. 최대 길이 데이터 소스에 따라 다릅니다.|  
 |SQL_DECIMAL|10 진수 (*p*,*s*)|서명 됨, 정확한 숫자 값의 전체 자릿수가 이상 *p* 와 소수 자릿수 *s입니다.* (최대 전체 자릿수는 드라이버 정의 합니다.) (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|숫자 (*p*,*s*)|서명 됨, 정확한 숫자 값 전체 자릿수가 *p* 와 소수 자릿수 *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|정확한 숫자 값을 정밀도 5 및 배율 0 (서명: –32,768 < =  *n*  < = 32, 767 서명 되지 않은: 0 < =  *n*  < 65, 535 =) [3].|  
-_INTEGER|INTEGER|정확한 숫자 값을 정밀도 10 및 배율 0 (서명: 있음 < =  *n*  < [31]-2 = 1, 서명 되지 않은: 0 < =  *n*  < = 2 [32]-1) [3].|  
-|SQL_REAL|real|서명 됨, 이진 정밀도 이며 24와 숫자 값 (0 또는 10[38]) 절대값 10 [–38].|  
+|SQL_SMALLINT|SMALLINT|정확한 숫자 값을 정밀도 5 및 배율 0 (서명: –32,768 < = *n* < = 32, 767 서명 되지 않은: 0 < = *n* < 65, 535 =) [3].|  
+_INTEGER|INTEGER|정확한 숫자 값을 정밀도 10 및 배율 0 (서명: 있음 < = *n* < [31]-2 = 1, 서명 되지 않은: 0 < = *n* < = 2 [32]-1) [3].|  
+|SQL_REAL|REAL|서명 됨, 이진 정밀도 이며 24와 숫자 값 (0 또는 10[38]) 절대값 10 [–38].|  
 |SQL_FLOAT|FLOAT (*p*)|서명 됨, 이진 정밀도를 가진 숫자 값 이상 *p*합니다. (최대 전체 자릿수는 드라이버 정의 합니다.) [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|서명 됨, 이진 전체 자릿수가 53 인 숫자 값 (0 또는 10[308]) 절대값 10 [–308].|  
 |SQL_BIT|BIT|단일 비트 이진 데이터입니다. [8]|  
-|SQL_TINYINT|TINYINT|정확한 숫자 값을 정밀도 3 고 배율 0 (서명:-128 < =  *n*  < = 서명 되지 않은 127: 0 < =  *n*  < = 255) [3].|  
-_BIGINT|bigint|정밀도 19 (부호 있음) 하는 경우 숫자 값 또는 20 (부호 없음) 하는 경우 및 0의 크기를 조정 (서명: – 2 [63] < =  *n*  < [63]-2 = 1, 서명 되지 않은: 0 < =  *n*  < = 2 [64]-1) [3], [9].|  
-|SQL_BINARY|이진 (*n*)|고정 길이 이진 데이터  *n* . [ 9]|  
-|SQL_VARBINARY|VARBINARY (*n*)|가변 길이 이진 데이터의 최대 길이  *n* 합니다. 최대는 사용자가 설정 됩니다. [9]|  
+|SQL_TINYINT|TINYINT|정확한 숫자 값을 정밀도 3 고 배율 0 (서명:-128 < = *n* < = 서명 되지 않은 127: 0 < = *n* < = 255) [3].|  
+_BIGINT|bigint|정밀도 19 (부호 있음) 하는 경우 숫자 값 또는 20 (부호 없음) 하는 경우 및 0의 크기를 조정 (서명: – 2 [63] < = *n* < [63]-2 = 1, 서명 되지 않은: 0 < = *n* < = 2 [64]-1) [3], [9].|  
+|SQL_BINARY|이진 (*n*)|고정 길이 이진 데이터 *n*. [ 9]|  
+|SQL_VARBINARY|VARBINARY (*n*)|가변 길이 이진 데이터의 최대 길이 *n*합니다. 최대는 사용자가 설정 됩니다. [9]|  
 |SQL_LONGVARBINARY|LONG VARBINARY|가변 길이 이진 데이터입니다. 최대 길이 데이터 소스에 따라 다릅니다. [9]|  
 |SQL_TYPE_DATE [6]|DATE|연도, 월 및 날짜 필드, 일반 달력 규칙을 준수 합니다. (참조 [일반 달력의 제약 조건](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)이 부록의 뒷부분에 나오는.)|  
 |SQL_TYPE_TIME [6]|시간 (*p*)|시간, 분, 및 00부터 59까지 분을 00에서 23 사이의 유효한 값의 시간에 대 한 유효한 값 및 61에 00의 시간 (초)에 대 한 유효한 값이 있는 두 번째 필드를 선택 합니다. 정밀도 *p* 초 전체 자릿수를 나타냅니다.|  

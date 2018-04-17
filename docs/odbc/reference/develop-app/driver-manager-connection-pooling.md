@@ -1,15 +1,16 @@
 ---
-title: "드라이버 관리자 연결 풀링 | Microsoft Docs"
-ms.custom: 
+title: 드라이버 관리자 연결 풀링 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 사용할 때마다 다시 설정에 필요 하지 않은 연결 풀에서 연결을 사용 하도록 응용 프로그램입니다. 연결이 만들어지고 풀에 배치 된 후 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  성능 향상 뿐만 아니라 연결 풀링 아키텍처에는 환경 및 해당 관련된 연결 단일 프로세스에서 여러 구성 요소에서 사용할 수 있습니다. 즉, 서로 인식 하지 않고 독립 실행형 구성 요소는 같은 프로세스에서 서로 상호 작용 수 있습니다. 여러 구성 요소는 연결 풀에서 연결을 반복적으로 사용할 수 있습니다.  
   
 > [!NOTE]  
->  ODBC 2를 표시 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작을 응용 프로그램에서 호출할 수 만큼 *SQLSetEnvAttr*합니다. 응용 프로그램 데이터베이스 또는 데이터베이스를 변경 하는 등의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 연결 풀링을 사용 하는 경우는 \< *데이터베이스**이름*> 역할 데이터 원본에 의해 사용 되는 카탈로그를 변경 합니다.  
+>  ODBC 2를 표시 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작을 응용 프로그램에서 호출할 수 만큼 *SQLSetEnvAttr*합니다. 응용 프로그램 데이터베이스 또는 데이터베이스를 변경 하는 등의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 연결 풀링을 사용 하는 경우는 \< *데이터베이스 * * 이름*>에서 사용 하는 카탈로그를 변경 하는 데이터 원본입니다.  
   
  ODBC 드라이버는 완벽 하 게 스레드로부터 안전 해야 하 고 연결에는 연결 풀링을 지원 하도록 스레드 선호도 없어야 합니다. 즉, 드라이버는 언제 든 지 모든 스레드에서 호출을 처리할 수와 한 스레드에서 다른 스레드로에서 연결을 사용 하 고 세 번째 스레드에서 연결을 끊으라는 연결할 수 있습니다.  
   

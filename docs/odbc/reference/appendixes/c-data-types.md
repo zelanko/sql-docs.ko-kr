@@ -1,15 +1,16 @@
 ---
-title: "C 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: C 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-data-types"></a>C 데이터 형식
 ODBC C 데이터 형식에는 응용 프로그램에 데이터를 저장 하는 데 사용 되는 C 버퍼의 데이터 형식을 나타냅니다.  
@@ -45,7 +46,7 @@ ODBC C 데이터 형식에는 응용 프로그램에 데이터를 저장 하는 
 |SQL_C_USHORT [j]|SQLUSMALLINT|부호 없는 short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|부호 없는 long int|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|부호 없는 문자|  
 |SQL_C_STINYINT [j]|SQLSCHAR|서명 된 char|  

@@ -1,15 +1,16 @@
 ---
-title: "Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Excel
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], accessing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67f350bf1070e7b35b6538f4d3fb56a866b728c0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ba64814f954ab9c689f5f452f24a6ab36f73cc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 설치 된 Microsoft 쿼리를 사용 하도록 설정한 경우 Visual FoxPro 데이터에 연결 되는 Microsoft Excel에서 데이터 원본을 만들 수 있습니다.  

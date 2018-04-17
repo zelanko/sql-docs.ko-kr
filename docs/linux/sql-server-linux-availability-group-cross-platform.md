@@ -1,6 +1,6 @@
 ---
-title: "Windows 및 Linux에서 가용성 그룹에 SQL Server를 항상 구성 | Microsoft Docs"
-description: "SQL Server 가용성 그룹 Windows 및 Linux에서 복제본을 구성 하 고 있습니다."
+title: Windows 및 Linux에서 가용성 그룹에 SQL Server를 항상 구성 | Microsoft Docs
+description: SQL Server 가용성 그룹 Windows 및 Linux에서 복제본을 구성 하 고 있습니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -8,18 +8,19 @@ ms.date: 01/31/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 280e0e9534fa29042e20c0a8a965abe62f0d2d51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>구성 SQL Server Always On 가용성 그룹에 Windows 및 Linux (플랫폼 간)
 
@@ -47,7 +48,7 @@ AG 만드는 단계에 확장성이 읽기 작업에 대 한 AG 만드는 단계
    >[!TIP]
    >Azure에서이 솔루션 유효성 데이터 센터에서 구분 하기 위해 동일한 가용성의 두 서버를 배치 합니다. 
 
-   가용성 그룹 사용
+   **가용성 그룹 사용**
 
    자세한 내용은 [활성화 및 비활성화 Always On 가용성 그룹 (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)합니다.
 

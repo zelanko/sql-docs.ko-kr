@@ -1,15 +1,16 @@
 ---
-title: "변환에 대 한 규칙 | Microsoft Docs"
-ms.custom: 
+title: 변환에 대 한 규칙 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - numeric data type [ODBC], literals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rules-for-conversions"></a>변환에 대 한 규칙
 숫자 리터럴을 포함 하는 변환은이 섹션의 규칙이 적용 됩니다. 이러한 규칙을 위해 다음 용어 정의 됩니다.  
@@ -81,9 +82,9 @@ ms.lasthandoff: 12/21/2017
   
     -   NS 0 보다 작은 경우의 결과 Y의 사용 수 있습니다.  
   
-         '-' &#124; &#124; YP  
+         '-' &AMP;#124; &AMP;#124; YP  
   
-         여기서 ' &#124; &#124;'은 문자열 연결 연산자.  
+         여기서 '&#124;&#124;'은 문자열 연결 연산자.  
   
          그렇지 않으면 사용 YP 같은 Y 수 있습니다.  
   

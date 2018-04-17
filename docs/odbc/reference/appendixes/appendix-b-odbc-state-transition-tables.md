@@ -1,32 +1,32 @@
 ---
-title: "부록 b: ODBC 상태 전환 테이블 | Microsoft Docs"
-ms.custom: 
+title: '부록 b: ODBC 상태 전환 테이블 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 b: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 해당 형식의 핸들 (환경, 연결, 문 또는 설명자)를 사용 하는 함수를 호출할 수 있습니다 결정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림에 나와 있는 것 처럼 대략 겹칩니다. 예를 들어 연결의 정확한 겹치는 C5 내용과 C6 하 문 S12 통해 S1을 데이터 원본 – 종속 트랜잭션이 서로 다른 데이터 원본에 대해 서로 다른 시간에 시작 하 고 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태 state D1e (명시적으로 할당 된 설명자)는 모든 문은의 상태와 무관입니다. 각 상태에 대 한 참조 [환경이 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md), [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는 합니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/20/2018
   
 |E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당 된|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|E0|(HY010)|  
+|(면)|E0|(HY010)|  
   
  경우 **SQLFreeHandle** 환경 상태가 E0 라고 *HandleType* SQL_HANDLE_ENV로 설정 하면 드라이버 관리자에서 SQL_INVALID_HANDLE을 반환 합니다. 상태가 E1 호출 되 면 *HandleType* E0 함수는 성공 하 고 함수가 실패 하면 E1 상태를 유지 하도록 환경 이동 SQL_HANDLE_ENV로 설정 합니다. 상태가 E2 호출 되 면 *HandleType* SQL_HANDLE_ENV로 설정 하면 드라이버 관리자 항상 반환 SQL_ERROR 및 SQLSTATE HY010 (함수 시퀀스 오류입니다.) 환경 상태 E2에에서 유지 됩니다.  
   

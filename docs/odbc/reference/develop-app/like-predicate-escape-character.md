@@ -1,30 +1,31 @@
 ---
-title: "조건자 이스케이프 문자 처럼 | Microsoft Docs"
-ms.custom: 
+title: 조건자 이스케이프 문자 처럼 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3946b81210ce439579464fa7e10e8fad63bfd225
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b47a12dbb25eaea1455a928892d6a1cd4f380c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="like-predicate-escape-character"></a>마찬가지로 조건자 이스케이프 문자
 에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 임의 문자 및 밑줄 (_) 하나의 문자를 찾습니다. 실제 백분율 기호는 하거나에 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 야 백분율 기호 또는 밑줄 합니다. 정의 하는 이스케이프 시퀀스는 **같은** 조건자 이스케이프 문자는:  

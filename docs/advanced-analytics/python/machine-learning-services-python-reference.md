@@ -1,32 +1,22 @@
 ---
-title: Python | Microsoft Docs
-ms.custom: ''
-ms.date: 04/18/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 컴퓨터 학습 서비스에 대 한 Python API 참조 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d318f50ebb239afaa7c9e0a3a2a42aff76f5755f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 11b722628bbe46203c9b04464703c6ed3f99fab7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="python"></a>Python
+# <a name="python-api-reference-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 Python API 참조
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 섹션에는 SQL Server 2017에 학습 서비스 컴퓨터에 특정 API 참조 링크가 포함 되어 있습니다.
-
-> [!NOTE]
-> Python 지원은 SQL Server 2017의 새로운 기능 하며 시험판에서 있습니다. 자세한 내용은 곧 찾습니다.
 
 **라이브러리**
 

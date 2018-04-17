@@ -1,15 +1,16 @@
 ---
-title: "데스크톱에 대 한 진단 데이터베이스 드라이버 | Microsoft Docs"
-ms.custom: 
+title: 데스크톱에 대 한 진단 데이터베이스 드라이버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], diagnostic information
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5440d7cb38dfeef678a9b665397b789bf506be72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a3120fd230d15a8a940a6e631275e41bb79ed50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버에 대 한 진단
 모든 오류와 경고를 선택 하거나 일부만 드라이버 관리자가 선택 되어 하지 드라이버에 의해 처리 됩니다. 드라이버 매핑됩니다.이 형식은 네이티브 오류 또는 Sqlstate를 데이터 원본에 의해 반환 되는 오류입니다. 에 나열 된 각 함수는 *ODBC Programmer's Reference* 조건 및 메시지를 지정 하는 "진단" 섹션을 포함 합니다.  

@@ -1,15 +1,16 @@
 ---
-title: "시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs"
-ms.custom: 
+title: 시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95545399054e35ee9377f2be5ad2569205c64e8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서; Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 날짜 및 시간 함수를 보여 줍니다. Visual FoxPro 문법 동일한 기능에 대 한 ODBC 구문을 다를 경우 해당 Visual FoxPro 나열 됩니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- 이 구문에서 **d** 나타냅니다 *값* 갖는 날짜는 *yyyy-월-일* 형식 및 **ts** 나타냅니다 *값*  은에 타임 스탬프는 *h:mm: ss yyyy-월-일*[. *f...* ] 형식입니다. 날짜 및 타임 스탬프 데이터에 대 한 축약형 구문을 다음과 같습니다.  
+ 이 구문에서 **d** 나타냅니다 *값* 갖는 날짜는 *yyyy-월-일* 형식 및 **ts** 나타냅니다 *값*  은에 타임 스탬프는 *h:mm: ss yyyy-월-일*[.*f...*] 형식입니다. 날짜 및 타임 스탬프 데이터에 대 한 축약형 구문을 다음과 같습니다.  
   
 ```  
 {d 'value'}  

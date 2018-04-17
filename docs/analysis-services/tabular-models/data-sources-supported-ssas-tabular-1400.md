@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>테이블 형식 1400 모델 SQL Server Analysis Services에서 데이터 원본 지원
 
@@ -49,7 +50,7 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 
 |데이터 원본 | 메모리 내 공급자 | DirectQuery 공급자 |
 |  --- | --- | --- |
 | SQL Server |SQL Server Native Client 11.0 Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
-| SQL Server Data Warehouse |SQL Server Native Client 11.0 Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
+| SQL Server 데이터 웨어하우스 |SQL Server Native Client 11.0 Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | Oracle |Microsoft OLE DB Provider for Oracle Oracle Data Provider for.NET |Oracle Data Provider for.NET | |
 | Teradata |OLE DB Provider for Teradata.NET에 대 한 Teradata 데이터 공급자 |.NET에 대 한 Teradata 데이터 공급자 | |
 | | | |
@@ -98,7 +99,7 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지원 
 |OData 피드     | 
 |ODBC 쿼리     | 
 |OLE DB  | 
-|SharePoint list | 
+|SharePoint 목록 | 
 |||
 
 ## <a name="see-also"></a>참고 항목

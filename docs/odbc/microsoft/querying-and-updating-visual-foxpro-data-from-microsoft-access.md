@@ -1,15 +1,16 @@
 ---
-title: "Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - querying Visual FoxPro data [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34383ecfbfae7c037137296942ba392ddb50db63
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c146461739eaac399dad54f02397858dbc6abae9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트
 쿼리 하 고 링크 테이블 옵션을 사용 하 여 Microsoft Access 데이터베이스에서 Visual FoxPro 데이터베이스에 저장 된 데이터를 업데이트할 수 있습니다.  

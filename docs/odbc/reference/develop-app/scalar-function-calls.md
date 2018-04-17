@@ -2,7 +2,7 @@
 title: 스칼라 함수 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  응용 프로그램 최대 상호 운용성을 위해 사용 해야는 **변환** 스칼라 함수를 스칼라 함수의 출력에 필요한 형식 인지 확인 합니다. **변환** 함수 한 SQL 데이터 형식에서 지정된 된 SQL 데이터 형식으로 데이터를 변환 합니다. 구문은 **변환** 함수는  
   
- **변환 (** *value_exp* **,** *data_type***)**  
+ **변환 (** *value_exp* **,** *data_type * * *)**  
   
  여기서 *value_exp* 열 이름, 다른 스칼라 함수 또는 리터럴 값의 결과 및 *data_type* 일치 하는 키워드는 **#define** 이름에서 사용 되는 에 정의 된 대로 SQL 데이터 형식 식별자 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다. 예를 들어 다음 SQL 문을 사용 하 여는 **변환** 되도록 하는 함수의 출력은 **CURDATE** 함수는 타임 스탬프 또는 문자 데이터 대신 날짜:  
   

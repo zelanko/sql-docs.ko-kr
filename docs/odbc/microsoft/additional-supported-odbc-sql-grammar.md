@@ -1,30 +1,31 @@
 ---
-title: "추가 ODBC SQL 문법을 지원 | Microsoft Docs"
-ms.custom: 
+title: 추가 ODBC SQL 문법을 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86be4015366a6e18e5a97a2fd719e44298c23465
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9073c9c1da0797af40395c8ba204342e1ed6d094
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원 되는 ODBC SQL 문법
 ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법 및 다음 절은 완전히 지원합니다. 파일로 이동 하 여 추가 정보를 표시할 수 있습니다는 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md), [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  

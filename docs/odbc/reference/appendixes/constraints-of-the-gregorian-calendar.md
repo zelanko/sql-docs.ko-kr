@@ -1,30 +1,31 @@
 ---
-title: "일반 달력의 제약 조건 | Microsoft Docs"
-ms.custom: 
+title: 일반 달력의 제약 조건 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac773945c5c138ab6834aa7914d4028d1d5e156
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36cbe4802912e2497408498b32e48f8f201479f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>일반 달력의 제약 조건
 Date 및 datetime 데이터 형식 및 간격 데이터 형식의 후행 필드는 일반 달력의 제약 조건에 따라야 합니다. 이러한 제약 조건은 다음과 같습니다.  
@@ -37,6 +38,6 @@ Date 및 datetime 데이터 형식 및 간격 데이터 형식의 후행 필드�
   
 -   분 필드의 값은 0에서 59 사이의 사이 여야 합니다.  
   
--   후행 초 필드의 간격 데이터 형식의 경우 초 필드의 값은 0과 59.9 사이 여야 합니다 (*n*) (포함), 여기서  *n*  수의 자릿수는 소수 자릿수 초의 전체 자릿수입니다.  
+-   후행 초 필드의 간격 데이터 형식의 경우 초 필드의 값은 0과 59.9 사이 여야 합니다 (*n*) (포함), 여기서 *n* 초 소수 부분 자릿수의 숫자의 수입니다.  
   
--   후행 초 필드의 날짜/시간 데이터 형식의 경우 초 필드의 값은 0에서 61.9 사이 여야 합니다 (*n*) (포함), 여기서  *n*  "9"의 수를 지정 합니다. 숫자의 값과  *n*  소수 자릿수 초의 전체 자릿수입니다. (초의 범위 sidereal 시간 동기화를 유지 하려면 최대 2 초의 윤 초가 허용 합니다.)
+-   후행 초 필드의 날짜/시간 데이터 형식의 경우 초 필드의 값은 0에서 61.9 사이 여야 합니다 (*n*) (포함), 여기서 *n* "9" 자리 숫자를 지정 하는 값을 *n*  소수 자릿수 초의 전체 자릿수입니다. (초의 범위 sidereal 시간 동기화를 유지 하려면 최대 2 초의 윤 초가 허용 합니다.)

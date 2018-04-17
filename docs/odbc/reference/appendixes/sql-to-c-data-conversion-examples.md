@@ -1,30 +1,31 @@
 ---
-title: "SQL에서 C 데이터 변환 예 | Microsoft Docs"
-ms.custom: 
+title: SQL에서 C 데이터 변환 예 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52791dba31e61663a84d9c80041874c1869c2836
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1908d940dc53eb8219f5c82b2ac7f3e6b37dfc31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C 데이터 변환 예제
 다음 표에 표시 된 예제 드라이버 C 데이터를 SQL 데이터를 변환 하는 방법을 보여 줍니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |SQL_DECIMAL|1234.56|SQL_C_STINYINT|무시됨|----|22003|  
 SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|무시됨|1.2345678|n/a|  
 |SQL_DOUBLE|1.2345678|SQL_C_FLOAT|무시됨|1.234567|n/a|  
-|SQL_DOUBLE|1.2345678|SQL_C_STINYINT|무시됨|1|n/a|  
+|SQL_DOUBLE|1.2345678|SQL_C_STINYINT|무시됨|1.|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|11|1992-12-31\0 [a]|n/a|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_CHAR|10|-----|22003|  
 |SQL_TYPE_DATE|1992-12-31|SQL_C_TIMESTAMP|무시됨|1992,12,31, 0,0,0,0 [b]|n/a|  

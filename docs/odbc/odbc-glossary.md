@@ -1,30 +1,31 @@
 ---
-title: "ODBC 용어 | Microsoft Docs"
-ms.custom: 
+title: ODBC 용어 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 용어집
 ## <a name="a"></a>변수를 잠그기 위한  
@@ -77,14 +78,14 @@ ms.lasthandoff: 11/20/2017
  **버퍼**  
  부분 응용 프로그램 및 드라이버 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리입니다. 버퍼 종종 쌍으로 제공:는 *데이터 버퍼* 및 *데이터 길이가 버퍼*합니다.  
   
- **바이트**  
+ **byte**  
  8 비트 또는 하나의 8 진수입니다. *참고 항목* 8 진수입니다.  
   
 ## <a name="c"></a>C  
  **C 데이터 형식**  
  이 경우 응용 프로그램에서에서 C 프로그램에서 변수의 데이터 형식입니다.  
   
- **카탈로그**  
+ **catalog**  
  데이터베이스의 모양을 설명 하는 데이터베이스의 시스템 테이블의 집합입니다. 라고도 *스키마* 또는 *데이터 사전*합니다.  
   
  **카탈로그 함수**  
@@ -96,10 +97,10 @@ ms.lasthandoff: 11/20/2017
  **클라이언트/서버**  
  하나 이상의 클라이언트가 서버를 통해 데이터에 액세스 하는 데이터베이스 액세스 전략 클라이언트는 일반적으로 서버 컨트롤에 데이터베이스 액세스 하는 동안 사용자 인터페이스를 구현 합니다.  
   
- **열**  
+ **column**  
  정보 행에서의 단일 항목에 대 한 컨테이너입니다. 라고도 *필드*합니다.  
   
- **커밋**  
+ **commit**  
  에 게 변경해 트랜잭션에서 영구적으로 적용 합니다.  
   
  **동시성**  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **실행 시 데이터 매개 변수**  
  매개 변수를 데이터 이후 보내질 **SQLExecute** 또는 **SQLExecDirect** 호출 됩니다. 의미 하는 매개 변수 버퍼에 표시 되지 않고 SQL 문이 실행 될 때 전송 됩니다. Long 데이터 부분 실행 시에 일반적으로 전송 됩니다.  
   
- **database**  
+ **데이터베이스**  
  DBMS의 데이터의 불연속 컬렉션입니다. 또한 DBMS 합니다.  
   
  **데이터베이스 엔진**  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
  SQL 문을 생성 되 고 런타임에 포함 된 SQL의 형식입니다. *참고 항목* 정적 SQL 합니다.  
   
 ## <a name="e"></a>E  
- **포함 된 SQL**  
+ **Embedded SQL**  
  COBOL, C. ODBC 등의 다른 언어로 작성 된 프로그램에 직접 포함 된 SQL 문을 embedded SQL을 사용 하지 않습니다. *참고 항목* 정적 SQL *및* 동적 SQL입니다.  
   
  **환경**  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **escape 절**  
  SQL 문에서 절입니다.  
   
- **실행**  
+ **execute**  
  SQL 문을 실행 합니다.  
   
 ## <a name="f"></a>F  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **fetch**  
  결과 집합에서 하나 이상의 행을 검색 합니다.  
   
- **필드**  
+ **field**  
  *참조* 열입니다.  
   
  **파일 기반 드라이버**  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  커서가 결과 집합으로 이동 하 고 일반적으로 앞으로 이동할 수 있는 커서는 한 번에 하나의 행을 인출 합니다. 대부분의 관계형 데이터베이스만 정방향 전용 커서를 지원합니다.  
   
 ## <a name="h"></a>H  
- **핸들**  
+ **handle**  
  같은 파일 또는 데이터 구조를 고유 하 게 식별 하는 값입니다. 핸들은 생성 하 고 사용 하 여 하지만 작업을 식별 하는 다른 소프트웨어에 의해 전달 되는 소프트웨어에만 의미가 있습니다. ODBC 환경, 연결, 문 및 설명자에 대 한 핸들을 정의합니다.  
   
 ## <a name="i"></a>I  
@@ -265,7 +266,7 @@ ms.lasthandoff: 11/20/2017
  지정 된 열을 두 개 이상의 테이블에 있는 행의 값을 비교 하 여 연결 하는 관계형 데이터베이스에서 작업 합니다.  
   
 ## <a name="k"></a>K  
- **키**  
+ **key**  
  열 또는 열 값을 가진 행을 식별 합니다. *참고 항목* 외래 키 *및* 기본 키입니다.  
   
  **키 집합**  
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/20/2017
  키 집합을 사용 하 여 업데이트 및 삭제 된 행을 검색 하는 스크롤 가능한 커서입니다.  
   
 ## <a name="l"></a>L  
- **리터럴**  
+ **literal**  
  SQL 문에서 실제 데이터 값의 문자 표시 합니다.  
   
  **잠금**  
@@ -327,7 +328,7 @@ ms.lasthandoff: 11/20/2017
  테이블의 소유자입니다.  
   
 ## <a name="p"></a>P  
- **매개 변수**  
+ **parameter**  
  매개 변수 표식 또는 물음표 (?)로 표시 된 SQL 문에 변수입니다. 매개 변수는 응용 프로그램 변수와 문이 실행 될 때 검색 값에 바인딩됩니다.  
   
  **매개 변수 설명자**  
@@ -357,7 +358,7 @@ ms.lasthandoff: 11/20/2017
  **기본 키**  
  열 또는 테이블의 행을 고유 하 게 식별 하는 열.  
   
- **프로시저**  
+ **procedure**  
  하나 이상의 그룹에 데이터베이스에 있는 명명 된 개체와 저장 된 SQL 문을 미리 컴파일된입니다.  
   
  **프로시저 열**  
@@ -367,7 +368,7 @@ ms.lasthandoff: 11/20/2017
  **한정자**  
  하나 이상의 테이블을 포함 하는 데이터베이스입니다.  
   
- **쿼리**  
+ **query**  
  SQL 문을 말합니다. 경우에 따라 사용 되는 것을 의미 하는 **선택** 문.  
   
  **따옴표 붙은 식별자**  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
  **스칼라 함수**  
  단일 값에서 단일 값을 생성 하는 함수입니다. 예를 들어, 문자 데이터의 대/소문자를 변경 하는 함수입니다.  
   
- **스키마**  
+ **schema**  
  *참조* 카탈로그입니다.  
   
  **스크롤 가능 커서**  

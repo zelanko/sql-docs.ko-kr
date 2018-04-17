@@ -1,24 +1,17 @@
 ---
-title: 실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/09/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: 실시간 점수 매기기 또는 SQL Server 기계 학습에서 기본 점수 매기기를 수행 하는 방법 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 186ead48ffe33eb8b9dc169041aaf78212a36b0a
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 91928b20316ec8555c7f309f134d083dea5c7569
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -219,7 +212,7 @@ Sp에서 요구 하는 이진 형식\_rxPredict PREDICT 함수를 사용 하는 
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>3단계. Call sp_rxPredict
+### <a name="step-3-call-sprxpredict"></a>3단계. Sp_rxPredict 호출
 
 Sp 호출\_rxPredict와는 다른 저장 프로시저입니다. 현재 릴리스에서 저장된 프로시저는 두 개의 매개 변수를 사용: _@model_ 이진 형식으로 모델에 대 한 및 _@inputData_ 상태 평가에 사용 하는 데이터에 대 한 유효한 SQL 쿼리로 정의 .
 

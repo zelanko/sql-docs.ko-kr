@@ -1,28 +1,17 @@
-﻿---
-title: 'RevoScaleR 패키지와 SQL server를 이용한 데이터 과학 심층 분석 | Microsoft Docs'
-ms.date: 12/14/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+---
+title: SQL Server와 RevoScaleR 패키지를 사용 하 여 데이터 과학 심층 분석 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 38656e31b48f43c32b57e75c207858292228f7a4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5c2596c881d48d2f2629b4363749e7d1c45b3489
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>RevoScaleR 패키지와 SQL server를 이용한 데이터 과학 심층 분석와 함께
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,17 +28,17 @@ ms.lasthandoff: 04/04/2018
 > + [Hadoop MapReduce에 ScaleR 시작](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
 
 ## <a name="overview"></a>개요
-RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
+
 RevoScaleR 패키지의 유연성과 처리 능력 확인을 위해, 이 자습서에서 주기적으로 데이터를 옮기고 계산 컨텍스트를 변경합니다. 이를 하기 위해 이 자습서에서 다음을 진행합니다:
 
 + 데이터는 초기에 CSV 파일 또는 XDF 파일에서 가져온 것입니다 RevoScaleR 패키지에서 함수를 사용해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 데이터를 가져옵니다.
-+ 모델 학습 및 점수 매기기를 사용하여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산합니다. 
-+ RevoScaleR 함수를 사용하여 새로 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
++ 모델 학습 및 점수 매기기를 사용 하 여 수행 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트를 계산 합니다. 
++ RevoScaleR 함수를 사용 하 여 새로 만드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과 저장 하는 테이블입니다.
 + 서버에서 모두 플롯을 만들고 로컬에서 계산 컨텍스트 합니다.
 + 데이터에 대해 모델을 학습 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R에서 실행 중인 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스.
 + 데이터의 하위 집합을 추출 하 고 로컬 워크스테이션에서 다시 분석에 사용할 XDF 파일로 저장 합니다.
-+ ODBC 연결을 열어 점수 매기기에 대한 새 데이터를 가져오기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 점수 매기기 로컬 워크스테이션에서 수행 됩니다.
-+ 사용자 지정 R 함수를 만들고 계산 컨텍스트는 시뮬레이션을 수행하는 서버에서 실행합니다.
++ ODBC 연결을 열어 점수 매기기에 대 한 새 데이터를 가져오기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 점수 매기기 로컬 워크스테이션에서 수행 됩니다.
++ 사용자 지정 R 함수를 만들고 계산 컨텍스트는 시뮬레이션을 수행 하는 서버에서 실행 합니다.
 
 ### <a name="article-list-and-time-required"></a>필요한 시간 및 항목 목록
 

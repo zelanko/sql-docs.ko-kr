@@ -1,15 +1,16 @@
 ---
-title: "데이터 형식 변환 | Microsoft Docs"
-ms.custom: 
+title: 데이터 형식 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversions"></a>데이터 형식 변환
 데이터가 변환 될 수 한 형식에서 다른 4 배 중 하나에서: 전송 될 때 데이터는 하나의 응용 프로그램 변수에서 (C에 C)를 다른 응용 프로그램 변수에서 데이터를 문 매개 변수 (C)에서 SQL로 보낼 때 결과 집합 열에는 데이터에 반환 될 때 응용 프로그램 변수 (SQL에서 C로) 및 때 데이터가 전송 되는지 하나의 데이터 원본 열에서 다른 SQL (to SQL)입니다.  

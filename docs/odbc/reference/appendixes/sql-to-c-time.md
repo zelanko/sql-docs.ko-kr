@@ -1,31 +1,32 @@
 ---
-title: "SQL에서 c: 시간 | Microsoft Docs"
-ms.custom: 
+title: 'SQL에서 c: 시간 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], time
 - time data type [ODBC]
 - data conversions from SQL to C types [ODBC], time
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b9879b2a051045fb4ecc6aeb75b92020b187652
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f8db10d126eab69546b2d81eaf4d93743a63238
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-time"></a>SQL에서 c: 시간
 ODBC SQL 데이터 형식은 시간에 대 한 식별자:  
@@ -36,10 +37,10 @@ ODBC SQL 데이터 형식은 시간에 대 한 식별자:
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> *9* <= *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> *9* <= *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|없음 [b]|data|6 [d]|n/a|  
+|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> *9* <= *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 9|Data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> *9* <= *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 9|Data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|Data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|없음 [b]|Data|6 [d]|n/a|  
 |SQL_C_TYPE_TIMESTAMP|없음 [b]|데이터 [c + +]|16 [d]|n/a|  
   
  [a] 시간의 소수 자릿수 초가 잘립니다.  

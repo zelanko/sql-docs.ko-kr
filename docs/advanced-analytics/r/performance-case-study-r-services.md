@@ -1,24 +1,17 @@
 ---
-title: R 서비스-결과 및 리소스에 대 한 성능 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/09/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server R Services-결과 및 리소스에 대 한 성능 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 1a0d74c293f092e2c1eb3d9273c97d75b7034dfb
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: ce5fb99b3808b9da0d32bee48ff31f6e0b2dae95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R 서비스에 대 한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -134,7 +127,7 @@ metric time pct
 
 **고성능** 전원 옵션:
 
-| 테스트 이름 | \#을 실행합니다. | 경과 시간 | 평균 시간 |
+| 테스트 이름 | \#를 실행합니다. | 경과 시간 | 평균 시간 |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1.      | 3.57초 |              |
 |           | 2      | 3.45초 |              |
@@ -153,7 +146,7 @@ metric time pct
 
 **균형 조정** 전원 옵션:
 
-| 테스트 이름 | \#을 실행합니다. | 경과 시간 | 평균 시간 |
+| 테스트 이름 | \#를 실행합니다. | 경과 시간 | 평균 시간 |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1.      | 3.89초 |              |
 |           | 2      | 4.15초 |              |
@@ -367,7 +360,7 @@ Resume 일치 하는 모델에 대 한 외부 스크립트 사용 하 여 많은
 
 + [SQL Server의 NUMA 지원 방법](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server 최적화에 대 한 자세한 내용은
 

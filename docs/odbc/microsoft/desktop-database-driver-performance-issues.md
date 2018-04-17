@@ -1,31 +1,32 @@
 ---
-title: "데스크톱 데이터베이스 드라이버 성능 문제 | Microsoft Docs"
-ms.custom: 
+title: 데스크톱 데이터베이스 드라이버 성능 문제 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], performance
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67379ee540aecb691122d91b42776b0c9d990b1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d13ef42e9658a24de65947fcb9aa85ffb854181
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-driver-performance-issues"></a>데스크톱 데이터베이스 드라이버 성능 문제
 기존 ANSI 응용 프로그램 호환성을 위해, Microsoft 액세스 4.0 또는 더 높은 데이터 원본에 대 한 SQL_WCHAR, SQL_WVARCHAR 및 SQL_WLONGVARCHAR 데이터 형식은 SQL_CHAR, SQL_VARCHAR, 및 SQL_LONGVARCHAR로 노출 됩니다. 데이터 소스를 넓은 CHAR 데이터 형식을 반환 하지 않지만 데이터 여전히로 보내야 합니다 Jet 와이드 문자 형식으로 합니다. 변환을 수행 됩니다 SQL_C_CHAR 매개 변수 또는 결과 열 ANSI 응용 프로그램에서 SQL_CHAR 데이터 형식에 바인딩된 경우를 이해 하는 것이 유용 합니다.  

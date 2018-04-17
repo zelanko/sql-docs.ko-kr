@@ -1,15 +1,16 @@
 ---
-title: "설명자 확보 | Microsoft Docs"
-ms.custom: 
+title: 설명자 확보 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLFreeHandle function [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - freeing descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db147faaae4ad0f2713e21f9e55228cbb2b057e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e99c394521bf6f733503e2d5e2f8794d5412cc94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="freeing-descriptors"></a>설명자를 해제합니다.
 명시적으로 할당 된 설명자 될 수 있습니다 하나를 명시적으로 호출 하 여 해제 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC, 또는 암시적으로 때 연결 핸들 해제 됩니다. 명시적으로 할당 된 설명자는 해제, 모든 문 핸들을 자동으로 적용 해제 된 설명자에 암시적으로 할당 된 설명자를 되돌립니다.  

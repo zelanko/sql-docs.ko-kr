@@ -2,7 +2,7 @@
 title: SET COLLATE 명령을 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b8820aed48e6b809d9d6b9c6795c2dcc13c5e270
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업의 문자 필드에 대 한 데이터 정렬 순서를 지정합니다.  
@@ -40,7 +40,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  데이터 정렬 순서를 지정합니다. 사용 가능한 데이터 정렬 순서 옵션을 다음 표에 설명 되어 있습니다.  
   
-|변수|언어|  
+|옵션|언어|  
 |-------------|--------------|  
 |네덜란드어|네덜란드어|  
 |GENERAL|영어, 프랑스어, 독일어, 최신 스페인어, 포르투갈어, 및 기타 서유럽 언어|  

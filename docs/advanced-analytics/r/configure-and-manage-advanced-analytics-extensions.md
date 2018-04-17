@@ -1,27 +1,19 @@
 ---
-title: 고급 컴퓨터 학습 서비스에 대 한 구성 옵션 | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 컴퓨터 학습 서비스에 대 한 고급 구성 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5fc4e661f68a23ff2a954b832463eb60c7449057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>컴퓨터 학습 서비스에 대 한 고급 구성 옵션
+# <a name="advanced-configuration-options-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 고급 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 외부 스크립트 런타임 및와 SQL Server의 기계 학습 연결 된 다른 서비스의 구성을 수정 하려면 설치 후에 만들 수 있는 변경 내용을 설명 합니다.

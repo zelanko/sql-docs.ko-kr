@@ -1,32 +1,22 @@
 ---
-title: Python 라이브러리 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/30/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: SQL Server 기계 학습에서 Python 라이브러리 및 데이터 형식 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 70156a6b4d443c54f9b6244e5491da63ce345198
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Python 라이브러리 및 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 다음 제품에 포함 된 Python 라이브러리를 설명 합니다.
-
-+ SQL Server 컴퓨터 학습 Services (In-database)
-+ Microsoft 기계 Server (독립 실행형)를 학습 합니다.
+이 문서에서는 SQL Server 컴퓨터 학습 Services (In-database) 및 (독립 실행형) 설치에 포함 된 Python 라이브러리를 설명 합니다.
 
 이 문서에는 또한 지원 되지 않는 데이터 형식을 나열 하 고 목록에서 데이터 형식 변환 Python 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 합니다.
 

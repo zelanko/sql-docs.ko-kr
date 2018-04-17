@@ -1,15 +1,16 @@
 ---
-title: "커서 및 준비 된 문을에 트랜잭션의 영향 | Microsoft Docs"
-ms.custom: 
+title: 커서 및 준비 된 문을에 트랜잭션의 영향 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 836cef9465c2ee935628e92168b9ace7650b8e66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23ba65d28ad9a40028ca5e02daeea11607e0c3c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>커서 및 준비 된 문을에 트랜잭션이 미치는 영향
 커밋 또는 롤백 트랜잭션이 커서 및 액세스 계획에 다음과 같은 결과가 나타납니다.  

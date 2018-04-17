@@ -1,15 +1,16 @@
 ---
-title: "드라이버에 직접 연결 | Microsoft Docs"
-ms.custom: 
+title: 드라이버에 직접 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], SQLDriverConnect
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], connecting directly to drivers
 - connecting to driver [ODBC], drivers
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da4d454eddccae8f72a29d5903887ffec14842c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ad3954780f42bc82daf6ae3233b9e1bac667cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-directly-to-drivers"></a>드라이버에 직접 연결
 설명한 대로 [데이터 원본이 나 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)이 섹션의 앞부분에 나오는 데이터 소스를 전혀 사용 하지 않으려는 일부 응용 프로그램입니다. 대신, 드라이버에 직접 연결 하려고 합니다. **SQLDriverConnect** 데이터 소스를 지정 하지 않고 드라이버에 직접 연결 하는 응용 프로그램에 대 한 방법을 제공 합니다. 개념적으로 임시 데이터 원본에서 런타임에 생성 됩니다.  

@@ -1,30 +1,31 @@
 ---
-title: "최소 SQL 문법을 | Microsoft Docs"
-ms.custom: 
+title: 최소 SQL 문법을 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>최소 SQL 문법
 이 섹션에서는 ODBC 드라이버가 지원 해야 하는 최소 SQL 구문을 설명 합니다. 이 섹션에 설명 된 구문은 SQL 92의 항목 수준 구문의 하위 집합입니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  읽기 전용 데이터 원본을 사용 하는 드라이버에서 변경 되는 데이터를 처리 하는이 섹션에 포함 된 문법의 부분을 지원 하지 않습니다. 응용 프로그램에서 호출 하 여 데이터 소스는 읽기 전용 경우를 확인할 수 **SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 정보 유형을 사용 합니다.  
   
-## <a name="statement"></a>인수를 제거합니다.  
+## <a name="statement"></a>문  
  *테이블 생성-문* :: =  
   
  CREATE TABLE *기본 테이블 이름*  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  *선택 문* :: =  
   
- [모든 &#124;를 선택 합니다. DISTINCT] *선택 목록*  
+ 선택 [모든 &#124; DISTINCT] *선택 목록*  
   
  *테이블 참조 목록*  
   
@@ -67,15 +68,15 @@ ms.lasthandoff: 12/21/2017
   
  *문* :: = *테이블 생성-문*  
   
- &#124; *delete 문은 검색*  
+ &#124;*delete 문은 검색*  
   
- &#124; *놓기 테이블 문*  
+ &#124;*놓기 테이블 문*  
   
- &#124; *insert 문*  
+ &#124;*insert 문*  
   
- &#124; *select 문*  
+ &#124;*select 문*  
   
- &#124; *업데이트 문을 검색*  
+ &#124;*업데이트 문을 검색*  
   
  *update 문을 검색*  
   

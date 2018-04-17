@@ -1,31 +1,32 @@
 ---
-title: "Microsoft에서 제공 하는 ODBC 드라이버 | Microsoft Docs"
-ms.custom: 
+title: Microsoft에서 제공 하는 ODBC 드라이버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], about ODBC drivers
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e321e1771076a4a71370f0494fb7331eb3ffc6f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad6a442be4b53615738ccf34bf4d6604b8682145
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft에서 제공 하는 ODBC 드라이버
 *드라이버* 는 ODBC api에서 함수를 구현 하는 라이브러리입니다. 각 드라이버는 특정 데이터베이스 관리 시스템 (DBMS)입니다. 드라이버를 대부분의 경우에서 기본 DBMS;의 기능을 노출 DBMS에 의해 지원 되지 않습니다는 기능을 구현 하 필요는 없습니다. 드라이버는 특정 작업을 수행 하 고 다음 두 가지 범주로 분류할 수 있습니다: 파일 및 DBMS 기반 합니다. 드라이버 및 드라이버 아키텍처에 대 한 자세한 내용은 참조 [드라이버](../../odbc/reference/drivers.md)합니다.  

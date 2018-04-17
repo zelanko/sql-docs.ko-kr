@@ -1,24 +1,17 @@
 ---
 title: 컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs
-ms.date: 02/05/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 65294b0b630b662e68d252312a865dc8e898dec5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -181,7 +174,7 @@ R 솔루션에 영향을 줄 수 있는 기타 알려진된 문제에 대 한 �
 
 ### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>기본이 아닌 위치에서 SQL Server에서 R 스크립트를 실행 하는 경우 경고를 거부 하는 액세스
 
-와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부에서 `Program Files` 폴더에는 경고 ACCESS_DENIED가 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 합니다. 예를 들어
+와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부에서 `Program Files` 폴더에는 경고 ACCESS_DENIED가 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 합니다. 예를 들어:
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` : 경로 [2] = "~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
 
@@ -327,7 +320,7 @@ R에 문자열 데이터를 보낼 때 ASCII 표현으로 가능 하면 변환 �
 
 이 문제가 발생한 경우 `f` 의 정의를 `g`의 정의 내에 포함하여 문제를 해결할 수 있습니다. `g` 앞의 모든 곳에서 `f`를 정상적으로 호출합니다.
 
-예를 들어
+예를 들어:
 
 ```r
 f <- function(x) { 2*x * 3 }

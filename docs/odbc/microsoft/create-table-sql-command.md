@@ -2,7 +2,7 @@
 title: 테이블-SQL 명령을 만들려면 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table---sql-command"></a>테이블-SQL 명령을 만들려면
 지정된 된 필드가 있는 테이블을 만듭니다.  
@@ -53,7 +53,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>인수  
- 테이블 &#124; 만들기 DBF *TableName1*  
+ 테이블 만들기 &#124; DBF *TableName1*  
  만들 테이블의 이름을 지정 합니다. 테이블 및 DBF 옵션은 동일 합니다.  
   
  이름 *LongTableName*  

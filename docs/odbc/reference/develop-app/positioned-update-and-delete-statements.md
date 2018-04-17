@@ -1,16 +1,16 @@
 ---
-title: "Update 및 Delete 문을 배치 | Microsoft Docs"
-ms.custom: 
+title: Update 및 Delete 문을 배치 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f1685fb077fbc7d5b99f0d33f58f7624d6bd23c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문은
 응용 프로그램 업데이트 또는 위치 지정된 업데이트 된 결과 집합의 현재 행을 삭제 또는 delete 문의 수 있습니다. 위치 update 및 delete 문이에서 일부 데이터 원본의 경우에 지원 됩니다. 데이터 원본에서 지 원하는 배치 update 및 delete 문 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ 특성을 1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 *정보 항목* (커서 유형)에 따라 다름. 배치에서 ODBC 커서 라이브러리를 시뮬레이션 하는 참고 update 및 delete 문입니다.  
@@ -44,15 +44,15 @@ ms.lasthandoff: 02/15/2018
   
  그런 다음 응용 프로그램을 업데이트 하거나 삭제할 행에 커서를 놓습니다. 호출 하 여 이렇게 하려면 **SQLFetchScroll** 를 호출 하 고 필요한 행을 포함 하는 행 집합 검색 **SQLSetPos** 해당 행의 행 집합 커서의 위치를 합니다. 그런 다음 응용 프로그램에서 결과 집합에서 사용 하 고 문보다 다른 문이 위치 지정된 update 또는 delete 문이 실행 합니다. 이러한 문의 구문은 다음과 같습니다.  
   
- **UPDATE** *table-name*  
+ **업데이트** *테이블 이름*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **설정** *열 식별자* **=** {*식* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [**,** *열 식별자* **=** {*식* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *커서 이름*  
   
- **DELETE FROM** *table-name* **WHERE CURRENT OF** *cursor-name*  
+ **DELETE FROM** *테이블 이름* **WHERE CURRENT OF** *커서 이름*  
   
  이러한 문은 커서 이름이 필요할 수 있는지를 확인 합니다. 응용 프로그램 수 지정 하거나 사용 하 여 커서 이름을 **SQLSetCursorName** 집합 결과 만드는 문을 실행 하거나 데이터 소스를 자동으로 할 수 전에 커서를 만들 때 커서 이름을 생성 합니다. 호출 하 여 응용 프로그램은 검색에서 위치 지정된 update 및 delete 문을 사용 하기 위해이 커서 이름을 후자의 경우 **SQLGetCursorName**합니다.  
   

@@ -1,36 +1,28 @@
 ---
 title: SQL Server에서 Microsoft 컴퓨터 학습 서버에 컴퓨터 학습 구성 요소를 바인딩 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Microsoft 컴퓨터 학습 서버에 SQL Server에서 컴퓨터 학습 구성 요소 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는의 과정을 설명 합니다. _바인딩_, 기계 학습 SQL Server에서 사용 되는 구성 요소를 업그레이드 하는 데 사용할 수 있습니다. 바인딩 프로세스 서버 기반으로 컴퓨터 학습 서버의 릴리스에서 업데이트 흐름으로, SQL Server를 사용 하는 대신 릴리스를 잠그고 일정을 업데이트 합니다.
+이 문서에서는의 과정을 설명 합니다. *바인딩* 에 R 및 Python 패키지를 업그레이드 하기 위해 SQL Server 컴퓨터 학습 서비스 또는 Microsoft 컴퓨터 학습 서버에 SQL Server R Services (In-database) 인스턴스는 더 빠른 릴리스 일정입니다. 
 
-> [!IMPORTANT]
-> SQL Server 업데이트의 일부로 업그레이드 확보 하려는 경우이 업그레이드 프로세스를 사용할 필요가 없습니다. 새 서비스 팩 또는 서비스 릴리스를 설치할 때마다 컴퓨터 학습 구성 요소는 항상 자동으로 최신 버전으로 업그레이드 됩니다. 만 사용 하 여는 _바인딩_ 서비스 릴리스에서 SQL Server에서 제공 하는 것 보다 더 빠른 속도로 구성 요소를 업그레이드 하려는 경우를 처리 합니다.
+바인딩 프로세스는 서비스 업데이트 메커니즘을 변경합니다. 바인딩이 없으면 R 및 Python 패키지의 버전 서비스 팩 또는 누적 업데이트 (CU)를 설치 하는 경우에 새로 고쳐집니다. 바인딩을 사용할 경우 새 패키지 버전 CU 릴리스 일정 독립적으로 인스턴스에 적용할 수 있습니다.
 
-언제 든 지 서버를 학습 하는 컴퓨터 일정에 따라 업그레이드를 중지 하려면 수행 해야 하는 경우 _바인딩 해제_ 에 설명 된 대로 인스턴스 [이 섹션](#bkmk_Unbind), 및 학습 서버 컴퓨터를 제거 합니다.
+바인딩 방금 기계 학습 또는 R 구성 요소를 데이터베이스 엔진 인스턴스는 데이터베이스 엔진 인스턴스가 아닌 자체의 영향을 줍니다. (In-database) 인스턴스로 적용 됩니다. (독립 실행형) 설치를 범위에 없습니다.
+
+언제 든 지를 기계 학습 구성 요소에 대 한 SQL Server 서비스 되돌릴 수 있는 경우 _바인딩 해제_ 에 설명 된 대로 인스턴스 [이 여기서](#bkmk_Unbind), 및 서버를 학습 하는 컴퓨터를 제거 합니다.
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
 

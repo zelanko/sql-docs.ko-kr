@@ -1,30 +1,31 @@
 ---
-title: "읽기 전용 상태 (Excel 드라이버) | Microsoft Docs"
-ms.custom: 
+title: 읽기 전용 상태 (Excel 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - read-only status for Excel driver [ODBC]
 - Excel driver [ODBC], read-only status
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2778444177477548a28b4139b6ba4bdb3bdea6fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b61c66536c40aeb39033fb93e315b320d83070cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-only-status-excel-driver"></a>읽기 전용 상태 (Excel 드라이버)
 Microsoft Excel 드라이버를 사용 하면 데이터 원본 테이블 읽기 전용으로 기본적으로 열리고 한 번에 한 명의 사용자만 열 수 있습니다. 그러나 테이블을 확보 하더라도 읽기 전용 상태 응용 프로그램을 수행할 수는 삽입 및 업데이트 Microsoft Excel 테이블에 대 한 합니다.  

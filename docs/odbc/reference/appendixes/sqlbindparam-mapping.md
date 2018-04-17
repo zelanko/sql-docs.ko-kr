@@ -1,30 +1,31 @@
 ---
-title: "SQLBindParam 매핑 | Microsoft Docs"
-ms.custom: 
+title: SQLBindParam 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c2ca8ae4b0b7b522259677b252e2b0d24d14b5d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a2c78cd97b6577be8d11d07325165d6d82cd895
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 매핑
 **SQLBindParam** 진정으로 호출할 수 없습니다 사용 되지 않는 있는 ODBC 되지 않은; 하지만 중복 된 기능 여전히 나타냅니다-ISO 및 Open 그룹 – 호환 응용 프로그램은 사용 하기 때문에 내보낼 드라이버 관리자를 사용 해야 합니다. 때문에 **SQLBindParameter** 의 모든 기능을 포함 **SQLBindParam**, **SQLBindParam** 위쪽에 매핑할 수 **SQLBindParameter** (기본 드라이버는 ODBC 3 경우*.x* 드라이버). ODBC 3*.x* 드라이버를 구현 하지 않아도 **SQLBindParam**합니다.  

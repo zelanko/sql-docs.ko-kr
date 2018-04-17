@@ -1,27 +1,19 @@
 ---
-title: SQL Server와 함께 사용 하기 위해 Python 클라이언트 도구 설정 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/13/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: python
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Python 클라이언트 도구와 SQL Server 기계 학습에 사용 하기 위해 설정 | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c0054fd0dc9ecb3dbf9035ddff0f6828a85b471d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: ace5ea536c020d2713f1aa07bd1b26c41065a587
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="set-up-python-client-tools-for-use-with-sql-server"></a>Python SQL Server와 함께 사용 하기 위해 클라이언트 도구 설정 
+# <a name="set-up-python-client-tools-for-use-with-sql-server-machine-learning"></a>Python 클라이언트 도구와 SQL Server 기계 학습 사용 하도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에는 SQL Server에서 Python 코드를 실행을 지원 하도록 Windows 컴퓨터에서 Python 환경을 구성 하는 방법을 설명 합니다. 다음과 같은 시나리오는 다음과 같습니다.
@@ -117,7 +109,7 @@ cd {{download-directory}}
 .\Install-PyForMLS.ps1
 ```
 
-실행할 수도 있습니다는 `-InstallFolder` 명령줄 인수는 명령의 일부로 새 경로 지정 합니다. 예를 들어 
+실행할 수도 있습니다는 `-InstallFolder` 명령줄 인수는 명령의 일부로 새 경로 지정 합니다. 예를 들어: 
 
 ```ps1
 .\Install-PyForMLS.ps1 -InstallFolder "<installation_path>")

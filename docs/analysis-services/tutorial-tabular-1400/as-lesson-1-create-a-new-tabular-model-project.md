@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services 자습서 1 단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs"
-description: "새 Analysis Services tutorial 프로젝트를 만드는 방법에 설명 합니다."
+title: 'Analysis Services 자습서 1 단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
+description: 새 Analysis Services tutorial 프로젝트를 만드는 방법에 설명 합니다.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 6b8d24a31ade8fe621ef2a71b932e87c13211451
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 

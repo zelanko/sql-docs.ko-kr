@@ -2,7 +2,7 @@
 title: DROP TABLE 명령을 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6b38eeeba42f1a24520c176fb2f49caac1712e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd9798d5394f4291b0ff77abba55cb7c780aa4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
 데이터 소스와 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  
@@ -39,7 +39,7 @@ DROP TABLE TableName | FileName | ?
 ```  
   
 ## <a name="settings"></a>설정  
- *테이블 이름*  
+ *TableName*  
  디스크에서 삭제 하 고 데이터 소스와 지정 된 데이터베이스에서 제거 하는 테이블을 지정 합니다.  
   
  *FileName*  

@@ -1,30 +1,31 @@
 ---
-title: "SQLTransact 매핑 | Microsoft Docs"
-ms.custom: 
+title: SQLTransact 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLTransact
 - SQLTransact function [ODBC], mapping
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e1e9d43a6e968d20042eff30552223c87813a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4742829b5df9d99007181109f68d020a2f4af98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 매핑
 **SQLTransact** 이제 바뀝니다 **SQLEndTran**합니다. 두 함수 간의 주요 차이점은 **SQLEndTran** 인수가 포함 되어 *HandleType*를 수행 해야 하는 작업의 범위를 지정 하는 합니다. *HandleType* 인수 환경 또는 연결 핸들을 지정할 수 있습니다. 다음에 대 한 호출 **SQLTransact**:  

@@ -1,15 +1,16 @@
 ---
-title: "선택 된 데이터 원본이 나 드라이버 | Microsoft Docs"
-ms.custom: 
+title: 선택 된 데이터 원본이 나 드라이버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>선택 된 데이터 원본이 나 드라이버
 데이터 원본 또는 응용 프로그램에서 사용 되는 드라이버는 응용 프로그램에 하드 코드는 경우도 있습니다. 예를 들어 사용자 지정 작성 한 응용 프로그램 전송할 MIS 부서 간에 데이터를 하나의 데이터 원본에는 데이터 원본의 이름이 포함 됩니다-응용 프로그램 단순히 다른 데이터 소스와 작동 하지 않습니다. 다른 예로 주문 입력에 사용 되는 등의 수직 응용 프로그램. 이러한 응용 프로그램 항상 동일한 데이터 원본에 응용 프로그램으로 인식 하는 미리 정의 된 스키마를 사용 합니다.  

@@ -2,7 +2,7 @@
 title: Date, Time 및 Timestamp 리터럴 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
@@ -35,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
 |*리터럴 형식*|의미|서식을 지정 *값*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
+|**d**|날짜|*yyyy*-*mm*-*dd*|  
 |**t**|시간 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
+|**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
  [초 구성 요소가 포함 된 리터럴 시간 또는 타임 스탬프 간격에서 소수점 오른쪽 자릿수입니다 1 수는 SQL_DESC_PRECISION 설명자 필드에 포함 된 초 전체 자릿수에 따라 다릅니다. (자세한 내용은 참조 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
