@@ -1,16 +1,16 @@
 ---
-title: "tempdb 데이터베이스 | Microsoft 문서"
-description: "이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다."
+title: tempdb 데이터베이스 | Microsoft 문서
+description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다.
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 SQL Database에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 SQL Database에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
   
 - 전역 또는 로컬 임시 테이블과 인덱스, 임시 저장 프로시저, 테이블 변수, 테이블 반환 함수에서 반환된 테이블, 커서 등 명시적으로 생성된 임시 **사용자 개체**.  
 - 데이터베이스 엔진에서 만든 **내부 개체**. 이러한 개체는 다음과 같습니다.
@@ -105,6 +106,9 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="tempdb-database-in-sql-database"></a>SQL Database의 Tempdb 데이터베이스
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>DTU 기반 서비스 계층에 대한 tempdb 크기
+
 |SLO|최대 Tempdb 데이터 파일 크기(MB)|tempdb 데이터 파일 수|최대 tempdb 데이터 크기(MB)|
 |---|---:|---:|---:|
 |Basic|14,225|1|14,225|
@@ -128,6 +132,9 @@ ms.lasthandoff: 01/18/2018
 |기본 탄력적 풀(모든 DTU 구성)|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore 기반 서비스 계층에 대한 tempdb 크기
+
+vCore 기반 리소스 제한 참조](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## <a name="restrictions"></a>Restrictions  
  다음 작업은 **tempdb** 데이터베이스에서 수행할 수 없습니다.  

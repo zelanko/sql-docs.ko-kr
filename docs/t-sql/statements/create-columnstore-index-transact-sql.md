@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -277,7 +277,7 @@ ON
 - INSERT, UPDATE, DELETE 또는 MERGE 작업으로 필터링된 인덱스의 데이터를 수정합니다.  
 - 필터링된 인덱스는 쿼리 최적화 프로그램이 쿼리 계획을 작성할 때 사용됩니다.  
   
-    |Set 옵션|필요한 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
+    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -304,29 +304,29 @@ ON
 **columnstore 인덱스의 각 열은 다음 일반적인 비즈니스 데이터 형식 중 하나여야 합니다.** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   날짜  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
--   smallint  
--   tinyint  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
+-   SMALLINT  
+-   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max)  (클러스터형 columnstore 인덱스에서만 프리미엄 가격 책정 계층의 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]과 Azure SQL 데이터베이스에 적용)   
+-   nvarchar(max) ([!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 프리미엄 계층, 표준 계층(S3 이상) 및 모든 VCore 제품 계층에 적용됨, 클러스터형 columnstore 인덱스에서만)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max)  (클러스터형 columnstore 인덱스에서만 프리미엄 가격 책정 계층의 Azure SQL 데이터베이스와 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에 적용)
+-   varchar(max) ([!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 프리미엄 계층, 표준 계층(S3 이상) 및 모든 VCore 제품 계층에 적용됨, 클러스터형 columnstore 인덱스에서만)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary(max)  (클러스터형 columnstore 인덱스에서만 프리미엄 가격 책정 계층의 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]과 Azure SQL 데이터베이스에 적용)
+-   varbinary(max) ([!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 프리미엄 계층, 표준 계층(S3 이상)에서 Azure SQL Database 및 모든 VCore 제품 계층에 적용됨, 클러스터형 columnstore 인덱스에서만)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에 적용됨)
   
@@ -349,7 +349,7 @@ ON
 -   **ALTER INDEX** 문을 사용하여 변경할 수 없습니다. 비클러스터형 인덱스를 변경하려면 인덱스를 삭제하고 해당 columnstore 인덱스를 대신 다시 만들어야 합니다. **ALTER INDEX**를 사용하여 columnstore 인덱스를 해제하고 다시 만들 수 있습니다.  
 -   **INCLUDE** 키워드를 사용하여 만들 수 없습니다.  
 -   인덱스를 정렬하기 위해 **ASC** 또는 **DESC** 키워드를 포함할 수 없습니다. columnstore 인덱스는 압축 알고리즘에 따라 정렬됩니다. 정렬을 사용하면 성능상의 많은 이점이 없어집니다.  
--   비클러스터형 열 저장소 인덱스에는 nvarchar(max), varchar(max) 및 varbinary(max) 형식의 LOB(대형 개체) 열을 포함할 수 없습니다. 클러스터형 columnstore 인덱스 만이 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 버전부터 LOB 형식 및 프리미엄 가격 책정 계층에서 구성된 Azure SQL Database를 지원합니다. 참고: 이전 버전에서는 클러스터형 및 비클러스터형 columnstore 인덱스에서 LOB 형식을 지원하지 않습니다.
+-   비클러스터형 열 저장소 인덱스에는 nvarchar(max), varchar(max) 및 varbinary(max) 형식의 LOB(대형 개체) 열을 포함할 수 없습니다. 클러스터형 columnstore 인덱스 만이 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 버전부터 LOB 형식 및 프리미엄 계층, 표준 계층(S3 이상)에서 구성된 Azure SQL Database 및 모든 VCore 제품 계층을 지원합니다. 참고: 이전 버전에서는 클러스터형 및 비클러스터형 columnstore 인덱스에서 LOB 형식을 지원하지 않습니다.
 
 
  **columnstore 인덱스는 다음 기능과 함께 사용할 수 없습니다.**  
@@ -624,7 +624,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  테이블에 비클러스터형 columnstore 인덱스를 만든 후에는 해당 테이블에서 데이터를 직접 수정할 수 없습니다. INSERT, UPDATE, DELETE 또는 MERGE를 사용한 쿼리는 실패하며 오류 메시지를 반환합니다. 테이블에서 데이터를 추가하거나 수정하려면 다음 중 하나를 수행합니다.  
   
--   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예를 들면 다음과 같습니다.  
+-   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

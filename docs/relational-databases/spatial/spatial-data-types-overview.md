@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 >  원호 세그먼트에 Z 값이 지정된 경우 원호 세그먼트의 모든 점에 대해 Z 값이 동일해야만 해당 원호 세그먼트를 입력할 수 있습니다. 예: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` 은 허용되지만 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 은 허용되지 않습니다.  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 및 CircularString 비교  
-다음 다이어그램에서는 동일한 이등변 삼각형을 보여 줍니다. 삼각형 A는 선 세그먼트를 사용하여 삼각형을 정의하고 삼각형 B는 원호 세그먼트를 사용하여 삼각형을 정의합니다.  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 이 예에서는 **LineString** 인스턴스와 **CircularString** 인스턴스를 모두 사용하여 위의 이등변 삼각형을 저장하는 방법을 보여 줍니다.  
+이 예에서는 **LineString** 인스턴스와 **CircularString** 인스턴스를 모두 사용하여 동일한 이등변 삼각형을 저장하는 방법을 보여줍니다.  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -135,11 +133,7 @@ LS LengthCS Length
 5.65685…6.28318…
 ```
 
-다음 그림에서는 각 형식이 저장되는 방법을 보여 줍니다. 빨간색 선은 **LineString**`@g1`을 나타내고 파란색 선은 **CircularString**`@g2`을 나타냅니다.  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-위의 그림과 같이 **CircularString** 인스턴스는 보다 적은 수의 점을 사용하여 **LineString** 인스턴스보다 정확도가 높은 곡선 경계를 저장합니다. **CircularString** 인스턴스는 특정 지점에서 반경 32km 이내 검색과 같이 원 경계를 저장하는 데 유용합니다. **LineString** 인스턴스는 사각형 도시 블록과 같이 선형인 경계를 저장하는 데 유용합니다.  
+**CircularString** 인스턴스는 보다 적은 수의 점을 사용하여 **LineString** 인스턴스보다 정확도가 높은 곡선 경계를 저장합니다. **CircularString** 인스턴스는 특정 지점에서 반경 32km 이내 검색과 같이 원 경계를 저장하는 데 유용합니다. **LineString** 인스턴스는 사각형 도시 블록과 같이 선형인 경계를 저장하는 데 유용합니다.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 및 CompoundCurve 비교  
 다음 코드 예제에서는 **LineString** 및 **CompoundCurve** 인스턴스를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.

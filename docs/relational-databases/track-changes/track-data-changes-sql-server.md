@@ -1,16 +1,16 @@
 ---
-title: "데이터 변경 내용 추적(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 데이터 변경 내용 추적(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
   
- 다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [에서 제공하는](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)변경 데이터 캡처 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
+ 다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 [변경 데이터 캡처](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
   
  ![변경 데이터 캡처에 대한 개념 설명](../../relational-databases/track-changes/media/cdcart1.gif "Conceptual illustration of change data capture")  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/09/2018
  캡처 인스턴스와 연결된 변경 데이터에 액세스하려면 연결된 원본 테이블의 캡처된 모든 열에 선택적으로 액세스할 수 있는 권한이 사용자에게 부여되어야 합니다. 또한 캡처 인스턴스를 만들 때 제어 역할을 지정한 경우 호출자도 지정된 제어 역할의 멤버여야 합니다. 메타데이터에 액세스하는 다른 일반적인 변경 데이터 캡처 함수에 모든 데이터베이스 사용자가 public 역할을 통해 액세스할 수 있습니다. 물론 반환된 메타데이터에 대한 액세스는 기본 원본 테이블에 대한 선택적 액세스 권한을 사용하거나 정의된 제어 역할에서의 멤버 자격을 통해 일반적으로 제어됩니다.  
   
  **변경 데이터 캡처를 사용하는 원본 테이블에 대한 DDL 작업**  
- 테이블에 변경 데이터 캡처를 사용하도록 설정한 경우 DDL 작업은 고정 서버 역할 **sysadmin**의 멤버, **database role db_owner**의 멤버 또는 **database role db_ddladmin**의 멤버에 의해서만 테이블에 적용될 수 있습니다. 테이블에서 DDL 작업을 수행할 수 있는 명시적 권한을 가진 사용자는 이 작업을 시도할 때 오류 22914를 받게 됩니다.  
+ 테이블에 변경 데이터 캡처를 사용하도록 설정한 경우 DDL 작업은 고정 서버 역할 **sysadmin**의 멤버, **database role db_owner**의 멤버 또는 **database role db_ddladmin**의 멤버에 의해서만 테이블에 적용될 수 있습니다. 테이블에서 DDL 작업을 수행할 수 있는 명시적 권한을 가진 사용자는 이러한 작업을 시도할 때 오류 22914를 받게 됩니다.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>변경 데이터 캡처에 대한 데이터 형식 고려 사항  
  변경 데이터 캡처에서는 모든 기본 열 유형이 지원됩니다. 다음 표에서는 여러 열 유형에 대한 동작 및 제한 사항을 나열합니다.  

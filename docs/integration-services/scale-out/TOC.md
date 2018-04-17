@@ -9,4 +9,5 @@
 # [Scale Out 로깅을 위한 계정 변경](change-logdb-account.md)
 # [Scale Out에 대한 인증서 관리](deal-with-certificates-in-ssis-scale-out.md)
 # [Scale Out 고가용성](scale-out-support-for-high-availability.md)
+# [SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성](scale-out-failover-cluster-instance.md)
 # [Scale Out 문제 해결](troubleshooting-scale-out.md)

@@ -1,16 +1,16 @@
 ---
 title: ASIN(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19cffa5a72ded3ac274fd032fd97a664bd57c09c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-지정된 **float** 식을 사인 값으로 가지는 각도를 라디안 단위로 반환합니다. 이를 아크사인이라고도 합니다.
+지정된 **float** 식을 사인 값으로 가지는 각도를 라디안 단위로 반환하는 기능입니다. 이를 **아크사인**이라고도 합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-**float** 형식 또는 -1에서 1 사이의 값을 가진 float로 암시적으로 변환될 수 있는 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 값이 이 범위를 벗어나면 NULL이 반환되고 도메인 오류가 보고됩니다.
+**float** 형식 또는 float로 암시적으로 변환할 수 있는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
   
 ## <a name="examples"></a>예  
-다음 예에서는 **float** 식을 받아서 지정된 각도의 ASIN을 반환합니다.
+이 예에서는 **float** 식을 받아서 지정된 각도의 ASIN 값을 반환합니다.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -96,13 +96,13 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-다음 예에서는 1.00의 아크사인을 반환합니다.
+이 예에서는 1.00의 아크사인을 반환합니다.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-다음은 허용 범위를 벗어난 값에 대해 아크사인을 요청하여 오류가 반환되는 예입니다.
+허용 범위를 벗어난 값에 대해 아크사인을 요청하여 오류가 반환되는 예입니다.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  

@@ -1,16 +1,16 @@
 ---
 title: APPLOCK_TEST(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_TEST_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4009a151873bf989a39bc4fb91ec3a9963af9f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8efc420c62031b0106c16bc25c8a8fdaa3f039a7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-지정된 잠금 소유자가 특정 응용 프로그램 리소스에 대한 잠금을 획득할 수 있는지에 대한 정보를 반환합니다. 실제로 잠금을 획득하지는 않습니다. APPLOCK_TEST는 응용 프로그램 잠금 함수이며 현재 데이터베이스에서 작동합니다. 응용 프로그램 잠금의 범위는 데이터베이스입니다.
+이 기능은 지정된 잠금 소유자가 특정 응용 프로그램 리소스에 대한 잠금을 획득할 수 있는지에 대한 정보를 반환합니다. 실제로 잠금을 획득하지는 않습니다. 응용 프로그램 잠금 함수로 APPLOCK_TEST는 현재 데이터베이스에서 작동합니다. 데이터베이스는 응용 프로그램 잠금의 범위입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,16 +50,16 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>인수  
 **'** *database_principal* **'**  
-데이터베이스의 개체에 대한 사용 권한이 부여될 수 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수를 성공적으로 호출하려면 이 함수의 호출자가 *database_principal*, **dbo** 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
+데이터베이스의 개체에 대한 사용 권한이 부여될 수 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수를 성공적으로 호출하려면 함수 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 **'** *resource_name* **'**  
-클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 리소스가 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name*은 **nvarchar(255)**이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
+클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다.  *resource_name*은 **nvarchar(255)**이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
   
 **'** *lock_mode* **'**  
-특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)**이며 기본값은 없습니다. 값은 **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive** 중 하나일 수 있습니다.
+잠금 모드는 특정 리소스에 대해 가져오는 것입니다. *lock_mode*는 **nvarchar(32)**이며 기본값은 없습니다. *lock_mode*는 **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive** 중 하나일 수 있습니다.
   
 **'** *lock_owner* **'**  
-잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)**입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 기본값 또는 **Transaction**이 명시적으로 지정되면 APPLOCK_TEST는 트랜잭션 내에서 실행되어야 합니다.
+잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*는 **nvarchar (32)**이고 값은 **Transaction**(기본값) 또는 **Session**이 될 수 있습니다. 기본값 또는 **Transaction**이 명시적으로 지정되면 APPLOCK_TEST는 트랜잭션 내에서 실행되어야 합니다.
   
 ## <a name="return-types"></a>반환 형식
 **smallint**
@@ -75,7 +75,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>예  
-다음 예에서는 별도의 세션을 사용하는 두 명의 사용자(**사용자 A**와  **사용자 B**)가 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 시퀀스를 실행합니다.
+별도의 세션을 갖는 두 명의 사용자(**사용자 A**와 **사용자 B**)가 다음의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령문 시퀀스를 실행합니다.
   
 **사용자 A**가 다음을 실행합니다.
   

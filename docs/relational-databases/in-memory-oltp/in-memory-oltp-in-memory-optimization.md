@@ -1,36 +1,36 @@
 ---
-title: "메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서"
-ms.custom: 
+title: 메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/22/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1cd94040db8eb4f126333863c31c92aa0a2b75f8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
  -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)  
  
 메모리 내 OLTP를 설명하고 성능상의 이점을 설명하는 17분 분량의 비디오
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/12/2018
 > [!NOTE]  
 >  **사용해 보기**  
 >   
->  메모리 내 OLTP는 Premium Azure SQL Database에서 사용할 수 있습니다. Azure SQL Database의 Columnstore 및 메모리 내 OLTP를 시작하려면 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)를 참조하세요.  
+>  메모리 내 OLTP는 프리미엄 및 중요 비즈니스용 계층 Azure SQL 데이터베이스 및 탄력적 풀에서 사용할 수 있습니다. Azure SQL Database의 Columnstore 및 메모리 내 OLTP를 시작하려면 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)를 참조하세요.  
   
 
 ## <a name="in-this-section"></a>섹션 내용  

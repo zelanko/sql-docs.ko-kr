@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key(미리 보기) 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 ### <a name="general-guidelines"></a>일반적인 지침
 - Azure Key Vault와 Azure SQL Database가 동일한 테넌트에 포함되어야 합니다.  테넌트 간 키 자격 증명 모음 및 서버 상호 작용은 **지원되지 않습니다**.
 - 필요한 리소스에 사용할 구독을 결정합니다. 나중에 서버를 다른 구독으로 이동하려면 BYOK 기반 TDE를 새로 설정해야 합니다.
-- BYOK 기반 TDE를 구성할 때에는 래핑/래핑 해제 작업 때문에 키 자격 증명 모음에 적용되는 부하를 고려하는 것이 중요합니다. 예를 들어 논리 서버와 연결된 모든 데이터베이스는 동일한 TDE 보호기를 사용하며, 따라서 해당 서버를 장애 조치(failover)하면 서버에 있는 데이터베이스 수만큼 자격 증명 모음에 대한 키 작업이 트리거됩니다. 우리가 경험한 내용과 [키 자격 증명 모음 서비스 제한](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)에 설명된 내용에 따라, 자격 증명 모음의 TDE 보호기에 액세스할 때 일관적으로 고가용성을 보장할 수 있도록 단일 구독의 Azure Key Vault 하나에 표준 데이터베이스는 최대 500개, 프리미엄 데이터베이스는 최대 200개까지만 연결하는 것이 좋습니다. 
+- BYOK 기반 TDE를 구성할 때에는 래핑/래핑 해제 작업 때문에 키 자격 증명 모음에 적용되는 부하를 고려하는 것이 중요합니다. 예를 들어 논리 서버와 연결된 모든 데이터베이스는 동일한 TDE 보호기를 사용하며, 따라서 해당 서버를 장애 조치(failover)하면 서버에 있는 데이터베이스 수만큼 자격 증명 모음에 대한 키 작업이 트리거됩니다. 우리가 경험한 내용과 [키 자격 증명 모음 서비스 제한](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)에 설명된 내용에 따라, 자격 증명 모음의 TDE 보호기에 액세스할 때 일관적으로 고가용성을 보장할 수 있도록 단일 구독의 Azure Key Vault 하나에 표준/범용 데이터베이스는 최대 500개 또는 프리미엄/중요 비즈니스용 데이터베이스는 최대 200개까지만 연결하는 것이 좋습니다. 
 - 권장 사항: 온-프레미스에 TDE 보호기 사본을 유지합니다.  이렇게 하려면 로컬로 TDE 보호기를 생성할 HSM 장치와 TDE 보호기의 로컬 복사본을 저장할 키 에스크로 시스템이 필요합니다.
 
 

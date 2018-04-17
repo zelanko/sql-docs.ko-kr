@@ -1,16 +1,16 @@
 ---
-title: "Columnstore 인덱스 - 개요 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: Columnstore 인덱스 - 개요 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Columnstore 인덱스 - 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ ms.lasthandoff: 02/12/2018
   
  열 세그먼트의 조각화를 줄이고 성능을 향상시키기 위해 columnstore 인덱스는 삭제된 행에 대한 ID의 btree 목록과 함께 deltastore라는 클러스터형 인덱스에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
- deltastore  
- 클러스터형 열 저장소 인덱스에만 사용되는 *deltastore* 는 행 수가 임계값에 도달한 다음 columnstore로 이동할 때까지 행을 저장하여 columnstore 압축 및 성능을 개선하는 클러스터형 인덱스입니다.  
+ 델타 행 그룹  
+ 열 저장소 인덱스에만 사용되는 *델타 행 그룹*은 행 수가 임계값에 도달한 다음 columnstore로 이동할 때까지 행을 저장하여 columnstore 압축 및 성능을 개선하는 클러스터형 인덱스입니다.  
+
+ 델타 행 그룹이 최대 행 수에 도달하면 닫힙니다. 튜플 이동기 프로세스는 닫힌 행 그룹이 있는지 확인합니다. 닫힌 행 그룹을 찾으면 압축하여 columnstore에 저장합니다.  
   
- 대규모 대량 로드 중에 대부분의 행은 deltastore를 통과하지 않고 columnstore로 곧바로 이동합니다. 대량 로드 끝부분의 일부 행은 수가 너무 적어서 행 그룹의 최소 크기(102,400개 행)에 맞지 않을 수 있습니다. 이 경우 최종 행은 columnstore 대신 deltastore로 이동합니다. 행 수가 102,400개 미만인 소규모 대량 로드의 경우 모든 행이 deltastore로 곧바로 이동합니다.  
+deltastore columnstore 인덱스는 둘 이상의 델타 행 그룹을 가질 수 있습니다.  모든 델타 행 그룹은 *deltastore*라고 통칭됩니다.   
+
+대규모 대량 로드 중에 대부분의 행은 deltastore를 통과하지 않고 columnstore로 곧바로 이동합니다. 대량 로드 끝부분의 일부 행은 수가 너무 적어서 행 그룹의 최소 크기(102,400개 행)에 맞지 않을 수 있습니다. 이 경우 최종 행은 columnstore 대신 deltastore로 이동합니다. 행 수가 102,400개 미만인 소규모 대량 로드의 경우 모든 행이 deltastore로 곧바로 이동합니다.  
   
- deltastore가 최대 행 수에 도달하면 닫힙니다. 튜플 이동기 프로세스는 닫힌 행 그룹이 있는지 확인합니다. 닫힌 행 그룹을 찾으면 압축하여 columnstore에 저장합니다.  
+
   
  비클러스터형 columnstore 인덱스  
  *비클러스터형 columnstore 인덱스* 와 클러스터형 columnstore 인덱스는 동일하게 작동합니다. 차이점은 비클러스터형 인덱스는 rowstore 테이블에 만들어지는 보조 인덱스인 반면, 클러스터형 columnstore 인덱스는 전체 테이블에 대한 기본 저장소라는 점입니다.  

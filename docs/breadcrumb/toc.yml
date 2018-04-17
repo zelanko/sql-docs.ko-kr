@@ -108,7 +108,7 @@
                       homepage: /sql/odbc/reference/syntax/odbc-reference
             - name: OLE DB
               href: /sql/connect/oledb/
-              homepage: /sql/connect/oledb/oledb-driver-for-sql-server-programming
+              homepage: /sql/connect/oledb/oledb-driver-for-sql-server
               items:
                 - name: 기능
                   href: /sql/connect/oledb/features/
@@ -116,9 +116,9 @@
                 - name: 응용 프로그램
                   href: /sql/connect/oledb/applications/
                   homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
-                - name: OLE DB
+                - name: OLE DB 프로그래밍
                   href: /sql/connect/oledb/ole-db/
-                  homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
+                  homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
                   items:
                     - name: 드라이버
                       href: /sql/connect/oledb/ole-db-driver/

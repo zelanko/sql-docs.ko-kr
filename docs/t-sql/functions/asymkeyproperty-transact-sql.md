@@ -1,16 +1,16 @@
 ---
 title: ASYMKEYPROPERTY(Transact-SQL) | Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-비대칭 키의 속성을 반환합니다.
+이 함수는 비대칭 키의 속성을 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,7 +46,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>인수  
 *Key_ID*  
-데이터베이스에 있는 비대칭 키의 Key_ID입니다. 키 이름만 알고 있는 경우 Key_ID를 찾으려면 ASYMKEY_ID를 사용합니다. *Key_ID*는 **int** 데이터 형식입니다.
+데이터베이스에 있는 비대칭 키의 Key_ID입니다. 키 이름만 알고 있는 경우 Key_ID를 찾으려면 ASYMKEY_ID를 사용합니다. *Key_ID*는 **int** 데이터 형식을 갖습니다.
   
 **'**algorithm_desc**'**  
 출력에 비대칭 키의 알고리즘 설명이 반환되도록 지정합니다. EKM 모듈에서 생성된 비대칭 키에만 사용할 수 있습니다.
@@ -61,7 +61,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 **sql_variant**
   
 ## <a name="permissions"></a>사용 권한  
-비대칭 키에 대한 일부 사용 권한이 필요하며 비대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다.
+비대칭 키에 대한 적절한 사용 권한이 필요하며 비대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다. 비대칭 키 권한에 대한 자세한 내용은 [CREATE ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
 다음 예에서는 Key_ID가 256인 비대칭 키의 속성을 반환합니다.

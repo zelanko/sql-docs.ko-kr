@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 버전 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 최신 릴리스에 사용할 수 있는 columnstore 기능에 대한 요약입니다.  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 columnstore 인덱스는 SQL Database Premium 계층 및 Standard 계층(S3 이상)에서 제공됩니다. SQL Server(2016 SP1 이상)의 경우 columnstore 인덱스는 모든 버전에서 제공됩니다. SQL Server(2016 이하)의 경우 columnstore 인덱스는 엔터프라이즈 버전에서만 제공됩니다.
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 columnstore 인덱스는 SQL Database Premium 계층 및 Standard 계층(S3 이상) 및 모든 vCore 계층에서 제공됩니다. SQL Server(2016 SP1 이상)의 경우 columnstore 인덱스는 모든 버전에서 제공됩니다. SQL Server(2016 이하)의 경우 columnstore 인덱스는 엔터프라이즈 버전에서만 제공됩니다.
  
 ## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 테이블은 Columnstore 인덱스 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
@@ -119,7 +119,8 @@ ms.lasthandoff: 03/22/2018
   
 ### <a name="limitations"></a>제한 사항  
   
--   MERGE는 클러스터형 columnstore 인덱스에 대해 B-tree 인덱스가 정의된 경우 비활성화됩니다.  
+
+  
 -   메모리 내 테이블의 경우 columnstore 인덱스는 모든 열을 포함해야 하며, columnstore 인덱스가 필터링된 조건을 가질 수 없습니다.  
 -   메모리 내 테이블의 경우 columnstore 인덱스에 대한 쿼리는 InterOP 모드에서만 실행되며 메모리 내 고유 모드에서는 실행되지 않습니다. 병렬 실행은 지원됩니다.  
   

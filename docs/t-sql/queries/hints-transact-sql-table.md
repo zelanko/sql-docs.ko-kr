@@ -1,16 +1,16 @@
 ---
-title: "테이블 힌트(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 테이블 힌트(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트는 WITH 키워드의 사용 여부와 관계없이 허용됩니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  힌트를 다른 옵션과 함께 지정하는 경우 다음과 같이 힌트를 WITH 키워드로 지정해야 합니다.  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |INDEX 힌트와 함께 사용|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|쿼리 최적화 프로그램이 Index Seek 연산만 고려하여 지정된 인덱스 전체에서 테이블 또는 뷰에 액세스합니다.|  
 |인덱스 및 인덱스 열을 지정하여 매개 변수 있음|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|쿼리 최적화 프로그램이 최소 지정된 인덱스 열을 사용하여 지정된 인덱스 전체에서 Index Seek 연산만 고려하여 테이블 또는 뷰에 액세스합니다.|  
   
- FORCESEEK 힌트(인덱스 매개 변수와 함께 또는 없이)를 사용할 경우 다음 지침을 고려합니다.  
+FORCESEEK 힌트(인덱스 매개 변수와 함께 또는 없이)를 사용할 경우 다음 지침을 고려합니다.  
   
 -   힌트는 테이블 힌트 또는 쿼리 힌트로 지정될 수 있습니다. 쿼리 힌트에 대한 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   FORCESEEK로 계획이 검색되지 않으면 오류 8622가 반환됩니다.  
   
- FORCESEEK가 인덱스 매개 변수와 함께 지정된 경우 다음 지침과 제한이 적용됩니다.  
+FORCESEEK가 인덱스 매개 변수와 함께 지정된 경우 다음 지침과 제한이 적용됩니다.  
   
 -   INSERT, UPDATE 또는 DELETE 문의 대상인 테이블에는 힌트를 지정할 수 없습니다.  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  메모리 최적화 테이블은 SNAPSHOT 격리로 액세스됩니다. SNAPSHOT은 메모리 최적화 테이블에서만 사용할 수 있습니다(디스크 기반 테이블에서 사용할 수 없음). 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>필터링된 인덱스 힌트  
  필터링된 인덱스는 테이블 힌트로 사용될 수 있지만 쿼리가 선택한 모든 행을 포함하지 않을 경우 쿼리 최적화 프로그램에서 오류 8622가 발생합니다. 다음은 잘못된 필터링된 인덱스 힌트에 대한 예입니다. 이 예에서는 필터링된 인덱스 `FIBillOfMaterialsWithComponentID`를 만든 다음 이를 SELECT 문에 대한 인덱스 힌트로 사용합니다. 필터링된 인덱스 조건자에는 ComponentID 533, 324 및 753의 데이터 행이 포함됩니다. 쿼리 조건자에도 ComponentID 533, 324 및 753의 데이터 행이 포함되지만 필터링된 인덱스에 없는 ComponentID 855 및 924도 포함하도록 결과 집합이 확장되어 있습니다. 따라서 쿼리 최적화 프로그램에서는 필터링된 인덱스 힌트를 사용할 수 없으며 오류 8622가 발생합니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -442,7 +442,7 @@ GO
  최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다.  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>테이블 힌트를 쿼리 힌트로 사용  
- *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서만 테이블 힌트를 쿼리 힌트로 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
+ *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>2. FORCESEEK 힌트를 사용하여 Index Seek 연산 지정  
  다음 예에서는 인덱스를 지정하지 않고 FORCESEEK 힌트를 사용하여 쿼리 최적화 프로그램이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesOrderDetail` 테이블에서 Index Seek 연산을 수행하도록 지정합니다.  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

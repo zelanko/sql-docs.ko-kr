@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 인덱스 디자인 가이드 | Microsoft 문서"
-ms.custom: 
-ms.date: 12/1/2017
+title: SQL Server 인덱스 디자인 가이드 | Microsoft 문서
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* 는 columnstore라는 칼럼 데이터 형식을 사용하여 데이터를 저장, 검색 및 관리하는 기술입니다. 자세한 내용은 [Columnstore 인덱스 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
 
-**적용 대상**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]까지
+버전 정보는 [Columnstore 인덱스 - 새로운 기능](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)을 참조하세요.
 
 ### <a name="columnstore-index-architecture"></a>Columnstore 인덱스 아키텍처
 
@@ -649,7 +649,7 @@ columnstore 인덱스는 물리적으로 대부분의 데이터를 columnstore �
 
 또한 columnstore 인덱스는 물리적으로 일부 행을 deltastore라는 rowstore 형식으로 저장합니다. 델타 행 그룹이라고도 하는 deltastore는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. 각 델타 행 그룹은 클러스터형 B-트리 인덱스로 구현됩니다. 
 
-- **deltastore**는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore입니다. 
+- **deltastore**는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore 형식으로 행을 저장합니다. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>행 그룹 및 열 세그먼트에서 작업이 수행됨
 
@@ -743,7 +743,7 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
 해시 함수는 인덱스 키 열에 적용되며 함수의 결과에 따라 해당 키가 속하는 버킷이 결정됩니다. 각 버킷에는 행에 대한 포인터가 있으며 해시된 키 값이 해당 버킷에 매핑됩니다.
 
 해시 인덱스에 사용되는 해시 함수의 특징은 다음과 같습니다.
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 모든 해시 인덱스에 사용되는 하나의 해시 함수가 있습니다.
 - 해시 함수는 결정적입니다. 동일한 입력 키 값이 항상 해시 인덱스의 동일한 버킷에 매핑됩니다.
 - 여러 인덱스 키를 동일한 해시 버킷에 매핑할 수 있습니다.
 - 해시 함수는 균형을 이룹니다. 즉, 해시 버킷에 대한 인덱스 키 값의 분포는 일반적으로 평평한 선형 분포가 아닌 포아송 분포 또는 종형 곡선 분포를 따릅니다.

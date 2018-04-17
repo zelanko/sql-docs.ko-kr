@@ -1,16 +1,16 @@
 ---
 title: ASCII(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASCII_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 31edb66f5d213a7b2241f5f97d9733cb9e0cb523
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,10 +55,10 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>Remarks
-ASCII는 American Standard Code for Information Interchange의 약어이며 컴퓨터에서 사용하는 문자 인코딩 표준입니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
+ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.
 
 ## <a name="examples"></a>예  
-다음 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
+이 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 문자에 대한 `ASCII` 값을 반환합니다.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   

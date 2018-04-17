@@ -1,16 +1,16 @@
 ---
 title: RAISERROR(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  이 형식 사양들은 원래 C 표준 라이브러리의 **printf** 함수용으로 정의된 것들을 기반으로 합니다. RAISERROR 메시지 문자열에 사용된 형식 사양들은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터 형식으로 매핑되고 **printf**에서 사용된 사양들은 C 언어 데이터 형식에 매핑됩니다. **printf**에 사용된 형식 사양들은 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 관련 C 데이터 형식과 유사한 데이터 형식이 없을 경우 RAISERROR에서 지원되지 않습니다. 예를 들어 포인터용 *%p* 사양은 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 포인터 데이터 형식이 없기 때문에 RAISERROR에서 지원되지 않습니다.  
   
 > [!NOTE]  
->  값을 [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** 데이터 형식으로 변환하려면 **%I64d**를 지정합니다.  
+>  값을 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 데이터 형식으로 변환하려면 **%I64d**를 지정합니다.  
   
- **@** *local_variable*  
- *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. **@***local_variable*은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
+ *@local_variable*  
+ *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. *@local_variable*은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
   
  *severity*  
  이 메시지에 연결된 사용자 정의 심각도입니다. sp_addmessage를 사용해 만든 사용자 정의 메시지를 발생시키기 위해 *msg_id*를 사용할 경우 RAISERROR에 지정된 심각도가 sp_addmessage에 지정된 심각도보다 우선합니다.  
