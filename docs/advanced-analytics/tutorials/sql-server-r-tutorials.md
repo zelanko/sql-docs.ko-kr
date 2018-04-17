@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL Server R 자습서 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -48,9 +48,9 @@ ms.lasthandoff: 04/04/2018
 
   RevoScaleR 패키지에서 함수를 사용하는 방법을 알아봅니다. R 및 SQL Server 및 스위치 간 데이터 이동에 맞게 특정 작업 컨텍스트를 계산합니다. 모델 및 플롯을 만들고 개발 환경의 데이터베이스 서버 간에 이동합니다.
 
-  **대상:** R 언어에 익숙한 데이터 과학자 또는 개발자, 그리고 Microsoft의 Revolution Analytics의 강력한 R 패키지와 기능에 대해 배우고 싶은 사람들.
+  **대상:** R 언어에 익숙한 데이터 과학자 또는 개발자, 그리고 Microsoft의 Revolution Analytics의 강력한 R 패키지와 기능에 대해 배우고 싶은 사람들 
 
-  **요구 사항:** R에 대한 기본적인 지식과,  SQL Server R Service 또는 Machine Learning Services with R을 이용한 서버 접속이 필요합니다.[필수 구성 요소](#bkmk_Prerequisites)를 참고하세요.
+  **요구 사항:** R에 대한 기본적인 지식과, SQL Server R Service 또는 Machine Learning Services with R을 이용한 서버 접속이 필요합니다. [필수 구성 요소](#bkmk_Prerequisites)를 참고하세요.
 
 + [SQL 개발자를 위해 데이터베이스에서 R 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
