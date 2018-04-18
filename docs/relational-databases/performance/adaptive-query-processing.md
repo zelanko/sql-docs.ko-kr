@@ -27,7 +27,7 @@ ms.lasthandoff: 04/06/2018
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 성능을 향상시키는 데 사용할 수 있는 다음과 같은 적응 쿼리 처리 기능을 소개합니다.
+이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 성능을 향상시키는 데 사용할 수 있는 다음과 같은 적응 쿼리 처리 기능을 소개합니다.
 - 일괄 처리 모드 메모리 부여 피드백
 - 일괄 처리 모드 적응 조인
 - 인터리브 실행 
