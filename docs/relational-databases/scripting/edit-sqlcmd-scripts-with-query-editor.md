@@ -1,16 +1,16 @@
 ---
-title: "쿼리 편집기로 SQLCMD 스크립트 편집 | Microsoft 문서"
-ms.custom: 
+title: 쿼리 편집기로 SQLCMD 스크립트 편집 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD 모드  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 SQLCMD 스크립트를 작성하거나 편집하려면 SQLCMD 스크립팅 모드를 설정해야 합니다. 기본적으로 SQLCMD 모드는 쿼리 편집기에서 설정되지 않습니다. 도구 모음에서 **SQLCMD 모드** 아이콘을 클릭하거나 **쿼리** 메뉴에서 **SQLCMD 모드** 를 선택하여 스크립팅 모드를 설정할 수 있습니다.  

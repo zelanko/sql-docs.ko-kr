@@ -1,34 +1,34 @@
 ---
-title: "XML 데이터에 비즈니스 논리 추가 | Microsoft 문서"
-ms.custom: 
+title: XML 데이터에 비즈니스 논리 추가 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6794df397b0cdb304a03f5d18c5facfd43dc146
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8bd981fa60077792357c2d02d7e8675b79e57423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
+  비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
   
 -   XML 데이터의 삽입 및 수정 중에 도메인 특정 제약 조건을 강화하도록 행 또는 열 제약 조건을 작성할 수 있습니다.  
   
@@ -59,7 +59,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- 어셈블리를 등록하고 사용자 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 만든 후 다음 쿼리에서와 같이 **TransformXml()** 에 해당하는 **SqlXslTransform()**함수를 Transact-SQL로부터 호출할 수 있습니다.  
+ 어셈블리를 등록하고 사용자 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 만든 후 다음 쿼리에서와 같이 **TransformXml()** 에 해당하는 **SqlXslTransform()** 함수를 Transact-SQL로부터 호출할 수 있습니다.  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

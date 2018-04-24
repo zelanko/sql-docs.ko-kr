@@ -1,16 +1,16 @@
 ---
-title: "기존 파일에서 파일 및 파일 그룹 복원(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 기존 파일에서 파일 및 파일 그룹 복원(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - overwriting filegroups
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e40849025b140cdd4cb162ca066723c67a35c81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5c683a13b3a008e3fda5047daaea0db8778f8dcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>기존 파일에서 파일 및 파일 그룹 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.lasthandoff: 01/18/2018
   
 6.  **페이지 선택** 창에서 **옵션** 페이지를 클릭합니다.  
   
-7.  **복원 옵션** 패널에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)**를 선택합니다. 복원 작업은 이름이 동일한 데이터베이스 또는 파일이 이미 있더라도 기존 데이터베이스 및 관련 파일을 덮어씁니다.  
+7.  **복원 옵션** 패널에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다. 복원 작업은 이름이 동일한 데이터베이스 또는 파일이 이미 있더라도 기존 데이터베이스 및 관련 파일을 덮어씁니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -2,7 +2,7 @@
 title: SQL Server 개체 사용 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: performance-monitor
@@ -38,11 +38,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 274458b006e0c7530b4fdd9af35e656319b965b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerAgentPOs"></a> SQL Server 에이전트 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 정보를 제공합니다.|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 정보를 제공합니다.|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="ServiceBrokerPOs"></a> Service Broker 성능 개체  
  다음 표에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 사용하는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 활성화한 태스크에 대한 정보를 제공합니다.|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|일반적인 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 정보를 제공합니다.|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerPOs"></a> SQL Server 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 대해 설명합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 할당(예: 인덱스 검색 수 또는 인덱스 및 데이터에 할당된 페이지 수)을 검색하고 측정합니다.|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|백업 장치의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 장치에 관한 정보를 제공합니다.|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에서 사용되는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 자세한 내용은 [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.|복제 에이전트 작업에 대한 정보를 제공합니다.|  
   

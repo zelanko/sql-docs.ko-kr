@@ -1,34 +1,35 @@
 ---
-title: "Showplan All for Query Compile 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Showplan All for Query Compile 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan All for Query Compile event class
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cff9b0f6567430b31b7ac70523d3b50f55f4ab
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 586f5665f4aa91d7ba5f90dc1eb86e68e01f873a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  
+  Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  
   
  Showplan All for Query Compile 이벤트 클래스는 완전한 컴파일 시간 데이터를 표시하므로 추적에 Showplan All for Query Compile을 포함시키면 상당한 성능 오버헤드가 발생할 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

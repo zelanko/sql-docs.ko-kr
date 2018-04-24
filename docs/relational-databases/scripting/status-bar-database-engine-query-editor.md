@@ -1,31 +1,33 @@
 ---
-title: "상태 표시줄(데이터베이스 엔진 쿼리 편집기) | Microsoft 문서"
-ms.custom: 
+title: 상태 표시줄(데이터베이스 엔진 쿼리 편집기) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61cce9ae4fab37c107bdeb7a66766debf83add80
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25820cea52bc5add459a5b86017086e3ecf50508
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 각 창이 연결되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 나타내도록 상태 표시줄을 색으로 구분할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 각 창이 연결되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 나타내도록 상태 표시줄을 색으로 구분할 수 있습니다.  
   
 1.  **시작하기 전에:**  [상태 표시줄 색](#StatusBarColors)  
   
@@ -41,9 +43,9 @@ ms.lasthandoff: 01/24/2018
 ##  <a name="SetOEServerColor"></a> 개체 탐색기에서 서버에 대한 상태 색 설정  
  **개체 탐색기에서 서버 상태 색을 설정하려면**  
   
-1.  **개체 탐색기**에서 **연결** 단추를 선택한 다음 **데이터베이스 엔진...**을 선택합니다.  
+1.  **개체 탐색기**에서 **연결** 단추를 선택한 다음 **데이터베이스 엔진...** 을 선택합니다.  
   
-2.  **서버에 연결** 대화 상자에서 **옵션 >>**을 선택합니다.  
+2.  **서버에 연결** 대화 상자에서 **옵션 >>** 을 선택합니다.  
   
 3.  **사용자 지정 색 사용** 확인란을 선택합니다.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/24/2018
 ##  <a name="SetRegServerColor"></a> 등록된 서버에 대한 상태 색 설정  
  **등록된 서버에 대한 서버 색을 설정하려면**  
   
-1.  **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성...**을 선택합니다.  
+1.  **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성...** 을 선택합니다.  
   
 2.  **서버 등록 속성 편집** 대화 상자에서 **연결 속성** 탭을 선택합니다.  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음 **데이터베이스 엔진 쿼리**를 선택합니다.  
   
--   **서버에 연결** 대화 상자에서 **옵션 >>**을 선택합니다.  
+-   **서버에 연결** 대화 상자에서 **옵션 >>** 을 선택합니다.  
   
 -   **사용자 지정 색 사용** 확인란을 선택합니다.  
   

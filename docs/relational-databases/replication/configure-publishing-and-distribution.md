@@ -1,32 +1,32 @@
 ---
-title: "게시 및 배포 구성 | Microsoft 문서"
-ms.custom: 
+title: 게시 및 배포 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83d6989646ac675630b18ec961c5da2e95687823
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: b9e53aac1ab34071466005bdd17b43d98be51f91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  배포 구성 마법사에 따라 다음을 수행하세요.  
   
-    -   배포자를 선택합니다. 로컬 배포자를 사용하려면 **'\<ServerName>'을(를) 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.**를 선택합니다. 원격 배포자를 사용하려면 **다음 서버를 배포자로 사용**을 선택한 다음 서버를 선택합니다. 서버는 미리 배포자로 구성되어 있어야 하며 해당 배포자를 사용하도록 게시자를 설정해야 합니다. 자세한 내용은 [배포자에서 원격 게시자 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)을 참조하세요.  
+    -   배포자를 선택합니다. 로컬 배포자를 사용하려면 **'\<ServerName>'을(를) 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.** 를 선택합니다. 원격 배포자를 사용하려면 **다음 서버를 배포자로 사용**을 선택한 다음 서버를 선택합니다. 서버는 미리 배포자로 구성되어 있어야 하며 해당 배포자를 사용하도록 게시자를 설정해야 합니다. 자세한 내용은 [배포자에서 원격 게시자 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)을 참조하세요.  
   
          원격 배포자를 선택할 경우 **관리 암호** 페이지에서 게시자에서 배포자로 연결할 때 사용될 암호를 입력합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.  
   

@@ -1,36 +1,37 @@
 ---
-title: "Performance 이벤트 범주 | Microsoft 문서"
-ms.custom: 
+title: Performance 이벤트 범주 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server event classes, Performance event category
 - Performance event category [SQL Server]
 - event classes [SQL Server], Performance event category
 ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed5debd5a14c0ab0ca3f1565eced2d19584cac8a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 714e0e482ada01aecf81a5c8f98b4115c41bdca5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-event-category"></a>Performance 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Performance** 이벤트 범주를 사용하여 **Showplan** 이벤트 클래스 및 SQL DML(데이터 조작 언어) 연산자 실행으로 생성된 이벤트 클래스를 모니터링할 수 있습니다.  
+  **Performance** 이벤트 범주를 사용하여 **Showplan** 이벤트 클래스 및 SQL DML(데이터 조작 언어) 연산자 실행으로 생성된 이벤트 클래스를 모니터링할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

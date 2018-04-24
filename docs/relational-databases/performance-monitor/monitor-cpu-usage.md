@@ -1,16 +1,16 @@
 ---
-title: "CPU 사용량 모니터링 | Microsoft 문서"
-ms.custom: 
+title: CPU 사용량 모니터링 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2422da83b7ac09fef52fbab3d8ca1286308c2950
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 정기적으로 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인할 수 있습니다. CPU 사용량이 계속 높게 나타나면 CPU 업그레이드 또는 멀티 프로세서 추가가 필요하거나 응용 프로그램 튜닝 또는 디자인이 적절하지 않다는 의미일 수 있습니다. 응용 프로그램을 최적화하면 CPU 사용률을 낮출 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 정기적으로 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인할 수 있습니다. CPU 사용량이 계속 높게 나타나면 CPU 업그레이드 또는 멀티 프로세서 추가가 필요하거나 응용 프로그램 튜닝 또는 디자인이 적절하지 않다는 의미일 수 있습니다. 응용 프로그램을 최적화하면 CPU 사용률을 낮출 수 있습니다.  
   
  CPU 사용량을 확인하는 효과적인 방법은 시스템 모니터의 **Processor:% Processor Time** 카운터를 사용하는 것입니다. 카운터는 CPU가 비유휴 스레드를 실행하는 데 소비하는 시간을 모니터링합니다. 카운터 값이 계속 80-90%로 나타나면 CPU를 업그레이드하거나 프로세서를 추가해야 할 수 있습니다. 다중 프로세서 시스템에서는 각 프로세서에 대해 이 카운터의 개별 인스턴스를 모니터링해야 합니다. 이 값은 특정 프로세서의 프로세서 시간의 합을 나타냅니다. 모든 프로세서의 평균을 확인하려면 **System: %Total Processor Time** 카운터를 대신 사용합니다.  
   

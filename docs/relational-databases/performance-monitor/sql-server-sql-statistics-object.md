@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, SQL Statistics 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, SQL Statistics 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8254edc172dc9e10133e90eab8842dcc0347cb8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:SQL Statistics** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **의** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
   
  컴파일은 쿼리 반환 시간의 중요한 부분을 차지합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴파일 비용을 줄이기 위해 컴파일된 쿼리 계획을 쿼리 캐시에 보관합니다. 캐시의 목적은 컴파일된 쿼리를 다시 사용할 수 있도록 보관하여 컴파일 작업을 줄이고 다음 쿼리를 실행할 때 다시 컴파일할 필요를 없애는 것입니다. 그러나 각각의 고유한 쿼리는 적어도 한 번은 컴파일해야 합니다. 다음 요인이 발생하면 쿼리를 다시 컴파일해야 합니다.  
   

@@ -2,7 +2,7 @@
 title: 시스템 버전 임시 테이블 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -18,11 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 501fcd308babf3703c4d7372fb53c1339c65d5e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c78d14ae0fe2f1a2e3b67d3d13bc8d0e5c4348e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,11 +64,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.  
   
--   익명 기록 테이블 이름의 형식은 *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*입니다. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
+-   익명 기록 테이블 이름의 형식은 *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 입니다. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
   
 -   기록 테이블은 rowstore 테이블로 생성됩니다. 페이지 압축은 가능하면 적용되며, 그렇지 않으면 기록 테이블을 압축하지 않습니다. 예를 들어 스파스 열과 같은 일부 테이블 구성은 압축을 허용하지 않습니다.  
   
--   기본 클러스터형 인덱스는 형식 *IX_<history_table_name>*의 자동 생성된 이름을 가진 기록 테이블에 대해 생성됩니다. 클러스터형 인덱스는 **PERIOD** 열(시작, 종료)을 포함합니다.  
+-   기본 클러스터형 인덱스는 형식 *IX_<history_table_name>* 의 자동 생성된 이름을 가진 기록 테이블에 대해 생성됩니다. 클러스터형 인덱스는 **PERIOD** 열(시작, 종료)을 포함합니다.  
   
 -   현재 테이블을 메모리 최적화 테이블로 만들려면 [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 참조하세요.  
   

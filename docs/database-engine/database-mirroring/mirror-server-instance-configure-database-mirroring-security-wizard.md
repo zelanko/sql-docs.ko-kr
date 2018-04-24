@@ -2,7 +2,7 @@
 title: 미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 725127486d64ba939a29c0b16dbf6bbddb4b776e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 미러 데이터베이스가 있는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 페이지를 사용하여 미러 데이터베이스가 있는 서버 인스턴스에 대한 정보를 지정할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전(Standard 또는 Enterprise)을 실행해야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  

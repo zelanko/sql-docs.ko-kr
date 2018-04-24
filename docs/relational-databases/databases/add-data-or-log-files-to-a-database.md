@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스에 데이터 또는 로그 파일 추가 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스에 데이터 또는 로그 파일 추가 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: feca52c4aeb1bde1d19f9afcb19145ce85895cd3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a74f168643fb7e5cab638e4952c2cf0e05fbe560
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/18/2018
   
 6.  데이터 또는 로그 중에서 원하는 파일 형식을 선택합니다.  
   
-7.  데이터 파일을 선택한 경우 파일을 포함할 파일 그룹을 목록에서 선택하거나 **\<새 파일 그룹>**을 선택하여 새 파일 그룹을 만듭니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
+7.  데이터 파일을 선택한 경우 파일을 포함할 파일 그룹을 목록에서 선택하거나 **\<새 파일 그룹>** 을 선택하여 새 파일 그룹을 만듭니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
   
 8.  파일의 처음 크기를 지정합니다. 데이터베이스에서 예상되는 최대 데이터 양을 고려하여 데이터 파일의 크기를 최대한 크게 지정합니다.  
   

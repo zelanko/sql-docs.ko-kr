@@ -1,16 +1,16 @@
 ---
-title: "트랜잭션 복제를 위한 업데이트 가능 구독 | Microsoft 문서"
-ms.custom: 
+title: 트랜잭션 복제를 위한 업데이트 가능 구독 | Microsoft 문서
+ms.custom: ''
 ms.date: 07/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4922de0c287e5263163f56d151455fea9a836f9
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d33ebae50e932efe39bd062d96ab1af46f2e2969
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>트랜잭션 복제를 위한 업데이트 가능 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 03/08/2018
   
 -   복제에 대한 변경 내용 추적 트리거 내의 삽입 테이블 또는 삭제 테이블에서는 읽기 작업을 수행할 수 없으므로 구독자는 **text**, **ntext** 또는 **image** 값을 업데이트하거나 삽입할 수 없습니다. 마찬가지로 게시자가 데이터를 덮어쓰므로 구독자는 **WRITETEXT** 또는 **UPDATETEXT** 를 사용하여 **text** 또는 **image** 값을 업데이트하거나 삽입할 수 없습니다. 대신 **text** 및 **image** 열을 별개의 테이블에 분할할 수 있고 트랜잭션 내에서 두 테이블을 수정할 수 있습니다.  
   
-     구독자에서 큰 개체를 업데이트하려면 **text**, **ntext**및 **image** 데이터 형식 대신 **varchar(max)**, **nvarchar(max)**및 **varbinary(max)** 데이터 형식을 사용합니다.  
+     구독자에서 큰 개체를 업데이트하려면 **text**, **ntext**및 **image** 데이터 형식 대신 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.  
   
 -   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 이는 구독자에서의 업데이트 설정이 영향을 받는 각 행에 대한 개별 **UPDATE** 문으로 복제에 의해 전파되기 때문입니다.  
   

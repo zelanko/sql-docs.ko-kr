@@ -2,7 +2,7 @@
 title: SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN | Microsoft 문서
 ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcb653919c25b8cb8f3a17322bbb640f24dfed20
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89d371d30fea0d3f09931925cd4835c3881f805a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,8 +51,8 @@ ms.lasthandoff: 04/06/2018
 
 
 - 이름 접두사는 다음과 같습니다.
-    - SQL Server의 이름 접두사는 *sys.server\_event\_session\**입니다.
-    - SQL 데이터베이스의 이름 접두사는 *sys.database\_event\_session\**입니다.
+    - SQL Server의 이름 접두사는 *sys.server\_event\_session\** 입니다.
+    - SQL 데이터베이스의 이름 접두사는 *sys.database\_event\_session\** 입니다.
 
 
 #### <a name="dynamic-management-views-dmvs"></a>DMV(동적 관리 뷰)
@@ -62,8 +63,8 @@ ms.lasthandoff: 04/06/2018
 
 
 - 확장 이벤트 DMV에 대한 이름 접두사는 다음과 같습니다.
-    - SQL Server의 이름 접두사는 *sys.dm\_xe\_\**입니다.
-    - 일반적으로 SQL Database의 이름 접두사는 *sys.dm\_xe\_database\_\**입니다.
+    - SQL Server의 이름 접두사는 *sys.dm\_xe\_\** 입니다.
+    - 일반적으로 SQL Database의 이름 접두사는 *sys.dm\_xe\_database\_\** 입니다.
 
 
 #### <a name="permissions"></a>사용 권한:
@@ -576,8 +577,8 @@ type           package0       xml                           Well formed XML frag
 
 다음 SELECT는 해당 이벤트 유형과 관련된 모든 데이터 필드를 반환합니다.
 
-- WHERE 절 항목: *column_type = 'data'*를 확인합니다.
-- 또한 *o.name =*에 대한 WHERE 절 값을 편집해야 합니다.
+- WHERE 절 항목: *column_type = 'data'* 를 확인합니다.
+- 또한 *o.name =* 에 대한 WHERE 절 값을 편집해야 합니다.
 
 
 ```sql
@@ -729,8 +730,8 @@ you could put:
 
 다음 SELECT는 대상에 대한 모든 매개 변수를 반환합니다. 각 매개 변수에는 필수 여부를 나타내는 태그가 지정되어 있습니다. 매개 변수에 할당한 값은 대상의 동작에 영향을 줍니다.
 
-- WHERE 절 항목: *object_type = 'customizable'*을 확인합니다.
-- 또한 *o.name =*에 대한 WHERE 절 값을 편집해야 합니다.
+- WHERE 절 항목: *object_type = 'customizable'* 을 확인합니다.
+- 또한 *o.name =* 에 대한 WHERE 절 값을 편집해야 합니다.
 
 
 ```sql
@@ -795,7 +796,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 이 DMV SELECT는 활성 이벤트 세션의 대상에서 데이터 행을 반환합니다. 데이터는 XML로 캐스팅되어 SSMS에서 표시하기 쉽도록 반환된 셀을 클릭 가능하게 합니다.
 
 - 이벤트 세션이 중지된 경우 이 SELECT는 0개 행을 반환합니다.
-- *s.name =*에 대한 WHERE 절 값을 편집해야 합니다.
+- *s.name =* 에 대한 WHERE 절 값을 편집해야 합니다.
 
 
 ```sql

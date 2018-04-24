@@ -1,31 +1,31 @@
 ---
-title: "SQL Server 지적 재산 보호 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 지적 재산 보호 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7839940c07b1322cf00d357055caf83ad30daca
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d10a62f9dcd7276d04c5c4f08430104722202369
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
 또한 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 자신의 네트워크에서 호스트하고 클라이언트가 네트워크를 통해 직접적으로나 웹 응용 프로그램을 통해 데이터에 액세스하도록 할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)  

@@ -1,34 +1,35 @@
 ---
-title: "TM: Rollback Tran Starting 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: 'TM: Rollback Tran Starting 이벤트 클래스 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8266e76eeb20ea7dbf3adf0fc3f1d18d68712a5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbdaa2af379f346ffc6b678b712cdcca1e73c597
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Rollback Tran Starting 이벤트 클래스는 ROLLBACK TRANSACTION 요청이 시작 중임을 나타냅니다. 클라이언트는 트랜잭션 관리 인터페이스를 통해 요청을 보냅니다. EventSubClass 열은 현재 트랜잭션이 롤백된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  
+  TM: Rollback Tran Starting 이벤트 클래스는 ROLLBACK TRANSACTION 요청이 시작 중임을 나타냅니다. 클라이언트는 트랜잭션 관리 인터페이스를 통해 요청을 보냅니다. EventSubClass 열은 현재 트랜잭션이 롤백된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting 이벤트 클래스 데이터 열  
   

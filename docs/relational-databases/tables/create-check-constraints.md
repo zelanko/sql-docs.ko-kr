@@ -1,16 +1,16 @@
 ---
-title: "CHECK 제약 조건 만들기 | Microsoft 문서"
-ms.custom: 
+title: CHECK 제약 조건 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - table constraints [SQL Server]
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a7fb39dd90a2df6a7567fecaaa9638f855c405c4
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d131f6fae0a587f42a05a219106617329b985fea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  **개체 탐색기**에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건** 을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건**을 클릭합니다.  
   
-2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후 줄임표 **(…)**를 클릭합니다.  
+2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후 줄임표 **(…)** 를 클릭합니다.  
   
 3.  **CHECK 제약 조건 식** 대화 상자에서 CHECK 제약 조건에 대한 SQL 식을 입력합니다. 예를 들어 `SellEndDate` 테이블의 `Product` 열에 있는 항목을 `SellStartDate` 열에 있는 날짜보다 크거나 같은 값 또는 NULL 값으로 제한하려면 다음을 입력합니다.  
   

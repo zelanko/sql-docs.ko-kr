@@ -1,34 +1,35 @@
 ---
-title: "Log File Auto Shrink 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Log File Auto Shrink 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Log File Auto Shrink event class
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15b9c03179f64ed3e764e7476798ce813d2d347d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95cc8329332ccdd651cc0e198a9a80c0ffb3ddde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Log File Auto Shrink** 이벤트 클래스는 자동으로 축소되는 로그 파일을 나타냅니다. 로그 파일이 명시적인 ALTER DATABASE 문 때문에 축소하는 경우 이 이벤트는 트리거되지 않습니다.  
+  **Log File Auto Shrink** 이벤트 클래스는 자동으로 축소되는 로그 파일을 나타냅니다. 로그 파일이 명시적인 ALTER DATABASE 문 때문에 축소하는 경우 이 이벤트는 트리거되지 않습니다.  
   
  로그 파일의 축소를 모니터링하는 추적에 **Log File Auto Shrink** 이벤트 클래스를 포함시킵니다. 이 이벤트 클래스가 추적에 포함되면 해당 파일이 자주 축소되지 않는 경우 발생되는 오버헤드의 크기가 줄어들게 됩니다.  
   

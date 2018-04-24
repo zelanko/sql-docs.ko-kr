@@ -1,33 +1,34 @@
 ---
-title: "TRUSTWORTHY 데이터베이스 속성 | Microsoft 문서"
-ms.custom: 
+title: TRUSTWORTHY 데이터베이스 속성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TRUSTWORTHY database property
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d7ee74ed2754b2aab6281750ca7f23864954eb5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0a2a364b8d01d5a56c1d28464084ca26149de8d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 데이터베이스 속성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`)을 입력합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`)을 입력합니다.  
   
 > [!NOTE]  
 >  이 옵션을 설정하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  

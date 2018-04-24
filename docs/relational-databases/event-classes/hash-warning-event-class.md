@@ -1,34 +1,35 @@
 ---
-title: "Hash Warning 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Hash Warning 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f7a3dbd06508d22c4b37acb3966104d7e3418276
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는데 사용할 수 있습니다.  
+  Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는데 사용할 수 있습니다.  
   
  해시 재귀는 빌드 입력이 사용할 수 있는 메모리를 초과하여 여러 개의 파티션으로 분할되어 개별적으로 처리되는 경우 발생합니다. 분할된 파티션 중 여전히 사용할 수 있는 메모리를 초과하는 파티션이 있으면 이는 다시 하위 파티션으로 분할되어 개별적으로 처리됩니다. 이러한 분할 프로세스는 각 파티션이 사용할 수 있는 메모리에 모두 맞거나 최대 재귀 수준에 도달할 때까지 계속됩니다(IntegerData 데이터 열에 표시됨).  
   

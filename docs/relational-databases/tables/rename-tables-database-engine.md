@@ -2,7 +2,7 @@
 title: 테이블 이름 바꾸기(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: tables
@@ -21,11 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7c96ad974288ec9c8bbaf09ae9405c40b47cb5e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 테이블
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -51,19 +52,19 @@ Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 테이블
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  테이블 이름을 변경해도 해당 테이블에 대한 참조 이름은 자동으로 바뀌지 않습니다. 이름을 바꾼 테이블을 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 이름을 바꿨고 해당 테이블이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 테이블 이름을 적용해야 합니다. 테이블 이름을 바꾸기 전에 테이블에 대한 종속성을 나열하려면 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-rename-a-table"></a>테이블의 이름을 바꾸려면  
+#### <a name="to-rename-a-table"></a>테이블 이름을 바꾸려면  
   
 1.  개체 탐색기에서 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **디자인** 을 선택합니다.  
   
@@ -77,7 +78,7 @@ Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 테이블
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-rename-a-table"></a>테이블의 이름을 바꾸려면  
+#### <a name="to-rename-a-table"></a>테이블 이름을 바꾸려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

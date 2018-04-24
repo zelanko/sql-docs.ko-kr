@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_2579 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_2579 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 2579 (Database Engine error)
 ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59c0fff1d160a804e272468c41df6c153711c9b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 04dc7dd2c271864bd3b821bdff337f2a7a8cadf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형)의 익스텐트 P_ID이(가) 이 데이터베이스의 범위를 벗어났습니다.|  
   
 ## <a name="explanation"></a>설명  
-*P_ID*는 *(filenum:pageinfile)* 형식의 PageID입니다. 이 익스텐트의 *pageinfile*이 데이터베이스 파일 (*filenum)*의 실제 크기보다 큽니다. 익스텐트는 표시된 할당 단위 ID에 해당하는 IAM 페이지에 할당된 것으로 표시됩니다.  
+*P_ID*는 *(filenum:pageinfile)* 형식의 PageID입니다. 이 익스텐트의 *pageinfile*이 데이터베이스 파일 (*filenum)* 의 실제 크기보다 큽니다. 익스텐트는 표시된 할당 단위 ID에 해당하는 IAM 페이지에 할당된 것으로 표시됩니다.  
   
 ## <a name="user-action"></a>사용자 동작  
   

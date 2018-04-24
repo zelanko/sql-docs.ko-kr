@@ -1,16 +1,16 @@
 ---
-title: "Transact-SQL 코드 단계별 실행| Microsoft 문서"
-ms.custom: 
+title: Transact-SQL 코드 단계별 실행| Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 978f53bf3d04afd9c42b23af63675b65bf905a04
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce2a12cedac9f347a18b0132b12cacb9c7421e0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
   
 ## <a name="breakpoints"></a>중단점  
  중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 [Transact-SQL 중단점](../../relational-databases/scripting/transact-sql-breakpoints.md)을 참조하세요.  

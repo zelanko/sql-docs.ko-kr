@@ -1,16 +1,16 @@
 ---
-title: "암호화 계층 | Microsoft 문서"
-ms.custom: 
+title: 암호화 계층 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7447398e55b4f3d8ad212dc506cafbb90512b15a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryption-hierarchy"></a>암호화 계층
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 계층적 암호화 및 키 관리 인프라로 데이터를 암호화합니다. 각 계층은 인증서, 비대칭 키 및 대칭 키 조합을 사용하여 해당 계층의 하위 계층을 암호화합니다. 비대칭 키 및 대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 외부의 EKM(확장 가능 키 관리) 모듈에 저장할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 계층적 암호화 및 키 관리 인프라로 데이터를 암호화합니다. 각 계층은 인증서, 비대칭 키 및 대칭 키 조합을 사용하여 해당 계층의 하위 계층을 암호화합니다. 비대칭 키 및 대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 외부의 EKM(확장 가능 키 관리) 모듈에 저장할 수 있습니다.  
   
  다음 그림에서는 암호화 계층의 각 계층이 그 아래의 계층을 암호화하는 모습과 가장 일반적인 암호화 구성을 보여 줍니다. 계층의 시작 부분에 대한 액세스는 일반적으로 암호로 보호됩니다.  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
 -   인증서  
   
--   투명한 데이터 암호화  
+-   Transparent Data Encryption  
   
 ### <a name="transact-sql-functions"></a>Transact-SQL 함수  
  개별 항목은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용하여 삽입 또는 업데이트할 때 암호화할 수 있습니다. 자세한 내용은 [ENCRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) 및 [DECRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md)를 참조하세요.  
@@ -108,7 +110,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="symmetric-keys"></a>대칭 키  
  대칭 키는 암호화 및 암호 해독에 대해 사용되는 하나의 키입니다. 대칭 키를 사용하면 암호화 및 암호 해독을 빠르게 수행할 수 있으며 데이터베이스의 중요한 데이터를 일상적으로 사용하는 데 적합합니다.  
   
-### <a name="transparent-data-encryption"></a>투명한 데이터 암호화  
+### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
  TDE(투명한 데이터 암호화)는 대칭 키를 사용한 특수한 암호화 형태입니다. TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스를 암호화합니다. 데이터베이스 암호화 키는 데이터베이스 마스터 키 또는 EKM 모듈에 저장된 비대칭 키로 보호되는 다른 키 또는 인증서로 보호됩니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  

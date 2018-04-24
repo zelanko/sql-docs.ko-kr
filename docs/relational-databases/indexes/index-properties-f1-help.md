@@ -2,7 +2,7 @@
 title: 인덱스 속성 F1 도움말 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -26,11 +26,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d51449f61a3c324952946704c2df5bcfecf5cb84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +151,7 @@ ms.lasthandoff: 04/10/2018
  FILESTREAM 데이터의 파일 그룹을 지정합니다. 이 목록에는 FILESTREAM 파일 그룹만 표시됩니다. 목록에서는 기본적으로 PRIMARY FILESTREAM 파일 그룹이 선택됩니다. 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
   
  **파티션 구성표**  
- 파티션 구성표에 인덱스를 저장합니다. **파티션 구성표** 를 클릭하면 아래의 표가 활성화됩니다. 목록에서는 기본적으로 테이블 데이터를 저장하는 데 사용되는 파티션 구성표가 선택됩니다. 목록에서 다른 파티션 구성표를 선택하면 표의 정보가 업데이트됩니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
+ 파티션 구성표에 인덱스를 저장합니다. **파티션 구성표** 를 클릭하면 아래의 표가 활성화됩니다. 목록에서는 기본적으로 테이블 데이터를 저장하는 데 사용되는 파티션 구성표가 선택됩니다. 목록에서 다른 파티션 구성표를 선택하면 표의 정보가 업데이트됩니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
  데이터베이스에 파티션 구성표가 없으면 파티션 구성표 옵션을 사용할 수 없습니다.  
   
@@ -178,7 +179,7 @@ ms.lasthandoff: 04/10/2018
 >  이 옵션은 XML 인덱스에 대해서는 사용할 수 없으며 인덱스가 비활성화된 클러스터형 인덱스인 경우에도 사용할 수 없습니다.  
   
  **최대 병렬 처리 수준 설정**  
- 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [최적 성능을 위해 최대 병렬 처리 수준 옵션 설정](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
+ 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
   
 > [!NOTE]  
 >  사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.  

@@ -1,35 +1,35 @@
 ---
-title: "중첩 AUTO 모드 쿼리를 사용하여 형제 생성 | Microsoft 문서"
-ms.custom: 
+title: 중첩 AUTO 모드 쿼리를 사용하여 형제 생성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8ec9136aa7676405f5392a29ae7f0e4104a2ed9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0b03f2b00ab34c9afa56738611dad4e760fc3c92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
+  다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  이 쿼리는 판매 주문 정보를 제공하는 XML을 생성합니다. 여기에는 다음이 포함됩니다.  

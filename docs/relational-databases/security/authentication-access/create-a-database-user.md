@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 사용자 만들기 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 사용자 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  보안 주체는 사용 권한을 사용자에게 부여할 수 있습니다. 사용자의 범위는 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> Permissions  
  데이터베이스에 대한 **ALTER ANY USER** 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SSMS를 사용하여 사용자 만들기  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  새 데이터베이스 사용자를 만들 데이터베이스를 확장합니다.  
   
-3.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **사용자...**를 선택합니다.  
+3.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **사용자...** 를 선택합니다.  
   
 4.  **데이터베이스 사용자 – 신규** 대화 상자의 **일반** 페이지에 있는 **사용자 유형** 목록에서  
   
@@ -137,11 +138,11 @@ ms.lasthandoff: 11/21/2017
      **데이터 정렬**  
      선택한 데이터베이스에 사용된 데이터 정렬을 표시합니다. 이 필드는 읽기 전용입니다.  
   
-     **속성**  
+     **Properties**  
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
-     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하세요.  
+     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(…)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하십시오.  
   
      **Delete**  
      선택한 확장 속성을 제거합니다.  
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
   
  자세한 내용은 추가 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예제가 포함된 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN&#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  

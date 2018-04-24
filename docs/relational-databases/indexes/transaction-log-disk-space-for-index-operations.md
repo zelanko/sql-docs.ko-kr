@@ -1,16 +1,16 @@
 ---
-title: "인덱스 작업에 필요한 트랜잭션 로그 디스크 공간 | Microsoft 문서"
-ms.custom: 
+title: 인덱스 작업에 필요한 트랜잭션 로그 디스크 공간 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index disk space [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - disk space [SQL Server], transaction logs
 - space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
-caps.latest.revision: 
+caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fcf3131776066e183f0b6f031dce00d143bdeca
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 74215aa9a456b3864eebf14010830cf688a858db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>인덱스 작업에 필요한 트랜잭션 로그 디스크 공간
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-대량 인덱스 작업은 트랜잭션 로그를 빠르게 채울 수 있는 대량의 데이터 로드를 생성할 수 있습니다. 트랜잭션 로그는 인덱스 작업의 롤백을 보장하기 위해 인덱스 작업이 완료된 이후에만 잘릴 수 있지만 트랜잭션 로그 백업은 인덱스 작업 중에도 수행할 수 있습니다. 따라서 인덱스 작업 중에는 인덱스 작업 트랜잭션 및 모든 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 트랜잭션 로그 공간이 필요합니다. 이것은 오프라인 인덱스 작업과 온라인 인덱스 작업 모두에 해당합니다. 오프라인 인덱스 작업 중에는 기본 테이블에 액세스할 수 없기 때문에 사용자 트랜잭션이 거의 없고 로그가 빠르게 증가하지 않을 수 있습니다. 온라인 인덱스 작업에서는 동시 사용자 작업이 제한되지 않습니다. 따라서 대량의 온라인 인덱스 작업과 대량의 동시 사용자 트랜잭션이 결합하는 경우에는 자를 수 없을 만큼 지속적으로 트랜잭션 로그가 증가할 수 있습니다.  
+  대량 인덱스 작업은 트랜잭션 로그를 빠르게 채울 수 있는 대량의 데이터 로드를 생성할 수 있습니다. 트랜잭션 로그는 인덱스 작업의 롤백을 보장하기 위해 인덱스 작업이 완료된 이후에만 잘릴 수 있지만 트랜잭션 로그 백업은 인덱스 작업 중에도 수행할 수 있습니다. 따라서 인덱스 작업 중에는 인덱스 작업 트랜잭션 및 모든 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 트랜잭션 로그 공간이 필요합니다. 이것은 오프라인 인덱스 작업과 온라인 인덱스 작업 모두에 해당합니다. 오프라인 인덱스 작업 중에는 기본 테이블에 액세스할 수 없기 때문에 사용자 트랜잭션이 거의 없고 로그가 빠르게 증가하지 않을 수 있습니다. 온라인 인덱스 작업에서는 동시 사용자 작업이 제한되지 않습니다. 따라서 대량의 온라인 인덱스 작업과 대량의 동시 사용자 트랜잭션이 결합하는 경우에는 자를 수 없을 만큼 지속적으로 트랜잭션 로그가 증가할 수 있습니다.  
   
 ## <a name="recommendations"></a>권장 사항  
  대량 인덱스 작업을 실행할 때는 다음 권장 사항을 고려하십시오.  

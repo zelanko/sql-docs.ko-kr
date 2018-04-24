@@ -1,31 +1,31 @@
 ---
-title: "MSSQLSERVER_7911 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_7911 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7911 (Database Engine error)
 ms.assetid: dd8390f3-0f77-4fb2-ba94-631a56e42bc6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: cdead42e52e7c45beed5045a4494620873baac3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d21ba60f1ca0858c574356900d628c816fd329b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,5 +45,5 @@ ms.lasthandoff: 11/21/2017
 이 메시지는 IAM(Index Allocation Map) 페이지의 단일 페이지 슬롯 배열에서 페이지 할당이 취소되었음을 나타내는 REPAIR의 정보 메시지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+InclusionThresholdSetting  
   

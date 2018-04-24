@@ -1,16 +1,16 @@
 ---
-title: "노출 영역 구성 | Microsoft 문서"
-ms.custom: 
+title: 노출 영역 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reducing attackable surface area
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 399484dfea5e83f8204a48c2da80c7e6db81c09f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새로 설치의 기본 구성에서는 많은 기능이 활성화되어 있지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 악의적인 사용자로부터 공격 대상이 될 수 있는 기능 수를 최소화하기 위해 주요 서비스와 기능만 필요에 따라 설치하고 시작합니다. 시스템 관리자는 설치 시 이러한 기본값을 변경할 수 있으며 필요에 따라 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 기능을 활성화 또는 비활성화할 수 있습니다. 또한 다른 컴퓨터에서 연결하는 경우 일부 구성 요소는 프로토콜을 구성해야만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  새로 설치와 달리 업그레이드 중에는 기존 서비스 또는 기능이 해제되지 않지만 추가 노출 영역 구성 옵션은 업그레이드가 완료된 후에 적용할 수 있습니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  정책 기반 관리를 사용하여 패싯 구성을 주기적으로 확인할 수 있습니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
- **sp_configure** 저장 프로시저를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 옵션을 설정할 수도 있습니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)을 참조하세요.  
+ **sp_configure** 저장 프로시저를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 옵션을 설정할 수도 있습니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
  **의** EnableIntegratedSecurity [!INCLUDE[ssRS](../../includes/ssrs-md.md)]속성을 변경하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 속성 설정을 사용합니다. **예약 이벤트 및 보고서 배달** 속성과 **웹 서비스 및 HTTP 액세스** 속성을 변경하려면 **RSReportServer.config** 구성 파일을 편집합니다.  
   

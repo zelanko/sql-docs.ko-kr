@@ -1,34 +1,34 @@
 ---
-title: "테이블 및 열에 대한 의미 체계 검색 사용 | Microsoft 문서"
-ms.custom: 
+title: 테이블 및 열에 대한 의미 체계 검색 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 34a86f82512dc2f469031aa84d13e6c84ad021c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
+  문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
   
  통계 의미 체계 검색에서는 전체 텍스트 검색을 통해 생성되는 인덱스를 사용하고 추가 인덱스를 만듭니다. 전체 텍스트 검색에 대한 이 종속성의 결과로 새 전체 텍스트 인덱스를 정의하거나 기존 전체 텍스트 인덱스를 변경할 때는 새 의미 체계 인덱스를 만듭니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 이 항목에서 설명하는 대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 전체 텍스트 인덱싱 마법사와 다른 대화 상자를 사용하여 새 의미 체계 인덱스를 만들 수 있습니다.  
   

@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_1505 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_1505 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1505 (Database Engine error)
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95b7a88504af3c97a252bf55aa92cc33805b8f81
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cdd8cdf1245101e1a9354b4a2dff7ac34a005444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444 [SQL Server의 테이블에서 중복 행을 제거하는 방법](http://support.microsoft.com/kb/139444)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [CREATE INDEX&#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
 [고유 인덱스 만들기](~/relational-databases/indexes/create-unique-indexes.md)  
 [UNIQUE 제약 조건 만들기](~/relational-databases/tables/create-unique-constraints.md)  

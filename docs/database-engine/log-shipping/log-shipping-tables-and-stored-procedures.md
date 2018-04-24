@@ -1,15 +1,16 @@
 ---
-title: "로그 전달 테이블 및 저장 프로시저 | Microsoft Docs"
-ms.custom: 
+title: 로그 전달 테이블 및 저장 프로시저 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - secondary servers [SQL Server]
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85f6f5c81e154bd4fcc6da3f28790ba6dedd6673
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2186505e2ba61425d0236566ab5bc66cd82d048e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 로그 전달 구성과 관련된 모든 테이블과 저장된 프로시저에 대해 설명합니다. 모든 로그 전달 테이블은 각 서버의 **msdb** 에 저장됩니다. 아래의 표에서는 로그 전달 구성에서 서버에 사용된 테이블 및 저장 프로시저를 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 로그 전달 구성과 관련된 모든 테이블과 저장된 프로시저에 대해 설명합니다. 모든 로그 전달 테이블은 각 서버의 **msdb** 에 저장됩니다. 아래의 표에서는 로그 전달 구성에서 서버에 사용된 테이블 및 저장 프로시저를 설명합니다.  
   
 ## <a name="primary-server-tables"></a>주 서버 테이블  
   

@@ -1,37 +1,38 @@
 ---
-title: "계층적 메서드를 사용하여 계층적 테이블의 데이터 다시 정렬 | Microsoft 문서"
-ms.custom: 
+title: 계층적 메서드를 사용하여 계층적 테이블의 데이터 다시 정렬 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: 90d149080610093800061aa0107691dee1972330
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>2-4단원 - 계층적 메서드를 사용하여 계층적 테이블의 데이터 다시 정렬
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 계층을 다시 구성하는 것은 일반적인 유지 관리 태스크입니다. 이 태스크에서는 UPDATE 문을 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 메서드와 함께 사용하여 먼저 단일 행을 계층의 새 위치로 이동합니다. 그런 다음 전체 하위 트리를 새 위치로 이동합니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+계층을 다시 구성하는 것은 일반적인 유지 관리 태스크입니다. 이 태스크에서는 UPDATE 문을 [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) 메서드와 함께 사용하여 먼저 단일 행을 계층의 새 위치로 이동합니다. 그런 다음 전체 하위 트리를 새 위치로 이동합니다.  
   
-`GetReparentedValue` 메서드는 두 개의 인수를 사용합니다. 첫 번째 인수는 수정할 계층 부분을 설명합니다. 예를 들어 계층이 **/1/4/2/3/** 인 경우 **/1/4/** 섹션을 변경하여 계층을 **/2/1/2/3/**으로 만들고 마지막 두 노드(**2/3/**)는 변경하지 않으려면 변경되는 노드(**/1/4/**)를 첫 번째 인수로 제공해야 합니다. 두 번째 인수는 새 계층 구조 수준(이 예제의 경우 **/2/1/**)을 제공합니다. 두 인수의 수준 수가 같을 필요는 없습니다.  
+`GetReparentedValue` 메서드는 두 개의 인수를 사용합니다. 첫 번째 인수는 수정할 계층 부분을 설명합니다. 예를 들어 계층이 **/1/4/2/3/** 인 경우 **/1/4/** 섹션을 변경하여 계층을 **/2/1/2/3/** 으로 만들고 마지막 두 노드(**2/3/**)는 변경하지 않으려면 변경되는 노드(**/1/4/**)를 첫 번째 인수로 제공해야 합니다. 두 번째 인수는 새 계층 구조 수준(이 예제의 경우 **/2/1/**)을 제공합니다. 두 인수의 수준 수가 같을 필요는 없습니다.  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>단일 행을 계층의 새 위치로 이동하려면  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/23/2018
     GO  
     ```  
   
-    이제 Wanida는 **/3/1/**노드에 있습니다.  
+    이제 Wanida는 **/3/1/** 노드에 있습니다.  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>계층의 섹션을 다시 구성하려면  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/23/2018
     GO  
     ```  
   
-2.  이제 Kevin은 Wanida에게 보고하고 Wanida는 Jill에게 보고하며 Jill은 David에게 보고합니다. 즉, Kevin은 **/3/1/1/**수준에 있습니다. Jill의 부하 직원을 모두 새 관리자에게로 이동하기 위해 **OrgNode** 가 **/3/** 인 모든 노드를 새 값으로 업데이트합니다. 다음 코드를 실행하여 Wanida가 Sariya에게 보고하도록 업데이트하고 Kevin은 계속 Wanida에게 보고하도록 둡니다.  
+2.  이제 Kevin은 Wanida에게 보고하고 Wanida는 Jill에게 보고하며 Jill은 David에게 보고합니다. 즉, Kevin은 **/3/1/1/** 수준에 있습니다. Jill의 부하 직원을 모두 새 관리자에게로 이동하기 위해 **OrgNode** 가 **/3/** 인 모든 노드를 새 값으로 업데이트합니다. 다음 코드를 실행하여 Wanida가 Sariya에게 보고하도록 업데이트하고 Kevin은 계속 Wanida에게 보고하도록 둡니다.  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

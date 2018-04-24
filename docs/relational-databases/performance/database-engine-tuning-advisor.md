@@ -1,33 +1,34 @@
 ---
-title: "데이터베이스 엔진 튜닝 관리자 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 엔진 튜닝 관리자 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9a0f6d0921c4d530c8ed1b46264d933c46678140
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   특정 문제 쿼리의 성능 문제 해결  
   

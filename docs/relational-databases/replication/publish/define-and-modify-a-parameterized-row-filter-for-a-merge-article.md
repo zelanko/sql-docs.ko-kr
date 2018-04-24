@@ -1,16 +1,16 @@
 ---
-title: "병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정 | Microsoft 문서"
-ms.custom: 
+title: 병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - modifying filters, parameterized row
 - dynamic filters [SQL Server replication]
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25e02f17df0a17ac500eb4549f564b1b1f5f6200
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f459ae77584f5598ce5c71b3040f8bb2ecaa223d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/08/2018
   
 #### <a name="to-define-a-parameterized-row-filter"></a>매개 변수가 있는 행 필터를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>**의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
 2.  **필터 추가** 대화 상자의 드롭다운 목록 상자에서 필터링할 테이블을 선택합니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/08/2018
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   기본 텍스트는 변경할 수 없습니다. 표준 SQL 구문을 사용하여 WHERE 키워드 뒤에 필터 절을 입력합니다. 매개 변수가 있는 필터는 **HOST_NAME()** 및/또는 **SUSER_SNAME()**시스템 함수 또는 이러한 함수 중 하나 또는 둘 다를 참조하는 사용자 정의 함수에 대한 호출을 포함합니다. 다음 예에서는 매개 변수가 있는 행 필터에 대한 전체 필터 절입니다.  
+    -   기본 텍스트는 변경할 수 없습니다. 표준 SQL 구문을 사용하여 WHERE 키워드 뒤에 필터 절을 입력합니다. 매개 변수가 있는 필터는 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 시스템 함수 또는 이러한 함수 중 하나 또는 둘 다를 참조하는 사용자 정의 함수에 대한 호출을 포함합니다. 다음 예에서는 매개 변수가 있는 행 필터에 대한 전체 필터 절입니다.  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  

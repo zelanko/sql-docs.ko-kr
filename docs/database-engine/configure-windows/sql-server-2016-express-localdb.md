@@ -1,15 +1,16 @@
 ---
 title: SQL Server 2016 Express LocalDB | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user instances
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d559c1f713a51a51a3b8279f585b0fa48d81ecba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 40ae45c73e45cc9ee040b4d6fadd4469f9f0c3be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
  
  ## <a name="try-it-out"></a>사용해 보세요! 
   
--   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. 
+-   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. 
   
 -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
   
@@ -52,7 +53,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
   
 ## <a name="description"></a>Description  
- **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
+ **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** 입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  응용 프로그램에 **LocalDB**를 포함하는 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서 [로컬 데이터 개요](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스 만들기](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) 및 [연습: SQL Server LocalDB 데이터베이스의 데이터에 연결(Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)을 참조하세요.  
   
@@ -88,7 +89,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
 ## <a name="starting-localdb-and-connecting-to-localdb"></a>LocalDB 시작 및 LocalDB에 연결  
   
 ### <a name="connecting-to-the-automatic-instance"></a>자동 인스턴스에 연결  
- **LocalDB** 를 사용하는 가장 쉬운 방법은 연결 문자열 **"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"**를 사용하여 현재 사용자가 소유한 자동 인스턴스에 연결하는 것입니다. 파일 이름을 사용하여 특정 데이터베이스에 연결하려면 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"**와 유사한 연결 문자열을 사용하여 연결합니다.  
+ **LocalDB** 를 사용하는 가장 쉬운 방법은 연결 문자열 **"Server=(localdb)\MSSQLLocalDB;Integrated Security=true"** 를 사용하여 현재 사용자가 소유한 자동 인스턴스에 연결하는 것입니다. 파일 이름을 사용하여 특정 데이터베이스에 연결하려면 **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"** 와 유사한 연결 문자열을 사용하여 연결합니다.  
   
 > [!NOTE]  
 >  컴퓨터에서 사용자가 처음으로 **LocalDB**에 연결하려고 시도하는 경우 자동 인스턴스가 생성되고 시작되어야 합니다. 인스턴스를 만드는 추가 시간으로 인해 시간 초과 메시지와 함께 연결 시도가 실패할 수 있습니다. 이 경우 만들기 프로세스가 완료되도록 몇 초 정도 기다린 후에 다시 연결하세요.  

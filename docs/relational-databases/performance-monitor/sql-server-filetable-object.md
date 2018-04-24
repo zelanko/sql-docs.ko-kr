@@ -1,33 +1,34 @@
 ---
-title: "SQL Server, FileTable 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, FileTable 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-caps.latest.revision: 
+caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a16709c701e8754446287f9d0b74b6e94581b3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e6016445b8d844eb62291ee01df9575134dc7c35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, FileTable 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:FileTable** 성능 개체는 FileTable 및 트랜잭션되지 않은 액세스와 관련된 통계에 대한 카운터를 제공합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**SQLServer:FileTable** 성능 개체는 FileTable 및 트랜잭션되지 않은 액세스와 관련된 통계에 대한 카운터를 제공합니다.
 
 다음 표에서는 SQL Server **FileTable** 성능 개체에 대해 설명합니다.
 

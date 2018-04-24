@@ -1,34 +1,35 @@
 ---
-title: "SQL Server 개체 및 버전에 대한 DAC 지원 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 개체 및 버전에 대한 DAC 지원 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f0318dca8e19ff5b4aaba97cf65d6106b7e3a260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] DAC(데이터 계층 응용 프로그램)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  DAC(데이터 계층 응용 프로그램)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
   
  **항목 내용**  
   

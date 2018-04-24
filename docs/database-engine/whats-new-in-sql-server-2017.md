@@ -1,27 +1,29 @@
 ---
-title: "데이터베이스 엔진의 새로운 기능 - SQL Server 2017 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 엔진의 새로운 기능 - SQL Server 2017 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 00a99af38eb93eda65928a033dc025329e944b21
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/17/2018
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)에는 새로운 3개 열, 즉 socket_count, cores_per_socket 및 numa_node_count가 있습니다. NUMA를 초과할 경우 과도하게 커밋된 호스트가 생성될 수 있고 결국 성능 문제로 이어지기 때문에 이 기능은 VM에서 서버를 실행할 때 유용합니다.
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)에 modified_extent_page_count\, 열이 새로 추가되어 데이터베이스의 각 데이터베이스 파일에 대한 차등 변경 내용을 추적합니다. 새로운 modified_extent_page_count 열을 사용하면 데이터베이스에서 변경된 페이지 백분율이 임계값(예: 70-80 %) 미만인 경우 차등 백업을 수행하고, 그렇지 않은 경우 전체 데이터베이스 백업을 수행하는 스마트 백업 솔루션을 빌드할 수 있습니다.
 - SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md)는 이제 SELECT INTO TSQL 구문에 추가된 **ON** 키워드 지원을 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다.
-- Tempdb 설정 향상 - 파일 크기가 1GB보다 큰 값으로 설정되고 IFI를 사용하도록 설정되지 않은 경우 이 설정을 통해 고객에 대한 경고 메시지와 함께 파일당 초기 tempdb 파일 크기를 **256GB(262,144MB)**까지 지정할 수 있습니다. 지정된 tempdb 데이터 파일의 초기 크기에 따라 설치 시간이 기하급수적으로 증가할 수 있는 IFI(인스턴트 파일 초기화)를 사용하지 않도록 설정하는 의미를 이해해야 합니다. IFI는 트랜잭션 로그 크기에 적용할 수 없으므로 SQL Server 서비스 계정에 대한 IFI 설정과 관계없이 설치 중에 tempdb를 시작하는 동안 더 큰 값의 트랜잭션 로그를 지정하면 설치 시간이 항상 증가할 수 있습니다.
+- Tempdb 설정 향상 - 파일 크기가 1GB보다 큰 값으로 설정되고 IFI를 사용하도록 설정되지 않은 경우 이 설정을 통해 고객에 대한 경고 메시지와 함께 파일당 초기 tempdb 파일 크기를 **256GB(262,144MB)** 까지 지정할 수 있습니다. 지정된 tempdb 데이터 파일의 초기 크기에 따라 설치 시간이 기하급수적으로 증가할 수 있는 IFI(인스턴트 파일 초기화)를 사용하지 않도록 설정하는 의미를 이해해야 합니다. IFI는 트랜잭션 로그 크기에 적용할 수 없으므로 SQL Server 서비스 계정에 대한 IFI 설정과 관계없이 설치 중에 tempdb를 시작하는 동안 더 큰 값의 트랜잭션 로그를 지정하면 설치 시간이 항상 증가할 수 있습니다.
 - 새로운 [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) DMV가 데이터베이스당 버전 저장소 사용량을 추적하기 위해 도입되었습니다. 이 새로운 DMV는 프로덕션 서버에서 실행되는 성능 비용이나 오버헤드 없이 데이터베이스당 버전 저장소 사용량 요구 사항을 기반으로 하여 tempdb 크기 조정을 사전에 계획하기 위해 버전 저장소 사용량에 대하여 tempdb를 모니터링하는 데 유용합니다.
 - 새로운 [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) DMF가 DBCC LOGINFO와 비슷한 VLF 정보를 표시하여 고객이 경험한 VLF 수, VLF 크기 또는 축소 파일 문제로 인해 발생할 수 있는 잠재적인 트랜잭션 로그 문제를 모니터링, 경고 및 방지하기 위해 도입되었습니다.
 - 최첨단 서버의 소형 데이터베이스에 대해 향상된 백업 성능 - SQL Server에서 데이터베이스 백업을 수행하는 동안 백업 프로세스는 진행 중인 I/O를 비우기 위해 버퍼 풀을 여러 번 반복해야 합니다. 결과적으로 백업 시간은 데이터베이스 크기의 기능일 뿐만 아니라 활성 버퍼 풀 크기의 기능이기도 합니다. SQL Server 2017에서 백업은 버퍼 풀을 여러 번 반복하지 않도록 최적화되어 중소형 데이터베이스의 백업 성능이 크게 향상되었습니다. 백업 및 백업 I/O에 대한 페이지가 버퍼 풀 반복에 비해 더 많은 시간이 소모되므로 데이터베이스 크기가 증가할수록 성능이 저하됩니다.  

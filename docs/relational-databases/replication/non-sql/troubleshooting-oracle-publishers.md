@@ -1,31 +1,31 @@
 ---
-title: "Oracle 게시자 문제 해결 | Microsoft 문서"
-ms.custom: 
+title: Oracle 게시자 문제 해결 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f5ada9a491160ae119ac4792f26640854fcacc0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **실행** 대화 상자에 **regedit**를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>*\Providers로 이동합니다.  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers로 이동합니다.  
   
      Providers 아래에는 OraOLEDB.Oracle 폴더가 있어야 하며 이 폴더 내에 이름이 **AllowInProcess**이고 값이 **1**인 DWORD 값이 있어야 합니다.  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 03/08/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>게시자를 다시 구성해야 하는 변경 내용이 적용되었습니다.  
  복제 메타데이터 테이블 또는 프로시저를 변경하면 게시자를 삭제하고 다시 구성해야 합니다. 게시자를 다시 구성하려면 게시자를 삭제하고 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL 또는 RMO를 사용하여 다시 구성해야 합니다. 게시자 구성에 대한 자세한 내용은 [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
- **Oracle 게시자를 삭제하려면(**SQL Server Management Studio**)**  
+ **Oracle 게시자를 삭제하려면(** SQL Server Management Studio **)**  
   
 1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 에서 Oracle 게시자에 대한 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
   

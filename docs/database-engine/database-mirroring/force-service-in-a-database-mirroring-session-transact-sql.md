@@ -1,33 +1,35 @@
 ---
-title: "데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - forced service [SQL Server]
 - database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d2293e47ca9ec237bc910815f79a11ebc679ef3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1a4eb1bfb3302d7ca5feeec1467315d26078a078
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 성능 우선 모드 및 장애 조치를 지원하지 않는 보호 우선 모드에서 미러 서버는 사용할 수 있는데 주 서버는 실패하는 경우 데이터베이스 소유자는 서비스가 미러 데이터베이스로 장애 조치(데이터 손실 가능)되도록 강제 적용하여 데이터베이스를 사용 가능하게 만들 수 있습니다. 이 옵션은 다음 조건이 모두 충족된 경우에만 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  성능 우선 모드 및 장애 조치를 지원하지 않는 보호 우선 모드에서 미러 서버는 사용할 수 있는데 주 서버는 실패하는 경우 데이터베이스 소유자는 서비스가 미러 데이터베이스로 장애 조치(데이터 손실 가능)되도록 강제 적용하여 데이터베이스를 사용 가능하게 만들 수 있습니다. 이 옵션은 다음 조건이 모두 충족된 경우에만 사용할 수 있습니다.  
   
 -   주 서버가 다운되었습니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/18/2018
   
      ALTER DATABASE *<database_name>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     여기서 *<database_name>*은 미러 데이터베이스입니다.  
+     여기서 *<database_name>* 은 미러 데이터베이스입니다.  
   
      미러 서버는 주 서버로 바로 전환되고 미러링은 일시 중지됩니다.  
   

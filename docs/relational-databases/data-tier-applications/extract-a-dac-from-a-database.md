@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스에서 DAC 추출 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스에서 DAC 추출 | Microsoft 문서
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
@@ -24,19 +24,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터 계층 응용 프로그램 추출 마법사**나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 응용 프로그램) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **데이터 계층 응용 프로그램 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 응용 프로그램) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
   
  
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
@@ -83,7 +84,7 @@ ms.lasthandoff: 01/17/2018
 ###  <a name="SelectData"></a> Select data page  
 DAC(데이터 계층 응용 프로그램) 패키지 파일에 포함할 참조 데이터를 선택합니다. DAC 패키지에 데이터를 포함하는 것은 선택 사항입니다. 지원되는 모든 데이터베이스 개체 및 데이터베이스와 관련된 인스턴스 개체의 스키마는 DAC 패키지에 미리 포함됩니다.  
   
- 최대 10MB의 참조 데이터를 DAC 패키지 파일에 포함할 수 있습니다. 그러나 DAC에 테이블을 포함하려는 경우 테이블에 **image** 또는 **varchar(max)**와 같은 BLOB(Binary Large Object) 데이터 형식을 포함할 수 없습니다. 다른 데이터베이스로 전송하기 위해 많은 양의 데이터를 추출하려는 경우 SQL Server Integration Services, 대량 복사 유틸리티 또는 다른 여러 데이터 마이그레이션 방법 중 하나를 사용하세요.  
+ 최대 10MB의 참조 데이터를 DAC 패키지 파일에 포함할 수 있습니다. 그러나 DAC에 테이블을 포함하려는 경우 테이블에 **image** 또는 **varchar(max)** 와 같은 BLOB(Binary Large Object) 데이터 형식을 포함할 수 없습니다. 다른 데이터베이스로 전송하기 위해 많은 양의 데이터를 추출하려는 경우 SQL Server Integration Services, 대량 복사 유틸리티 또는 다른 여러 데이터 마이그레이션 방법 중 하나를 사용하세요.  
   
  **데이터베이스 테이블** - DAC 패키지에 포함할 데이터가 포함된 데이터베이스 테이블 옆의 확인란을 선택합니다. 10,000개 이하의 행이 포함된 테이블을 10개까지 선택할 수 있습니다.  
   
@@ -105,7 +106,7 @@ DAC(데이터 계층 응용 프로그램) 패키지 파일에 포함할 참조 �
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  이 페이지에서 마법사는 모든 데이터베이스 개체가 DAC(데이터 계층 응용 프로그램)에 의해 지원되는지 확인합니다. 또한 데이터베이스 개체 간의 종속성도 검사하여 DAC에 성공적으로 포함될 수 있는 개체 집합을 확인합니다. 그런 다음 유효성 검사 보고서를 표시하고 이 마법사에서 선택한 옵션을 요약합니다. 옵션을 변경하려면 **이전**을 클릭하고, DAC 추출을 시작하려면 **다음**을 클릭합니다.  
   
-> **참고!**DAC에서 지원하지 않는 개체가 하나 이상 있으면 **다음** 단추가 비활성화되고 추출 프로세스를 계속할 수 없습니다. 이 경우에는 지원되지 않는 개체를 제거하고 이 마법사를 다시 실행하는 것이 좋습니다.  
+> **참고!** DAC에서 지원하지 않는 개체가 하나 이상 있으면 **다음** 단추가 비활성화되고 추출 프로세스를 계속할 수 없습니다. 이 경우에는 지원되지 않는 개체를 제거하고 이 마법사를 다시 실행하는 것이 좋습니다.  
   
  **요약** - 선택한 옵션에 대한 요약 정보가 **DAC 속성**아래에 나열됩니다. 유효성 검사 결과는 **DAC 개체**아래에 나열됩니다. 유효성 검사 결과는 다음과 같은 세 가지 유형으로 나타납니다.  
   

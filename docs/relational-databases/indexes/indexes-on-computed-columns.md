@@ -1,16 +1,16 @@
 ---
-title: "계산 열의 인덱스 | Microsoft 문서"
-ms.custom: 
+title: 계산 열의 인덱스 | Microsoft 문서
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - computed columns, index creation
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - persisted computed columns
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-caps.latest.revision: 
+caps.latest.revision: 41
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17eefea966232b9ef297477efae843e556098ba8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2a2328fca99839f9d33eec502e539905f64fdeb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* �
 **Data Type Requirements**  
   
 -   계산 열에 대해 정의된 *computed_column_expression* 은 **text**, **ntext**또는 **image** 데이터 형식으로 계산할 수 없습니다.  
--   **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**및 **xml** 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 인덱스 키 열로 사용할 수 있으면 인덱스를 만들 수 있습니다.  
+-   **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 인덱스 키 열로 사용할 수 있으면 인덱스를 만들 수 있습니다.  
 -   **image**, **ntext**및 **text** 데이터 형식에서 파생된 계산 열의 경우 해당 데이터 형식을 키가 아닌 인덱스 열로 사용할 수 있으면 비클러스터형 인덱스에서 키가 아닌(포함된) 열이 될 수 있습니다.  
   
 **SET Option Requirements**  

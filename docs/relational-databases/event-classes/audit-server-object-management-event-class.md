@@ -1,34 +1,35 @@
 ---
-title: "Audit Server Object Management 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Server Object Management 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Server Object Management event class
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0b72bf95b5726eb0435f176c28423b6a514d285
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b551b7bc8e18492634afd55eeec049987b5fff5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Server Object Management** 이벤트 클래스는 서버 개체에 대한 CREATE, ALTER 또는 DROP이 있는 경우에 발생합니다.  
+  **Audit Server Object Management** 이벤트 클래스는 서버 개체에 대한 CREATE, ALTER 또는 DROP이 있는 경우에 발생합니다.  
   
 ## <a name="audit-server-object-management-event-class-data-columns"></a>Audit Server Object Management 이벤트 클래스 데이터 열  
   

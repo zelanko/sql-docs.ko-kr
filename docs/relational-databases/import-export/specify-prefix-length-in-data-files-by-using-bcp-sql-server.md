@@ -1,16 +1,16 @@
 ---
-title: "bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7844cafe49ef203c60240636ef418bb926086ef7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  
+  원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 프롬프트에서 접두사 길이 지정  
  대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**)가 없으면 명령에서 다음과 같이 각 데이터 필드의 접두사 길이를 지정하라는 메시지가 표시됩니다.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/03/2018
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 **nvarchar(max)**, **varchar(max)**및 **varbinary(max)** 를 사용합니다.  
+ \***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 **nvarchar(max)**, **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
 ##  <a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
  데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  

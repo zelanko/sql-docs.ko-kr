@@ -2,7 +2,7 @@
 title: CHECK 제약 조건 수정 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -23,11 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23af1baa5b43796d326aea114e4b2ae2a3a30382
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c5f6d7acb3827b425b4b3dedb533f33fc0574db4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/10/2018
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -46,11 +47,11 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/10/2018
   
 1.  **개체 탐색기**에서 CHECK 제약 조건이 포함된 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
-2.  **테이블 디자이너** 메뉴에서 **CHECK 제약 조건...**을 클릭합니다.  
+2.  **테이블 디자이너** 메뉴에서 **CHECK 제약 조건...** 을 클릭합니다.  
   
 3.  **CHECK 제약 조건** 대화 상자의 **선택한 CHECK 제약 조건**아래에서 편집하려는 제약 조건을 선택합니다.  
   

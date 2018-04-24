@@ -1,16 +1,16 @@
 ---
-title: "병합 아티클 사이에서 조인 필터 정의 및 수정 | Microsoft 문서"
-ms.custom: 
+title: 병합 아티클 사이에서 조인 필터 정의 및 수정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - modifying filters, join
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0ad590f14e8a9c774c9108028a58fa5a7ff008e
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/08/2018
   
 #### <a name="to-define-a-join-filter"></a>조인 필터를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>**의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 기존 행 필터 또는 조인 필터를 선택합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 기존 행 필터 또는 조인 필터를 선택합니다.  
   
 2.  **추가**를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/08/2018
   
     -   작성기 사용을 선택하면 표의 열(**결합**, **필터링된 테이블 열**, **연산자**및 **조인된 테이블 열**)을 사용하여 조인 문을 작성합니다.  
   
-         표의 각 열에는 드롭다운 콤보 상자가 들어 있습니다. 여기서 두 개의 열과 연산자 1개(**=**, **<>**, **<=**, **\<**, **>=**, **>**및 **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면 **결합** 열에서 결합(AND 또는 OR)을 선택한 다음 두 개 이상의 열과 연산자를 입력합니다.  
+         표의 각 열에는 드롭다운 콤보 상자가 들어 있습니다. 여기서 두 개의 열과 연산자 1개(**=**, **<>**, **<=**, **\<**, **>=**, **>** 및 **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면 **결합** 열에서 결합(AND 또는 OR)을 선택한 다음 두 개 이상의 열과 연산자를 입력합니다.  
   
     -   수동으로 문 작성을 선택하면 **조인 문** 텍스트 영역에 조인 문을 작성합니다. **필터링된 테이블 열** 목록 상자 및 **조인된 테이블 열** 목록 상자를 사용하여 열을 **조인 문** 텍스트 영역에 끌어다 놓습니다.  
   

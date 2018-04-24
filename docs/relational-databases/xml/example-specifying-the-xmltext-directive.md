@@ -1,34 +1,34 @@
 ---
-title: "예: XMLTEXT 지시어 지정 | Microsoft 문서"
-ms.custom: 
+title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: fdc8aad3f516e5bbdc9aa455e6ca1017f52f789e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-이 예에서는 EXPLICIT 모드를 사용하는 **문에서** XMLTEXT `SELECT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
+  이 예에서는 EXPLICIT 모드를 사용하는 **문에서** XMLTEXT `SELECT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
   

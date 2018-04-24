@@ -1,35 +1,36 @@
 ---
-title: "Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan XML events
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a3f8e743eabbd8e084aeb28e26ccaa548adb1ba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: df2406fcfe0a570c4d501903ab34cab0c17d7746
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 추적에서 캡처된 **Showplan XML Statistics Profile** 이벤트를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 개별적인 .SQLPlan 파일로 저장하는 방법에 대해 설명합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **Showplan XML Statistics Profile** 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 추적에서 캡처된 **Showplan XML Statistics Profile** 이벤트를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 개별적인 .SQLPlan 파일로 저장하는 방법에 대해 설명합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **Showplan XML Statistics Profile** 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>Showplan XML Statistics Profile 이벤트를 개별적으로 저장  
   

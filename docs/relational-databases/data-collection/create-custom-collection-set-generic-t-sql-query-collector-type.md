@@ -1,35 +1,35 @@
 ---
-title: "사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식 | Microsoft 문서"
-ms.custom: 
+title: 사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72ceb6d3bb9220c9f4f5ce8ad8c25624f037cbd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7ea1d43ae4ace0b7d2ed06f17bc9903f08fbe43c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>사용자 지정 컬렉션 집합 만들기 - 일반 T-SQL 쿼리 수집기 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-데이터 수집기와 함께 제공된 저장 프로시저를 사용하여 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 지정 컬렉션 집합을 만들 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
+  데이터 수집기와 함께 제공된 저장 프로시저를 사용하여 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 지정 컬렉션 집합을 만들 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
 -   업로드 일정 구성  
   

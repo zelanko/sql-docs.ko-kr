@@ -1,16 +1,16 @@
 ---
-title: "데이터 계층 응용 프로그램 내보내기 | Microsoft 문서"
-ms.custom: 
+title: 데이터 계층 응용 프로그램 내보내기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.exportdac.progress.f1
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - export DAC
 - data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c20a0e2757366b22b4c81885106d1b9c6d362f6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3902e91e5f4766afc32baa7a99a09501cd9ca1fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 보관 파일을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
+  DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 보관 파일을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  내보내기 프로세스에서는 DAC 내보내기 파일을 두 단계로 작성합니다.  
@@ -69,7 +70,7 @@ DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내
   
 3.  데이터베이스 이름을 마우스 오른쪽 단추로 클릭합니다.  
   
-4.  **태스크** 를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...**를 선택합니다.  
+4.  **태스크** 를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...** 를 선택합니다.  
   
 5.  마법사 대화 상자를 완료합니다.  
   

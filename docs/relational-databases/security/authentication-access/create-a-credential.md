@@ -1,35 +1,36 @@
 ---
-title: "자격 증명 만들기 | Microsoft 문서"
-ms.custom: 
+title: 자격 증명 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - credentials [SQL Server], creating
 - authentication [SQL Server], credentials
 - logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 100ee5ba087e151ac0c025324dc01651b1b1a3c5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f6511c0162513bfab20e4b3e075db9d90b4e920
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-credential"></a>자격 증명 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 자격 증명을 만드는 방법에 대해 설명합니다.  
+# <a name="create-a-credential"></a>Create a Credential
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 자격 증명을 만드는 방법에 대해 설명합니다.  
   
  자격 증명을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부에서 ID를 가질 수 있습니다. 자격 증명은 주로 EXTERNAL_ACCESS 권한 집합이 포함된 어셈블리에서 코드를 실행하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 사용자가 백업을 저장할 파일 위치와 같은 도메인 리소스에 액세스해야 할 경우에도 자격 증명을 사용할 수 있습니다.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  자격 증명을 만들거나 수정하려면 ALTER ANY CREDENTIAL 권한이 필요하고 로그인을 자격 증명에 매핑하려면 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  개체 탐색기에서 **보안** 폴더를 확장합니다.  
   
-2.  **자격 증명** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 자격 증명...**을 선택합니다.  
+2.  **자격 증명** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 자격 증명...** 을 선택합니다.  
   
 3.  **새 자격 증명** 대화 상자의 **자격 증명 이름** 상자에 자격 증명의 이름을 입력합니다.  
   

@@ -1,16 +1,16 @@
 ---
-title: "동기화 일정 지정 | Microsoft 문서"
-ms.custom: 
+title: 동기화 일정 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - synchronization [SQL Server replication], schedules
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ccfd2c6a2869dff3cff89eb20d4c82d11fa0667
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: b02c075341c0034f1e01735c751652f011f16720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ ms.lasthandoff: 03/08/2018
 |끌어오기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>** <sup>2</sup>|  
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>**가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ <sup>1</sup> Oracle 게시에서 밀어넣기 구독의 경우 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
   
- <sup>2</sup> Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>**가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ <sup>2</sup> Oracle 게시에서 끌어오기 구독에 대한 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
 #### <a name="to-specify-synchronization-schedules"></a>동기화 일정을 지정하려면  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/08/2018
   
     -   **\<일정 정의...>**  
   
-2.  **\<일정 정의...>**를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음 **확인**을 클릭합니다.  
+2.  **\<일정 정의...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음 **확인**을 클릭합니다.  
   
 3.  마법사를 완료합니다.  
   

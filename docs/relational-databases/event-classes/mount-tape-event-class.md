@@ -1,34 +1,35 @@
 ---
-title: "Mount Tape 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Mount Tape 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15fc3c9dff46fc655525feaa604eb8e5a1326e55
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 57c0a02d3d6aec3695e7383fd8100def8f4e194c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Mount Tape 이벤트 클래스는 테이프 탑재 요청을 받을 때 발생합니다. 이 이벤트 클래스를 사용하여 테이프 탑재 요청 및 요청의 성공 또는 실패를 모니터링할 수 있습니다.  
+  Mount Tape 이벤트 클래스는 테이프 탑재 요청을 받을 때 발생합니다. 이 이벤트 클래스를 사용하여 테이프 탑재 요청 및 요청의 성공 또는 실패를 모니터링할 수 있습니다.  
   
 ## <a name="mount-tape-event-class-data-columns"></a>Mount Tape 이벤트 클래스 데이터 열  
   

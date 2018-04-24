@@ -1,33 +1,34 @@
 ---
-title: "보조 데이터베이스 설정 | Microsoft 문서"
-ms.custom: 
+title: 보조 데이터베이스 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a916d8dd2953860982403f16e74e007a772f41a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 로그 전달 구성에서 보조 데이터베이스의 속성을 구성하고 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 대화 상자를 사용하여 로그 전달 구성에서 보조 데이터베이스의 속성을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/18/2018
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 주 데이터베이스의 기존 백업을 사용하여 보조 데이터베이스를 초기화하도록 합니다. **백업 파일** 입력란에 해당 백업 파일이 저장된 위치를 입력합니다. 보조 데이터베이스 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로서 해당 데이터베이스가 만들어집니다.  
   
  **백업 파일**  
- **예, 주 데이터베이스의 기존 백업을 보조 데이터베이스에 복원합니다.**옵션을 선택한 경우에 보조 데이터베이스를 초기화하는 데 사용할 전체 데이터베이스 백업의 경로와 파일 이름을 입력합니다.  
+ **예, 주 데이터베이스의 기존 백업을 보조 데이터베이스에 복원합니다.** 옵션을 선택한 경우에 보조 데이터베이스를 초기화하는 데 사용할 전체 데이터베이스 백업의 경로와 파일 이름을 입력합니다.  
   
  **복원 옵션**  
  이 도움말 항목의 앞에서 설명한 내용을 참조하십시오.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/18/2018
  주 서버에서 보조 서버로 트랜잭션 로그 백업 파일을 복사하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 이름을 표시합니다. 처음 이 작업을 만들 때 입력란에 이름을 입력하여 변경할 수 있습니다.  
   
  **일정**  
- 주 서버에서 보조 서버로 트랜잭션 로그 백업을 복사하는 SQL Server 에이전트 복사 작업의 현재 일정을 표시합니다. **일정...**을 클릭하여 이 일정을 수정할 수 있습니다.  
+ 주 서버에서 보조 서버로 트랜잭션 로그 백업을 복사하는 SQL Server 에이전트 복사 작업의 현재 일정을 표시합니다. **일정...** 을 클릭하여 이 일정을 수정할 수 있습니다.  
   
  **일정...**  
  주 서버에서 보조 서버로 트랜잭션 로그 백업을 복사하는 SQL Server 에이전트 작업의 매개 변수를 수정합니다.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/18/2018
  보조 데이터베이스에 트랜잭션 로그 백업을 복원하는 데 사용된 SQL Server 에이전트 작업의 이름을 표시합니다. 처음 이 작업을 만들 때 입력란에 이름을 입력하여 변경할 수 있습니다.  
   
  **일정**  
- 보조 데이터베이스에 트랜잭션 로그 백업을 복원하는 데 사용된 SQL Server 에이전트 작업의 현재 일정을 표시합니다. **일정...**을 클릭하여 이 옵션을 수정할 수 있습니다.  
+ 보조 데이터베이스에 트랜잭션 로그 백업을 복원하는 데 사용된 SQL Server 에이전트 작업의 현재 일정을 표시합니다. **일정...** 을 클릭하여 이 옵션을 수정할 수 있습니다.  
   
  **일정...**  
  SQL Server 에이전트 복원 작업과 연관된 매개 변수를 수정합니다.  

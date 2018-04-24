@@ -1,16 +1,16 @@
 ---
-title: "보안 주체(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: 
+title: 보안 주체(데이터베이스 엔진) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.roleproperties.selectroll.f1
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c071c953f36a1e32612366c6cbb7a4a1666ef5f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/01/2017
  각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자는 삭제할 수 없지만 CONNECT 권한을 취소하여 해제할 수 있습니다. CONNECT 권한은 `master` 또는 `tempdb`가 아닌 임의의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST;`를 실행하여 취소할 수 있습니다.  
   
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 섹션에는 다음과 같은 항목이 포함되어 있습니다.  

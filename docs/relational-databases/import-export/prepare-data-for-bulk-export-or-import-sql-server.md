@@ -1,16 +1,16 @@
 ---
-title: "대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bulk importing [SQL Server], planning
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44c1510507707b1fcdc9f10a31d8dce47d838a9c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 811f9f080d89a184692c6eb94d40c41358f069e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/03/2018
   
 -   테이블 또는 뷰에서 데이터 파일로 대량 내보내기를 수행하려면 대량 복사할 테이블 또는 뷰에 대한 SELECT 권한이 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 병렬 검색을 사용하여 데이터를 검색할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대량으로 내보내는 테이블 행은 대개 데이터 파일에 특정 순서로 정렬되지 않을 수도 있습니다. 대량으로 내보낸 테이블 행이 데이터 파일에 특정 순서로 표시되도록 하려면 쿼리에서 대량으로 내보내는 **queryout** 옵션을 사용하고 ORDER BY 절을 지정합니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 병렬 검색을 사용하여 데이터를 검색할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대량으로 내보내는 테이블 행은 대개 데이터 파일에 특정 순서로 정렬되지 않을 수도 있습니다. 대량으로 내보낸 테이블 행이 데이터 파일에 특정 순서로 표시되도록 하려면 쿼리에서 대량으로 내보내는 **queryout** 옵션을 사용하고 ORDER BY 절을 지정합니다.  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>대량 가져오기의 데이터 파일 형식 요구 사항  
  데이터 파일에서 데이터를 가져오려면 해당 파일은 다음과 같은 기본 요구 사항을 충족해야 합니다.  

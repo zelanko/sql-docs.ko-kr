@@ -1,28 +1,29 @@
 ---
-title: "Columnstore 인덱스 - 데이터 웨어하우스 | Microsoft Docs"
-ms.custom: 
+title: Columnstore 인덱스 - 데이터 웨어하우스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bc429301acd87544925195879ba116983454627
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bce265c81c06adf13b70e5e4c05565b44120bb94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore 인덱스 - 데이터 웨어하우스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   Columnstore 인덱스는 분할과 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스를 만들기 위해 필수입니다.  
   
 ## <a name="whats-new"></a>새로운 기능  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 성능 향상을 위해 이러한 기능을 도입합니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 columnstore 성능 향상을 위해 다음 기능이 도입되었습니다.  
   
 -   Always On은 읽기 가능 복제본에 대한 columnstore 인덱스 쿼리를 지원합니다.  
 -   MARS(Multiple Active Result Sets)는 columnstore 인덱스를 지원합니다.  

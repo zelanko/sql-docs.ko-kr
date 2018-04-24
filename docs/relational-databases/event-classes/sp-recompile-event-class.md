@@ -1,34 +1,35 @@
 ---
-title: "SP:Recompile 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: SP:Recompile 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bb54befe1e768f21298ee1417057b2d01976cbee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SP:Recompile 이벤트 클래스는 저장 프로시저, 트리거 또는 사용자 정의 함수를 다시 컴파일했음을 나타냅니다. 이 이벤트 클래스가 보고하는 다시 컴파일은 문 수준에서 발생합니다.  
+  SP:Recompile 이벤트 클래스는 저장 프로시저, 트리거 또는 사용자 정의 함수를 다시 컴파일했음을 나타냅니다. 이 이벤트 클래스가 보고하는 다시 컴파일은 문 수준에서 발생합니다.  
   
  SQL:StmtRecompile 이벤트 클래스를 사용하여 문 수준의 다시 컴파일을 추적하는 것이 좋습니다. SP:Recompile 이벤트 클래스는 더 이상 사용되지 않습니다. 자세한 내용은 [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)을(를) 참조하세요.  
   

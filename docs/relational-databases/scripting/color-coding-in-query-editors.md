@@ -1,34 +1,36 @@
 ---
-title: "쿼리 편집기에서 코드 색상 지정 | Microsoft 문서"
-ms.custom: 
+title: 쿼리 편집기에서 코드 색상 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5df02dfb76c056cabe08074d83b69270c6db014c
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b51afacfd047298f5f498bf956e9a70443ad71c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)을 참조하십시오.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)을 참조하십시오.  
   
 ## <a name="default-code-colors"></a>기본 코드 색  
   

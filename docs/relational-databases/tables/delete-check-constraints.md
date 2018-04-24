@@ -1,16 +1,16 @@
 ---
-title: "CHECK 제약 조건 삭제 | Microsoft 문서"
-ms.custom: 
+title: CHECK 제약 조건 삭제 | Microsoft 문서
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing constraints
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - deleting constraints
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fa53632aaa3a14cb7175b432015a2406b042e1f
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6200c5f628e0dc4f9bc153f9f77d9a0a3d7b569
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-check-constraints"></a>CHECK 제약 조건 삭제
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

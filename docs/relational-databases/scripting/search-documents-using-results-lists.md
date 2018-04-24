@@ -1,16 +1,16 @@
 ---
-title: "결과 목록을 사용하여 문서 검색 | Microsoft 문서"
-ms.custom: 
+title: 결과 목록을 사용하여 문서 검색 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0999168eac58aab6efe5888e21cd1b606904e0c
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f6352e99a18f02976a3b992e3ae77aade117ad0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  
   
 ### <a name="to-search-in-multiple-files"></a>여러 파일을 검색하려면  
   

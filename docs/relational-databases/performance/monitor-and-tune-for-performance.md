@@ -1,16 +1,16 @@
 ---
-title: "성능 모니터링 및 튜닝 | Microsoft 문서"
-ms.custom: 
+title: 성능 모니터링 및 튜닝 | Microsoft 문서
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - database monitoring [SQL Server]
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5d7d72464e1b7f2295a108df275ab3aa5426341a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>성능 모니터링 및 튜닝
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 데이터베이스 모니터링의 목표는 서버의 성능을 평가하는 것입니다. 효과적인 모니터링을 위해서는 현재 성능에 대한 스냅숏을 정기적으로 만들어 문제를 일으키는 프로세스를 격리하고 데이터를 지속적으로 수집하여 성능 경향을 추적해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  데이터베이스 모니터링의 목표는 서버의 성능을 평가하는 것입니다. 효과적인 모니터링을 위해서는 현재 성능에 대한 스냅숏을 정기적으로 만들어 문제를 일으키는 프로세스를 격리하고 데이터를 지속적으로 수집하여 성능 경향을 추적해야 합니다.  
   
  지속적인 데이터베이스 성능 평가를 수행하면 응답 시간을 최소화하고 처리량을 최대화할 수 있으므로 성능이 최적화됩니다. 효율적인 네트워크 소통량, 디스크 I/O 및 CPU 사용량을 통해 성능을 최적화할 수 있습니다. 응용 프로그램 요구 사항을 완벽하게 분석하고, 데이터의 논리적 및 물리적 구조를 이해하고, 데이터베이스 사용량을 평가하고, OLTP(온라인 트랜잭션 처리) 및 의사 결정 지원과 같이 서로 상충되는 상황인 경우 타협점을 찾아야 합니다.  
   

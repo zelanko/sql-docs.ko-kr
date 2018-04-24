@@ -1,16 +1,16 @@
 ---
-title: "SQL Server, Databases 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Databases 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5278e1637d118c7f1908495acd0a1ee9b7757d11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server의 **SQLServer:Databases** 개체는 대량 복사 작업, 백업 및 복원 처리량, 트랜잭션 로그 동작을 모니터링하기 위해 카운터를 제공합니다. 트랜잭션 및 트랜잭션 로그를 모니터링하면 데이터베이스에서 사용자 작업이 일어나는 횟수와 트랜잭션 로그가 얼마나 기록되었는지 확인할 수 있습니다. 사용자 작업의 양은 데이터베이스의 성능을 결정하고 로그 크기, 잠금 및 복제에 영향을 줍니다. 낮은 수준의 로그 작업을 모니터링하여 사용자 작업 및 리소스 사용을 측정하면 성능 병목 상태를 분석할 때 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL Server의 **SQLServer:Databases** 개체는 대량 복사 작업, 백업 및 복원 처리량, 트랜잭션 로그 동작을 모니터링하기 위해 카운터를 제공합니다. 트랜잭션 및 트랜잭션 로그를 모니터링하면 데이터베이스에서 사용자 작업이 일어나는 횟수와 트랜잭션 로그가 얼마나 기록되었는지 확인할 수 있습니다. 사용자 작업의 양은 데이터베이스의 성능을 결정하고 로그 크기, 잠금 및 복제에 영향을 줍니다. 낮은 수준의 로그 작업을 모니터링하여 사용자 작업 및 리소스 사용을 측정하면 성능 병목 상태를 분석할 때 유용합니다.  
   
  개별 데이터베이스를 나타내는 **Databases** 개체의 여러 가지 인스턴스를 동시에 모니터링할 수도 있습니다.  
   

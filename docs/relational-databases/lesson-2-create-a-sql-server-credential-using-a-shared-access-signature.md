@@ -2,7 +2,7 @@
 title: '2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기 | Microsoft 문서'
 ms.custom: ''
 ms.date: 02/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tutorial
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f6ed57a4b97737f5780cd48e6fe58f644be97fd
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 555f26b131b56984279f3a6e79ef5c70373b680d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

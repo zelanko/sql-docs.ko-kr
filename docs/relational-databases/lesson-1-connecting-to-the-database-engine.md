@@ -1,28 +1,28 @@
 ---
-title: "1 단원: 데이터베이스 엔진에 연결 | Microsoft 문서"
-ms.custom: 
+title: '1 단원: 데이터베이스 엔진에 연결 | Microsoft 문서'
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
  - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 다양한 도구와 함께 제공됩니다. 이 항목에서는 이 중 가장 필요한 도구를 설명하고 작업에 적합한 도구를 선택할 수 있도록 도움을 줍니다. 모든 도구는 **시작** 메뉴에서 액세스할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 같은 일부 도구는 기본적으로 설치되지 않으며 설치하는 동안 클라이언트 구성 요소의 일부로 해당 도구를 선택해야 합니다. 아래에서 설명하는 도구에 대한 전체 설명을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에서 검색하세요. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 에는 이러한 도구의 일부만 포함되어 있습니다.  
 
 ### <a name="basic-tools"></a>기본 도구
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. SSMS는 [Microsoft 다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 무료로 다운로드할 수 있습니다. 이전 버전의 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]에서 최신 버전을 사용할 수 있습니다.  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 관리하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 기록하는 주 도구이며 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 셸에 호스팅됩니다. SSMS는 [Microsoft 다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 무료로 다운로드할 수 있습니다. 이전 버전의 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]에서 최신 버전을 사용할 수 있습니다.  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 클라이언트 도구 둘 다와 함께 설치됩니다. 이 관리자를 사용하면 서버 프로토콜을 설정하고, TCP 포트와 같은 프로토콜 옵션을 구성하고, 서버 서비스가 자동으로 시작되도록 구성하고, 클라이언트 컴퓨터에서 사용자가 선호하는 방법으로 연결을 설정하도록 구성할 수 있습니다. 이 도구는 더 많은 고급 연결 요소를 구성하지만 기능을 설정하지는 않습니다.  
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/09/2018
 1.  Administrators 그룹의 멤버로 Windows에 로그인한 다음 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 엽니다.  
 2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
 3.  등록된 서버가 표시되지 않으면 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.
-4.  등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 선택한 상태로 **데이터베이스 엔진**을 확장하고 **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **로컬 서버 등록**을 클릭합니다. 컴퓨터에 설치된 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 표시됩니다. 기본 인스턴스의 이름은 지정되지 않으며 컴퓨터 이름으로 표시됩니다. 명명된 인스턴스는 컴퓨터 이름 다음에 백슬래시(\\)가 오고 마지막으로 인스턴스 이름이 붙는 형식으로 표시됩니다. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]의 경우 설치하는 동안 이름을 변경하지 않은 한 인스턴스 이름이 *<computer_name>*\sqlexpress로 지정됩니다.  
+4.  등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 선택한 상태로 **데이터베이스 엔진**을 확장하고 **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **로컬 서버 등록**을 클릭합니다. 컴퓨터에 설치된 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 표시됩니다. 기본 인스턴스의 이름은 지정되지 않으며 컴퓨터 이름으로 표시됩니다. 명명된 인스턴스는 컴퓨터 이름 다음에 백슬래시(\\)가 오고 마지막으로 인스턴스 이름이 붙는 형식으로 표시됩니다. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]의 경우 설치하는 동안 이름을 변경하지 않은 한 인스턴스 이름이 *<computer_name>* \sqlexpress로 지정됩니다.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>데이터베이스 엔진이 실행 중인지 확인하려면
 

@@ -1,35 +1,37 @@
 ---
-title: "책갈피 관리 | Microsoft 문서"
-ms.custom: 
+title: 책갈피 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2671d5b81a7bd99492df35047988444d420c8e4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
   
  책갈피를 만들고 탐색하려면 **텍스트 편집기** 도구 모음과 **책갈피** 창 상단에 있는 단추를 클릭합니다. 책갈피를 추가하거나 제거하고 책갈피를 활성화하거나 비활성화하며 책갈피를 폴더로 구성할 수 있습니다. 특정 명령은 **책갈피** 창의 바로 가기 메뉴에서도 사용할 수 있습니다. 책갈피를 추가하거나 제거하려면 편집기에서 원하는 행에 삽입 지점을 넣은 다음 **현재 줄에서 책갈피를 설정/해제합니다**를 클릭합니다. 책갈피를 활성화하려면 **책갈피** 창에서 해당 확인란을 선택하고 책갈피를 제거하지 않고 비활성화하려면 해당 확인란의 선택을 취소합니다.  
   

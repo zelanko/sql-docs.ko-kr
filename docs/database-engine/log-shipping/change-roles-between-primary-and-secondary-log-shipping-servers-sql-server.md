@@ -1,15 +1,16 @@
 ---
-title: "주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], role changes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e8b432636f4a8c51e58b67e394b81d96e6ded4ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  보조 서버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에 대해 장애 조치(Failover)를 수행한 후에 주 데이터베이스로 작동하도록 보조 데이터베이스를 구성할 수 있습니다. 그러면 필요할 때 주 데이터베이스와 보조 데이터베이스를 바꿀 수 있습니다.  
   
 ## <a name="performing-the-initial-role-change"></a>초기 역할 변경 수행  
  처음으로 보조 데이터베이스로 장애 조치(Failover)를 하고 이 데이터베이스를 새로운 주 데이터베이스로 만들 때 일련의 단계를 수행해야 합니다. 이러한 초기 단계를 수행한 후에는 주 데이터베이스와 보조 데이터베이스의 역할을 쉽게 바꿀 수 있습니다.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/18/2018
   
     2.  보조 데이터베이스를 추가할 때 **보조 데이터베이스 설정** 대화 상자에서 **보조 데이터베이스** 상자에 원래의 주 데이터베이스 이름을 입력합니다.  
   
-    3.  **보조 데이터베이스 설정** 대화 상자에서 **아니요, 보조 데이터베이스가 초기화되었습니다.**를 선택합니다.  
+    3.  **보조 데이터베이스 설정** 대화 상자에서 **아니요, 보조 데이터베이스가 초기화되었습니다.** 를 선택합니다.  
   
 4.  이전 로그 전달 구성에서 로그 전달 모니터링을 사용하도록 설정한 경우에는 새 로그 전달 구성을 모니터링하도록 로그 전달 모니터링을 다시 구성합니다.  *database_name* 을 사용자 데이터베이스 이름으로 바꾸어 다음 명령을 실행합니다.  
   

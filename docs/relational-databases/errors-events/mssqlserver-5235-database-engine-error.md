@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_5235 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_5235 | Microsoft 문서
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 5235 (Database Engine error)
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b786414c1fdd53d21148ff7b682f0b030362afe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 180ad346d05dcc30dae1beadf0c6030ec748ee55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 11/21/2017
 |상태 4|CSS에 문의합니다.|  
 |상태 6|명령을 다시 실행합니다. 문제가 지속되면 CSS에 문의합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
   

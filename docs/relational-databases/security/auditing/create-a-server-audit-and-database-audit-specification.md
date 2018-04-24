@@ -2,7 +2,7 @@
 title: 서버 감사 및 데이터베이스 감사 사양 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: security
@@ -18,25 +18,26 @@ helpviewer_keywords:
 - audits [SQL Server], creating database specification
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d306c125bec9e96e82ff8629d27d82bd571bce6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d70251050dd4522a0d694598d4a763bb1dbf061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>서버 감사 및 데이터베이스 감사 사양 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 서버 감사 및 데이터베이스 감사 사양을 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 서버 감사 및 데이터베이스 감사 사양을 만드는 방법에 대해 설명합니다.  
   
  *인스턴스 또는* 데이터베이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 감사 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 시스템에서 발생하는 추적 이벤트 및 로깅 이벤트가 포함됩니다. *SQL Server Audit* 개체는 사용자가 모니터링하려는 서버 또는 데이터베이스 수준 동작 및 동작 그룹에 대한 하나의 인스턴스를 수집합니다. 감사는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 수준으로 존재합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 여러 개의 감사를 가질 수 있습니다. *데이터베이스 수준 감사 사양* 개체는 감사에 속해 있습니다. 감사의 SQL Server 데이터베이스당 하나의 데이터베이스 감사 사양을 만들 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  데이터베이스 감사 사양은 지정된 데이터베이스에 있는 비보안 개체입니다. 데이터베이스 감사 사양을 처음 만들 때는 사용할 수 없는 상태입니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
   
 -   ALTER ANY DATABASE AUDIT 권한이 있는 사용자는 데이터베이스 감사 사양을 만들어 모든 감사에 바인딩할 수 있습니다.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  개체 탐색기에서 **보안** 폴더를 확장합니다.  
   
-2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...**를 선택합니다. 자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
+2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...** 를 선택합니다. 자세한 내용은 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
   
 3.  옵션 선택을 마쳤으면 **확인**을 클릭합니다.  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  **보안** 폴더를 확장합니다.  
   
-3.  **데이터베이스 감사 사양** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스 감사 사양...**을 선택합니다.  
+3.  **데이터베이스 감사 사양** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스 감사 사양...** 을 선택합니다.  
   
      **데이터베이스 감사 사양 만들기** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   

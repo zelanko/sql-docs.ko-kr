@@ -2,7 +2,7 @@
 title: 데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: a8c2b7948e4a9c33e8d49c82e477d25a74752c2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +39,14 @@ ms.lasthandoff: 04/10/2018
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  데이터를 저장하고 보관할 새 테이블은 특수한 보관 데이터베이스에 위치할 수 있습니다. 행을 텍스트 파일로 내보낼 수도 있습니다.  
    
 ###  <a name="Recommendations"></a> 권장 사항  
  프로덕션 환경에서 오류 검사를 추가하고 작업이 실패할 경우 운영자에게 전자 메일 메시지를 보낼 수 있습니다.  
   
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="Permissions"></a> Permissions  
  이 항목에서 설명하는 저장 프로시저를 실행하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  **단계 이름** 입력란에 **Copy Database Mail Items**를 입력합니다.  
   
-3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)**를 선택합니다.  
+3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)** 를 선택합니다.  
   
 4.  **데이터베이스** 드롭다운 목록에서 **msdb**를 선택합니다.  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  **단계 이름** 입력란에 **Copy Database Mail Attachments**를 입력합니다.  
   
-3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)**를 선택합니다.  
+3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)** 를 선택합니다.  
   
 4.  **데이터베이스** 드롭다운 목록에서 **msdb**를 선택합니다.  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  **단계 이름** 입력란에 **Copy Database Mail Log**를 입력합니다.  
   
-3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)**를 선택합니다.  
+3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)** 를 선택합니다.  
   
 4.  **데이터베이스** 드롭다운 목록에서 **msdb**를 선택합니다.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  **단계 이름** 입력란에 **Remove rows from Database Mail**을 입력합니다.  
   
-3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)**를 선택합니다.  
+3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)** 를 선택합니다.  
   
 4.  **데이터베이스** 드롭다운 목록에서 **msdb**를 선택합니다.  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  **단계 이름** 입력란에 **Remove rows from Database Mail event log**를 입력합니다.  
   
-3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)**를 선택합니다.  
+3.  **유형** 드롭다운 목록에서 **Transact-SQL 스크립트(T-SQL)** 를 선택합니다.  
   
 4.  **명령** 입력란에 다음 문을 입력하여 현재 달보다 이전인 행을 데이터베이스 메일 이벤트 로그에서 제거합니다.  
   
@@ -215,7 +215,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  **빈도** 영역에서 정기적으로 작업을 실행할 옵션을 선택합니다(예: 매월 한 번).  
   
-6.  **일별 빈도** 영역에서 **한 번 수행 - \<시간>**을(를) 선택합니다.  
+6.  **일별 빈도** 영역에서 **한 번 수행 - \<시간>** 을(를) 선택합니다.  
   
 7.  다른 옵션이 원하는 대로 구성되었는지 확인하고 **확인** 을 눌러 일정을 저장합니다.  
   

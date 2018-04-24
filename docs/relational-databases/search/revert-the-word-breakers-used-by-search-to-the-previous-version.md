@@ -1,28 +1,29 @@
 ---
-title: "검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서"
-ms.custom: 
+title: 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 49069efde39f405aa2c3c67e8951197fa26188d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +173,7 @@ ms.lasthandoff: 02/13/2018
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-7.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+7.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 8.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -201,7 +202,7 @@ ms.lasthandoff: 02/13/2018
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 6.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 02/13/2018
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -317,7 +318,7 @@ ms.lasthandoff: 02/13/2018
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   

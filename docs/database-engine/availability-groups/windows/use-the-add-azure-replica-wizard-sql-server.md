@@ -2,7 +2,7 @@
 title: Azure 복제본 추가 마법사 사용(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66f52afb6c52c426be6cc6470d3e628b4c010a7a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9026c85ff61113ddf1873ac1ec8b3aff223d3b07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Microsoft Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Microsoft Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  
   

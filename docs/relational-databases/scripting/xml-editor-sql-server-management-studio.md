@@ -2,7 +2,7 @@
 title: XML 편집기(SQL Server Management Studio) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -25,11 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b90d35941d80dae9ba0775a859cca3c764008987
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
  XML 디자이너는 XML 파일, XML 스키마 및 데이터 집합 작업에 다음 세 가지 뷰(또는 모드)를 제공합니다.  
   
-|보기|설명|지원되는 파일 형식|  
+|보기|Description|지원되는 파일 형식|  
 |----------|-----------------|--------------------------|  
 |**스키마**|XML 스키마 및 ADO.NET 데이터 집합을 시각적으로 만들고 수정할 때 사용|.xsd|  
 |**데이터**|구조화된 데이터 표에서 XML 데이터 파일을 시각적으로 수정할 때 사용|.xml|  

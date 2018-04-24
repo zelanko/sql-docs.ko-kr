@@ -1,34 +1,35 @@
 ---
-title: "Exchange Spill 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Exchange Spill 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9b8847a3bbbbeb85a3b27d8bd225eb8eb96bb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
+  **Exchange Spill** 이벤트 클래스는 병렬 쿼리 계획의 통신 버퍼가 **tempdb** 데이터베이스에 임시적으로 기록되었음을 나타냅니다. 이는 매우 드물게 발생하며 쿼리 계획에 다중 범위 검색이 있는 경우에만 발생합니다.  
   
  일반적으로 이러한 다중 범위 검색은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 BETWEEN 연산자가 많이 사용되었을 때 발생하며 각 BETWEEN 연산자는 테이블 또는 인덱스에서 행 범위를 선택합니다. 또는 (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120)과 같은 식을 사용하여 다중 범위를 가져올 수도 있습니다. 또한 T.a에 ORDER BY 절이 있거나 계획 내의 반복자가 정렬된 튜플을 소비해야 하는 경우 쿼리 계획에서 이러한 범위가 순서대로 검색되어야 합니다.  
   

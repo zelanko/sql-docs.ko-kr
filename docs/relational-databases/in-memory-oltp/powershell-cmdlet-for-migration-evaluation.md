@@ -1,32 +1,33 @@
 ---
-title: "마이그레이션 평가용 PowerShell cmdlet | Microsoft 문서"
-ms.custom: 
+title: 마이그레이션 평가용 PowerShell cmdlet | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63f5604c01bba64b75c51908840b8b9650ed03d2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7e6f051e918e96e2d7e5c4db951b1b4ea9ed23c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
+  Save-SqlMigrationReport cmdlet은 SQL Server 데이터베이스에서 여러 개체의 마이그레이션 적합성을 평가하는 도구입니다. 현재 이 도구에서는 메모리 내 OLTP에 대한 마이그레이션 적합성만 평가할 수 있습니다. 이 cmdlet은 관리자 권한 Windows PowerShell 환경과 sqlps에서 모두 실행할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

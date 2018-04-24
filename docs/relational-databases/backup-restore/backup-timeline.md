@@ -1,16 +1,16 @@
 ---
-title: "백업 시간대 | Microsoft 문서"
-ms.custom: 
+title: 백업 시간대 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.POINTINTIMERESTORE.F1
@@ -18,19 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5281d07e90a8163ec02392c7f52f04d1aa949959
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-timeline"></a>백업 시간대
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **백업 시간대** 대화 상자를 사용하여 데이터베이스를 지정 시간으로 복원할 백업을 찾고 지정할 수 있습니다. **데이터베이스 복원(일반 페이지)** 창에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스할 수 있습니다. 이 대화 상자에서 데이터베이스에 대해 수행된 복원 작업의 시간대를 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **백업 시간대** 대화 상자를 사용하여 데이터베이스를 지정 시간으로 복원할 백업을 찾고 지정할 수 있습니다. **데이터베이스 복원(일반 페이지)** 창에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스할 수 있습니다. 이 대화 상자에서 데이터베이스에 대해 수행된 복원 작업의 시간대를 확인할 수 있습니다.  
   
  데이터베이스 복구 관리자는 해당 시점에 복원하는 데 필요한 백업만 선택되도록 합니다. 이러한 선택된 백업은 복원 작업에 필요한 권장 복원 계획을 구성합니다. 선택된 백업만 사용해야 합니다. 데이터베이스 복구 관리자에 대한 자세한 내용은 [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.  
   

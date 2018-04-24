@@ -1,35 +1,36 @@
 ---
-title: "저장 프로시저(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: 
+title: 저장 프로시저(데이터베이스 엔진) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3792d9ef087c2e8dce4dfbceed1a1a4d500440c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3923972ec113d0f7f1b5906eeab6d1c85f04d0f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 저장 프로시저는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 그룹이거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조입니다. 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 구문과 유사합니다.  
   
 -   입력 매개 변수를 받아 여러 값을 출력 매개 변수의 형태로 호출하는 프로그램에 반환합니다.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/03/2018
  시스템  
  시스템 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함됩니다. 이러한 프로시저는 물리적으로 **Resource** 데이터베이스에 저장되지만 논리적으로는 모든 시스템 정의 데이터베이스와 사용자 정의 데이터베이스의 **sys** 스키마에 표시됩니다. 또한 **msdb** 데이터베이스에도 **dbo** 스키마에 경고 및 작업을 예약하는 데 사용되는 시스템 저장 프로시저가 있습니다. 시스템 프로시저는 **sp_** 접두사로 시작하므로 사용자 정의 프로시저의 이름을 지정할 때 이 접두사를 사용하지 않는 것이 좋습니다. 시스템 저장 프로시저의 전체 목록은 [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)를 참조하세요.  
   
  확장 사용자 정의  
  확장 프로시저를 사용하면 C와 같은 프로그래밍 언어로 외부 루틴을 작성할 수 있습니다. 이러한 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동적으로 로드 및 실행할 수 있는 DLL입니다.  

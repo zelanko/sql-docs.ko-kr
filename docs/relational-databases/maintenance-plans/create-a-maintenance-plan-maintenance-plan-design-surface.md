@@ -2,7 +2,7 @@
 title: 유지 관리 계획 만들기(유지 관리 계획 디자인 화면) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/10/2018
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> 유지 관리 계획 디자인 화면 사용  
@@ -207,7 +207,7 @@ ms.lasthandoff: 04/10/2018
   
     3.  **연결 속성** 대화 상자의 **연결 이름** 상자에 만들려는 연결의 이름을 입력합니다.  
   
-    4.  **SQL Server 데이터에 연결하려면 다음을 지정하세요.**의 **서버 이름 선택 또는 입력** 상자에 사용하려는 SQL Server의 이름을 입력하거나 줄임표 **(…)** 를 클릭하고 **SQL Server** 대화 상자에서 서버를 선택합니다. **SQL Server** 대화 상자에서 서버를 선택하는 경우 **확인**을 클릭합니다.  
+    4.  **SQL Server 데이터에 연결하려면 다음을 지정하세요.** 의 **서버 이름 선택 또는 입력** 상자에 사용하려는 SQL Server의 이름을 입력하거나 줄임표 **(…)** 를 클릭하고 **SQL Server** 대화 상자에서 서버를 선택합니다. **SQL Server** 대화 상자에서 서버를 선택하는 경우 **확인**을 클릭합니다.  
   
     5.  **서버 로그온 정보 입력**에서 **Windows NT 통합 보안 사용** 또는 **특정 사용자 이름 및 암호 사용**을 선택합니다. 특정 사용자 이름 및 암호를 사용하도록 선택한 경우 **사용자 이름** 및 **암호** 상자에 각각 해당 정보를 입력합니다.  
   

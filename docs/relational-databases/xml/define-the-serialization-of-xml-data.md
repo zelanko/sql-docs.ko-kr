@@ -1,16 +1,16 @@
 ---
-title: "XML 데이터 직렬화 정의 | Microsoft 문서"
-ms.custom: 
+title: XML 데이터 직렬화 정의 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - entitization rules [XML in SQL Server]
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02ae370490f638a0ad02d5539473c61c6c89b2b3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6aeca4153be0134cccb20e3d2a46df996fc2e78a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  
+  xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  
   
 ## <a name="serialization-encoding"></a>직렬화 인코딩  
  SQL 대상 유형이 VARBINARY인 경우 결과는 UTF-16 바이트 순서 표시가 앞에 표시되어 있지만 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  

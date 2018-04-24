@@ -1,30 +1,31 @@
 ---
-title: "쿼리 저장소 사용 시나리오 | Microsoft 문서"
-ms.custom: 
+title: 쿼리 저장소 사용 시나리오 | Microsoft 문서
+ms.custom: ''
 ms.date: 02/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0484bb78d863bbbbbb9a2ea096c858c6e3f06af
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 77edfff83e84ba0e5d54e9fc7ab1242be39a46c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   
 -   A/B 테스트  
   
--   최신 버전으로 업그레이드하는 동안 성능 안정성 유지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
   
 -   임시 워크로드 식별 및 개선  
   

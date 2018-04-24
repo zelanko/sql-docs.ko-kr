@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 보안 설정 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 보안 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 07ab7d7c420d1b0c9809f58476d2bf8f6b4b0260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [웹 사이트에서](http://go.microsoft.com/fwlink/?LinkID=31629) 보안에 대한 자세한 정보를 확인할 수 있습니다. 여기에는 최선의 구현 방법 안내와 보안 검사 목록도 포함되어 있습니다. 이 사이트에는 최신 서비스 팩 정보 및 다운로드도 포함되어 있습니다.  
   

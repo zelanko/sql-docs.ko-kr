@@ -2,7 +2,7 @@
 title: 기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -19,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e863ae549ad388a3e10d6d0bfd667602ff2572d
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c2acd43d2aa4a36fd29d518878169dc03f30dec5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/06/2018
   
     2.  이전 단계에서 확인한 각 SQL 추적 이벤트 클래스에 대해 해당하는 확장 이벤트의 이벤트 이름을 찾습니다. 해당하는 이벤트 이름을 모르면 [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)항목에 나오는 쿼리를 사용합니다.  
   
-    3.  다음 쿼리를 사용하여 이전 단계에서 확인한 이벤트에 사용할 올바른 데이터 필드를 확인합니다. 이 쿼리는 확장 이벤트 데이터 필드를 "event_field" 열에 표시합니다. 쿼리에서 *<event_name>*을 이전 단계에서 지정한 이벤트의 이름으로 바꿉니다.  
+    3.  다음 쿼리를 사용하여 이전 단계에서 확인한 이벤트에 사용할 올바른 데이터 필드를 확인합니다. 이 쿼리는 확장 이벤트 데이터 필드를 "event_field" 열에 표시합니다. 쿼리에서 *<event_name>* 을 이전 단계에서 지정한 이벤트의 이름으로 바꿉니다.  
   
         ```  
         SELECT xp.name package_name, xe.name event_name  

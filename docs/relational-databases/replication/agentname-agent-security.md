@@ -1,30 +1,30 @@
 ---
-title: "&lt;AgentName&gt; 에이전트 보안 | Microsoft 문서"
-ms.custom: 
+title: '&lt;AgentName&gt; 에이전트 보안 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b03aa6772f2432a46dbf1b24386c08f05b93400
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: dfb4db1db00e9ed732995aa57c303831153963c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt; 에이전트 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 03/08/2018
  **배포자에 대한 연결**  
  트랜잭션 및 스냅숏 복제에 대해 표시됩니다. 배포자에 대한 연결이 설정되는 컨텍스트입니다. 로컬 연결은 항상 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정됩니다.  
   
--   밀어넣기 구독의 경우 로컬 연결은 배포자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'**을 표시합니다.  
+-   밀어넣기 구독의 경우 로컬 연결은 배포자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
   
 -   끌어오기 구독의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트로 연결할 수도 있습니다. 이 필드는 **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 중 하나를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
   
  **게시자 및 배포자에 연결**  
  병합 복제에 대해 표시됩니다. 게시자 및 배포자에 대한 연결이 설정되는 컨텍스트입니다. 로컬 연결은 항상 에이전트가 실행되는 Windows 계정의 컨텍스트를 사용하여 설정됩니다.  
   
--   밀어넣기 구독의 경우 로컬 연결은 게시자 및 배포자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'**을 표시합니다.  
+-   밀어넣기 구독의 경우 로컬 연결은 게시자 및 배포자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
   
 -   끌어오기 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트로 연결할 수도 있습니다. 이 필드는 **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 중 하나를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
   
  **구독자에 대한 연결**  
  구독자에 대한 연결이 설정되는 컨텍스트입니다. 로컬 연결은 항상 에이전트가 실행되는 Windows 계정의 컨텍스트를 사용하여 설정됩니다.  
   
--   끌어오기 구독의 경우 로컬 연결은 구독자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'**을 표시합니다.  
+-   끌어오기 구독의 경우 로컬 연결은 구독자에 대한 연결이므로 이 필드는 밀어넣기 구독에 대해 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
   
 -   밀어넣기 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트로 연결할 수도 있습니다. 이 필드는 **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 중 하나를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
   

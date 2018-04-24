@@ -1,19 +1,19 @@
 ---
-title: "서버 구성 옵션(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 서버 구성 옵션(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "서버 구성(SQL Server)"
+- 서버 구성(SQL Server)
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
 - configuration options [SQL Server], when take effect
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 
+caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4bf8c88d19d6b23f1cae11cc32c048e50a2d6b2f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5311cde76a56b1da478462aa98a270af5143ed13
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/03/2018
     |[affinity I/O mask](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) (A, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64비트 버전에만 해당)|-2147483648|2147483647|0|  
     |[affinity mask](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md)(A, RR), 64비트 버전에만 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) (A, RR), 64비트 버전에만 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작하면 1로 변경됩니다. 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 자동으로 시작되도록 설정하는 경우 기본값은 0입니다.|  
     |[allow updates](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) (구식. 사용하지 마십시오. 사용할 경우 다시 구성하는 동안 오류 발생)|0|1|0|  
     |[자동 soft-NUMA 사용 안 함](http://msdn.microsoft.com/library/ms345357.aspx)|0|1|0|  

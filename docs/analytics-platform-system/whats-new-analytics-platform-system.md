@@ -1,23 +1,19 @@
 ---
-title: 분석 플랫폼 시스템 확장 데이터 웨어하우스의에서 새로운 기능
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 분석 플랫폼 시스템 확장 데이터 웨어하우스의에서 새로운 기능 | Microsoft Docs
 description: Microsoft® 분석 플랫폼 시스템, MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 확장 온-프레미스 어플라이언스의에서 새로운 기능을 참조 하십시오.
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스 분석 플랫폼 시스템 2016의 새로운 기능
 새로운 기능에서 Microsoft® Analytics Platform System (APS) 2016 최신 어플라이언스 업데이트 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 확장 온-프레미스 어플라이언스에 대 한 참조입니다. 
@@ -40,7 +36,7 @@ APS 2016 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가
 
 - [Varchar (max)][], [nvarchar (max)][] 및 [varbinary (max)][]합니다. 이러한 LOB 데이터 형식이 있는 최대 크기는 2GB입니다. 로드 하는 이러한 개체가 사용 [bcp 유틸리티][]합니다. Polybase 및 dwloader 지원 하지 않습니다 현재 이러한 데이터 형식입니다. 
 - [SYSNAME][]
-- [UNIQUEIDENTIFIER][]
+- [고유 식별자][]
 - [숫자][] 및 DECIMAL 데이터 형식입니다.
 
 ### <a name="window-functions"></a>창 함수
@@ -59,7 +55,7 @@ APS 2016 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가
 ### <a name="additional-functions"></a>추가 기능
 
 - [NEWID()][]
-- [RAND()][]
+- [RAND)][]
 
 ## <a name="polybasehadoop-enhancements"></a>PolyBase Hadoop/향상 된 기능
 
@@ -104,7 +100,7 @@ APS 2016으로 업그레이드 하거나 설치는 빠르고 이전 버전 보�
 [넓은 테이블]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
 [bcp 유틸리티]:https://msdn.microsoft.com/library/ms162802.aspx
-[UNIQUEIDENTIFIER]:https://msdn.microsoft.com/library/ms187942.aspx
+[고유 식별자]:https://msdn.microsoft.com/library/ms187942.aspx
 [숫자]:https://msdn.microsoft.com/library/ms187746.aspx
 [ROWS 또는 RANGE]:https://msdn.microsoft.com/library/ms189461.aspx
 [FIRST_VALUE]:https://msdn.microsoft.com/library/hh213018.aspx
@@ -115,7 +111,7 @@ APS 2016으로 업그레이드 하거나 설치는 빠르고 이전 버전 보�
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
 [NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
-[RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
+[RAND)]:https://msdn.microsoft.com/library/ms177610.aspx
 
 
   

@@ -1,36 +1,36 @@
 ---
-title: "관리 데이터 웨어하우스 | Microsoft 문서"
-ms.custom: 
+title: 관리 데이터 웨어하우스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a5184f3e59dc3e592b73696b3ebaba994a53211c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
+  관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
   
  데이터 수집기 인프라는 데이터베이스 관리자가 정의하는 보존 정책을 구현하기 위해 필요한 작업 및 유지 관리 계획을 정의합니다.  
   

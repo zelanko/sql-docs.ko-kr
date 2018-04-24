@@ -2,7 +2,7 @@
 title: Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업 | Microsoft 문서
 ms.custom: ''
 ms.date: 05/23/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d010a0b7ea33cdda98c62c07d6d52c61d01051cb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 68b0363dd12911281565e63e2d62a0b6767a23e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/06/2018
   
  **다운로드**  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**로 이동하세요.  
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
 -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
   

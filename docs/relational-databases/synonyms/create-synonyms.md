@@ -1,16 +1,16 @@
 ---
-title: "동의어 만들기 | Microsoft 문서"
-ms.custom: 
+title: 동의어 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: synonyms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - sql13.swb.synonym.general.f1
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: 
+caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7eebe7f6edfc447f36ea4256e392822f288e3acb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9f76e52ed824dd0d55e873183577b90941a54db0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-synonyms"></a>동의어 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동의어를 만드는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동의어를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 02/12/2018
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 동의어...**를 클릭합니다.  
+2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 동의어...** 를 클릭합니다.  
   
 3.  **새 동의어 추가** 대화 상자에 다음 정보를 입력합니다.  
   

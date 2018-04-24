@@ -2,7 +2,7 @@
 title: SQL Server 감사 동작 그룹 및 동작 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: security
@@ -29,14 +29,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a6dbc0a4fd646a93f6b0934d3297579e7e44398
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7676c207da04ade84dad14018c7b5c984dd0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit는 0개 이상의 감사 동작 항목으로 구성되어 있습니다. 이러한 감사 동작 항목은 동작 그룹(예: Server_Object_Change_Group) 또는 개별 동작(예: 테이블에 대한 SELECT 작업)일 수 있습니다.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서는 서버 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
   
-|동작 그룹 이름|설명|  
+|동작 그룹 이름|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|응용 프로그램 역할의 암호가 변경될 때마다 발생하는 이벤트입니다. [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)와 동일합니다.|  
 |AUDIT_CHANGE_GROUP|모든 감사가 생성, 수정 또는 삭제되거나 모든 감사 사양이 생성, 수정 또는 삭제될 때마다 발생하는 이벤트입니다. 감사에 대한 모든 변경 내용은 자체적으로 감사됩니다. [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)와 동일합니다.|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|서버 범위의 사용 권한(예: 로그인 생성)에 대해 GRANT, REVOKE 또는 DENY가 실행되면 발생하는 이벤트입니다. [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)와 동일합니다.|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|서버 보안 주체가 생성, 변경 또는 삭제되면 발생하는 이벤트입니다. [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)와 동일합니다.<br /><br /> 보안 주체가 sp_defaultdb 또는 sp_defaultlanguage 저장 프로시저나 ALTER LOGIN 문을 실행하면 발생하는 이벤트입니다. [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)와 동일합니다.<br /><br /> sp_addlogin 및 sp_droplogin 저장 프로시저에 대해 발생하는 이벤트입니다. 또한 [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)와 동일합니다.<br /><br /> sp_grantlogin 또는 sp_revokelogin 저장 프로시저에 대해 발생하는 이벤트입니다. [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)와 동일합니다.|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|서버 범위 내에 EXECUTE AS \<login>과 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)와 동일합니다.|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|고정 서버 역할에서 로그인이 추가 또는 제거될 때마다 발생하는 이벤트입니다. 이 이벤트는 sp_addsrvrolemember 및 sp_dropsrvrolemember 저장 프로시저에 대해 발생합니다. [Audit Add Login to Server Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)와 동일합니다.|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|고정 서버 역할에서 로그인이 추가 또는 제거될 때마다 발생하는 이벤트입니다. 이 이벤트는 sp_addsrvrolemember 및 sp_dropsrvrolemember 저장 프로시저에 대해 발생합니다. [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)와 동일합니다.|  
 |SERVER_STATE_CHANGE_GROUP|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 상태가 수정되면 발생하는 이벤트입니다. [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)와 동일합니다.|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|보안 주체가 포함된 데이터베이스에 성공적으로 로그인했음을 나타냅니다. Audit Successful Database Authentication 이벤트 클래스와 동일합니다.|  
 |SUCCESSFUL_LOGIN_GROUP|보안 주체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 성공적으로 로그인했음을 나타냅니다. 이 클래스의 이벤트는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다. [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md)와 동일합니다.|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서는 데이터베이스 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
   
-|동작 그룹 이름|설명|  
+|동작 그룹 이름|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|응용 프로그램 역할의 암호가 변경될 때마다 발생하는 이벤트입니다. [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)와 동일합니다.|  
 |AUDIT_CHANGE_GROUP|모든 감사가 생성, 수정 또는 삭제되거나 모든 감사 사양이 생성, 수정 또는 삭제될 때마다 발생하는 이벤트입니다. 감사에 대한 모든 변경 내용은 자체적으로 감사됩니다. [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)와 동일합니다.|  
@@ -163,13 +164,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="database-level-audit-actions"></a>데이터베이스 수준 감사 동작  
  데이터베이스 수준 동작은 데이터베이스 스키마 및 스키마 개체(예: 테이블, 뷰, 저장 프로시저, 함수, 확장 저장 프로시저, 큐, 동의어)에 대한 특정 동작을 직접 감사할 수 있습니다. 유형, XML 스키마 컬렉션, 데이터베이스 및 스키마는 감사되지 않습니다. 스키마 개체 감사는 스키마 및 데이터베이스에 구성될 수 있습니다. 이 경우 지정된 스키마 또는 데이터베이스에 포함된 모든 스키마 개체의 이벤트가 감사됩니다. 다음 표에서는 데이터베이스 수준 감사 동작에 대해 설명합니다.  
   
-|작업|설명|  
+|작업|Description|  
 |------------|-----------------|  
 |SELECT|SELECT를 실행할 때마다 발생하는 이벤트입니다.|  
 |UPDATE|UPDATE를 실행할 때마다 발생하는 이벤트입니다.|  
 |INSERT|INSERT를 실행할 때마다 발생하는 이벤트입니다.|  
-|DELETE|DELETE를 실행할 때마다 발생하는 이벤트입니다.|  
-|EXECUTE|EXECUTE를 실행할 때마다 발생하는 이벤트입니다.|  
+|Delete|DELETE를 실행할 때마다 발생하는 이벤트입니다.|  
+|CREATE 문을 실행하기 전에|EXECUTE를 실행할 때마다 발생하는 이벤트입니다.|  
 |RECEIVE|RECEIVE를 실행할 때마다 발생하는 이벤트입니다.|  
 |REFERENCES|REFERENCES 사용 권한을 확인할 때마다 발생하는 이벤트입니다.|  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="audit-level-audit-action-groups"></a>감사 수준 감사 동작 그룹  
  감사 프로세스의 동작을 감사할 수도 있습니다. 이는 서버 범위 또는 데이터베이스 범위일 수 있습니다. 데이터베이스 범위에서는 데이터베이스 감사 사양에 대해서만 발생합니다. 다음 표에서는 감사 수준 감사 동작 그룹에 대해 설명합니다.  
   
-|동작 그룹 이름|설명|  
+|동작 그룹 이름|Description|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|다음 명령 중 하나를 실행할 때마다 발생하는 이벤트입니다.<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

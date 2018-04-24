@@ -1,32 +1,32 @@
 ---
-title: "병합 아티클 해결 프로그램 지정 | Microsoft 문서"
-ms.custom: 
+title: 병합 아티클 해결 프로그램 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df23cff2cc1aab86205fabe0f81ff9aa25b0645
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 49f738f95cc01297d6df28d7626a138489ad8f95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-merge-article-resolver"></a>병합 아티클 해결 프로그램 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  **아티클 속성 - \<Article>** 페이지에서 **해결 프로그램** 탭을 클릭합니다.  
   
-4.  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**을 선택하고 목록에서 해결 프로그램을 클릭합니다.  
+4.  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)** 을 선택하고 목록에서 해결 프로그램을 클릭합니다.  
   
 5.  해결 프로그램에 열 이름과 같은 입력값이 필요하면 **해결 프로그램에 필요한 정보 입력** 입력란에 값을 지정합니다.  
   

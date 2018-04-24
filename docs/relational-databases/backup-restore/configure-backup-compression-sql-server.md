@@ -1,31 +1,32 @@
 ---
-title: "백업 압축 구성(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 백업 압축 구성(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43f1fbed7a953bf8989764c9c835a047fb65d4c2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 551ec9e73f1844edfdc73af4486f46c5b41af168
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-backup-compression-sql-server"></a>백업 압축 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 설치 시 백업 압축은 기본적으로 설정되지 않습니다. 백업 압축의 기본 동작은 **백업 압축 기본값** 옵션 서버 수준 구성 옵션에 의해 정의됩니다. 그러나 단일 백업을 만들거나 일련의 일상적인 백업을 예약할 때 서버 수준 기본값을 재정의할 수 있습니다. 서버 수준 기본값을 변경하려면 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  설치 시 백업 압축은 기본적으로 설정되지 않습니다. 백업 압축의 기본 동작은 **백업 압축 기본값** 옵션 서버 수준 구성 옵션에 의해 정의됩니다. 그러나 단일 백업을 만들거나 일련의 일상적인 백업을 예약할 때 서버 수준 기본값을 재정의할 수 있습니다. 서버 수준 기본값을 변경하려면 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="override-the-backup-compression-default"></a>백업 압축 기본값 재정의  
  단일 백업, 백업 작업 또는 로그 전달 구성에 대한 백업 압축 동작을 변경할 수 있습니다.  

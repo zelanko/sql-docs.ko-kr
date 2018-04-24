@@ -2,7 +2,7 @@
 title: 포괄 열을 사용하여 인덱스 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -28,11 +28,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3f9d4311ad0cf14254e2b5f4efe5930b1a74f51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -89,17 +90,17 @@ ms.lasthandoff: 04/10/2018
   
 3.  더하기 기호를 클릭하여 키가 아닌 열이 있는 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...**를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 키 열** 탭 아래에서 **추가...**를 클릭합니다.  
+6.  **인덱스 키 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
 7.  *****table_name에서 열 선택* 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
-9. **포괄 열** 탭 아래에서 **추가...**를 클릭합니다.  
+9. **포괄 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
 10. *****table_name에서 열 선택* 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   

@@ -2,7 +2,7 @@
 title: 정책 기반 관리 정책 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: performance-monitor
@@ -15,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6495828ee76e490d2b7da7bfbe6bf4d2c4799da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7030bb175e910dacd264fc4346028d423063bd57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-policy-based-management-policy"></a>정책 기반 관리 정책 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 정책 기반 관리 정책을 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/18/2018
   
 11. 정책을 대상 유형의 하위 집합으로 제한하려면 **서버 제한** 상자에 있는 제한 조건 중에서 선택하거나 새 조건을 만듭니다.  
   
-     **새 정책 만들기** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하십시오.  
+     **새 정책 만들기** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 또는 [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하십시오.  
   
 12. 완료되면 **확인**을 클릭합니다.  
   

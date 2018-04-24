@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, General Statistics 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, General Statistics 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d3c24bb7875975221d3af721fe29d6dd3b0433
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1fc2e9b5685aaffd290172eb1d844e6504793d97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, General Statistics 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **SQLServer:General Statistics** 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **의** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 카운터를 설명합니다.  
   

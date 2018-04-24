@@ -1,16 +1,16 @@
 ---
-title: "유지 관리 계획 | Microsoft 문서"
-ms.custom: 
+title: 유지 관리 계획 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.AG.MAINTPLAN.LEGACY.F1
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fb163f036bd2da2eddd698c0e8cf5a21add50897
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 유지 관리 계획은 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 데 필요한 태스크의 워크플로를 만듭니다. 유지 관리 계획 마법사에서도 중요한 유지 관리 계획을 만들지만 이러한 계획을 수동으로 만들면 유연성을 향상시킬 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  유지 관리 계획은 데이터베이스를 최적화하고 정기적으로 백업하며 불일치를 제거하는 데 필요한 태스크의 워크플로를 만듭니다. 유지 관리 계획 마법사에서도 중요한 유지 관리 계획을 만들지만 이러한 계획을 수동으로 만들면 유연성을 향상시킬 수 있습니다.  
   
 ## <a name="benefits-of-maintenance-plans"></a>유지 관리 계획의 이점  
  [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]의 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 만듭니다. 유지 관리 계획은 예약된 간격으로 수동 또는 자동으로 실행될 수 있습니다.  

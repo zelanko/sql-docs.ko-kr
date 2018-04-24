@@ -1,33 +1,35 @@
 ---
-title: "SQL 삽입 | Microsoft 문서"
-ms.custom: 
+title: SQL 삽입 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-security
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fc38f900f84abba5f1e5efab47772703f246317
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-injection"></a>SQL 인젝션
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 SQL Server에 전달되는 방식의 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 SQL Server에 전달되는 방식의 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
   
 ## <a name="how-sql-injection-works"></a>SQL 삽입의 작동 방식  
  기본적으로 SQL 삽입에서는 SQL 명령과 연결되어 실행되는 사용자 입력 변수에 코드를 직접 삽입합니다. 간접적인 공격에서는 테이블에 저장할 문자열에 또는 메타데이터로 악의적인 코드를 주입합니다. 이후에 저장된 문자열이 동적 SQL 명령에 연결되고 악성 코드가 실행됩니다.  

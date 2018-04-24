@@ -1,16 +1,16 @@
 ---
-title: "유지 관리 계획 마법사 사용 | Microsoft 문서"
+title: 유지 관리 계획 마법사 사용 | Microsoft 문서
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ag.maintwiz.integrity.f1
@@ -37,19 +37,20 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e0aa3d178355e9b50ad381f3ef3517aabce8c78f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
     
  
 ##  <a name="Restrictions"></a> 제한 사항  
@@ -116,11 +117,11 @@ ms.lasthandoff: 01/18/2018
   
                 -   **주별**을 선택하는 경우 **매** 상자에 작업 일정을 반복하는 주 수를 입력합니다. 작업 일정을 실행할 요일을 선택합니다.  
   
-                -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)**를 선택합니다.  
+                -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)** 를 선택합니다.  
   
-                    -   **매(Day)**를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                    -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                    -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                    -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
             2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   

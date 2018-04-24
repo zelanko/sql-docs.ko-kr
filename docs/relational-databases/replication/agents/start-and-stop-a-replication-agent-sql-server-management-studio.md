@@ -1,31 +1,31 @@
 ---
-title: "복제 에이전트 시작 및 중지(SQL Server Management Studio) | Microsoft 문서"
-ms.custom: 
+title: 복제 에이전트 시작 및 중지(SQL Server Management Studio) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication], stopping
 - agents [SQL Server replication], starting
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9472ec9424a92fe10b551ae793995928d2d76dfc
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 29fd1b9771fc09c0c0d9c834a0728045a8c8327c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **SQL Server 에이전트** 폴더를 확장한 다음 **작업** 폴더를 확장합니다.  
   
-3.  에이전트에 대한 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다. 큐 판독기 에이전트에 대한 작업 이름의 형식은 **[\<배포자>].\<정수>**입니다.  
+3.  에이전트에 대한 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다. 큐 판독기 에이전트에 대한 작업 이름의 형식은 **[\<배포자>].\<정수>** 입니다.  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>복제 모니터에서 스냅숏 에이전트, 로그 판독기 에이전트 또는 큐 판독기 에이전트를 시작하고 중지하려면  
   

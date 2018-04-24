@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_2575 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_2575 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 2575 (Database Engine error)
 ms.assetid: 92dfe449-a122-4730-942b-e1d319862d20
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 806a9086dcbe4ebbe229293a90e40769fa2ef3b3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bd2a4d16bb09574df83622675d1889074df95e7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver2575"></a>MSSQLSERVER_2575
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,6 @@ REPAIR 절 중 하나를 사용하여 DBCC CHECKDB를 실행해도 문제가 해
 #### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
 DBCC에서 인덱스를 다시 작성합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [DBCC CHECKDB&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

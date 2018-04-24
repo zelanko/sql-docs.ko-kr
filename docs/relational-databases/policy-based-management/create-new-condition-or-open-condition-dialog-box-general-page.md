@@ -1,33 +1,34 @@
 ---
-title: "새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지 | Microsoft 문서"
-ms.custom: 
+title: 새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69116441118315b2fa9bcf92ab5b20fcc725b73e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c0f265fdc65f405f9adced865732bee6c812695d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 정책 기반 관리 조건을 만들거나 변경할 수 있습니다. 조건은 패싯과 관련하여 정책 기반 관리로 관리되는 대상의 허용되는 상태 집합을 지정하는 부울 식입니다. **식/필드** 상자에서 선택할 수 있는 속성은 사용되는 패싯에 따라 달라집니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 대화 상자를 사용하여 정책 기반 관리 조건을 만들거나 변경할 수 있습니다. 조건은 패싯과 관련하여 정책 기반 관리로 관리되는 대상의 허용되는 상태 집합을 지정하는 부울 식입니다. **식/필드** 상자에서 선택할 수 있는 속성은 사용되는 패싯에 따라 달라집니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
 ## <a name="options"></a>변수  
  **이름**  

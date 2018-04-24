@@ -1,16 +1,16 @@
 ---
-title: "밀어넣기 구독 만들기 | Microsoft 문서"
-ms.custom: 
+title: 밀어넣기 구독 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5bf9d80a888af7af607fd8d9335213c4eb5796b3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 4a975a8fe4146f77c4c99a47f6fd0ca42280fc74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
   
-4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<SQL Server 게시자 찾기>** 또는 **\<Oracle 게시자 찾기>**를 선택합니다.  
+4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<SQL Server 게시자 찾기>** 또는 **\<Oracle 게시자 찾기>** 를 선택합니다.  
   
 5.  **서버에 연결** 대화 상자에서 게시자에 연결합니다.  
   
@@ -199,7 +199,7 @@ ms.lasthandoff: 03/08/2018
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출합니다.  
   
-    > **중요!!**원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    > **중요!!** 원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 밀어넣기 구독을 만들려면  
   

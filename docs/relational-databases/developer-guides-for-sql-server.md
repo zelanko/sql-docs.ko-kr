@@ -1,40 +1,42 @@
 ---
-title: "SQL Server용 개발자 가이드 | Microsoft Docs"
+title: SQL Server용 개발자 가이드 | Microsoft Docs
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eac97b7988a9e929578863e97fad9ecd8c20070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5275c3bfb72c654934b05a74d73f924482287152
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server용 개발자 가이드
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 프로그래밍 모델 및 인터페이스를 사용하여 사용자 지정 코드를 통해 거의 모든 SQL Server 기능을 통합합니다. 각 기능 영역에는 데이터 수집, 데이터 액세스, 서버 관리 또는 데이터 시각화에 사용되는 기본 API 및 관리되는 API가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  프로그래밍 모델 및 인터페이스를 사용하여 사용자 지정 코드를 통해 거의 모든 SQL Server 기능을 통합합니다. 각 기능 영역에는 데이터 수집, 데이터 액세스, 서버 관리 또는 데이터 시각화에 사용되는 기본 API 및 관리되는 API가 포함되어 있습니다.  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition(무료)
 
 - [**SQL Server Developer Edition 다운로드**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 
-- **SSMS(SQL Server Management Studio)**는 SQL Server 작업을 위한 무료 통합 환경입니다. 업데이트된 버전을 거의 매월 발표하고 있으니 최신 버전을 보려면 [SSMS 다운로드 페이지](../ssms/download-sql-server-management-studio-ssms.md)를 방문하세요.
+- **SSMS(SQL Server Management Studio)** 는 SQL Server 작업을 위한 무료 통합 환경입니다. 업데이트된 버전을 거의 매월 발표하고 있으니 최신 버전을 보려면 [SSMS 다운로드 페이지](../ssms/download-sql-server-management-studio-ssms.md)를 방문하세요.
 
-- **SSDT(SQL Server Data Tools)** 또한 무료이며 Visual Studio에 가장 적합합니다. 최신 버전을 보려면 [SSDT 다운로드 페이지](../ssdt/download-sql-server-data-tools-ssdt.md)를 방문하세요. 여기에서 **[Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)**의 체험 버전도 다운로드할 수 있습니다.
+- **SSDT(SQL Server Data Tools)** 또한 무료이며 Visual Studio에 가장 적합합니다. 최신 버전을 보려면 [SSDT 다운로드 페이지](../ssdt/download-sql-server-data-tools-ssdt.md)를 방문하세요. 여기에서 **[Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)** 의 체험 버전도 다운로드할 수 있습니다.
 
   
 ### <a name="programmable-features-and-services"></a>프로그래밍 가능한 기능 및 서비스: 

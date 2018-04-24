@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, Broker TO Statistics 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Broker TO Statistics 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Broker Transmission Object object
 - 'SQL Server: Broker Transmission Object'
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 356fc4a2b894cbcb226678b4aa320c4590002dbb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4ee86ea195bdb12f245777802498b12b0d379ebd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, Broker TO Statistics 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQLServer:Broker TO Statistics 성능 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 상자에서 전송 개체를 요청하는 횟수와 전송 개체가 **tempdb**에 기록되는 빈도에 대한 정보를 보고합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQLServer:Broker TO Statistics 성능 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 상자에서 전송 개체를 요청하는 횟수와 전송 개체가 **tempdb**에 기록되는 빈도에 대한 정보를 보고합니다.  
   
  전송 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 메시지 전송 상태를 기록하고, 메모리에 저장됩니다. 메모리를 늘리기 위해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 정기적으로 비활성 전송 개체의 일괄 처리를 **tempdb**의 작업 테이블에 기록합니다.  
   

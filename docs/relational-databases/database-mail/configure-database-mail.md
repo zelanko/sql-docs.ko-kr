@@ -2,7 +2,7 @@
 title: 데이터베이스 메일 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,17 +47,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
 -   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 04/10/2018
  마법사를 사용할 때마다 **구성 태스크 선택** 페이지를 사용하여 수행할 작업을 지정할 수 있습니다. 마법사를 완료하기 전에 태스크를 취소하고 다른 태스크를 수행하려면 **뒤로** 단추를 눌러 이 페이지로 다시 돌아와 다른 태스크를 선택합니다.  
   
 > [!NOTE]  
->  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?**라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
+>  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
   
  **다음 태스크를 수행하여 데이터베이스 메일 설치**  
  최초로 데이터베이스 메일을 설정하는 데 필요한 모든 태스크를 수행합니다. 이 옵션에는 다른 세 가지 옵션이 모두 포함됩니다.  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **기본 인증**  
  SMTP 서버에 필요한 사용자 이름과 암호를 지정합니다.  
   
- **사용자 이름**  
+ **User name**  
  데이터베이스 메일에서 SMTP 서버에 로그인하는 데 사용하는 사용자 이름을 확인하거나 업데이트합니다. SMTP 서버에 기본 인증이 필요한 경우 사용자 이름은 필수 사항입니다.  
   
  **암호**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail** 은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail** 은 오류를 반환합니다.  
   
- **사용자 이름**  
+ **User name**  
  **msdb** 데이터베이스에서 사용자 또는 역할 이름을 선택합니다.  
   
  **액세스 권한**  

@@ -1,33 +1,33 @@
 ---
-title: "전체 텍스트 검색 | Microsoft 문서"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
+title: 전체 텍스트 검색 | Microsoft 문서
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
+ms.technology: database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다.
   
 ## <a name="basic-tasks"></a>기본 태스크
@@ -139,7 +139,7 @@ ms.lasthandoff: 02/13/2018
 ###  <a name="indexing"></a> 전체 텍스트 인덱싱 프로세스  
  탐색이라고도 하는 전체 텍스트 채우기가 시작되면 전체 텍스트 엔진은 대용량 데이터 일괄 처리를 메모리에 밀어 넣고 필터 데몬 호스트에 알립니다. 호스트가 데이터를 필터링하고 데이터의 단어를 분리하며 변환된 데이터를 반전된 단어 목록으로 변환합니다. 그런 다음 전체 텍스트 검색은 변환된 데이터를 단어 목록에서 끌어오고 데이터를 처리하여 중지 단어를 제거하며 하나의 일괄 처리에 대한 단어 목록을 하나 이상의 반전된 인덱스를 통해 유지합니다.  
   
- 인덱싱 데이터가 **varbinary(max)** 또는 **image** 열에 저장되어 있으면 **IFilter** 인터페이스를 구현하는 필터는 해당 데이터에 지정된 파일 형식(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출합니다. 필터 구성 요소에서 **varbinary(max)**또는 **image** 데이터를 메모리에 밀어넣는 대신 filterdata 폴더에 기록해야 하는 경우도 있습니다.  
+ 인덱싱 데이터가 **varbinary(max)** 또는 **image** 열에 저장되어 있으면 **IFilter** 인터페이스를 구현하는 필터는 해당 데이터에 지정된 파일 형식(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출합니다. 필터 구성 요소에서 **varbinary(max)** 또는 **image** 데이터를 메모리에 밀어넣는 대신 filterdata 폴더에 기록해야 하는 경우도 있습니다.  
   
  수집된 텍스트 데이터는 처리 중에 단어 분리기를 통과하여 텍스트가 개별 토큰 또는 키워드로 분리됩니다. 토큰화에 사용되는 언어는 열 수준에서 지정되거나 필터 구성 요소로 **varbinary(max)**, **image**또는 **xml** 데이터 내에서 식별할 수 있습니다.  
   

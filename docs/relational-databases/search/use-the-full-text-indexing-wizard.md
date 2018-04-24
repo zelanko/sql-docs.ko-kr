@@ -1,16 +1,16 @@
 ---
-title: "전체 텍스트 인덱싱 마법사 사용 | Microsoft Docs"
-ms.custom: 
+title: 전체 텍스트 인덱싱 마법사 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.fulltextindexingwizard.welcome.f1
@@ -26,20 +26,21 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85be544c13310a98863b03d8bd515c5a1990a5ba
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: be8a57c51f67af28d41968255e5296ba7b6966be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SSMS에서 전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
+  SSMS에서 전체 텍스트 인덱싱 마법사는 전체 텍스트 인덱스를 만드는 과정을 단계별로 안내합니다.  
   
 ## <a name="create-a--full-text-index"></a>전체 텍스트 인덱스 만들기 
 

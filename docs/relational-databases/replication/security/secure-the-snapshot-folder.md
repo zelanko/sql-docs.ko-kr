@@ -2,7 +2,7 @@
 title: 스냅숏 폴더 보안 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a811827ab0be4c5a61c5e3b65361e8a82421f38
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 19997da29e8ecbcfb49f03666b09c458f4831948
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/10/2018
 > [!NOTE]  
 >  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
   
- 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\*\<instance>*\MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>*\snapshot)를 지정해야 합니다.  
+ 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\*\<instance>* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
   
  스냅숏 폴더에 대한 액세스 권한을 부여할 때는 폴더가 액세스되는 방법에 따라 권한을 부여해야 합니다. 다음 대화 상자 탭은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003에서 사용됩니다.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/10/2018
   
  FTP를 통해 스냅숏에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)항목의 "FTP 스냅숏 배달" 섹션을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [대체 스냅숏 폴더 위치](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

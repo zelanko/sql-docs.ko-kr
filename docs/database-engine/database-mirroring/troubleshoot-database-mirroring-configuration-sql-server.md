@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 미러링 구성 문제 해결(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 구성 문제 해결(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e61724769df578e030d6b616d74dd34510e4ccee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 데이터베이스 미러링 세션을 설정할 때 발생하는 문제를 해결하는 데 도움이 되는 정보를 제공합니다.  
+  이 항목에서는 데이터베이스 미러링 세션을 설정할 때 발생하는 문제를 해결하는 데 도움이 되는 정보를 제공합니다.  
   
 > [!NOTE]  
 >  [데이터베이스 미러링을 위한 선행 조건](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)을 모두 충족하는지 확인하세요.  

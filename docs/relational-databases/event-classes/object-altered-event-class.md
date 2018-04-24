@@ -1,34 +1,35 @@
 ---
-title: "Object:Altered 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Object:Altered 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21eafbc19f9659ca6fc22cf59c242f0b4857b699
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3266f3c4134c6428e585da49d3648fe537d50ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  
+  Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 응용 프로그램의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  
   
  Object:Altered 이벤트 클래스는 항상 두 이벤트로 발생합니다. 첫 번째 이벤트는 시작 단계를 나타내며 두 번째 이벤트는 롤백 또는 커밋 단계를 나타냅니다.  
   

@@ -1,30 +1,30 @@
 ---
-title: "MSSQL_ENG018752 | Microsoft 문서"
-ms.custom: 
+title: MSSQL_ENG018752 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MSSQL_ENG018752 error
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: beb14577540644925084e9142d3513e422ff6255
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 051333e6680c2f567736786356109ed6445b5650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/08/2018
   
 -   로그 판독기 에이전트를 다시 시작합니다. 자세한 내용은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요.  
   
--   배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작(클러스터에서 오프라인 또는 온라인 상태로 만듦)합니다. 예약된 작업이 다른 **인스턴스에서**sp_repldone **,**sp_replcmds **또는** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행했을 가능성이 있는 경우 해당 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트도 다시 시작합니다. 자세한 내용은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
+-   배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작(클러스터에서 오프라인 또는 온라인 상태로 만듦)합니다. 예약된 작업이 다른 **인스턴스에서**sp_repldone **,** sp_replcmds **또는** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행했을 가능성이 있는 경우 해당 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트도 다시 시작합니다. 자세한 내용은 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)를 참조하세요.  
   
 -   게시 데이터베이스의 게시자에서 [sp_replflush&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)를 실행한 다음 로그 판독기 에이전트를 다시 시작합니다.  
   

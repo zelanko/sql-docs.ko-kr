@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_4104 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_4104 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 4104 (Database Engine error)
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c0cdcfd3336eef5d120c9c73c57f8d744cc70a5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 59d043f6ea73d72940daed4866275354d0891c9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/21/2017
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    또는  
+    로 구분하거나 여러  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 -   식별자에 대해 고유하고 명확하게 정의된 이름을 사용합니다. 이렇게 하면 코드를 보다 쉽게 읽고 유지 관리할 수 있으며 여러 엔터티를 모호하게 참조하는 위험을 최소화할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [MSSQLSERVER_107](~/relational-databases/errors-events/mssqlserver-107-database-engine-error.md)  
 [데이터베이스 식별자](~/relational-databases/databases/database-identifiers.md)  
   

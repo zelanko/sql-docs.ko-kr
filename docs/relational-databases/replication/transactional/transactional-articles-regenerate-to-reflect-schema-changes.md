@@ -1,32 +1,32 @@
 ---
-title: "스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성 | Microsoft 문서"
-ms.custom: 
+title: 스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom procedures [SQL Server replication]
 - transactional replication, replicating schema changes
 - schemas [SQL Server replication], replicating changes
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 048c2c183a3d62646e5f7e45bb996fcc25f5b087
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3202148a41c91c5f0d63dfe338ecee471c734f4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>트랜잭션 아티클 - 스키마 변경 반영을 위해 다시 생성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

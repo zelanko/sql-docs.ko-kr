@@ -1,27 +1,27 @@
 ---
-title: "SharePoint용 파워 피벗 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: SharePoint용 파워 피벗 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 29c01e9972997459764933b25a23f8e0b085deb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/09/2018
   
     1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사에서 **설치**를 클릭합니다.  
   
-    2.  **SQL Server에서 업그레이드…..**를 클릭합니다.  
+    2.  **SQL Server에서 업그레이드…..** 를 클릭합니다.  
   
     3.  **인스턴스 선택** 페이지에서 **POWERPIVOT** 인스턴스 이름을 선택한 후 **다음**을 클릭합니다.  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 02/09/2018
     get-SPserviceinstance | where {$_.typename -like "*sql*"}  
     ```  
   
-4.  **Windows** 서비스 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**가 실행되고 있는지 확인합니다.  
+4.  **Windows** 서비스 **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 가 실행되고 있는지 확인합니다.  
   
     ```  
     Get-Service | where {$_.displayname -like "*powerpivot*"}  

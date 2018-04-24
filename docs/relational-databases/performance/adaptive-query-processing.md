@@ -3,7 +3,7 @@ title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: performance
@@ -18,11 +18,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54daefe15f62d9ccc708770f25b7603ae817872c
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3d872beef925cd7e49387b231adcea401b4c4b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +169,7 @@ WHERE [fo].[Quantity] = 361;
 ![조인 임계값](./media/6_AQPJoinThreshold.png)
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>다중 문 테이블 반환 함수에 대한 인터리브 실행
-인터리브 실행을 사용하면 단일 쿼리 실행에 대한 최적화 및 실행 단계 사이의 단방향 경계가 변경되며 수정된 카디널리티 예상치에 따라 계획을 조정할 수 있습니다. 최적화 중에 현재 **MSTVF(다중 문 테이블 반환 함수)**인 인터리브 실행 후보를 발견할 경우 최적화를 일시 중지하고, 해당 하위 트리를 실행하고, 정확한 카디널리티 예상치를 캡처한 다음 다운스트림 작업에 대해 최적화를 다시 시작합니다.
+인터리브 실행을 사용하면 단일 쿼리 실행에 대한 최적화 및 실행 단계 사이의 단방향 경계가 변경되며 수정된 카디널리티 예상치에 따라 계획을 조정할 수 있습니다. 최적화 중에 현재 **MSTVF(다중 문 테이블 반환 함수)** 인 인터리브 실행 후보를 발견할 경우 최적화를 일시 중지하고, 해당 하위 트리를 실행하고, 정확한 카디널리티 예상치를 캡처한 다음 다운스트림 작업에 대해 최적화를 다시 시작합니다.
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 MSTVF에 대한 고정 카디널리티 추정이 100이고, 이전 버전에서는 1입니다. 인터리브 실행은 다중 문 테이블 반환 함수와 연결된 이러한 고정 카디널리티 예상치 때문에 발생하는 워크로드 성능 문제에 도움이 됩니다.
 
 다음 이미지에서는 MSTVF의 고정 카디널리티 예상치 영향을 보여 주는 전체 실행 계획의 하위 집합인 활성 쿼리 통계 출력을 보여줍니다. 실제 행 흐름 및 예상 행 수를 확인할 수 있습니다. 중요한 세 가지 계획 영역은 다음과 같습니다(오른쪽에서 왼쪽으로 흐름).

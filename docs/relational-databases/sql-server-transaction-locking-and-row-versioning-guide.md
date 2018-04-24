@@ -2,7 +2,7 @@
 title: SQL Server 트랜잭션 잠금 및 행 버전 관리 지침 | Microsoft 문서 도구
 ms.custom: ''
 ms.date: 02/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -23,11 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a34b0dcdca05996db0990722cbe0456cdab3d50b
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d0c8e2320325a00e0729562c07aa328ef8ddafe0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +459,7 @@ GO
   
  키 범위 잠금은 가상 읽기를 방지합니다. 또한 행 사이에서 키 범위를 보호하여 트랜잭션에서 액세스하는 레코드 집합에 대한 가상 삽입을 방지합니다.  
   
- 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'**AAA**'** 및 **'**CZZ**'**까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. **'**AAA**'**부터 **'**CZZ**'**까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'**ADG**'**, **'**BBD**'** 또는 **'**CAL**'**과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
+ 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'** AAA **'** 및 **'** CZZ **'** 까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'**, **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
   
 #### <a name="key_range_modes"></a> 키 범위 잠금 모드  
  키 범위 잠금에는 범위-행 형식으로 지정된 범위 및 행 구성 요소가 모두 포함됩니다.  
@@ -514,7 +515,7 @@ GO
  키 범위 잠금이 발생하려면 다음 조건을 만족해야 합니다.  
   
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
--   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N**'**AAA**'** AND N**'**CZZ**'**. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
+-   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
 #### <a name="examples"></a>예  
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  

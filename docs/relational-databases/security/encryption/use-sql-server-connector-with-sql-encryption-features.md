@@ -1,34 +1,36 @@
 ---
-title: "SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서"
-ms.custom: 
+title: SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 1a3f616c25da5e01234d6a8d4145783053e8bb11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Azure Key Vault로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+  Azure 주요 자격 증명 모음으로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
   
 -   Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
   

@@ -1,31 +1,31 @@
 ---
-title: "병합 아티클 간에 자동으로 조인 필터 생성 | Microsoft 문서"
-ms.custom: 
+title: 병합 아티클 간에 자동으로 조인 필터 생성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic join filter generation
 - join filters
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52c4a459f126eb4bf23a4d541186155f178505b3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: a4b9708e59bc7d582615ca19d4e17a38b017ec3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>병합 아티클 간에 자동으로 조인 필터 생성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/08/2018
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>병합 아티클 간의 조인 필터 집합을 자동으로 생성하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>**의 **행 필터** 페이지에서 **추가**를 클릭하고 **자동으로 필터 생성**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **자동으로 필터 생성**을 클릭합니다.  
   
     > [!NOTE]  
     >  자동으로 필터를 생성하면 게시의 기존 행 필터나 조인 필터가 삭제됩니다. 필터 집합을 자동으로 생성한 후에 필터를 추가할 수 있습니다.  

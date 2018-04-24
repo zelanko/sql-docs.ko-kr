@@ -2,7 +2,7 @@
 title: 공간 인덱스 만들기, 수정 및 삭제 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: spatial
@@ -25,11 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad9c53df2826c08a96e592e49fc760eb09b8a4a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -161,7 +162,7 @@ ms.lasthandoff: 04/10/2018
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에 도입된 공간 분할(tessellation)은 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]로 복제할 수 없습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 데이터베이스와의 호환성이 요구되는 경우 공간 인덱스에는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 분할을 사용해야 합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

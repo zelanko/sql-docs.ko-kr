@@ -1,42 +1,44 @@
 ---
-title: "응용 프로그램 역할 만들기 | Microsoft 문서"
-ms.custom: 
+title: 응용 프로그램 역할 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.approle.general.f1
 helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17fc34a6a2856f613a37a02ef8c6c31c7b80e23d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a7cbf6e60d2d3c07efc51e98caefa6f224a270fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-an-application-role"></a>응용 프로그램 역할 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 응용 프로그램 역할을 만드는 방법에 대해 설명합니다. 응용 프로그램 역할은 특정 응용 프로그램을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 응용 프로그램 역할에 사용자가 없으므로 **응용 프로그램 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
   
 > [!IMPORTANT]  
 >  응용 프로그램 역할 암호가 설정된 경우 암호 복잡성이 검사됩니다. 응용 프로그램 역할을 호출하는 응용 프로그램은 해당 암호를 저장해야 합니다. 응용 프로그램 역할 암호는 항상 암호화된 상태로 저장되어야 합니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  **역할** 폴더를 확장합니다.  
   
-4.  **응용 프로그램 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 응용 프로그램 역할...**을 선택합니다.  
+4.  **응용 프로그램 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 응용 프로그램 역할...** 을 선택합니다.  
   
 5.  **응용 프로그램 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자의 새 응용 프로그램 역할의 새 이름을 입력합니다.  
   

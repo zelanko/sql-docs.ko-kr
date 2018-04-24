@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, Memory Manager 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Memory Manager 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2abe6f643c448be8411dfc4894b827eaedeb927d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **Memory Manager** 개체는 서버 메모리의 전반적인 사용량을 모니터링하는 카운터를 제공합니다. 서버 메모리의 전반적인 사용량을 모니터링하여 사용자 작업 및 리소스 사용량을 측정하면 성능 병목 상태가 발생하는지 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 사용하는 메모리를 모니터링하면 다음 사항을 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft **의** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 서버 메모리의 전반적인 사용량을 모니터링하는 카운터를 제공합니다. 서버 메모리의 전반적인 사용량을 모니터링하여 사용자 작업 및 리소스 사용량을 측정하면 성능 병목 상태가 발생하는지 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 사용하는 메모리를 모니터링하면 다음 사항을 확인할 수 있습니다.  
   
 -   자주 액세스되는 데이터를 캐시에 저장하기 위한 실제 메모리가 부족하여 병목 상태가 발생하는지 여부. 메모리가 부족한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디스크에서 데이터를 검색해야 합니다.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/18/2018
 |**Memory Grants Outstanding**|부여된 작업 영역 메모리를 성공적으로 인식한 총 프로세스 수를 지정합니다.|  
 |**Memory Grants Pending**|작업 공간 메모리 부여를 대기 중인 총 프로세스 수를 지정합니다.|  
 |**Optimizer Memory (KB)**|서버가 쿼리 최적화를 위해 사용 중인 총 동적 메모리 양을 지정합니다.|  
-|**Reserved Server Memory(KB)**|서버가 나중에 사용하기 위해 예약한 메모리 양을 지정합니다. 이 카운터는 **Granted Workspace Memory(KB)**에 표시된 최초 부여 메모리 중 현재 사용되지 않는 메모리 양을 보여 줍니다.|  
+|**Reserved Server Memory(KB)**|서버가 나중에 사용하기 위해 예약한 메모리 양을 지정합니다. 이 카운터는 **Granted Workspace Memory(KB)** 에 표시된 최초 부여 메모리 중 현재 사용되지 않는 메모리 양을 보여 줍니다.|  
 |**SQL Cache Memory (KB)**|서버가 동적 SQL 캐시를 위해 사용 중인 총 동적 메모리 양을 지정합니다.|  
 |**Stolen Server Memory(KB)**|서버가 데이터베이스 페이지가 아닌 다른 용도로 사용 중인 메모리 양을 지정합니다.|  
 |**Target Server Memory (KB)**|서버가 사용할 이상적인 메모리 양을 나타냅니다.|  

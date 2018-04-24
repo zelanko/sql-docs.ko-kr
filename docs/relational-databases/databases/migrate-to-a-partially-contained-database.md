@@ -1,33 +1,34 @@
 ---
-title: "부분적으로 포함된 데이터베이스로 마이그레이션 | Microsoft 문서"
-ms.custom: 
+title: 부분적으로 포함된 데이터베이스로 마이그레이션 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c2bad59ca0fb052d9adcfd15f41efc7c995db08
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ae429ff2ebcaa64c2e30a0558ed2c7296548591e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 부분적으로 포함된 데이터베이스 모델 변경을 준비하는 방법에 대해 설명한 다음 마이그레이션 단계를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 부분적으로 포함된 데이터베이스 모델 변경을 준비하는 방법에 대해 설명한 다음 마이그레이션 단계를 제공합니다.  
   
  **항목 내용**  
   

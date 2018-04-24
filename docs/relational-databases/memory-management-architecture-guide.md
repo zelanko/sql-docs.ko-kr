@@ -2,7 +2,7 @@
 title: 메모리 관리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -21,11 +21,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +82,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 -  **단일 페이지 할당자(SPA)**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
 -  **다중 페이지 할당자(MPA)**: 8KB 이상을 요청하는 메모리 할당입니다.
 -  **CLR 할당자**: SQL CLR 힙 및 CLR 초기화 중에 생성되는 전역 할당을 포함합니다.
--  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 **[스레드 스택](../relational-databases/memory-management-architecture-guide.md#stacksizes)**에 대한 메모리 할당.
+-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 **[스레드 스택](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 에 대한 메모리 할당.
 -  **직접 Windows 할당(DWA)**: Windows에 직접 요청된 메모리 할당입니다. 여기에는 Windows 힙 사용 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스로 로드되는 모듈에 의한 직접 가상 할당이 포함됩니다. 이러한 메모리 할당 요청의 예로는 확장 저장 프로시저 DLL의 할당, 자동화 프로시저(sp_OA 호출)를 사용하여 만든 개체 및 연결된 서버 공급자의 할당이 있습니다.
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 단일 페이지 할당, 다중 페이지 할당 및 CLR 할당은 모두 **"임의 크기" 페이지 할당자**에 통합되며 *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션에 의해 제어되는 메모리 제한에 포함됩니다. 이 변경으로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자를 통과하는 모든 메모리 요구 사항에 대해 보다 정확한 크기 조정 기능이 제공되었습니다. 
@@ -94,10 +95,10 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
 |단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|아니요|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니요|예|
-|스레드 스택 메모리|아니요|아니요|
-|Windows에서 직접 할당|아니요|아니요|
+|다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|아니오|예|
+|스레드 스택 메모리|아니오|아니오|
+|Windows에서 직접 할당|아니오|아니오|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 ***Total Server Memory(KB)*** 값이 이미 max server memory에 지정된 ***Target Server Memory(KB)*** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -111,7 +112,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
 
-이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **Multi-Page Allocator(MPA)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **Direct Windows 할당(DWA)**으로 사용하기 위해 프로세스 가상 주소 공간(VAS)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
+이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **Multi-Page Allocator(MPA)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **Direct Windows 할당(DWA)** 으로 사용하기 위해 프로세스 가상 주소 공간(VAS)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 ***memory_to_reserve*** 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
@@ -121,7 +122,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|아니요|아니요, "임의 크기" 페이지 할당에 통합됨|
+|단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
 |다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
 |CLR 할당|예|예|
 |스레드 스택 메모리|예|예|
@@ -133,7 +134,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
   
-**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)**는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 할당, 컴파일 메모리, 모든 캐시(버퍼 풀 포함), 쿼리 실행 메모리 부여, 잠금 관리자 메모리 및 CLR<sup>1</sup> 메모리를 제어합니다(기본적으로 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**에 있는 모든 메모리 클럭). 
+**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 할당, 컴파일 메모리, 모든 캐시(버퍼 풀 포함), 쿼리 실행 메모리 부여, 잠금 관리자 메모리 및 CLR<sup>1</sup> 메모리를 제어합니다(기본적으로 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 에 있는 모든 메모리 클럭). 
 
 <sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
@@ -221,7 +222,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 버퍼 관리자는 다음과 같은 기능을 지원합니다.
 
-* 버퍼 관리자는 **NUMA(Non-Uniform Memory Access)**를 인식합니다. 버퍼 캐시 페이지는 하드웨어 NUMA 노드에 분산되므로 스레드가 외부 메모리 대신 로컬 NUMA 노드에 할당된 버퍼 페이지에 액세스할 수 있습니다. 
+* 버퍼 관리자는 **NUMA(Non-Uniform Memory Access)** 를 인식합니다. 버퍼 캐시 페이지는 하드웨어 NUMA 노드에 분산되므로 스레드가 외부 메모리 대신 로컬 NUMA 노드에 할당된 버퍼 페이지에 액세스할 수 있습니다. 
 * 버퍼 관리자는 **Hot Add 메모리**를 지원하므로 사용자가 서버를 다시 시작하지 않고도 실제 메모리를 추가할 수 있습니다. 
 * 버퍼 관리자는 64비트 플랫폼에서 **큰 페이지**를 지원합니다. 페이지 크기는 Windows 버전에 따라 달라집니다.
 
@@ -282,7 +283,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 응용 프로그램을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [페이지 읽기](../relational-databases/reading-pages.md)   
 [페이지 쓰기](../relational-databases/writing-pages.md)   

@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 스냅숏(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 스냅숏(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - static database views
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 
+caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dbc97b4e0a07f21471c1c6de18308390a3a9183
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅숏(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
   
  지정된 원본 데이터베이스에 스냅숏이 여러 개 있을 수 있습니다. 각 데이터베이스 스냅숏은 데이터베이스 소유자가 명시적으로 삭제하기 전까지 유지됩니다.  
   

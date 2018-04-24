@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e6d9a9107e0ddb997492bec813938120e0fd6bf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 02/23/2018
   
  롤백 작업도 기록됩니다. 각 트랜잭션은 트랜잭션 로그에 공간을 예약하여 명시적 롤백 문이나 오류로 인해 발생한 롤백을 지원하기에 충분한 로그 공간을 확보합니다. 예약된 공간의 크기는 트랜잭션에서 수행되는 작업에 따라 다르지만 일반적으로 각 작업을 기록하는 데 사용되는 공간의 크기와 같습니다. 이렇게 예약된 공간은 트랜잭션 완료 시 해제됩니다.  
   
-<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 [로그 레코드의 LSN(로그 시퀀스 번호)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)은 ***최소 복구 LSN(*MinLSN**)이라고 합니다.  
+<a name="minlsn"></a>마지막으로 작성된 로그 레코드로의 성공적인 데이터베이스 차원의 롤백에 필요한 첫 번째 로그 레코드의 로그 파일 섹션을 로그의 활성 부분 또는 *활성 로그*라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 이 첫 번째 [로그 레코드의 LSN(로그 시퀀스 번호)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)은 ***최소 복구 LSN(* MinLSN**)이라고 합니다.  
   
 ##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
 데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
@@ -254,7 +255,7 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 [트랜잭션 로그 파일의 크기 관리](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
-[복구 간격 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[recovery interval 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Paul Randall, “SQL Server의 로깅 및 복구 이해”](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    

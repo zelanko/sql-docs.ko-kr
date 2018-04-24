@@ -1,33 +1,34 @@
 ---
-title: "로그 전달 트랜잭션 로그 백업 설정 | Microsoft 문서"
-ms.custom: 
+title: 로그 전달 트랜잭션 로그 백업 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a15e3ebf54cae459aad00052e009774d125c56
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d9deb810c671861087452f737891900042855e4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>로그 전달 트랜잭션 로그 백업 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 로그 전달 구성에 대한 트랜잭션 로그 백업 설정을 구성하고 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 대화 상자를 사용하여 로그 전달 구성에 대한 트랜잭션 로그 백업 설정을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/18/2018
  로그 전달에 사용할 트랜잭션 로그 백업을 만드는 데 사용되는 SQL Server 에이전트 작업의 이름을 표시합니다. 처음 작업을 만들 때 상자에 이름을 입력하여 수정할 수 있습니다.  
   
  **일정**  
- 주 데이터베이스의 트랜잭션 로그를 백업하기 위한 현재 일정을 표시합니다. 백업 작업이 생성되기 전에는 **일정...**을 클릭하여 이 일정을 수정할 수 있고 작업이 생성된 후에는 **작업 편집...**을 클릭하여 이 일정을 수정할 수 있습니다.  
+ 주 데이터베이스의 트랜잭션 로그를 백업하기 위한 현재 일정을 표시합니다. 백업 작업이 생성되기 전에는 **일정...** 을 클릭하여 이 일정을 수정할 수 있고 작업이 생성된 후에는 **작업 편집...** 을 클릭하여 이 일정을 수정할 수 있습니다.  
   
 ### <a name="backup-job"></a>백업 작업  
  **일정...**  

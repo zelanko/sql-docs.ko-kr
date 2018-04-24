@@ -1,16 +1,16 @@
 ---
-title: "sqlcmd 유틸리티 사용 | Microsoft 문서"
-ms.custom: 
+title: sqlcmd 유틸리티 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd** 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. **sqlcmd** 를 대화형으로 사용하거나 **sqlcmd**를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 **sqlcmd** 유틸리티는 다음과 같은 방법으로 사용됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlcmd** 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. **sqlcmd** 를 대화형으로 사용하거나 **sqlcmd**를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 **sqlcmd** 유틸리티는 다음과 같은 방법으로 사용됩니다.  
   
 -   사용자는 명령 프롬프트에서와 비슷한 방법으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력합니다. 결과는 명령 프롬프트에 표시됩니다. 명령 프롬프트 창을 열려면 Windows 검색 상자에 “cmd”를 입력하고 **명령 프롬프트**를 클릭하여 엽니다. 명령 프롬프트에서 **sqlcmd** 를 입력한 뒤 원하는 옵션을 입력합니다. **sqlcmd**에서 지원하는 옵션의 전체 목록은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.  
   

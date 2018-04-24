@@ -1,34 +1,36 @@
 ---
-title: "시스템 관리자가 잠겨 있을 때 SQL Server에 연결 | Microsoft Docs"
-ms.custom: 
+title: 시스템 관리자가 잠겨 있을 때 SQL Server에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sa account
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: abf07c71d02103153a968bcbb102a25e563387a4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f7ba4823ef22a81778648871ca2954d8b9513047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 시스템 관리자로서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 액세스 권한을 다시 얻을 수 있는 방법에 대해 설명합니다. 시스템 관리자는 다음 중 한 가지 이유로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한을 상실할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 시스템 관리자로서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 대한 액세스 권한을 다시 얻을 수 있는 방법에 대해 설명합니다. 시스템 관리자는 다음 중 한 가지 이유로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한을 상실할 수 있습니다.  
   
 -   sysadmin 고정 서버 역할의 멤버인 모든 로그인이 실수로 제거되었습니다.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/18/2018
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 먼저 중지하십시오. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되므로 두 번째 사용자로 연결하지 못합니다.  
   
- **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"**를 사용합니다.  
+ **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
   
 > [!IMPORTANT]  
 >  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 응용 프로그램에서 클라이언트 응용 프로그램 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
@@ -62,7 +64,7 @@ ms.lasthandoff: 01/18/2018
   
 3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 닫습니다.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 찾습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에는 컴퓨터 이름 뒤에 **(MSSQLSERVER)**가 있습니다. 명명된 인스턴스는 등록된 서버에서와 같은 이름(대문자)으로 나타납니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 찾습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에는 컴퓨터 이름 뒤에 **(MSSQLSERVER)** 가 있습니다. 명명된 인스턴스는 등록된 서버에서와 같은 이름(대문자)으로 나타납니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
 5.  **시작 매개 변수** 탭의 **시작 매개 변수 지정** 상자에 `-m`를 입력하고 **추가**를 클릭합니다. 클릭합니다.  
   

@@ -2,7 +2,7 @@
 title: 데이터베이스 축소 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: databases
@@ -26,14 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b706efb7e6a3939f89de750a80c0abe1eb2c1da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: df353c4345de034394a11c14ead1c359db525d4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 개체를 사용하여 데이터베이스를 축소하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 과 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 개체를 사용하여 데이터베이스를 축소하는 방법에 대해 설명합니다.  
   
  파일 끝에 있는 데이터 페이지를 파일 앞의 사용되지 않은 공간으로 이동하여 데이터 파일을 축소하면 공간이 복구됩니다. 파일 끝에 사용 가능한 공간을 충분히 확보한 다음 파일 끝에 있는 데이터 페이지를 할당 해제하고 파일 시스템에 반환할 수 있습니다.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [데이터베이스의 데이터 및 로그 공간 정보 표시](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)를 참조하세요  
+-   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)를 참조하세요.  
   
 -   데이터베이스를 축소할 때는 다음을 고려하세요.  
   

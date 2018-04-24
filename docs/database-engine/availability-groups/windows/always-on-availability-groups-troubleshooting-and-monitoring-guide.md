@@ -13,12 +13,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 75dfac4c3f09746bbe891a72ff8528f6d7418e75
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 가용성 그룹 문제 해결 및 모니터링 가이드
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/05/2018
 |[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](http://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 응용 프로그램에서 연결할 수 없습니다.|  
 |[실패 자동 장애 조치(failover) 문제 해결](http://support.microsoft.com/kb/2833707)|장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|성능|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
-|[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
+|[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
 |[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 응용 프로그램에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
 |[문제 해결: Always On 가용성 그룹을 사용하여 높은 HADR_SYNC_COMMIT 대기 유형](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|성능|HADR_SYNC_COMMIT가 비정상적으로 긴 경우 데이터 이동 흐름 또는 보조 복제본 로그 강화에 성능 문제가 있습니다.|  
 

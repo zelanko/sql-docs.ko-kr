@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_7914 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_7914 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7914 (Database Engine error)
 ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b998e598e5bce6cf2b6375ba58eb6987988f357
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 64a2f6c62dd7d07310521723ef78b3931d4c5750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver7914"></a>MSSQLSERVER_7914
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,5 +44,5 @@ ms.lasthandoff: 11/21/2017
 GAM 또는 SGAM 페이지가 PFS 페이지 데이터를 사용하여 다시 작성되었음을 나타내는 REPAIR의 정보 페이지입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-없음  
+InclusionThresholdSetting  
   

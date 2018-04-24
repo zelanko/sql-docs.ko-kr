@@ -1,28 +1,29 @@
 ---
-title: "Columnstore 인덱스 - 디자인 지침 | Microsoft Docs"
-ms.custom: 
+title: Columnstore 인덱스 - 디자인 지침 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c2b3c604d5da223b651b8467b126878653fae294
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 - 디자인 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +100,7 @@ columnstore 인덱스는 rowstore 인덱스보다 10배 더 뛰어난 데이터 
   
 *   별도 데이터 웨어하우스가 필요하지 않습니다. 일반적으로 회사는 rowstore 테이블에서 트랜잭션을 실행하고 별도의 데이터 웨어하우스에 데이터를 로드하여 분석을 실행합니다. 많은 워크로드에서 트랜잭션 테이블에 비클러스터형 columnstore 인덱스를 만들어 로드 프로세스 및 별도의 데이터 웨어하우스를 제거할 수 있습니다.
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이 시나리오의 성능을 향상시킬 수 있는 몇 가지 전략을 제공합니다. OLTP 응용 프로그램을 변경하지 않고도 비클러스터형 columnstore 인덱스를 사용할 수 있으므로 매우 쉽게 체험할 수 있습니다. 
 
 처리 리소스를 더 추가하려면 읽기 가능한 보조 복제본에서 분석을 실행할 수 있습니다. 읽기 가능한 보조 복제본 사용으로 트랜잭션 워크로드 및 분석 워크로드의 처리를 구분합니다. 
 
@@ -197,7 +198,7 @@ columnstore 인덱스는 데이터를 정렬하지 않지만 메타데이터를 
 빈 columnstore 인덱스를 만들려면
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [CREATE TABLE(Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요.
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 [CREATE TABLE(Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)을 참조하세요.
 
 기존 rowstore 힙 또는 B-트리 인덱스를 클러스터형 columnstore 인덱스로 변환하는 방법 또는 비클러스터형 columnstore 인덱스를 만드는 방법에 대한 자세한 내용은 [CREATE COLUMNSTORE INDEX(TRANSACT-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.
 

@@ -2,7 +2,7 @@
 title: 효과적인 데이터베이스 엔진 사용 권한 결정 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ SELECT DP1.name AS DatabaseRoleName,
 
 이 시스템은 유연하여 정확하게 설정하려고 하면 복잡해질 수 있습니다. 문제를 단순화하려면 역할을 만들고 역할에 사용 권한을 할당한 다음 역할에 사용자 그룹을 추가하는 것이 좋습니다. 또한 데이터베이스 개발 팀에서 스키마로 작업을 구분한 후 개별 테이블이나 프로시저 대신 전체 스키마에 역할 사용 권한을 부여하는 경우에는 더 용이합니다. 실제 시나리오는 복잡하며 비즈니스 요구 사항은 예기치 않은 보안 요구 사항을 만들 수 있습니다.   
 
-다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 문서에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
-  
- [![데이터베이스 사용 엔진 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>보안 클래스
 

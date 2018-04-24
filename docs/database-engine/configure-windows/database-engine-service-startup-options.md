@@ -1,15 +1,16 @@
 ---
-title: "데이터베이스 엔진 서비스 시작 옵션 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 엔진 서비스 시작 옵션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -27,19 +28,20 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 47452c7a2f858dd72cf847f80f2352acace2d5a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 시작 옵션은 시작하는 동안 필요한 특정 파일 위치를 지정하고 일부 서버 차원의 조건을 지정합니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 문제가 발생하거나 예외적인 문제가 발생하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객 지원 서비스에서 시작 옵션을 사용하도록 지시하는 경우가 아니면 시작 옵션을 지정할 필요가 없습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  시작 옵션은 시작하는 동안 필요한 특정 파일 위치를 지정하고 일부 서버 차원의 조건을 지정합니다. 일반적으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 문제가 발생하거나 예외적인 문제가 발생하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객 지원 서비스에서 시작 옵션을 사용하도록 지시하는 경우가 아니면 시작 옵션을 지정할 필요가 없습니다.  
   
 > [!WARNING]  
 >  시작 옵션을 잘못 사용하면 서버 성능에 영향을 주고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작되지 않을 수 있습니다.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/18/2018
 |**-g**  *memory_to_reserve*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 내 그리고 [max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 서버 설정에 의해 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 풀 외 범위에 메모리를 할당하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용할 수 있는 메모리를 메가바이트(MB) 단위의 정수로 지정합니다. 메모리 풀 외부의 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 확장 프로시저 .dll 파일, 분산 쿼리에서 참조하는 OLE DB Provider 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 참조되는 자동화 개체 같은 항목을 로드하는 데 사용하는 영역입니다. 기본값은 256MB입니다.<br /><br /> 이 옵션을 사용하면 메모리 할당을 튜닝하는 데 도움이 될 수 있으나 실제 메모리가 운영 체제에서 응용 프로그램에 사용할 수 있도록 구성된 가상 메모리 한계보다 큰 경우에만 사용할 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리 사용 요청이 불규칙하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 가상 주소 공간이 전부 사용되는 대량 메모리 구성에서 사용하는 것이 적합합니다. 이 옵션을 제대로 사용하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 시작할 수 없거나 런타임 오류가 발생할 수도 있습니다.<br /><br /> **오류 로그에서 다음 경고가 표시되지 않으면** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매개 변수의 기본값을 사용해야 합니다.<br /> "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_RESERVE \<크기>"<br /> "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_COMMIT \<크기>"<br /><br /> 이 메시지에 따르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 확장 저장 프로시저 .dll 파일이나 자동화 개체 등의 항목에 필요한 공간을 찾기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 풀의 일부를 없애려고 합니다. 이 경우 **-g** 스위치로 예약되는 메모리 양을 늘려 보세요.<br /><br /> 기본값보다 낮은 값을 사용하면 SQL Server Memory Manager 및 스레드 스택에서 관리하는 메모리 풀의 사용 가능한 메모리 양을 증가시켜 확장 저장 프로시저, 분산 쿼리, 자동화 개체 등을 사용하지 않는 시스템에서 메모리 집중형 작업에 대한 성능상의 이점을 제공할 수 있습니다.|  
 |**-m**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있으며 CHECKPOINT 프로세스가 시작되지 않습니다. CHECKPOINT는 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 장치에 기록되도록 합니다. 일반적으로 이 옵션은 복구해야 할 시스템 데이터베이스에 문제가 발생했을 때 사용합니다. sp_configure allow updates 옵션을 설정합니다. 기본적으로 allow updates는 사용할 수 없습니다. 단일 사용자 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하면 컴퓨터에서 로컬 Administrators 그룹의 모든 멤버가 sysadmin 고정 서버 역할의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. 자세한 내용은 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)을 참조하세요. 단일 사용자 모드에 대한 자세한 내용은 [단일 사용자 모드로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)을 참조하세요.|  
 |**-mClient Application Name**|지정된 클라이언트 응용 프로그램에 대한 연결 수를 제한합니다. 예를 들어 `-mSQLCMD`  는 연결 수를 단일 연결로 제한하며 이 경우 연결은 스스로 SQLCMD 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. SSMS 쿼리 편집기와 연결하려면 `"Microsoft SQL Server Management Studio - Query" ` 를 사용합니다. SSMS 쿼리 편집기 옵션은 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 구성 관리자 도구를 사용하여 구성할 수 없습니다. 도구에서 거부된 대시 문자가 포함되어 있기 때문입니다.<br /><br /> 클라이언트 응용 프로그램 이름은 대/소문자를 구분합니다. 큰따옴표는 응용 프로그램 이름에 공백이나 특수 문자가 포함되어 있는 경우 필요합니다.<br /><br />**명령줄에서 시작하는 예제:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> **보안 정보:** 이 옵션을 보안 기능으로는 사용하지 마세요. 클라이언트 응용 프로그램에서 클라이언트 응용 프로그램 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.|  
-|**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 기록하는 데 Windows 응용 프로그램 로그를 사용하지 않습니다. **-n**으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 시작하는 경우 **-e** 시작 옵션도 사용하는 것이 좋습니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트가 로깅되지 않습니다.|  
+|**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 기록하는 데 Windows 응용 프로그램 로그를 사용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **으로**인스턴스를 시작하는 경우 **-e** 시작 옵션도 사용하는 것이 좋습니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트가 로깅되지 않습니다.|  
 |**-s**|명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작을 시도합니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 `\mssql$Instance1`을 사용할 경우, 사용자는 `\mssql$Instance1\binn` 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다.|  
 |**-T**  *trace#*|지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.<br /><br /> **중요:** **-T** 옵션으로 추적 플래그를 지정할 때 추적 플래그 번호를 전달하려면 대문자 "T"를 입력합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 소문자 "t"도 사용할 수 있지만 그럴 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 엔지니어에게만 필요한 다른 내부 추적 플래그가 설정됩니다. 제어판 시작 창에서 지정한 매개 변수를 읽을 수 없습니다.|  
 |**-x**|다음 모니터링 기능을 해제합니다.<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 모니터 카운터<br /> - CPU 시간과 캐시 적중률 통계 유지<br /> - DBCC SQLPERF 명령에 대한 정보 수집<br /> - 일부 동적 관리 뷰에 대한 정보 수집<br /> - 여러 확장 이벤트 이벤트 지점<br /><br /> **경고:** **–x** 시작 옵션을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능 및 기능 문제를 진단하는 데 사용할 수 있는 정보가 크게 줄어듭니다.|  

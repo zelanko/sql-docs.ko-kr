@@ -2,7 +2,7 @@
 title: 사용 권한(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -21,25 +21,24 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: ''
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5d0fcc6fcb0e0a40e23f65f4efbf7f6ff8a39255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 총 권한 수는 237개입니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어 SQL Database에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에는 몇 가지 권한만 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다. 다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
-  
-[![데이터베이스 엔진 사용 권한](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 총 권한 수는 237개입니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어 SQL Database에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에는 몇 가지 권한만 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
 
 권한을 이해했으면 [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)및 [DENY](../../t-sql/statements/deny-transact-sql.md) 문을 사용하여 로그인 및 데이터베이스 수준 권한 사용자에게 서버 수준 권한을 적용합니다. 예를 들면 다음과 같습니다.   
 ```sql
@@ -102,7 +101,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 포스터 크기의 차트를 보려면 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)를 참조하세요.  
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ##  <a name="_securables"></a> 특정 보안 개체에 적용 가능한 사용 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  

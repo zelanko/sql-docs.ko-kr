@@ -1,15 +1,16 @@
 ---
-title: "SCM 서비스 - 사용된 계정의 암호 변경 | Microsoft Docs"
-ms.custom: 
+title: SCM 서비스 - 사용된 계정의 암호 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - expired password [SQL Server], SQL Server Agent
@@ -21,24 +22,25 @@ helpviewer_keywords:
 - changing passwords used by SQL Server
 - modifying passwords
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6ee1c96bf8a302f5451fe985aacae66a5fd768d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 684c6a65c551038f03f02ed782bb51c03ac40176
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>SCM 서비스 - 사용된 계정의 암호 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되는 계정의 암호를 변경하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 설치 중에 처음 제공된 자격 증명을 사용하여 컴퓨터에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 도메인 계정으로 실행되고 있으며 해당 계정의 암호가 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 암호를 새 암호로 업데이트해야 합니다. 암호를 업데이트하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 도메인 리소스에 액세스하지 못할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 중지되면 암호를 업데이트할 때까지 서비스가 다시 시작되지 않습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에이전트에 사용되는 계정의 암호를 변경하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 설치 중에 처음 제공된 자격 증명을 사용하여 컴퓨터에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 도메인 계정으로 실행되고 있으며 해당 계정의 암호가 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 암호를 새 암호로 업데이트해야 합니다. 암호를 업데이트하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 도메인 리소스에 액세스하지 못할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 중지되면 암호를 업데이트할 때까지 서비스가 다시 시작되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호를 변경하려면 [암호 만료](http://msdn.microsoft.com/library/9831b194-9ad5-47b0-8009-59c7aef4319b)를 참조하세요.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 설정을 변경하도록 디자인 되고 권한이 부여된 도구입니다. Windows 서비스 제어 관리자( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.msc**) 응용 프로그램을 사용하여**서비스를 변경하면 일부 필수 설정은 변경되지 않으며 서비스가 제대로 작동하지 않을 수 있습니다. 그러나 클러스터형 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 액티브 노드의 암호를 변경한 후에는 서비스 제어 관리자를 사용하여 패시브 노드의 암호를 변경해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 설정을 변경하도록 디자인 되고 권한이 부여된 도구입니다. Windows 서비스 제어 관리자( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.msc **) 응용 프로그램을 사용하여**서비스를 변경하면 일부 필수 설정은 변경되지 않으며 서비스가 제대로 작동하지 않을 수 있습니다. 그러나 클러스터형 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 액티브 노드의 암호를 변경한 후에는 서비스 제어 관리자를 사용하여 패시브 노드의 암호를 변경해야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server(**\<instancename>**)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server(**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **SQL Server(**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server 에이전트 (**\<instancename>**)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server 에이전트 (**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **SQL Server 에이전트 (**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   

@@ -1,28 +1,29 @@
 ---
-title: "데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서"
-ms.custom: 
+title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서'
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f221ee5c9da668b2327196fae73406a7a473bfd
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5d80cb36c8e8c8e094a70d836823085a5a21d4c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 03/19/2018
   
 1.  SQL Server Management Studio(SSMS.exe)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하세요. 또는 SSMS.exe와 유사한 도구를 사용해도 됩니다.  
   
-2.  이름이 **C:\data\\\**인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
+2.  이름이 **C:\data\\\** 인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
   
 3.  짧은 T-SQL을 실행하여 데이터베이스 및 메모리 최적화 파일 그룹을 생성하세요.  
   

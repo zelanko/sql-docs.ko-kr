@@ -1,16 +1,16 @@
 ---
-title: "서버 수준 역할 | Microsoft 문서"
-ms.custom: 
+title: 서버 수준 역할 | Microsoft 문서
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.Security.NT_AUTHORITY.SYSTEM
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7c77f856173a581fbab9d462af15279b5cc983a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  
  다음 표에서는 고정 서버 수준 역할과 해당 기능을 보여 줍니다.  
   
-|고정 서버 수준 역할|설명|  
+|고정 서버 수준 역할|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다.|  
 |**serveradmin**|**serveradmin** 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.|  
@@ -83,7 +84,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>서버 수준 역할 작업  
  다음 표에서는 서버 수준 역할을 통해 사용할 수 있는 명령, 뷰 및 함수를 보여 줍니다.  
   
-|기능|유형|설명|  
+|기능|형식|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|메타데이터|서버 수준 역할의 목록을 반환합니다.|  
 |[sp_helpsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|메타데이터|서버 수준 역할의 멤버에 대한 정보를 반환합니다.|  

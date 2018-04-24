@@ -1,16 +1,16 @@
 ---
-title: "웹 동기화 구성 | Microsoft 문서"
-ms.custom: 
+title: 웹 동기화 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: b7a50c27d51b9cab9e2d874b756fd32180a7074a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/08/2018
 4.  하나 이상의 구독에서 웹 동기화를 사용하도록 구성합니다.  
   
 > [!NOTE]  
->  많은 양의 데이터를 복제하거나 **varchar(max)**등의 큰 데이터 형식을 사용하려는 경우 이 항목의 "많은 양의 데이터 복제" 섹션을 참조하십시오.  
+>  많은 양의 데이터를 복제하거나 **varchar(max)** 등의 큰 데이터 형식을 사용하려는 경우 이 항목의 "많은 양의 데이터 복제" 섹션을 참조하십시오.  
   
  웹 동기화를 성공적으로 설정하려면 특정 요구 사항 및 정책에 맞게 보안을 구성하는 방법을 결정해야 합니다. IIS, 게시 및 구독을 구성하기 전에 이러한 의사 결정을 내리고 필요한 계정을 만드는 것이 가장 좋습니다.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 03/08/2018
   
  XML 파일의 최대 크기는 4GB이지만 복제를 수행하면 일괄 처리에 있는 해당 파일의 변경 내용이 동기화됩니다. 데이터 및 메타데이터의 최대 일괄 처리 크기는 25MB입니다. 각 일괄 처리의 데이터가 20MB를 초과하지 않도록 해야 메타데이터 및 기타 오버헤드를 위한 공간이 확보됩니다. 이러한 제한이 의미하는 바는 다음과 같습니다.  
   
--   데이터와 메타데이터가 25MB를 초과하도록 하는 열은 복제할 수 없습니다. 이는 **varchar(max)**등의 큰 데이터 형식이 포함된 행을 복제하는 경우 문제가 될 수 있습니다.  
+-   데이터와 메타데이터가 25MB를 초과하도록 하는 열은 복제할 수 없습니다. 이는 **varchar(max)** 등의 큰 데이터 형식이 포함된 행을 복제하는 경우 문제가 될 수 있습니다.  
   
 -   많은 양의 데이터를 복제하는 경우 병합 에이전트 일괄 처리 크기를 조정해야 합니다.  
   

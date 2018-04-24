@@ -1,36 +1,37 @@
 ---
-title: "Database Mirroring State Change 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Database Mirroring State Change 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
 - database mirroring [SQL Server], event notifications
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cccd5bf6328a97283940ad6782aa98fbdb90ebd3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8a3f47ce8b68ebb6f81986044dcb1afafda1ecb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Database Mirroring State Change** 이벤트 클래스는 미러된 데이터베이스의 상태가 변경되는 시기를 나타냅니다. 미러된 데이터베이스의 상태를 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
+  **Database Mirroring State Change** 이벤트 클래스는 미러된 데이터베이스의 상태가 변경되는 시기를 나타냅니다. 미러된 데이터베이스의 상태를 모니터링하는 추적에 이 이벤트 클래스를 포함시키십시오.  
   
  **Database Mirroring State Change** 이벤트 클래스가 추적에 포함되면 상대적인 오버헤드가 줄어듭니다. 오버헤드는 미러된 데이터베이스의 상태가 증가하면 커질 수 있습니다.  
   

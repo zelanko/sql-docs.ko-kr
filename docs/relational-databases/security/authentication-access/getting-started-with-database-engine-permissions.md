@@ -1,30 +1,31 @@
 ---
-title: "데이터베이스 엔진 사용 권한 시작 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 엔진 사용 권한 시작 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  위에 나열된 첫 번째 권한(`GRANT SELECT ON OBJECT::Region TO Ted;`)은 가장 세분화된 권한입니다. 즉, 이 문은 `SELECT`를 부여할 수 있는 최소 권한입니다. 하위 개체에 대한 권한은 함께 제공되지 않습니다. 항상 가능한 최소 권한을 부여하는 것이 좋지만 권한 부여 시스템을 간소화하려면 상위 수준에서 부여해야 합니다. 따라서 Ted에게 전체 스키마에 대한 권한이 필요한 경우 테이블 또는 뷰 수준에서 `SELECT` 권한을 여러 번 부여하는 대신 스키마 수준에서 `SELECT` 권한을 한 번 부여합니다. 데이터베이스의 디자인은 이 전략의 성공 가능성에 큰 영향을 미칩니다. 이 전략은 동일한 권한이 필요한 개체가 단일 스키마에 포함되도록 데이터베이스가 디자인된 경우에 가장 효과적입니다.  
   
 ## <a name="list-of-permissions"></a>권한 목록  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 에는 195개의 권한이 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]및 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 에는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되지 않는 일부 권한이 있지만 데이터베이스 엔진의 일부만 노출하기 때문에 권한 수가 적습니다. 다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 항목에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
-  
-[![데이터베이스 엔진 사용 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 에는 195개의 권한이 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]및 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 에는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되지 않는 일부 권한이 있지만 데이터베이스 엔진의 일부만 노출하기 때문에 권한 수가 적습니다. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 보안 주체와 서버 및 데이터베이스 개체 간의 관계를 보여 주는 그래픽은 [사용 권한 계층 구조&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)를 참조하세요.  
   

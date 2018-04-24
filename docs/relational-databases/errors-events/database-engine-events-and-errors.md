@@ -1,31 +1,32 @@
 ---
-title: "데이터베이스 엔진 이벤트 및 오류 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 엔진 이벤트 및 오류 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e5ebba9bfa6cdbf6bf0c6c2416227a30c6605df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 296612d78c773a665837d03df471b9343a103645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-events-and-errors"></a>데이터베이스 엔진 이벤트 및 오류
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 오류 및 이벤트에 대한 정보를 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 오류 및 이벤트에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 엔진 오류 이해](../../relational-databases/errors-events/understanding-database-engine-errors.md)  

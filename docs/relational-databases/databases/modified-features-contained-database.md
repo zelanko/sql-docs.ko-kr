@@ -1,33 +1,34 @@
 ---
-title: "수정된 기능(포함된 데이터베이스) | Microsoft 문서"
-ms.custom: 
+title: 수정된 기능(포함된 데이터베이스) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, modifications to DBs
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56cbd393df49410b54f2e61e212f4ca55a6ef980
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 126f826de61c9f4d53abab3d8977cbec71d8e75a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다음 기능은 부분적으로 포함된 데이터베이스에서 지원하도록 수정되었습니다. 일반적으로 기능은 데이터베이스 경계를 넘지 않도록 수정됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  다음 기능은 부분적으로 포함된 데이터베이스에서 지원하도록 수정되었습니다. 일반적으로 기능은 데이터베이스 경계를 넘지 않도록 수정됩니다.  
   
  자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)을 참조하세요.  
   

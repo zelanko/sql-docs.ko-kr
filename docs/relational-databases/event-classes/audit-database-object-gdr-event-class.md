@@ -1,34 +1,35 @@
 ---
-title: "Audit Database Object GDR 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Database Object GDR 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Object GDR event class
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8cf6b2df21912d840514bcf17f80a08703616a8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 222f266cfb57a63e5d2a181aabe79e9e961206ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Database Object GDR** 이벤트 클래스는 어셈블리와 스키마 같은 데이터베이스 개체에 대해 GRANT, REVOKE 또는 DENY가 실행되었을 때 발생합니다.  
+  **Audit Database Object GDR** 이벤트 클래스는 어셈블리와 스키마 같은 데이터베이스 개체에 대해 GRANT, REVOKE 또는 DENY가 실행되었을 때 발생합니다.  
   
 ## <a name="audit-database-object-gdr-event-class-data-columns"></a>Audit Database Object GDR 이벤트 클래스 데이터 열  
   

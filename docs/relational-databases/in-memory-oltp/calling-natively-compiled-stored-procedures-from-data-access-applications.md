@@ -1,28 +1,29 @@
 ---
-title: "데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서"
-ms.custom: 
+title: 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9111de789fad1ef59d2d1785d44e686a0993c956
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5568951eda9dee292a301f37da03840bbd976a88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 03/19/2018
   
 -   **SQLBindParameter**를 사용하여 매개 변수를 바인딩합니다.  
   
--   **SQLPrepare.**을 사용하여 프로시저 호출을 준비합니다.  
+-   **SQLPrepare.** 을 사용하여 프로시저 호출을 준비합니다.  
   
 -   **SQLExecute**를 사용하여 저장 프로시저를 여러 번 실행합니다.  
   

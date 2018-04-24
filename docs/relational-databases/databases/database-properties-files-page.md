@@ -1,33 +1,34 @@
 ---
-title: "데이터베이스 속성(파일 페이지) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 속성(파일 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b1df5ff627018147e165af6f169e41b646ff2549
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)**에 적용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)** 에 적용됩니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **데이터베이스 이름**  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/18/2018
  Filestream 데이터 파일 그룹에 파일 (컨테이너)을 추가하려면 FILESTREAM을 사용해야 합니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md) 대화 상자를 사용하여 FILESTREAM을 설정할 수 있습니다.  
   
  **파일 그룹**  
- 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<새 파일 그룹>**을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
+ 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<새 파일 그룹>** 을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
   
  메모리 최적화 파일 그룹에 파일(컨테이너)을 추가할 경우 **파일 그룹** 필드에 데이터베이스의 메모리 최적화 파일 그룹 이름이 채워집니다.  
   

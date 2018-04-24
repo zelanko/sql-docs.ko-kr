@@ -1,28 +1,29 @@
 ---
-title: "실시간 운영 분석을 위한 Columnstore 시작 | Microsoft 문서"
-ms.custom: 
+title: 실시간 운영 분석을 위한 Columnstore 시작 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9f8fc41e72885a9a08d7779afa611e07e1dc8f5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59ce255693bd9148b5f63d18ec26eb522f52a181
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +207,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  권장 모범 사례는 다음과 같습니다.  
   
--   **삽입/쿼리 워크로드:**워크로드가 주로 데이터를 삽입하고 쿼리하는 경우 기본 COMPRESSION_DELAY(0)가 권장되는 옵션입니다. 100만 개의 행이 단일 델타 행 그룹에 삽입되면 새로 삽입된 행이 압축됩니다.  
+-   **삽입/쿼리 워크로드:** 워크로드가 주로 데이터를 삽입하고 쿼리하는 경우 기본 COMPRESSION_DELAY(0)가 권장되는 옵션입니다. 100만 개의 행이 단일 델타 행 그룹에 삽입되면 새로 삽입된 행이 압축됩니다.  
     이러한 워크로드의 예로는 (a) 기존 DW 워크로드 (b) 웹 응용 프로그램에서 클릭 패턴을 분석해야 하는 경우의 클릭 스트림 분석 등이 있습니다.  
   
 -   **OLTP 워크로드:** 워크로드가 DMV에 집중된 경우(즉, 주로 업데이트, 삭제 및 삽입 수행) DMV sys를 검사하면 columnstore 인덱스 조각화를 볼 수 있습니다. dm_db_column_store_row_group_physical_stats. 최근에 압축된 행 그룹에서 삭제된 것으로 표시된 행 수가 10%를 초과하는 경우 COMPRESSION_DELAY 옵션을 사용하여 행이 압축에 적합하게 될 때 시간 지연을 추가할 수 있습니다. 예를 들어 워크로드에 대해 새로 삽입된 행이 60분 동안 '핫' 상태로 유지되는 경우(즉, 여러 번 업데이트되는 경우) COMPRESSION_DELAY가 60이 되도록 선택해야 합니다.  

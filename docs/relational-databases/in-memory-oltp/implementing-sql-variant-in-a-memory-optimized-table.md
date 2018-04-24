@@ -1,28 +1,29 @@
 ---
-title: "메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현 | Microsoft 문서"
-ms.custom: 
+title: 메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b043fb065a9b9930c6cd86d23bd6fefaf1de4af
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7558432045731279f6c898b475eebbac1254ff9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 02/12/2018
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- 키 열은 **BIGINT** 또는 **NVARCHAR(300)**만 가능하다고 가정합니다. 이러한 테이블은 다음과 같이 모델링할 수 있습니다.  
+ 키 열은 **BIGINT** 또는 **NVARCHAR(300)** 만 가능하다고 가정합니다. 이러한 테이블은 다음과 같이 모델링할 수 있습니다.  
   
 ```sql  
 -- original disk-based table  

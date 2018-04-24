@@ -1,34 +1,35 @@
 ---
-title: "CursorImplicitConversion 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: CursorImplicitConversion 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62c9ff7500944f749523a2aa42f01d8106bf54d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d7e3f4bb563b1386392b5dd8892eb22bf000a0c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**CursorImplicitConversion** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트를 의미합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 요청된 유형의 서버 커서에서 지원되지 않는 Transact-SQL 문을 실행할 때 커서 암시적 변환 이벤트가 발생합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 커서 유형이 변경되었음을 나타내는 오류를 반환합니다.  
+  **CursorImplicitConversion** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트를 의미합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 요청된 유형의 서버 커서에서 지원되지 않는 Transact-SQL 문을 실행할 때 커서 암시적 변환 이벤트가 발생합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 커서 유형이 변경되었음을 나타내는 오류를 반환합니다.  
   
  커서 성능을 기록하는 추적에 **CursorImplicitConversion** 이벤트 클래스를 포함합니다.  
   

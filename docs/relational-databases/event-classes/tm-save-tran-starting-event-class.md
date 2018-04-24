@@ -1,34 +1,35 @@
 ---
-title: "TM: Save Tran Starting 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: 'TM: Save Tran Starting 이벤트 클래스 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0640c3a09d1666ab028e3049e16db61d60484cf2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 45b1c6cf46844342435af1f2815cb0144550b3cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Save Tran Starting 이벤트 클래스는 SAVE TRANSACTION 요청이 시작 중임을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
+  TM: Save Tran Starting 이벤트 클래스는 SAVE TRANSACTION 요청이 시작 중임을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
   
 ## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save Tran Starting 이벤트 클래스 데이터 열  
   

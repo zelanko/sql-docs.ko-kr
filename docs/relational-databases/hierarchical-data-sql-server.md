@@ -1,16 +1,16 @@
 ---
-title: "계층적 데이터(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 계층적 데이터(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 33242a30d520ff42721cec074c1bd8a4b78460cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid** 는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
+  기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid** 는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
   
  계층적 데이터는 계층 관계를 통해 서로 관련된 데이터 항목 집합으로 정의됩니다. 계층 관계는 데이터의 한 항목이 다른 항목의 부모인 관계입니다. 데이터베이스에 일반적으로 저장되는 계층적 데이터는 다음과 같습니다.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/09/2018
   
 -   높은 압축성  
   
-     *n*개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
+     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
   
 -   깊이 우선 순서로 비교  
   

@@ -1,34 +1,34 @@
 ---
-title: "장애 조치(Failover) 클러스터에서 FILESTREAM 설정 | Microsoft 문서"
-ms.custom: 
+title: 장애 조치(Failover) 클러스터에서 FILESTREAM 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], setting up on a failover cluster
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4cfd6d35f3b0355aece3f6780f3f1e6b04813f7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d738480648fc9427707ca3949672a9311fe5f2e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>장애 조치(Failover) 클러스터에서 FILESTREAM 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 장애 조치(Failover) 클러스터에서 FILESTREAM을 사용하는 방법에 대해 설명합니다. 이 절차를 시도하기 전에 [장애 조치(Failover) 클러스터링](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 을 이해하고 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
+  이 항목에서는 장애 조치(Failover) 클러스터에서 FILESTREAM을 사용하는 방법에 대해 설명합니다. 이 절차를 시도하기 전에 [장애 조치(Failover) 클러스터링](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 을 이해하고 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
 ### <a name="to-set-up-filestream-on-a-failover-cluster"></a>장애 조치 클러스터에서 FILESTREAM을 설정하려면  
   

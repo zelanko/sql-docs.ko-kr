@@ -1,34 +1,35 @@
 ---
-title: "Audit Database Principal Management 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Database Principal Management 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Principal Management event class
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404a0b01294facff15f3f09ba3b6d98ba5e1d567
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0c4ef25cc986974d67451647b6cd33b0c0199c22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  
+  **Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Audit Database Principal Management 이벤트 클래스 데이터 열  
   

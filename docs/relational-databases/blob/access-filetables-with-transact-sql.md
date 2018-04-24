@@ -1,34 +1,34 @@
 ---
-title: "Transact-SQL을 사용하여 FileTable에 액세스 | Microsoft 문서"
-ms.custom: 
+title: Transact-SQL을 사용하여 FileTable에 액세스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b5ca174c60f14db6fbc86e80693d6132a6ece2a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a959a32dcc25a8d6eaa2a5b84201f535e328f041
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
+  FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="BasicsInsert"></a> FileTable에 대한 INSERT 작업  
  FileTable에 대해 **INSERT** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  

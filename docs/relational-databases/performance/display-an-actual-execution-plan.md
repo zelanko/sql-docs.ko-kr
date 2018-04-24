@@ -1,16 +1,16 @@
 ---
-title: "실제 실행 계획 표시 | Microsoft 문서"
-ms.custom: 
+title: 실제 실행 계획 표시 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - displaying execution plans
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - viewing execution plans
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d34a82e9ceb357fde6059e3259cb2be64a3e50d7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 01e8796ec210078d2ae45896e269063a35f4142b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실제 그래픽 실행 계획을 생성하는 방법에 대해 설명합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행된 후 실제 실행 계획이 실행됩니다. 이 때문에 실제 실행 계획에는 실제 리소스 사용량 메트릭 및 런타임 경고(있는 경우)와 같은 런타임 정보가 포함됩니다. 생성된 실행 계획은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 쿼리를 실행할 때 사용한 실제 쿼리 실행 계획을 표시합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실제 그래픽 실행 계획을 생성하는 방법에 대해 설명합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행된 후 실제 실행 계획이 실행됩니다. 이 때문에 실제 실행 계획에는 실제 리소스 사용량 메트릭 및 런타임 경고(있는 경우)와 같은 런타임 정보가 포함됩니다. 생성된 실행 계획은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 쿼리를 실행할 때 사용한 실제 쿼리 실행 계획을 표시합니다.  
   
  이 기능을 사용하려면 사용자가 그래픽 실행 계획이 생성되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행할 적절한 권한을 가져야 하며 쿼리가 참조하는 모든 데이터베이스에 대해서도 SHOWPLAN 권한이 필요합니다.  
   

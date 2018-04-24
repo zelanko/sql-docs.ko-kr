@@ -1,33 +1,35 @@
 ---
-title: "sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행 | Microsoft 문서"
-ms.custom: 
+title: sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행 | Microsoft 문서
+ms.custom: ''
 ms.date: 07/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-caps.latest.revision: 
+caps.latest.revision: 42
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 815b9a2deb8dd4c3f81e46257ae3756eeefe9512
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e08af3e61b2fad2f30f0969e0f61f72cb1e25e2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL 스크립트 파일 실행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd**를 사용하여 Transact-SQL 스크립트 파일을 실행합니다. Transact-SQL 스크립트 파일은 Transact-SQL 문, **sqlcmd** 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+ **sqlcmd** 를 사용하여 Transact-SQL 스크립트 파일을 실행합니다. Transact-SQL 스크립트 파일은 Transact-SQL 문, **sqlcmd** 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
 
 ## <a name="create-a-script-file"></a>스크립트 파일 만들기  
  메모장을 사용하여 간단한 Transact-SQL 스크립트 파일을 만들려면 다음 단계를 따르세요.  

@@ -2,7 +2,7 @@
 title: 메모리 액세스에 최적화된 시스템 버전 관리 임시 테이블 성능 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tables
@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73b0036271e1c2356ca9f520a8a4ccd3d27c137c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 39d15889d5c3709a2f3defd30e7a6612ea95dbcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>메모리 액세스에 최적화된 시스템 버전 관리 임시 테이블 성능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

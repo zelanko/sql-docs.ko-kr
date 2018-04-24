@@ -1,16 +1,16 @@
 ---
-title: "전체 텍스트 인덱스 채우기 | Microsoft 문서"
-ms.custom: 
+title: 전체 텍스트 인덱스 채우기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
+  전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
 ##  <a name="types"></a> Types of population  
 전체 텍스트 인덱스는 다음 유형의 채우기를 지원합니다.

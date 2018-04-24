@@ -1,34 +1,35 @@
 ---
-title: "SQL:BatchStarting 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: SQL:BatchStarting 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:BatchStarting event class
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acad18a14bbfacef47f07d87b29e6e7942e7e1af
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d16b630f157e134e44bb11e2bcbd2837487e1c9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQL:BatchStarting 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 시작 중임을 나타냅니다.  
+  SQL:BatchStarting 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 시작 중임을 나타냅니다.  
   
 ## <a name="sqlbatchstarting-event-class-data-columns"></a>SQL:BatchStarting 이벤트 클래스 데이터 열  
   

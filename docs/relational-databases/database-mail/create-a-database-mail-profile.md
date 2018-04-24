@@ -1,36 +1,36 @@
 ---
-title: "데이터베이스 메일 프로필 만들기 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 메일 프로필 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a30265b02ca821a3d787162b60847e71e7260fa1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 16e6979b706398dd9de6a81fa6b3be533ac74765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)을 참조하세요.
+  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)을 참조하세요.
   
 -   **시작하기 전 주의 사항:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
   

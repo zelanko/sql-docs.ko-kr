@@ -2,7 +2,7 @@
 title: 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8d2e7c8102333283171e1477d1637f447bf08c9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 9a70919d17a83f1592012ee0bc1064018560c17b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/10/2018
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -124,11 +124,11 @@ ms.lasthandoff: 04/10/2018
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** - **CALL sp_MSins_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name*** 또는 **MCALL sp_MSupd_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name*** 또는 **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -144,11 +144,11 @@ ms.lasthandoff: 04/10/2018
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** - **CALL sp_MSins_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_*article_name***, **CALL sp_MSupd_*article_name***, **XCALL sp_MSupd_*article_name***, **MCALL sp_MSupd_*article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name***, **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  

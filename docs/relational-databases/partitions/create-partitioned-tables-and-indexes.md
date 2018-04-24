@@ -1,16 +1,16 @@
 ---
-title: "분할된 테이블 및 인덱스 만들기 | Microsoft 문서"
-ms.custom: 
+title: 분할된 테이블 및 인덱스 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.createpartition.progress.f1
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df57d6fa660d806b38deb6730dd2152099873f15
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0abc49c1884a0516bc9e0b46b0f4d879ccbacfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 분할된 테이블 및 인덱스에 있는 데이터는 데이터베이스의 여러 파일 그룹에 분산할 수 있는 가로로 구분된 단위로 되어 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 분할된 테이블 및 인덱스에 있는 데이터는 데이터베이스의 여러 파일 그룹에 분산할 수 있는 가로로 구분된 단위로 되어 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
   
  분할된 테이블 또는 인덱스를 만드는 과정은 대개 다음 네 단계로 진행됩니다.  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-create-a-partitioned-table"></a>분할된 테이블을 만들려면  
   
-1.  분할할 테이블을 마우스 오른쪽 단추로 클릭하고 **저장소**를 가리킨 다음 **파티션 만들기...**를 클릭합니다.  
+1.  분할할 테이블을 마우스 오른쪽 단추로 클릭하고 **저장소**를 가리킨 다음 **파티션 만들기...** 를 클릭합니다.  
   
 2.  **파티션 작성 마법사**의 **파티션 작성 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
@@ -204,11 +206,11 @@ ms.lasthandoff: 01/18/2018
   
             -   **주별**을 선택하는 경우 **매** 상자에 작업 일정을 반복하는 주 수를 입력합니다. 작업 일정을 실행할 요일을 선택합니다.  
   
-            -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)**를 선택합니다.  
+            -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)** 를 선택합니다.  
   
-                -   **매(Day)**를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
         2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   

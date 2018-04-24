@@ -1,16 +1,16 @@
 ---
-title: "TDE(투명한 데이터 암호화) | Microsoft 문서"
-ms.custom: 
+title: TDE(투명한 데이터 암호화) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc91fd8963b438902ee29ffb64d6cac0bb2d2f9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 014bf3a80c499d5efc296eb623c976a4d48d2205
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transparent-data-encryption-tde"></a>투명한 데이터 암호화
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +156,7 @@ GO
 > [!TIP]  
 > 데이터베이스의 TDE 상태 변경을 모니터링하려면 SQL Server Audit 또는 SQL Database 감사를 사용합니다. SQL Server의 경우 [SQL Server 감사 동작 그룹 및 동작](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)에서 찾을 수 있는 감사 동작 그룹 DATABASE_CHANGE_GROUP에서 TDE가 추적됩니다.
   
-### <a name="restrictions"></a>제한 사항  
+### <a name="restrictions"></a>Restrictions  
  초기 데이터베이스 암호화, 키 변경 또는 데이터베이스 암호 해독 중에는 다음 작업을 수행할 수 없습니다.  
   
 -   데이터베이스의 파일 그룹에서 파일 삭제  
@@ -241,7 +242,7 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>투명한 데이터 암호화 및 메모리 내 OLTP  
  TDE는 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. TDE를 사용하는 경우 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 메모리 내 OLTP 로그 레코드와 데이터가 암호화됩니다. TDE를 사용하지만 MEMORY_OPTIMIZED_DATA 파일 그룹의 파일이 암호화되지 않으면 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 메모리 내 OLTP 로그 레코드와 데이터가 암호화됩니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [다른 SQL Server로 TDE 보호 데이터베이스 이동](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
  [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
  [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
@@ -252,8 +253,8 @@ GO
  [SQL Server 암호화](../../../relational-databases/security/encryption/sql-server-encryption.md)  
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
-## <a name="see-also"></a>관련 항목:  
- [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM&#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   
   

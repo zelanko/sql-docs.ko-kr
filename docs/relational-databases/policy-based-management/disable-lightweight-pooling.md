@@ -1,33 +1,34 @@
 ---
-title: "경량 풀링 해제 | Microsoft 문서"
-ms.custom: 
+title: 경량 풀링 해제 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59192d43be79bac91db67aedb2bc4fc935865a2c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8e2986f48f38fff9f18547245838c7230771609d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disable-lightweight-pooling"></a>경량 풀링 해제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 규칙은 서버에 경량 풀링이 해제되어 있는지 검사합니다. lightweightpooling을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 파이버 모드 일정으로 전환됩니다. 파이버 모드는 UMS 작업자의 컨텍스트 전환으로 인해 중대한 성능 병목 상태가 발생하는 특정한 상황을 위한 것입니다. 이런 경우는 드물기 때문에 파이버 모드가 일반 시스템의 성능이나 확장성을 향상시키는 경우는 거의 없습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 규칙은 서버에 경량 풀링이 해제되어 있는지 검사합니다. lightweightpooling을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 파이버 모드 일정으로 전환됩니다. 파이버 모드는 UMS 작업자의 컨텍스트 전환으로 인해 중대한 성능 병목 상태가 발생하는 특정한 상황을 위한 것입니다. 이런 경우는 드물기 때문에 파이버 모드가 일반 시스템의 성능이나 확장성을 향상시키는 경우는 거의 없습니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  lightweightpooling 옵션은 철저한 테스트를 수행하고 다른 모든 성능 튜닝 방법을 평가한 후에, 현재 환경에서 컨텍스트 전환이 알려진 문제인 경우에만 설정해야 합니다.  

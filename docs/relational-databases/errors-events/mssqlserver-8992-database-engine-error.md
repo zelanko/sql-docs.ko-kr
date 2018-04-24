@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_8992 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_8992 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 8992 (Database Engine error)
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46b76d5dd4df1a9e693bb1f3da4f383abf9df2a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d0b26c29f4043fe9b88baf1eafeef7b4fe7dedd6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,6 @@ DBCC CHECKCATALOG 또는 DBCC CHECKDB에서 지정된 개체에 대한 시스템
 ### <a name="do-not-manually-update-system-tables"></a>시스템 테이블 수동 업데이트 금지  
 시스템 테이블을 수동으로 업데이트하지 마십시오. SQL Server는 시스템 데이터베이스에 대한 수동 변경을 지원하지 않습니다. SQL Server 데이터베이스에서 시스템 테이블을 업데이트할 경우 두 가지 이벤트(이벤트 ID 17659와 이벤트 ID 3859)가 기록됩니다. 자세한 내용은 기술 자료 문서 2688307, "SQL Server 데이터베이스의 시스템 테이블을 업데이트할 경우 이벤트 ID 17659와 이벤트 ID 3859가 기록됨"을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 데이터베이스의 시스템 테이블을 업데이트할 경우 이벤트 ID 17659와 이벤트 ID 3859가 기록됨](http://support.microsoft.com/kb/2688307/EN-US)  
   

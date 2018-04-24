@@ -1,30 +1,31 @@
 ---
-title: "뷰 만들기 | Microsoft 문서"
-ms.custom: 
+title: 뷰 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b575e509a34c03aca052250c220fcf1726ba2e0
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 793939c45a05c084eb8a7c80fcc5c6ed83a6b5f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-views"></a>뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/19/2018
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 뷰...**를 클릭합니다.  
+2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 뷰...** 를 클릭합니다.  
   
 3.  **테이블 추가** 대화 상자의 테이블, 뷰, 함수 및 동의어 탭 중 하나에서 새 뷰에 포함할 요소를 선택합니다.  
   

@@ -1,16 +1,16 @@
 ---
-title: "계층적 메서드를 사용하여 계층적 테이블 채우기 | Microsoft 문서"
-ms.custom: 
+title: 계층적 메서드를 사용하여 계층적 테이블 채우기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24e6481c9f9122786d46cf7b813fdbdddac2ef74
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 7e2c2b48c78d75eea6ef788eae3dd99e38392b99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-2---populating-a-hierarchical-table-using-hierarchical-methods"></a>2-2단원 - 계층적 메서드를 사용하여 계층적 테이블 채우기
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  
   
 **EmployeeID**가 6인 **David** 는 Marketing Manager입니다. 다음과 같은 3명의 Marketing Specialist가 **David**에게 보고합니다.  
   

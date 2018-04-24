@@ -1,34 +1,35 @@
 ---
-title: "Audit Login 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Login 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0fa928aa50d296cfdfadff980e78369f85a0e86
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2797d58ee721829ceec4d3b41635ac9af53d27a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-login-event-class"></a>Audit Login 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Login** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 로그인했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  
+  **Audit Login** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 로그인했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 이벤트 클래스 데이터 열  
   

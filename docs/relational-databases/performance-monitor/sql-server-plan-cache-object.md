@@ -1,34 +1,35 @@
 ---
-title: "SQL Server, Plan Cache 개체 | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Plan Cache 개체 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68fafc8b215fa71f07cae30b0c19839fdd7261ab
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2444eb38b9197c83c1b4b03c7b63e3132c6aeee4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plan Cache 개체
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Plan Cache** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장 프로시저, 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 트리거와 같은 개체를 저장하기 위해 메모리를 사용하는 방법을 모니터링하는 카운터를 제공합니다. **Plan Cache** 개체의 여러 인스턴스를 한 번에 모니터링할 수 있으며 각 인스턴스는 모니터링할 다양한 유형의 계획을 나타냅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Plan Cache** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 저장 프로시저, 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 트리거와 같은 개체를 저장하기 위해 메모리를 사용하는 방법을 모니터링하는 카운터를 제공합니다. **Plan Cache** 개체의 여러 인스턴스를 한 번에 모니터링할 수 있으며 각 인스턴스는 모니터링할 다양한 유형의 계획을 나타냅니다.  
   
  다음 표에서는 **SQLServer:Plan Cache**카운터에 대해 설명합니다.  
   

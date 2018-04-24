@@ -1,34 +1,35 @@
 ---
-title: "QN:Template 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: QN:Template 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2169d940b03d317493f3894c42e24307c324d952
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 343f80e278b2974afa2b252bab97bcb124de0799
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-QN:Template 이벤트는 쿼리 템플릿의 내부 사용에 대한 정보를 보고합니다. 여기서 쿼리 템플릿이란 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 알리기 위해 쿼리 정의를 공유하는 데 사용하는 메커니즘을 말합니다. 이러한 템플릿은 매개 변수 테이블과 함께 만들어집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 쿼리 템플릿이 만들어지거나 사용되거나 소멸될 때 이러한 유형의 이벤트를 만듭니다.  
+  QN:Template 이벤트는 쿼리 템플릿의 내부 사용에 대한 정보를 보고합니다. 여기서 쿼리 템플릿이란 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 알리기 위해 쿼리 정의를 공유하는 데 사용하는 메커니즘을 말합니다. 이러한 템플릿은 매개 변수 테이블과 함께 만들어집니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 쿼리 템플릿이 만들어지거나 사용되거나 소멸될 때 이러한 유형의 이벤트를 만듭니다.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>QN:Template 이벤트 클래스 데이터 열  
   

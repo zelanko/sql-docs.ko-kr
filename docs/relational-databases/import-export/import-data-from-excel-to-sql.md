@@ -2,7 +2,7 @@
 title: Excel에서 SQL로 데이터 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: import-export
@@ -16,11 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: da247aaa7381703421997378fe95226b5376fe3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +156,7 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 ## <a name="prerequisite---save-excel-data-as-text"></a>필수 구성 요소 - Excel 데이터를 텍스트로 저장
 이 페이지에 설명된 나머지 방법(BULK INSERT 문, BCP 도구 또는 Azure Data Factory 등)을 사용하려면 먼저 Excel 데이터를 텍스트 파일로 내보내야 합니다.
 
-Excel에서 **파일 | 다른 이름으로 저장**을 선택한 다음, **텍스트(탭으로 구분)(\*.txt)** 또는 **CSV(쉼표로 구분)(\*.csv)**를 대상 파일 형식으로 선택합니다.
+Excel에서 **파일 | 다른 이름으로 저장**을 선택한 다음, **텍스트(탭으로 구분)(\*.txt)** 또는 **CSV(쉼표로 구분)(\*.csv)** 를 대상 파일 형식으로 선택합니다.
 
 > [!TIP]
 > 데이터 가져오기 도구로 최상의 결과를 얻으려면, 데이터의 열 헤더 및 행만 포함하는 시트를 저장합니다. 저장된 데이터에 페이지 제목, 빈 줄, 메모 등이 포함되어 있는 경우 나중에 데이터를 가져올 때 예기치 않은 결과가 발생할 수 있습니다.

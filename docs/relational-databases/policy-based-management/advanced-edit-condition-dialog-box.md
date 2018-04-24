@@ -1,33 +1,34 @@
 ---
-title: "고급 편집(조건) 대화 상자 | Microsoft 문서"
-ms.custom: 
+title: 고급 편집(조건) 대화 상자 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>고급 편집(조건) 대화 상자
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **고급 편집** 대화 상자를 사용하여 정책 기반 관리 조건에 대한 복잡한 식을 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **고급 편집** 대화 상자를 사용하여 정책 기반 관리 조건에 대한 복잡한 식을 만들 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **셀 값**  
@@ -91,15 +92,15 @@ ms.lasthandoff: 01/18/2018
 |**Guid()**|Guid Guid(String *guidString*)|문자열에서 GUID를 반환합니다.|*guidString* - 만들 GUID의 문자열 표현입니다.|문자열에서 만든 GUID를 반환합니다.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull(Variant *check_expression*, Variant *replacement_value*)|NULL이 아니면 *check_expression* 값이 반환되고, 그렇지 않으면 *replacement_value* 가 반환됩니다. 형식이 다른 경우 *replacement_value* 는 암시적으로 *check_expression*형식으로 변환됩니다.|*check_expression* - NULL 여부를 검사할 식입니다. *check_expression* 은 정책 기반 관리 지원 형식인 Numeric, String, Bool, DateTime, Array 및 Guid일 수 있습니다.<br /><br /> *replacement_value* - *check_expression* 이 NULL일 경우 반환할 식입니다. *replacement_value* 는 암시적으로 *check_expression*형식으로 변환되는 형식이어야 합니다.|*check_expression* 이 NULL이 아닌 경우 *check_expression* 유형이 반환되고, 그렇지 않으면 *replacement_value* 유형이 반환됩니다.||  
 |**Len()**|Numeric Len(*string_expression*)|후행 공백을 제외하고 제공된 문자열 식의 문자 수를 반환합니다.|*string_expression* - 계산할 문자열 식입니다.|정수 데이터 형식 범주의 값을 반환합니다.|`Len('Hello')``5` 를 반환합니다.|  
-|**Lower()**|String Lower(String*_expression*)|대문자를 모두 소문자로 변환한 후에 문자열을 반환합니다.|*expression* - 원본 문자열 식입니다.|대문자를 모두 소문자로 변환한 후에 원본 문자열 식을 나타내는 문자열을 반환합니다.|`Len('HeLlO')``'hello'` 를 반환합니다.|  
+|**Lower()**|String Lower(String *_expression*)|대문자를 모두 소문자로 변환한 후에 문자열을 반환합니다.|*expression* - 원본 문자열 식입니다.|대문자를 모두 소문자로 변환한 후에 원본 문자열 식을 나타내는 문자열을 반환합니다.|`Len('HeLlO')``'hello'` 를 반환합니다.|  
 |**Mod()**|Numeric Mod(Numeric *expression_dividend*, Numeric *expression_divisor*)|첫 번째 숫자 식을 두 번째 숫자 식으로 나눈 다음 정수 나머지를 제공합니다.|*expression_dividend* - 나눌 숫자 식입니다. *expression_dividend* 는 정수 또는 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식이어야 합니다.<br /><br /> *expression_divisor* - 피제수를 나눌 숫자 식입니다. *expression_divisor* 는 정수 또는 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식이어야 합니다.|정수 데이터 형식 범주의 값을 반환합니다.|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply(Numeric *expression1*, Numeric *expression2*)|두 식을 곱합니다.|*expression1* 및 *expression2* - **datetime** 데이터 형식을 제외한 숫자 범주의 데이터 형식에 대한 올바른 식입니다.|우선 순위가 높은 인수의 데이터 형식을 반환합니다.|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power(Numeric *numeric_expression*, Numeric *expression_power*)|지정된 식을 거듭제곱한 값을 반환합니다.|*numeric_expression* - bit 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다.<br /><br /> *expression_power* - *numeric_expression*을 구할 거듭제곱입니다. *expression_power* - **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다.|반환 형식은 *numeric_expression*과 같습니다.|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round(Numeric *expression*, Numeric *expression_precision*)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다.|*expression* - **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다.<br /><br /> *expression_precision* - 식을 반올림할 전체 자릿수입니다. *expression_precision* 이 양수이면 *numeric_expression* 은 길이로 지정된 10진수 자리의 숫자로 반올림됩니다. *expression_precision* 이 음수이면 *numeric_expression* 은 *expression_precision*에서 지정한 대로 소수점 왼쪽에서 반올림됩니다.|*numeric_expression*과 같은 유형을 반환합니다.|`Round(5.333, 0)`|  
-|**String()**|String String(Variant*_expression*)|변형을 문자열로 변환합니다.|*expression* - 문자열로 변환할 변형 식입니다.|변형 식의 문자열 값을 반환합니다.|`String(4)`|  
+|**String()**|String String(Variant *_expression*)|변형을 문자열로 변환합니다.|*expression* - 문자열로 변환할 변형 식입니다.|변형 식의 문자열 값을 반환합니다.|`String(4)`|  
 |**Sum()**|Numeric Sum(*VarArgs*)|인수 목록에 있는 모든 값의 합계를 반환합니다. Sum은 숫자 값에만 사용할 수 있습니다.|*VarArgs*- **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 변형 식 목록입니다.|가장 정확한 식 데이터 형식에서 모든 식 값의 합계를 반환합니다.<br /><br /> 식 결과가 **integer**, **numeric**, **money** 및 **small money**, **float** 및 **real** 범주이면 반환 형식은 각각 **int**, **numeric**, **money**및 **float**입니다.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)``15` 를 반환합니다.|  
 |**True()**|Bool TRUE()|부울 값 TRUE를 반환합니다.||부울 값 TRUE를 반환합니다.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper(String*_expression*)|소문자를 모두 대문자로 변환한 후에 문자열을 반환합니다.|*expression* - 원본 문자열 식입니다.|소문자를 모두 대문자로 변환한 후에 원본 문자열 식을 나타내는 문자열을 반환합니다.|`Upper('HeLlO')``'HELLO'` 를 반환합니다.|  
+|**Upper()**|String Upper(String *_expression*)|소문자를 모두 대문자로 변환한 후에 문자열을 반환합니다.|*expression* - 원본 문자열 식입니다.|소문자를 모두 대문자로 변환한 후에 원본 문자열 식을 나타내는 문자열을 반환합니다.|`Upper('HeLlO')``'HELLO'` 를 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

@@ -1,35 +1,36 @@
 ---
-title: "Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan XML events
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 106a627a50964d482776401bf27db6f2c83ac0ea
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3e0ff27705828cc5a4175aad63986cc6139a7e25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에서 캡처된 **Showplan XML** 이벤트를 개별 .SQLPlan 파일에 저장하는 방법에 대해 설명합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **Showplan XML** 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 **를 사용하여 추적에서 캡처된** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이벤트를 개별 .SQLPLan 파일에 저장하는 방법에 대해 설명합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **Showplan XML** 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
   
 ## <a name="save-showplan-xml-events-separately"></a>Showplan XML 이벤트를 개별적으로 저장  
   

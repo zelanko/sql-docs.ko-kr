@@ -1,30 +1,30 @@
 ---
-title: "로그 판독기 에이전트 보안(피어 투 피어 복제) | Microsoft 문서"
-ms.custom: 
+title: 로그 판독기 에이전트 보안(피어 투 피어 복제) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.p2pwizard.LRA.f1
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b064576c5edd65059bdfcf2950fc4482da8e41d5
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 7a8abfedf9d464d19e67565e5146c0026efedcd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>로그 판독기 에이전트 보안(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/08/2018
  각 피어에서 게시 데이터베이스 및 구독 데이터베이스 역할을 하는 데이터베이스입니다.  
   
  **배포자에 대한 연결**  
- 배포자에 대한 연결이 설정되는 컨텍스트입니다. 배포자에 대한 로컬 연결은 항상 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정되므로 이 필드는 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'**을 표시합니다.  
+ 배포자에 대한 연결이 설정되는 컨텍스트입니다. 배포자에 대한 로컬 연결은 항상 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정되므로 이 필드는 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
   
  **게시자에 대한 연결**  
  게시자에 대한 연결을 설정하는 컨텍스트입니다. 게시자에 대한 연결은 에이전트를 실행하는 Windows 계정의 컨텍스트 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 설정할 수 있습니다. 이 필드는 **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 중 하나를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  

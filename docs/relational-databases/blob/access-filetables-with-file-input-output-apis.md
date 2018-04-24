@@ -1,34 +1,34 @@
 ---
-title: "파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서"
-ms.custom: 
+title: 파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: d03a42d802d5e1da9b699f4edb3e6e40529d77b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
+  FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
@@ -100,7 +100,7 @@ FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합�
   
 -   이러한 변경은 롤백할 수 없습니다.  
   
- 그러나 **OpenSqlFileStream()**을 호출하여 트랜잭션 FILESTREAM 액세스를 통해 FileTable의 FILESTREAM 열에 액세스할 수도 있습니다. 이러한 종류의 액세스는 완전한 트랜잭션이 될 수 있으며 현재 지원되는 모든 트랜잭션 일관성 수준을 유지합니다.  
+ 그러나 **OpenSqlFileStream()** 을 호출하여 트랜잭션 FILESTREAM 액세스를 통해 FileTable의 FILESTREAM 열에 액세스할 수도 있습니다. 이러한 종류의 액세스는 완전한 트랜잭션이 될 수 있으며 현재 지원되는 모든 트랜잭션 일관성 수준을 유지합니다.  
   
 ###  <a name="concurrency"></a> 동시성 제어  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파일 시스템 응용 프로그램과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 응용 프로그램 간에는 물론 파일 시스템 응용 프로그램 간에도 FileTable 액세스에 동시성 제어를 적용합니다. 이 동시성 제어는 FileTable 행에 대해 적절한 잠금을 얻음으로써 수행됩니다.  

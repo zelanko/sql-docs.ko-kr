@@ -2,7 +2,7 @@
 title: 로그 시퀀스 번호로 복구(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 8a4f7bf02ef09eb623afc88d4c36da3cbc31056d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>로그 시퀀스 번호로 복구(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/10/2018
   
  트랜잭션 로그의 모든 레코드는 LSN(로그 시퀀스 번호)으로 고유하게 식별됩니다. LSN은 변경이 발생한 순서에 따라 번호가 매겨집니다. 예를 들어 LSN2가 LSN1보다 큰 경우 로그 레코드 LSN1에 해당하는 변경이 먼저 발생하고 로그 레코드 LSN2에 해당하는 변경이 이후에 발생한 것입니다.  
   
- 중요한 이벤트가 발생한 로그 레코드의 LSN은 올바른 복원 시퀀스를 생성하는 데 도움이 될 수 있습니다. LSN은 정렬되기 때문에 같음 또는 같지 않음을 확인할 수 있습니다. 즉, **\<**, **>**, **=**, **\<=**, **>=**과 같은 비교가 가능합니다. 이러한 비교 방식은 복원 시퀀스를 만들 때 유용하게 사용할 수 있습니다.  
+ 중요한 이벤트가 발생한 로그 레코드의 LSN은 올바른 복원 시퀀스를 생성하는 데 도움이 될 수 있습니다. LSN은 정렬되기 때문에 같음 또는 같지 않음을 확인할 수 있습니다. 즉, **\<**, **>**, **=**, **\<=**, **>=** 과 같은 비교가 가능합니다. 이러한 비교 방식은 복원 시퀀스를 만들 때 유용하게 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  LSN은 **numeric**(25,0) 데이터 형식의 값입니다. 더하기나 빼기와 같은 산술 연산은 의미가 없으며 LSN과 함께 사용하면 안 됩니다.  
@@ -71,11 +71,11 @@ ms.lasthandoff: 04/10/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN으로 복원하기 위한 Transact-SQL 구문  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
   
--   WITH STOPATMARK **='**lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>*는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPATMARK **='** lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
      STOPATMARK는 복구 중지 지점을 나타내며 지정된 로그 레코드를 포함하는 지점까지 롤포워드됩니다.  
   
--   WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>*는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
      STOPBEFOREMARK는 LSN에 롤포워드하고 롤포워드의 해당 로그 레코드를 제외합니다.  
   
@@ -90,7 +90,7 @@ WITH STOPATMARK = 'lsn:15000000040000037'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "병목 상태 식별 | Microsoft 문서"
-ms.custom: 
+title: 병목 상태 식별 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - resource bottlenecks [SQL Server]
@@ -24,19 +24,21 @@ helpviewer_keywords:
 - bottlenecks [SQL Server]
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a98c591125dad32d9bdd9d77b62bacda8fe47750
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 72d402371944b58fadb028e49c913b29998d0e79
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 공유 리소스를 동시에 액세스하는 경우 병목 상태가 발생합니다. 일반적으로 병목 상태는 모든 소프트웨어 시스템에서 필연적으로 나타나지만 공유 리소스에 대한 과도한 요구는 응답 시간을 현저히 늦추는 원인이므로 반드시 확인하고 적절하게 튜닝해야 합니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  공유 리소스를 동시에 액세스하는 경우 병목 상태가 발생합니다. 일반적으로 병목 상태는 모든 소프트웨어 시스템에서 필연적으로 나타나지만 공유 리소스에 대한 과도한 요구는 응답 시간을 현저히 늦추는 원인이므로 반드시 확인하고 적절하게 튜닝해야 합니다.  
   
  병목 상태의 원인은 다음과 같습니다.  
   

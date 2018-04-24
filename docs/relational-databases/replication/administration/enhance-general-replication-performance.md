@@ -1,16 +1,16 @@
 ---
-title: "일반적인 복제 성능 향상 | Microsoft 문서"
-ms.custom: 
+title: 일반적인 복제 성능 향상 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], general considerations
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eee012274773cb6e0e0fd075aaa88447100d738
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d46c40043d2b6c25d16752bed12f7fb65c55a94a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/08/2018
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**를 각각 사용하는 것이 좋습니다.  
+     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
   
      트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   

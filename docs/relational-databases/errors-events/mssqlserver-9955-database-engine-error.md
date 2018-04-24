@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_9955 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_9955 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 9955 (Database Engine error)
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5ac734473c592a347c8c954d7815b43869d3b9c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 274dfd7f0a8d54966a8788b6bb29a1389cd0c04b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver9955"></a>MSSQLSERVER_9955
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="user-action"></a>사용자 동작  
 이 오류를 해결하려면 실행 중인 전체 텍스트 필터 데몬 프로세스를 종료하고, 필요한 경우 SQL Server 구성 관리자를 사용하여 전체 텍스트 데몬 호스트 계정을 다시 구성하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 구성 관리자](~/relational-databases/sql-server-configuration-manager.md)  
 [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [전체 텍스트 검색](~/relational-databases/search/full-text-search.md)  

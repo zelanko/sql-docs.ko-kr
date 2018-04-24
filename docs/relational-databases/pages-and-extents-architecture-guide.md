@@ -1,31 +1,32 @@
 ---
-title: "페이지 및 익스텐트 아키텍처 가이드 | Microsoft 문서"
-ms.custom: 
+title: 페이지 및 익스텐트 아키텍처 가이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 
+caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81580d88fc57a88aadd7212c229faf2aa7bcda7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 76c3411535c32c4d921ed464a877868b9600c9af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,7 +96,7 @@ ms.lasthandoff: 02/09/2018
 
 ### <a name="managing-extent-allocations"></a>익스텐트 할당 관리
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다음의 두 가지 형식의 할당 맵을 사용하여 익스텐트의 할당을 기록합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 다음의 두 가지 형식의 할당 맵을 사용하여 익스텐트의 할당을 기록합니다. 
 
 - **전역 할당 맵(GAM)**   
   GAM 페이지는 어떤 익스텐트가 할당되었는지 기록합니다. 각 GAM은 64,000개의 익스텐트 또는 거의 4GB의 데이터를 처리합니다. GAM은 처리 간격으로 각 익스텐트에 대해 한 비트를 갖습니다. 이 비트가 1인 경우 익스텐트는 비어 있고 이 비트가 0인 경우 익스텐트는 할당된 상태입니다. 
@@ -163,7 +164,7 @@ IAM 페이지는 필요에 따라 각 할당 단위에 대해 할당되고 파�
 
 ## <a name="tracking-modified-extents"></a>수정된 익스텐트 추적 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 두 개의 내부 데이터 구조를 사용하여 대량 복사 작업에 의해 수정된 익스텐트와 마지막 전체 백업 이후에 수정된 익스텐트를 추적할 수 있습니다. 이 두 데이터 구조를 사용하면 차등 백업의 속도가 크게 향상됩니다. 또한 데이터베이스가 대량 로그 복구 모델을 사용할 경우 대량 복사 작업의 로깅 속도도 향상됩니다. 이러한 구조들은 GAM(전역 할당 맵)과 SGAM(공유 전역 할당 맵) 페이지처럼 각 비트가 단일 익스텐트를 표시하는 비트맵에 해당합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 두 개의 내부 데이터 구조를 사용하여 대량 복사 작업에 의해 수정된 익스텐트와 마지막 전체 백업 이후에 수정된 익스텐트를 추적할 수 있습니다. 이 두 데이터 구조를 사용하면 차등 백업의 속도가 크게 향상됩니다. 또한 데이터베이스가 대량 로그 복구 모델을 사용할 경우 대량 복사 작업의 로깅 속도도 향상됩니다. 이러한 구조들은 GAM(전역 할당 맵)과 SGAM(공유 전역 할당 맵) 페이지처럼 각 비트가 단일 익스텐트를 표시하는 비트맵에 해당합니다. 
 
 - **DCM(차등 변경 맵)**   
    마지막 `BACKUP DATABASE` 문 이후에 변경된 익스텐트를 추적합니다. 익스텐트의 비트가 1인 경우 익스텐트는 마지막 `BACKUP DATABASE` 문 이후에 수정된 것입니다. 이 비트가 0인 경우 익스텐트는 수정되지 않은 것입니다. 차등 백업의 경우 DCM 페이지만 읽고도 어떤 익스텐트가 수정되었는지 알 수 있습니다. 이를 통해 차등 백업이 검색해야 하는 페이지의 수가 상당히 줄어듭니다. 차등 백업이 실행되는 시간의 길이는 데이터베이스의 전체 크기가 아니라 마지막 BACKUP DATABASE 문 이후에 수정된 익스텐트의 수에 비례합니다. 

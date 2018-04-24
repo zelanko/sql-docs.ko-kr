@@ -1,34 +1,35 @@
 ---
-title: "Audit Server Alter Trace 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Server Alter Trace 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Server Alter Trace event class
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b84224a656dfeb178645fdce9996f31e92da7b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2eb83d82ed32400cf6d19ac7c742d910c7d774be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Server Alter Trace** 이벤트 클래스는 ALTER TRACE 권한을 확인하는 모든 문에 대해 발생합니다. ALTER TRACE를 확인하는 문에는 추적을 만들고 구성하거나 추적에 필터를 설정하는 데 사용되는 문이 들어 있습니다.  
+  **Audit Server Alter Trace** 이벤트 클래스는 ALTER TRACE 권한을 확인하는 모든 문에 대해 발생합니다. ALTER TRACE를 확인하는 문에는 추적을 만들고 구성하거나 추적에 필터를 설정하는 데 사용되는 문이 들어 있습니다.  
   
 ## <a name="audit-server-alter-trace-event-class-data-columns"></a>Audit Server Alter Trace 이벤트 클래스 데이터 열  
   

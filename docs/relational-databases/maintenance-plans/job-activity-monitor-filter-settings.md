@@ -2,7 +2,7 @@
 title: 작업 활동 모니터(필터 설정) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: e7155eeaedbbbcd0ac21629906e7c38b56d6577c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
  **마지막 실행 결과**  
  마지막으로 작업을 실행했을 때의 상태로 작업을 필터링합니다.  
   
- **설정**  
+ **Enabled**  
  사용하는 작업만 표시하거나 사용하지 않는 작업만 표시합니다.  
   
  **범주**  

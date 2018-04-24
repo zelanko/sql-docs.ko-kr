@@ -1,16 +1,16 @@
 ---
-title: "보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서"
-ms.custom: 
+title: 보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서
+ms.custom: ''
 ms.date: 09/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [SQL Server], Security Log
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81487f57c0addf8f6e703a22e14bfe7e305a8fc6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2741717a635f0c92aceca76668a76a52bf5aacd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
 ##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  

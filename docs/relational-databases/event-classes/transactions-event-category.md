@@ -1,36 +1,37 @@
 ---
-title: "Transactions 이벤트 범주 | Microsoft 문서"
-ms.custom: 
+title: Transactions 이벤트 범주 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server event classes, Transactions event category
 - event classes [SQL Server], Transactions event category
 - Transactions event category [SQL Server]
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f68fece93029bd48b07cef6101e928028336f5d7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cef031b31ed079aae639d8af764e2d36cf2b60d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-event-category"></a>Transactions 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Transactions** 이벤트 클래스를 사용하면 트랜잭션 상태를 모니터링할 수 있습니다. 접두사 **TM:** 으로 시작되는 이벤트 클래스 이름은 트랜잭션 관리 인터페이스를 통해 전송되는 트랜잭션 관련 작업을 추적하는 데 사용됩니다.  
+  **Transactions** 이벤트 클래스를 사용하면 트랜잭션 상태를 모니터링할 수 있습니다. 접두사 **TM:** 으로 시작되는 이벤트 클래스 이름은 트랜잭션 관리 인터페이스를 통해 전송되는 트랜잭션 관련 작업을 추적하는 데 사용됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -1,16 +1,16 @@
 ---
-title: "뷰 수정 | Microsoft 문서"
-ms.custom: 
+title: 뷰 수정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - views [SQL Server], renaming
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - modifying views
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 414515b7c9c2d6b9c3fe3319979a5987594fb5dd
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a5413185e4903fc7994dab9a1e4e5228f563d28d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-views"></a>뷰 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/19/2018
   
     1.  추가하거나 제거할 요소의 확인란을 선택하거나 선택을 취소합니다.  
   
-    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...**를 선택한 다음 **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
+    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음 **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
   
     3.  제거할 테이블의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.  
   

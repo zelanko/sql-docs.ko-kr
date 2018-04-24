@@ -2,7 +2,7 @@
 title: 가용성 그룹 수신기 만들기 또는 구성(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,19 +23,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 만들기 또는 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 대한 단일 *가용성 그룹 수신기*를 만들거나 구성하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 *,* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 대한 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)]가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 만들거나 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹에 대한 첫 번째 가용성 그룹 수신기를 만들려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell을 사용하는 것이 좋습니다. 추가 수신기를 만들려는 경우처럼 필요한 경우를 제외하고 WSFC 클러스터에서 수신기를 직접 만들지 마세요.  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [이 가용성 그룹에 대한 수신기가 이미 존재합니까?](#DoesListenerExist)  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Recommendations"></a> 권장 사항  
  필수는 아니지만 여러 서브넷 구성에 대해 고정 IP 주소를 사용하는 것이 좋습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  의미 있는 문자열을 지정하는 것이 좋습니다. 예를 들어, `AG1`이라는 가용성 그룹의 경우 `ag1-listener`와 같은 의미 있는 DNS 호스트 이름을 지정합니다.  
   
 > [!IMPORTANT]  
->  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면 가상 네트워크 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
+>  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
   
 ###  <a name="WinPermissions"></a> Windows 사용 권한  
   
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **가용성 그룹 수신기를 만들거나 구성하려면**  
   
-1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
+1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리(**cd**)를 변경합니다.  
   
 2.  가용성 그룹 수신기를 만들거나 수정하려면 다음 cmdlet 중 하나를 사용합니다.  
   
@@ -298,7 +299,7 @@ ms.lasthandoff: 11/20/2017
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 클라이언트 연결 문자열이 권장 사항에 따라  **를 지정하는 클라이언트에 대한 장애 조치(Failover) 후에 재연결 시간을 줄이기 위해** RegisterAllProvidersIP `MultiSubnetFailover = True`속성을 1로 설정합니다. 수신기의 다중 서브넷 기능을 사용하려면 클라이언트에 **MultiSubnetFailover** 키워드를 지원하는 데이터 공급자가 필요할 수 있습니다. 다중 서브넷 장애 조치(Failover)의 드라이버 지원에 대한 자세한 내용은 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 참조하세요.  
   
-     다중 서브넷 클러스터링에 대한 자세한 내용은 [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)을 참조하세요.  
+     다중 서브넷 클러스터링에 대한 자세한 내용은 [SQL Server 다중 서브넷 클러스터링&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)를 만들거나 구성하는 방법에 대해 설명합니다.  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`일 때 WSFC 클러스터에서 WSFC 구성 유효성 검사 마법사를 실행하면 마법사가 다음과 같은 경고 메시지를 생성합니다.  

@@ -1,16 +1,16 @@
 ---
-title: "XML 데이터 인스턴스 만들기 | Microsoft 문서"
-ms.custom: 
+title: XML 데이터 인스턴스 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 54afef1467ec06d3ca695db00aa829fa387f6292
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
+  이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음과 같은 방법으로 XML 인스턴스를 생성할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/12/2018
 -   대량 로드 사용  
   
 ## <a name="type-casting-string-and-binary-instances"></a>문자열 및 이진 인스턴스의 형식 캐스팅  
- 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**n**n**][**var**]**char **,**char **,**varbinary **및**image **와 같은** 문자열 데이터 형식을 **와 같은** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**데이터 형식으로 캐스팅(CAST) 또는 변환(CONVERT)하여 [** n **][** var **]** char **,**[n]text **,** varbinary **및**image **와 같은** 문자열 데이터 형식을 **xml** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
  XML 문서는 UTF-8, UTF-16, windows-1252 등과 같은 다른 인코딩 방식으로 인코딩할 수 있습니다. 다음은 문자열 및 이진 원본 유형이 XML 문서 인코딩과 상호 작용하는 방법 및 파서의 동작 방식에 대한 규칙을 대략적으로 설명한 것입니다.  
   
@@ -188,7 +188,7 @@ go
  FOR XML에 대한 자세한 내용은 [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE 지시문을 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 **xml** 데이터 형식 인스턴스를 반환합니다. 또는 **xml** 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 **xml** 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
  문자열 상수는 **xml** 데이터 형식의 인스턴스가 예상되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  

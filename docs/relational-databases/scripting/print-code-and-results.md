@@ -1,16 +1,16 @@
 ---
-title: "코드 및 결과 인쇄 | Microsoft 문서"
-ms.custom: 
+title: 코드 및 결과 인쇄 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d1f662f0911234962948fe9e68123aaf06e5fd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d198072951c81ab11c3258aab0be4bfb0d4c9819
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="print-code-and-results"></a>코드 및 결과 인쇄
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  쿼리나 파일을 인쇄할 경우 프린터에서 컬러 인쇄를 지원하며 프린터 설정에서 컬러 인쇄가 설정된 경우 컬러 요소는 컬러로 인쇄됩니다.  
   
  그러나 편집기의 텍스트 글꼴 및 색과 해당 텍스트가 프린터에서 인쇄되는 방식이 다를 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**아래에서 **글꼴 및 색**을 클릭한 다음 편집기에 표시할 항목에 대한 글꼴 및 색과 인쇄 시에 적용할 글꼴 및 색을 선택합니다. 이러한 설정이 다르기 때문에 편집기에 표시된 것과 출력이 다를 수 있습니다.  
   

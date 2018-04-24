@@ -1,16 +1,16 @@
 ---
-title: "inserted 및 deleted 테이블 사용 | Microsoft 문서"
-ms.custom: 
+title: inserted 및 deleted 테이블 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserted tables
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 297a59dd264361ece94525f1f8a046a0cccf2dad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 메모리에 상주하는 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 이 테이블에서 데이터를 직접 수정하거나 CREATE INDEX와 같은 DDL(데이터 정의 언어) 작업을 수행할 수 없습니다.  
+  DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 메모리에 상주하는 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 이 테이블에서 데이터를 직접 수정하거나 CREATE INDEX와 같은 DDL(데이터 정의 언어) 작업을 수행할 수 없습니다.  
   
  DML 트리거에서 inserted 및 deleted 테이블은 주로 다음 작업을 수행하는 데 사용됩니다.  
   
@@ -57,7 +58,7 @@ DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)
 > [!NOTE]  
 >  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 저장하는 경우 **varchar(max)**, **nvarchar(max)**및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 저장하는 경우 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
  **비즈니스 규칙을 적용하기 위해 트리거의 inserted 테이블을 사용하는 예**  
   

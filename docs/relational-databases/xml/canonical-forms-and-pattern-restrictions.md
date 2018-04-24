@@ -1,35 +1,35 @@
 ---
-title: "정규 형식 및 패턴 제한 사항 | Microsoft 문서"
-ms.custom: 
+title: 정규 형식 및 패턴 제한 사항 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8492b7bae99daa71c801f4d32314efa51067fcfe
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6a74400bd7691d1f9b05fda355b12ef30005902e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>정규 형식 및 패턴 제한 사항
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-XSD 패턴 패싯을 사용하면 단순 유형의 어휘 영역을 제한할 수 있습니다. 어휘 표현이 둘 이상 있는 형식에 패턴 제한을 적용한 경우 일부 값으로 인해 유효성 검사 후 예기치 않은 동작이 발생할 수 있습니다.  
+  XSD 패턴 패싯을 사용하면 단순 유형의 어휘 영역을 제한할 수 있습니다. 어휘 표현이 둘 이상 있는 형식에 패턴 제한을 적용한 경우 일부 값으로 인해 유효성 검사 후 예기치 않은 동작이 발생할 수 있습니다.  
   
  이러한 동작은 이러한 값의 어휘 표현이 데이터베이스에 저장되지 않기 때문에 발생합니다. 따라서 출력으로 직렬화될 때 값이 해당 정규 표현으로 변환됩니다. 문서에 있는 값의 정규 형식이 값 형식에 대한 패턴 제한을 준수하지 않는 경우 사용자가 이 값을 다시 삽입하려고 하면 해당 문서는 거부됩니다.  
   

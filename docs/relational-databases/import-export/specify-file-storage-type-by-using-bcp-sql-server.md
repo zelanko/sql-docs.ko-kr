@@ -1,16 +1,16 @@
 ---
-title: "bcp를 사용하여 파일 저장 유형 지정(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: bcp를 사용하여 파일 저장 유형 지정(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f8a92798377339913711e20c952ea0148cae2f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 저장 유형 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/20/2018
     |**numeric**|**n**|  
     |**float**|**f[loat]**|  
     |**real**|**r**|  
-    |**Int**|**i[nt]**|  
+    |**정수**|**i[nt]**|  
     |**bigint**|**B[igint]**|  
     |**smallint**|**s[mallint]**|  
     |**tinyint**|**t[inyint]**|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 03/20/2018
   
      \***char** 파일 저장 유형으로 내보낸 데이터 중 문자가 아닌 데이터에 대해 데이터 파일에 할당되는 저장 공간의 크기는 필드 길이, 접두사 길이 및 종결자의 상호 작용에 따라 결정됩니다.  
   
-     \*\***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하십시오. 대신 **nvarchar(max)**, **varchar(max)**및 **varbinary(max)** 를 사용합니다.  
+     \*\***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하십시오. 대신 **nvarchar(max)**, **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
 ## <a name="native-file-storage-types"></a>네이티브 파일 저장 유형  
  각 네이티브 파일 저장 유형은 해당 호스트 파일 데이터 형식으로 서식 파일에 기록됩니다.  

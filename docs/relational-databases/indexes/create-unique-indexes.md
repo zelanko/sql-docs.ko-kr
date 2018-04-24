@@ -2,7 +2,7 @@
 title: 고유 인덱스 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -25,13 +25,14 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 652c81c2236ee63ba5ee3a61bef2026d0c9a8f49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-unique-indexes"></a>Create Unique Indexes
+# <a name="create-unique-indexes"></a>고유 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 고유 인덱스를 만드는 방법에 대해 설명합니다. 고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블의 모든 행이 고유합니다. UNIQUE 제약 조건을 만드는 것과 제약 조건의 영향을 받지 않는 고유 인덱스를 만드는 것에는 큰 차이가 없습니다. 데이터 유효성 검사는 이와 동일한 방식으로 수행됩니다. 쿼리 최적화 프로그램에서는 제약 조건에 따라 생성된 고유 인덱스와 수동으로 만든 고유 인덱스를 동일하게 취급합니다. 하지만 열에 UNIQUE 제약 조건을 만들면 인덱스의 목표가 명확해집니다. UNIQUE 제약 조건에 대한 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/10/2018
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [고유 인덱스의 이점](#Benefits)  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -119,15 +120,15 @@ ms.lasthandoff: 04/10/2018
   
 6.  **선택한 기본/고유 키 또는 인덱스** 입력란에서 새 인덱스를 선택합니다.  
   
-7.  주 표의 **(일반)**에서 **유형** 을 선택한 다음 목록에서 **인덱스** 를 선택합니다.  
+7.  주 표의 **(일반)** 에서 **유형** 을 선택한 다음 목록에서 **인덱스** 를 선택합니다.  
   
-8.  **열**을 선택한 다음 줄임표 **(…)**를 클릭합니다.  
+8.  **열**을 선택한 다음 줄임표 **(…)** 를 클릭합니다.  
   
 9. **인덱스 열** 대화 상자의 **열 이름**에서 인덱스를 작성할 열을 선택합니다. 최대 16개의 열을 선택할 수 있습니다. 최상의 성능을 얻으려면 인덱스별로 열을 한두 개만 선택하는 것이 좋습니다. 선택한 각 열에 대해 해당 열의 인덱스 값을 오름차순으로 정렬할지 내림차순으로 정렬할지 지정합니다.  
   
 10. 인덱스의 모든 열을 선택한 후 **확인**을 클릭합니다.  
   
-11. 표의 **(일반)**에서 **고유 여부** 를 선택한 다음 목록에서 **예** 를 선택합니다.  
+11. 표의 **(일반)** 에서 **고유 여부** 를 선택한 다음 목록에서 **예** 를 선택합니다.  
   
 12. 선택 사항: 주 표의 **테이블 디자이너**에서 **중복 키 무시** 를 선택한 다음 목록에서 **예** 를 선택합니다. 고유 인덱스에 중복 키를 만드는 데이터를 추가하려는 시도를 무시하려는 경우 이와 같이 선택합니다.  
   
@@ -143,13 +144,13 @@ ms.lasthandoff: 04/10/2018
   
 3.  고유 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...**를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
 6.  **고유** 확인란을 선택합니다.  
   
-7.  **인덱스 키 열**아래에서 **추가...**를 클릭합니다.  
+7.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
   
 8.  *****table_name에서 열 선택* 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   

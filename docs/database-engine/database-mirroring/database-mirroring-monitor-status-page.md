@@ -1,34 +1,34 @@
 ---
-title: "데이터베이스 미러링 모니터(상태 페이지) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 모니터(상태 페이지) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 498f036251ce65580a967dccb8b3d5b7073167c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
+  이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/23/2018
 |**기록**|서버 인스턴스의 미러링 기록을 표시하려면 클릭합니다. 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 통계 및 미러링 상태의 기록을 표시하는 **데이터베이스 미러링 기록** 대화 상자가 열립니다.<br /><br /> 모니터가 서버 인스턴스에 연결되지 않은 경우 **기록** 단추는 흐리게 표시됩니다.|  
   
  **주 로그(** *\<시간>* **)**  
- *\<시간>*으로 표시된 서버 인스턴스의 현지 시간 기준의 주 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
+ *\<시간>* 으로 표시된 서버 인스턴스의 현지 시간 기준의 주 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
   
  **보내지 않은 로그**  
  Send Queue에서 대기 중인 로그의 양(KB)입니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/23/2018
  들어오는 트랜잭션이 주 서버의 로그에 들어오는 속도(KB/초)입니다. 미러링 속도가 늦는지, 보통인지 또는 빠른지를 확인하려면 이 값을 **로그 전송 예상 시간** 값과 비교합니다.  
   
  **미러 로그(** *\<시간>* **)**  
- *\<시간>*으로 표시된 서버 인스턴스의 현지 시간 기준의 미러 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
+ *\<시간>* 으로 표시된 서버 인스턴스의 현지 시간 기준의 미러 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
   
  **복원되지 않은 로그**  
  Redo Queue에서 대기 중인 로그의 양(KB)입니다.  

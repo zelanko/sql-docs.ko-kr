@@ -1,32 +1,32 @@
 ---
-title: "BLOB 저장 옵션 비교(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: BLOB 저장 옵션 비교(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 386447067f95fb40f0b8cae87325df348e4ec8c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
   
 ##  <a name="Expectations"></a> 데이터베이스에 파일 저장 - 이점 및 요구 사항  
  대부분의 기업 데이터는 본질적으로 구조화되어 있지 않으며 대개 파일 시스템에 파일 및 문서로 저장됩니다. 이러한 데이터는 대부분 Windows API를 통해 파일에 액세스하는 응용 프로그램에서 생성, 관리 및 사용합니다. 일반적으로 기업에서는 이러한 데이터를 파일 시스템에 보관하는 한편, 파일의 관련 메타데이터는 관계형 데이터베이스에 저장합니다.  

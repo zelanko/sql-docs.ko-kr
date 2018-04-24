@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 엔진 오류 심각도 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 엔진 오류 심각도 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류가 발생한 경우 오류 심각도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발견된 문제의 유형을 나타냅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류가 발생한 경우 오류 심각도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발견된 문제의 유형을 나타냅니다.  
   
 ## <a name="levels-of-severity"></a>심각도  
  다음 표에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 발생하는 오류의 심각도를 나열하고 그 내용을 설명합니다.  
   
-|심각도|설명|  
+|심각도|Description|  
 |--------------------|-----------------|  
 |0-9|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 심각도가 0 ~ 9인 경우 시스템 오류를 발생시키지 않습니다.|  
 |10|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 호환성을 위해 오류 정보를 호출 응용 프로그램으로 반환하기 전에 심각도 10을 심각도 0으로 변환합니다.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="retrieving-error-severity"></a>오류 심각도 검색  
  ERROR_SEVERITY 시스템 함수를 사용하여 TRY…CATCH 구문의 CATCH 블록을 실행했던 오류 심각도를 검색할 수 있습니다. CATCH 블록의 범위를 벗어나 호출한 경우 ERROR_SEVERITY는 NULL을 반환합니다. 자세한 내용은 [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 오류 이해](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

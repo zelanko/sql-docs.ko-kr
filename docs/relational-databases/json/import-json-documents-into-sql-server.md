@@ -2,10 +2,10 @@
 title: SQL Server에 JSON 문서 가져오기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: ''
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
@@ -13,15 +13,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e16ca364f3e9ed5c65b89a1abdd554991558862e
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a003721f442734c553631cf58ecd723a6298709d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/28/2018
 이 항목에서는 SQL Server에 JSON 파일을 가져오는 방법을 설명합니다. 현재 많은 JSON 문서가 파일로 저장됩니다. JSON 파일의 응용 프로그램 로그 정보, JSON 파일에 저장된 센서 생성 정보 등을 예로 들 수 있습니다. 파일에 저장된 JSON 데이터를 읽고, 데이터를 SQL Server에 로드하여 분석할 수 있어야 합니다.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>단일 열에 JSON 문서 가져오기
-**OPENROWSET(BULK)**는 SQL Server에 해당 위치에 대한 읽기 권한이 있는 경우 로컬 드라이브 또는 네트워크에 있는 모든 파일에서 데이터를 읽을 수 있는 테이블 반환 함수입니다. 파일의 콘텐츠를 포함하는 단일 열로 된 테이블을 반환합니다. 구분 기호 등 OPENROWSET(BULK) 함수에서 사용할 수 있는 다양한 옵션이 있습니다. 하지만 가장 간단하게 파일의 전체 콘텐츠를 텍스트 값으로 로드할 수 있습니다. (이 단일 큰 값을 단일 문자 LOB(Large Object) 또는 SINGLE_CLOB이라고 합니다.) 
+**OPENROWSET(BULK)** 는 SQL Server에 해당 위치에 대한 읽기 권한이 있는 경우 로컬 드라이브 또는 네트워크에 있는 모든 파일에서 데이터를 읽을 수 있는 테이블 반환 함수입니다. 파일의 콘텐츠를 포함하는 단일 열로 된 테이블을 반환합니다. 구분 기호 등 OPENROWSET(BULK) 함수에서 사용할 수 있는 다양한 옵션이 있습니다. 하지만 가장 간단하게 파일의 전체 콘텐츠를 텍스트 값으로 로드할 수 있습니다. (이 단일 큰 값을 단일 문자 LOB(Large Object) 또는 SINGLE_CLOB이라고 합니다.) 
 
 다음은 JSON 파일의 콘텐츠를 읽고 단일 값으로 사용자에게 반환하는 **OPENROWSET(BULK)** 함수의 예입니다.
 

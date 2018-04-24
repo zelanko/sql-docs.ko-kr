@@ -2,7 +2,7 @@
 title: 강력한 암호 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c5b783d4899479523d0e54fda7620ad0145b642
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92fe5fd85a062dd4de6d86fab6b7a559f2e0010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="strong-passwords"></a>강력한 암호
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/10/2018
   
 -   $ 또는 @ 문자로 시작하는 경우  
   
- OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 [] {}() , ; ? * ! @. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
+ OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 [] {}() , ; ? * ! @을 참조하세요. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [암호 정책](../../relational-databases/security/password-policy.md)  

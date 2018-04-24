@@ -1,31 +1,32 @@
 ---
-title: "서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 02/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffe13b9772d5c281897fa2e9099060e6858660b6
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71ad1ae945f4b8aca1ef1fa259b5ffb78fd753af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,8 +100,8 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 열을 건너뛰는 데 기본적으로 사용되는 방법에는 다음 세 가지 단계가 포함됩니다.
 
 1.   먼저 원본 데이터 파일에서 누락된 필드를 나타내는 모든 서식 파일 행을 삭제합니다.
-2.   그런 다음, 삭제된 행 뒤에 오는 각 서식 파일 행의 “호스트 파일 필드 순서” 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n*까지의 순차적인 “호스트 파일 필드 순서” 값을 얻는 것입니다.
-3.   마지막으로 데이터 파일의 실제 필드 수를 반영하도록 “열 수” 필드의 값을 줄입니다.  
+2.   그런 다음 삭제된 행 뒤에 오는 각 서식 파일 행의 "호스트 파일 필드 순서" 값을 줄입니다. 목표는 데이터 파일에서 각 데이터 필드의 실제 위치를 반영하는 1부터 *n*까지의 순차적인 "호스트 파일 필드 순서" 값을 얻는 것입니다.
+3.   마지막으로 데이터 파일의 실제 필드 수를 반영하도록 "열 수" 필드의 값을 줄입니다.  
   
 다음 예는 `myTestSkipCol` 테이블에 대한 기본 서식 파일을 기반으로 합니다. 수정된 이 서식 파일은 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col2`를 건너뛴 다음 두 번째 데이터 필드를 `Col3`에 매핑합니다. `Col2` 의 행은 삭제되었습니다. 첫 번째 필드 뒤의 구분 기호도 `\t`에서 `,`로 변경되었습니다.
   
@@ -113,7 +114,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
 #### <a name="option-2---modify-the-row-definition"></a>옵션 #2 - 행 정의 수정
 
-테이블 열을 건너뛰기 위해 테이블 열에 해당하는 서식 파일 행의 정의를 수정할 수도 있습니다. 이 서식 파일 행에서 “접두사 길이”, “호스트 파일 데이터 길이” 및 “서버 열 순서” 값은 0으로 설정해야 하며 “종결자” 및 “열 데이터 정렬” 필드도 ""(즉, 빈 값이나 NULL 값)로 설정해야 합니다. 실제 열 이름이 필요하지 않더라도 “서버 열 이름” 값에는 공백이 아닌 문자열이 필요합니다. 나머지 서식 필드에는 해당 기본값이 필요합니다.  
+테이블 열을 건너뛰기 위해 테이블 열에 해당하는 서식 파일 행의 정의를 수정할 수도 있습니다. 이 서식 파일 행에서 "접두사 길이", "호스트 파일 데이터 길이" 및 "서버 열 순서" 값은 0으로 설정해야 하며 “종결자” 및 “열 데이터 정렬” 필드도 ""(즉, 빈 값이나 NULL 값)로 설정해야 합니다. 실제 열 이름이 필요하지 않더라도 “서버 열 이름” 값에는 공백이 아닌 문자열이 필요합니다. 나머지 서식 필드에는 해당 기본값이 필요합니다.  
   
 다음 예도 `myTestSkipCol` 테이블에 대한 기본 서식 파일에서 파생된 것입니다.  
   
@@ -201,9 +202,9 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 #### <a name="using-bulk-insert-with-a-view"></a>뷰와 함께 BULK INSERT 사용  
 
-XML 서식 파일을 사용하면 **bcp** 명령이나 `BULK INSERT` 문을 사용하여 테이블로 데이터를 직접 가져올 때 열을 건너뛸 수 없습니다. 그러나 테이블의 마지막 열을 제외하고 모든 열로 가져올 수 있습니다. 마지막 열을 제외하고 모든 열을 건너뛰어야 하는 경우 데이터 파일에 있는 열만 포함된 대상 테이블의 뷰를 만들어야 합니다. 그런 다음, 해당 파일의 데이터를 뷰로 대량 가져오기를 수행할 수 있습니다.  
+XML 서식 파일을 사용하면 **bcp** 명령이나 `BULK INSERT` 문을 사용하여 테이블로 데이터를 직접 가져올 때 열을 건너뛸 수 없습니다. 그러나 테이블의 마지막 열을 제외하고 모든 열로 가져올 수 있습니다. 마지막 열을 제외하고 모든 열을 건너뛰어야 하는 경우 데이터 파일에 있는 열만 포함된 대상 테이블의 뷰를 만들어야 합니다. 그런 다음 해당 파일의 데이터를 뷰로 대량 가져오기를 수행할 수 있습니다.  
   
-다음 예에서는 `myTestSkipCol` 테이블에 `v_myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음, 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
+다음 예에서는 `myTestSkipCol` 테이블에 `v_myTestSkipCol` 뷰를 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
   
 SSMS에서 다음 코드를 실행합니다. 컴퓨터에서 샘플 파일 위치에 대한 파일 시스템 경로를 업데이트합니다. 
   

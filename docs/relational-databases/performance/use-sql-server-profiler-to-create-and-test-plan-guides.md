@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트 | Microsoft 문서"
-ms.custom: 
+title: SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - checking plan guides
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a19fd733c0367c53c56228aeb1e04293f3eb2ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 계획 지침을 만들 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 **sp_create_plan_guide** 저장 프로시저의 *statement_text* 인수에서 사용할 정확한 쿼리 텍스트를 캡처할 수 있습니다. 이렇게 하면 컴파일 시 계획 지침이 쿼리와 일치하도록 보장할 수 있습니다. 계획 지침을 만든 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실제로 계획 지침이 쿼리와 일치하는지 여부를 테스트할 수도 있습니다. 일반적으로 쿼리가 계획 지침과 일치하는지 확인하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 계획 지침을 테스트해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  계획 지침을 만들 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 *sp_create_plan_guide* 저장 프로시저의 **statement_text** 인수에서 사용할 정확한 쿼리 텍스트를 캡처할 수 있습니다. 이렇게 하면 컴파일 시 계획 지침이 쿼리와 일치하도록 보장할 수 있습니다. 계획 지침을 만든 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실제로 계획 지침이 쿼리와 일치하는지 여부를 테스트할 수도 있습니다. 일반적으로 쿼리가 계획 지침과 일치하는지 확인하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 계획 지침을 테스트해야 합니다.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler를 사용하여 쿼리 텍스트 캡처  
  쿼리를 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 전송된 대로 정확히 텍스트를 캡처하려는 경우 쿼리 텍스트와 정확히 일치하는 SQL 또는 TEMPLATE 유형의 계획 지침을 만들 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램에서 이 계획 지침이 사용되도록 보장할 수 있습니다.  
@@ -73,7 +74,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  일괄 처리 텍스트 파일을 메모장에서 열고 텍스트를 복사 및 붙여 넣기 버퍼로 복사합니다.  
   
-8.  계획 지침을 만들고 복사한 텍스트를**@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. **@stmt** 인수에 있는 작은따옴표 앞에 다른 작은따옴표를 붙여 이스케이프 처리해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'**20000101**'** 은 **''**20000101**''**로 구분해야 합니다.  
+8.  계획 지침을 만들고 복사한 텍스트를 **@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. **@stmt** 인수에 있는 작은따옴표 앞에 다른 작은따옴표를 붙여 이스케이프 처리해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
   
  계획 지침은 다음과 같습니다.  
   

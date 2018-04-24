@@ -1,16 +1,16 @@
 ---
-title: "시스템 데이터베이스 다시 빌드 | Microsoft 문서"
-ms.custom: 
+title: 시스템 데이터베이스 다시 빌드 | Microsoft 문서
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 3291ec725dac23a1a6d9b95f94a4f7f4035f4a36
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)또는 [resource](../../relational-databases/databases/resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
+  [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)또는 [resource](../../relational-databases/databases/resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
   
  **항목 내용**  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 02/20/2018
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들면 **NT AUTHORITY\SYSTEM**과 같이 입력합니다.|  
     |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \*\*****sa**계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
-    |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\***서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
+    |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\*** 서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|각 tempdb 데이터 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|각 tempdb 데이터 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64|  
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/20/2018
   
      자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
-3.  다른 명령줄 창에서 다음 명령을 실행하여 **msdb** 데이터베이스를 분리하고 *\<servername>*을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다. `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  다른 명령줄 창에서 다음 명령을 실행하여 **msdb** 데이터베이스를 분리하고 *\<servername>* 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다. `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  Windows 탐색기를 사용하여 **msdb** 데이터베이스 파일의 이름을 바꿉니다. 기본적으로 이러한 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터 하위 폴더에 있습니다.  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/20/2018
   
 6.  명령줄 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작하고 다음 명령을 실행합니다. `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     *\<servername>*을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스로 바꿉니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 파일 시스템 경로를 사용합니다.  
+     *\<servername>* 을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스로 바꿉니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 파일 시스템 경로를 사용합니다.  
   
 7.  Windows 메모장을 사용하여 **instmsdb.out** 파일을 열고 오류 출력을 확인합니다.  
   

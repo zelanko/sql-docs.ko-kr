@@ -1,36 +1,36 @@
 ---
-title: "PolyBase 스케일 아웃 그룹 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 스케일 아웃 그룹 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 
+caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e20ca5840b78e36e31f80247f77686135db489f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 스케일 아웃 그룹
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 저장소에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
+  PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 저장소에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
   
  [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.  
   

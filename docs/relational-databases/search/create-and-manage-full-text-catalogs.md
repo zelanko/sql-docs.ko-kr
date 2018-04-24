@@ -1,31 +1,32 @@
 ---
-title: "전체 텍스트 카탈로그 만들기 및 관리 | Microsoft 문서"
-ms.custom: 
+title: 전체 텍스트 카탈로그 만들기 및 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 52ec4860676f445e775ff90048bd091329510cc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  다시 작성하려는 전체 텍스트 카탈로그의 이름을 마우스 오른쪽 단추로 클릭하고 **다시 작성**을 선택합니다.  
   
-4.  **전체 텍스트 카탈로그를 삭제하고 다시 작성하시겠습니까?**라는 질문에 **확인**을 클릭합니다.  
+4.  **전체 텍스트 카탈로그를 삭제하고 다시 작성하시겠습니까?** 라는 질문에 **확인**을 클릭합니다.  
   
 5.  **전체 텍스트 카탈로그 다시 작성** 대화 상자에서 **닫기**를 클릭합니다.  
    
@@ -107,7 +108,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
   
 3.  **모두 다시 작성**을 선택합니다.  
   
-4.  **전체 텍스트 카탈로그를 모두 삭제하고 다시 작성하시겠습니까?**라고 질문에 **확인**을 클릭합니다.  
+4.  **전체 텍스트 카탈로그를 모두 삭제하고 다시 작성하시겠습니까?** 라고 질문에 **확인**을 클릭합니다.  
   
 5.  **전체 텍스트 카탈로그 모두 다시 작성** 대화 상자에서 **닫기**를 클릭합니다.  
   

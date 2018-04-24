@@ -1,16 +1,16 @@
 ---
-title: "저장 프로시저 실행 | Microsoft 문서"
-ms.custom: 
+title: 저장 프로시저 실행 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.executeprocedure.general.f1
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c4052a34b4365de0382e7a8118f743231b8f4873
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ac4f09f4e00e4590ebc2725a5fab3e49d5eea3ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 02/03/2018
   
 -   시스템 저장 프로시저 실행  
   
-     시스템 프로시저는 접두사 **sp_**로 시작합니다. 시스템 프로시저는 모든 사용자 정의 데이터베이스와 시스템 정의 데이터베이스에 논리적으로 나타나기 때문에 프로시저 이름을 완전히 한정하지 않고도 모든 데이터베이스에서 시스템 프로시저를 실행할 수 있습니다. 그러나 이름 충돌이 발생하지 않도록 **sys** 스키마 이름으로 모든 시스템 프로시저 이름을 스키마로 한정하는 것이 좋습니다. 다음 예에서는 권장되는 시스템 프로시저 호출 방법을 보여 줍니다.  
+     시스템 프로시저는 접두사 **sp_** 로 시작합니다. 시스템 프로시저는 모든 사용자 정의 데이터베이스와 시스템 정의 데이터베이스에 논리적으로 나타나기 때문에 프로시저 이름을 완전히 한정하지 않고도 모든 데이터베이스에서 시스템 프로시저를 실행할 수 있습니다. 그러나 이름 충돌이 발생하지 않도록 **sys** 스키마 이름으로 모든 시스템 프로시저 이름을 스키마로 한정하는 것이 좋습니다. 다음 예에서는 권장되는 시스템 프로시저 호출 방법을 보여 줍니다.  
   
     ```sql  
     EXEC sys.sp_who;  

@@ -1,16 +1,16 @@
 ---
-title: "SQL Server, Availability Replica | Microsoft 문서"
-ms.custom: 
+title: SQL Server, Availability Replica | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f57bdb7b9ffdcd908d593a2c0ac0ad464bf03b3e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7aad317c244b13d80c48188f921b1e75e24655aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, 가용성 복제본
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Availability Replica** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹의 가용성 복제본에 대한 정보를 보고하는 성능 카운터를 포함합니다. 모든 가용성 복제본 성능 카운터는 로컬 복제본을 반영하는 보내기/받기 카운터와 함께 주 복제본과 보조 복제본 모두에 적용됩니다. 대부분의 경우 주 복제본은 대부분의 데이터를 보내고 보조 복제본은 해당 데이터를 받습니다. 그러나 보조 복제본은 주 복제본에 ACK 및 일부 다른 백그라운드 트래픽을 보냅니다. 특정 가용성 복제본에서 일부 카운터는 로컬 복제본의 현재 역할(주/보조)에 따라 값을 0으로 표시합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **SQLServer:Availability Replica** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹의 가용성 복제본에 대한 정보를 보고하는 성능 카운터를 포함합니다. 모든 가용성 복제본 성능 카운터는 로컬 복제본을 반영하는 보내기/받기 카운터와 함께 주 복제본과 보조 복제본 모두에 적용됩니다. 대부분의 경우 주 복제본은 대부분의 데이터를 보내고 보조 복제본은 해당 데이터를 받습니다. 그러나 보조 복제본은 주 복제본에 ACK 및 일부 다른 백그라운드 트래픽을 보냅니다. 특정 가용성 복제본에서 일부 카운터는 로컬 복제본의 현재 역할(주/보조)에 따라 값을 0으로 표시합니다.  
   
 |카운터 이름|Description|  
 |------------------|-----------------|  

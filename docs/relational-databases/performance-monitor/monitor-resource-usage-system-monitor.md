@@ -1,16 +1,16 @@
 ---
-title: "리소스 사용 모니터링(시스템 모니터) | Microsoft 문서"
-ms.custom: 
+title: 리소스 사용 모니터링(시스템 모니터) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - tuning databases [SQL Server], resource usage
 - server performance [SQL Server], resource usage
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e30f2d0f47d856cdb3c8732d6f4ab553b43d6393
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64caaa19af879a07a19255991c6b948fd4b05cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>리소스 사용 모니터링(시스템 모니터)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft Windows 서버 운영 체제를 실행 중인 경우 시스템 모니터 그래픽 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정할 수 있습니다. 이 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 성능 카운터를 보거나 프로세서, 메모리, 캐시, 스레드 및 프로세스 등 다른 개체의 동작을 볼 수 있습니다. 각 개체는 장치 사용, 큐 길이, 지연, 처리량 및 내부 정체의 기타 지표를 측정하는 관련 카운터 집합을 포함합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft Windows 서버 운영 체제를 실행 중인 경우 시스템 모니터 그래픽 도구를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정할 수 있습니다. 이 도구에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 성능 카운터를 보거나 프로세서, 메모리, 캐시, 스레드 및 프로세스 등 다른 개체의 동작을 볼 수 있습니다. 각 개체는 장치 사용, 큐 길이, 지연, 처리량 및 내부 정체의 기타 지표를 측정하는 관련 카운터 집합을 포함합니다.  
   
 > [!NOTE]  
 >  Windows NT 4.0 이후 버전에서는 성능 모니터가 시스템 모니터로 대체되었습니다.  

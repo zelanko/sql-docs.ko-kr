@@ -1,35 +1,36 @@
 ---
-title: "서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링 | Microsoft 문서"
-ms.custom: 
+title: 서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 99cd4d96616ad820eaef4660316e051e55e56b18
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  
+  서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  
   
 -   FDHOST Launcher 서비스(MSSQLFDLauncher) 관리, 서비스 계정 자격 증명을 변경하는 경우 필터 데몬 호스트 프로세스 다시 시작, 서버 차원의 전체 텍스트 속성 구성, 전체 텍스트 카탈로그 백업 등의 시스템 관리 태스크. 예를 들어 서버 수준에서 전반적으로 서버 인스턴스의 기본 언어와 다른 기본 전체 텍스트 언어를 지정할 수 있습니다.  
   

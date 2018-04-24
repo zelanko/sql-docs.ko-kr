@@ -1,16 +1,16 @@
 ---
-title: "OPENROWSET 대량 행 집합 공급자를 사용하여 대형 개체 데이터 대량 가져오기 | Microsoft 문서"
-ms.custom: 
+title: OPENROWSET 대량 행 집합 공급자를 사용하여 대형 개체 데이터 대량 가져오기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SINGLE_NCLOB option
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - large data, bulk imports
 - SINGLE_BLOB option
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cb73567a88cbdc4402a178fe7ec28f79cccca95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e309875d56367c83a638fd8cea76b579125f607
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>OPENROWSET 대량 행 집합 공급자를 사용하여 대형 개체 데이터 대량 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ ms.lasthandoff: 02/03/2018
  OPENROWSET BULK 절은 데이터 파일의 내용을 단일 행/단일 열로 된 행 집합으로 가져올 수 있는 3개의 옵션을 지원합니다. 서식 파일을 사용하는 대신 이 큰 개체 옵션 중 하나를 지정할 수 있습니다. 옵션은 다음과 같습니다.  
   
  SINGLE_BLOB  
- *data_file* 의 내용을 단일 행으로 읽은 후 **varbinary(max)**형식의 단일 열로 된 행 집합으로 반환합니다.  
+ *data_file* 의 내용을 단일 행으로 읽은 후 **varbinary(max)** 형식의 단일 열로 된 행 집합으로 반환합니다.  
   
  SINGLE_CLOB  
  지정한 데이터 파일의 내용을 문자로 읽은 후 텍스트나 **Word 문서와 같은 현재 데이터베이스의 데이터 정렬을 사용하여**varchar(max) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 형식의 단일 행/열로 된 행 집합으로 반환합니다.  
   
  SINGLE_NCLOB  
- 지정한 데이터 파일의 내용을 유니코드로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 **nvarchar(max)**형식의 단일 행/열로 된 행 집합으로 반환합니다.  
+ 지정한 데이터 파일의 내용을 유니코드로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 **nvarchar(max)** 형식의 단일 행/열로 된 행 집합으로 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   

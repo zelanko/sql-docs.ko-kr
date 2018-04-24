@@ -1,31 +1,31 @@
 ---
-title: "병합 구독 유형 및 충돌 해결 우선 순위 지정 | Microsoft 문서"
-ms.custom: 
+title: 병합 구독 유형 및 충돌 해결 우선 순위 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], merge subscription resolvers
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 642a4b5a78f92264f483c2ab6677ddf25ad86fda
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 939f5498abd92ad5ada042fd4a6c8ee90e9eef73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>병합 구독 유형 및 충돌 해결 우선 순위 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/08/2018
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>충돌 해결 우선 순위를 수정하려면  
   
-1.  게시자의 **구독 속성 - \<Publisher>: \<PublicationDatabase>**에서 **우선 순위** 옵션에 값(0.00~99.99)을 입력합니다.  
+1.  게시자의 **구독 속성 - \<Publisher>: \<PublicationDatabase>** 에서 **우선 순위** 옵션에 값(0.00~99.99)을 입력합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -1,33 +1,34 @@
 ---
-title: "SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: 
+title: SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d640b7fc6ce4aa49b19dac142d9fcfa1d412993
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고( *공개* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다( *개인* 키라고 함).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고( *공개* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다( *개인* 키라고 함).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 키에는 중요한 데이터를 보호하는 데 사용되는 공개 키, 개인 키 및 대칭 키의 조합이 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 처음 시작할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 초기화하는 동안 대칭 키가 생성됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이 키를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 암호화합니다. 공개 키 및 개인 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 데이터베이스의 중요한 데이터를 저장하는 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 공개 키 및 개인 키 쌍이 생성됩니다.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  [확장 가능 키 관리 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  타사 키 관리 시스템을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 사용하는 방법에 대해 설명합니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [서비스 마스터 키 백업](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [서비스 마스터 키 복원](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  

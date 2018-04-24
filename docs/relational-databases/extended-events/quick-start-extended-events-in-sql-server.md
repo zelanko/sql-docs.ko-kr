@@ -2,7 +2,7 @@
 title: '빠른 시작: SQL Server의 확장 이벤트 | Microsoft 문서'
 ms.custom: ''
 ms.date: 09/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac73b7d77058a6586f82cba15fd3d36df11e6c05
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7ae393df8bcdd89f0cfc6a7398ce75e649c4c47c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,18 +113,18 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
     ![새 세션 > 이벤트 > 구성 > 필터(조건자) > 필드](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. **필터(조건자)** 탭을 클릭합니다. 그런 다음 **절을 추가하려면 여기를 클릭하세요.**를 클릭하여 HAVING 절을 포함하는 모든 SQL SELECT 문을 캡처합니다.
+7. **필터(조건자)** 탭을 클릭합니다. 그런 다음 **절을 추가하려면 여기를 클릭하세요.** 를 클릭하여 HAVING 절을 포함하는 모든 SQL SELECT 문을 캡처합니다.
 
 8. **필드** 드롭다운 목록에서 **sqlserver.sql_text**를 선택합니다.
    - **연산자** 에 대해 LIKE 연산자를 선택합니다.
-   - **값** 에 **%SELECT%HAVING%**을 입력합니다.
+   - **값** 에 **%SELECT%HAVING%** 을 입력합니다.
 
     > [!NOTE]
     > 이 두 부분의 이름에서 *sqlserver* 는 패키지 이름이고 *sql_text* 는 필드 이름입니다. 이전에 선택한 *sql_statement_completed* 이벤트는 선택한 필드와 같은 패키지에 있어야 합니다.
 
 9. 왼쪽 위에서 **데이터 저장소** 페이지를 클릭합니다.
 
-10. **대상** 영역에서 **대상을 지정하려면 여기를 클릭하세요.**를 클릭합니다.
+10. **대상** 영역에서 **대상을 지정하려면 여기를 클릭하세요.** 를 클릭합니다.
     - **형식** 드롭다운 목록에서 **event_file**을 선택합니다.
     - 즉, 사용자가 볼 수 있는 파일에 이벤트 데이터가 저장됩니다.
 

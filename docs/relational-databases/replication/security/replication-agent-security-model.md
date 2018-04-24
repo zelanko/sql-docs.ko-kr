@@ -2,7 +2,7 @@
 title: 복제 에이전트 보안 모델 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/07/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -28,11 +28,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07b24a4d11b0bb95417d3808afb8d9d4e5c1b849
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 30e8b72f0715f8e194fdabfab89f23444eb3df25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/10/2018
 > [!NOTE]  
 >  일부 Windows 운영 체제의 UAC(사용자 계정 컨트롤)에서 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다. 자세한 내용은 [스냅숏 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
-|에이전트|Permissions|  
+|에이전트|사용 권한|  
 |-----------|-----------------|  
 |스냅숏 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -스냅숏 공유에 대해 쓰기, 읽기 및 수정 권한이 있어야 합니다.<br /><br /> <br /><br /> 게시자 *연결* 에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
 |로그 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.|  
@@ -85,9 +85,9 @@ ms.lasthandoff: 04/10/2018
 |SQL Server 이외 구독자의 밀어넣기 구독에 대한 배포 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |큐 판독기 에이전트|**[\<Distributor>].\<integer>**|  
   
- \*Oracle 게시물에 대한 밀어넣기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>**가 아닌 **\<Publisher>-\<Publisher**>입니다.  
+ \*Oracle 게시물에 대한 밀어넣기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<Publisher**>입니다.  
   
- \*\*Oracle 게시물에 대한 끌어오기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>**가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
+ \*\*Oracle 게시물에 대한 끌어오기 구독의 경우 작업 이름은 **\<Publisher>-\<PublicationDatabase>** 가 아닌 **\<Publisher>-\<DistributionDatabase**>입니다.  
   
  복제를 구성할 때는 에이전트를 실행해야 하는 계정을 지정합니다. 그러나 모든 작업 단계는 *프록시*의 보안 컨텍스트에서 실행되므로 복제는 사용자가 지정하는 에이전트 계정에 대해 다음 매핑을 내부적으로 수행합니다.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/10/2018
 > [!NOTE]  
 >  이 정보는 적절한 보안 컨텍스트로 에이전트를 실행하는 작업과 관련된 사항을 이해하는 데 도움을 주기 위한 것입니다. 이미 생성된 자격 증명이나 프록시와는 직접 상호 작용하지 않아도 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [스냅숏 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  

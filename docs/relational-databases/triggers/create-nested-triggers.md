@@ -1,16 +1,16 @@
 ---
-title: "중첩 트리거 만들기 | Microsoft 문서"
-ms.custom: 
+title: 중첩 트리거 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3a37b5abbf9c29dd52a94033980c5b637546487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nested-triggers"></a>중첩 트리거 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DML 및 DDL 트리거는 트리거가 다른 트리거를 시작하는 동작을 수행할 때 둘 다 중첩됩니다. 이러한 동작이 다른 트리거를 시작할 수도 있습니다. DML 및 DDL 트리거는 최대 32 수준까지 중첩될 수 있습니다. **nested triggers** 서버 구성 옵션을 통해 AFTER 트리거를 중첩할 수 있는지를 제어할 수 있습니다. INSTEAD OF 트리거(DML 트리거만 INSTEAD OF 트리거가 될 수 있음)는 이 설정에 관계없이 중첩될 수 있습니다.  
+  DML 및 DDL 트리거는 트리거가 다른 트리거를 시작하는 동작을 수행할 때 둘 다 중첩됩니다. 이러한 동작이 다른 트리거를 시작할 수도 있습니다. DML 및 DDL 트리거는 최대 32 수준까지 중첩될 수 있습니다. **nested triggers** 서버 구성 옵션을 통해 AFTER 트리거를 중첩할 수 있는지를 제어할 수 있습니다. INSTEAD OF 트리거(DML 트리거만 INSTEAD OF 트리거가 될 수 있음)는 이 설정에 관계없이 중첩될 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거에서 관리 코드로의 참조는 32 수준 중첩 제한에서 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  

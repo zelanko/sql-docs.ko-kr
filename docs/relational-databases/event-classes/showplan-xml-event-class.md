@@ -1,34 +1,35 @@
 ---
-title: "Showplan XML 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Showplan XML 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9034829fb4c0d5174cc66eff34eefe22b4adb22
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1474895d2505c18162a782073c152c9fe0e37aa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Showplan XML 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan 연산자를 식별하려면 Showplan XML 이벤트 클래스를 포함시키십시오. 이 이벤트 클래스는 각 이벤트를 정의된 XML 문서로 저장합니다.  
+  Showplan XML 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan 연산자를 식별하려면 Showplan XML 이벤트 클래스를 포함시키십시오. 이 이벤트 클래스는 각 이벤트를 정의된 XML 문서로 저장합니다.  
   
  Showplan XML 이벤트 클래스가 추적에 포함되어 있는 경우 오버헤드로 인해 성능이 크게 저하될 수 있습니다. Showplan XML은 쿼리가 최적화될 때 생성되는 쿼리 계획을 저장합니다. 오버헤드 발생을 최소화하려면 이 이벤트 클래스의 용도를 특정 문제를 단기간 모니터링하는 추적으로 제한하십시오.  
   

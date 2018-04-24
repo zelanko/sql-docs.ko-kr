@@ -1,16 +1,16 @@
 ---
-title: "전체 텍스트 검색 업그레이드 | Microsoft 문서"
-ms.custom: 
+title: 전체 텍스트 검색 업그레이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], installing
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-caps.latest.revision: 
+caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74e12e9e4b1d6379a0dc8954b2c99d77c99faa55
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f0215117505c5873fdaeda174de3e50e8c22a610
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
+  설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
   
   
 ##  <a name="Upgrade_Server"></a> 서버 인스턴스 업그레이드  

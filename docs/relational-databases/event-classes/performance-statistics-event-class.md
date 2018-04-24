@@ -1,34 +1,35 @@
 ---
-title: "Performance Statistics 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Performance Statistics 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3b788ea13beced99f19a35707591ecf90c5dd5d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 02db411f94695499fa0fdc3ad061ff8e0e5effe4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
+  Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 이벤트 클래스 데이터 열  
  다음 표에서는 EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 및 EventSubClass 5와 같은 각 이벤트 하위 클래스와 관련된 이벤트 클래스 데이터 열에 대해 설명합니다.  
@@ -61,7 +62,7 @@ Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프�
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 컴파일된 저장 프로시저 내의 쿼리입니다.<br /><br /> 저장 프로시저에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> *n* 개|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 컴파일된 저장 프로시저 내의 쿼리입니다.<br /><br /> 저장 프로시저에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 저장 프로시저<br /><br /> 유형 1인 쿼리*n* 개|21|예|  
 |IntegerData2|**int**|저장 프로시저 내에 있는 문의 끝입니다.<br /><br /> -1은 저장 프로시저의 끝입니다.|55|예|  
 |ObjectID|**int**|시스템이 할당한 개체의 ID입니다.|22|예|  
 |Offset|**int**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.|61|예|  
@@ -85,7 +86,7 @@ Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프�
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 2 = 컴파일된 임의 SQL 문 내의 쿼리입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> *n* 개|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 2 = 컴파일된 임의 SQL 문 내의 쿼리입니다.<br /><br /> 임시 일괄 처리에 대한 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 유형 2인 쿼리*n* 개|21|예|  
 |IntegerData2|**int**|일괄 처리 내에 있는 문의 끝입니다.<br /><br /> -1은 일괄 처리의 끝입니다.|55|예|  
 |ObjectID|**int**|해당 사항 없음|22|예|  
 |Offset|**int**|일괄 처리 내에 있는 문의 시작 오프셋입니다.<br /><br /> 0은 일괄 처리의 시작입니다.|61|예|  
@@ -108,7 +109,7 @@ Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프�
 |DatabaseID|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
 |SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 3 = 캐시된 쿼리가 소멸되었으며 계획과 관련된 기록 성능 데이터도 소멸될 예정입니다.<br /><br /> 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 3 = 캐시된 쿼리가 소멸되었으며 계획과 관련된 기록 성능 데이터도 소멸될 예정입니다.<br /><br /> 추적에서 다음 EventSubClass 유형이 생성됩니다.<br /><br /> 쿼리 수가 *n* 인 임시 일괄 처리<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개<br /><br /> 쿼리 수가 *n* 인 저장 프로시저<br /><br /> 쿼리가 캐시에서 플러시될 때 유형 3인 쿼리 한 개|21|예|  
 |IntegerData2|**int**|저장 프로시저나 일괄 처리 내에 있는 문의 끝입니다.<br /><br /> -1은 저장 프로시저나 일괄 처리의 끝입니다.|55|예|  
 |ObjectID|**int**|NULL|22|예|  
 |Offset|**int**|저장 프로시저나 일괄 처리 내에 있는 문의 시작 오프셋입니다.<br /><br /> 0은 저장 프로시저나 일괄 처리의 시작입니다.|61|예|  

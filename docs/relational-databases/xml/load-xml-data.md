@@ -1,35 +1,35 @@
 ---
-title: "XML 데이터 로드 | Microsoft 문서"
-ms.custom: 
+title: XML 데이터 로드 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6fb5f96848f0b6e38c5a2b07c13048426262bcf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+  XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 [n]text 또는 image 열에 데이터가 있으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 테이블을 가져올 수 있습니다. ALTER TABLE 문을 사용하여 열 유형을 XML로 바꿉니다.  
   

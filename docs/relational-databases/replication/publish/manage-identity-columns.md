@@ -1,16 +1,16 @@
 ---
-title: "ID 열 관리 | Microsoft 문서"
-ms.custom: 
+title: ID 열 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f783110c2741bc461df4baf1b12d7d4454da32c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 941a6480f1629b4d2b7140be8bff734a59ee922c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/08/2018
   
 -   다른 게시 유형을 선택한 경우에 ID 범위 관리는 수동으로 설정해야 합니다.  
   
- **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>**의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 -\<Article>** 의 **속성** 탭에서 ID 범위 및 임계값을 수정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 열 관리 옵션을 지정하려면  
   

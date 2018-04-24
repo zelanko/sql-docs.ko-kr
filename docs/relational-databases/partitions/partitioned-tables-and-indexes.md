@@ -1,16 +1,16 @@
 ---
-title: "분할된 테이블 및 인덱스 | Microsoft 문서"
-ms.custom: 
+title: 분할된 테이블 및 인덱스 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8af645cee08f550eb8d22ba06d6ab68da50312e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/18/2018
  파티션 함수의 파티션을 파일 그룹 집합으로 매핑하는 데이터베이스 개체입니다. 별개의 파일 그룹에 파티션을 넣는 주된 이유는 파티션 백업 작업을 독립적으로 수행하기 위해서입니다. 이는 개별 파일 그룹에 대해 백업을 수행할 수 있기 때문입니다.  
   
  분할 열  
- 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. **timestamp**를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**또는 **varbinary(max)** 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
+ 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. **timestamp**를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
   
  정렬된 인덱스  
  해당 테이블과 동일한 파티션 구성표를 기반으로 작성되는 인덱스입니다. 테이블과 인덱스가 정렬되면 SQL Server에서 테이블과 인덱스의 파티션 구조를 유지하면서 신속하고 효율적으로 파티션을 전환할 수 있습니다. 인덱스가 기본 테이블에 맞게 정렬되기 위해 반드시 같은 이름의 파티션 함수를 사용할 필요는 없습니다. 그러나 인덱스와 기본 테이블의 파티션 함수는 1) 파티션 함수의 인수가 동일한 데이터 형식이어야 하고 2) 정의되는 파티션 수가 같아야 하고 3) 동일한 파티션 경계 값이 정의되어야 한다는 점에서 기본적으로 동일합니다.  

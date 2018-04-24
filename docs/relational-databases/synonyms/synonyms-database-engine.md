@@ -1,36 +1,37 @@
 ---
-title: "동의어(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: 
+title: 동의어(데이터베이스 엔진) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: synonyms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 
+caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9df7448405e86285c19aa6a240a6591251632d57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
+  동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
   
 -   로컬 서버나 원격 서버에 있을 수 있는 기본 개체로 참조되는 다른 데이터베이스 개체의 대체 이름을 제공합니다.  
   

@@ -1,33 +1,35 @@
 ---
-title: "상시 암호화로 보호되는 중요한 데이터 마이그레이션 | Microsoft 문서"
-ms.custom: 
+title: 상시 암호화로 보호되는 중요한 데이터 마이그레이션 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa13b882639b0b23d937c479eec6b2a29aa34ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3e3e9a41fca762ae1303be0f451cbdc4e33e6c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>상시 암호화로 보호되는 중요한 데이터 마이그레이션
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ 대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
  [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) 와 [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="bulk-loading-of-encrypted-data"></a>암호화된 데이터의 대량 로드  
 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
 
-1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 예를 들어  
+1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 
 2.  해당 사용자로 연결하는 대량 복사 응용 프로그램 또는 도구를 실행합니다. (응용 프로그램에서 상시 암호화가 사용 설정된 클라이언트 드라이버를 사용하고 있는 경우 암호화된 열에서 검색된 데이터가 암호화를 유지하도록 데이터 원본에 대한 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않아야 합니다. 자세한 내용은 [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.  
   
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 예를 들어  
+3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  

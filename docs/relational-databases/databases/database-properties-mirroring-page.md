@@ -1,33 +1,34 @@
 ---
-title: "데이터베이스 속성(미러링 페이지) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 속성(미러링 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d706b8cdb3ee366aa60a7324f949132a0acaa7bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-mirroring-page"></a>데이터베이스 속성(미러링 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  주 데이터베이스에서 이 페이지에 액세스한 다음 이 페이지를 사용하여 데이터베이스의 데이터베이스 미러링 속성을 구성하고 수정할 수 있습니다. 또한 이 페이지를 사용하여 데이터베이스 미러링 보안 구성 마법사를 시작하면 미러링 세션의 상태를 보거나 데이터베이스 미러링 세션을 일시 중지 또는 제거할 수 있습니다.  
   
 > **중요** 보안을 구성해야 미러링을 시작할 수 있습니다. 미러링이 시작되지 않은 경우 마법사를 사용하여 시작해야 합니다. 마법사를 완료할 때까지 **미러링** 페이지 입력란은 사용할 수 없습니다.  
   
@@ -105,7 +106,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **장애 조치**  
  주 데이터베이스를 미러 데이터베이스에 수동으로 장애 조치하려면 클릭합니다.  
   
-> **참고:** 미러링 세션이 성능 우선 모드에서 실행되는 경우 수동 장애 조치가 지원되지 않습니다. 수동으로 장애 조치(failover)하려면 먼저 운영 모드를 **자동 장애 조치(failover)가 없는 보호 우선(동기)**으로 변경해야 합니다. 장애 조치(failover)가 완료된 후 새 주 서버 인스턴스에서 모드를 다시 **성능 우선(비동기)** 으로 변경할 수 있습니다.  
+> **참고:** 미러링 세션이 성능 우선 모드에서 실행되는 경우 수동 장애 조치가 지원되지 않습니다. 수동으로 장애 조치(failover)하려면 먼저 운영 모드를 **자동 장애 조치(failover)가 없는 보호 우선(동기)** 으로 변경해야 합니다. 장애 조치(failover)가 완료된 후 새 주 서버 인스턴스에서 모드를 다시 **성능 우선(비동기)** 으로 변경할 수 있습니다.  
   
  확인 메시지가 나타납니다. **예**를 클릭하면 장애 조치가 시도됩니다. 먼저 주 서버가 Windows 인증을 사용하여 미러 서버에 대한 연결을 시도합니다. Windows 인증을 사용할 수 없는 경우 주 서버는 **서버에 연결** 대화 상자를 표시합니다. 미러 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 **인증** 상자에서 **SQL Server 인증** 을 선택합니다. **로그인** 입력란에 미러 서버에서 연결에 사용할 로그인 계정을 지정하고 **암호** 입력란에 해당 계정의 암호를 지정합니다.  
   
@@ -113,7 +114,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  장애 조치가 실패할 경우 오류 메시지가 표시되고 대화 상자는 열린 상태로 유지됩니다.  
   
-> **중요!!** **데이터베이스 속성** 대화 상자에서 속성을 수정한 후 **장애 조치(Failover)** 를 클릭하면 해당 변경 내용이 손실됩니다. 현재 변경 내용을 저장하려면 확인 메시지에 **아니요** 로 응답하고 **확인** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 데이터베이스 속성 대화 상자를 다시 열고 **장애 조치(Failover)**를 클릭합니다.  
+> **중요!!** **데이터베이스 속성** 대화 상자에서 속성을 수정한 후 **장애 조치(Failover)** 를 클릭하면 해당 변경 내용이 손실됩니다. 현재 변경 내용을 저장하려면 확인 메시지에 **아니요** 로 응답하고 **확인** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 데이터베이스 속성 대화 상자를 다시 열고 **장애 조치(Failover)** 를 클릭합니다.  
   
  **운영 모드**  
  선택적으로 운영 모드를 변경합니다. 특정 운영 모드의 가용성은 미러링 모니터 서버에 대해 TCP 주소를 지정했는지에 따라 달라집니다. 다음과 같은 옵션이 있습니다.  

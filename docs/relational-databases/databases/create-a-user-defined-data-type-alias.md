@@ -1,16 +1,16 @@
 ---
-title: "사용자 정의 데이터 형식 별칭 만들기 | Microsoft 문서"
-ms.custom: 
+title: 사용자 정의 데이터 형식 별칭 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
@@ -18,20 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 02/19/2018
      **길이/전체 자릿수**  
      데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이** 는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수** 는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
   
-     **nvarchar(max)**, **varchar(max)**또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
+     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
   
      **이름**  
      새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 사용할 수 있는 최대 문자 수는 시스템의 **sysname** 데이터 형식과 동일합니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/19/2018
   
      **nchar** 및 **nvarchar** 데이터 형식의 경우 저장소 값이 항상 **길이**값의 두 배입니다.  
   
-     **nvarchar(max)**, **varchar(max)**또는 **varbinary(max)** 데이터 형식에 대해서는 저장소가 표시되지 않습니다.  
+     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 저장소가 표시되지 않습니다.  
   
 2.  **새 사용자 정의 데이터 형식** 대화 상자의 **스키마** 상자에 이 데이터 형식 별칭을 소유할 스키마를 입력하거나 찾아보기 단추를 사용하여 스키마를 선택합니다.  
   

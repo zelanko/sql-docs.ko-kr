@@ -1,34 +1,35 @@
 ---
-title: "Audit Add DB User 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Audit Add DB User 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77357183147cf4fc5e6a651fae6543bd4d7743a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: dc431cdbbd76447fd98b0889bed6592342371a50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
+  **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 **Audit Database Principal Management** 이벤트 클래스를 대신 사용하는 것이 좋습니다.  
   

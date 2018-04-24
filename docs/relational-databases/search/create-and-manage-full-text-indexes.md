@@ -1,30 +1,31 @@
 ---
-title: "전체 텍스트 인덱스 만들기 및 관리 | Microsoft 문서"
-ms.custom: 
+title: 전체 텍스트 인덱스 만들기 및 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd0868f14755f69f88b80b85df5cd2d052447066
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 02/13/2018
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)을 참조하세요.|  
     |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업( *database_name*.*table_name*에 대한 증분 테이블 채우기 시작)에 연결됩니다.|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면  
+6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
  OBJECTPROPERTYEX와 같은 여러 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 다양한 전체 텍스트 인덱싱 속성 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  

@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_21879 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_21879 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d366b7cc857471370afd18b28b8ee9c9b3e561a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e6f9156726bf9ca3495e0079ef6d40b1e0a86d8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
     -   사용자가 **sp_validate_redirected_publisher**를 명시적으로 호출한 경우에는 사용자가 실행되고 있는 Windows 로그인을 사용하여 연결합니다.  
   
-    -   **sp_validate_redirected_**publisher를 **sp_get_redirected_publisher**의 복제 에이전트에서 호출한 경우에는 해당 에이전트와 연관된 Windows 로그인이 사용됩니다.  
+    -   **sp_validate_redirected_** publisher를 **sp_get_redirected_publisher**의 복제 에이전트에서 호출한 경우에는 해당 에이전트와 연관된 Windows 로그인이 사용됩니다.  
   
 오류 21879는 리디렉션된 대상 게시자에 알려지지 않은 로그인을 사용하여 **sp_validate_redirected_publisher**가 호출되었음을 나타낼 수 있습니다.  
   

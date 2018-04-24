@@ -1,35 +1,36 @@
 ---
-title: "Deprecation Final Support 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: Deprecation Final Support 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deprecation Final Support event class
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b607ac893d89271059f798736b3ee365032409ac
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6286e56ba37ea83f7a500a340cbff37c43a081c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Deprecation Final Support** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 제거할 기능을 사용할 때 발생합니다. 응용 프로그램을 오랫동안 유지하려면 **Deprecation Final Support** 이벤트 클래스 또는 **Deprecation Announcement** 이벤트 클래스가 발생되는 기능을 사용하지 마십시오. 곧 사용이 중단될 예정인 기능을 사용하는 응용 프로그램은 최대한 빨리 수정하십시오.  
+  **Deprecation Final Support** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 제거할 기능을 사용할 때 발생합니다. 응용 프로그램을 오랫동안 유지하려면 **Deprecation Final Support** 이벤트 클래스 또는 **Deprecation Announcement** 이벤트 클래스가 발생되는 기능을 사용하지 마십시오. 곧 사용이 중단될 예정인 기능을 사용하는 응용 프로그램은 최대한 빨리 수정하십시오.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Deprecation Final Support 이벤트 클래스 데이터 열  
   

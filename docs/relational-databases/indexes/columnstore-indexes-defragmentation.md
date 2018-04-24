@@ -1,28 +1,29 @@
 ---
-title: "Columnstore 인덱스 - 조각 모음 | Microsoft 문서"
-ms.custom: 
+title: Columnstore 인덱스 - 조각 모음 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283b8e0fe5173c6527e6f3708b578eca87c80ff3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7b78bf660b22fb04973a0f0494c35fe088654aac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore 인덱스 - 조각 모음
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   Columnstore 인덱스에 대한 조각 모음 작업입니다.  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Columnstore 인덱스에 대한 조각 모음을 온라인에서 수행하기 위해 ALTER INDEX REORGANIZE 사용  
- **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 모든 종류의 로드를 수행하면 deltastore에서 여러 개의 작은 rowgroup을 사용할 수 있습니다. `ALTER INDEX REORGANIZE`를 사용하여 모든 rowgroup을 columnstore로 강제한 후 rowgroup을 열이 더 많은 소수의 rowgroup으로 결합합니다.  또한, 재구성 작업은 columnstore에서 삭제된 행도 제거합니다.  
   

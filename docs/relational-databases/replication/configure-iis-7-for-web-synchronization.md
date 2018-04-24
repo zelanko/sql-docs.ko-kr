@@ -1,31 +1,31 @@
 ---
-title: "웹 동기화를 위한 IIS 7 구성 | Microsoft 문서"
-ms.custom: 
+title: 웹 동기화를 위한 IIS 7 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b19f966b7e7c01edb4f53d3c3ff7194f1b78879a
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 9458cfe599a240719ad4f04c27c0bc13fb2a04a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/08/2018
   
     2.  **별칭**에 **SQLReplication**를 입력합니다.  
   
-    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\**을 입력하고 **확인**을 클릭합니다.  
+    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\** 을 입력하고 **확인**을 클릭합니다.  
   
 7.  replisapi.dll이 실행될 수 있도록 IIS를 구성합니다.  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **동작** 창에서 **\**:443(https) 찾아보기**를 클릭합니다.  
   
-3.  Internet Explorer가 열리고 "이 웹 사이트의 보안 인증서에 문제가 있습니다."라는 메시지가 표시됩니다. 이 경고에서는 연결된 인증서가 공인 CA에 의해 발급되지 않았으며 신뢰할 수 없을 수도 있음을 알립니다. 이는 예상되는 경고이므로 **이 웹 사이트를 계속 탐색합니다(권장하지 않음).**를 클릭합니다.  
+3.  Internet Explorer가 열리고 "이 웹 사이트의 보안 인증서에 문제가 있습니다."라는 메시지가 표시됩니다. 이 경고에서는 연결된 인증서가 공인 CA에 의해 발급되지 않았으며 신뢰할 수 없을 수도 있음을 알립니다. 이는 예상되는 경고이므로 **이 웹 사이트를 계속 탐색합니다(권장하지 않음).** 를 클릭합니다.  
   
 4.  **localhost에 연결**메시지가 표시되면 사용자 이름 및 암호를 입력하여 계속합니다. 웹 사이트에 대한 기본 페이지가 나타납니다.  
   

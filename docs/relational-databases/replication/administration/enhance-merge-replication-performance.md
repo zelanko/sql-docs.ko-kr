@@ -1,16 +1,16 @@
 ---
-title: "병합 복제 성능 향상 | Microsoft 문서"
-ms.custom: 
+title: 병합 복제 성능 향상 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4490561c6902497eba6d8a775790df1e19026a29
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 540fe157f33e4f5a9e597a9c1b5128a7acca26b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/08/2018
   
 -   LOB(Large Object) 데이터 형식을 포함하는 테이블을 너무 많이 정규화한 경우를 고려해 보십시오.  
   
-     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**를 각각 사용하는 것이 좋습니다.  
+     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
   
 ## <a name="publication-design"></a>게시 디자인  
   

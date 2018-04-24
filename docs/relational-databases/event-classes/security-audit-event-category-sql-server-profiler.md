@@ -1,36 +1,37 @@
 ---
-title: "Security Audit 이벤트 범주(SQL Server Profiler) | Microsoft 문서"
-ms.custom: 
+title: Security Audit 이벤트 범주(SQL Server Profiler) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 - event classes [SQL Server], Security Audit event category
 - SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b93277d27d4a797fc5ca5924794a7631673445f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2f2fa2a9ae7be568015499dbad62335c4638e44e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Security Audit** 이벤트 범주에는 보안 감사 이벤트가 포함됩니다.  
+  **Security Audit** 이벤트 범주에는 보안 감사 이벤트가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

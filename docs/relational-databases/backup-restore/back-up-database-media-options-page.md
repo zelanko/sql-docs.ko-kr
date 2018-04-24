@@ -1,34 +1,35 @@
 ---
-title: "데이터베이스 백업(미디어 옵션 페이지) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 백업(미디어 옵션 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a35f6c1fce23d063ee132164de8e1573ffe4458
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **데이터베이스 백업** 대화 상자의 **미디어 옵션** 페이지를 사용하여 데이터베이스 미디어 옵션을 확인하거나 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **데이터베이스 백업** 대화 상자의 **미디어 옵션** 페이지를 사용하여 데이터베이스 미디어 옵션을 확인하거나 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  
   

@@ -1,29 +1,29 @@
 ---
-title: "SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장 | Microsoft Docs"
+title: SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장 | Microsoft Docs
 ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+ms.assetid: ''
+caps.latest.revision: ''
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9042b6cf7cb7298e5f327ab96c77cf625eee3872
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9dfb96a67a6356a0c220b852b48db9541eda8959
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
 SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.

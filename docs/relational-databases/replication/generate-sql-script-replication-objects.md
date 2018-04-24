@@ -1,32 +1,32 @@
 ---
-title: "SQL 스크립트 생성(복제 개체) | Microsoft 문서"
-ms.custom: 
+title: SQL 스크립트 생성(복제 개체) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.generatesqlscript.f1
 helpviewer_keywords:
 - Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffc0fd061540ec62aae33b2269035d4d63067725
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 4f23c9232e01e476fd3d13ff7524f9ca06bc4a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL 스크립트 생성(복제 개체)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/08/2018
   
 -   **SQL 스크립트 생성**대화 상자 - **msCoName** 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]폴더 및 모든 하위 폴더의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 복제 개체를 스크립팅할 수 있습니다.  
   
--   **SQL 스크립트 생성 \<ObjectName>**은 게시 및 구독의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 개별 개체를 스크립팅할 수 있습니다.  
+-   **SQL 스크립트 생성 \<ObjectName>** 은 게시 및 구독의 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 개별 개체를 스크립팅할 수 있습니다.  
   
  이러한 대화 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스에 있는 개체를 스크립팅하며, 다른 인스턴스에 연결하여 관련 개체를 스크립팅하지는 않습니다.  
   

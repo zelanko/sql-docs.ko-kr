@@ -1,16 +1,16 @@
 ---
-title: "인덱스 다시 빌드 태스크(유지 관리 계획) | Microsoft 문서"
-ms.custom: 
+title: 인덱스 다시 빌드 태스크(유지 관리 계획) | Microsoft 문서
+ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - reindex
@@ -18,24 +18,25 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f077a5071cfb7f3da4114fde9453cfa2c331783f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1b6d135cb44a0110a7ca85a0d0cc90f102dd5615
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>인덱스 다시 작성 태스크(유지 관리 계획)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **인덱스 다시 작성 태스크** 대화 상자를 사용하여 데이터베이스에 있는 테이블의 인덱스를 새 채우기 비율로 다시 만들 수 있습니다. 채우기 비율은 향후 확장을 수용하기 위해 각 인덱스 페이지에 남겨 둘 빈 공간을 결정합니다. 데이터를 테이블에 추가할 때는 채우기 비율이 유지되지 않으므로 사용 가능한 공간이 꽉 찹니다. 데이터 및 인덱스 페이지를 다시 구성하면 사용 가능한 공간을 다시 확보할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **인덱스 다시 작성 태스크** 대화 상자를 사용하여 데이터베이스에 있는 테이블의 인덱스를 새 채우기 비율로 다시 만들 수 있습니다. 채우기 비율은 향후 확장을 수용하기 위해 각 인덱스 페이지에 남겨 둘 빈 공간을 결정합니다. 데이터를 테이블에 추가할 때는 채우기 비율이 유지되지 않으므로 사용 가능한 공간이 꽉 찹니다. 데이터 및 인덱스 페이지를 다시 구성하면 사용 가능한 공간을 다시 확보할 수 있습니다.  
   
  **인덱스 다시 작성 태스크** 는 ALTER INDEX 문을 사용합니다. 이 페이지에서 설명하는 옵션에 대한 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
-## <a name="options"></a>옵션  
- **연결**  
+## <a name="options"></a>변수  
+ **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/17/2017
  사용자가 인덱스 작업을 수행하는 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있는 `ONLINE` 옵션을 사용합니다.  
   
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  **인덱스 다시 작성 안 함 | 오프라인 인덱스 다시 작성**  
  온라인 상태인 동안 다시 작성할 수 없는 인덱스 유형에 대해 수행할 작업을 지정합니다.  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/17/2017
  **특정 사용자 이름 및 암호 사용**  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
- **사용자 이름**  
+ **User name**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
  **암호**  

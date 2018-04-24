@@ -2,7 +2,7 @@
 title: Employee 테이블의 현재 구조 검사 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/27/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tables
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fa6d4693132ec646438ab7cd0f45f85569c4109f
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 0b745e4cfd51cbfa6bf1ac6ca149be8ec20e49c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>1-1단원 - Employee 테이블의 현재 구조 검사
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

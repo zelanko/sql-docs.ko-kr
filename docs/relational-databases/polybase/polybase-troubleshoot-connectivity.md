@@ -1,30 +1,30 @@
 ---
-title: "PolyBase Kerberos 연결 문제 해결 | Microsoft Docs"
-description: 
-services: 
-documentationcenter: 
+title: PolyBase Kerberos 연결 문제 해결 | Microsoft Docs
+description: ''
+services: ''
+documentationcenter: ''
 author: alazad-msft
-manager: 
-editor: 
-tags: 
-ms.assetid: 
-ms.service: 
+manager: ''
+editor: ''
+tags: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: polybase
 ms.suite: sql
-ms.custom: 
-ms.workload: 
+ms.custom: ''
+ms.workload: ''
 ms.tgt_pltfrm: na
-ms.devlang: 
+ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
-ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d41adcd958af3c5bc87c03b83a4d1330fdf1c779
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos �
 1. 보안 리소스(HDFS, MR2, YARN, 작업 기록 등)
 1. 키 배포 센터(Active Directory에서는 도메인 컨트롤러라고 함)
 
-Hadoop 보안 리소스의 각 리소스는 Hadoop 클러스터의 Kerberization 프로세스의 일환으로 고유한 **SPN(서비스 사용자 이름)**을 사용하여 **KDC(키 배포 센터)**에 등록됩니다. 목표는 클라이언트가 임시 사용자 티켓인 **TGT(허용 티켓)**를 얻어, 액세스하려는 특정 SPN에 대해 또 다른 임시 티켓인 **ST(서비스 티켓)**를 KDC에서 요청하는 것입니다.  
+Hadoop 보안 리소스의 각 리소스는 Hadoop 클러스터의 Kerberization 프로세스의 일환으로 고유한 **SPN(서비스 사용자 이름)** 을 사용하여 **KDC(키 배포 센터)** 에 등록됩니다. 목표는 클라이언트가 임시 사용자 티켓인 **TGT(허용 티켓)** 를 얻어, 액세스하려는 특정 SPN에 대해 또 다른 임시 티켓인 **ST(서비스 티켓)** 를 KDC에서 요청하는 것입니다.  
 PolyBase에서 Kerberos 보안 리소스에 대해 인증이 요청되면 다음과 같은 4번 왕복 핸드셰이크가 수행됩니다.
 1. SQL Server가 KDC에 연결하고 사용자의 TGT를 가져옵니다. TGT는 KDC의 개인 키를 사용하여 암호화됩니다.
 1. SQL Server가 Hadoop 보안 리소스(예: HDFS)를 호출하고 ST가 필요한 SPN을 결정합니다.

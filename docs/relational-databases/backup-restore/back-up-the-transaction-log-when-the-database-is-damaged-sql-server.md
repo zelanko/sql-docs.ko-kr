@@ -2,7 +2,7 @@
 title: 데이터베이스가 손상된 경우 트랜잭션 로그 백업(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51d33ac6235c47b71a5f596d36318c323c49f280
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: c50bc74cff7415db4e96d705a507f48588eeada2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>데이터베이스가 손상된 경우 트랜잭션 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.lasthandoff: 04/05/2018
      `BACKUP LOG <database_name> TO <backup_device> WITH NORECOVERY`  
   
     > [!IMPORTANT]  
-    >  복원 시 데이터베이스 복원 대화 상자에 비상 로그 백업의 유형이 **트랜잭션 로그(복사 전용)**로 표시됩니다.  
+    >  복원 시 데이터베이스 복원 대화 상자에 비상 로그 백업의 유형이 **트랜잭션 로그(복사 전용)** 로 표시됩니다.  
   
 15. **일반** 페이지의 **대상** 섹션에서 지정한 대로 테이프 드라이브에 백업하는 경우 **백업 후 테이프 언로드** 옵션이 활성화됩니다. 이 옵션을 클릭하면 **언로드 전에 테이프 되감기** 옵션이 활성화됩니다.  
   

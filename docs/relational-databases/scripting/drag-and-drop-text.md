@@ -1,34 +1,36 @@
 ---
-title: "텍스트 끌어다 놓기 | Microsoft 문서"
-ms.custom: 
+title: 텍스트 끌어다 놓기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37d9cde76ee171b50b9e001fd1c7baa65a7c9b2e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4a79755e9cbf3fd24ff0633f1efba40ea9355da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drag-and-drop-text"></a>텍스트 끌어다 놓기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 텍스트를 선택한 다음 다른 위치에 끌어 놓을 수 있습니다. 다음과 같이 텍스트를 끌어 놓을 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  텍스트를 선택한 다음 다른 위치에 끌어 놓을 수 있습니다. 다음과 같이 텍스트를 끌어 놓을 수 있습니다.  
   
 -   쿼리를 만들기 위해 개체 탐색기에서 편집기로  
   

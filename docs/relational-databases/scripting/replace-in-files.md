@@ -1,16 +1,16 @@
 ---
-title: "파일에서 바꾸기 | Microsoft 문서"
-ms.custom: 
+title: 파일에서 바꾸기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.findreplace.replaceinfiles
@@ -18,19 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ff5ad7512f416d936f14c2aa080e114e8bbcd4d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9e67b6b8da3da6f812b57878bc61818ece4f9341
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replace-in-files"></a>파일에서 바꾸기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 찾기 및 바꾸기 창의 **파일에서 바꾸기** 탭을 사용하여 지정한 파일 집합의 코드에서 문자열이나 식을 검색하고 일치하는 항목을 일부 또는 모두 변경할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  찾기 및 바꾸기 창의 **파일에서 바꾸기** 탭을 사용하여 지정한 파일 집합의 코드에서 문자열이나 식을 검색하고 일치하는 항목을 일부 또는 모두 변경할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
   
  도구 모음 단추 및 바로 가기 키를 사용하여 **찾기 및 바꾸기** 대화 상자를 열 수도 있습니다.  
   

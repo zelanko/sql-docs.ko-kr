@@ -1,34 +1,36 @@
 ---
-title: "구문 쌍의 자동 일치 기능 | Microsoft 문서"
-ms.custom: 
+title: 구문 쌍의 자동 일치 기능 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c92287748c6724f10c5b89cf82ca7ff3be8a39bd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: da274e16d460d0f4d0be54372bf006062cca92ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>구문 쌍의 자동 일치 기능
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>데이터베이스 엔진 쿼리 편집기의 구분 기호 짝 맞추기  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 코드 블록의 경계를 식별하는 구분 기호의 짝을 맞춥니다. 짝 맞추기 작업은 다음 두 가지 방법으로 수행됩니다.  

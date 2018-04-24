@@ -1,16 +1,16 @@
 ---
-title: "RANK를 사용하여 검색 결과 제한 | Microsoft 문서"
-ms.custom: 
+title: RANK를 사용하여 검색 결과 제한 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row ranking [full-text search]
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9d4cf346f769133ffecdf20d7a5541876652ea1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 432eaa56a2261ff10164ad873a14acc40b3d4457
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
+  [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 및 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
   
 > [!NOTE]  
 >  CONTAINS 및 FREETEXT 조건자는 순위 값을 반환하지 않습니다.  

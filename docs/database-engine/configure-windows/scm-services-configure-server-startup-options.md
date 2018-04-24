@@ -1,16 +1,16 @@
 ---
-title: "서버 시작 옵션 구성(SQL Server 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: 서버 시작 옵션 구성(SQL Server 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - SQL Server services, setting startup options
 - SQL Server services, setting startup parameters
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff11f5d2ec4c086733793ebb13e54ab5448b9dd3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d95ee1d8202b26563814939d5f5af8a32eb1d5d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 서비스 - 서버 시작 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  오른쪽 창에서 **SQL Server(***<instance_name>***)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  오른쪽 창에서 **SQL Server(***<instance_name>***)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **시작 매개 변수** 탭의 **시작 매개 변수 지정** 상자에 매개 변수를 입력하고 **추가**를 클릭합니다.  
   

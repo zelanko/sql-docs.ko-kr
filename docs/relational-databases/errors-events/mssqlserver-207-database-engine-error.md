@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_207 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_207 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 207 (Database Engine error)
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb5dd99ae08c46b689353ddd07d83e040b41418f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3c334cadbde541118562f0577386a3b0f0d336a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/21/2017
   
 -   MERGE 문의 WHEN NOT MATCHED BY SOURCE 절이 참조하는 값에 액세스할 수 없습니다. WHEN NOT MATCHED BY SOURCE 절의 원본 테이블에서 하나 이상의 행을 반환하도록 MERGE 문을 수정합니다. 예를 들어 이 절에 지정된 검색 조건을 추가하거나 수정해야 할 수 있습니다. 또는 절을 수정하여 원본 테이블을 참조하지 않는 값을 지정할 수 있습니다. `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`)을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [MERGE&#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
 [FROM&#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md)  
 [SELECT&#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  

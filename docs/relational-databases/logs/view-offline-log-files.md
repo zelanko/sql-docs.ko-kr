@@ -1,31 +1,31 @@
 ---
-title: "오프라인 로그 파일 보기 | Microsoft 문서"
-ms.custom: 
+title: 오프라인 로그 파일 보기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e77911326a85724de1fbf901fe31f8d8f9cccca5
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: dde3ddfb7c994144c1fe85e3a6929667329b7ffd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/19/2018
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 네임스페이스에 대한 읽기 권한. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다. 자세한 내용은 이 섹션 뒷부분의 "WMI 사용 권한을 확인하려면" 절차를 참조하십시오.  
   
--   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*드라이브>*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
+-   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*드라이브>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
   
      **\<드라이브>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
@@ -76,13 +76,13 @@ ms.lasthandoff: 03/19/2018
   
      원격 컴퓨터에 연결하려면 다음 단계를 수행합니다.  
   
-    1.  **WMI 컨트롤(로컬)**을 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결**을 클릭합니다.  
+    1.  **WMI 컨트롤(로컬)** 을 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결**을 클릭합니다.  
   
     2.  **관리되는 컴퓨터 변경** 대화 상자에서 **다른 컴퓨터**를 클릭합니다.  
   
     3.  원격 컴퓨터 이름을 입력하고 **확인**을 클릭합니다.  
   
-3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)** 을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 4.  **WMI 컨트롤 속성** 대화 상자에서 **보안** 탭을 클릭합니다.  
   

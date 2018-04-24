@@ -2,7 +2,7 @@
 title: 스크립팅 변수와 함께 sqlcmd 사용 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -26,11 +26,12 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 14a86c83343b85df0aa3f7a16929d55b06d9ae1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +94,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 -   변수 이름은 공백 문자나 따옴표를 포함할 수 없습니다.  
   
--   변수 이름은 *$(var)*와 같은 변수 식 형태가 될 수 없습니다.  
+-   변수 이름은 *$(var)* 와 같은 변수 식 형태가 될 수 없습니다.  
   
 -   스크립팅 변수는 대/소문자를 구분하지 않습니다.  
   
@@ -116,7 +117,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 스크립팅 변수  
  **sqlcmd** 에서 정의하는 변수를 스크립팅 변수라고 합니다. 다음 표에는 **sqlcmd** 스크립팅 변수가 나와 있습니다.  
   
-|        변수         | 관련 옵션 | R/W |         기본값         |
+|        변수         | 관련 옵션 | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

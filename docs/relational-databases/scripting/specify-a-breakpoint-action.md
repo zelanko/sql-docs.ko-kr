@@ -1,16 +1,16 @@
 ---
-title: "중단점 동작 지정 | Microsoft 문서"
-ms.custom: 
+title: 중단점 동작 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.breakpt.action
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc843d4ee2866eaaa90a78ce6d4141c5ba8bf400
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>중단점 동작 지정
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  중단점 **적중될 때** 동작은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 중단점에 대해 수행하는 사용자 지정 태스크를 지정합니다. 지정한 적중 횟수에 도달하고 지정한 중단 조건을 만족하면 디버거는 해당 중단점에 대해 지정된 동작을 수행합니다.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> 동작 고려 사항  
  중단점의 기본 동작은 적중 횟수와 중단점 조건을 모두 만족하면 실행을 중단하는 것입니다. **디버거에서** 적중될 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작은 주로 출력 메시지를 지정하여 대신 디버거 **출력** 창에 정보를 출력하는 데 사용됩니다.  

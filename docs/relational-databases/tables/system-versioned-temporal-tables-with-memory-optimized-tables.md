@@ -2,7 +2,7 @@
 title: 메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -18,11 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: def11deba22b3d78922c41a76b6c4ff07dce8a83
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5cd489a06041aec036cab272003ff2a4b5a80279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ ms.lasthandoff: 04/06/2018
 ## <a name="the-internal-memory-optimized-staging-table"></a>내부 메모리 액세스에 최적화된 준비 테이블  
  내부 메모리 최적화 준비 테이블은 DML 작업을 최적화하기 위해 시스템에 의해 생성된 내부 개체입니다.  
   
--   테이블 이름은 **Memory_Optimized_History_Table_<object_id>** 형식으로 생성됩니다. 여기서 *<object_id>*는 현재 temporal 테이블의 ID입니다.  
+-   테이블 이름은 **Memory_Optimized_History_Table_<object_id>** 형식으로 생성됩니다. 여기서 *<object_id>* 는 현재 temporal 테이블의 ID입니다.  
   
 -   테이블은 현재 temporal 테이블에 BIGINT 열 한 개를 더한 스키마를 복제합니다. 이 추가 열은 내부 기록 버퍼로 이동되는 행의 고유성을 보장합니다.  
   
--   추가 열 이름의 형식은 **Change_ID[_< suffix>]**입니다. 여기서 *_\<suffix>*는 테이블에 *Change_ID* 열이 이미 있는 경우에 선택적으로 추가됩니다.  
+-   추가 열 이름의 형식은 **Change_ID[_< suffix>]** 입니다. 여기서 *_\<suffix>* 는 테이블에 *Change_ID* 열이 이미 있는 경우에 선택적으로 추가됩니다.  
   
 -   시스템 버전 관리 메모리 최적화 테이블에 대한 최대 행 크기는 준비 테이블의 추가 BIGINT 열 때문에 8 바이트만큼 감소합니다. 새 최대값은 이제 8052 바이트입니다.  
   

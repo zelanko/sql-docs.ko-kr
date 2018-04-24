@@ -1,30 +1,30 @@
 ---
-title: "Server Core 설치 시 SQL Server 구성 | Microsoft Docs"
-ms.custom: 
+title: Server Core 설치 시 SQL Server 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d09246e56569160c46d245dc2d1150422ba109be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
@@ -63,7 +63,7 @@ Server Core 설치를 원격으로 구성하고 관리하는 방법에 대한 �
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다.  
   
-설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
+최신 버전의 적용 가능한 업데이트를 찾으면 설치 프로그램이 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다.  
   
 주 제품 설치에 최신 제품 업데이트를 포함하려면 UpdateEnabled 및 UpdateSource 매개 변수를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 제품 업데이트를 사용하려면 다음 예제를 참조하십시오.  
   
@@ -107,7 +107,7 @@ Net 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 1. **컴퓨터 관리**를 엽니다. **컴퓨터 관리**를 열려면 **시작**을 클릭하고 `compmgmt.msc`를 입력한 다음 **확인**을 클릭합니다.    
   
-2. 콘솔 트리에서 **컴퓨터 관리**를 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결...**을 클릭합니다.  
+2. 콘솔 트리에서 **컴퓨터 관리**를 마우스 오른쪽 단추로 클릭한 다음 **다른 컴퓨터에 연결...** 을 클릭합니다.  
   
 3. **컴퓨터 선택** 대화 상자에서 관리할 Server Core 컴퓨터의 이름을 입력하거나 **찾아보기**를 클릭하여 찾은 다음 **확인**을 클릭합니다.  
   

@@ -1,36 +1,36 @@
 ---
-title: "FileTable 만들기, 변경 및 삭제 | Microsoft 문서"
-ms.custom: 
+title: FileTable 만들기, 변경 및 삭제 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], altering
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e8df2d7fcac73f7ff11f68d5780d9ee54f2bb695
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
+  새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsCreate"></a> FileTable 만들기  
  FileTable은 미리 정의된 고정 스키마가 있는 특수한 사용자 테이블입니다. 이 스키마는 FILESTREAM 데이터, 파일/디렉터리 정보 및 파일 특성을 저장합니다. FileTable 스키마에 대한 자세한 내용은 [FileTable Schema](../../relational-databases/blob/filetable-schema.md)를 참조하세요.  
@@ -185,9 +185,9 @@ GO
  **시스템 정의 제약 조건에 대한 명명 규칙**  
  위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서 각 항목은 다음을 나타냅니다.  
   
--   *<constraint_type>*은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
+-   *<constraint_type>* 은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
   
--   *\<uniquifier>*는 이름을 고유하게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
+-   *\<uniquifier>* 는 이름을 고유하게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable 관리](../../relational-databases/blob/manage-filetables.md)  

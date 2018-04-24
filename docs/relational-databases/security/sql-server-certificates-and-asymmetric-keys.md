@@ -1,33 +1,35 @@
 ---
-title: "SQL Server 인증서 및 비대칭 키 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 인증서 및 비대칭 키 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4d20aa5344127303df606b8dcaeb5722ce7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] PKI(공개 키 암호화)는 사용자가 *공개* 키 및 *개인* 키를 만드는 메시지 비밀화의 형식입니다. 개인 키는 비밀을 유지하지만 공개 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 공개 키로 개인 키를 쉽게 이끌어 낼 수 없습니다. 공개 키는 데이터를 암호화하는 데 사용되고 개인 키는 데이터의 암호를 해독하는 데 사용됩니다. 공개 키를 사용하여 암호화된 메시지는 올바른 개인 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  PKI(공개 키 암호화)는 사용자가 *공개* 키 및 *개인* 키를 만드는 메시지 비밀화의 형식입니다. 개인 키는 비밀을 유지하지만 공개 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 공개 키로 개인 키를 쉽게 이끌어 낼 수 없습니다. 공개 키는 데이터를 암호화하는 데 사용되고 개인 키는 데이터의 암호를 해독하는 데 사용됩니다. 공개 키를 사용하여 암호화된 메시지는 올바른 개인 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  
   
  인증서 및 비대칭 키의 두 가지 방법 모두 비대칭 암호화를 사용합니다. 인증서는 만료 날짜 및 발급자와 같은 자세한 정보를 포함할 수 있으므로 비대칭 키의 컨테이너로 종종 사용됩니다. 암호화 알고리즘에 있어서 두 가지 메커니즘 사이에 차이점이 없고 지정된 동일한 키 길이에 지정된 강도의 차이가 없습니다. 일반적으로 인증서를 사용하여 데이터베이스에서 다른 유형의 암호화 키를 암호화하거나 코드 모듈을 서명합니다.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server에서 인증서 사용  
  인증서를 사용하면 데이터베이스 미러링에서 패키지 및 기타 개체를 서명하도록 안전하게 연결할 수 있으며 데이터 또는 연결을 암호화할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인증서에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|인증서를 만들기 위한 명령에 대해 설명합니다.|  
 |[디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|인증서를 사용하여 소프트웨어 패키지를 서명하는 방법에 대한 정보가 표시됩니다.|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server에서 비대칭 키 사용  
  비대칭 키는 데이터에 보안을 설정하거나 일반 텍스트를 서명하는 데 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 비대칭 키에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|비대칭 키를 만들기 위한 명령에 대해 설명합니다.|  
 |[SIGNBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|개체를 서명하는 옵션을 표시합니다.|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|인증서를 만듭니다.|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|대칭 키에 대한 강력한 이름을 만듭니다.|  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  

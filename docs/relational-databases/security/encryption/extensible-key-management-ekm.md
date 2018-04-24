@@ -1,35 +1,37 @@
 ---
-title: "EKM(확장 가능 키 관리) | Microsoft 문서"
-ms.custom: 
+title: EKM(확장 가능 키 관리) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c42cd4b6f5f1ee8355e124c46e2cc194e1de080a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 암호화 및 키 생성용 MSCAPI(*Microsoft Cryptographic API*) 공급자를 사용하여 EKM(*Extensible Key Management*)과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
  규정 준수에 대한 요구와 데이터에 포함된 개인 정보 보호에 대한 관심이 증가함에 따라 조직에서는 "심층 방어" 솔루션을 제공하기 위해 암호화를 활용하고 있습니다. 일반적으로 이 방법은 데이터베이스 암호화 관리 도구만 사용하므로 유용한 방법이 아닙니다. 하드웨어 공급업체에서는 HSM( *하드웨어 보안 모듈* )을 사용하여 엔터프라이즈 키 관리를 해결하는 제품을 제공합니다. HSM 장치는 하드웨어나 소프트웨어 모듈에 암호화 키를 저장합니다. 이 방법은 암호화 키와 암호화 데이터가 별도로 보관되므로 더욱 안전한 솔루션입니다.  
   
@@ -139,7 +141,7 @@ DECRYPTION BY EKM_AKey1
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자에서 생성된 비대칭 키를 사용한 서명 모듈을 지원하지 않습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
  [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

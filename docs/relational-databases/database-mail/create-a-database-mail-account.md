@@ -1,35 +1,35 @@
 ---
-title: "데이터베이스 메일 계정 만들기 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 메일 계정 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
 - accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a067e95f873d4d3409fe0a1e4187b01afb999df
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5d12abd7f84a6e50851ac6cd434057104d977dd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  
+  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   

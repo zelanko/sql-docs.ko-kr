@@ -1,16 +1,16 @@
 ---
-title: "컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio) | Microsoft 문서"
-ms.custom: 
+title: 컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.collectionsetprop.uploads.f1
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9d018c701915708166c7bfe7bfb29121bec5fc7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 컬렉션 집합 일정을 보거나 변경할 수 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 컬렉션 집합 일정을 보거나 변경할 수 있습니다.  
   
  컬렉션 모드가 캐시되거나 캐시되지 않은지에 따라 일정을 변경할 수 있는 방법이 결정됩니다. 캐시된 모드에서는 컬렉션과 업로드에 별도의 일정을 사용합니다. 캐시되지 않은 모드에서는 컬렉션과 업로드에 동일한 일정을 사용합니다. 각 시스템 데이터 컬렉션 집합에 대한 컬렉션 모드의 유형은 다음과 같습니다.  
   

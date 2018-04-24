@@ -1,16 +1,16 @@
 ---
-title: "유틸리티 탐색기 F1 도움말 | Microsoft 문서"
-ms.custom: 
+title: 유틸리티 탐색기 F1 도움말 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스와 데이터 계층 응용 프로그램의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/18/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램에 대한 필터링된 뷰를 만들려면 유틸리티 대시보드에서 해당 슬라이딩 표시기 옆에 있는 사용 범주 링크를 클릭합니다. 예를 들어 **유틸리티 탐색기 내용** 창에서 **초과 사용 인스턴스 CPU** 를 클릭할 경우, SSMS에서는 현재 정책 설정을 기반으로 CPU가 초과 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대한 필터링된 목록 뷰를 만듭니다.  
   
- 사용 범주 링크를 클릭할 때 유틸리티 탐색기 탐색 창의 해당 노드에 **(필터링됨)** 이 추가됩니다. 즉, **관리되는 인스턴스** 레이블이 **관리되는 인스턴스(필터링됨)**로 바뀝니다. 필터 설정을 보려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 설정**을 클릭합니다. 필터 설정을 지우려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 제거**를 클릭합니다.  
+ 사용 범주 링크를 클릭할 때 유틸리티 탐색기 탐색 창의 해당 노드에 **(필터링됨)** 이 추가됩니다. 즉, **관리되는 인스턴스** 레이블이 **관리되는 인스턴스(필터링됨)** 로 바뀝니다. 필터 설정을 보려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 설정**을 클릭합니다. 필터 설정을 지우려면 탐색 창의 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택한 다음 **필터 제거**를 클릭합니다.  
   
  개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/18/2018
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **배포된 데이터 계층 응용 프로그램** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **배포된 데이터 계층 응용 프로그램** 노드가 **배포된 데이터 계층 응용 프로그램(필터링됨)**이라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **배포된 데이터 계층 응용 프로그램** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **배포된 데이터 계층 응용 프로그램** 노드가 **배포된 데이터 계층 응용 프로그램(필터링됨)** 이라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
   
  기본적으로 각 데이터 계층 응용 프로그램의 상태 정보가 다음과 같은 열에 표시됩니다.  
   
@@ -279,7 +280,7 @@ ms.lasthandoff: 01/18/2018
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
- 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **관리되는 인스턴스** 노드가 **관리되는 인스턴스(필터링됨)**라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
+ 유틸리티 목록 뷰의 필터 옵션에 액세스하려면 유틸리티 탐색기 탐색 창의 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **필터**를 선택합니다. 필터 설정이 구현된 후에는 유틸리티 탐색기의 **관리되는 인스턴스** 노드가 **관리되는 인스턴스(필터링됨)** 라고 표시됩니다. 자세한 내용은 [필터 설정&#40;개체 탐색기 및 유틸리티 탐색기&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)을 참조하세요.  
   
  기본적으로 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 상태 정보가 다음과 같은 열에 표시됩니다.  
   

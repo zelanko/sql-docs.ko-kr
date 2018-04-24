@@ -2,7 +2,7 @@
 title: 통계 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>통계 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/10/2018
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  사용자가 테이블 또는 인덱싱된 뷰의 소유자이거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할 중 하나의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/10/2018
   
 3.  더하기 기호를 클릭하여 새 통계를 만들 테이블을 확장합니다.  
   
-4.  **통계** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 통계...**를 선택합니다.  
+4.  **통계** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 통계...** 를 선택합니다.  
   
      **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에 다음 속성이 표시됩니다.  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
      **ID**  
      선택 시 ID 열을 나타냅니다.  
   
-     **Allow Nulls**  
+     **Null 허용**  
      열에 NULL 값을 사용할 수 있는지 여부를 나타냅니다.  
   
      **추가**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      **테이블에 대한 새 통계***table_name* 대화 상자의 **필터** 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
-     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들어 IPv4 주소를 사용하는 경우 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   

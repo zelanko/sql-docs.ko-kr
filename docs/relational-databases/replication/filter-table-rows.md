@@ -1,30 +1,30 @@
 ---
-title: "테이블 행 필터 | Microsoft 문서"
-ms.custom: 
+title: 테이블 행 필터 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8388441e70e5bd37f95510a39fc33b180a5ef1d7
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f5ebe5373699e85c98778790ab5691927811bdc7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/08/2018
  **테이블 찾기**  
  조인 필터만 사용하여 게시를 병합합니다. **테이블 찾기** 를 클릭하여 복잡한 필터 트리에서 테이블을 찾을 수 있습니다. 관계가 복잡하게 설정된 데이터베이스에서는 한 테이블이 여러 테이블에 조인될 수 있으므로 필터 트리에서 두 개 이상의 위치에 표시될 수 있습니다.  
   
- 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시되며 해당 노드를 확장하면 **\<tablename>에 대한 테이블을 보려면 [테이블 찾기]를 클릭하십시오.**라는 텍스트가 표시됩니다.  
+ 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시되며 해당 노드를 확장하면 **\<tablename>에 대한 테이블을 보려면 [테이블 찾기]를 클릭하십시오.** 라는 텍스트가 표시됩니다.  
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기**를 클릭합니다. 창이 확장되고 해당 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   

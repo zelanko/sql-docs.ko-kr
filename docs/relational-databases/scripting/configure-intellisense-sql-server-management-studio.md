@@ -1,35 +1,37 @@
 ---
-title: "IntelliSense 구성(SQL Server Management Studio) | Microsoft 문서"
-ms.custom: 
+title: IntelliSense 구성(SQL Server Management Studio) | Microsoft 문서
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1ff46e794da6529bdd21e89d4867e29a9ca58294
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense 구성(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 대부분의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 기본적으로 설정되어 있습니다. IntelliSense 옵션을 해제하고 대신에 메뉴 명령이나 키 입력 조합을 통해 호출할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  대부분의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 기본적으로 설정되어 있습니다. IntelliSense 옵션을 해제하고 대신에 메뉴 명령이나 키 입력 조합을 통해 호출할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  일부 변경 내용은 현재 편집기 세션에서 적용되지 않습니다.  변경 내용을 확인하려면 새 Transact-SQL 편집기 세션을 열어야 합니다.

@@ -1,15 +1,16 @@
 ---
-title: "서버 메모리 서버 구성 옵션 | Microsoft Docs"
-ms.custom: 
+title: 서버 메모리 서버 구성 옵션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: "78"
+caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 45a6ecb0861d15f0f4eb26855af46759a7db86ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 080707d94aca7e645f0ccfe0dab4b9f715511753
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/18/2018
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
   
-<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록  **max_server_memory** 를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
+<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
  -  전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
  -  그런 다음 ***스택 크기 <sup>1</sup> * 계산된 최대 작업자 스레드 수 <sup>2</sup> + -g 시작 매개 변수 <sup>3</sup>***(또는 *-g*가 설정되지 않은 경우 기본적으로 256MB)으로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
  

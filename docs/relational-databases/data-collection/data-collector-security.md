@@ -1,36 +1,36 @@
 ---
-title: "데이터 수집기 보안 | Microsoft 문서"
-ms.custom: 
+title: 데이터 수집기 보안 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collection [SQL Server]
 - security [data collector]
 - data collector [SQL Server], security
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6884f7f420bed12112b910808bfa72146948e54f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 98e33385f0f34e9ba3ba272237b42edee6017bbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  
+  데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  
   
 > [!IMPORTANT]  
 >  이 보안 모델의 다른 핵심 요소는 공통적 사용 권한입니다. 공통적 사용 권한에서는 개체(예: 경고, 운영자, 작업, 일정 및 프록시)에 대해 사용 권한이 많은 역할이 사용 권한이 적은 역할의 사용 권한을 상속받습니다. 자세한 내용은 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  

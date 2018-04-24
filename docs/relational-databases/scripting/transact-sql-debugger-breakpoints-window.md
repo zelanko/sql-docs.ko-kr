@@ -1,35 +1,37 @@
 ---
-title: "중단점 창 | Microsoft 문서"
-ms.custom: 
+title: 중단점 창 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e65aa2535f4c0f1aebb9723edf29c041a9c74fed
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fdede44d8789d75dbaf11551d14fa98835a36510
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 디버거 - 중단점 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **중단점** 창에서는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에 설정된 모든 중단점을 표시합니다. 중단점을 관리하려면 **중단점** 창의 도구 모음을 사용합니다. 여기서 중단점은 디버깅 데이터를 볼 수 있도록 디버그 모드에서 실행을 일시 중지하는 코드의 특정 위치를 의미합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **중단점** 창에서는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에 설정된 모든 중단점을 표시합니다. 중단점을 관리하려면 **중단점** 창의 도구 모음을 사용합니다. 여기서 중단점은 디버깅 데이터를 볼 수 있도록 디버그 모드에서 실행을 일시 중지하는 코드의 특정 위치를 의미합니다.  
   
 ## <a name="task-list"></a>작업 목록  
  **중단점 창에 액세스하려면**  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/24/2018
  중단점의 이름을 표시합니다. 중단점 이름은 디버거에서 지정됩니다. 이 이름에는 중단점을 포함하는 데이터베이스 엔진 쿼리 편집기 창의 이름과 중단점이 설정된 쿼리 편집기의 줄 번호가 포함됩니다.  
   
  **조건**  
- **(조건 없음)**을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.  
+ **(조건 없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.  
   
  **적중 횟수**  
  **항상 중단**을 표시합니다.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/24/2018
  **열** 목록에서 다음 열을 선택하여 해당 열을 추가하거나 제거할 수 있습니다.  
   
  **Assert**  
- **(없음)**을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.  
+ **(없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.  
   
  **적중될 때**  
  **중단**을 표시합니다.  
