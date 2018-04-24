@@ -1,16 +1,16 @@
 ---
-title: "XML 데이터 내 관계형 데이터 바인딩 | Microsoft Docs"
-ms.custom: 
+title: XML 데이터 내 관계형 데이터 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 24fb6baf5c60d7fec9596d9c2893ab7aadd5528b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
  또한 이 바인딩은 읽기 전용으로만 사용됩니다. 즉, 이러한 함수를 사용하는 열에는 데이터를 기록할 수 없습니다. 예를 들어 sql:variable(“@x”)=“*some expression”*은 허용되지 않습니다.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>예: sql:variable()을 사용한 도메인 간 쿼리  
- 이 예에서는 응용 프로그램에서 **sql:variable()**을 사용하여 쿼리를 매개 변수화하는 방법을 보여 줍니다. ISBN은 SQL 변수 @isbn을 사용하여 전달됩니다. 상수를 **sql:variable()**로 바꿈으로써 0-7356-1588-2인 ISBN뿐만 아니라 다른 모든 ISBN을 검색하는 데 쿼리를 사용할 수 있습니다.  
+ 이 예에서는 응용 프로그램에서 **sql:variable()** 을 사용하여 쿼리를 매개 변수화하는 방법을 보여 줍니다. ISBN은 SQL 변수 @isbn을 사용하여 전달됩니다. 상수를 **sql:variable()** 로 바꿈으로써 0-7356-1588-2인 ISBN뿐만 아니라 다른 모든 ISBN을 검색하는 데 쿼리를 사용할 수 있습니다.  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -61,7 +61,7 @@ FROM    T
 WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1  
 ```  
   
- **sql:column()**을 비슷한 방식으로 사용하면 추가 이점이 있습니다. 비용 기반 쿼리 최적화 프로그램에서 결정되는 것과 같이 효율성을 위해 열에 대해 인덱스를 사용할 수 있습니다. 또한 계산 열에서 승격된 속성을 저장할 수 있습니다.  
+ **sql:column()** 을 비슷한 방식으로 사용하면 추가 이점이 있습니다. 비용 기반 쿼리 최적화 프로그램에서 결정되는 것과 같이 효율성을 위해 열에 대해 인덱스를 사용할 수 있습니다. 또한 계산 열에서 승격된 속성을 저장할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)  

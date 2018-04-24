@@ -1,16 +1,16 @@
 ---
-title: "&amp;(비트 AND)(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: '&amp;(비트 AND)(Transact-SQL) | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 094c127434f2339a4a3e977c4455ca6ce904ab01
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a0509ebc1023843554c106d5a58e2a1e6edff87a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(비트 AND)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +56,7 @@ expression & expression
 >  비트 연산에서는 하나의 *식*이 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 입력된 값이 **int**인 경우 **int**입니다.  
+ 입력 값이 **int**이면 **int**입니다.  
   
  입력된 값이 **smallint**인 경우 **smallint**입니다.  
   

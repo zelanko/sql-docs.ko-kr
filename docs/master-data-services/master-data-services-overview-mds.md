@@ -1,16 +1,16 @@
 ---
-title: "MDS(Master Data Services) 개요 | Microsoft Docs"
-ms.custom: 
+title: MDS(Master Data Services) 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - what is master data
@@ -18,21 +18,24 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 
+caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8702bafc6b62d4c75d9dc76a32931e16dbe84e76
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
-  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ 이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
   
  >  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 아키텍처에 대한 설명은 simple-talk.com의 [Master Data Services -- The Basics](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) (Master Data Services -- 기본 사항) 문서를 참조하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새로운 기능에 대한 자세한 내용은 [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)을 참조하세요.  
    **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하는 방법에 대한 자세한 내용은** [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)을 참조하세요.  

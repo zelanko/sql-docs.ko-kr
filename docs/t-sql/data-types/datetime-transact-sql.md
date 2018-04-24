@@ -1,16 +1,16 @@
 ---
 title: datetime(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - datetime data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4493e165efbc0410d444f34fc41e30cc08e90307
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 84a5d0f57019067307995784a84fbcfb82e8578f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 소수 자릿수 초가 있는 24시간제 기준의 시간과 결합된 날짜를 정의합니다.
   
 > [!NOTE]  
->  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. **datetimeoffset**은 전 세계에 배포되는 응용 프로그램에 대해 표준 시간대를 지원합니다.  
+>  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. 전 세계에 배포되는 응용 프로그램의 경우 **datetimeoffset**을 사용하면 표준 시간대가 지원됩니다.  
   
 ## <a name="datetime-description"></a>datetime 설명  
   
@@ -100,12 +101,12 @@ ms.lasthandoff: 11/21/2017
 **datetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
 ##  <a name="_datetime"></a> Date 및 Time 데이터 변환  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)을 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>다른 날짜 및 시간 형식을 datetime 데이터 형식으로 변환 
 이 섹션에서는 다른 날짜/시간 데이터 형식이 **datetime** 데이터 형식으로 변환하면 어떤 일이 발생하는지를 설명합니다.  
   
-변환이 **날짜**에서 일어나는 경우 년, 월, 일이 복사됩니다. 시간 구성 요소는 00:00:00.000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**date**에서 변환되는 경우 년, 월, 일이 복사됩니다. 시간 구성 요소는 00:00:00.000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @date date = '12-21-16';  
@@ -119,7 +120,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-변환이 **time(n)**에서 일어나는 경우 날짜 구성 요소가 복사되고 시간 구성 요소는 '1900-01-01'로 설정됩니다. **time(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 이에 맞게 잘립니다. 다음 예에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**time(n)** 에서 변환되는 경우 시간 구성 요소가 복사되고 날짜 구성 요소는 '1900-01-01'로 설정됩니다. **time(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 이에 맞게 잘립니다. 다음 예에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -133,7 +134,7 @@ SELECT @datetime AS '@datetime', @time AS '@time';
 --1900-01-01 12:10:05.123 12:10:05.1237  
 ```  
   
-변환이 **smalldatetime**에서 일어나는 경우 시간 및 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**smalldatetime**에서 변환되는 경우 시간과 분이 복사됩니다. 초 및 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';  
@@ -147,7 +148,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-**datetimeoffset (n)**에서 변환이 일어나는 경우 날짜 및 시간 구성 요소가 복사됩니다. 표준 시간대는 잘립니다. **datetimeoffset(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 예에서는 `datetimeoffset(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+**datetimeoffset(n)** 에서 변환되는 경우 날짜 및 시간 구성 요소가 복사됩니다. 표준 시간대는 잘립니다. **datetimeoffset(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 예에서는 `datetimeoffset(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -161,7 +162,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-변환이 **datetime2(n)**에서 일어나는 경우 날짜 및 시간이 복사됩니다. **datetime2(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 예에서는 `datetime2(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+변환이 **datetime2(n)** 에서 일어나는 경우 날짜 및 시간이 복사됩니다. **datetime2(n)** 값의 소수 자릿수가 세 자리보다 크면 값이 잘립니다. 다음 예에서는 `datetime2(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  
@@ -176,7 +177,7 @@ SELECT @datetime AS '@datetime', @datetime2 AS '@datetime2';
 ```  
   
 ## <a name="examples"></a>예  
-다음 예에서는 문자열을 각 **날짜** 및 **시간** 데이터 형식으로 캐스팅하는 결과를 비교합니다.
+다음 예에서는 문자열을 각 **date** 및 **time** 데이터 형식으로 캐스팅하는 결과를 비교합니다.
   
 ```sql
 SELECT   

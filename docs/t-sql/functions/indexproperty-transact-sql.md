@@ -1,16 +1,16 @@
 ---
 title: INDEXPROPERTY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INDEXPROPERTY
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7099b3e11259d59c18ff6c5d8f591beca70846f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b632f46999c70ec1d4653def8ec2a29112435ce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,13 +49,13 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
 ## <a name="arguments"></a>인수  
  *object_ID*  
- 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID*는 **int**입니다.  
+ 인덱스 속성 정보를 제공할 테이블 또는 인덱싱된 뷰의 개체 ID가 포함된 식입니다. *object_ID* 는 **int**입니다.  
   
  *index_or_statistics_name*  
- 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name*은 **nvarchar(128)**입니다.  
+ 속성 정보를 반환할 인덱스 또는 통계의 이름이 포함된 식입니다. *index_or_statistics_name*은 **nvarchar(128)** 입니다.  
   
  *property*  
- 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *property*는 **varchar(128)**이며 다음 값 중 하나일 수 있습니다.  
+ 반환할 데이터베이스 속성의 이름이 포함된 식입니다. *property*는 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
 >  달리 언급하지 않는 한 *property*가 유효한 속성 이름이 아니거나, *object_ID*가 유효한 개체 ID가 아니거나, *object_ID*가 지정된 속성에 대해 지원되지 않는 개체 유형이거나 또는 호출자가 개체의 메타데이터를 볼 수 있는 권한이 없는 경우에는 NULL이 반환됩니다.  

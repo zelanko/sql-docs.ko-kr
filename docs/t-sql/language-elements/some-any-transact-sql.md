@@ -1,16 +1,16 @@
 ---
 title: SOME | ANY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 모든 쌍(*scalar_expression***,***x*)에 대해 지정된 비교 값이 TRUE일 경우 SOME이나 ANY는 **TRUE**를 반환하고 그렇지 않으면 **FALSE**를 반환합니다. 여기서 *x*는 단일 열 집합의 값입니다.  
+ 모든 쌍(*scalar_expression ***,*** x*)에 대해 지정된 비교 값이 TRUE일 경우 SOME이나 ANY는 **TRUE**를 반환하고 그렇지 않으면 **FALSE**를 반환합니다. 여기서 *x*는 단일 열 집합의 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  SOME의 경우 하위 쿼리에서 반환한 하나 이상의 값을 정확하게 비교하려면 *scalar_expression*이 필요합니다. 하위 쿼리에서 반환한 모든 값을 정확하게 비교하기 위해 *scalar_expression*이 필요한 문에 대한 자세한 내용은 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)을 참조하세요. 예를 들어 하위 쿼리에서 값 2와 3을 반환할 경우 *scalar_expression* = SOME(하위 쿼리)은 2의 *scalar_express*에 대해 TRUE로 계산됩니다. 하위 쿼리에서 값 2와 3을 반환할 경우에는 하위 쿼리 값(값 3)의 일부가 식의 조건을 만족하지 않으므로 *scalar_expression* = ALL(하위 쿼리)은 FALSE로 계산됩니다.  
@@ -150,7 +150,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>참고 항목  
- [ALL&#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
+ [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
-title: "STInteriorRingN(geometry 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: STInteriorRingN(geometry 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STInteriorRingN_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7335cdeab403eb8530a7a26742c7c0d715dce0a1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5dfa4d7a8669234cb7c154d18ce103626182b52a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
  OGC(Open Geospatial Consortium) 형식: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 **geometry** 인스턴스가 다각형이 아니면 **null**을 반환합니다. 또한 이 메서드는 식이 링 개수보다 크면 **ArgumentOutOfRangeException**을 throw합니다. 링 개수는 `STNumInteriorRing``()`를 사용하여 반환할 수 있습니다.  
+ 이 메서드는 **geometry** 인스턴스가 다각형이 아니면 **Null**을 반환합니다. 또한 이 메서드는 식이 링 개수보다 크면 **ArgumentOutOfRangeException**을 throw합니다. 링 개수는 `STNumInteriorRing``()`를 사용하여 반환할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Polygon` 인스턴스를 만들고 `STInteriorRingN()`을 사용하여 다각형의 내부 링을 **LineString**으로 반환합니다.  

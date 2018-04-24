@@ -1,30 +1,33 @@
 ---
-title: "도메인 기반 특성 만들기(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: 
+title: 도메인 기반 특성 만들기(Excel용 MDS 추가 기능) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd878a9698e1c06d1bfac7dd8fc377cbdfcb5361
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 06089ce81de2bbfa8156128bf66178c52b104291
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 열에 있는 값을 특정 값 집합으로 제약하려는 경우 도메인 기반 특성을 만들 수 있습니다.  
   
  워크시트에 이미 있는 값이나 기존 엔터티에서 가져온 값으로 제약할 수 있습니다.  
@@ -49,7 +52,7 @@ ms.lasthandoff: 03/05/2018
   
 3.  **모델 작성** 그룹에서 **특성 속성**을 클릭합니다.  
   
-4.  **특성 속성** 대화 상자의 **특성 유형** 목록에서 **제약된 목록(도메인 기반)**을 선택합니다.  
+4.  **특성 속성** 대화 상자의 **특성 유형** 목록에서 **제약된 목록(도메인 기반)** 을 선택합니다.  
   
 5.  **특성을 채울 값** 목록에서 다음을 수행합니다.  
   

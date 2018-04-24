@@ -1,16 +1,16 @@
 ---
-title: "Filter(geography 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: Filter(geography 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Filter
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd3ca8cc7e9e61cec96075b367e1ad7407179e21
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 320ecb9b538300bd4d25dbb365bfbe1058833a7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filter-geography-data-type"></a>Filter(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  **geography** 인스턴스가 다른 **geography** 인스턴스와 잠재적으로 교차할 수 있는 경우 1을 반환합니다. 이 메서드는 거짓 긍정 결과를 반환할 수 있으며 정확한 결과는 계획에 따라 다릅니다. **geography** 인스턴스가 교차하지 않으면 정확한 0 값을 반환합니다(참 부정 반환).  
   
- 인덱스를 사용할 수 없거나 사용하지 않는 경우 동일한 매개 변수로 호출되면 이 메서드에서 **STIntersects()**와 동일한 값을 반환합니다.  
+ 인덱스를 사용할 수 없거나 사용하지 않는 경우 동일한 매개 변수로 호출되면 이 메서드에서 **STIntersects()** 와 동일한 값을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -80,7 +80,7 @@ WHERE g.Filter(geography::Parse(
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [geography 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [STIntersects&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

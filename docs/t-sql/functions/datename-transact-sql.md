@@ -1,16 +1,16 @@
 ---
 title: DATENAME(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATENAME_TSQL
@@ -27,23 +27,24 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22dc10851e3185512527f82f593fdc2cdb2b765f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a8803278c567f01888b7b530885e82e4543c966a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datename-transact-sql"></a>DATENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 지정된 *date*의 지정된 *datepart*를 나타내는 문자열을 반환합니다.
   
-모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
+모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -76,7 +77,7 @@ DATENAME ( datepart , date )
 |**ISO_WEEK**|**ISOWK, ISOWW**|  
   
 *date*  
-**time**, **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다. *date*는 식, 열 식, 사용자 정의 변수 또는 문자열 리터럴일 수 있습니다  
+**time**, **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다. *date*는 식, 열 식, 사용자 정의 변수 또는 문자열 리터럴일 수 있습니다.  
 모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
@@ -97,9 +98,9 @@ DATENAME ( datepart , date )
 *date*가 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)이면 초는 00으로 반환됩니다.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>date 인수에 포함되지 않은 datepart는 기본값이 반환됨  
-*date* 인수의 데이터 형식에 지정된 *datepart*가 없으면 *datepart*에 대해 리터럴이 지정된 경우에만 *date*의 기본값이 반환됩니다.
+*date* 인수의 데이터 형식에 지정된 *datepart*가 없으면 *date*에 대해 리터럴이 지정된 경우에만 해당 *datepart*의 기본값이 반환됩니다.
   
-예를 들어 모든 **date** 데이터 형식의 년-월-일 기본값은 1900-01-01입니다. 다음 문은 *datepart*에 대한 날짜 부분 인수, *date*에 대한 시간 인수를 가지며 `1900, January, 1, 1, Monday`를 반환합니다.
+예를 들어 모든 **date** 데이터 형식의 년-월-일 기본값은 1900-01-01입니다. 다음 명령문은 *datepart*에 대한 날짜 부분 인수, *date*에 대한 시간 인수를 가지며 `1900, January, 1, 1, Monday`를 반환합니다.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  

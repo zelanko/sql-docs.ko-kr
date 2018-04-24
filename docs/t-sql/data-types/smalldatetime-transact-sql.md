@@ -1,16 +1,16 @@
 ---
 title: smalldatetime(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smalldatetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf5273a362de4a4eb86f266d252fe4c853900e1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
 **smalldatetime**은 ANSI 또는 ISO 8601 규격이 아닙니다.
   
-## <a name="converting-date-and-time-data"></a>날짜 및 시간 데이터 변환
+## <a name="converting-date-and-time-data"></a>date 및 time 데이터 변환
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime을 다른 날짜 및 시간 형식으로 변환
@@ -87,7 +88,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-**time(n)**으로 변환되는 경우 시간, 분 및 초가 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `time(4)` 값으로 변환한 결과를 보여 줍니다.
+**time(n)** 으로 변환되는 경우 시간, 분 및 초가 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `time(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -119,7 +120,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-**datetimeoffset(n)**으로 변환되는 경우 **smalldatetime** 값이 **datetimeoffset(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
+**datetimeoffset(n)** 으로 변환되는 경우 **smalldatetime** 값이 **datetimeoffset(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -135,7 +136,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-**datetime2(n)**로 변환되는 경우 **smalldatetime** 값이 **datetime2(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2(4)` 값으로 변환한 결과를 보여 줍니다.
+**datetime2(n)** 로 변환되는 경우 **smalldatetime** 값이 **datetime2(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetime2(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  

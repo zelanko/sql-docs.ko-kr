@@ -1,16 +1,16 @@
 ---
 title: REVERT(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REVERT_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - COOKIE clause
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3350f92afbb6d6ed0278a9ae41ee25f5ed4096b0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8f3cb447b1234e3f22b572253d628e1bb49d0aeb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ REVERT
   
 ## <a name="arguments"></a>인수  
  WITH COOKIE = @*varbinary_variable*  
- 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *@varbinary_variable*은 **varbinary(100)**입니다.  
+ 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *@varbinary_variable*은 **varbinary(100)** 입니다.  
   
 ## <a name="remarks"></a>Remarks  
  REVERT는 저장 프로시저 또는 사용자 정의 함수 같은 모듈 내에서 지정하거나 독립 실행형 문으로 지정할 수 있습니다. 모듈 내에서 지정하면 REVERT는 모듈에 정의된 EXECUTE AS 문에만 적용할 수 있습니다. 예를 들어 다음 저장 프로시저는 `EXECUTE AS` 문과 `REVERT` 문을 차례로 실행합니다.  
@@ -160,7 +160,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   

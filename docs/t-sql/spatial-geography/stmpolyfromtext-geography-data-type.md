@@ -1,16 +1,16 @@
 ---
-title: "STMPolyFromText(geography 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: STMPolyFromText(geography 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STMPolyFromText (geography Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1932081db399952f0cbecccca98153fec8036b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2b9a986c00f571e2cf9efcdfa0dbcffccf31eb9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
  반환할 **geographyMultiPolygon** 인스턴스의 WKT 표현입니다. *multipolygon_tagged_text*는 **nvarchar(max)** 식입니다.  
   
  *SRID*  
- 반환할 **geographyMultiPolygon** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
+ 반환하려는 **geographyMultiPolygon** 인스턴스의 SRID(Spatial Reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  

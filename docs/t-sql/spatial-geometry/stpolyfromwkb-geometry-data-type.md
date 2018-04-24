@@ -1,16 +1,16 @@
 ---
-title: "STPolyFromWKB(geometry 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: STPolyFromWKB(geometry 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromWKB_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromWKB (geometry Data Type)
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7455d690fabea30dd8d4f8cc1139df73f2fb4c7b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 486bad91da8d9a18dca10ecdc309b2d1eab643de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
  반환할 **geometryPolygon** 인스턴스의 WKB 표현입니다. *WKB_polygon*은 **varbinary(max)** 식입니다.  
   
  *SRID*  
- 반환할 **geometryPolygon** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
+ 반환하려는 **geometryPolygon** 인스턴스의 SRID(spatial reference ID)를 나타내는 **int** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  

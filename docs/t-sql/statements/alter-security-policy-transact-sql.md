@@ -1,16 +1,16 @@
 ---
 title: ALTER SECURITY POLICY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SECURITY_POLICY_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f40c77f8328ee93cd0e1ec8c3b17731060e88288
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  보안 정책의 이름입니다. 보안 정책 이름은 식별자에 대한 규칙을 따라야 하며 데이터베이스에서 각 스키마별로 고유해야 합니다.  
   
  schema_name  
- 보안 정책이 속한 스키마의 이름입니다. 스키마 바인딩 때문에 *schema_name*이 필요 합니다.  
+ 보안 정책이 속한 스키마의 이름입니다. 스키마 바인딩 때문에 *schema_name*이 필요합니다.  
   
  [ FILTER | BLOCK ]  
  대상 테이블에 바인딩되어 있는 함수에 대한 보안 조건자의 형식입니다. FILTER 조건자는 읽기 작업에 사용 가능한 행을 자동으로 필터링합니다. BLOCK 조건자는 조건자 함수를 위반하는 쓰기 작업을 명시적으로 차단합니다.  

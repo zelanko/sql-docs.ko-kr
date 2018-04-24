@@ -1,30 +1,33 @@
 ---
-title: "Excel용 MDS 추가 기능의 데이터 품질 일치 | Microsoft Docs"
-ms.custom: 
+title: Excel용 MDS 추가 기능의 데이터 품질 일치 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6630871f9fd5104db43e11017b6b14a92d1cded3
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fbb510e5c7035a8b6247bf1098951f5dec276f26
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel용 MDS 추가 기능의 데이터 품질 일치
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가하기 전에 새 데이터와 MDS에서 관리되는 기존 데이터를 비교하면 중복되거나 정확하지 않은 데이터가 추가되는 것을 방지할 수 있습니다.  
   
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 DQS(Data Quality Services)를 사용하여 비슷한 데이터를 일치시킵니다. 추가 기능에 포함된 일치 기능을 사용하면 비슷한 레코드가 그룹화되고 결과의 정확성을 보여 주는 점수가 표시됩니다. DQS가 제공하는 일치 기능에 대한 자세한 내용은 [Data Matching](../../data-quality-services/data-matching.md)를 참조하십시오.  

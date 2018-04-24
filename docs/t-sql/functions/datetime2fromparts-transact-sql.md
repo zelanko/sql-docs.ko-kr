@@ -1,16 +1,16 @@
 ---
 title: DATETIME2FROMPARTS(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATETIME2FROMPARTS_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce109671228e82bc0f02e9920b2ef98c9bbcdb83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2b55cdb54537bafd171c1fd2d340ea679b2bcd2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -99,7 +100,7 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>2. 소수 단위 초를 사용하는 예  
 다음 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.
   
-1.  *fractions*의 값이 5이고 *precision*의 값이 1이면 *fractions*의 값은 1초의 5/10를 나타냅니다.  
+1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  
   
 2.  *fractions*의 값이 50이고 *precision*의 값이 2이면 *fractions*의 값은 1초의 50/100을 나타냅니다.  
   

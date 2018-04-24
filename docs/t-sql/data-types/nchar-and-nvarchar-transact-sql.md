@@ -2,7 +2,7 @@
 title: nchar 및 nvarchar(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|data-types
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: ''
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de099c00e160e212ff309abf74d5411687a82532
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3cfbc8f95367098861dac13b67baca442133d056
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 및 nvarchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/16/2018
   
 열 데이터 항목들의 크기가 다양할 경우 **nvarchar**를 사용합니다.
   
-**sysname**은 시스템이 제공하는 사용자 정의 데이터 형식으로 Null을 허용하지 않는다는 점을 제외하면 기능상 **nvarchar(128)**와 동일합니다. **sysname**은 데이터베이스 개체 이름을 참조하는 데 사용됩니다.
+**sysname**은 시스템이 제공하는 사용자 정의 데이터 형식으로 Null을 허용하지 않는다는 점을 제외하면 기능상 **nvarchar(128)** 와 동일합니다. **sysname**은 데이터베이스 개체 이름을 참조하는 데 사용됩니다.
   
 **nchar** 또는 **nvarchar**를 사용하는 개체에는 COLLATE 절을 사용하여 특정 데이터 정렬을 할당하지 않는 한 데이터베이스의 기본 데이터 정렬이 할당됩니다.
   

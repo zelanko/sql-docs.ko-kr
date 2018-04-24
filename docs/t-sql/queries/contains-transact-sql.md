@@ -1,16 +1,16 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 
+caps.latest.revision: 117
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 98c8cd2ed884b6cdacb569920b75b7e87ed46375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -180,7 +180,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  *column_name*에서 검색할 텍스트와 일치 조건을 지정합니다.  
   
-*\<contains_search_condition>*은 **nvarchar**입니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar(max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
+*\<contains_search_condition>* 은 **nvarchar**입니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar(max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `CONTAINS` 조건자에서 암시적 변환이 발생합니다.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -216,14 +216,14 @@ WHERE CONTAINS(Description, @SearchWord);
 >  몇몇 아시아 지역의 언어로 작성된 경우처럼 일부 언어에는 각 단어 사이에 공백이 없는 하나 이상의 단어로 구성된 구가 있을 수 있습니다.  
   
 \<simple_term>  
-단어나 구가 정확하게 일치하는 항목을 지정합니다. 유효한 단순 단어의 예로는 "blue berry", blueberry, "Microsoft SQL Server" 등이 있습니다. 구는 큰따옴표("")로 묶어야 합니다. 구에 포함된 단어는 *\<contains_search_condition>*에 지정된 것과 같은 순서로 데이터베이스 열에 나타나야 합니다. 단어나 구에서 문자를 검색할 때는 대/소문자를 구분하지 않습니다. 전체 텍스트 인덱싱된 열에서 의미 없는 단어 또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)(예: a, and, the)는 전체 텍스트 인덱스에 저장되지 않습니다. 단일 단어 검색에 의미 없는 단어가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 의미 없는 단어만 포함되어 있다는 오류 메시지를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 \Mssql\Binn\FTERef 디렉터리에 의미 없는 단어 표준 목록이 포함되어 있습니다.  
+단어나 구가 정확하게 일치하는 항목을 지정합니다. 유효한 단순 단어의 예로는 "blue berry", blueberry, "Microsoft SQL Server" 등이 있습니다. 구는 큰따옴표("")로 묶어야 합니다. 구에 포함된 단어는 *\<contains_search_condition>* 에 지정된 것과 같은 순서로 데이터베이스 열에 나타나야 합니다. 단어나 구에서 문자를 검색할 때는 대/소문자를 구분하지 않습니다. 전체 텍스트 인덱싱된 열에서 의미 없는 단어 또는 [중지 단어](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)(예: a, and, the)는 전체 텍스트 인덱스에 저장되지 않습니다. 단일 단어 검색에 의미 없는 단어가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 의미 없는 단어만 포함되어 있다는 오류 메시지를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 \Mssql\Binn\FTERef 디렉터리에 의미 없는 단어 표준 목록이 포함되어 있습니다.  
   
  문장 부호는 무시됩니다. 따라서 `CONTAINS(testing, "computer failure")`는 "Where is my computer? Failure to find it would be expensive."라는 값을 가진 행을 검색합니다. 단어 분리기 작동에 대한 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
  \<prefix_term>  
  지정한 텍스트로 시작하는 단어 또는 구를 검색하도록 지정합니다. 접두사 단어를 큰따옴표("")로 묶고 뒤에 있는 따옴표 앞에 별표(\*)를 추가하면 별표 앞에 지정된 단순 단어로 시작하는 모든 텍스트가 검색됩니다. 절은 `CONTAINS (column, '"text*"')`와 같이 지정해야 합니다. 별표는 단어나 구에 포함된 어근의 문자를 개수에 관계없이 검색합니다. 텍스트와 별표를 큰따옴표로 구분하지 않으면 조건자가 `CONTAINS (column, 'text*')`를 읽고 전체 텍스트 검색에서 별표를 문자로 간주하여 `text*`와 정확하게 일치하는 텍스트를 검색합니다. 일반적으로 단어 분리기는 별표(\*)와 같은 문자를 무시하므로 전체 텍스트 엔진은 별표가 포함된 단어를 검색하지 않습니다.  
   
- *\<prefix_term>*이 구일 경우 구에 포함된 각 단어는 별도의 접두사로 간주됩니다. 따라서 접두사 단어 "local wine*"을 지정하는 쿼리는 "local winery", "locally wined and dined" 등의 텍스트가 포함된 모든 행을 검색합니다.  
+ *\<prefix_term>* 이 구일 경우 구에 포함된 각 단어는 별도의 접두사로 간주됩니다. 따라서 접두사 단어 "local wine*"을 지정하는 쿼리는 "local winery", "locally wined and dined" 등의 텍스트가 포함된 모든 행을 검색합니다.  
   
  \<generation_term>  
  포함된 단순 단어에 검색할 원래 단어에서 변형된 단어가 포함된 경우 단어를 검색하도록 지정합니다.  
@@ -231,10 +231,10 @@ WHERE CONTAINS(Description, @SearchWord);
  INFLECTIONAL  
  지정된 단순 단어에 언어별 형태소 분석기를 사용하도록 지정합니다. 형태소 분석기 동작은 각 언어의 형태소 분석 규칙에 따라 정의됩니다. 중립 언어에는 관련된 형태소 분석기가 없습니다. 쿼리할 열의 열 언어는 원하는 형태소 분석기를 참조하는 데 사용됩니다. *language_term*을 지정하면 해당 언어에 대한 형태소 분석기가 사용됩니다.  
   
- *\<generation_term>* 안에 지정된 *\<simple_term>*은 명사 및 동사와 일치하지 않습니다.  
+ *\<generation_term>* 안에 지정된 *\<simple_term>* 은 명사 및 동사와 일치하지 않습니다.  
   
  THESAURUS  
- 열의 전체 텍스트 언어 또는 쿼리에 지정된 언어에 해당되는 동의어 사전이 사용되도록 지정합니다. *\<simple_term>*에서 가장 긴 패턴에 대해 동의어 사전에서 대응되는 항목을 찾고 원래 패턴을 확장하거나 대체하도록 추가 단어가 생성됩니다. *\<simple_term>*의 전체 또는 일부에 일치하는 항목을 찾을 수 없으면 일치하지 않는 부분이 *simple_term*으로 처리됩니다. 전체 텍스트 검색 동의어 사전에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
+ 열의 전체 텍스트 언어 또는 쿼리에 지정된 언어에 해당되는 동의어 사전이 사용되도록 지정합니다. *\<simple_term>* 에서 가장 긴 패턴에 대해 동의어 사전에서 대응되는 항목을 찾고 원래 패턴을 확장하거나 대체하도록 추가 단어가 생성됩니다. *\<simple_term>* 의 전체 또는 일부에 일치하는 항목을 찾을 수 없으면 일치하지 않는 부분이 *simple_term*으로 처리됩니다. 전체 텍스트 검색 동의어 사전에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
   
  \<generic_proximity_term>  
  검색 대상 문서에 있어야 하는 단어 또는 구를 지정합니다.  
@@ -321,7 +321,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  *\<weighted_term>* 키워드를 지정합니다.  
   
  WEIGHT(*weight_value*)  
- 0.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>*의 각 구성 요소는 *weight_value*를 포함할 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
+ 0.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소는 *weight_value*를 포함할 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
   
 > [!NOTE]  
 >  소수 구분 기호는 운영 체제 로캘에 관계없이 항상 마침표입니다.  
@@ -338,7 +338,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  두 개의 포함 검색 조건 중 하나가 충족되어야 일치한다는 것을 나타냅니다. OR 키워드 대신 막대 기호(|)를 사용하여 OR 연산자를 나타낼 수도 있습니다.  
   
- *\<contains_search_condition>*에 괄호로 묶은 그룹이 있으면 이러한 그룹이 가장 먼저 평가됩니다. 괄호로 묶인 그룹을 평가한 후 포함 검색 조건에 논리 연산자를 사용할 때 다음 규칙이 적용됩니다.  
+ *\<contains_search_condition>* 에 괄호로 묶은 그룹이 있으면 이러한 그룹이 가장 먼저 평가됩니다. 괄호로 묶인 그룹을 평가한 후 포함 검색 조건에 논리 연산자를 사용할 때 다음 규칙이 적용됩니다.  
   
 -   AND보다 NOT이 먼저 적용됩니다.  
   
@@ -544,7 +544,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색 시작](../../relational-databases/search/get-started-with-full-text-search.md)   
  [전체 텍스트 카탈로그 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
@@ -554,7 +554,7 @@ GO
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)   
  [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

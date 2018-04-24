@@ -1,16 +1,16 @@
 ---
-title: "int, bigint, smallint 및 tinyint(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: int, bigint, smallint 및 tinyint(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/8/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bigint_TSQL
@@ -30,16 +30,17 @@ helpviewer_keywords:
 - int data type
 - smallint data type
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e99ccb97dc5c36f8b7870a042963d6302b3f1eb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31200f2dbdb8d67176dcac450a5d638a1edcc25b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint 및 tinyint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,9 +64,9 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  +, -, \*, / 또는 % 산술 연산자를 사용하여 **int**, **smallint**, **tinyint** 또는 **bigint** 상수 값을 **float**, **real**, **decimal** 또는 **numeric** 데이터 형식으로 암시적 또는 명시적으로 변환하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 형식과 식의 전체 자릿수를 계산할 때 적용하는 규칙은 쿼리에 자동으로 매개 변수가 지정되는지 여부에 따라 결과가 달라집니다.  
 >   
->  그러므로 경우에 따라 쿼리의 비슷한 식이 다른 결과를 생성하기도 합니다. 쿼리에 자동으로 매개 변수가 지정되지 않는 경우 상수 값은 먼저 전체 자릿수가 상수 값을 보유할 수 있을 만큼 큰 **numeric**으로 변환된 다음, 지정된 데이터 형식으로 변환됩니다. 예를 들어 상수 값 1은 **numeric(1, 0)**으로 변환되고 상수 값 250은 **numeric(3, 0)**으로 변환됩니다.  
+>  그러므로 경우에 따라 쿼리의 비슷한 식이 다른 결과를 생성하기도 합니다. 쿼리에 자동으로 매개 변수가 지정되지 않는 경우 상수 값은 먼저 전체 자릿수가 상수 값을 보유할 수 있을 만큼 큰 **numeric**으로 변환된 다음, 지정된 데이터 형식으로 변환됩니다. 예를 들어 상수 값 1은 **numeric(1, 0)** 으로 변환되고 상수 값 250은 **numeric(3, 0)** 으로 변환됩니다.  
 >   
->  쿼리에 자동으로 매개 변수가 지정되는 경우 상수 값은 최종 데이터 형식으로 변환하기 전에 항상 **numeric(10, 0)**으로 변환됩니다. / 연산자가 들어 있는 경우 비슷한 쿼리 간에 결과 형식의 전체 자릿수뿐만 아니라 결과 값도 달라질 수 있습니다. 예를 들어 자동으로 매개 변수가 지정되며 `SELECT CAST (1.0 / 7 AS float)` 식이 포함된 쿼리의 결과 값은 자동으로 매개 변수가 지정되지 않는 동일한 쿼리의 결과 값과 달라집니다. 자동으로 매개 변수가 지정되는 쿼리의 결과는 **numeric(10, 0)** 데이터 형식에 맞게 잘리기 때문입니다.  
+>  쿼리에 자동으로 매개 변수가 지정되는 경우 상수 값은 최종 데이터 형식으로 변환하기 전에 항상 **numeric(10, 0)** 으로 변환됩니다. / 연산자가 들어 있는 경우 비슷한 쿼리 간에 결과 형식의 전체 자릿수뿐만 아니라 결과 값도 달라질 수 있습니다. 예를 들어 자동으로 매개 변수가 지정되며 `SELECT CAST (1.0 / 7 AS float)` 식이 포함된 쿼리의 결과 값은 자동으로 매개 변수가 지정되지 않는 동일한 쿼리의 결과 값과 달라집니다. 자동으로 매개 변수가 지정되는 쿼리의 결과는 **numeric(10, 0)** 데이터 형식에 맞게 잘리기 때문입니다.  
   
 ## <a name="converting-integer-data"></a>integer 데이터 변환
 정수가 암시적으로 문자 데이터 형식으로 변환될 경우 정수가 너무 커서 문자 필드에 맞지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ASCII 문자 42인 별표(*)를 입력합니다.
@@ -119,6 +120,6 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

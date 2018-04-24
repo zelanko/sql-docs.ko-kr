@@ -2,7 +2,7 @@
 title: FROM(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -36,16 +36,17 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: ''
+caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 18b042ae05331e65f4d10657536f360f17328ed7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -357,7 +358,7 @@ ON (p.ProductID = v.ProductID);
  PIVOT 연산자의 값 열입니다. UNPIVOT과 함께 사용되면 *value_column*은 입력 *table_source*에 있는 기존 열의 이름이 될 수 없습니다.  
   
  FOR *pivot_column*  
- PIVOT 연산자의 피벗 열입니다. *pivot_column*은 암시적 또는 명시적으로 **nvarchar()**로 변환할 수 있는 형식이어야 합니다. 이 열은 **image** 또는 **rowversion**일 수 없습니다.  
+ PIVOT 연산자의 피벗 열입니다. *pivot_column*은 암시적 또는 명시적으로 **nvarchar()** 로 변환할 수 있는 형식이어야 합니다. 이 열은 **image** 또는 **rowversion**일 수 없습니다.  
   
  UNPIVOT이 사용되면 *pivot_column*은 *table_source*에서 좁혀진 출력 열의 이름입니다. 해당 이름의 *table_source*에 기존 열이 있을 수 없습니다.  
   

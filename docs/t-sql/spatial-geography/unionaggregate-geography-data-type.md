@@ -1,16 +1,16 @@
 ---
-title: "UnionAggregate(geography 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: UnionAggregate(geography 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UnionAggregate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - UnionAggregate method (geography)
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63299cfd3847f236f5908085b824b7b271dafc7a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a0803f35d7d7576d3721ef9d3ae169c39f97bb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ UnionAggregate ( geography_operand )
  메서드가 **null** 입력을 무시합니다.  
   
 > [!NOTE]  
->  메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
+>  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 한 도시 안의 **geography** 위치 지점 집합에서 `UnionAggregate`를 수행합니다.  

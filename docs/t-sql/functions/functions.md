@@ -1,16 +1,16 @@
 ---
-title: "Microsoft SQL 데이터베이스 함수란? | Microsoft Docs"
-ms.custom: 
+title: Microsoft SQL 데이터베이스 함수란? | Microsoft Docs
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2d0e8115debf9d29ac57876381ef3052ca057157
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -82,7 +83,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
   
  문자가 아닌 항목을 입력으로 받고 문자열을 출력으로 반환하는 함수는 출력에 현재 데이터베이스의 기본 데이터 정렬을 사용합니다.  
   
- 입력으로 여러 문자열을 받고 출력으로 문자열을 반환하는 함수는 데이터 정렬 선행 규칙을 사용하여 출력 문자열의 데이터 정렬을 설정합니다. 자세한 내용은 [선행 정렬 우선 순위&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.  
+ 입력으로 여러 문자열을 받고 출력으로 문자열을 반환하는 함수는 데이터 정렬 선행 규칙을 사용하여 출력 문자열의 데이터 정렬을 설정합니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

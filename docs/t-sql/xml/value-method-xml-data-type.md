@@ -1,16 +1,16 @@
 ---
-title: "value() 메서드(xml 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: value() 메서드(xml 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a3822e0469836b59369eb676ece956533d4df58
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ae76516ac8225755b6fc2fe53862c62b6fda8bd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ value (XQuery, SQLType)
  **value()** 메서드는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 연산자를 암시적으로 사용하고 직렬화된 문자열 표현인 XQuery 식의 결과를 XSD 유형에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환으로 지정된 해당 SQL 유형으로 변환하려고 시도합니다. CONVERT에 대한 형식 캐스트 규칙에 대한 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
->  성능상의 이유로 조건자에서 **value()** 메서드를 사용하여 관계형 값과 비교하는 대신 **sql:column()**에서 **exist()**를 사용하세요. 뒤에 나오는 예 4에서 이러한 작업 방법을 보여 줍니다.  
+>  성능상의 이유로 조건자에서 **value()** 메서드를 사용하여 관계형 값과 비교하는 대신 **sql:column()** 에서 **exist()** 를 사용하세요. 뒤에 나오는 예 4에서 이러한 작업 방법을 보여 줍니다.  
   
 ## <a name="examples"></a>예  
   

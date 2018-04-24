@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: a1199bd1bc03a29b5e2469b501bc2d9be7124abe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인의 도메인 간 규칙을 만드는 방법에 대해 설명합니다. 도메인 간 규칙은 복합 도메인에 포함된 단일 도메인에서 값 사이의 관계를 테스트합니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 간 규칙이 복합 도메인 전체에서 유효해야 합니다. 도메인 간 규칙은 도메인 값의 유효성 검사, 수정 및 표준화에 사용됩니다.  
   
  도메인 간 규칙의 If 절과 Then 절은 각각 복합 도메인의 단일 도메인 중 하나에 대해 정의됩니다. 각 절은 서로 다른 단일 도메인에 대해 정의되어야 합니다. 도메인 간 규칙은 여러 개의 단일 도메인과 관련되어야 합니다. 복합 도메인에 단순 도메인 규칙(단일 도메인 전용)을 정의할 수는 없습니다. 단일 도메인에 도메인 규칙을 정의하여 이 작업을 수행합니다. If 절과 Then 절은 각각 하나 이상의 조건을 포함할 수 있습니다.  
@@ -61,7 +64,7 @@ ms.lasthandoff: 03/22/2018
   
 4.  **CD 규칙** 탭을 클릭합니다.  
   
-5.  **새 도메인 규칙을 추가합니다.**를 클릭하고 규칙의 이름과 설명을 입력합니다.  
+5.  **새 도메인 규칙을 추가합니다.** 를 클릭하고 규칙의 이름과 설명을 입력합니다.  
   
 6.  **활성** 을 선택하여 해당 규칙이 실행되도록 지정하거나(기본값) 선택 취소하여 규칙이 실행되지 않도록 합니다.  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 03/22/2018
   
     3.  조건에 값이 필요한 경우 조건과 연결된 입력란에 값을 입력합니다.  
   
-    4.  if 절에 다른 조건이 필요한 경우 **선택한 절에 새 조건을 추가합니다.**를 클릭합니다. 연산자를 선택하고 조건을 선택한 후 필요하면 조건의 값을 입력합니다.  
+    4.  if 절에 다른 조건이 필요한 경우 **선택한 절에 새 조건을 추가합니다.** 를 클릭합니다. 연산자를 선택하고 조건을 선택한 후 필요하면 조건의 값을 입력합니다.  
   
     5.  조건 순서를 변경하려면 조건의 왼쪽을 클릭하여 조건을 선택하고 위쪽 화살표나 아래쪽 화살표를 클릭합니다.  
   

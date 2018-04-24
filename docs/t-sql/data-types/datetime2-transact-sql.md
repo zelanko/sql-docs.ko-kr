@@ -1,16 +1,16 @@
 ---
 title: datetime2(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime2
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70a3f27fc59fcc904679040029e47f312017dbe3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4c49b540669ba403d2be278e25bc724b5dea7684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +108,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-**time(n)**에서 변환되는 경우 시간 구성 요소가 복사되고 날짜 구성 요소는 '1900-01-01'로 설정됩니다. 다음 예에서는 `time(7)` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
+**time(n)** 에서 변환되는 경우 시간 구성 요소가 복사되고 날짜 구성 요소는 '1900-01-01'로 설정됩니다. 다음 예에서는 `time(7)` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -135,7 +136,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-**datetimeoffset(n)**에서 변환되는 경우 날짜 및 시간 구성 요소가 복사됩니다. 표준 시간대는 잘립니다. 다음 예에서는 `datetimeoffset(7)` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
+**datetimeoffset(n)** 에서 변환되는 경우 날짜 및 시간 구성 요소가 복사됩니다. 표준 시간대는 잘립니다. 다음 예에서는 `datetimeoffset(7)` 값을 `datetime2` 값으로 변환한 결과를 보여 줍니다.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';

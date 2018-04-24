@@ -1,16 +1,16 @@
 ---
 title: CREATE SECURITY POLICY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SECURITY_POLICY_TSQL
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CREATE SECURITY POLICY statement
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 205a09efdef9e59736fa20238455b4327dced330
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d310e0dc6aa21758f63d8d7dbe755a0cea950d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *schema_name*  
  보안 정책이 속한 스키마의 이름입니다. 스키마 바인딩 때문에 *schema_name*이 필요합니다.  
   
- [필터 | 차단]  
- 대상 테이블에 바인딩되어 있는 함수에 대한 보안 조건자의 형식입니다. 필터 조건자는 읽기 작업에 사용 가능한 행을 자동으로 필터링합니다. 차단 조건자는 조건자 함수를 위반하는 쓰기 작업을 명시적으로 차단합니다.  
+ [ FILTER | BLOCK ]  
+ 대상 테이블에 바인딩되어 있는 함수에 대한 보안 조건자의 형식입니다. FILTER 조건자는 읽기 작업에 사용 가능한 행을 자동으로 필터링합니다. 차단 조건자는 조건자 함수를 위반하는 쓰기 작업을 명시적으로 차단합니다.  
   
  *tvf_schema_name.security_predicate_function_name*  
  조건자로 사용되고 대상 테이블에 대한 쿼리 시 적용될 인라인 테이블 값 함수입니다. 특정 테이블에 대한 특정 DML 작업을 위해 최대 하나의 보안 조건자를 정의할 수 있습니다. 인라인 테이블 값 함수는 SCHEMABINDING 옵션을 사용하여 생성했어야 합니다.  
@@ -81,7 +81,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *table_schema_name.table_name*  
  보안 조건자를 적용할 대상 테이블입니다. 사용되지 않도록 설정된 여러 보안 정책이 특정 DML 작업용 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용할 수 있습니다.  
   
- *\<block_dml_operation>* 블록 조건자가 적용될 특정 DML 작업입니다. AFTER는 DML 작업 수행(삽입 또는 업데이트) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. BEFORE는 DML 작업 수행(업데이트 또는 삭제) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. 작업이 지정되지 않은 경우 조건자는 모든 작업에 적용됩니다.  
+ *\<block_dml_operation>* 블록 조건자가 적용될 특정 DML 작업입니다. AFTER는 DML 작업 수행(삽입 또는 업데이트) 후 조건자가 행의 값에 따라 평가되도록 지정합니다. BEFORE는 DML 작업 수행(UPDATE 또는 DELETE) 전에 조건자가 행의 값에 따라 평가되도록 지정합니다. 작업이 지정되지 않은 경우 조건자는 모든 작업에 적용됩니다.  
   
  [ STATE = { ON | **OFF** } ]  
  대상 테이블에 대해 해당 보안 조건자를 강제 적용하여 보안 정책을 사용하거나 사용하지 않도록 설정합니다. 지정되지 않으면 생성되는 보안 정책이 사용되도록 설정됩니다.  
@@ -112,7 +112,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 -   인수로 사용하는 대상 테이블의 모든 열에 대한 REFERENCES 권한.  
   
 ## <a name="examples"></a>예  
- 다음 예는 **CREATE SECURITY POLICY** 구문의 사용을 보여 줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [Row-Level Security](../../relational-databases/security/row-level-security.md)를 참조하세요.  
+ 다음 예는 **CREATE SECURITY POLICY** 구문의 사용을 보여 줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
 ### <a name="a-creating-a-security-policy"></a>1. 보안 정책 만들기  
  다음 구문은 Customer 테이블에 대한 필터 조건자가 있는 보안 정책을 만들고 보안 정책을 사용하지 않도록 설정해 둡니다.  
@@ -151,7 +151,7 @@ CREATE SECURITY POLICY rls.SecPol
  [ALTER SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
 

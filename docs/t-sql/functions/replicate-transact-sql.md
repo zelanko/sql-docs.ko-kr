@@ -1,16 +1,16 @@
 ---
 title: REPLICATE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REPLICATE_TSQL
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 574f4d115708075ddb8f2a4c2987f97508ae24cb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d5d7a01f58ab66200964c62dedd6850215b134af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +52,7 @@ REPLICATE ( string_expression ,integer_expression )
  문자 또는 이진 데이터 형식의 식입니다. *string_expression*는 문자 또는 이진 데이터일 수 있습니다.  
   
 > [!NOTE]  
->  *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)**가 아닌 경우 REPLACE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
+>  *string_expression*의 형식이 **varchar(max)** 또는 **nvarchar(max)** 가 아닌 경우 REPLACE는 반환 값을 8,000 바이트에서 자릅니다. 8,000바이트를 초과하는 값을 반환하려면 *string_expression*을 적절한 큰 값 데이터 형식으로 명시적으로 캐스팅해야 합니다.  
   
  *integer_expression*  
  **bigint**를 포함하는 정수 유형의 식입니다. *integer_expression*이 음수이면 NULL이 반환됩니다.  

@@ -1,16 +1,16 @@
 ---
 title: CREATE MESSAGE TYPE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_MESSAGE_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 67a5149692017533f2941770f39088871b2b389e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE MESSAGE TYPE message_type_name
   
  대화의 양 측면에 동일한 메시지 유형 이름을 정의해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 양 측면에서 같은 유효성 검사를 사용하도록 요구하지는 않지만 일반적으로 문제 해결에 도움을 주기 위해 대화의 양 측면에서 메시지 유형에 대해 동일한 유효성 검사를 지정합니다.  
   
- 메시지 유형은 임시 개체가 아닐 수 있습니다. 메시지 유형 이름은 **#**으로 시작할 수 있지만 영구 개체입니다.  
+ 메시지 유형은 임시 개체가 아닐 수 있습니다. 메시지 유형 이름은 **#** 으로 시작할 수 있지만 영구 개체입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  메시지 유형 생성 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  

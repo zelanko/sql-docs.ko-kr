@@ -1,16 +1,16 @@
 ---
-title: "GRANT 스키마 사용 권한(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 스키마 사용 권한(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - GRANT statement, schemas
 - granting permissions [SQL Server], schemas
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35e4775e421102931c0864dee97be0a862901416
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0e7d350c70a92621bdbebf695c09e2272171e84e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 스키마 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +52,8 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  *permission*  
  스키마에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하십시오.  
   
- ON SCHEMA **::** schema*_name*  
- 사용 권한을 부여할 스키마를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ ON SCHEMA **::** schema *_name*  
+ 사용 권한을 부여할 스키마를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
  사용 권한을 부여할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  

@@ -1,29 +1,30 @@
 ---
-title: "테이블 또는 인덱스에서 압축 해제 | Microsoft 문서"
-ms.custom: 
+title: 테이블 또는 인덱스에서 압축 해제 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: data-compression
 ms.technology:
 - dbe-data-compression
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26617d7ebdeae568acb35d518cc17f068b607ba3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a10b0aba535ab1c5332d2843de9b502eddb692da
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에서 압축 해제
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  개체 탐색기에서 압축을 해제할 테이블이 포함된 데이터베이스를 확장한 다음 **테이블** 폴더를 확장합니다.  
   
-2.  압축을 해제할 테이블이나 인덱스를 마우스 오른쪽 단추로 클릭하고 **저장소** 를 가리킨 다음 **압축 관리...**를 선택합니다.  
+2.  압축을 해제할 테이블이나 인덱스를 마우스 오른쪽 단추로 클릭하고 **저장소** 를 가리킨 다음 **압축 관리...** 를 선택합니다.  
   
 3.  인덱스에서 압축을 해제하려면 인덱스가 포함된 테이블을 확장한 다음 **인덱스** 폴더를 확장합니다.  
   
@@ -137,11 +138,11 @@ ms.lasthandoff: 01/18/2018
   
             -   **주별**을 선택하는 경우 **매** 상자에 작업 일정을 반복하는 주 수를 입력합니다. 작업 일정을 실행할 요일을 선택합니다.  
   
-            -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)**를 선택합니다.  
+            -   **월별**을 선택한 경우 **매(Day)** 또는 **매(The)** 를 선택합니다.  
   
-                -   **매(Day)**를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
         2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: DBCC TRACEON(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_TRACEON_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - DBCC TRACEON statement
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-caps.latest.revision: 
+caps.latest.revision: 36
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c173779833562123c9ba3820fef76bf23b80a43
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5260d9a685f4bc9eb75bf0b0852c26cf11436866
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 예기치 않은 상황이 발생하지 않도록 다음 방법 중 하나를 사용하여 프로덕션 서버에서 서버 차원의 추적 플래그만 설정하는 것이 좋습니다.
 -   Sqlservr.exe의 **-T** 명령줄 시작 옵션을 사용합니다. 모든 문이 추적 플래그가 설정된 상태에서 실행되므로 이 방법이 최선의 구현 방법입니다. 여기에는 시작 스크립트의 명령이 포함됩니다. 자세한 내용은 [sqlservr Application](../../tools/sqlservr-application.md)을 참조하세요.  
--   사용자 또는 응용 프로그램이 시스템에서 동시에 문을 실행하지 않는 동안에만 DBCC TRACEON**(***trace#* [**,** ...*.n*]**,-1)**을 사용합니다.  
+-   사용자 또는 응용 프로그램이 시스템에서 동시에 문을 실행하지 않는 동안에만 DBCC TRACEON**(***trace#* [**,** ...*.n*]**,-1)** 을 사용합니다.  
 
 추적 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 작동하는 방법을 제어하여 특정한 특징을 사용자 지정하는 데 사용됩니다. 설정된 추적 플래그는 DBCC TRACEOFF 문을 실행하여 해제할 때까지 서버에서 설정된 상태로 유지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 추적 플래그의 상태를 확인하려면 DBCC TRACESTATUS를 사용하십시오. 추적 플래그를 해제하려면 DBCC TRACEOFF를 사용하십시오.
   

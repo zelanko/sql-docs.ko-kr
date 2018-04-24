@@ -1,33 +1,36 @@
 ---
-title: "주석(Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 주석(Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26b66a993dc0ccbd167b092b595ae989f6b53610
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a5ff042d0d06a66fe865340273f0d674ce8d3f55
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="annotations-master-data-services"></a>주석(Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 주석은 트랜잭션에 대한 세부 정보를 제공하기 위해 입력하는 설명입니다.  
   
  트랜잭션에 주석을 추가하여 동작이 수행된 이유를 나타낼 수 있습니다. 관련 주석을 추가하려면 트랜잭션을 선택해야 합니다. 다음 영역에 주석이 트랜잭션과 함께 표시됩니다.  

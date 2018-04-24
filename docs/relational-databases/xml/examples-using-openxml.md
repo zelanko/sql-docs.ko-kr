@@ -1,16 +1,16 @@
 ---
-title: "예제: OPENXML 사용 | Microsoft 문서"
-ms.custom: 
+title: '예제: OPENXML 사용 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
+  이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  데이터를 검색할 때 XML 문서에서 행을 결정하는 노드를 식별하는 데 *rowpattern* 이 사용됩니다. 또한 MSXML XPath 구현에 사용된 XPath 패턴 언어에 *rowpattern* 이 표현됩니다. 예를 들어 패턴이 요소나 특성으로 끝나는 경우에는 *rowpattern*에 의해 지정된 각 요소 또는 특성 노드에 대해 한 개의 행이 생성됩니다.  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   *flags* 매개 변수 값은 **1**로 설정되어 특성 중심의 매핑을 나타냅니다. 결과적으로 XML 특성은 *SchemaDeclaration*에 정의된 행 집합 열에 매핑됩니다.  
   
--   WITH 절에 있는 *SchemaDeclaration* 에서는 행 집합 열 이름 **oid** 와 **amount** 가 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 지정되지 않습니다. 행 집합의 **comment** 열에 대해서는 XPath 함수 **text()**가 *ColPattern*으로 지정됩니다. 이것은 *flags*에 지정된 특성 중심의 매핑을 덮어쓰며 열에는 요소 내용의 리프 값 문자열이 포함됩니다.  
+-   WITH 절에 있는 *SchemaDeclaration* 에서는 행 집합 열 이름 **oid** 와 **amount** 가 해당 XML 특성 이름과 일치합니다. 따라서 *ColPattern* 매개 변수는 지정되지 않습니다. 행 집합의 **comment** 열에 대해서는 XPath 함수 **text()** 가 *ColPattern*으로 지정됩니다. 이것은 *flags*에 지정된 특성 중심의 매핑을 덮어쓰며 열에는 요소 내용의 리프 값 문자열이 포함됩니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   

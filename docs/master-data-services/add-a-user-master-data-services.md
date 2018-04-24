@@ -1,33 +1,36 @@
 ---
-title: "사용자 추가(Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 사용자 추가(Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf1c83be1205f7114cfa68c03c5b86187ca42bab
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: af5d78b15c6b09173503fbc2770396679ffa6bab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   웹 응용 프로그램에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  

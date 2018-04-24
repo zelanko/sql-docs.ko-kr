@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efa8807737e6c307b51b5edc9da2a048096285ef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 515bcfaebccd6d2da63fe4d351e5b1569c933286
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다. 기술 자료는 데이터 필드의 데이터를 나타내는 각각의 도메인으로 구성됩니다. 기술 자료는 DQS에서 데이터베이스에 대해 데이터 정리 및 중복 제거를 수행하는 데 사용됩니다. 데이터 정리를 위해 기술 자료를 준비하려면 데이터 샘플에 대한 컴퓨터 기반 분석을 실행하고 도메인의 값을 대화식으로 관리하면 됩니다. DQS를 통해 정보를 가져오고, 규칙 및 관계를 만들고, 데이터 값을 직접 변경하고, 기본 데이터베이스를 활용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

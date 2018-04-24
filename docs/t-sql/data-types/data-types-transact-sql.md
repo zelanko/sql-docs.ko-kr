@@ -1,15 +1,15 @@
 ---
 title: Data types(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 9/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c22a3218cf55ff934a0b74abd6e21dbb9012231e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-transact-sql"></a>Data types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 데이터 형식, 데이터 정렬, 전체 자릿수, 소수 자릿수 또는 길이가 다른 두 식이 연산자에 의해 결합된 경우 그 특징은 다음 규칙에 따라 결정됩니다.
 -   결합 결과의 데이터 형식은 입력 식의 데이터 형식에 데이터 형식 우선 순위 규칙을 적용하여 결정됩니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
--   결과 데이터 형식이 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext**인 경우 결과의 데이터 정렬은 데이터 정렬 우선 순위 규칙에 따라 결정됩니다. 자세한 내용은 [선행 정렬 우선 순위&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.  
+-   결과 데이터 형식이 **char**, **varchar**, **text**, **nchar**, **nvarchar** 또는 **ntext**인 경우 결과의 데이터 정렬은 데이터 정렬 우선 순위 규칙에 따라 결정됩니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
 -   결과의 전체 자릿수, 소수 자릿수 및 길이는 입력 식의 전체 자릿수, 소수 자릿수, 길이에 따라 달라집니다. 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ISO 호환성을 위해 데이터 형식 동의어를 제공합니다. 자세한 내용은 [데이터 형식 동의어&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)를 참조하세요.

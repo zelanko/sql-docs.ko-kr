@@ -1,16 +1,16 @@
 ---
 title: date(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - date_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1776f70f2136f7b46fe3aa9205f76108a2807170
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e42e51775c4967522561385af19e67fbe2fd3899
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,7 +112,7 @@ ms.lasthandoff: 03/08/2018
 ### <a name="converting-date-to-other-date-and-time-types"></a>date을 다른 날짜 및 시간 형식으로 변환
 이 섹션에서는 **date** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
   
-변환이 **time(n)**에서 일어나는 경우 이 변환이 실패하고 "피연산자 유형 충돌: 날짜 시간와 호환되지 않습니다."라는 오류 메시지 206이 나타납니다.
+변환이 **time(n)** 에서 일어나는 경우 이 변환이 실패하고 "피연산자 유형 충돌: 날짜 시간와 호환되지 않습니다."라는 오류 메시지 206이 나타납니다.
   
 변환이 **datetime**에서 일어나는 경우 날짜가 복사 됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
@@ -145,7 +146,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-변환이 **datetimeoffset(n)**에서 일어나는 경우 날짜가 복사되고 시간은 00:00.0000000 +00:00으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetimeoffset(3)` 값으로 변환한 결과를 보여 줍니다.
+변환이 **datetimeoffset(n)** 에서 일어나는 경우 날짜가 복사되고 시간은 00:00.0000000 +00:00으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetimeoffset(3)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -161,7 +162,7 @@ SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';
 --(1 row(s) affected)  
 ```  
   
-변환이 **datetime2(n)**에서 일어나는 경우 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00.000000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime2(3)` 값으로 변환한 결과를 보여 줍니다.
+변환이 **datetime2(n)** 에서 일어나는 경우 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00.000000으로 설정됩니다. 다음 코드에서는 `date` 값을 `datetime2(3)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date = '1912-10-25'  

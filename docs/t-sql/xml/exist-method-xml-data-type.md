@@ -1,16 +1,16 @@
 ---
-title: "exist() 메서드(xml 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: exist() 메서드(xml 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d0c4bf029fe2f5ed930c18b86ae5d6d2153b300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ exist (XQuery)
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  **exist()** 메서드는 비어 있지 않은 결과를 반환하는 XQuery 식에 대해 1을 반환합니다. **exist()** 메서드 내에서 **true()** 또는 **false()** 함수를 지정하면 **true()** 및 **false()** 함수가 각각 부울 값인 True와 False를 반환하기 때문에 **exist()** 메서드가 1을 반환합니다. 즉, 이들 함수는 비어 있지 않은 결과를 반환합니다. 따라서 **exist()**는 다음 예에서와 같이 1(True)을 반환합니다.  
+>  **exist()** 메서드는 비어 있지 않은 결과를 반환하는 XQuery 식에 대해 1을 반환합니다. **exist()** 메서드 내에서 **true()** 또는 **false()** 함수를 지정하면 **true()** 및 **false()** 함수가 각각 부울 값인 True와 False를 반환하기 때문에 **exist()** 메서드가 1을 반환합니다. 즉, 이들 함수는 비어 있지 않은 결과를 반환합니다. 따라서 **exist()** 는 다음 예에서와 같이 1(True)을 반환합니다.  
   
 ```  
 declare @x xml;  

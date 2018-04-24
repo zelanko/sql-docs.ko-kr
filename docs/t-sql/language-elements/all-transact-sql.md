@@ -1,16 +1,16 @@
 ---
 title: ALL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 60f49c0e10546fadaa245eb160318dd1923867ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>인수  
  *scalar_expression*  
- 모든 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  비교 연산자입니다.  
@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 모든 쌍(*scalar_expression***,***x)*에 대해 지정된 비교값이 TRUE일 경우 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다. 이때 *x*는 단일 열 집합의 값입니다.  
+ 모든 쌍(*scalar_expression ***,*** x)* 에 대해 지정된 비교값이 TRUE일 경우 TRUE를 반환하고, 그렇지 않으면 FALSE를 반환합니다. 이때 *x*는 단일 열 집합의 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  ALL의 경우 하위 쿼리에 의해 반환된 모든 값을 정확하게 비교하려면 *scalar_expression*이 필요합니다. 예를 들어 하위 쿼리에서 값 2와 3을 반환할 경우 *scalar_expression* <= ALL (하위 쿼리)은 2의 *scalar_expression*에 대해 TRUE로 계산됩니다. 하위 쿼리에서 값 2와 3을 반환할 경우에는 하위 쿼리 값(값 3)의 일부가 식의 조건을 만족하지 않으므로 *scalar_expression* = ALL(하위 쿼리)은 FALSE로 계산됩니다.  
@@ -75,7 +75,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  이 항목에서는 하위 쿼리에 사용되는 경우의 ALL을 참조합니다. ALL은 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 및 [SELECT](../../t-sql/queries/select-transact-sql.md)에도 사용될 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 지정한 `SalesOrderID`의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예제에서는 하위 쿼리를 사용하여 특정 `SalesOrderID`의 모든 구성 요소에 대한 `DaysToManufacture` 값 수의 목록을 만든 다음, 모든 `DaysToManufacture`가 지정한 일 수 범위에 있는지 확인합니다.  
+ 다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예제에서는 하위 쿼리를 사용하여 특정 `SalesOrderID`의 모든 구성 요소에 대한 `DaysToManufacture` 값 수의 목록을 만든 다음, 모든 `DaysToManufacture`가 지정한 일 수 범위에 있는지 확인합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -116,13 +116,13 @@ EXECUTE DaysToBuild 49080, 1 ;
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>참고 항목  
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [연산자 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
+ [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [IN&#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   

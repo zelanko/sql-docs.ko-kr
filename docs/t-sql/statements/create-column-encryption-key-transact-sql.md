@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMN_ENCRYPTION_KEY_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 921b1901cac16a2d9a3788785ef1d6ab82f41d30
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e324a504e429996e53d187e9ebc0ba6cc1ca7b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ WITH VALUES
  암호화된 CEK 값 BLOB입니다.  
   
 > [!WARNING]  
->  일반 텍스트 CEK 값을 이 문에 절대 전달하지 마십시오. 이렇게 하면 이 기능의 이점을 구성하게 됩니다.  
+>  일반 텍스트 CEK 값을 이 문에 절대 전달하지 마십시오. 그럴 경우 이 기능의 이점을 구성하게 됩니다.  
   
 ## <a name="remarks"></a>Remarks  
  CREATE COLUMN ENCRYPTION KEY 문은 하나 이상의 VALUES 절을 포함해야 하며 2개까지 보유할 수 있습니다. 하나를 지정한 경우 나중에 두 번째 값을 추가하려면 ALTER COLUMN ENCRYPTION KEY 문을 사용할 수 있습니다. 또한 VALUES 절을 제거하려면 ALTER COLUMN ENCRYPTION KEY 문을 사용할 수도 있습니다.  
@@ -92,7 +92,7 @@ WITH VALUES
   
  암호화된 값은 열 마스터 키를 보유한 키 저장소를 캡슐화하는 키 저장소 공급자를 사용하여 생성돼야 합니다. 자세한 내용은 [상시 암호화 &#40;클라이언트 개발&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.  
   
- 열 암호화 키에 대한 정보를 보려면 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 및 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
+ 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **ALTER ANY COLUMN ENCRYPTION KEY** 권한을 요구합니다.  
@@ -135,7 +135,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

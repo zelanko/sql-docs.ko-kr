@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: ''
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d4773a4e54048ae8f5c90b73439f44b728615b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c690e397688ad457970e5da1c45ce2d6b9b372d0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**의 두 가지 구성 요소가 포함됩니다.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 의 두 가지 구성 요소가 포함됩니다.  
   
 |DQS 구성 요소|Description|  
 |-------------------|-----------------|  
@@ -87,7 +90,7 @@ ms.lasthandoff: 03/22/2018
   
     -   DQInitDQS_MAIN 저장 프로시저는 master 데이터베이스에 만들어집니다.  
   
-    -   DQS_install.log 파일은 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL13.*<instance_name>*\MSSQL\Log 폴더에 만들어집니다. 이 파일에는 DQSInstaller.exe 파일을 실행할 때 수행되는 동작에 대한 정보가 포함됩니다.  
+    -   DQS_install.log 파일은 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL13.*<instance_name>* \MSSQL\Log 폴더에 만들어집니다. 이 파일에는 DQSInstaller.exe 파일을 실행할 때 수행되는 동작에 대한 정보가 포함됩니다.  
   
     -   MDS(Master Data Services) 데이터베이스가 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]와 같은 SQL Server 인스턴스에 있는 경우 MDS(Master Data Services) 로그인에 매핑된 사용자가 만들어지고 DQS_MAIN 데이터베이스의 dqs_administrator 역할이 부여됩니다.  
   

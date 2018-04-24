@@ -1,16 +1,16 @@
 ---
 title: CREATE ASYMMETRIC KEY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMMETRIC_KEY_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server]
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eeacba0076f6fed7b6dcda8802616dd9398df7ef
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 932f8139685c5af4bdf92288ff937529286a1549
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  ASSEMBLY *Assembly_Name*  
  공개 키를 로드할 어셈블리 이름을 지정합니다.  
   
-*\<key_name_in_provider>*에 의한 암호화는 키를 암호화하는 방법을 지정합니다. 인증서, 암호 또는 비대칭 키일 수 있습니다.  
+*\<key_name_in_provider>* 에 의한 암호화는 키를 암호화하는 방법을 지정합니다. 인증서, 암호 또는 비대칭 키일 수 있습니다.  
   
  KEY_NAME ='*key_name_in_provider*'  
  외부 공급자의 키 이름을 지정합니다. 외부 키 관리에 대한 자세한 내용은 [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
@@ -115,7 +115,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  RSA_1024 및 RSA_512는 사용하지 않습니다. RSA_1024 또는 RSA_512(권장하지 않음)를 사용하려면 데이터베이스 호환성 수준을 120 이하로 설정해야 합니다.  
   
  PASSWORD = '*password*'  
- 개인 키를 암호화하는 데 사용할 암호를 지정합니다. 이 절이 없는 경우 개인 키는 데이터베이스 마스터 키로 암호화됩니다. *password*는 최대 128자입니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 따라야 합니다.  
+ 개인 키를 암호화하는 데 사용할 암호를 지정합니다. 이 절이 없는 경우 개인 키는 데이터베이스 마스터 키로 암호화됩니다. *password*는 최대 128자입니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
  *asymmetric key*는 데이터베이스 수준에서 보안 가능한 엔터티입니다. 기본 형태의 이 엔터티에는 공개 키와 개인 키가 모두 포함됩니다. FROM 절 없이 실행될 경우 CREATE ASYMMETRIC KEY는 새로운 키 쌍을 생성합니다. FROM 절로 실행될 경우 CREATE ASYMMETRIC KEY는 파일에서 키 쌍을 가져오거나 어셈블리에서 공개 키를 가져옵니다.  

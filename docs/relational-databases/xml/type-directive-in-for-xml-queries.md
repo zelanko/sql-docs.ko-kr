@@ -1,31 +1,31 @@
 ---
-title: "FOR XML 쿼리의 TYPE 지시어 | Microsoft 문서"
-ms.custom: 
+title: FOR XML 쿼리의 TYPE 지시어 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2552660cf0500a5274095765f0540e9ddcee6701
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  `value()` 메서드의 XQuery 경로 식이 `BusinessEntityID`가 `1`인 고객 연락처의 첫 번째 전화 번호를 검색합니다.  
   
 > [!NOTE]  
->  TYPE 지시어를 지정하지 않으면 FOR XML 쿼리 결과가 **nvarchar(max)**형식으로 반환됩니다.  
+>  TYPE 지시어를 지정하지 않으면 FOR XML 쿼리 결과가 **nvarchar(max)** 형식으로 반환됩니다.  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>INSERT, UPDATE 및 DELETE(Transact-SQL DML)에 FOR XML 쿼리 결과 사용  
  다음 예에서는 DML(데이터 조작 언어) 문에 FOR XML 쿼리를 사용할 수 있는 방법을 보여 줍니다. 예에서 `FOR XML` 은 **xml** 유형의 인스턴스를 반환합니다. `INSERT` 문은 이 XML을 테이블에 삽입합니다.  

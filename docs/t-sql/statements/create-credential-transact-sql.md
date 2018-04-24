@@ -1,16 +1,16 @@
 ---
 title: CREATE CREDENTIAL(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 060ca4b7ae4b7a0304336ed4f1221fd51856e3a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='***secret***'**  
  나가는 인증에 필요한 암호를 지정합니다.  
   
- Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>*(하이픈 없이) 및 *\<Secret>*가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오.  Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만드는 방법은 [1 단원: Azure 컨테이너에 저장 된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)를 참조합니다.  
+ Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>*(하이픈 없이) 및 *\<Secret>* 가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오.  Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만드는 방법은 [1 단원: Azure 컨테이너에 저장 된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)를 참조합니다.  
   
  CRYPTOGRAPHIC PROVIDER에 대해서는 *cryptographic_provider_name*  
  *EKM(Enterprise Key Management) 공급자*의 이름을 지정합니다. Key Management에 대한 자세한 내용은 [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
@@ -123,7 +124,7 @@ GO
  다음 예제에서는 **Microsoft Azure Key Vault용 SQL Server 커넥터**를 사용하여 Azure Key Vault에 액세스할 때 사용하기 위하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커넥터를 사용하는 완전한 예에 대해서는 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  **CREATE CREDENTIAL** 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요합니다. **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 *\<Client ID>*(하이픈 없이) 및 *\<Secret>*이 필요합니다.  
+>  **CREATE CREDENTIAL** 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요합니다. **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 *\<Client ID>*(하이픈 없이) 및 *\<Secret>* 이 필요합니다.  
   
  다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈이 제거되어 문자열 `EF5C8E094D2A4A769998D93440D8115D` 로 입력되어 있으며 **암호** 는 문자열 *SECRET_DBEngine*으로 표현되었습니다.  
   

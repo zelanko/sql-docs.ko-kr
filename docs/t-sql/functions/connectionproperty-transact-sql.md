@@ -1,16 +1,16 @@
 ---
 title: CONNECTIONPROPERTY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONNECTIONPROPERTY_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ab513c11d86ca5d7496ad1fca2ff7527d69bba6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 95c95ad472c5b5d4cb5420fa3b0da8f88053c0c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CONNECTIONPROPERTY ( property )
 |local_tcp_port|**int**|TCP 전송을 사용하는 연결인 경우 이 연결이 대상으로 하는 서버 TCP 포트를 반환합니다. Null을 허용합니다.|  
 |client_net_address|**varchar(48)**|이 서버에 연결되는 클라이언트의 주소를 요청합니다. Null을 허용합니다.|  
 |physical_net_transport|**nvarchar(40)**|이 연결에서 사용하는 물리적 전송 프로토콜을 반환합니다. 연결에 MARS(Multiple Active Result Sets)가 설정된 경우 정확합니다.|  
-|\<다른 문자열 >||입력이 유효하지 않으면 NULL을 반환합니다.|  
+|\<다른 문자열>||입력이 유효하지 않으면 NULL을 반환합니다.|  
   
 ## <a name="remarks"></a>Remarks  
 **local_net_address** 및 **local_tcp_port**는 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 NULL을 반환합니다. 

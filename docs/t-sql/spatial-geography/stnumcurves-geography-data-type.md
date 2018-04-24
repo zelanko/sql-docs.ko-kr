@@ -1,16 +1,16 @@
 ---
-title: "STNumCurves(geography 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: STNumCurves(geography 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STNumCurves
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geography)
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7baccab2b0087fdb2ae90f5b212b4d820919d25
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5303a9683a337b710b54b31fdea3abf5354565dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 1 차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. 빈 1차원 **geography** 인스턴스는 0을 반환합니다.  
+ 1차원 공간 데이터 형식에는 **LineString**, **CircularString** 및 **CompoundCurve**가 포함됩니다. 빈 1차원 **geography** 인스턴스는 0을 반환합니다.  
   
  `STNumCurves`()는 단순 형식에서만 작동하며 **MultiLineString**과 같은 **geography** 컬렉션에서는 작동하지 않습니다. **geography** 인스턴스가 1차원 데이터 형식이 아닌 경우에는 **NULL**이 반환됩니다.  
   

@@ -1,16 +1,16 @@
 ---
-title: "xml 데이터 형식 메서드 | Microsoft Docs"
-ms.custom: 
+title: xml 데이터 형식 메서드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3a08e2e0c49c707150df9f350cb9060203fd6f62
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 99a4afc98cc18f885c367a5f00ff352448f18771
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-methods"></a>xml 데이터 형식 메서드
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  **xml** 데이터 형식 메서드 **query()**, **value()** 및 **exist()**는 NULL XML 인스턴스에 대해 실행된 경우 NULL을 반환합니다. 또한 **modify()**는 아무 것도 반환하지 않지만 **nodes()**는 행 집합과 NULL 입력 사항이 있는 빈 행 집합을 반환합니다.  
+>  **xml** 데이터 형식 메서드 **query()**, **value()** 및 **exist()** 는 NULL XML 인스턴스에 대해 실행된 경우 NULL을 반환합니다. 또한 **modify()** 는 아무 것도 반환하지 않지만 **nodes()** 는 행 집합과 NULL 입력 사항이 있는 빈 행 집합을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

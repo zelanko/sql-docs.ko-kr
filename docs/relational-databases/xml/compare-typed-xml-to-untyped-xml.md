@@ -1,16 +1,16 @@
 ---
-title: "형식화된 XML과 형식화되지 않은 XML 비교 | Microsoft 문서"
-ms.custom: 
+title: 형식화된 XML과 형식화되지 않은 XML 비교 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - xml data type [SQL Server], variables
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 
+caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c6cde5809ed6f9a05ac01bf517f24ec5968d53d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-**xml** 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 **xml** 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이런 경우 **xml** 데이터 형식 인스턴스를 *형식화되었다*고 하고, 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
+  **xml** 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 **xml** 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이런 경우 **xml** 데이터 형식 인스턴스를 *형식화되었다*고 하고, 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>올바른 형식의 XML 및 xml 데이터 형식  
  **xml** 데이터 형식은 ISO 표준 **xml** 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
@@ -149,7 +149,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
  타사 도구를 사용하여 DTD를 XML 스키마 문서로 변환하고 XML 스키마를 데이터베이스에 로드할 수 있습니다.  
   
 ## <a name="upgrading-typed-xml-from-sql-server-2005"></a>SQL Server 2005에서 형식화된 XML 업그레이드  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서는 XML 스키마 지원이 여러 가지로 확대되었습니다. 여기에는 lax 유효성 검사에 대한 지원, 향상된 **xs:date**, **xs:time** 및 **xs:dateTime** 인스턴스 데이터 처리, 목록 유형 및 공용 구조체 유형에 대한 추가 지원이 포함됩니다. 대부분의 경우 변경 사항이 업그레이드에 영향을 주지 않습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] xs:date **,**xs:time **또는**xs:dateTime **형식이나 하위 형식의 값을 사용할 수 있는** 의 XML 스키마 컬렉션을 사용한 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 그 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 연결하면 다음 업그레이드 단계가 진행됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서는 XML 스키마 지원이 여러 가지로 확대되었습니다. 여기에는 lax 유효성 검사에 대한 지원, 향상된 **xs:date**, **xs:time** 및 **xs:dateTime** 인스턴스 데이터 처리, 목록 유형 및 공용 구조체 유형에 대한 추가 지원이 포함됩니다. 대부분의 경우 변경 사항이 업그레이드에 영향을 주지 않습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] xs:date **,** xs:time **또는**xs:dateTime **형식이나 하위 형식의 값을 사용할 수 있는** 의 XML 스키마 컬렉션을 사용한 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 그 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 연결하면 다음 업그레이드 단계가 진행됩니다.  
   
 1.  모든 XML 열의 경우, 이 열이 **xs:anyType**, **xs:anySimpleType**, **xs:date** 또는 해당 하위 유형, **xs:time** 또는 해당 하위 유형, **xs:dateTime** 또는 해당 하위 유형으로 형식화되거나 이러한 유형이 포함된 공용 구조체나 목록 유형으로 형식화된 요소나 특성이 들어 있는 XML 스키마 컬렉션으로 형식화되면 다음과 같은 상황이 발생합니다.  
   

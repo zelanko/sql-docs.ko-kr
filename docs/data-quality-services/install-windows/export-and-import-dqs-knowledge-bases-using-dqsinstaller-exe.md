@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8060994f8f7da132b848150f1c005140b9eba2c6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4145ef8b52e5d1a2c0610550ffe7cf40766a2906
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   기존 DQS 설치의 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 한 번에 DQS 백업 파일(.dqsb)로 내보낸 다음 나중에 명령 프롬프트에서 DQSInstaller.exe 파일을 실행하여 .dqsb 파일을 통해 다른 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 로 모든 기술 자료를 한 번에 가져올 수 있습니다. 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법은 [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 에서 [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)을 참조하십시오.  
   
  이 기능을 사용하면 *를 사용하여 각 기술 자료를 .dqs 파일로 개별적으로 내보낼 필요 없이* 의 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 모든 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]기술 자료를 한 번에 백업할 수 있습니다. 마찬가지로 *를 사용하여 .dqs 파일에서 각 기술 자료를 개별적으로 가져올 필요 없이 백업 파일에서 다른* 로 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 모든 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]기술 자료를 한 번에 가져올 수 있습니다. 이 기능은 컴퓨터에서 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 제거한 다음 다른 컴퓨터에 다시 설치할 때 기술 자료를 백업 및 복원하는 데 특히 유용합니다. 기존 설치된 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보낸 다음 다른 컴퓨터에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 설치한 후 백업 파일에서 모든 기술 자료를 손쉽게 가져올 수 있습니다.  

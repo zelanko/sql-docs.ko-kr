@@ -1,16 +1,16 @@
 ---
-title: "DENY 개체 사용 권한(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 개체 사용 권한(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc405b480d063ff6990182f9a66cc6f4e35c3a5a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc9a15f82d5a60bf63a0a745b4b7da794b21aa26
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ PRIVILEGES
  ANSI-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
   
 *column*  
- 사용 권한을 거부할 테이블, 뷰 또는 테이블 반환 함수의 열 이름을 지정합니다. 괄호 **( )**가 필요합니다. SELECT, REFERENCES 및 UPDATE 권한만 열에 정의할 수 있습니다. *column*은 권한 절에 지정하거나 보안 이름 뒤에 지정할 수 있습니다.  
+ 사용 권한을 거부할 테이블, 뷰 또는 테이블 반환 함수의 열 이름을 지정합니다. 괄호 **( )** 가 필요합니다. SELECT, REFERENCES 및 UPDATE 권한만 열에 정의할 수 있습니다. *column*은 권한 절에 지정하거나 보안 이름 뒤에 지정할 수 있습니다.  
   
 > [!CAUTION]  
 >  테이블 수준의 DENY는 열 수준의 GRANT보다 우선하지 않습니다. 사용 권한 계층에서의 이러한 불일치는 이전 버전과의 호환성을 위해 유지되었습니다.  

@@ -1,32 +1,32 @@
 ---
-title: "IsValidDetailed (geometry 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: IsValidDetailed (geometry 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f7531e9b692db3a026e4697e502f3d10e39cfa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 285833fd707c524f3912fa68ca7e44878417f788
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,16 +57,16 @@ ms.lasthandoff: 01/25/2018
 |24404|다각형 링({0})이 자체나 다른 링과 교차하므로 유효하지 않습니다.|  
 |24405|일부 다각형 링이 자체나 다른 링과 교차하므로 유효하지 않습니다.|  
 |24406|곡선({0})이 점에서 중복 제거되므로 유효하지 않습니다.|  
-|24407|다각형 링({0})이 점 {1}에서 선으로 축소되므로 유효하지 않습니다.|  
+|24407|다각형 링({0})이 점({1})에서 선으로 축소되므로 유효하지 않습니다.|  
 |24408|다각형 링({0})이 닫혀 있지 않으므로 유효하지 않습니다.|  
 |24409|다각형 링({0})의 일부분이 다각형의 내부에 있으므로 유효하지 않습니다.|  
 |24410|링({0})이 외부 링이 아닌 다각형 내의 첫 번째 링이므로 유효하지 않습니다.|  
-|24411|링({0})이 다각형의 외부 링 {1} 바깥에 있으므로 유효하지 않습니다.|  
+|24411|링({0})이 다각형의 외부 링({1}) 바깥에 있으므로 유효하지 않습니다.|  
 |24412|{0} 및 {1} 링이 있는 다각형의 내부가 연결되지 않으므로 유효하지 않습니다.|  
 |24413|곡선({0})에 두 개의 겹치는 가장자리가 있으므로 유효하지 않습니다.|  
-|24414|곡선({0})의 가장자리가 다른 곡선{1}의 가장자리와 겹치므로 유효하지 않습니다.|  
+|24414|곡선({0})의 가장자리가 다른 곡선({1})의 가장자리와 겹치므로 유효하지 않습니다.|  
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
-|24416|점{1}에서 시작하는 곡선({0}) 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
+|24416|점({1})에서 시작하는 곡선({0}) 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
 ## <a name="examples"></a>예  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  

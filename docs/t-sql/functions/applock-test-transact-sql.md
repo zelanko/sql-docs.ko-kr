@@ -2,7 +2,7 @@
 title: APPLOCK_TEST(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8efc420c62031b0106c16bc25c8a8fdaa3f039a7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 463c6e176cec6c0403e85bc75584e6bd890e0668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 데이터베이스의 개체에 대한 사용 권한이 부여될 수 있는 사용자, 역할 또는 응용 프로그램 역할입니다. 함수를 성공적으로 호출하려면 함수 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 **'** *resource_name* **'**  
-클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다.  *resource_name*은 **nvarchar(255)**이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
+클라이언트 응용 프로그램이 지정한 잠금 리소스의 이름입니다. 응용 프로그램은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다.  *resource_name*은 **nvarchar(255)** 이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
   
 **'** *lock_mode* **'**  
-잠금 모드는 특정 리소스에 대해 가져오는 것입니다. *lock_mode*는 **nvarchar(32)**이며 기본값은 없습니다. *lock_mode*는 **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive** 중 하나일 수 있습니다.
+잠금 모드는 특정 리소스에 대해 가져오는 것입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. *lock_mode*는 **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive** 중 하나일 수 있습니다.
   
 **'** *lock_owner* **'**  
-잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*는 **nvarchar (32)**이고 값은 **Transaction**(기본값) 또는 **Session**이 될 수 있습니다. 기본값 또는 **Transaction**이 명시적으로 지정되면 APPLOCK_TEST는 트랜잭션 내에서 실행되어야 합니다.
+잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*는 **nvarchar (32)** 이고 값은 **Transaction**(기본값) 또는 **Session**이 될 수 있습니다. 기본값 또는 **Transaction**이 명시적으로 지정되면 APPLOCK_TEST는 트랜잭션 내에서 실행되어야 합니다.
   
 ## <a name="return-types"></a>반환 형식
 **smallint**

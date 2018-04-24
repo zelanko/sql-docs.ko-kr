@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c958dfa6d3ba94a1d17835876d8de6b26dea1943
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   이 문서에서는 Windows Server 2012 R2 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 를 설치하고, MDS 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델 및 데이터를 배포하는 방법을 설명합니다. MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )를 사용하면 조직에서 신뢰할 수 있는 버전의 데이터를 관리할 수 있습니다.   
   
 > [!NOTE] 
@@ -38,8 +41,8 @@ ms.lasthandoff: 04/06/2018
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 알아보는 데 유용한 동영상 및 기타 학습 리소스의 링크는 [Master Data Services에 대해 알아보기](../master-data-services/learn-sql-server-master-data-services.md)를 참조하세요. 
   
 > **다운로드**  
->-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**로 이동하세요.  
->-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**로 이동하여 SQL Server가이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
+>-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
+>-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
  
 > **MDS 웹 사이트를 만들 수 없는 경우**
 >>이 Microsoft 지원 문서에서 이 문제를 해결하는 방법에 대한 지침을 확인하세요.
@@ -47,7 +50,7 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 및 Silverlight
 - Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 응용 프로그램 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
-- 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)**에서 설치할 수 있습니다.
+- 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure Virtual Machine의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]이 설치된 Azure Virtual Machine을 설치하면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치됩니다. 
@@ -97,7 +100,7 @@ ms.lasthandoff: 04/06/2018
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. 왼쪽 창에서 **웹 서버 역할(IIS)**을 클릭한 후 **역할 서비스**를 클릭합니다.
+10. 왼쪽 창에서 **웹 서버 역할(IIS)** 을 클릭한 후 **역할 서비스**를 클릭합니다.
 11. **역할 서비스** 페이지에서 다음 서비스가 선택되었는지 확인한 후 **다음**을 클릭합니다. 이러한 서비스는 [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 필요합니다.
 
     > [!WARNING]  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>.dqs 파일에서 도메인 가져오기
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 파일의 도메인을 기존 기술 자료로 가져오는 방법에 대해 설명합니다. .dqs 데이터 파일은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 도메인이나 기술 자료를 내보내면 생성됩니다. .dqs 데이터 파일은 암호화되어 있으므로 볼 수 없습니다.  
   
  .dqs 데이터 파일을 사용하여 한 기술 자료의 도메인을 내보낸 다음 다른 기술 자료로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 도메인과 정보를 다른 사람과 공유하여 다른 사람의 시간을 절감할 수도 있습니다. 단일 도메인 하나 또는 복합 도메인 하나(여러 단일 도메인 포함)를 가져올 수 있습니다. 단일 도메인을 포함하는 .dqs 파일에는 매핑된 참조 데이터 정보를 제외하고 도메인 속성, 값 및 규칙 데이터를 비롯하여 모든 도메인 데이터가 포함됩니다. 복합 도메인을 포함하는 .dqs 파일에는 매핑된 참조 데이터를 제외하고 복합 도메인에 포함된 단일 도메인에 대한 모든 도메인 데이터와 복합 도메인 속성, 값 관계 및 CD 규칙을 비롯하여 모든 복합 도메인 데이터가 포함됩니다. 게시된 데이터와 게시되지 않은 데이터를 가져올 수 있습니다.  

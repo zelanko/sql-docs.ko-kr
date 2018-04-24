@@ -1,16 +1,16 @@
 ---
 title: REVOKE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REVOKE_TSQL
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f96892b5671d9616a3c809aa6b83fbcaa071b6d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af52c3516d374d02e19abb757765cc23adad4fe3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-transact-sql"></a>REVOKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +128,7 @@ REVOKE
  사용 권한을 취소할 테이블의 열 이름을 지정합니다. 괄호가 필요합니다.  
   
  *class*  
- 사용 권한을 취소할 보안 개체의 클래스를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 보안 개체의 클래스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *securable*  
  사용 권한을 취소할 보안 개체를 지정합니다.  

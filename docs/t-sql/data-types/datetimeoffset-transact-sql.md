@@ -1,16 +1,16 @@
 ---
 title: datetimeoffset(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetimeoffset_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time zones [SQL Server]
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9c14c09caf30e1daae5180b80fdb0518d3d76d0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/08/2018
 |표준 시간대 오프셋 범위|-14:00부터 +14:00(Informatica에서는 표준 시간대 오프셋이 무시됨)|  
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 지정한 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0부터 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica에서는 초 소수 부분이 지원되지 않습니다.<br /><br /> hh는 -14에서 14 사이에 속하는 두 자리 숫자입니다. Informatica에서는 표준 시간대 오프셋이 무시됩니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자입니다. Informatica에서는 표준 시간대 오프셋이 무시됩니다.|  
 |문자 길이|최소 26자리(YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm)부터 최대 34자리(YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)까지|  
-|전체 자릿수, 소수 자릿수|아래 표를 참조하십시오.|  
+|전체 자릿수, 소수 자릿수|아래 표를 참조하세요.|  
 |저장소 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 10바이트(고정)가 기본값입니다.|  
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00 00:00|  
@@ -136,7 +137,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-**time(n)**으로 변환하는 경우 시, 분, 초, 초 소수 부분 자릿수가 복사됩니다. 표준 시간대 값은 잘립니다. **datetimeoffset(n)** 값의 전체 자릿수가 **time(n)** 값의 전체 자릿수보다 큰 경우 값이 반올림됩니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `time(3)` 값으로 변환한 결과를 보여 줍니다.
+**time(n)** 으로 변환하는 경우 시, 분, 초, 초 소수 부분 자릿수가 복사됩니다. 표준 시간대 값은 잘립니다. **datetimeoffset(n)** 값의 전체 자릿수가 **time(n)** 값의 전체 자릿수보다 큰 경우 값이 반올림됩니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `time(3)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -186,7 +187,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-**datetime2(n)**로 변환하는 경우 날짜 및 시간이 **datetime2** 값으로 복사되고 시간대는 잘립니다. **datetime2(n)** 값의 전체 자릿수가 **datetimeoffset(n)** 값의 전체 자릿수보다 크면 초 소수 부분이 이에 맞게 잘립니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `datetime2(3)` 값으로 변환한 결과를 보여 줍니다.
+**datetime2(n)** 로 변환하는 경우 날짜 및 시간이 **datetime2** 값으로 복사되고 시간대는 잘립니다. **datetime2(n)** 값의 전체 자릿수가 **datetimeoffset(n)** 값의 전체 자릿수보다 크면 초 소수 부분이 이에 맞게 잘립니다. 다음 코드에서는 `datetimeoffset(4)` 값을 `datetime2(3)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

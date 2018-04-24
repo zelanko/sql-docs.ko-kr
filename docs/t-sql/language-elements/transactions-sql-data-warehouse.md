@@ -1,30 +1,31 @@
 ---
-title: "트랜잭션(SQL Data Warehouse) | Microsoft Docs"
-ms.custom: 
+title: 트랜잭션(SQL Data Warehouse) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 48259ee896fa0ba03844a6791527fae82114c682
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   *자동 커밋 트랜잭션*은 세션 안에서 자동으로 시작되며 BEGIN TRANSACTION 문으로 시작되지 않습니다. AUTOCOMMIT 설정이 ON이면 각 문은 트랜잭션 안에서 실행되며 명시적 COMMIT 또는 ROLLBACK이 필요하지 않습니다. AUTOCOMMIT 설정이 OFF이면 트랜잭션 결과를 판단하기 위해 COMMIT 또는 ROLLBACK 문이 필요합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 자동 커밋 트랜잭션은 COMMIT 또는 ROLLBACK 문 직후 또는 SET AUTOCOMMIT OFF 문 다음에서 시작됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘")[Transact-SQL 구문 표기 규칙 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   

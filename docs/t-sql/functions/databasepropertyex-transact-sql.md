@@ -2,7 +2,7 @@
 title: DATABASEPROPERTYEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|functions
@@ -27,11 +27,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,11 +49,11 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>인수  
 *database*  
-명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *데이터베이스*는 **nvarchar(128)**입니다.  
+명명된 속성 정보를 반환할 데이터베이스의 이름을 나타내는 식입니다. *데이터베이스*는 **nvarchar(128)** 입니다.  
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 현재 데이터베이스의 이름이어야 합니다. 다른 데이터베이스 이름을 제공하는 경우 모든 속성에 대해 NULL을 반환합니다.
   
 *property*  
-반환할 데이터베이스 속성의 이름을 나타내는 식입니다. *속성*은 **varchar(128)**이며 다음 값 중 하나일 수 있습니다. 반환 형식은 **sql_variant**입니다. 다음 표에서는 각 속성 값에 대한 기본 데이터 형식을 보여 줍니다.
+반환할 데이터베이스 속성의 이름을 나타내는 식입니다. *속성*은 **varchar(128)** 이며 다음 값 중 하나일 수 있습니다. 반환 형식은 **sql_variant**입니다. 다음 표에서는 각 속성 값에 대한 기본 데이터 형식을 보여 줍니다.
   
 > [!NOTE]  
 >  데이터베이스가 시작되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메타데이터에서 값을 검색하지 않고 데이터베이스에 직접 액세스하여 검색하는 속성은 NULL을 반환합니다. 즉, 데이터베이스에 대해 AUTO_CLOSE가 ON으로 설정된 경우 또는 데이터베이스가 오프라인인 경우입니다.  

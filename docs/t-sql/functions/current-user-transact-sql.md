@@ -1,16 +1,16 @@
 ---
 title: CURRENT_USER(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURRENT_USER
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e97b13384f43969f55e6870cb7f8bddc21ddb5db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b95f8f5e8d446f89f832ee389572c95da39630a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ CURRENT_USER
 ## <a name="remarks"></a>Remarks  
 CURRENT_USER는 현재 보안 컨텍스트의 이름을 반환합니다. EXECUTE AS 호출로 컨텍스트를 전환한 후 CURRENT_USER를 실행하면 가장된 컨텍스트 이름이 반환됩니다. Windows 보안 주체가 그룹의 멤버 자격을 통해 데이터베이스에 액세스한 경우에는 그룹 이름 대신 Windows 보안 주체 이름이 반환됩니다.
   
-현재 사용자의 로그인을 반환하려면 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER &#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)을 참조하세요.
+현재 사용자의 로그인을 반환하려면 [SUSER_NAME & #40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER &#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   

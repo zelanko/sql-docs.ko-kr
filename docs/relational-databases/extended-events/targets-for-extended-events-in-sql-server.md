@@ -1,8 +1,8 @@
 ---
 title: SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 선택한 파일 이름은 시스템에서 date-time 기반 긴 정수가 추가되는 접두사로 사용되며, 이어서 .xel 확장이 나타납니다.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > Azure SQL Database는 **event_file** 대상을 지원하지만 출력에 대한 Azure Storage의 blob을 사용하는 경우에만 해당합니다. SQL Database는 로컬 하드 드라이브의 파일에 이벤트 출력을 저장할 수 없습니다.
+>
 > SQL Database(및 SQL Database 관리되는 인스턴스)에 대한 **event_file** 코드 예제의 경우 [SQL Database의 확장된 이벤트에 대한 이벤트 파일 대상 코드](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)를 참조하세요.
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>**event_file** 대상을 사용하는 CREATE EVENT SESSION

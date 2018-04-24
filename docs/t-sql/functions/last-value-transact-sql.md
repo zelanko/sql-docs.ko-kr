@@ -1,16 +1,16 @@
 ---
 title: LAST_VALUE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LAST_VALUE
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - analytic functions, LAST_VALUE
 - LAST_VALUE function
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ae5fbf63898d56e9af53a096c666a30d9fb1b77
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b58cfa088baaac6015044de19fc00bae0902e1a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -54,7 +55,7 @@ LAST_VALUE ( [scalar_expression )
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다.  
   
- *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. *rows_range_clause*는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *order_by_clause*가 필요합니다. *rows_range_clause*는 시작점 및 끝점을 지정하여 파티션 내에서 행을 추가로 제한합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
  *scalar_expression*과 같은 유형입니다.  
@@ -108,7 +109,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>2. 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 사용  
  다음 예에서는 계산된 식에서 FIRST_VALUE 및 LAST_VALUE 함수를 사용하여 지정된 직원들의 해당 연도 현재 분기 및 첫 분기와 마지막 분기의 분기별 판매 할당량 값의 차이를 각각 표시합니다. FIRST_VALUE  함수는 해당 연도의 첫 분기의 판매 할당량 값을 반환하고 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromFirstQuarter라는 파생 열에 반환됩니다. 해당 연도의 첫 번째 분기인 경우 DifferenceFromFirstQuarter 열의 값은 0입니다. LAST_VALUE 함수는 해당 연도의 마지막 분기에 대한 판매 할당량 값을 반환하고, 현재 분기의 판매 할당량 값에서 이 값을 뺍니다. 값은 DifferenceFromLastQuarter라는 파생 열에 반환됩니다. 연도의 마지막 분기의 경우 DifferenceFromLastQuarter  열의 값은 0입니다.  
   
- 아래와 같이 이 예에서는 DifferenceFromLastQuarter  열에 0이 아닌 값이 반환되도록 하기 위해서는 “RANGE  BETWEEN  CURRENT  ROW  AND  UNBOUNDED  FOLLOWING” 절이 필요합니다. 기본 범위는 “RANGE  BETWEEN  UNBOUNDED  PRECEDING  AND  CURRENT  ROW”입니다. 이 예에서는 기본 범위를 사용하여(또는 범위를 포함하지 않아 기본값이 사용되도록 함)  DifferenceFromLastQuarter  열에 0이 반환됩니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
+ 아래와 같이 이 예에서는 DifferenceFromLastQuarter  열에 0이 아닌 값이 반환되도록 하기 위해서는 “RANGE  BETWEEN  CURRENT  ROW  AND  UNBOUNDED  FOLLOWING” 절이 필요합니다. 기본 범위는 “RANGE  BETWEEN  UNBOUNDED  PRECEDING  AND  CURRENT  ROW”입니다. 이 예에서는 기본 범위를 사용하여(또는 범위를 포함하지 않아 기본값이 사용되도록 함)  DifferenceFromLastQuarter  열에 0이 반환됩니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0c75c41ac8feb6141adbaa0ef1daa363b31d6f
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 425ea0bf553e081cb3f61d387529193a0d88dbf5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   참조 데이터는 신뢰할 수 있는 공용 도메인에서 또는 고급 상용 콘텐츠 공급자를 통해 사용할 수 있는 관련 또는 분류된 전역 데이터(엔터프라이즈의 경계를 벗어남)의 정확하고 완전한 집합을 의미합니다.  
   
  DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 참조 데이터 서비스 기능을 사용하여 타사 참조 데이터 공급자를 구독하고 고품질 데이터를 기준으로 비즈니스 데이터의 유효성을 검사하여 비즈니스 데이터를 쉽게 정리하고 보강할 수 있습니다. 정리 프로세스가 진행되는 동안 Data Quality Services 내에서 업계 선두 데이터 품질 서비스 공급업체의 서비스를 사용하여 데이터 표준화, 수정 또는 보강을 수행할 수 있습니다. 예를 들어 지역 번호 또는 우편 번호 목록을 사용하여 참조 데이터를 기준으로 고객 주소의 유효성을 검사할 수 있습니다.  

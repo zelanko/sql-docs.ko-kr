@@ -1,30 +1,33 @@
 ---
-title: "모델 배포 패키지 편집 | Microsoft Docs"
-ms.custom: 
+title: 모델 배포 패키지 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2bdfa27750d9eaa882c70a4fcf5b13030375268
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: dfc1f6630feb4e8345ddb92291b178a19d4e47a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   이 항목에서는 MDS에서 전체 모델 대신 모델의 선택한 부분을 배포하는 방법에 대해 설명합니다. 이렇게 하려면 모델 패키지 편집기를 사용하여 MDS 모델 패키지를 편집하면 됩니다.  
   
  모델 패키지 편집기 마법사에서는 MDS 패키지에 포함할 모델의 특정 엔터티, 파생 계층, 구독 뷰 및 비즈니스 규칙을 선택한 다음 나중에 배포할 수 있습니다. 모델에서 배포하지 않으려는 부분은 그대로 남겨 둘 수 있습니다. 엔터티를 선택하면 해당 엔터티의 모든 종속 개체도 자동으로 선택됩니다.  

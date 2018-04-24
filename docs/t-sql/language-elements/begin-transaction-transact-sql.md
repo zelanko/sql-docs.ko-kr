@@ -1,16 +1,16 @@
 ---
 title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BEGIN_TRANSACTION_TSQL
@@ -32,16 +32,17 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-caps.latest.revision: 
+caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 260399c0964afeeafc0f8a221de13169ef277496
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a084c264195d48e0f0d8a5aae538c0a50e75c23c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -107,7 +108,7 @@ BEGIN TRANSACTION은 해당 문을 실행한 연결에 대해 로컬 트랜잭�
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 복사본은 트랜잭션 컨트롤러가 되고 MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)를 사용하여 분산 트랜잭션을 관리합니다.  
   
- BEGIN DISTRIBUTED TRANSACTION을 사용하여 트랜잭션을 분산 트랜잭션으로 명시적으로 실행할 수 있습니다. 자세한 내용은 [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)을 참조하세요.  
+ BEGIN DISTRIBUTED TRANSACTION을 사용하여 트랜잭션을 분산 트랜잭션으로 명시적으로 실행할 수 있습니다. 자세한 내용은 [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)를 참조하세요.  
   
  SET IMPLICIT_TRANSACTIONS가 ON인 경우 BEGIN TRANSACTION 문을 실행하면 두 개의 중첩 트랜잭션이 만들어집니다. 자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)을 참조하세요.  
   

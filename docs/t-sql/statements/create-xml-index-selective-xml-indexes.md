@@ -1,30 +1,30 @@
 ---
-title: "CREATE XML INDEX(선택적 XML 인덱스) | Microsoft Docs"
-ms.custom: 
+title: CREATE XML INDEX(선택적 XML 인덱스) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0cd1c2dd0c77409768e8ea7838724ca4d6b827e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 26b82da395c2892e3188ca5788c9be8ee3a1e9e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  만들 새 인덱스의 이름입니다. 인덱스 이름은 테이블에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- ON *\<table_object>*은 인덱싱할 XML 열이 포함된 테이블입니다. 다음 형식을 사용할 수 있습니다.  
+ ON *\<table_object>* 은 인덱싱할 XML 열이 포함된 테이블입니다. 다음 형식을 사용할 수 있습니다.  
   
 -   `database_name.schema_name.table_name`  
   

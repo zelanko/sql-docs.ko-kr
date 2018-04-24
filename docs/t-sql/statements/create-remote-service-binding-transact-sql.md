@@ -1,16 +1,16 @@
 ---
 title: CREATE REMOTE SERVICE BINDING(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE REMOTE SERVICE BINDING
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f0df6ec364331c118de08b6eb312d9cf331761e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a1313143e96658fd2d7b19193726af371fce70f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  CREATE REMOTE SERVICE BINDING 문을 실행하는 사용자는 문에서 지정한 보안 주체에 대해 가장 권한이 있어야 합니다.  
   
- 원격 서비스 바인딩은 임시 개체가 될 수 없습니다. 원격 서비스 바인딩 이름은 **#**으로 시작할 수 있지만 영구 개체입니다.  
+ 원격 서비스 바인딩은 임시 개체가 될 수 없습니다. 원격 서비스 바인딩 이름은 **#** 으로 시작할 수 있지만 영구 개체입니다.  
   
 ## <a name="examples"></a>예  
   

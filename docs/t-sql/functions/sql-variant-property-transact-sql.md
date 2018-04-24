@@ -1,16 +1,16 @@
 ---
 title: SQL_VARIANT_PROPERTY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_VARIANT_PROPERTY_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5947528f4e8959de1b8b4ee3679d4e3e058476d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9220a64ada2045691b631935aca5593ef913f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  **sql_variant** 형식의 식입니다.  
   
  *property*  
- 정보를 제공할 **sql_variant** 속성의 이름이 포함됩니다. *속성*은 **varchar(**128**)**이며 다음 값 중 하나일 수 있습니다.  
+ 정보를 제공할 **sql_variant** 속성의 이름이 포함됩니다. *속성*은 **varchar(** 128 **)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|반환된 sql_variant의 기본 형식|  
 |-----------|-----------------|----------------------------------------|  
@@ -59,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |**소수 자릿수**|숫자 기반 데이터 형식의 소수점 이하 자릿수<br /><br /> **decimal** (p,s) 및 **numeric** (p,s) = s<br /><br /> **money** 및 **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> 기타 모든 유형 = 0|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**TotalBytes**|메타데이터 및 값의 모든 데이터를 저장하는 데 필요한 바이트 수입니다. 이 정보는 **sql_variant** 열의 데이터에 대한 최대치를 확인하는 데 유용합니다. 값이 900을 초과하면 인덱스를 만들 수 없습니다.|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**데이터 정렬**|특정 **sql_variant** 값의 데이터 정렬을 나타냅니다.|**sysname**<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**MaxLength**|최대 데이터 형식 길이(바이트)입니다. 예를 들어 **nvarchar(**50**)**의 **MaxLength**는 100이고, **int**의 **MaxLength**는 4입니다.|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**MaxLength**|최대 데이터 형식 길이(바이트)입니다. 예를 들어 **nvarchar(** 50 **)** 의 **MaxLength**는 100이고, **int**의 **MaxLength**는 4입니다.|**int**<br /><br /> NULL = 입력이 잘못되었습니다.|  
   
 ## <a name="return-types"></a>반환 형식  
  **sql_variant**  
@@ -88,7 +89,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. sql_variant를 변수로 사용   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. 변수로 sql_variant 사용   
  다음 예에서는 변수 @v1에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    

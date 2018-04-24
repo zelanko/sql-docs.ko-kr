@@ -2,7 +2,7 @@
 title: CREATE TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -54,11 +54,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e2018a6e0975c739a3d796cb1f0bdf6a0b392584
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 9f0a96fb3d9ffabc97ae32afbaa2462a34ec14e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -379,7 +379,7 @@ column_name <data_type>
   
 -   계산 열 값이 결정적 식에 의해 정의되고 결과의 데이터 형식이 인덱스 열에 허용되는 경우에는 계산 열을 인덱스의 키 열이나 PRIMARY KEY 또는 UNIQUE 제약 조건의 일부로 사용할 수 있습니다.  
   
-     예를 들어 테이블에 **a**와 **b**라는 정수 열이 있을 때 계산 열 **a+b**는 인덱싱할 수 있지만 계산 열 **a+DATEPART(dd, GETDATE())**는 다음 호출 시 값이 바뀌므로 인덱싱할 수 없습니다.  
+     예를 들어 테이블에 **a**와 **b**라는 정수 열이 있을 때 계산 열 **a+b**는 인덱싱할 수 있지만 계산 열 **a+DATEPART(dd, GETDATE())** 는 다음 호출 시 값이 바뀌므로 인덱싱할 수 없습니다.  
   
 -   계산 열은 INSERT 또는 UPDATE 문의 대상이 될 수 없습니다.  
   
@@ -391,22 +391,22 @@ column_name <data_type>
  PERSISTED  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 계산된 값을 테이블에 물리적으로 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트하도록 지정합니다. 계산 열을 PERSISTED로 표시하면 결정적이지만 정확하지는 않은 계산 열에 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요. 분할된 테이블의 분할 열로 사용되는 계산 열은 명시적으로 PERSISTED로 표시해야 합니다. PERSISTED를 지정할 때 *computed_column_expression*은 결정적이어야 합니다.  
   
- ON { *partition_scheme* | *filegroup* | **"**default**"** }  
+ ON { *partition_scheme* | *filegroup* | **"** default **"** }  
 
- 테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme*을 지정하면 해당 테이블은 *partition_scheme*에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup*을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"**default**"**를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 저장 메커니즘은 곧이어 변경할 수 없습니다.  
+ 테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme*을 지정하면 해당 테이블은 *partition_scheme*에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup*을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"** default **"** 를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 저장 메커니즘은 곧이어 변경할 수 없습니다.  
   
- ON {*partition_scheme* | *filegroup* | **"**default**"**}는 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"**default**"**를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.  
+ ON {*partition_scheme* | *filegroup* | **"** default **"**}는 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"** default **"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.  
   
 > [!NOTE]  
->  이 컨텍스트에서 default는 키워드가 아니라 이것은 기본 파일 그룹에 대한 식별자이며 ON **"**default**"** 또는 ON **[**default**]**와 같이 구분되어야 합니다. **"**default**"**를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+>  이 컨텍스트에서 default는 키워드가 아니라 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
 >  분할된 테이블을 만든 후에는 테이블의 LOCK_ESCALATION 옵션을 AUTO로 설정하십시오. 이렇게 하면 테이블 수준이 아닌 파티션(HoBT) 수준으로 잠금이 에스컬레이션되도록 하여 동시성을 향상시킬 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
- TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
+ TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
  지정된 파일 그룹에 **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 CLR 사용자 정의 형식 열(기하 도형 및 지리 포함)이 저장되어 있음을 나타냅니다.  
   
- 테이블에 큰 값 열이 없는 경우에는 TEXTIMAGE_ON이 허용되지 않습니다. *partition_scheme*을 지정하면 TEXTIMAGE_ON을 지정할 수 없습니다. **"**default**"**를 지정하거나 TEXTIMAGE_ON을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. CREATE TABLE에 지정된 큰 값 열 데이터를 저장한 후에는 곧이어 변경할 수 없습니다.  
+ 테이블에 큰 값 열이 없는 경우에는 TEXTIMAGE_ON이 허용되지 않습니다. *partition_scheme*을 지정하면 TEXTIMAGE_ON을 지정할 수 없습니다. **"** default **"** 를 지정하거나 TEXTIMAGE_ON을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. CREATE TABLE에 지정된 큰 값 열 데이터를 저장한 후에는 곧이어 변경할 수 없습니다.  
 
 > [!NOTE]  
 > Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.
@@ -414,9 +414,9 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
 
 
 > [!NOTE]  
->  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 TEXTIMAGE_ON **"**default**"** 또는 TEXTIMAGE_ON **[**default**]**와 같이 구분되어야 합니다. **"**default**"**를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+>  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 TEXTIMAGE_ON **"** default **"** 또는 TEXTIMAGE_ON **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** }  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** }  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  FILESTREAM 데이터의 파일 그룹을 지정합니다.  
   
@@ -430,7 +430,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
 -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) 문은 힙을 클러스터형 인덱스로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 NULL을 지정할 수 있습니다.  
   
--   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 문은 클러스터형 인덱스를 힙으로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 **"**default**"**를 지정할 수 있습니다.  
+-   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 문은 클러스터형 인덱스를 힙으로 변환합니다. 이 경우 다른 FILESTREAM 파일 그룹, 파티션 구성표 또는 **"** default **"** 를 지정할 수 있습니다.  
   
  `FILESTREAM_ON <filegroup>` 절의 파일 그룹이나 파티션 구성표에 명명되어 있는 각 FILESTREAM 파일 그룹에는 파일 그룹에 대해 정의된 파일이 하나 포함되어 있어야 합니다. 이 파일은 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 정의해야 합니다. 그러지 않으면 오류가 발생합니다.  
   
@@ -501,7 +501,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  시스템이 지정된 datetime2 열을 사용하여 레코드가 유효한 시작 시간 또는 레코드가 유효한 종료 시간을 기록하도록 지정합니다. 열은 NOT NULL로 지정해야 합니다. 이들을 NULL로 지정하려고 하면 시스템 오류가 발생합니다. 기간 열에 NOT NULL을 명시적으로 지정하지 않으면 시스템은 기본적으로 해당 열을 NOT NULL로 정의합니다. PERIOD FOR SYSTEM_TIME 및 WITH SYSTEM_VERSIONING = ON 인수와 함께 이 인수를 사용하여 테이블에 대한 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
   
- 기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM***`<table>`*이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.  
+ 기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM***`<table>`* 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -525,7 +525,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
   
  비클러스터형 columnstore 인덱스는 클러스터형 columnstore 인덱스로 저장 및 관리됩니다. 이는 열이 제한될 수 있고 테이블에 보조 인덱스로 존재하기 때문에 비클러스터형 columnstore 인덱스라고 부릅니다.  
   
- ON *partition_scheme_name***(***column_name***)**  
+ ON *partition_scheme_name ***(*** column_name***)**  
  분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.  
   
 > [!NOTE]  
@@ -541,10 +541,10 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  ON *filegroup_name*  
  주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.  
   
- ON **"**default**"**  
+ ON **"** default **"**  
  기본 파일 그룹에 지정된 인덱스를 만듭니다.  
   
- 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"**default**"** 또는 ON **[**default**]**와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+ 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
@@ -583,7 +583,7 @@ TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 
  열은 한정 데이터 형식이어야 합니다.  
   
  ALGORITHM  
- **'AEAD_AES_256_CBC_HMAC_SHA_256'**이어야 합니다.  
+ **'AEAD_AES_256_CBC_HMAC_SHA_256'** 이어야 합니다.  
   
  기능 제약 조건을 포함한 자세한 내용은 [Always Encrypted &#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)을 참조하세요.  
   

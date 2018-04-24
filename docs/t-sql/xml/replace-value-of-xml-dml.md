@@ -1,16 +1,16 @@
 ---
 title: replace value of(XML DML) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - updating node values
 - replace value of XML DML statement
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 236e919d1817e100c043e29de94c25442aac776f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b446f0eb72b79a660c8d65d287d82345cd80b35d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ with Expression2
  업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1*은 정적 단일 항목이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. *Expression1*이 빈 시퀀스를 반환하면 값이 대체되지 않고 오류가 반환되지 않습니다. *Expression1*은 단순 유형의 콘텐츠(목록 또는 원자성 유형), 텍스트 노드 또는 특성 노드를 가진 단일 요소를 반환해야 합니다. 또한 *Expression1*은 공용 구조체 형식, 복합 형식, 처리 명령, 문서 노드 또는 주석 노드는 될 수 없습니다. 이들 중 하나인 경우 오류가 반환됩니다.  
   
  *Expression2*  
- 노드의 새 값을 식별합니다. **data()**를 암시적으로 사용하므로 단순 유형의 노드를 반환하는 식이 될 수 있습니다. 값이 값 목록일 경우 **update** 문은 이전 값을 목록으로 대체합니다. 형식화된 XML 인스턴스를 수정하는 경우 *Expression2*는 *Expression*1과 같은 유형이거나 그 하위 유형이어야 합니다. 그렇지 않으면 오류가 반환됩니다. 형식화되지 않은 XML 인스턴스를 수정할 경우 *Expression2*는 원자화될 수 있는 식이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
+ 노드의 새 값을 식별합니다. **data()** 를 암시적으로 사용하므로 단순 유형의 노드를 반환하는 식이 될 수 있습니다. 값이 값 목록일 경우 **update** 문은 이전 값을 목록으로 대체합니다. 형식화된 XML 인스턴스를 수정하는 경우 *Expression2*는 *Expression*1과 같은 유형이거나 그 하위 유형이어야 합니다. 그렇지 않으면 오류가 반환됩니다. 형식화되지 않은 XML 인스턴스를 수정할 경우 *Expression2*는 원자화될 수 있는 식이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
   
 ## <a name="examples"></a>예  
  **replace value of** XML DML 문의 다음 예제에서는 XML 문서에서 노드를 업데이트하는 방법을 보여줍니다.  
@@ -203,6 +203,6 @@ from T
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
- [XML 데이터 수정 언어 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML DML&#40;XML 데이터 수정 언어&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

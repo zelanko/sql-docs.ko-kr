@@ -1,16 +1,16 @@
 ---
 title: TRUNCATE TABLE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRUNCATE
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - deleting rows
 - dropping rows
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 829d464e7370a2deb326597bf84fec71e60475be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,11 +80,11 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name*은 리터럴이어야 합니다. *table_name*은 **OBJECT_ID()** 함수 또는 변수일 수 없습니다.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  자를 파티션이나 모든 행이 제거되는 파티션을 지정합니다. 테이블이 분할되지 않은 경우 **WITH PARTITIONS** 인수를 사용하면 오류가 발생합니다. **WITH PARTITIONS** 절을 지정하지 않으면 전체 테이블이 잘립니다.  
   
- *\<partition_number_expression>*은 다음과 같은 방법으로 지정할 수 있습니다. 
+ *\<partition_number_expression>* 은 다음과 같은 방법으로 지정할 수 있습니다. 
   
 -   파티션의 번호를 지정합니다. 예: `WITH (PARTITIONS (2))`  
   
@@ -91,7 +92,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
 -   범위와 개별 파티션을 모두 지정합니다. 예: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>*는 **TO**로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* 는 **TO**로 구분된 파티션 번호로 지정할 수 있습니다. 예: `WITH (PARTITIONS (6 TO 8))`  
   
  분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
@@ -159,7 +160,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>2. 테이블 파티션 자르기  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  다음 예에서는 분할된 테이블의 지정된 파티션을 자릅니다. `WITH (PARTITIONS (2, 4, 6 TO 8))` 구문은 파티션 번호 2, 4, 6, 7, 8이 잘리도록 합니다.  
   

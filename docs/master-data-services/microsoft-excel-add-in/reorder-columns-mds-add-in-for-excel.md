@@ -1,30 +1,33 @@
 ---
-title: "열 순서 바꾸기(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: 
+title: 열 순서 바꾸기(Excel용 MDS 추가 기능) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 782958cb18c22f39968d33509d4a8366029898b1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 7341188a900ade5bd69ec1173498aefcb2c0dc9b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>열 순서 바꾸기(Excel용 MDS 추가 기능)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 로드하기 전에 목록을 필터링하여 열의 순서를 바꿀 수 있습니다.  
   
  **필터** 대화 상자에서 특성의 순서를 조정하면 데이터가 새 순서로 Excel에 로드됩니다. 하지만 다음에 특성 데이터를 필터링하면 순서가 원래 디자인된 순서로 되돌아갑니다. 순서를 영구적으로 변경하려면 관리자가 마스터 데이터 관리자의 **시스템 관리** 영역에서 순서를 변경해야 합니다. 자세한 내용은 [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md)을 참조하세요.  

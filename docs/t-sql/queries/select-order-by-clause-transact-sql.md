@@ -1,16 +1,16 @@
 ---
-title: "ORDER BY 절(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ORDER BY 절(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ORDER_TSQL
@@ -41,16 +41,17 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ef72a4ee2dd0ec18eef502820fe289696589776
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +107,7 @@ ORDER BY order_by_expression
  ORDER BY 절에서 참조하는 열 이름은 정확하게 SELECT 목록의 열이나 FROM 절에서 지정한 테이블에 정의된 열과 같아야 합니다.  
   
  COLLATE *collation_name*  
- 테이블이나 뷰에 정의된 열의 데이터 정렬이 아니라 *collation_name*에 지정된 데이터 정렬에 따라 ORDER BY 작업을 수행하도록 지정합니다. *collation_name*은 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름이 될 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
+ 테이블이나 뷰에 정의된 열의 데이터 정렬이 아니라 *collation_name*에 지정된 데이터 정렬에 따라 ORDER BY 작업을 수행하도록 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
   
  **ASC** | DESC  
  지정된 열의 값이 오름차순으로 정렬되는지 내림차순으로 정렬되는지를 지정합니다. ASC는 오름차순으로 정렬하고, DESC는 내림차순으로 정렬합니다. ASC가 기본 정렬 순서입니다. Null 값은 가능한 가장 작은 값으로 취급됩니다.  
@@ -125,7 +126,7 @@ ORDER BY order_by_expression
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  OFFSET 절을 처리한 후에 반환할 행 수를 지정합니다. 값은 1보다 크거나 같은 정수 상수 또는 식일 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  *fetch_row_count_expression*은 변수, 매개 변수 또는 상수 스칼라 하위 쿼리일 수 있습니다. 하위 쿼리를 사용하는 경우 외부 쿼리 범위에 정의된 열을 참조할 수 없습니다. 즉, 외부 쿼리와 상관 관계를 만들 수 없습니다.  
   
@@ -362,7 +363,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> 반환되는 행 수 제한  
  다음 예에서는 OFFSET 및 FETCH를 사용하여 쿼리에서 반환되는 행 수를 제한합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 정수 상수를 OFFSET 및 FETCH 절의 값으로 지정합니다. 첫 번째 쿼리는 `DepartmentID` 열을 기준으로 정렬된 모든 행을 반환합니다. 이 쿼리에서 반환된 결과를 다음에 나오는 두 쿼리의 결과와 비교해 보세요. 다음 쿼리에서는 `OFFSET 5 ROWS` 절을 사용하여 처음 5개 행을 건너뛰고 나머지 행을 모두 반환합니다. 마지막 쿼리에서는 `OFFSET 0 ROWS` 절을 사용하여 첫 번째 행에서 시작한 다음 `FETCH NEXT 10 ROWS ONLY`를 사용하여 반환되는 행을 정렬된 결과 집합의 10개 행으로 제한합니다.  
@@ -555,7 +556,7 @@ ORDER BY LastName, FirstName;
  [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP&#40;Transact SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
- [EXCEPT 및 INTERSECT&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT and INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UNION&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

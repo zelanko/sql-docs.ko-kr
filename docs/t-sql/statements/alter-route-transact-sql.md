@@ -2,7 +2,7 @@
 title: ALTER ROUTE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,11 +29,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a1b6e3b8ea236aec4104653a7a96cdc0a6a53f2
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b41176d134e04511939b85a2b525bdaba05c9d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -109,7 +110,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  경로에 *next_hop_address*가 **‘LOCAL’**로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
   
- 경로에 *next_hop_address*가 **'TRANSPORT'**로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'**를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
+ 경로에 *next_hop_address*가 **'TRANSPORT'** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
   
  *next_hop_address*가 데이터베이스 미러의 주 서버인 경우에는 미러 서버에 대해 MIRROR_ADDRESS도 지정해야 합니다. 그렇지 않으면 이 경로는 미러 서버에 대해 자동으로 장애 조치(Failover)하지 않습니다.  
   

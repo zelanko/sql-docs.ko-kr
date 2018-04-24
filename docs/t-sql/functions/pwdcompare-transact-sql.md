@@ -1,16 +1,16 @@
 ---
 title: PWDCOMPARE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PWDCOMPARE
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23b90a0d4a09fc2eb754dc5f298883ef4469ade5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eedbec4b9e026422052ab5aab83bf8d23666541e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ PWDCOMPARE ( 'clear_text_password'
  암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**( **nvarchar(128)**)입니다.  
   
  *password_hash*  
- 암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)**입니다.  
+ 암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)** 입니다.  
   
  *version*  
  *password_hash*가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  

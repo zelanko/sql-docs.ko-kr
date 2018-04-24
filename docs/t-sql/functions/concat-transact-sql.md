@@ -1,16 +1,16 @@
 ---
 title: CONCAT(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONCAT
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71f52ba08f2fd5fe94af4b16dbcac06746564e09
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -59,9 +60,9 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |입력 형식|출력 형식 및 길이|  
 |---|---|
 |인수가 SQL-CLR 시스템 형식, SQL-CLR UDT 또는 `nvarchar(max)`인 경우|**nvarchar(max)**|  
-|그렇지 않고 인수가 **varbinary(max)** 또는 **varchar(max)**인 경우|매개 변수 중 하나가 임의 길이의 **nvarchar**가 아닌 경우 **varchar(max)**. 그럴 경우 결과는 **nvarchar(max)**입니다.|  
+|그렇지 않고 인수가 **varbinary(max)** 또는 **varchar(max)** 인 경우|매개 변수 중 하나가 임의 길이의 **nvarchar**가 아닌 경우 **varchar(max)**. 그럴 경우 결과는 **nvarchar(max)** 입니다.|  
 |그렇지 않고 인수가 **nvarchar**(<= 4000)인 경우|**nvarchar**(<= 4000)|  
-|그렇지 않은 다른 모든 경우|매개 변수 중 하나가 임의 길이의 nvarchar가 아닌 경우 **varchar**(<= 8000). 그럴 경우 결과는 **nvarchar(max)**입니다.|  
+|그렇지 않은 다른 모든 경우|매개 변수 중 하나가 임의 길이의 nvarchar가 아닌 경우 **varchar**(<= 8000). 그럴 경우 결과는 **nvarchar(max)** 입니다.|  
   
 **nvarchar**에 대한 인수가 <= 4000이거나 **varchar**에 대한 인수가 <= 8000인 경우 암시적 변환이 결과의 길이에 영향을 줄 수 있습니다. 다른 데이터 형식은 암시적으로 문자열로 변환될 경우 다른 길이를 가집니다. 예를 들어 **int** (14)의 문자열 길이는 12자이고, **float**의 길이는 32자입니다. 따라서 두 정수를 연결한 결과는 길이가 24자 이상입니다.
   

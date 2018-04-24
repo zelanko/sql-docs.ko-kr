@@ -1,16 +1,16 @@
 ---
-title: "modify() 메서드(xml 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: modify() 메서드(xml 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - modify() method
 - modify method
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 429797447e56ecb57f0dc257bfd13bea59ea1f40
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 718b350793573527e822f0c28bd02f90e8a266fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ modify (XML_DML)
 >  Null 값에 **modify()** 메서드를 호출하거나 결과 값이 Null이면 오류가 반환됩니다.  
   
 ## <a name="examples"></a>예  
- **modify()** 메서드가 XML DML(데이터 조작 언어)의 문자열이 필요하므로 **modify()**의 예제는 XML DML 문을 설명하는 항목에 포함됩니다. 이러한 예제의 경우 [삽입&#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md), [삭제&#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md) 및 [값 바꾸기&#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)를 참조하세요.  
+ **modify()** 메서드가 XML DML(데이터 조작 언어)의 문자열이 필요하므로 **modify()** 의 예제는 XML DML 문을 설명하는 항목에 포함됩니다. 이러한 예제의 경우 [삽입&#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md), [삭제&#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md) 및 [값 바꾸기&#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)   

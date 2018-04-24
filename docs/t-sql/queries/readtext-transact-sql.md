@@ -1,16 +1,16 @@
 ---
 title: READTEXT(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - READTEXT_TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1659dfcc9ca8908ce756eb41b32fd30649decfa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1cfbec25af14a46c36989428102c2243a22baaa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
 ## <a name="arguments"></a>인수  
  *테이블* **.** *column*  
- 읽을 테이블과 열의 이름입니다. 테이블 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 테이블 및 열 이름은 반드시 지정해야 하지만 데이터베이스 이름과 소유자 이름을 지정하는 것은 선택적입니다.  
+ 읽을 테이블과 열의 이름입니다. 테이블 이름 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 테이블 및 열 이름은 반드시 지정해야 하지만 데이터베이스 이름과 소유자 이름을 지정하는 것은 선택적입니다.  
   
  *text_ptr*  
- 유효한 텍스트 포인터입니다. *text_ptr*은 **이진(16)**이여야 합니다.  
+ 유효한 텍스트 포인터입니다. *text_ptr*은 **이진(16)** 이여야 합니다.  
   
  *offset*  
  **text**, **image** 또는 **ntext** 데이터를 읽기 전에 건너뛸 바이트 수(**text** 또는 **image** 데이터 형식을 사용하는 경우) 또는 문자 수(**ntext** 데이터 형식을 사용하는 경우)입니다.  

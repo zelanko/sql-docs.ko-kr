@@ -1,16 +1,16 @@
 ---
 title: SEND(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SEND_ON_CONVERSATION_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - messages [Service Broker], sending
 - sending messages
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d40948dad23dca9dc4905d29a94995f087f78b1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bcf1da6ae0470bce273f6907e557fc9beea0e559
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SEND
  보낸 메시지의 메시지 유형을 지정합니다. 이 메시지 유형은 이 대화에 사용된 서비스 계약에 포함되어야 합니다. 이 계약은 대화의 이 쪽에서 보내는 메시지 유형을 허용해야 합니다. 예를 들어 대화의 대상 서비스는 계약에 SENT BY TARGET 또는 SENT BY ANY로 지정되어 있는 메시지만 보낼 수 있습니다. 이 절이 생략된 경우 메시지 유형은 DEFAULT입니다.  
   
  *message_body_expression*  
- 메시지 본문을 나타내는 식을 제공합니다. *message_body_expression*은 선택 사항입니다. 하지만 *message_body_expression*이 있으면 해당 식은 **varbinary(max)**로 변환될 수 있는 유형이어야 합니다. 이 식은 NULL이 될 수 없습니다. 이 절이 생략된 경우에는 메시지 본문이 비어 있습니다.  
+ 메시지 본문을 나타내는 식을 제공합니다. *message_body_expression*은 선택 사항입니다. 하지만 *message_body_expression*이 있으면 해당 식은 **varbinary(max)** 로 변환될 수 있는 유형이어야 합니다. 이 식은 NULL이 될 수 없습니다. 이 절이 생략된 경우에는 메시지 본문이 비어 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -103,7 +103,7 @@ SEND
  메시지를 보내려면 현재 사용자가 메시지를 보내는 모든 서비스의 큐에 대한 RECEIVE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 대화를 시작하고 해당 대화에서 XML 메시지를 보냅니다. 메시지를 보내기 위해 이 예제에서는 xml 개체를 **varbinary(max)**로 변환합니다.  
+ 다음 예에서는 대화를 시작하고 해당 대화에서 XML 메시지를 보냅니다. 메시지를 보내기 위해 이 예제에서는 xml 개체를 **varbinary(max)** 로 변환합니다.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -152,7 +152,7 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  

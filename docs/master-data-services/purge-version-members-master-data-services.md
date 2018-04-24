@@ -1,30 +1,33 @@
 ---
-title: "버전 멤버 삭제(Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 버전 멤버 삭제(Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 864b68cff920fc940ab2943aed4b7986235c801c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 26c53b0e050ebdb9682fe8d64dc10f9500d88b46
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="purge-version-members-master-data-services"></a>버전 멤버 삭제(Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 멤버를 삭제해도 멤버가 비활성화(일시 삭제) 상태로만 전환됩니다. 멤버의 데이터는 데이터베이스에 계속 남아 있습니다. 이 항목에서는 모델 버전에서 일시 삭제된 모든 멤버를 영구적으로 삭제하는 방법을 설명합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  

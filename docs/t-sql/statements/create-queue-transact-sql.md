@@ -1,16 +1,16 @@
 ---
 title: CREATE QUEUE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 
+caps.latest.revision: 67
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 129670e6efbbfcf7373c9cb03112a4f404c8c46f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ CREATE QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  큐는 SELECT 문의 대상이 될 수 있습니다. 그러나 큐의 내용은 SEND, RECEIVE, END CONVERSATION 등 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에서 실행되는 문을 사용해야만 수정할 수 있습니다. 큐는 INSERT, UPDATE, DELETE 또는 TRUNCATE 문의 대상이 될 수 없습니다.  
   
- 큐는 임시 개체일 수 없습니다. 따라서 **#**으로 시작하는 큐 이름은 유효하지 않습니다.  
+ 큐는 임시 개체일 수 없습니다. 따라서 **#** 으로 시작하는 큐 이름은 유효하지 않습니다.  
   
  비활성 상태의 큐를 만들면 큐에서 메시지를 받기 전까지 서비스를 위한 해당 인프라를 사용할 수 있습니다.  
   
@@ -232,9 +232,9 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

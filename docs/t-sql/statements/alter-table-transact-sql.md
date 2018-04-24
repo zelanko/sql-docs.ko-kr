@@ -2,7 +2,7 @@
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -66,11 +66,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 41908f6d675e60fb5e188cd739f8e8833e4f4d07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -326,7 +327,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **ntext**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로  
   
--   **image**에서 **varbinary(max)**로  
+-   **image**에서 **varbinary(max)** 로  
   
 데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 **nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.  
   
@@ -496,7 +497,7 @@ WITH CHECK | WITH NOCHECK
   
  이 인수와 함께 SET SYSTEM_VERSIONING 인수를 사용할 경우 기존 테이블에서 시스템 버전 관리를 수행할 수 있습니다. 자세한 내용은 [Temporal 테이블](../../relational-databases/tables/temporal-tables.md) 및 [Azure SQL Database에서 Temporal 테이블 시작하기](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)를 참조하세요.  
   
- [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>*이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
+ [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]에서는 사용자가 하나 또는 두 기간 열에 **HIDDEN** 플래그를 표시해 이러한 열을 암시적으로 숨김으로써 **SELECT \* FROM***\<table>* 이 이러한 열에 대한 값을 반환하지 않도록 할 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 숨겨진 열을 사용하려면 temporal 테이블을 직접 참조하는 모든 쿼리에 이러한 열을 명시적으로 포함해야 합니다.  
   
  DROP  
  하나 이상의 열 정의, 계산 열 정의 또는 테이블 제약 조건을 삭제하거나 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제하도록 지정합니다.  
@@ -571,13 +572,13 @@ WITH CHECK | WITH NOCHECK
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+ MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 이동할 위치를 지정합니다. 테이블이 새 위치로 이동됩니다. 이 옵션은 클러스터형 인덱스를 만드는 제약 조건에만 적용됩니다.  
   
 > [!NOTE]  
->  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"**default**"** 또는 MOVE TO **[**default**]**와 같이 구분되어야 합니다. **"**default**"**를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+>  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  { CHECK | NOCHECK } CONSTRAINT  
  *constraint_name*의 설정 여부를 지정합니다. 이 옵션은 FOREIGN KEY 및 CHECK 제약 조건에만 사용할 수 있습니다. NOCHECK를 지정하면 제약 조건이 해제되고 향후 해당 열에 삽입하거나 해당 열을 업데이트할 때 제약 조건에 대한 유효성 검사가 수행되지 않습니다. DEFAULT, PRIMARY KEY 및 UNIQUE 제약 조건은 해제할 수 없습니다.  
@@ -637,7 +638,7 @@ WITH CHECK | WITH NOCHECK
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 및 버전 V12 이전의 SQL Database용으로 구축된 비클러스터형 columnstore 인덱스는 읽기 전용 형식입니다. 비클러스터형 columnstore 인덱스는 PARTITION 연산을 수행하기 전 최신 형식(업데이트 가능)으로 다시 빌드해야 합니다.  
   
- SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
+ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  FILESTREAM 데이터가 저장되는 위치를 지정합니다.  
@@ -648,9 +649,9 @@ WITH CHECK | WITH NOCHECK
   
  *filestream_filegroup_name*은 FILESTREAM 파일 그룹의 이름입니다. 파일 그룹에는 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 또는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 그룹에 대해 정의된 한 파일이 있어야 하며 그렇지 않으면 오류가 발생합니다.  
   
- **"**default**"**는 DEFAULT 속성이 설정된 FILESTREAM 파일 그룹을 지정합니다. FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
+ **"** default **"** 는 DEFAULT 속성이 설정된 FILESTREAM 파일 그룹을 지정합니다. FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
   
- **"**NULL**"**은 테이블의 FILESTREAM 파일 그룹에 대한 모든 참조를 제거하도록 지정합니다. All FILESTREAM 열을 먼저 삭제해야 합니다. SET FILESTREAM_ON**="**NULL**"**을 사용하여 테이블과 관련된 모든 FILESTREAM 데이터를 삭제해야 합니다.  
+ **"** NULL **"** 은 테이블의 FILESTREAM 파일 그룹에 대한 모든 참조를 제거하도록 지정합니다. All FILESTREAM 열을 먼저 삭제해야 합니다. SET FILESTREAM_ON **="** NULL **"** 을 사용하여 테이블과 관련된 모든 FILESTREAM 데이터를 삭제해야 합니다.  
   
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  

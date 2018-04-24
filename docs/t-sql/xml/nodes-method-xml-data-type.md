@@ -1,16 +1,16 @@
 ---
-title: "nodes() 메서드(xml 데이터 형식) | Microsoft Docs"
-ms.custom: 
+title: nodes() 메서드(xml 데이터 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - nodes() method
 - nodes method
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f75f08164b84e803a6a54d039a09cf481a1886e9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 988450321365d830d0e98fc1f65789f03b8626b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
  **nodes()** 메서드의 결과는 원래 XML 인스턴스의 논리적 복사본이 들어 있는 행 집합입니다. 이러한 논리적 복사본에서 모든 행 인스턴스의 컨텍스트 노드는 쿼리 식으로 식별된 노드 중 하나로 설정되므로 이후의 쿼리에서는 이러한 컨텍스트 노드에 따라 상대적으로 탐색할 수 있습니다.  
   
- 행 집합에서 여러 값을 검색할 수 있습니다. 예를 들어 **nodes()**에 의해 반환된 행 집합에 **value()** 메서드를 적용하고 원래 XML 인스턴스에서 여러 값을 검색할 수 있습니다. XML 인스턴스에 적용된 경우 **value()** 메서드는 값을 하나만 반환합니다.  
+ 행 집합에서 여러 값을 검색할 수 있습니다. 예를 들어 **nodes()** 에 의해 반환된 행 집합에 **value()** 메서드를 적용하고 원래 XML 인스턴스에서 여러 값을 검색할 수 있습니다. XML 인스턴스에 적용된 경우 **value()** 메서드는 값을 하나만 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -114,7 +114,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
- 반환된 행 집합에는 유형 정보가 유지 관리됩니다. **query()**, **value()**, **exist()** 및 **nodes()**와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
+ 반환된 행 집합에는 유형 정보가 유지 관리됩니다. **query()**, **value()**, **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
   
  또한 행 집합의 컨텍스트 노드는 구체화할 수 없습니다. 즉, 이 노드를 SELECT 문에서 사용할 수 없습니다. 하지만 IS NULL 및 COUNT(*)에서는 사용할 수 있습니다.  
   

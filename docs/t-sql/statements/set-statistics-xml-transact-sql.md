@@ -1,16 +1,16 @@
 ---
 title: SET STATISTICS XML(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_STATISTICS_XML_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], statistical information
 - XML [SQL Server], statement execution information
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ef0199258d6d4a87a041979dd0f75bbc6b835f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a8f9cf700e8ac6c041cc29d795b0f7d6c6682590
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- 실행 계획 스키마는 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.  
+ 실행 계획 스키마는 [이 웹 사이트](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.  
   
  SET STATISTICS PROFILE과 SET STATISTICS XML은 서로 유사합니다. 전자는 텍스트 출력을 생성하고 후자는 XML 출력을 생성합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 쿼리 실행 계획 정보가 SET STATISTICS PROFILE 문이 아니라 SET STATISTICS XML 문을 통해서만 표시됩니다.  
   

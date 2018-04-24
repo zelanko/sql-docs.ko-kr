@@ -1,16 +1,16 @@
 ---
-title: "REVOKE Service Broker 사용 권한(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE Service Broker 사용 권한(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d5b63ac2544ee9ad866e431f602a9b39e22c56d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,19 +70,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  CONTRACT **::***contract_name*  
- 사용 권한을 취소할 계약을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 계약을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  MESSAGE TYPE **::***message_type_name*  
- 사용 권한을 취소할 메시지 유형을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
- 사용 권한을 취소할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  ROUTE **::***route_name*  
- 사용 권한을 취소할 경로를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 경로를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  SERVICE **::***message_type_name*  
- 사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
  사용 권한을 취소할 보안 주체를 지정합니다. *database_principal*은 다음 중 하나일 수 있습니다.  

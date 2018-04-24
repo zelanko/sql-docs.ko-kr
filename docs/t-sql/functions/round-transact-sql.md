@@ -1,16 +1,16 @@
 ---
 title: ROUND(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROUND_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d946c9dc4d13e155bb7d2ccf8a86db62ae33c1c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +49,7 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- **비트** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *length*  
  *numeric_expression*을 반올림할 전체 자릿수입니다. *length*는 **tinyint**, **smallint** 또는 **int** 형식의 식이어야 합니다. *length*가 양수이면 *numeric_expression*은 *length*로 지정된 10진수 자리의 숫자로 반올림됩니다. *length*가 음수이면 *numeric_expression*은 *length*로 지정된 소수점의 왼쪽에 반올림됩니다.  

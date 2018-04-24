@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
   
  데이터 정리는 4단계로 수행됩니다. *매핑* 단계에서는 정리할 데이터 원본을 확인하여 기술 자료의 필수 도메인에 매핑하고, *컴퓨터 기반 정리* 단계에서는 DQS에서 정리할 데이터에 기술 자료를 적용하고 원본 데이터에 대한 변경 내용을 제안/적용하며, *대화형 정리* 단계에서는 데이터 관리자가 데이터 변경 내용을 분석한 후 데이터 변경을 허용/거부할 수 있고, 마지막 *내보내기* 단계에서는 정리된 데이터를 내보낼 수 있습니다. 이러한 각 프로세스는 정리 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 정리 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. DQS에서는 원본 데이터 및 정리 결과에 대한 통계를 제공하므로 정보를 바탕으로 데이터 정리에 대한 의사를 결정할 수 있습니다.  
@@ -174,7 +177,7 @@ ms.lasthandoff: 03/22/2018
   
         -   **\<Domain>_Status**: 데이터 정리 후 도메인 값의 상태입니다. 예를 들어 **제안**, **새로 만들기**, **잘못됨**, **수정됨**또는 **올바름**이 여기에 해당합니다.  
   
-        -   **레코드 상태**: 매핑된 도메인별 상태 필드**(\<DomainName>_Status**)와 별도로 **레코드 상태** 필드에는 레코드에 대한 상태가 표시됩니다. 레코드의 도메인 상태가 *새로 만들기* 또는 *올바름*인 경우 **레코드 상태** 는 *올바름*으로 설정됩니다. 레코드의 도메인 상태가 *제안*, *잘못됨*또는 *수정됨*인 경우 **레코드 상태** 는 해당 값으로 설정됩니다. 예를 들어 레코드의 도메인 상태가 *제안*인 경우 **레코드 상태** 는 *제안*으로 설정됩니다.  
+        -   **레코드 상태**: 매핑된 도메인별 상태 필드 **(\<DomainName>_Status**)와 별도로 **레코드 상태** 필드에는 레코드에 대한 상태가 표시됩니다. 레코드의 도메인 상태가 *새로 만들기* 또는 *올바름*인 경우 **레코드 상태** 는 *올바름*으로 설정됩니다. 레코드의 도메인 상태가 *제안*, *잘못됨*또는 *수정됨*인 경우 **레코드 상태** 는 해당 값으로 설정됩니다. 예를 들어 레코드의 도메인 상태가 *제안*인 경우 **레코드 상태** 는 *제안*으로 설정됩니다.  
   
             > [!NOTE]  
             >  정리 작업에 참조 데이터 서비스를 사용하는 경우 도메인 값에 대한 몇 가지 추가 데이터도 내보낼 수 있습니다. 자세한 내용은 [참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)를 참조하세요.  

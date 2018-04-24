@@ -1,16 +1,16 @@
 ---
-title: "xml 데이터 형식 메서드를 사용하기 위한 지침 | Microsoft Docs"
-ms.custom: 
+title: xml 데이터 형식 메서드를 사용하기 위한 지침 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79f10b22ba88d6dd860c608c9468e20a27615650
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc05e3e72e1b3f542fd2b49fa9703c1f3be0196e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
  유형 검사를 위해서는 //first-name[1] 및 (//first-name)[1] 간의 차이점을 인식해야 합니다. 전자는 각 노드가 해당 형제 간의 가장 왼쪽에 있는 \<first-name> 노드인 \<first-name> 노드의 시퀀스를 반환합니다. 후자는 XML 인스턴스에서 문서 순서의 첫 번째 단일 \<first-name> 노드를 반환합니다.  
   
 ### <a name="example-using-value"></a>예: value() 사용  
- 형식화되지 않은 XML 열에서 다음 쿼리를 실행하면 정적 컴파일 오류가 발생합니다. 그 이유는 **value()**에 첫 번째 인수로 단일 노드가 필요한데 런타임 시 하나의 \<last-name> 노드만 발생하는지 여부를 컴파일러에서 확인할 수 없기 때문입니다.  
+ 형식화되지 않은 XML 열에서 다음 쿼리를 실행하면 정적 컴파일 오류가 발생합니다. 그 이유는 **value()** 에 첫 번째 인수로 단일 노드가 필요한데 런타임 시 하나의 \<last-name> 노드만 발생하는지 여부를 컴파일러에서 확인할 수 없기 때문입니다.  
   
 ```  
 SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName  

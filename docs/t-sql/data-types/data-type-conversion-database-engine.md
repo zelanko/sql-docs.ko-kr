@@ -1,16 +1,16 @@
 ---
-title: "데이터 형식 변환(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: 
+title: 데이터 형식 변환(데이터베이스 엔진) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9443c64daa514c83e6493606f961e501b26f04f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 암시적 변환은 사용자에게 보이지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 형식을 자동으로 변환합니다. 예를 들어 **smallint**를 **int**와 비교하는 경우 **smallint**는 비교가 진행되기 전에 암시적으로 **int**로 변환됩니다.
   
-**GETDATE()**는 암시적으로 날짜 스타일 0으로 변환합니다. **SYSDATETIME()**은 암시적으로 날짜 스타일 21로 변환합니다.
+**GETDATE()** 는 암시적으로 날짜 스타일 0으로 변환합니다. **SYSDATETIME()** 은 암시적으로 날짜 스타일 21로 변환합니다.
   
 명시적 변환은 CAST 또는 CONVERT 함수를 사용합니다.
   
@@ -71,15 +72,15 @@ CAST ( $157.27 AS VARCHAR(10) )
   
  - [binary 및 varbinary&#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
  - [datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
- - [money 및 smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ - [money 및 smallmoney&#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
  - [bit &#40;Transact-SQL&#41;](../../t-sql/data-types/bit-transact-sql.md)  
  - [datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
  - [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
  - [char 및 varchar&#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
- - [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+ - [decimal 및 numeric&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [float 및 real&#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
  - [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)  
  - [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
  - [int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
@@ -105,7 +106,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**, **smalldatetime**|**날짜**|  
 |NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
   
-단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열은 **Byte(*길이***0에서 1**까지)**의 범위를 갖습니다. 여기서 *길이*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **binary**, **varbinary** 또는 **이미지** 값에서 바이트 수를 말합니다.
+단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열은 **Byte(*길이*** 0에서 1**까지)** 의 범위를 갖습니다. 여기서 *길이*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **binary**, **varbinary** 또는 **이미지** 값에서 바이트 수를 말합니다.
   
 이들은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환한 것입니다.
   
@@ -124,6 +125,6 @@ CAST ( $157.27 AS VARCHAR(10) )
 [OLE 자동화 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

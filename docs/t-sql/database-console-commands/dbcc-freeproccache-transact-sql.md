@@ -1,16 +1,16 @@
 ---
 title: DBCC FREEPROCCACHE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FREEPROCCACHE_TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 
+caps.latest.revision: 61
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c2403d697ca1906e26c5f20bf7648acad21415e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,13 +66,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>인수  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle*은 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며, 해당 계획은 계획 캐시에 있습니다. *plan_handle*은 **varbinary(64)**이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*plan_handle*은 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며, 해당 계획은 계획 캐시에 있습니다. *plan_handle*은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle*은 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle*은 **varbinary(64)**이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*sql_handle*은 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle*은 **varbinary(64)** 이며, 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
@@ -118,7 +119,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>결과 집합  
-WITH NO_INFOMSGS 절이 지정되지 않으면 DBCC FREEPROCCACHE에서 "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."를 반환합니다.
+WITH NO_INFOMSGS 절이 지정되지 않으면 DBCC FREEPROCCACHE에서 "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
 ## <a name="permissions"></a>사용 권한  
 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 

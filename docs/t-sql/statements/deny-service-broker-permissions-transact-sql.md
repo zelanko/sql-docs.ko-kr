@@ -1,16 +1,16 @@
 ---
-title: "DENY Service Broker 사용 권한(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY Service Broker 사용 권한(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dba4c9e45e527abd1022c2fb8f0b7f577da7e018
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,19 +65,19 @@ DENY permission  [ ,...n ] ON
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  CONTRACT **::***contract_name*  
- 사용 권한을 거부할 계약을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 거부할 계약을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  MESSAGE TYPE **::***message_type_name*  
- 사용 권한을 거부할 메시지 유형을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 거부할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
- 사용 권한을 거부할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 거부할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  ROUTE **::***route_name*  
- 사용 권한을 거부할 경로를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 거부할 경로를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  SERVICE **::***message_type_name*  
- 사용 권한을 거부할 서비스를 지정합니다. 범위 한정자 **::**가 필요합니다.  
+ 사용 권한을 거부할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
  사용 권한을 거부할 보안 주체를 지정합니다. 다음 중 하나일 수 있습니다.  
