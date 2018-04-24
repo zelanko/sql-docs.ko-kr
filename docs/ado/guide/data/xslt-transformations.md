@@ -1,30 +1,30 @@
 ---
-title: "XSLT 변환을 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: XSLT 변환을 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dc90399ec31c921bfebbd342bbc082365dc238d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d235ea5208f5c4cbf98f7f5664b1a3b3666b9207
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
 XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습니다. XSLT 템플릿 보다 친숙 한 형식으로 변환할 수 있는 개발에 도움이 ADO의 XML 형식을 이해 합니다.  

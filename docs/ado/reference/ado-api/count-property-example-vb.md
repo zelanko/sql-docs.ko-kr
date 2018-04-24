@@ -1,32 +1,32 @@
 ---
-title: "Count 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Count 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ab29cd1d57ebdb721085c7f743d96b2c0052ea6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dac5210691ea6a0bfdb8f4e1d51661b65bfe68ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="count-property-example-vb"></a>Count 속성 예제 (VB)
 이 예제에서는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 의 두 컬렉션을 사용 하 여 속성의 ***직원*** 데이터베이스입니다. 속성 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프에 대 한 상한값을 설정 합니다. 사용 하지 않고 해당이 컬렉션을 열거 하는 다른 방법은 **Count** 속성을 사용 하려는 것 `For Each...Next` 문.  

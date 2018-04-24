@@ -1,32 +1,32 @@
 ---
-title: "최적화 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 최적화 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1f51f4b06cc81464a90c30cfe42737cc971d23a2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="optimize-property-example-vb"></a>속성 예제 (VB)를 최적화 합니다.
 이 예제에서는 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 동적 **최적화** 속성입니다. ***zip*** 필드는 ***작성자*** 테이블에 ***Pubs*** 데이터베이스 인덱싱되지 않았습니다. 설정의 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 ***zip*** 의 성능을 개선 하는 인덱스를 작성 하는 ADO를 인증 하는 필드는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  

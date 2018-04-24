@@ -1,40 +1,40 @@
 ---
 title: AffectEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - AffectEnum
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3192f84f0dd09bdb6d2479e090d1adb5c0b25fe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8160e14d900d0b7b60e30f127410f42f17e81e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="affectenum"></a>AffectEnum
 작업의 영향을 받는 레코드를 지정 합니다.  
   
 |상수|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|없는 경우는 [필터](../../../ado/reference/ado-api/filter-property.md) 에 적용 된 **레코드 집합**, 모든 레코드에 영향을 줍니다.<br /><br /> 경우는 **필터** 문자열 조건 속성이 설정 되어 (같은 "작성자 'Smith' ="), 다음 작업을 현재 장에 표시 된 레코드에 영향을 줍니다.<br /><br /> 경우는 **필터** 속성의 멤버에는 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 책갈피, 작업의 배열에는의 모든 행에 영향을 줍니다 또는 **레코드 집합**합니다. **참고:****adAffectAll** Visual Basic 개체 브라우저에서 숨길 수 있습니다.|  
+|**adAffectAll**|3|없는 경우는 [필터](../../../ado/reference/ado-api/filter-property.md) 에 적용 된 **레코드 집합**, 모든 레코드에 영향을 줍니다.<br /><br /> 경우는 **필터** 문자열 조건 속성이 설정 되어 (같은 "작성자 'Smith' ="), 다음 작업을 현재 장에 표시 된 레코드에 영향을 줍니다.<br /><br /> 경우는 **필터** 속성의 멤버에는 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 책갈피, 작업의 배열에는의 모든 행에 영향을 줍니다 또는 **레코드 집합**합니다. **참고:****adAffectAll** Visual Basic 개체 브라우저에서 숨길 수 있습니다.  |  
 |**adAffectAllChapters**|4|모든 레코드의 모든 형제 장에 있는 영향을 줍니다는 **레코드 집합**, 하나를 통해 표시 되지 않는 포함 하 여 **필터** 현재 적용 되어 있습니다.|  
 |**adAffectCurrent**|1.|현재 레코드를만 영향을 줍니다.|  
 |**adAffectGroup**|2|현재 만족 하는 레코드에만 영향을 줍니다 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 설정 합니다. 설정 해야 합니다는 **필터** 속성을 한 **FilterGroupEnum** 값 또는 배열 **책갈피** 이 옵션을 사용 하도록 합니다.|  

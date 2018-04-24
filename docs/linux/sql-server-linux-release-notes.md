@@ -4,7 +4,7 @@ description: 이 항목에서는 Linux에서 동작하는 SQL Server 2017에 대
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/04/2018
+ms.date: 04/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e768322cf8dc33e9d8995012f87088902c2e705
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -49,8 +49,9 @@ ms.lasthandoff: 04/05/2018
 
 | 릴리스 | 버전 | 릴리스 날짜 |
 |-----|-----|-----|
-| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
+| [CU6 적용](#CU6) | 14.0.3025.34 | 2018 4 |
+| [CU5](#CU5) | 14.0.3023.8 | 2018 3 |
+| [CU4](#CU4) | 14.0.3022.28 | 2018 2 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -66,6 +67,20 @@ ms.lasthandoff: 04/05/2018
 - [전체 텍스트 검색 패키지 설치](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU6"></a> Cu6 적용 (2018 년 4 월)
+
+이 SQL Server 2017의 누적 업데이트 6 (cu6)가 적용 릴리스입니다. 이 릴리스에 대 한 SQL Server 엔진 버전 14.0.3025.34입니다. 수정 사항 및이 릴리스에서 향상 된 기능에 대 한 정보를 참조 하십시오. [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 RPM 및 Debian 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.3025.34-3 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.3025.34-3 | [mssql 서버 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.3025.34-3 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[높은 가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU5"></a> CU5 (2018 년 3 월)
 

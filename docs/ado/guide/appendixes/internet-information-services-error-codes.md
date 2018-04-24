@@ -1,31 +1,31 @@
 ---
-title: "인터넷 정보 서비스 오류 코드 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 인터넷 정보 서비스 오류 코드 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcffff281bcd3f537dcf696e5a2ff374ebe56e54
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f8049c588ff230a5f9339bb932af10e9f9fe65eb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 인터넷 정보 서비스 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® 인터넷 정보 서비스 (IIS) 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수로 변환한 음의 10 진수로 변환한 전체 오류 코드 및 16 진수 값의 표시 됩니다.

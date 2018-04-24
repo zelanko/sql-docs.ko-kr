@@ -1,33 +1,33 @@
 ---
-title: "커서 위치의 중요성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 커서 위치의 중요성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - server-side cursors [ADO]
 - cursors [ADO], client-side
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71af2e383a1ee598e00789aae5045d5e475948e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bb82081d69a03cd7ab9b7a42cf5ed7fead811657
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-significance-of-cursor-location"></a>커서 위치의 중요성
 모든 커서는 해당 데이터를 저장할 임시 리소스를 사용 합니다. 이러한 리소스는 메모리, 디스크 페이징 파일, 임시 디스크 파일 또는 데이터베이스의 임시 저장소 될 수 있습니다. 커서 라고는 *클라이언트 쪽* 이러한 리소스는 클라이언트 컴퓨터에 있을 때 커서입니다. 커서 라고는 *서버 쪽* 커서 서버에 이러한 리소스가 있는 경우.  

@@ -1,17 +1,17 @@
 ---
-title: "Mode 속성 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Mode 속성 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Mode
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 032780415e0869c5994b4630546131b4ad51e8c4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f6ed032263810d32dd73d0e7356b8b3f30dbfecc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="mode-property-ado"></a>Mode 속성 (ADO)
 데이터 수정에 대 한 사용할 수 있는 권한을 나타냅니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  

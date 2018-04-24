@@ -1,32 +1,32 @@
 ---
-title: "버전 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 버전 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86d3b981271498ee8366ac2d8dea1f22d9e1ed61
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad683a4f532341e15fedfb40fc352806e6d12b9b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-property-example-vc"></a>버전 속성 예제 (VC + +)
 사용 하 여이 예제는 [버전](../../../ado/reference/ado-api/version-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  

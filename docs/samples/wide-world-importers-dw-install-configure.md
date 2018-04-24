@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e4328da10d2ec51083f3b1dbc23d6b0f5fa5da21
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,4 +78,4 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 1. SQL Server Management Studio에서 WideWorldImportersDW 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
 2. 데이터베이스에 PolyBase 사용 하도록 설정 하려면 다음 T-SQL 명령을 실행 합니다.
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+   [응용 프로그램]을 실행 합니다. [Configuration_ApplyPolyBase]

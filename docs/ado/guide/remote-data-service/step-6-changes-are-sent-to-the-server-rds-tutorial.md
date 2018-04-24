@@ -1,30 +1,30 @@
 ---
-title: "6 단계: (RDS 자습서) 서버에 변경 내용이 보내집니다 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '6 단계: (RDS 자습서) 서버에 변경 내용이 보내집니다 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a03d6178b9a8af36dedbda242e5e809a025bf1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 585d16d19f26bca19acb62b16cf6c48f52515677
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>(RDS 자습서) 서버에 변경 내용이 보내집니다 6 단계:
 경우는 **레코드 집합** 개체를 편집, 변경 (즉, 추가, 변경 또는 삭제 하는 행) 서버에 다시 보낼 수 있습니다.  

@@ -1,32 +1,33 @@
 ---
-title: "SQL Server 파트너 모니터링 | Microsoft Docs"
-description: "서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다."
+title: SQL Server 파트너 모니터링 | Microsoft Docs
+description: 서버를 모니터링할 솔루션이 있는 타사 파트너 목록입니다.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 0ddac5bf809c836c194e7b0f187a24e4ed060abe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c6873ceb09c2cb7f2f9761c9b5c0ffe74d8b4f3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 중에서 선택합니다. 이 문서에서는 Microsoft SQL Server를 지원하는 모니터링 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 중에서 선택합니다. 이 문서에서는 Microsoft SQL Server를 지원하는 모니터링 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 <!--
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)

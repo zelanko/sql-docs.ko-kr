@@ -1,29 +1,22 @@
 ---
-title: 잠금 동작 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 잠금 동작-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 병렬 데이터 웨어하우스 사용 하는 방법을 잠금 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해에 대해 알아봅니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>잠금 동작
-SQL Server PDW에서 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해 잠금을 사용 합니다.  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 잠금 동작
+병렬 데이터 웨어하우스 사용 하는 방법을 잠금 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해에 대해 알아봅니다.  
   
 ## <a name="Basics"></a>잠금 기본 사항  
 **모드**  
@@ -81,7 +74,7 @@ SQL Server에는 다음과 같은 유형의 잠금 지원합니다. 모든 잠�
   
 -   UIX (업데이트 의도 배타)입니다. 잠금 계층 구조의 하위 리소스에 대한 배타적 잠금을 획득하기 위해 리소스에 업데이트 잠금을 보유함을 표시합니다.  
   
--   BU. 대량 작업에 사용합니다.  
+-   BU 합니다. 대량 작업에 사용합니다.  
   
 -   RangeS_S (공유 키 범위 및 공유 리소스 잠금). 직렬화 가능 범위 검색을 표시합니다.  
   
@@ -91,9 +84,9 @@ SQL Server에는 다음과 같은 유형의 잠금 지원합니다. 모든 잠�
   
 -   RangeI_S. RangeI_N 잠금과 S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_U. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_U 합니다. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_X. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_X 합니다. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
 -   RangeX_S. RangeI_N 잠금과 RangeS_S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   

@@ -1,31 +1,31 @@
 ---
-title: "책갈피를 사용 하 여 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 책갈피를 사용 하 여 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2d4036cbe8205a4dd25c5a1f97ec490b20afa20
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 이동 하다가 특정 레코드에 직접 반환할 유용는 **레코드 집합** 모든 레코드를 스크롤하여 이동 하며 값을 비교할 필요 없이 합니다. 예를 들어, 사용 하 여 레코드를 검색 하려고 하면는 **찾을** 메서드 하지만 검색 레코드가 반환의 한쪽 끝에서 자동으로 배치 됩니다는 **레코드 집합**합니다. 위치를 표시 한 사용 하기 전에 책갈피를 사용할 수 공급자가 지 원하는, 경우는 **찾을** 메서드를 통해 위치를 반환할 수 있도록 합니다. 책갈피는는 **Variant** 의 레코드를 고유 하 게 식별 하는 값을 입력 한 **레코드 집합** 개체입니다.  

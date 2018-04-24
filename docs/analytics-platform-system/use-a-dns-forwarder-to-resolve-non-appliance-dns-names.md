@@ -1,28 +1,21 @@
 ---
-title: DNS 전달자를 사용 하 여 비 어플라이언스 DNS 이름 (APS)를 해결 하려면
-author: barbkess
-ms.author: barbkess
+title: 분석 플랫폼 시스템에는 DNS 전달자를 사용 하 여 | "Microsoft Docs
+description: 분석 플랫폼 시스템의 비 어플라이언스 DNS 이름을 확인 하는 DNS 전달자를 사용 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>비 어플라이언스 DNS 이름을 확인 하기 위해 DNS 전달자를 사용 합니다.
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>분석 플랫폼 시스템에 비 어플라이언스 DNS 이름을 확인 하기 위해 DNS 전달자를 사용 합니다.
 Active Directory 도메인 서비스 노드에서 DNS 전달자를 구성할 수 있습니다 (***appliance_domain *-AD01** 및 ***appliance_domain *-AD02**) 수 있도록 분석 플랫폼 시스템 어플라이언스의 스크립트와 소프트웨어 응용 프로그램 외부 서버에 액세스할 수 있습니다.  
   
 ## <a name="ResolveDNS"></a>DNS 전달자를 사용 하 여  

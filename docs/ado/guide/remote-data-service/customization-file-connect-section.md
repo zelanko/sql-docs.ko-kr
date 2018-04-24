@@ -1,31 +1,31 @@
 ---
-title: "사용자 지정 파일 연결 섹션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 사용자 지정 파일 연결 섹션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bc00af717ef3161f414525f109236b0aba0c442e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **연결** 섹션 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든는 **연결** 섹션 된 absent 이거나 비어 있는 경우 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  

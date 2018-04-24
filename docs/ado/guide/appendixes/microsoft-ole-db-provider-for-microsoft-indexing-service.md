@@ -1,32 +1,32 @@
 ---
-title: "Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f84d13fa3f4e2da728c914f2228233a04e64643f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색할 SQL 쿼리를 실행할 수 있습니다.
@@ -114,7 +114,7 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|
 |[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|

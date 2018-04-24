@@ -1,31 +1,31 @@
 ---
-title: "Analysis Services 설치 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1810a2de0e4337bfae9a387e98e933dc0a922a4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
+  SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
   
  Analysis Services는 다중 인스턴스는 단일 컴퓨터에 복사본 여러 개 설치 하거나 신규 버전과 기존 버전-side-by-side 실행 수를 의미 합니다. 설치한 모든 인스턴스는 설치 도중 결정된 세 가지 모드(다차원 및 데이터 마이닝, 테이블 형식 또는 SharePoint) 중 하나로 실행됩니다. 다중 모드를 사용하려면 각 모드에 대한 별도의 인스턴스가 필요합니다.  
   
@@ -64,7 +64,7 @@ SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 �
   
 ```  
   
-Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
+Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  **INSTANCENAME** 은 17자 미만이어야 합니다.  

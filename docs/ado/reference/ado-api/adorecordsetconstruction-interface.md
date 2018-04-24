@@ -1,33 +1,33 @@
 ---
-title: "ADORecordsetConstruction 인터페이스 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADORecordsetConstruction 인터페이스 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c19ec5d0b2439af92306dc655520a25b7ed5bc51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 **ADORecordsetConstruction** 인터페이스 사용 하는 ADO 생성 **레코드 집합** OLE DB에서 개체 **행 집합** C/c + + 응용 프로그램의 개체입니다.  

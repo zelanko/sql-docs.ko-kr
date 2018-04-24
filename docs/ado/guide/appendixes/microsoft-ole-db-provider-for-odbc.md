@@ -1,31 +1,31 @@
 ---
 title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -222,7 +222,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니오|사용자 계정 컨트롤|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
 |[업데이트](../../../ado/reference/ado-api/update-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |DBMS 이름|DBPROP_DBMSNAME|
 |DBMS 버전|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|지원 기준으로 그룹화|DBPROP_GROUPBY|
+|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |초기 카탈로그|DBPROP_INIT_CATALOG|
@@ -263,8 +263,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
 |위치|DBPROP_INIT_LOCATION|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
-|최대 행 크기|DBPROP_MAXROWSIZE|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
+|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
 |BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |모드|DBPROP_INIT_MODE|
@@ -272,7 +272,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
 |여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
 |NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
@@ -284,14 +284,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |영구 ID 유형|DBPROP_PERSISTENTIDTYPE|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
 |프로시저 용어가|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
 |스키마 사용|DBPROP_SCHEMAUSAGE|

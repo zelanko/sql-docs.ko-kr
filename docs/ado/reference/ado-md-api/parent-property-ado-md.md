@@ -1,17 +1,17 @@
 ---
-title: "부모 속성 (ADO MD) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 부모 속성 (ADO MD) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Parent
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Parent property [ADO MD]
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7079b2e3c5871c8f048632fd854266a08dcf672e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bcbecb5a787c6ae37d6858c1371b335c2e25911a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parent-property-ado-md"></a>ADO MD parent 속성
 현재 부모 멤버를 나타냅니다 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 계층에 있습니다.  

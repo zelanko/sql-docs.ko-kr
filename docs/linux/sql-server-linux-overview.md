@@ -1,25 +1,25 @@
 ---
-title: "SQL Server on Linux 개요 | Microsoft Docs"
-description: "이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 및 자세한 학습 방법에 대한 정보를 제공합니다."
+title: SQL Server on Linux 개요 | Microsoft Docs
+description: 이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 및 자세한 학습 방법에 대한 정보를 제공합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6542e86862b64b3c880cc3300a37384c28ab039d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -60,3 +60,5 @@ SQL Server에 이미 익숙한 경우, [릴리스 정보](sql-server-linux-relea
 > 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](sql-server-linux-faq.md)합니다.
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

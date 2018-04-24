@@ -1,32 +1,32 @@
 ---
-title: "지원 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 지원 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f078404d2f524b0ae98cf875724a744f8b0d034e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 112c820325e0cc28ebd5ee28adf6459f742fcd04
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="supports-method-example-vb"></a>메서드 예제 (VB)를 지원합니다.
 사용 하 여이 예제는 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 절차는이 절차를 실행 하려면 필요 합니다.  

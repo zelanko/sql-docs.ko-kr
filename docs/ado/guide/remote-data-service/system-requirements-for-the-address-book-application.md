@@ -1,31 +1,31 @@
 ---
-title: "응용 프로그램을 예약 하는 주소에 대 한 시스템 요구 사항 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 응용 프로그램을 예약 하는 주소에 대 한 시스템 요구 사항 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d182b879a9b99cafb2624613dc05a7416160f47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7fcb6383a8104834975d7e5988276b5004648367
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 응용 프로그램에 대 한 시스템 요구 사항
 주소록 예제 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항에 맞게 필요:  

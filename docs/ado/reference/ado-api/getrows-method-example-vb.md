@@ -1,32 +1,32 @@
 ---
-title: "GetRows 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: GetRows 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b962fb703230b94e72d8ba22893e970bd5f4f08
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59a7efc09b2883889195ffeaa98bcd0dcab50948
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 메서드 예제 (VB)
 사용 하 여이 예제는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 행에서 지정 된 수를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 결과 데이터 배열을 채우는 합니다. **GetRows** 메서드 수의 행 보다 적은 두 가지 경우에 반환 됩니다: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가을 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  

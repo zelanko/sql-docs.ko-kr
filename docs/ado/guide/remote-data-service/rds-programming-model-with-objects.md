@@ -1,31 +1,31 @@
 ---
-title: "RDS 프로그래밍 모델 개체와 사용 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: RDS 프로그래밍 모델 개체와 사용 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da0fee3543f3e684f403f11bad5a613e9f4cac21
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 프로그래밍 모델 개체와 사용
 RDS의 목표 액세스 하 고 IIS와 같은 매개 자를 통해 데이터 소스를 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 작업 순서를 지정 합니다. 개체 모델 메서드와 속성이 프로그래밍 모델에 영향을 줄 개체를 지정 합니다.  

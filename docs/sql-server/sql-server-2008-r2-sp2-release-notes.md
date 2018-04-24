@@ -1,33 +1,32 @@
 ---
-title: "SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서"
-ms.prod: sql-non-specified
+title: SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+이 릴리스 정보 문서에서는 Microsoft SQL Server 2008 R2 서비스 팩 2를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 SQL Server 2008 R2 SP2의 모든 버전에 적용되며 온라인으로만 볼 수 있습니다. 문서는 주기적으로 업데이트됩니다.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 서비스 팩 2의 새로운 기능  
 DMV(동적 관리 뷰) **sys.dm_db_stats_properties**. 이 DMV를 사용하여 지정된 테이블 또는 현재 데이터베이스에 있는 인덱싱된 뷰에 대한 통계 속성을 반환할 수 있습니다. 예를 들어, 이 DMV는 샘플링된 행 수와 히스토그램에 있는 단계 수를 반환합니다.  
@@ -67,6 +66,6 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 이 서비스 팩에서 해결된 알려진 문제  
 이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 이 [마스터 KB 문서](http://support.microsoft.com/kb/2630455)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL  Server  버전 및 에디션 확인 방법](http://support.microsoft.com/kb/321185)  
   

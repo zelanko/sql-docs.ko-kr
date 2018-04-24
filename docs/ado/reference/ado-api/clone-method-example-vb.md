@@ -1,32 +1,32 @@
 ---
-title: "Clone 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Clone 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], Visual Basic example
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e12ea632c58e1b9c332d6b981551baa404c82371
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4b84981e9d8a98136e7b2395274ead8c0335efae
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clone-method-example-vb"></a>Clone 메서드 예제 (VB)
 사용 하 여이 예제는 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만들고 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 배치 하는 사용자 지정할 수 있도록 합니다.  

@@ -1,17 +1,17 @@
 ---
-title: "범위란, CopyTo 및 SaveToFile 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 범위란, CopyTo 및 SaveToFile 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 624484f7783449fa0793ee934217a3ae76dba865
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ccdaf87b01a6dd09ced9e94301e73ab9cfeb38db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>범위란, CopyTo 및 SaveToFile 메서드 예제 (VB)
 사용 하 여 파일의 복사본을 만드는 방법을 보여 주는이 예제 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 하나의 복사본이 인터넷 게시에 대 한 웹 폴더에 생성 됩니다. 다른 속성 및 메서드로 표시 된 [스트림 형식](../../../ado/reference/ado-api/type-property-ado-stream.md), **열려**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드가 열려](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  

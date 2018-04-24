@@ -1,6 +1,6 @@
 ---
 title: 처리기 속성 (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa363b9fa9761eb764a7bf2aa7b9d4eb992ec65b
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: cb8259abb53f57fc21b53329b0de0ac94cfbcefc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="handler-property-rds"></a>처리기 속성 (RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타냅니다는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수는 *처리기*합니다.  

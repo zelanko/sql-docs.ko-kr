@@ -1,29 +1,22 @@
 ---
-title: 어플라이언스 관리 작업 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스 관리 작업-분석 플랫폼 시스템 | Microsoft Docs
+description: 이 가이드에서는 Analytics Platform System (APS)에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
-caps.latest.revision: 25
-ms.openlocfilehash: 584de02b3a22224de8b60ba476259a98de31c0ba
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-management-tasks"></a>어플라이언스 관리 작업
-이 가이드는 SQL Server PDW에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.  
+# <a name="appliance-management-tasks-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 기기 관리 작업
+이 가이드에서는 Analytics Platform System (APS)에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.  
   
 ## <a name="guide-sections"></a>가이드 섹션  
   

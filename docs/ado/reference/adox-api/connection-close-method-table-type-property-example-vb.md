@@ -1,33 +1,33 @@
 ---
-title: "연결 닫기 메서드를 테이블 형식 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 닫기 메서드를 테이블 형식 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bdc520343baf5e00091aab8d683b6e6ea8456f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69019c3a7cc9af1d841ea5fbb27be5180fd2c95e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>테이블 형식 속성 예제 (VB) 연결 Close 메서드
 설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 카탈로그에 대 한 연결을 종료 해야 합니다. 연결된 컬렉션은 비어 있게 됩니다. 카탈로그의 스키마 개체에서 생성 된 모든 개체가 분리 됩니다. 캐시 된 경우 해당 개체에 속성을 사용할 수 있지만 공급자를 호출 하는 속성을 읽는 시도 실패 합니다.  

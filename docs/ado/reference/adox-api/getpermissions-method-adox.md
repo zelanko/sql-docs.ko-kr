@@ -1,17 +1,17 @@
 ---
-title: "GetPermissions 메서드 (ADOX) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: GetPermissions 메서드 (ADOX) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _User25::GetPermissions
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 280a63c18cdabd173c9a8ea1d9b2bbd6db7b02a1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5952d4970fdcac7a28c121b4ca3457384fe31691
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 메서드 (ADOX)
 에 대 한 사용 권한을 반환 하는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체나 개체 컨테이너에 있습니다.  

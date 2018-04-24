@@ -1,31 +1,31 @@
 ---
-title: "충돌 감지 및 해결 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 충돌 감지 및 해결 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
 직접 실행 모드에서 레코드 집합으로 처리 하는 경우 훨씬 더 적은 동시성 문제가 발생할 가능성이 있습니다. 반면에 응용 프로그램에서 일괄 업데이트 모드를 사용 하는 경우 있을 수 있습니다 좋은 변경 동일한 레코드를 편집 하는 다른 사용자가 수행한 변경 내용을 저장 하기 전에 사용자 레코드를 변경 합니다. 이 경우 응용 프로그램을 정상적으로 충돌을 처리 합니다. 마지막 사용자에 대 한 업데이트는 서버에 보내도록 "알고리즘이 적용 됩니다." 내리 세요 수 있습니다. 또는 가장 최근 사용자가 업데이트 우선 그 제공 두 개의 충돌 하는 값 중 하나를 선택 하 여 결정을 할 수 있습니다.  

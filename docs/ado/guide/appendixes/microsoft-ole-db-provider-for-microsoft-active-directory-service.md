@@ -1,33 +1,33 @@
 ---
-title: "Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider
 서비스 인터페이스 ADSI (Active Directory) 공급자 ADO를 ADSI 통해 유형이 다른 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램에서는 읽기 전용 액세스할 모든 LDAP 호환 디렉터리 서비스 및 Novell 디렉터리 서비스 외에 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스에 있습니다. ADO 응용 프로그램 원활 하 게 액세스할 수 없는 경우 다른 디렉터리에 새 공급자 주어진 액세스, 있도록 ADSI 자체 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드 및 유니코드를 사용할 수 있습니다.  
@@ -73,13 +73,13 @@ ADSDSOObject
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
 |*범위*|(선택 사항) A **문자열** 검색 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> 밑수가-기준 개체 (검색의 루트)를 검색 합니다.<br />-기준 개체를 검색 한 수준입니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
- 예를 들어  
+ 예를 들어:  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- 공급자도 지원 SQL SELECT 명령 텍스트에 대 한 합니다. 예를 들어  
+ 공급자도 지원 SQL SELECT 명령 텍스트에 대 한 합니다. 예를 들어:  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -138,7 +138,7 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|  
 |[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|예|  
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
 |[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|  

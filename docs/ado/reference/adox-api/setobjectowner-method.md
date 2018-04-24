@@ -1,17 +1,17 @@
 ---
-title: "SetObjectOwner 메서드 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SetObjectOwner 메서드 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Catalog::SetObjectOwner
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35b592bf1503c457532d8988f0fd6e09f06115dd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a3d3642d0641a55bdb476998b722a04dc81edf10
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 메서드
 에 있는 개체의 소유자를 지정 된 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다.  

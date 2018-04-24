@@ -1,30 +1,30 @@
 ---
-title: "3 단계: 서버 가져옵니다 (RDS 자습서) 레코드 집합 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '3 단계: 서버 가져옵니다 (RDS 자습서) 레코드 집합 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a55083897b680ece362fe734f3f4a4cd97db4d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>3 단계: 서버가 가져옵니다 (RDS 자습서) 레코드 집합을
 서버 프로그램 연결 문자열 및 명령 텍스트를 사용 하 여 원하는 행에 대 한 데이터 원본을 쿼리할 수 있습니다. ADO는 일반적으로 검색 하는 데이 **레코드 집합**OLE DB를 사용할 수와 같은 다른 Microsoft 데이터 액세스 인터페이스, 하지만, 합니다.  

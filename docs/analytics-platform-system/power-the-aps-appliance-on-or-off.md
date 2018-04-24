@@ -1,28 +1,21 @@
 ---
-title: APS 기기 (분석 플랫폼 시스템)를 끄거나 전원
-author: barbkess
-ms.author: barbkess
+title: 전원을 켜거나-분석 플랫폼 시스템 기기 | Microsoft Docs
+description: 분석 플랫폼 시스템에 대 한 기기를 끄거나 전원
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>APS 기기를 켜거나 전원을
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 기기를 끄거나 전원
 이 항목에서는 전원을 켜거나 전원을 끄고 병렬 데이터 웨어하우스를 실행 하 고 필요에 따라 HDInsight 지역이 실행 하 여 분석 플랫폼 Systemappliance 하는 방법을 설명 합니다. 사용 하 여이 항목 분석 플랫폼 시스템 기기를 이동할 때 전원 기기에서 치명적인 정전 후.  
   
 어플라이언스에 켜거나 전원을 켜는 중 않습니다 기기 서비스 시작 및 중지와 동일 합니다. 해당 주제에 대 한 자세한 내용은 참조 하십시오. [PDW 서비스 상태 &#40;분석 플랫폼 시스템&#41;](pdw-services-status.md)합니다. SQL Server 2008 병렬 데이터 웨어하우스를 켜거나 전원을 켜는 중에 대 한 내용은 SQL Server 2008 병렬 데이터 웨어하우스 도움말 파일을 참조 하십시오. 전원을 켜는 중 또는 SQL Server 2012 AU1 또는 AU2 병렬 데이터 웨어하우스를 해제 하는 방법에 대 한 내용은 해당 버전에 대 한 도움말 파일을 참조 하십시오.  

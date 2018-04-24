@@ -1,30 +1,30 @@
 ---
-title: "DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c9f797023e5a6893dd6370ddf9245c066435227c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록
 사용자 지정 비즈니스 개체는 클라이언트 쪽 DCOM을 통해 사용할 수 있는 식별자 (CLSID)를 해당 프로그램 이름 progid (프로그램)를 매핑할 수 있는지 확인 해야 합니다. 이러한 이유로 DCOM 개체의 ProgID 클라이언트 레지스트리에 여야 하며 서버 쪽 비즈니스 개체의 클래스 ID에 매핑됩니다. 다른 지원 되는 프로토콜 (HTTP, HTTPS 및 프로세스)이 필요는 없습니다.  

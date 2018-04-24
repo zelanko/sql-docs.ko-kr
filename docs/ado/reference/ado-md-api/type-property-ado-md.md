@@ -1,17 +1,17 @@
 ---
-title: "Type 속성 (ADO MD) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Type 속성 (ADO MD) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Member::Type
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO MD]
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3affa9a3d7d5a10c3a423a7e2015d79339c23f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2b41211b9933090c62ce8f5af2a685bf4472cfb9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-ado-md"></a>Type 속성 (ADO MD)
 현재 형식을 나타내는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  

@@ -1,30 +1,23 @@
 ---
-title: 원격 테이블 복사본 (PDW)을 받을 수 외부 SMP SQL Server 구성
-author: barbkess
-ms.author: barbkess
+title: SQL Server 병렬 데이터 웨어하우스-원격 테이블 복사본을 받을 수 구성 | Microsoft Docs
+description: 병렬 데이터 웨어하우스 로부터 원격 테이블 복사본을 받을 수 외부 SMP SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: 13
-ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>원격 테이블 복사본을 받을 수는 외부 SMP SQL Server 구성
-SQL Server PDW에서 원격 테이블 복사본을 받을 수 외부 SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.  
-  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>병렬 데이터 웨어하우스-원격 테이블 복사본을 받을 수는 외부 SMP SQL Server 구성
+병렬 데이터 웨어하우스 로부터 원격 테이블 복사본을 받을 수 외부 SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.  
+
 이 항목에서는 원격 테이블 복사본을 구성 하기 위한 구성 단계 중 하나. 목록이 모든 구성 단계에 대 한 참조 [원격 테이블 복사](remote-table-copy.md)합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  

@@ -1,33 +1,33 @@
 ---
-title: "Append 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Append 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _DynaCollection::Append
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c7007b09de937c013f7da1605ea78093d7a4ce51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-ado"></a>Append 메서드 (ADO)
 컬렉션에 개체를 추가합니다. 컬렉션의 경우 [필드](../../../ado/reference/ado-api/fields-collection-ado.md), 새 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션에 추가 하기 전에 개체를 만들 수 있습니다.  
@@ -78,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue* 추가 하는 경우에 매개 변수는 유효한만 **필드** 개체를 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 아니라 개체는 **레코드 집합** 개체입니다. 와 **레코드** 개체 필드를 추가 하 고 동시에 값을 제공할 수 있습니다. 와 **레코드 집합** 개체를 하는 동안 필드를 만들어야 합니다는 **레코드 집합** , 닫혀 있고 연 다음는 **레코드 집합** 필드에 값을 할당 하 고 있습니다.  
   
 > [!NOTE]
->  새 **필드** 에 추가 된 개체는 **필드** 의 컬렉션을 **레코드** 개체는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성을 설정 해야 다른 모든 하기 전에 **필드** 속성을 지정할 수 있습니다. 먼저, 특정 값에 대 한는 **값** 속성이 할당 해야 하 고 [업데이트](../../../ado/reference/ado-api/update-method.md) 에 **필드** 이라는 컬렉션. 그런 다음 같은 다른 속성과 [형식](../../../ado/reference/ado-api/type-property-ado.md) 또는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 액세스할 수 있습니다. **필드** 다음 데이터 형식의 개체 (**DataTypeEnum**)에 추가할 수 없습니다는 **필드** 컬렉션 되려면 오류가 발생 합니다: **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, 및 **adUserDefined**합니다. 또한, 다음 데이터 형식은 ADO에서 지원 되지 않습니다: **adIDispatch**, **adIUnknown**, 및 **adIVariant**합니다. 이러한 형식에 대 한 추가할 때 오류가 발생 하지만 사용 메모리 누수와 같은 예기치 않은 결과 생성할 수 있습니다.  
+>  새 **필드** 에 추가 된 개체는 **필드** 의 컬렉션을 **레코드** 개체는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성을 설정 해야 다른 모든 하기 전에 **필드** 속성을 지정할 수 있습니다. 먼저, 특정 값에 대 한는 **값** 속성이 할당 해야 하 고 [업데이트](../../../ado/reference/ado-api/update-method.md) 에 **필드** 이라는 컬렉션. 그런 다음 같은 다른 속성과 [형식](../../../ado/reference/ado-api/type-property-ado.md) 또는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 액세스할 수 있습니다. **필드** 다음 데이터 형식의 개체 (**DataTypeEnum**)에 추가할 수 없습니다는 **필드** 컬렉션 되려면 오류가 발생 합니다. **adArray**, **adChapter**, **adEmpty**, **adPropVariant**, 및 **adUserDefined**합니다. 또한, 다음 데이터 형식은 ADO에서 지원 되지 않습니다: **adIDispatch**, **adIUnknown**, 및 **adIVariant**합니다. 이러한 형식에 대 한 추가할 때 오류가 발생 하지만 사용 메모리 누수와 같은 예기치 않은 결과 생성할 수 있습니다.  
   
 ## <a name="recordset"></a>레코드 집합  
  설정 하지 않은 경우는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 호출 하기 전에 속성에서 **Append** 메서드를 **앞** 로 설정 됩니다 **adUseClient** ( [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) 값) 될 때 자동으로 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 의 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 호출 합니다.  

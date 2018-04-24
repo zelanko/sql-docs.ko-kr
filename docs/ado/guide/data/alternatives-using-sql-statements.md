@@ -1,32 +1,32 @@
 ---
-title: "대체 방법: SQL 문을 사용 하 여 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '대체 방법: SQL 문을 사용 하 여 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ADO]
 - editing data [ADO], sql statements
 - ADO, SQL statements
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85831e635103ec622414af7a77d545fb470c3f7e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 40d0554ed5dc50f4b059de510d17608fb33077c6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alternatives-using-sql-statements"></a>대체 방법: SQL 문 사용
 ADO는 명령을 기본 제공 속성 및 데이터를 편집 하기 위한 메서드를 사용 하 여 수도 있습니다. 공급자에 따라,이 섹션에 언급 된 모든 작업도 가능 데이터 원본에 명령을 전달 합니다. SQL UPDATE 문을 사용 하지 않고 데이터를 수정 하려면 예를 들어 사용할 수는 **값** 속성은 **필드**합니다. ADO 메서드가 아니라 데이터 원본에 새 레코드를 추가 SQL insert를 사용할 수 **AddNew**합니다. SQL 또는 공급자의 데이터 조작 언어에 대 한 자세한 내용은 데이터 원본의 설명서를 참조 합니다.  

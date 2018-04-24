@@ -1,27 +1,21 @@
 ---
-title: 분석 플랫폼 시스템 하드웨어 구성 요소
-author: barbkess
-ms.author: barbkess
+title: 하드웨어 구성 요소-분석 플랫폼 시스템 | Microsoft Docs
+description: Analytics Platform System (APS) 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구입할 수 있도록 확장 가능한 구성 요소를 사용 합니다. APS을 주문할 때 이러한 핵심 하드웨어 구성 요소 조합을 해야 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Analytics Platform System (APS) 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구입할 수 있도록 확장 가능한 구성 요소를 사용 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
-caps.latest.revision: 17
-ms.openlocfilehash: 4b972c4b926463a67588c4ee41ed0157da7cdc80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9bb7b67a896164fe29611da2091e02c700c46970
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-hardware-components"></a>분석 플랫폼 시스템 하드웨어 구성 요소
+# <a name="hardware-components-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 하드웨어 구성 요소
 
 Analytics Platform System (APS) 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구입할 수 있도록 확장 가능한 구성 요소를 사용 합니다. APS을 주문할 때 이러한 핵심 하드웨어 구성 요소 조합을 해야 합니다. 특정 하드웨어 공급 업체 다른 명명 규칙을 사용 하거나 추가 구성 요소가 필요.  
  

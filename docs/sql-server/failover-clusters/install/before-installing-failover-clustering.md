@@ -1,36 +1,36 @@
 ---
-title: "장애 조치(Failover) 클러스터링을 설치하기 전에 | Microsoft 문서"
-ms.custom: 
+title: 장애 조치(Failover) 클러스터링을 설치하기 전에 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 
+caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 61839a9371b86805b6b939c2b6fbe0f86d42c64e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-SQL Server 장애 조치(Failover) 클러스터를 설치하기 전에 SQL Server에서 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
+  SQL Server 장애 조치(Failover) 클러스터를 설치하기 전에 SQL Server에서 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  
   
  Windows 클러스터에 로컬 디스크 드라이브가 있고, 하나 이상의 클러스터 노드에서 같은 드라이브 문자가 공유 드라이브로 사용된 경우 해당 드라이브에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 설치할 수 없습니다.  
   
@@ -229,7 +229,7 @@ SQL Server 장애 조치(Failover) 클러스터를 설치하기 전에 SQL Serve
   
 ##  <a name="WSFC"></a> Windows Server 장애 조치(Failover) 클러스터 구성  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service)는 하나 이상의 서버 클러스터 노드에 구성되어야 합니다. 또한 WSFC와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard를 실행해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise는 최대 16개의 노드로 구성된 장애 조치(Failover) 클러스터를 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard는 2 노드 장애 조치(failover) 클러스터를 지원합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service(WSFC)는 하나 이상의 서버 클러스터 노드에 구성되어야 합니다. 또한 WSFC와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard를 실행해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise는 최대 16개의 노드로 구성된 장애 조치(Failover) 클러스터를 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard는 2 노드 장애 조치(failover) 클러스터를 지원합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 리소스 DLL은 WSFC 클러스터 관리자에서 사용되는 두 함수를 내보내 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스의 가용성을 검사합니다. 자세한 내용은 [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)을 참조하세요.  
   

@@ -1,33 +1,33 @@
 ---
-title: "IsolationLevel 및 모드 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: IsolationLevel 및 모드 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d59b27059ee4249bebbe3d35129a755e91544895
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd99808954a10c715eef8526c01f8c7dfc90e64a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 모드 속성 예제 (VB)
 사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  

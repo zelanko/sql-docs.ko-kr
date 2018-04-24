@@ -1,17 +1,17 @@
 ---
-title: "모두, LockType, 및 EditMode 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 모두, LockType, 및 EditMode 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ab38e935694c17d27d8a451465e217129b1b3a0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3b5308a04e71a29e6544419ddbe28d1eb8f117e2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>모두, LockType, 및 EditMode 속성 예제 (VC + +)
 이 예제에서는 설정 된 [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성 열기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 또한의 값을 표시는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건에서 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  

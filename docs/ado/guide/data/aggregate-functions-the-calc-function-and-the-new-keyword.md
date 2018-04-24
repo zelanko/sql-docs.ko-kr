@@ -1,33 +1,33 @@
 ---
-title: "집계 함수, CALC 함수 및 NEW 키워드 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 집계 함수, CALC 함수 및 NEW 키워드 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
 - CALC function [ADO]
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f490ca1a9e95f92d39367c3914b5a0ea5cf0c9a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정 다음 기능을 지원 합니다. 작업을 수행할 열을 포함 하는 장에 할당 된 이름은 *장 별칭*합니다.  
@@ -41,16 +41,16 @@ ms.lasthandoff: 02/09/2018
 |MAX (*장 별칭*. *열 이름*)|지정 된 열의 최대값을 계산합니다.|  
 |MIN (*장 별칭*. *열 이름*)|지정 된 열의 최소값을 계산합니다.|  
 |COUNT(*chapter-alias*[.*column-name*])|지정된 된 별칭의 행 수를 계산합니다. 열을 지정 하는 경우를 해당 열이 Null이 아닌 행만 개수에 포함 됩니다.|  
-|STDEV(*chapter-alias*.*column-name*)|지정 된 열의 표준 편차를 계산 합니다.|  
+|STDEV (*장 별칭*. *열 이름*)|지정 된 열의 표준 편차를 계산 합니다.|  
 |모든 (*장 별칭*. *열 이름*)|지정 된 열의 값입니다. 모든 열의 값이 장에 있는 모든 행에 대해 동일 하 게 하는 경우에 예측 가능한 값을 갖습니다.<br /><br /> **참고** 장에 있는 행에 대해 동일한 값이 포함 되지 않은 열, SHAPE 명령 임의로 반환 ANY 함수의 값으로 값 중 하나입니다.|  
   
 |계산 된 식|Description|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|행에만 임의의 식을 계산는 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
+|계산 (*식*)|행에만 임의의 식을 계산는 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
   
 |NEW 키워드|Description|  
 |-----------------|-----------------|  
-|새 *필드 형식* [(*너비* &#124; *배율* &#124; *정밀도* &#124; *오류* [, *배율* &#124; *오류*])]|에 지정 된 형식의 빈 열에 추가 된 **레코드 집합**합니다.|  
+|새 *필드 형식* [(*너비* &#124; *배율* &#124; *정밀도* &#124; *오류*[, *배율* &#124; *오류*])]|에 지정 된 형식의 빈 열에 추가 된 **레코드 집합**합니다.|  
   
  *필드 형식* 새 키워드와 함께 전달 된 다음 데이터 형식 중 하나가 될 수 있습니다.  
   

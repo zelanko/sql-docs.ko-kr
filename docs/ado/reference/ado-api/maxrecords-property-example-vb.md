@@ -1,32 +1,32 @@
 ---
-title: "MaxRecords 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: MaxRecords 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89a1d7e9ecc360bb5a92cb4a9584c93cbc2ca8ce
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3f59c12cae5ff2b8ce4c78602b7f47d13fbde6f5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 속성 예제 (VB)
 사용 하 여이 예제는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성 열을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 10 개의 가장 비싼 책 제목을 포함 하는 ***타이틀*** 테이블입니다.  

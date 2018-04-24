@@ -1,17 +1,17 @@
 ---
-title: "이벤트 매개 변수 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 이벤트 매개 변수 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
 - Object parameter [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에 이벤트 처리기를 제어 하는 상태 매개 변수입니다. 전체 이벤트에 대 한이 매개 변수는 이벤트를 생성 하는 작업의 성공 여부를 나타내는 것도 사용 됩니다. 가장 완전 이벤트 발생 하는 모든 오류 및 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수 하는 방법에 대 한 정보를 제공 하는 오류 매개 변수를 갖게 됩니다. 예를 들어는 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 에 대 한 개체 매개 변수를 포함 하는 이벤트는 **명령**, **레코드 집합**, 및 **연결** 개체 이벤트와 연결 합니다. 다음 Microsoft® Visual Basic® 예에서 pCommand, pRecordset, 및 pConnection 개체를 나타냅니다를 볼 수는 **명령**, **레코드 집합**, 및 **연결** 에서 사용 되는 개체는 **Execute** 메서드.  

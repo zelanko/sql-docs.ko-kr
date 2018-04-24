@@ -1,30 +1,30 @@
 ---
-title: "1 단계: 서버 프로그램 (RDS 자습서) 지정 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '1 단계: 서버 프로그램 (RDS 자습서) 지정 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eae6b17fc9277bd5e3c4cfe9259a026681252f0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c47ebabbb0560dafba7582714759f619f2438d24
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>1 단계: 서버 프로그램 (RDS 자습서) 지정
 가장 일반적인 경우에 사용 된 [.rds입니다 DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 기본 서버 프로그램 지정할 메서드가 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 또는 사용자 고유의 사용자 지정 서버 프로그램 (비즈니스 개체). 서버 프로그램은에서 서버에 서버 프로그램에 대 한 참조 인스턴스화되며 또는 *프록시*, 반환 됩니다.  

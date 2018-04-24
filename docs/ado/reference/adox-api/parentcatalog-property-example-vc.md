@@ -1,32 +1,32 @@
 ---
-title: "ParentCatalog 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ParentCatalog 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b98423b519809f94d1956971c9613bc4747632b3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9eeb1a844d93d2f20b0f1c8a9e9cbd1767482f5b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 속성 예제 (VC + +)
 다음 코드에서는 사용 하는 방법을 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 카탈로그에 테이블을 추가 하기 전에 공급자별 속성에 액세스 하는 속성입니다. 속성은 **AutoIncrement**, Microsoft Jet 데이터베이스의 자동 증분 필드 만듭니다.  

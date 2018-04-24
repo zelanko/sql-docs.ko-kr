@@ -1,6 +1,6 @@
 ---
 title: Microsoft OLE DB Provider for SQL Server | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2ec6a57af7dcc0e964445800823aef1c13aa1a4a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server, SQLOLEDB Microsoft SQL Server에 액세스 하는 ADO 수 있습니다.
@@ -163,22 +163,22 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |DBMS 이름|DBPROP_DBMSNAME|
 |DBMS 버전|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|지원 기준으로 그룹화|DBPROP_GROUPBY|
+|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |초기 카탈로그|DBPROP_INIT_CATALOG|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
-|최대 행 크기|DBPROP_MAXROWSIZE|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
+|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
 |BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
 |여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
 |NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
 |OLE 개체 지원|DBPROP_OLEOBJECTS|
@@ -189,14 +189,14 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |암호|DBPROP_AUTH_PASSWORD|
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |영구 ID 유형|DBPROP_PERSISTENTIDTYPE|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
 |프로시저 용어가|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
 |스키마 사용|DBPROP_SCHEMAUSAGE|

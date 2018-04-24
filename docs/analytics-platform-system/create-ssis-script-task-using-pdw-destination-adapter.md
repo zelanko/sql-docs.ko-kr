@@ -1,28 +1,22 @@
 ---
-title: SSIS PDW 대상 어댑터를 사용 하는 스크립트 태스크를 만드는 방법
-author: barbkess
-ms.author: barbkess
+title: 스크립트 태스크를 SSIS PDW 대상 어댑터 만들기 | Microsoft Docs
+desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
-caps.latest.revision: 8
-ms.openlocfilehash: d10bdf6dc8bd403ea29a928d1a89319cbb19f9f6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>SSIS PDW 대상 어댑터를 사용 하는 스크립트 태스크를 만드는 방법
-Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하기 위한 코드 예제입니다.  
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>병렬 데이터 웨어하우스 SSIS 대상 어댑터를 사용 하는 스크립트 태스크 만들기
+이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하기 위한 코드 예제입니다.  Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 
   
 ## <a name="sample-code"></a>예제 코드  
   

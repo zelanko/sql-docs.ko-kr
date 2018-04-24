@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치) | Microsoft 문서"
-ms.custom: 
+title: SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/22/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading clusters
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7bdf71944c3ac248ab61bb43fc07f2db7bc9eab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 UI를 사용하거나 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 장애 조치(Failover) 클러스터로 업그레이드할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 UI를 사용하거나 명령 프롬프트에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 장애 조치(Failover) 클러스터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터로 업그레이드할 수 있습니다.  
   
  로컬로 설치하는 경우 관리자로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](으)로 업그레이드하려면 위의 단계를 따릅니다.  
   
-2.  AddNode 설치 동작을 사용하여 다른 서브넷에 있는 노드를 추가하고 **클러스터 네트워크 구성** 페이지에서 IP 주소 리소스 종속성을 OR로 설정합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하세요.  
+2.  AddNode 설치 동작을 사용하여 다른 서브넷에 있는 노드를 추가하고 **클러스터 네트워크 구성** 페이지에서 IP 주소 리소스 종속성을 OR로 설정합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>현재 V-LAN 확장을 사용하는 다중 서브넷 클러스터를 업그레이드하려면  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Windows 장애 조치(Failover) 클러스터 관리 도구를 사용하여 새 서브넷에 대한 새 IP 주소를 추가하고 IP 주소 리소스 종속성을 OR로 설정합니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드한 후 다음 태스크를 완료하십시오.  
   
 -   [데이터베이스 엔진 업그레이드 완료](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

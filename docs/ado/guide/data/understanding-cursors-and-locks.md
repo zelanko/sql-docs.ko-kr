@@ -1,31 +1,31 @@
 ---
-title: "커서 및 잠금 이해 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 커서 및 잠금 이해 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a28f672ffd4a5cd1cb7cbf98353a9fb3b987c5e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d409dd8f667a39ecd9faa5ce77b4fde2c43b37d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="understanding-cursors-and-locks"></a>커서 및 잠금 이해
 응용 프로그램의 데이터 액세스 요구 사항에 대 한 가장 효율적인 커서 유형을 선택할 수 있는 커서의 작동 방법을 이해 하는 것이 유용 합니다. 덜 최적화 커서 구성 매우 느려질 데이터 액세스 작업을 만들 수 있습니다.  

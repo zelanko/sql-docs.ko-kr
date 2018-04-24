@@ -1,27 +1,21 @@
 ---
-title: 데이터 형식 dwloader에 대 한 변환 규칙
-author: barbkess
-ms.author: barbkess
+title: Dwloader 데이터 형식 변환 규칙-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 이 항목에 설명 하는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 해당 dwloader 병렬 데이터 웨어하우스 (PDW)에 데이터를 로드할 때 명령줄 로더를 지원 합니다. "
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 이 항목에서는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 명령줄 로더 지원 PDW에 데이터를 로드할 때 해당 dwloader를 설명 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-ms.openlocfilehash: 6910358803673c34d2381d071340e2ec7c8f2a0b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ecfc29c92bc99827ee943ff665524ff49e82a8df
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="data-type-conversion-rules-for-dwloader"></a>데이터 형식 dwloader에 대 한 변환 규칙
+# <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>데이터 형식 변환 규칙 dwloader-병렬 데이터 웨어하우스
 이 항목에서는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 설명 하는 [dwloader 명령줄 로더](dwloader.md) PDW에 데이터를 로드할 때 지원 합니다. 암시적 데이터 변환이 입력된 데이터에 SQL Server PDW 대상 테이블에서 데이터 형식이 일치 하지 않을 때 발생 합니다. SQL Server PDW로 성공적으로 로드 데이터를 확인 하 여 로드 프로세스를 디자인 하는 경우이 정보를 사용 합니다.  
    
   
@@ -43,7 +37,7 @@ ms.lasthandoff: 04/06/2018
 |에 문자열 리터럴이 **datetime** 형식|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />예: ' 2007-05-08 12:35:29.123'|누락 된 소수 자릿수 값이 삽입 될 때 0으로 설정 됩니다. 예를 들어 리터럴 ' 2007-05-08 12:35 '로 삽입 됩니다 ' 2007-05-08 12:35:00.000'.|  
 |에 문자열 리터럴이 **smalldatetime** 형식|' yyyy-월-일 hh: mm '<br /><br />예: ' 2007-05-08 12시 35분 '|초가 고 나머지 소수 자릿수 값이 삽입 될 때 0으로 설정 됩니다.|  
 |에 문자열 리터럴이 **날짜** 형식|'yyyy-MM-dd'<br /><br />예: ' 2007-05-08'|값이 삽입 될 때 시간 값 (1 시간, 분, 초 및 소수) 12:00:00.000으로 설정 됩니다.|  
-|에 문자열 리터럴이 **datetime2** 형식|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />예: ' 2007-05-08 12:35:29.1234567'|원본 데이터는 3 개의 소수 자릿수를 초과할 수 없습니다. 예를 들어 리터럴 ' 2007-05-08 12:35:29.123' 값을 제외한 삽입 됩니다 ' 2007-05-8 12:35:29.1234567' 오류가 발생 합니다.|  
+|에 문자열 리터럴이 **datetime2** 형식|' yyyy-월-일 hh:mm:ss.fffffff'<br /><br />예: ' 2007-05-08 12:35:29.1234567'|원본 데이터는 3 개의 소수 자릿수를 초과할 수 없습니다. 예를 들어 리터럴 ' 2007-05-08 12:35:29.123' 값을 제외한 삽입 됩니다 ' 2007-05-8 12:35:29.1234567' 오류가 발생 합니다.|  
   
 ### <a name="smalldatetime-data-type"></a>smalldatetime 데이터 형식  
 다음 표에서 기본 형식 및 형식 열에 리터럴 값을 로드 하는 것에 대 한 규칙 정의 **smalldatetime**합니다. 빈 문자열 (")를 기본 값으로 변환 ' 1900-01-01 12시 '. 만 공백을 포함 하는 문자열 (' ') 오류를 생성 합니다.  
@@ -75,7 +69,7 @@ ms.lasthandoff: 04/06/2018
 |에 문자열 리터럴이 **datetime** 형식|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />예: ' 2007-05-08 12:35:29.123'|값이 삽입 될 때 누락 된 소수 자릿수와 오프셋된 값을 0으로 설정 됩니다. 예를 들어 리터럴 ' 2007-05-08 12:35:29.123'으로 삽입 되며 ' 2007-05-08 12:35:29.1230000 + 00시 '.|  
 |에 문자열 리터럴이 **smalldatetime** 형식|' yyyy-월-일 hh: mm '<br /><br />예: ' 2007-05-08 12시 35분 '|값이 삽입 될 때 초, 나머지 소수 자릿수 및 오프셋된 값을 0으로 설정 됩니다.|  
 |에 문자열 리터럴이 **날짜** 형식|'yyyy-MM-dd'<br /><br />예: ' 2007-05-08'|시간 값 (1 시간, 분, 초 및 소수) 값이 삽입 될 때 0으로 설정 됩니다. 예를 들어 리터럴 ' 2007-05-08'으로 삽입 되며 ' 2007-05-08 이며 + 00시 '.|  
-|에 문자열 리터럴이 **datetime2** 형식|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />예: ' 2007-05-08 12:35:29.1234567'|원본 데이터는 지정된 된 datetimeoffset 열에 소수 자릿수 초 수를 초과할 수 없습니다. 데이터 원본에 있는 경우 더 작거나 같은 소수 자릿수 초 수가, 데이터 오른쪽에 0으로 채워서. 예를 들어, 데이터 형식이 datetimeoffset (5), 리터럴 값 이면 ' 2007-05-08 12:35:29.123 + 12:15 '으로 삽입 되며 ' 12:35:29.12300 + 12:15 '.|  
+|에 문자열 리터럴이 **datetime2** 형식|' yyyy-월-일 hh:mm:ss.fffffff'<br /><br />예: ' 2007-05-08 12:35:29.1234567'|원본 데이터는 지정된 된 datetimeoffset 열에 소수 자릿수 초 수를 초과할 수 없습니다. 데이터 원본에 있는 경우 더 작거나 같은 소수 자릿수 초 수가, 데이터 오른쪽에 0으로 채워서. 예를 들어, 데이터 형식이 datetimeoffset (5), 리터럴 값 이면 ' 2007-05-08 12:35:29.123 + 12:15 '으로 삽입 되며 ' 12:35:29.12300 + 12:15 '.|  
 |에 문자열 리터럴이 **datetimeoffset** 형식|'yyyy-MM-dd hh:mm:ss.fffffff {+&#124;-} hh:mm'<br /><br />예: ' 2007-05-08 12:35:29.1234567 + 12:15 '|원본 데이터는 지정된 된 datetimeoffset 열에 소수 자릿수 초 수를 초과할 수 없습니다. 데이터 원본에 있는 경우 더 작거나 같은 소수 자릿수 초 수가, 데이터 오른쪽에 0으로 채워서. 예를 들어, 데이터 형식이 datetimeoffset (5), 리터럴 값 이면 ' 2007-05-08 12:35:29.123 + 12:15 '으로 삽입 되며 ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>datetime2 데이터 형식  
@@ -128,7 +122,7 @@ Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다�
   
 |입력된 데이터 형식|입력된 데이터 예제|Bit 데이터 형식으로 변환|  
 |-------------------|-----------------------|-------------------------------|  
-|에 문자열 리터럴이 **정수** 형식|'ffffffffff'<br /><br />예: '1' 또는 '321'|리터럴 문자열로 서식이 지정 된 정수 값은 음수 값을 포함할 수 없습니다. 예를 들어 값 '-123' 오류가 발생 합니다.<br /><br />1 보다 큰 값을 1로 변환 됩니다. 예를 들어 '123' 값은 1로 변환 됩니다.|  
+|에 문자열 리터럴이 **정수** 형식|' '<br /><br />예: '1' 또는 '321'|리터럴 문자열로 서식이 지정 된 정수 값은 음수 값을 포함할 수 없습니다. 예를 들어 값 '-123' 오류가 발생 합니다.<br /><br />1 보다 큰 값을 1로 변환 됩니다. 예를 들어 '123' 값은 1로 변환 됩니다.|  
 |문자열 리터럴|'TRUE' 또는 'FALSE'<br /><br />예: ' true'|'TRUE' 값은 1로 변환 됩니다. 'FALSE' 값은 0으로 변환 됩니다.|  
 |정수 리터럴|fffffffn<br /><br />예: 1 또는 321|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어,-123 및 123 값 1로 변환 됩니다.|  
 |10 진 리터럴|fffnn.fffn<br /><br />예: 1234.5678|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어 123.45 및-123.45 값 1로 변환 됩니다.|  

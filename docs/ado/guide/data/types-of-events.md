@@ -1,6 +1,6 @@
 ---
 title: 유형의 이벤트 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EventComplete event [ADO]
 - events [ADO], types
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d78d1a6ae1fc2ccb34ee6b8d810f1ca5ba1c22
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 504f6e97614e8688a0cf1b12206200c6f3519d71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="types-of-events"></a>이벤트 유형
 이벤트의 두 기본 유형이 있습니다. "이벤트에 는" 작업이 시작 되기 전에 호출 되는, 일반적으로 이름에 "는"를 포함-예를 들어 **WillChangeRecordset** 또는 **WillConnect**합니다. 이벤트가 완료 된 후 일반적으로 호출 된 이벤트에 이름에 "Complete"는 포함-예를 들어 **RecordChangeComplete** 또는 **ConnectComplete**합니다. 예외가-와 같은 **InfoMessage** -하지만 연결된 작업이 완료 된 후 발생 합니다.  

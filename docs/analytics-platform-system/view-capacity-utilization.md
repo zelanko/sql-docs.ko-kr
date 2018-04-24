@@ -1,28 +1,21 @@
 ---
-title: 용량 사용률 보기 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 분석 플랫폼 시스템에서 용량 사용률을 볼 | Microsoft Docs
+description: 분석 플랫폼 시스템에서 용량 사용률을 봅니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>용량 사용률 보기
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>분석 플랫폼 시스템의 용량 사용률 보기
 이 항목에는 SQL Server PDW 어플라이언스의 용량 사용률을 보는 방법에 설명 합니다.  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>관리 콘솔을 사용 하 여 용량 사용률을 보려면  

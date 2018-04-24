@@ -1,32 +1,33 @@
 ---
-title: "SQL Server 개발 파트너 | Microsoft Docs"
-description: "서버에 대한 개발 솔루션이 있는 타사 파트너 목록입니다."
+title: SQL Server 개발 파트너 | Microsoft Docs
+description: 서버에 대한 개발 솔루션이 있는 타사 파트너 목록입니다.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 개발 파트너
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server에 대한 개발 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server 데이터베이스 솔루션 개발을 지원하기 위해 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server에 대한 개발 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-development-partners"></a>개발 파트너
 | 파트너 | Description | 링크 |

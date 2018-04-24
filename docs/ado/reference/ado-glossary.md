@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>ADO 용어집
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/03/2018
  바인딩 항목  
  테이블의 필드와 변수 간의 매핑. ADO Visual c + + 확장에 **레코드 집합** 필드는 C/c + + 변수에 매핑됩니다.  
   
- bitmask  
+ 비트 마스크  
  숫자 값을 위한 다른 숫자 값을 비트 단위로 값 비교 일반적으로 매개 변수 또는 반환 값의 옵션 플래그를 설정 하려면. 일반적으로이 비교 작업을 완료 비트 논리 연산자와 같은 **및** 및 **또는** Visual Basic의 **&** 및 **&#124;** c + +에서입니다.  
   
  예를 들어 ADO **파생** 필드의 특성을 결정 하로 나타내는 비트 마스크 값을 사용할 수 있습니다. 필드를 업데이트할 수 있는지 확인 하 고 한다고 가정 합니다. Visual Basic에서 다음 식을 사용 하 여이 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`  
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/03/2018
  ProgID (프로그래밍 id)  
  Windows 레지스트리에 COM 응용 프로그램에 의해 매핑되는 고유 이름입니다. ADO 연결에 대 한 ProgID가 "ADODB 합니다. 연결 "입니다. CLSID, COM.를 참조 하십시오.  
   
- proxy  
+ 프록시  
  매개 변수 마샬링 제공 하는 인터페이스 관련 개체 및 다른 스레드가 다른 프로세스와 같은 다른 실행 환경에서 실행 되는 응용 프로그램 개체를 호출 하는 클라이언트에 필요한 통신 합니다. 프록시는 클라이언트와 호출 되는 응용 프로그램 개체에 있는 해당 스텁 통신 합니다. 스텁을 참고 하십시오.  
   
 ## <a name="r"></a>R  
@@ -283,10 +283,10 @@ ms.lasthandoff: 04/03/2018
  저장 프로시저  
  이름으로 저장 하 고 하나의 단위로 처리 하는 미리 컴파일된 모음 SQL 문과 선택적 흐름 제어 문이 같은 코드입니다. 저장된 프로시저는 데이터베이스 내에 저장 됩니다. 이러한 응용 프로그램에서 호출 하 여 실행할 수 있습니다 및 사용자 지정 변수, 조건부 실행 및 기타 강력한 프로그래밍 기능을 허용 합니다.  
   
- stub  
+ 스텁  
  매개 변수 마샬링 제공 하는 인터페이스 관련 개체 및 호출을 받을 다른 스레드가 다른 프로세스와 같은 다른 실행 환경에서 실행 되는 클라이언트에서 응용 프로그램 개체에 필요한 통신 합니다. 스텁은 응용 프로그램 개체에 있으며 호출 하는 클라이언트에 있는 해당 프록시와와 통신 합니다. 프록시를 참조 하십시오.  
   
- sub-node  
+ 하위 노드  
  자식을 참조 하십시오.  
   
  동기 작업  

@@ -1,32 +1,32 @@
 ---
-title: "CacheSize 속성 예제 (JScript) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: CacheSize 속성 예제 (JScript) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94ead7b4512c3a66f32494a016fc4457758ad5fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7b5863ef970851fdc1499add7d39e77aacb40fc3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 속성 예제 (JScript)
 사용 하 여이 예제는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 집합과 30 개의 레코드가 캐시 없는 수행 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **CacheSizeJS.asp**합니다.  

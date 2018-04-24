@@ -1,32 +1,32 @@
 ---
-title: "모드를 일괄 처리 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 모드를 일괄 처리 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], batch mode
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 048fbd6f43bd78612c810049a07788e659a4139d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f9fadf4744517b2de4e756e6e6167d8615419a25
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 일괄 처리 모드가 설정 되어 때는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 있습니다. 예를 들어, 비관적 잠금 유형에 사용할 수 없는 경우는 **앞** 로 설정 된 **adUseClient**합니다. 반대로, 공급자는 커서 위치는 서버에 있으면 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  

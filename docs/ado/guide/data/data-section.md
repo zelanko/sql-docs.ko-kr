@@ -1,30 +1,30 @@
 ---
-title: "데이터 섹션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 데이터 섹션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ea45564e35d9e6bbd3d8cd484f190a4fdd3b88aa
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션 업데이트, 삽입 또는 삭제 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션에는 0 개 이상의 행 포함 될 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합에서 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 모든 데이터가 없는 열을 생략할 수 있습니다. 특성 또는 하위 요소 데이터 섹션에 사용 하는 경우 해당 구문이 스키마 섹션에 정의 되지 않은 자동으로 무시 됩니다.  

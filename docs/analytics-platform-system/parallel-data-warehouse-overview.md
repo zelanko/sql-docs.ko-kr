@@ -1,28 +1,22 @@
 ---
-title: 병렬 데이터 웨어하우스 개요
-author: barbkess
-ms.author: barbkess
+title: 병렬 데이터 웨어하우스 구성 요소-분석 플랫폼 시스템 | Microsoft Docs
+description: 원격 클라이언트 컴퓨터 및 비 어플라이언스 소프트웨어 구성 요소 분석 플랫폼 시스템의이 문서에 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: 20
-ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>병렬 데이터 웨어하우스 개요
-이 항목에서는 원격 클라이언트 컴퓨터 및 분석 플랫폼 시스템의 비 어플라이언스 소프트웨어 구성 요소를 설명 합니다.  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-분석 플랫폼 시스템
+원격 클라이언트 컴퓨터 및 비 어플라이언스 소프트웨어 구성 요소 분석 플랫폼 시스템의이 문서에 설명 합니다.  
   
 <!-- MISSING LINKS
 

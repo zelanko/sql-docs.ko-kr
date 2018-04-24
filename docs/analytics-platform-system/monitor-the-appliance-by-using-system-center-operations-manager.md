@@ -1,29 +1,22 @@
 ---
-title: System Center Operations Manager (APS)와 함께 모니터 어플라이언스
-author: barbkess
-ms.author: barbkess
+title: SCOM-분석 플랫폼 시스템 모니터 | Microsoft Docs
+description: Analytics Platform System (APS) 기기를 모니터링 하려면 System Center Operations Manager (SCOM)를 사용 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링
-SQL Server PDW 및 HDInsight를 모니터링 하려면 System Center Operations Manager를 사용 하는 방법을 설명 합니다.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations manager-분석 플랫폼 시스템 모니터
+Analytics Platform System (APS) 기기를 모니터링 하려면 System Center Operations Manager (SCOM)를 사용 합니다.
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
@@ -33,7 +26,7 @@ SQL Server PDW 및 HDInsight를 모니터링 하려면 System Center Operations 
   
 2.  SQL Server 2008 R2 Native Client 또는 SQL Server 2012 Native Client를 설치 해야 합니다.  
   
-3.  SQL Server PDW 및 HDInsight 모니터링 관리 팩을 설치 하 고 사용을 가져온, 게 구성 해야 합니다. 이러한 작업을 수행할 대 한 지침은 다음을 사용 합니다.  
+3.  SQL Server PDW 및 HDInsight 모니터링 관리 팩을 설치 하 고 사용을 가져온, 게 구성 해야 합니다. 지침은 다음 문서를 사용 하 여 이러한 작업을 수행 합니다.  
   
     -   [SCOM 관리 팩을 설치 &#40;분석 플랫폼 시스템&#41;](install-the-scom-management-packs.md)  
   
@@ -53,7 +46,7 @@ SCOM 관리 팩을 구성한 후 SCOM의 모니터링 창에서을 클릭 하 �
 ![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>어플라이언스  
-어플라이언스는 사용자 환경에서 현재 검색 하 고 모니터링 대상 SQL Server PDW 어플라이언스를 찾을 수 있습니다. 어플라이언스에 여기 표시 되지 않습니다 것에 대 한 ODBC 연결을 만든 경우 다음 있을 수 있습니다 PDWWatcher 계정에 문제가 있습니다. 이러한 표시 "모니터링 안 함"으로 PDWMonitor 계정에 문제가 있을 수 있습니다. SCOM 실시간으로 변경 하지 않습니다 하지만 정기적으로 모니터링 하는 새 어플라이언스에 대 한 검사 정도가 소요 됩니다 하 고 정기적으로 모니터링 하기 위한 기기에 쿼리를 보냅니다.  
+어플라이언스는 사용자 환경에서 현재 검색 하 고 모니터링 대상 SQL Server PDW 어플라이언스를 찾을 수 있습니다. 어플라이언스에 여기 표시 되지 않습니다 것에 대 한 ODBC 연결을 만든 경우 다음 있을 수 있습니다 PDWWatcher 계정에 문제가 있습니다. "모니터링 안 함"으로 표시 될 경우 있을 수 있습니다 PDWMonitor 계정에 문제가 있습니다. SCOM에 실시간으로 변경 하지 않습니다 있지만 주기적으로 모니터링 하는 새 어플라이언스에 대 한 확인 하므로 환자 되며 주기적으로 모니터링 하기 위한 어플라이언스에 쿼리를 보냅니다.  
   
 ![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   

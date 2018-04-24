@@ -1,32 +1,32 @@
 ---
-title: "명령 사용 하 여 저장된 프로시저를 호출 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 명령 사용 하 여 저장된 프로시저를 호출 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 613c9d2e018360798eb71748473750712dec461e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 01e11ece22cc6cee531dccfe45179446643c04ac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령 사용 하 여 저장된 프로시저 호출
 저장된 프로시저를 호출 하는 명령을 사용할 수 있습니다. 이 항목의 끝에 있는 코드 샘플 CustOrdersOrders 다음과 같이 정의 된 호출 Northwind 샘플 데이터베이스의 저장된 프로시저를 참조 합니다.  

@@ -1,30 +1,30 @@
 ---
-title: "RDS를 사용 하 여 ODBC 연결 풀링 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: RDS를 사용 하 여 ODBC 연결 풀링 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40a7469e2d5a264138b108d4ba8ea274b3c0b7ae
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 25baa1ee860ac1f36cdf2f6e1e7541d970976594
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS를 사용 하 여 ODBC 연결 풀링
 ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 성능을 향상 시킬 하의 연결 풀링 인터넷 정보 서비스 (IIS)에서 옵션을 사용할 수 있습니다. 연결 풀링은 자주 사용 되는 연결에서 열려 있는 상태를 유지 관리 연결에 대 한 리소스에 대 한 관리자입니다.  
@@ -61,7 +61,7 @@ ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 �
   
 5.  완료 되는 데 계속을 클릭 하 고 설치 프로그램을 종료 합니다.  
   
-### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
   
 1.  시작 메뉴에서 프로그램, Microsoft SQL Server 7.0을 차례로 가리킨 다음 서버 네트워크 유틸리티를 클릭 합니다.  
   

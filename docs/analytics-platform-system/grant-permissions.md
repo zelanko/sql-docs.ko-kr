@@ -1,26 +1,22 @@
 ---
-title: 사용 권한 부여
-author: barbkess
-ms.author: barbkess
+title: 사용 권한 부여 T-SQL-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 병렬 데이터 웨어하우스 데이터베이스 작업에 대 한 Grant T-SQL 권한입니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>사용 권한 부여
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 사용 권한을 부여 T-SQL
+병렬 데이터 웨어하우스 데이터베이스 작업에 대 한 Grant T-SQL 권한입니다.
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>데이터베이스 쿼리를 전송 하는 권한 부여
 이 섹션에서는 사용자가 SQL Server PDW 어플라이언스에에서 데이터를 쿼리할 수 및 데이터베이스 역할에 권한을 부여 하는 방법을 설명 합니다.  

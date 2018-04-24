@@ -1,17 +1,17 @@
 ---
-title: "CopyTo 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: CopyTo 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e929ff331d1bc99aac75018fa28e0da200f7f529
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3164fbdffe9bad363a09f6ff7accf8cf6d55d751
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드 (ADO)
 지정한 개수의 문자 또는 바이트 복사 (에 따라 [형식](../../../ado/reference/ado-api/type-property-ado-stream.md))에 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 다른 **스트림** 개체입니다.  

@@ -1,33 +1,33 @@
 ---
-title: "저장 및 열기 메서드 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 저장 및 열기 메서드 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4ee952b2fb5f6f6fedcfd10f02aca0d692ed579
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 369ba2c466e54283e91639c50e9923cd4a0178cf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-and-open-methods-example-vc"></a>저장 및 열기 메서드 예제 (VC + +)
 이 세 가지 예제를 보여 주는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 및 **열려** 방법을 함께 사용할 수 있습니다.  

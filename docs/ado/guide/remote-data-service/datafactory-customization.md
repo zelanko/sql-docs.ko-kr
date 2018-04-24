@@ -1,30 +1,30 @@
 ---
-title: "사용자 지정 DataFactory | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 사용자 지정 DataFactory | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f286af82af900116eb0cbc4e8154d046d45b342
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6926c858ca9b1f8c09014b8637c8a17c6ca33f7b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datafactory-customization"></a>DataFactory 사용자 지정
 원격 데이터 서비스 (RDS) 3 계층 클라이언트/서버 시스템에서 데이터 액세스를 쉽게 수행 하는 방법을 제공 합니다. 클라이언트 데이터 컨트롤의 원격 데이터 원본 또는 연결 문자열에서 쿼리를 수행 하려면 연결 및 명령 문자열 매개 변수를 지정 하 고 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 업데이트를 수행 하려면 매개 변수 개체입니다.  

@@ -1,29 +1,22 @@
 ---
-title: 어플라이언스 노드 (분석 플랫폼 시스템)에 연결
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스 노드-분석 플랫폼 시스템에 연결 | Microsoft Docs
+description: 이 문서에서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 다양 한 방법에 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>어플라이언스 노드에 연결
-이 항목에서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 다양 한 방법에 설명 합니다.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>분석 플랫폼 시스템에 어플라이언스 노드에 연결
+이 문서에서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 다양 한 방법에 설명 합니다.  
   
 ## <a name="connecting-with-hadoop"></a>Hadoop을 사용 하 여 연결  
 Hadoop SQL Server PDW를 사용 하기 전에 SQL Server PDW에 Java Runtime Environment를 설치 하려면 기기 관리자에 게 문의 합니다. 자세한 내용은 [외부 데이터에 PolyBase 연결 구성 &#40;분석 플랫폼 시스템&#41; ](configure-polybase-connectivity-to-external-data.md) 기기 Operations guide에서 합니다.  

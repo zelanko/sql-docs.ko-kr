@@ -1,30 +1,33 @@
 ---
-title: "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools에 대한 사용자 환경 개선 프로그램 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 사용자 환경 개선 프로그램
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자 환경 개선 프로그램(CEIP)이 어떻게 Microsoft가 소프트웨어 개선 방법을 식별하는 데 도움이 되는지 알아 보세요.  언제든지 참여하거나 참여하지 않도록 도구를 구성할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  사용자 환경 개선 프로그램(CEIP)이 어떻게 Microsoft가 소프트웨어 개선 방법을 식별하는 데 도움이 되는지 알아 보세요.  언제든지 참여하거나 참여하지 않도록 도구를 구성할 수 있습니다.  
   
 > [!NOTE]  
 >  Microsoft SQL Server 2016 릴리스, 기타 제품 및 서비스에 대한 사용자 데이터 수집 및 사용 방법에 대한 설명은 이 [Microsoft 개인 정보 취급 방침](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)을 참조하세요.  

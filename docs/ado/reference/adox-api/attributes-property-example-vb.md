@@ -1,32 +1,32 @@
 ---
-title: "특성 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 특성 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 736d3c89b24a4a7da05aa4e754f1776ffff53c92
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 324dc0c04bf0ca4aeeddcc37fc65c3ebcf9fd3d9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-property-example-vb"></a>특성 속성 예제 (VB)
 이 예제에서는 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 을 빈 문자열입니다. 이 경우 사용자는 데이터가 적용 되지 않은 레코드와 위치 데이터 알 수 없는 레코드 구별할 수 있습니다.  

@@ -1,17 +1,17 @@
 ---
-title: "Cancel 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Cancel 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9dd6f6c62d9ee20f75dabc8b28831b7376fc00b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfa05c071a40189478c361c1d5f4e3b34813daf1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드 (ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  

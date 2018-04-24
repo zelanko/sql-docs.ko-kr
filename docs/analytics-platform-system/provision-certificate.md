@@ -1,27 +1,21 @@
 ---
-title: PDW 인증서 (분석 플랫폼 시스템) 프로비저닝
-author: barbkess
-ms.author: barbkess
+title: -프로 비전 인증서 분석 플랫폼 시스템 | Microsoft Docs
+description: 분석 플랫폼 시스템에 프로 비전 인증서입니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 분석 플랫폼 시스템 Configuration Manager의 PDW 인증서 프로 비전 페이지를 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>PDW 인증서 프로 비전
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>분석 플랫폼 시스템에 프로 비전 인증서
 **PDW 인증서 프로 비전이** 분석 플랫폼 시스템의 페이지**Configuration Manager** 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다. 
 
 를 사용 하 여 연결을 암호화할 인증서를 도와 보안 통신 하는 제어 노드에 SQL Server 클라이언트에는 SQL Server PDW 드라이버를 사용 하는 도구를 통해는 [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md), Integration Services를 로드 합니다. 

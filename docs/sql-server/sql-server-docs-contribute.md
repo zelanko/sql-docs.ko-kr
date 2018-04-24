@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서에 기여하는 방법 | Microsoft Docs
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a id="githubui"></a> 브라우저에서 편집
 
-다음 단계는 브라우저에서 SQL Server 콘텐츠에 대한 간단한 편집을 수행하는 개요를 제공합니다. 전체 프로세스는 문서, [사소하거나 드문 변경 내용에 대한 GitHub 참여 워크플로](https://docs.microsoft.com/contribute/contribute/light-workflow)에 설명되어 있습니다.
+다음 단계는 브라우저에서 SQL Server 콘텐츠에 대한 간단한 편집을 수행하는 개요를 제공합니다. 전체 프로세스는 문서, [사소하거나 드문 변경 내용에 대한 GitHub 참여 워크플로](https://docs.microsoft.com/contribute/light-workflow)에 설명되어 있습니다.
 
 1. 이를 포함하는 모든 문서에는 오른쪽에 **편집** 단추가 있습니다. 변경하려는 문서를 찾고, **편집** 단추를 클릭하여 시작합니다.
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/19/2018
    ![편집 단추](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > 문서를 편집하려면 GitHub에 로그인해야 합니다. GitHub 계정이 없는 경우 [GitHub 계정 설정](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)을 참조하세요. 새 계정을 만든 후 편집하려면 GitHub로 이메일 주소를 확인해야 합니다.
+   > 문서를 편집하려면 GitHub에 로그인해야 합니다. GitHub 계정이 없는 경우 [GitHub 계정 설정](https://docs.microsoft.com/contribute/get-started-setup-github)을 참조하세요. 새 계정을 만든 후 편집하려면 GitHub로 이메일 주소를 확인해야 합니다.
 
 1. 브라우저에서 문서를 편집합니다. 모든 문서는 Markdown으로 작성됩니다. 마크다운에서 도움이 필요한 경우 [Markdown 기본 사항](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)을 검토할 수 있습니다. 게시된 문서가 기존 Markdown을 렌더링하는 방법을 관찰하여 배울 수도 있습니다.
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
    ![끌어오기 요청 만들기](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-이 시점에서 끌어오기 요청 설명의 나머지 프로세스를 통해 안내해야 합니다. 전체 프로세스 및 추가 세부 정보는[참가자 가이드](https://docs.microsoft.com/contribute/contribute/light-workflow)에서 찾을 수 있습니다.
+이 시점에서 끌어오기 요청 설명의 나머지 프로세스를 통해 안내해야 합니다. 전체 프로세스 및 추가 세부 정보는[참가자 가이드](https://docs.microsoft.com/contribute/light-workflow)에서 찾을 수 있습니다.
 
 ## <a id="tools"></a> 도구를 사용하여 로컬로 편집
 
@@ -73,10 +74,10 @@ ms.lasthandoff: 03/19/2018
 
 이 방법을 사용하여 참여하려면 다음 문서를 참조하세요.
 
-- [GitHub 계정 만들기](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [콘텐츠 제작 도구 설치](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [로컬로 Git 리포지토리 설정](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [GitHub 계정 만들기](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [콘텐츠 제작 도구 설치](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [로컬로 Git 리포지토리 설정](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/full-workflow)
 
 설명서에 중요한 변경 내용이 있는 끌어오기 요청을 제출하는 경우 GitHub에서 온라인 **기여 CLA(라이선스 규약)**를 제출하도록 요청하는 메시지를 받습니다. 끌어오기 요청을 수락되도록 하려면 온라인 양식을 완료해야 합니다.
 

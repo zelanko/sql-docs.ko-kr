@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Remoting Provider (ADO 서비스 공급자) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Remoting Provider (ADO 서비스 공급자) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자 수 있습니다. 원격 컴퓨터에서 로컬 사용자 인 경우와 마찬가지로 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스할 수는 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 경우에 따라 원격 컴퓨터를 액세스할 수 있습니다.

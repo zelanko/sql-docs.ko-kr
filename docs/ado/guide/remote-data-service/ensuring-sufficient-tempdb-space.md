@@ -1,30 +1,30 @@
 ---
-title: "충분 한 TempDB 공간 확인 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 충분 한 TempDB 공간 확인 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - TempDB space in RDS [ADO]
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b25883b6e0d2b52719b4227d0fbec1abdf31eae
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>충분 한 TempDB 공간 확인
 처리 하는 동안 오류가 발생 하면 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 를 Microsoft SQL Server 6.5에서 공간을 처리 해야 하는 개체는 TempDB의 크기가 증가 해야 할 수 있습니다. (임시 처리 공간을 필요로 하는 일부 쿼리에; ORDER BY 절을 사용 하 여 쿼리 정렬 해야 하는 예를 들어의 **레코드 집합**, 일부 임시 공간이 필요 합니다.)  

@@ -1,30 +1,32 @@
 ---
-title: "SQL Server 장애 조치(Failover) 클러스터 설치 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 장애 조치(Failover) 클러스터 설치 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 045f941ca5f5de2703bbd315f862ecf2c1985902
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  
   
 ## <a name="installing-a-failover-cluster"></a>장애 조치(Failover) 클러스터 설치  
  장애 조치(Failover) 클러스터를 설치하려면 서비스로 로그온할 수 있고 장애 조치(Failover) 클러스터의 모든 노드에서 운영 체제의 일부로 실행할 수 있는 로컬 관리자 권한이 있는 도메인 계정을 사용해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 장애 조치(Failover) 클러스터를 설치하려면 다음 단계를 따르십시오.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
     -   시스템이 최소 요구 사항을 충족하는지 확인해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터의 특정 요구 사항에 대한 자세한 내용은 [장애 조치(failover) 클러스터링을 설치하기 전에](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)를 참조하세요.  
   
-2.  다른 클러스터 노드에 영향을 주지 않고 장애 조치(Failover) 클러스터 구성에 노드를 추가하거나 제거할 수 있습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하세요.  
+2.  다른 클러스터 노드에 영향을 주지 않고 장애 조치(Failover) 클러스터 구성에 노드를 추가하거나 제거할 수 있습니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
     -   장애 조치(Failover) 클러스터의 모든 노드는 32비트 또는 64비트의 동일한 플랫폼에 속해야 하며 동일한 운영 체제 에디션 및 버전을 실행해야 합니다. 또한 64비트 버전의 Windows 운영 체제를 실행 중인 64비트 하드웨어에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치해야 합니다. 이 릴리스에서는 장애 조치(Failover) 클러스터링에 WOW64가 지원되지 않습니다.  
   

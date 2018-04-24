@@ -1,17 +1,17 @@
 ---
-title: "레코드 집합에서 이동 하는 방법 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 레코드 집합에서 이동 하는 방법 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MoveNext method [ADO]
 - MoveLast method [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fb1557723421cefa94a14de420d1f4619de65a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fec2b2c8fa338f6f9e05c4dab5e2732e3f270ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동 하는 방법
 다음 네가지 메서드는, 이동 또는 스크롤할에 하는 데 사용 되는 **레코드 집합**: [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)합니다. (이 중에서 사용할 수 없는 정방향 전용 커서입니다.)  

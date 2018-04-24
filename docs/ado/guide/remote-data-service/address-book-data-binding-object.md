@@ -1,31 +1,31 @@
 ---
-title: "주소록 데이터 바인딩 개체 주소 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 주소록 데이터 바인딩 개체 주소 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램이 사용 하 여 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에서 데이터를 바인딩할 SQL Server 데이터베이스 (이 경우 DHTML 테이블)에 시각적 개체를 응용 프로그램의 HTML 클라이언트 페이지 개체입니다. 이벤트 기반 VBScript 프로그램 논리를 사용 하 여는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  
@@ -67,7 +67,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|값은 앞에 서버 컴퓨터의 이름 HTTP를 사용 하는 경우 `http://`합니다.|  
+|[서버](../../../ado/reference/rds-api/server-property-rds.md)|값은 앞에 서버 컴퓨터의 이름 HTTP를 사용 하는 경우 `http://`합니다.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|에 대 한 필요한 연결 정보를 제공는 **.rds입니다 DataControl** SQL Server에 연결 합니다.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|설정 하거나 검색 하는 데 쿼리 문자열을 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.|  
   

@@ -1,33 +1,33 @@
 ---
-title: "계층적 레코드 집합 구성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 계층적 레코드 집합 구성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
 - hierarchical Recordsets [ADO]
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8c5c97983fbfa0cbf10f302f992c1bd6c9a59f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87c0e8c3b838e090e885de8ae0a75d2532a1c754
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>계층적 레코드 집합 구성
 다음 예제에서는 데이터 셰이핑 부모, 자식 및 손자에 대 한 열을 정의 하는 문법을 사용 하 여 데이터 원본 없이 계층적 레코드 집합을 구성 하는 방법을 보여 줍니다. **레코드 집합**합니다.  

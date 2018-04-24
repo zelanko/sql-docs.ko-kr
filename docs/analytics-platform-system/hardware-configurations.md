@@ -1,27 +1,21 @@
 ---
-title: 하드웨어 구성 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 하드웨어 구성-분석 플랫폼 시스템 | Microsoft Docs
+description: Analytics Platform System (APS) 어플라이언스 하드웨어의 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위와 구성 됩니다. 6 페타바이트 규모의 데이터에 수 테라바이트에 달하는에서 병렬 데이터 웨어하우스에 대 한 저장소를 확장 하는 어플라이언스 됩니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Analytics Platform System (APS) 하드웨어의 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위와 구성 됩니다.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>하드웨어 구성
+# <a name="hardware-configurations---analytics-platform-system"></a>하드웨어 구성-분석 플랫폼 시스템
 Analytics Platform System (APS) 하드웨어의 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위와 구성 됩니다. 어플라이언스는 저장소에 대 한 SQL Server 병렬 데이터 Wareouse (PDW) 수 테라바이트에 달하는에서 6 페타바이트 규모의 데이터를 조정합니다.  
   
 ## <a name="contents"></a>내용  

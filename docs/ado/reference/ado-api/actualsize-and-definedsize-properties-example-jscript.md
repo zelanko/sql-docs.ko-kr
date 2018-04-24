@@ -1,33 +1,33 @@
 ---
-title: "ActualSize 및 DefinedSize 속성 예제 (JScript) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ActualSize 및 DefinedSize 속성 예제 (JScript) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64e3688811759197b1f4c3e19c28e416fe30aa92
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d181506af65c4ab1f3ebcd5b330af7dd752cb2c4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize 및 DefinedSize 속성 예제 (JScript)
 사용 하 여이 예제는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 된 크기 및 필드의 실제 크기를 표시 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **ActualSizeJS.asp**합니다.  

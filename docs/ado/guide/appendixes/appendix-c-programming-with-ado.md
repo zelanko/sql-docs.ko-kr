@@ -1,30 +1,30 @@
 ---
-title: "부록 c: ADO와 프로그래밍 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '부록 c: ADO와 프로그래밍 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce6030b4e039cf88ac22bc85dd5c2aba46ded7b4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1a75d6afc2b8d998b6f7026beda9a8d3be3fe92c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 c: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 포함 하 여 많은 프로그래밍 언어를 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. ADO의 버전은 각 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램에 함께 설치 됩니다.

@@ -1,33 +1,33 @@
 ---
-title: "특성 및 이름 속성 예 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 특성 및 이름 속성 예 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28506a9073abf5c71a049aec7a651d4896c8ff9b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3149bf0d9514c64aa8c80febbc0cadf2514678aa
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>특성 및 이름 속성 예 (VB)
 값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 및 **속성** 개체입니다.  

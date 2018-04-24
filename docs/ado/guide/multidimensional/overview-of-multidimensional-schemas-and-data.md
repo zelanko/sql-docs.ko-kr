@@ -1,30 +1,30 @@
 ---
-title: "다차원 스키마 및 데이터 개요 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 다차원 스키마 및 데이터 개요 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 061c8df1aff59c97df54a973491d333858288fd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -65,15 +65,15 @@ Hamburg, Munich, Stuttgart}
   
  각 수준에는 다음과 같이 멤버 집합이:  
   
--   전 세계`= {All}`  
+-   전 세계 `= {All}`  
   
--   대륙`= {North America, Europe}`  
+-   대륙 `= {North America, Europe}`  
   
--   국가`= {Canada, USA, UK, Germany}`  
+-   국가 `= {Canada, USA, UK, Germany}`  
   
--   영역`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   영역 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   도시`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   도시 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>멤버  
  멤버는 계층의 리프 수준에 자식이 없습니다. 있고 루트 수준에서 멤버는 부모가 없습니다. 다른 모든 멤버에 하나 이상의 부모 있고 자식이 하나 이상 있습니다. 예를 들어 Geography 차원에서 계층 구조 부분 탐색에는 다음과 같은 부모-자식 관계 생성 됩니다.  

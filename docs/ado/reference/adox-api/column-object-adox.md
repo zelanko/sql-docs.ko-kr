@@ -1,33 +1,33 @@
 ---
-title: "Column 개체 (ADOX) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Column 개체 (ADOX) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Column
 helpviewer_keywords:
 - Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90ca5950c857ea5037381daae3568bc6c7becd71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7d8c2fc9ff3732e3d8330813a16f3605b2fd3c03
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="column-object-adox"></a>Column 개체 (ADOX)
 테이블, 인덱스 또는 키에서 열을 나타냅니다.  

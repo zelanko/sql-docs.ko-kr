@@ -1,15 +1,16 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리 | Microsoft 문서"
-ms.custom: 
+title: 장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a05ccc3c7e1bec3419dd8555f40cd3576456f80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 기존 Always On FCI(장애 조치(Failover) 클러스터 인스턴스)에서 노드 추가 또는 제거와 같은 유지 관리 태스크는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 수행합니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  기존 Always On FCI(장애 조치(Failover) 클러스터 인스턴스)에서 노드 추가 또는 제거와 같은 유지 관리 태스크는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 수행합니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>장애 조치(Failover) 클러스터 인스턴스 유지 관리  
  FCI는 설치한 후에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 변경하거나 복구할 수 있습니다. 예를 들어 FCI에 노드를 더 추가하거나 FCI를 독립 실행형 인스턴스로 실행하거나 FCI 구성에서 노드를 제거할 수 있습니다.  
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정과 WSFC 서비스 계정에 같은 계정을 사용하지 마십시오. WSFC 서비스 계정의 암호를 변경하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 수 없습니다.  
   
- [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]에서 서비스 SID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 사용됩니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+ [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]에서 서비스 SID는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 사용됩니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
 ## <a name="administering-a-failover-cluster-instance"></a>장애 조치(Failover) 클러스터 인스턴스 관리  
   

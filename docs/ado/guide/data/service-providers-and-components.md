@@ -1,32 +1,32 @@
 ---
-title: "서비스 공급자 및 구성 요소 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 서비스 공급자 및 구성 요소 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e738fb4f5bd4635a8a53a87d000b72736edc5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 915b927c1728f5b64ac99b8eb3a43b645e5b500b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="service-providers-and-components"></a>서비스 공급자 및 구성 요소
 서비스 공급자는 데이터 저장소에서 기본적으로 지원 되지 않는 확장된 인터페이스를 구현 하 여 데이터 공급자의 기능을 확장 하는 구성 요소입니다.  

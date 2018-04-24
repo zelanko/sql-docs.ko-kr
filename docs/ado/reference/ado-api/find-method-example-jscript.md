@@ -1,32 +1,32 @@
 ---
-title: "메서드 예제 (JScript) 찾기 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 메서드 예제 (JScript) 찾기 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71fc2a1180d702cf0324aefd7769f1fb6d7c0dec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c4355a60ff964b33868ed883940e0e1d20ddfc3b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-example-jscript"></a>찾을 메서드 예제 (JScript)
 사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 찾아서 표시에 있는 회사는 ***Northwind*** G. 잘라내기 문자로 시작 되는 이름의 데이터베이스 및 붙여넣기 다음 코드를 메모장 이나 다른 텍스트 편집기를 및로 저장 **붙여 넣고 FindJS.asp**합니다.  

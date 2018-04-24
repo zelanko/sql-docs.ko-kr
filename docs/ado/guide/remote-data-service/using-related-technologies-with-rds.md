@@ -1,30 +1,30 @@
 ---
-title: "관련된 기술 RDS를 사용 하 여 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 관련된 기술 RDS를 사용 하 여 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d6dcfb2375daefdfd55c1e5ec4beb5d4879e7eb8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>관련된 기술 RDS를 사용 하 여
 이 섹션에서는 다음 항목을 다룹니다.  

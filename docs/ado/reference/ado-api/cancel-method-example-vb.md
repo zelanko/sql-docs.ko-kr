@@ -1,32 +1,32 @@
 ---
-title: "취소 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 취소 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cancel method [ADO], Visual Basic example
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63c0512622045cb4c65820826cbb8e120a91ead4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2ac42411d014ab9515148267b66e6b270f70bfe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 메서드 예제 (VB)
 사용 하 여이 예제는 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 에서 명령 실행을 취소 하는 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 연결이 사용 중입니다.  

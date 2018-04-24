@@ -1,29 +1,23 @@
 ---
-title: 오류 메시지 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 오류 메시지-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 병렬 데이터 웨어하우스 (PDW) 오류 메시지는 오류를 보고 하 고 PDW 구성 요소에서 발생 한 문제와 PDW를 통해 표시 되는 SQL Server 오류에 포함 될 수도 있습니다. 이러한 오류 메시지는 정보를 표시 하기 위한 일관성 있는 구문을 사용 합니다. 이 구문을 이해 하면 문제를 찾고 해결 수 있습니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>오류 메시지
-SQL Server PDW 오류 메시지는 오류 보고와 문제는 SQL Server PDW 구성 요소에서 발생 하 고 SQL Server PDW를 통해 표시 되는 SQL Server 오류에 포함 될 수도 있습니다. 이러한 오류 메시지는 정보를 표시 하기 위한 일관성 있는 구문을 사용 합니다. 이 구문을 이해 하면 파악 하 고 SQL Server PDW에서 문제를 해결할 수 있습니다.  
+# <a name="error-messages-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 오류 메시지
+
+병렬 데이터 웨어하우스 (PDW) 오류 메시지는 오류를 보고 하 고 PDW 구성 요소에서 발생 한 문제와 PDW를 통해 표시 되는 SQL Server 오류에 포함 될 수도 있습니다. 이러한 오류 메시지는 정보를 표시 하기 위한 일관성 있는 구문을 사용 합니다. 이 구문을 이해 하면 파악 하 고 SQL Server PDW에서 문제를 해결할 수 있습니다.  
   
 ## <a name="Basics"></a>오류 메시지의 기본 사항  
 반환 되는 오류 메시지에는 동일한 구문을 따릅니다.  

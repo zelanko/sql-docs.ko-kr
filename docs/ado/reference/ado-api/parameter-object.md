@@ -1,33 +1,33 @@
 ---
-title: "Parameter 개체가 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Parameter 개체가 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Parameter
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8556b03b2f0d3a3d7d439ae223385860040c63
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 96cda7fc0a6768f614024c58f0ec3d20fdcd1cfd
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-object"></a>Parameter 개체
 매개 변수 또는 연결 된 인수를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 매개 변수가 있는 쿼리 또는 저장된 프로시저에 따라 개체입니다.  

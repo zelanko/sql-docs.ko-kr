@@ -1,32 +1,32 @@
 ---
-title: "Count 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Count 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98d9f5223e5ed264ce2cc901f31d387211e10f4b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c137bfef9b93300dff91423200b5d4dadabf2a85
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="count-property-example-vc"></a>Count 속성 예제 (VC + +)
 이 예제에서는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 의 두 컬렉션을 사용 하 여 속성의 ***직원*** 데이터베이스입니다. 속성 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프에 대 한 상한값을 설정 합니다.  

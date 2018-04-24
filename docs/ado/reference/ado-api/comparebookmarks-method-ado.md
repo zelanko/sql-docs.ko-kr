@@ -1,17 +1,17 @@
 ---
-title: "불일치 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 불일치 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CompareBookmarks
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 431ffdb1a2be03404b4d0c3636f547b6c8cf8514
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c1b2934df74efb3ee9f82f4f6a5b933d25818fc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="comparebookmarks-method-ado"></a>불일치 메서드 (ADO)
 두 개의 책갈피를 비교 하 고 상대 값의 표시를 반환 합니다.  

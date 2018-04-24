@@ -1,30 +1,30 @@
 ---
-title: "ADOX 개체 모델 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADOX 개체 모델 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dc06e89839347b86b7ef68045ee6463a562b2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fdefd4a38405f8bc3b4237de463415d26b913d6d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
 다음 다이어그램에는 개체를 표시 하 고 ADOX 관련 된 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하십시오. 또는 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 및 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  

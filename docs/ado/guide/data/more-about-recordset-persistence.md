@@ -1,33 +1,33 @@
 ---
-title: "지 속성 레코드 집합에 대 한 자세한 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 지 속성 레코드 집합에 대 한 자세한 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-about-recordset-persistence"></a>지 속성 레코드 집합에 대 한 자세한 정보
 ADO 레코드 집합 개체의 콘텐츠를 저장 하도록 지원는 **레코드 집합** 개체를 사용 하 여 파일에 해당 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 영구적으로 저장 된 파일은 로컬에 있을 수 있습니다 드라이브, 서버 또는 사이트는 웹에서 URL로 합니다. 사용 하 여 파일을 복원할 수 나중의 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 의 메서드는 **레코드 집합** 개체 또는 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 의 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  

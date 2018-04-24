@@ -1,17 +1,17 @@
 ---
-title: "GetChildren 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: GetChildren 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_GetChildren
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1588a5a63acaa8876f753d765852926cc749c240
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4605435d6d85ad9ff23df3f1289c7ddf121673ac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드 (ADO)
 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 해당 행 컬렉션의 자식을 나타내는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  

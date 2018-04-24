@@ -1,30 +1,30 @@
 ---
-title: "XML 레코드 집합 지 속성 시나리오 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: XML 레코드 집합 지 속성 시나리오 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf4899425669d8c65b6b3661fb75e8bf37091ce9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4aa455c004305f1350fef0006ba1986932ea692c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지 속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP Active Server Pages () 응용 프로그램에 만들어집니다.  

@@ -28,11 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a727c385ce24f9d1490de52e1e563510d3dfa5
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5033120057e83f6fd155466a35188be04068ef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/10/2018
   
 |인스턴스 유형|개체 이름|  
 |-----------------|---------------|  
-|기본값|**SQLAgent:***object*:*counter*|  
+|Default|**SQLAgent:***object*:*counter*|  
 |명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :***object*:*counter*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 성능 개체가 포함됩니다.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/10/2018
 |[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|경고 및 알림 수에 대한 정보|  
 |[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|일반 성능 정보|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [성능 모니터링 및 튜닝](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [방법: 시스템 모니터 시작(Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

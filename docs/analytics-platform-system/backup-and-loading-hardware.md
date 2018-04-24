@@ -1,28 +1,22 @@
 ---
-title: 백업 및 AP PDW에 대 한 하드웨어 개요 로드
-author: barbkess
-ms.author: barbkess
+title: 백업 및 하드웨어-병렬 데이터 웨어하우스를 로드 합니다.
+description: 종단 간 데이터 웨어하우징 솔루션 Analytics Platform System (APS)와 병렬 데이터 웨어하우스 (PDW)를 배포 하려면 데이터 웨어하우스를 백업 하 고 데이터를 로드 하기 위한 계획을 만들 필요 합니다. 이 가이드를 사용 하 여를 확보 하 고 비즈니스 요구 사항을 충족 하는 백업 하 고 로드할 서버를 구성 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 종단 간 데이터 웨어하우징 솔루션 Analytics Platform System (APS)와 SQL Server 병렬 데이터 웨어하우스 (PDW)를 배포 하려면 데이터 웨어하우스를 백업 하 고 데이터를 로드 하기 위한 계획을 만들어야 할 수 있습니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: 9
-ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-and-loading-hardware-overview"></a>백업 및 하드웨어 개요를 로드 합니다.
-종단 간 데이터 웨어하우징 솔루션 Analytics Platform System (APS)와 SQL Server 병렬 데이터 웨어하우스 (PDW)를 배포 하려면 데이터 웨어하우스를 백업 하 고 데이터를 로드 하기 위한 계획을 만들어야 할 수 있습니다. 이 가이드를 사용 하 여를 확보 하 고 비즈니스 요구 사항을 충족 하는 백업 하 고 로드할 서버를 구성 합니다.  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>백업 및 하드웨어 개요-병렬 데이터 웨어하우스를 로드 합니다.
+종단 간 데이터 웨어하우징 솔루션 Analytics Platform System (APS)와 병렬 데이터 웨어하우스 (PDW)를 배포 하려면 데이터 웨어하우스를 백업 하 고 데이터를 로드 하기 위한 계획을 만들 필요 합니다. 이 가이드를 사용 하 여를 확보 하 고 비즈니스 요구 사항을 충족 하는 백업 하 고 로드할 서버를 구성 합니다.  
   
 ## <a name="acquire-and-configure-backup-servers"></a>획득 하 고 백업 서버를 구성 합니다.  
 ![백업 프로세스](media/backup-process.png "프로세스를 백업 합니다.")  

@@ -1,29 +1,22 @@
 ---
-title: 모니터 어플라이언스 상태 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스 상태 모니터-분석 플랫폼 시스템
+description: 관리 콘솔을 사용 하 여 또는 병렬 데이터 웨어하우스 동적 관리 뷰를 직접 쿼리하여 분석 플랫폼 시스템 어플라이언스의 상태를 모니터링 하는 방법.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>모니터 어플라이언스 상태
-이 SQL Server PDW 동적 관리 뷰를 직접 쿼리하여 또는 관리 콘솔을 사용 하 여 SQL Server PDW 어플라이언스의 상태를 모니터링 하는 방법을 설명 합니다.  
+이 문서에서는 관리 콘솔을 사용 하 여 또는 병렬 데이터 웨어하우스 동적 관리 뷰를 직접 쿼리하여 분석 플랫폼 시스템 어플라이언스의 상태를 모니터링 하는 방법에 설명 합니다. 
   
 ## <a name="to-monitor-the-appliance-state"></a>어플라이언스 상태를 모니터링 하려면  
 시스템 관리자는 노드, 구성 요소 및 소프트웨어의 전체 계층 구조를 검색 하 관리 콘솔 또는 SQL Server PDW 동적 관리 뷰 (Dmv)를 사용할 수 있습니다. 다음 다이어그램에서는 SQL Server PDW를 모니터링 하는 구성 요소에 대 한 높은 수준의 이해를 제공 합니다.  
@@ -77,7 +70,7 @@ Status 속성에 대해 반환 되는 가능한 값은 같습니다.
   
 -   확인  
   
--   NonCritical  
+-   치명적이 지 않음  
   
 -   심각  
   

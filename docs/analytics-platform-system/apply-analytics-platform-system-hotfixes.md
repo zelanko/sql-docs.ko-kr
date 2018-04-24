@@ -1,29 +1,22 @@
 ---
-title: 분석 플랫폼 시스템 핫픽스 (분석 플랫폼 시스템) 적용
-author: barbkess
-ms.author: barbkess
+title: 분석 플랫폼 시스템 핫픽스를 적용 | Microsoft Docs
+description: 이 문서에는 분석 플랫폼 시스템 소프트웨어에 핫픽스를 적용 하는 방법을 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: 25
-ms.openlocfilehash: 1a054ead9ef39169257eb1813ba49eae06082b96
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b3a7a31ce791fbe44c38d1d30ce408235720e241
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스 적용
-이 항목에는 분석 플랫폼 시스템 소프트웨어에 핫픽스를 적용 하는 방법을 설명 합니다.  
+이 문서에는 분석 플랫폼 시스템 소프트웨어에 핫픽스를 적용 하는 방법을 설명 합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   

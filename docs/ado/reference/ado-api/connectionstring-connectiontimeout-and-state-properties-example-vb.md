@@ -1,17 +1,17 @@
 ---
-title: "연결 속성 예 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 속성 예 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fa6edc93360752ae1bf65bb291ea2c87ba185e4f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 509fdd736d1a85b05a08fc41ed98d6122c8156d8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VB)
 이 예제에서는 여러 가지를 사용 하 여는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 열고는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 제한 시간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. 우편 번호 함수는이 절차를 실행 하려면 필요 합니다.  

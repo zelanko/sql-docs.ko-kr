@@ -1,32 +1,32 @@
 ---
-title: "레코드 및 스트림 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 레코드 및 스트림 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO]
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68af92a054b9c891849118df1802543d79432ef1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9a107f9322758453222982b7f8ad9c1c4a5a15c7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-streams"></a>레코드 및 스트림
 ADO 현재 제공 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 관계형 데이터베이스와 같은 데이터 원본의 정보에에서 액세스 하는 주요 수단으로 하는 개체입니다. 그러나 일부 공급자는 지원의 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체 변수로 대체 또는 보조 개체는 공급자에서 데이터를 조작할 수 있습니다. 에 사양에 대 한 **레코드** 동작을 공급자의 설명서를 참조 하십시오.  

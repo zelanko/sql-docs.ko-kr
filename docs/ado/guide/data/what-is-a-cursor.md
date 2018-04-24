@@ -1,30 +1,30 @@
 ---
-title: "커서는 무엇입니까? | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 커서는 무엇입니까? | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e467c01afe9ebdb53d5d66e4c939205a97ca4be7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1681bdc14576915d3c9a6833e99d6f0f1c3b95ab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-a-cursor"></a>커서는 무엇입니까?
 관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 응용 프로그램, 특히 대화형 및 온라인으로 하는 항상 전체 결과 집합을 하나의 단위로 사용 효과적으로 작업할 수 없습니다. 이러한 응용 프로그램에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  

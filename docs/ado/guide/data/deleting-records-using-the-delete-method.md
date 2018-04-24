@@ -1,33 +1,33 @@
 ---
-title: "Delete 메서드를 사용 하 여 레코드를 삭제 합니다. | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Delete 메서드를 사용 하 여 레코드를 삭제 합니다. | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, deleting records
 - deleting records [ADO]
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f73534da8e2b99e410413673481d1a317e0e730e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Delete 메서드를 사용 하 여 레코드 삭제
 사용 하는 **삭제** 현재 레코드 또는 그룹에 있는 레코드의 메서드를 표시 한 **레코드 집합** 개체를 삭제 합니다. 경우는 **레코드 집합** 개체 하지 못하도록 레코드 삭제 오류가 발생 합니다. 즉시 업데이트 모드에 있는 경우 삭제는 데이터베이스에 즉시 수행 합니다. 레코드를 호출한 후 편집 모드에 유지 됩니다 (위반으로 인해 데이터베이스 무결성 예를 들어) 레코드를 성공적으로 삭제할 수 없으면, **업데이트 합니다.** 사용 하 여 업데이트를 취소 해야 하는 것이 즉 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 현재 레코드를 이동 하기 전에 (예를 들어를 사용 하 여 [닫기](../../../ado/reference/ado-api/close-method-ado.md), [이동](../../../ado/reference/ado-api/move-method-ado.md), 또는 [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

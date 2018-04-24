@@ -1,31 +1,31 @@
 ---
-title: "사용자 지정 파일 SQL 섹션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 사용자 지정 파일 SQL 섹션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6294ab601f527527cf69ca017e3643dfe98a1336
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새로운 SQL 문자열 포함 될 수 있습니다. 섹션에서 SQL 문자열이 없는 섹션 무시 됩니다.  

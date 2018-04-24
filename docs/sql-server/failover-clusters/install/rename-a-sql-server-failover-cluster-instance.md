@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59f761ee41f888f65960f9a58589c441419f40d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da7b8e146a9b5fb7d4ce98a8f31ecc48ca71c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
   
  가상 서버의 이름은 항상 SQL 네트워크 이름(SQL 가상 서버 네트워크 이름)과 동일합니다. 가상 서버의 이름은 바꿀 수 있지만 인스턴스 이름은 바꿀 수 없습니다. 예를 들어 VS1\instance1이라는 가상 서버 이름을 SQL35\instance1과 같은 다른 이름으로 바꿀 수 있지만 이름 중 인스턴스 부분인 instance1은 바뀌지 않습니다.  
   
@@ -73,13 +75,13 @@ ms.lasthandoff: 12/05/2017
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)을 참조하세요.  
   
--   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 다음 항목을 참조하세요.  
+-   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [마스터 서버에서 여러 대상 서버 제거](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
   
     -   [다중 서버 환경 만들기](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
   
--   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 다음 항목을 참조하세요.  
+-   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [로그 전달 구성&#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

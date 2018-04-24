@@ -1,32 +1,32 @@
 ---
-title: "프로시저 메서드 예제 (VB) 새로 고침 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 프로시저 메서드 예제 (VB) 새로 고침 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf65ae1cc8e18e20d23d521fd4f7fc01f6c08b01
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 29fb6863ff3a18096b4d25875664d71a40c9ef83
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="procedures-refresh-method-example-vb"></a>프로시저는 메서드 예제를 (VB)를 새로 고칩니다.
 다음 코드에서는 새로 고치는 방법을 보여 줍니다.는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 지정 해야 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 에서 개체는 **카탈로그** 액세스할 수 있습니다.  

@@ -1,32 +1,32 @@
 ---
-title: "ADO 이벤트 모델 (VC + +) 예 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO 이벤트 모델 (VC + +) 예 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e141eadd6f641608ccef1fb6b1b48b4138bf2728
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제 (VC + +)
 Visual c + + 섹션 [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 이벤트 모델에서 만든 환경에서 인스턴스화하는 구체적인 예제는 **#import** 지시문입니다.  

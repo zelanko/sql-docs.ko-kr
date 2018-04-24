@@ -1,31 +1,31 @@
 ---
-title: "ADO 개체 및 인터페이스 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO 개체 및 인터페이스 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76115318e0205c0b0f0bf4746dd482f39f4a8b89
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a9888255ff5560cf432b29850b1104f5470df9a6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계에 표시 됩니다는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  

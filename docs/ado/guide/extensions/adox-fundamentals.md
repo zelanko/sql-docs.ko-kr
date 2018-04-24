@@ -1,30 +1,30 @@
 ---
-title: "ADOX 기본 사항 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADOX 기본 사항 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69b460a0d18501f89f8d9f7ab4b83b5251bf38e9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 28ce83932f22d68f7ccddcc65d252b587af7d935
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-fundamentals"></a>ADOX 기본 사항
 Microsoft® ActiveX® 데이터 개체 확장 데이터 정의 언어 및 보안 (ADOX)에 대 한는 ADO 개체 및 프로그래밍 모델을 확장 합니다. ADOX 보안 뿐만 아니라 스키마 만들기 및 수정에 대 한 개체를 포함합니다. 스키마 조작 하는 개체 기반 방식 이기 때문에 기본 구문의의 차이 관계 없이 원본 다양 한 데이터에 대해 작동 하는 코드를 작성할 수 있습니다.  

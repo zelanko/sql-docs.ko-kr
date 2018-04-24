@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 리소스에 종속성 추가 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 리소스에 종속성 추가 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - resource dependencies [SQL Server]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab2f55e272b4d882ea867cfc210eae24c542da38
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0b7dc1fee54afb366518547f4c2c9518843d0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server 리소스에 종속성 추가
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(Failover) 클러스터 인스턴스(FCI) 리소스에 종속성을 추가하는 방법을 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(Failover) 클러스터 인스턴스(FCI) 리소스에 종속성을 추가하는 방법을 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [사전 요구 사항](#Prerequisites)  
   

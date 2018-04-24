@@ -1,31 +1,31 @@
 ---
-title: "ADO를 사용 하 여 스크립트 언어 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO를 사용 하 여 스크립트 언어 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어와 함께 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립트를 통해 데이터를 노출할 수 있습니다. 이 시나리오에서는 ADO, OLE DB 공급자를 사용 하 고 다른 모든 구성 요소는 지정 된 데이터 저장소를 참조 하는 데 필요한 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 되어 있는 원본으로 사용 합니다. ASP Active Server Pages ()를 사용 하 여 ADO는 예를 들어 HTML을 생성할 수 있는 스크립트에서 참조 하는 구성 요소입니다. 이 HTML 콘텐츠를 클라이언트 웹 브라우저에 HTTP를 통해 전달할 수 있습니다. 스크립트를 사용 하 여 웹 페이지 업데이트 트래버스하거나 특정 데이터를 볼 수 있도록 서버 쪽 스크립트에 다시 작업을 보낼 수 있습니다.  

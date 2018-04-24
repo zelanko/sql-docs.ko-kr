@@ -1,32 +1,32 @@
 ---
-title: "DefinedSize 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: DefinedSize 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7a9366879aa23b1ceefa6bfe688f168fff2dfee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 57609bce13555f6a8927c48c7d3d2a39f3169628
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 속성 예제 (VC + +)
 이 예제에서는 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 코드의 FirstName 열 크기를 다시 정의 됩니다는 **직원** 목차는 *Northwind* 데이터베이스입니다. 그런 다음는 FirstName의 값에 변경 내용을 [필드](../../../ado/reference/ado-api/field-object.md) 의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 따라는 **직원** 테이블이 표시 됩니다. 기본적으로 FirstName 필드는 공백으로 채워집니다 다시 정의 하면 후 참고는 **DefinedSize** 속성입니다.  

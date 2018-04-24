@@ -1,28 +1,22 @@
 ---
-title: 백업 및 복원
-author: barbkess
-ms.author: barbkess
+title: 백업 및 복원-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 데이터 백업 및 복원 작동 병렬 데이터 웨어하우스 (PDW)에 대 한 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>백업 및 복원
-데이터 백업 및 복원에 대 한 SQL Server 병렬 데이터 웨어하우스 (PDW)을 작동 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.  
+데이터 백업 및 복원 작동 병렬 데이터 웨어하우스 (PDW)에 대 한 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.  
     
 ## <a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항  
 PDW *데이터베이스 백업* 기기를 원본 데이터베이스를 복원 하려면 사용할 수 있는 형식으로 저장 하는 어플라이언스 데이터베이스의 복사본입니다.  

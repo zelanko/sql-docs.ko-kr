@@ -1,29 +1,22 @@
 ---
-title: 하드웨어 설치 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 하드웨어 설치-분석 플랫폼 시스템 | Microsoft Docs
+description: 이 문서에서는 이동, 압축 풀기 및 SQL Server PDW 장치에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 문서는 알림 전용 하며 프로세스를 쉽게 이해할 수 있도록 합니다. 장치 포장을 푼, 설치와를 설정 된 전에 확인 합니다. 고객 참여는 데이터와 같이 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 가운데 맞춤 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-ms.openlocfilehash: 24236e525efbc96c7e263a293f2a27582d700929
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-installation"></a>하드웨어 설치
-이 항목에서는 이동, 압축 풀기 및 SQL Server PDW 장치에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 항목은 정보를 제공 하며 프로세스를 쉽게 이해할 수 있도록 합니다. 장치 포장을 푼, 설치와를 설정 된 전에 확인 합니다. 고객 참여는 데이터와 같이 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 가운데 맞춤 합니다.  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>분석 플랫폼 시스템 어플라이언스 용 하드웨어 설치
+이 문서에서는 이동, 압축 풀기 및 SQL Server PDW 장치에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 문서는 알림 전용 하며 프로세스를 쉽게 이해할 수 있도록 합니다. 장치 포장을 푼, 설치와를 설정 된 전에 확인 합니다. 고객 참여는 데이터와 같이 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 가운데 맞춤 합니다.  
   
 ## <a name="BeforeMoving"></a>로드 도킹 스테이션에서 모든 구성 요소를 이동 하기 전에  
 이동, 압축 풀기 또는 어플라이언스 구성 요소 중 하나를 랙 전에 다음 작업을 수행 합니다.  

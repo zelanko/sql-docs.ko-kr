@@ -1,17 +1,17 @@
 ---
-title: "Execute 메서드 (ADO 명령) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Execute 메서드 (ADO 명령) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8eaf057d8ac52d1d1664bafd9304fe1f92ab0ae2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드 (ADO 명령)
 쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 되는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 의 속성은 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다.  

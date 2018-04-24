@@ -1,17 +1,17 @@
 ---
-title: "FetchProgress 이벤트 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: FetchProgress 이벤트 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FetchProgress
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bd5284c35e51a8cc711fe7612d1176241c00ac7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f84ed48008d5b4589c62ebed2353fbf80f9f3140
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 이벤트 (ADO)
 **FetchProgress**이벤트에 현재으로 가져온 더 많은 행의 수를 보고 하기 위해 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

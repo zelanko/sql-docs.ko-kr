@@ -1,17 +1,17 @@
 ---
-title: "인터넷 게시에 대 한 OLE DB Provider | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 인터넷 게시에 대 한 OLE DB Provider | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - ADO, Internet publishing
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시에 대 한 OLE DB Provider
 ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체가 사용 하 여 Microsoft OLE DB Provider for Internet Publishing (게시 공급자 인터넷) 액세스 하 고 리소스를 조작할 웹 폴더 또는 파일 Microsoft FrontPage 처리합니다. ADO와 원본을 지정할 수 있습니다는 **레코드**, **스트림**, 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) url은 URL 이어야 합니다. 수 다음 업로드, 다운로드, 이동, 복사 및 리소스를 삭제 또는 리소스 속성을 직접 조작 합니다.  
@@ -39,19 +39,19 @@ ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트
   
  ADO 인터넷 게시 공급자에 연결 하는 방법은 세 가지가 있습니다.  
   
--   지정 "URL =" 연결 문자열에 있습니다. 예를 들어  
+-   지정 "URL =" 연결 문자열에 있습니다. 예를 들어:  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   에 대 한 Msdaipp.dso 지정는 *공급자* 의 연결 문자열 키워드입니다. 예를 들어  
+-   에 대 한 Msdaipp.dso 지정는 *공급자* 의 연결 문자열 키워드입니다. 예를 들어:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   에 대 한 Msdaipp.dso 지정는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 예를 들어  
+-   에 대 한 Msdaipp.dso 지정는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 예를 들어:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

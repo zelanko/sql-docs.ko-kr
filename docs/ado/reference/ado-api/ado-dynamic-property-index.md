@@ -1,26 +1,26 @@
 ---
-title: "ADO 동적 속성 인덱스 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO 동적 속성 인덱스 | Microsoft Docs
+ms.prod: sql
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 Property 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 는 열려 있지 않은 각종 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 또한 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션. 자세히가 특정 공급자에 나열 된 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/09/2018
 |DBMS 이름|DBPROP_DBMSNAME|  
 |DBMS 버전|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|지원 기준으로 그룹화|DBPROP_GROUPBY|  
+|지원 기준으로 그룹화|DBPROP_GROUPBY와 같습니다|  
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|  
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|  
 |초기 카탈로그|DBPROP_INIT_CATALOG|  
@@ -56,8 +56,8 @@ ms.lasthandoff: 02/09/2018
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|  
 |로캘 ID|DBPROP_INIT_LCID|  
 |위치|DBPROP_INIT_LOCATION|  
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|  
-|최대 행 크기|DBPROP_MAXROWSIZE|  
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|  
+|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|  
 |BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|  
 |모드|DBPROP_INIT_MODE|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
 |여러 결과|DBPROP_MULTIPLERESULTS|  
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|  
 |여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|  
-|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION|  
+|NULL 데이터 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|  
 |NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|  
@@ -77,14 +77,14 @@ ms.lasthandoff: 02/09/2018
 |암호|DBPROP_AUTH_PASSWORD|  
 |보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |영구 ID 유형|DBPROP_PERSISTENTIDTYPE|  
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|  
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|  
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|  
 |프로시저 용어가|DBPROP_PROCEDURETERM|  
 |프롬프트|DBPROP_INIT_PROMPT|  
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |공급자 버전|DBPROP_PROVIDERVER|  
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|  
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|  
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |스키마 용어|DBPROP_SCHEMATERM|  
 |스키마 사용|DBPROP_SCHEMAUSAGE|  

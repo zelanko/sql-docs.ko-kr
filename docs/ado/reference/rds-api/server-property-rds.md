@@ -1,32 +1,32 @@
 ---
-title: "서버 속성 (RDS) | Microsoft Docs"
+title: 서버 속성 (RDS) | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ae8ddff340e42428db9fe852bbcd2b9d2bba4d34
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="server-property-rds"></a>서버 속성 (RDS)
 인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.  
@@ -113,7 +113,7 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *awebsrvr*or *computername*  
+ *awebsrvr*또는 *컴퓨터 이름*  
  A **문자열** 서버에 있으면 원격 컴퓨터; 또는 빈 문자열은 서버가 로컬 컴퓨터에 있으면 인터넷 또는 인트라넷 경로 또는 컴퓨터 이름을 포함 하는 값입니다.  
   
  *port*  

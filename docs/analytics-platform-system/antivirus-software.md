@@ -1,28 +1,21 @@
 ---
-title: 바이러스 백신 소프트웨어 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 바이러스 백신 소프트웨어-분석 플랫폼 시스템 | Microsoft Docs
+description: 데이터 센터 바이러스 백신 소프트웨어를 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 다음이 지침을 사용 합니다. 데이터 센터의 절대적인 요구 하는 경우 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: 29
-ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed050520a53aea596b2f315047c68d593c578f27
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="antivirus-software"></a>바이러스 백신 소프트웨어
+# <a name="antivirus-software-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 바이러스 백신 소프트웨어
 데이터 센터 바이러스 백신 소프트웨어를 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 다음이 지침을 사용 합니다. 데이터 센터의 절대적인 요구 하는 경우 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
   
 > [!WARNING]  

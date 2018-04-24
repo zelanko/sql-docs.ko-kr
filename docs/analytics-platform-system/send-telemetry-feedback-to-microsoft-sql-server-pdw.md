@@ -1,35 +1,28 @@
 ---
-title: Microsoft (SQL Server PDW) 원격 분석 피드백 보내기
-author: barbkess
-ms.author: barbkess
+title: 원격 분석 피드백-분석 플랫폼 시스템 | Microsoft Docs
+description: Microsoft 분석 플랫폼 시스템에 대 한 원격 분석 피드백을 보냅니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>Microsoft 원격 분석 피드백 보내기
-분석 플랫폼 시스템에 관리 콘솔 데이터를 Microsoft로 전송 하는 선택적 원격 분석 기능이 있습니다. 이 제품을 개선 하기 위한 필드를 사용 하는 것이 좋습니다.  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 Microsoft 원격 분석 피드백 보내기
+분석 플랫폼 시스템에 관리 콘솔 데이터를 Microsoft로 전송 하는 선택적 원격 분석 기능이 있습니다. 
   
 > [!NOTE]  
 > 이 릴리스의 경우 Microsoft가 원격 분석 데이터를 적극적으로 모니터링 하지 않습니다. 데이터 분석 목적 으로만 수집 되 고 됩니다.  
   
 ## <a name="privacy"></a>개인 정보  
-최대 개인 정보 보호를 제공 하려면 APS 원격 분석을 사용 하지 않고 제공 됩니다. 이 기능을 사용 하기 전에 먼저 검토는 [Microsoft 분석 플랫폼 시스템 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkId=400902)합니다. 그런 다음 실행을 위해 옵트인 아래에 설명 된 PowerShell 스크립트입니다.  
+최대 개인 정보 보호를 제공 하려면 APS 원격 분석을 사용 하지 않고 제공 됩니다. 이 기능을 사용 하기 전에 먼저 검토는 [Microsoft 분석 플랫폼 시스템 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkId=400902)합니다. 프로그램에 참여 하려면 아래에 설명 된 PowerShell 스크립트를 실행 합니다.  
   
 ## <a name="enable"></a>원격 분석을 사용 하도록 설정  
 **DNS 전달:** 원격 분석 데이터를 Microsoft로 보내는 분석 플랫폼 시스템 DNS 전달자를 통해 인터넷에 연결 하는 데이 필요 합니다. 이 기능을 사용 하려면 모든 호스트 및 작업 부하 Vm에서 DNS 전달 사용 하도록 설정 해야 합니다. 호출 된 `Enable-RemoteMonitoring` 명령에 `SetupDnsForwarder` DNS 전달 구성 하 고 원격 분석을 사용 하도록 설정 하는 옵션입니다. 호출 된 `Enable-RemoteMonitoring` 없이 명령을 `SetupDnsForwarder` 옵션 DNS 전달 이미 구성 되어 있고 하트 비트 모니터링 사용 하려는 경우.  
@@ -116,9 +109,10 @@ ms.lasthandoff: 04/06/2018
   
 실행 하더라도 피해는는 `Disable-RemoteMonitoring` 여러 번 명령입니다.  
   
-## <a name="see-also"></a>관련 항목:  
-[관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[시스템 뷰를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-views.md)  
-[System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[비 어플라이언스 DNS 이름을 확인 하는 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>다음 단계
+참조 항목:
+- [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [시스템 뷰를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [비 어플라이언스 DNS 이름을 확인 하는 DNS 전달자를 사용 하 여 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

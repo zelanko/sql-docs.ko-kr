@@ -1,32 +1,32 @@
 ---
-title: "JScript 코드 예제에서는 레코드 집합을 반환 하려면 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: JScript 코드 예제에서는 레코드 집합을 반환 하려면 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9c767413fefb4f35e2f3ac60ebcf52323efd2b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da6823bb218311000b8e3ca58d28cc412e8d51fd
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript 코드 예제에서는 레코드 집합을 반환 하려면
 ## <a name="jscript-code-rsjs"></a>JScript 코드 (rs.js)  

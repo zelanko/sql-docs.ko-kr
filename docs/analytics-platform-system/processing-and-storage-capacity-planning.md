@@ -1,27 +1,21 @@
 ---
-title: 분석 플랫폼 처리 및 저장소 용량
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 처리 및 저장소 용량-분석 플랫폼 시스템 | Microsoft Docs
 description: 비즈니스 요구 사항 데이터 배율 단위의 수와 Analytics Platform System (APS) 기기에서 필요한 계산 노드 디스크의 크기를 결정 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: 7
-ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-processing-and-storage-capacity"></a>분석 플랫폼 시스템 처리 및 저장소 용량
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 처리 및 저장소 용량
 비즈니스 요구 사항 데이터 배율 단위의 수와 Analytics Platform System (APS) 기기에서 필요한 계산 노드 디스크의 크기를 결정 합니다. 이러한 처리 및 저장소 계산을 사용 하 여 용량을 구입 하 고 계획 결정 수 있습니다.  
   
   

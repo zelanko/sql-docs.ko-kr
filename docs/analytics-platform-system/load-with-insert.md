@@ -1,27 +1,21 @@
 ---
-title: INSERT 사용 하 여 데이터를 로드 합니다.
-author: barbkess
-ms.author: barbkess
+title: 삽입-병렬 데이터 웨어하우스를 사용 하 여 데이터를 로드 합니다. | Microsoft Docs
+description: 병렬 데이터 웨어하우스 (PDW)에 데이터를 로드 하는 T-SQL INSERT 문을 사용 하 여 복제 된 테이블 또는 배포.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테이블에 데이터를 로드 tsql INSERT 문을 사용할 수 있습니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
-caps.latest.revision: 21
-ms.openlocfilehash: d11799aabdf3f0695a1a8e33add730886a4bcbbe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-insert"></a>INSERT 사용 하 여 데이터를 로드 합니다.
+# <a name="load-data-with-insert-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 INSERT 사용 하 여 데이터 로드
 
 SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테이블에 데이터를 로드 tsql INSERT 문을 사용할 수 있습니다. 삽입에 대 한 자세한 내용은 참조 [삽입](../t-sql/statements/insert-transact-sql.md)합니다. 분산된 테이블의 모든 비 배포 열을 복제 된 테이블에 대 한 PDW 대상 열의 데이터 형식으로 문에 지정 된 데이터 값으로 암시적으로 변환할 SQL Server를 사용 합니다. SQL Server 데이터 변환 규칙에 대 한 자세한 내용은 참조 [데이터 형식 변환에 대 한 SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx)합니다. 그러나 배포 열에는 PDW SQL Server를 지원 하는 암시적 변환의 하위 집합만을 지원 합니다. 따라서 INSERT 문을 사용 하 여 배포 열에 데이터를 로드 하는 경우 원본 데이터는 다음 표에 정의 된 형식 중 하나로 지정 되어야 합니다.  
   
@@ -97,7 +91,7 @@ SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테�
   
 |리터럴 형식|형식|변환 규칙|  
 |----------------|----------|--------------------|  
-|에 문자열 리터럴이 **정수** 형식|'nnnnnnnnnn'<br /><br />예: '1' 또는 '321'|리터럴 문자열로 서식이 지정 된 정수 값은 음수 값을 포함할 수 없습니다. 예를 들어 값 '-123' 오류가 발생 합니다.<br /><br />1 보다 큰 값을 1로 변환 됩니다. 예를 들어 '123' 값은 1로 변환 됩니다.|  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnn'<br /><br />예: '1' 또는 '321'|리터럴 문자열로 서식이 지정 된 정수 값은 음수 값을 포함할 수 없습니다. 예를 들어 값 '-123' 오류가 발생 합니다.<br /><br />1 보다 큰 값을 1로 변환 됩니다. 예를 들어 '123' 값은 1로 변환 됩니다.|  
 |문자열 리터럴|'TRUE' 또는 'FALSE'<br /><br />예: ' true'|'TRUE' 값은 1로 변환 됩니다. 'FALSE' 값은 0으로 변환 됩니다.|  
 |정수 리터럴|nnnnnnnn<br /><br />예: 1 또는 321|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어,-123 및 123 값 1로 변환 됩니다.|  
 |10 진 리터럴|nnnnn.nnnn<br /><br />예: 1234.5678|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어 123.45 및-123.45 값 1로 변환 됩니다.|  
@@ -107,7 +101,7 @@ SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테�
   
 |리터럴 형식|형식|  
 |----------------|----------|  
-|에 문자열 리터럴이 **정수** 형식|'nnnnnnnnnnnn'<br /><br />예: ' 321312313123'|  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnnnn'<br /><br />예: ' 321312313123'|  
 |에 문자열 리터럴이 **10 진수** 형식|'nnnnnn.nnnnn'<br /><br />예: ' 123344.34455'|  
 |정수 리터럴|nnnnnnnnnnnn<br /><br />예: 321312313123|  
 |10 진 리터럴|nnnnnn.nnnnn<br /><br />예: ' 123344.34455'|  
@@ -117,7 +111,7 @@ SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테�
   
 |리터럴 형식|형식|  
 |----------------|----------|  
-|에 문자열 리터럴이 **정수** 형식|'nnnnnnnnnnnn'<br /><br />예: ' 321312313123'|  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnnnn'<br /><br />예: ' 321312313123'|  
 |에 문자열 리터럴이 **10 진수** 형식|'nnnnnn.nnnnn'<br /><br />예: ' 123344.34455'|  
 |에 문자열 리터럴이 **부동 소수점** 형식|'n.nnnnnE+nn'<br /><br />예: ' 3.12323E + 14'|  
 |정수 리터럴|nnnnnnnnnnnn<br /><br />예: 321312313123|  
@@ -129,7 +123,7 @@ SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테�
   
 |리터럴 형식|형식|변환 규칙|  
 |------------|------|----------------|
-|에 문자열 리터럴이 **정수** 형식|'nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123'| InclusionThresholdSetting |  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnnnnnnnn'<br /><br />예: ' 321312313123'| InclusionThresholdSetting |  
 |정수 리터럴|nnnnnnnnnnnnnn<br /><br />예: 321312313123| InclusionThresholdSetting|  
 |10 진 리터럴|nnnnnn.nnnnn<br /><br />예: 123344.34455|값을 소수점의 오른쪽이 잘립니다.|  
   
@@ -138,7 +132,7 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호 접두사를 가진
   
 |리터럴 형식|형식|변환 규칙|  
 |----------------|----------|--------------------|  
-|에 문자열 리터럴이 **정수** 형식|'nnnnnnnn'<br /><br />예: ' 123433'|소수점 뒤에 누락 된 자릿수 값이 삽입 될 때 0으로 설정 됩니다. 예를 들어 리터럴 '12345' 12345.0000로 삽입 됩니다.|  
+|에 문자열 리터럴이 **정수** 형식|' nnnnnnnn'<br /><br />예: ' 123433'|소수점 뒤에 누락 된 자릿수 값이 삽입 될 때 0으로 설정 됩니다. 예를 들어 리터럴 '12345' 12345.0000로 삽입 됩니다.|  
 |에 문자열 리터럴이 **10 진수** 형식|'nnnnnn.nnnnn'<br /><br />예: ' 123344.34455'|소수점 뒤의 자릿수 4를 초과 하는 경우 값이 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 '123344.34455' 123344.3446로 삽입 됩니다.|  
 |에 문자열 리터럴이 **money** 형식|'$nnnnnn.nnnn'<br /><br />예: ' $ 123456.7890'|선택적인 통화 기호 값으로 삽입 되지 않습니다.<br /><br />소수점 뒤의 자릿수 4를 초과 하는 경우 값이 가장 가까운 값으로 반올림 됩니다.|  
 |정수 리터럴|nnnnnnnn<br /><br />예: 123433|소수점 뒤에 누락 된 자릿수 값이 삽입 될 때 0으로 설정 됩니다. 예를 들어 리터럴 12345 12345.0000로 삽입 됩니다.|  

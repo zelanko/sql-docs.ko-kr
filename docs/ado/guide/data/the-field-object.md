@@ -1,30 +1,30 @@
 ---
-title: "Field 개체 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Field 개체 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3b0fc2840f9cd1b9dde3e5a9a883f3f37ce816b8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-field-object"></a>Field 개체
 각 **필드** 개체는 일반적으로 데이터베이스 테이블의 열에 해당 합니다. 그러나 한 **필드** 다른에 대 한 포인터를 나타낼 수도 있습니다 **레코드 집합**, 장 이라고 합니다. 이 가이드의 뒷부분에 나오는 장 열과 같은 예외를 설명 합니다.  

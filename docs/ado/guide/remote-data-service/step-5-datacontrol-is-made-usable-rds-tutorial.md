@@ -1,30 +1,30 @@
 ---
-title: "5 단계: DataControl 유용 수행 (RDS 자습서) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '5 단계: DataControl 유용 수행 (RDS 자습서) | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6c152323f13f8f21cef1485f81a81f5a01dcde71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>5 단계: DataControl 유용 수행 (RDS 자습서)
 반환 된 **레코드 집합** 개체를 사용 하기 위해 사용할 수 있습니다. 검사, 탐색, 또는 다른 대로 편집할 **레코드 집합**합니다. 으로 수행할 수 있는 **레코드 집합** 사용자 환경에 따라 달라 집니다. Visual Basic 및 Visual c + +를 사용할 수 있는 시각적 컨트롤을 포함 한 **레코드 집합** 직접 또는 간접적으로 제어 데이터를 설정 하는 사용 하 여 합니다.  

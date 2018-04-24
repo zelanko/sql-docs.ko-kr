@@ -1,31 +1,31 @@
 ---
-title: "동적 속성 (ADO) 이름 만들기 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 동적 속성 (ADO) 이름 만들기 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>동적 속성 (ADO) Name 모양 변경
 에 대 한 이름을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
  사용 하 여는 **Name 모양 변경** 참조 하려는 경우이 속성을 **레코드 집합** Data Shaping Service에서 생성 되었으므로 이름을 알지 때나 Shape 명령입니다. 이 경우 명령에서 반환 된 문자열 앞뒤에 연결 하 여 SHAPE 명령을 생성할 수 있습니다는 **이름 변형** 속성입니다.  
   
- **이름 변형** 동적 속성에 추가 **레코드 집합** 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성 **adUseClient**합니다.  
+ **이름 변형** 동적 속성에 추가 **레코드 집합** 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성**adUseClient**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

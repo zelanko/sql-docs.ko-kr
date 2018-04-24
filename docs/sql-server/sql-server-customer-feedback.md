@@ -1,25 +1,25 @@
 ---
-title: "SQL Server를 구성하여 Microsoft에 피드백 보내기 | Microsoft Docs"
-description: 
+title: SQL Server를 구성하여 Microsoft에 피드백 보내기 | Microsoft Docs
+description: ''
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: c379c070e94a9bd54ed98c439c6185430ac4e2a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c4de14abb12d3cdb74c9169d45b20093022b3db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

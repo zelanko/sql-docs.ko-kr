@@ -1,6 +1,6 @@
 ---
 title: 속성 필터링 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>필터 속성
 데이터에 대 한 필터 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/22/2018
   
 -   연산자는 다음 중 하나 여야 합니다: \<, >, \<=, > =, <>, =, 또는 **같은**합니다.  
   
--   값이 있는 필드 값을 비교 하 여 값 (예를 들어 'Smith', #8/24/&#95; 12.345, 또는 $50.00). 문자열 및 날짜와 함께 파운드 기호 (#)와 작은따옴표를 사용 합니다. 숫자를 소수점이 하, 달러 기호 및 과학적 표기법을 사용할 수 있습니다. 연산자가 **같은**, 값 와일드 카드를 사용할 수 있습니다. 별표 (*) 및 백분율 기호 (%) 와일드 카드는 허용 하 고 문자열의 마지막 문자 여야 합니다. 값은 null 일 수 없습니다.  
+-   값이 있는 필드 값을 비교 하 여 값 (예를 들어 'Smith', #8/24/95 # 12.345, 또는 $50.00). 문자열 및 날짜와 함께 파운드 기호 (#)와 작은따옴표를 사용 합니다. 숫자를 소수점이 하, 달러 기호 및 과학적 표기법을 사용할 수 있습니다. 연산자가 **같은**, 값 와일드 카드를 사용할 수 있습니다. 별표 (*) 및 백분율 기호 (%) 와일드 카드는 허용 하 고 문자열의 마지막 문자 여야 합니다. 값은 null 일 수 없습니다.  
   
 > [!NOTE]
 >  필터 값에에서 작은따옴표 (')를 포함 하려면 두 개의 작은따옴표를 사용 하 여 하나를 나타냅니다. 예를 들어 O'Malley를 필터링 하려면 조건 문자열 이어야 합니다 `"col1 = 'O''Malley'"`합니다. 시작과 끝 필터 값의 작은 따옴표를 포함 하려면 숫자 기호를 사용 하 여 문자열을 묶습니다 (#). 예를 들어, '1'을 필터링 하려면 조건 문자열 이어야 합니다 `"col1 = #'1'#"`합니다.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/22/2018
   
 -   다중 키 테이블의 모든 필드에서 수정 되었습니다.  
   
-다음 표에서 요약의 효과 **그** 필터링 및 수정 작업의 다양 한 조합에서 합니다. 왼쪽된 열은 가능한 수정 작업을 보여 줍니다. 단일 키 테이블의 키 필드 또는 다중 키 테이블의 키 필드 중 하나에 있는 아닌 필드에서 수정할 수 있습니다. 맨 위 행은 필터링 조건을 보여 줍니다. 필터링 기반 아닌 필드의 모든 다중 키 테이블의 키 필드 또는 단일 키 테이블의 키 필드입니다. 교차 셀의 결과 보여 줍니다. A  **+**  더하기 기호를 적용 의미 **그** 비어 있지 않은 결과 **레코드 집합**합니다. A  **-**  빼기 기호는 빈 의미 **레코드 집합**합니다.  
+다음 표에서 요약의 효과 **그** 필터링 및 수정 작업의 다양 한 조합에서 합니다. 왼쪽된 열은 가능한 수정 작업을 보여 줍니다. 단일 키 테이블의 키 필드 또는 다중 키 테이블의 키 필드 중 하나에 있는 아닌 필드에서 수정할 수 있습니다. 맨 위 행은 필터링 조건을 보여 줍니다. 필터링 기반 아닌 필드의 모든 다중 키 테이블의 키 필드 또는 단일 키 테이블의 키 필드입니다. 교차 셀의 결과 보여 줍니다. A **+** 더하기 기호를 적용 의미 **그** 비어 있지 않은 결과 **레코드 집합**합니다. A **-** 빼기 기호는 빈 의미 **레코드 집합**합니다.  
   
 ||비 키|단일 키|여러 키|
 |-|--------------|----------------|-------------------|

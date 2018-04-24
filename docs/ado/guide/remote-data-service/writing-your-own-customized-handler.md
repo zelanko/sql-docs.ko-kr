@@ -1,31 +1,31 @@
 ---
-title: "사용자 고유의 사용자 지정된 처리기 작성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 사용자 고유의 사용자 지정된 처리기 작성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>사용자 고유의 사용자 지정된 처리기 작성
 RDS 지원, 기본 IIS 서버 관리자 모르는 경우 자신만 처리기를 작성 하려는 수 있지만 사용자 요청 더 자세하게 제어 및 액세스 권한을 합니다.  

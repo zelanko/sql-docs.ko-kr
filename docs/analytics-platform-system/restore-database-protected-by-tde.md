@@ -1,27 +1,21 @@
 ---
-title: 병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다.
-author: barbkess
-ms.author: barbkess
+title: 병렬 데이터 웨어하우스-TDE로 보호 되는 데이터베이스를 복원 | Microsoft Docs
+description: 분석 플랫폼 시스템 병렬 데이터 웨어하우스에서 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>TDE로 보호 되는 데이터베이스를 복원 합니다.
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다.
 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.  
   
 [투명 한 데이터 암호화를 사용 하 여](transparent-data-encryption.md#using-tde) 예제에서 TDE를 설정 하는 코드에는 `AdventureWorksPDW2012` 데이터베이스입니다. 다음 코드는 해당 예제에서는 원래 Analytics Platform System (APS) 어플라이언스에서 데이터베이스의 백업을 만들고 다음 인증서와 다른 장치에서 사용 데이터베이스를 복원 하 여 계속 합니다.  

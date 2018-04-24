@@ -1,34 +1,36 @@
 ---
-title: "WSFC 쿼럼 모드 및 투표 구성(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: WSFC 쿼럼 모드 및 투표 구성(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9c0a87d4229aa94cf30ddc61394656377456eea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 쿼럼 모드 및 투표 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 Always On FCI(장애 조치(failover) 클러스터 인스턴스)는 모두 WSFC(Windows Server 장애 조치(failover) 클러스터링)를 플랫폼 기술로 활용합니다.  WSFC는 쿼럼 기반 방식을 사용하여 전반적인 클러스터 상태를 모니터링하고 노드 수준의 내결함성을 극대화합니다. Always On 고가용성 및 재해 복구 솔루션을 디자인하고 운영하고 문제를 해결하기 위해서는 WSFC 쿼럼 모드 및 노드 투표 구성의 기초를 이해하는 것이 매우 중요합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 Always On FCI(장애 조치(failover) 클러스터 인스턴스)는 모두 WSFC(Windows Server 장애 조치(failover) 클러스터링)를 플랫폼 기술로 활용합니다.  WSFC는 쿼럼 기반 방식을 사용하여 전반적인 클러스터 상태를 모니터링하고 노드 수준의 내결함성을 극대화합니다. Always On 고가용성 및 재해 복구 솔루션을 디자인하고 운영하고 문제를 해결하기 위해서는 WSFC 쿼럼 모드 및 노드 투표 구성의 기초를 이해하는 것이 매우 중요합니다.  
   
  **항목 내용**  
   

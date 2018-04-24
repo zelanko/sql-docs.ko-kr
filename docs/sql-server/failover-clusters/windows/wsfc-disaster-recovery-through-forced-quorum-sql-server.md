@@ -1,36 +1,38 @@
 ---
-title: "쿼럼 강제를 통해 WSFC 재해 복구(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 쿼럼 강제를 통해 WSFC 재해 복구(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16d17e02c0594f3906651b0f270c8a36e891e69d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 145742e14b82fa992a40ef7ca629e47ada88bce5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
--   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
 -   **강제 쿼럼 절차를 통해 WSFC 재해 복구** [강제 쿼럼 절차를 통해 WSFC 재해 복구](#Main)  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  

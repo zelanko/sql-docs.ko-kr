@@ -1,31 +1,31 @@
 ---
-title: "결과 수신 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 결과 수신 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a13be909891455c21b3409ea53072a5f2c9268e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 429a9706d6a751da691812f14142ced5f30aed8f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="receiving-results"></a>결과 받기
 ADO에서 대부분의 명령을 호출자에 게 반환 하는 몇 가지 정보 발생 합니다. 행 집합을 반환 하는 명령에 대 한 결과에서 수신 되는 **레코드 집합** 개체 수는 가장 많이 사용 되는 ADO 개체입니다.  

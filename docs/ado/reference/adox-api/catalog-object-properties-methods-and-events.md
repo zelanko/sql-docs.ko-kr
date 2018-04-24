@@ -1,34 +1,34 @@
 ---
-title: "개체 속성, 메서드 및 이벤트 카탈로그 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 개체 속성, 메서드 및 이벤트 카탈로그 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f3a863e00e874dc28868563f60b9bcf3018728a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9ea5e250a09e85f37f8339c8321badb27220c356
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>카탈로그 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [ActiveConnection Property](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection 속성](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
  [그룹 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
   

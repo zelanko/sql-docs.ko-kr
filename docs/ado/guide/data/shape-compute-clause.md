@@ -1,32 +1,32 @@
 ---
-title: "COMPUTE 절 셰이프 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: COMPUTE 절 셰이프 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -68,7 +68,7 @@ SHAPE child-command [AS] child-alias
   
  BY 절을 생략 하면 전체 자식 **레코드 집합** 단일 그룹 및 부모도 처리 **레코드 집합** 정확히 한 개의 행이 포함 됩니다. 해당 행은 전체 자식 참조 **레코드 집합**합니다. BY 절을 생략 하면 전체 자식 통해 "총합계" 집계를 계산 하 **레코드 집합**합니다.  
   
- 예를 들어  
+ 예를 들어:  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         

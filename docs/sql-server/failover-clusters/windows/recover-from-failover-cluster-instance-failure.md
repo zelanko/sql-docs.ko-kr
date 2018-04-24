@@ -1,15 +1,16 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스 오류 복구 | Microsoft 문서"
-ms.custom: 
+title: 장애 조치(failover) 클러스터 인스턴스 오류 복구 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], recovery from failure
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - hardware failures [SQL Server]
 - recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f13897f5d754bc8d6b65034f0c9aab842b31c7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1ef3537461571fa3cca82529b650382e1d6c94f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>장애 조치(failover) 클러스터 인스턴스 오류 복구
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 장애 조치(failover)가 발생한 후에 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 클러스터 오류를 복구하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 장애 조치(failover)가 발생한 후에 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 클러스터 오류를 복구하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
   
 -   [복구 불가능 오류 복구](#Scenario1)  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/05/2017
   
 6.  관리자 계정이 모든 클러스터 노드에서 동일한지 확인합니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 FCI에 노드 1을 추가합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하세요.  
+7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 FCI에 노드 1을 추가합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
 ##  <a name="Scenario2"></a> 복구 가능 오류 복구  
  복구 가능 오류를 복구하려면 다음 단계를 따르세요. 이 단계에서 오류는 노드 1이 다운되거나 오프라인 상태가 되어 발생하지만 회복할 수 없는 상태는 아닙니다. 이는 운영 체제의 오류, 하드웨어 오류 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 자체의 오류에 의해 발생할 수 있습니다.  

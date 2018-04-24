@@ -1,33 +1,33 @@
 ---
-title: "Hierarchy 개체 (ADO MD) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Hierarchy 개체 (ADO MD) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Hierarchy
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1904398172f9a7b1eaad57e3c4cda11a00fad22e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체 (ADO MD)
 한 가지 방식을 보여의 멤버는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 집계 되거나 "롤업 합니다." 차원은 하나 이상의 계층 구조에 따라 집계 될 수 있습니다.  

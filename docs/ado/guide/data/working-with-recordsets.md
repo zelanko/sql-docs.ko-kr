@@ -1,30 +1,30 @@
 ---
-title: "레코드 집합으로 작업할 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 레코드 집합으로 작업할 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 사용
 **레코드 집합** 개체에는 제공 하는 기준에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 결과 집합에 있는 데이터의 순서를 다시 정렬할 수 있는 기본 제공 기능입니다. 일부 경우 공급자에 따라 이러한 기능을 사용 하기 위해 사용할 수 있는지 여부 — 등는 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성 — 자체 데이터 원본의 구조입니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  조건에 대 한 비교 연산자가 될 수 있습니다"**>**"(보다 큼),"**\<**" (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), " <> "(같지 않음), 또는"좋아요"(패턴 일치).  
   
- 조건 값은 문자열, 부동 소수점 숫자 또는 날짜 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호)로 구분 (예를 들어 "상태 = '서울'" 또는 "상태 = WA # #"). 날짜 값 표시 "#" (숫자 기호)로 구분 됩니다 (예를 들어 "start_date > #7/22/&#97;").  
+ 조건 값은 문자열, 부동 소수점 숫자 또는 날짜 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호)로 구분 (예를 들어 "상태 = '서울'" 또는 "상태 = WA # #"). 날짜 값 표시 "#" (숫자 기호)로 구분 됩니다 (예를 들어 "start_date > #7/22/97 #").  
   
  비교 연산자가 있는 경우 "좋아요", 문자열 값에 별표 (*) 문자 또는 부분 문자열의 하나 이상의 항목을 찾을를 포함할 수 있습니다. 예를 들어 "와 같은 상태 중\*'", Maine 등이 검색 합니다. 선행 및 후행 별표를 사용 하 여 값 내에 포함 된 부분 문자열을 찾을 수 있습니다. 예를 들어 "와 같은 상태 '\*으로\*'" Alaska, 사스, 등이 검색 합니다.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/09/2018
   
 -   *FieldName* 에서 유효한 필드 이름 이어야 합니다는 **레코드 집합**합니다. 필드 이름에 공백이 이름을 대괄호로 묶어야 합니다.  
   
--   *연산자* 다음 중 하나 여야 합니다:  **\<** ,  **>** ,  **\< =** ,  **>=**   **<>** ,  **=** , 또는 **같은**합니다.  
+-   *연산자* 다음 중 하나 여야 합니다: **\<**, **>**, **\< =**, **>=** **<>**, **=**, 또는 **같은**합니다.  
   
 -   *값* 된 필드 값을 비교 하 여 값 (예를 들어 `'Smith'`, `#8/24/95#`, `12.345`, 또는 `$50.00`). 작은따옴표 (')를 사용 하 여 문자열 및 파운드 기호 (`#`) 날짜와 함께 합니다. 숫자를 소수점이 하, 달러 기호 및 과학적 표기법을 사용할 수 있습니다. 경우 *연산자* 은 **같은**, *값* 와일드 카드 문자를 사용할 수 있습니다. 별표 (\*) 및 백분율 기호 (%) 와일드 카드 문자는 허용 하며 문자열의 마지막 문자 여야 합니다. *값* null 일 수 없습니다.  
   

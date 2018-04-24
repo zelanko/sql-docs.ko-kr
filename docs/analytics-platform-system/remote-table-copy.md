@@ -1,26 +1,19 @@
 ---
-title: 원격 테이블 복사 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 원격 테이블 복사-병렬 데이터 웨어하우스 | Microsoft Docs
+description: 원격 테이블 복사본을 사용 하 여 분석 플랫폼 시스템 병렬 데이터 웨어하우스에서 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: 23
-ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remote-table-copy"></a>원격 테이블 복사
 원격 (비 어플라이언스) SMP SQL Server 데이터베이스에 SQL Server PDW 데이터베이스에서 테이블을 복사 하려면 원격 테이블 복사 기능을 사용 하는 방법을 설명 합니다. SQL Server PDW에 대 한 허브 및 스포크 시나리오를 사용 하도록 설정 하려면 원격 테이블 복사본을 사용 합니다.  

@@ -1,31 +1,31 @@
 ---
-title: "Internet Explorer 오류 코드 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Internet Explorer 오류 코드 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf4ee8c31a09ad1c1bf88ffb37d987f5dabb8bf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® Internet Explorer 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수로 변환한 음의 10 진수로 변환한 전체 오류 코드 및 16 진수 값의 표시 됩니다.

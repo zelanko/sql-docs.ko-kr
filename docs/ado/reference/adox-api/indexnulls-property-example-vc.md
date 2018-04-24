@@ -1,32 +1,32 @@
 ---
-title: "IndexNulls 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: IndexNulls 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f95c5468b61a37649a3fd8e11529ac70d76298b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51b185c22f36a7a878639e1d4871e2f4e1a584a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 속성 예제 (VC + +)
 이 예제에서는 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드에서는 새 인덱스를 만들고의 값을 설정 **IndexNulls** 사용자 입력에 기반 합니다. 그런 다음 **인덱스** 에 추가 되는 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반는 **직원** 테이블 및 **레코드 집합** 열릴 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블와는 **Null** 인덱싱된 필드의 값입니다. 설정에 따라이 새 레코드의 표시 여부는 **IndexNulls** 속성입니다.  

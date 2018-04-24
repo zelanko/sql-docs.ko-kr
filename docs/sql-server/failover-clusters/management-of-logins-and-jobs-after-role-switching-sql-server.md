@@ -18,16 +18,17 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8829a826c0e31d1c37cf7b65478cbd781cf89d0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 고가용성 또는 재해 복구 솔루션을 배포하는 경우 **master** 또는 **msdb** 데이터베이스에 해당 데이터베이스에 대해 저장되는 관련 정보를 다시 생성해야 합니다. 대개 관련 정보에는 주 데이터베이스의 작업과 데이터베이스에 연결해야 하는 프로세스 또는 사용자의 로그인이 포함됩니다. 보조/미러 데이터베이스를 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 정보를 복제해야 합니다. 가능하다면 역할이 전환된 후 새 주 데이터베이스에서 프로그래밍 방식으로 해당 정보를 다시 생성하는 것이 가장 좋습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 고가용성 또는 재해 복구 솔루션을 배포하는 경우 **master** 또는 **msdb** 데이터베이스에 해당 데이터베이스에 대해 저장되는 관련 정보를 다시 생성해야 합니다. 대개 관련 정보에는 주 데이터베이스의 작업과 데이터베이스에 연결해야 하는 프로세스 또는 사용자의 로그인이 포함됩니다. 보조/미러 데이터베이스를 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 정보를 복제해야 합니다. 가능하다면 역할이 전환된 후 새 주 데이터베이스에서 프로그래밍 방식으로 해당 정보를 다시 생성하는 것이 가장 좋습니다.  
   
 ## <a name="logins"></a>로그인  
  데이터베이스 복사본을 호스팅하는 모든 서버 인스턴스에서 주 데이터베이스에 대한 액세스 권한이 있는 로그인을 다시 생성해야 합니다. 주 역할이 전환되는 경우 새 주 서버 인스턴스에 로그인이 있는 사용자만 새 주 데이터베이스에 액세스할 수 있습니다. 새 주 서버 인스턴스에 로그인이 정의되어 있지 않은 사용자는 분리된 상태가 되어 데이터베이스에 액세스할 수 없습니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (데이터베이스 엔진 블로그)를 참조하세요.  
   
-## <a name="jobs"></a>작업  
+## <a name="jobs"></a>에서  
  백업과 같은 작업에는 특별한 주의가 필요합니다. 일반적으로 역할 전환 후 데이터베이스 소유자 또는 시스템 관리자는 새 주 데이터베이스의 작업을 다시 만들어야 합니다.  
   
  이전 주 서버 인스턴스를 사용할 수 있는 경우 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 원래 작업을 삭제해야 합니다. 현재 미러 데이터베이스가 RESTORING 상태에 있어서 사용할 수 없으므로 현재 미러 데이터베이스의 작업은 실패합니다.  

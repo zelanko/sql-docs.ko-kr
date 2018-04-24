@@ -1,31 +1,21 @@
 ---
-title: T-SQL 문을 분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs
-author: barbkess
-ms.author: barbkess
+title: T-SQL 문을-병렬 데이터 웨어하우스 | Microsoft Docs
+description: T-SQL 문에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)입니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>T-SQL 항목
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-SQL 문
 TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>데이터 정의 언어 (DDL) 문

@@ -1,29 +1,22 @@
 ---
-title: 클러스터 노드 실패 (분석 플랫폼 시스템) 확인
-author: barbkess
-ms.author: barbkess
+title: 실패 한 클러스터 노드-분석 플랫폼 시스템 확인 | Microsoft Docs
+description: 이 문서에서는 클러스터 장애 조치가 발생 한 것 이며 클러스터 장애 조치 경고가 발생 했습니다 후 실패 한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제를 해결 하기 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>클러스터 노드 실패를 확인 합니다.
-이 항목에는 클러스터 장애 조치가 발생 한 것 이며 클러스터 장애 조치 경고가 발생 했습니다 후 실패 한 SQL Server PDW 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제를 해결 하기 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>클러스터 확인 분석 플랫폼 시스템에 대 한 노드 실패 했습니다.
+이 항목에는 클러스터 장애 조치가 발생 한 것 이며 클러스터 장애 조치 경고가 발생 했습니다 후 실패 한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제를 해결 하기 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.  
   
 ## <a name="Background"></a>배경  
 SQL Server PDW에서 고가용성을 위해 컨트롤 노드와 계산 노드는 Windows 장애 조치 클러스터의 활성 또는 수동 구성 요소로 구성 됩니다. 중요 한 시스템 요청에 응답 하는 활성 서버에 실패 하면 수동 서버 장애 조치 되 고 실패 한 서버 기능을 수행 합니다.  

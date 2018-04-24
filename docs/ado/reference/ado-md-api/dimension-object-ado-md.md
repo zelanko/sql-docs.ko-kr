@@ -1,33 +1,33 @@
 ---
-title: "ADO MD 개체 차원 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO MD 개체 차원 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Dimension
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4818afd2bbf7392385c3516be1d762266cd2b60
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dimension-object-ado-md"></a>차원 개체 (ADO MD)
 하나 이상의 멤버 계층 구조를 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  

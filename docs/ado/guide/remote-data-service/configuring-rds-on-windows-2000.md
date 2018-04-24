@@ -1,30 +1,30 @@
 ---
-title: "Windows 2000에서 RDS 구성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Windows 2000에서 RDS 구성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO], Windows 2000
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483cbe5243c9a5d2d6d63eb2b7c5f009a98cf33d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: defb200c5e15c65fe1045e8cf1678700395819b8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000에서 RDS를 구성합니다.
 Windows 2000으로 업그레이드 한 후 올바르게 작동 하려면 RDS를 시작 하는 데 문제가 발생 하는 경우 문제를 해결 하려면 다음이 단계를 수행 합니다.  

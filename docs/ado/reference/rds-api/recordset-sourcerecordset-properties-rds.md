@@ -1,30 +1,30 @@
 ---
-title: "레코드 집합 SourceRecordset 속성 (RDS) | Microsoft Docs"
+title: 레코드 집합 SourceRecordset 속성 (RDS) | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a59056cd579bfc3bebfdd2e33c18e733fbacd1b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: be22029aa9a0bdd7deaeb47f988c4ccd13bc8761
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>SourceRecordset 속성 (RDS) 레코드 집합
 나타냅니다는 **레코드 집합** 사용자 지정 비즈니스 개체에서 반환 된 개체입니다.  

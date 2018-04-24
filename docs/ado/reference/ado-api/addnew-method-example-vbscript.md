@@ -1,32 +1,32 @@
 ---
-title: "AddNew 메서드 예제 (VBScript) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: AddNew 메서드 예제 (VBScript) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c6c7b3afaba5db3ba73affda17f515bb716b18d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 127273b3ea15905647ae6b37d24844fc59d29681
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 메서드 예제 (VBScript)
 사용 하 여이 예제는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정 된 이름의 새 레코드를 만듭니다.  

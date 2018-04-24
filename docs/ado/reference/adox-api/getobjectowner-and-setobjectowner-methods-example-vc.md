@@ -1,33 +1,33 @@
 ---
-title: "GetObjectOwner 및 SetObjectOwner 메서드 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: GetObjectOwner 및 SetObjectOwner 메서드 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee1b891dd12810e8a54ebb8532a366789f28c957
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35d6f0bc472aa83c726b8307bb687c77e6b810b4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제 (VC + +)
 이 예제에서는 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 및 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 있다고 가정 Accounting (참조는 [그룹 및 사용자 추가, ChangePassword 메서드 예제 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) 시스템에이 그룹을 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  

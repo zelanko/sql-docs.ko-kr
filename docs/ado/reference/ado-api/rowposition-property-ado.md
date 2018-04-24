@@ -1,17 +1,17 @@
 ---
-title: "RowPosition 속성 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: RowPosition 속성 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADORecordConstruction::put_RowPosition
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e384d850a51cc94439a896040951ec3c23f2f6a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e2ef9ba5408aa41e3deda4c73e40057d916e1b31
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 속성 (ADO)
 OLE DB를 가져오거나 설정 합니다. **RowPosition** 에/에서 개체는 **ADORecordsetConstruction** 개체입니다. 사용 하는 경우 **put_RowPosition** 설정 하는 **RowPosition** 결과 개체 **레코드 집합** 개체에서 사용 하 여 **RowPosition** 개체를 현재 행을 결정 합니다.  

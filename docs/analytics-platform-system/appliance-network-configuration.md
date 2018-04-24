@@ -1,36 +1,29 @@
 ---
-title: 어플라이언스 네트워크 구성 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스 네트워크 구성-분석 플랫폼 시스템 | Microsoft Docs
+description: Analytics Platform System (APS) 어플라이언스 작성 및 수정 프로그램 집합의 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소를 사용 하 여 구성 합니다. 어플라이언스의 배달에는 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소를 구성 해야 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>어플라이언스 네트워크 구성
-SQL Server PDW 어플라이언스에 작성 및 수정 프로그램 집합의 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소를 사용 하 여 구성 합니다. 어플라이언스의 배달에는 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소를 구성 해야 합니다.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 네트워크 구성
+Analytics Platform System (APS) 어플라이언스 작성 및 수정 프로그램 집합의 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소를 사용 하 여 구성 합니다. 어플라이언스의 배달에는 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소를 구성 해야 합니다.  
   
 > [!NOTE]  
 > PDW V1 필요한 8 IP 외부 (*고객 측*) 각 컨트롤에 대 한 외부 연결을 제공 하는 주소 랙 노드. PDW 2012 (V2) IP 주소를 통해 외부에서 어플라이언스의 모든 구성 요소가 노출 하 여 네트워크 통신을 향상 합니다. 이 방법은 더욱 강력한 디자인 하 고 비용을 절감 하 고, 유연성 증가 증가 하 고, 데이터 이동, 데이터 로드 및 Hadoop 통합 향상을 제공 합니다. 필요한 IP 주소 수가 어플라이언스의 노드 수 및 HDInsight 같은 기능의 현재 상태에 따라 다릅니다. 이 더 큰 블록의 IP 주소를 수용할 수 있도록 고객 PDW에 대 한 별도 서브넷 설정 해야 합니다. 이 서브넷 내에 충분 한 IP 주소 공간 (최대 250 개 주소) 최대 5 개의 PDW 랙 구성 요소에 맞게 생깁니다.  
   
 **네트워크 구성** 페이지 분석 플랫폼 시스템 어플라이언스에 노드에 대 한 외부와 접한 네트워크 설정을 볼 수 있습니다. 이 페이지는 읽기 전용입니다.  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig 어플라이언스 네트워크](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>어플라이언스 네트워크 구성을 업데이트 하려면  
 HDInsight 도메인 패브릭 도메인 및 작업 도메인의 IP 주소를 편집 하 여 변경에서 **AplianceInfo.xml** 파일과 다음 설치 프로그램을 실행 합니다. 이 작업은 오프 라인 작업입니다. HDInsight (있는 경우)와 PDW 영역 IP 주소가 변경 될 때 자동으로 중지 됩니다.  

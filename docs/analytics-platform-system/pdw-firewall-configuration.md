@@ -1,28 +1,21 @@
 ---
-title: PDW 방화벽 구성 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: PDW 방화벽 구성-분석 플랫폼 시스템 | Microsoft Docs
+description: SQL Server PDW 구성 관리자의 방화벽 페이지를 사용 하도록 설정 하거나 허용 하거나 분석 플랫폼 시스템 어플라이언스에서 특정 포트에 액세스할 수 없도록 하는 방화벽 규칙을 사용 하지 않도록 설정할 수 있습니다.
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>PDW 방화벽 구성
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>분석 플랫폼 시스템에 병렬 데이터 웨어하우스 방화벽 구성
 **방화벽** SQL Server PDW 구성 관리자의 페이지를 사용 하도록 설정 하거나 허용 하거나 분석 플랫폼 시스템 어플라이언스에서 특정 포트에 액세스할 수 없도록 하는 방화벽 규칙을 사용 하지 않도록 수 있습니다.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>어플라이언스 노드에 대 한 규칙 포트 및 방화벽을 관리 하려면  

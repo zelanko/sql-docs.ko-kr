@@ -1,30 +1,30 @@
 ---
-title: "ADOX 열거형 상수의 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADOX 열거형 상수의 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 880c49c4cfda1faf32313ac919939bcba734ced5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b622f8cda931a0c15c1ff97dbf33ffdb9a9441be
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 디버깅을 지원 하기 ADOX 열거 상수에는 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADOX의 릴리스에서 변경 될 수 있습니다. 코드는 실제 값이 아닌 열거 된 상수의 이름 뒤에 의존 해야 합니다.  

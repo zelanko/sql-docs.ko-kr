@@ -1,30 +1,30 @@
 ---
-title: "ADO MD와 함께 ADO를 사용 하 여 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO MD와 함께 ADO를 사용 하 여 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3761a5553b13dc65a15862c5e9b27cdc5634b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4b99d78262909123157cdcd60cc14dc95e9115c0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD와 함께 ADO 사용
 ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이터 원본에 연결, 명령을 실행 하 고, 테이블 형식 데이터와 스키마 메타 데이터를 테이블 형식으로 검색 하 고 공급자 오류 정보 보기에 대 한 개체를 제공 합니다. ADO MD는 다차원 데이터를 검색 하 고 다차원 스키마 메타 데이터를 보기 위한 개체를 제공 합니다.  

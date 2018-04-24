@@ -1,28 +1,21 @@
 ---
-title: 사용자 세션 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 분석 플랫폼 시스템에 사용자 세션이 | "Microsoft Docs
+description: 병렬 데이터 웨어하우스 분석 플랫폼 시스템에에서 사용자 세션이 있습니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-ms.openlocfilehash: 4ed0fab1fae1fe2d1a5a3ebb961d6c4d4747764f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fc2e759d77953f739d77f6ad4eb371cc9747efdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="user-sessions"></a>사용자 세션
+# <a name="user-sessions-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 사용자 세션
 적절 한 사용 권한 가진 로그인 이러한 작업을 수행 하는 포함 하는 SQL Server PDW 어플라이언스의 모든 로그인의 세션을 관리할 수 있습니다.  
   
 -   활성 및 유휴 세션 포함 하 여 장치에서 현재 세션을 확인 합니다.  

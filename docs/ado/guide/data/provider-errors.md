@@ -1,17 +1,17 @@
 ---
-title: "공급자 오류 정보 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 공급자 오류 정보 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors collection [ADO]
 - provider errors [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="provider-errors"></a>공급자 오류 정보
 공급자 오류가 발생 하는 경우에-2147467259 런타임에 오류가 반환 됩니다. 이 오류를 받으면 확인는 **오류** 활성의 컬렉션 **연결** 하나 이상의 오류가 발생 한 문제를 설명 하는 포함 하는 개체입니다.  

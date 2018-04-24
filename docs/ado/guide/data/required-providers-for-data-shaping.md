@@ -1,6 +1,6 @@
 ---
 title: 데이터 모양 지정에 필요한 공급자 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: ce88a316a1ef31baf083032e31023d36a3e3fff4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>데이터 모양 지정에 필요한 공급자
 데이터 모양 지정 두 공급자는 일반적으로 필요 합니다. 서비스 공급자 [for OLE DB Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), 데이터를 셰이핑 기능 및 OLE DB Provider for SQL Server와 같은 데이터 공급자를 제공, 모양을 채우는 데이터의 행을 제공 [레코드 집합 ](../../../ado/reference/ado-api/recordset-object-ado.md).  

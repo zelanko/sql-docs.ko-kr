@@ -1,31 +1,31 @@
 ---
-title: "부록 d: ADO 샘플 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '부록 d: ADO 샘플 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebaa64517591b9ea89700557f02c9e17dfa3c72e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9a267d5b86e9b999a29c465d7e38116271f87bc7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK의에서 부록 d: ADO 예제
 Windows SDK ADO 및 RDS 코드의 사용을 보여 주는 몇 가지 예제 응용 프로그램을 포함 합니다. 이 샘플은 ADO 및 RDS를 사용 하는 방법을 배울 수 있도록 만들어졌으나 프로덕션 서버에 배포할 수는 없습니다.

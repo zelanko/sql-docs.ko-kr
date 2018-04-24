@@ -1,17 +1,17 @@
 ---
-title: "Find 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Find 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find 메서드 (ADO)
 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 지정된 된 조건을 만족 시키는 행에 대 한 합니다. 필요에 따라 검색, 시작 행 및 행 시작에서 오프셋의 방향을 지정할 수 있습니다. 조건이 충족 되 면 검색 된 레코드로; 현재 행의 위치가 설정 됩니다. 그렇지 위치의 끝 (또는 시작)으로 설정 되 고 **레코드 집합**합니다.  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  비교 연산자 *조건* 될 수 있습니다 "**>**"(보다 큼),"**\<**" (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), "(같지 않음)," <> 또는 "좋아요" (패턴 일치).  
   
- 값 *조건* 문자열, 부동 소수점 숫자 또는 날짜 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호)로 구분 (예를 들어 "상태 = '서울'" 또는 "상태 = WA # #"). 날짜 값 표시 "#" (숫자 기호)로 구분 됩니다 (예를 들어 "start_date > #7/22/&#97;"). 이러한 값 시간, 분 및 초를 나타내는 타임 스탬프 포함 될 수 있지만 밀리초를 포함 해야 하거나 오류가 발생 합니다.  
+ 값 *조건* 문자열, 부동 소수점 숫자 또는 날짜 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호)로 구분 (예를 들어 "상태 = '서울'" 또는 "상태 = WA # #"). 날짜 값 표시 "#" (숫자 기호)로 구분 됩니다 (예를 들어 "start_date > #7/22/97 #"). 이러한 값 시간, 분 및 초를 나타내는 타임 스탬프 포함 될 수 있지만 밀리초를 포함 해야 하거나 오류가 발생 합니다.  
   
  비교 연산자가 있는 경우 "좋아요", 문자열 값에 별표 (*) 문자 또는 부분 문자열의 하나 이상의 항목을 찾을를 포함할 수 있습니다. 예를 들어 "와 같은 상태 중\*'", Maine 등이 검색 합니다. 선행 및 후행 별표를 사용 하 여 값 내에 포함 된 부분 문자열을 찾을 수 있습니다. 예를 들어 "와 같은 상태 '\*으로\*'" Alaska, 사스, 등이 검색 합니다.  
   

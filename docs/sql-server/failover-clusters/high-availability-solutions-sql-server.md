@@ -1,15 +1,16 @@
 ---
-title: "고가용성 솔루션(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 고가용성 솔루션(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7af2a4035d3c528189cca77a4506e98db1acd93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>고가용성 솔루션(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 서버나 데이터베이스의 가용성을 개선하는 여러 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고가용성 솔루션을 소개합니다. 고가용성 솔루션은 하드웨어 또는 소프트웨어 오류의 영향을 차단하고 응용 프로그램의 가용성을 유지하여 사용자가 인지하는 작동 중단을 최소화합니다.    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 서버나 데이터베이스의 가용성을 개선하는 여러 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고가용성 솔루션을 소개합니다. 고가용성 솔루션은 하드웨어 또는 소프트웨어 오류의 영향을 차단하고 응용 프로그램의 가용성을 유지하여 사용자가 인지하는 작동 중단을 최소화합니다.    
     
    
 >  **참고!** 지정된 고가용성 솔루션을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)의 "고가용성(Always On)" 섹션을 참조하세요.    

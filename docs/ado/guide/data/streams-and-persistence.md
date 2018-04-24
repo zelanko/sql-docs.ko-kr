@@ -1,31 +1,31 @@
 ---
-title: "스트림 및 지 속성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 스트림 및 지 속성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a0a45a32086dc3befd19e720c8d600b6b43adde
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f252af47194986372c5fb7e098ca451d5aabe81b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *계속 되 면*, **레코드 집합** 파일인 및 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드 복원은 **레코드 집합** 파일에 해당 합니다.  
@@ -111,7 +111,7 @@ Set rs = nothing
   
  RDS에 새 속성 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md)를 생성 하는.asp 페이지를 가리키는 **레코드 집합**합니다. 즉, 한 **레코드 집합** 개체 없이 얻을 수 RDS 서버 쪽을 사용 하 여 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체나 비즈니스 개체를 작성 하는 사용자입니다. RDS 프로그래밍 모델을 훨씬 간단해 집니다.  
   
- http://server/directory/recordset.asp 명명 된 서버 쪽 코드:  
+ 서버 쪽 코드, 이름 http://server/directory/recordset.asp:  
   
 ```  
 <%  

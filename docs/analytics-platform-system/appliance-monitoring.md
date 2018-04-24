@@ -1,29 +1,22 @@
 ---
-title: 어플라이언스 (분석 플랫폼 시스템)를 모니터링 합니다.
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스 모니터링-분석 플랫폼 시스템 | Microsoft Docs
+description: 이 어플라이언스 모니터링 가이드 도구 및 분석 플랫폼 시스템 기기를 모니터링 하기 위한 작업을 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-ms.openlocfilehash: f361b56581fd5a8dadb4ff41c387074abc006879
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-monitoring"></a>어플라이언스 모니터링
-이 어플라이언스 모니터링 가이드 도구와 SQL Server PDW 어플라이언스에 모니터링에 대 한 작업을 설명 합니다.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>어플라이언스 분석 플랫폼 시스템에 대 한 모니터링
+이 어플라이언스 모니터링 가이드 도구 및 분석 플랫폼 시스템 기기를 모니터링 하기 위한 작업을 설명 합니다.  
   
 ## <a name="Basics"></a>기본 사항 및 도구를 모니터링합니다.  
 값 및 SQL Server PDW 어플라이언스에 모니터링할 수 있는 정보는 광범위 한입니다. 예를 들어 다음은 일반적인 작업을 모니터링 합니다.  

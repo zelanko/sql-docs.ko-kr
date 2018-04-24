@@ -1,30 +1,30 @@
 ---
-title: "HelloData에 대 한 설명 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: HelloData에 대 한 설명 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2265e361258ee49a9d387f3cb879f138c196ba8e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d04b6f886a1f1a4583830d1afdd096b445461232
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="comments-on-hellodata"></a>HelloData에 대 한 설명
 HelloData 응용 프로그램이 일반적인 ADO 응용 프로그램의 기본 작업을 단계별로: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 응용 프로그램을 시작 하는 경우 첫 번째 단추를 클릭 **데이터 가져오기**합니다. 이렇게 하면 실행은 **GetData** 서브루틴 합니다.  

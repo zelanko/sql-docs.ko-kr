@@ -1,31 +1,31 @@
 ---
-title: "키 집합 커서 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 키 집합 커서 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59e2b203f6b33d94a1f615c53c2507964a13a65
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88772fa9ede31acdf5b719cec7cb9311b15cb864
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 변경 내용을 검색 하는 기능에는 정적 및 동적 커서 간의 기능을 제공 합니다. 정적 커서와 같은 검색 되지 않으면 항상의 멤버 자격과 결과 집합의 순서를 변경 합니다. 동적 커서와 같은 결과 집합의 값 행의 변경 내용을 검색지 않습니다 것.  

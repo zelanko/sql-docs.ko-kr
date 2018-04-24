@@ -1,30 +1,30 @@
 ---
-title: "준비 및 실행 명령을 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 준비 및 실행 명령을 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9c8bce6735f6fb7db1f0c279514aca3420d3ba1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfe5be8b68fe701d5b44431ab6e10cf8445deda3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="preparing-and-executing-commands"></a>준비 및 명령 실행
 명령은 데이터 원본에 대 한 작업을 수행 하는 공급자에 실행 하는 명령입니다. SQL 문은 예를 들어 Microsoft SQL 데이터 공급자에 명령입니다. ADO, 명령은 일반적으로 표현 된 **명령** 간단한 명령을 통해도 실행할 수 있지만 개체 **연결** 또는 **레코드 집합** 개체입니다.  

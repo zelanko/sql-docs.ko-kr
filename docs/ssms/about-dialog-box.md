@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bccb8658d5894e20b2a55432093d36b33b40388
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 18cdfd21fecbed78ce6ff31d624e344a542cccd0
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="about-dialog-box"></a>대화 상자 정보
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.   
+# <a name="about-dialog-box"></a>정보 대화 상자
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
+**정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  
   
 ## <a name="options"></a>변수  
 **구성 요소 이름**  

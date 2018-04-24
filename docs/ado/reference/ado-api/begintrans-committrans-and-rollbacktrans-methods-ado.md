@@ -1,17 +1,17 @@
 ---
-title: "BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::raw_RollbackTrans
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09f6bab43fc648f76670b84b5c434232255e0cf3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0d1f3a607ed6b39100b5de5c2d166bc428fbae7f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)
 이러한 트랜잭션 메서드 내에서 처리 하는 트랜잭션 관리는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다음과 같이 개체:  

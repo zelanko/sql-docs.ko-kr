@@ -1,28 +1,28 @@
 ---
-title: "3 단계: 필드 목록 상자 채우기 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '3 단계: 필드 목록 상자 채우기 | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53600209952c84dc19009348df580fb660cbe396
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b7f82e92cc9293781992eccdbb04a46f8ac788fa
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>3 단계: 필드 목록 상자 채우기
 필드 목록 상자를 채우려면의 Click 이벤트 처리기에 다음 코드를 삽입 `lstMain`:  

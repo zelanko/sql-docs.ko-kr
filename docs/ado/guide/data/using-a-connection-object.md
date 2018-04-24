@@ -1,33 +1,33 @@
 ---
-title: "연결 개체를 사용 하 여 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 개체를 사용 하 여 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e27a3da94c2699e2281d331e6aa1fff4b9a62001
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7aa8e57d79b7f65ede84c7e88f03d18a5131f449
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-a-connection-object"></a>연결 개체를 사용 하 여
-열기 전에 **연결** 개체를 데이터 원본 및 연결의 종류에 대 한 정보를 정의 해야 합니다. 이 정보의 대부분 보유는 *ConnectionString* 의 매개 변수는 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표 내에 포함 된 값을 가진 세미 콜론으로 구분 된 인수/값 쌍의 목록으로 구성 합니다. 예를 들어  
+열기 전에 **연결** 개체를 데이터 원본 및 연결의 종류에 대 한 정보를 정의 해야 합니다. 이 정보의 대부분 보유는 *ConnectionString* 의 매개 변수는 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표 내에 포함 된 값을 가진 세미 콜론으로 구분 된 인수/값 쌍의 목록으로 구성 합니다. 예를 들어:  
   
 ```  
 Dim sConn As String  

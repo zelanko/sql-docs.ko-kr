@@ -1,32 +1,32 @@
 ---
-title: "레코드 집합의 경계 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 레코드 집합의 경계 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - EOF property [ADO], boundaries of a Recordset
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96473d512ed586ebdb155e3422f6559294c2616d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드 집합** 지원는 **BOF** 및 **EOF** 속성을 데이터 집합의 시작과 끝을 각각 설명 합니다. 생각할 수 있으며 **BOF** 및 **EOF** 의 시작과 끝에 배치 됩니다 "팬텀" 레코드로 **레코드 집합**합니다. 계산 **BOF** 및 **EOF**, 샘플 **레코드 집합** 는 이제 다음과 같이 표시 됩니다.  

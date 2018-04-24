@@ -1,32 +1,32 @@
 ---
-title: "속성 예제 (VC + +)를 준비 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 속성 예제 (VC + +)를 준비 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 759a516062ea81e173690c2f55364cf32fff72a0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 00960036b0939c2f6ea42fc149ba7e3e2230669a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepared-property-example-vc"></a>준비 속성 예제 (VC + +)
 이 예제에서는 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 열어 두는 속성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체-준비 및 준비 되지 않았습니다.  

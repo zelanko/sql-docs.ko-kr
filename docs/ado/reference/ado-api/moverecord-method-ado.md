@@ -1,17 +1,17 @@
 ---
-title: "범위란 메서드 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 범위란 메서드 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::MoveRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a626e6f86d2e44fed972f8043b556d233fdf1d17
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3c6361dca137a27c5b54149fd400ee5cd29d9160
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="moverecord-method-ado"></a>범위란 메서드 (ADO)
 이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -56,7 +56,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *옵션*  
  (선택 사항) A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 해당 기본값은 값 **메서드의 동작**합니다. 이 메서드의 동작을 지정합니다.  
   
- *Async*  
+ *비동기*  
  (선택 사항) A **부울** 값 때 **True**,이 작업은 비동기 되지 않아야 합니다.  
   
 ## <a name="return-value"></a>반환 값  

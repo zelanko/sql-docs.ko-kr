@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(FCI)에서는 한 번에 하나의 노드에서만 WSFC(Windows Server Failover Cluster) 클러스터 리소스 그룹을 소유할 수 있습니다. 클라이언트 요청은 FCI에서 이 노드를 통해 제공됩니다. 오류가 발생하여 다시 시작이 실패하면 그룹 소유권이 FCI의 다른 WSFC 노드로 이동합니다. 이 프로세스를 장애 조치(Failover)라고 합니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 는 오류 검색의 안정성이 향상되었고 유연한 장애 조치(failover) 정책을 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(FCI)에서는 한 번에 하나의 노드에서만 WSFC(Windows Server Failover Cluster) 클러스터 리소스 그룹을 소유할 수 있습니다. 클라이언트 요청은 FCI에서 이 노드를 통해 제공됩니다. 오류가 발생하여 다시 시작이 실패하면 그룹 소유권이 FCI의 다른 WSFC 노드로 이동합니다. 이 프로세스를 장애 조치(Failover)라고 합니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 는 오류 검색의 안정성이 향상되었고 유연한 장애 조치(failover) 정책을 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI는 장애 조치(failover) 탐지에 대한 기본 WSFC 서비스에 따라 달라집니다. 따라서 기본 WSFC 기능과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 추가한 기능의 두 가지 메커니즘을 통해 장애 조치(failover) 동작이 결정됩니다.  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  이 시스템 저장 프로시저는 오류 상태 수준에서 중요한 역할을 하므로 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)를 검토하세요.  
   
-|Level|조건|설명|  
+|Level|조건|Description|  
 |-----------|---------------|-----------------|  
 |0|자동 장애 조치(Failover) 또는 다시 시작 안 함|어떤 실패 조건에서도 장애 조치(Failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다. 이 수준은 시스템 유지 관리 목적으로만 제공됩니다.|  
 |1|서버 다운 시 장애 조치(Failover) 또는 다시 시작|다음 조건이 발생한 경우 서버가 다시 시작되거나 장애 조치(Failover)됨을 나타냅니다.<br /><br /> SQL Server 서비스가 다운된 경우|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
  쿼럼 상태의 유지 관리에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

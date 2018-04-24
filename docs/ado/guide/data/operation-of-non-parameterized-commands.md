@@ -1,31 +1,31 @@
 ---
-title: "매개 변수가 없는 명령 작업을 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 매개 변수가 없는 명령 작업을 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a025cf381bdf5a51cb825294bf5a5399fc033b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수가 없는 명령 작업을
 매개 변수가 없는 명령에 대 한 모든 공급자 명령이 실행 됩니다 및 **레코드 집합** 명령 실행 중에 만들어집니다. 이 명령은 동기적으로 실행 되는 경우 모든는 **레코드 집합** 완전히 채울 수 있습니다. 비동기 채우기 모드를 선택한 경우의 채워진된 상태는 **레코드 집합** 채우기 모드와의 크기에 따라 달라 집니다는 **레코드 집합**합니다.  

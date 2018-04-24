@@ -1,22 +1,22 @@
 ---
-title: "클라우드의 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작에서는 SQL Server 2017 linux 원하는 클라우드에서 실행 하는 방법을 보여 줍니다."
+title: 클라우드의 SQL Server 2017 시작 | Microsoft Docs
+description: 이 빠른 시작에서는 SQL Server 2017 linux 원하는 클라우드에서 실행 하는 방법을 보여 줍니다.
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.component: 
+ms.component: ''
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.assetid: ''
+ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>빠른 시작: SQL Server 2017은 클라우드에서 실행
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="amazon-web-services"></a>Amazon 웹 서비스
 1.  Linux a m I 최소 2GB의 마켓플레이스에서 메모리를 사용 하 여 만들기 
-    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  에 연결 된 a m I s s h
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/24/2018
     
 ## <a name="google-cloud-platform"></a>Google 클라우드 플랫폼
 1.  최소 2GB의 메모리 클라우드 시작 관리자와 Linux 이미지를 만들려면 
-    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  이미지에 연결 된 ssh

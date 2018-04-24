@@ -1,30 +1,32 @@
 ---
-title: "HealthCheckTimeout 속성 설정 구성 | Microsoft 문서"
-ms.custom: 
+title: HealthCheckTimeout 속성 설정 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0165e046d479cab6f541dbc7cd81787ebd0accf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4130fd646080339fe0f62154742879290dbbe053
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] HealthCheckTimeout 설정은 SQL Server 리소스 DLL이 Always On FCI(장애 조치(failover) 클러스터 인스턴스)가 응답하지 않는 것으로 보고하기 전에 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 저장 프로시저에서 반환되는 정보를 대기해야 하는 시간(밀리초)을 지정하는 데 사용됩니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  HealthCheckTimeout 설정은 SQL Server 리소스 DLL이 Always On FCI(장애 조치(failover) 클러스터 인스턴스)가 응답하지 않는 것으로 보고하기 전에 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 저장 프로시저에서 반환되는 정보를 대기해야 하는 시간(밀리초)을 지정하는 데 사용됩니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  ALTER SETTINGS 및 VIEW SERVER STATE 사용 권한이 필요합니다.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  

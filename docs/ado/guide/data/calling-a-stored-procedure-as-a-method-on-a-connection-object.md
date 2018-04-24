@@ -1,32 +1,32 @@
 ---
-title: "저장 프로시저는 연결 개체의 메서드로 호출 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 저장 프로시저는 연결 개체의 메서드로 호출 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab6ec30a05bed643b032845c6ecf9777e1a14453
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6fc8b02ae7390a4ab86b04a501a2e9902f99c25e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>저장 프로시저는 연결 개체의 메서드로 호출
 연결된 열기에 대 한 네이티브 메서드 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명된 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  

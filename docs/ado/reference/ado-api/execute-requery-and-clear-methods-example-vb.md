@@ -1,17 +1,17 @@
 ---
-title: "실행 하 고, Requery 메서드 예제 (VB)의 선택을 취소 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 실행 하 고, Requery 메서드 예제 (VB)의 선택을 취소 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1549486e1dc4efc0325f935ce80d25627aeb72df
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b35a5d1428876c92472908218be87f2e03b7ad02
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>실행, Requery, 및 메서드 예제 (VB)를 지웁니다.
 이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. (의 **오류** 컬렉션을 통해 액세스 되는 **연결** 의 개체는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand 및 PrintOutput 절차는이 절차를 실행 하려면 필요 합니다.  

@@ -1,33 +1,33 @@
 ---
-title: "PrimaryKey 및 고유한 속성 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: PrimaryKey 및 고유한 속성 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fbb3844149af7a036749a44ce70a425b4701706
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9d4180fd60fa5edc8f9bbee5d26c33d4072bc135
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 및 고유한 속성 예제 (VB)
 이 예제에서는 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 속성의는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 두 개의 열이 있는 새 테이블을 만듭니다. **PrimaryKey** 및 **Unique** 속성 중복 값은 허용 되지 않습니다는 기본 키 열이 하나를 확인 하는 데 사용 됩니다.  

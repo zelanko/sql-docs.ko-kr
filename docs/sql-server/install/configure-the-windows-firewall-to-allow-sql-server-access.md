@@ -1,16 +1,16 @@
 ---
-title: "SQL Server 액세스를 허용하도록 Windows 방화벽 구성 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 액세스를 허용하도록 Windows 방화벽 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Firewall ports
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 02/09/2018
   
     2.  명령 프롬프트에서 **netstat -n -a**를 입력합니다.  
   
-         제어판에서 **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
+         **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
   
 -   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=28590)에서 다운로드할 수 있습니다.  
   

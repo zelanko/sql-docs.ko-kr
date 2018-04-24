@@ -1,30 +1,30 @@
 ---
-title: "ADO 오류 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO 오류 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7319f978370134775d7f89593716beac9fb73fab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-run-time-errors"></a>ADO 런타임 오류
 ADO 오류를 프로그램 실행 시간 오류로 보고 됩니다. 트래핑 하 고 처리 하는 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어 Visual Basic에서 사용 하 여는 **On Error** 문. Visual c + +에서 ADO 라이브러리에 액세스 하는 데 사용 하는 방법에 따라 다릅니다. #Import를 사용 하 여 한 **try / catch** 블록입니다. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 그렇지 않은 경우 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.

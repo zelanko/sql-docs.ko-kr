@@ -1,31 +1,31 @@
 ---
-title: "DataSpace (ADO-WFC 구문) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: DataSpace (ADO-WFC 구문) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a393ae11d8248bc10c7d9831743426e2687ae76
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18572b2eb08963b2020808040f8a5a7cc43099f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO-WFC 구문)
 **createObject** 의 메서드는 **DataSpace** 클라이언트 응용 프로그램 요청을 처리할 두 비즈니스 개체를 지정 하는 클래스 (*progid*) 및 통신 프로토콜 와 서버 (*연결*). **createObject** 반환는 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) 서버를 나타내는 개체입니다.  

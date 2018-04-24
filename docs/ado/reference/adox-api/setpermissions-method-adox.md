@@ -1,17 +1,17 @@
 ---
-title: "SetPermissions 메서드 (ADOX) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SetPermissions 메서드 (ADOX) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - User25::SetPermissions
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7987ce08f242421d2c84766c575e4867e7e1b8c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3bcc44011a880f05489be5cc1fcf5e398629d01d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드 (ADOX)
 에 대 한 사용 권한을 지정는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체에 있습니다.  
@@ -55,7 +55,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *권한*  
  A **긴** 비트 마스크 될 수 있는 값의 하나 이상의 [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) 설정에 대 한 권한을 나타내는 상수입니다.  
   
- *Inherit*  
+ *상속*  
  (선택 사항) A **긴** 하나일 수 있는 값의는 [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) 개체는 이러한 사용 권한을 상속 하는 방법을 지정 하는 상수입니다. 기본값은 **adInheritNone**합니다.  
   
  *ObjectTypeId*  

@@ -1,36 +1,36 @@
 ---
-title: "멤버 개체 속성, 메서드 및 이벤트 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 멤버 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e860d8d676b82e718271324472fd399261082f6a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3193f41c08e02215d2ad2e4032c0303bca4825d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="member-object-properties-methods-and-events"></a>멤버 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [Caption 속성](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
   
- [ChildCount Property](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
+ [ChildCount 속성](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
   
  [Children 속성](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
   

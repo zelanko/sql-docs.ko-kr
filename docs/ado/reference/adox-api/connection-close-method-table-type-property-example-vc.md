@@ -1,33 +1,33 @@
 ---
-title: "연결 닫기 메서드를 테이블 형식 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 닫기 메서드를 테이블 형식 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5556e7087cbdddc7dab24538898b1422360ec753
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 83be87a8c4c0dc86867e624e1f31a00994a37971
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close 메서드 연결, 테이블 형식 속성 예제 (VC + +)
 설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 해야 "닫기" 카탈로그입니다. 연결된 컬렉션은 비어 있게 됩니다. 카탈로그의 스키마 개체에서 생성 된 모든 개체가 분리 됩니다. 캐시 된 경우 해당 개체에 속성을 사용할 수 있지만 공급자에 대 한 호출을 요구 하는 속성을 읽는 중에 실패 합니다.  

@@ -16,18 +16,20 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 60efe21b9417e0efe7301472f8b9777b1d1f8a91
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd577dfbabfe8d4aa989fc2da0f1751310c3d0dc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-samples"></a>SQL 샘플
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Microsoft SQL 제품에 대 한 코드 예제 및 예제 데이터베이스의 위치입니다.
 
 ## <a name="sql-samples-repository"></a>SQL 샘플 리포지토리
+
 SQL 제품에 대 한 코드 예제는는 [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) GitHub 리포지토리 합니다. 각 샘플에는 실행 하 고 샘플을 사용 하는 방법을 설명 하는 추가 정보 파일이 포함 되어 있습니다. 샘플 리포지토리에 대 한 주요 추가 정보에는 기여 하는 방법을 설명 합니다. 
 
 예제 및 서식 파일은 모두 MIT 라이선스에 따라 허가 됩니다. 루트의 license.txt 파일을 참조 하십시오.

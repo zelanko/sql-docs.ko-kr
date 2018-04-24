@@ -1,31 +1,31 @@
 ---
-title: "명령 속성-동적 (ADO)를 다시 동기화 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 명령 속성-동적 (ADO)를 다시 동기화 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>명령 속성-동적 (ADO)를 다시 동기화
 지정 된 사용자가 제공한 명령 문자열의 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 명명 된 테이블의 데이터를 새로 고치려면 메서드 문제는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성.  
@@ -87,7 +87,7 @@ WHERE Orders.ordid  = @ordid
   
  다시 한 번는 **고유 테이블** 은 *Orders* 와 기본 키가 *OrderID*, 매개 변수화 합니다.  
   
- **다시 동기화 명령** 동적 속성에 추가 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성 **adUseClient**합니다.  
+ **다시 동기화 명령** 동적 속성에 추가 된 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성**adUseClient**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

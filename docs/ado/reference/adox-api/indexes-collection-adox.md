@@ -1,17 +1,17 @@
 ---
-title: "인덱스 컬렉션 (ADOX) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 인덱스 컬렉션 (ADOX) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Table::Indexes
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d465c0aad483a55bfe1b2560f23a5de91ff5a754
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dc9448fa9f235d8c2b7f63a2ed0d91fb57269111
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexes-collection-adox"></a>인덱스 컬렉션 (ADOX)
 모든 포함 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 테이블의 개체입니다.  

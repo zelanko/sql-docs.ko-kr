@@ -1,31 +1,31 @@
 ---
-title: "IRDSService 인터페이스 (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: IRDSService 인터페이스 (RDS) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e360c609905f7983de95c704fe49ca72d043f71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e452cd1282debede2131703ccb8566e3e9dec416
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스 (RDS)
 노출 된 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 기능이 더 많은 버전의 개체에 요청된 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 메서드.  

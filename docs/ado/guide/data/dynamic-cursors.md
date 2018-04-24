@@ -1,31 +1,31 @@
 ---
-title: "동적 커서 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 동적 커서 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbeb8f40cf6d1ad91a59fa9719410f26386953d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f5888d8043fbc2c5db660060b0e1fe13c39c592a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dynamic-cursors"></a>동적 커서
 동적 커서는 커서 내부 또는 커서 외부의 다른 사용자가 변경 내용을에서 발생 하는지 여부에 관계 없이 결과 집합의 행에 대 한 모든 변경 내용을 검색 합니다. Insert, update 및 delete 문은 모든 사용자가 수행한 모든 커서를 통해 표시 됩니다. 동적 커서는 변경 내용이 행, 순서 및 커서가 열린 후에 결과 집합의 값을 검색할 수 있습니다. 커밋될 때까지 (아닌 경우 커서 트랜잭션 격리 수준을 "커밋되지 않은"로 설정 됨)에 업데이트 커서 밖에 서 표시 되지 않습니다.  

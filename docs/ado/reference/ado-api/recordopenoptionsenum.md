@@ -1,33 +1,33 @@
 ---
-title: "함께 사용할 수 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 함께 사용할 수 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RecordOpenOptionsEnum
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56caae53741a24727763868295ca92216557323c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fecb68d5e6884a0a6bd6bfc4732c0eb02c5d7fdf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 열기에 대 한 옵션을 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다. 사용 하 여 이러한 값을 결합할 수 있습니다 또는 합니다.  

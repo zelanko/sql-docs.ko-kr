@@ -1,33 +1,33 @@
 ---
-title: "연결 개체 (ADO) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 개체 (ADO) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1354a3037c81d8d439908faf74caefd426f78d58
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-object-ado"></a>연결 개체 (ADO)
 데이터 원본에 대해 열린 연결을 나타냅니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/09/2018
 >  이 기능을 사용 하지 마십시오 (네이티브 메서드 인쇄 된 하는 경우 명명 된 명령 또는 저장된 프로시저를 호출의 **연결** 개체)는 Microsoft®.NET Framework 응용 프로그램에서 때문에 기능 충돌의 기본 구현 com 상호 운용.NET Framework는 방식과  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>연결 개체의 기본 방법으로 명령을 실행합니다  
- 명령을 실행 하려면 명령을 이름을 사용 하 여 지정 된 **명령** 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성입니다. 설정의 **ActiveConnection** 속성은 **명령** 개체를 연결 합니다. 메서드처럼 하는 경우 명령 이름 사용 되는 위치 명령문을 발급 하는 **연결** 매개 변수, 개체 및 **레코드 집합** 모든 행이 반환 하는 경우 개체입니다. 설정의 **레코드 집합** 결과 사용자 지정 하는 속성 **레코드 집합**합니다. 예를 들어  
+ 명령을 실행 하려면 명령을 이름을 사용 하 여 지정 된 **명령** 개체 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성입니다. 설정의 **ActiveConnection** 속성은 **명령** 개체를 연결 합니다. 메서드처럼 하는 경우 명령 이름 사용 되는 위치 명령문을 발급 하는 **연결** 매개 변수, 개체 및 **레코드 집합** 모든 행이 반환 하는 경우 개체입니다. 설정의 **레코드 집합** 결과 사용자 지정 하는 속성 **레코드 집합**합니다. 예를 들어:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -86,7 +86,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>연결 개체의 기본 방법으로 저장된 프로시저를 실행 합니다.  
- 저장된 프로시저를 실행 하려면 저장된 프로시저 이름이 사용 되는 위치 처럼에 메서드처럼 문을 발행는 **연결** 묶인 매개 변수 개체입니다. ADO는 "최상의 추측" 매개 변수 형식의 생성 됩니다. 예를 들어  
+ 저장된 프로시저를 실행 하려면 저장된 프로시저 이름이 사용 되는 위치 처럼에 메서드처럼 문을 발행는 **연결** 묶인 매개 변수 개체입니다. ADO는 "최상의 추측" 매개 변수 형식의 생성 됩니다. 예를 들어:  
   
 ```  
 Dim cnn As New ADODB.Connection  

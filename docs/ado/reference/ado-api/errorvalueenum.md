@@ -1,33 +1,33 @@
 ---
 title: ErrorValueEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a79af3564a177da2953b053ce943a2d740e4cc7d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8a543a2e8816a23d420dd7bb007ae157d676f98
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO에서 런타임 오류가 유형을 지정합니다.  
@@ -52,7 +52,7 @@ ADO에서 런타임 오류가 유형을 지정합니다.
 |**adErrCantConvertvalue**|3724 -2146824564 0x800A0E8C|부호 불일치 또는 데이터 오버플로 이외의 이유로 데이터 값을 변환할 수 없습니다. 예를 들어 변환 시 데이터가 잘렸습니다.|  
 |**adErrCantCreate**|3725 -2146824563 0x800A0E8D|데이터 값을 설정 하거나 필드 데이터 형식을 알 되었거나 않았습니다. 작업을 수행 하려면 리소스 부족을 검색할 수 없습니다.|  
 |**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|작업을 수행 하려면 올바른 **ParentCatalog**합니다.|  
-|**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|레코드가 필드가 없습니다.|  
+|**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|레코드가 필드가 없습니다.|  
 |**adErrDataConversion**|3421 -2146824867 0x800A0D5D|응용 프로그램에서 현재 작업에 대 한 잘못 된 형식의 값을 사용합니다.|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|데이터 값이 너무 커서 필드 데이터 형식으로 나타낼 수 있습니다.|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|삭제할 개체의 URL 현재 레코드의 범위를 벗어납니다.|  

@@ -1,32 +1,32 @@
 ---
-title: "삭제 메서드 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 삭제 메서드 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac2b901995a10e1af4f29dbc716f23fd26522678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0b84e3d1320ae15500fd23f8f1b2d66d9225934d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-method-example-vc"></a>삭제 메서드 예제 (VC + +)
 사용 하 여이 예제는 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

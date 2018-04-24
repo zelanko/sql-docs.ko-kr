@@ -1,31 +1,31 @@
 ---
-title: "사용자 지정 파일 기록 섹션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 사용자 지정 파일 기록 섹션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c136282f7d337791046d009c9729fefee0d27112
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **로그** 섹션의 작업 중 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목에 포함 되어는 **DataFactory**합니다.  

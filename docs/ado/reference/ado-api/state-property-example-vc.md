@@ -1,32 +1,32 @@
 ---
-title: "상태 속성 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 상태 속성 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bdb7823ed43d251105330ef235fe16537037ac5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7e60354e772096dcd65a19c9f710caff4e8a828a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="state-property-example-vc"></a>State 속성 예제 (VC + +)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/state-property-ado.md) 비동기 연결을 여는 동안 비동기 명령이 실행 되는 메시지를 표시 하는 속성입니다.  

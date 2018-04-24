@@ -1,17 +1,17 @@
 ---
-title: "ADO MD LevelDepth 속성이 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: ADO MD LevelDepth 속성이 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - LevelDepth
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - LevelDepth property [ADO MD]
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4addff63db42f2d5842db5854635a0b244699b4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cf684f0de2a8fd4b2bd2cb85e421937ec90b82f6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="leveldepth-property-ado-md"></a>ADO MD LevelDepth 속성
 계층의 루트 사이 있는 수준 수를 나타내는 및 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  

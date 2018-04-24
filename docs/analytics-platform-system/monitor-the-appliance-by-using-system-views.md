@@ -1,29 +1,22 @@
 ---
-title: 시스템 뷰 (분석 플랫폼 시스템)를 사용 하 여 어플라이언스에 모니터링
-author: barbkess
-ms.author: barbkess
+title: 시스템 뷰-분석 플랫폼 시스템 모니터 | Microsoft Docs
+description: 이 문서에서는 분석 플랫폼 시스템 기기 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>시스템 뷰를 사용 하 여 어플라이언스에 모니터링
-이 항목에서는 SQL Server PDW 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>시스템 뷰-분석 플랫폼 시스템 기기 모니터
+이 문서에서는 SQL Server PDW 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>시스템 뷰를 사용 하 여 어플라이언스에 모니터링  
 SQL Server PDW 어플라이언스 상태, 상태 및 성능에 대 한 자세한 정보를 얻을 수 있도록 하는 포괄적인 시스템 뷰를 포함 합니다. 이 표에서 각 모니터링 기능에 대해 사용할 수 있는 시스템 뷰에 대 한 링크를 제공 합니다.  

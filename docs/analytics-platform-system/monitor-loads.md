@@ -1,28 +1,22 @@
 ---
-title: 병렬 데이터 웨어하우스에 대 한 로드 모니터
-author: barbkess
-ms.author: barbkess
+title: 병렬 데이터 웨어하우스에 대 한 부하를 모니터링 | Microsoft Docs
+description: 활성 상태이 고 최근 모니터 분석 플랫폼 System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW) 시스템 뷰를 사용 하 여 로드 합니다. "
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 활성 상태이 고 최근를 모니터링할 수 있습니다 [dwloader](dwloader.md) Analytics Platform System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW) 시스템 뷰를 사용 하 여 로드 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-loads"></a>모니터 로드
-활성 상태이 고 최근를 모니터링할 수 있습니다 [dwloader](dwloader.md) Analytics Platform System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW)를 사용 하 여 로드 [시스템 뷰](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)합니다. 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 로드 모니터
+활성 상태이 고 최근 모니터 [dwloader](dwloader.md) Analytics Platform System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW)를 사용 하 여 로드 [시스템 뷰](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)합니다. 
   
 > [!TIP]  
 > 일부 부하 INSERT 문 또는 SQL 문을 사용 하 여 부하를 수행 하는 비즈니스 인텔리전스 도구를 사용 하 여 시작 됩니다. 

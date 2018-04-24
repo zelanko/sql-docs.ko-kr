@@ -1,28 +1,21 @@
 ---
-title: 분석 플랫폼 시스템 핫픽스 (분석 플랫폼 시스템)를 제거 합니다.
-author: barbkess
-ms.author: barbkess
+title: 분석 플랫폼 시스템에는 핫픽스를 제거 합니다. | Microsoft Docs
+description: 분석 플랫폼 시스템 핫픽스를 제거 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
-caps.latest.revision: 21
-ms.openlocfilehash: 56c6731d5a39741574999d94532b9505adaf6380
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 83e57a676ee0eff21eb3a736484d8e286cdeee01
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스를 제거 합니다.
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스를 제거 합니다. 
 다음 단계에서는 이전에 설치한 분석 플랫폼 시스템 핫픽스를 제거 하는 방법에 설명 합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  

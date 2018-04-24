@@ -1,28 +1,28 @@
 ---
-title: "2 단계: 기본 목록 상자를 초기화 합니다. | Microsoft Docs"
-ms.prod: sql-non-specified
+title: '2 단계: 기본 목록 상자를 초기화 합니다. | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60ece26fab2c6f691614b609d1dd3f07f42231e4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8272c721c2717df494db5ead86716900f44c46e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>2 단계: 기본 목록 상자를 초기화 합니다.
 전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입:  
@@ -52,7 +52,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. Record 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL이 있으면 열. 이미 존재 하지 않는 경우 자동으로 만들어집니다. 사용자 환경에서 "http://servername/foldername/"는 올바른 url을 바꿔야 함을 note 합니다.  
+ 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. Record 개체 `grec`는 ActiveConnection로 지정 된 URL로 열립니다. URL이 있으면 열. 이미 존재 하지 않는 경우 자동으로 만들어집니다. 교체 해야 하는 "http://servername/foldername/" 된 환경에서 유효한 URL입니다.  
   
  레코드 집합 개체 `grs`, 레코드의 자식에서 열릴 `grec`합니다. 그런 다음 `lstMain` URL에 게시 된 리소스의 파일 이름으로 채워집니다.  
   

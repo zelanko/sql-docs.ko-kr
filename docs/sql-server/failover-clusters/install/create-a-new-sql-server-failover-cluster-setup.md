@@ -1,15 +1,16 @@
 ---
-title: "새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치) | Microsoft 문서"
-ms.custom: 
+title: 새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 581129c04f1348b0fd66a9a5064c923324365d65
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 다른 노드를 관리하려고 액티브 노드에서 설치 프로그램을 실행하지 않도록 주의해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 다른 노드를 관리하려고 액티브 노드에서 설치 프로그램을 실행하지 않도록 주의해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터는 노드가 클러스터되는 방식에 따라 다음과 같은 방법으로 구성됩니다.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/05/2017
   
  Windows 장애 조치 클러스터에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 설치에 대한 자세한 내용은 [SQL Server Analysis Services 클러스터링 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 항목을 검토하십시오.  
   
 -   [SQL Server 설치 계획](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -401,7 +403,7 @@ ms.lasthandoff: 12/05/2017
   
 19. 설치가 끝나면 설치 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 **완료** 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 과정을 완료하려면 **닫기**를 클릭합니다. 동일한 장애 조치(Failover) 클러스터를 위해 준비한 모든 노드가 이제 이 단계를 통해 최종 완료된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 일부가 됩니다.  
   
-## <a name="next-steps"></a>다음 단계  
+## <a name="next-steps"></a>Next Steps  
  **새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 구성** — [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 공격받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별적으로 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
  로그 파일 위치에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  

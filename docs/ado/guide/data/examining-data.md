@@ -1,33 +1,33 @@
 ---
-title: "데이터를 검토할 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 데이터를 검토할 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
 - examining data [ADO]
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e08bd9943a3744c5629ea47396a6574b9e23938
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 963b6846aeb4622bda9383046424620f695ac9dc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="examining-data"></a>데이터를 검사합니다.
 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **레코드 집합** 개체입니다. 이 섹션에 설명 합니다 **레코드 집합** 더욱 자세하게에서를 통해 탐색 하는 방법을 포함 하는 **레코드 집합** 있으며 해당 데이터를 볼 합니다.  

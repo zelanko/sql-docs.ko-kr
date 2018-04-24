@@ -1,35 +1,35 @@
 ---
-title: "다차원 데이터 작업 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 다차원 데이터 작업 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 4 개 이하의 축 및 보통 두 또는 세 컬렉션을 구성 됩니다. *축* 은 찾거나 큐브에서 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  
   
- A *위치* 축의 위치가 있습니다. 1 차원으로 구성 된 한 축에 대 한 이러한 위치는 차원 멤버의 하위 집합입니다. 둘 이상의 차원을의 구성 요소 경우 각 위치에는 복합 엔터티는  *n*  where 부분  *n*  방향이 해당 축에 따라 차원 수는 있습니다. 위치의 각 부분에는 하나의 구성 차원에서 멤버입니다.  
+ A *위치* 축의 위치가 있습니다. 1 차원으로 구성 된 한 축에 대 한 이러한 위치는 차원 멤버의 하위 집합입니다. 둘 이상의 차원을의 구성 요소 경우 각 위치에는 복합 엔터티는 *n* where 부분 *n* 방향이 해당 축에 따라 차원 수입니다. 위치의 각 부분에는 하나의 구성 차원에서 멤버입니다.  
   
  예를 들어, Geography 및 Product 차원에서 판매 데이터를 포함 하는 큐브에 셀 집합의 x 축을 따라 지향적 이며,이 축 따라 위치 포함 될 수 있습니다 "미국"와 "Computers". 멤버 이 예제에서는 x 축 위치를 결정 하려면 각 차원의 멤버를에서 축 방향 됩니다 필요 합니다.  
   

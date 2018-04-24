@@ -1,28 +1,21 @@
 ---
-title: InfiniBand PDW 원격 테이블 복사본을 외부 Windows 시스템 구성
-author: barbkess
-ms.author: barbkess
+title: 병렬 데이터 웨어하우스-원격 테이블 복사본을 받을 수 있는 기간을 구성 | Microsoft Docs
+description: 구입 하 고 InfiniBand 네트워크를 사용 하 여 병렬 데이터 웨어하우스는 원격 테이블 복사 기능에 사용할 연결 기기 비 Windows 시스템을 구성 하는 방법을 설명 합니다. Windows 시스템 SQL Server PDW 데이터베이스에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스트 합니다. 기기에서 별도로 구입 이며 기기 InfiniBand 네트워크에 연결 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
-caps.latest.revision: 11
-ms.openlocfilehash: 32875c5c7b93f47dbf9dbcc01c621df402ab782d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>InfiniBand를 사용 하 여 원격 테이블 복사본을 받을 수는 외부 Windows 시스템 구성
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand-병렬 데이터 웨어하우스를 사용 하 여 원격 테이블 복사본을 받을 수는 외부 Windows 시스템 구성
 구입 하 고 InfiniBand 네트워크를 사용 하 여 SQL Server PDW에서 원격 테이블 복사 기능과 함께 사용 하기 위해 연결 하는 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다. Windows 시스템 SQL Server PDW 데이터베이스에서 원격 테이블 복사본을 수신 하는 SQL Server 데이터베이스를 호스트 합니다. 기기에서 별도로 구입 이며 기기 InfiniBand 네트워크에 연결 합니다.  
   
 > [!NOTE]  

@@ -1,32 +1,32 @@
 ---
-title: "NextRecordset 메서드 예제 (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: NextRecordset 메서드 예제 (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf08a82d23f4fc89539ef87bc52b612a578915e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0270fdaeebba219876a56a7df7ef80397548b9e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제 (VB)
 사용 하 여이 예제는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 세 개의 개별 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 볼 **선택** 문.  

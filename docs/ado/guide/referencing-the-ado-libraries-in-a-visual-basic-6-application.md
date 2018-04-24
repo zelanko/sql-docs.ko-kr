@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27ac2cc8b7a10d421296987db230cdde33384203
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 20044ab8bc57f8c943a26457cd165d95afcd077f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 응용 프로그램에서 ADO 라이브러리 참조
 ADO 라이브러리는 Microsoft Visual Basic 6 응용 프로그램을 가져오려면 Visual Basic 프로젝트에 대 한 참조를 설정 해야 합니다.  
@@ -53,10 +53,10 @@ ADO 라이브러리는 Microsoft Visual Basic 6 응용 프로그램을 가져오
   
 -   *msado26.tlb*, ADO 2.6 Type Library  
   
--   *msado25.tlb*, ADO 2.5 Type Library  
+-   *msado25.tlb*, ADO 2.5 형식 라이브러리  
   
--   *msado21.tlb*, ADO 2.1 Type Library  
+-   *msado21.tlb*, ADO 2.1 형식 라이브러리  
   
--   *msado20.tlb*, ADO 2.0 Type Library  
+-   *msado20.tlb*, ADO 2.0 형식 라이브러리  
   
  응용 프로그램 이전 버전과 호환성에 속하는 이유로 이러한 ADO 라이브러리를 사용 해야, 형식 라이브러리의 적절 한 버전을 가져와야 합니다. 이 수행 하려면 이전 섹션의 절차에 따라 대체 *msado15.dll* 여 *msadoXX.tlb*여기서 *XX* 가져와야 버전 번호를 나타냅니다.

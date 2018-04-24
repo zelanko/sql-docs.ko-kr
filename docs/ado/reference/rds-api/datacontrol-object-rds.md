@@ -1,17 +1,17 @@
 ---
-title: "DataControl 개체 (RDS) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: DataControl 개체 (RDS) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체 (RDS)
 데이터 쿼리 바인딩하여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 표시 하려면 하나 이상의 컨트롤 (예: 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자)에 **레코드 집합** 웹 페이지에는 데이터입니다.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/09/2018
  모든 속성은 **.rds입니다 DataControl** 는 사용자 지정 비즈니스 개체의 기능을 바꿀 수 있으므로 선택 사항입니다.  
   
 > [!NOTE]
->  여러 결과 쿼리 하는 경우 첫 번째 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 반환 됩니다. 여러 개의 결과 집합이 필요한 경우 자체에 각각 할당 **DataControl**합니다. 여러 결과 대 한 쿼리의 예는 다음 수 있습니다.`"Select * from Authors, Select * from Topics"`  
+>  여러 결과 쿼리 하는 경우 첫 번째 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 반환 됩니다. 여러 개의 결과 집합이 필요한 경우 자체에 각각 할당 **DataControl**합니다. 여러 결과 대 한 쿼리의 예는 다음 수 있습니다. `"Select * from Authors, Select * from Topics"`  
   
  추가 "DFMode = 20;" 연결 문자열을 사용 하는 경우에 **.rds입니다 DataControl** 데이터를 업데이트할 때 개체 서버의 성능을 향상 시킬 수 있습니다. 이 설정을 통해는 **업데이트할** 많이 모드를 사용 하는 서버에서 개체입니다. 그러나 다음과 같은 기능을이 구성에서 사용할 수 없습니다.  
   

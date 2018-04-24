@@ -1,32 +1,32 @@
 ---
-title: "이동 메서드 예제 (VC + +) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 이동 메서드 예제 (VC + +) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Move method [ADO], VC++ example
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 554b78e38b47cdfde7ed6bfdc5667ae2959c3d50
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 98bdad7cb290685cc9fccdf6f87f7214c75a5f96
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="move-method-example-vc"></a>Move 메서드 예제 (VC + +)
 사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드 레코드 포인터를 사용자 입력에 기반 합니다.  

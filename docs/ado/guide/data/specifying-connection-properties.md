@@ -1,31 +1,31 @@
 ---
-title: "연결 속성을 지정 하 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 연결 속성을 지정 하 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e07a16be9d12aa905abbad4b2007726b853d805
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8aea80d0bd512d75e46686722242d4955baa4769
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="specifying-connection-properties"></a>연결 속성 지정
 대부분의 의해 지정 된 정보를 제공할 수 있습니다는 [연결 문자열](../../../ado/guide/data/creating-a-connection-string.md) 의 속성을 설정 하 여는 **연결** 연결을 열기 전에 개체입니다. 연결 문자열에 설명 된 대로 같은 기능을 얻을 수는 예를 들어 [연결 문자열 만들기](../../../ado/guide/data/creating-a-connection-string.md) 다음 코드를 사용 하 여 합니다.  
