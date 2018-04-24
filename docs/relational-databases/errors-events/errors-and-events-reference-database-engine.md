@@ -1,35 +1,36 @@
 ---
-title: "오류 및 이벤트 참조(데이터베이스 엔진) | Microsoft 문서"
-ms.custom: 
+title: 오류 및 이벤트 참조(데이터베이스 엔진) | Microsoft 문서
+ms.custom: ''
 ms.date: 05/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d421713ed83c3f73bd3d9b30f0549bceb692b40a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ed5a2375cf1e5426f832254948064bb992114e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션에는 추가 설명이 필요한 선택된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지가 포함되어 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 섹션에는 추가 설명이 필요한 선택된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 엔진 이벤트 및 오류](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  다음 표에서는 링크와 해당 리소스에 대한 설명을 제공합니다.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[SQL Server 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42455)|이 사이트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커뮤니티에서 모니터링하는 뉴스 그룹과 포럼에 대한 링크가 있습니다. 또한 블로그와 웹 사이트와 같은 커뮤니티 정보 출처가 나열됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커뮤니티를 통해 답변을 받지 못하는 경우도 있지만 이 커뮤니티는 질문에 대한 답변을 얻는 데 매우 유용합니다.|  
 |[SQL Server Developer Center 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42456)|이 사이트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자에게 유용한 뉴스 그룹, 포럼 및 기타 커뮤니티 리소스에 대한 정보를 제공합니다.|  

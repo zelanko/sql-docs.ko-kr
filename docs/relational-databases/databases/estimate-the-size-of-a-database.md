@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 크기 예측 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 크기 예측 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - space allocation [SQL Server], database size
@@ -22,19 +22,21 @@ helpviewer_keywords:
 - estimating database size
 - designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fd8ebd7223c44cdfb5b830ae0f9fc5ea08f3266
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 180e6a5d6c74a8a2859c6f30566f113d3c14f771
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
   
 -   응용 프로그램에서 필요한 성능을 확보합니다.  
   

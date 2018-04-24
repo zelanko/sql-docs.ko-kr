@@ -1,15 +1,16 @@
 ---
-title: "Kerberos 연결의 서비스 사용자 이름 등록 | Microsoft Docs"
-ms.custom: 
+title: Kerberos 연결의 서비스 사용자 이름 등록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5937ccfd40ee959c344dd1f03f7314ce40d9fcb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe8e537bb8d01784f68dd168ba84df9d6daac4db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Kerberos 인증을 사용하려면 다음 조건 모두에 해당해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
   
 -   클라이언트 및 서버 컴퓨터는 동일한 Windows 도메인이나 트러스트된 도메인의 일부여야 합니다.  
   

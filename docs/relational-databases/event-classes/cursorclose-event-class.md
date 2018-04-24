@@ -1,34 +1,35 @@
 ---
-title: "CursorClose 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: CursorClose 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35763a70260b8d542ca290c91a27cb9e290ecbb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd9435c4e5eccff10877e1b645abfd96d1887520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorclose-event-class"></a>CursorClose 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-커서 닫기 이벤트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 닫히고 커서의 할당을 취소할 때 발생합니다. **CursorClose** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트를 설명합니다. 이 이벤트 클래스는 ODBC, OLE DB 또는 DB-Library에 의해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 문이 닫힐 때 발생합니다.  
+  커서 닫기 이벤트는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 닫히고 커서의 할당을 취소할 때 발생합니다. **CursorClose** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트를 설명합니다. 이 이벤트 클래스는 ODBC, OLE DB 또는 DB-Library에 의해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 문이 닫힐 때 발생합니다.  
   
  커서 성능을 기록하는 추적에 **CursorClose** 이벤트 클래스를 포함시킵니다. 발생한 오버헤드의 크기는 추적 중 데이터베이스에 커서가 얼마나 자주 사용되는지에 따라 달라집니다. 커서가 광범위하게 사용되는 경우에는 추적으로 인해 성능이 상당히 저하될 수 있습니다.  
   

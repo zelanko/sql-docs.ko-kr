@@ -2,7 +2,7 @@
 title: 데이터베이스 미러링 기록 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f8d4d344a8901fcfcf6caa537d4b3fbc6b6891ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   

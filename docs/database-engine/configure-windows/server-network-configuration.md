@@ -1,15 +1,16 @@
 ---
-title: "서버 네트워크 구성 | Microsoft Docs"
-ms.custom: 
+title: 서버 네트워크 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 서버 네트워크 구성 태스크에는 프로토콜 사용, 프로토콜에 사용되는 포트 또는 파이프 수정, 암호화 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 구성, 네트워크상에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 표시 또는 숨기기, SPN(서버 보안 주체 이름) 등록 등이 있습니다. 대개 사용자는 서버 네트워크 구성을 변경할 필요가 없습니다. 특별한 네트워크 요구 사항이 있을 경우에만 서버 네트워크 프로토콜을 다시 구성합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  서버 네트워크 구성 태스크에는 프로토콜 사용, 프로토콜에 사용되는 포트 또는 파이프 수정, 암호화 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 구성, 네트워크상에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 표시 또는 숨기기, SPN(서버 보안 주체 이름) 등록 등이 있습니다. 대개 사용자는 서버 네트워크 구성을 변경할 필요가 없습니다. 특별한 네트워크 요구 사항이 있을 경우에만 서버 네트워크 프로토콜을 다시 구성합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 네트워크 구성을 완료합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 해당 제품과 함께 제공된 서버 네트워크 유틸리티를 사용합니다.  
   

@@ -1,15 +1,16 @@
 ---
-title: "NUMA 노드에 TCP IP 포트 매핑(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: NUMA 노드에 TCP IP 포트 매핑(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - NUMA
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], NUMA support
 - non-uniform memory access
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f29668768deb7c713d1c80f9d54ac0df9fbfd15
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a2546e6fb835370d476405f6d51433de5a98b64a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드로 매핑하는 방법에 대해 설명합니다. 시작할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 오류 로그에 노드 정보를 씁니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드로 매핑하는 방법에 대해 설명합니다. 시작할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 오류 로그에 노드 정보를 씁니다.  
   
  사용할 노드의 번호를 확인하려면 오류 로그나 **sys.dm_os_schedulers** 뷰의 노드 정보를 확인하세요. 한 개 또는 여러 개의 노드에 TCP/IP 주소와 포트를 설정하려면 포트 번호 뒤에서 괄호 안에 노드 확인 비트맵(선호도 마스크)을 추가합니다. 십진수나 16진수 형식으로 노드를 지정할 수 있습니다. 비트맵을 만들려면 먼저 76543210처럼 0부터 시작하여 오른쪽에서 왼쪽으로 노드 번호를 매깁니다. 사용할 노드에 1을 지정하고 사용하지 않을 노드에 0을 지정하여 노드 목록의 이진 표현을 만드세요. 예를 들어 NUMA 노드 0, 2, 5를 사용하려면 00100101을 지정합니다.  
   

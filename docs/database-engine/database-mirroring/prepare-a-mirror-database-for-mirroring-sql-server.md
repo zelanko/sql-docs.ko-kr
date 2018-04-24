@@ -1,34 +1,36 @@
 ---
-title: "미러 데이터베이스의 미러링 준비(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 미러 데이터베이스의 미러링 준비(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], preparing for mirroring
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 71458796cd4a1c7dee69960d3514440ac987a58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>미러 데이터베이스의 미러링 준비(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 세션을 시작하기 전에 데이터베이스 소유자나 시스템 관리자는 미러 데이터베이스가 생성되었으며 미러링 준비가 완료되었는지 확인해야 합니다. 새 미러 데이터베이스를 만들려면 최소한 주 데이터베이스의 전체 백업과 후속 로그 백업이 필요하며 WITH NORECOVERY를 사용하여 두 백업을 모두 미러 서버 인스턴스로 복원해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터베이스 미러링 세션을 시작하기 전에 데이터베이스 소유자나 시스템 관리자는 미러 데이터베이스가 생성되었으며 미러링 준비가 완료되었는지 확인해야 합니다. 새 미러 데이터베이스를 만들려면 최소한 주 데이터베이스의 전체 백업과 후속 로그 백업이 필요하며 WITH NORECOVERY를 사용하여 두 백업을 모두 미러 서버 인스턴스로 복원해야 합니다.  
   
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   

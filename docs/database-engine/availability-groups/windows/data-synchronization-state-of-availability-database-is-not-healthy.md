@@ -2,7 +2,7 @@
 title: 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 17bdfa75db4e82e8f3c398c92e8af424de21492b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69ed8cb6e217dfcae1807274ae1e9ff64322d06e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 |**범주**|**경고**|  
 |**패싯**|가용성 데이터베이스|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 복제본에서 모든 가용성 데이터베이스("데이터베이스 복제본"이라고도 함)의 데이터 동기화 상태를 롤업합니다. 예상되는 데이터 동기화 상태가 아닌 데이터베이스 복제본이 있으면 정책이 비정상 상태입니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

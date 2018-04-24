@@ -1,32 +1,32 @@
 ---
-title: "예제: 일부 파일 그룹만 증분 복원(단순 복구 모델) | Microsoft 문서"
-ms.custom: 
+title: '예제: 일부 파일 그룹만 증분 복원(단순 복구 모델) | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - piecemeal restores [SQL Server], simple recovery model
 - restore sequences [SQL Server], piecemeal
 - simple recovery model [SQL Server], RESTORE examples
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39b07366c8f2dfd9ccd5322e172b4df5829084ff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec7355a49464c5f5bf81670b93f5c0e094060883
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>예: 일부 파일 그룹만 증분 복원(단순 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

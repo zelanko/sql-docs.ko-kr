@@ -1,16 +1,16 @@
 ---
-title: "전체 파일 백업(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 전체 파일 백업(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full backups [SQL Server]
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4caf6c242eabb3f3be393c896723314beff5c8ef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3122dab8636b6785d3dc6c66daae5eeaba4a54bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-file-backups-sql-server"></a>전체 파일 백업(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 여러 개의 파일 및 파일 그룹을 포함하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련된 내용을 다룹니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 여러 개의 파일 및 파일 그룹을 포함하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련된 내용을 다룹니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 파일을 개별적으로 백업하고 복원할 수 있습니다. 또한 각 구성 파일을 개별적으로 지정하는 대신 전체 파일 그룹을 지정할 수 있습니다. 이때 파일 그룹에 오프라인 상태인 파일이 있다면(예: 복원 중인 파일) 전체 파일 그룹이 오프라인 상태가 되고 이를 백업할 수 없습니다.  
   

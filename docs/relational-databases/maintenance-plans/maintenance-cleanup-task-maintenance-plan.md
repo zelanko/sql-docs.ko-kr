@@ -1,35 +1,36 @@
 ---
-title: "유지 관리 정리 태스크(유지 관리 계획) | Microsoft 문서"
-ms.custom: 
+title: 유지 관리 정리 태스크(유지 관리 계획) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.cleanup.f1
 helpviewer_keywords:
 - Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d083329514a3e8a12362bc7277ee50bd34add7d3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f260ee4c358058adddc34949fe3a3eb2d0750881
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **유지 관리 정리 태스크**를 사용하여 유지 관리 계획에서 만든 텍스트 보고서와 데이터베이스 백업 파일을 포함하여 유지 관리 계획과 관련된 오래된 파일을 제거할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **유지 관리 정리 태스크** 를 사용하여 유지 관리 계획에서 만든 텍스트 보고서와 데이터베이스 백업 파일을 포함하여 유지 관리 계획과 관련된 오래된 파일을 제거할 수 있습니다.  
   
 > [!NOTE]  
 >  유지 관리 정리 태스크에서는 지정된 디렉터리의 하위 폴더에 있는 파일을 자동으로 삭제하지 않습니다. 이 기능은 유지 관리 정리 태스크를 사용하여 파일을 삭제하는 악의적 공격의 가능성을 줄여 줍니다. 첫 번째 수준의 하위 폴더를 삭제하려는 경우 **첫 번째 수준의 하위 폴더 포함**을 선택해야 합니다.  

@@ -1,34 +1,36 @@
 ---
-title: "데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - outbound connections [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2f2b52243f94686b1132988d588bf901db09c7c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2c2929c64686a2b696563da4d2f954e163c763fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 아웃바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계를 설명합니다. 아웃바운드 연결을 구성한 후 인바운드 연결을 설정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 인증서를 사용하여 데이터베이스 미러링의 아웃바운드 연결을 인증하도록 서버 인스턴스를 구성하는 단계를 설명합니다. 아웃바운드 연결을 구성한 후 인바운드 연결을 설정할 수 있습니다.  
   
 > [!NOTE]  
 >  서버 인스턴스의 모든 미러링 연결은 단일 데이터베이스 미러링 끝점을 사용하며 이러한 끝점을 만들 때는 서버 인스턴스의 인증 방법을 지정해야 합니다.  

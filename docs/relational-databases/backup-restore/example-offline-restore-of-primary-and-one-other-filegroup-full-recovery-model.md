@@ -1,32 +1,32 @@
 ---
-title: "오프라인 복원 예제: 주 파일 그룹 및 하나의 파일 그룹(전체 복구 모델) | Microsoft 문서"
-ms.custom: 
+title: '오프라인 복원 예제: 주 파일 그룹 및 하나의 파일 그룹(전체 복구 모델) | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full recovery model [SQL Server], RESTORE example
 - offline restores [SQL Server]
 - restore sequences [SQL Server], offline
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c757a8299605ab8459b7a90fa86b18d202891d98
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b16876dca5869212a3d9d3b5f051dae3b592f889
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>예제: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

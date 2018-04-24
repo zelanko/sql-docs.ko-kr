@@ -1,33 +1,34 @@
 ---
-title: "단일 사용자 모드로 데이터베이스 설정 | Microsoft 문서"
-ms.custom: 
+title: 단일 사용자 모드로 데이터베이스 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - single-user mode [SQL Server], database option
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d5ba3d5ec7a1c5dee7ef6e437a18dbbef421ad7b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60ba07dbaf3b4ff47baed75ee0f32077d914fe10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-a-database-to-single-user-mode"></a>단일 사용자 모드로 데이터베이스 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자 정의 데이터베이스를 단일 사용자 모드로 설정하는 방법에 대해 설명합니다. 단일 사용자 모드는 한 번에 하나의 사용자만 데이터베이스에 액세스할 수 있도록 지정하며 일반적으로 유지 관리 동작에 사용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스를 단일 사용자 모드로 설정하는 방법에 대해 설명합니다. 단일 사용자 모드는 한 번에 하나의 사용자만 데이터베이스에 액세스할 수 있도록 지정하며 일반적으로 유지 관리 동작에 사용됩니다.  
   
  **항목 내용**  
   

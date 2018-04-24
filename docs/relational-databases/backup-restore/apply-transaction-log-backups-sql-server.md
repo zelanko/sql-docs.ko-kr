@@ -1,16 +1,16 @@
 ---
-title: "트랜잭션 로그 백업 적용(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 트랜잭션 로그 백업 적용(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 08/13/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring [SQL Server], log backups
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b4bc4c88baaccf4bf24c1145df466fefbeb88a29
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 878308631577ba9060e5a501f64d874594396733
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 전체 복구 모델 또는 대량 로그 복구 모델과 관련된 내용을 다룹니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 전체 복구 모델 또는 대량 로그 복구 모델과 관련된 내용을 다룹니다.  
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 복원의 일부로 수행되는 트랜잭션 로그 백업 적용에 대해 설명합니다.  
  

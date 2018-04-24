@@ -1,15 +1,16 @@
 ---
-title: "SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - services [SQL Server], security
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf94cff3e764a7079eb5166a6a204453fd217ce3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 85ecf79351e7d6968d56e9047a0c557248b9d157
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
   

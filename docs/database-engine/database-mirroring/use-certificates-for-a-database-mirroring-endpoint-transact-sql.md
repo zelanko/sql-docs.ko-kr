@@ -1,15 +1,16 @@
 ---
-title: "데이터베이스 미러링 끝점에 인증서 사용(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 끝점에 인증서 사용(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e834a18fd0bc91be36a6e6c9b9bcd3a0901aa2e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d27137b22e93cc450fd45fcfd0027181e74bd4d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>데이터베이스 미러링 끝점에 대한 인증서 사용(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 지정된 서버 인스턴스에서 데이터베이스 미러링에 인증서 인증을 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다. 이 경우 아웃바운드 연결을 먼저 구성해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  지정된 서버 인스턴스에서 데이터베이스 미러링에 인증서 인증을 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다. 이 경우 아웃바운드 연결을 먼저 구성해야 합니다.  
   
 > [!NOTE]  
 >  서버 인스턴스의 모든 미러링 연결은 단일 데이터베이스 미러링 끝점을 사용하며 이러한 끝점을 만들 때는 서버 인스턴스의 인증 방법을 지정해야 합니다. 따라서 데이터베이스 미러링에 사용할 서버 인스턴스마다 한 형식의 인증만 사용할 수 있습니다.  

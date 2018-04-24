@@ -1,34 +1,36 @@
 ---
-title: "데이터베이스 미러링 및 데이터베이스 스냅숏(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 및 데이터베이스 스냅숏(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b51e1ad9f6789480165ece1d97f43d447a5b7a65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅숏(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업을 오프로드할 수 있습니다. 미러 데이터베이스를 보고 용도로 사용하려면 미러 데이터베이스에서 데이터베이스 스냅숏을 만들고 클라이언트 연결 요청을 가장 최근의 스냅숏으로 지정할 수 있습니다. 데이터베이스 스냅숏은 스냅숏이 만들어진 시점에 존재하던 원본 데이터베이스의 정적, 읽기 전용, 트랜잭션 일치 스냅숏입니다. 미러 데이터베이스에서 데이터베이스 스냅숏을 만들려면 데이터베이스가 동기화된 미러링 상태여야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업을 오프로드할 수 있습니다. 미러 데이터베이스를 보고 용도로 사용하려면 미러 데이터베이스에서 데이터베이스 스냅숏을 만들고 클라이언트 연결 요청을 가장 최근의 스냅숏으로 지정할 수 있습니다. 데이터베이스 스냅숏은 스냅숏이 만들어진 시점에 존재하던 원본 데이터베이스의 정적, 읽기 전용, 트랜잭션 일치 스냅숏입니다. 미러 데이터베이스에서 데이터베이스 스냅숏을 만들려면 데이터베이스가 동기화된 미러링 상태여야 합니다.  
   
  미러 데이터베이스와 달리 데이터베이스 스냅숏은 클라이언트에서 액세스할 수 있습니다. 미러 서버가 주 서버와 통신하고 있는 한, 보고 클라이언트를 스냅숏에 연결하도록 지시할 수 있습니다. 데이터베이스 스냅숏은 정적이기 때문에 새로운 데이터를 사용할 수 없습니다. 사용자가 비교적 최근 데이터를 사용하려면 정기적으로 새 데이터베이스 스냅숏을 만들고 응용 프로그램에서 들어오는 클라이언트 연결을 최신 스냅숏으로 지정하도록 해야 합니다.  
   

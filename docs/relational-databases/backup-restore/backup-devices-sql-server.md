@@ -2,7 +2,7 @@
 title: 백업 장치(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -33,11 +33,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 45ff0eb0fb8129ce38664540e2168ff92d5f84f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-devices-sql-server"></a>백업 장치(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/10/2018
   
  TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -89,7 +89,7 @@ GO
   
  FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 예를 들면 다음과 같습니다.  
+ 예:  
   
 ```sql  
 RESTORE DATABASE AdventureWorks2012   
@@ -125,7 +125,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC(범용 명명 규칙) 이름 지정  
  백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 장치에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* 형식입니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -155,7 +155,7 @@ GO
   
  TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
 BACKUP LOG AdventureWorks2012   
@@ -272,7 +272,7 @@ GO
   
 -   [백업 장치 삭제&#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server, Backup Device 개체](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   

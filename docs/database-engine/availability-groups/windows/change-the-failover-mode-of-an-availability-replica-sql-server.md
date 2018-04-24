@@ -1,15 +1,16 @@
 ---
-title: "가용성 복제본의 장애 조치 모드 변경(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 가용성 복제본의 장애 조치 모드 변경(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - failover modes [SQL Server]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - Availability Groups [SQL Server], configuring
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f000822def837547d13e26104cbf2b0a1bf2d467
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c94ee18d31e887a05a81845a31e74ed3bdf48f78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>가용성 복제본의 장애 조치(failover) 모드 변경(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹의 가용성 복제본에 대한 장애 조치(failover) 모드를 변경하는 방법에 대해 설명합니다. 장애 조치(failover) 모드는 동기-커밋 가용성 모드에서 실행되는 복제본에 대한 장애 조치(failover) 모드를 결정하는 복제본 속성입니다. 자세한 내용은 [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 및 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹의 가용성 복제본에 대한 장애 조치(failover) 모드를 변경하는 방법에 대해 설명합니다. 장애 조치(failover) 모드는 동기-커밋 가용성 모드에서 실행되는 복제본에 대한 장애 조치(failover) 모드를 결정하는 복제본 속성입니다. 자세한 내용은 [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 및 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
   
 -   **시작하기 전 주의 사항:**  
   

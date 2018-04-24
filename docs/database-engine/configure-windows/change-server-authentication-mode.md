@@ -1,15 +1,16 @@
 ---
-title: "서버 인증 모드 변경 | Microsoft Docs"
-ms.custom: 
+title: 서버 인증 모드 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sa account
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63282fbc0b88a940f1a3d90a40d025a8338f3427
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9427e32169a92686c19e86b1e6d78bcf4ef9ed4c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.  
   
  설치 중에 **Windows 인증 모드** 를 선택하면 sa 로그인이 해제되며 설치 프로그램에서 암호를 할당합니다. 나중에 인증 모드를 **SQL Server 및 Windows 인증 모드**로 변경해도 sa 로그인은 계속 해제되어 있습니다. sa 로그인을 사용하려면 ALTER LOGIN 문을 사용하여 sa 로그인을 설정하고 새 암호를 할당합니다. sa 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용한 서버 연결만 허용합니다.  
   

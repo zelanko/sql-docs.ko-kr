@@ -1,36 +1,36 @@
 ---
-title: "원격 서버 연결 옵션 보기 또는 구성(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 원격 서버 연결 옵션 보기 또는 구성(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - remote servers [SQL Server], connection options
 - servers [SQL Server], remote
 - connections [SQL Server], remote servers
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea6a980fe4a939dad07b64da43918fbc9cd9a060
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 429e7d1ee33bb1d140ad5d5608bbd82397fe6187
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 서버 수준에서 원격 서버 연결 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 서버 수준에서 원격 서버 연결 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   

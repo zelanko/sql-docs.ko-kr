@@ -1,33 +1,35 @@
 ---
-title: "가용성 그룹 옵션 지정 페이지(새 가용성 그룹 마법사/데이터베이스 추가 마법사) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹 옵션 지정 페이지(새 가용성 그룹 마법사/데이터베이스 추가 마법사) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.newagwizard.specifyagname.f1
 - sql13.swb.adddatabasewizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c12b2607c1f1ecd50d61e2b73646b040a2bbc338
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dde55d128d66641cfbd0de72794dbad4ec8f6b92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-availability-group-options-page"></a>가용성 그룹 옵션 지정 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 **가용성 그룹 이름 지정** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]모두에 사용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 **가용성 그룹 이름 지정** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]모두에 사용됩니다.  
   
 ##  <a name="PageOptions"></a> 가용성 그룹 옵션 지정  
  **가용성 그룹 이름**  

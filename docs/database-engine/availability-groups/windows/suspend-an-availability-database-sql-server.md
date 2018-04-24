@@ -2,7 +2,7 @@
 title: 가용성 데이터베이스 일시 중단(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -25,14 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1ca99d049a5df8788c220a2a582539426c6488f0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 22eb081d662868e26cd28b7b6ea0af483f7cb04d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
   
  일시 중지 명령의 효과는 일시 중지하는 데이터베이스가 보조 데이터베이스인지 주 데이터베이스인지에 따라 다음과 같이 다릅니다.  
   

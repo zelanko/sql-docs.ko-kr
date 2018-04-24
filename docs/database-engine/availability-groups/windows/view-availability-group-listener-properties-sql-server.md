@@ -2,7 +2,7 @@
 title: 가용성 그룹 수신기 속성 보기(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -22,14 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a45bef71e8b715e6c9967c3c050cefb2873e3fe9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 752416a32f0c5c20adc751c280f00e43421b9c81
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>가용성 그룹 수신기 속성 보기(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 Always On *가용성 그룹 수신기*의 속성을 보는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 *에서* 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] Always On 가용성 그룹 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 속성을 보는 방법에 대해 설명합니다.  
   
 -   **수신기 속성을 보려면:**  
   

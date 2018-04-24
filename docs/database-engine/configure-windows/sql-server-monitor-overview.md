@@ -2,7 +2,7 @@
 title: SQL Server 모니터 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -22,14 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7799381dbbcaf57dd0d02d01bc4c27a5c21f624c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8025197baa6da578f999087a5d4cadc39d4a3bfd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server 모니터는 모니터링 기능을 수행하지 않지만 이 기능을 수행하는 모듈을 호스팅합니다. SQL Server 모니터 모듈에는 복제 모니터와 데이터베이스 미러링 모니터가 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL Server 모니터는 모니터링 기능을 수행하지 않지만 이 기능을 수행하는 모듈을 호스팅합니다. SQL Server 모니터 모듈에는 복제 모니터와 데이터베이스 미러링 모니터가 있습니다.  
   
  이러한 모듈 중 하나를 사용하려면 **이동** 메뉴에서 해당 모듈을 선택합니다. 현재 선택한 모듈에서 탐색 창과 세부 정보 창의 내용, 세부 정보 창의 사용자 상호 작용, 내용과 상태에 대한 쿼리 등을 소유합니다.  
   

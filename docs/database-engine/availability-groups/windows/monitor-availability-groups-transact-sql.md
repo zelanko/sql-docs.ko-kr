@@ -1,15 +1,16 @@
 ---
-title: "가용성 그룹 모니터링(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹 모니터링(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4510a528afc92850a9cb96c597a29dea33949873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 가용성 그룹, 복제본 및 연결된 데이터베이스를 모니터링할 수 있도록 여러 카탈로그 및 동적 관리 뷰와 서버 속성을 제공합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문을 사용하여 뷰를 통해 가용성 그룹과 해당 복제본 및 데이터베이스를 모니터링할 수 있습니다. 지정된 가용성 그룹에 대해 반환되는 정보는 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 주 복제본을 호스팅 중인지 아니면 보조 복제본을 호스팅 중인지에 따라 다릅니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹, 복제본 및 연결된 데이터베이스를 모니터링할 수 있도록 여러 카탈로그 및 동적 관리 뷰와 서버 속성을 제공합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문을 사용하여 뷰를 통해 가용성 그룹과 해당 복제본 및 데이터베이스를 모니터링할 수 있습니다. 지정된 가용성 그룹에 대해 반환되는 정보는 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 주 복제본을 호스팅 중인지 아니면 보조 복제본을 호스팅 중인지에 따라 다릅니다.  
   
 > [!TIP]  
 >  ID 열로 뷰를 조인하여 한 번의 쿼리로 여러 뷰에서 정보를 반환할 수 있습니다.  

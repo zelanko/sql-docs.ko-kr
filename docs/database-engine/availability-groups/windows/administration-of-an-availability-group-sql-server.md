@@ -2,7 +2,7 @@
 title: 가용성 그룹 관리(SQL Server) | Microsoft
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76903d01070c2b86fc9fbf9560a42cc4537ace2f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8ade2b65577a53dff5e53a4d9ccfe0ab425152ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>가용성 그룹 관리(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 기존 Always On 가용성 그룹 관리에는 다음 태스크 중 하나 이상이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 기존 Always On 가용성 그룹 관리에는 다음 태스크 중 하나 이상이 포함됩니다.  
   
 -   기존 가용성 그룹 복제본의 속성 변경(예: 읽기 가능한 보조 복제본 구성을 위한 클라이언트 연결 액세스 변경용), 장애 조치(failover) 모드, 가용성 모드 또는 세션 제한 시간 설정 변경  
   

@@ -1,15 +1,16 @@
 ---
-title: "데이터베이스 미러링 세션 중 역할 전환(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 세션 중 역할 전환(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d7fd6b11ab5fd2ab494e34aa7421b9b1afafb17c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 세션에서는 *역할 전환* 프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 미러 서버는 주 서버에 대한 *장애 조치(Failover) 파트너* 역할을 하며 주 역할을 넘겨 받아 해당 데이터베이스 복사본을 복원하고 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버는 가능할 경우 미러 서버 역할을 맡으며 이 서버의 데이터베이스는 새 미러 데이터베이스가 됩니다. 여러 오류에 대한 응답이나 관리 용도로 역할이 전환될 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터베이스 미러링 세션에서는 *역할 전환*프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 미러 서버는 주 서버에 대한 *장애 조치(Failover) 파트너* 역할을 하며 주 역할을 넘겨 받아 해당 데이터베이스 복사본을 복원하고 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버는 가능할 경우 미러 서버 역할을 맡으며 이 서버의 데이터베이스는 새 미러 데이터베이스가 됩니다. 여러 오류에 대한 응답이나 관리 용도로 역할이 전환될 수 있습니다.  
   
 > [!NOTE]  
 >  이 항목에서는 사용자가 데이터베이스 미러링 운영 모드에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  

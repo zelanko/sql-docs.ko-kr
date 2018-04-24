@@ -2,7 +2,7 @@
 title: 가용성 그룹 제거(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 14f1ef9e8a9ac9bc070e05effb1e225e1bdf7a65
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60deeac7c5b2d70e119b8f635c0be63d4cba4814
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remove-an-availability-group-sql-server"></a>가용성 그룹 제거(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹을 삭제하는 방법을 설명합니다. 가용성 복제본 중 하나를 호스팅하는 서버 인스턴스가 오프라인 상태일 때 가용성 그룹을 삭제하면 나중에 서버 인스턴스가 온라인 상태가 되었을 때 서버 인스턴스에서 로컬 가용성 복제본을 삭제합니다. 가용성 그룹을 삭제하면 관련 가용성 그룹 수신기도 삭제됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹을 삭제하는 방법을 설명합니다. 가용성 복제본 중 하나를 호스팅하는 서버 인스턴스가 오프라인 상태일 때 가용성 그룹을 삭제하면 나중에 서버 인스턴스가 온라인 상태가 되었을 때 서버 인스턴스에서 로컬 가용성 복제본을 삭제합니다. 가용성 그룹을 삭제하면 관련 가용성 그룹 수신기도 삭제됩니다.  
   
  필요한 경우 가용성 그룹에 대한 올바른 보안 자격 증명이 있는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드에서 가용성 그룹을 삭제할 수 있습니다. 이렇게 하면 가용성 복제본이 더 이상 없을 때 가용성 그룹을 삭제할 수 있습니다.  
   

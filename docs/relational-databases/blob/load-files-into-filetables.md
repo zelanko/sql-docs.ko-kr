@@ -1,36 +1,36 @@
 ---
-title: "FileTable로 파일 로드 | Microsoft 문서"
-ms.custom: 
+title: FileTable로 파일 로드 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: cae14be4676927821a5d30f1eb1503f91b0d45ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
+  파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsLoadNew"></a> FileTable로 파일 로드 또는 마이그레이션  
  FileTable로 파일을 로드하거나 마이그레이션하기 위해 선택하는 방법은 파일이 현재 저장된 위치에 따라 달라집니다.  

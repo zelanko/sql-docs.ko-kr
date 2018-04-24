@@ -1,31 +1,32 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup 설정 | Microsoft 문서"
-ms.custom: 
+title: Microsoft Azure에 대한 SQL Server Managed Backup 설정 | Microsoft 문서
+ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6762af12c0b669335fbe965f85fada74d1ef3e1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: df895915eab3204455b2628e79a33c411cf5f683
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]를 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
   
  이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)하십시오.  
   

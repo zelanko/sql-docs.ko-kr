@@ -1,15 +1,16 @@
 ---
-title: "역할 전환 중 서비스 중단 예측(데이터베이스 미러링) | Microsoft Docs"
-ms.custom: 
+title: 역할 전환 중 서비스 중단 예측(데이터베이스 미러링) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel redo [SQL Server]
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - redo [database mirroring]
 - database mirroring [SQL Server], failover
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ecfc3f4c066afaf535922e8144452fccdb78991c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다.  
   
 -   자동 장애 조치(Failover)의 경우 서비스 중단 시간은 미러 서버에서 주 서버 인스턴스의 실패를 인식하는 데 필요한 시간(오류 검색)과 데이터베이스 장애 조치에 필요한 시간(장애 조치 시간)에 의해 결정됩니다.  
   

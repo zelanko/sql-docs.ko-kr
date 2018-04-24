@@ -1,16 +1,16 @@
 ---
-title: "데이터 계층 응용 프로그램 업그레이드 | Microsoft 문서"
-ms.custom: 
+title: 데이터 계층 응용 프로그램 업그레이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.upgradedacwizard.summary.f1
@@ -27,19 +27,20 @@ helpviewer_keywords:
 - wizard [DAC], upgrade
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6bb7f23bb655ca08286a291d92bbdfd111b4fc28
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터 계층 응용 프로그램 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 응용 프로그램)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터 계층 응용 프로그램 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 응용 프로그램)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   

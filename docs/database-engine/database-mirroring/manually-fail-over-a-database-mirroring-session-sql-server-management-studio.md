@@ -1,34 +1,36 @@
 ---
-title: "데이터베이스 미러링 세션 수동 장애 조치(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 세션 수동 장애 조치(SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - manual failover [SQL Server]
 - database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59ef0f8eae527598c8ba08e236a1916c5454ab05
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 05c9c3d68755b617bf4aa8e07fecb6acf4cfa7a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>데이터베이스 미러링 세션 수동 장애 조치(failover)(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 미러된 데이터베이스가 동기화되면, 즉 데이터베이스가 SYNCHRONIZED 상태인 경우 데이터베이스 소유자가 미러 서버에 수동 장애 조치(failover)를 시작할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  미러된 데이터베이스가 동기화되면, 즉 데이터베이스가 SYNCHRONIZED 상태인 경우 데이터베이스 소유자가 미러 서버에 수동 장애 조치(failover)를 시작할 수 있습니다.  
   
  수동 장애 조치 중에는 장애 조치가 발생하는 데이터베이스에 대해 주 서버와 미러 서버 역할이 바뀝니다. 미러 데이터베이스는 주 데이터베이스가 되고 주 데이터베이스는 미러 데이터베이스가 됩니다. 예를 들어, 다음 표에서는 수동 장애 조치가 두 개의 미러링 파트너인 `SQLDBENGINE0_1` 및 `SQLDBENGINE0_2`의 역할을 바꾸는 방법을 보여 줍니다.  
   

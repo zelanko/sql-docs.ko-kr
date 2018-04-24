@@ -1,33 +1,35 @@
 ---
-title: "미러된 데이터베이스 상태 보기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 미러된 데이터베이스 상태 보기(SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - database mirroring [SQL Server], states
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1db44478e3b6c8d51e6d66e9dd5a95b7c5059926
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51be53b8d766cae442cda3c077786775e844946e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 미러링 세션 동안 **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 상태를 확인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터베이스 미러링 세션 동안 **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 상태를 확인할 수 있습니다.  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>데이터베이스 미러링 세션 상태를 보려면  
   

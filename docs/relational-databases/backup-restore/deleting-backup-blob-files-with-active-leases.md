@@ -1,31 +1,32 @@
 ---
-title: "활성 임대가 있는 백업 Blob 파일 삭제 | Microsoft 문서"
-ms.custom: 
+title: 활성 임대가 있는 백업 Blob 파일 삭제 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9d8368d268caf86958ce90229c69f792a1ff036
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b9d4bbee0b0effb8ae44dc32514fcaf40da94f70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft Azure Storage로 백업하거나 Microsoft Azure Storage에서 복원할 때 SQL Server는 Blob에 대한 단독 액세스를 잠그기 위해 무한 임대를 획득합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 Blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 Blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제(중단)하고 Blob을 삭제하는 방법을 설명합니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft Azure Storage로 백업하거나 Microsoft Azure Storage에서 복원할 때 SQL Server는 Blob에 대한 단독 액세스를 잠그기 위해 무한 임대를 획득합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 Blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 Blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제(중단)하고 Blob을 삭제하는 방법을 설명합니다. 
   
  임대 유형에 대한 자세한 내용은 이 [문서](http://go.microsoft.com/fwlink/?LinkId=275664)를 참조하세요.  
   

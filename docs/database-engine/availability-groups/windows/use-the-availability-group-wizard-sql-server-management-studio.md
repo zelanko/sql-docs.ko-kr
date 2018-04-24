@@ -1,15 +1,16 @@
 ---
-title: "가용성 그룹 마법사 사용(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹 마법사 사용(SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.newagwizard.f1
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9f3578c769071d948cc2efda2a8b67e8617cabe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 553770717195fbdab24fd23e0c7b157967ab0fb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **새 가용성 그룹 마법사**를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **새 가용성 그룹 마법사**를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
 > [!NOTE]  
 >  가용성 그룹에 대한 소개는 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다.  

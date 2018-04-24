@@ -1,16 +1,16 @@
 ---
-title: "데이터베이스 복사 마법사 사용 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 복사 마법사 사용 | Microsoft 문서
+ms.custom: ''
 ms.date: 07/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 
+caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 103e5a579ea802636e0d79c6a9ec531cdff3784c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터베이스 복사 마법사는 서버 가동을 중지시키지 않고 데이터베이스 및 특정 서버 개체를 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  인스턴스에서 다른 인스턴스로 이동하거나 복사합니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다. 
   
 -   원본 서버 및 대상 서버 선택  
   

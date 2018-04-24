@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_12302 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_12302 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 12302 (Database Engine error)
 ms.assetid: c1ab574c-c277-4ba7-ab82-f0d09f54a5d0
-caps.latest.revision: 
+caps.latest.revision: 4
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc2a1c8e1e20359cc0d81adda7dbc083b88b2d79
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bc01d747035497e674fb26d3d339853383f05688
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver12302"></a>MSSQLSERVER_12302
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,6 +43,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="user-action"></a>사용자 동작  
 기본 키 제약 조건의 일부인 열을 업데이트하지 마십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

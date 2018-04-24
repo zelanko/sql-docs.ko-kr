@@ -1,27 +1,28 @@
 ---
-title: "Always On 가용성 그룹이 포함된 Analysis Services | Microsoft Docs"
-ms.custom: 
+title: Always On 가용성 그룹이 포함된 Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

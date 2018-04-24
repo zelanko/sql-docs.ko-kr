@@ -1,16 +1,16 @@
 ---
-title: "트랜잭션 로그 백업(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 트랜잭션 로그 백업(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backing up [SQL Server], transaction logs
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - log backups [SQL Server]
 - transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e53fe2ce5b1f257589eff67301fd8aa0ba0ed162
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a259d364001d330b9774b200678ecfa0dc2c439c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
   
  로그 백업을 만들려면 최소한 하나의 전체 백업을 만들어야 합니다. 그렇게 해야 로그가 백업 중일 때를 제외하고 언제든지 트랜잭션 로그를 백업할 수 있습니다. 
  

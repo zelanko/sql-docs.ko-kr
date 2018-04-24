@@ -1,16 +1,16 @@
 ---
-title: "서버 속성 보기 또는 변경(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 서버 속성 보기 또는 변경(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.connectionproperties.f1
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 - Connection Properties dialog box
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 501375d52cb16f1919c82bfb65f84220bcbbe6a7
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4a0df8ff3a0758558e38607e4895b7552bb12d00
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   

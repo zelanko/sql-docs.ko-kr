@@ -1,15 +1,16 @@
 ---
-title: "SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3671c010f2c17d4a7c0312a99312f6d0996e5735
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f2bbc2491cce3638712be0ceb152a6ccc5a63684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

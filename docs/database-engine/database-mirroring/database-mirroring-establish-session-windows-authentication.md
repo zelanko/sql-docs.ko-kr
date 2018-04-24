@@ -1,39 +1,39 @@
 ---
-title: "데이터베이스 미러링 - 세션 설정 - Windows 인증 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 - 세션 설정 - Windows 인증 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9a3f3693577ca93afe7379f3924a67b844afdc5e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>데이터베이스 미러링 - 세션 설정 - Windows 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 를 사용해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
- 미러 데이터베이스를 준비한 후( [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)참조) 데이터베이스 미러링 세션을 구성합니다. 주 서버, 미러 서버 및 미러링 모니터 서버 인스턴스는 다른 호스트 시스템에 있는 별도의 서버 인스턴스여야 합니다.  
+ 미러 데이터베이스를 준비한 후( [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)참조) 데이터베이스 미러링 세션을 구성합니다. 주 서버, 미러 서버 및 미러링 모니터 서버 인스턴스는 다른 호스트 시스템에 있는 별도의 서버 인스턴스여야 합니다.  
   
 > [!IMPORTANT]  
 >  미러링 구성은 성능에 영향을 줄 수 있으므로 사용률이 낮은 시간에 데이터베이스 미러링을 구성하는 것이 좋습니다.  

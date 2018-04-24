@@ -2,7 +2,7 @@
 title: 서버 속성(데이터베이스 설정 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6219f83025b6e2fdaceaa36958582f6c7ba73544
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 669088b678c04de730f83ebf8de59d10751cd676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---database-settings-page"></a>서버 속성 - 데이터베이스 설정 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **기본 인덱스 채우기 비율**  

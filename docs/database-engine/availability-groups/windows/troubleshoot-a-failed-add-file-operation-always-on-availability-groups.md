@@ -1,30 +1,31 @@
 ---
-title: "실패한 파일 추가 작업 문제 해결(Always On 가용성 그룹) | Microsoft Docs"
-ms.custom: 
+title: 실패한 파일 추가 작업 문제 해결(Always On 가용성 그룹) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - secondary databases [SQL Server], Availability Groups
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed024eab21ccc8a3c28b5bf63fd10e431b5eee61
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 85ae45eda16944364c9a3388d3c118855a82bbf5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>실패한 파일 추가 작업 문제 해결(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

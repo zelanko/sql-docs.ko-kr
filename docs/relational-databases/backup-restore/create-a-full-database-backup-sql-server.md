@@ -1,16 +1,16 @@
 ---
-title: "전체 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 전체 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ee32fb6e10c9bcfbfe60c739f2f5083f4bf90e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,14 +262,14 @@ ms.lasthandoff: 02/23/2018
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **또는 PowerShell을 사용하여**...*n* ]  
+     TO *backup_device* [ **,**...*n* ]  
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
     |옵션|Description|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **또는 PowerShell을 사용하여**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
+    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  

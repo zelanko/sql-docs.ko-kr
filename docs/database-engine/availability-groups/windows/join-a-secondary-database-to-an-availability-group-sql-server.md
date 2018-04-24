@@ -2,7 +2,7 @@
 title: 가용성 그룹에 보조 데이터베이스 조인(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -26,14 +26,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 651e5f7cba6415f793d535735aa1f8ed9d73721e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c9b3b57217a4d3de4111a1c29091e8ba3aea8235
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 데이터베이스 조인(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다. 보조 복제본용 보조 데이터베이스를 준비한 후에는 가능한 한 빨리 해당 데이터베이스를 가용성 그룹에 조인해야 합니다. 그러면 해당 주 데이터베이스에서 보조 데이터베이스로 데이터 이동이 시작됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다. 보조 복제본용 보조 데이터베이스를 준비한 후에는 가능한 한 빨리 해당 데이터베이스를 가용성 그룹에 조인해야 합니다. 그러면 해당 주 데이터베이스에서 보조 데이터베이스로 데이터 이동이 시작됩니다.  
   
 -   **시작하기 전 주의 사항:**  
   

@@ -1,35 +1,35 @@
 ---
-title: "데이터베이스 미러링 모니터링(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 모니터링(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 
+caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 96e9a421b1ec2ffd0e8b02cd24a9142fbc3fea07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
+  이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
   
  미러링 세션 중에 미러된 데이터베이스를 모니터링하여 데이터 흐름 여부와 상태를 확인할 수 있습니다. 서버 인스턴스에 있는 하나 이상의 미러된 데이터베이스에 대한 모니터링을 설정하고 관리하려면 데이터베이스 미러링 모니터나 **sp_dbmmonitor** 시스템 저장 프로시저를 사용합니다.  
   

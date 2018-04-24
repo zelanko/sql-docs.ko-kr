@@ -1,15 +1,16 @@
 ---
-title: "SQL Server에 로그인 | Microsoft Docs"
-ms.custom: 
+title: SQL Server에 로그인 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server, logging in
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 918c10f9fc0527619e9eaa239ffe9b83f0820dbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 로그인할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 그래픽 관리 도구를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 로그인할 때 필요에 따라 서버 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 암호를 제공하라는 메시지가 표시됩니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 사용하여 자동으로 로그인합니다. 혼합 모드 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드)에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행 중인 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로그인하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공해야 합니다. 가능하면 Windows 인증을 사용하세요.  
   

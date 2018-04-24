@@ -2,7 +2,7 @@
 title: 개체 탐색기 정보를 사용하여 가용성 그룹 모니터링 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -24,14 +24,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0ca1b9266bd24bd8b6a276fa1ca85f90d0d2893f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기 정보** 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 **의** 개체 탐색기 정보 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 창을 사용하여 기존 Always On 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 관리하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)을 참조하세요.  

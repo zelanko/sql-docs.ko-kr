@@ -1,33 +1,35 @@
 ---
-title: "가용성 그룹 모니터링(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹 모니터링(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc061ce1dd4ea316daefa7a5dee7212c387d7820
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d38d5d566ab35b07a00844abdc0403c8217f2364
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>가용성 그룹 모니터링(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Always On 가용성 그룹의 속성 및 상태를 모니터링하려면 다음 도구를 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Always On 가용성 그룹의 속성 및 상태를 모니터링하려면 다음 도구를 사용할 수 있습니다.  
   
 |도구|간단한 설명|링크|  
 |----------|-----------------------|-----------|  

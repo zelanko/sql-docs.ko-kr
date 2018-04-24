@@ -1,33 +1,35 @@
 ---
-title: "로그 전달 및 복제(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 로그 전달 및 복제(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8f2223777608d8c4235d9d657cc94b9200a6d5c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 로그 전달에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 업데이트한 내용은 로그 전달을 사용하여 보조 데이터베이스라고 부르는 다른 데이터베이스 복사본에 전달됩니다. 로그 전달에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 작업이 포함됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  로그 전달에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 업데이트한 내용은 로그 전달을 사용하여 보조 데이터베이스라고 부르는 다른 데이터베이스 복사본에 전달됩니다. 로그 전달에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 작업이 포함됩니다.  
   
  로그 전달은 다음과 같은 동작의 경우 복제와 함께 사용될 수 있습니다.  
   

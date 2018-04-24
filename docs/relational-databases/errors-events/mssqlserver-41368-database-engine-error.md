@@ -1,31 +1,31 @@
 ---
-title: "MSSQLSERVER_41368 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_41368 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 41368 (Database Engine error)
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 65840ace1da84166a3ad33c647ced330f444f29b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e2aded8bf29e77ff4239528790b3b8745dd97d3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,6 @@ BEGIN TRANSACTION으로 시작된 명시적 트랜잭션에서 메모리 최적�
 ## <a name="user-action"></a>사용자 동작  
 명시적 또는 암시적 READ COMMITTED 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 SNAPSHOT을 사용하여 테이블에 액세스합니다. 이렇게 하려면 테이블 힌트 WITH (SNAPSHOT)를 사용(자세한 내용은 [메모리 내 테이블 및 프로시저와의 트랜잭션](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) 참조)하거나 데이터베이스 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정(자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md) 참조)할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

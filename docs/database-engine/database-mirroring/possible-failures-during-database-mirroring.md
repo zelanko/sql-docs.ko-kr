@@ -1,15 +1,16 @@
 ---
-title: "데이터베이스 미러링 중에 발생 가능한 오류 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 중에 발생 가능한 오류 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time-out period [SQL Server database mirroring]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34c337fa0808e00cde09e1805983e82e2dd40977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 물리적, 운영 체제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제로 인해 데이터베이스 미러링 세션에서 오류가 발생할 수 있습니다. 데이터베이스 미러링은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지, 아니면 실패했는지를 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 데이터베이스 미러링은 자체적으로 제한 시간 메커니즘을 구현합니다. 미러링 제한 시간이 발생하면 데이터베이스 미러링은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다. 하지만 SQL Server 인스턴스 수준에서 발생하는 일부 오류는 미러링 제한 시간을 일으키지 않으며, 발견되지 않은 상태로 진행될 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  물리적, 운영 체제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제로 인해 데이터베이스 미러링 세션에서 오류가 발생할 수 있습니다. 데이터베이스 미러링은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지, 아니면 실패했는지를 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 데이터베이스 미러링은 자체적으로 제한 시간 메커니즘을 구현합니다. 미러링 제한 시간이 발생하면 데이터베이스 미러링은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다. 하지만 SQL Server 인스턴스 수준에서 발생하는 일부 오류는 미러링 제한 시간을 일으키지 않으며, 발견되지 않은 상태로 진행될 수 있습니다.  
   
 > [!IMPORTANT]  
 >  미러된 데이터베이스가 아닌 다른 데이터베이스의 오류는 데이터베이스 미러링 세션에서 감지되지 않습니다. 또한 데이터베이스가 데이터 디스크 오류로 인해 다시 시작되지 않는 한 데이터 디스크 오류도 감지되지 않습니다.  

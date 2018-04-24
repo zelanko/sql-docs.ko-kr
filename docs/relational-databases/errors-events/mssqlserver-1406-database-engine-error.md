@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_1406 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_1406 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1406 (Database Engine error)
 ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19edf0ace27b35934e3a4d63c586893bd8cfc18f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0949d99e01e3b4f58060c1e1fbacc121e66639bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver1406"></a>MSSQLSERVER_1406
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="user-action"></a>사용자 동작  
 데이터베이스 미러링을 제거합니다. 그런 다음 미러 데이터베이스를 복구하여 이 데이터베이스에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터베이스 미러링 세션에 서비스 강제 수행&#40;Transact-SQL&#41;](~/database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  
 [데이터베이스 미러링 제거&#40;SQL Server&#41;](~/database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   

@@ -2,7 +2,7 @@
 title: Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4645d6deeb80cc8c7bceeff685598cdfcff3841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ ms.lasthandoff: 11/20/2017
   
 -   로그 복원 시간  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  가용성 그룹의 주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> Permissions  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> Always On 대시보드를 시작하려면  

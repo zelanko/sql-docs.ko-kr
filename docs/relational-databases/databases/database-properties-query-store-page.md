@@ -1,33 +1,34 @@
 ---
-title: "데이터베이스 속성(쿼리 저장소 페이지) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 속성(쿼리 저장소 페이지) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7d65de7c2c53b3f1ad6530197386201ceca682a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-query-store-page"></a>데이터베이스 속성(쿼리 저장소 페이지)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 페이지는 주 데이터베이스에서 액세스하며 데이터베이스 쿼리 저장소의 속성을 구성하고 수정하는 데 사용합니다. [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 이러한 옵션을 구성할 수도 있습니다. 쿼리 저장소에 대한 자세한 내용은 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 페이지는 주 데이터베이스에서 액세스하며 데이터베이스 쿼리 저장소의 속성을 구성하고 수정하는 데 사용합니다. [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 이러한 옵션을 구성할 수도 있습니다. 쿼리 저장소에 대한 자세한 내용은 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.  
   
 ||  
 |-|  

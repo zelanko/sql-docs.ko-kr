@@ -1,15 +1,16 @@
 ---
-title: "확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Microsoft Docs"
-ms.custom: 
+title: 확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - spoofing attacks
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전부터는 **확장된 보호**가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
   
 > [!IMPORTANT]  
 >  Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](http://support.microsoft.com/kb/968389)를 참조하십시오.  

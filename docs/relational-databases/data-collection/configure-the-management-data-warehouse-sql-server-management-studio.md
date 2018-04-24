@@ -1,16 +1,16 @@
 ---
-title: "관리 데이터 웨어하우스 구성(SQL Server Management Studio) | Microsoft 문서"
-ms.custom: 
+title: 관리 데이터 웨어하우스 구성(SQL Server Management Studio) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.datacollection.wizard_completecfg.f1
@@ -26,20 +26,20 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da6483877cf2f69a3aa638f635366f91b9f7352a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d34ed103c530e6cb6dcf9eda3670b99c150d9488
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 저장소를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
+  이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 저장소를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시스템 서비스 계정(로컬 시스템, 네트워크 서비스 또는 로컬 서비스) 중 하나를 사용하여 실행되도록 구성되고 관리 데이터 웨어하우스는 데이터 수집기와 다른 인스턴스에서 생성될 경우 관리 데이터 웨어하우스에 데이터를 업로드하는 데 프록시를 사용하도록 컬렉션 집합을 구성해야 합니다.  

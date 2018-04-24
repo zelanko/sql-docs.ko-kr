@@ -13,12 +13,12 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 caps.latest.revision: 9
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 8e828a3e3578fbe3ff8ce733d30a7aea549fbcef
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: f700fc08614bb9c63579eaff16244723d257f349
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

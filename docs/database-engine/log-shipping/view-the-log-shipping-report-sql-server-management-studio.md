@@ -1,15 +1,16 @@
 ---
-title: "로그 전달 보고서 보기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 로그 전달 보고서 보기(SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing log shipping reports
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abc94b43ffca65db5e37f32a8efd707f2b142042
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f9c4741a8e70c8e0e14ab91b05846331f627dfff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
   
  이 보고서에는 모든 로그 전달 작업의 상태가 표시됩니다. 상태는 연결된 서버 인스턴스에서 제공됩니다. 한 데이터베이스에 대해서는 모니터 서버 역할을 하고 다른 데이터베이스에 대해서는 보조 서버 역할을 하는 등 서버 인스턴스가 다양한 역할로 여러 가지 구성과 관련되어 있으면 각 역할과 연관된 모든 구성 정보가 결과에 표시됩니다. 저장 프로시저가 특정한 로그 전달 구성을 위해 모니터 서버 인스턴스에 연결할 수 있으면 보고서에 해당 구성의 추가 상태가 표시됩니다.  
   

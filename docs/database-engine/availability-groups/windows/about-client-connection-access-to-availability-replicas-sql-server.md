@@ -1,15 +1,16 @@
 ---
-title: "가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a3771d3702c24a89adacc165add4f003da60bb60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Always On 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Always On 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
   
  지정된 가용성 그룹의 주 또는 보조 데이터베이스에 클라이언트가 쉽게 액세스할 수 있도록 하려면 가용성 그룹 수신기를 정의해야 합니다. 기본적으로 가용성 그룹 수신기는 들어오는 연결을 주 복제본으로 전달합니다. 그러나 읽기 전용 라우팅만 지원하도록 가용성 그룹을 구성할 수 있습니다. 그러면 가용성 그룹 수신기가 읽기 전용 응용 프로그램의 연결 요청을 읽기 가능한 보조 복제본으로 리디렉션합니다. 자세한 내용은 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)을 참조하세요.  
   

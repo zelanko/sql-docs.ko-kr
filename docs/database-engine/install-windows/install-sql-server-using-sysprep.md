@@ -1,27 +1,27 @@
 ---
-title: "SysPrep을 사용하여 SQL Server 설치 | Microsoft Docs"
-ms.custom: 
+title: SysPrep을 사용하여 SQL Server 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d85f3803d2ed3ba4df875edbae9eee1d9d29cadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 

@@ -1,15 +1,16 @@
 ---
-title: "가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.availabilitygroup.preparedbs.f1
@@ -20,18 +21,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 122d33f196943bf751b67ea8c45b442361261c29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹에 대한 데이터베이스를 준비하는 방법에 대해 설명합니다. 데이터베이스를 준비하는 데에는 다음 두 단계가 필요합니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹에 대한 데이터베이스를 준비하는 방법에 대해 설명합니다. 데이터베이스를 준비하는 데에는 다음 두 단계가 필요합니다. 
 
 1. RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 주 데이터베이스의 최근 데이터베이스 백업과 후속 로그 백업을 복원합니다.
 2. 가용성 그룹에 복원된 데이터베이스를 조인합니다.  

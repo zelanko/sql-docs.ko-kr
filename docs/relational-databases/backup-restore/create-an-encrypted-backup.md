@@ -1,31 +1,32 @@
 ---
-title: "암호화된 백업 만들기 | Microsoft 문서"
-ms.custom: 
+title: 암호화된 백업 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/04/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ee0ec30a5ec6f6fc6977d74ff4b00a35781e2ac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a4d39f21fb357c4900fa6c3d2fc99601e1e2980
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]사용에 대한 예는 [전체 데이터베이스 백업 만들기(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]사용에 대한 예는 [전체 데이터베이스 백업 만들기(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요. 
   
 ## <a name="backup-to-disk-with-encryption"></a>암호화하여 디스크에 백업  
  **사전 요구 사항:**  

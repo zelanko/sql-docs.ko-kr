@@ -1,33 +1,35 @@
 ---
-title: "데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: '데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], interoperability and coexistence
 - Database Engine [SQL Server], high availability
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4f96be2ba6ef11dec1da4bafccaa747ae3e60bb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: cc1edc91226f5b8d20e982c9b1234f32db5cee44
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 또는 구성 요소와 함께 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
 -   [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server 장애 조치(failover) 클러스터링)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  
   

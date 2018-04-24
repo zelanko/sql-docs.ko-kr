@@ -1,34 +1,36 @@
 ---
-title: "가용성 그룹 만들기 및 구성(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 가용성 그룹 만들기 및 구성(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], creating
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c881c4c092ad7f65de48ed8bdfeff69d46440f39
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aae5e0f471f2e774450c793e7152e577dec9de35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>가용성 그룹의 생성 및 구성(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 섹션의 항목에서는 단일 WSFC 장애 조치(Failover) 클러스터 내의 여러 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드에 있는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 인스턴스에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 구현을 배포하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 섹션의 항목에서는 단일 WSFC 장애 조치(Failover) 클러스터 내의 여러 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드에 있는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스에 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 구현을 배포하는 방법에 대해 설명합니다.  
   
  첫 번째 가용성 그룹을 만들기 전에 다음 항목의 정보를 숙지하는 것이 좋습니다.  
   

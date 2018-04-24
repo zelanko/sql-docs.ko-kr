@@ -1,34 +1,34 @@
 ---
-title: "FileTable DDL, 함수, 저장 프로시저 및 뷰 | Microsoft 문서"
-ms.custom: 
+title: FileTable DDL, 함수, 저장 프로시저 및 뷰 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2d7db20d24b87c674a1eb45960fd53e95954652
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: cdeb9f2da1af54ff8c7102c7a01182df93cc1cd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL, 함수, 저장 프로시저 및 뷰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 FileTable 기능을 지원하기 위해 추가되거나 변경된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 나열합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 FileTable 기능을 지원하기 위해 추가되거나 변경된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 나열합니다.  
   
  다음 표의 상태 열은 항목이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 신규 항목인지, 아니면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있었지만 의미 체계 검색을 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서 변경되었는지를 나타냅니다.  
   

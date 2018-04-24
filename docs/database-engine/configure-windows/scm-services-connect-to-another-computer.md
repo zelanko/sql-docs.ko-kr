@@ -1,34 +1,34 @@
 ---
-title: "다른 컴퓨터에 연결(SQL Server 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: 다른 컴퓨터에 연결(SQL Server 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8e4014206abb4c84201724744ec30f1f39f4243
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 992b1cb431091e2eda20bfb8951abd6199b06873
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 서비스 - 다른 컴퓨터에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 응용 프로그램 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 다른 컴퓨터에 연결하는 방법에 대해 설명합니다. 첫 번째 절차에 따라 Windows 컴퓨터 관리 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)를 열고 해당 컴퓨터에 연결한 다음 서비스 및 응용 프로그램 트리를 확장합니다. 두 번째 절차에 따라 원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 대한 링크가 있는 파일을 만듭니다.  
   
 > [!NOTE]  
 >  일부 작업은 원격으로 연결할 때 구성 관리를 통해 수행할 수 없습니다.  

@@ -2,7 +2,7 @@
 title: 암호 입력 페이지(복제본 추가 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b782184c4efe0bfdb632a3473d8a91fb2dfac58
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9222f0b5d941cbdac38dc04afc3f770c9d487029
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>암호 입력 페이지(복제본 추가 마법사)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 도움말 항목에서는 **암호 입력** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 도움말 항목에서는 **암호 입력** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다.  
   
  **복제본 선택** 페이지에서 선택한 복제본에 데이터베이스 마스터 키가 있는 데이터베이스가 포함되어 있으면 암호 입력 페이지가 나타납니다.  
   

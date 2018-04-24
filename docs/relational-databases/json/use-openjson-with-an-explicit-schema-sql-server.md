@@ -1,29 +1,30 @@
 ---
-title: "명시적 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: 명시적 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OPENJSON, with explicit schema
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 13
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6ba49bfbb64fe21028792330cf7ac19494180d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59e102774e85ea7d788eae94cdb42cd6c6f6307b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>명시적 스키마와 함께 JSON 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

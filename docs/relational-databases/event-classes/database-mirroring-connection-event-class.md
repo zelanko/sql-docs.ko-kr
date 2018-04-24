@@ -1,28 +1,29 @@
 ---
-title: "데이터베이스 미러링 Connection 이벤트 클래스 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 미러링 Connection 이벤트 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
-caps.latest.revision: 
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d26accbe02ac42a01dbb4c8bf832facec5b1b99e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f6ad79e7f28e4ebbf69ca6a923a60d6975b96e04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-connection-event-class"></a>데이터베이스 미러링 Connection 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

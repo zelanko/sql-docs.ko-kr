@@ -2,7 +2,7 @@
 title: '속성: 새 가용성 그룹(백업 기본 설정 페이지) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -22,14 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84684e7c9327cce92add49ff44aa881b3af25023
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7afbe40afc6f69a88ce4dacb1a8767cd98cbf521
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Availability Group Properties: New Availability Group (Backup Preferences Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 대화 상자를 사용하여 선택한 가용성 그룹의 백업 기본 설정을 보고 변경할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 대화 상자를 사용하여 선택한 가용성 그룹의 백업 기본 설정을 보고 변경할 수 있습니다.  
   
  **가용성 그룹 속성을 보려면**  
   

@@ -1,34 +1,36 @@
 ---
-title: "데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - witness [SQL Server], turning off
 - witness [SQL Server], removing
 - database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8761a09f4ee59bcdcabb99d78e7135e6e919d61
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 61e87861d064c8dc4892b4361059ff2726d61098
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거하는 방법에 대해 설명합니다. 데이터베이스 소유자는 데이터베이스 미러링 세션 중에 언제든지 미러링 모니터를 해제할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거하는 방법에 대해 설명합니다. 데이터베이스 소유자는 데이터베이스 미러링 세션 중에 언제든지 미러링 모니터를 해제할 수 있습니다.  
   
  **항목 내용**  
   

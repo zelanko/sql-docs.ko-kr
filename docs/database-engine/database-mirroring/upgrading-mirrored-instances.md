@@ -1,34 +1,36 @@
 ---
-title: "미러된 인스턴스 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: 미러된 인스턴스 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 329c2a8f2fb61ed3691d83b289bcb3fb9ea4f4e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>미러된 인스턴스 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미러된 인스턴스를 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩 또는 누적 업데이트나 새 Windows 서비스 팩 또는 누적 업데이트로 업그레이드하려는 경우 롤링 업그레이드를 수행하여 각 미러된 데이터베이스의 가동 중지 시간을 한 번의 수동 장애 조치(failover)에 걸리는 시간으로 줄일 수 있습니다. 원래 주 서버로 장애 복구(failback)할 때는 수동 장애 조치(failover) 2회에 걸리는 시간이 소요됩니다. 롤링 업그레이드는 가장 단순한 형식으로 수행할 때 현재 미러링 세션에서 미러 서버로 작동 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(failover)하고, 이전의 주 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 수행하는 정확한 프로세스는 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 실행되는 미러링 세션의 작동 모드, 수 및 레이아웃에 따라 달라집니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미러된 인스턴스를 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩 또는 누적 업데이트나 새 Windows 서비스 팩 또는 누적 업데이트로 업그레이드하려는 경우 롤링 업그레이드를 수행하여 각 미러된 데이터베이스의 가동 중지 시간을 한 번의 수동 장애 조치(failover)에 걸리는 시간으로 줄일 수 있습니다. 원래 주 서버로 장애 복구(failback)할 때는 수동 장애 조치(failover) 2회에 걸리는 시간이 소요됩니다. 롤링 업그레이드는 가장 단순한 형식으로 수행할 때 현재 미러링 세션에서 미러 서버로 작동 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(failover)하고, 이전의 주 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 업그레이드한 다음 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 수행하는 정확한 프로세스는 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 실행되는 미러링 세션의 작동 모드, 수 및 레이아웃에 따라 달라집니다.  
   
 > [!NOTE]  
 >  마이그레이션 중에 로그 전달을 통해 데이터베이스 미러링을 사용하는 방법에 대한 자세한 내용을 확인하려면 이 [데이터베이스 미러링 및 로그 전달 백서](https://t.co/RmO6ruCT4J)를 다운로드하세요.  

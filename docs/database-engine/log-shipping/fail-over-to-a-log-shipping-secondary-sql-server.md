@@ -1,15 +1,16 @@
 ---
-title: "로그 전달 보조 데이터베이스로 장애 조치(SQL Server) | Microsoft"
-ms.custom: 
+title: 로그 전달 보조 데이터베이스로 장애 조치(SQL Server) | Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - primary databases [SQL Server]
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ada8976a3c51dcbe1a0a6c4b3c4cff6b3b399745
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>로그 전달 보조 데이터베이스로 장애 조치(Failover)(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 로그 전달 보조 데이터베이스로 장애 조치(Failover)는 주 서버 인스턴스에서 오류가 발생하거나 유지 관리가 필요한 경우에 유용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  로그 전달 보조 데이터베이스로 장애 조치(Failover)는 주 서버 인스턴스에서 오류가 발생하거나 유지 관리가 필요한 경우에 유용합니다.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>제어된 장애 조치(Failover) 준비  
  일반적으로 주 데이터베이스는 가장 최근의 백업 작업 이후 계속 업데이트되므로 주 데이터베이스와 보조 데이터베이스는 동기화되지 않습니다. 경우에 따라 최근 트랜잭션 로그 백업이 보조 서버 인스턴스로 복사되지 않았거나 복사된 일부 로그 백업이 보조 데이터베이스에 아직 적용되지 않았을 수도 있습니다. 가능한 경우 먼저 모든 보조 데이터베이스를 주 데이터베이스와 동기화하는 것이 좋습니다.  

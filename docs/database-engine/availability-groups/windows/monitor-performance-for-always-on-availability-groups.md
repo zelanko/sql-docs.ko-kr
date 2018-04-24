@@ -13,12 +13,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 caps.latest.revision: 13
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0d41627a8c08e2fd06a9d5fdb391f5e626599233
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 6ad77dc80e9c54dffba133e06428dca24f2f704b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

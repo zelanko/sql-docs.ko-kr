@@ -1,36 +1,36 @@
 ---
-title: "데이터베이스 미러링 모니터 개요 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 미러링 모니터 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  
+  올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  
   
  각 장애 조치(Failover) 파트너에서 개별적으로 모니터링하기 위해 미러된 데이터베이스를 등록할 수 있습니다. 데이터베이스를 등록하면 데이터베이스 미러링 모니터는 데이터베이스에 대한 다음 정보를 캐시합니다.  
   

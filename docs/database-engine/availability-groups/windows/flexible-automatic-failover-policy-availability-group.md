@@ -1,15 +1,16 @@
 ---
-title: "유연한 자동 장애 조치 정책 - 가용성 그룹 | Microsoft Docs"
-ms.custom: 
+title: 유연한 자동 장애 조치 정책 - 가용성 그룹 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - flexible failover policy
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 486be04f76c4a8b3cb017a2cbd1e6ac73942aeb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>유연한 자동 장애 조치 정책 - 가용성 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 유연한 장애 조치(failover) 정책을 통해 가용성 그룹에 대해 [자동 장애 조치(failover)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  유연한 장애 조치(failover) 정책을 통해 가용성 그룹에 대해 [자동 장애 조치(failover)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
   
  가용성 그룹에 대한 유연한 장애 조치(Failover) 정책은 가용성 그룹의 오류 상태 수준 및 상태 확인 제한 시간 임계값으로 정의합니다. 가용성 그룹이 해당 오류 상태 수준 또는 해당 상태 확인 제한 시간 임계값을 초과했음이 감지되면 가용성 그룹의 리소스 DLL은 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 다시 응답합니다. 그러면 WSFC 클러스터는 보조 복제본으로 자동 장애 조치를 시작합니다.  
   

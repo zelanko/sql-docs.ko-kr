@@ -1,35 +1,36 @@
 ---
-title: "데이터베이스 데이터 정렬 설정 또는 변경 | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 데이터 정렬 설정 또는 변경 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: collations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 025bfc5512c9e53569077749a852191a76e8b7dd
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cd165229adc76974b29142ac1c0e8e4b8bccd6c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
  
 > [!NOTE]
 > Azure SQL Database에 대한 데이터 정렬을 만든 후에는 변경할 수 없습니다.

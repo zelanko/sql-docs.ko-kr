@@ -1,15 +1,16 @@
 ---
-title: "클라이언트 프로토콜 구성 | Microsoft Docs"
-ms.custom: 
+title: 클라이언트 프로토콜 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default protocols
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 - default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9f3e68de28e6dd2052b2f0fd0f40acd5a167678
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 87b22e3634d0f612c6331b84a84b865b556a6f3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-client-protocols"></a>클라이언트 프로토콜 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 클라이언트 응용 프로그램이 사용하는 클라이언트 프로토콜을 구성하는 방법에 대해 설명합니다. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 응용 프로그램이 사용하는 클라이언트 프로토콜을 구성하는 방법에 대해 설명합니다. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 프로토콜 순서를 설정하여 모든 클라이언트 응용 프로그램이 동일한 네트워크 프로토콜을 사용하도록 구성하십시오.  
   

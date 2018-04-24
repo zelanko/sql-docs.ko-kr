@@ -1,15 +1,16 @@
 ---
-title: "로그 전달 모니터링(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 로그 전달 모니터링(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60cb24f05e6c7793cea3dfd49ee7946651e129ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 로그 전달을 구성한 후 모든 로그 전달 서버의 상태에 대한 정보를 모니터링할 수 있습니다. 로그 전달 작업의 기록과 상태는 항상 로그 전달 작업에 의해 로컬에 저장됩니다. 백업 작업의 기록과 상태는 주 서버에 저장되고 복사 및 복원 작업의 기록과 상태는 보조 서버에 저장됩니다. 원격 모니터 서버를 구현한 경우 이 정보는 모니터 서버에도 저장됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  로그 전달을 구성한 후 모든 로그 전달 서버의 상태에 대한 정보를 모니터링할 수 있습니다. 로그 전달 작업의 기록과 상태는 항상 로그 전달 작업에 의해 로컬에 저장됩니다. 백업 작업의 기록과 상태는 주 서버에 저장되고 복사 및 복원 작업의 기록과 상태는 보조 서버에 저장됩니다. 원격 모니터 서버를 구현한 경우 이 정보는 모니터 서버에도 저장됩니다.  
   
  로그 전달 작업이 예약된 대로 수행되지 않으면 경고가 발생하도록 구성할 수 있습니다. 오류는 백업 및 복원 작업 상태를 감시하는 경고 작업에 의해 발생합니다. 이러한 오류가 발생할 때 운영자에게 알리는 경고를 정의할 수 있습니다. 모니터 서버가 구성되어 있는 경우 모니터 서버에서 로그 전달 구성의 모든 작업에 대해 오류를 발생시키는 하나의 경고 작업이 실행됩니다. 모니터 서버가 지정되지 않은 경우 경고 작업은 주 서버 인스턴스에서 실행되어 백업 작업을 모니터링합니다. 모니터 서버가 지정되어 있지 않으면 각 보조 서버 인스턴스에서도 경고 작업이 실행되어 로컬 복사 및 복원 작업을 모니터링합니다.  
   

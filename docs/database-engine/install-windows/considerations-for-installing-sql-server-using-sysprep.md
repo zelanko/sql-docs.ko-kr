@@ -1,27 +1,27 @@
 ---
-title: "SysPrep을 사용하여 SQL Server 설치 시 고려 사항 | Microsoft Docs"
-ms.custom: 
+title: SysPrep을 사용하여 SQL Server 설치 시 고려 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1089089d6e0eb1a3085dad9306a6e598535b739
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 864c23937935a7a8c8695bb60dffd1aea7fde95c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
 
