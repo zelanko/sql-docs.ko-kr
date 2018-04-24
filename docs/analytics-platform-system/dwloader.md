@@ -1,27 +1,21 @@
 ---
-title: dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
-author: barbkess
-ms.author: barbkess
+title: 명령줄 로더-dwloader 병렬 데이터 웨어하우스 | Microsoft Docs
+description: dwloader는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다.'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader 명령줄 로더
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
 **dwloader** 는 기존 테이블에 대량으로 테이블 행을 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 테이블의 끝에 모든 행을 추가할 수 있습니다 (*추가 모드* 또는 *fastappend 모드*), 새 행이 추가 및 기존 행을 업데이트 (*upsert 모드*)을 모두 삭제 하거나 행 로드 하기 전에 기존 한 다음 빈 테이블에 모든 행을 삽입 (*모드를 다시 로드*).  
   
 **데이터를 로드 하기 위한 프로세스**  
@@ -248,7 +242,7 @@ ASCII 파일에 대 한 Null 구분 기호를 연속적으로 배치 하 여 표
   
 -t \t  
   
--t '~|~'  
+-t ' ~ | ~'  
   
 **-r** *row_delimiter*  
 원본 데이터 파일의 각 행에 대 한 구분 기호입니다. 행 구분 기호는 ASCII 값을 하나 이상.  
@@ -284,7 +278,7 @@ LF가 Unix 필요 합니다. CR은 Windows 필요 합니다.
   
 -s 0x22  
   
-< fixed_width_column_options>  
+< fixed_width_column_options >  
 고정 길이 열이 있는 원본 데이터 파일에 대 한 옵션입니다. 기본적으로 *source_data_file_name* 가변 길이 열에 ASCII 문자를 포함 합니다.  
   
 고정된 폭 열-e u t f 8 때 지원 되지 않습니다.  
@@ -491,7 +485,7 @@ Char, nchar, varchar 및 nvarchar 필드의 왼쪽 및 오른쪽에서 공백 �
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 다른 정수 값 (실패)  
   
-명령 창이 나 배치 파일을 사용 하 여 `errorlevel` 반환 코드를 표시 합니다. 예를 들어  
+명령 창이 나 배치 파일을 사용 하 여 `errorlevel` 반환 코드를 표시 합니다. 예를 들어:  
   
 ```  
 dwloader  

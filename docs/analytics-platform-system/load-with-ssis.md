@@ -1,27 +1,21 @@
 ---
-title: Integration Services 사용 하 여 데이터를 로드 합니다.
-author: barbkess
-ms.author: barbkess
+title: Integration Services-병렬 데이터 웨어하우스를 로드 | Microsoft Docs
+description: SQL Server Integration Services (SSIS) 패키지를 사용 하 여 병렬 데이터 웨어하우스 (PDW)에 데이터를 로드 하기 위한 참조 및 배포 정보를 제공 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>Integration Services를 사용 하 여 데이터를 로드 합니다.
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 Integration Services를 사용 하 여 데이터를 로드 합니다.
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다.  
   
 <!-- MISSING LINKS

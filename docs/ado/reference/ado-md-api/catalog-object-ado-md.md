@@ -1,33 +1,33 @@
 ---
-title: "카탈로그 개체 (ADO MD) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 카탈로그 개체 (ADO MD) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Catalog
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4201fb49c367575434948616d376f54a68bcf1e5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6c1102703da512655f101af27bb38acbc74ee735
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="catalog-object-ado-md"></a>카탈로그 개체 (ADO MD)
 다차원 데이터 공급자 (MDP)에 적용 되는 다차원 스키마 정보 (큐브 기본 차원, 계층, 수준 및 멤버)를 포함합니다.  

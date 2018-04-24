@@ -1,6 +1,6 @@
 ---
-title: "Linux에서 SQL Server 설정 구성 | Microsoft Docs"
-description: "이 문서에서는 Linux에서 SQL Server 2017 설정을 구성 하는 mssql conf 도구를 사용 하는 방법을 설명 합니다."
+title: Linux에서 SQL Server 설정 구성 | Microsoft Docs
+description: 이 문서에서는 Linux에서 SQL Server 2017 설정을 구성 하는 mssql conf 도구를 사용 하는 방법을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/21/2018
 | [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 제한을 설정 합니다. |
 | [TCP 포트](#tcpport) | SQL Server 연결에 대 한 수신 위치는 포트를 변경 합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
-| [Traceflags](#traceflags) | 서비스를 사용 하려고 합니다. traceflag를 설정 합니다. |
+| [Traceflag](#traceflags) | 서비스를 사용 하려고 합니다. traceflag를 설정 합니다. |
 
 > [!TIP]
 > 이러한 설정 중 일부를 환경 변수와 구성할 수도 있습니다. 자세한 내용은 참조 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> SQL Server 에이전트를 사용 하도록 설정
 
-**sqlagent.enabled** 있습니다 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)합니다. SQL Server 에이전트는 기본적으로 비활성화 됩니다.
+**sqlagent.enabled** 있습니다 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)합니다. SQL Server 에이전트는 기본적으로 비활성화 됩니다. 경우 **sqlagent.enabled** 다음 SQL Server는 내부적으로 SQL Server 에이전트를 사용할 수 있음을 가정 mssql.conf 설정 파일에 나타나지 않습니다.
 
 이 설정을 변경 하려면 다음 단계를 사용 합니다.
 

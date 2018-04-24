@@ -1,29 +1,22 @@
 ---
-title: 외부 데이터 (분석 플랫폼 시스템) PolyBase 연결 구성
-author: barbkess
-ms.author: barbkess
+title: PolyBase 연결-분석 플랫폼 시스템 구성 | Microsoft Docs
+description: PolyBase에서 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하는 데 병렬 데이터 웨어하우스 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, 병렬 데이터 웨어하우스를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>외부 데이터 연결 PolyBase 구성
-Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하려면 SQL Server PDW에서 PolyBase를 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, SQL Server PDW를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  
+PolyBase에서 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하는 데 병렬 데이터 웨어하우스 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, 병렬 데이터 웨어하우스를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  
   
 ### <a name="to-configure-connectivity"></a>연결을 구성 하려면  
   
@@ -57,7 +50,7 @@ Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연�
   
 4.  외부 데이터 원본으로 Microsoft Azure blob 저장소를 사용 하려면 PDW 코어 site.xml 파일에 하나 이상의 Microsoft Azure 저장소 계정 액세스 키를 추가 합니다. 키를 추가 합니다.  
   
-    1.  Microsoft Azure 저장소 계정 이름을 찾습니다. 저장소 계정, 로그인을 보려면는[Azure 포털](https://portal.azure.com) 클릭 **저장소 계정 (클래식)**합니다.  
+    1.  Microsoft Azure 저장소 계정 이름을 찾습니다. 저장소 계정, 로그인을 보려면는[Azure 포털](https://portal.azure.com) 클릭 **저장소 계정 (클래식)** 합니다.  
   
         ![Windows Azure 저장소 계정 이름](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
@@ -96,7 +89,7 @@ Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연�
   
     외부 Hadoop 1.3에 연결 하는 경우이 단계를 건너뜁니다.  
   
-    Hadoop 2.0 이후부터 yarn-site.xml 파일은 Hadoop YARN 프레임 워크에 대 한 구성 설정을 포함 합니다. 이 파일이 컨트롤 노드 아래에 있는 **C:\program files\Microsoft SQL Server 병렬 데이터 Warehouse\100\Hadoop\conf\\**합니다.  
+    Hadoop 2.0 이후부터 yarn-site.xml 파일은 Hadoop YARN 프레임 워크에 대 한 구성 설정을 포함 합니다. 이 파일이 컨트롤 노드 아래에 있는 **C:\program files\Microsoft SQL Server 병렬 데이터 Warehouse\100\Hadoop\conf\\** 합니다.  
   
     PolyBase 쿼리는 외부 Hadoop 2.0 클러스터에 대해 Windows 또는 Linux를 실행 하려면 yarn.application.classpath 속성 및 외부 Hadoop 클러스터에 yarn-site.xml 설정을 사용 하 여 일치 하는 값을 구성 해야 합니다. 이 구성은 외부 Hadoop 클러스터에는 기본 설정을 사용 하는 경우에 필요 합니다.  
   

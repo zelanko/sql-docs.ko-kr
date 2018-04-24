@@ -1,28 +1,21 @@
 ---
-title: 다운로드 하 여 Microsoft 업데이트 (분석 플랫폼 시스템)를 적용 합니다.
-author: barbkess
-ms.author: barbkess
+title: Microsoft 업데이트-분석 플랫폼 시스템 다운로드 | Microsoft Docs
+description: 이 항목에서는 Windows Server Update Services (WSUS)를 Microsoft Update 카탈로그에서 업데이트를 다운로드 하 고 분석 플랫폼 시스템 기기 서버 해당 업데이트를 적용 하는 방법에 설명 합니다. Microsoft 업데이트를 통해 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>다운로드 하 여 Microsoft 업데이트 적용
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>다운로드 하 여 분석 플랫폼 시스템에 대 한 Microsoft 업데이트 적용
 이 항목에서는 Windows Server Update Services (WSUS)를 Microsoft Update 카탈로그에서 업데이트를 다운로드 하 고 분석 플랫폼 시스템 기기 서버 해당 업데이트를 적용 하는 방법에 설명 합니다. Microsoft 업데이트를 통해 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
   
 ## <a name="TOP"></a>시작하기 전 주의 사항  

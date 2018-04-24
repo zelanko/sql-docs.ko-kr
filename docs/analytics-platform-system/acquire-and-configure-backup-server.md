@@ -1,28 +1,22 @@
 ---
-title: 획득 및 AP PDW에 대 한 백업 서버를 구성 합니다.
-author: barbkess
-ms.author: barbkess
+title: 획득 하 고 백업 서버-병렬 데이터 웨어하우스 구성 | Microsoft Docs
+description: 이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하는 방법을 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Backup과 함께 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하 고 Analytics Platform System (APS) 및 SQL Server 병렬 데이터 웨어하우스 (PDW)의 기능을 복원 합니다.
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>획득 하 고 백업 서버를 구성 합니다.
-이 항목에서는 Analytics Platform System (APS)의 백업 및 복원 기능을 통해 사용 하기 위해 백업 서버 및 SQL Server 병렬 데이터 웨어하우스 (PDW)와 비 어플라이언스 Windows 시스템을 구성 하는 방법에 설명 합니다.  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>획득 및 병렬 데이터 웨어하우스에 대 한 백업 서버를 구성 합니다.
+이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하는 방법을 설명 합니다.  
   
   
 ## <a name="Basics"></a>백업 서버 기본 사항  
@@ -94,7 +88,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
   
 5.  PDW에 백업 도메인 계정 자격 증명을 추가 합니다.  
   
-    예를 들어  
+    예를 들어:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -114,7 +108,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버를 액세스 합니다. 파일 
 > [!IMPORTANT]  
 > 백업 서버의 InfiniBand IP 주소를 사용 해야 합니다. 그렇지 않으면 데이터 over Ethernet InfiniBand 대신 복사 됩니다.  
   
-예를 들어  
+예를 들어:  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

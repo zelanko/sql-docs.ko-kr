@@ -1,28 +1,21 @@
 ---
-title: 관리 콘솔 경고 이해 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 관리 콘솔 경고-분석 플랫폼 시스템 | Microsoft Docs
+description: 관리 콘솔 경고 Analytics Platform System (APS)을 이해 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>관리 콘솔 경고 이해
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>분석 플랫폼 시스템에 관리 콘솔 경고 이해
 어플라이언스에 경고가 표시 **관리 콘솔** 및 **System Center Operations Manager** (SCOM)입니다. 추가 확인이 필요한 경고를 식별 하려면이 목록을 경고를 사용 하세요.  
   
 에 연결 하는 방법에 대 한 내용은 **관리 콘솔** Internet Explorer를 사용 하 여 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)합니다. 에 대 한 내용은 **SCOM**, 참조 [System Center Operations Manager를 사용 하 여 어플라이언스에 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
