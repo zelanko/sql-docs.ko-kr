@@ -1,27 +1,28 @@
 ---
-title: "연결 문자열 보안 | Microsoft Docs"
-ms.custom: 
+title: 연결 문자열 보안 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 588166b41e7a66a442b1b5b49fbdcaf0d6d13320
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a91ed021b749a0f23c08b1b4d01ef4d60d073814
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="securing-connection-strings"></a>연결 문자열 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
  사용자 ID와 암호를 제공하는 사용자처럼 외부 원본에서 연결 문자열 정보를 가져오는 경우 원본 입력의 유효성을 검사하여 입력이 올바른 형식을 따르며 연결에 영향을 주는 추가 매개 변수가 들어 있지 않은지 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

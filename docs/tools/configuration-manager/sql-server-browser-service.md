@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Browser 서비스 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Browser 서비스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.browseservers.local.f1
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5018082d7a9ee06c1015925e3efad92eecc5133b
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 다음과 같은 작업에 적용 됩니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
   
 -   DAC(관리자 전용 연결) 끝점에 연결  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 서비스(sqlbrowser)는 [!INCLUDE[ssAS](../../includes/ssas-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 대해 인스턴스 이름과 버전 번호를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저와 함께 설치 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 서비스(sqlbrowser)는 [!INCLUDE[ssAS](../../includes/ssas-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 대해 인스턴스 이름과 버전 번호를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 설치됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 구성하거나 설치 중에 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 자동으로 시작됩니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스를 설치하는 경우  
   
 ## <a name="background"></a>배경  
- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]이전에는 컴퓨터 한 대에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 하나만 설치할 수 있었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]할당 된 포트 1433에서 수신 요청에 대 한 수신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여는 공식 IANA Internet Assigned Numbers 기관 (). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나만 포트를 사용할 수 있으므로 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에서 처음으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 지원하게 되자 UDP 포트 1434로 수신하기 위해 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)가 개발되었습니다. 이 수신기 서비스는 설치된 인스턴스 이름과 인스턴스에 사용되는 포트나 명명된 파이프를 사용하여 클라이언트 요청에 응답합니다. SSRP 시스템의 제한을 해결하기 위해 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Browser 서비스가 SSRP를 대신하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 도입되었습니다.  
+ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]이전에는 컴퓨터 한 대에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 하나만 설치할 수 있었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공식 IANA(Internet Assigned Numbers Authority)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당한 포트 1433을 통해 들어오는 요청을 수신했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나만 포트를 사용할 수 있으므로 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 에서 처음으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 지원하게 되자 UDP 포트 1434로 수신하기 위해 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)가 개발되었습니다. 이 수신기 서비스는 설치된 인스턴스 이름과 인스턴스에 사용되는 포트나 명명된 파이프를 사용하여 클라이언트 요청에 응답합니다. SSRP 시스템의 제한을 해결하기 위해 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Browser 서비스가 SSRP를 대신하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 도입되었습니다.  
   
 ## <a name="how-sql-server-browser-works"></a>SQL Server Browser 작동 방법  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 TCP/IP 프로토콜이 설정되면 서버에 TCP/IP 포트가 할당됩니다. 명명된 파이프 프로토콜을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 특정 명명된 파이프에서 수신합니다. 이 포트 또는 "파이프"는 클라이언트 응용 프로그램과 데이터를 교환하기 위해 특정 인스턴스에 사용됩니다. 설치하는 동안 TCP 포트 1433과 파이프 `\sql\query` 가 기본 인스턴스에 할당되지만 나중에 서버 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 하나에서만 포트나 파이프를 사용할 수 있으므로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 비롯한 명명된 인스턴스에는 다른 포트 번호와 파이프 이름이 할당됩니다. 기본적으로 설정되어 있는 명명된 인스턴스와 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 둘 다 동적 포트를 사용하도록 구성되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때 사용 가능한 포트가 할당됩니다. 필요할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 특정 포트를 할당할 수 있습니다. 연결할 때 클라이언트가 특정 포트를 지정할 수 있지만 포트가 동적으로 할당될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 언제든지 포트 변호가 달라질 수 있어 클라이언트는 정확한 포트 번호를 알지 못합니다.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="security"></a>보안  
   
 ### <a name="account-privileges"></a>계정 권한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)를 사용하여 인증되지 않은 요청을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]브라우저는 악의적 공격을 최대한 차단 하려면 권한이 낮은 사용자의 보안 컨텍스트에서 실행 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 로그온 계정을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 최소 사용자 권한은 다음과 같습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)를 사용하여 인증되지 않은 요청을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 실행해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 로그온 계정을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 최소 사용자 권한은 다음과 같습니다.  
   
 -   네트워크에서 이 컴퓨터 액세스 거부  
   

@@ -1,6 +1,6 @@
 ---
-title: mssql-cli | Microsoft Docs
-description: "mssql cli는 대화형 명령줄 쿼리 도구를 사용 하 여 Windows, macOS 등 또는 Linux에서 실행 되는 SQL Server입니다."
+title: mssql cli | Microsoft Docs
+description: mssql cli는 대화형 명령줄 쿼리 도구를 사용 하 여 Windows, macOS 등 또는 Linux에서 실행 되는 SQL Server입니다.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql-non-specified
@@ -8,17 +8,18 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: mssql-cli
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c996fb8b4b896ef50f53c9420a8ee27648d0579
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 919921c957768ed6d58290c9232d9c11d8c0d953
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>SQL Server 용 mssql cli 명령줄 쿼리 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

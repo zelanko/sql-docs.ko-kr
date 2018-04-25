@@ -2,7 +2,7 @@
 title: 시작 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48811b32eaaf76b586fce57d4d1592704dfe1dc3
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>시작 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/28/2018
 * [3단계: PHP를 사용하는 SQL과 연결된 개념 증명](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
