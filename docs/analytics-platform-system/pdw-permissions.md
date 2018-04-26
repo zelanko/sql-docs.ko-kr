@@ -1,29 +1,22 @@
 ---
-title: PDW 사용 권한 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 병렬 데이터 웨어하우스에 대 한 사용 권한 | Microsoft Docs
+description: 이 문서에서는 요구 사항 및 병렬 데이터 웨어하우스에 대 한 데이터베이스 사용 권한을 관리 하기 위한 옵션을 설명 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>PDW 사용 권한
-이 항목에서는 요구 사항 및 SQL Server PDW에 대 한 데이터베이스 권한을 관리 하기 위한 옵션에 설명 합니다.  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 사용 권한 관리
+이 문서에서는 요구 사항 및 SQL Server PDW에 대 한 데이터베이스 권한을 관리 하기 위한 옵션을 설명 합니다.  
   
 ## <a name="BackupRestoreBasics"></a>데이터베이스 엔진 권한 기본 사항  
 SQL Server PDW에서 데이터베이스 엔진 권한, 로그인을 통해 서버 수준 및 데이터베이스 사용자 및 사용자 정의 데이터베이스 역할을 통해 데이터베이스 수준에서 관리 됩니다.  

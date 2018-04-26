@@ -1,29 +1,22 @@
 ---
-title: 어플라이언스에 설치 및 구성 개요 (분석 플랫폼 시스템)
-author: barbkess
-ms.author: barbkess
+title: 어플라이언스에 설치 및 구성-분석 플랫폼 시스템 | Microsoft Docs
+description: Analytics Platform System (APS)를 설정 하 고 새 어플라이언스를 사용 하 여 시작 하는 초기 단계 기기 단계적으로 안내 합니다.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
-caps.latest.revision: 23
-ms.openlocfilehash: df27bb16f24e313f7cb1d7c7f5ced912c0a09e1d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-installation-and-configuration-overview"></a>어플라이언스에 설치 및 구성 개요
-초기 단계를 설정 하 고 새 SQL Server PDW 어플라이언스를 사용 하 여 시작 하려면 SQL Server PDW 어플라이언스에 단계적으로 안내 합니다.  
+# <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>어플라이언스에 설치 및 구성을 분석 플랫폼 시스템에 대 한
+Analytics Platform System (APS)를 설정 하 고 새 어플라이언스를 사용 하 여 시작 하는 초기 단계 기기 단계적으로 안내 합니다.  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:  
