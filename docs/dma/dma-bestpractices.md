@@ -2,7 +2,7 @@
 title: 데이터 마이그레이션 길잡이 (SQL Server)에 대 한 모범 사례 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8842ca064494bc7ead99eb34d6ea2cc76bb2679
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b903d62a78b420ae6a267449b81919bd9db876e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>데이터 마이그레이션 길잡이 실행 하기 위한 모범 사례
 이 문서에서는 설치, 평가 및 마이그레이션에 대 한 다음과 같은 모범 사례 정보를 제공 합니다.

@@ -2,7 +2,7 @@
 title: 온-프레미스 SQL Server (데이터 마이그레이션 길잡이)를 마이그레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c578625f9dac8b242dcd6d06fcf60925dd5b02c2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>데이터 마이그레이션 길잡이 사용 하 여 온-프레미스 SQL Server로 마이그레이션
 
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 1. 로그인 마이그레이션에 대 한 세부 정보에 대 한 저장된 된 파일을 검토 하 고 변경 내용을 확인 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 마이그레이션 길잡이 (DMA)](../dma/dma-overview.md)
 
