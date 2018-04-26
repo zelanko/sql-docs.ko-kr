@@ -1,10 +1,8 @@
 ---
 title: SQL Server 2012 릴리스 정보 | Microsoft 문서
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -14,19 +12,20 @@ ms.topic: article
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 6786ab20e983647a9b83ee383017fc8bd106d8a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](http://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+이 릴리스 정보 문서에서는 Microsoft SQL Server 2012([다운로드하려면 여기를 클릭](http://go.microsoft.com/fwlink/?LinkId=238647))를 설치하거나 문제를 해결하기 전에 읽어야 할 알려진 문제에 대해 설명합니다. 이 릴리스 정보 문서는 정기적으로 업데이트되며 온라인으로만 사용할 수 있고 설치 미디어에는 포함되지 않습니다.  
   
 SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 정보를 참조하십시오. 추가 정보 문서는 설치 미디어에 포함되어 있거나 [추가 정보](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 다운로드 페이지에서 다운로드할 수 있습니다. 또한 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=190948) 및 [SQL Server 포럼](http://go.microsoft.com/fwlink/?LinkId=213599)에서 자세한 내용을 볼 수 있습니다.  
   
@@ -69,7 +68,7 @@ SQL Server 2012를 시작하고 설치하는 방법은 SQL Server 2012 추가 �
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-또는  
+로 구분하거나 여러  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -99,7 +98,7 @@ Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니�
   
 **해결 방법:** 의미 체계 언어 통계 데이터베이스를 의미 체계 인덱싱을 위한 필수 구성 요소로 설정하려면 다음 태스크를 수행합니다.  
   
-1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)에서 다운로드하고 Windows Installer 패키지를 실행하세요.  
+1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(http://go.microsoft.com/fwlink/?LinkId=221787))에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
   
 2.  데이터베이스를 적절한 데이터 폴더로 이동합니다. 데이터베이스를 기본 위치에 두는 경우 연결하기 전에 권한을 변경해야 합니다.  
   
@@ -303,14 +302,14 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 ## <a name="BOL"></a>3.0 온라인 설명서  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 IPv6만 실행하도록 구성된 환경에서 SQL Server 도움말 뷰어 충돌  
-**문제:**IPv6만 실행하도록 환경이 구성된 경우 SQL Server 2012의 도움말 뷰어가 충돌하고 다음 오류 메시지가 표시됩니다.  
+**문제:** IPv6만 실행하도록 환경이 구성된 경우 SQL Server 2012의 도움말 뷰어가 충돌하고 다음 오류 메시지가 표시됩니다.  
   
 `HelpLibAgent.exe has stopped working.`  
   
 > [!IMPORTANT]  
 > 이는 IPv6만 실행하도록 설정된 모든 환경에 적용됩니다. IPv4(및 IPv6과 함께 사용되는 IPv4)가 활성화된 환경은 영향을 받지 않습니다.  
   
-**해결 방법:**이 문제를 방지하려면 IPv4를 사용하도록 설정하거나 다음 단계를 사용하여 레지스트리 항목을 추가하고 ACL을 만들어 IPv6의 도움말 뷰어를 사용하도록 설정합니다.  
+**해결 방법:** 이 문제를 방지하려면 IPv4를 사용하도록 설정하거나 다음 단계를 사용하여 레지스트리 항목을 추가하고 ACL을 만들어 IPv6의 도움말 뷰어를 사용하도록 설정합니다.  
   
 1.  이름이 “IPv6”이고 값이 “1(DWORD(32비트))”인 레지스트리 키를 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 아래에 만듭니다.  
   
@@ -347,7 +346,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 큰 글꼴 크기에서 컨트롤의 비율이 제대로 조정되지 않음  
 **문제:** 텍스트 크기를 "크게 – 150%"로 변경하거나(Windows Server 2008 또는 Windows 7) 사용자 지정 DPI 설정을 200%로 변경하는 경우(Windows 7) **새 기술 자료** 페이지의 **취소** 및 **만들기** 단추에 액세스할 수 없습니다.  
   
-**해결 방법:**이 문제를 해결하려면 글꼴을 더 작은 크기로 설정합니다.  
+**해결 방법:** 이 문제를 해결하려면 글꼴을 더 작은 크기로 설정합니다.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 800x600의 화면 해상도는 지원되지 않음  
 **문제:** 화면 해상도를 800x600으로 설정하는 경우 Data Quality Client 응용 프로그램이 올바르게 표시되지 않습니다.  
@@ -380,7 +379,7 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 **해결 방법:** 매핑할 원본 데이터가 포함된 Excel 파일의 시트 이름에서 ;(세미콜론)을 제거하고 다시 시도합니다.  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 정리 및 일치 중에 Excel의 매핑되지 않은 원본 필드에 있는 Date 또는 DateTime 값의 문제점  
-**문제:**원본 데이터가 Excel이고 **날짜** 또는 **날짜/시간** 데이터 형식의 값이 포함된 원본 필드를 매핑하지 않은 경우 정리 및 일치 작업 중에 다음과 같은 현상이 발생합니다.  
+**문제:** 원본 데이터가 Excel이고 **날짜** 또는 **날짜/시간** 데이터 형식의 값이 포함된 원본 필드를 매핑하지 않은 경우 정리 및 일치 작업 중에 다음과 같은 현상이 발생합니다.  
   
 -   매핑되지 않은 **날짜** 값이 yyyymmdd 형식으로 표시되고 내보내집니다.  
   
@@ -444,7 +443,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 **해결 방법:** Windows Server 2008, Windows Server 2008 R2 및 Windows Server 7의 Server Core SKU에서 이 두 기능을 설치 또는 사용하지 마세요.  
   
 ### <a name="52-sql-server-management-studio-depends-on-visual-studio-2010-sp1"></a>5.2 SQL Server Management Studio가 Visual Studio 2010 SP1에 따라 달라짐  
-**문제:**SQL Server 2012 Management Studio가 올바르게 작동하는지 여부는 Visual Studio 2010 SP1에 따라 달라집니다. Visual Studio 2010 SP1을 제거하면 SQL Server Management Studio의 기능이 손상될 수 있고 Management Studio을 지원되지 않는 상태로 두게 됩니다. 이 경우 다음과 같은 문제를 볼 수 있습니다.  
+**문제:** SQL Server 2012 Management Studio가 올바르게 작동하는지 여부는 Visual Studio 2010 SP1에 따라 달라집니다. Visual Studio 2010 SP1을 제거하면 SQL Server Management Studio의 기능이 손상될 수 있고 Management Studio을 지원되지 않는 상태로 두게 됩니다. 이 경우 다음과 같은 문제를 볼 수 있습니다.  
   
 -   ssms.exe의 명령줄 매개 변수가 올바르게 작동하지 않습니다.  
   
@@ -454,7 +453,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 -   쿼리가 일반 사용자 모드에서 디버깅되지 않습니다.  
   
-**해결 방법:**Visual Studio 2010 SP1을 다시 설치하고 Management Studio를 다시 시작합니다.  
+**해결 방법:** Visual Studio 2010 SP1을 다시 설치하고 Management Studio를 다시 시작합니다.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 x64 운영 체제에 64비트 PowerShell 2.0 필요  
 **문제:** 64비트 운영 체제의 SQL Server 2012 인스턴스에 대해 Windows PowerShell Extensions for SQL Server의 32비트 설치가 지원되지 않습니다.  
@@ -478,7 +477,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 새 유지 관리 계획 레이아웃이 이전 SQL Server 도구와 호환되지 않음  
 **문제:** SQL Server 2012 관리 도구가 이전 버전의 SQL Server 관리 도구(SQL Server 2008 R2, SQL Server 2008 또는 SQL Server 2005)에서 만든 기존 유지 관리 계획을 수정하는 데 사용되면 유지 관리 계획이 새로운 형식으로 저장됩니다. 이전 버전의 SQL Server 유지 관리 도구에서는 이 새로운 형식을 지원하지 않습니다.  
   
-**해결 방법:**없습니다.  
+**해결 방법:** 없습니다.  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 포함된 데이터베이스에 로그인할 때 Intellisense에 제약이 따름  
 문제: 포함된 사용자가 포함된 데이터베이스에 로그인하면 SSMS(SQL Server Management Studio) 및 SSDT(SQL Server Data Tools)에서 Intellisense가 정상적으로 작동하지 않습니다. 이 경우 다음과 같은 동작이 나타날 수 있습니다.  
@@ -489,7 +488,7 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
   
 3.  기본 제공 함수의 도구 설명 도움말이 작동하지 않습니다.  
   
-**해결 방법:**없습니다.  
+**해결 방법:** 없습니다.  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn 가용성 그룹  
 가용성 그룹을 만들기 전에 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)에 대한 사전 요구 사항, 제한 사항 및 권장 사항](http://go.microsoft.com/?linkid=9753168) 을 참조하세요. AlwaysOn 가용성 그룹에 대한 소개는 온라인 설명서의 [AlwaysOn 가용성 그룹(SQL Server)](http://go.microsoft.com/?linkid=9753166)을 참조하세요.  
@@ -506,14 +505,14 @@ Data Quality 클라이언트 홈 화면에서 **최근 기술 자료** 목록의
 |드라이버|다중 서브넷 장애 조치(Failover)|응용 프로그램 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 끝점 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
-|SQL Native Client 11.0 OLEDB|아니요|예|예|아니오|아니요|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
-|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|사용자 계정 컨트롤|예|예|예|예|  
-|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
+|SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
+|SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
   
-**\&#42;** .NET Framework 4.0이 있는 ADO.NET용 연결 패치 다운로드: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)  
+**\&#42;** .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치 다운로드:  
   
-**\&#42;\&#42;** .NET Framework 3.5 SP1이 있는 ADO.NET용 연결 패치 다운로드: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)  
+**\&#42;\&#42;**.NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치 다운로드:  
   
 **MultiSubnetFailover 키워드 및 관련 기능**  
   
@@ -577,7 +576,7 @@ Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300
 **문제:** 참여하는 클러스터 노드 컴퓨터 계정에 대한 Active Directory 할당량에 도달하여 새 가용성 그룹 수신기를 만들지 못할 수도 있습니다. 자세한 내용은 [컴퓨터 개체 수정 시 클러스터 서비스 계정 문제를 해결하는 방법](http://support.microsoft.com/kb/307532) 및 [Active Directory 할당량](http://technet.microsoft.com/library/cc904295(WS.10).aspx)을 참조하세요.  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 가용성 그룹 수신기 이름에 동일한 15자 접두사를 사용하여 NetBIOS 충돌  
-두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면 가상 네트워크 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265(WS.10).aspx)을 참조하세요.  
+두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265(WS.10).aspx)을 참조하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -603,7 +602,7 @@ Oracle용 CDC 서비스는 Oracle 트랜잭션 로그를 검색하고 관련 Ora
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 클러스터에서 MDS 설치 수정  
 **문제:** **Master Data Services** 확인란이 선택된 상태로 SQL Server 2012 RTM 버전의 클러스터형 인스턴스를 설치하는 경우 단일 노드에 MDS가 설치되지만 MDS를 사용할 수 없고 클러스터에 추가하는 추가 노드에서 작동하지 않습니다.  
   
-**해결 방법:**이 문제를 해결하려면 다음 단계를 수행하여 SQL Server 2012 누적 릴리스 1(CU1)을 설치해야 합니다.  
+**해결 방법:** 이 문제를 해결하려면 다음 단계를 수행하여 SQL Server 2012 누적 릴리스 1(CU1)을 설치해야 합니다.  
   
 1.  기존 SQL/MDS 설치가 없는지 확인합니다.  
   
@@ -614,7 +613,7 @@ Oracle용 CDC 서비스는 Oracle 트랜잭션 로그를 검색하고 관련 Ora
 문제에 대한 자세한 내용 및 위 단계를 수행하는 방법은 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)을 참조하세요.  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 필요  
-마스터 데이터 관리자 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)에서 Silverlight 5를 설치할 수 있습니다.  
+마스터 데이터 관리자 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5.0이 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)에서 설치할 수 있습니다.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -635,7 +634,7 @@ SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsi
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 업그레이드 관리자 설치에 대한 링크가 중국어(HK) 운영 체제에서 활성화되지 않음  
 문제: 중국어(홍콩 특별행정구) 운영 체제(OS)가 지원되는 Windows 버전에 업그레이드 관리자를 설치하려고 할 때 업그레이드 관리자 설치에 대한 링크가 사용하도록 설정되지 않은 것을 발견할 수 있습니다.  
   
-**해결 방법:**해당 운영 체제 아키텍처에 따라 **또는** 에서 SQL Server 2012 미디어에 있는 `\1028_CHT_LP\x64\redist\Upgrade Advisor` SQLUA.msi `\1028_CHT_LP\x86\redist\Upgrade Advisor`파일을 찾습니다.  
+**해결 방법:** 해당 운영 체제 아키텍처에 따라 **또는** 에서 SQL Server 2012 미디어에 있는 `\1028_CHT_LP\x64\redist\Upgrade Advisor` SQLUA.msi `\1028_CHT_LP\x86\redist\Upgrade Advisor`파일을 찾습니다.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

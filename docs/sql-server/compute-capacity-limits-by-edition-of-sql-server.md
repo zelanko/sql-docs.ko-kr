@@ -1,40 +1,42 @@
 ---
-title: "SQL Server의 버전별 계산 용량 제한 | Microsoft 문서"
-ms.custom: 
+title: SQL Server의 버전별 계산 용량 제한 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 버전별 계산 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 버전별 계산 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
   
  ![계산 용량 제한에 매핑](../sql-server/media/compute-capacity-limits.gif "계산 용량 제한에 매핑")  
   
  이 표에서는 위 다이어그램의 표기법에 대해 설명합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0..1|없거나 1개|  
 |1|정확히 1개|  
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/05/2017
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: 코어 기반 라이선스\*|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |개발자|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|Standard|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 24개 미만으로 제한됨|  
+|표준|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 24개 미만으로 제한됨|  
 |Express|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 
 \*Server + CAL(클라이언트 액세스 라이선스) 라이선싱이 있는 Enterprise Edition은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 20개의 코어로 제한됩니다. (새로운 계약에는 이 라이선싱을 사용할 수 없습니다.) 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
@@ -98,11 +100,12 @@ ms.lasthandoff: 12/05/2017
   
 각각의 가상 프로세서 성능이 중요한 경우 하이퍼 스레딩을 해제할 수 있습니다. BIOS 설정 도중 프로세서에 대해 BIOS 설정을 사용하여 하이퍼 스레딩을 활성화 또는 비활성화할 수 있습니다. 그러나 일반적으로 서버에서 실행되는 모든 작업 부하에 영향을 주는 서버 범위 작업입니다. 이는 물리적 운영 체제 환경에서 하이퍼 스레딩 성능을 향상시킬 수 있는 워크로드로부터 가상화된 환경에서 실행되는 워크로드를 분리할 것을 제안할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2016 빠른 시작 설치](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

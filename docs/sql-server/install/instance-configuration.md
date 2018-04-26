@@ -1,16 +1,16 @@
 ---
-title: "설치 마법사 도움말 | Microsoft Docs"
-ms.custom: 
+title: 설치 마법사 도움말 | Microsoft Docs
+ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - instance configuration, Setup
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 
+caps.latest.revision: 62
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 16c42d4f6864e94c475ba917c75c8219d96245ce
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4ef290dacb4863511444c1267ce98a28a9e80926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep을 사용할 경우 **인스턴스 구성** 페이지에서 준비 인스턴스를 완료할 때 인스턴스 이름을 지정할 수 있습니다. 시스템에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기존 기본 인스턴스가 없는 경우 완료하려는 준비 인스턴스를 기본 인스턴스로 구성하도록 선택할 수 있습니다.  
   
 ### <a name="multiple-instances"></a>여러 인스턴스  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 단일 서버 또는 프로세서에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지원하지만 하나의 인스턴스만 기본 인스턴스가 될 수 있습니다. 다른 모든 인스턴스는 명명된 인스턴스여야 합니다. 한 컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 동시에 실행할 수 있으며 각 인스턴스는 다른 인스턴스와 독립적으로 실행됩니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 단일 서버 또는 프로세서에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지원하지만 하나의 인스턴스만 기본 인스턴스가 될 수 있습니다. 다른 모든 인스턴스는 명명된 인스턴스여야 합니다. 한 컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 동시에 실행할 수 있으며 각 인스턴스는 다른 인스턴스와 독립적으로 실행됩니다.  
   
  자세한 내용은 [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md)을 참조하세요.  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="notes"></a>참고  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 팜 스토어에 배포된 인스턴스는 응용 프로그램 파일, 데이터 파일 및 속성을 콘텐츠 데이터베이스와 서비스 응용 프로그램 데이터베이스에 저장합니다.  
+-   SharePoint 팜에 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 응용 프로그램 파일, 데이터 파일 및 속성을 콘텐츠 데이터베이스와 서비스 응용 프로그램 데이터베이스에 저장합니다.  
   
 -   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경하거나 새 기능의 위치를 지정할 수 없습니다.  
 
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="notes"></a>참고  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 팜 스토어에 배포된 인스턴스는 응용 프로그램 파일, 데이터 파일 및 속성을 콘텐츠 데이터베이스와 서비스 응용 프로그램 데이터베이스에 저장합니다.  
+-   SharePoint 팜에 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 응용 프로그램 파일, 데이터 파일 및 속성을 콘텐츠 데이터베이스와 서비스 응용 프로그램 데이터베이스에 저장합니다.  
   
 -   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경하거나 새 기능의 위치를 지정할 수 없습니다.  
 
@@ -309,7 +309,7 @@ ms.lasthandoff: 02/15/2018
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 빈 암호나 약한 sa 암호로는 설정하지 마십시오.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 비어 있거나 약한 sa 암호는 설정하지 마십시오.  
   
  **혼합 모드(Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증)**  
  사용자가 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 수 있도록 허용합니다. Windows 사용자 계정을 통해 연결하는 사용자는 Windows에서 유효성을 검사하는 트러스트된 연결을 사용할 수 있습니다.  
@@ -323,7 +323,7 @@ ms.lasthandoff: 02/15/2018
  시스템 관리자(sa) 로그인을 입력하고 확인하십시오. 암호는 침입을 막는 최전방 방어선이므로 시스템 보안을 위해서는 반드시 강력한 암호를 설정해야 합니다. 빈 암호나 약한 sa 암호로는 설정하지 마십시오.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호는 글자, 기호 및 숫자 조합을 포함하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 혼합 모드 인증을 선택한 경우 설치 마법사의 다음 페이지로 이동하기 전에 강력한 sa 암호를 입력해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호는 문자, 기호 및 숫자를 임의로 조합하여 1자에서 128자까지 포함할 수 있습니다. 혼합 모드 인증을 선택한 경우 설치 마법사의 다음 페이지로 이동하기 전에 강력한 sa 암호를 입력해야 합니다.  
   
  **강력한 암호 지침**  
  강력한 암호는 쉽게 추측할 수 없으며 컴퓨터 프로그램을 사용하여 해킹하기도 어렵습니다. 강력한 암호에는 다음을 비롯한 금지된 조건 및 용어를 사용할 수 없습니다.  
@@ -401,7 +401,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **데이터 디렉터리** 에는 **tempdb** 데이터 파일이 저장된 모든 디렉터리가 표시됩니다. 여러 디렉터리가 있는 경우에는 데이터 파일이 디렉터리에 라운드 로빈 방식으로 배치됩니다. 예를 들어 3개의 디렉터리를 만들고 8개의 데이터 파일을 지정하는 경우 1, 4, 7번 데이터 파일이 첫 번째 디렉터리에 생성됩니다. 2, 5, 8번 데이터 파일은 두 번째 디렉터리에 생성됩니다. 3, 6번 데이터 파일은 세 번째 디렉터리에 생성됩니다.  
   
--   디렉터리를 추가하려면 **추가...**를 클릭합니다.  
+-   디렉터리를 추가하려면 **추가...** 를 클릭합니다.  
   
 -   디렉터리를 제거하려면 디렉터리를 선택하고 **제거**를 클릭합니다.  
   
@@ -451,7 +451,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 역할에 사용자 추가  
  이 옵션은 기본적으로 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 역할에 현재 설치 사용자를 추가하려면 확인란을 선택하십시오.  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] BUILTIN\Administrators의 멤버인 사용자는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 연결할 때 sysadmin 고정 서버 역할에 자동으로 추가되지 않습니다. 서버 수준의 관리자 역할에 명시적으로 추가된 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 사용자만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 관리할 수 있습니다. Built-In\Users 그룹의 멤버는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에 연결할 수 있지만 제한적인 데이터베이스 태스크 수행 권한을 가집니다. 따라서 이전 Windows 릴리스의 BUILTIN\Administrators 및 Built-In\Users에서 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 권한을 상속받은 사용자는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 실행하는 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]인스턴스에서 관리 권한을 명시적으로 부여 받아야 합니다.  
+ BUILTIN\Administrators의 멤버인 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 사용자는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 연결할 때 sysadmin 고정 서버 역할에 자동으로 추가되지 않습니다. 서버 수준의 관리자 역할에 명시적으로 추가된 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 사용자만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 관리할 수 있습니다. Built-In\Users 그룹의 멤버는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에 연결할 수 있지만 제한적인 데이터베이스 태스크 수행 권한을 가집니다. 따라서 이전 Windows 릴리스의 BUILTIN\Administrators 및 Built-In\Users에서 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 권한을 상속받은 사용자는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 실행하는 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]인스턴스에서 관리 권한을 명시적으로 부여 받아야 합니다.  
   
  이 설치 프로그램이 끝난 후 사용자 역할을 변경하려면 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 노출 영역 구성 도구(SQLSAC.exe)를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 역할의 사용자 목록을 업데이트하려면 **새 관리자 추가** 링크를 클릭합니다.  
   

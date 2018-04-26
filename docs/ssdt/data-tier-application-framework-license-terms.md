@@ -1,27 +1,29 @@
 ---
-title: "데이터 계층 응용 프로그램 프레임워크 - 사용 조건 | Microsoft 문서"
-ms.custom: 
+title: 데이터 계층 응용 프로그램 프레임워크 - 사용 조건 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e1984a2e71de0a605346d23b0b99ac8a7aed0afb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-framework---license-terms"></a>데이터 계층 응용 프로그램 프레임워크 - 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +85,7 @@ ms.lasthandoff: 12/21/2017
     -   소프트웨어나 본 계약서를 제3자에게 양도하는 행위, 또는  
     -   상업용 소프트웨어 호스팅 서비스에 소프트웨어를 사용하는 행위  
       
-4.  **제3자 통지.** 본 소프트웨어에는 제3자가 아닌 Microsoft가 본 계약에 명시된 조항에 따라 귀하에게 라이선스를 허여한 제3자 코드가 포함되어 있을 수 있습니다. 제3자 코드는 정보 제공을 목적으로 포함되어 있습니다. 또한 이 소프트웨어에 연결되어 있거나 이 소프트웨어에서 호출 또는 참조되는 제3자 스크립트는 Microsoft가 아니라 그러한 코드를 소유하는 제3자에 의해 귀하에게 라이선스가 허여됩니다. 다음 웹 사이트에서 ASP.NET Ajax CDN 사용 약관을 참조하세요. http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **제3자 통지.** 본 소프트웨어에는 제3자가 아닌 Microsoft가 본 계약에 명시된 조항에 따라 귀하에게 라이선스를 허여한 제3자 코드가 포함되어 있을 수 있습니다. 제3자 코드는 정보 제공을 목적으로 포함되어 있습니다. 또한 이 소프트웨어에 연결되어 있거나 이 소프트웨어에서 호출 또는 참조되는 제3자 스크립트는 Microsoft가 아니라 그러한 코드를 소유하는 제3자에 의해 귀하에게 라이선스가 부여됩니다. ASP.NET Ajax CDN 사용 약관(http://www.asp.net/ajaxlibrary/CDN.ashx)을 참조하세요.  
   
 5.  **백업 복사본.** 소프트웨어의 백업 복사본을 하나 만들 수 있습니다. 이 백업 복사본은 소프트웨어를 다시 설치할 때만 사용할 수 있습니다.  
   

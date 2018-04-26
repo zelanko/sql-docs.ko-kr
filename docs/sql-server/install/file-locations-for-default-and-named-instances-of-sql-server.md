@@ -1,27 +1,27 @@
 ---
-title: "SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5ce1eacf023848410bf41261072adf1cd56ee43
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: db5977924f9a1b6b83817516f6ae2b1b4a916af9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +86,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 클라이언트 구성 요소는 인스턴스 인식형이 아니므로 인스턴스 ID가 할당되지 않습니다. 기본적으로 인스턴스 비인식형 구성 요소는 단일 디렉터리 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]에 설치됩니다. 한 공유 구성 요소의 설치 경로를 변경하면 다른 공유 구성 요소의 설치 경로도 변경됩니다. 후속 설치 시 원래 설치와 동일한 디렉터리에 인스턴스 비인식형 구성 요소가 설치됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 후 인스턴스 이름 변경을 지원하는 유일한  구성 요소입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 바꾸어도 인스턴스 ID는 변경되지 않습니다. 인스턴스 이름을 바꾼 후에도 디렉터리 및 레지스트리 키는 설치 중에 만든 인스턴스 ID를 계속 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 설치 후 인스턴스 이름 변경을 지원하는 유일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 바꾸어도 인스턴스 ID는 변경되지 않습니다. 인스턴스 이름을 바꾼 후에도 디렉터리 및 레지스트리 키는 설치 중에 만든 인스턴스 ID를 계속 사용합니다.  
   
  인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> 아래에 생성됩니다. 예:  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/09/2018
 |복제 및 서버 쪽 COM 개체|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |고정 경로|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소 DLL - 데이터 변환 런타임 엔진, 데이터 변환 파이프라인 엔진 및 **dtexec** 명령 프롬프트 유틸리티용|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|고정 경로|  
 |에 대해 관리되는 연결을 지원하는 DLL(!!) [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|고정 경로|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 지원하는 각 열거자 유형에 대한 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|고정 경로|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 지원하는 각 열거자 유형에 대한 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|고정 경로|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스, WMI 공급자|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |고정 경로|  
 |의 모든 인스턴스 간에 공유되는 구성 요소(!!) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |고정 경로|  
   

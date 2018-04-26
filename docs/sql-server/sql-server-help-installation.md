@@ -1,31 +1,31 @@
 ---
-title: "SQL Server 도움말 콘텐츠 및 도움말 뷰어 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 도움말 콘텐츠 및 도움말 뷰어 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 679d0fb003a8a59185d860a125cfdd8b5601367c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e6ac779e6ec7aa16f386df20a517305a2757dedd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
@@ -181,7 +181,7 @@ Visual Studio에서 설치된 도움말을 보려면:
 
 **SSMS 17.x에서 SQL Server 온라인 도움말을 보려면**
 
-- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. 최신 SQL Server 2016/2017 설명서([https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation))는 브라우저에서 표시됩니다. 
+- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
 
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -210,7 +210,7 @@ SSMS 또는 VS의 대화 상자에서 F1 키를 누르거나 **도움말** 또�
 **F1 도움말을 보려면**
 
 1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다. 
-2. 표시되는 대화 상자에서 F1 키를 누르거나 **도움말** 또는 **?**를 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.
+2. 표시되는 대화 상자에서 F1 키를 누르거나 **도움말** 또는 **?** 를 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.
 
 >  [!NOTE]
 >  F1 도움말은 온라인 상태일 경우에만 작동합니다. F1 도움말에 대한 오프라인 소스는 없습니다. 

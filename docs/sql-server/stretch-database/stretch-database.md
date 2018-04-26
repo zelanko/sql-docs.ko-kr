@@ -1,30 +1,30 @@
 ---
-title: "Stretch Database | Microsoft 문서"
-ms.custom: 
+title: Stretch Database | Microsoft 문서
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  가장 중요한 응용 프로그램을 클라우드로 안전하게 확장할 수 있습니다. SQL Server의 상시 암호화는 이동 중인 데이터에 대한 암호화를 제공합니다. RLS(행 수준 보안) 및 기타 고급 SQL Server 보안 기능도 스트레치 데이터베이스와 함께 작동하여 데이터를 보호합니다.  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database의 기능  
- SQL Server 인스턴스, 데이터베이스 및 하나 이상의 테이블에 Stretch Database를 사용하도록 설정한 경우 Stretch Database는 콜드 데이터를 Azure로 자동으로 마이그레이션하기 시작합니다.  
+ SQL Server 인스턴스 및 데이터베이스에 Stretch Database를 사용하도록 설정하였고 하나 이상의 테이블을 선택했다면 Stretch Database는 콜드 데이터를 Azure로 자동으로 마이그레이션하기 시작합니다.  
   
 -   콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션할 수 있습니다.  
   

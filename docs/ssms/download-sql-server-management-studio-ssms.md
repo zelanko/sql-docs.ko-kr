@@ -1,7 +1,7 @@
 ---
 title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 20
 **[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.6 다운로드](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.6 업그레이드 패키지 다운로드(17.x에서 17.6으로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md)를 사용할 때 SSMS 17.6이 불안정해지고 크래시되는 알려진 문제가 있습니다. Maintenance Plans를 사용하는 경우에는 SSMS 17.6을 설치하지 마세요. 이미 17.6을 설치했고 이 문제가 발생할 경우 SSMS 17.5로 다운그레이드합니다. 
 
 **버전 정보**
 
@@ -161,13 +164,9 @@ SQL Database 관리되는 인스턴스:
 
 ## <a name="feedback"></a>피드백
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a>참고 항목
 
@@ -175,3 +174,5 @@ SQL Database 관리되는 인스턴스:
 - [SQL Server Management Studio 설명서](sql-server-management-studio-ssms.md)
 - [추가 업데이트 및 서비스 팩](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

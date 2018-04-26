@@ -1,26 +1,27 @@
 ---
-title: "SSDT(SQL Server Data Tools)의 Azure Active Directory 지원 | Microsoft Docs"
-ms.custom: 
+title: SSDT(SQL Server Data Tools)의 Azure Active Directory 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -64,7 +65,7 @@ Active Directory 대화형 인증은 AD(Azure Active Directory) MFA(Multi-Factor
 - ‘Active Directory 대화형 인증’은 Azure SQL 데이터베이스에 연결할 때만 지원됩니다. 온-프레미스 또는 VM 상의 SQL Server나 Azure SQL Data Warehouse는 지원되지 않습니다.
 - ‘Active Directory 대화형 인증’은 ‘서버 탐색기’의 연결 대화 상자에서 지원되지 않으며, ‘SQL Server 개체 탐색기’에서 SSDT를 사용하여 연결해야 합니다.
 - 현재 로그인한 Visual Studio 계정을 사용한 Single Sign-On 통합은 SSDT에서 지원되지 않습니다.
-- Visual Studio 설치 중 확장 디렉터리에 설치되는 SQLPackage.exe는 해당 위치에서 사용하기 위한 것은 아닙니다. AAD에 SQLpackage.exe를 사용하려면 https://www.microsoft.com/en-us/download/details.aspx?id=55088을 참조하세요. 
+- Visual Studio 설치 중 확장 디렉터리에 설치되는 SQLPackage.exe는 해당 위치에서 사용하기 위한 것은 아닙니다. AAD에 SQLpackage.exe를 사용하려면 https://www.microsoft.com/en-us/download/details.aspx?id=55088로 이동합니다. 
 - 새 인증 방법을 비롯해 AAD 인증에서는 SSDT 데이터 비교가 지원되지 않습니다.  
 
 

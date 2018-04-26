@@ -29,8 +29,10 @@
 #### [웹 동기화를 위한 토폴로지](topologies-for-web-synchronization.md)  
 ### [웹 동기화를 위한 IIS 구성](configure-iis-for-web-synchronization.md)  
 ### [웹 동기화를 위한 IIS 7 구성](configure-iis-7-for-web-synchronization.md)  
+
 ## [배포 구성](configure-distribution.md)  
 ### [게시 및 배포 구성](configure-publishing-and-distribution.md)  
+### [AG에서 배포 구성](configure-distribution-availability-group.md)
 ### [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)  
 ### [게시 및 배포 해제](disable-publishing-and-distribution.md)  
 ### [데이터베이스 복제 설정(SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [기본 스냅숏 위치 지정(SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [트랜잭션 게시에 대한 배포 보존 기간 설정(SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [기록 보존 기간 설정(SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [게시 구독](subscribe-to-publications.md)  
 ### [끌어오기 구독 만들기](create-a-pull-subscription.md)  
 ### [밀어넣기 구독 만들기](create-a-push-subscription.md)  

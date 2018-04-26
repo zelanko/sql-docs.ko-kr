@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ ms.lasthandoff: 03/22/2018
 **msdb**의 **SQLAgentUserRole**, **SQLAgentReaderRole** 및 **SQLAgentOperatorRole**고정 데이터베이스 역할 멤버와 **sysadmin** 고정 서버 역할 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에 액세스할 수 있습니다. 이러한 역할 중 하나에 속하지 않는 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 사용하는 역할에 대한 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ### <a name="subsystems"></a>하위 시스템  
-하위 시스템은 작업 단계에서 사용할 수 있는 기능을 나타내는 미리 정의된 개체입니다. 각 프록시는 하나 이상의 하위 시스템에 액세스할 수 있습니다. 하위 시스템은 프록시에 사용할 수 있는 기능에 대한 액세스를 구분하므로 보안을 제공합니다. [!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계를 제외한 각 작업 단계는 프록시 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계는 EXECUTE AS 명령을 사용하여 보안 컨텍스트를 설정합니다.  
+하위 시스템은 작업 단계에서 사용할 수 있는 기능을 나타내는 미리 정의된 개체입니다. 각 프록시는 하나 이상의 하위 시스템에 액세스할 수 있습니다. 하위 시스템은 프록시에 사용할 수 있는 기능에 대한 액세스를 구분하므로 보안을 제공합니다. [!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계를 제외한 각 작업 단계는 프록시 컨텍스트에서 실행됩니다. [!INCLUDE[tsql](../../includes/tsql_md.md)] 작업 단계는 EXECUTE AS 명령을 사용하여 작업 소유자에 대해 보안 컨텍스트를 설정합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 정의되어 있는 하위 시스템을 나열합니다.  
   

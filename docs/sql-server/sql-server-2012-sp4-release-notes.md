@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 2012 서비스 팩 릴리스 정보 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server 2012 서비스 팩 릴리스 정보 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 2/26/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0aa6379b2d0a0675c0ebc999e3fcee603d5b5fb
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: c89264e120ce67a814d102f0306f74e06c3d79f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

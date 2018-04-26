@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
   
 - [자습서: SSMS를 사용하여 SQL Server 연결 및 쿼리](connect-query-sql-server.md)
 
-    이 섹션에서는 SQL Server 인스턴스에 연결하는 방법을 알아봅니다. 또한 새 데이터베이스를 만든 다음, 쿼리하는 몇 가지 기본 T-SQL(Transact-SQL) 명령을 알아봅니다. 
+    이 자습서에서는 SQL Server 인스턴스에 연결하는 방법을 알아봅니다. 또한 새 데이터베이스를 만든 다음, 쿼리하는 몇 가지 기본 T-SQL(Transact-SQL) 명령을 알아봅니다. 
 
 - [자습서: SSMS에서 개체 스크립팅](scripting-ssms.md)
 
-    이 섹션에서는 데이터베이스 및 쿼리를 포함하여 SSMS에서 다양한 개체를 스크립팅하는 방법을 알아봅니다. 
+    이 자습서에서는 데이터베이스 및 쿼리를 포함하여 SSMS에서 다양한 개체를 스크립팅하는 방법을 알아봅니다. 
 
 - [자습서: SSMS에서 템플릿 사용](templates-ssms.md)
    
-    이 섹션에서는 SSMS 내에서 미리 작성된 템플릿으로 작업하는 방법을 알아봅니다. 
+    이 자습서에서는 SSMS 내에서 미리 작성된 템플릿으로 작업하는 방법을 알아봅니다. 템플릿은 다양한 데이터베이스 관리 작업을 위해 많은 Transact-SQL 코드 조각을 저장하는 잘 알려지지 않은 기능입니다. 
 
 - [자습서: SSMS 구성](ssms-configuration.md)
 
-    이 섹션에서는 SSMS 환경 구성의 기본 사항을 알아봅니다. 
+    이 자습서에서는 환경 레이아웃 변경 등, SSMS 환경 구성의 기본 사항을 학습합니다. 이 자습서는 다양한 SSMS 구성 요소에 대해서도 설명합니다. 
   
 
 - [자습서: SSMS 사용을 위한 추가 팁과 요령](ssms-tricks.md)
 
-    이 섹션에서는 SSMS 사용을 위한 추가 팁과 요령을 알아봅니다. 자습서에는 다음이 포함되어 있습니다.
+    이 자습서에서는 SSMS 사용을 위한 추가 팁과 요령을 알아봅니다. 자습서에는 다음이 포함되어 있습니다.
     - 텍스트 주석 처리 및 주석 처리 제거
     - 텍스트 들여쓰기
     - 개체 탐색기에서 개체 필터링

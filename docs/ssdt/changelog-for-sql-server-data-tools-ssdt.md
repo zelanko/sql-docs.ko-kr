@@ -1,34 +1,66 @@
 ---
-title: "SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서"
-ms.custom: 
-ms.date: 02/09/2018
+title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>Visual Studio 2017용 SSDT(15.6.0)
+빌드 번호: 14.0.16162.0  
+릴리스 날짜: 2018년 4월 10일
+  
+### <a name="whats-new"></a>새로운 기능
+
+**SSIS:**
+
+1.  SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제를 해결합니다.
+2.  SSDT에서 매우 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
+3.  작업 UI에서 간혹 ScriptTask 변수 목록이 사라지는 문제를 해결합니다.
+4.  패키지 위치가 SQL Server일 때 기존 패키지 사본 추가가 실패하는 문제 해결
+5.  일부 편집기 대화 상자에서 콤보 상자에 액세스할 때 포커스가 멈추는 문제를 해결합니다.
+6.  VS 테마를 전환하는 동안 배경이 변경되지 않는 문제를 해결합니다.
+7.  어두운 테마에서 주석 및 로드 레이블이 보이지 않는 문제 해결
+8.  SSIS 도구 상자 항목에 대해 상태 속성이 올바르게 정의되지 않는 문제를 해결합니다.
+9.  WebServiceTask 실행에 항상 실패하는 문제를 해결합니다.
+10. 연결 문자열이 프로젝트 매개 변수에 종속적인 변수로 설정된 경우 패키지 배포가 실패하는 문제를 해결합니다.
+
+**설치 관리자:**
+
+1.  개인정보 보호 고지 사항에 "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램" 링크를 추가합니다.
+2.  "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제를 해결합니다.
+
+### <a name="known-issues"></a>알려진 문제:
+1.  SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>Visual Studio 2017용 SSDT(15.5.2)
 빌드 번호: 14.0.16156.0
@@ -49,7 +81,7 @@ ms.lasthandoff: 02/11/2018
 - 가끔씩 "지정한 파일을 찾을 수 없습니다(0x80070002)" 오류와 함께 페이로드 다운로드가 실패하는 문제를 해결합니다.  
 
 ### <a name="known-issues"></a>알려진 문제
-- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- SSIS 패키지 실행 태스크는 *ExecuteOutOfProcess*가 *True*로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 
 
 
