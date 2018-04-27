@@ -1,16 +1,16 @@
 ---
-title: "비교 식 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 비교 식 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 361a600ec8033cbd0e10af75e7782b1b86b343cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -227,9 +227,9 @@ ProductModelID       Result
   
  이러한 연산자는 문서 순서를 기준으로 생성된 비교 연산자입니다.  
   
--   `<<`: **Operand 1** 앞에 야 **operand 2** 문서 순서로 합니다.  
+-   `<<` : **Operand 1** 앞에 야 **operand 2** 문서 순서로 합니다.  
   
--   `>>`: **Operand 1** 따라 **operand 2** 문서 순서로 합니다.  
+-   `>>` : **Operand 1** 따라 **operand 2** 문서 순서로 합니다.  
   
  다음 쿼리는 제품 카탈로그 설명에 있으면 True를 반환 합니다는 \<보증 > 요소 앞에 나타나는 \<유지 관리 > 특정 제품에 대 한 문서 순서입니다.  
   
@@ -254,7 +254,7 @@ where ProductModelID=19
 -   쿼리에서 True를 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [형식 시스템 &#40; XQuery &#41;](../xquery/type-system-xquery.md)   
+ [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 선택 하 고 테스트 (OracleToSQL)에 개체를 구성 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>선택 하 고 테스트 (OracleToSQL)에 개체를 구성 합니다.
 이 단계를 테스트 하 고 프로시저의 및 함수 출력 매개 변수 뿐만 아니라 함수의 반환 값을 비교 하기 위한 설정을 구성 하는 개체를 선택 합니다.  
   
 ## <a name="selection-of-objects-to-test"></a>테스트를 위해 선택한 개체  
-창의 왼쪽에 있는 Oracle 개체 트리에서 테스트 프로세스 중 호출 하려는 개체를 확인 합니다. 에 있는 테스트 가능한 개체의 전체 목록을 보려면는 [테스트 마이그레이션된 데이터베이스 개체 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) 항목입니다.  
+창의 왼쪽에 있는 Oracle 개체 트리에서 테스트 프로세스 중 호출 하려는 개체를 확인 합니다. 에 있는 테스트 가능한 개체의 전체 목록을 보려면는 [마이그레이션된 데이터베이스 개체 테스트 &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) 항목입니다.  
   
 레이블이 링크 표시는 SSMA 테스터가 테스트를 위해 선택한 개체를 지원 하지 않는 경우 **일부 선택 된 개체에 오류가 포함 되어** 개체 트리 아래 합니다. 이러한 개체를 테스트할 수 없는 이유에 이유를 표시 하 고 잘못 된 개체의 선택을 취소 하려면이 링크를 클릭 합니다.  
   
@@ -87,8 +87,8 @@ ms.lasthandoff: 12/21/2017
 입력된 매개 변수 값을 지정할 수 있습니다는 **호출 값** 페이지. **호출 추가** 단추 빈 매개 변수 값이 포함 된 새로운 호출을 추가 합니다. **제거 호출** 단추는 현재 호출을 제거 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[선택 하 고 구성 영향을 받는 개체 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[영향을 받는 개체 선택 및 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

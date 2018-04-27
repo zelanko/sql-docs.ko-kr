@@ -1,16 +1,16 @@
 ---
-title: "생성자 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 생성자 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1550a35b87b3895f6d9e8074ede8ff78a9b9ef7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constructor-functions-xquery"></a>생성자 함수(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ select @x.query('
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 생성 &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)   
+ [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

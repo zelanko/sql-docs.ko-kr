@@ -1,6 +1,6 @@
 ---
 title: 액세스 인벤토리 (AccessToSQL) 내보내기 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 834b8d2b1be548a8be1114d6b536475eb52d4441
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4d3968104ed7e9dec525afa3bd3e0cd7b8dcbb96
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고로 마이그레이션할 수 있는 대상을 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트에서 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 검토 및 쿼리할 수 있습니다 인벤토리 메타 데이터를 마이그레이션하려면 해당 데이터베이스 내의 개체 및 데이터베이스를 결정 합니다. 이 인벤토리 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  

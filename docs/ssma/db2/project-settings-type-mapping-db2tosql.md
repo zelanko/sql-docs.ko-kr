@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 설정 (형식 매핑) (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: be9c30338806ada2c4a74ef73cb5d8725a15dabf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA DB2 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -105,7 +105,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |raw|varbinary(max)|  
 |real|float[53]|  
 |Rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
@@ -134,7 +134,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |char[*..\*]|char[*]|  
 |character|char|  
 |다양 한 문자 [*... \*]|varchar[*]|  
-|character[*..\*]|char[*]|  
+|문자 [*... \*]|char[*]|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
@@ -145,7 +145,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |float|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |int|int|  
 |integer|int|  
@@ -155,7 +155,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |긴 원시 [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
 |긴 [*... 8000]|varchar[*]|  
-|long[8001..*]|varchar(max)|  
+|긴 [8001.. *]|varchar(max)|  
 |국가별 문자|NCHAR|  
 |다양 한 national char [*... \*]|nvarchar[*]|  
 |national char [*... \*]|nchar[*]|  
@@ -166,10 +166,10 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |nchar[*]|nchar[*]|  
 |Nclob|nvarchar(max)|  
 |number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |numeric|numeric|  
-|numeric[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..\*]|nvarchar[*]|  
 |raw[*..\*]|varbinary[*]|  
@@ -181,7 +181,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset[*]|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
 |타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|타임 스탬프 [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid[*..\*]|uniqueidentifier|  
 |varchar[*..\*]|varchar[*]|  
@@ -202,12 +202,12 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |Char|char|  
 |다양 한 char [*... 8000]|varchar[*]|  
 |다양 한 char [8001.. *]|varchar(max)|  
-|char[*..8000]|char[*]|  
+|char [*... 8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |문자|char|  
 |다양 한 문자 [*... 8000]|varchar[*]|  
 |다양 한 문자 [8001.. *]|varchar(max)|  
-|character[*..8000]|char[*]|  
+|문자 [*... 8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
@@ -219,7 +219,7 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |부동|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |int|int|  
 |정수|int|  
@@ -239,16 +239,16 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |다양 한 국가별 문자 [*... 4000]|nvarchar[*]|  
 |다양 한 국가별 문자 [4001.. *]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar[*..4000]|nchar[*]|  
+|nchar [*... 4000]|nchar[*]|  
 |nchar[4001..*]|nvarchar(max)|  
 |nchar 다양 한 [*... 4000]|nvarchar[*]|  
 |nchar 다양 한 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |Number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |숫자|numeric[38][0]|  
-|numeric[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
@@ -259,14 +259,14 @@ SSMA for d b 2 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 �
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|string[*..8000]|varchar[*]|  
+|문자열 [*... 8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대 포함 된 타임 스탬프|datetimeoffset|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
 |현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset[*]|  
 |타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|타임 스탬프 [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid[*..\*]|uniqueidentifier|  
 |varchar[*..8000]|varchar[*]|  

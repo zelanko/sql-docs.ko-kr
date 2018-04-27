@@ -1,6 +1,6 @@
 ---
 title: SSMA는 MySQL 구성 요소 (MySQLToSql)에 대 한 제거 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adf008b1a6bbcd584c0d3c0ee90dcb4345cf1819
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a62a3f9a3fdb5e6876cb6ac27d4f9f1fb2500cc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>SSMA는 MySQL 구성 요소 (MySQLToSql)에 대 한 제거
 완료 했을 때에 mysql 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 구성 요소를 제거 해야 할 경우가 있습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 그러나 확장 팩을 제거 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , 그런 다음 SSMA는 더 이상 지원 데이터에서 MySQL 서버 쪽 데이터 마이그레이션 엔진을 사용 하 여 대상 데이터베이스 (SQL Server/SQL Azure)에 마이그레이션.  

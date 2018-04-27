@@ -2,7 +2,7 @@
 title: 백업 (SybaseToSQL) 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f941f1cf34e2c4f00ce847b47863190a4355addf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>백업 (SybaseToSQL) 관리
 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 Sybase 백업 관리는 수 있습니다. 백업 내용 관리 대화 상자와 백업 콘텐츠를 관리할 수 있습니다.  

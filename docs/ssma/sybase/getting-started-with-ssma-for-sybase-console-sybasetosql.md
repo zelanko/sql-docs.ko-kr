@@ -2,7 +2,7 @@
 title: SSMA는 Sybase 콘솔 (SybaseToSQL)에 대 한 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63e1c4e3ecf3cd5f2537ec54db24be59a4d8ad5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d9ee7bbb1805f6476317386490ca5c3d71865472
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA는 Sybase 콘솔 (SybaseToSQL)에 대 한 시작
 이 섹션에서는를 시작 하 고 SSMA Sybase 콘솔 응용 프로그램에 대 한 시작 프로시저가 설명 합니다. 또한 여기에 나열 된 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  

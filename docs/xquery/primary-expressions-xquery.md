@@ -1,16 +1,16 @@
 ---
-title: "기본 식 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 기본 식 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ee901d54e5cf68eb5de1e20c448289eab83dbfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 유로 기호 문자 참조로 나타낼 수는 예를 들어 "&\#8364;"입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구문 분석 하기 위한 기반으로 XML 버전 1.0 사용합니다.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
   
 ### <a name="examples"></a>예  
  다음 예에서는 리터럴과 엔터티 및 문자 참조의 사용법을 보여 줍니다.  
@@ -191,6 +191,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   함수 가져오기는 지원되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 생성 &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

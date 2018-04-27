@@ -2,7 +2,7 @@
 title: 프로젝트 설정 (형식 매핑) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>프로젝트 설정 (형식 매핑) (SybaseToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA Sybase 적응형 Server Enterprise (ASE) 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -64,19 +64,19 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**binary[\*..8000]**|**binary[\*]**|  
+|**이진 [\*... 8000]**|**binary[\*]**|  
 |**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
 |**다양 한 char [\*... 8000]**|**varchar[\*]**|  
-|**char varying[8001..\*]**|**varchar(max)**|  
+|**다양 한 char [8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**다양 한 문자**|**varchar**|  
 |**다양 한 문자 [\*... 8000]**|**varchar[\*]**|  
-|**character varying[8001..\*]**|**varchar(max)**|  
+|**다양 한 문자 [8001..\*]**|**varchar(max)**|  
 |**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -114,7 +114,7 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |**nchar**|**nchar**|  
 |**nchar 다양 한**|**nvarchar**|  
 |**nchar 다양 한 [\*... 4000]**|**nvarchar[\*]**|  
-|**nchar varying[4001..\*]**|**nvarchar(max)**|  
+|**nchar 다양 한 [4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -136,7 +136,7 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |**unichar**|**nchar**|  
 |**다양 한 unichar**|**nvarchar**|  
 |**다양 한 unichar [\*... 4000]**|**nvarchar[\*]**|  
-|**unichar varying[4001..\*]**|**nvarchar(max)**|  
+|**다양 한 unichar [4001..\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
@@ -145,7 +145,7 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
 |**부호 없는 bigint**|**numeric[20][0]**|  
 |**부호 없는 int**|**bigint**|  
-|**unsigned smallint**|**int**|  
+|**부호 없는 smallint**|**int**|  
 |**부호 없는 tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary[\*..8000]**|**varbinary[\*]**|  

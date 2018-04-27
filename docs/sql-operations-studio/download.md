@@ -2,8 +2,8 @@
 title: Microsoft SQL Operations Studio (preview) 다운로드 및 설치 | Microsoft Docs
 description: Microsoft SQL Operations Studio (preview) 를 Windows, macOS, 또는 Linux에 다운로드 및 설치합니다.
 ms.custom: tools|sos
-ms.date: 03/28/2018
-ms.prod: sql-non-specified
+ms.date: 04/25/2018
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7df740f3c50e8f4db5324e37908ec11ea83aed15
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (preview) 다운로드 및 설치
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
-*2월 공개 미리 보기* 에서 최신 릴리스를 다운로드 및 설치합니다.
+최신 릴리스를 설치 및 다운로드는 *공개 미리 보기 4 월*:
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|2018년 3월 28일 |0.27.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|2018년 3월 28일 |0.27.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|2018년 3월 28일 |0.27.3|
+|Windows|[설치 관리자](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|2018 년 4 월 25, |0.28.6|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|2018 년 4 월 25, |0.28.6|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|2018 년 4 월 25, |0.28.6|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
@@ -40,20 +40,20 @@ ms.lasthandoff: 04/16/2018
 
 **설치 관리자**
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=870837)를 다운로드한 다음 실행합니다.
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=872717)를 다운로드한 다음 실행합니다.
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 
 **.zip 파일**
 
-1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=870838)을 다운로드합니다.
+1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=872718)을 다운로드합니다.
 2. 다운로드한 파일을 찾은 다음 압축을 풉니다.
 3. `\sqlops-windows\sqlops.exe`를 실행합니다.
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>MacOS용 SQL Operations Studio (preview) 얻기
 
-1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=870839)를 다운로드합니다.
+1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=872719)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 *Launchpad*에서 사용할 수 있게 하려면 *sqlops.app*을 *응용 프로그램* 폴더에 드래그합니다.
 
@@ -61,9 +61,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Linux용 SQL Operations Studio (preview) 얻기
 
 1. 다운로드 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여 Linux 용:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=872722)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=872721)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 실행하기 위해 새 터미널 창을 열고 다음 명령을 입력합니다.
 
    **Debian 설치:**

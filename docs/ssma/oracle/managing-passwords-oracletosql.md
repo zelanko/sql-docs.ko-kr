@@ -1,30 +1,31 @@
 ---
-title: "암호 (OracleToSQL) 관리 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 암호 (OracleToSQL) 관리 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6f4203119231c6792d46d3287394dd3bab1b46a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5239faddefa9925e0c8b3a938fc968c5a03855c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 (OracleToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보안에 대 한이 섹션은:  
@@ -42,7 +43,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
 1.  **일반 텍스트로:** 'password' 노드의 value 속성에 데이터베이스 암호를 입력 합니다. 스크립트 파일 또는 서버 연결 파일의 서버 섹션에서 서버 정의 노드 아래에서 발견 되었습니다.  
   
-    일반 텍스트로 암호가 안전 하지 않습니다. 콘솔 출력에 다음과 같은 경고 메시지가 발생 합니다 따라서: *"서버 &lt;서버 id&gt; 암호가 제공 SSMA 콘솔 응용 프로그램에 안전 하지 않은 일반 텍스트 형식 암호화를 통해 암호를 보호, SSMA 도움말 파일에 대 한 자세한 내용은의 – securepassword 옵션을 참조 하십시오는 옵션을 제공 합니다."*  
+    일반 텍스트로 암호가 안전 하지 않습니다. 콘솔 출력에 다음과 같은 경고 메시지가 발생 합니다 따라서: *"서버 &lt;서버 id&gt; 암호 SSMA 콘솔 응용 프로그램에 안전 하지 않은 일반 텍스트 형식 보호 하는 옵션을 제공 하는 제공 되는 암호화를 통해 암호 참조 하세요 도움말 파일에 대 한 자세한 내용은 SSMA에서 – securepassword 옵션. "*  
   
     **암호화 된 암호:** 이 경우 지정 된 암호가 ProtectedStorage.ssma에서 로컬 컴퓨터에 암호화 된 형태로 저장 됩니다.  
   

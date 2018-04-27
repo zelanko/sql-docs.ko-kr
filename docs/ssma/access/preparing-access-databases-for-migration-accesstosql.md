@@ -1,15 +1,16 @@
 ---
-title: "Access 데이터베이스 마이그레이션 (AccessToSQL)에 대 한 준비 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Access 데이터베이스 마이그레이션 (AccessToSQL)에 대 한 준비 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 마이그레이션 (AccessToSQL) 준비
 Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하려면 데이터베이스를 결정 해야 합니다.  
@@ -46,7 +47,7 @@ Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersi
 데이터베이스를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]계속 연결 된 테이블을 사용 하 여 액세스를 사용할 수 있습니다, 또는 응용 프로그램을 수동으로 마이그레이션할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 와 직접 상호 작용 하는.NET Framework 기반 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
 ## <a name="determining-which-databases-to-migrate"></a>마이그레이션할 데이터베이스를 결정 합니다.  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 액세스를 위해 사용자에 대 한 Access 데이터베이스를 찾을 수 있습니다. 그런 다음 해당 데이터베이스에 대 한 메타 데이터를 내보낼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 내보내기 및 메타 데이터를 쿼리 하는 방법에 대 한 자세한 내용은 참조 [액세스 인벤토리 내보내기](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스를 위해 사용자에 대 한 Access 데이터베이스를 찾을 수 있습니다. 그런 다음 해당 데이터베이스에 대 한 메타 데이터를 내보낼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 내보내기 및 메타 데이터를 쿼리 하는 방법에 대 한 자세한 내용은 참조 [액세스 인벤토리 내보내기](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)합니다.  
 
    > [!NOTE]
    > 일부 액세스 기능 및 설정에서 지 원하는 또는로 쉽게 변환할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 데이터베이스를 마이그레이션하기 전에 참조 [호환 되지 않는 기능 액세스](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1)합니다.
@@ -84,6 +85,6 @@ Access 데이터베이스를 백업 하는 **도구** 메뉴에서 **데이터�
 ### <a name="documenting-databases"></a>데이터베이스 문서화  
 문서 데이터베이스 개체, 파일 크기 및 Access 데이터베이스의 사용 권한 목록과 같은 속성 수도 있습니다. Access에서는이 문서에서 생성 하는 **도구** 메뉴에서 **분석**, 클릭 하 고 **Documented**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [SQL Server에 대 한 액세스 응용 프로그램 연결](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)

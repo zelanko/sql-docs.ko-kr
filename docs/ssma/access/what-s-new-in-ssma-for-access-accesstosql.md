@@ -1,31 +1,31 @@
 ---
-title: "Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: d2e054168ef28b6f6f323fa67f6a5c189d7febc9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>(AccessToSQL) Access 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스에 대 한 액세스 변경에 대 한 SSMA를 나열 합니다.  

@@ -1,31 +1,31 @@
 ---
-title: "SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs"
-ms.custom: 
+title: SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8bd705a767095e28a55dc22d6b26fcd079baf6
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: cfcb84fd1be2823cf23b47aa4a1d1675a35a989f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스의 SAP ASE (이전의 SSMA for Sybase) 변경에 대 한 SSMA를 나열 합니다. 
@@ -217,4 +217,4 @@ Sybase 용 SSMA의 2006 년 11 월 릴리스에서 다음과 같은 변경을 �
 SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SSMA for Sybase &#40; 시작 SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+[SSMA for Sybase 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

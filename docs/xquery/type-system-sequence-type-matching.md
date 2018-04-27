@@ -1,16 +1,16 @@
 ---
-title: "시퀀스 유형 일치 | Microsoft Docs"
-ms.custom: 
+title: 시퀀스 유형 일치 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템-시퀀스 유형 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 식 값은 항상 0개 이상의 항목에 대한 시퀀스입니다. 항목은 원자 값이거나 노드일 수 있습니다. 시퀀스 유형은 쿼리 식에 의해 반환된 시퀀스 유형을 특정 유형과 일치하는지 검색하는 기능을 참조합니다. 예를 들어  
+  XQuery 식 값은 항상 0개 이상의 항목에 대한 시퀀스입니다. 항목은 원자 값이거나 노드일 수 있습니다. 시퀀스 유형은 쿼리 식에 의해 반환된 시퀀스 유형을 특정 유형과 일치하는지 검색하는 기능을 참조합니다. 예를 들어:  
   
 -   식의 값이 원자 값인 경우 값이 integer, decimal 또는 string 유형인지 여부를 확인할 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   식이 XML 요소나 특정 이름 및 유형의 특성 노드를 반환하는지 여부를 확인할 수 있습니다.  
   
- 시퀀스 유형 일치에서는 `instance of` 부울 연산자를 사용할 수 있습니다. 에 대 한 자세한 내용은 `instance of` 식 참조 [SequenceType 식 &#40; XQuery &#41; ](../xquery/sequencetype-expressions-xquery.md).  
+ 시퀀스 유형 일치에서는 `instance of` 부울 연산자를 사용할 수 있습니다. 에 대 한 자세한 내용은 `instance of` 식 참조 [SequenceType 식 &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)합니다.  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>식에 의해 반환된 원자 값 유형 비교  
  식이 원자 값 시퀀스를 반환하는 경우 시퀀스에서 값의 유형을 찾아야 할 수도 있습니다. 다음 예에서는 시퀀스 유형 구문을 사용하여 식에 의해 반환된 원자 값 유형을 평가하는 방법을 보여 줍니다.  
@@ -442,6 +442,6 @@ RETURN
 -   에 대 한 명시적인 쿼리 **xsi: type** 또는 **xsi: nil** 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [형식 시스템 &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

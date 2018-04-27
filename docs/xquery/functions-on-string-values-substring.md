@@ -1,16 +1,16 @@
 ---
-title: "substring 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: substring 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ae71eb26e93c65f853c5d1c842a1835cf40d866
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 388fe297f0dc74ce5641768fef8b531c72a98bb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---substring"></a>문자열 값-substring 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ fn:substring($sourceString as xs:string?,
  하는 경우의 값 *$sourceString* 이 빈 시퀀스인 경우 길이가 0 인 문자열로 처리 됩니다. 그렇지 않은 경우 *$startingLoc* 또는 *$length* 이 빈 시퀀스인 경우 빈 시퀀스가 반환 됩니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
- XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
   
 ## <a name="implementation-limitations"></a>구현 시 제한 사항  
  SQL Server가 필요는 *$startingLoc* 및 *$length 매개 변수* 유형이 xs: double 대신 xs: decimal 이어야 합니다.  
@@ -96,7 +96,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
 -   **string ()** 의 문자열 값을 반환 하는 함수는 <`Summary`> 요소입니다. <`Summary`> 요소에 텍스트와 하위 요소(html 서식 지정 요소)가 모두 들어 있고, 이러한 요소를 건너뛰고 모든 텍스트를 검색할 것이기 때문에 이 함수가 사용됩니다.  
   
--   **substring ()** 으로 검색 하는 문자열 값에서 처음 50 개 문자를 검색 하는 함수는 **string ()**합니다.  
+-   **substring ()** 으로 검색 하는 문자열 값에서 처음 50 개 문자를 검색 하는 함수는 **string ()** 합니다.  
   
  다음은 결과의 일부입니다.  
   

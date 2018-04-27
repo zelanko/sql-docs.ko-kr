@@ -1,38 +1,39 @@
 ---
-title: "SSMA for Oracle (OracleToSQL) 시작 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SSMA for Oracle (OracleToSQL) 시작 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 761afabb604025c7c1f6472d09c8b3acf630915c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 시작
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) Oracle 사용 하면 신속 하 게에 대 한 변환 Oracle 데이터베이스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결과 스키마를 업로드 하는 스키마, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) Oracle 사용 하면 신속 하 게에 대 한 변환 Oracle 데이터베이스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결과 스키마를 업로드 하는 스키마, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
 이 항목 설치 프로세스를 소개 하 고 SSMA 사용자 인터페이스에 익숙해질 수 있습니다.  
   
 ## <a name="installing-ssma"></a>SSMA를 설치합니다.  
-SSMA를 사용 하려면 먼저 설치 해야 SSMA 클라이언트 프로그램은 원본 Oracle 데이터베이스와의 대상 인스턴스 모두에 액세스할 수 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 그런 다음 및 설치 해야 하는 확장 팩 Oracle 공급자 중 하나 이상 (OLE DB 또는 [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소는 데이터 마이그레이션 및 Oracle 시스템 함수의 에뮬레이션을 지원합니다. 설치 지침을 참조 하십시오. [Oracle &#40; OracleToSQL &#41;에 대 한 설치 SSMA](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)합니다.  
+SSMA를 사용 하려면 먼저 설치 해야 SSMA 클라이언트 프로그램은 원본 Oracle 데이터베이스와의 대상 인스턴스 모두에 액세스할 수 있는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 그런 다음 및 설치 해야 하는 확장 팩 Oracle 공급자 중 하나 이상 (OLE DB 또는 [!INCLUDE[vstecado](../../includes/vstecado_md.md)]) 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소는 데이터 마이그레이션 및 Oracle 시스템 함수의 에뮬레이션을 지원합니다. 설치 지침을 참조 하십시오. [Oracle 용 SSMA 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)합니다.  
   
 SSMA를 시작 하려면 **시작**, 가리킨 **모든 프로그램**, 가리킨  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle**, 클릭 하 고  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle**합니다.  
   
@@ -47,7 +48,7 @@ SSMA를 설치한 후에 Oracle 데이터베이스를 마이그레이션할 SSMA
   
 변환 된 스키마를 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Oracle 메타 데이터 탐색기로 되돌린으로 Oracle 스키마에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스.  
   
-이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 [SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)합니다.  
+이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 [Oracle 데이터베이스를 SQL Server로 마이그레이션 &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)합니다.  
   
 다음 섹션에서는 SSMA 사용자 인터페이스의 기능을 설명 합니다.  
   
@@ -59,16 +60,16 @@ Oracle 스키마에 대 한 정보를 표시 하는 oracle 메타 데이터 탐�
   
 -   각 스키마의 개체를 찾아봅니다.  
   
--   변환에 대 한 개체를 선택 하 고 다음 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다. 자세한 내용은 참조 [Oracle 스키마로 변환 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)합니다.  
+-   변환에 대 한 개체를 선택 하 고 다음 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다. 자세한 내용은 참조 [Oracle 스키마 변환 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)합니다.  
   
--   데이터 마이그레이션에 대 한 테이블을 선택한 다음 해당 테이블에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [Oracle 데이터를 SQL Server &#40; OracleToSQL &#41;를 마이그레이션](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)합니다.  
+-   데이터 마이그레이션에 대 한 테이블을 선택한 다음 해당 테이블에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [Oracle 데이터를 SQL Server로 마이그레이션 &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)합니다.  
   
 #### <a name="sql-server-metadata-explorer"></a>SQL Server 메타 데이터 탐색기  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]인스턴스에 대 한 정보를 표시 하는 메타 데이터 탐색기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 인스턴스로 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 해당 인스턴스에 대 한 메타 데이터를 검색 하 고 프로젝트 파일에 저장 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 대 한 정보를 표시 하는 메타 데이터 탐색기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 인스턴스로 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 해당 인스턴스에 대 한 메타 데이터를 검색 하 고 프로젝트 파일에 저장 합니다.  
   
 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환 된 Oracle 데이터베이스 개체를 선택한 다음 해당 개체의 인스턴스와 동기화 메타 데이터 탐색기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
-자세한 내용은 참조 [로드 변환 데이터베이스 개체를 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)합니다.  
+자세한 내용은 참조 [를 SQL Server로 변환 된 데이터베이스 개체를 로드 &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)합니다.  
   
 ### <a name="metadata"></a>메타데이터  
 각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭이 있습니다. 예를 들어 Oracle 메타 데이터 탐색기에서 테이블을 선택 하는 경우 6 개의 탭 표시 됩니다: **테이블**, **SQL**, **유형 매핑, 보고서**, **속성**, 및 **데이터**합니다. **보고서** 탭 선택된 된 개체를 포함 하는 보고서를 만든 후에 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 세 가지 탭이 표시 됩니다: **테이블**, **SQL**, 및 **데이터**합니다.  
@@ -102,7 +103,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 |메뉴|Description|  
 |----|-----------|  
-|**최근에 사용한 파일**|프로젝트 작업, Oracle에 연결에 연결 하기 위한 명령이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.|  
+|**파일**|프로젝트 작업, Oracle에 연결에 연결 하기 위한 명령이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.|  
 |**편집**|검색 및 텍스트를 복사 하는 등의 세부 정보 페이지에서 작업 하기 위한 명령이 포함 되어 [!INCLUDE[tsql](../../includes/tsql_md.md)] SQL 세부 정보 창에서. 도 포함 되어는 **관리 책갈피** 여기서 기존 책갈피의 목록을 볼 수는 옵션입니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **동기화 메타 데이터 탐색기** 명령입니다. Oracle 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. 표시 하거나 숨기는 명령이 포함 되어는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 관리 하 합니다.|  
 |**Tools**|보고서를 만들고 개체 및 데이터 마이그레이션에 명령이 포함 됩니다. 또한에 대 한 액세스를 제공 된 **전역 설정** 및 **프로젝트 설정** 대화 상자.|  
@@ -117,6 +118,6 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 -   오류 목록 창 정렬 가능한 목록에서 오류, 경고 및 정보 메시지를 표시 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41;에 Oracle 데이터 마이그레이션](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
-[사용자 인터페이스 참조 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[Oracle 데이터를 SQL Server로 마이그레이션 &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
+[사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

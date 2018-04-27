@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |COUNTRECOVERYMGR |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |CREATE_DATINISERVICE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 하 고 제작 및 소비자 스레드에 대 한 행만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 유형의에서 개별적으로 추적 됩니다.| 
+|CXCONSUMER |병렬 쿼리 계획에서 소비자 스레드 행 보낼 공급자 스레드를 대기할 때 발생 합니다. 이 병렬 쿼리 실행의 정상적인 일부입니다. <br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |병렬 쿼리 계획 생성 하 고 행을 사용 하는 경우 및 쿼리 프로세서 교환 반복기를 동기화 할 때 발생 합니다. 대기 시간이 너무 길고 쿼리 튜닝(예: 인덱스 추가)으로 시간을 줄일 수 없는 경우에는 병렬 처리 비용 임계값을 조정하거나 병렬 처리 수준을 낮추세요.<br /> **참고:** 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET 쿼리 프로세서 교환 반복기를 동기화 하 고 제작 및 소비자 스레드에 대 한 행만 참조 합니다. 소비자 스레드는 CXCONSUMER 대기 유형의에서 개별적으로 추적 됩니다.| 
 |CXROWSET_SYNC |병렬 범위 검색 중에 발생합니다.| 
 |DAC_INIT |관리자 전용 연결이 초기화되는 동안 발생합니다.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 

@@ -1,27 +1,28 @@
 ---
-title: "(OracleToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: (OracleToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d37a01129f273611a0502c14ea6caa44f8f90ad3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-oracletosql"></a>(OracleToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 Oracle 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  
@@ -34,11 +35,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Oracle 데이터베이스에서 새 개체가 있으면 해당 행은 분홍색.  
   
-기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정 &#40; 동기화 &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+기본 개체 새로 고침 설정을 지정할 수는 **프로젝트 설정** 대화 상자. 자세한 내용은 참조 [프로젝트 설정&#40;동기화&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)합니다.  
   
 액세스는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 하 고 Oracle 메타 데이터 탐색기에서 개체 **데이터베이스에서 새로 고침**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **축소 (-)**  
 개별 개체를 숨기려면 모든 개체 그룹을 축소 합니다.  
   

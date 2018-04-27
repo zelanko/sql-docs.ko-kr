@@ -2,7 +2,7 @@
 title: (SybaseToSQL) 보고서를 생성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53dc69221ad1fff391db85987628e14f798c73e7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4855e73b947c46c21cdb4c966d93c406a9e6fe46
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-sybasetosql"></a>보고서 생성 (SybaseToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -43,12 +43,12 @@ ms.lasthandoff: 04/06/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1.|generate-assessment-report|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|동기화 대상|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |5|동기화 대상|TargetSynchronizationReport&lt;n&gt;합니다. XML|  
+    |6|데이터베이스에서 새로 고침|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > 형식의 출력 보고서는 평가 보고서와에서 다릅니다. 전자는 동안 실행 된 명령의 성능에 대 한 보고서, 후자는 프로그래밍 방식 소비에 대 한 XML 보고서입니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/06/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|verbose=”false”|활동의 요약 된 보고서를 생성합니다.|  
+    |1.|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
     |2|verbose=”true”|각 작업에 대 한 요약 및 세부 상태 보고서를 생성합니다.|  
   
     > [!NOTE]  
@@ -123,9 +123,9 @@ ms.lasthandoff: 04/06/2018
   
 -   report-each-as-warning  
   
--   fail-script  
+-   스크립트 실패  
   
-### <a name="refresh-from-database"></a>refresh-from-database:  
+### <a name="refresh-from-database"></a>새로 고침--데이터베이스에서:  
 명령 **데이터베이스에서 새로 고침** 가 **보고 오류-대상** 매개 변수는 새로 고침 작업에 대 한 오류 보고서의 위치를 지정 합니다. 그런 다음 이름의 파일이 **SourceDBRefreshReport&lt;n&gt;합니다. XML** 지정된 된 위치에 만든 여기서 **&lt;n&gt;** 숫자로 동일한 명령이 실행 될 때마다 증가 하는 고유한 파일 수입니다.  
   
 **참고:** 폴더 경로 지정 하는 경우 다음 ' 보고 오류-대상 ' 매개 변수는 명령 ' 동기화 대상 '에 대 한 선택적 특성이 됩니다.  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/06/2018
   
 -   report-each-as-warning  
   
--   fail-script  
+-   스크립트 실패  
   
 ## <a name="see-also"></a>관련 항목:  
 [SSMA 콘솔 (Sybase)를 실행합니다.](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

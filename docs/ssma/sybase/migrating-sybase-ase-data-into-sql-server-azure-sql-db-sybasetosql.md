@@ -2,7 +2,7 @@
 title: Sybase ASE 데이터를 SQL Server-SQL Azure DB로 마이그레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab42e495eb4e76b6e9d7b6a2cca3d031eed12448
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8b80b219f89122ea9c4072d682fbde4beb9f6bf1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 데이터를 Azure SQL DB (SybaseToSQL)-SQL Server로 마이그레이션
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL DB를 ASE에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다.  

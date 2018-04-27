@@ -1,16 +1,16 @@
 ---
-title: "유효한 부울 값 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 유효한 부울 값 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf7f4f3e24b5c17c543e616b539b54ca900f3242
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>유효한 부울 값(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,6 +99,6 @@ go
   
 ## <a name="see-also"></a>관련 항목:  
  [XQuery 기초](../xquery/xquery-basics.md)   
- [FLWOR 문 및 반복 &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

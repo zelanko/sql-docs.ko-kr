@@ -1,30 +1,31 @@
 ---
-title: "Oracle 콘솔 (OracleToSQL) 용 SSMA 시작 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Oracle 콘솔 (OracleToSQL) 용 SSMA 시작 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8fb5dc2f2bc16f531ffebef7a4e908fe6260b7a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Oracle 콘솔 (OracleToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 Oracle 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  
@@ -41,13 +42,13 @@ SSMA 콘솔 응용 프로그램을 시작 하려면 다음 단계를 사용 합�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA 콘솔을 사용 하기 위한 절차  
 Windows 시스템에 콘솔이 성공적으로 시작 후에 작업을 다음 단계를 사용할 수 있습니다.  
   
-1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 합니다.  
+1.  SSMA 콘솔 스크립트 파일을 통해 구성 합니다. 이 섹션에 대 한 자세한 내용은 참조 하십시오. [스크립트 파일 만들기 &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md) 합니다.  
   
-2.  [만드는 변수 값 파일 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [변수 값 파일을 만드는 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [서버 연결 파일 &#40; OracleToSQL &#41; 만들기](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [서버 연결 파일 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [SSMA 콘솔 &#40; OracleToSQL &#41;를 실행합니다. ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 프로젝트 요구 사항에 따라  
+4.  [SSMA 콘솔 실행 &#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 프로젝트 요구 사항에 따라  
   
 추가 기능:  
   

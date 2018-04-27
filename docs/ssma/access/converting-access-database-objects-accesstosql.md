@@ -1,6 +1,6 @@
 ---
 title: Access 데이터베이스 개체 (AccessToSQL) 변환 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -41,11 +41,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: adf6b62a0cddd53eaebd3cacc33ef05730bc08a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
 Access 데이터베이스를 추가 하 고 연결 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음으로 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 스키마입니다.  

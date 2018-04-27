@@ -1,16 +1,16 @@
 ---
-title: "경로 식 단계에서 노드 테스트 지정 | Microsoft Docs"
-ms.custom: 
+title: 경로 식 단계에서 노드 테스트 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>경로 식에서 노드 테스트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [(선택 사항) 0 개 이상의 단계 한정자](../xquery/path-expressions-specifying-predicates.md)  
   
- 자세한 내용은 참조 [경로 식 &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ 자세한 내용은 참조 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다.  
   
  노드 테스트는 경로 식에서 축 단계의 두 번째 구성 요소이자 조건입니다. 단계에서 선택한 모든 노드는 이 조건을 충족시켜야 합니다. 경로 식 `/child::ProductDescription`의 경우 노드 테스트는 `ProductDescription`입니다. 이 단계에서는 이름이 ProductDescription인 요소 노드 자식만 검색합니다.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
 >  XQuery 경로 식에 지정된 노드 이름은 Transact-SQL 쿼리와 같은 데이터 정렬 구분 규칙이 적용되지 않고 항상 대/소문자를 구분합니다.  
   
 ## <a name="node-name-as-node-test"></a>노드 테스트로서의 노드 이름  
- 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들어  
+ 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들어:  
   
 -   attribute 축은 특성만 포함할 수 있습니다. 따라서 특성 노드는 attribute 축의 주 노드 종류입니다.  
   

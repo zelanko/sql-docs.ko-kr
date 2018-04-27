@@ -2,7 +2,7 @@
 title: 테스트 리포지토리 (SybaseToSQL)를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 424c5166984e5ad73041c4d1b8816638240726c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 (SybaseToSQL) 사용 하 고
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례 및 테스트 결과 나중에 사용할 수 있습니다. 리포지토리 데이터는 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 및 **RunTestCaseResultRepository** 스키마에 **ssma_sybase_utilities** 의 **ssmatesterdb_syb** 데이터베이스입니다.  

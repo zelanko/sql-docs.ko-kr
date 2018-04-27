@@ -1,36 +1,37 @@
 ---
-title: "스크립트 파일 (OracleToSQL) 만들기 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 스크립트 파일 (OracleToSQL) 만들기 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087bde0aca02a1101cb1914a69e0d5982d294732
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-oracletosql"></a>스크립트 파일 (OracleToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  
   
-스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다.. 하십시오:  
+스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다 하십시오..,:  
   
 1.  **config:** 콘솔 응용 프로그램에 대 한 구성 매개 변수를 설정할 수 있습니다.  
   
@@ -349,14 +350,14 @@ ms.lasthandoff: 12/21/2017
 -   **최대 다시 연결 시도 횟수:** 설정 된 연결이 시간 초과 되거나 네트워크 오류로 인해 중단, 서버는 다시 연결 하는 데 필요 합니다. 회 시도의 최대 수 **5** , 그 후 다시 시도 횟수는 콘솔으로 다시 연결을 자동으로 수행 합니다. 자동 다시 연결은 시설에 스크립트를 다시 실행 하 여 활동을 줄일 수 있습니다.  
   
 ## <a name="server-connection-parameters"></a>서버 연결 매개 변수  
-스크립트 파일 또는 서버 연결 파일에 서버 연결 매개 변수를 정의할 수 있습니다. 참조 하십시오는 [서버 연결 파일 &#40; OracleToSQL &#41; 만드는](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 자세한 내용은 섹션.  
+스크립트 파일 또는 서버 연결 파일에 서버 연결 매개 변수를 정의할 수 있습니다. 참조 하십시오는 [서버 연결 파일을 만드는 &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) 자세한 내용은 섹션.  
   
 ## <a name="script-commands"></a>스크립트 명령  
 스크립트 파일은 XML 형식의 마이그레이션 워크플로 명령 시퀀스를 포함 합니다. SSMA 콘솔 응용 프로그램 마이그레이션 스크립트 파일에 표시 되는 명령이 순서 대로 처리 합니다.  
   
 예를 들어 Oracle 데이터베이스의 특정 테이블의 일반적인 데이터 마이그레이션을의 계층 구조를 따릅니다: 스키마-&gt; 테이블입니다.  
   
-스크립트 파일에 있는 모든 명령을 올바르게 실행 되는지, SSMA 콘솔 응용 프로그램 종료 되 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 포함 한 [변수 값 파일 만들기 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 또는 변수 값에 대 한 스크립트 파일 내 별도 섹션입니다.  
+스크립트 파일에 있는 모든 명령을 올바르게 실행 되는지, SSMA 콘솔 응용 프로그램 종료 되 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 포함 한 [변수 값 파일 만들기 &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 또는 변수 값에 대 한 스크립트 파일 내 별도 섹션입니다.  
   
 **예:**  
   
@@ -397,14 +398,14 @@ ms.lasthandoff: 12/21/2017
   
 관련성에 대 한 그 안에 표시 매개 변수 변경 후 템플릿 (파일)를 실행할 수 있습니다.  
   
-스크립트 명령의 전체 목록은에 있습니다 [실행 SSMA 콘솔 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+스크립트 명령의 전체 목록은에 있습니다 [SSMA 콘솔 실행 &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="script-file-validation"></a>스크립트 파일 유효성 검사  
 사용자는 스키마 정의 파일에 대해 스크립트 파일의 유효성을 검사할 쉽게 수 **'O2SSConsoleScriptSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)합니다.  
+운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[만드는 변수 값 파일 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[변수 값 파일을 만드는 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

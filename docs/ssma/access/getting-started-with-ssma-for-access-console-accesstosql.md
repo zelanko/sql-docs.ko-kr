@@ -1,6 +1,6 @@
 ---
 title: 액세스 콘솔 (AccessToSQL) 용 SSMA 시작 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad49cf3dacefb44e86d7b752382dca62baf35827
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: abb34d1b0d6656b251c23e209af1f58b9fdb4c6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>액세스 콘솔 (AccessToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 액세스 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  

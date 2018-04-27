@@ -1,6 +1,6 @@
 ---
 title: DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9b69c59a7b06f18b080a1f2ee5ae259b4abfb3fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션
 으로 변환 된 개체를 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 d b 2에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

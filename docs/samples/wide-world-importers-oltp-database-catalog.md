@@ -1,7 +1,7 @@
 ---
 title: WideWorldImporters OLTP 데이터베이스 카탈로그 SQL | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: 데이터베이스 개체 (SybaseToSQL) 마이그레이션 테스트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ec259e9f7849a84d02de12b22dae622060677d6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 374da14e841ad184d4203dec387fe6f3a16e37a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>데이터베이스 개체 (SybaseToSQL) 마이그레이션 테스트
 Microsoft SQL Server Migration Assistant (SSMA 테스터) Sybase 테스터를 위한 자동으로 데이터베이스 개체를 변환 및 테스트 데이터 마이그레이션 SSMA 수행 합니다. 모든 SSMA 마이그레이션 단계가 완료 되 면 SSMA 테스터를 사용 하 여 변환 된 개체가 같은 방식으로 작동 하는지 되 고 모든 데이터가 제대로 전송 되었습니다.  

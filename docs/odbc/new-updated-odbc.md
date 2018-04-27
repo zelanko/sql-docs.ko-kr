@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: odbc
 ms.date: 02/03/2018
-ms.openlocfilehash: d5c8f3ffac0a14c6cd0090b2b248a08acc52066c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 0a01b1ec919f2265c48db204c20f42751d30f011
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-odbc-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server 용 ODBC
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/08/2018
 
 
 - *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
-- *주제 영역:* &nbsp; **SQL Server에 대 한 ODBC (Open Database Connectivity)**합니다.
+- *주제 영역:* &nbsp; **SQL Server에 대 한 ODBC (Open Database Connectivity)** 합니다.
 
 
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/08/2018
 - [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
 - [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL 작업 Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)

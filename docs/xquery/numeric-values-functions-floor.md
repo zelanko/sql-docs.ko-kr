@@ -1,16 +1,16 @@
 ---
-title: "floor 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: floor 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - floor function [XQuery]
 - fn:floor function
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54241fde9a0c97fe66687c88d82812c7ce0d5eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 718d95f84d7fde816b243de61ea21122e21294c1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---floor"></a>숫자 값 함수-floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,8 @@ fn:floor ($arg as numeric?) as numeric?
 -   **floor ()** 함수 모든 정수 값을 xs: decimal에 매핑합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [ceiling 함수 &#40; XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)   
- [round 함수 &#40; XQuery &#41;](../xquery/numeric-values-functions-round.md)   
+ [ceiling 함수 &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [round 함수 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

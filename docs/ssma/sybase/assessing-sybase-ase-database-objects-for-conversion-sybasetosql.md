@@ -2,7 +2,7 @@
 title: SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환에 대 한 평가 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99342797792c8b57eff144e8c5a611bbace2776d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: cfbab28ca516f4a9048bb5603dfe54ad21b39469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>변환 (SybaseToSQL)에 SAP ASE 데이터베이스 개체를 평가합니다.
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결정 해야 Azure SQL 또는 어떻게 마이그레이션 복잡성 및 걸리는 시간입니다. SSMA 개체 및를 성공적으로 변환 되는 프로시저의 비율을 표시 하는 평가 보고서를 만들 수 [!INCLUDE[tsql](../../includes/tsql_md.md)]합니다. 또한 SSMA 변환 실패를 일으킬 수 있는 특정 문제를 볼 수 있습니다.  

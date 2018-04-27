@@ -1,34 +1,35 @@
 ---
-title: "평가 보고서 (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 평가 보고서 (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1265951a20285556f3b020767d5b5214d879bc30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a192d86e53b02f1abb46ed5bab590fd974e4a9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessment-report-oracletosql"></a>평가 보고서 (OracleToSQL)
 데이터베이스 개체를 변환의 결과 표시 하는 평가 보고서 창 [!INCLUDE[tsql](../../includes/tsql_md.md)] 구문, 복잡성과 비용이 마이그레이션 프로젝트를 예상할 수 있습니다.  
   
 원본 메타 데이터 탐색기에서 변환할 개체를 선택할 평가 보고서에 액세스 하려면 마우스 단추로 클릭 **스키마** 또는 **동의어**를 선택한 후 **보고서 만들기**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 |||  
 |-|-|  

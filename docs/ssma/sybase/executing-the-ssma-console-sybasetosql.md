@@ -2,7 +2,7 @@
 title: SSMA 콘솔 (SybaseToSQL) 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 (SybaseToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -95,7 +95,7 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
 > [!NOTE]  
 > SSMA SAP ASE 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지원합니다. SSMA의 이전 버전에서 만든 프로젝트를 열려면를 사용할 수 있습니다.  
   
-### <a name="save-project"></a>save-project  
+### <a name="save-project"></a>프로젝트 저장  
 이 명령은 마이그레이션 프로젝트를 저장합니다.  
   
 **구문 예제:**  
@@ -164,7 +164,7 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>connect-target-database  
+### <a name="connect-target-database"></a>대상 연결-데이터베이스  
 이 명령은 대상 SQL Server 데이터베이스에 연결 하 고 대상 데이터베이스의 상위 수준 메타 데이터는 있지만 메타 데이터가 아니라를 완전히 로드 합니다.  
   
 대상에 대 한 연결을 설정할 수 없는 경우 오류가 발생 하 고 콘솔 응용 프로그램에서 더 이상 실행 합니다.  
@@ -177,7 +177,7 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>reconnect-target-database  
+### <a name="reconnect-target-database"></a>대상 다시 연결-데이터베이스  
   
 이 명령은 대상 데이터베이스에 다시 연결 하지만 연결 대상 데이터베이스 명령과 달리 모든 메타 데이터를 로드 하지 않습니다.  
   
@@ -192,7 +192,7 @@ Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강�
 ## <a name="report-commands"></a>보고서 명령  
 SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보고서 명령입니다.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>-평가-보고서 생성  
   
 이 명령은 원본 데이터베이스에서 평가 보고서를 생성합니다.  
   
@@ -420,7 +420,7 @@ sql-server-schema="<target-schema>"/>
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 -   `report-errors-to:` (선택 사항 특성) 동기화 작업에 대 한 오류 보고서의 위치를 지정합니다. 폴더 경로 지정 하는 경우에 다음 이름으로 파일 **TargetSynchronizationReport.XML** 만들어집니다.  
   
@@ -464,7 +464,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
+### <a name="refresh-from-database"></a>데이터베이스에서 새로 고침  
 이 명령은 데이터베이스에서 원본 개체를 새로 고칩니다.  
   
 이 명령은 대상 데이터베이스에 대해 실행 될 경우 오류가 생성 됩니다.  
@@ -481,7 +481,7 @@ fail-script>" (optional)
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 -   `report-errors-to:` (선택 사항 특성)의 새로 고침 작업에 대 한 오류 보고서의 위치를 지정 합니다. 폴더 경로 지정 하는 경우에 다음 이름으로 파일 **SourceDBRefreshReport.XML** 만들어집니다.  
   

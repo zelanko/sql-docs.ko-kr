@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정 (변환) (MySQLToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
 |||  
 |-|-|  
 |**용어**|**정의**|  
-|**경계 상자 기본 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 공간 인덱스에 대 한**|에 대 한 기본값을 정의 합니다. {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}의 경계 상자가 공간 인덱스에 사용 된 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**최적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**경계 상자 기본 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 공간 인덱스에 대 한**|에 대 한 기본값을 정의 합니다. {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}의 경계 상자가 공간 인덱스에 사용 된 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**최적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**공간 인덱스에 대 한 기본 표 밀도**|LEVEL_1, LEVEL_2, LEVEL_3, 및 공간 인덱스에 사용 되는 표 밀도의 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**최적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
 ### <a name="transactions"></a>트랜잭션  

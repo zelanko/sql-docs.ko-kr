@@ -1,6 +1,6 @@
 ---
 title: (MySQLToSQL) 데이터베이스에서 새로 고침 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1881df93e8b26463b4f7a638e5b1e94674442013
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9fcc074a16f5fc794dc4339bb58bd552371206a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>(MySQLToSQL) 데이터베이스에서 새로 고침
 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 MySQL 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에 있는 행은 코딩 된 색 메타 데이터의 상태에 따라:  

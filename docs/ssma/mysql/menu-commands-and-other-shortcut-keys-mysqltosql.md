@@ -1,6 +1,6 @@
 ---
 title: 메뉴 명령 및 기타 바로 가기 키 (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec0bab67f16fbd67a0fe6ffaa759e578882035e1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a450b2cf56894bcd899ab0ec358e640b48bb9781
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>메뉴 명령 및 기타 바로 가기 키 (MySQLToSQL)
 다음 섹션에서는 메뉴 명령 및 MySQL 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에 사용 된 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  

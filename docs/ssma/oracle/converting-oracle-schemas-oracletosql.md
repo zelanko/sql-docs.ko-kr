@@ -1,6 +1,6 @@
 ---
 title: Oracle 스키마 (OracleToSQL) 변환 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61bea3173bcb085e551c35a3c2c746626f5ba0bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 (OracleToSQL) 변환
 Oracle에 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트 설정 및 데이터 매핑 옵션에는 Oracle 데이터베이스 개체를 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  
@@ -35,7 +35,7 @@ Oracle에서 개체 정의 가져와 데이터베이스 개체를 변환, 유사
 SSMA는 변환 중 출력 창에 출력 메시지 및 오류 목록 창에 오류 메시지를 인쇄합니다. 출력 및 오류 정보를 사용 하 여 Oracle 데이터베이스 또는 원하는 변환 결과를 얻으려면 변환 프로세스를 수정할 수 있는지 확인 합니다.  
   
 ## <a name="setting-conversion-options"></a>변환 옵션 설정  
-개체를 변환 하기 전에 프로젝트 변환 옵션을 검토는 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 [프로젝트 설정 &#40; 변환 &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+개체를 변환 하기 전에 프로젝트 변환 옵션을 검토는 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 함수 및 전역 변수를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 [프로젝트 설정 &#40;변환&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)합니다.  
   
 ## <a name="conversion-results"></a>변환 결과  
 다음 표에 나와 있는 Oracle 개체 변환 되 고 그 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체:  
@@ -116,7 +116,7 @@ Oracle 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를
   
 -   프로시저에 대 한 소스 코드를 수정할 수는 **SQL** 탭 합니다.  
   
--   제거 하거나 문제가 있는 코드를 수정 하려면 Oracle 데이터베이스에서 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Oracle 데이터베이스 &#40; OracleToSQL &#41;에 연결](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
+-   제거 하거나 문제가 있는 코드를 수정 하려면 Oracle 데이터베이스에서 개체를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Oracle 데이터베이스에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
   
 -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기가 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 Oracle에서 데이터 마이그레이션.  
   
@@ -124,5 +124,5 @@ Oracle 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를
 마이그레이션 프로세스의 다음 단계에서는 [SQL Server로 변환된 된 개체를 로드](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: SSMA 콘솔 (DB2ToSQL) 실행 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다. 콘솔 응용 프로그램은이 섹션의 열거형으로 특정 표준 스크립트 파일 명령을 사용합니다.  
@@ -95,7 +95,7 @@ SSMA DB2 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지
   
 **Command**  
   
-save-project  
+프로젝트 저장  
   
 마이그레이션 프로젝트를 저장합니다.  
   
@@ -195,7 +195,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+대상 연결-데이터베이스  
   
 -   대상 SQL Server 데이터베이스에 연결 하 고 대상 데이터베이스의 높은 수준의 메타 데이터는 있지만 메타 데이터가 아니라를 완전히 로드 합니다.  
   
@@ -212,7 +212,7 @@ connect-target-database
 ```  
 **Command**  
   
-reconnect-target-database  
+대상 다시 연결-데이터베이스  
   
 -   대상 데이터베이스에 다시 연결 되지만 연결 대상 데이터베이스 명령과 달리 모든 메타 데이터를 로드 하지 않습니다.  
   
@@ -231,7 +231,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
-generate-assessment-report  
+-평가-보고서 생성  
   
 -   원본 데이터베이스에서 평가 보고서를 생성합니다.  
   
@@ -509,7 +509,7 @@ map-schema
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 -   `report-errors-to:` 에 대 한 동기화 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **TargetSynchronizationReport.XML** 만들어집니다.  
   
@@ -554,7 +554,7 @@ map-schema
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 -   데이터베이스의 원본 개체를 새로 고칩니다.  
   
@@ -574,7 +574,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 -   `report-errors-to:` 에 대 한 새로 고침 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **SourceDBRefreshReport.XML** 만들어집니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server (MySQLToSQL)에 연결 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e1e57b9c9ce766a78259376fe641a970aff9b15
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 1703fd9f4aa42e9c81a89d51da78e1d606aec06e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL)에 연결
 사용 하 여 **SQL Server에 연결** 의 인스턴스에 연결 하는 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 마이그레이션하려는 합니다. 에 액세스 하려면는 **SQL Server에 연결** 대화 상자의 **파일** 메뉴를 클릭 하 여 **SQL Server에 연결**합니다.  

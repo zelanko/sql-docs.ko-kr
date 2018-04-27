@@ -1,16 +1,16 @@
 ---
 title: Expanded-qname (XQuery) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9a00b0b5f6e21f8590c4dee3e1a588d0203f004
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7d5f3bfcdcca66e5d4d6892dc1ec0e256d480ba5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>관련 된 Qname-Expanded-qname 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -212,6 +212,6 @@ FROM T
  한 가지 제한:는 **expanded-qname ()** 함수는 빈 시퀀스는 두 번째 인수로 사용 하며 두 번째 인수가 올바르지 않을 때 런타임 오류를 발생 시키는 대신 빈 반환 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Qname &#40; 관련 함수 XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Qname 관련 함수 &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

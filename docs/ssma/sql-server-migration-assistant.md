@@ -1,30 +1,31 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1003d5250c2d1e2cc9816fa50ea8f11bdd3a8b29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
 Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화할 수 있는 도구입니다.  
@@ -51,7 +52,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL 데이터베이스
+- Azure SQL Database
 - Windows 및 Linux (미리 보기)에서 SQL Server 2017
 - * * Azure SQL 데이터 웨어하우스
 
@@ -75,7 +76,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
   
     -   [SQL Server Developer Center 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42456) -뉴스 그룹, 포럼 및 SQL Server 개발자에 유용한 기타 커뮤니티 리소스  
   
--   지원-이동 부서 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant'으로 검색 합니다.  버전을 선택한 다음 "시작 요청입니다." 선택  도움을 받아 SQL Server 마이그레이션 길잡이 도구가 포함 되어 있습니다.  
+-   지원-이동 부서 [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant'으로 검색 합니다.  버전을 선택한 다음 "시작 요청입니다." 선택  도움을 받아 SQL Server 마이그레이션 길잡이 도구가 포함 되어 있습니다.  
   
 -   프리미어 지원-프리미어 계약에 있는 경우 가져올 수 있습니다 프리미어 지원에 [Premier Online 포털](https://premier.microsoft.com/)합니다.  
   

@@ -2,7 +2,7 @@
 title: 완료 하는 테스트 사례 준비 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3d69ece1c99b84a283a563b5cf14d96ff92a6722
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 (SybaseToSQL)를 완료합니다.
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트에 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 설정할 수 있습니다는 테스트 실행 옵션.  

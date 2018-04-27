@@ -1,31 +1,31 @@
 ---
-title: "MySQL (MySQLToSql) 용 SSMA의 새로운 기능 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: MySQL (MySQLToSql) 용 SSMA의 새로운 기능 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 503e6c5a6c2d06a5c6a98ae1e9f45faebc40ae34
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: dc25a8b1b0c83ae5322aec85c000cb48b560a7f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSql) 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스의 MySQL 변경에 대 한 SSMA를 나열 합니다. 

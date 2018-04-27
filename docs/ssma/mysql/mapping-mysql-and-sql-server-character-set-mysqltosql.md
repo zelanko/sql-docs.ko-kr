@@ -1,6 +1,6 @@
 ---
 title: (MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑
 MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문자 집합)을 지정할 수 있습니다.  
@@ -118,7 +118,7 @@ MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문�
     |macce|Mac 중앙 유럽|CHAR/VARCHAR (기본값)|  
     |macroman|Mac 서 부 유럽|CHAR/VARCHAR (기본값)|  
     |cp852|DOS 중앙 유럽|CHAR/VARCHAR (기본값)|  
-    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (기본값)|  
+    |latin7|ISO 8859-13 발트어|CHAR/VARCHAR (기본값)|  
     |cp 1251|Windows Cyrillic|CHAR/VARCHAR (기본값)|  
     |cp 1256|Windows 아랍어|CHAR/VARCHAR (기본값)|  
     |cp 1257|Windows Baltic|CHAR/VARCHAR (기본값)|  

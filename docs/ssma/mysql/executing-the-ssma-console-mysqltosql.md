@@ -1,6 +1,6 @@
 ---
 title: SSMA 콘솔 (MySQLToSQL) 실행 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA 콘솔 (MySQLToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다.  
@@ -209,7 +209,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+대상 연결-데이터베이스  
   
 1.  대상 SQL Server 또는 SQL Azure 데이터베이스에 연결 하 고 대상 데이터베이스의 높은 수준의 메타 데이터는 있지만 메타 데이터가 아니라를 완전히 로드 합니다.  
   
@@ -226,7 +226,7 @@ connect-target-database
 ```  
 **Command**  
   
-reconnect-target-database  
+대상 다시 연결-데이터베이스  
   
 1.  대상 데이터베이스에 다시 연결 되지만 연결 대상 데이터베이스 명령과 달리 모든 메타 데이터를 로드 하지 않습니다.  
   
@@ -245,7 +245,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 **Command**  
   
-generate-assessment-report  
+-평가-보고서 생성  
   
 1.  원본 데이터베이스에서 평가 보고서를 생성합니다.  
   
@@ -497,7 +497,7 @@ map-schema
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 4.  `report-errors-to:` 에 대 한 동기화 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **TargetSynchronizationReport.XML** 만들어집니다.  
   
@@ -542,7 +542,7 @@ map-schema
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 1.  데이터베이스의 원본 개체를 새로 고칩니다.  
   
@@ -560,7 +560,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   스크립트 실패  
   
 4.  `report-errors-to:` 에 대 한 동기화 작업 (특성 선택 사항) 폴더 경로 지정 하는 경우에 다음 파일 이름으로 오류 보고서의 위치를 지정 **SourceDBRefreshReport.XML** 만들어집니다.  
   

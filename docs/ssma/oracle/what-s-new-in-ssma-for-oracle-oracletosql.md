@@ -1,28 +1,28 @@
 ---
-title: "SSMA for Oracle (OracleToSQL)의 새로운 기능 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SSMA for Oracle (OracleToSQL)의 새로운 기능 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: 39d030541bbfd12503078542f97bfc8cd780af12
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL)의 새로운 기능
 이 항목에서는 각 릴리스의 Oracle 변경에 대 한 SSMA를 나열 합니다.  

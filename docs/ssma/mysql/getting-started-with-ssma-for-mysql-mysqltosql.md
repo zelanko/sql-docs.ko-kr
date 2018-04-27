@@ -1,6 +1,6 @@
 ---
 title: MySQL (MySQLToSQL) 용 SSMA 시작 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL) 용 SSMA 시작
 SQL Server Migration Assistant (SSMA) MySQL에 대 한 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환 결과 스키마를 SQL Server 또는 Azure SQL DB에 업로드 하 고 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  

@@ -1,6 +1,6 @@
 ---
 title: 인벤토리 스키마 (AccessToSQL) 액세스 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>액세스 인벤토리 스키마 (AccessToSQL)
 다음 섹션에서는 액세스 스키마를 내보낼 때 SSMA가 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -161,7 +161,7 @@ ms.lasthandoff: 04/06/2018
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 폼이 포함 된 데이터베이스를 식별 합니다.|  
 |**FormId**|**int**|폼을 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키입니다.|  
-|**FormName**|**nvarchar(4000)**|양식의 이름입니다.|  
+|**생략**|**nvarchar(4000)**|양식의 이름입니다.|  
   
 ## <a name="macros"></a>매크로  
 매크로 메타 데이터가 내보내집니다는 **SSMA_Access_InventoryMacros** 테이블입니다. 이 테이블 다음 열을 있습니다.  

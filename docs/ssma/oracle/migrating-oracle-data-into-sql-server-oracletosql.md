@@ -1,30 +1,31 @@
 ---
-title: "Oracle 데이터를 SQL Server (OracleToSQL)로 마이그레이션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Oracle 데이터를 SQL Server (OracleToSQL)로 마이그레이션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: fee4d190885979fe55c598a542feed89a460e3d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1792b9d84ccbf04876c28dce778d002a5dcf17da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 데이터를 SQL Server (OracleToSQL)로 마이그레이션
 으로 변환 된 개체를 성공적으로 동기화 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Oracle에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > Oracle 확장 팩 용 SSMA의 인스턴스에 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 쓰고 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 대상 데이터베이스에 데이터를 마이그레이션하는 동안 다음 오류가 발생: ' SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다 SQL Server, 서버 쪽 데이터 마이그레이션 지원 되지 것입니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하십시오. '. 클릭 **취소** 데이터 마이그레이션을 종료 하 합니다.  
   
-5.  에 **Connect to Oracle** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. Oracle에 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [Oracle에 연결 &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  에 **Connect to Oracle** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **연결**합니다. Oracle에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Oracle 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
     대상 데이터베이스에 연결 하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 연결 자격 증명을 입력의 **SQL Server에 연결** 대화 상자와 클릭 **연결**합니다. 연결에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 참조 [SQL Server에 연결](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
@@ -108,5 +109,5 @@ ms.lasthandoff: 12/21/2017
 > SQL Express edition으로 대상 데이터베이스를 사용 하면 클라이언트 쪽 데이터 마이그레이션에만 사용할 수 및 서버 쪽 데이터 마이그레이션이 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

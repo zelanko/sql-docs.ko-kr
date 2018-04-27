@@ -1,16 +1,16 @@
 ---
-title: "XQuery 기초 | Microsoft Docs"
-ms.custom: 
+title: XQuery 기초 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2cafafe39eeb1efd8dbca66215ae26c991a1823
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2b179d4a8202897232d11ff124773eacd962459d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-basics"></a>XQuery 기초
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,22 +36,22 @@ ms.lasthandoff: 02/09/2018
   이 섹션에서는 XQuery의 기본 사항에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [시퀀스 및 Qname &#40; XQuery &#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [시퀀스 및 Qname &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  시퀀스와 QName 및 미리 정의된 네임스페이스에 대해 설명합니다.  
   
- [식 컨텍스트 및 쿼리 평가 &#40; XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [식 컨텍스트 및 쿼리 평가 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  XQuery가 계산되는 두 가지 컨텍스트에 대해 설명합니다. 이 두 가지 컨텍스트는 정적 컨텍스트와 동적 컨텍스트입니다.  
   
- [원자화 &#40; XQuery &#41;](../xquery/atomization-xquery.md)  
+ [원자화 &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  항목의 형식화된 값을 추출하는 프로세스인 원자화에 대해 설명합니다.  
   
- [유효한 부울 값 &#40; XQuery &#41;](../xquery/effective-boolean-value-xquery.md)  
+ [유효한 부울 값 &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  효과적인 부울 값에 대해 설명합니다. 단일 부울 값, 노드 시퀀스 또는 빈 시퀀스를 반환하는 식에 대해 이 값을 계산할 수 있습니다.  
   
- [형식 시스템 &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  여러 유형이 미리 정의된 XQuery 유형 시스템에 대해 설명합니다. XQuery는 스키마 유형에 대해 강력한 형식의 언어이며 형식화되지 않은 데이터에 대해 약한 형식의 언어입니다.  
   
- [오류 처리 &#40; XQuery &#41;](../xquery/error-handling-xquery.md)  
+ [오류 처리 &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
  XQuery의 정적, 동적 및 유형 오류를 처리하는 방법에 대해 설명합니다.  
   
  [XQuery의 주석](../xquery/comments-in-xquery.md)  

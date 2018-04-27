@@ -1,9 +1,9 @@
 ---
-title: '자습서: SQL Operations Studio (preview) TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만드는 | Microsoft Docs'
-description: 이 자습서에서는 T-SQL을 사용 하 여 단순화 하는 SQL Operations Studio (preview)의 주요 기능에 설명 합니다.
+title: '자습서: SQL 작업 (미리 보기) Studio TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만드는 | Microsoft Docs'
+description: 이 자습서에서는 T-SQL을 사용 하 여 단순화 하는 SQL 작업 Studio (미리 보기)의 주요 기능에 설명 합니다.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체-를 만들려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>저장된 프로시저를 만들 T-SQL 코드 조각을 사용합니다
 
-SQL Operations Studio 문을 빠르게 만들기에 대 한 기본 제공 되는 많은 T-SQL 조각이 제공 합니다.
+SQL 작업 Studio 문을 빠르게 만들기에 대 한 기본 제공 되는 많은 T-SQL 조각이 제공 합니다.
 
 
 1. 키를 눌러 새 쿼리 편집기를 열고 **Ctrl + N**합니다.
@@ -117,7 +117,7 @@ SQL Operations Studio 문을 빠르게 만들기에 대 한 기본 제공 되는
 
 ## <a name="use-peek-definition"></a>정의 피킹 사용 
 
-SQL Operations Studio peek 정의 기능을 사용 하는 개체 정의 볼 수 있는 기능을 제공 합니다. 이 섹션 두 번째 저장된 프로시저를 만들고 신속 하 게 저장된 프로시저의 본문을 만들 수 있도록 테이블에 있는 열을 미리 보기 정의 사용 하 여 합니다.
+SQL 작업 Studio peek 정의 기능을 사용 하는 개체 정의 볼 수 있는 기능을 제공 합니다. 이 섹션 두 번째 저장된 프로시저를 만들고 신속 하 게 저장된 프로시저의 본문을 만들 수 있도록 테이블에 있는 열을 미리 보기 정의 사용 하 여 합니다.
 
 1. 키를 눌러 새 편집기를 열고 **Ctrl + N**합니다. 
 

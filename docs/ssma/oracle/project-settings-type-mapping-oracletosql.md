@@ -1,28 +1,28 @@
 ---
-title: "프로젝트 설정 (형식 매핑) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 프로젝트 설정 (형식 매핑) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 84d47276324b7616a30aff3d14949230595194c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정 (형식 매핑) (OracleToSQL)
 형식 매핑 페이지는 **프로젝트 설정** 대화 상자 SSMA Oracle 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/15/2018
 **원본 형식**  
 매핑된 Oracle 데이터 형식입니다.  
   
-대상 유형  
+**대상 유형**  
 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지정된 된 Oracle 데이터 형식에 대 한 데이터 형식입니다.  
   
 Oracle 형식 매핑에 대 한 기본 SSMA 한 다음 섹션의 표를 참조 하십시오.  
@@ -102,7 +102,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |raw|varbinary(max)|  
 |real|float[53]|  
 |Rowid|uniqueidentifier|  
-|signtype|smallint|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
 |timestamp|datetime2|  
@@ -131,7 +131,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |char[*..\*]|char[*]|  
 |character|char|  
 |다양 한 문자 [*... \*]|varchar[*]|  
-|character[*..\*]|char[*]|  
+|문자 [*... \*]|char[*]|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
 |dec|dec[38][0]|  
@@ -142,7 +142,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |float|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |int|int|  
 |integer|int|  
@@ -152,7 +152,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |긴 원시 [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
 |긴 [*... 8000]|varchar[*]|  
-|long[8001..*]|varchar(max)|  
+|긴 [8001.. *]|varchar(max)|  
 |국가별 문자|NCHAR|  
 |다양 한 national char [*... \*]|nvarchar[*]|  
 |national char [*... \*]|nchar[*]|  
@@ -163,10 +163,10 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |nchar[*]|nchar[*]|  
 |Nclob|nvarchar(max)|  
 |number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |numeric|numeric|  
-|numeric[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..\*]|nvarchar[*]|  
 |raw[*..\*]|varbinary[*]|  
@@ -178,7 +178,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset[*]|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
 |타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|타임 스탬프 [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid[*..\*]|uniqueidentifier|  
 |varchar[*..\*]|varchar[*]|  
@@ -199,12 +199,12 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |Char|char|  
 |다양 한 char [*... 8000]|varchar[*]|  
 |다양 한 char [8001.. *]|varchar(max)|  
-|char[*..8000]|char[*]|  
+|char [*... 8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |문자|char|  
 |다양 한 문자 [*... 8000]|varchar[*]|  
 |다양 한 문자 [8001.. *]|varchar(max)|  
-|character[*..8000]|char[*]|  
+|문자 [*... 8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
 |date|datetime2[0]|  
@@ -216,7 +216,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |부동|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |int|int|  
 |정수|int|  
@@ -236,16 +236,16 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |다양 한 국가별 문자 [*... 4000]|nvarchar[*]|  
 |다양 한 국가별 문자 [4001.. *]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar[*..4000]|nchar[*]|  
+|nchar [*... 4000]|nchar[*]|  
 |nchar[4001..*]|nvarchar(max)|  
 |nchar 다양 한 [*... 4000]|nvarchar[*]|  
 |nchar 다양 한 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |Number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |숫자|numeric[38][0]|  
-|numeric[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |numeric[*..\*][\*..\*]|numeric[*][\*]|  
 |nvarchar2[*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
@@ -256,14 +256,14 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|string[*..8000]|varchar[*]|  
+|문자열 [*... 8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대 포함 된 타임 스탬프|datetimeoffset|  
 |표준 시간대와 타임 스탬프|datetimeoffset|  
 |현지 표준 시간대 포함 된 타임 스탬프 [*... \*]|datetimeoffset[*]|  
 |타임 스탬프와 표준 시간대 [*... \*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2[*]|  
+|타임 스탬프 [*... \*]|datetime2[*]|  
 |Urowid|uniqueidentifier|  
 |urowid[*..\*]|uniqueidentifier|  
 |varchar[*..8000]|varchar[*]|  
@@ -273,5 +273,5 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>관련 항목:  
-[사용자 인터페이스 참조 &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "SequenceType 식 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: SequenceType 식 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0885694aa774a74d694742bf62e32efdcf3a7552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
  에 원자성 유형 이름도 사용할 수도 있습니다는 **로 캐스팅** XQuery 식입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **인스턴스의** 및 **로 캐스팅** 에서는 Sequencetype에 XQuery 식이 부분적으로 지원 됩니다.  
   
 ## <a name="instance-of-operator"></a>instance of 연산자  
- **인스턴스의** 동적 또는 런타임 유형의 지정된 된 식의 값을 결정 하는 연산자를 사용할 수 있습니다. 예를 들어  
+ **인스턴스의** 동적 또는 런타임 유형의 지정된 된 식의 값을 결정 하는 연산자를 사용할 수 있습니다. 예를 들어:  
   
 ```  
   
@@ -321,7 +321,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   `(1,2) instance of xs:integer*`와 같은 전체 시퀀스는 지원되지 않습니다.  
   
--   형태를 사용 하는 경우는 **element()** 시퀀스와 같은 형식 이름을 지정 하는 유형의 `element(ElementName, TypeName)`, 유형에 물음표 (?)으로 한정 되어야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]런타임에 검색을 지원 하지 않습니다는 **xsi: nil** 사용 하 여 속성 `instance of`합니다.  
+-   형태를 사용 하는 경우는 **element()** 시퀀스와 같은 형식 이름을 지정 하는 유형의 `element(ElementName, TypeName)`, 유형에 물음표 (?)으로 한정 되어야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 런타임에 검색을 지원 하지 않습니다는 **xsi: nil** 사용 하 여 속성 `instance of`합니다.  
   
 -   공용 구조체로 형식화된 요소나 특성에서 `Expression`의 값을 가져올 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 파생되지 않은 기본 유형만 식별할 수 있습니다. 이 기본 유형에서 값 유형이 파생됩니다. 예를 들어 <`e1`>이 (xs:integer | xs:string) 정적 유형을 갖도록 정의되면 다음 예에서 False를 반환합니다.  
   
@@ -334,7 +334,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 -   에 대 한는 **processing-instruction()** 및 **document-node()** 시퀀스 형식은 인수가 없는 형태만 사용할 수 있습니다. 예를 들어 `processing-instruction()`은 사용할 수 있지만 `processing-instruction('abc')`은 사용할 수 없습니다.  
   
 ## <a name="cast-as-operator"></a>cast as 연산자  
- **로 캐스팅** 식은 값을 특정 데이터 형식 변환에 사용할 수 있습니다. 예를 들어  
+ **로 캐스팅** 식은 값을 특정 데이터 형식 변환에 사용할 수 있습니다. 예를 들어:  
   
 ```  
   
@@ -417,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>관련 항목:  
  [XQuery 식](../xquery/xquery-expressions.md)   
- [형식 시스템 &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

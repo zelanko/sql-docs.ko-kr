@@ -1,27 +1,28 @@
 ---
-title: "프로젝트 설정 (마이그레이션) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 프로젝트 설정 (마이그레이션) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: c22868d8db0b223b297f2b719040cecffe0cc732
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3e43b77ca0ab8544adad09f5e57a60dc82f8b9eb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-oracletosql"></a>프로젝트 설정 (마이그레이션) (OracleToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA는 Oracle에서 데이터를 마이그레이션합니다 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |**Null 유지**|SQL Server에 지정 된 기본값에 관계 없이 SQL server에 데이터를 추가할 때 SSMA 원본 데이터에 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**: True<br /><br />**최적 모드**: True<br /><br />**전체 모드**: True|  
 |**오류와 함께 문자열 트림 작업 표시**|대상 열 크기 소스 문자열 길이 보다 작은 경우 값을 잘라내는 하며 오류로 표시 됩니다.<br /><br />**기본 모드**: 예<br /><br />**최적 모드**: 예<br /><br />**전체 모드**: 예|  
 |**오류 발생 시**|오류가 발생 한 경우 데이터 마이그레이션을 중지 합니다. 세 가지 옵션이 있습니다.<br /><br />**마이그레이션 중지:** 데이터 마이그레이션 작업을 중지 합니다.<br /><br />**다음 테이블에 계속:** 현재 테이블에 데이터 마이그레이션을 중지 하 고 다음 진행 됩니다.<br /><br />**다음 일괄 처리를 진행:** 현재 일괄 처리로의 데이터 마이그레이션을 중지 하 고 다음 진행 됩니다.<br /><br />**기본 모드**: 다음 일괄 처리를 계속 진행<br /><br />**최적 모드**: 다음 일괄 처리를 계속 진행<br /><br />**전체 모드**: 다음 일괄 처리를 계속 진행|  
-|**지원 되지 않는 날짜를 대체 합니다.**|SSMA 가능한 한 빨리 이전의 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** 날짜 (1753 01 년 1 월).<br /><br />현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.<br /><br />1753 년 1 월 1 일 이전 날짜는 지원 되는 날짜를 바꾸려면 선택 **지원 되는 날짜에 가장 가까운 바꿉니다**합니다.<br /><br />**기본 모드**: 아무 작업도 하지 않음<br /><br />**최적 모드**: 아무 작업도 하지 않음<br /><br />**전체 모드**: 지원 되는 날짜에 가장 가까운으로 대체 합니다.|  
+|**지원 되지 않는 날짜를 대체 합니다.**|SSMA 가능한 한 빨리 이전의 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** 날짜 (1753 01 년 1 월).<br /><br />현재 날짜 값을 유지 하기 위해 선택 **아무 작업도 수행 하지**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 열에는 1753 년 1 월 1 일 이전의 날짜를 수락 하지 않습니다. 오래 된 날짜를 사용 하 여 문자 값을 날짜/시간 값을 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 선택 **NULL로 대체**합니다.<br /><br />1753 년 1 월 1 일 이전 날짜는 지원 되는 날짜를 바꾸려면 선택 **지원 되는 날짜에 가장 가까운 바꿉니다**합니다.<br /><br />**기본 모드**: 아무 작업도 하지 않음<br /><br />**최적 모드**: 아무 작업도 하지 않음<br /><br />**전체 모드**: 지원 되는 날짜에 가장 가까운으로 대체 합니다.|  
 |**테이블 잠금**|SSMA 데이터 마이그레이션 중에 테이블에 데이터를 추가할 때 테이블 잠금 여부를 지정 합니다. 대량 복사 작업의 기간에 대 한 대량 업데이트 잠금을 얻습니다. 값이 False 이면 한 잠금이 행 수준에서 설정 됩니다.<br /><br />**기본 모드**: True<br /><br />**최적 모드**: True<br /><br />**전체 모드**: True|  
   
 ## <a name="parallel-data-migration"></a>병렬 데이터 마이그레이션  

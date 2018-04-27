@@ -1,15 +1,16 @@
 ---
-title: "SQL Server-Azure SQL DB에 대 한 액세스 응용 프로그램 연결 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server-Azure SQL DB에 대 한 액세스 응용 프로그램 연결 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server-Azure SQL DB (AccessToSQL)에 대 한 액세스 응용 프로그램 연결
 기존 Access 응용 프로그램을 사용 하려는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 원래 Access 테이블을 마이그레이션된 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 테이블입니다. 연결을 수정 하 Access 데이터베이스에서 데이터를 사용 하는 쿼리, 폼, 보고서 및 데이터 액세스 페이지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Access 데이터베이스의 데이터 대신 SQL Azure 데이터베이스입니다.  
@@ -57,7 +58,7 @@ Access 테이블을 연결할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 2.  마우스 오른쪽 단추로 클릭 **테이블**를 선택한 후 **링크**합니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) 액세스에 대 한 원래 Access 테이블을 백업 하 고 연결된 된 테이블을 만듭니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스에 대 한 원래 Access 테이블을 백업 하 고 연결된 된 테이블을 만듭니다.  
   
 테이블에 연결한 후 SSMA에 테이블이 작은 링크 아이콘으로 나타납니다. Access에서 테이블와 가리키는 화살표가 있는 구형 "연결 된" 아이콘을 표시 합니다.  
   
@@ -134,7 +135,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>새 레코드를 사용할 수 없는 경우  
-**원인:** 레코드를 추가 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 테이블의 고유 인덱스 필드에 기본값을 할당 하지 않으면 값을 해당 필드에 새 레코드 나타나지 않으면에서 테이블을 다시 열 때까지 경우 VBA를 사용 하 여 SQL Azure 테이블 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 새 레코드의 값을 가져오는 하려고 하면 다음과 같은 오류 메시지가 나타납니다.  
+**원인:** 레코드를 추가 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 테이블의 고유 인덱스 필드에 기본값을 할당 하지 않으면 값을 해당 필드에 새 레코드 나타나지 않으면에서 테이블을 다시 열 때까지 경우 VBA를 사용 하 여 SQL Azure 테이블 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 S QL Azure입니다. 새 레코드의 값을 가져오는 하려고 하면 다음과 같은 오류 메시지가 나타납니다.  
   
 `Run-time error '3167' Record is deleted.`  
   
@@ -162,6 +163,6 @@ Recordset.LastModified
   
 **해결 방법:** 지원 되는 데이터 형식에는 행만 반환 하는 액세스 쿼리를 정의할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -1,16 +1,16 @@
 ---
-title: "시퀀스 식 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 시퀀스 식 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8bed36d0c784da74731e92404d5849386ec8756d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 생성, 필터링 및 항목의 시퀀스를 결합 하는 데 사용 되는 XQuery 연산자를 지원 합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항목의 시퀀스를 생성, 필터링 및 조합하는 데 사용되는 XQuery 연산자를 지원합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
   
 ## <a name="constructing-sequences"></a>시퀀스 생성  
  쉼표 연산자를 사용하여 항목을 단일 시퀀스로 연결하는 시퀀스를 생성할 수 있습니다.  
@@ -138,7 +138,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>시퀀스 필터링  
- 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 참조 [경로 식 &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md). 예를 들어 다음 쿼리는 3개의 <`a`> 요소 노드에 대한 하나의 시퀀스를 반환합니다.  
+ 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 참조 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다. 예를 들어 다음 쿼리는 3개의 <`a`> 요소 노드에 대한 하나의 시퀀스를 반환합니다.  
   
 ```  
 declare @x xml  

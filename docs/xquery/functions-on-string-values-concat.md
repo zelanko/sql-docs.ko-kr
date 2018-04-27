@@ -1,16 +1,16 @@
 ---
-title: "concat 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: concat 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f7d63904e613f399e4f66b9fcd3547f57a0e5175
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---concat"></a>문자열 값-concat 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ fn:concat ($string as xs:string?
  함수에는 최소한 둘 이상의 인수가 필요합니다. 인수가 빈 시퀀스인 경우 길이가 0인 문자열로 처리됩니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
- XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** AdventureWorks 예제 데이터베이스에 열을 입력 합니다.  

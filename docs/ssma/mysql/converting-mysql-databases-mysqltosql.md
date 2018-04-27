@@ -1,6 +1,6 @@
 ---
 title: MySQL 데이터베이스 (MySQLToSQL) 변환 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b1bbf54f4b8ddfa33b10d0aa1f5cb7cdbc139a6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2f5784f994169d8a43752b7e935cc06ae4aaacea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 (MySQLToSQL) 변환
 에 MySQL에 연결한 후 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] MySQL 데이터베이스 개체를 SQL Azure 및 집합 프로젝트 및 데이터 매핑 옵션을 변환할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  

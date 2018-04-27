@@ -1,34 +1,35 @@
 ---
-title: "전역 설정 (로깅) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 전역 설정 (로깅) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>전역 설정 (로깅) (OracleToSQL)
 사용 하 여 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 제품 지원 팀과 작업 하는 경우에 이러한 설정을 변경할 것 있습니다.  
   
 이 대화 상자에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정** 클릭 하 고는 **로깅** 왼쪽 창의 맨 아래에 단추입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **메시지 수준**  
 다음 옵션에서 사용할 수 있는 **메시지 수준**:  
   

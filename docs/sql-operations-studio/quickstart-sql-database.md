@@ -1,9 +1,9 @@
 ---
-title: '빠른 시작: 연결 하 고 SQL Operations Studio (preview) 를 사용 하 여 Azure SQL 데이터베이스를 쿼리 하 | Microsoft Docs'
-description: 이 빠른 시작에서는 SQL Operations Studio (preview) 를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
+title: '빠른 시작: 연결 하 고 SQL 작업 Studio (미리 보기)를 사용 하 여 Azure SQL 데이터베이스를 쿼리 하 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL 데이터베이스에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5ecee0879282a31f08fb98bceb0241a5faf0ca2f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작:를 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL 데이터베이스 쿼리
 
@@ -59,7 +59,7 @@ Azure SQL server를 아직 없는 경우 다음 Azure SQL 데이터베이스 퀵
 
    ![새 연결 상태 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. 서버에 연결 하려면 SQL Operations Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
+3. 서버에 연결 하려면 SQL 작업 Studio 허용 하는 방화벽 규칙에 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 만드는 양식을 완성 합니다. 자세한 내용은 참조 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
 
    ![새 방화벽 규칙](media/quickstart-sql-database/firewall.png)  
 

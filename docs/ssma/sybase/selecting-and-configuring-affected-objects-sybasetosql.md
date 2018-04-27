@@ -2,7 +2,7 @@
 title: 영향을 받는 개체 (SybaseToSQL) 선택 하 고 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b4ee4b97b69aa937479ca3123a02adcef906d2d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>영향을 받는 개체 (SybaseToSQL) 선택 및 구성
 이 페이지에서 테이블을 선택할 수 있습니다 및 SSMA 이전 단계에서 선택한 개체에 대 한 실행의 결과 확인 하는 경우 비교 외래 키를 변경 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  

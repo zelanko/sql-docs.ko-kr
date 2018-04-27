@@ -1,6 +1,6 @@
 ---
 title: Oracle 스키마 (OracleToSQL) 변환에 대 한 평가 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 72e4156ed3ac58a4870ab5487a3ece2e3adeaadb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30cead1b886fecd524e417b5daee6f76ebc796d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Oracle 스키마 (OracleToSQL) 변환에 대 한 평가
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 복잡 한 정도 마이그레이션 되 고 시간을 결정 해야 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 보여주는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
@@ -82,13 +82,13 @@ SSMA 변환 선택한 Oracle 데이터베이스 개체를이 평가 보고서를
   
     -   SSMA는 Oracle 구문을 업데이트 합니다. 프로시저, 함수, 트리거, 패키지 함수 및 패키지 된 프로시저에 대 한 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 Oracle 메타 데이터 탐색기 창에서 개체를 선택, 클릭는 **SQL** 탭을 선택한 다음 SQL 코드를 수정 합니다. 항목 벗어나 탐색 하면 업데이트 된 구문 저장할 묻는 메시지가 나타납니다. 개체에 대해 보고 된 오류를 볼 수 있습니다는 **보고서** 탭 합니다.  
   
-    -   Oracle에서는 Oracle 개체를 제거 하거나 수정 하는 문제가 있는 코드를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Oracle 데이터베이스 &#40; OracleToSQL &#41;에 연결](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
+    -   Oracle에서는 Oracle 개체를 제거 하거나 수정 하는 문제가 있는 코드를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 참조 [Oracle 데이터베이스에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
   
     -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기 확인란의 선택을 취소 항목 옆에 개체를 로드 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle의 데이터를 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[Oracle 스키마로 변환 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[Oracle 스키마 변환 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

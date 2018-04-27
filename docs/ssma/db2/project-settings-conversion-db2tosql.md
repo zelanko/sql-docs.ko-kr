@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 설정 (변환) (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA를 DB2 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다.  
@@ -81,7 +81,7 @@ SSMA ROWNUM 식을 변환, 식 옵니다 TOP 절에 식으로 변환 합니다. 
   
 1.  **데이터베이스에 스키마:** 이 모드로 DB2 스키마 'sch1' 'dbo' SQL Server 데이터베이스 스키마에 SQL Server 'sch1' 기본적으로 매핑되지 것입니다.  
   
-2.  **스키마를 스키마:**이 모드로 DB2 스키마 'sch1' 'sch1' SQL Server 데이터베이스 스키마에 기본 SQL Server 연결 대화 상자에서 제공 되는 기본적으로 매핑되지 것입니다.  
+2.  **스키마를 스키마:** 이 모드로 DB2 스키마 'sch1' 'sch1' SQL Server 데이터베이스 스키마에 기본 SQL Server 연결 대화 상자에서 제공 되는 기본적으로 매핑되지 것입니다.  
   
 변환 모드를 선택 하면는 **모드** SSMA 상자에서 다음 설정이 적용 됩니다.  
   

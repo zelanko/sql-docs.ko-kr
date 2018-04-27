@@ -2,7 +2,7 @@
 title: 프로젝트 설정 (마이그레이션) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 834c6559987a441dd4b8122673029802a92bc86a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>프로젝트 설정 (마이그레이션) (SybaseToSQL)
 마이그레이션 페이지는 **프로젝트 설정** 대화 상자 SSMA가 마이그레이션하는 방법을 데이터에서 Sybase 적응형 Server Enterprise (ASE)를 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

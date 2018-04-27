@@ -1,30 +1,31 @@
 ---
-title: "영향을 받는 개체 (OracleToSQL) 선택 하 고 구성 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 영향을 받는 개체 (OracleToSQL) 선택 하 고 구성 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d212f53d9cdd366ec6105ca6d44b345112d2f4fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>영향을 받는 개체 (OracleToSQL) 선택 및 구성
 이 페이지에서 테이블을 선택할 수 있습니다 및 SSMA 이전 단계에서 선택한 개체에 대 한 실행의 결과 확인 하는 경우 비교 외래 키를 변경 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  
@@ -34,7 +35,7 @@ Oracle 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
   
 레이블이 링크 표시는 SSMA 테스터는 이러한 개체 중 하나를 확인할 수 없는, **일부 선택 된 개체에 오류가 포함 되어** 개체 트리 아래 합니다. 이러한 개체를 비교할 수 없는 이유는 이유를 표시 하 고 잘못 된 개체의 선택을 취소 하려면이 링크를 클릭 합니다.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>테이블  
 테이블 탭 선택한 테이블의 표 뷰를 포함 합니다. 표에서 선택한 테이블에 대 한 다음과 같은 정보가 포함 되어 있습니다.  
   
 -   열 이름  
@@ -47,7 +48,7 @@ Oracle 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
   
 -   규칙  
   
--   Default  
+-   기본값  
   
 -   ID  
   
@@ -56,7 +57,7 @@ Oracle 개체 트리에서 창의 왼쪽에 있는 테이블과 외래 키를 �
 ## <a name="sql"></a>Sql  
 SQL 탭에 "Create table" 선택한 테이블의 SQL 합니다.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Data  
 데이터 탭에는 선택한 테이블에 데이터가 표시 됩니다.  
   
 ## <a name="properties"></a>속성  
@@ -113,10 +114,10 @@ SSMA 테스터에서 생성 된 SELECT 문의 볼 수는 **비교 SQL** 페이�
 사용자 지정 확인 기능을 제공 하는 SELECT 문을 편집할 수 있습니다. ְ ת oracle에서 및 SQL Server 문에서 사용 하 여는 **적용** 원본 및 대상 SQL, 아래까지 단추입니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[사용자 지정 호출 순서 &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[호출 순서 사용자 지정 &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[완료 테스트 사례 준비 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[실행 중인 테스트 사례 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[테스트 사례 준비를 마친 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[테스트 사례 실행 &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -2,7 +2,7 @@
 title: SQL Server (SybaseToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2532575dcfeaff0b75520ef1a104db0281bbc9b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server (SybaseToSQL)에 SSMA 구성 요소 설치
 서버 쪽 데이터 마이그레이션을 사용 하 여에 대 한 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소를 지 원하는 데이터 마이그레이션 및 서버 간 연결을 허용 하도록 Sybase 공급자 SSMA 확장 팩을 포함 합니다.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/06/2018
   
 -   **stop_agent_process**  
   
-데이터를 마이그레이션하기 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업입니다. 이러한 작업 이름은 **ssma_syb 데이터 마이그레이션 패키지 {GUID}**에 표시 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 에이전트 노드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 작업 폴더에 있습니다.  
+데이터를 마이그레이션하기 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업입니다. 이러한 작업 이름은 **ssma_syb 데이터 마이그레이션 패키지 {GUID}** 에 표시 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 에이전트 노드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 작업 폴더에 있습니다.  
   
 ## <a name="sybase-providers"></a>Sybase 공급자  
 ASE에에서 데이터를 마이그레이션할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure 데이터 ASE 간에 직접 마이그레이션합니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure입니다. 따르지 않는 SSMA를 통해이 데이터 마이그레이션 속도가 느려질 것 때문에 있습니다.  

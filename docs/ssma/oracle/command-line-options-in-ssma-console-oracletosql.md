@@ -1,15 +1,16 @@
 ---
-title: "SSMA 콘솔 (OracleToSQL)의 명령줄 옵션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SSMA 콘솔 (OracleToSQL)의 명령줄 옵션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Command Line Options, Help Option
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: a5b0502ba12f5151679b6e4468bdb046b490ecc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c1061732d28120432da9e8f4e20e129af066027
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔 (OracleToSQL)의 명령줄 옵션
 Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -94,7 +95,7 @@ Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   
@@ -164,21 +165,21 @@ SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)합니다.  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)합니다.  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Securepassword – SecurePassword 도움말 옵션:-? / h  
 SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
   
 ### <a name="next-step"></a>다음 단계  
 다음 단계에서는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40; OracleToSQL &#41;](../../ssma/oracle/managing-passwords-oracletosql.md)합니다.  
+-   암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)합니다.  
   
--   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)합니다.  
+-   보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)합니다.  
   
--   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)합니다.  
+-   콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)합니다.  
   

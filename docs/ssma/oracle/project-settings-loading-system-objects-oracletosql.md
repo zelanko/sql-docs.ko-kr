@@ -1,27 +1,28 @@
 ---
-title: "프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 28736a939c3ad2a73c0924901b79ce8f9954982b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 598f7726c2bb01b2b57cc98817716821b9112ca1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL)
 시스템 개체를 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 Oracle 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -35,19 +36,19 @@ ms.lasthandoff: 12/21/2017
 ## <a name="default-settings"></a>기본 설정  
 시스템 개체를 변환 시스템 리소스를 소모 하며 시간이 걸립니다. 성능 향상을 위해 다음 목록에 표시 된 것 처럼 SSMA에서 가장 자주 사용 되는 시스템 개체를 선택 합니다.  
   
--   SYS입니다. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS입니다. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS입니다. DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
 -   SYS입니다. 표준  
   
--   SYS입니다. UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS입니다. DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS입니다. DBMS_SQL  
+-   SYS.DBMS_SQL  
   
 -   SYS입니다. DBMS_SESSION  
   

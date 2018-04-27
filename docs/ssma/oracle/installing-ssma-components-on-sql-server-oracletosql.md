@@ -1,30 +1,31 @@
 ---
-title: "SQL Server (OracleToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server (OracleToSQL)에 SSMA 구성 요소 설치 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9dc0fbc22cedb1c7aa7d4ac3bd342c6acb91ba88
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server (OracleToSQL)에 SSMA 구성 요소 설치
 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 이러한 구성 요소를 지 원하는 데이터 마이그레이션 및 서버 간 연결을 허용 하도록 Oracle 공급자 SSMA 확장 팩을 포함 합니다.  
@@ -34,12 +35,12 @@ SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는
   
 또한 데이터를 마이그레이션할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 서버 쪽 데이터 마이그레이션 엔진으로 데이터를 마이그레이션하는 데 사용 되는 경우 에이전트 작업입니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>필수 구성 요소  
 에 Oracle 서버 구성 요소에 대 한 SSMA를 설치 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 시스템이 다음 요구 사항을 충족 하는지 확인 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]인스턴스가 설치 되어 있습니다. SSMA는 SQL Server 2008 Express Edition을 지원 하지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스가 설치 되어 있습니다. SSMA는 SQL Server 2008 Express Edition을 지원 하지 않습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 또는 이후 버전입니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 또는 이후 버전입니다.  
   
 -   Oracle 클라이언트 공급자 또는 OLE DB provider for Oracle 및 마이그레이션할 수 있는 Oracle 데이터베이스에 연결 합니다. 제품 미디어 Oracle 또는 Oracle 웹 사이트에서 공급자를 설치할 수 있습니다.  
   
@@ -60,9 +61,9 @@ SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는
   
     WinZip 있는의 버전에 따라 하거나 파일을 두 번 클릭 하거나 파일을 마우스 오른쪽 단추로 클릭 하 고 선택할 수 **압축 풀기** 또는 **WinZip에 열려 있는**합니다. 파일을 추출 WinZip 사용자 인터페이스의 지시를 따릅니다.  
   
-2.  Oracle 확장 팩 SSMA를 복사 합니다. *n*. Install.exe 여기서  *n*  실행 중인 컴퓨터에 있는 빌드 번호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+2.  Oracle 확장 팩 SSMA를 복사 합니다. *n*합니다. Install.exe 여기서 *n* 실행 중인 컴퓨터에 있는 빌드 번호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
-3.  Oracle 확장 팩 SSMA를 두 번 클릭 합니다. *n*. Install.exe 합니다.  
+3.  Oracle 확장 팩 SSMA를 두 번 클릭 합니다. *n*합니다. Install.exe 합니다.  
   
 4.  시작 페이지에서 클릭 **다음**합니다.  
   
@@ -84,7 +85,7 @@ SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는
   
     Windows 인증 Windows 자격 증명을 사용 하 여 인스턴스의에 로그온 하려고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 입력 해야 인증을 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로그인 이름 및 암호.  
   
-11. 다음 페이지에서 선택 **설치 유틸리티 데이터베이스**  *n* 여기서  *n*  버전 번호 이며 클릭 **다음**합니다.  
+11. 다음 페이지에서 선택 **설치 유틸리티 데이터베이스** *n*여기서 *n* 버전 번호 이며 클릭 **다음**합니다.  
   
     **sysdb** 데이터베이스가 만들어지고 사용자 정의 함수와 저장된 프로시저는 해당 데이터베이스에 만들어집니다.  
   
@@ -107,9 +108,9 @@ SSMA를 설치 하는 것 외에도 설치 해야 구성 요소를 실행 하는
 ### <a name="sql-server-database-objects"></a>SQL Server 데이터베이스 개체  
 참조 확장 팩을 설치한 후 됩니다는 **ssma_oracle.bcp_migration_packages** 테이블은 **ssma_oracle.db_storage** 테이블 및 **ssma_oracle.db_error_list** 테이블에 **sysdb** 데이터베이스입니다. 많은 저장된 프로시저 및 사용자 정의 함수에도 표시 됩니다는 **ssma_oracle** 스키마입니다.  
   
-데이터를 마이그레이션하기 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업입니다. 이러한 작업 이름은 **ssma_oracle 데이터 마이그레이션 패키지 {GUID}**에 표시 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 에이전트 노드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 작업 폴더에 있습니다.  
+데이터를 마이그레이션하기 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 만듭니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업입니다. 이러한 작업 이름은 **ssma_oracle 데이터 마이그레이션 패키지 {GUID}** 에 표시 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 에이전트 노드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 작업 폴더에 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Oracle 클라이언트 &#40; OracleToSQL &#41; 용 SSMA를 설치합니다.](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SSMA Oracle 클라이언트에 대 한 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

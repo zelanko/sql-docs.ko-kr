@@ -1,37 +1,38 @@
 ---
-title: "SQL Server (OracleToSQL)로 데이터베이스 마이그레이션 Oracle | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server (OracleToSQL)로 데이터베이스 마이그레이션 Oracle | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 04/22/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Active
-ms.openlocfilehash: c3b6bc1f359cd54c1380fbe193fb007e1e337a3d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09fe8820413108e4df6479b0a7c2bd95f1f84741
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server (OracleToSQL) Oracle 데이터베이스 마이그레이션
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for Oracle은 Oracle 데이터베이스를 신속 하 게 마이그레이션할 수 있는 포괄적인 환경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. SSMA for Oracle을 사용 하 여 있습니다 수 데이터베이스 개체와 데이터를 검토, 평가 마이그레이션할 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, 다음 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 참고 SYS 및 시스템 Oracle 스키마를 마이그레이션할 수 없습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle은 Oracle 데이터베이스를 신속 하 게 마이그레이션할 수 있는 포괄적인 환경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL 데이터 웨어하우스 또는 Azure SQL DB 합니다. SSMA for Oracle을 사용 하 여 있습니다 수 데이터베이스 개체와 데이터를 검토, 평가 마이그레이션할 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB 또는 Azure SQL 데이터 웨어하우스 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB 또는 Azure SQL 데이터 웨어하우스입니다. 참고 SYS 및 시스템 Oracle 스키마를 마이그레이션할 수 없습니다.
   
 ## <a name="recommended-migration-process"></a>권장 되는 마이그레이션 프로세스  
-Oracle 데이터베이스에서 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, 다음 프로세스를 사용 합니다.  
+에 Oracle 데이터베이스에서 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL 데이터 웨어하우스 또는 Azure SQL DB 다음 프로세스를 사용 합니다.
   
 1.  [새 SSMA 프로젝트 만들기](http://msdn.microsoft.com/en-us/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b)합니다.  
   
-    프로젝트를 만든 후에 프로젝트 변환, 마이그레이션 및 유형 매핑 옵션을 설정할 수 있습니다. 프로젝트 설정에 대 한 정보를 참조 하십시오. [프로젝트 옵션 설정 &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md)합니다. 데이터 형식 매핑을 사용자 지정 하는 방법에 대 한 정보를 참조 하십시오. [매핑 Oracle 및 SQL Server 데이터 형식 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)합니다.  
+    프로젝트를 만든 후에 프로젝트 변환, 마이그레이션 및 유형 매핑 옵션을 설정할 수 있습니다. 프로젝트 설정에 대 한 정보를 참조 하십시오. [프로젝트 옵션 설정 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)합니다. 데이터 형식 매핑을 사용자 지정 하는 방법에 대 한 정보를 참조 하십시오. [매핑 Oracle 및 SQL Server 데이터 형식 &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)합니다.  
   
 2.  [Oracle 데이터베이스 서버에 연결](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)합니다.  
   
@@ -56,6 +57,6 @@ Oracle 데이터베이스에서 개체 및 데이터를 성공적으로 마이�
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Oracle &#40; OracleToSQL &#41; SSMA를 설치합니다.](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
-[SSMA Oracle &#40; OracleToSQL &#41;에 대 한 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+[Oracle 용 SSMA를 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[Oracle 용 SSMA 시작 &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

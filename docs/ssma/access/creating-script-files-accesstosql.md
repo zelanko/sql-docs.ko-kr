@@ -1,35 +1,36 @@
 ---
-title: "스크립트 파일 (AccessToSQL) 만들기 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 스크립트 파일 (AccessToSQL) 만들기 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b249b133ffb2316046f65786e0ac41f3a034e0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-accesstosql"></a>스크립트 파일 (AccessToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  
   
-스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다.. 하십시오:  
+스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다 하십시오..,:  
   
 1.  **config:** 콘솔 응용 프로그램에 대 한 구성 매개 변수를 설정할 수 있습니다.  
   
@@ -348,7 +349,7 @@ ms.lasthandoff: 12/21/2017
 -   **최대 다시 연결 시도 횟수:** 설정 된 연결이 시간 초과 되거나 네트워크 오류로 인해 중단, 서버는 다시 연결 하는 데 필요 합니다. 회 시도의 최대 수 **5** , 그 후 다시 시도 횟수는 콘솔으로 다시 연결을 자동으로 수행 합니다. 자동 다시 연결은 시설에 스크립트를 다시 실행 하 여 활동을 줄일 수 있습니다.  
   
 ## <a name="server-connection-parameters"></a>서버 연결 매개 변수  
-스크립트 파일 또는 서버 연결 파일에 서버 연결 매개 변수를 정의할 수 있습니다. 참조 하십시오는 [서버 연결 파일 &#40; 만들기 AccessToSQL &#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) 자세한 내용은 섹션.  
+스크립트 파일 또는 서버 연결 파일에 서버 연결 매개 변수를 정의할 수 있습니다. 참조 하십시오는 [서버 연결 파일을 만드는 &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) 자세한 내용은 섹션.  
   
 ## <a name="script-commands"></a>스크립트 명령  
 스크립트 파일은 XML 형식의 마이그레이션 워크플로 명령 시퀀스를 포함 합니다. SSMA 콘솔 응용 프로그램 마이그레이션 스크립트 파일에 표시 되는 명령이 순서 대로 처리 합니다.  
@@ -394,14 +395,14 @@ ms.lasthandoff: 12/21/2017
   
 관련성에 대 한 그 안에 표시 매개 변수 변경 후 템플릿 (파일)를 실행할 수 있습니다.  
   
-스크립트 명령의 전체 목록은에 있습니다 [SSMA 콘솔 &#40; 실행 AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+스크립트 명령의 전체 목록은에 있습니다 [SSMA 콘솔 실행 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="script-file-validation"></a>스크립트 파일 유효성 검사  
 사용자는 스키마 정의 파일에 대해 스크립트 파일의 유효성을 검사할 쉽게 수 **'A2SSConsoleScriptSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계
-운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
-[변수 값 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+## <a name="see-also"></a>참고 항목  
+[변수 값 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

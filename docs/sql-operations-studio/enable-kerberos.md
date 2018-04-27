@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) 로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs
-description: SQL Operations Studio (preview) 에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다
+title: SQL 작업 Studio (미리 보기)로 연결 시 Active Directory 인증 (Kerberos)을 사용 하 여 | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)에 대 한 Active Directory 인증을 사용 하는 Kerberos를 설정 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: c100ce441ae9bb2285df967c35f4083ca4802ad2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 을 Windows 인증-Kerberos를 사용 하 여 SQL Server 
 

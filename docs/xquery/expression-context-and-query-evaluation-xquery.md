@@ -1,16 +1,16 @@
 ---
-title: "식 컨텍스트 및 쿼리 평가 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 식 컨텍스트 및 쿼리 평가 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-context"></a>정적 컨텍스트  
  정적 컨텍스트 초기화는 식에 대한 정적 분석을 위해 모든 정보를 함께 입력하는 프로세스를 의미합니다. 정적 컨텍스트 초기화의 일부로 다음과 같은 작업이 완료됩니다.  
   
--   **경계 공백** 정책이 스트립으로 설정 됩니다. 따라서 경계 공백이 유지 되지 않습니다는 **요소** 및 **특성** 쿼리에 대 한 생성자입니다. 예를 들어  
+-   **경계 공백** 정책이 스트립으로 설정 됩니다. 따라서 경계 공백이 유지 되지 않습니다는 **요소** 및 **특성** 쿼리에 대 한 생성자입니다. 예를 들어:  
   
     ```  
     declare @x xml  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  식에 지정된 함수 및 유형 이름 확인  
   
-3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 때문에 다음 쿼리는 정적 오류를 반환 하는 예를 들어는  **+**  연산자는 숫자 primitive 유형 인수가 필요 합니다.  
+3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 때문에 다음 쿼리는 정적 오류를 반환 하는 예를 들어는 **+** 연산자는 숫자 primitive 유형 인수가 필요 합니다.  
   
     ```  
     declare @x xml  

@@ -1,16 +1,16 @@
 ---
-title: "string-length 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: string-length 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 
+caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a01221907acd777eaaf41ca77d73bf561724c96c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63031831d6bcb040f9b19f9d291c81b9486832f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---string-length"></a>문자열 값-문자열 길이 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ fn:string-length($arg as xs:string?) as xs:integer
 ## <a name="remarks"></a>주의  
  하는 경우의 값 *$arg* 이 빈 시퀀스인 경우는 **xs: integer** 0 값이 반환 됩니다.  
   
- XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준에 따라 달라집니다. 호환성 수준이 110 이상인 경우 각 서로게이트 쌍은 단일 문자로 계산됩니다. 호환성 수준이 110보다 낮으면 각 서로게이트 쌍을 두 문자로 간주합니다. 자세한 내용은 참조 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준에 따라 달라집니다. 호환성 수준이 110 이상인 경우 각 서로게이트 쌍은 단일 문자로 계산됩니다. 호환성 수준이 110보다 낮으면 각 서로게이트 쌍을 두 문자로 간주합니다. 자세한 내용은 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
   
  값에 두 개의 서로게이트 문자로 표현된 4바이트 유니코드 문자가 포함된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 서로게이트 문자 개수를 별개로 셉니다.  
   
@@ -64,7 +64,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
- XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40; Transact SQL &#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
+ XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준과 일부 경우 함수의 기본 네임스페이스 URI에 따라 달라집니다. 자세한 내용은 항목의 "XQuery 함수는 서로게이트 인식" 섹션을 참조 하십시오. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다. 또한 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 및 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)합니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  

@@ -1,6 +1,6 @@
 ---
 title: 액세스 데이터를 Azure SQL DB (AccessToSQL)-SQL Server로 마이그레이션 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 937d75eb150a65bf65d1f55c01c5de760f0d36d4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 872471f89489c4b1f38681fdfd15a84cdb6fe280
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>액세스 데이터를 Azure SQL DB (AccessToSQL)-SQL Server로 마이그레이션
 가 데이터베이스 개체를 성공적으로 만든 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 대 한 액세스에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  

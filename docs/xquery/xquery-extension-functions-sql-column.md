@@ -2,8 +2,8 @@
 title: ': column () 함수 (XQuery) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -25,13 +25,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4d68443b225f0b24a69ac4bd310a58a2d6a2991c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - sql:column()
+# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수-: column)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   항목에 설명 된 대로 [XML 관계형 데이터 바인딩 내](../t-sql/xml/binding-relational-data-inside-xml-data.md)를 사용할 수 있습니다는 **sql:column(()** 사용 하는 경우 작동 [XML 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md) 관계형 값을 제공할 XQuery 내 합니다.  

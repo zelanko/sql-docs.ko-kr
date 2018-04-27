@@ -1,6 +1,6 @@
 ---
 title: DB2 스키마를 SQL Server 스키마 (DB2ToSQL)로 매핑 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b6270bf3fda2f19b6559ceca4c3385369213de3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f0c8ef0b8c22fd3bf57e54c23f9fc21c43405028
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>DB2 스키마를 SQL Server 스키마 (DB2ToSQL)로 매핑
 D b 2에서는 각 데이터베이스에는 하나 이상의 스키마에 있습니다. 기본적으로 SSMA를 DB2 스키마의 모든 개체를 마이그레이션합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스키마에 대 한 명명 된 데이터베이스입니다. 그러나 DB2 스키마 간의 매핑을 사용자 지정할 수는 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스.  

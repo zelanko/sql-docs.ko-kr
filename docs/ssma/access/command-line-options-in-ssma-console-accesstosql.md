@@ -1,30 +1,31 @@
 ---
-title: "SSMA 콘솔 (AccessToSQL)의 명령줄 옵션 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SSMA 콘솔 (AccessToSQL)의 명령줄 옵션 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f1e71cefafab7e905b83b66c87eebbc88dc852c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)의 명령줄 옵션
 Microsoft는 강력한 집합 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서는 추가 세부 정보를 제공 합니다.  
@@ -166,21 +167,21 @@ SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; AccessToSQL &#41; ](../../ssma/access/appendix-1-accesstosql.md).  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)합니다.  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword 도움말 옵션:-securepassword-? / h  
 SSMA 콘솔 옵션의 구문 요약 정보를 표시합니다.  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40; AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+SSMA 콘솔 명령줄 옵션의 테이블 형식으로 출력, 참조 [부록-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>다음 단계  
 다음 단계에서는 프로젝트 요구 사항에 따라 달라 집니다.  
   
-1.  암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40; AccessToSQL &#41; ](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  암호 또는 내보내기 지정 하기 위한 암호 가져오기 /를 참조 하십시오 [암호 관리 &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)합니다.  
   
-2.  보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40; AccessToSQL &#41; ](../../ssma/access/generating-reports-accesstosql.md).  
+2.  보고서를 생성 하는 것에 대 한 참조 [보고서 생성 &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)합니다.  
   
-3.  콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  콘솔에서 문제를 해결 하는 것에 대 한 참조 [문제 해결 &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)합니다.  
   

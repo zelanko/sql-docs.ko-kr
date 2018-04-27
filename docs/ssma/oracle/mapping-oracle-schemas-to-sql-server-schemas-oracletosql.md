@@ -1,27 +1,28 @@
 ---
-title: "Oracle 스키마를 SQL Server 스키마 (OracleToSQL)로 매핑 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Oracle 스키마를 SQL Server 스키마 (OracleToSQL)로 매핑 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e51a3b70f585bebd353a84b9c0274180a0daf870
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle 스키마를 SQL Server 스키마 (OracleToSQL)로 매핑
 Oracle의 경우 각 데이터베이스에는 하나 이상의 스키마에 있습니다. 기본적으로 SSMA를 Oracle 스키마의 모든 개체를 마이그레이션합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스키마에 대 한 명명 된 데이터베이스입니다. 그러나 Oracle 스키마 간의 매핑을 사용자 지정할 수는 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스.  
@@ -65,10 +66,10 @@ Oracle 스키마 간의 매핑을 사용자 지정 하는 경우와 [!INCLUDE[ss
   
 1.  스키마 매핑 탭에서 모든 행을 선택 하 고 클릭 **기본값으로 재설정** 기본 데이터베이스 및 스키마에 되돌릴 수 있습니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 Oracle 개체를 변환 하는 과정을 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체를 할 수 있습니다 [변환 보고서를 만들](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)합니다. 수 그렇지 않으면 [Oracle 데이터베이스 개체 정의 변환](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41;에 연결](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

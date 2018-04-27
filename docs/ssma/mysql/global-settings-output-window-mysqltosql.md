@@ -1,6 +1,6 @@
 ---
 title: 전역 설정 (출력 창) (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff68f09276c7fa3bbb7911da164616f230bc694b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3a9cddfd94e6bcd17688639a05ddd85b55738e37
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>전역 설정 (출력 창) (MySQLToSQL)
 사용 하 여 **전역 설정** SSMA에 대 한 설정을 지정 하려면 대화 상자.  

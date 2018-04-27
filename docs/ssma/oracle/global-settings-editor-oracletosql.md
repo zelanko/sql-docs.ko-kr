@@ -1,34 +1,35 @@
 ---
-title: "전역 설정 (편집기) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 전역 설정 (편집기) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 3fad4c5437b998b6a8d13957fad529fb82c7a91c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 34d160cf3e2e6ff66dd9df0bfa3bd9f5fe76e553
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-editor-oracletosql"></a>전역 설정 (편집기) (OracleToSQL)
 편집기 페이지를 사용 하 여 **전역 설정** 코드 편집기 창에 대 한 설정을 지정 하려면 대화 상자.  
   
 편집기 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 **GUI** 선택 고 왼쪽된 창 맨 아래에 **편집기**합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **줄 번호 표시**  
 코드 편집기 창에서 줄 번호를 표시 하려면 선택한 **True**합니다.  
   

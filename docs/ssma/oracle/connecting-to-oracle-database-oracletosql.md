@@ -1,6 +1,6 @@
 ---
 title: Oracle 데이터베이스 (OracleToSQL)에 연결 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Oracle 데이터베이스 (OracleToSQL)에 연결
 Oracle 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 마이그레이션할 수 있는 Oracle 데이터베이스에 연결 해야 합니다. 에 연결할 때 SSMA는 모든 Oracle 스키마에 대 한 메타 데이터를 가져오고 Oracle 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -98,7 +98,7 @@ Oracle 데이터베이스에 연결 하는 데 사용 되는 계정에 적어도
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    자세한 내용은 참조 [Oracle에 연결 &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)합니다.  
+    자세한 내용은 참조 [Oracle 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)합니다.  
   
 ## <a name="reconnecting-to-oracle"></a>Oracle에 다시 연결  
 데이터베이스 서버에 연결 된 프로젝트를 닫을 때까지 활성 상태를 유지 합니다. 프로젝트를 다시 열 때 데이터베이스에 활성 연결 하려는 경우 다시 연결 해야 합니다. 메타 데이터를 업데이트, 데이터베이스 개체를 로드 하려면 될 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 데이터를 마이그레이션합니다.  
@@ -133,5 +133,5 @@ Oracle 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고
 -   마이그레이션 프로세스의 다음 단계에서는 [SQL Server의 인스턴스에 연결](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL Server &#40; OracleToSQL &#41; Oracle 데이터베이스 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 설정 (형식 매핑) (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f184eda88079ddcee91f93f0c34f43c4c2062ec
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b7db7307f7266bb49483d00a370c712c138b5c6f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정 (형식 매핑) (MySQLToSQL)
 프로젝트 유형 매핑 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  
@@ -68,14 +68,14 @@ ms.lasthandoff: 04/06/2018
 |이진 [0..1]|binary[1]|  
 |이진 [2..255]|binary[*]|  
 |bit|binary[1]|  
-|bit[0..8]|binary[1]|  
-|bit[17..24]|binary[3]|  
-|bit[25..32]|binary[4]|  
+|비트 [0..8]|binary[1]|  
+|bit[17..24]|이진 [3]|  
+|비트 [25..32]|binary[4]|  
 |bit[33..40]|binary[5]|  
 |bit[41..48]|binary[6]|  
 |bit[49..56]|binary[7]|  
 |bit[57..64]|binary[8]|  
-|bit[9..16]|binary[2]|  
+|비트 [9..16]|binary[2]|  
 |blob|varbinary(max)|  
 |blob [0..1]|varbinary[1]|  
 |blob [2..8000]|varbinary[*]|  
@@ -92,24 +92,24 @@ ms.lasthandoff: 04/06/2018
 |[0..1] 다양 한 문자|nvarchar[1]|  
 |다양 한 2..255 문자|nvarchar|  
 |문자 [0..1]|nchar[1]|  
-|character[2..255]|nchar[*]|  
+|문자 [2..255]|nchar[*]|  
 |date|date|  
 |datetime|datetime2[0]|  
 |dec|decimal|  
-|dec[*..65]|decimal[*][0]|  
+|dec [*... 65]|decimal[*][0]|  
 |dec[*..65][\*..30]|decimal[*][\*]|  
 |decimal|decimal|  
-|decimal[*..65]|decimal[*][0]|  
+|10 진수 [*... 65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
 |double|float[53]|  
 |배정밀도|float[53]|  
 |배정밀도 [*... 255][\*.. 30]|numeric[*][\*]|  
-|double[*..255][\*..30]|numeric[*][\*]|  
+|double [*... 255][\*.. 30]|numeric[*][\*]|  
 |고정|numeric|  
-|fixed[*..65][\*..30]|numeric[*][\*]|  
+|고정 [*... 65][\*.. 30]|numeric[*][\*]|  
 |float|float[24]|  
-|float[*..255][\*..30]|numeric[*][\*]|  
-|float[*..53]|float[53]|  
+|float [*... 255][\*.. 30]|numeric[*][\*]|  
+|float [*... 53]|float[53]|  
 |int|int|  
 |int[*..255]|int|  
 |integer|int|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 04/06/2018
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|int|  
-|mediumint[*..255]|int|  
+|mediumint [*... 255]|int|  
 |mediumtext|nvarchar(max)|  
 |국가별 문자|nchar[1]|  
 |national char [0..1]|nchar[1]|  
@@ -138,18 +138,18 @@ ms.lasthandoff: 04/06/2018
 |nchar varchar|nvarchar[1]|  
 |nchar varchar [0..1]|nvarchar[1]|  
 |nchar varchar [2..4000]|nvarchar[*]|  
-|nchar varchar[4001..*]|nvarchar(max)|  
+|nchar varchar [4001.. *]|nvarchar(max)|  
 |nchar [0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |numeric|numeric|  
 |숫자 [*... 65]|numeric[*][0]|  
-|numeric[*..65][\*..30]|numeric[*][\*]|  
+|숫자 [*... 65][\*.. 30]|numeric[*][\*]|  
 |nvarchar|nvarchar[1]|  
-|nvarchar[0..1]|nvarchar[1]|  
+|nvarchar [0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
 |real|float[53]|  
-|real[*..255][\*..30]|numeric[*][\*]|  
+|실제 [*... 255][\*.. 30]|numeric[*][\*]|  
 |직렬|bigint|  
 |smallint|smallint|  
 |smallint[*..255]|smallint|  
@@ -198,12 +198,12 @@ ms.lasthandoff: 04/06/2018
 |varbinary [0..1]|varbinary[1]|  
 |varbinary [2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar[1]|  
+|varchar [0..1]|nvarchar[1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|smallint|  
 |연도 [2..2]|smallint|  
-|year[4..4]|smallint|  
+|연도 [4..4]|smallint|  
   
 ##### <a name="add"></a>추가  
 데이터 형식 매핑 목록에 추가 하려면 클릭 합니다.  

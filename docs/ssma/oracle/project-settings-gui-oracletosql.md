@@ -1,27 +1,28 @@
 ---
-title: "프로젝트 설정 (GUI) (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 프로젝트 설정 (GUI) (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 153de9ef870a78e15c085e18f37c9c94103277d0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-gui-oracletosql"></a>프로젝트 설정 (GUI) (OracleToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수 있습니다는 **데이터** 탭과 여부 변환 된 후 평가 보고서를 표시할지 여부입니다.  
@@ -32,7 +33,7 @@ GUI 창도에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝
   
 -   사용 하 여는 **기본 프로젝트 설정** 대화 상자는 모든 프로젝트에 대 한 사용자 인터페이스 옵션을 설정 합니다. GUI 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정을 보거나에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운을 클릭 한 **GUI** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **원본에 대 한 최대 행 수**  
 에 표시 되는 데이터의 행 수를 구성 하며는 **데이터** 선택된 된 원본 테이블에 대 한 탭 합니다.  
   

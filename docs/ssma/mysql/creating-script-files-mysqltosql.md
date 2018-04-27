@@ -1,6 +1,6 @@
 ---
 title: 스크립트 파일 (MySQLToSQL) 만들기 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: e8ae3b53b946373ba6f3b6bed8f6d5f139afaadb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-mysqltosql"></a>스크립트 파일 (MySQLToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  
@@ -258,9 +258,9 @@ ms.lasthandoff: 04/06/2018
   
     -   모든 1%  
   
-    -   every-2%  
+    -   모든 2%  
   
-    -   every-5%  
+    -   매 5%  
   
     -   매 10%  
   

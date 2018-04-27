@@ -1,6 +1,6 @@
 ---
 title: 프로젝트 옵션 (MySQLToSQL) 설정 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9de9ab5f01b0d6b5bf46c45d091e93430cfb8067
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 0a39cb38cc8439ccb5eac559445b7836982b41ff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정 (MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준의 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식이 대상 데이터 형식으로 매핑되는 방법을 지정 합니다.  SQL Server 또는 SQL Azure에 개체를 변환 하거나 SQL Server 또는 SQL Azure로 데이터를 마이그레이션하려면 하기 전에 구성 옵션은 프로젝트에 적절 한지 확인 합니다.  

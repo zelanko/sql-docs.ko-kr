@@ -1,9 +1,9 @@
 ---
-title: '자습서: 가장 느린 쿼리 5 개의 사용 샘플 위젯-SQL Operations Studio (preview) | Microsoft Docs'
+title: '자습서: 가장 느린 쿼리 5 개의 사용 샘플 위젯-SQL 작업 Studio (미리 보기) | Microsoft Docs'
 description: 이 자습서에서는 5 개의 가장 느린 쿼리 샘플 위젯 데이터베이스 대시보드를 사용 하도록 설정 하는 방법을 설명 합니다.
 ms.custom: tools|sos
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *가장 느린 쿼리 5* 데이터베이스 대시보드에 위젯을 샘플
 

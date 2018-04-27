@@ -1,6 +1,6 @@
 ---
 title: DB2 스키마 (DB2ToSQL) 변환 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ef7efc485836b6b65b6f2236bd2a7682422b78e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 (DB2ToSQL) 변환
 에 연결 하는 d b 2에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트 설정 및 데이터 매핑 옵션을 DB2 데이터베이스 개체를 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  

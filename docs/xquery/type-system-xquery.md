@@ -1,16 +1,16 @@
 ---
-title: "형식 시스템 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: 형식 시스템 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   형식화된 값과 노드의 문자열 값  
   
--   [데이터 함수 &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) 및 [함수 &#40; 문자열 XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   [함수 데이터 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 및 [string 함수 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)합니다.  
   
 -   식에 의해 반환된 시퀀스 유형 일치  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML 스키마의 기본 제공 유형  
  XML 스키마의 기본 제공 유형에는 xs의 미리 정의된 네임스페이스 접두사가 있습니다. 이러한 형식 중 일부는 같습니다. **xs: integer** 및 **xs: string**합니다. 이러한 모든 기본 제공 유형이 지원됩니다. 이러한 유형은 XML 스키마 컬렉션을 만들 때 사용할 수 있습니다.  
   
- 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 유형에 대 한 자세한 내용은 참조 하십시오. [식 컨텍스트 및 쿼리 평가 &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). 다음 쿼리를 지정 하는 예를 들어 형식화 된에 대해 **xml** 열 (`Instructions`). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
+ 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 유형에 대 한 자세한 내용은 참조 하십시오. [식 컨텍스트 및 쿼리 평가 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)합니다. 다음 쿼리를 지정 하는 예를 들어 형식화 된에 대해 **xml** 열 (`Instructions`). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  사용할 수는 **data ()** 또는 **string ()** 노드의 값을 검색 하는 함수:  
   
--   [데이터 함수 &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) 노드의 형식화 된 값을 반환 합니다.  
+-   [함수 데이터 &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) 노드의 형식화 된 값을 반환 합니다.  
   
--   [함수 &#40; 문자열 XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) 노드의 문자열 값을 반환 합니다.  
+-   [string 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) 노드의 문자열 값을 반환 합니다.  
   
  다음 XML 스키마 컬렉션에서는 정수 유형의 <`root`> 요소가 정의됩니다.  
   

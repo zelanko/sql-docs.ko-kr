@@ -1,16 +1,16 @@
 ---
-title: "round 함수 (XQuery) | Microsoft Docs"
-ms.custom: 
+title: round 함수 (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85be02ca3d43acee4972eab8efc4b9ec88fd3b49
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd4fa2060667fc914e8ef52f998f162bb8b27976
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---round"></a>반올림할 숫자 값 함수-
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  소수 부분이 없고 인수에 가장 근접한 숫자를 반환합니다. 이와 같은 숫자가 하나 이상 있는 경우 양의 무한수에 가장 근접한 숫자가 반환됩니다. 예를 들어  
+  소수 부분이 없고 인수에 가장 근접한 숫자를 반환합니다. 이와 같은 숫자가 하나 이상 있는 경우 양의 무한수에 가장 근접한 숫자가 반환됩니다. 예를 들어:  
   
  2.5에서는 인수가 **round ()** 3을 반환 합니다.  
   
@@ -75,7 +75,7 @@ fn:round ( $arg as numeric?) as numeric?
 -   **round ()** -0.5e0와-0e0 사이의 xs: double 및 xs: float 값의 함수-0e0 대신 0 e 0으로 매핑됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [floor 함수 &#40; XQuery &#41;](../xquery/numeric-values-functions-floor.md)   
- [ceiling 함수 &#40; XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)  
+ [floor 함수 &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [ceiling 함수 &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

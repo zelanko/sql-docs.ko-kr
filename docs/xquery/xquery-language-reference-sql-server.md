@@ -2,8 +2,8 @@
 title: XQuery 언어 참조 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e9ac63fb610743e540979271dd9ebac32fd6c873
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 언어 참조(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  이 섹션의 구성은 W3C(World Wide Web Consortium) XQuery 초안 사양을 기반으로 합니다. 이 섹션에서 제공되는 일부 다이어그램은 이 사양에서 가져온 것입니다. 이 섹션에서는 Microsoft XQuery 구현과 W3C 사양을 비교하고 Microsoft XQuery와 W3C의 다른 점을 설명하고 지원되지 않는 W3C 기능에 대해 설명합니다. W3C 사양에서 제공 됩니다. [http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)합니다.  
+>  이 섹션의 구성은 W3C(World Wide Web Consortium) XQuery 초안 사양을 기반으로 합니다. 이 섹션에서 제공되는 일부 다이어그램은 이 사양에서 가져온 것입니다. 이 섹션에서는 Microsoft XQuery 구현과 W3C 사양을 비교하고 Microsoft XQuery와 W3C의 다른 점을 설명하고 지원되지 않는 W3C 기능에 대해 설명합니다. W3C 사양에서 제공 됩니다. [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

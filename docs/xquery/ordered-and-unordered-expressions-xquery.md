@@ -1,16 +1,16 @@
 ---
-title: "정렬 및 식 (XQuery) 순서 없이 | Microsoft Docs"
-ms.custom: 
+title: 정렬 및 식 (XQuery) 순서 없이 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], ordered
 - expressions [XQuery], unordered
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 817177c377690395082429c04ca6148863f5cddb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 310f6f4d64a03ba67c21791008babbc3dc0d59ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>순차 식 및 비순차 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [XQuery 식](../xquery/xquery-expressions.md)   
- [FLWOR 문 및 반복 &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
- [경로 식 &#40; XQuery &#41;](../xquery/path-expressions-xquery.md)  
+ [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
+ [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

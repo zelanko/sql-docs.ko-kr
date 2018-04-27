@@ -1,27 +1,28 @@
 ---
-title: "초기화 테스트 사례 (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 초기화 테스트 사례 (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9906475f74b1606ff581282544b13b2550da9e42
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5570cc8d7bdba118a6682dd22938e6d8c2fb6b84
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="initializing-test-cases-oracletosql"></a>테스트 사례 (OracleToSQL)를 초기화합니다.
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정합니다.  
@@ -40,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 테스트 사례의 용도 식별 하는 추가 정보를 입력 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[선택 하 고 구성 개체를 테스트 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[선택 하 고 테스트 하는 개체 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 개체 &#40; OracleToSQL &#41; 마이그레이션 테스트](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
