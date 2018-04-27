@@ -1,24 +1,24 @@
 ---
-title: "Linux에서 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs"
-description: "이 문서 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침을 제공 합니다."
+title: Linux에서 SQL Server에 대 한 성능 모범 사례 | Microsoft Docs
+description: 이 문서 SQL Server 2017 Linux에서 실행 하기 위한 성능 모범 사례 및 지침을 제공 합니다.
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>성능에 대 한 유용한 정보 및 SQL Server 2017 linux에 대 한 구성 지침
 
@@ -104,7 +104,7 @@ sysctl -w vm.max_map_count=262144
 
 대부분의 Linux 설치 기본적으로의이 옵션을 해야 합니다. 이 구성 옵션을 사용 하도록 설정 하려면 가장 일관 된 성능 경험에 대 한 것이 좋습니다.
 
-### <a name="swapfile"></a>swapfile
+### <a name="swapfile"></a>스왑 파일
 
 모든 메모리가 부족 한 문제를 방지 하기 위해는 올바르게 구성 된 스왑 파일 확인 합니다. 만들고 제대로 스왑 파일 크기를 하는 방법에 대 한 Linux 설명서를 참조 하십시오.
 

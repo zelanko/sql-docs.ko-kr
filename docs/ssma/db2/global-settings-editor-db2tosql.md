@@ -1,6 +1,6 @@
 ---
 title: 전역 설정 (편집기) (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 424206b5895ed7b575e21c476f091ee867642170
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7a2b6f9780dc05c65abe1b966144b3dc83bd8706
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-editor-db2tosql"></a>전역 설정 (편집기) (DB2ToSQL)
 편집기 페이지를 사용 하 여 **전역 설정** 코드 편집기 창에 대 한 설정을 지정 하려면 대화 상자.  

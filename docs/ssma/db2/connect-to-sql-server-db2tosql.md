@@ -1,6 +1,6 @@
 ---
 title: SQL Server (DB2ToSQL)에 연결 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 530aa83faf83c0e5c1fabb4251b37a9e89821686
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eb8354d012fc2c4de6568466f34c8d8ad1295be6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 연결
 사용 하 여 **SQL Server에 연결** 의 인스턴스에 연결 하는 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 마이그레이션하려는 합니다. 에 액세스 하려면는 **SQL Server에 연결** 대화 상자의 **파일** 메뉴를 클릭 하 여 **SQL Server에 연결**합니다.  

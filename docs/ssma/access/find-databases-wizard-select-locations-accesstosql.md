@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2612b2658ae1d89891e410768dc0e31d78eb299c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: dad3dca8a5a8f2153338f4f7d381553dff755e56
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  

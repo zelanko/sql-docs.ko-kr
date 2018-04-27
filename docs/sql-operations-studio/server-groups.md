@@ -1,9 +1,9 @@
 ---
-title: 서버 그룹에서 SQL Operations Studio (preview) | Microsoft Docs
-description: SQL Operations Studio (preview) 에서 서버 그룹에 알아봅니다.
+title: 서버 그룹에서 SQL 작업 Studio (미리 보기) | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)에서 서버 그룹에 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eec4684b1a06e5226029a3a2409f831bffff04f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 07db639c5cd4f4b90ffa78a3d4677d9f5f17ade2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>서버 그룹[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>서버 그룹 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 서버 그룹에는 서버 및 사용 하는 데이터베이스에 대 한 연결이 구성 하는 방법을 제공 합니다. 서버 그룹을 만들 때는 구성 세부 정보에 저장 되 고 *사용자 설정*합니다.
 

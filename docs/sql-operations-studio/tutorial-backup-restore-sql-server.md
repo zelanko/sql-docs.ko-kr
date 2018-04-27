@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) 를 사용 하 여 데이터베이스 백업 및 복원 | Microsoft Docs
-description: SQL Operations Studio (preview) 를 사용 하 여 데이터베이스 백업 및 복원 하는 방법을 알아봅니다
+title: SQL 작업 Studio (미리 보기)를 사용 하 여 데이터베이스 백업 및 복원 | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)를 사용 하 여 데이터베이스 백업 및 복원 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>백업 및 복원을 사용 하 여[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>백업 및 복원을 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 이 자습서에서 사용 하는 방법을 배웁니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에:
 > [!div class="checklist"]
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 
 이 자습서에서는 SQL Server *TutorialDB*합니다. 만들려는 *TutorialDB* 데이터베이스에서 다음 퀵 스타트 중 하나를 완료 합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>데이터베이스 백업

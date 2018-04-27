@@ -1,24 +1,24 @@
 ---
-title: "Linux에서 SQL Server에 대 한 고객 의견 | Microsoft Docs"
-description: "SQL Server 사용자 의견 수집 되 고 Linux에 구성 되는 방법을 설명 합니다."
+title: Linux에서 SQL Server에 대 한 고객 의견 | Microsoft Docs
+description: SQL Server 사용자 의견 수집 되 고 Linux에 구성 되는 방법을 설명 합니다.
 author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0cc16f093a04876a07cbc4566138861f268453ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 고객 의견
 

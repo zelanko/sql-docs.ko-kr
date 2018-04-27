@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa92fecfa13610fb5e8720238629321bfb6c62c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 727a7752eea98f778780056c0940873580e6682c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>인수  
 *sql_handle*  
-조회할 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)**합니다. *sql_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+조회할 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)** 합니다. *sql_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-캐시되거나 현재 실행 중인 일괄 처리에 대한 쿼리 계획을 고유하게 식별합니다. *plan_handle* 은 **varbinary(64)**합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+캐시되거나 현재 실행 중인 일괄 처리에 대한 쿼리 계획을 고유하게 식별합니다. *plan_handle* 은 **varbinary(64)** 합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -82,7 +82,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**text**|**nvarchar(max** **)**|SQL 쿼리의 텍스트입니다.<br /><br /> 암호화된 개체의 경우 NULL입니다.|  
   
 ## <a name="permissions"></a>Permissions  
- 을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
+ 서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="remarks"></a>주의  
 임시 쿼리를 SQL 핸들 server에 전송 되는 SQL 텍스트 기반의 해시 값 이며 모든 데이터베이스에서 가져온 것일 수 있습니다. 

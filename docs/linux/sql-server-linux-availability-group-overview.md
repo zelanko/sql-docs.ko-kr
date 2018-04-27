@@ -1,25 +1,25 @@
 ---
-title: "Linux에서 SQL Server에 대 한 가용성 그룹에 항상 | Microsoft Docs"
-description: 
+title: Linux에서 SQL Server에 대 한 가용성 그룹에 항상 | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 54fec5a177d5edf463853d230a56c28eeb1b0f7c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 9d442c41adaec7148b3eb0259f851fee3fd2b683
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux에서 가용성 그룹
 
@@ -53,7 +53,7 @@ None 클러스터 유형에 대 한 요구 사항은 없습니다 또는 AG ´ �
 
 클러스터 유형에 저장 됩니다는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 동적 관리 뷰 (DMV) `sys.availability_groups`, 열에 `cluster_type` 및 `cluster_type_desc`합니다.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>필수\_동기화\_보조\_를\_커밋
 
 처음 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Ag 호출에서 사용 되는 설정은 `required_synchronized_secondaries_to_commit`합니다. 이렇게 하면 AG 주와 록스텝에 있어야 하는 보조 복제본의 수입니다. 자동 장애 조치 (경우에 외부 클러스터 유형 Pacemaker와 통합 됨), 같은 있으며 온라인 또는 오프 라인 보조 복제본의 수는 경우 주 가용성 등의 동작을 제어 합니다. 이 과정에 대 한 자세한을 이해 하려면 참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. `required_synchronized_secondaries_to_commit` 값은 기본적으로 설정 되 고 Pacemaker에서 유지 관리 /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 이 값을 직접 재정의할 수 있습니다.
 

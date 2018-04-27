@@ -1,25 +1,25 @@
 ---
-title: "Red Hat Enterprise Linux 공유 클러스터 SQL Server에 대 한 구성 | Microsoft Docs"
-description: "SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다."
+title: Red Hat Enterprise Linux 공유 클러스터 SQL Server에 대 한 구성 | Microsoft Docs
+description: SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 높은 가용성을 구현 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 69f0953d6a03231b86ba9fb7a13bbddea2a48a22
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>공유 저장소를 구성 하 고 데이터베이스 파일 이동 
 
-공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+공유 저장소를 제공 하는 솔루션의 여러 가지가 있습니다. 이 연습이 NFS를 사용 하 여 공유 저장소를 구성 하는 방법을 보여 줍니다. 모범 사례를 따르고 NFS를 보호 하기 위해 Kerberos를 사용 하는 것이 좋습니다 (여기에 예제를 찾을 수 있습니다: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)합니다. 
 
 >[!Warning]
 >NFS를 보호 하지 않으면 모든 사용자가 네트워크에 액세스 하 고 SQL 노드의 IP 주소를 스푸핑할 수 됩니다 데이터 파일에 액세스할 수 있습니다. 늘 그렇듯이 위협을 하면 프로덕션 환경에서 사용 하기 전에 시스템을 모델링 해야 합니다. 또 다른 저장소 옵션 SMB 파일 공유를 사용 하는 것입니다.
@@ -143,7 +143,7 @@ NFS 서버에서 다음을 수행 합니다.
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 각 공유를 1 줄이 필요 합니다. 예를 들어 
+1.  편집 `/etc/exports` 내보내려면 공유 하려는 디렉터리입니다. 각 공유를 1 줄이 필요 합니다. 예를 들어: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

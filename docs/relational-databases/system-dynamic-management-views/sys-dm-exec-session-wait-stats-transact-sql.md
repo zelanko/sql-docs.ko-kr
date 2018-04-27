@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_session_wait_stats (Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -25,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ddca79ef78b42c06488f8c103b655d280418f7a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd87b3a99f965d60c4d02f2149a1fe33cbf9e5b9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   각 세션에 대해 실행 중인 스레드로 인해 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 보기를 사용 하 여 성능 문제를 진단 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 및 특정 쿼리 및 일괄 처리와도 합니다.  이 보기는 세션에 대 한 집계 된 동일한 정보를 반환 [sys.dm_os_wait_stats &#40;Transact SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 하지만 제공 된 **session_id** 번호도 합니다.  
   

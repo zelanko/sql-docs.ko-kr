@@ -1,25 +1,25 @@
 ---
-title: "Linux에서 SQL Server 보안 시작 | Microsoft Docs"
-description: "이 문서에서는 일반적인 보안 동작을 설명 합니다."
+title: Linux에서 SQL Server 보안 시작 | Microsoft Docs
+description: 이 문서에서는 일반적인 보안 동작을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: 0868aeaec180999590a06f8012a89addb64d1ce1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 보안 기능에 대 한 연습
 
@@ -33,7 +33,7 @@ SQL Server에 새로운 Linux 사용자 인 경우 다음 작업에 관한 일�
 
 ## <a name="create-a-login-and-a-database-user"></a>로그인 및 데이터베이스 사용자 만들기 
 
-다른 로그인을 사용 하 여 master 데이터베이스에서 생성 하 여 SQL Server에 대 한 액세스 부여는 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문. 예를 들어
+다른 로그인을 사용 하 여 master 데이터베이스에서 생성 하 여 SQL Server에 대 한 액세스 부여는 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문. 예를 들어:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -54,7 +54,7 @@ GO
 - SQL Server 관리자 계정 모든 데이터베이스에 연결할 수 있으며 모든 데이터베이스에 더 많은 로그인 및 사용자가 만들 수 있습니다.  
 - 다른 사용자가 데이터베이스를 만들 때 해지기 데이터베이스 소유자에 해당 데이터베이스에 연결할 수 있습니다. 데이터베이스 소유자는 더 많은 사용자가 만들 수 있습니다.
 
-나중에 권한을 부여할 수 있습니다 다른 로그인에 부여 하 여 더 많은 로그인을 만들고 사용자는 `ALTER ANY LOGIN` 권한. 데이터베이스 내의 다른 사용자가 부여 하 여 더 많은 사용자가 만들 수를 권한을 부여할 수는 `ALTER ANY USER` 권한. 예를 들어   
+나중에 권한을 부여할 수 있습니다 다른 로그인에 부여 하 여 더 많은 로그인을 만들고 사용자는 `ALTER ANY LOGIN` 권한. 데이터베이스 내의 다른 사용자가 부여 하 여 더 많은 사용자가 만들 수를 권한을 부여할 수는 `ALTER ANY USER` 권한. 예를 들어:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

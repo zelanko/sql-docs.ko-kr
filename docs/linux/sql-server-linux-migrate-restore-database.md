@@ -1,25 +1,25 @@
 ---
-title: "Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션 | Microsoft Docs"
-description: "이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 고 SQL Server 2017을 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다."
+title: Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션 | Microsoft Docs
+description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 고 SQL Server 2017을 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 85feed30c5167112fb61ee3ae4338a2b58a702e1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Linux 백업 및 복원을 사용 하 여 Windows에서 SQL Server 데이터베이스 마이그레이션
 
@@ -90,7 +90,7 @@ SQL Server Always On 가용성 그룹 Linux로 Windows에서 SQL Server 데이�
 
 ## <a id="scp"></a> Linux 백업 파일 복사
 
-1. Bash 세션에서는 백업 파일에 포함 된 디렉터리로 이동 합니다. 예를 들어
+1. Bash 세션에서는 백업 파일에 포함 된 디렉터리로 이동 합니다. 예를 들어:
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'

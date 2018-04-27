@@ -1,25 +1,25 @@
-﻿---
-title: "Red Hat Enterprise Linux에서 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작 자습서에서는 Red Hat Enterprise Linux에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd를 사용하여 데이터베이스를 쿼리하는 방법을 보여줍니다."
+---
+title: Red Hat Enterprise Linux에서 SQL Server 2017 시작 | Microsoft Docs
+description: 이 빠른 시작 자습서에서는 Red Hat Enterprise Linux에 SQL Server 2017을 설치할 로컬 폴더를 만들고 sqlcmd를 사용하여 데이터베이스를 쿼리하는 방법을 보여줍니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 145f829b3baf5392ed3d6ed93db43b01603b9b8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>SQL Server를 설치 하는 빠른 시작: Red Hat에 SQL Server를 설치하고 데이터베이스 만들기
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 02/24/2018
 이 빠른 시작 자습서에서는 먼저 Red Hat Enterprise Linux (RHEL) 7.3 +에 SQL Server 2017를 설치합니다. 다음으로 첫 번째 데이터베이스를 만들고 쿼리를 실행하기 위해서 **sqlcmd** 를 사용해서 연결합니다.
 
 > [!TIP]
-> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md) 을 참조합니다.
+> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
 **2GB 이상** 메모리를 가진 RHEL 7.3 또는 7.4 컴퓨터가 있어야 합니다.
 
-Red Hat Enterprise Linux를 사용자의 컴퓨터에 설치하려면, [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation) 으로 이동합니다. 또한 Azure에서 RHEL 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image RHEL` 를 사용합니다.
+Red Hat Enterprise Linux을 사용자의 컴퓨터에 설치 하려면로 이동 [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image RHEL` 를 사용합니다.
 
 다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system) 을 참조하십시오.
 
@@ -120,8 +120,8 @@ RHEL에 SQL Server를 구성하려면, **mssql-server** 패키지를 설치하�
 > **Sqlcmd** 는 SQL Server에 연결해서 쿼리를 실행하고 관리 및 개발 작업을 수행하는 하나의 도구입니다. 다른 도구는 다음과 같습니다.
 >
 > * [SQL Server Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
+> * 다른 도구는 [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * 및[Visual Studio Code](sql-server-linux-develop-use-vscode.md)가 있습니다.
 > * [mssql-cli(미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

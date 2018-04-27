@@ -2,7 +2,7 @@
 title: (SQL Server 데이터 Migration Assistant) 명령줄에서 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,14 +21,14 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bf0437354f90a03f1d1cf68be074df3f4234676
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>실행 명령줄에서 데이터 마이그레이션 길잡이
-데이터 마이그레이션 도우미를 설치 버전 2.1 이상에서 때도 설치 됩니다. dmacmd.exe에 *% ProgramFiles %\\Microsoft 데이터 마이그레이션 길잡이\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 하 고 JSON 또는 CSV 파일에 결과 출력 합니다. 여러 데이터베이스 또는 대규모 데이터베이스에 액세스할 때 특히 유용 합니다. 
+데이터 마이그레이션 도우미를 설치 버전 2.1 이상에서 때도 설치 됩니다. dmacmd.exe에 *% ProgramFiles %\\Microsoft 데이터 마이그레이션 길잡이\\* 합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 하 고 JSON 또는 CSV 파일에 결과 출력 합니다. 여러 데이터베이스 또는 대규모 데이터베이스에 액세스할 때 특히 유용 합니다. 
 
 > [!NOTE]
 > 만 평가 실행 하는 Dmacmd.exe 지원 합니다. 이 이번에는 마이그레이션이 지원 되지 않습니다.
@@ -135,6 +135,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 마이그레이션 길잡이 다운로드](https://www.microsoft.com/download/details.aspx?id=53595)

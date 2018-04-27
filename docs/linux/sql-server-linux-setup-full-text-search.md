@@ -1,25 +1,25 @@
 ---
-title: "SQL Server 전체 텍스트 검색 linux 설치 | Microsoft Docs"
-description: "이 문서에서는 Linux에서 SQL Server 전체 텍스트 검색을 설치 하는 방법을 설명 합니다."
+title: SQL Server 전체 텍스트 검색 linux 설치 | Microsoft Docs
+description: 이 문서에서는 Linux에서 SQL Server 전체 텍스트 검색을 설치 하는 방법을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 13252803c749753d562214e1675b7f68c824cd7e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
@@ -53,7 +53,7 @@ sudo yum update mssql-server-fts
 
 오프 라인 설치 해야 할 경우에 전체 텍스트 검색 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 문서에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
 
-## <a name="ubuntu">Ubuntu 설치</a>
+## <a name="ubuntu">Ubuntu에 설치</a>
 
 다음 명령을 사용 하 여 설치 된 **mssql-서버-fts** ubuntu 합니다. 
 
@@ -152,7 +152,7 @@ sudo zypper update mssql-server-fts
 
 전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](../relational-databases/search/configure-and-manage-filters-for-search.md)합니다.
 
-호출 하 여 설치 된 필터의 목록을 볼 수 **sp_help_fulltext_system_components 'filter'**합니다. SQL Server 2017 년에 대 한 다음 필터 설치 됩니다.
+호출 하 여 설치 된 필터의 목록을 볼 수 **sp_help_fulltext_system_components 'filter'** 합니다. SQL Server 2017 년에 대 한 다음 필터 설치 됩니다.
 
 | 구성 요소 이름 | 클래스 ID | 버전 |
 |---|---|---|
@@ -230,7 +230,7 @@ sudo zypper update mssql-server-fts
 |.rgs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|인스턴스입니다. | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.scc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.shtml | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |

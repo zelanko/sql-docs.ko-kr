@@ -1,10 +1,10 @@
 ---
-title: SQL Operations Studio (preview) 에서 코드 조각을 만드는 | Microsoft Docs
-description: 만들기 및 SQL Operations Studio (preview) 에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다
+title: SQL 작업 Studio (미리 보기)에서 코드 조각을 만드는 | Microsoft Docs
+description: 만들기 및 SQL 작업 Studio (미리 보기)에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>만들고 신속 하 게 스크립트를 만드는 TRANSACT-SQL (T-SQL)에서 코드 조각을 사용합니다[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>만들고 신속 하 게 스크립트를 만드는 TRANSACT-SQL (T-SQL)에서 코드 조각을 사용합니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 코드 조각에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 데이터베이스와 데이터베이스 개체를 쉽게 해 주는 템플릿 만드는 됩니다. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]적합 한 구문은 신속 하 게 생성 해야 하는지 여러 개의 T-SQL 코드 조각을 제공 합니다. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 적합 한 구문은 신속 하 게 생성 해야 하는지 여러 개의 T-SQL 코드 조각을 제공 합니다. 
 
 사용자 정의 코드 조각은 만들 수도 있습니다.
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 1. 선택 **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]이 문서는 SQL 조각을 사용 하 여 구체적으로 설명 하므로 Visual Studio 코드에서 해당 코드 조각 기능을 상속 합니다. 자세한 내용은 참조 [사용자 고유의 조각을 만들어](https://code.visualstudio.com/docs/editor/userdefinedsnippets) Visual Studio Code 설명서에서. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 이 문서는 SQL 조각을 사용 하 여 구체적으로 설명 하므로 Visual Studio 코드에서 해당 코드 조각 기능을 상속 합니다. 자세한 내용은 참조 [사용자 고유의 조각을 만들어](https://code.visualstudio.com/docs/editor/userdefinedsnippets) Visual Studio Code 설명서에서. 
 
    ![서식 파일 필드를 대체 합니다.](media/code-snippets/select-sql.png)
 

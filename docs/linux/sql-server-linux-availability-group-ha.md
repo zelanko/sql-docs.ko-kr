@@ -1,27 +1,27 @@
 ---
-title: "SQL Server Always On 가용성 그룹 배포 방법 | Microsoft Docs"
+title: SQL Server Always On 가용성 그룹 배포 방법 | Microsoft Docs
 ms.custom: sql-linux
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: f94214f44e7edc95097f3d5c8774fd8e8421a935
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -65,7 +65,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 세 개의 동기 복제본이 포함 된 가용성 그룹 읽기 확장성, 고가용성 및 데이터 보호를 제공할 수 있습니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |read-scale|고가용성 & </br> 데이터 보호 | 데이터 보호
+| |읽기 비율|고가용성 & </br> 데이터 보호 | 데이터 보호
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새 주 파일 그룹은 R /w |자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우 
@@ -82,7 +82,7 @@ SQL Server 2017 소개는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 2 개의 동기 복제본이 포함 된 가용성 그룹 읽기 규모 및 데이터 보호를 제공합니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |read-scale |데이터 보호
+| |읽기 비율 |데이터 보호
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1.
 |주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 파일 그룹은 R /w| 자동 장애 조치(failover). 새로운 주 이전의 주 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 사용자 트랜잭션에 사용할 수 없는 경우

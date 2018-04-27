@@ -1,9 +1,9 @@
 ---
-title: 소스 제어에서 SQL Operations Studio (preview) | Microsoft Docs
-description: SQL Operations Studio (preview) 에서 소스 제어를 구성 하는 방법에 알아봅니다.
+title: 소스 제어에서 SQL 작업 Studio (미리 보기) | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)에서 소스 제어를 구성 하는 방법에 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f28199262b087ad5362da0ddf56827216aec748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fec13868004469b02f3117b9b8d70e1ec26ff3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>소스 제어에서 사용 하 여[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>소스 제어에서 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]버전/소스 제어에 Git를 지원합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 버전/소스 제어에 Git를 지원합니다.
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>에 Git 지원[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>에 Git 지원 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]하지만 Git 소스 제어 관리자 (SCM)과 함께 제공 되며 계속 해야 [Git 설치 (버전 2.0.0 이상)](https://git-scm.com/download) 전에 이러한 기능을 사용할 수 있습니다. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 하지만 Git 소스 제어 관리자 (SCM)과 함께 제공 되며 계속 해야 [Git 설치 (버전 2.0.0 이상)](https://git-scm.com/download) 전에 이러한 기능을 사용할 수 있습니다. 
 
 
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="working-with-git-repositories"></a>Git 리포지토리를 사용
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]VS Code에서 Git 구현을 상속 되지만 추가 SCM 공급자 현재 지원 하지 않습니다. Git를 열거나 저장소 초기화 작업에 대 한 세부 정보를 참조 하십시오. [VS Code의 Git 지원](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code에서 Git 구현을 상속 되지만 추가 SCM 공급자 현재 지원 하지 않습니다. Git를 열거나 저장소 초기화 작업에 대 한 세부 정보를 참조 하십시오. [VS Code의 Git 지원](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)합니다.
 
 
 ## <a name="additional-resources"></a>추가 리소스

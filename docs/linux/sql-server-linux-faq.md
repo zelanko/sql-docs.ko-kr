@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4d59b7f4d2c88640f3f925949f8938e689d1e029
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux에서 SQL Server가 질문과 대답 (FAQ)
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/22/2018
 
 1. **Linux에서 실행 되는 SSMS와 같은 도구를 거기?**
 
-   새 Microsoft SQL 작업 Studio (미리 보기)는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 참조 [Microsoft SQL 작업 Studio (미리 보기) 이란](../sql-operations-studio/what-is.md)합니다.
+   새 Microsoft SQL Operations Studio (preview) 는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 참조 [Microsoft SQL 작업 Studio (미리 보기) 이란](../sql-operations-studio/what-is.md)합니다.
 
 1. **Sqlcmd 및 bcp와 같은 명령은 Linux에서 사용할 수 있습니까?**
 

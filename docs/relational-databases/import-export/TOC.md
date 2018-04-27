@@ -30,7 +30,6 @@
 ### [서식 파일을 사용하여 데이터 필드 건너뛰기](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 # [플랫 파일 가져오기 마법사로 플랫 파일 가져오기](import-flat-file-wizard.md)
-## [플랫 파일 가져오기 실패 보고](reporting-import-flat-file-failures.md)
 # [가져오기 및 내보내기 마법사를 사용하여 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Excel에서 가져오기](import-data-from-excel-to-sql.md) 
 # [JSON 문서 가져오기](../json/import-json-documents-into-sql-server.md)

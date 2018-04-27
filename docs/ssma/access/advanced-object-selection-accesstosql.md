@@ -1,6 +1,6 @@
 ---
 title: 고급 개체 선택 (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76d6ad6531250fe01ef10106e753b4e4bc8323f6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6d7e6e457d1f308f19df909752d30f7a90f579a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--accesstosql"></a>고급 개체 선택 (AccessToSQL)
 **고급 개체 섹션** 대화 상자를 사용 하면 개체 이름에 문자열 및 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 선택 하거나 해당 개체를 선택 취소 합니다. SSMA는 선택한 개체에 변환 및 마이그레이션 작업을 수행합니다.  

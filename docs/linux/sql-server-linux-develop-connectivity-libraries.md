@@ -1,25 +1,25 @@
 ---
-title: "연결 라이브러리 및 프레임 워크 | Microsoft Docs"
-description: "클라이언트 앱은 다양 한 언어에서 온-프레미스를 실행 중인 Microsoft SQL Server 또는 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스를 클라우드에 연결 하는 데 사용할 수 있는 연결 드라이버를 나열 합니다."
+title: 연결 라이브러리 및 프레임 워크 | Microsoft Docs
+description: 클라이언트 앱은 다양 한 언어에서 온-프레미스를 실행 중인 Microsoft SQL Server 또는 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스를 클라우드에 연결 하는 데 사용할 수 있는 연결 드라이버를 나열 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
-ms.openlocfilehash: 0e5a08655bcfea396bcf599ef65e7a8e1f126575
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e74d5804d5a6fef00696b62d7f4606dc8fa7599e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 

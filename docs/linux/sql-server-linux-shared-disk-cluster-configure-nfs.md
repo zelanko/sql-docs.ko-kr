@@ -1,24 +1,24 @@
 ---
-title: "장애 조치 클러스터 인스턴스 저장소 NFS-Linux에서 SQL Server 구성 | Microsoft Docs"
-description: 
+title: 장애 조치 클러스터 인스턴스 저장소 NFS-Linux에서 SQL Server 구성 | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3c17fc54cf181bbac1fee61ddc52cef034c91f02
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux에서 SQL Server 구성
 
@@ -232,7 +232,7 @@ NFS 서버에서 공유 하는 폴더를 구성할 때 이러한 지침 일반 �
 
    * 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. 다음 예제에서는 sqlcmd를 사용 하 여 데이터베이스를 만들, 컨텍스트를 전환할 OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인 합니다. SSMS를 사용할 수 있습니다.
 
-    ![15-createtestdatabase][4]
+    ![15 createtestdatabase][4]
  
    * 공유를 마운트 해제 
 

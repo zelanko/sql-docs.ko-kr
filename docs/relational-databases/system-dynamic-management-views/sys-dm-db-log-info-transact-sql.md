@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -27,15 +27,15 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e180bf8257f97bbdab086b485bea0425453462c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 반환 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그의 정보입니다. 참고 모든 트랜잭션 로그 파일은 출력 테이블에에서 결합 됩니다. 출력의 각 행 트랜잭션 로그에 VLF를 나타내며 해당 VLF 로그에서 관련 정보를 제공 합니다.
 
@@ -43,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>인수  
  *database_id* | NULL | DEFAULT  
  데이터베이스의 ID입니다. *database_id*는 **int**입니다. 유효한 입력은 데이터베이스, NULL 또는 기본값의 ID 번호입니다. 기본값은 NULL입니다. NULL 및 DEFAULT는 현재 데이터베이스의 컨텍스트에서 해당 하는 값입니다.
@@ -68,10 +69,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[로그 시퀀스 번호 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 로그의 레코드를 만든는 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
 
 ## <a name="remarks"></a>주의
- `sys.dm_db_log_info` 동적 관리 함수 대체는 `DBCC LOGINFO` 문. 
+`sys.dm_db_log_info` 동적 관리 함수 대체는 `DBCC LOGINFO` 문.    
  
 ## <a name="permissions"></a>Permissions  
- 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.  
+필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.  
   
 ## <a name="examples"></a>예  
   

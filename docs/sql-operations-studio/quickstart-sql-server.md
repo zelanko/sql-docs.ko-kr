@@ -1,9 +1,9 @@
 ---
-title: '빠른 시작: 연결 및 SQL Operations Studio (preview) 를 사용 하 여 SQL Server에 쿼리할 | Microsoft Docs'
-description: 이 빠른 시작에서는 SQL Operations Studio (preview) 를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
+title: '빠른 시작: 연결 및 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 쿼리할 | Microsoft Docs'
+description: 이 빠른 시작에서는 SQL 작업 Studio (미리 보기)를 사용 하 여 SQL Server에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 하 고 사용 하 여 SQL Server 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작을 사용 하는 방법을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server에 연결 하 고 TRANSACT-SQL (T-SQL) 문을 만드는 데 사용할는 *TutorialDB* 에 사용 된 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서입니다.
@@ -30,15 +30,15 @@ ms.lasthandoff: 03/09/2018
 - [설치 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)합니다.
 
 SQL Server에 액세스할 수 없으면 다음 링크에서 플랫폼을 선택 (SQL 로그인 및 암호를 기억 하 고 있는지 확인!).
-- [Windows-SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS-Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux-다운로드 SQL 2017 Server Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -까지의 단계를 수행 하면 *만들기 및 쿼리 데이터*합니다.
 
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server에 연결
 
    
-1. 시작 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**합니다.
+1. 시작 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 합니다.
 1. 처음으로 실행 하면 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 는 **연결** 대화 상자가 열립니다. 경우는 **연결** 대화 상자를 열고 하지 않습니다는 **새 연결** 아이콘에는 **서버** 페이지:
    
    ![새 연결 상태 아이콘](media/quickstart-sql-server/new-connection-icon.png)

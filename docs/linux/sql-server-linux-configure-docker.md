@@ -1,25 +1,25 @@
 ---
-title: "Docker에서 SQL Server 2017에 대 한 구성 옵션 | Microsoft Docs"
-description: "및 SQL Server 2017 컨테이너 이미지 Docker에서 상호 작용에 사용 하 여 다양 한 방법을 탐색 합니다. 여기에 영구 데이터 파일을 복사 하 고 문제를 해결 합니다."
+title: Docker에서 SQL Server 2017에 대 한 구성 옵션 | Microsoft Docs
+description: 및 SQL Server 2017 컨테이너 이미지 Docker에서 상호 작용에 사용 하 여 다양 한 방법을 탐색 합니다. 여기에 영구 데이터 파일을 복사 하 고 문제를 해결 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
 
@@ -54,7 +54,7 @@ Docker 허브에서 무료 개발자 버전의 SQL Server를 실행 하는 이�
       docker login
       ```
 
-   1. 다음으로 무료 개발자 Docker 저장소에서 컨테이너 이미지를 가져올 해야 합니다. 로 이동 [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), 클릭 **체크아웃으로**, 지시를 따릅니다.
+   1. 다음으로 무료 개발자 Docker 저장소에서 컨테이너 이미지를 가져올 해야 합니다. 로 이동 [ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux), 클릭 **체크아웃으로**, 지시를 따릅니다.
 
    1. 요구 사항을 검토 하 고 프로시저에서 실행 된 [퀵 스타트](quickstart-install-connect-docker.md)합니다. 하지만 두 가지 차이점이 있습니다. 이미지를 가져와야 **저장소/microsoft/mssql-서버-linux:\<태그 이름을\>**  Docker 저장소에서 합니다. 와 프로덕션 버전을 지정 해야 하는 **MSSQL_PID** 환경 변수입니다. 다음 예제에서는 Enterprise Edition에 대 한 최신 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다.
 
@@ -351,7 +351,7 @@ Windows에서는 시작 하는 PowerShell 또는 관리자 권한으로 명령 �
 
 SQL Server 컨테이너 실행이 실패 하면 다음 테스트 하세요.
 
-- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어 
+- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어: 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.

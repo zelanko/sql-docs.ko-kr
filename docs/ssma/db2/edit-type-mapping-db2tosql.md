@@ -1,6 +1,6 @@
 ---
 title: 형식 매핑 (DB2ToSQL) 편집 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9577b7616d5744fce71a55218ad846d130066d2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 12daad8394b47fd6f36bf131e3055e5eb44dc8a5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-type-mapping-db2tosql"></a>형식 매핑 (DB2ToSQL) 편집
 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정할 수 있습니다.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/06/2018
 다음 필드 아래에 표시 됩니다 가변 길이 데이터 형식이 인 경우 **소스 형식**:  
   
 **보낸 사람**  
-이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어는 **nchar** 데이터 형식으로 입력할 수 있는 10부터 시작 하는 범위에 대 한이 매핑은 임을 지정 하려면 **nchar(10)**합니다.  
+이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어는 **nchar** 데이터 형식으로 입력할 수 있는 10부터 시작 하는 범위에 대 한이 매핑은 임을 지정 하려면 **nchar(10)** 합니다.  
   
 **수행할 작업**  
-이 매핑에 대 한 최대 길이 지정 합니다. 예를 들어는 **nchar** 데이터 형식으로 입력할 수 있는 20 끝 범위에 대 한이 매핑은 임을 지정 하려면 **nchar(20)**합니다.  
+이 매핑에 대 한 최대 길이 지정 합니다. 예를 들어는 **nchar** 데이터 형식으로 입력할 수 있는 20 끝 범위에 대 한이 매핑은 임을 지정 하려면 **nchar(20)** 합니다.  
   
 **대상 유형**  
 선택 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 원본 데이터 형식이 매핑되는 데이터 형식입니다. SSMA는 테이블 또는 저장된 프로시저를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)],이 데이터 형식으로 원본 데이터 형식이 변경 됩니다.  
@@ -56,5 +56,5 @@ ms.lasthandoff: 04/06/2018
 다음 필드 아래에 표시 됩니다 가변 길이 데이터 형식이 인 경우 **대상 유형**:  
   
 **Replace with**  
-이 매핑에 대 한 대상 길이 지정 합니다. 예를 들어는 **nvarchar** 데이터 형식으로 입력할 수 있는 지정 된 원본 데이터 형식이에 매핑되고 지정할 수는 20 **nvarchar (20)**합니다.  
+이 매핑에 대 한 대상 길이 지정 합니다. 예를 들어는 **nvarchar** 데이터 형식으로 입력할 수 있는 지정 된 원본 데이터 형식이에 매핑되고 지정할 수는 20 **nvarchar (20)** 합니다.  
   

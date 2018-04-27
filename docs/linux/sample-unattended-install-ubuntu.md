@@ -1,24 +1,24 @@
 ---
-title: "Ubuntu에서 SQL Server에 대 한 자동된 설치 | Microsoft Docs"
-description: "SQL Server 스크립트 샘플 ubuntu 무인된 설치"
+title: Ubuntu에서 SQL Server에 대 한 자동된 설치 | Microsoft Docs
+description: SQL Server 스크립트 샘플 ubuntu 무인된 설치
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f6df20d942331b6361651ade82b6158b2c6798de
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 891094a759662b386379be0007443d8608b6d845
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 용 SQL Server 무인된 설치 스크립트 샘플:
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/13/2018
 
 - 최소 2GB의 메모리 Linux에서 SQL Server를 실행 해야 합니다.
 - 파일 시스템을 해야 **XFS** 또는 **EXT4**합니다. 와 같은 다른 파일 시스템, **BTRFS**, 지원 되지 않습니다.
-- 다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
+- 다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하십시오.
 
 ## <a name="sample-script"></a>샘플 스크립트
 

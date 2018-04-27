@@ -1,9 +1,9 @@
 ---
-title: '자습서: SQL Operations Studio (preview) 에서 사용자 지정 통찰력 위젯을 빌드할 | Microsoft Docs'
-description: 이 자습서에는 사용자 지정 통찰력은 widget을 작성할 SQL Operations Studio (preview) 의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다.
+title: '자습서: SQL 작업 Studio (미리 보기)에서 사용자 지정 통찰력 위젯을 빌드할 | Microsoft Docs'
+description: 이 자습서에는 사용자 지정 통찰력은 widget을 작성할 SQL 작업 Studio (미리 보기)의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 빌드 사용자 지정 통찰력 위젯
 
@@ -35,8 +35,8 @@ ms.lasthandoff: 12/21/2017
 
 이 자습서에서는 SQL Server 또는 Azure SQL 데이터베이스 *TutorialDB*합니다. 만들려는 *TutorialDB* 데이터베이스에서 다음 퀵 스타트 중 하나를 완료 합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [연결 및 Azure SQL 데이터베이스를 사용 하 여 쿼리[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [연결 및 Azure SQL 데이터베이스를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>사용자 고유의 쿼리를 실행 하 고 차트 보기에서 결과 보려면

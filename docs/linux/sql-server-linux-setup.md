@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/08/2018
 > 이 가이드는 몇 가지 배포 시나리오를 coves 합니다. 단계별 설치 지침에 대해서만 찾으려는 경우 퀵 스타트 중 하나로 이동 합니다.
 > - [RHEL 빠른 시작](quickstart-install-connect-red-hat.md)
 > - [SLES 빠른 시작](quickstart-install-connect-suse.md)
-> - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
+> - [Ubuntu 퀵 스타트](quickstart-install-connect-ubuntu.md)
 > - [Docker 빠른 시작](quickstart-install-connect-docker.md)
 
 자주 묻는 질문에 대 한 답을 참조 하십시오.는 [Linux FAQ에서 SQL Server](../linux/sql-server-linux-faq.md)합니다.

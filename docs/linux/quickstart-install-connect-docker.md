@@ -1,25 +1,25 @@
-﻿---
-title: "Docker에서 SQL Server 2017 시작 | Microsoft Docs"
-description: "이 빠른 시작에서는 Docker를 사용하여 SQL Server 2017 컨테이너 이미지를 실행하는 방법을 보여줍니다. 그런 다음, sqlcmd 사용하여 데이터베이스를 만들고 쿼리합니다."
+---
+title: Docker에서 SQL Server 2017 시작 | Microsoft Docs
+description: 이 빠른 시작에서는 Docker를 사용하여 SQL Server 2017 컨테이너 이미지를 실행하는 방법을 보여줍니다. 그런 다음, sqlcmd 사용하여 데이터베이스를 만들고 쿼리합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d422a4a755061837c08a6f4f8de4e1889768ac5d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 하는 빠른 시작:
 
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/08/2018
 ## <a id="requirements"></a> 필수 구성 요소
 
 - 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
-- 최소 2 GB의 디스크 공간
-- 최소 2 GB의 RAM
+- 최소 2GB의 디스크 공간
+- 최소 2GB의 RAM
 - [Linux에서 SQL Server에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 끌어와 실행하기

@@ -1,31 +1,31 @@
 ---
-title: "가용성 그룹 장애 조치-Linux에서 SQL Server 관리 | Microsoft Docs"
-description: 
+title: 가용성 그룹 장애 조치-Linux에서 SQL Server 관리 | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/01/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: 086cf16e243810452a3bace411abdc3689e74ff8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 83cb4a3493534c568a44e7f2ec478cf6ca7df9e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-가용성 그룹 (AG)의 컨텍스트 내에서 주 역할과 보조 역할의 가용성 복제본은 장애 조치로 알려진 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)*라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획 된 수동 장애 조치는 모든 데이터를 보존 합니다. 가용성 복제본의 수준에서 장애 조치 AG 됩니다. 즉, AG 장애 조치 (현재 장애 조치 대상) 보조 복제본 중 하나로 됩니다. 
+가용성 그룹 (AG)의 컨텍스트 내에서 주 역할과 보조 역할의 가용성 복제본은 장애 조치로 알려진 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획 된 수동 장애 조치는 모든 데이터를 보존 합니다. 가용성 복제본의 수준에서 장애 조치 AG 됩니다. 즉, AG 장애 조치 (현재 장애 조치 대상) 보조 복제본 중 하나로 됩니다. 
 
 장애 조치에 대 한 배경 정보를 참조 하십시오. [장애 조치 및 장애 조치 모드](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)합니다.
 
@@ -140,13 +140,13 @@ ms.lasthandoff: 03/08/2018
 
 1. AG 리소스 관리 되지 않도록 클러스터에서 더 이상 확인 합니다. 
 
-      - 대상 클러스터 노드에서 리소스 관리 되지 않는 모드로 설정 합니다. 이 명령은 리소스 에이전트를 중지 리소스 모니터링 및 관리를 알립니다. 예를 들어 
+      - 대상 클러스터 노드에서 리소스 관리 되지 않는 모드로 설정 합니다. 이 명령은 리소스 에이전트를 중지 리소스 모니터링 및 관리를 알립니다. 예를 들어: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - 관리 되지 않는 모드로 리소스 모드를 설정 하 고 시도가 실패 하는 경우에 리소스를 삭제 합니다. 예를 들어
+      - 관리 되지 않는 모드로 리소스 모드를 설정 하 고 시도가 실패 하는 경우에 리소스를 삭제 합니다. 예를 들어:
 
       ```bash
       sudo pcs resource delete <resourceName>

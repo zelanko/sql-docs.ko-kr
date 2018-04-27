@@ -1,9 +1,9 @@
 ---
-title: Insights 및 SQL Operations Studio (preview) 의 일반적인 작업을 신속 하 게 액세스할 | Microsoft Docs
-description: SQL Operations Studio (preview) 에서 통찰력 위젯을 표시 하는 방법을 알아봅니다.
+title: Insights 및 SQL 작업 Studio (미리 보기)의 일반적인 작업을 신속 하 게 액세스할 | Microsoft Docs
+description: SQL 작업 Studio (미리 보기)에서 통찰력 위젯을 표시 하는 방법을 알아봅니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>대시보드[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>대시보드 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 대시보드, 마우스 오른쪽 단추로 클릭 한 서버 또는 데이터베이스를 표시 하 고 선택 **관리**합니다.
 
@@ -107,11 +107,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="sample-insight-action-definition"></a>샘플 통찰력 동작 정의
 
-```"actions"{}```통찰력 동작을 정의합니다. 와 같은 특정 범위에 대해 정의할 수 동작 ```"server"```, ```"database"``` 등 및 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 동작에 현재 연결 컨텍스트 정보를 전달 합니다. 
+```"actions"{}``` 통찰력 동작을 정의합니다. 와 같은 특정 범위에 대해 정의할 수 동작 ```"server"```, ```"database"``` 등 및 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 동작에 현재 연결 컨텍스트 정보를 전달 합니다. 
 
-예를 들어 복원 작업 시작 시 WideWorldImporters 데이터베이스에 대 한 ```"database": "${Database}"``` 정의 전달할 나타냅니다 ```Database``` 복원 작업에 쿼리 결과에 열 값입니다. 다음 데이터베이스에 대 한 복원 작업이 시작 됩니다. ```"types"```json 배열 및 배열에 여러 작업을 나열 될 수 있습니다. 상황에 맞는 메뉴를 기본적으로 데이터베이스가 통찰력 세부 정보 대화 상자에서 해당 사용자 수를 클릭 한 작업을 수행 합니다. 
+예를 들어 복원 작업 시작 시 WideWorldImporters 데이터베이스에 대 한 ```"database": "${Database}"``` 정의 전달할 나타냅니다 ```Database``` 복원 작업에 쿼리 결과에 열 값입니다. 다음 데이터베이스에 대 한 복원 작업이 시작 됩니다. ```"types"``` json 배열 및 배열에 여러 작업을 나열 될 수 있습니다. 상황에 맞는 메뉴를 기본적으로 데이터베이스가 통찰력 세부 정보 대화 상자에서 해당 사용자 수를 클릭 한 작업을 수행 합니다. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]미리 보기 0.17.1 "backup", "restore", "새 쿼리" 및 "새 데이터베이스" 동작 유형으로 설정 했습니다.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] 미리 보기 0.17.1 "backup", "restore", "새 쿼리" 및 "새 데이터베이스" 동작 유형으로 설정 했습니다.
 
 ```json
 "details": {

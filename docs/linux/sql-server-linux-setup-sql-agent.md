@@ -1,25 +1,25 @@
 ---
-title: "Linux에서 SQL Server 에이전트를 설치 합니다. | Microsoft Docs"
-description: "이 문서에서는 Linux에서 SQL Server 에이전트를 설치 하는 방법을 설명 합니다."
+title: Linux에서 SQL Server 에이전트를 설치 합니다. | Microsoft Docs
+description: 이 문서에서는 Linux에서 SQL Server 에이전트를 설치 하는 방법을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 1135e7844515ffd051e937c7804c654b3143ac36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 
@@ -73,7 +73,7 @@ sudo systemctl restart mssql-server
 
 오프 라인 설치 해야 할 경우에 SQL Server 에이전트 패키지 다운로드를 찾습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다. 다음 문서에 설명 된 동일한 오프 라인 설치 단계를 사용 하 여 [SQL Server 설치](sql-server-linux-setup.md#offline)합니다.
 
-### <a name="ubuntu">Ubuntu 설치</a>
+### <a name="ubuntu">Ubuntu에 설치</a>
 
 다음 단계를 사용 하 여 설치 하는 **mssql 서버 에이전트** ubuntu 합니다. 
 
@@ -97,7 +97,7 @@ sudo systemctl restart mssql-server
 
 설치 하려면 다음 단계를 사용 하 여는 **mssql 서버 에이전트** SUSE Linux Enterprise Server에 있습니다. 
 
-Install **mssql-server-agent** 
+설치 **mssql 서버 에이전트** 
 
 ```bash
 sudo zypper install mssql-server-agent

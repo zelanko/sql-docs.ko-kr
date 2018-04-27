@@ -1,24 +1,24 @@
 ---
-title: "Docker에서 SQL Server 데이터베이스를 복원 | Microsoft Docs"
-description: "이 자습서에서는 어떻게 새 Linux Docker 컨테이너에 SQL Server 데이터베이스 백업을 복원 합니다."
+title: Docker에서 SQL Server 데이터베이스를 복원 | Microsoft Docs
+description: 이 자습서에서는 어떻게 새 Linux Docker 컨테이너에 SQL Server 데이터베이스 백업을 복원 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ad11495a927d5ca37e15cb872a200a55beb93b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -35,16 +35,16 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
+* 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 * 최소 2GB의 디스크 공간
-* 2GB ram 이상
-* [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
+* 최소 2GB의 RAM
+* [Linux에서 SQL Server에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)
 
-## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 실행 하 고 끌어오기
+## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 끌어와 실행하기
 
 1. Linux/Mac에서 bash 터미널 또는 Windows에서 관리자 권한 PowerShell 세션을 엽니다.
 
-1. Docker 허브에서 SQL Server 2017 Linux 컨테이너 이미지를 끌어옵니다.
+1. Docker Hub를 사용하여 SQL Server 2017 Linux 컨테이너 이미지를 끌어오기.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -76,9 +76,9 @@ ms.lasthandoff: 02/13/2018
     이 명령은 Developer edition (기본값)을 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트로 호스트에 노출 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 명명 된 데이터 볼륨 컨테이너를 만듦 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하는이 사용 됩니다.
 
    > [!NOTE]
-   > 컨테이너에서 프로덕션 SQL Server 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다. 동일한 컨테이너 이름 및 포트를 사용 하는 경우이 연습의 나머지 부분 프로덕션 컨테이너와 계속 작동 합니다.
+   > 컨테이너에서 프로덕션 SQL Server 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 [프로덕션 컨테이너 이미지 실행](sql-server-linux-configure-docker.md#production)을 참조하세요. 동일한 컨테이너 이름 및 포트를 사용 하는 경우이 연습의 나머지 부분 프로덕션 컨테이너와 계속 작동 합니다.
 
-1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
+1. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
     ```bash
     sudo docker ps -a
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/13/2018
     docker ps -a
     ```
  
-1. 경우는 **상태** 열 표시의 상태 **를**컨테이너에서 SQL Server가 실행 한 다음, 및에 지정 된 포트에서 수신 하는 **포트** 열입니다. 경우는 **상태** SQL Server 컨테이너 표시에 대 한 열 **Exited**, 참조는 [구성 가이드의 섹션 문제 해결](sql-server-linux-configure-docker.md#troubleshooting)합니다.
+1. **상태** 열이 **Up**의 상태를 표시하는 경우, SQL Server는 컨테이너에서 실행되며 **포트** 열의 지정된 포트에서 수신 대기합니다. SQL Server 컨테이너의 **상태** 열이 **Exited**를 표시하는 경우, [구성 가이드의 문제 해결 섹션](sql-server-linux-configure-docker.md#troubleshooting)을 참조하세요.
 
    ```
    $ sudo docker ps -a
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/13/2018
    941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
-## <a name="change-the-sa-password"></a>SA 암호를 변경 합니다.
+## <a name="change-the-sa-password"></a>SA 암호 변경
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

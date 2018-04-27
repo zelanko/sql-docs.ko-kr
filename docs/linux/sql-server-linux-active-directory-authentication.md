@@ -6,7 +6,7 @@ ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -16,11 +16,11 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 7816293d595b5231fe19ea464c4b099495c3d2c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 함께 사용 하 여 Active Directory 인증 자습서:
 
@@ -73,7 +73,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 
    - **Ubuntu**:
 
-      편집 된 `/etc/network/interfaces` 파일 AD 도메인 컨트롤러의 IP 주소는 dns 이름 서버 목록이 표시 됩니다. 예를 들어 
+      편집 된 `/etc/network/interfaces` 파일 AD 도메인 컨트롤러의 IP 주소는 dns 이름 서버 목록이 표시 됩니다. 예를 들어: 
 
       ```/etc/network/interfaces
       <...>

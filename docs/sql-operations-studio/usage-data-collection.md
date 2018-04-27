@@ -1,9 +1,9 @@
 ---
-title: 사용 또는 사용 현황 데이터 수집을 사용 하지 않도록 설정 하 고 크래시 SQL Operations Studio (preview) 에 대 한 보고 | Microsoft Docs
+title: 사용 또는 사용 현황 데이터 수집을 사용 하지 않도록 설정 하 고 크래시 SQL 작업 Studio (미리 보기)에 대 한 보고 | Microsoft Docs
 description: 이 문서에는 사용 및 충돌 보고 데이터를 수집 하 고 Microsoft로 전송 하는 경우를 제어 하는 방법을 설명 합니다.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae620951028ba8e0e82f89c4251238c92bc614ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 035195a03dea60f097a9de88ceb869fe53398c35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>에 대 한 사용 데이터 컬렉션 설정 또는 해제[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>에 대 한 사용 데이터 컬렉션 설정 또는 해제 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 ## <a name="how-to-disable-telemetry-reporting"></a>원격 분석 보고를 해제 하는 방법
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]사용 현황 데이터를 수집 하 고 자사 제품 및 서비스를 개선 하는 Microsoft로 보냅니다. 자세한 내용을 보려면 읽고는 [개인정보취급방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용 현황 데이터를 수집 하 고 자사 제품 및 서비스를 개선 하는 Microsoft로 보냅니다. 자세한 내용을 보려면 읽고는 [개인정보취급방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)합니다.
 
 Microsoft 사용 현황 데이터를 전송 하려는 하지 않는 경우 설정할 수 있습니다는 *telemetry.enableTelemetry* 설정을 *false*합니다.
 

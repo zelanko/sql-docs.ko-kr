@@ -1,25 +1,25 @@
 ---
-title: "VDI 백업 사양-Linux에서 SQL Server | Microsoft Docs"
-description: "SQL Server 가상 백업 장치 인터페이스 사양입니다."
+title: VDI 백업 사양-Linux에서 SQL Server | Microsoft Docs
+description: SQL Server 가상 백업 장치 인터페이스 사양입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 클라이언트 SDK 사양에서 SQL Server
 
@@ -146,7 +146,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 | |**VD_E_INVALID** |장치 이름이 잘못 되었습니다. 이기는 집합을 구성 하는 특성 이름 중 하나입니다.
 
 **주의** VD_E_OPEN 문제 없이 반환 될 수 있습니다. 클라이언트는이 코드에 반환 될 때까지 OpenDevice 루프를 사용 하 여 호출할 수 있습니다.
-하나 이상의 장치가 구성 된 경우, 예를 들어  *n*  장치, 가상 장치 집합이 반환 됩니다  *n*  고유 장치 인터페이스입니다.
+하나 이상의 장치가 구성 된 경우, 예를 들어 *n* 장치, 가상 장치 집합이 반환 됩니다 *n* 고유 장치 인터페이스입니다.
 
 `GetConfiguration` 장치를 열 수까지 기다렸다가 함수를 사용할 수 있습니다.
 이 함수 이어지지 않는 경우는 ppVirtualDevice 통해 null 값이 반환 됩니다.

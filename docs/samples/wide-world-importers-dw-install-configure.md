@@ -1,7 +1,7 @@
 ---
 title: 예제 데이터베이스 WideWorldImporters OLAP-설치 및 구성-SQL | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -18,11 +18,11 @@ manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 69eee1a6460509e70b061583d7a096c2b8293294
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
