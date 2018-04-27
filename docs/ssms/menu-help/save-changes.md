@@ -2,7 +2,7 @@
 title: 변경 내용 저장 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8913eedde43e2e59dbae1230480bca10fe84219a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fda24f7e68f534572ff38460bd209b3cd9209c7f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-changes"></a>변경 내용 저장
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**예**를 클릭하지 않으면 나열된 항목의 변경 내용이 저장되지 않는다는 경고가 표시됩니다.  
   
 이 대화 상자는 솔루션, 유지 관리 계획 또는 다른 열려 있는 파일을 닫을 때 표시될 수 있습니다.  
   

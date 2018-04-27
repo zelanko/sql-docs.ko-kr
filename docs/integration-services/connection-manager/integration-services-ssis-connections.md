@@ -1,16 +1,16 @@
 ---
-title: "Integration Services(SSIS) 연결 | Microsoft Docs"
-ms.custom: 
+title: Integration Services(SSIS) 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 
+caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0f11d9e2acfac903bd77b2931a06d5a17af9782c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -128,12 +128,12 @@ ms.lasthandoff: 01/25/2018
   
  새 연결 관리자를 만들 때 연결 관리자를 자동으로 만들고 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 사용할 수 있습니다. 또한 마법사는 연결 관리자를 사용하는 원본과 대상을 만들고 구성할 수 있도록 도와줍니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md)을 참조하세요.  
   
- 수동으로 새 연결 관리자를 만들고 기존 패키지에 이 연결 관리자를 추가하려면 **디자이너의** 제어 흐름 **,**데이터 흐름 **및**이벤트 처리기 **탭에 나타나는** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 사용합니다. **연결 관리자** 영역에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 제공하는 대화 상자를 사용하여 만들 연결 관리자 유형을 선택한 다음 해당 연결 관리자의 속성을 설정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "연결 관리자 영역 사용" 섹션을 참조하십시오.  
+ 수동으로 새 연결 관리자를 만들고 기존 패키지에 이 연결 관리자를 추가하려면 **디자이너의** 제어 흐름 **,** 데이터 흐름 **및**이벤트 처리기 **탭에 나타나는** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 사용합니다. **연결 관리자** 영역에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 제공하는 대화 상자를 사용하여 만들 연결 관리자 유형을 선택한 다음 해당 연결 관리자의 속성을 설정합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "연결 관리자 영역 사용" 섹션을 참조하십시오.  
   
  패키지에 연결 관리자를 추가한 다음에는 태스크, Foreach 루프 컨테이너, 원본, 변환 및 대상에서 연결 관리자를 사용할 수 있습니다. 자세한 내용은 [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md), [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [데이터 흐름](../../integration-services/data-flow/data-flow.md)을 참조하세요.  
   
 ### <a name="using-the-connection-managers-area"></a>연결 관리자 영역 사용  
- **디자이너의**제어 흐름 **,**데이터 흐름 **또는** 이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭이 활성화된 상태에서 연결 관리자를 만들 수 있습니다.  
+ **디자이너의**제어 흐름 **,** 데이터 흐름 **또는** 이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭이 활성화된 상태에서 연결 관리자를 만들 수 있습니다.  
   
  다음 다이어그램은 **디자이너의** 제어 흐름 **탭에 표시된** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역을 보여 줍니다.  
   

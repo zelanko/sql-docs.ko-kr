@@ -2,8 +2,8 @@
 title: SQL Server 2016의 새로운 기능
 ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -25,11 +25,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0c8b7cbe768aa6c443bf803f3a4fcf65f50dfeb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d6ac83721d53902cca28f109056c140836054c0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -42,7 +42,8 @@ ms.lasthandoff: 04/18/2018
  **SQL Server를 지금 사용해 보세요.** 
 - **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
 - 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
-- Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 컴퓨터](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)를 실행해 보세요.
+- Azure 계정이 있으세요? 
+  [SQL Server 2016이 이미 설치된 가상 머신](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)을 설정하세요.
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 데이터베이스 엔진
 - 이제 SQL Server 설치 및 설정 중에 **여러 tempDB** 데이터베이스 파일을 구성할 수 있습니다.
@@ -63,8 +64,8 @@ ms.lasthandoff: 04/18/2018
 [데이터베이스 엔진](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)을 참조하세요.
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS(SQL Server 2016 Analysis Services)
 SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 테이블 형식 모델 데이터베이스에 대한 향상된 성능, 제작, 데이터베이스 관리, 필터링, 프로세싱 및 그 외 많은 기능을 제공합니다.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)**는 통계 분석에 사용되는 R 프로그래밍 언어를 SQL Server에 통합합니다. 
-- 새 **데이터베이스 일관성 검사기(DBCC)**는 잠재적 데이터 손상 문제를 감지하기 위해 내부적으로 실행됩니다.
+- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 는 통계 분석에 사용되는 R 프로그래밍 언어를 SQL Server에 통합합니다. 
+- 새 **데이터베이스 일관성 검사기(DBCC)** 는 잠재적 데이터 손상 문제를 감지하기 위해 내부적으로 실행됩니다.
 - **직접 쿼리**는 라이브 외부 데이터를 먼저 가져오는 대신 쿼리하며 이제 Azure SQL, Oracle 및 Teradata를 비롯한 더 많은 데이터 원본을 지원합니다. 
 - 다양한 새 **DAX(Data Access Expressions) 기능**이 있습니다.
 - 새 **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 

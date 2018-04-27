@@ -1,28 +1,28 @@
 ---
-title: "catalog.move_environment(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.move_environment(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd8598e526761f51e361fcc7c3330bbe3c9a470f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8c488ab03eb895257e90367db7c06476ba96d2c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>인수  
  [ @source_folder = ] *source_folder*  
- 이동하기 전의 환경이 있는 원본 폴더의 이름입니다. *source_folder*는 **nvarchar(128)**입니다.  
+ 이동하기 전의 환경이 있는 원본 폴더의 이름입니다. *source_folder*는 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 이동할 환경의 이름입니다. *environment_name*은 **nvarchar(128)**입니다.  
+ 이동할 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
   
  [ @destination_folder = ] *destination_folder*  
- 이동한 후의 환경이 있는 대상 폴더의 이름입니다. *destination_folder*는 **nvarchar(128)**입니다.  
+ 이동한 후의 환경이 있는 대상 폴더의 이름입니다. *destination_folder*는 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

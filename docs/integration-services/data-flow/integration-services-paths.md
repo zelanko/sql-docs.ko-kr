@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 경로 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 경로 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.patheditor.general.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7e20807ed1f4972eeb722055e7671fd259aca9dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
  구성 가능한 경로 속성에는 경로의 이름, 설명 및 주석이 포함됩니다. 또한 경로를 프로그래밍 방식으로 구성할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 데이터 흐름 구성 요소 연결](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)을 참조하세요.  
   
- 경로 주석에는 **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 표시된 경로 원본의 이름 또는 경로 이름이 표시됩니다. 경로 주석은 데이터 흐름, 제어 흐름 및 이벤트 처리기에 추가할 수 있는 주석과 비슷합니다. 단지 경로 주석은 경로에 연결되며, 다른 주석은 **디자이너의**데이터 흐름 **,**제어 흐름 **및**이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 테이블에 표시된다는 점만 다릅니다.  
+ 경로 주석에는 **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 표시된 경로 원본의 이름 또는 경로 이름이 표시됩니다. 경로 주석은 데이터 흐름, 제어 흐름 및 이벤트 처리기에 추가할 수 있는 주석과 비슷합니다. 단지 경로 주석은 경로에 연결되며, 다른 주석은 **디자이너의**데이터 흐름 **,** 제어 흐름 **및**이벤트 처리기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 테이블에 표시된다는 점만 다릅니다.  
   
  메타데이터에는 이전 구성 요소의 출력에 있는 각 열의 이름, 데이터 형식, 전체 자릿수, 소수 자릿수, 길이, 코드 페이지 및 원본 구성 요소가 표시됩니다. 원본 구성 요소는 해당 열을 만든 데이터 흐름 구성 요소입니다. 이러한 구성 요소는 데이터 흐름에서 첫 번째 구성 요소일 수도 있으며, 아닐 수도 있습니다. 예를 들어 UNION ALL 및 정렬 변환은 해당 열을 만들며, 이는 출력 열에 대한 원본이 됩니다. 반대로 열 복사 변환은 열을 변경하지 않은 상태로 전달하거나 입력 열을 복사하여 새 열을 만들 수도 있습니다. 열 복사 변환은 새로운 열에 대해서만 원본 구성 요소가 됩니다.  
 

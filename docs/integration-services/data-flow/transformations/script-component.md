@@ -1,16 +1,16 @@
 ---
-title: "스크립트 구성 요소 | Microsoft Docs"
-ms.custom: 
+title: 스크립트 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 
+caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c446fd57d8dc795931bf9ff5dba6816ec9c9a57
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -136,7 +136,7 @@ ms.lasthandoff: 01/25/2018
  연결에 대한 설명이 포함된 고유 이름을 입력합니다.  
   
  **연결 관리자**  
- 사용 가능한 연결 관리자 목록에서 선택하거나 **\<새 연결>**을 선택하여 **SSIS 연결 관리자 추가** 대화 상자를 엽니다.  
+ 사용 가능한 연결 관리자 목록에서 선택하거나 **\<새 연결>** 을 선택하여 **SSIS 연결 관리자 추가** 대화 상자를 엽니다.  
   
  **설명**  
  연결에 대한 설명을 입력합니다.  

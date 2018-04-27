@@ -1,15 +1,16 @@
 ---
-title: "SQL 편집기(Visual Database Tools) | Microsoft 문서"
-ms.custom: 
+title: SQL 편집기(Visual Database Tools) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.sqleditor
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 008839bdbed40f179687d1adea3876cce465bbbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 을 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 을 사용합니다.  
   
 SQL 편집기는 다음과 같이 다양하고 유용한 SQL 텍스트 편집 기능을 제공합니다.  
   

@@ -1,16 +1,16 @@
 ---
-title: "UNION ALL 변환을 사용하여 데이터 병합 | Microsoft Docs"
-ms.custom: 
+title: UNION ALL 변환을 사용하여 데이터 병합 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - merging datasets [Integration Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e171fc263daa72d8cea4c9e21b05c1ad452817e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bfce89b436c07acbccfd1cabb3a255d79e48b331
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  UNION ALL 변환을 두 번 클릭합니다.  
   
-5.  **UNION ALL 변환 편집기**에서 행을 클릭하여 입력의 열을 **출력 열 이름** 목록의 열로 매핑한 후 입력 목록에서 열을 선택합니다. 입력 목록에서 **\<무시>**를 선택하여 열 매핑을 건너뜁니다.  
+5.  **UNION ALL 변환 편집기**에서 행을 클릭하여 입력의 열을 **출력 열 이름** 목록의 열로 매핑한 후 입력 목록에서 열을 선택합니다. 입력 목록에서 **\<무시>** 를 선택하여 열 매핑을 건너뜁니다.  
   
     > [!NOTE]  
     >  두 열을 매핑하려면 해당 열의 메타데이터가 일치해야 합니다.  

@@ -1,16 +1,16 @@
 ---
-title: "보안 개요(Integration Services) | Microsoft Docs"
-ms.custom: 
+title: 보안 개요(Integration Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS packages, security
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1bff92603483a8f2120dac95412d388c752dffbd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/25/2018
  자세한 내용은 [패키지 구성](../../integration-services/packages/package-configurations.md), [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)및 [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
   
 ### <a name="checkpoint-files"></a>검사점 파일  
- 이와 비슷하게 패키지에서 사용되는 검사점 파일에 중요한 정보가 들어 있는 경우 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일은 패키지 진행 중에 현재 상태 정보와 현재 변수 값을 저장합니다. 예를 들어 패키지에는 전화 번호가 포함된 사용자 지정 변수가 포함될 수 있습니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+ 이와 비슷하게 패키지에서 사용되는 검사점 파일에 중요한 정보가 들어 있는 경우 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일은 패키지 진행 중에 현재 상태 정보와 현재 변수 값을 저장합니다. 예를 들어 패키지에는 전화 번호가 포함된 사용자 지정 변수가 포함될 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ### <a name="log-files"></a>로그 파일  
  파일 시스템에 기록된 로그 항목도 ACL(액세스 제어 목록)을 사용하여 보호되어야 합니다. 로그 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안으로 보호할 수도 있습니다. 로그 항목에는 중요한 정보가 포함될 수 있습니다. 예를 들어 패키지에 전화 번호를 참조하는 SQL 문을 구성하는 SQL 실행 태스크가 포함되는 경우 SQL 문에 대한 로그 항목에는 전화 번호가 포함됩니다. SQL 문은 또한 데이터베이스에 있는 테이블 및 열 이름에 대한 개인 정보를 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  

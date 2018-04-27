@@ -2,8 +2,8 @@
 title: SQL Server의 버전별 계산 용량 제한 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 66a446fe6ffb9286ee204c7ed9a8722e24ed2c2a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/18/2018
 > 보다 중점적으로 설명하면  
 >   
 > - 가상 머신(VM)에 하나 이상의 가상 프로세서가 있습니다.  
-> - 하나 이상의 가상 프로세서가 정확히 가상 컴퓨터 한 대에 할당됩니다.  
+> - 하나 이상의 가상 프로세서가 정확히 가상 머신 한 대에 할당됩니다.  
 > - 0 또는 1개의 가상 프로세서가 0개 이상의 논리적 프로세서에 매핑됩니다. 가상 프로세서 대 논리 프로세서의 매핑이 
 >     -   1대 0인 경우, 바인딩되지 않은 논리적 프로세서가 게스트 운영 체제에서 사용되지 않은 것을 나타냅니다.  
 >     -   1대 다인 경우, 오버 커밋을 나타냅니다.  

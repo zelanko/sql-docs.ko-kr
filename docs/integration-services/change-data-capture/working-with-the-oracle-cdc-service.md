@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC Service 작업 | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC Service 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e3f62e9ac098fe0eeca228103db665287d3fc8e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/15/2018
 |ref_count|이 항목은 동일한 Oracle CDC Service가 설치된 컴퓨터의 수를 계산합니다. 이 항목은 동일한 이름의 Oracle 서비스가 추가될 때마다 하나씩 증가하며 이러한 서비스가 제거될 때마다 하나씩 감소합니다. 카운터가 0이 되면 이 행이 삭제됩니다.|  
 |active_service_node|CDC Service를 현재 처리하는 Windows 노드의 이름입니다. 서비스가 올바르게 중지되면 이 열은 더 이상 활성 서비스가 없음을 나타내는 null로 설정됩니다.|  
 |active_service_heartbeat|이 항목은 현재 CDC Service를 추적하여 아직 활성인지를 확인합니다.<br /><br /> 이 항목은 활성 CDC Service에 대한 현재 데이터베이스 UTC 타임스탬프를 사용하여 정기적인 간격으로 업데이트됩니다. 기본 간격은 30초이지만 간격을 구성할 수 있습니다.<br /><br /> 보류 중인 CDC Service에서 구성된 간격이 경과한 후 하트비트가 업데이트되지 않았음을 발견하면 보류 중인 서비스는 활성 CDC Service 역할을 넘겨 받으려고 시도합니다.|  
-|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]**형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에 가능한 값은 다음과 같습니다.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 기본 값은 **false**입니다.<br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
+|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]** 형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에 가능한 값은 다음과 같습니다.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<class name>[,class name>]**<br /><br /> <br /><br /> 기본 값은 **false**입니다.<br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 데이터베이스 저장 프로시저  
@@ -179,7 +179,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="BKMK_CDCdatabase"></a> CDC 데이터베이스  
  CDC Service에서 사용되는 각 Oracle CDC 인스턴스는 CDC Database라는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 Oracle CDC Service와 연결된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 호스팅됩니다.  
   
- CDC 데이터베이스에는 특별 cdc 스키마가 포함되어 있습니다. Oracle CDC Service는 접두사가 **xdbcdc_**인 테이블 이름에 이 스키마를 사용합니다. 이 스키마는 보안 및 일관성을 위해 사용됩니다.  
+ CDC 데이터베이스에는 특별 cdc 스키마가 포함되어 있습니다. Oracle CDC Service는 접두사가 **xdbcdc_** 인 테이블 이름에 이 스키마를 사용합니다. 이 스키마는 보안 및 일관성을 위해 사용됩니다.  
   
  Oracle CDC 인스턴스와 CDC 데이터베이스는 모두 Oracle CDC Designer 콘솔을 사용하여 만들어집니다. CDC 데이터베이스에 대한 자세한 내용은 Oracle CDC Designer 콘솔 설치 프로그램에 들어 있는 설명서를 참조하십시오.  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 02/15/2018
   
  **sql-username**, **sql-password** 는 업데이트되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 자격 증명입니다. sqlacct에서 사용자 이름과 암호가 모두 비어 있는 경우 Oracle CDC Service는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"**입력).  
+ **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ###  <a name="BKMK_create"></a> 만들기  
  `Create` 를 사용하여 스크립트에서 Oracle CDC Service를 만듭니다. 컴퓨터 관리자가 명령을 실행해야 합니다. 다음은 `Create` 명령의 예입니다.  
@@ -250,7 +250,7 @@ ms.lasthandoff: 02/15/2018
   
  **sql-username**, **sql-password** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 이름과 암호입니다. 이 두 매개 변수가 모두 비어 있으면 Oracle CDC Service는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"**입력).  
+ **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  `Delete` 를 사용하여 스크립트에서 Oracle CDC Service를 완전히 삭제합니다. 컴퓨터 관리자가 이 명령을 실행해야 합니다. 다음은 `Delete` 명령의 예입니다.  
@@ -265,7 +265,7 @@ ms.lasthandoff: 02/15/2018
   
  **cdc-service-name** 삭제할 CDC Service의 이름입니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"**입력).  
+ **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ## <a name="see-also"></a>참고 항목  
  [CDC Service 명령줄 인터페이스를 사용하는 방법](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   

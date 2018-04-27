@@ -1,28 +1,28 @@
 ---
-title: "SAP BW 원본 | Microsoft Docs"
-ms.custom: 
+title: SAP BW 원본 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6af26baf75b59769c6c26757ad1483265eab5c5c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8a25826885bb00e03da47ea6d458ac7ad132e522
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
   SAP BW 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 구성 요소입니다. 따라서 SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하고 이 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 사용할 수 있도록 합니다.  
@@ -63,15 +63,15 @@ ms.lasthandoff: 01/25/2018
   
     1.  Administrator Workbench(트랜잭션 코드 RSA1)로 이동하고 왼쪽 창에서 **Open Hub Destination**을 선택합니다.  
   
-    2.  가운데 창에서 InfoArea를 마우스 오른쪽 단추로 클릭한 다음 **"Create Open Hub Destination"**을 선택합니다.  
+    2.  가운데 창에서 InfoArea를 마우스 오른쪽 단추로 클릭한 다음 **"Create Open Hub Destination"** 을 선택합니다.  
   
-    3.  **Destination Type**에서 **"Third Party Tool"**을 선택한 다음 이전에 만든 RFC 대상을 입력합니다.  
+    3.  **Destination Type**에서 **"Third Party Tool"** 을 선택한 다음 이전에 만든 RFC 대상을 입력합니다.  
   
     4.  새 오픈 허브 대상을 저장하고 활성화합니다.  
   
 3.  DTP(데이터 전송 프로세스)를 만듭니다.  
   
-    1.  InfoArea의 가운데 창에서 이전에 만든 대상을 마우스 오른쪽 단추로 클릭한 다음 **"Create data transfer process"**를 선택합니다.  
+    1.  InfoArea의 가운데 창에서 이전에 만든 대상을 마우스 오른쪽 단추로 클릭한 다음 **"Create data transfer process"** 를 선택합니다.  
   
     2.  DTP를 구성하고 저장하고 활성화합니다.  
   

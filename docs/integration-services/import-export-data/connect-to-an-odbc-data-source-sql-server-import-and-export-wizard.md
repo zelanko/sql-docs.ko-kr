@@ -1,28 +1,28 @@
 ---
-title: "ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
-ms.custom: 
+title: ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9a7692c229728e97bc830020d6ec2cdc35843af4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bca53673a0f6b32dd4d1b020c82863cfc98dd554
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **ODBC** 데이터 원본에 연결하는 방법을 보여 줍니다.
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 또한 제공해야 하는 필요한 연결 정보를 찾아야 할 수도 있습니다. 이 타사 사이트([연결 문자열 참조](https://www.connectionstrings.com/))에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>원하는 드라이버가 설치되어 있는지 확인
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 한다는 것을 알고 있는 경우 **ODBC 데이터 원본(32비트)**을 대신 검색하거나 찾아봅니다.
+1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 한다는 것을 알고 있는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다.
 3.  **드라이버** 탭에서 컴퓨터에 설치된 모든 ODBC 드라이버의 목록을 찾을 수 있습니다. (일부 드라이버의 이름은 여러 언어로 나열될 수 있습니다.)
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="odbc_dsn"></a> 옵션 1 - DSN 제공
 연결 정보에 DSN(데이터 원본 이름)을 제공하려면 **ODBC 데이터 원본 관리자** 애플릿을 사용하여 기존 DSN의 이름을 찾거나 새 DSN을 만듭니다.
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)**을 대신 검색하거나 찾아봅니다.
+1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다. 애플릿의 모양은 다음과 같습니다.
 
     ![ODBC 관리자 제어판 애플릿](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="get-the-connection-string-with-an-app"></a>앱으로 연결 문자열 가져오기
 사용자 컴퓨터에서 ODBC 드라이버에 대한 연결 문자열을 작성하고 테스트하려면 [제어판]에서 **ODBC 데이터 원본 관리자** 애플릿을 사용할 수 있습니다. 연결에 대한 파일 DSN을 만든 다음, 파일 DSN에서 설정을 복사하여 연결 문자열을 조합합니다. 이 작업에는 여러 단계가 필요하지만, 유효한 연결 문자열이 있는지 확인하는 데 도움이 됩니다.
 
-1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)**을 대신 검색하거나 찾아봅니다.
+1.  [제어판]에서 **ODBC 데이터 원본(64비트)** 애플릿을 검색하거나 찾아봅니다. 32비트 드라이버만 있거나 32비트 드라이버를 사용해야 하는 경우 **ODBC 데이터 원본(32비트)** 을 대신 검색하거나 찾아봅니다.
 2.  애플릿을 시작합니다. **ODBC 데이터 원본 관리자** 창이 열립니다.
 3.  이제 애플릿의 **파일 DSN** 탭으로 이동합니다. **추가**를 클릭합니다.
 

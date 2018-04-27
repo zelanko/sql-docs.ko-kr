@@ -1,28 +1,28 @@
 ---
-title: "클러스터의 Integration Services(SSIS) | Microsoft Docs"
-ms.custom: 
+title: 클러스터의 Integration Services(SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>클러스터의 Integration Services(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 또는 클러스터 인식형 서비스가 아니며 클러스터 노드 간 장애 조치(failover) 기능을 지원하지 않으므로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클러스터링이 권장되지 않습니다. 따라서 클러스터형 환경에서는 클러스터의 노드마다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하고 독립 실행형 서비스로 시작해야 합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **장애 조치(failover)가 수행될 경우 실행 중인 패키지가 다시 시작되지 않습니다.**
     
-    검사점에서 패키지를 다시 시작하면 패키지 오류를 복구할 수 있습니다. 서비스를 클러스터 리소스로 구성하지 않고 검사점부터 다시 시작할 수 있습니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+    검사점에서 패키지를 다시 시작하면 패키지 오류를 복구할 수 있습니다. 서비스를 클러스터 리소스로 구성하지 않고 검사점부터 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 리소스 그룹에 구성하는 경우 클라이언트 컴퓨터에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 msdb 데이터베이스에 저장된 패키지를 관리할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 이러한 이중 홉 시나리오에서 자격 증명을 위임할 수 없습니다.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **리소스**를 클릭합니다.  
   
-5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형** 으로 **"일반 서비스"**를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
+5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형** 으로 **"일반 서비스"** 를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
   
 6.  **가능한 소유자** 페이지에서 클러스터의 노드를 리소스의 가능한 소유자로 추가하거나 제거합니다. **다음**을 클릭합니다.  
   

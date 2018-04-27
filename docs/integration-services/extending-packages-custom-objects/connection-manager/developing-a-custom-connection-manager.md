@@ -1,15 +1,15 @@
 ---
-title: "사용자 지정 연결 관리자 개발 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 연결 관리자 개발 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2aacdb7bf35b675cac2b94f9a3be532aa739c5c2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d87e08599128776e38a45e424bac60efb9b8446
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-a-custom-connection-manager"></a>사용자 지정 연결 관리자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 연결 관리자를 사용하여 외부 데이터 원본에 연결하는 데 필요한 정보를 캡슐화합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 엔터프라이즈 데이터베이스에서 텍스트 파일 및 Excel 워크시트에 이르기까지 가장 일반적으로 사용되는 데이터 원본에 대한 연결을 지원하는 다양한 연결 관리자가 포함되어 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 지원하는 연결 관리자와 외부 데이터 원본이 개발자의 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 연결 관리자를 만들 수 있습니다.  

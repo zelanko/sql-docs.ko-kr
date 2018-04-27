@@ -1,28 +1,28 @@
 ---
 title: catalog.add_data_tap_by_guid | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088d7eeda34d83a0bd54b0626216663725a94d5d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c69317a8739a5547042a035c0c2b2fc13cc7d434
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  ID 문자열을 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 두 데이터 흐름 구성 요소 사이의 경로를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **IdentificationString** 속성이 **속성** 창에 표시됩니다.  
   
- *dataflow_path_id_string*은 **nvarchar(4000)**입니다.  
+ *dataflow_path_id_string*은 **nvarchar(4000)** 입니다.  
   
  [ @data_filename = ] *data_filename*  
- 탭 데이터를 저장하는 파일의 이름입니다. 데이터 흐름 태스크가 Foreach 루프 또는 For 루프 컨테이너 내부에서 실행되는 경우 각 루프 반복에 대한 탭 데이터가 개별 파일에 저장됩니다. 각 파일은 반복에 해당하는 번호가 접두사로 붙습니다. 데이터 탭 파일은 "*\<SQL Server 설치 폴더>*\130\DTS\\" 폴더에 기록됩니다. *data_filename*은 **nvarchar(4000)**입니다.  
+ 탭 데이터를 저장하는 파일의 이름입니다. 데이터 흐름 태스크가 Foreach 루프 또는 For 루프 컨테이너 내부에서 실행되는 경우 각 루프 반복에 대한 탭 데이터가 개별 파일에 저장됩니다. 각 파일은 반복에 해당하는 번호가 접두사로 붙습니다. 데이터 탭 파일은 "*\<SQL Server 설치 폴더>* \130\DTS\\" 폴더에 기록됩니다. *data_filename*은 **nvarchar(4000)** 입니다.  
   
  [ @max_rows = ] max_rows  
  데이터 탭 도중 캡처하는 행 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다. max_rows는 **int**입니다.  

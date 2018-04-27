@@ -2,7 +2,7 @@
 title: Master Data Services 설치 및 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c958dfa6d3ba94a1d17835876d8de6b26dea1943
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 897a98e3028a17740c74e2452594385006b861b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/18/2018
   
 > **다운로드**  
 >-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
->-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
+>-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가 이미 설치된 가상 머신을 실행해 보세요.  
  
 > **MDS 웹 사이트를 만들 수 없는 경우**
 >>이 Microsoft 지원 문서에서 이 문제를 해결하는 방법에 대한 지침을 확인하세요.
@@ -52,8 +52,8 @@ ms.lasthandoff: 04/18/2018
 - Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 응용 프로그램 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
 - 웹 응용 프로그램에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 응용 프로그램 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure Virtual Machine의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]이 설치된 Azure Virtual Machine을 설치하면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치됩니다. 
+## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]이 설치된 Azure 가상 머신을 설치하면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치됩니다. 
 
 다음 단계는 IIS(인터넷 정보 서비스)를 설치하는 것입니다. [IIS 설치 및 구성](#InstallIIS) 섹션을 참조하세요. 
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/18/2018
 3.  **데이터베이스 서버** 페이지에서 **인증 유형** 을 선택하고 **연결 테스트** 를 클릭하여 선택한 인증 유형에 대한 자격 증명으로 데이터베이스에 연결할 수 있는지 확인합니다. **다음**을 클릭합니다.
   
     > [!NOTE]  
-    >  **현재 사용자 – 통합 보안** 을 인증 유형으로 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
+    >  **현재 사용자 – 통합 보안** 을 인증 유형으로 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   

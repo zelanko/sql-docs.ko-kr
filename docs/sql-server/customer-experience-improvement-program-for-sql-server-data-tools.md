@@ -2,8 +2,8 @@
 title: SQL Server Data Tools에 대한 사용자 환경 개선 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: beae11de576f8f6c413271ee2b532454d03613fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 사용자 환경 개선 프로그램
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,9 +48,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정**을 선택합니다.  
   
-3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.**를 클릭한 후 **확인**을 클릭합니다.  
+3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
   
-     CEIP를 설정하려면 **예, 참여하겠습니다.**를 클릭한 후 **확인**을 클릭합니다.  
+     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
   
 
   
@@ -90,9 +90,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정**을 선택합니다.  
   
-3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.**를 클릭한 후 **확인**을 클릭합니다.  
+3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
   
-     CEIP를 설정하려면 **예, 참여하겠습니다.**를 클릭한 후 **확인**을 클릭합니다.  
+     CEIP를 설정하려면 **예, 참여하겠습니다.** 를 클릭한 후 **확인**을 클릭합니다.  
   
 
   

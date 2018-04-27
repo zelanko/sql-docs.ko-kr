@@ -1,24 +1,24 @@
 ---
-title: "Azure에서 SSIS 패키지 배포, 실행 및 모니터링 | Microsoft Docs"
+title: Azure에서 SSIS 패키지 배포, 실행 및 모니터링 | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2097595a90a44be6285b48be03ac9229749dd419
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -97,7 +97,7 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 
 5.  배포 프로세스가 완료되면 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업이 실패하면 **결과** 열에서 **실패**를 선택하여 해당 오류에 대한 설명을 표시합니다.
-    -   필요에 따라 **보고서 저장...**을 선택하여 결과를 XML 파일에 저장합니다.
+    -   필요에 따라 **보고서 저장...** 을 선택하여 결과를 XML 파일에 저장합니다.
     -   **닫기**를 선택하여 마법사를 종료합니다.
 
 ## <a name="deploy-a-project-with-powershell"></a>PowerShell을 사용하여 프로젝트 배포

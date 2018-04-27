@@ -1,16 +1,16 @@
 ---
-title: "Integration Services(SSIS) 로깅 | Microsoft Docs"
-ms.custom: 
+title: Integration Services(SSIS) 로깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -233,7 +233,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  **공급자 유형** 목록에서 로그 공급자를 선택한 다음 **추가**를 클릭합니다.  
   
-4.  **구성** 열에서 연결 관리자를 선택하거나 **\<새 연결>**을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
+4.  **구성** 열에서 연결 관리자를 선택하거나 **\<새 연결>** 을 클릭하여 로그 공급자에 대한 적절한 유형의 연결 관리자를 만듭니다. 선택한 공급자에 따라 다음 연결 관리자 중 하나를 사용합니다.  
   
     -   텍스트 파일에는 파일 연결 관리자를 사용합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)를 참조하세요.  
   
@@ -345,7 +345,7 @@ ms.lasthandoff: 01/25/2018
 |**MessageText**|로그 항목과 연결된 메시지입니다.|  
 |**DataBytes**|나중에 사용하도록 예약되어 있습니다.|  
   
- **Basic**  
+ **기본**  
  로깅할 이벤트를 선택하거나 선택을 취소합니다. 이 옵션은 이벤트 목록을 제외한 로깅 세부 정보를 숨깁니다. 이벤트를 선택한 경우 해당 이벤트에 대한 모든 로깅 세부 정보가 기본적으로 선택됩니다. 로깅 세부 정보를 모두 표시하려면 **고급** 을 클릭합니다.  
   
  **로드**  

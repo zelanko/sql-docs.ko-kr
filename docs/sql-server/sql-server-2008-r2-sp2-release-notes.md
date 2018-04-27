@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2008 R2 SP2 릴리스 정보 | Microsoft 문서
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
@@ -18,11 +18,11 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e8e39fb903504fb319f29f6eaaeb223159c9e3f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SQL Server 2008 R2를 시작하고 설치하는 방법은 SQL Server 2008 R2 추
 |SQL Server 2008 R2 Management Studio의 64비트 설치 안 됨|SQL Server 2008 R2 Management Studio(SP2 포함) 설치|[여기](http://go.microsoft.com/fwlink/p/?LinkId=251791) 에 있는 SQLManagementStudio_x64_ENU.exe를 다운로드하여 무료로 SQL Server 2008 R2 SP2 Management Studio Express Edition을 설치합니다.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 SQAGTRES.dll이 다른 프로세스에 의해 잠겨 있는 경우 설치 실패  
-**문제:**다음 오류로 SQL Server 설치 작업이 실패할 수 있습니다. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 근본 원인은 C:\Windows\system32\SQAGTRES.DLL이 다른 프로세스에 의해 잠겨 있고 설치 프로그램에서 업데이트할 수 없었기 때문입니다.  
+**문제:** 다음 오류로 SQL Server 설치 작업이 실패할 수 있습니다. `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` 근본 원인은 C:\Windows\system32\SQAGTRES.DLL이 다른 프로세스에 의해 잠겨 있고 설치 프로그램에서 업데이트할 수 없었기 때문입니다.  
   
 **해결 방법**: C:\Windows\system32\SQAGTRES.DLL의 이름을 C:\Windows\system32\SQAGTRES_old.DLL과 같은 임시 이름으로 바꾼 다음 설치 오류 메시지에서 다시 시도 옵션을 선택합니다. 이렇게 하면 설치를 계속할 수 있습니다. 다시 부팅한 이후에 임시 파일 C:\Windows\system32\SQAGTRES_old.DLL을 삭제하면 됩니다.  
   

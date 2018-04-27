@@ -1,28 +1,28 @@
 ---
-title: "SQL Server Integration Services Scale Out 관리자 | Microsoft Docs"
+title: SQL Server Integration Services Scale Out 관리자 | Microsoft Docs
 ms.description: This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0180a4820781e19b728ddb1157db2010a8988ec
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e7d9120273330d4beab9e859fa17dde4caa0b04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 관리자
 
@@ -69,7 +69,7 @@ Scale Out 작업자의 상태는 **작업자 관리자** 페이지에 표시됩�
 ![포털 작업자 관리자](media/portal-worker-manager.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Scale Out 작업자 추가
-Scale Out 작업자를 추가하려면 Scale Out 작업자 목록의 맨 아래에서 **+**를 선택합니다. 
+Scale Out 작업자를 추가하려면 Scale Out 작업자 목록의 맨 아래에서 **+** 를 선택합니다. 
 
 추가할 Scale Out 작업자의 컴퓨터 이름을 입력하고 **유효성 검사**를 클릭합니다. Scale Out 관리자는 현재 사용자가 Scale Out 마스터 및 Scale Out 작업자 컴퓨터의 인증서 저장소에 액세스 권한이 있는지 확인합니다.
 
@@ -96,7 +96,7 @@ Scale Out 작업자를 추가하려면 Scale Out 작업자 목록의 맨 아래�
 **확인** 확인란을 선택한 다음 **확인**을 선택하여 Scale Out 작업자 추가를 시작합니다.
 
 ### <a name="delete-a-scale-out-worker"></a>Scale Out 작업자 삭제
-Scale Out 작업자를 삭제하려면 Scale Out 작업자를 선택한 다음 Scale Out 작업자 목록 맨 아래에서 **-**를 선택합니다.
+Scale Out 작업자를 삭제하려면 Scale Out 작업자를 선택한 다음 Scale Out 작업자 목록 맨 아래에서 **-** 를 선택합니다.
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Scale Out 작업자 사용 또는 사용 안 함
 Scale Out 작업자를 사용하거나 사용하지 않으려면 Scale Out 작업자를 선택한 다음 **작업자 사용** 또는 **작업자 사용 안 함**을 선택합니다. 작업자가 오프라인 상태가 아니면 스케일 아웃 관리자에 작업자의 해당 상태가 표시됩니다.

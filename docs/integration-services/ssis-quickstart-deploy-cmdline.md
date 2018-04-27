@@ -1,23 +1,24 @@
 ---
-title: "명령 프롬프트에서 SSIS 프로젝트 배포 | Microsoft Docs"
+title: 명령 프롬프트에서 SSIS 프로젝트 배포 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a94a74659cefdb1fbed508836d45cacff1cf65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe를 사용하여 명령 프롬프트에서 SSIS 프로젝트 배포
 이 빠른 시작 자습서에서는 Integration Services 배포 마법사인 `ISDeploymentWizard.exe`를 실행하여 명령 프롬프트에서 SSIS 프로젝트를 배포하는 방법을 보여줍니다.
@@ -50,7 +51,7 @@ Integration Services 배포 마법사에 대한 자세한 내용은 [ Integratio
   
 5.  배포 프로세스가 완료되면 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업이 실패하면 **결과** 열에서 **실패**를 클릭하여 해당 오류에 대한 설명을 표시합니다.
-    -   필요에 따라 **보고서 저장...**을 클릭하여 결과를 XML 파일에 저장합니다.
+    -   필요에 따라 **보고서 저장...** 을 클릭하여 결과를 XML 파일에 저장합니다.
     -   **닫기**를 클릭하여 마법사를 종료합니다.
 
 ## <a name="next-steps"></a>다음 단계

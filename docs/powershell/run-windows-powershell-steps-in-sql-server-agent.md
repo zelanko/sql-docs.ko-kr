@@ -1,27 +1,28 @@
 ---
-title: "SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0e3a5a64d8c65a722e0c235bed60daa4a9872b60
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 29d0a509d4e022772537b53b69fa1f3358c0824f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +74,7 @@ SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell �
   
 3.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
   
-4.  **유형** 목록에서 **운영 체제(CmdExec)**를 선택합니다.  
+4.  **유형** 목록에서 **운영 체제(CmdExec)** 를 선택합니다.  
   
 5.  **다음 계정으로 실행** 목록에서 해당 작업이 사용할 자격 증명을 가진 프록시 계정을 선택합니다. 기본적으로 CmdExec 작업 단계는 SQL Server 에이전트 서비스 계정의 컨텍스트에서 실행됩니다.  
   

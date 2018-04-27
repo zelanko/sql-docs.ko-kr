@@ -1,30 +1,30 @@
 ---
-title: "변경 데이터 검색 및 이해 | Microsoft Docs"
-ms.custom: 
+title: 변경 데이터 검색 및 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ff4d2567d455744270b3fa317b3290ac1ced123
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 10b9057d6659ac37b0d841fa12549fdb8d3dc42f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>변경 데이터 검색 및 이해
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 첫 번째 태스크는 변경 데이터를 검색하는 쿼리를 실행하는 것입니다. 데이터 흐름 태스크의 원본 구성 요소 내에서 이 쿼리를 실행합니다. 그런 다음 다운스트림 변환 및 대상을 사용하여 대상에 변경 데이터를 적용할 수 있습니다.  

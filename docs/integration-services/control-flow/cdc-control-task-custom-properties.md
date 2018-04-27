@@ -1,28 +1,28 @@
 ---
-title: "CDC 제어 태스크 사용자 지정 속성 | Microsoft Docs"
-ms.custom: 
+title: CDC 제어 태스크 사용자 지정 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40805d8c0f2e070df89344babfbc607a7cd6c66f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c6e91a8131da19b8c3c38a261bf93bbaa464f0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 제어 태스크 사용자 지정 속성
   다음 표에서는 CDC 제어 태스크의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |연결|ADO.NET 연결|변경 테이블과 CDC 상태(동일한 데이터베이스에 저장되어 있는 경우)에 액세스하기 위한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 데이터베이스에 대한 ADO.NET 연결입니다.<br /><br /> CDC에 사용할 수 있고 선택한 변경 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결해야 합니다.|  
-|TaskOperation|Integer(열거형)|CDC 제어 태스크에 대해 선택한 작업입니다. 가능한 값은 **초기 로드 시작 표시**, **초기 로드 끝 표시**, **CDC 시작 표시**, **처리 범위 가져오기**, **처리된 범위 표시**및 **CDC 상태 다시 설정**입니다.<br /><br /> **CDC(Oracle이 아님)에서 작업할 때**MarkCdcStart **,**MarkInitialLoadStart **또는** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택하는 경우 연결 관리자에서 지정하는 사용자가  **db_owner** 또는 **sysadmin**이어야 합니다.<br /><br /> 이러한 작업에 대한 자세한 내용은 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 및 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
+|TaskOperation|Integer(열거형)|CDC 제어 태스크에 대해 선택한 작업입니다. 가능한 값은 **초기 로드 시작 표시**, **초기 로드 끝 표시**, **CDC 시작 표시**, **처리 범위 가져오기**, **처리된 범위 표시**및 **CDC 상태 다시 설정**입니다.<br /><br /> **CDC(Oracle이 아님)에서 작업할 때**MarkCdcStart **,** MarkInitialLoadStart **또는** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택하는 경우 연결 관리자에서 지정하는 사용자가  **db_owner** 또는 **sysadmin**이어야 합니다.<br /><br /> 이러한 작업에 대한 자세한 내용은 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 및 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
 |OperationParameter|String|현재 **MarkCdcStart** 작업에 사용됩니다. 이 매개 변수를 사용하면 특정 작업에 필요한 추가 입력이 가능해집니다. **MarkCdcStart** 작업에 필요한 LSN 번호를 예로 들 수 있습니다.|  
 |StateVariable|String|현재 CDC 컨텍스트의 CDC 상태를 저장하는 SSIS 패키지 변수입니다. CDC 제어 태스크가 상태를 읽고 **StateVariable** 에 쓰며, **AutomaticStatePersistence** 가 선택되지 않은 한 상태를 로드하거나 영구 저장소에 저장하지 않습니다. [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)|  
 |AutomaticStatePersistence|Boolean|CDC 제어 태스크가 CDC 상태 패키지 변수에서 CDC 상태를 읽습니다. 작업 다음에 CDC 제어 태스크가 CDC 상태 패키지 변수의 값을 업데이트합니다. **AutomaticStatePersistence** 속성은 SSIS 패키지 실행 간에 CDC 상태 값을 유지하는 주체가 누구인지를 CDC 제어 태스크에 알려 줍니다.<br /><br /> 이 속성이 **true**이면 CDC 제어 태스크가 상태 테이블에서 자동으로 CDC 상태 변수의 값을 로드합니다. CDC 제어 태스크가 CDC 상태 변수의 값을 업데이트할 때는 특수 테이블의 상태인 동일한 상태 **table.stores**의 값과 StateVariable도 업데이트됩니다. 개발자는 상태 테이블 및 해당 이름이 포함되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 제어할 수 있습니다. 이 상태 테이블의 구조는 미리 정의되어 있습니다.<br /><br /> **false**이면 CDC 제어 태스크가 해당 값을 유지하는 작업을 처리하지 않습니다. true이면 CDC 제어 태스크가 특수 테이블에 상태를 저장하고 StateVariable을 업데이트합니다.<br /><br /> 기본값은 상태 지속이 자동으로 업데이트됨을 나타내는 **true**입니다.|  

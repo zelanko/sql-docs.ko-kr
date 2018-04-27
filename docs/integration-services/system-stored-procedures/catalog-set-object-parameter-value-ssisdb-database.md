@@ -1,28 +1,28 @@
 ---
-title: "catalog.set_object_parameter_value(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.set_object_parameter_value(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 216f5e4e3a68ead9a8353b2b35fef0b3d1717cba
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de4f863322b805d8a2dfc0e6f21cae8378095e93
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ catalog.set_object_parameter_value [@object_type =] object_type
  매개 변수의 유형입니다. 프로젝트 매개 변수를 나타내려면 값 `20`을 사용하고, 패키지 매개 변수를 나타내려면 값 `30`을 사용합니다. *object_type*은 **smallInt**입니다.  
   
  [@folder_name =] *folder_name*  
- 매개 변수가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 매개 변수가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [@project_name =] *project_name*  
- 매개 변수가 포함된 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 매개 변수가 포함된 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [@parameter_name =] *parameter_name*  
- 매개 변수의 이름입니다. *parameter_name*은 **nvarchar(128)**입니다.  
+ 매개 변수의 이름입니다. *parameter_name*은 **nvarchar(128)** 입니다.  
   
  [@parameter_value =] *parameter_value*  
  매개 변수의 값입니다. *parameter_value*는 **sql_variant**입니다.  
   
  [@object_name =] *object_name*  
- 패키지의 이름입니다. 이 인수는 매개 변수가 패키지 매개 변수인 경우에 필요합니다. *object_name*은 **nvarchar(260)**입니다.  
+ 패키지의 이름입니다. 이 인수는 매개 변수가 패키지 매개 변수인 경우에 필요합니다. *object_name*은 **nvarchar(260)** 입니다.  
   
  [@value_type =] *value_type*  
- 매개 변수 값의 유형입니다. *parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면 `V` 문자를 사용하고, *parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면 `R` 문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)**입니다.  
+ 매개 변수 값의 유형입니다. *parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면 `V` 문자를 사용하고, *parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면 `R` 문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

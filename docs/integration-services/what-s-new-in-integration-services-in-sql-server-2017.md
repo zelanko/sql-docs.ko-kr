@@ -1,28 +1,28 @@
 ---
-title: "SQL Server 2017 Integration Services의 새로운 기능 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 Integration Services의 새로운 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0357907777cfec8cf65c36a074cc8e91c4d0e02c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 513b790c69959b56e210259283874a48ce7a457c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
 이 항목에서는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다.
@@ -64,7 +64,7 @@ Azure용 Integration Services 기능 팩에는 SQL Server의 향상된 연결성
 
 -   Scale Out Master에서 이제 고가용성을 지원합니다. SSISDB용 Always On을 사용하도록 설정하고, Scale Out 마스터 서비스를 호스팅하는 서버에 대한 Windows Server 장애 조치 클러스터링을 설정할 수 있습니다. 이 변경된 기능을 Scale Out 마스터에 적용하면 단일 장애 지점을 방지하고 전체 Scale Out 배포에 고가용성을 제공할 수 있습니다.
 -   Scale Out Worker에서 실행 로그의 장애 조치(failover) 처리가 향상되었습니다. Scale Out 작업자가 예기치 않게 중지되는 경우 실행 로그가 로컬 디스크에 유지됩니다. 나중에 작업자가 다시 시작되면 지속형 로그를 다시 로드하고 SSISDB에 계속 저장합니다.
--   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]**의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다. 이러한 매개 변수 이름의 변경으로 인해 미치는 영향은 다음과 같습니다.
+-   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다. 이러한 매개 변수 이름의 변경으로 인해 미치는 영향은 다음과 같습니다.
     -   Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
     -   SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “*@runincluster*은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 해결 방법으로, SSMS 버전 17.2를 제공할 때까지 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성한 다음 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경하여 해당 스크립트를 실행하면 됩니다.
 -   SSIS 카탈로그에 SSIS 패키지를 실행하기 위한 기본 모드를 지정하는 새 전역 속성이 있습니다. 이 새 속성은 null로 설정된 *runinscaleout* 매개 변수를 사용하여 **[catalog].[create_execution]** 저장 프로시저를 호출할 때 적용됩니다. 이 모드는 SSIS SQL 에이전트 작업에도 적용됩니다. SSMS의 SSISDB 노드에 대한 [속성] 대화 상자에서 또는 다음 명령을 사용하여 새 전역 속성을 설정할 수 있습니다.

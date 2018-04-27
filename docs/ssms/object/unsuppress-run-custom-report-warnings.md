@@ -2,7 +2,7 @@
 title: 사용자 지정 보고서 실행 경고 표시 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef82982f5a18595c28fd8fb20a1ba28c43936f9d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 83cfba9bd32f1b3174410ae348bce1f31304a50d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+사용자 지정 보고서에 대한 경고 대화 상자에는 두 가지가 있습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에서 이러한 상자를 표시하는 방법에 대해 설명합니다.  
   
 기본적으로 사용자 지정 보고서가 실행되기 전에 **사용자 지정 보고서 실행** 대화 상자가 표시됩니다. **이 경고 메시지를 다시 표시 안 함** 확인란을 선택하면 이 대화 상자가 더 이상 표시되지 않습니다. 또한 사용자 지정 보고서를 연 다음 링크를 클릭하여 다른 사용자 지정 보고서를 열면 기본적으로 **사용자 지정 보고서 실행** 대화 상자가 표시됩니다. 이 대화 상자는 드릴스루 사용자 지정 보고서 파일에 대한 채우기 경로를 표시합니다. **이 경고 메시지를 다시 표시 안 함** 확인란을 선택하면 이 대화 상자가 더 이상 표시되지 않습니다.  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  **reports.xml**을 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-3.  **<SuppressWarning>true\<\/SuppressWarning>을 <SuppressWarning>false\<\/SuppressWarning>**으로 변경합니다.  
+3.  **<SuppressWarning>true\<\/SuppressWarning>을 <SuppressWarning>false\<\/SuppressWarning>** 으로 변경합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]를 다시 시작합니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  **reports.xml**을 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
-3.  **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>을 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**으로 변경합니다.  
+3.  **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>을 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** 으로 변경합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]를 다시 시작합니다.  
   

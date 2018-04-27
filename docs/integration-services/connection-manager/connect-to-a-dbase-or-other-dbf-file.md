@@ -1,32 +1,32 @@
 ---
-title: "dBASE 또는 다른 DBF 파일에 연결 | Microsoft Docs"
-ms.custom: 
+title: dBASE 또는 다른 DBF 파일에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to DBF files
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a840093c5501dc7d7f91ea3aa0a7b04ed4a42339
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 27078fb038e9cee60a4da76a6548c648ea46085f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>dBASE 또는 다른 DBF 파일에 연결
   OLE DB 연결 관리자를 사용하고 Microsoft OLE DB Provider for Jet 4.0을 선택하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 dBASE 또는 다른 .DBF 데이터베이스에 연결할 수 있습니다.  

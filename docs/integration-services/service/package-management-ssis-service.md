@@ -1,16 +1,16 @@
 ---
-title: "패키지 관리(SSIS 서비스) | Microsoft Docs"
-ms.custom: 
+title: 패키지 관리(SSIS 서비스) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef5f56d09d34fa2688fe46fdf6d7983af4e9e1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 모니터링, 관리, 패키지 가져오기 및 내보내기가 포함됩니다.  
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/25/2018
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>**를 클릭하여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>** 를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -145,15 +145,15 @@ ms.lasthandoff: 01/25/2018
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 가져오려면 **SQL Server** 옵션을 선택한 후 서버를 지정하고 인증 모드를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우 사용자 이름과 암호를 제공합니다.  
   
-         찾아보기 단추 **(…)**를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
   
     -   파일 시스템에서 가져오려면 **파일 시스템** 옵션을 선택합니다.  
   
-         찾아보기 단추 **(…)**를 클릭하고 가져올 패키지를 선택한 후 **열기**를 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **열기**를 클릭합니다.  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에서 가져오려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
-         찾아보기 단추**(…)**를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
   
 7.  선택적으로 패키지 이름을 업데이트합니다.  
   
@@ -169,7 +169,7 @@ ms.lasthandoff: 01/25/2018
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>**를 클릭하여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에 서버 이름을 입력하거나 **\<더 찾아보기…>** 를 클릭하여 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 01/25/2018
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 내보내려면 **SQL Server** 옵션을 선택한 후 서버를 지정하고 인증 모드를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우 사용자 이름과 암호를 제공합니다.  
   
-         찾아보기 단추 **(…)**를 클릭하고 **SSIS 패키지** 폴더를 확장하여 패키지를 저장하려는 폴더를 찾습니다. 선택적으로 패키지의 기본 이름을 업데이트한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 **SSIS 패키지** 폴더를 확장하여 패키지를 저장하려는 폴더를 찾습니다. 선택적으로 패키지의 기본 이름을 업데이트한 후 **확인**을 클릭합니다.  
   
     -   파일 시스템으로 내보내려면 **파일 시스템** 옵션을 선택합니다.  
   
@@ -189,9 +189,9 @@ ms.lasthandoff: 01/25/2018
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소로 내보내려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
-         찾아보기 단추 **(…)**를 클릭하고 **SSIS 패키지** 폴더를 확장하여 패키지를 저장하려는 폴더를 선택합니다. 선택적으로 **패키지 이름** 입력란에 패키지의 새 이름을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         찾아보기 단추 **(…)** 를 클릭하고 **SSIS 패키지** 폴더를 확장하여 패키지를 저장하려는 폴더를 선택합니다. 선택적으로 **패키지 이름** 입력란에 패키지의 새 이름을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  패키지의 보호 수준을 업데이트하려면 찾아보기 단추**(…)**를 클릭하고 **패키지 보호 수준** 대화 상자를 사용하여 다른 보호 수준을 선택합니다. **암호로 중요한 데이터 암호화** 또는 **암호로 모든 데이터 암호화** 옵션을 선택한 경우 암호를 입력하고 확인합니다.  
+7.  패키지의 보호 수준을 업데이트하려면 찾아보기 단추 **(…)** 를 클릭하고 **패키지 보호 수준** 대화 상자를 사용하여 다른 보호 수준을 선택합니다. **암호로 중요한 데이터 암호화** 또는 **암호로 모든 데이터 암호화** 옵션을 선택한 경우 암호를 입력하고 확인합니다.  
   
 8.  **확인** 을 클릭하여 내보내기를 완료합니다.  
 

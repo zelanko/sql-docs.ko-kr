@@ -1,31 +1,31 @@
 ---
-title: "CDC 제어 태스크 | Microsoft Docs"
-ms.custom: 
+title: CDC 제어 태스크 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6b98a21579471b613dae3746dbc745439103c90e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
   CDC 제어 태스크는 CDC(변경 데이터 캡처) 패키지의 수명 주기를 제어하는 데 사용됩니다. 이 태스크를 사용하면 초기 로드 패키지와의 CDC 패키지 동기화, CDC 패키지 실행 시 처리되는 LSN(로그 시퀀스 번호) 범위의 관리가 처리됩니다. 또한 CDC 제어 태스크는 오류 시나리오 및 복구를 다룹니다.  
@@ -151,7 +151,7 @@ ms.lasthandoff: 01/25/2018
  상태 테이블은 **자동 상태 지속** 이 선택되어 있는 경우에만 사용할 수 있으며 필수 매개 변수입니다.  
   
  **상태를 저장하는 데 사용할 테이블**  
- CDC 상태를 저장하는 데 사용할 상태 테이블의 이름을 입력합니다. 지정한 테이블에는 **이름** 열과 **상태** 열이 있어야 하며 두 열 모두 데이터 형식이 **varchar(256)**야 합니다.  
+ CDC 상태를 저장하는 데 사용할 상태 테이블의 이름을 입력합니다. 지정한 테이블에는 **이름** 열과 **상태** 열이 있어야 하며 두 열 모두 데이터 형식이 **varchar(256)** 야 합니다.  
   
  필요에 따라 **새로 만들기** 를 선택하여 필수 열이 포함된 새 상태 테이블을 작성하는 SQL 스크립트를 가져올 수도 있습니다. **자동 상태 지속** 이 선택되어 있으면 개발자가 위에 나열된 요구 사항에 따라 상태 테이블을 작성해야 합니다.  
   

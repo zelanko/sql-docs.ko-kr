@@ -1,30 +1,30 @@
 ---
-title: "6단계: 조회 변환 추가 및 구성 | Microsoft Docs"
-ms.custom: 
+title: '6단계: 조회 변환 추가 및 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 797ae8c8901f4fe102a6689bb1f752a1de3fa4ac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 41d236698902fde3dd771650c98fb8ce0117b73c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성
 원본 파일에서 데이터를 추출하도록 플랫 파일 원본을 구성한 후에 다음 태스크에서는 **CurrencyKey** 및 **DateKey**값을 얻는 데 필요한 조회 변환을 정의합니다. 조회 변환에서는 지정한 입력 열의 데이터를 참조 데이터 집합의 열로 조인하여 조회를 수행합니다. 참조 데이터 집합은 기존 테이블, 기존 뷰, 새 테이블 또는 SQL 문의 결과일 수 있습니다. 이 자습서에서 조회 변환은 OLE DB 연결 관리자를 사용하여 참조 데이터 집합의 원본인 데이터가 포함된 데이터베이스에 연결합니다.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **OLEDB 연결 관리자** 대화 상자에서 **localhost.AdventureWorksDW2012** 가 표시되어 있는지 확인합니다.  
   
-    2.  **테이블 또는 뷰 사용** 상자에서 **[dbo].[DimDate]**를 입력하거나 선택합니다.  
+    2.  **테이블 또는 뷰 사용** 상자에서 **[dbo].[DimDate]** 를 입력하거나 선택합니다.  
   
 8.  **열** 페이지에서 다음을 선택합니다.  
   

@@ -2,7 +2,7 @@
 title: 개체 탐색기를 사용하여 개체 관리 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 22c57aa3c643c83c9ecd23316aab18e48fc5a07a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 개체 탐색기를 사용하여 데이터베이스, 테이블 및 저장 프로시저와 같은 개체를 관리할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+개체 탐색기를 사용하여 데이터베이스, 테이블 및 저장 프로시저와 같은 개체를 관리할 수 있습니다.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>개체 탐색기에서 개체 보기  
 개체 탐색기는 트리 구조를 사용하여 정보를 폴더로 그룹화합니다. 폴더를 확장하려면 더하기 기호(+)를 클릭하거나 폴더를 두 번 클릭합니다. 폴더를 확장하여 더 자세한 정보를 표시합니다. 일반적인 태스크를 수행하려면 폴더나 개체를 마우스 오른쪽 단추로 클릭하고, 가장 일반적인 태스크를 수행하려면 개체를 두 번 클릭합니다.  

@@ -1,34 +1,36 @@
 ---
-title: "데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools) | Microsoft 문서"
-ms.custom: 
+title: 데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Database Diagram Designer
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6274d6f8e01833e850c5fedca92dcd18a769f784
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 423232830f465382140ae74b0c41c83ffd4ff966
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 데이터베이스 다이어그램 디자이너에서 작업할 때 마우스와 키보드를 모두 사용할 수 있습니다. 데이터베이스 다이어그램 디자이너에 사용되는 특정 작업 방법에 대한 내용은 아래 표를 참조하십시오.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+데이터베이스 다이어그램 디자이너에서 작업할 때 마우스와 키보드를 모두 사용할 수 있습니다. 데이터베이스 다이어그램 디자이너에 사용되는 특정 작업 방법에 대한 내용은 아래 표를 참조하십시오.  
   
 |**수행할 작업**|**작업 방법**|  
 |----------|-------------|  

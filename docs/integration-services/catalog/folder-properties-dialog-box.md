@@ -1,32 +1,32 @@
 ---
-title: "폴더 속성 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 폴더 속성 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isfolderprop.permissions.f1
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac2865b2fc4528785cbe8ebd89c0d2cedcacb3d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d4403c76a6e48d6fb5639183551f26ba5afa80cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
   폴더에는 **SSISDB** 카탈로그의 프로젝트 및 환경이 포함됩니다. 각 폴더는 폴더 내용에 적용되는 사용 권한을 정의합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 권한에 대한 자세한 내용은 [catalog.grant_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)을 참조하세요.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **일반** 페이지의 **일반** 아래에서 **설명** 을 선택하고 선택적인 설명을 입력합니다.  
   
-3.  **사용 권한** 페이지에서 **찾아보기...**를 클릭하고 하나 이상의 데이터베이스 보안 주체를 선택하고 **확인**을 클릭합니다.  
+3.  **사용 권한** 페이지에서 **찾아보기...** 를 클릭하고 하나 이상의 데이터베이스 보안 주체를 선택하고 **확인**을 클릭합니다.  
   
 4.  **로그인 또는 역할** 아래에서 이름을 선택하고 **사용 권한**아래에서 적합한 권한을 지정합니다.  
   

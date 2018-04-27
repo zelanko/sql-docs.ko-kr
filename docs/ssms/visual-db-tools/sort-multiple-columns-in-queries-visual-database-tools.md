@@ -2,7 +2,7 @@
 title: 쿼리에서 여러 열 정렬(Visual Database Tools) | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ff5f39674cdaba2f7b1846a9a59dda69da3934b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 04c91b8c18b93b95864c031189aeaffb0d256b13
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>쿼리에서 여러 열 정렬(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)에서 **정렬 순서** 열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**조건 창** 에서 [정렬 순서](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>두 개 이상의 열을 기준으로 쿼리 결과를 정렬하려면  
   

@@ -1,16 +1,16 @@
 ---
-title: "Integration Services 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
 -   데이터 변환을 사용하여 열의 데이터 형식을 한 데이터 형식에서 다른 데이터 형식으로 캐스팅합니다. 자세한 내용은 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)을 참조하세요.  
   
--   파생 열 변환을 사용하여 원래 열과 데이터 형식이 다른 열의 복사본을 만듭니다. 자세한 내용은 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
+-   파생 열 변환을 사용하여 원래 열과 데이터 형식이 다른 열의 복사본을 만듭니다. 자세한 내용은 [파생 열 변환](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>문자열과 날짜/시간 데이터 형식 간 변환  
  다음 표에서는 날짜/시간 데이터 형식과 문자열 간의 캐스팅 또는 변환 결과를 보여 줍니다.  

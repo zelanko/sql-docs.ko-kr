@@ -1,28 +1,28 @@
 ---
-title: "SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft 문서 도구"
-ms.custom: 
+title: SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft 문서 도구
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0e22f388277d9ad96e4c38497789d20f3e98cfad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bce490f05278c7ce07cf3ec2268bb605cea60d10
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Microsoft SQL Server** 데이터 원본에 연결하는 방법을 보여 줍니다. SQL Server에 연결하는 데 사용할 수 있는 여러 데이터 공급자가 있습니다.

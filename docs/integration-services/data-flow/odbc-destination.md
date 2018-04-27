@@ -1,16 +1,16 @@
 ---
-title: "ODBC 대상 | Microsoft Docs"
-ms.custom: 
+title: ODBC 대상 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -18,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 265df43e7f376621e1f5dde6f6911be3eecf38b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/15/2018
  사용 가능한 대상 열 목록입니다. 대상 열을 사용 가능한 입력 열에 끌어 놓아 열을 매핑할 수 있습니다.  
   
 #### <a name="input-column"></a>입력 열  
- 선택한 입력 열을 표시합니다. 출력에서 열을 제외하는 **\<ignore>**를 선택하여 매핑을 제거할 수 있습니다.  
+ 선택한 입력 열을 표시합니다. 출력에서 열을 제외하는 **\<ignore>** 를 선택하여 매핑을 제거할 수 있습니다.  
   
 #### <a name="destination-column"></a>대상 열  
  사용 가능한 모든 대상 열(매핑되거나 매핑되지 않음)을 표시합니다.  

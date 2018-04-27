@@ -1,31 +1,31 @@
 ---
-title: "WMI를 구성하여 SQL Server 도구에 서버 상태 표시 | Microsoft 문서"
-ms.custom: 
+title: WMI를 구성하여 SQL Server 도구에 서버 상태 표시 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WMI Provider for Server Events, setting permissions
 - WMI permissions [SQL Server]
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 654dfff830fa18a1a38a3ecb3454cfa824e097c9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d55a0e44ecac130f6eb4a32fd802c5004b833ce4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  **열기** 상자에 **wmimgmt.msc**를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  **Windows Management Infrastructure** 프로그램에서 **WMI 컨트롤(로컬)**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  **Windows Management Infrastructure** 프로그램에서 **WMI 컨트롤(로컬)** 을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **WMI 컨트롤(로컬) 속성** 대화 상자의 **보안** 탭에서 **루트**를 확장한 다음 **CIMV2**를 클릭합니다.  
   

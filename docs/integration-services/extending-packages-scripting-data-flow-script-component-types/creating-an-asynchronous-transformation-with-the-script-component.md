@@ -1,15 +1,15 @@
 ---
-title: "스크립트 구성 요소를 사용하여 비동기 변환 만들기 | Microsoft Docs"
-ms.custom: 
+title: 스크립트 구성 요소를 사용하여 비동기 변환 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c7a8ecd16aa8ea4957b54195feb66b3b8824d6b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비동기 변환 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 변환 구성 요소를 사용하여 데이터가 원본에서 대상으로 전달될 때 데이터를 수정하고 분석할 수 있습니다. 동기 출력을 사용하는 변환에서는 각 입력 행이 이 구성 요소를 통해 전달될 때 이를 처리합니다. 비동기 출력을 사용하는 변환에서는 입력 행을 모두 받을 때까지 기다렸다가 처리를 완료하거나 입력 행을 모두 받기 전에 일부 행을 출력할 수 있습니다. 이 항목에서는 비동기 변환에 대해 설명합니다. 처리에 동기 변환이 필요한 경우에는 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)를 참조하세요. 동기 구성 요소와 비동기 구성 요소 간 차이에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
  비동기 변환에서는 ProcessInputRow 또는 ProcessInput 메서드 내에서 AddRow 메서드를 사용하여 출력에 행을 적절하게 추가할 수 있습니다. CreateNewOutputRows 메서드를 사용할 필요가 없습니다. 집계 결과와 같은 결과를 특정 출력에 한 행으로 작성하려는 경우 먼저 CreateNewOutputRows 메서드를 사용하여 출력 행을 만들고 나중에 모든 입력 행을 처리한 후에 해당 값을 채울 수 있습니다. 그러나 스크립트 구성 요소에서는 입력 또는 출력에 현재 행만 사용할 수 있으므로 CreateNewOutputRows 메서드에서 여러 행을 만드는 것은 유용하지 않습니다. CreateNewOutputRows 메서드는 처리할 입력 행이 없는 원본 구성 요소에서 보다 중요합니다.  
   
- ProcessInput 메서드 자체를 재정의할 수도 있으므로 입력 버퍼를 반복하고 각 행에 대해 ProcessInputRow를 호출하기 전이나 그 후에 예비 또는 최종 처리를 추가로 수행할 수 있습니다. 예를 들어 이 항목의 코드 예제 중 하나는 ProcessInputRow가 행을 반복하면서 특정 도시의 주소 수를 계산하도록 ProcessInput을 재정의합니다**.** 이 예제에서는 모든 행이 처리된 후 요약 값을 두 번째 출력에 기록합니다. PostExecute가 호출되면 출력 버퍼를 더 이상 사용할 수 없으므로 이 예에서는 ProcessInput에서 출력을 완료합니다.  
+ ProcessInput 메서드 자체를 재정의할 수도 있으므로 입력 버퍼를 반복하고 각 행에 대해 ProcessInputRow를 호출하기 전이나 그 후에 예비 또는 최종 처리를 추가로 수행할 수 있습니다. 예를 들어 이 항목의 코드 예제 중 하나는 ProcessInputRow가 행을 반복하면서 특정 도시의 주소 수를 계산하도록 ProcessInput을 재정의합니다 **.** 이 예제에서는 모든 행이 처리된 후 요약 값을 두 번째 출력에 기록합니다. PostExecute가 호출되면 출력 버퍼를 더 이상 사용할 수 없으므로 이 예에서는 ProcessInput에서 출력을 완료합니다.  
   
  요구 사항에 따라 ScriptMain 클래스에서 사용할 수 있는 PreExecute 및 PostExecute 메서드에서 스크립트를 작성하여 예비 또는 최종 처리를 수행할 수도 있습니다.  
   

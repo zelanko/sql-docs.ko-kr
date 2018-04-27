@@ -1,28 +1,28 @@
 ---
 title: catalog.set_customized_logging_level_value | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f5cbc65822e3f105db0e210aa5bbda1e22cc332
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dfbd94cfa574c224f0f45d1eeb433107d43380da
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  기존 사용자 지정 로깅 수준의 이름입니다.  
   
- *level_name*은 **nvarchar(128)**입니다.  
+ *level_name*은 **nvarchar(128)** 입니다.  
   
  [ @property_name = ] *property_name*  
  변경할 속성의 이름입니다. 유효한 값은 **PROFILE** 및 **EVENTS**입니다.  
   
- *property_name*은 **nvarchar(128)**입니다.  
+ *property_name*은 **nvarchar(128)** 입니다.  
   
  [ @property_value = ] *property_value*  
  지정된 사용자 지정 로깅 수준의 지정된 속성에 대한 새 값입니다.  

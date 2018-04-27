@@ -2,7 +2,7 @@
 title: 쿼리 만들기(Visual Database Tools) | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 11e7ac99b1d9f54c6ed16e58fba7572f3a04d39b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>쿼리 만들기(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리를 사용하면 데이터베이스에서 테이블과 뷰의 데이터를 검색할 수 있습니다. 쿼리는 **쿼리 및 뷰 디자이너**에서 만들고 사용합니다. 이 디자이너는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)및 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)의 네 가지 창으로 구성됩니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+쿼리를 사용하면 데이터베이스에서 테이블과 뷰의 데이터를 검색할 수 있습니다. 쿼리는 **쿼리 및 뷰 디자이너**에서 만들고 사용합니다. 이 디자이너는 [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)및 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)의 네 가지 창으로 구성됩니다.  
   
 ### <a name="to-create-a-new-query"></a>새 쿼리를 만들려면  
   

@@ -1,16 +1,16 @@
 ---
-title: "패키지 속성 설정 | Microsoft Docs"
-ms.custom: 
+title: 패키지 속성 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89564adcf11f815413fefaeb2701431c37b898c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  다음 표에서는 항목별 패키지 속성을 나열합니다.  
   
 ###  <a name="Checkpoints"></a> 검사점  
- 이 항목의 속성을 사용하면 제어 흐름 시작부터 패키지를 다시 실행하는 대신 패키지 제어 흐름의 오류 발생 시점으로부터 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+ 이 항목의 속성을 사용하면 제어 흐름 시작부터 패키지를 다시 실행하는 대신 패키지 제어 흐름의 오류 발생 시점으로부터 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/25/2018
 |**CreatorComputerName**|패키지를 만든 컴퓨터의 이름입니다.|  
 |**CreatorName**|패키지를 만든 사용자의 이름입니다.|  
 |**설명**|패키지 기능에 대한 설명입니다.|  
-|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>**을 선택합니다.|  
+|**ID**|패키지를 만들 때 할당된 패키지 GUID입니다. 이 속성은 읽기 전용입니다. **ID** 속성의 새 임의 값을 생성하려면 드롭다운 목록에서 **\<새 ID 생성\>** 을 선택합니다.|  
 |**이름**|패키지의 이름입니다.|  
 |**PackageType**|패키지 유형입니다. 가능한 값은 **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**및 **SQLReplication**입니다. 이 속성의 기본값은 **Default**입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>를 참조하세요.|  
   

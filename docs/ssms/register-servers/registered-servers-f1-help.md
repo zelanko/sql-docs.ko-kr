@@ -1,36 +1,36 @@
 ---
-title: "등록된 서버 F1 도움말 | Microsoft 문서"
-ms.custom: 
+title: 등록된 서버 F1 도움말 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 22a9a95e73b34a9c094abf24a0b12998bc8cfc87
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="registered-servers-f1-help"></a>등록된 서버 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 등록된 서버 구성 요소에 대한 F1 도움말을 제공합니다. 다양한 옵션에 대해 설명합니다.
+  이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 등록된 서버 구성 요소에 대한 F1 도움말을 제공합니다. 다양한 옵션에 대해 설명합니다.
   
  등록된 서버에 대해 알아보고 서버에서 수행할 작업에 대한 링크를 확인하려면 [서버 등록](../../tools/sql-server-management-studio/register-servers.md) 항목으로 이동합니다. 
  

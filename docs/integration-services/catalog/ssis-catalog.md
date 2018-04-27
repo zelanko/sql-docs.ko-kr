@@ -1,32 +1,32 @@
 ---
-title: "SSIS 카탈로그 | Microsoft Docs"
-ms.custom: 
+title: SSIS 카탈로그 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **데이터베이스가 연결된** 인스턴스가 중지되었거나 응답하지 않으면 ISServerExec.exe 프로세스가 종료됩니다. 메시지는 Windows 이벤트 로그에 기록됩니다.  
 >   
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 클러스터 장애 조치(Failover)의 일부로 장애 조치(Failover)되는 경우에는 실행 중인 패키지가 다시 시작되지 않습니다. 검사점을 사용하여 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 클러스터 장애 조치(Failover)의 일부로 장애 조치(Failover)되는 경우에는 실행 중인 패키지가 다시 시작되지 않습니다. 검사점을 사용하여 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ## <a name="features-and-capabilities"></a>기능 및 특징  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/25/2018
   
  카탈로그의 같은 폴더에 동일한 이름으로 배포하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 업데이트하거나 다시 배포할 수 있습니다. 기본적으로 프로젝트를 다시 배포할 때마다 **SSISDB** 카탈로그에서 이전 버전의 프로젝트를 보존합니다. 작업 데이터의 크기를 유지 관리하기 위해 **SSIS 서버 유지 관리 작업** 을 사용하여 오래된 버전의 프로젝트를 제거합니다.  
  
-**SSIS Server 유지 관리 작업**을 실행하기 위해 SSIS는 SQL Server 로그인 **##MS_SSISServerCleanupJobLogin##**을 만듭니다. 이 로그인은 SSIS 내부에서만 사용됩니다.
+**SSIS Server 유지 관리 작업**을 실행하기 위해 SSIS는 SQL Server 로그인 **##MS_SSISServerCleanupJobLogin##** 을 만듭니다. 이 로그인은 SSIS 내부에서만 사용됩니다.
   
  이 **에이전트 작업의 동작 방법은 다음** SSISDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 속성에 의해 정의됩니다. **카탈로그 속성** 대화 상자를 사용하거나 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)를 사용하여 속성을 보고 수정할 수 있습니다.  
   
@@ -420,7 +420,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **보안** 노드를 확장한 후 **로그인** 노드를 확장합니다.  
   
-    2.  **##MS_SSISServerCleanupJobLogin##**을 마우스 오른쪽 단추로 클릭한 후 **로그인 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
+    2.  **##MS_SSISServerCleanupJobLogin##** 을 마우스 오른쪽 단추로 클릭한 후 **로그인 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
   
 5.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 SSISDB 데이터베이스를 복원할 경우 다음을 수행하여 sp_ssis_startup에 대한 CREATE PROCEDURE 스크립트를 생성합니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)를 참조하세요.  
   

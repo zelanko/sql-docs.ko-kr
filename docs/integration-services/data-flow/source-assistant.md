@@ -1,31 +1,31 @@
 ---
-title: "원본 길잡이 | Microsoft Docs"
-ms.custom: 
+title: 원본 길잡이 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sourceassistant.f1
 - sql13.dts.designer.addNewSource.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7d59fde2de60cf96ae87585e40efd022ef95b81
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2edc08de83250e1dcd05fcdc942f631a23725c77
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="source-assistant"></a>원본 길잡이
   원본 길잡이 구성 요소는 원본 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  
@@ -42,11 +42,11 @@ ms.lasthandoff: 01/25/2018
   
 3.  **유형** 목록에서 대상의 유형을 선택합니다.  
   
-4.  **연결 관리자** 목록에서 기존 연결 관리자를 선택하거나 **\<새로 만들기>**를 선택하여 새 연결 관리자를 만듭니다.  
+4.  **연결 관리자** 목록에서 기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 선택하여 새 연결 관리자를 만듭니다.  
   
 5.  기본 연결 관리자를 선택한 경우 **확인** 을 클릭하여 **새 대상 추가** 대화 상자를 닫습니다. 데이터 흐름에 추가된 대상 및 연결 관리자가 표시됩니다.  
   
-6.  **\<새로 만들기>**를 클릭하여 새 연결 관리자를 만든 경우 연결에 대한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 나타납니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
+6.  **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만든 경우 연결에 대한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 나타납니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
 
 ## <a name="add-new-source-dialog-box"></a>새 원본 추가 대화 상자
 다음 표에서는 **새 원본 추가** 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/25/2018
 |옵션|Description|  
 |------------|-----------------|  
 |유형|연결할 원본 유형을 선택합니다.|  
-|연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>**를 클릭하여 새 연결 관리자를 만듭니다.|  
+|연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만듭니다.|  
 |설치된 항목만 표시|설치된 원본만 볼 것인지 여부를 지정합니다.|  
 |확인|변경 내용을 저장하고 모든 후속 대화 상자를 열어 추가 옵션을 구성하려면 클릭합니다.| 
   

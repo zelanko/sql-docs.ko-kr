@@ -2,7 +2,7 @@
 title: Visual Database Tools F1 도움말 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae151529619af34a8d801ef0efa1f82818e4d977
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 도움말
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 다음 항목에서는 테이블 속성 창 및 열 속성 탭과 같은 Visual Database Tools 요소에 대한 대화 상자 및 속성 창에서 제공하는 명령과 옵션에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+다음 항목에서는 테이블 속성 창 및 열 속성 탭과 같은 Visual Database Tools 요소에 대한 대화 상자 및 속성 창에서 제공하는 명령과 옵션에 대해 설명합니다.  
   
 대화 상자 항목을 열려면 대화 상자가 열려 있고 포커스가 주어진 상태에서 F1 키를 누릅니다. 속성 창 항목을 열려면 속성 창을 클릭하고 F1 키를 누릅니다.  
   

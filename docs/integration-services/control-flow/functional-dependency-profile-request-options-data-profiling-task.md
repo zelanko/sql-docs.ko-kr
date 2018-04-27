@@ -1,30 +1,30 @@
 ---
-title: "함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs"
-ms.custom: 
+title: 함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9307c5f2dfb263453c2d61c024092955d05974b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c428b05a8258081efc6d1b36458256367fe4c88b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **함수 종속성 프로필 요청** 의 옵션을 설정할 수 있습니다. 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Zip Code/Postal Code 열과 US State 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 이 프로필이 종속성 위반을 검색할 수 있습니다.  
@@ -43,10 +43,10 @@ ms.lasthandoff: 01/25/2018
   
 -   **(\*)** 와일드카드와 다른 열을 선택하면 데이터 프로파일링 태스크에서 각 열의 조합을 종속성의 결정 측으로 테스트합니다. 예를 들어 열 A, B, C를 포함하는 예제 테이블의 경우 **(\*)** 및 열 C를 **DeterminantColumns** 속성의 값으로 지정하면 데이터 프로파일링 태스크에서 조합 (A, C) 및 (B, C)를 종속성의 결정 측으로 테스트합니다.  
   
- 종속측의 경우 **DependentColumn** 속성에 단일 열 또는 **(\*)** 와일드카드를 지정할 수 있습니다. **(\*)**를 선택하면 데이터 프로파일링 태스크에서 각 열에 대해 결정 측 열 또는 열 집합을 테스트합니다.  
+ 종속측의 경우 **DependentColumn** 속성에 단일 열 또는 **(\*)** 와일드카드를 지정할 수 있습니다. **(\*)** 를 선택하면 데이터 프로파일링 태스크에서 각 열에 대해 결정 측 열 또는 열 집합을 테스트합니다.  
   
 > [!NOTE]  
->  **(\*)**를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 함수 종속성에 대한 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 경우 태스크에서 열 C가 결정 열임을 확인하면 복합 후보를 계속 분석하지 않습니다.  
+>  **(\*)** 를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 함수 종속성에 대한 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 경우 태스크에서 열 C가 결정 열임을 확인하면 복합 후보를 계속 분석하지 않습니다.  
   
 ## <a name="request-properties-options"></a>요청 속성 옵션  
  **함수 종속성 프로필 요청**에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
@@ -80,10 +80,10 @@ ms.lasthandoff: 01/25/2018
  자세한 내용은 이 항목의 앞부분에 나오는 "결정 열 및 종속 열 선택 이해" 섹션을 참조하십시오.  
   
  **IsWildCard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)**를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
- 선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)**를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
+ 선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
   
  **StringCompareOptions**  
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  

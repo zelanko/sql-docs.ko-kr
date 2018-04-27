@@ -1,23 +1,24 @@
 ---
-title: ".NET 코드가 있는 SSIS 프로젝트 실행(C#) | Microsoft Docs"
+title: .NET 코드가 있는 SSIS 프로젝트 실행(C#) | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82e928aed1c5d460ff03332912e670582434fbad
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 이 빠른 시작 자습서에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여 줍니다.
@@ -45,7 +46,7 @@ Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용하여
 ## <a name="create-a-new-visual-studio-project"></a>새 Visual Studio 프로젝트 만들기
 
 1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다. 
-2. **새 프로젝트** 대화 상자에서 **Visual C#**을 펼칩니다.
+2. **새 프로젝트** 대화 상자에서 **Visual C#** 을 펼칩니다.
 3. **콘솔 앱**을 선택하고 프로젝트 이름으로 *run_ssis_project*를 입력합니다.
 4. **확인**을 클릭하여 Visual Studio에서 새 프로젝트를 만들고 엽니다.
 

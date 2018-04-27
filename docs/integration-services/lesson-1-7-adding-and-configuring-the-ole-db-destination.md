@@ -1,30 +1,30 @@
 ---
-title: "7단계: OLE DB 대상 추가 및 구성 | Microsoft Docs"
-ms.custom: 
+title: '7단계: OLE DB 대상 추가 및 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 125045500038af764f10ec3746ade7e7069a4817
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5066afcb93dae4b66626b9cf94c0ca2611e0eb13
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>1-7단원: OLE DB 대상 추가 및 구성
 이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  **OLE DB 대상 편집기** 대화 상자의 **OLE DB 연결 관리자** 상자에서 **localhost.AdventureWorksDW2012** 가 선택되어 있는지 확인합니다.  
   
-7.  **테이블 또는 뷰 이름** 상자에서 **[dbo].[FactCurrencyRate]**를 입력하거나 선택합니다.  
+7.  **테이블 또는 뷰 이름** 상자에서 **[dbo].[FactCurrencyRate]** 를 입력하거나 선택합니다.  
   
 8.  새 테이블을 만들려면 **새로 만들기** 단추를 클릭합니다.  스크립트에서 테이블의 이름을 변경하여 **NewFactCurrencyRate**를 읽습니다.  **확인**을 클릭합니다.  
   

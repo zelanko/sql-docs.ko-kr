@@ -1,28 +1,28 @@
 ---
-title: "catalog.delete_project(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.delete_project(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 471ebd1a5aef05ac3e45f56bdaf3b32a24ce8800
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4d74baea839dd45c402e02fe22f540efb644d1b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 삭제할 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 삭제할 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

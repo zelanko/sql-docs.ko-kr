@@ -1,28 +1,28 @@
 ---
-title: "catalog.get_parameter_values(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.get_parameter_values(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fcb3ffcdd35f2b526f1e84ce36c206919e8eb74
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 94a712761eab5b9a3b477687aed9c07fe143eb6f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 매개 변수가 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 매개 변수가 있는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @package_name = ] *package_name*  
- 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. 모든 프로젝트 매개 변수와 모든 패키지의 매개 변수를 검색하려면 NULL을 사용합니다. *package_name*은 **nvarchar(260)**입니다.  
+ 패키지의 이름입니다. 패키지 이름을 지정하면 모든 프로젝트 매개 변수와 특정 패키지의 매개 변수를 검색할 수 있습니다. 모든 프로젝트 매개 변수와 모든 패키지의 매개 변수를 검색하려면 NULL을 사용합니다. *package_name*은 **nvarchar(260)** 입니다.  
   
  [ @reference_id = ] *reference_id*  
  환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  

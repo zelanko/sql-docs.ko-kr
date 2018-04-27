@@ -1,28 +1,28 @@
 ---
-title: "catalog.restore_project(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.restore_project(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6933aa64b1a2c660e7328238ad52442d500bd496
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ce136d3f87c2f654bd562c0dd58dfb262cc47c85
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @project _name = ] *project_name*  
- 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  프로젝트의 버전입니다. *object_version_lsn*은 **bigint**입니다.  
@@ -52,7 +52,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- *project_name*이 있는 경우 프로젝트 상세 정보가 **varbinary(MAX)**로 결과 집합에 포함됩니다.  
+ *project_name*이 있는 경우 프로젝트 상세 정보가 **varbinary(MAX)** 로 결과 집합에 포함됩니다.  
   
  프로젝트를 지정된 폴더로 복원할 수 없는 경우 **NO RESULT SET**이 반환됩니다.  
   

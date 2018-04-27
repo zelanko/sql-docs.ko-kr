@@ -1,16 +1,16 @@
 ---
-title: "Foreach 루프 컨테이너 | Microsoft Docs"
-ms.custom: 
+title: Foreach 루프 컨테이너 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 9d60344e799f0c32205c5ed697d23c645523bfe9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  Foreach 루프 컨테이너는 특정 기능을 제공하는 것이 아니라 반복 가능한 제어 흐름을 작성하고, 열거자 유형을 지정하고, 열거자를 구성할 수 있는 구조만 제공합니다. 컨테이너 기능을 제공하려면 적어도 하나 이상의 태스크를 Foreach 루프 컨테이너에 포함시켜야 합니다. 자세한 내용은 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)을(를) 참조하세요.  
   
- Foreach 루프 컨테이너에는 여러 태스크가 포함된 제어 흐름과 다른 컨테이너가 포함될 수 있습니다. Foreach 루프 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지가 아닌 Foreach 루프 컨테이너로 끌어 온다는 점만 다릅니다. Foreach 루프 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을 참조하세요.  
+ Foreach 루프 컨테이너에는 여러 태스크가 포함된 제어 흐름과 다른 컨테이너가 포함될 수 있습니다. Foreach 루프 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지가 아닌 Foreach 루프 컨테이너로 끌어 온다는 점만 다릅니다. Foreach 루프 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 추가 및 구성
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 03/20/2018
   
 7.  선택적으로 **변수 매핑**을 클릭하여 컬렉션 값에 개체 속성을 매핑한 후 다음을 수행합니다.  
   
-    1.  **변수** 목록에서 변수를 선택하거나 **\<새 변수>**를 클릭하여 새 변수를 만듭니다.  
+    1.  **변수** 목록에서 변수를 선택하거나 **\<새 변수>** 를 클릭하여 새 변수를 만듭니다.  
   
     2.  새 변수를 추가하는 경우에는 **변수 추가** 대화 상자에서 변수 속성을 설정하고 **확인**을 클릭합니다.  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 03/20/2018
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **이름**  
  Foreach 루프 컨테이너에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘과 로그에서 레이블로 사용됩니다.  
   
@@ -205,7 +205,7 @@ ms.lasthandoff: 03/20/2018
  **Enumerator**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -219,7 +219,7 @@ ms.lasthandoff: 03/20/2018
 |**Foreach ADLS File 열거자**|지정된 Data Lake Store 디렉터리에서 파일을 열거합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
- 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추**(…)**를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
+ 기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(…)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md), [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md), [식 작성기](../../integration-services/expressions/expression-builder.md)  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 03/20/2018
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 스키마 행 집합 열거자  
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
- **연결**  
+ **대량 삽입 태스크 편집기**  
  목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
@@ -346,7 +346,7 @@ ms.lasthandoff: 03/20/2018
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -366,7 +366,7 @@ ms.lasthandoff: 03/20/2018
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
 |**Node**|XPath 작업에서 반환한 노드를 열거합니다.|  
@@ -376,7 +376,7 @@ ms.lasthandoff: 03/20/2018
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -399,7 +399,7 @@ ms.lasthandoff: 03/20/2018
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -419,7 +419,7 @@ ms.lasthandoff: 03/20/2018
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 열거자  
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
- **연결**  
+ **대량 삽입 태스크 편집기**  
  기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -500,16 +500,16 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **변수**  
- 기존 변수를 선택하거나 **새 변수...**를 클릭하여 새 변수를 만듭니다.  
+ 기존 변수를 선택하거나 **새 변수...** 를 클릭하여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수를 매핑하면 새 행이 **변수** 목록에 자동으로 추가됩니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
- **인덱스**  
+ **Index**  
  Foreach Item 열거자를 사용하는 경우 컬렉션 값에서 변수에 매핑할 열의 인덱스를 지정합니다. 다른 유형의 열거자를 사용하는 경우 인덱스는 읽기 전용입니다.  
   
 > [!NOTE]  
@@ -521,12 +521,12 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>스키마 제한 대화 상자(ADO.NET)
 **스키마 제한** 대화 상자를 사용하여 Foreach ADO.NET 스키마 행 집합 열거자에 적용할 스키마 제한을 설정할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **제한 사항**  
  스키마에 적용할 제약 조건을 선택합니다.  
   
  **변수**  
- 변수를 사용하여 제한을 정의합니다. 목록에서 변수를 선택하거나 **새 변수...**를 클릭하여 새 변수를 만듭니다.  
+ 변수를 사용하여 제한을 정의합니다. 목록에서 변수를 선택하거나 **새 변수...** 를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -536,7 +536,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="for-each-item-columns-dialog-box"></a>For Each Item 열 대화 상자
 **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **열**  
  열을 나열합니다.  
   
@@ -550,9 +550,9 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
  열을 선택한 다음 **제거**를 클릭합니다.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
-**SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
+**SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **열거**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   
@@ -565,7 +565,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
  **이름**  
  Names 열거형을 사용합니다.  
   
- **Urn**  
+ **URN**  
  URNs 열거형을 사용합니다.  
   
  **위치**  
@@ -578,7 +578,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
   
  루프 태스크의 병렬 실행 타이밍이 불확실해지는 부정적인 결과가 발생하지 않도록 하려면 한 번에 하나의 실행 파일만 실행하도록 패키지를 구성해야 합니다. 예를 들어 한 패키지가 여러 태스크를 동시에 실행할 수 있는 경우 SQL 실행 태스크의 인스턴스 두 개가 동시에 쓰기를 시도하면 폴더에 있는 파일을 열거하고 파일 이름을 검색한 다음 SQL 실행 태스크를 사용하여 파일 이름을 테이블에 삽입하는 Foreach 루프 컨테이너에 쓰기 충돌이 발생할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](../../integration-services/control-flow/control-flow.md)   
  [Integration Services 컨테이너](../../integration-services/control-flow/integration-services-containers.md)  
   

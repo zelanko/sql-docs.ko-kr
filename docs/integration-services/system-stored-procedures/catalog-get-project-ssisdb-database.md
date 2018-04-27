@@ -1,28 +1,28 @@
 ---
-title: "catalog.get_project(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.get_project(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8a121ff43135e79da3e02ede0d2e67e0290f225
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e9860d2424f02822c505d8a2fda883b44474e1b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 프로젝트가 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- 프로젝트의 이진 스트림은 **varbinary(MAX)**로 반환됩니다. 폴더 또는 프로젝트가 없으면 아무 결과도 반환되지 않습니다.  
+ 프로젝트의 이진 스트림은 **varbinary(MAX)** 로 반환됩니다. 폴더 또는 프로젝트가 없으면 아무 결과도 반환되지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

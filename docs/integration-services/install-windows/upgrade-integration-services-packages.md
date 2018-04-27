@@ -1,30 +1,31 @@
 ---
-title: "Integration Services 패키지 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 패키지 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c82382c5948f6f81b5b3e80bc6fe9fd76eb23942
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd66afb2660ce758f80515d9cd0e96f75cf2a8ec
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 인스턴스를 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스로 업그레이드할 때는 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지가 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 릴리스에서 사용되는 패키지 형식으로 자동 업그레이드되지 않습니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  

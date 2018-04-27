@@ -3,7 +3,7 @@ title: SQL Server 2017 릴리스 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -15,11 +15,11 @@ ms.author: craigg
 manager: craigg
 ms.workload: Active
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 33e55dfeb1123dc5528cfc358600d06ecaede364
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/18/2018
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 릴리스 후보(RC1 - 2017년 7월)
 ### <a name="sql-server-integration-services-ssis-rc1---july-2017"></a>SSIS(SQL Server Integration Services)(RC1 - 2017년 7월)
-- **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]**의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
+- **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
 - **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
 
 - **문제 및 고객 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “*@runincluster*은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
@@ -116,9 +116,9 @@ ms.lasthandoff: 04/18/2018
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 응용 프로그램의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.*와 유사한 오류가 표시됩니다.
+- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 응용 프로그램의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
 
-   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 *컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.*라는 메시지가 표시됩니다.
+   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 *컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.* 라는 메시지가 표시됩니다.
 
 - **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 응용 프로그램을 수정하려면 다음 단계를 수행합니다.
 
@@ -154,5 +154,7 @@ ms.lasthandoff: 04/18/2018
 - [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

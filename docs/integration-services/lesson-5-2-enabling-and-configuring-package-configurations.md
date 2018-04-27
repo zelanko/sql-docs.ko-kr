@@ -1,30 +1,30 @@
 ---
-title: "2단계: 패키지 구성 설정 및 구성 | Microsoft Docs"
-ms.custom: 
+title: '2단계: 패키지 구성 설정 및 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 05badd9b5954f079adab16d57b9c428d6c733db7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>5-2단원 - 패키지 구성 설정 및 구성
 이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 **Directory** 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  
@@ -48,11 +48,11 @@ ms.lasthandoff: 01/25/2018
   
 7.  **제어 흐름** 탭으로 돌아가 **Foreach File in Folder** 컨테이너를 두 번 클릭합니다.  
   
-8.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 **Expressions**를 클릭한 다음 줄임표 단추 **(...)**를 클릭합니다.  
+8.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 **Expressions**를 클릭한 다음 줄임표 단추 **(...)** 를 클릭합니다.  
   
 9. **속성 식 편집기**에서 **속성** 목록을 클릭한 다음 **Directory**를 선택합니다.  
   
-10. **식** 상자에서 줄임표 단추**(...)**를 클릭합니다.  
+10. **식** 상자에서 줄임표 단추 **(...)** 를 클릭합니다.  
   
 11. **식 작성기**에서 변수 폴더를 확장하고 **User::varFolderName** 변수를 **식** 상자로 끕니다.  
   

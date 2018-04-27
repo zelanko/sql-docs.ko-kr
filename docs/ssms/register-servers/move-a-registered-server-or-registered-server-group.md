@@ -1,16 +1,16 @@
 ---
-title: "등록된 서버 또는 등록된 서버 그룹 이동 | Microsoft Docs"
-ms.custom: 
+title: 등록된 서버 또는 등록된 서버 그룹 이동 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - moving registered server or server group
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf97c1bdf28d3f6ab6523d463c44a92a6ba7a87
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 81235664b53a80678c6efe8a5793f35fbabf7b34
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이동
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 또는 서버 그룹을 이동하여 등록된 서버에서 서버를 구성하는 방법에 대해 설명합니다. 서버 그룹에는 등록된 서버나 다른 서버 그룹이 포함될 수 있습니다. 서버 및 서버 그룹은 한 서버 그룹에서 다른 서버 그룹으로 이동할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a>  
   

@@ -1,28 +1,28 @@
 ---
-title: "catalog.move_project(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.move_project(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 262c850c76383ac27c49898c29672fb1d5cd170f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB 데이터베이스
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>인수  
  [ @source_folder = ] *source_folder*  
- 이동하기 전의 프로젝트가 있는 원본 폴더의 이름입니다. *source_folder*는 **nvarchar(128)**입니다.  
+ 이동하기 전의 프로젝트가 있는 원본 폴더의 이름입니다. *source_folder*는 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 이동할 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 이동할 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @destination_folder = ] *destination_folder*  
- 이동한 후의 프로젝트가 있는 대상 폴더의 이름입니다. *destination_folder*는 **nvarchar(128)**입니다.  
+ 이동한 후의 프로젝트가 있는 대상 폴더의 이름입니다. *destination_folder*는 **nvarchar(128)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

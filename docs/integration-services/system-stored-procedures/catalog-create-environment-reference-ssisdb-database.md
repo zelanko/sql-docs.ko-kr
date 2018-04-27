@@ -1,28 +1,28 @@
 ---
-title: "catalog.create_environment_reference(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.create_environment_reference(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46224cbe85784c146ee9f4b6122ac70c51dcfc5a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 00d7a3384b99d8968b0397ea3e0f482135133bca
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 환경을 참조하는 프로젝트의 폴더 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 환경을 참조하는 프로젝트의 폴더 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @project_name = ] *project_name*  
- 환경을 참조하는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)**입니다.  
+ 환경을 참조하는 프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 참조되는 환경의 이름입니다. *environment_name*은 **nvarchar(128)**입니다.  
+ 참조되는 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
   
  [ @reference_location = ] *reference_location*  
- 환경을 프로젝트와 같은 폴더(상대 참조)에서 찾을 수 있는지, 아니면 다른 폴더(절대 참조)에서 찾을 수 있는지를 나타냅니다. 상대 참조를 나타내려면 값 `R`을 사용하고, 절대 참조를 나타내려면 값 `A`를 사용합니다. *reference_location*은 **char(1)**입니다.  
+ 환경을 프로젝트와 같은 폴더(상대 참조)에서 찾을 수 있는지, 아니면 다른 폴더(절대 참조)에서 찾을 수 있는지를 나타냅니다. 상대 참조를 나타내려면 값 `R`을 사용하고, 절대 참조를 나타내려면 값 `A`를 사용합니다. *reference_location*은 **char(1)** 입니다.  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- 참조되는 환경이 있는 폴더의 이름입니다. 이 값은 절대 참조에 필요합니다. *environment_folder_name*은 **nvarchar(128)**입니다.  
+ 참조되는 환경이 있는 폴더의 이름입니다. 이 값은 절대 참조에 필요합니다. *environment_folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @reference_id = ] *reference_id*  
  새 참조에 대한 고유 식별자를 반환합니다. 이 매개 변수는 선택 사항입니다. *reference_id*는 **bigint**입니다.  

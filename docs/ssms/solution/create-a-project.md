@@ -2,7 +2,7 @@
 title: 프로젝트 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-solutions
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767341628dec4f192235954aaa4eeb6ece681615
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d8d5a619b0c25cee830d3ca3934d07898d30dcee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  
   
 ### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>새 프로젝트를 만들어 솔루션에 추가하려면  
   

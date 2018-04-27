@@ -1,22 +1,23 @@
 ---
-title: "Azure에 배포된 SSIS 패키지 유효성 검사 | Microsoft Docs"
+title: Azure에 배포된 SSIS 패키지 유효성 검사 | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS 패키지 유효성 검사
 Azure 서버의 SSIS 카탈로그 데이터베이스(SSISDB)에 SQL Server Integration Services(SSIS) 프로젝트를 배포하면 패키지 배포 마법사는 **검토** 페이지 이후에 추가 유효성 검사 단계를 추가합니다. 이 유효성 검사 단계에서는 Azure SSIS Integration Runtime에서 패키지가 예상대로 실행되지 않을 수 있는 알려진 문제점을 프로젝트의 패키지에서 확인합니다. 그런 다음 마법사는 **유효성 검사** 페이지에서 적용 가능한 경고를 표시합니다.
@@ -42,7 +43,7 @@ Azure 서버의 SSIS 카탈로그 데이터베이스(SSISDB)에 SQL Server Integ
 | Ado                | ✓        |           |     | ✓         | ✓                 |
 | AdoNet             | ✓        |           |     | ✓         | ✓                 |
 | Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
+| 내보내기              |          | ✓         | ✓   |           |                   |
 | 파일               |          | ✓         | ✓   |           |                   |
 | FlatFile           |          | ✓         | ✓   |           |                   |
 | Ftp                |          |           |     | ✓         |                   |

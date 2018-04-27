@@ -1,16 +1,16 @@
 ---
-title: "피벗 변환 | Microsoft Docs"
-ms.custom: 
+title: 피벗 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.pivottrans.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 41e027c10bfdb1e9309c6ee1226694c1c9601837
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: befe1a3cf4056076d97715015a9e0f6d4bdd49e5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pivot-transformation"></a>피벗 변환
   피벗 변환은 입력 데이터를 열 값으로 피벗함으로써 정규화된 데이터 집합을 정규화 상태는 낮지만 좀 더 압축된 버전으로 만듭니다. 예를 들어 고객 이름, 제품 및 구매 수량이 나열된 정규화된 **Orders** 데이터 집합에는 일반적으로 여러 제품을 구매한 고객에 대해 여러 행이 포함되어 있으며, 각 행에는 해당 고객의 각 제품 주문 정보가 표시되어 있습니다. 피벗 변환을 사용하여 이 데이터 집합을 제품 열로 피벗하면 각 고객별로 단일 행만 포함된 데이터 집합을 출력할 수 있습니다. 이 단일 행에는 해당 고객의 모든 구매 정보가 나열되며, 제품 이름은 열 이름으로, 그리고 수량은 제품 열에 값으로 표시됩니다. 모든 고객이 모든 제품을 구매하는 것은 아니기 때문에 여러 열에 Null 값이 포함될 수 있습니다.  

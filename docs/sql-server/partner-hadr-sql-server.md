@@ -16,14 +16,14 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ''
 ms.date: 09/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 9c2c64526878cd5a499f6ee58d20a54bd878081f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3d21c3b066459a9617ac51c32cc2808498acc13a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 |![idera][3]|**IDERA**<br>SQL 안전 백업은 데이터베이스 백업 시간 및 백업 파일 크기를 줄이고 백업 파일 내의 데이터베이스에 대한 즉시 읽기 및 쓰기 액세스를 제공함으로써 비용을 절감하는 SQL Server용 고성능 백업 및 복구 솔루션입니다.<br><br>Microsoft SQL Server: 2005 SP1 이상, 2008, 2008 R2, 2012, 2014, 2016, 모든 버전 |[웹 사이트][idera_website]|
 |![nec][7]|**NEC**<br>ExpressCluster는 SQL Server에 대한 하드웨어, 소프트웨어, 네트워크 및 사이트 오류를 비롯한 모든 주요 오류에 대한 포괄적이고 완벽하게 자동화된 고가용성 및 재해 복구 솔루션이며 온-프레미스 또는 클라우드 환경의 실제 또는 가상 머신에서 실행되는 연결된 응용 프로그램입니다.<br><br>Microsoft SQL Server: 2005 이상, 모든 버전 |[웹 사이트][necec_website]<br>[데이터시트][necec_datasheet]<br>[비디오][necec_youtube]<br>[다운로드][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker에서 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|
-|![veeam][1] |**Veeam**<br>Veeam 백업 및 복제는 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 시스템) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 응용 프로그램 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 – SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
+|![veeam][1] |**Veeam**<br>Veeam 백업 및 복제는 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 응용 프로그램 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 – SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
 
 
 

@@ -1,28 +1,28 @@
 ---
-title: "catalog.set_worker_agent_property(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.set_worker_agent_property(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89e5893e418de7bdd7041b5ec8e8193479205659
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6f92924a7936af0797d13d2a680f42260832f419
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 Scale Out Worker의 작업자 에이전트 ID입니다. *WorkerAgentId*는 **uniqueidentifier**입니다.
 
 [@PropertyName =] *PropertyName*  
-속성의 이름입니다. *PropertyName*은 **nvarchar(256)**입니다.
+속성의 이름입니다. *PropertyName*은 **nvarchar(256)** 입니다.
 
 [@PropertyValue =] *PropertyValue*  
-속성 값입니다. *PropertyValue*는 **nvarchar(max)**입니다.
+속성 값입니다. *PropertyValue*는 **nvarchar(max)** 입니다.
 
 ## <a name="remarks"></a>Remarks
 유효한 속성 이름은 **DisplayName**, **Description**, **Tags**입니다.

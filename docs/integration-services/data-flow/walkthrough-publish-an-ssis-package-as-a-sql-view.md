@@ -1,30 +1,30 @@
 ---
-title: "연습: SSIS 패키지를 SQL 뷰로 게시 | Microsoft Docs"
-ms.custom: 
+title: '연습: SSIS 패키지를 SQL 뷰로 게시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4aca75d9495d628c314c1382a73dc889cdcc367
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   
     4.  **SSIS 도구 상자** 에서 **데이터 흐름 디자이너** 로 **OLE DB 원본**구성 요소를 끌어 옵니다.  
   
-    5.  **TestDB** 데이터베이스의 **Employee** 테이블에서 데이터를 추출하도록 구성 요소를 구성합니다. **OLE DB 연결 관리자** 에서 **(local).TestDB**, **데이터 액세스 모드** 에서 **테이블 또는 뷰**, **테이블 또는 뷰 이름** 에서 **[dbo].[Employee]**를 선택합니다.  
+    5.  **TestDB** 데이터베이스의 **Employee** 테이블에서 데이터를 추출하도록 구성 요소를 구성합니다. **OLE DB 연결 관리자** 에서 **(local).TestDB**, **데이터 액세스 모드** 에서 **테이블 또는 뷰**, **테이블 또는 뷰 이름** 에서 **[dbo].[Employee]** 를 선택합니다.  
   
          ![데이터 스트리밍 대상 - OLE DB 연결](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "데이터 스트리밍 대상 - OLE DB 연결")  
   

@@ -1,30 +1,30 @@
 ---
-title: "2단계: Foreach 루프 컨테이너 추가 및 구성 | Microsoft Docs"
-ms.custom: 
+title: '2단계: Foreach 루프 컨테이너 추가 및 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80a4fa426a322346de99aafef393e75a67e7e82a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcbdf3baf515ac83a4910193ef0bd25b8f3f597a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>2-2단원 - Foreach 루프 컨테이너 추가 및 구성
 이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 **이름**에 **Foreach File in Folder**를 입력합니다. **확인**을 클릭합니다.  
   
-5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 속성 창에서 **LocaleID** 속성이 **영어(미국)**로 설정되었는지 확인합니다.  
+5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 속성 창에서 **LocaleID** 속성이 **영어(미국)** 로 설정되었는지 확인합니다.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Foreach 루프 컨테이너의 열거자를 구성하려면  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  **변수 매핑**을 클릭합니다.  
   
-2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 클릭하고 **\<새 변수...>**를 선택합니다.  
+2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 클릭하고 **\<새 변수...>** 를 선택합니다.  
   
 3.  **변수 추가** 대화 상자에서 **이름**에 **varFileName**을 입력합니다.  
   

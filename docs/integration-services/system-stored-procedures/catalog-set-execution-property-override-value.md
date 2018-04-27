@@ -1,28 +1,28 @@
 ---
 title: catalog.set_execution_property_override_value | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b127fe80d88d05c3f1f56e7c355d7a24f3abd6a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b2798ffbc1af2d9b468b526f257a8081e655c728
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  실행 인스턴스의 고유 식별자입니다. *execution_id*는 **bigint**입니다.  
   
  [ @property_path = ] *property_path*  
- 패키지의 속성에 대한 경로입니다. *property_path*는 **nvarchar(4000)**입니다.  
+ 패키지의 속성에 대한 경로입니다. *property_path*는 **nvarchar(4000)** 입니다.  
   
  [ @property_value = ] *property_value*  
- 속성에 할당할 재정의 값입니다. *property_value*는 **nvarchar(max)**입니다.  
+ 속성에 할당할 재정의 값입니다. *property_value*는 **nvarchar(max)** 입니다.  
   
  [ @sensitive = ] *sensitive*  
  값이 1이면 속성이 중요하며 저장될 때 암호화됩니다. 값이 0이면 속성이 중요하지 않으며 값이 일반 텍스트로 저장됩니다. *sensitive* 인수는 **bit**입니다.  

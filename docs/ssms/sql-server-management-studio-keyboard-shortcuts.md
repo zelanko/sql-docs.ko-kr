@@ -2,7 +2,7 @@
 title: SQL Server Management Studio 바로 가기 키 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d206355149899d1e8f9df816d45b2f64fe2c4cb
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 0a1533dcb778741661206bdf35ab35e5d2efe865
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
 |상황에 맞는 메뉴 표시|Shift+F10|Shift+F10|  
 |파일을 만들 수 있는 **새 파일** 대화 상자 표시|Ctrl+N|Ctrl+N|  
 |새 프로젝트를 만들 수 있는 **새 프로젝트** 대화 상자 표시|Ctrl+Shift+N|Ctrl+Shift+N|  
-|기존 파일을 열 수 있는 **파일 열기** 대화 상자 표시|Ctrl+O<br /><br /> 또는<br /><br /> Ctrl+Shift+G|Ctrl+O|  
+|기존 파일을 열 수 있는 **파일 열기** 대화 상자 표시|Ctrl+O<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Shift+G|Ctrl+O|  
 |기존 프로젝트를 열 수 있는 **프로젝트 열기** 대화 상자 표시|Ctrl+Shift+O|Ctrl+Shift+O|  
 |새 파일을 현재 프로젝트에 추가할 수 있는 **새 항목 추가** 대화 상자 표시|Ctrl+Shift+A|Ctrl+Shift+A|  
 |기존 파일을 현재 프로젝트에 추가할 수 있는 **기존 항목 추가** 대화 상자 표시|Shift+Alt+A|Shift+Alt+A|  
@@ -73,10 +73,10 @@ ms.lasthandoff: 04/10/2018
 |편집기가 코드 뷰 또는 서버 코드 뷰에 있을 때 코드 편집기의 맨 위에 있는 드롭다운 막대로 삽입 지점 이동|Ctrl+F2|해당 키 없음|  
 |현재 도구 창 도구 모음으로 이동|Shift+Alt|Shift+Alt|  
 |선택한 첫 번째 도구 창을 사용하여 IDE 탐색기 표시|Alt+F7|해당 키 없음|  
-|다음 도구 창으로 이동|Alt+F6<br /><br /> 또는<br /><br /> F6( [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기의 경우)|Alt+F6|  
+|다음 도구 창으로 이동|Alt+F6<br /><br /> 로 구분하거나 여러<br /><br /> F6( [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기의 경우)|Alt+F6|  
 |이전 도구 창으로 이동|Shift+Alt+F7|Shift+Alt+F7|  
 |단일 문서의 분할 창 보기에서 다음 창으로 이동|F6|F6|  
-|이전의 선택한 창으로 이동|Shift+Alt+F6<br /><br /> 또는<br /><br /> Shift+F6( [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기의 경우)|Shift+Alt+F6|  
+|이전의 선택한 창으로 이동|Shift+Alt+F6<br /><br /> 로 구분하거나 여러<br /><br /> Shift+F6( [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기의 경우)|Shift+Alt+F6|  
 |단일 문서의 분할 창 보기에서 이전 창으로 이동|Shift+F6|F6|  
 |도킹 메뉴 표시|Alt+빼기 기호(-)|해당 키 없음|  
 |열려 있는 모든 창을 나열하는 팝업 표시|Ctrl+Alt+아래쪽 화살표|해당 키 없음|  
@@ -88,14 +88,14 @@ ms.lasthandoff: 04/10/2018
 |요약 창 표시|F7|F7|  
 |속성 창 표시|F4|F4|  
 |**출력** 창 표시|Ctrl+Alt+O|해당 키 없음|  
-|**태스크 목록** 창 표시|CTRL+\\, T<br /><br /> 또는<br /><br /> CTRL+\\, CTRL+T|Ctrl+Alt+K|  
+|**태스크 목록** 창 표시|CTRL+\\, T<br /><br /> 로 구분하거나 여러<br /><br /> CTRL+\\, CTRL+T|Ctrl+Alt+K|  
 |개체 탐색기 정보 목록 뷰와 개체 탐색기 정보 속성 창 간에 전환|F6|F6|  
 |개체 탐색기 정보 목록 뷰와 개체 탐색기 정보 속성 창을 구분하는 분할 막대를 제어하여 표시 창의 크기 조정|Tab 키를 누른 다음 위쪽 화살표 또는 아래쪽 화살표|Tab 키를 누른 다음 위쪽 화살표 또는 아래쪽 화살표|  
 |도구 상자 표시|Ctrl+Alt+X|Ctrl+Alt+X|  
 |책갈피 창 표시|Ctrl+K, Ctrl+W|Ctrl+K, Ctrl+W|  
 |브라우저 창 표시|Ctrl+Alt+R|Ctrl+Alt+R|  
 |HTML 디자이너에 웹 서버 컨트롤에 대한 일반적인 명령이 포함된 스마트 태그 메뉴 표시|Shift+Alt+F10|해당 키 없음|  
-|오류 목록 창 표시([!INCLUDE[tsql](../includes/tsql-md.md)] 편집기에만 해당)|CTRL+\\, CTRL+E<br /><br /> 또는<br /><br /> CTRL+\\, E|CTRL+\\, CTRL+E|  
+|오류 목록 창 표시([!INCLUDE[tsql](../includes/tsql-md.md)] 편집기에만 해당)|CTRL+\\, CTRL+E<br /><br /> 로 구분하거나 여러<br /><br /> CTRL+\\, E|CTRL+\\, CTRL+E|  
 |오류 목록 창에서 다음 항목으로 이동([!INCLUDE[tsql](../includes/tsql-md.md)] 편집기에만 해당)|Ctrl+Shift+F12|Ctrl+Shift+F12|  
 |보기 기록에서 이전 페이지 표시. 웹 브라우저 창에서만 사용할 수 있습니다|Alt+왼쪽 화살표|해당 키 없음|  
 |보기 기록에서 다음 페이지 표시. 웹 브라우저 창에서만 사용할 수 있습니다|Alt+오른쪽 화살표|해당 키 없음|  
@@ -188,8 +188,8 @@ ms.lasthandoff: 04/10/2018
 |전체 화면 표시 설정/해제|Shift+Alt+Enter|Shift+Alt+Enter|  
 |텍스트를 한 줄 위로 스크롤|Ctrl+위쪽 화살표|Ctrl+위쪽 화살표|  
 |텍스트를 한 줄 아래로 스크롤|Ctrl+아래쪽 화살표|Ctrl+아래쪽 화살표|  
-|마지막 편집 동작 취소|Ctrl+Z<br /><br /> 또는<br /><br /> Alt+Backspace|Ctrl+Z|  
-|이전에 취소된 편집 복원|Ctrl+Shift+Z<br /><br /> 또는<br /><br /> Ctrl+Y<br /><br /> 또는<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 또는<br /><br /> Ctrl+Y<br /><br /> 또는<br /><br /> Alt+Shift+Backspace|  
+|마지막 편집 동작 취소|Ctrl+Z<br /><br /> 로 구분하거나 여러<br /><br /> Alt+Backspace|Ctrl+Z|  
+|이전에 취소된 편집 복원|Ctrl+Shift+Z<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Y<br /><br /> 로 구분하거나 여러<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Y<br /><br /> 로 구분하거나 여러<br /><br /> Alt+Shift+Backspace|  
 |선택한 항목 저장|Ctrl+S|Ctrl+S|  
 |모두 저장|Ctrl+Shift+S|Ctrl+Shift+S|  
 |닫기|Ctrl+F4|Ctrl+F4|  
@@ -208,7 +208,7 @@ ms.lasthandoff: 04/10/2018
 |현재 연결에서의 새 쿼리 열기|Ctrl+N|Ctrl+N|  
 |개체 탐색기에서 데이터베이스 열기|Alt+F8|Alt+F8|  
 |템플릿 매개 변수에 대한 값 지정|Ctrl+Shift+M|Ctrl+Shift+M|  
-|쿼리 편집기의 선택한 부분을 실행하거나 선택한 것이 없을 경우 전체 쿼리 편집기 실행|F5<br /><br /> 또는<br /><br /> Ctrl+Shift+E|F5<br /><br /> 또는<br /><br /> Ctrl+E<br /><br /> 또는<br /><br /> Alt+X|  
+|쿼리 편집기의 선택한 부분을 실행하거나 선택한 것이 없을 경우 전체 쿼리 편집기 실행|F5<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Shift+E|F5<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+E<br /><br /> 로 구분하거나 여러<br /><br /> Alt+X|  
 |쿼리 편집기의 선택한 부분을 구문 분석하거나 선택한 것이 없을 경우 전체 쿼리 편집기 구문 분석|Ctrl+F5|Ctrl+F5|  
 |예상 실행 계획 표시|Ctrl+Shift+Alt+L|Ctrl+L|  
 |실행 중인 쿼리 취소|Alt+Break|Alt+Break|  
@@ -221,7 +221,7 @@ ms.lasthandoff: 04/10/2018
 |쿼리 및 결과 창 사이를 전환|F6|F6|  
 |결과 표 및 헤더를 클립보드에 복사|Ctrl+Shift+C|해당 키 없음|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]의 다음 활성 창으로 이동|Alt+F6|Alt+F6|  
-|열기[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl+Alt+P|Ctrl+Alt+P|  
+|열기 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Ctrl+Alt+P|Ctrl+Alt+P|  
 |쿼리 편집기 창에서 쿼리 디자이너 대화 상자 표시|Ctrl+Shift+Q|해당 키 없음|  
 |**sp_help** 시스템 저장 프로시저 실행|Alt+F1|Alt+F1|  
 |**sp_who** 시스템 저장 프로시저 실행|Ctrl+1|Ctrl+1|  
@@ -242,8 +242,8 @@ ms.lasthandoff: 04/10/2018
 |------------|-----------------------------|---------------------------------|  
 |새 줄 삽입|Enter 또는 Shift+Enter|Enter 또는 Shift+Enter|  
 |커서 양쪽의 문자 바꾸기(SQL 편집기에는 적용되지 않음)|Ctrl+T|Ctrl+T|  
-|커서 오른쪽의 문자 하나 삭제|DELETE|DELETE|  
-|커서 왼쪽의 문자 하나 삭제|Backspace<br /><br /> 또는<br /><br /> Shift+<br /><br /> Backspace|Backspace<br /><br /> 또는<br /><br /> Shift+<br /><br /> Backspace|  
+|커서 오른쪽의 문자 하나 삭제|Delete|Delete|  
+|커서 왼쪽의 문자 하나 삭제|Backspace<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> Backspace|Backspace<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> Backspace|  
 |선택 항목의 공백을 삭제하거나, 선택 항목이 없는 경우 커서에 인접한 공백 삭제|Ctrl+K, C|해당 키 없음|  
 |편집기에 구성된 공백 수 삽입|Tab|Tab|  
 |커서 위에 빈 줄 삽입|Ctrl+Enter|Ctrl+Enter|  
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/10/2018
 |다음 문 설정|Ctrl+3 0|해당 키 없음|  
 |다음 문 표시|Alt+Num|해당 키 없음|  
 |**커서까지 실행** 명령 구현|Ctrl+F10|Ctrl+F10|  
-|**간략한 조사식** 대화 상자 표시|Ctrl+Alt+Q<br /><br /> 또는<br /><br /> Shift+F9|Ctrl+Alt+Q|  
+|**간략한 조사식** 대화 상자 표시|Ctrl+Alt+Q<br /><br /> 로 구분하거나 여러<br /><br /> Shift+F9|Ctrl+Alt+Q|  
 |중단점 설정/해제|F9|F9|  
 |중단점 설정|Ctrl+F9|해당 키 없음|  
 |중단점 삭제. **중단점** 창에서만 사용할 수 있습니다.|Alt+F9, D|해당 키 없음|  
@@ -311,8 +311,8 @@ ms.lasthandoff: 04/10/2018
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|멤버 목록|Ctrl+J|Ctrl+스페이스<br /><br /> 또는<br /><br /> Ctrl+J|  
-|단어 자동 완성|Ctrl+스페이스<br /><br /> 또는<br /><br /> Alt+오른쪽 화살표|Alt+오른쪽 화살표|  
+|멤버 목록|Ctrl+J|Ctrl+스페이스<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+J|  
+|단어 자동 완성|Ctrl+스페이스<br /><br /> 로 구분하거나 여러<br /><br /> Alt+오른쪽 화살표|Alt+오른쪽 화살표|  
 |요약 정보 표시|Ctrl+K, Ctrl+I|해당 키 없음|  
 |매개 변수 정보 표시|Ctrl+Shift+스페이스바|Ctrl+Shift+스페이스바|  
 |매개 변수 팁 복사|Ctrl+Shift+Alt+C|해당 키 없음|  
@@ -351,7 +351,7 @@ ms.lasthandoff: 04/10/2018
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|도움말|F1<br /><br /> 또는<br /><br /> Shift+F1|F1|  
+|도움말|F1<br /><br /> 로 구분하거나 여러<br /><br /> Shift+F1|F1|  
 |SQL Server 온라인 설명서 표시|Ctrl+F1|해당 키 없음|  
 |도움말 라이브러리 관리자 열기|Ctrl+Alt+F1|해당 키 없음|  
 |SQL Server 리소스 센터 웹 페이지 표시|Ctrl+Alt+F2|해당 키 없음|  
@@ -389,11 +389,11 @@ ms.lasthandoff: 04/10/2018
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|잘라내기(현재 선택한 항목을 삭제하여 클립보드에 넣기)|Ctrl+X<br /><br /> 또는<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 또는<br /><br /> Shift+Delete|  
-|선택한 모든 줄을 잘라내거나, 선택한 줄이 없는 경우 현재 줄 잘라내기|Ctrl+L<br /><br /> 또는<br /><br /> Ctrl+Shift+L|해당 키 없음|  
-|클립보드에 복사|CTRL+C<br /><br /> 또는<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> 또는<br /><br /> Ctrl+Insert|  
-|클립보드에서 삽입 지점에 붙여넣기|Ctrl+V<br /><br /> 또는<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 또는<br /><br /> Shift+Insert|  
-|클립보드 링의 항목을 삽입 지점에 붙여넣고 붙여넣은 항목을 자동으로 선택|Ctrl+Shift+V<br /><br /> 또는<br /><br /> Ctrl+Insert, Shift+Insert|해당 키 없음|  
+|잘라내기(현재 선택한 항목을 삭제하여 클립보드에 넣기)|Ctrl+X<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Delete|  
+|선택한 모든 줄을 잘라내거나, 선택한 줄이 없는 경우 현재 줄 잘라내기|Ctrl+L<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Shift+L|해당 키 없음|  
+|클립보드에 복사|CTRL+C<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert|  
+|클립보드에서 삽입 지점에 붙여넣기|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Insert|  
+|클립보드 링의 항목을 삽입 지점에 붙여넣고 붙여넣은 항목을 자동으로 선택|Ctrl+Shift+V<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert, Shift+Insert|해당 키 없음|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>로그 뷰어 바로 가기 키  
   
@@ -413,7 +413,7 @@ ms.lasthandoff: 04/10/2018
 |------------|-----------------------------|---------------------------------|  
 |작업 모니터를 실행합니다.|Ctrl+Alt+A|Ctrl+Alt+A|  
 |작업 모니터를 닫습니다.|Ctrl+F4|Ctrl+F4|  
-|새로 고침|F5|F5|  
+|새로 고침|F5 |F5|  
 |모니터 표시 필터링|Ctrl+Shift+F|Ctrl+Shift+F|  
 |패널 순환|F6|F6|  
 |선택한 창 확장 또는 축소|Ctrl 및 + 또는 -|Ctrl 및 + 또는 -|  
@@ -427,7 +427,7 @@ ms.lasthandoff: 04/10/2018
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|새로 고침|F5|F5|  
+|새로 고침|F5 |F5|  
 |표에서 세부 정보 창 열기|Enter|Enter|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>복제 충돌 뷰어 바로 가기 키  

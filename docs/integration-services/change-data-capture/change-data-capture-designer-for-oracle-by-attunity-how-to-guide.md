@@ -1,28 +1,28 @@
 ---
-title: "Attunity Oracle CDC Designer 방법 가이드 | Microsoft Docs"
-ms.custom: 
+title: Attunity Oracle CDC Designer 방법 가이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2696a51ff9bb42a94ac315cda8d893e81f9d54da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 016021112013bdd7fb6ac9f3fff8e113672de2f3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle CDC Designer 방법 가이드
   이 섹션에서는 Attunity Oracle CDC Designer에서 태스크를 수행하는 방법에 대해 설명합니다.  

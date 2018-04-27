@@ -1,28 +1,28 @@
 ---
-title: "catalog.set_environment_variable_protection(SSISDB 데이터베이스) | Microsoft Docs"
-ms.custom: 
+title: catalog.set_environment_variable_protection(SSISDB 데이터베이스) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33c7ec0dee60cb772ad2683dcec763a19fd57051
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 406d58db8009857cebca9c092eeecc12ce35bf6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>인수  
  [ @folder_name = ] *folder_name*  
- 환경이 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)**입니다.  
+ 환경이 있는 폴더의 이름입니다. *folder_name*은 **nvarchar(128)** 입니다.  
   
  [ @environment_name = ] *environment_name*  
- 환경의 이름입니다. *environment_name*은 **nvarchar(128)**입니다.  
+ 환경의 이름입니다. *environment_name*은 **nvarchar(128)** 입니다.  
   
  [ @variable_name = ] *variable_name*  
- 환경 변수의 이름입니다. *variable_name*은 **nvarchar(128)**입니다.  
+ 환경 변수의 이름입니다. *variable_name*은 **nvarchar(128)** 입니다.  
   
  [ @sensitive = ] *sensitive*  
  변수에 중요한 값이 포함되었는지 여부를 나타냅니다. 환경 변수 값이 중요함을 나타내려면 값 `1`을 사용하고, 그렇지 않음을 나타내려면 값 `0`을 사용합니다. 중요한 값은 저장될 때 암호화되고, 중요하지 않은 값은 일반 텍스트로 저장됩니다. *중요한* 매개 변수는 **비트**입니다.  

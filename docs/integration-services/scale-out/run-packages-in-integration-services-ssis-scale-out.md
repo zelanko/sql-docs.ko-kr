@@ -1,30 +1,30 @@
 ---
-title: "SSIS(SQL Server Integration Services) Scale Out에서 패키지 실행 | Microsoft Docs"
+title: SSIS(SQL Server Integration Services) Scale Out에서 패키지 실행 | Microsoft Docs
 ms.description: This article describes how to run SSIS packages in Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 766e43ab37016cbff99d7d7881e8d1e9b0a9a1cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
 Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하나를 사용하여 Scale Out에서 패키지를 실행할 수 있습니다.
@@ -39,7 +39,7 @@ Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하�
 
 1. Scale Out에서 패키지 실행 대화 상자를 엽니다.
 
-    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]에서 Integration Services 서버에 연결합니다. 개체 탐색기에서 트리를 확장하여 **Integration Services 카탈로그**아래의 노드를 표시합니다. **SSISDB** 노드 또는 실행하려는 프로젝트나 패키지를 마우스 오른쪽 단추로 클릭한 다음 **Execute in Scale Out(규모 확장 시 실행)**을 클릭합니다.
+    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]에서 Integration Services 서버에 연결합니다. 개체 탐색기에서 트리를 확장하여 **Integration Services 카탈로그**아래의 노드를 표시합니다. **SSISDB** 노드 또는 실행하려는 프로젝트나 패키지를 마우스 오른쪽 단추로 클릭한 다음 **Execute in Scale Out(규모 확장 시 실행)** 을 클릭합니다.
 
 2. 패키지를 선택하고 옵션을 설정합니다.
 
@@ -121,7 +121,7 @@ Scale Out에서 패키지를 실행하려면 다음 권한 중 하나가 있어�
 
 2.  **카탈로그 속성** 대화 상자에서 **서버 차원의 기본 실행 모드**를 **Scale Out**으로 설정합니다.
 
-이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때  **@runinscaleout**  매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
+이 기본 실행 모드를 설정하면 `[catalog].[create_execution]` 저장 프로시저를 호출할 때 **@runinscaleout** 매개 변수를 더 이상 지정할 필요가 없습니다. 패키지가 Scale Out 모드로 자동 실행됩니다. 
 
 ![실행 모드](media\exe-mode.PNG)
 

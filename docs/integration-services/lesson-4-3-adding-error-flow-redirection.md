@@ -1,30 +1,30 @@
 ---
-title: "3단계: 오류 흐름 리디렉션 추가 | Microsoft Docs"
-ms.custom: 
+title: '3단계: 오류 흐름 리디렉션 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e4e6e431132c3c6e5c8edc698711e7b24b87f6d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>4-3단원 - 오류 흐름 리디렉션 추가
 이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/25/2018
   
 8.  **입/출력** 페이지에서 **출력 0**을 확장하고 **출력 열**을 클릭한 다음 **열 추가**를 클릭합니다.  
   
-9. **Name** 속성에 **ErrorDescription** 을 입력하고 **DataType** 속성을 **Unicode string [DT_WSTR]**으로 설정합니다.  
+9. **Name** 속성에 **ErrorDescription** 을 입력하고 **DataType** 속성을 **Unicode string [DT_WSTR]** 으로 설정합니다.  
   
-10. **스크립트** 페이지에서 **LocaleID** 속성이 **영어(미국)**로 설정되었는지 확인합니다.  
+10. **스크립트** 페이지에서 **LocaleID** 속성이 **영어(미국)** 로 설정되었는지 확인합니다.  
   
 11. **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. **Input0_ProcessInputRow** 메서드에 다음 코드를 입력하거나 붙여넣습니다.  
   

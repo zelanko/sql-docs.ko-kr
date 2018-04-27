@@ -1,31 +1,32 @@
 ---
-title: "쿼리 식 및 URN | Microsoft 문서"
-ms.custom: 
+title: 쿼리 식 및 URN | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 47241e1734104bb1d787b4d006aa7d7769181651
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,7 +122,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
   
- 개체에 대해 *\<FilterExpression>*이 지정되지 않은 경우 해당 노드의 개체가 모두 열거됩니다.  
+ 개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 개체가 모두 열거됩니다.  
   
 ## <a name="uniform-resource-names-urn"></a>URN(Uniform Resource Name)  
  URN은 쿼리 식의 하위 집합입니다. 각 URN은 단일 개체에 대한 정규화된 참조를 형성합니다. 일반적인 URN에서는 Name 속성을 사용하여 각 노드의 단일 개체를 식별합니다. 예를 들어 이 URN은 특정 열을 참조합니다.  

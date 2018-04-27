@@ -2,8 +2,8 @@
 title: SQL Server 2017의 새로운 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -19,11 +19,11 @@ ms.author: craigg
 manager: craigg
 ms.workload: Active
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f8458c4f6a1b2f6a1cb9c2b3ef0b62b8c681acf9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 386ab67ce1196af9cec19c6daf9149dc051915f1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
     - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)는 VLF 정보를 노출하여 잠재적인 트랜잭션 로그 문제를 모니터링하고, 알리고, 방지합니다. (CTP 2.0)
     - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)은 통계를 검토하기 위해 새로운 동적 관리 뷰입니다. (CTP 1.3)
     - **sys.dm_os_host_info**는 Windows와 Linux 모두에 대한 운영 체제 정보를 제공합니다. (CTP 1.0)
-- **DTA(데이터베이스 튜닝 관리자)**의 성능이 개선되고 옵션이 추가됩니다. (CTP 1.2)
+- **DTA(데이터베이스 튜닝 관리자)** 의 성능이 개선되고 옵션이 추가됩니다. (CTP 1.2)
 - 
             **메모리 내 기능이 향상**되어 메모리 최적화 테이블에서 계산 열이 지원되고 고유하게 컴파일된 모듈에서 JSON 함수가 완벽히 지원되며 고유하게 컴파일된 모듈에서 CROSS APPLY 연산자가 지원됩니다. (CTP 1.1)
 - **문자열 함수** CONCAT_WS, TRANSLATE 및 TRIM이 새로 제공되며 STRING_AGG 함수에 대해 WITHIN GROUP이 새로 지원됩니다. (CTP 1.1)
@@ -71,7 +71,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - SSIS의 새 **Scale Out** 기능에서 다음과 같은 새로운 기능과 변경된 기능을 제공합니다. 자세한 내용은 [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)(SQL Server 2017에서 Integration Services의 새로운 기능)을 참조하세요. (RC1)
     -   Scale Out Master에서 이제 고가용성을 지원합니다.
     -   Scale Out Worker에서 실행 로그의 장애 조치(failover) 처리가 향상되었습니다.
-    -   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]**의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
+    -   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
     -   SSIS 카탈로그에 SSIS 패키지를 실행하기 위한 기본 모드를 지정하는 새 전역 속성이 있습니다.
 - 새 **SSIS용 Scale Out** 기능에서 이제 실행을 트리거할 때 **Use32BitRuntime** 매개 변수를 사용할 수 있습니다. (CTP 2.1)
 - SQL Server 2017 Integration Services(SSIS)에서 이제 **Linux의 SQL Server**를 지원하며 새 패키지를 사용하여 명령줄에서 Linux의 SSIS 패키지를 실행할 수 있습니다. 자세한 내용은 [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)(Linux에 대한 SSIS 지원을 발표하는 블로그 게시물)를 참조하세요. (CTP 2.1)
@@ -112,7 +112,7 @@ SQL Server 설치 프로그램을 통해 SQL Server Reporting Services를 더 �
 
 ## <a name="machine-learning-in-sql-server-2017"></a>SQL Server 2017의 Machine Learning 
 
-R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행하거나 **Microsoft Machine Learning Server(독립 실행형)**를 설치하여 SQL Server가 필요 없는 R 및 Python 모델을 배포하고 사용할 수 있습니다. 
+R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행하거나 **Microsoft Machine Learning Server(독립 실행형)** 를 설치하여 SQL Server가 필요 없는 R 및 Python 모델을 배포하고 사용할 수 있습니다. 
 
 SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다.
 

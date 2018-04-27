@@ -1,15 +1,16 @@
 ---
-title: "조인을 사용한 쿼리(Visual Database Tools) | Microsoft 문서"
-ms.custom: 
+title: 조인을 사용한 쿼리(Visual Database Tools) | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dcdc5f6af6c47c7f100a48f899fe4a86c402d735
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>조인을 사용한 쿼리(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+쿼리 결과에 여러 테이블 또는 테이블 반환 개체의 데이터가 포함될 수 있습니다. 여러 테이블 반환 개체에 있는 데이터를 조합하려면 SQL에서 JOIN 연산을 사용합니다.  
   
 여러 테이블을 사용하는 쿼리를 작성하는 방법은 다음 항목을 참조하십시오.  
   

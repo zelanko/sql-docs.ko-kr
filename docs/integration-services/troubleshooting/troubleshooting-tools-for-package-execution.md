@@ -1,16 +1,16 @@
 ---
-title: "패키지 실행 문제 해결 도구 | Microsoft Docs"
-ms.custom: 
+title: 패키지 실행 문제 해결 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac15ea4e6c42c5f299303a9d2335563e819cc98c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **오류 출력을 사용하여 잘못된 데이터 캡처** 오류가 들어 있는 행을 오류 테이블이나 텍스트 파일과 같은 별도의 대상으로 보냅니다. 오류 출력에는 행이 거부되도록 한 오류의 번호와 오류가 발생한 열의 ID가 들어 있는 두 개의 숫자 열이 자동으로 추가됩니다.  
   
--   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [스크립트 구성 요소를 사용하여 오류 출력 향상](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
+-   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
 -   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>작업 보고서를 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하는 데 도움이 되는 표준 작업 보고서가 제공됩니다. 이러한 패키지 보고서는 패키지 상태 및 기록을 보고 필요한 경우 실패 원인을 파악하는 데 도움이 됩니다.  
   
- 자세한 내용은 [패키지 실행 보고서 문제 해결](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)을 참조하세요.  
+ 자세한 내용은 [Troubleshooting Reports for Package Execution](../../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md)을 참조하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>SSISDB 뷰를 사용하여 패키지 실행 문제 해결  
  패키지 실행 및 기타 작업 정보를 모니터링하기 위해 쿼리할 수 있는 다양한 SSISDB 데이터베이스 뷰가 제공됩니다. 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](../../integration-services/performance/monitor-running-packages-and-other-operations.md)을 참조하세요.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  
   
--   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [패키지 연결 문제 해결 도구](troubleshooting-tools-for-package-connectivity.md)을 참조하세요.  
+-   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)을 참조하세요.  
   
 -   **기본 로깅 출력 향상**. 로깅 기능은 일반적으로 패키지가 실행될 때마다 로깅 대상에 행을 추가합니다. 로깅 출력의 각 행이 패키지를 이름과 고유 식별자로 식별하고 패키지 실행을 고유 ExecutionID로 식별하더라도 단일 목록에 많은 양의 로깅 출력이 있으면 분석하기가 어려울 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **각 패키지 실행을 기록하는 부모 테이블 만들기** 이 부모 테이블은 각 패키지 실행에 대한 단일 행만 포함하며, ExecutionID를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로깅 테이블의 자식 레코드에 연결합니다. 각 패키지가 시작될 때 SQL 실행 태스크를 사용하여 이 새 행을 만들고 시작 시간을 기록할 수 있습니다. 그런 다음 패키지가 끝날 때 다른 SQL 실행 태스크를 사용하여 해당 행을 종료 시간, 기간 및 상태로 업데이트할 수 있습니다.  
   
-    2.  **데이터 흐름에 감사 정보 추가** 감사 변환을 사용하여 데이터 흐름의 행에 각 행을 만들었거나 수정한 패키지 실행에 대한 정보를 추가할 수 있습니다. 감사 변환을 통해 PackageName 및 ExecutionInstanceGUID를 비롯한 9가지 정보를 사용할 수 있습니다. 자세한 내용은 [감사 변환](../../integration-services/data-flow/transformations/audit-transformation.md)을 참조하세요. 감사를 위해 각 행에도 포함할 사용자 지정 정보가 있는 경우 파생 열 변환을 사용하여 이 정보를 데이터 흐름의 행에 추가할 수 있습니다. 자세한 내용은 [파생 열 변환](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
+    2.  **데이터 흐름에 감사 정보 추가** 감사 변환을 사용하여 데이터 흐름의 행에 각 행을 만들었거나 수정한 패키지 실행에 대한 정보를 추가할 수 있습니다. 감사 변환을 통해 PackageName 및 ExecutionInstanceGUID를 비롯한 9가지 정보를 사용할 수 있습니다. 자세한 내용은 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)을 참조하세요. 감사를 위해 각 행에도 포함할 사용자 지정 정보가 있는 경우 파생 열 변환을 사용하여 이 정보를 데이터 흐름의 행에 추가할 수 있습니다. 자세한 내용은 [파생 열 변환](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
     3.  **행 개수 데이터 캡처** 행 개수 정보에 대한 별도의 테이블을 만듭니다. 이 테이블에서 패키지 실행의 각 인스턴스는 ExecutionID로 식별됩니다. 행 개수 변환을 사용하여 데이터 흐름의 중요 지점에서 일련의 변수에 행 개수를 저장합니다. 데이터 흐름이 끝난 후에는 나중에 분석 및 보고할 수 있도록 SQL 실행 태스크를 사용하여 일련의 값을 이 테이블의 행에 삽입합니다.  
   

@@ -1,23 +1,24 @@
 ---
-title: ".NET 코드를 사용하여 SSIS 프로젝트 배포(C#) | Microsoft Docs"
+title: .NET 코드를 사용하여 SSIS 프로젝트 배포(C#) | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d3971add40fcd60bdce9e9dc7c3f3d02b99fbf0f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
 이 빠른 시작 자습서에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 프로젝트를 배포하는 방법을 보여 줍니다.
@@ -45,7 +46,7 @@ C# 앱을 만들려면 Visual Studio, Visual Studio Code 또는 원하는 다른
 ## <a name="create-a-new-visual-studio-project"></a>새 Visual Studio 프로젝트 만들기
 
 1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다. 
-2. **새 프로젝트** 대화 상자에서 **Visual C#**을 펼칩니다.
+2. **새 프로젝트** 대화 상자에서 **Visual C#** 을 펼칩니다.
 3. **콘솔 앱**을 선택하고 프로젝트 이름으로 *deploy_ssis_project*를 입력합니다.
 4. **확인**을 클릭하여 Visual Studio에서 새 프로젝트를 만들고 엽니다.
 

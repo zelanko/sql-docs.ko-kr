@@ -1,28 +1,28 @@
 ---
 title: catalog.add_data_tap | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c4130b66a7c9c2011aaf1e2af30f799d753162
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ddfe02301128ef54a4dcd91778b5ed736d2b12e8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @task_package_path = ] *task_package_path*  
  데이터 흐름 태스크의 패키지 경로입니다. 데이터 흐름 태스크에 대한 **PackagePath** 속성에서 이 경로를 지정합니다. 경로는 대/소문자를 구분합니다. 패키지 경로를 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **PackagePath** 속성이 **속성** 창에 표시됩니다.  
   
- *task_package_path*는 **nvarchar(max)**입니다.  
+ *task_package_path*는 **nvarchar(max)** 입니다.  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  데이터 흐름 경로의 ID 문자열입니다. 경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로에 대한 **IdentificationString** 속성에서 이 문자열을 지정합니다.  
   
  ID 문자열을 찾으려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 두 데이터 흐름 구성 요소 사이의 경로를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **IdentificationString** 속성이 **속성** 창에 표시됩니다.  
   
- *dataflow_path_id_string*은 **nvarchar(4000)**입니다.  
+ *dataflow_path_id_string*은 **nvarchar(4000)** 입니다.  
   
  [ @data_filename = ] *data_filename*  
  탭 데이터를 저장하는 파일의 이름입니다. 데이터 흐름 태스크가 Foreach 루프 또는 For 루프 컨테이너 내부에서 실행되는 경우 각 루프 반복에 대한 탭 데이터가 개별 파일에 저장됩니다. 각 파일은 반복에 해당하는 번호가 접두사로 붙습니다.  
   
  파일은 기본적으로 \<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps 폴더에 저장됩니다.  
   
- *data_filename*은 **nvarchar(4000)**입니다.  
+ *data_filename*은 **nvarchar(4000)** 입니다.  
   
  [ @max_rows = ] *max_rows*  
  데이터 탭 도중 캡처하는 행 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다. *max_rows*는 **int**입니다.  
