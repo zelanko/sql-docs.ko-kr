@@ -2,7 +2,7 @@
 title: 분석 서버 속성 (로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 915d8b9b06d30ce7690b177f71f14d3ce8f38ca8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2ac693b1ea77d909301454db6ea551c1983245a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>분석 서버 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-**분석 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
+  **분석 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
 > [!NOTE]  
 >  클러스터형 인스턴스의 서비스에서 사용하는 **계정 이름** 을 변경하는 경우 새 계정은 변경되는 서비스의 설치 중에 지정한 도메인 그룹의 멤버여야 합니다. 그렇지 않으면 해당 그룹에 멤버를 추가할 수 있는 권한이 있어야 합니다. 그룹 멤버 자격을 수정할 권한이 없을 경우 도메인 관리자에게 문의하십시오.  

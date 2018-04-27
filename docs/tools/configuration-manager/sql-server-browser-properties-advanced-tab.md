@@ -2,7 +2,7 @@
 title: SQL Server Browser 속성 (고급 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5017cfa180e81bc0b20b3cd115504a99436bba7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: eb337c2ec02e853cb8ac00282c60de12fef9ef18
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server Browser 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  
   
 ## <a name="options"></a>변수  
  **클러스터형**  

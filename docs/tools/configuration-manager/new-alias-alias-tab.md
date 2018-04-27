@@ -2,7 +2,7 @@
 title: 새 별칭 (별칭 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a39d7940814839dcda00d45b7dd325a887a3d7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 42e3ff015b65ac189a60a170fd023dd4b9a64955
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-alias-alias-tab"></a>새 별칭(별칭 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **별칭 - 새로 만들기** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 지정할 수 있습니다. 기존 별칭의 연결 문자열을 변경하려면 [&#60;Alias&#62; 속성&#40;별칭 탭&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)을 참조하세요.  
+  별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. **별칭 - 새로 만들기** 대화 상자의 **별칭** 페이지를 사용하여 별칭에 대한 연결 문자열의 요소를 지정할 수 있습니다. 기존 별칭의 연결 문자열을 변경하려면 [&#60;Alias&#62; 속성&#40;별칭 탭&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)을 참조하세요.  
   
  **속성** 표의 모든 값을 채울 필요는 없습니다. 선택한 프로토콜에 따라 유효한 값 조합이 달라집니다. 유효한 값 조합의 예는 아래 항목을 참조하십시오.  
   

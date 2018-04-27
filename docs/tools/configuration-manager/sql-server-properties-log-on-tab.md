@@ -2,7 +2,7 @@
 title: SQL Server 속성 (로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e12e87d3135f88e04dc159e7433ade959625daf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b440ac7faf5634134e8bd50654c0ccf699e949a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-**SQL Server 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 사용할 계정을 지정하고 계정의 암호를 변경하며 서비스를 시작 및 중지할 수 있습니다. 계정의 암호를 변경하면 즉시 적용됩니다.  
+  **SQL Server 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 사용할 계정을 지정하고 계정의 암호를 변경하며 서비스를 시작 및 중지할 수 있습니다. 계정의 암호를 변경하면 즉시 적용됩니다.  
   
 > [!NOTE]  
 >  클러스터형 인스턴스의 서비스에서 사용하는 계정 이름을 변경하는 경우 새 계정은 변경되는 서비스의 설치 중에 지정한 도메인 그룹의 멤버여야 합니다. 그렇지 않으면 해당 그룹에 멤버를 추가할 수 있는 권한이 있어야 합니다. 그룹 멤버 자격을 수정할 권한이 없을 경우 도메인 관리자에게 문의하십시오.  

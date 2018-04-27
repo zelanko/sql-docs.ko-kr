@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 Services 란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ SQL Server에서 컴퓨터 학습 기능을 사용 하기 위한 두 가지가 �
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | 함수는 T-SQL에 R 스크립트를 배치에 대 한 저장 프로시저를 데이터베이스와 함께 저장된 프로시저를 등록 하 고 R 개발 환경에서 저장된 프로시저를 실행 합니다.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | 기본적으로 컴퓨터 학습 서버의 비 SQL 설치에서와 같은 사용는 [(독립 실행형) 버전](r/r-server-standalone.md)합니다. 이 패키지를 사용 하 여, 배포 하 고 웹 서비스를 호스트, 전용된 웹으로 확장 된 토폴로지로 빌드 및 계산 노드의 로컬 및 원격 세션, 진단, 실행 사이 전환 합니다. (In-database) 설치의 경우 클라이언트 기능에서이 패키지를 사용 합니다: 예를 들어 원격 서버에 웹 서비스에 액세스 전용으로 컴퓨터 학습 서비스 작업에만 실행 합니다. |
 
-사용자 지정 R 및 Python 코드의 이식성은 패키지 배포 및 여러 제품에 내장 된 인터프리터를 통해 처리 됩니다. SQL Server에서 제공 되는 동일한 패키지에 다른 여러 Microsoft 제품 및 이라는 비 SQL 버전을 포함 한 서비스를 사용할 수 있습니다. [Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/)합니다. 우리의 Pyton 및 R 인터프리터를 포함 하는 무료 클라이언트 포함 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 및 [Python 라이브러리](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)합니다.
+사용자 지정 R 및 Python 코드의 이식성은 패키지 배포 및 여러 제품에 내장 된 인터프리터를 통해 처리 됩니다. SQL Server에서 제공 되는 동일한 패키지에 다른 여러 Microsoft 제품 및 이라는 비 SQL 버전을 포함 한 서비스를 사용할 수 있습니다. [Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/)합니다. 우리의 R 및 Python 인터프리터를 포함 하는 무료 클라이언트 포함 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 및 [Python 라이브러리](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)합니다.
 
 패키지 및 인터프리터 여러에서 사용할 수 있습니다. [Azure 가상 컴퓨터](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux), Azure 기계 학습 및와 같은 Azure 서비스 [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)합니다. 
 
@@ -82,7 +82,8 @@ SQL Server 설명서의 최신 릴리스에 버전에 적용할 수 있습니다
   
   Azure 마켓플레이스 R 서버나 컴퓨터 학습 서버를 포함 하는 여러 가상 컴퓨터 이미지를 포함 합니다. 예측 모델의 개발 및 배포를 시작 하는 가장 빠른 방법은 Microsoft Azure에서 가상 컴퓨터를 만드는 중입니다. 이미지 크기 조정 및 이미 구성 된 공유에 쉽게 응용 프로그램 분석을 포함 하 고 백 엔드 시스템과 통합 하는 기능 제공 됩니다.
 
-+ [데이터 과학 가상 컴퓨터](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
++ 
+  [데이터 과학 가상 머신](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
 
   컴퓨터 학습 서버, SQL Server를 포함 하는 데이터 과학 가상 컴퓨터의 최신 버전 뿐만 아니라 기계 학습에 가장 인기 있는 도구의 배열 모든 사전 설치 및 테스트 합니다. Jupyter 노트북, 만들고, Julia에서 솔루션을 개발 MXNet, CNTK, 및 TensorFlow과 같은 심층 학습 GPU 사용이 가능한 라이브러리를 사용 합니다.
 

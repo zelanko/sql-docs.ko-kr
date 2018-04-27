@@ -2,7 +2,7 @@
 title: 보고서 서버 속성 (서비스 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55a991a48bcae34cea1bfbc834d7a6e6891c786
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1087d6a3919959a4d66a151d882d95e7785e7ead
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="report-server-properties-service-tab"></a>보고서 서버 속성(서비스 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
+  이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 응용 프로그램을 사용하여 변경할 수 없습니다.  
   
 ## <a name="options"></a>변수  
  **이진 경로**  

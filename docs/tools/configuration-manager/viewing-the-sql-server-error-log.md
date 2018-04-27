@@ -2,7 +2,7 @@
 title: SQL Server 오류 로그 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -25,15 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 241fcbbef1663b4fadc7128c2ad2a47d10943475
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 62824f3634a398327fb6804f28ab82423d54000b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="viewing-the-sql-server-error-log"></a>SQL Server 오류 로그 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그를 보면 프로세스(예: 백업 및 복원 작업, 일괄 처리 명령, 다른 스크립트 및 프로세스)가 성공적으로 완료되었는지 확인할 수 있습니다. 이것은 자동 복구 메시지(특히 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지되었다가 다시 시작된 경우), 커널 메시지 또는 기타 서버 수준 오류 메시지 등의 현재 또는 잠재적 문제 영역을 찾아내는 데 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그를 보면 프로세스(예: 백업 및 복원 작업, 일괄 처리 명령, 다른 스크립트 및 프로세스)가 성공적으로 완료되었는지 확인할 수 있습니다. 이것은 자동 복구 메시지(특히 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지되었다가 다시 시작된 경우), 커널 메시지 또는 기타 서버 수준 오류 메시지 등의 현재 또는 잠재적 문제 영역을 찾아내는 데 유용합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 텍스트 편집기를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 오류 로그를 봅니다. 오류 로그를 보는 방법은 [Open Log File Viewer](../../relational-databases/logs/open-log-file-viewer.md)를 참조하십시오. 기본적으로 오류 로그는 `Program Files\Microsoft SQL Server\MSSQL.`*n*`\MSSQL\LOG\ERRORLOG` 및 `ERRORLOG.`*n* 파일에 있습니다.  
   
