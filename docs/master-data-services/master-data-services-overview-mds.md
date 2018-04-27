@@ -23,17 +23,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b8d9a0203b8e4bce7391415c99ebeba8aafa3333
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- 이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
+이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 주요 데이터 구성 및 관리 기능을 설명합니다. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 사용하면 조직 데이터의 마스터 집합을 관리할 수 있습니다. 데이터를 모델로 구성하고, 데이터를 업데이트하는 규칙을 만들고, 데이터를 누가 업데이트하는지 제어할 수 있습니다. Excel을 사용하면 조직의 다른 사람들과 마스터 데이터 집합을 공유할 수 있습니다. 
   
