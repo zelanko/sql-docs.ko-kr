@@ -3,7 +3,7 @@ title: Multiple Active Result Sets MARS ()를 사용 하 여 | Microsoft Docs
 description: MARS(Multiple Active Result Sets) 사용
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39950e9e23e0f77de977a0f0d276fdf8db6f1259
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d196dd7127a88d912317923737cb235a8f6eabe4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

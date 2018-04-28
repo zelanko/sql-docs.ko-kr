@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 249a9ea959e5e218bc1d0c88a7cfa9b3388845ec
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   멤버에 대 한 내용은 [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), 참조 [SQLServerBlob 멤버](../../../connect/jdbc/reference/sqlserverblob-members.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLServerBlob 클래스](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

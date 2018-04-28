@@ -2,7 +2,7 @@
 title: 연결 풀링 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2a332153e4e2651079198dac5b4390c3b56d550d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>연결 풀링(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/28/2018
 연결 풀링에 대 한 자세한 내용은 참조 [드라이버 관리자 연결 풀링](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)합니다.  
   
 ## <a name="enablingdisabling-connection-pooling"></a>활성화/비활성화 해도 연결 풀링
-### <a name="windows"></a>창
+### <a name="windows"></a>Windows
 드라이버의 값을 설정 하 여 연결 풀에서 동일한 연결을 찾는) (대신 새 연결을 만들려고 할 수 있습니다는 *ConnectionPooling* 특성에 대 한 연결 문자열 **false**  (또는 0).  
   
 경우는 *ConnectionPooling* 특성이 연결 문자열에서 생략 되거나로 설정 되 면 **true** (또는 1)에 해당 연결이 존재 하지 않는 경우만 새 연결을 만듭니다는 드라이버는 연결 풀입니다.  

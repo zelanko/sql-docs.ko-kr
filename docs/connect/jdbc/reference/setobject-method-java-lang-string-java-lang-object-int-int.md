@@ -1,30 +1,33 @@
 ---
-title: "setObject 메서드 (java.lang.String, java.lang.Object, int, int) | Microsoft Docs"
-ms.custom: 
+title: setObject 메서드 (java.lang.String, java.lang.Object, int, int) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setObject (java.lang.String, java.lang.Object, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56e45c5b631a01f704877248f1bd1023bd6bfd96
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ef105123f3dbbc3820c935c2e0f2ab6b237af6f5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject 메서드(java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -69,7 +72,7 @@ public void setObject(java.lang.String sCol,
  자세한 내용은 참조 [구성 방법을 java.sql.Time 값에는 서버에 보내집니다](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [setObject 메서드 &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
+ [setObject 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

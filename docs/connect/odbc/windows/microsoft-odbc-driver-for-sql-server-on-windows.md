@@ -1,28 +1,28 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: 6d4d453019ffd7fcb04c1c2ba434b864ed283fa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ Microsoft ODBC Driver for SQL Server는 새 응용 프로그램을 만드는 데
 
 | 버전       | 지원 되는 기능      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API에 대 한 상시 암호화 지원</li><li>새 연결 문자열 특성 UseFMTONLY로 인해 임시 테이블을 요구 하는 특별 한 경우에서 레거시 메타 데이터를 사용 하는 드라이버</li>
+| 17 Microsoft ODBC Driver for SQL Server | <ul><li>BCP API에 대 한 상시 암호화 지원</li><li>새 연결 문자열 특성 UseFMTONLY로 인해 임시 테이블을 요구 하는 특별 한 경우에서 레거시 메타 데이터를 사용 하는 드라이버</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>항상 암호화</li><li>Azure AD 인증</li><li>AlwaysOn AG(가용성 그룹)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>IDN(다국어 도메인 이름)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>드라이버 인식 연결 풀링</li><li>연결 복원력</li><li>비동기 실행 (폴링 방법)</li></ul> |    
@@ -50,7 +50,7 @@ Microsoft ODBC Driver for SQL Server는 새 응용 프로그램을 만드는 데
 -   [비동기 실행&#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC 드라이버의 연결 복원](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
--   [Azure Active Directory를 사용 하 여 ODBC 드라이버](../../../connect/odbc/using-azure-active-directory.md) 
+-   [ODBC 드라이버에서 Azure Active Directory 사용](../../../connect/odbc/using-azure-active-directory.md) 
 -   [투명 네트워크 IP 확인을 사용 하 여](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>커뮤니티  

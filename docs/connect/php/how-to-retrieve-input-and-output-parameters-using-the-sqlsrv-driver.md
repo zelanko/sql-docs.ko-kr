@@ -1,8 +1,8 @@
 ---
 title: '방법: SQLSRV 드라이버를 사용 하 여 I/O 매개 변수를 검색 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.date: 04/12/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a13b70c105ea6dfa27d7a261d2e926b122b569
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 23853aac469b7ff614c67c695b9a04f7453abda2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -106,7 +106,7 @@ $employeeId = 4;
 $vacationHrs = 8;  
 $params = array(   
                  array($employeeId, SQLSRV_PARAM_IN),  
-                 array($vacationHrs, SQLSRV_PARAM_INOUT)  
+                 array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                );  
   
 /* Execute the query. */  
@@ -128,7 +128,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> 값의 범위 밖에 있는 될 수 있습니다 하는 경우는 입/출력 매개 변수는 bigint 형식에 바인딩할 때는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), SQL 필드 유형을 해당 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "값 범위를 벗어났습니다" 예외가 발생할 수 있습니다.
+
+## <a name="example"></a>예제  
+이 코드 예제를 입/출력 매개 변수로 큰 bigint 값을 바인딩하는 방법을 보여 줍니다.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_INOUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## <a name="see-also"></a>관련 항목:  
 [방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

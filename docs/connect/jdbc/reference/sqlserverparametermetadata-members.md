@@ -1,27 +1,28 @@
 ---
-title: "SQLServerParameterMetaData 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerParameterMetaData 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a08e8540e387cf9b7bc5d75b9e98bbb8bbf1a27
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 39cac09a68bb9cbac3b207abd7d35a9f7981159e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|지정된 매개 변수의 데이터베이스 관련 형식 이름을 검색합니다.|  
 |[getPrecision](../../../connect/jdbc/reference/getprecision-method-sqlserverparametermetadata.md)|지정된 매개 변수의 자릿수를 검색합니다.|  
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverparametermetadata.md)|지정된 매개 변수의 소수점 이하 자릿수를 검색합니다.|  
-|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|지정된 매개 변수에 null 값이 허용되는지 여부를 검색합니다.|  
+|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|지정된 매개 변수에 null 값이 허용되는지 여부를 검색합니다.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverparametermetadata.md)|지정된 매개 변수의 값이 부호 있는 숫자일 수 있는지 여부를 검색합니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  

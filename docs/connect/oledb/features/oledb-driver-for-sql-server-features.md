@@ -3,7 +3,7 @@ title: SQL Server 기능에 대 한 OLE DB 드라이버 | Microsoft Docs
 description: OLE DB Driver SQL Server 기능에 대 한
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 66f48a985dd0ddafc6f147c45b3fc3be76f7ec19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB Driver for SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Windows (이전의 Microsoft) 데이터 액세스 구성 요소 (WDAC)의 기능을 노출할 뿐 아니라 OLE DB Driver for SQL Server도 다른 여러 기능도 구현 노출 하도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능입니다.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 04/06/2018
  SQL Server에서 지 원하는 LocalDB 기능에 대 한 OLE DB Driver를 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)      
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [SQL Server용 OLE DB 드라이버 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

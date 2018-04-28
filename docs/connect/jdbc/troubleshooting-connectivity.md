@@ -1,27 +1,28 @@
 ---
-title: "연결 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: 연결 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>연결 문제 해결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   TCP/IP 사용 하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 또는 지정 된 서버 또는 포트 번호가 올바르지 않습니다. 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지정 된 서버 및 포트에서 TCP/IP로 수신 대기 합니다. 이 경우 "로그인에 실패했습니다. 호스트에 TCP/IP 연결을 설정하지 못했습니다."와 유사한 예외가 함께 보고됩니다. 이는 다음 중 하나를 나타냅니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]가 설치 되어 TCP/IP에 대 한 네트워크 프로토콜로 설치 되지 않은 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 용 네트워크 유틸리티 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 설치 되어 TCP/IP에 대 한 네트워크 프로토콜로 설치 되지 않은 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용 하 여는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 용 네트워크 유틸리티 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager에 대 한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상.  
   
     -   로 설치 된 TCP/IP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 프로토콜을 하지만 JDBC 연결 URL에 지정 된 포트에서 수신 하지 않는 합니다. 기본 포트는 1433 이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 제품 설치 시 임의의 포트에서 수신 하도록 구성할 수 있습니다. 다음 사항을 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 포트 1433에서 수신 합니다. 또는 포트를 변경한 경우 JDBC 연결 URL에 지정된 포트가 변경된 포트와 일치하는지 확인합니다. JDBC 연결 Url에 대 한 자세한 내용은 참조 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)합니다.  
   

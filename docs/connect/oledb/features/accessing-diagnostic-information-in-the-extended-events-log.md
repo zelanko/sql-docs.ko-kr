@@ -3,7 +3,7 @@ title: 확장된 이벤트 로그의 진단 정보 액세스 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 추적 하 고 확장된 이벤트 로그의 진단 정보 액세스
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -15,12 +15,12 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
-ms.openlocfilehash: ea81e8bc007b9afd526901bcd60827238f5356e4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: c10eb2e76b881fa0f87f2fd7f430eb3e24df19c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

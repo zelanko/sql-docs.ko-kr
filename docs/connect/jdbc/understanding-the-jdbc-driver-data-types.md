@@ -1,32 +1,33 @@
 ---
-title: "JDBC 드라이버 데이터 형식 이해 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버 데이터 형식 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8aedc06687d574be4392157d667fde74325be431
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]사용 하는 Java 응용 프로그램 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스로 합니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 사용 하는 Java 응용 프로그램 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스로 합니다.  
   
  JDBC 유형 시스템 사이의 변환을 중재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식과 Java 언어 형식 및 개체입니다. JDBC 형식은 SQL-92 및 SQL-99 형식을 기준으로 합니다. JDBC 드라이버는 JDBC 사양에 따르며 예측 가능성과 융통성 사이의 올바른 균형을 제공하도록 디자인되었습니다.  
   

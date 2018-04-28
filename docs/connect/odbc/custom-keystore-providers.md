@@ -1,27 +1,28 @@
 ---
-title: "사용자 지정 키 저장소 공급자 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 키 저장소 공급자 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-keystore-providers"></a>사용자 지정 키 저장소 공급자
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -195,7 +196,7 @@ void (*Free)();
 |`msg`|[입력] 보고서에 오류 메시지입니다. Null로 끝나는 와이드 문자 문자열입니다. 매개 변수가 있는 정보를 사용할 수 있도록이 문자열에서 허용 하는 폼의 insert 서식을 시퀀스를 포함할 수 있습니다는 [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) 함수입니다. 이 매개 변수에서 아래 설명 된 대로 확장 된 기능을 지정할 수 있습니다.|
 |...|[입력] 적절 하 게 msg의 형식 지정자에 맞게 추가 variadic 매개 변수입니다.|
 
-오류가 발생 하는 경우를 보고 하려면 드라이버 및 오류 메시지에 서식을 지정할 선택적 추가 매개 변수를 사용 하 여 컨텍스트 매개 변수를 제공 하는 공급자 호출 onError 공급자 함수에 전달 합니다. 공급자 하나 공급자 함수 호출 내에서 연속적으로 여러 오류 메시지를 게시 하려면이 함수의 여러 번을 호출할 수 있습니다. 예를 들어
+오류가 발생 하는 경우를 보고 하려면 드라이버 및 오류 메시지에 서식을 지정할 선택적 추가 매개 변수를 사용 하 여 컨텍스트 매개 변수를 제공 하는 공급자 호출 onError 공급자 함수에 전달 합니다. 공급자 하나 공급자 함수 호출 내에서 연속적으로 여러 오류 메시지를 게시 하려면이 함수의 여러 번을 호출할 수 있습니다. 예를 들어:
 
 ```
     if (!doSomething(...))

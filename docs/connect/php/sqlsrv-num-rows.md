@@ -1,30 +1,31 @@
 ---
 title: sqlsrv_num_rows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0be1f022460ed99445de32e6dcac439cc5365ca
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0548f10588754fcf5e9ffbc973118737e50869ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +46,7 @@ sqlsrv_num_rows( resource $stmt )
 행 수를 계산하는 중 오류가 발생하면**false** 이고, 그렇지 않으면 결과 집합의 행 수를 반환합니다.  
   
 ## <a name="remarks"></a>주의  
-sqlsrv_num_rows 클라이언트 쪽, 정적 또는 키 집합 커서를 차지 하며 돌아갑니다 **false** 정방향 커서 또는 동적 커서를 사용 하는 경우. 정방향 커서가 기본값입니다. 커서에 대 한 자세한 내용은 참조 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형 &#40; SQLSRV 드라이버 &#41; ](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows 클라이언트 쪽, 정적 또는 키 집합 커서를 차지 하며 돌아갑니다 **false** 정방향 커서 또는 동적 커서를 사용 하는 경우. 정방향 커서가 기본값입니다. 커서에 대 한 자세한 내용은 참조 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형 &#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)합니다.  
   
 ## <a name="example"></a>예제  
   

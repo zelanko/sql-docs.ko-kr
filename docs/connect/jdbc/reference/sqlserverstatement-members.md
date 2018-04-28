@@ -1,27 +1,28 @@
 ---
-title: "SQLServerStatement 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerStatement 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cdce6c1ac993fc36b861e9ec6d87926e1a7661a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 07071e2e84736ba7014c72e62f054af3829c4458
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,11 +46,11 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|이 대 한 명령의 현재 목록에 지정된 된 SQL 명령을 추가 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
-|[취소](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|이 현재 실행 되 고 있는 SQL 문을 취소 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|이 현재 실행 되 고 있는 SQL 문을 취소 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|이 대 한 SQL 명령의 현재 목록을 비웁니다 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|이 보고 되는 모든 경고를 지웁니다 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|이 해제 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 데이터베이스와 JDBC 리소스를 자동으로 해제 되기를 기다리지 않고 즉시 해제 합니다.|  
-|[실행](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|이 해제 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 데이터베이스와 JDBC 리소스를 자동으로 해제 되기를 기다리지 않고 즉시 해제 합니다.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행합니다.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|실행할 명령 일괄 처리를 데이터베이스로 전송합니다. 모든 명령이 성공적으로 실행되면 업데이트 횟수의 배열을 반환합니다.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|지정된 된 SQL 문을 실행 하 고는 단일 반환 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|INSERT, UPDATE, MERGE 또는 DELETE 문과 같은 지정된 SQL 문이나 SQL DDL 문 같이 아무 것도 반환하지 않는 SQL 문을 실행합니다.|  

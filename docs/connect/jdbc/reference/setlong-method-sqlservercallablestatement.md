@@ -1,30 +1,33 @@
 ---
-title: "setLong 메서드 (SQLServerCallableStatement) | Microsoft Docs"
-ms.custom: 
+title: setLong 메서드 (SQLServerCallableStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setLong
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setLong
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f38869ba609becd1ce3ea4caa6112fffca3877bf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e1867daf791e6edda9be09abbcff27499944cd28
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public void setLong(java.lang.String sCol,
   
  A **문자열** 매개 변수 이름이 들어 있는입니다.  
   
- *l*  
+ *L*  
   
  A **긴** 값입니다.  
   

@@ -1,27 +1,28 @@
 ---
-title: "이해 데이터 형식 변환 | Microsoft Docs"
-ms.custom: 
+title: 이해 데이터 형식 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>데이터 형식 변환 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/18/2017
   
  updateString를 호출 하는 경우는 **이진**, **varbinary**, **varbinary (max)**, 또는 **이미지** 문자열 값을 처리 열 데이터 형식 16 진수 문자열 값입니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 이어야 합니다. 예를 들어  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 이어야 합니다. 예를 들어:  
   
 ```  
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
@@ -81,11 +82,11 @@ ms.lasthandoff: 11/18/2017
   
 -   **변환된 (y)**: Java **숫자** 원본 서버 형식 **숫자** 작은 형식입니다. 이 변환은 일반적 이며 뒤에 오는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환 규칙입니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로가 발생하면 지원되지 않는 변환 오류가 발생합니다. 예를 들어 updateDecimal에 "1.9999"에서 원본 정수 열 대상 열에 "1"의 값을 사용 하지만 "3000000000"을 전달 하면 드라이버에서 오류가 발생 합니다.  
   
--   **데이터 의존 (z)**: Java **문자열** 내부에 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식은 다음 조건에 따라 다릅니다.: 드라이버 보냅니다는 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 필요할 경우, 변환을 수행 합니다. SendStringParametersAsUnicode true이 고 내부로 설정 되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 변환을 허용 하지 않는 **nvarchar** 를 **이미지** sqlserverexception이 발생 하 고 있습니다. SendStringParametersAsUnicode가 false로 설정 되며 기본 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 변환을 허용 **varchar** 를 **이미지**하며 예외를 throw 하지 않습니다.  
+-   **데이터 의존 (z)**: Java **문자열** 내부에 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식은 다음 조건에 따라 다릅니다.: 드라이버 보냅니다는 **문자열** 값[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 필요할 경우, 변환을 수행 합니다. SendStringParametersAsUnicode true이 고 내부로 설정 되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 변환을 허용 하지 않는 **nvarchar** 를 **이미지** sqlserverexception이 발생 하 고 있습니다. SendStringParametersAsUnicode가 false로 설정 되며 기본 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 변환을 허용 **varchar** 를 **이미지**하며 예외를 throw 하지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 이어야 합니다. 예를 들어  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. UpdateBytes, updateBinaryStream, updateBlob 메서드를 호출할 때 데이터 값은 XML 문자의 16 진수 문자열 표현 이어야 합니다. 예를 들어:  
   
 ```  
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   
@@ -110,11 +111,11 @@ ms.lasthandoff: 11/18/2017
   
 -   **변환된 (y)**: Java **숫자** 원본 서버 형식 **숫자** 작은 형식입니다. 이 변환은 일반적 이며 뒤에 오는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 변환 규칙입니다. 또한 전체 자릿수는 항상 잘리고(반올림되지 않음) 오버플로로 인해 지원되지 않는 변환 오류가 발생합니다. 예를 들어 updateDecimal에 "1.9999"에서 원본 정수 열 대상 열에 "1"의 값을 사용 하지만 "3000000000"을 전달 하면 드라이버에서 오류가 발생 합니다.  
   
--   **데이터 의존 (z)**: Java **문자열** 내부에 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식은 다음 조건에 따라 다릅니다.: 드라이버 보냅니다는 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 필요할 경우, 변환을 수행 합니다. SendStringParametersAsUnicode 연결 속성이 true이 고 내부로 설정 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 변환을 허용 하지 않는 **nvarchar** 를**이미지** sqlserverexception이 발생 하 고 있습니다. SendStringParametersAsUnicode가 false로 설정 되며 기본 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 변환을 허용 **varchar** 를 **이미지**하며 예외를 throw 하지 않습니다.  
+-   **데이터 의존 (z)**: Java **문자열** 내부에 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식은 다음 조건에 따라 다릅니다.: 드라이버 보냅니다는 **문자열** 값[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 필요할 경우, 변환을 수행 합니다. SendStringParametersAsUnicode 연결 속성이 true이 고 내부로 설정 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 변환을 허용 하지 않는 **nvarchar** 를**이미지** sqlserverexception이 발생 하 고 있습니다. SendStringParametersAsUnicode가 false로 설정 되며 기본 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 변환을 허용 **varchar** 를 **이미지**하며 예외를 throw 하지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]대량 설정 변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다. 클라이언트 쪽 변환은 예외 이며만의 경우에 수행 **날짜**, **시간**, **타임 스탬프**, **부울**, 및  **문자열** 값입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 대량 설정 변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다. 클라이언트 쪽 변환은 예외 이며만의 경우에 수행 **날짜**, **시간**, **타임 스탬프**, **부울**, 및  **문자열** 값입니다.  
   
- 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. setObject(byte[], SQLXML), setObject(inputStream, SQLXML) 또는 setObject(Blob, SQLXML) 메서드를 호출하는 경우 데이터 값은 XML 문자의 16진수 문자열 표현이어야 합니다. 예를 들어  
+ 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. setObject(byte[], SQLXML), setObject(inputStream, SQLXML) 또는 setObject(Blob, SQLXML) 메서드를 호출하는 경우 데이터 값은 XML 문자의 16진수 문자열 표현이어야 합니다. 예를 들어:  
   
 ```  
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E   

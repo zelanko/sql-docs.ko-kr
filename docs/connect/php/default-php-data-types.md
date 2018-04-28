@@ -2,7 +2,7 @@
 title: 기본 PHP 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
 |smallint|정수|8 비트 문자<sup>1</sup>|  
 |smallmoney|문자열|8 비트 문자<sup>1</sup>|  
 |sql_variant<sup>7</sup>|문자열|8 비트 문자<sup>1</sup>|  
-|text<sup>8</sup>|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
+|텍스트<sup>8</sup>|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
 |time<sup>4</sup>|날짜/시간|해당 사항 없음|  
 |timestamp|문자열|8 비트 문자<sup>1</sup>|  
 |tinyint|정수|8 비트 문자<sup>1</sup>|  

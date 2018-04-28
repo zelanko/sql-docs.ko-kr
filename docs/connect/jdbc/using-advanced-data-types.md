@@ -1,27 +1,28 @@
 ---
-title: "고급 데이터 형식을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 고급 데이터 형식을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,10 +48,10 @@ ms.lasthandoff: 11/18/2017
  JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페이스의 모든 메서드를 구현합니다.  
   
 > [!NOTE]  
->  CLOB 값은 함께 사용할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상의 큰 값 데이터 형식입니다. 특히 CLOB 형식은 사용할 수 있습니다는 **varchar (max)** 및 **nvarchar (max)** 데이터 형식 BLOB 형식을 사용 하 여 **varbinary (max)** 및 **이미지**  NCLOB 형식 및 데이터 형식을 사용 하 여 **ntext** 및 **nvarchar (max)**합니다.  
+>  CLOB 값은 함께 사용할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상의 큰 값 데이터 형식입니다. 특히 CLOB 형식은 사용할 수 있습니다는 **varchar (max)** 및 **nvarchar (max)** 데이터 형식 BLOB 형식을 사용 하 여 **varbinary (max)** 및 **이미지**  NCLOB 형식 및 데이터 형식을 사용 하 여 **ntext** 및 **nvarchar (max)** 합니다.  
   
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식  
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]특별 한 처리가 필요 큰 값 데이터 형식으로 작업 합니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]max 지정자에 대 한 소개 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식을 저장할 수 있도록 값의 2 ^31 바이트입니다. 테이블 열 및 [!INCLUDE[tsql](../../includes/tsql_md.md)] 변수를 지정할 수 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 데이터 형식입니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]특별 한 처리가 필요 큰 값 데이터 형식으로 작업 합니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] max 지정자에 대 한 소개 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식을 저장할 수 있도록 값의 2 ^31 바이트입니다. 테이블 열 및 [!INCLUDE[tsql](../../includes/tsql_md.md)] 변수를 지정할 수 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 데이터 형식입니다.  
   
  큰 값 형식을 사용하는 주요 시나리오는 큰 값 형식을 데이터베이스에서 검색하거나 데이터베이스에 추가하는 것입니다. 다음 섹션에서는 이러한 태스크를 수행하는 다양한 접근 방식에 대해 설명합니다.  
   
@@ -139,7 +140,7 @@ rs.updateRow();
  큰 값 형식에 대한 자세한 내용은 SQL Server 온라인 설명서의 "큰 값 형식 사용"을 참조하십시오.  
   
 ## <a name="xml-data-type"></a>XML 데이터 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]제공 된 **xml** 데이터 형식 및 XML 문서를 저장할 수 있습니다에 조각의입니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다. **xml** 데이터의 기본 제공 데이터 형식이 며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]와 같은 몇 가지 다른 기본 제공 유형과 비슷합니다는 **int** 및 **varchar**합니다. 다른 기본 제공 형식과 함께 사용할 수 있는 **xml** 테이블을 만들 때 열 유형으로; 변수 유형, 매개 변수 형식 또는 함수 반환 유형;로 또는에서 데이터 형식을 [!INCLUDE[tsql](../../includes/tsql_md.md)] CAST 및 CONVERT 함수입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 제공 된 **xml** 데이터 형식 및 XML 문서를 저장할 수 있습니다에 조각의입니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다. **xml** 데이터의 기본 제공 데이터 형식이 며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]와 같은 몇 가지 다른 기본 제공 유형과 비슷합니다는 **int** 및 **varchar**합니다. 다른 기본 제공 형식과 함께 사용할 수 있는 **xml** 테이블을 만들 때 열 유형으로; 변수 유형, 매개 변수 형식 또는 함수 반환 유형;로 또는에서 데이터 형식을 [!INCLUDE[tsql](../../includes/tsql_md.md)] CAST 및 CONVERT 함수입니다.  
   
  JDBC 드라이버에서는 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** 데이터 형식입니다. 읽고으로 관계형 데이터베이스에 XML 데이터를 쓰는 방법에 대 한 자세한 내용은 **SQLXML** Java 데이터 형식 참조 [XML 데이터를 지 원하는](../../connect/jdbc/supporting-xml-data.md)합니다.  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   다른 XML 프로세서 및 디스크 파일과의 교환을 위해 UTF-16으로 인코딩된 경우 선행 BOM이 있는 바이트 배열로 XML에 액세스합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]u t F-16으로 인코딩된 XML에 선행 BOM을 필요합니다. 응용 프로그램은 XML 매개 변수 값이 바이트 배열로 제공되는 경우에 이를 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]utf-16 BOM 문자열 또는 포함 된 인코딩 선언에 항상 XML 값을 출력 합니다. XML 값을 byte[], BinaryStream 또는 BLOB로 검색하면 UTF-16 BOM이 값 앞에 붙습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u t F-16으로 인코딩된 XML에 선행 BOM을 필요합니다. 응용 프로그램은 XML 매개 변수 값이 바이트 배열로 제공되는 경우에 이를 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utf-16 BOM 문자열 또는 포함 된 인코딩 선언에 항상 XML 값을 출력 합니다. XML 값을 byte[], BinaryStream 또는 BLOB로 검색하면 UTF-16 BOM이 값 앞에 붙습니다.  
   
  에 대 한 자세한 내용은 **xml** 에서 "xml 데이터 형식"을 참조 데이터 형식, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
   

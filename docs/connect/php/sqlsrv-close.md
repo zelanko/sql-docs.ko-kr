@@ -2,7 +2,7 @@
 title: sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb772c02196c2c47dd0c5f8542fdb23ef3745fdb
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: acee29ec49e4bd0d8e303248a2a527d5697b42aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

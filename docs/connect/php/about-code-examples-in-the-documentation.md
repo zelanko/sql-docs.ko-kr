@@ -2,7 +2,7 @@
 title: 설명서의 코드 예제에 대 한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5515db3c5b98ddb0c3645016eade20ecf4f224b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f5f1faba6ca4a81814cd69657c7d921b43bdcd5c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-code-examples-in-the-documentation"></a>설명서의 코드 예제 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

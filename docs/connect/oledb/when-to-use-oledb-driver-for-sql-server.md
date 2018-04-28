@@ -3,7 +3,7 @@ title: SQL Server 용 OLE DB 드라이버를 사용 하는 경우 | Microsoft Do
 description: SQL Server 용 OLE DB 드라이버를 사용 하는 경우
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 361a13bd249bef726e202fc8fef69fb48d88b746
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 250fdffb328fe781279819ae2e856624388122bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버를 사용 하는 경우
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server는 데이터에 액세스 하는 데 사용할 수 있는 하나의 기술은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  서로 다른 데이터 액세스 기술 논의 알려면 [데이터 액세스 기술 로드맵](http://go.microsoft.com/fwlink/?LinkID=179186)  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 04/06/2018
  OLE DB Driver for SQL Server와 MDAC의 차이점에 대 한 정보를 참조 하십시오. [MDAC에서 SQL Server 용 OLE DB Driver로 응용 프로그램 업데이트](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 방법 도움말 항목](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -2,7 +2,7 @@
 title: 상수 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: ''
+caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a7af0c51e115aae2fb8319a847d16b272001f93
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a54937aab5ffad32eb4e2531234485058ecb6af5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -145,8 +145,8 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV_PHPTYPE_INT|정수|  
 |SQLSRV_PHPTYPE_DATETIME|날짜/시간|  
 |SQLSRV_PHPTYPE_FLOAT|부동|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|문자열|  
+|SQLSRV_PHPTYPE_STREAM ($인코딩<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING ($인코딩<sup>1</sup>)|문자열|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 및 **SQLSRV_PHPTYPE_STRING** 은 스트림 인코딩을 지정 하는 매개 변수를 허용 합니다. 다음 표에는 허용 가능한 매개 변수인 SQLSRV 상수 및 해당 인코딩에 대한 설명이 있습니다.  
   

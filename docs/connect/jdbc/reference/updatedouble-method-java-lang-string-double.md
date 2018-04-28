@@ -1,30 +1,33 @@
 ---
-title: "updateDouble 메서드 (java.lang.String, double) | Microsoft Docs"
-ms.custom: 
+title: updateDouble 메서드 (java.lang.String, double) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateDouble (java.lang.String, double)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateDouble (java.lang.String, double)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13ecb0f1351efe9f56d281d8478807b6309f9e44
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d158e1cd1f6727e04472de55c8313f6487ce1739
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble 메서드(java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateDouble(java.lang.String columnName,
  이 updateDouble 메서드는 java.sql.ResultSet 인터페이스의 updateDouble 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateDouble 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
+ [updateDouble 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

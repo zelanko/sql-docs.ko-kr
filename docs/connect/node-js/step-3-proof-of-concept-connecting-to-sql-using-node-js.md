@@ -1,27 +1,28 @@
 ---
-title: "3 단계: Node.js를 사용 하 여 SQL에 연결 하는 개념 증명 | Microsoft Docs"
-ms.custom: 
+title: '3 단계: Node.js를 사용 하 여 SQL에 연결 하는 개념 증명 | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3 단계: Node.js를 사용 하 여 SQL에 연결 하는 개념 증명
 

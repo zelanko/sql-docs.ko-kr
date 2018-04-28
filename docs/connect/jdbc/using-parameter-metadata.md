@@ -1,28 +1,28 @@
 ---
-title: "매개 변수 메타 데이터를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수 메타 데이터를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 812e8af3f3b08cf7cd25de64b157cb76657a6b6f
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 9299c3cff07a594ab58014b4835b4ad796756b5c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-parameter-metadata"></a>매개 변수 메타데이터 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

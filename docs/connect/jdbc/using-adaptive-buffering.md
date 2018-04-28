@@ -1,27 +1,28 @@
 ---
-title: "선택 버퍼링을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 선택 버퍼링을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>선택 버퍼링 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **쿼리에서 매우 큰 결과 집합 생성:** 응용 프로그램에는 응용 프로그램 메모리에 저장할 수 있는 보다 많은 행을 생성 하는 SELECT 문을 실행할 수 있습니다. 이전 버전에서는 응용 프로그램 프로그램 OutOfMemoryError를 방지 하기 위해 서버 커서를 사용 해야 했습니다. 선택 버퍼링을 사용하면 서버 커서 없이도 임의의 큰 결과 집합을 정방향 읽기 전용으로 처리할 수 있습니다.  
   
--   **쿼리로 매우 큰**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**열 또는**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 매개 변수 값:**  응용 프로그램에는 단일 값을 검색할 수 (열 또는 OUT 매개 변수)는이 너무 커서 응용 프로그램 메모리에 저장할 수 있습니다. 선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램에서 값을 검색 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스트림에서 읽으면서 합니다.  
+-   **쿼리로 매우 큰**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**열 또는**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 매개 변수 값:** 응용 프로그램에는 단일 값을 검색할 수 (열 또는 OUT 매개 변수)는이 너무 커서 응용 프로그램 메모리에 저장할 수 있습니다.         선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램에서 값을 검색 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스트림에서 읽으면서 합니다.  
   
 > [!NOTE]  
 >  선택 버퍼링을 사용하면 JDBC 드라이버는 필요한 양의 데이터만 버퍼링합니다. 드라이버는 버퍼 크기를 제어 또는 제한하는 공용 메서드를 제공하지 않습니다.  

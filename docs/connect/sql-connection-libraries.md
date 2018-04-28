@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
-이 문서에서는 연결 모듈에 대 한 다운로드 링크를 제공 하거나 *드라이버* 클라이언트 프로그램 상호 작용에 사용할 수 있는 [Microsoft SQL Server](../index.md), 클라우드에서로 해당 이중 가진 [Azure SQL 데이터베이스](http://docs.microsoft.com/azure/sql-database/)합니다. 드라이버는 다양 한 다음 운영 체제에서 실행 되는 프로그래밍 언어를 사용할 수 있습니다.
+이 문서에서는 연결 모듈에 대 한 다운로드 링크를 제공 하거나 *드라이버* 클라이언트 프로그램 상호 작용에 사용할 수 있는 [Microsoft SQL Server](../relational-databases/database-features.md), 클라우드에서로 해당 이중 가진 [Azure SQL 데이터베이스](http://docs.microsoft.com/azure/sql-database/)합니다. 드라이버는 다양 한 다음 운영 체제에서 실행 되는 프로그래밍 언어를 사용할 수 있습니다.
 
 - Linux (Ubuntu)
 - MacOS
@@ -53,11 +53,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 언어 | SQL 드라이버를 다운로드 합니다. |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[Windows 용.NET core](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core를 MacOS](https://www.microsoft.com/net/core#macos)<br />[Windows 용.NET core](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 드라이버, 설치 지침](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP | *운영 체제:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github에서 Linux 또는 macOS PHP driver](http://github.com/Microsoft/msphpsql/) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, 설치 지침](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC를 다운로드 합니다.](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby 드라이버, 설치 지침](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

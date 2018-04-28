@@ -2,7 +2,7 @@
 title: Microsoft ODBC Driver for Linux와 macOS에서 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,20 +18,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 이 문서에서는 설치 하는 방법에 설명는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] SQL Server에 대 한 선택적인 명령줄 도구 뿐만 아니라 Linux macOS 등 (`bcp` 및 `sqlcmd`) 및 unixODBC 개발 헤더입니다.
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>17 Microsoft ODBC Driver for SQL Server 
 
 > [!IMPORTANT]
 > v17를 설치한 경우 `msodbcsql` 일시적으로 사용할 수 있는 패키지를 제거 해야 설치 하기 전에 `msodbcsql17` 패키지 합니다. 충돌을 피해 야 합니다. `msodbcsql17` 패키지와 함께 설치할 수 있습니다는 `msodbcsql` v13 패키지 합니다.
@@ -169,7 +169,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat 엔터프라이즈 서버 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -185,7 +185,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>RedHat 엔터프라이즈 서버 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -295,7 +295,7 @@ brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
 
-### <a name="redhat-enterprise-server-6"></a>RedHat Enterprise Server 6
+### <a name="redhat-enterprise-server-6"></a>RedHat 엔터프라이즈 서버 6
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -309,7 +309,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>RedHat 엔터프라이즈 서버 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -519,7 +519,7 @@ Linux와 MacOS에서 ODBC 드라이버는 다음 구성 요소가 구성 됩니�
 
 |구성 요소|Description|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|동적 라이브러리 (`dylib`) 드라이버의 기능을 모두 포함 된 파일입니다. 이 파일은 설치 `/usr/local/lib/`합니다.|  
+|libmsodbcsql.17.dylib 또는 libmsodbcsql.13.dylib|동적 라이브러리 (`dylib`) 드라이버의 기능을 모두 포함 된 파일입니다. 이 파일은 설치 `/usr/local/lib/`합니다.|  
 |`msodbcsqlr17.rll`또는`msodbcsqlr13.rll`|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 설치 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` 드라이버 17 및 `[driver .dylib directory]../share/msodbcsql/resources/en_US/` Driver 13에 대 한 합니다. | 
 |msodbcsql.h|모든 드라이버를 사용 하는 데 필요한 새 정의 포함 하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> msodbcsql.h는에 설치 된 `/usr/local/include/msodbcsql17/` 드라이버 17 및 `/usr/local/include/msodbcsql/` Driver 13에 대 한 합니다. |
 |LICENSE.txt|최종 사용자 사용권 계약의 용어를 포함 하는 텍스트 파일입니다. 이 파일은 `/usr/local/share/doc/msodbcsql17/` 드라이버 17 및 `/usr/local/share/doc/msodbcsql/` Driver 13에 대 한 합니다. |

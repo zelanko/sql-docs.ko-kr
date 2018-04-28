@@ -3,7 +3,7 @@ title: SQL Server 용 OLE DB 드라이버와 응용 프로그램을 구축 | Mic
 description: 사용한 응용 프로그램 작성 OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버 빌딩 응용 프로그램
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 라이브러리에 대 한 OLE DB 드라이버를 사용 하는 응용 프로그램을 개발할 때 고려해 야 하는 문제는 여러 가지가 있습니다. 이 섹션의 항목에 설명 된 여러 OLE DB Driver MDAC에서 SQL Server, OLE DB 드라이버를 사용 하 여 SQL Server 헤더 및 라이브러리 파일 및 S에 대 한 OLE DB 드라이버와 함께 사용할 수 있는 다양 한 연결 문자열의 개요에 대 한 업그레이드를 포함 하 여 이러한 문제 QL 서버입니다.  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  다양 한 데이터 액세스 구성 요소가 사용 하 여 서로 다른 버전의 OLE DB Driver for SQL Server에 설명 합니다.  
 
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

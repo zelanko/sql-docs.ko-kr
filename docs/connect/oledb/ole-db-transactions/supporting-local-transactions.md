@@ -3,7 +3,7 @@ title: 로컬 트랜잭션 지원 | Microsoft Docs
 description: SQL Server에 대 한 OLE DB 드라이버에서 로컬 트랜잭션
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-transactions
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - local transactions [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5076c62a7c6553c0474585960da74af2f392b019
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 54866788608e778ea294e69472f5d4ead91cdaf4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-local-transactions"></a>로컬 트랜잭션 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

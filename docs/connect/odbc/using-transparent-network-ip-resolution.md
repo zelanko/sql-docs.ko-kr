@@ -1,27 +1,28 @@
 ---
-title: "투명 네트워크 IP 확인을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 투명 네트워크 IP 확인을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0db2d2b8dfc796b8c2dc696d66264745182ab39a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e7249d00dc4f3d71b7c3245e2939be7e541f5b39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-transparent-network-ip-resolution"></a>투명 네트워크 IP 확인을 사용 하 여
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -52,7 +53,7 @@ TransparentNetworkIPResolution은 수정 버전의 Microsoft ODBC Driver 13.1 fo
 
 `SQL_COPT_SS_TNIR` 사전 연결 특성을 사용 하면 프로그래밍 방식으로이 설정을 제어 하는 응용 프로그램:
 
-연결 특성입니다.|   크기/유형|  기본값| 값| Description
+연결 특성입니다.|   크기/유형|  기본값| Value| Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER`또는`SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|사용 하거나 TNIR 사용 하지 않도록 설정 합니다.
 

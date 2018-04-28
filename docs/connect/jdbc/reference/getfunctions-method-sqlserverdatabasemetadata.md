@@ -1,27 +1,28 @@
 ---
-title: "getFunctions 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getFunctions 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d09162647b6d5a4076bb60b3bf05e1e90eb27dee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cafae4dcdbe9102da3ef4e27ee20b41b231667e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *카탈로그*  
+ *catalog*  
   
  데이터베이스의 카탈로그 이름입니다. 빈 문자열("")을 지정하면 결과에는 카탈로그 없이 함수만 포함됩니다. 이 경우 **null**, 카탈로그 이름을 검색에 사용 되지 않습니다.  
   
@@ -75,7 +76,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 |NUM_OUTPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |NUM_RESULT_SETS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |REMARKS|**문자열**|함수에 대한 설명입니다.|  
-|FUNCTION_TYPE|**짧은**|함수의 형식입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> SQL_PT_UNKNOWN(0)<br /><br /> SQL_PT_PROCEDURE(1)<br /><br /> SQL_PT_FUNCTION(2)|  
+|FUNCTION_TYPE|**short**|함수의 형식입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> SQL_PT_UNKNOWN(0)<br /><br /> SQL_PT_PROCEDURE(1)<br /><br /> SQL_PT_FUNCTION(2)|  
   
  반환된 결과 집합의 모든 설명은 FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME 및 SPECIFIC_NAME 순으로 정렬됩니다.  
   

@@ -22,7 +22,7 @@ manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: efbe3ce15444b0c6556cf3cef0267e99bb55657f
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/11/2018
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2018
   
  이 변경 사항은 irowset:: Getdata, icommand:: Execute, 및 irowsetfastload:: Insertrow 주로 데이터를 전송 하는 모든 인터페이스에 적용 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,30 +1,33 @@
 ---
-title: "updateBlob 메서드 (int, java.sql.Blob) | Microsoft Docs"
-ms.custom: 
+title: updateBlob 메서드 (int, java.sql.Blob) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateBlob (int, java.sql.Blob)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateBlob (int, java.sql.Blob)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04f95ed91ad1c8b4a6f50621276208698ffe0075
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 19edcc20153a3aacc6773c37fd3d8ec19669487d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>updateBlob 메서드(int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateBlob(int index,
  이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateBlob 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [updateBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

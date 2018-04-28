@@ -1,27 +1,28 @@
 ---
-title: "래퍼 및 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 래퍼 및 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b0dc608dc62db0f8f06092843c0c2a0e7b747ca
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c36ca32076aad6612b2f4eaa23d1373aa17c8f56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,29 +36,29 @@ ms.lasthandoff: 11/18/2017
   
  **isWrapperFor** 및 **unwrap** 메서드는 다음과 같이 노출 됩니다.  
   
--   [isWrapperFor 메서드 &#40; SQLServerCallableStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [unwrap 메서드 &#40; SQLServerCallableStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [unwrap 메서드 &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
--   [isWrapperFor 메서드 &#40; SQLServerConnectionPoolDataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [unwrap 메서드 &#40; SQLServerConnectionPoolDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [unwrap 메서드 &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
--   [isWrapperFor 메서드 &#40; SQLServerDataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
--   [unwrap 메서드 &#40; SQLServerDataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
+-   [unwrap 메서드 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
--   [isWrapperFor 메서드 &#40; SQLServerPreparedStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [unwrap 메서드 &#40; SQLServerPreparedStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [unwrap 메서드 &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
--   [isWrapperFor 메서드 &#40; SQLServerStatement &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
--   [unwrap 메서드 &#40; SQLServerStatement &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
+-   [unwrap 메서드 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
--   [isWrapperFor 메서드 &#40; SQLServerXADataSource &#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
+-   [isWrapperFor 메서드 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
--   [unwrap 메서드 &#40; SQLServerXADataSource &#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
+-   [unwrap 메서드 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>인터페이스  
  부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0에서는 인터페이스는 관련된 클래스의 드라이버 관련 메서드에 액세스할 수 있는 응용 프로그램 서버에 사용할 수 있습니다. 응용 프로그램 서버를 노출 하는 프록시를 만들고 여 클래스를 래핑할 수는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-인터페이스에서 특정 기능입니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 있는 인터페이스를 지원는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 응용 프로그램 서버 클래스의 프록시를 만들 수 있도록 합니다.  

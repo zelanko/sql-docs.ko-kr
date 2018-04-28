@@ -1,27 +1,28 @@
 ---
-title: "updateNString 메서드 (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: 
+title: updateNString 메서드 (java.lang.String, java.lang.String) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4c0eac1b3c7e9ab77f5c005f5bbd7243e020cc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 456c774af0f6f8723098f2be2bcd50b4f1ccdb17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +55,7 @@ public void updateNString(java.lang.String columnLabel,
  이 메서드는 Java 전달 **문자열** 에 선택한 **nchar**, **nvarchar (max)**, **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateNString 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
+ [updateNString 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

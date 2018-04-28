@@ -2,7 +2,7 @@
 title: 예제 응용 프로그램 (SQLSRV 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - example application
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4665b4205ae896c7aaadd574d60c1cb9db6283b4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f1386fadc062414b58c29677f68773f1e35eee98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 응용 프로그램(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

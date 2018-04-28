@@ -1,27 +1,28 @@
 ---
-title: "SQL 이스케이프 시퀀스를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: SQL 이스케이프 시퀀스를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edf033fd91ecdd9ddd5ad33ce9a19e32f58b8bba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,7 +70,7 @@ LIKE '\\_%' {escape '\\'}");
 {fn functionName}  
 ```  
   
- 여기서 `functionName` 는 JDBC 드라이버에서 지원 되는 함수입니다. 예를 들어  
+ 여기서 `functionName` 는 JDBC 드라이버에서 지원 되는 함수입니다. 예를 들어:  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -79,7 +80,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 |문자열 함수|숫자 함수|Datetime 함수|시스템 함수|  
 |----------------------|-----------------------|------------------------|----------------------|  
-|ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE|ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE|CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR|DATABASE<br /><br /> IFNULL<br /><br /> User|  
+|ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE|ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE|CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR|DATABASE<br /><br /> IFNULL<br /><br /> USER|  
   
 > [!NOTE]  
 >  데이터베이스에서 지원하지 않는 함수를 사용하려고 하면 오류가 발생합니다.  
@@ -99,7 +100,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 |t|Time|hh:mm:ss [1]|  
 |ts|타임스탬프|yyyy-mm-dd hh:mm:ss[.f...]|  
   
- 예를 들어  
+ 예를 들어:  
   
 ```  
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
@@ -135,7 +136,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  여기서 `table-reference` 은 테이블 이름 및 `search-condition` 이 테이블에 대 한 사용 하려는 조인 조건입니다.  
   
- 예를 들어  
+ 예를 들어:  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   

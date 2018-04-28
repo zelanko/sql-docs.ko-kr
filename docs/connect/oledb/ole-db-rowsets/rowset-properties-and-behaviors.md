@@ -3,7 +3,7 @@ title: 행 집합 속성 및 동작 | Microsoft Docs
 description: 행 집합 속성 및 OLE DB 드라이버에서 SQL Server에 대 한 동작
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,13 +74,13 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MAYWRITECOLUMN|SQL Server 용 OLE DB 드라이버에서이 행 집합 속성을 구현 되지 않았습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_MEMORYUSAGE|SQL Server 용 OLE DB 드라이버에서이 행 집합 속성을 구현 되지 않았습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_NOTIFICATIONGRANULARITY|SQL Server 용 OLE DB 드라이버에서이 행 집합 속성을 구현 되지 않았습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
-|DBPROP_NOTIFICATIONPHASES|R/w: 읽기 전용<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 설명:는 OLE DB Driver for SQL Server는 모든 알림 단계를 지원합니다.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: 읽기 전용<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 설명: OLE DB 드라이버에서 SQL Server 알림 단계는 표시 된 행 집합 수정 하려고 하기 전에 취소할 수 있습니다. OLE DB Driver for SQL Server 시도가 완료 된 후 단계 취소를 지원 하지 않습니다.|  
+|DBPROP_NOTIFICATIONPHASES|R/w: 읽기 전용<br /><br /> 기본값: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 설명:는 OLE DB Driver for SQL Server는 모든 알림 단계를 지원합니다.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: 읽기 전용<br /><br /> 기본값: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> 설명: OLE DB 드라이버에서 SQL Server 알림 단계는 표시 된 행 집합 수정 하려고 하기 전에 취소할 수 있습니다. OLE DB Driver for SQL Server 시도가 완료 된 후 단계 취소를 지원 하지 않습니다.|  
 |DBPROP_ORDEREDBOOKMARKS|SQL Server 용 OLE DB 드라이버에서이 행 집합 속성을 구현 되지 않았습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 변경 표시 유형 속성을 설정 하면 OLE DB 드라이버를 사용 하도록 SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 행 집합을 지원 합니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.|  
 |DBPROP_QUICKRESTART|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> OLE DB Driver for SQL Server에 대 한 VARIANT_TRUE로 설정 된 경우, 행 집합에 대 한 서버 커서를 사용 하려고 합니다.|  
 |DBPROP_REENTRANTEVENTS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: OLE DB 드라이버에서 SQL Server 행 집합은 재진입용 이며 소비자가 알림 콜백에서 재진입용이 아닌 행 집합 메서드에 액세스 하려고 하는 경우 DB_E_NOTREENTRANT를 반환할 수 있습니다.|  
-|DBPROP_REMOVEDELETED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 OLE DB Driver for SQL Server에 대 한 변경의 표시 여부에 따라 속성의 값을 변경는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합에 의해 노출 되는 데이터입니다.<br /><br /> VARIANT_TRUE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 됩니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> VARIANT_FALSE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 되지 않습니다. 삭제된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행에 대한 행 상태 값은 DBROWSTATUS_E_DELETED입니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> 이 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서에서 지원하는 행 집합에 대한 값만 갖습니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.<br /><br /> DBPROP_REMOVEDELETED 속성이 키 집합 커서 행 집합에 구현 된 경우 삭제 된 행 인출 시간에 제거 되 고 수에 대 한 행 인출 메서드 같은 **GetNextRows** 및 **GetRowsAt,**를 S_OK와 요청 된 수보다 적은 수의 행을 반환 합니다. 이 동작은 DB_S_ENDOFROWSET 조건을 나타내지 않으며 남은 행이 있는 경우 반환되는 행의 수는 0이 되지 않습니다.|  
+|DBPROP_REMOVEDELETED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 OLE DB Driver for SQL Server에 대 한 변경의 표시 여부에 따라 속성의 값을 변경는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합에 의해 노출 되는 데이터입니다.<br /><br /> VARIANT_TRUE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 됩니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> VARIANT_FALSE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 되지 않습니다. 삭제된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행에 대한 행 상태 값은 DBROWSTATUS_E_DELETED입니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> 이 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서에서 지원하는 행 집합에 대한 값만 갖습니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.<br /><br /> DBPROP_REMOVEDELETED 속성이 키 집합 커서 행 집합에 구현 된 경우 삭제 된 행 인출 시간에 제거 되 고 수에 대 한 행 인출 메서드 같은 **GetNextRows** 및 **GetRowsAt,** 를 S_OK와 요청 된 수보다 적은 수의 행을 반환 합니다. 이 동작은 DB_S_ENDOFROWSET 조건을 나타내지 않으며 남은 행이 있는 경우 반환되는 행의 수는 0이 되지 않습니다.|  
 |DBPROP_REPORTMULTIPLECHANGES|SQL Server 용 OLE DB 드라이버에서이 행 집합 속성을 구현 되지 않았습니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_RETURNPENDINGINSERTS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 행을 인출 하는 메서드가 호출 되는 OLE DB Driver for SQL Server 반환 하지 않습니다 보류 된 삽입 행입니다.|  
 |DBPROP_ROWRESTRICT|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: SQL Server 행 집합에 대 한 OLE DB 드라이버는 행에 따라 액세스 권한을 지원 하지 않습니다. 경우는 **IRowsetChange** 인터페이스는 행 집합에 노출 되는 **SetData** 소비자에서 메서드를 호출할 수 있습니다.|  
@@ -97,15 +97,15 @@ ms.lasthandoff: 04/06/2018
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|열: ColumnID<br /><br /> R/w: 읽기 전용<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 현재 내에서 COMPUTE 절 결과 열의 서 수 위치 (1부터 시작)를 나타내는 정수 값의 배열 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문입니다. 이 OLE DB 드라이버에서 SQL Server ODBC SQL_CA_SS_COLUMN_ID 특성에 해당 합니다.|  
+|SSPROP_COLUMN_ID|열: ColumnID<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_U12 &#124; VT_ARRAY<br /><br /> 기본값: VT_EMPTY<br /><br /> 설명: 현재 내에서 COMPUTE 절 결과 열의 서 수 위치 (1부터 시작)를 나타내는 정수 값의 배열 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문입니다. 이 OLE DB 드라이버에서 SQL Server ODBC SQL_CA_SS_COLUMN_ID 특성에 해당 합니다.|  
 |SSPROP_DEFERPREPARE|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: VARIANT_TRUE: 준비 된 실행 명령 준비 될 때까지 지연 됩니다 **icommand:: Execute** 호출 되거나 메타 속성 작업이 수행 됩니다. 속성 설정에 따른 동작은 다음과 같습니다.<br /><br /> VARIANT_FALSE: 문을 준비할 때 **icommandprepare:: Prepare** 실행 됩니다.|  
 |SSPROP_IRowsetFastLoad|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:이 속성을 통해 빠른 로드 행 집합을 VARIANT_TRUE로 설정 **iopenrowset:: Openrowset**합니다. 이 속성을 설정할 수 없습니다 **icommandproperties:: Setproperties**합니다.|  
 |SSPROP_ISSAsynchStatus|열: 아니요.<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:이 속성을 variant_true를 사용 하 여 비동기 작업을 사용 하도록 설정 된 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스입니다.|  
 |SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환 하는 텍스트의 크기를 제한 하지 않습니다 및 속성 값이 해당 최대값으로 설정 합니다. 2147483647).<br /><br /> 설명:는 OLE DB Driver for SQL Server는 SELECT 문에서 반환 하는 이진 BLOB (large object) 데이터의 길이 제한 하는 SET TEXTSIZE 문을 실행 합니다.|  
 |SSPROP_NOCOUNT_STATUS|열: NoCount<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: SET NOCOUNT on/off에서의 상태를 나타내는 부울 값 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: SET NOCOUNT ON인 경우<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF인 경우|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR (1-2000 자 허용)<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 메시지의 메시지 텍스트입니다. 사용자가 정의하며 정의된 형식은 없습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어<br /><br /> `service=mySSBService;local database=mydb`|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> Type: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 초<br /><br /> 최대: 2 ^31-1 초<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지 되는 시간 (초) 수입니다.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 초<br /><br /> 최대: 2 ^31-1 초<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지 되는 시간 (초) 수입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [행 집합](../../oledb/ole-db-rowsets/rowsets.md)  

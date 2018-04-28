@@ -1,27 +1,28 @@
 ---
-title: "SQLServerResultSetMetaData 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerResultSetMetaData 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df2f0fbfe57b258bf0ad314377f0d11925ac03b9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f59c3d4b46395b931cd2ad68400c9c9b707b4d14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,11 +57,11 @@ ms.lasthandoff: 11/18/2017
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|지정된 열의 소수점 이하 자릿수를 가져옵니다.|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|지정된 열의 테이블 스키마 이름을 가져옵니다.|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|지정된 열의 테이블 이름을 가져옵니다.|  
-|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|지정된 열이 자동으로 번호가 매겨지고 이로 인해 읽기 전용이 되는지 여부를 나타냅니다.|  
-|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|열이 대/소문자를 구분하는지 여부를 나타냅니다.|  
+|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|지정된 열이 자동으로 번호가 매겨지고 이로 인해 읽기 전용이 되는지 여부를 나타냅니다.|  
+|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|열이 대/소문자를 구분하는지 여부를 나타냅니다.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|지정된 열이 현금 값인지 여부를 나타냅니다.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|지정된 열에 대한 쓰기 작업이 확실하게 성공할지 여부를 나타냅니다.|  
-|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|지정된 열의 값에 대한 Null 허용 여부를 나타냅니다.|  
+|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|지정된 열의 값에 대한 Null 허용 여부를 나타냅니다.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|지정된 열이 확실하게 쓰기 불가능한지 여부를 나타냅니다.|  
 |[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|SQL WHERE 절에 지정된 열을 사용할 수 있는지 여부를 나타냅니다.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverresultsetmetadata.md)|지정된 열의 값이 부호 있는 숫자인지 여부를 나타냅니다.|  

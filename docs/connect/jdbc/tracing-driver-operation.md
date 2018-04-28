@@ -1,27 +1,28 @@
 ---
-title: "드라이버 작업 추적 | Microsoft Docs"
-ms.custom: 
+title: 드라이버 작업 추적 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 717c1d05c666efef553a77d11dcd8105a0834832
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ea02f1c06e942933fa7add21888447664e3608f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |연결|메시지를 로그에 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|인수를 제거합니다.|메시지를 로그에 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|문|메시지를 로그에 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
 |DataSource|메시지를 로그에 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
 |ResultSet|메시지를 로그에 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
 |드라이버|메시지를 로그에 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스입니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  

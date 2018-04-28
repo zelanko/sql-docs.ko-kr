@@ -1,27 +1,28 @@
 ---
-title: "SQLServerBlob 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerBlob 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef29d1bcd35511df7caa0ef728513ba70e7624d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bdcb7495e5f57670ad9b75aee3d6db4aebc43b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,13 +45,13 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[있음](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|이 메서드는 BLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
+|[무료](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|이 메서드는 BLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|BLOB에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|BLOB 데이터를 바이트 배열로 가져옵니다.|  
-|[길이](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|BLOB 개체의 바이트 수를 반환합니다.|  
-|[위치](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|지정된 패턴과 시작 인덱스에 따라 BLOB에서 지정된 패턴이 있는 위치를 반환합니다.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|BLOB 데이터를 바이트 배열로 가져옵니다.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|BLOB 개체의 바이트 수를 반환합니다.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|지정된 패턴과 시작 인덱스에 따라 BLOB에서 지정된 패턴이 있는 위치를 반환합니다.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|BLOB 값을 쓰는 데 사용할 수 있는 스트림을 검색합니다.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|지정된 바이트 배열을 BLOB의 지정된 위치부터 쓴 다음 쓴 바이트 수를 반환합니다.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|지정된 바이트 배열을 BLOB의 지정된 위치부터 쓴 다음 쓴 바이트 수를 반환합니다.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|BLOB을 지정된 길이로 자릅니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  

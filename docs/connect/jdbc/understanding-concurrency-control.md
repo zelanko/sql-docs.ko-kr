@@ -1,27 +1,28 @@
 ---
-title: "동시성 제어 이해 | Microsoft Docs"
-ms.custom: 
+title: 동시성 제어 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9a414c6d5fe2ee18fb83e168fe33fef53a0ac02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-concurrency-control"></a>동시성 제어 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
 |원인|Description|해결책|  
 |-----------|-----------------|------------|  
 |JDBC 2.0(또는 이후 버전) 구문을 사용하여 문을 작성할 수 없습니다.|JDBC 2.0에서는 문 작성을 위한 새로운 메서드가 도입되었습니다. JDBC 1.0 구문을 사용한 경우 결과 집합이 기본적으로 읽기 전용으로 설정됩니다.|문을 작성할 때 결과 집합 유형과 동시성을 지정하십시오.|  
-|TYPE_SCROLL_INSENSITIVE를 사용하여 문이 작성되었습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]정적 스냅샷 커서를 만듭니다. 이 커서는 다른 사용자가 행을 업데이트하지 못하도록 커서를 보호하기 위해 기본 테이블 행과의 연결을 끊습니다.|정적 커서를 만들지 않으려면 TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC 또는 TYPE_FORWARD_ONLY를 CONCUR_UPDATABLE과 함께 사용하십시오.|  
+|TYPE_SCROLL_INSENSITIVE를 사용하여 문이 작성되었습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 정적 스냅샷 커서를 만듭니다. 이 커서는 다른 사용자가 행을 업데이트하지 못하도록 커서를 보호하기 위해 기본 테이블 행과의 연결을 끊습니다.|정적 커서를 만들지 않으려면 TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC 또는 TYPE_FORWARD_ONLY를 CONCUR_UPDATABLE과 함께 사용하십시오.|  
 |테이블 디자인이 KEYSET 또는 DYNAMIC 커서를 방해합니다.|기본 테이블에 고유 키 수 있도록 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 행을 고유 하 게 식별할 수 있도록 합니다.|테이블에 고유 키를 추가하여 각 행의 고유 ID를 제공하십시오.|  
   
 ## <a name="see-also"></a>관련 항목:  

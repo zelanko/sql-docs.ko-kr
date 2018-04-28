@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 * [3단계: PHP를 사용하는 SQL과 연결된 개념 증명](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

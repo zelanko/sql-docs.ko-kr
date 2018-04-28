@@ -1,27 +1,28 @@
 ---
-title: "격리 수준 이해 | Microsoft Docs"
-ms.custom: 
+title: 격리 수준 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,9 +52,9 @@ ms.lasthandoff: 11/18/2017
   
 |격리 수준|커밋되지 않은 읽기|반복하지 않는 읽기|가상|  
 |---------------------|----------------|-------------------------|-------------|  
-|커밋되지 않은 읽기|예|예|예|  
-|커밋된 읽기|아니요|예|예|  
-|반복 읽기|아니요|아니요|예|  
+|커밋되지 않은 읽기|예|사용자 계정 컨트롤|예|  
+|커밋된 읽기|아니요|사용자 계정 컨트롤|예|  
+|반복 읽기|아니요|아니오|예|  
 |Snapshot|아니요|아니오|아니요|  
 |직렬화 가능|아니요|아니오|아니요|  
   

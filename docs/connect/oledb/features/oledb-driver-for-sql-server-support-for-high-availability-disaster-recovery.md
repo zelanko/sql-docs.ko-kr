@@ -3,7 +3,7 @@ title: OLE DB Driver for SQL Server Support for High Availability, Disaster Reco
 description: OLE DB Driver for SQL Server 고가용성, 재해 복구에 대 한 지원
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: dc6bba3823e1683baa7962bd11889fbaca83dea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,7 +151,7 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   

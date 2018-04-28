@@ -1,27 +1,28 @@
 ---
-title: "커서 유형 이해 | Microsoft Docs"
-ms.custom: 
+title: 커서 유형 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>커서 유형 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,12 +52,12 @@ ms.lasthandoff: 11/18/2017
 |TYPE_FORWARD_ONLY(CONCUR_READ_ONLY)|해당 사항 없음|정방향 전용, 읽기 전용|direct|전체|응용 프로그램은 결과 집합을 정방향으로 한 번 통과해야 합니다. 이것은 기본 동작이며 TYPE_SS_DIRECT_FORWARD_ONLY 커서와 동일하게 작동합니다. 드라이버는 문 실행 중 서버의 전체 결과 집합을 메모리로 읽습니다.|  
 |TYPE_FORWARD_ONLY(CONCUR_READ_ONLY)|해당 사항 없음|정방향 전용, 읽기 전용|direct|adaptive|응용 프로그램은 결과 집합을 정방향으로 한 번 통과해야 합니다. 이것은 TYPE_SS_DIRECT_FORWARD_ONLY 커서와 동일하게 작동합니다. 드라이버는 응용 프로그램에서 요청할 경우 서버의 행을 읽어 클라이언트 쪽 메모리 사용량을 최소화합니다.|  
 |TYPE_FORWARD_ONLY(CONCUR_READ_ONLY)|빠른 정방향|정방향 전용, 읽기 전용|cursor|해당 사항 없음|응용 프로그램은 서버 커서를 사용하여 결과 집합을 정방향으로 한 번 통과해야 합니다. 이 유형은 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 커서와 동일하게 동작합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
-|TYPE_FORWARD_ONLY(CONCUR_UPDATABLE)|동적(정방향 전용)|정방향 전용, 업데이트 가능|해당 사항 없음|해당 사항 없음|응용 프로그램은 한 개 이상의 행을 업데이트하기 위해 결과 집합을 정방향으로 한 번 통과해야 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.<br /><br /> 기본적으로 인출 크기는 응용 프로그램 호출 때 고정 됩니다는 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.<br /><br /> **참고:** JDBC 드라이버는에서 문 실행 결과 검색할 수 있는 선택 버퍼링 기능이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 응용 프로그램에서 필요할 때 보다는 한 번에 모두 있습니다. 예를 들어 너무 커서 응용 프로그램 메모리에 한 번에 저장할 수 없는 큰 데이터를 검색해야 하는 경우 클라이언트 응용 프로그램에서는 이러한 값을 스트림으로 검색할 수 있습니다. 드라이버의 기본 동작은 "**적응**"입니다. 그러나 정방향 전용 업데이트 가능 결과 집합에 대해 선택 버퍼링 가져오려면 응용 프로그램에 명시적으로 호출 하 여 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체 제공 하 여 한 **문자열** 값 "**적응"**합니다. 예제 코드를 보려면 참조 [큰 데이터 업데이트 샘플](../../connect/jdbc/updating-large-data-sample.md)합니다.|  
+|TYPE_FORWARD_ONLY(CONCUR_UPDATABLE)|동적(정방향 전용)|정방향 전용, 업데이트 가능|해당 사항 없음|해당 사항 없음|응용 프로그램은 한 개 이상의 행을 업데이트하기 위해 결과 집합을 정방향으로 한 번 통과해야 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.<br /><br /> 기본적으로 인출 크기는 응용 프로그램 호출 때 고정 됩니다는 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.<br /><br /> **참고:** JDBC 드라이버는에서 문 실행 결과 검색할 수 있는 선택 버퍼링 기능이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 응용 프로그램에서 필요할 때 보다는 한 번에 모두 있습니다. 예를 들어 너무 커서 응용 프로그램 메모리에 한 번에 저장할 수 없는 큰 데이터를 검색해야 하는 경우 클라이언트 응용 프로그램에서는 이러한 값을 스트림으로 검색할 수 있습니다. 드라이버의 기본 동작은 "**적응**"입니다. 그러나 정방향 전용 업데이트 가능 결과 집합에 대해 선택 버퍼링 가져오려면 응용 프로그램에 명시적으로 호출 하 여 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체 제공 하 여 한 **문자열** 값 "**적응"** 합니다. 예제 코드를 보려면 참조 [큰 데이터 업데이트 샘플](../../connect/jdbc/updating-large-data-sample.md)합니다.|  
 |TYPE_SCROLL_INSENSITIVE|정적|스크롤 가능, 업데이트 불가능<br /><br /> 외부 행 업데이트, 삽입 및 삭제는 표시되지 않음|해당 사항 없음|해당 사항 없음|응용 프로그램에 데이터베이스 스냅숏이 필요합니다. 결과 집합을 업데이트할 수 없습니다. CONCUR_READ_ONLY만 지원됩니다.  이외에 다른 모든 동시성 유형을 이 커서 유형과 함께 사용하는 경우 예외가 발생합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|스크롤 가능, 읽기 전용 외부 행 업데이트는 표시되며, 삭제는 데이터 누락으로 나타남<br /><br /> 외부 행 삽입은 표시되지 않음|해당 사항 없음|해당 사항 없음|응용 프로그램은 기존 행의 변경된 데이터만 볼 수 있어야 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE, CONCUR_SS_SCROLL_LOCKS, CONCUR_SS_OPTIMISTIC_CC, CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|스크롤 가능 및 업데이트 가능.<br /><br /> 외부 및 내부 행 업데이트는 표시되고 삭제는 데이터 누락으로 나타나며, 삽입은 표시되지 않음|해당 사항 없음|해당 사항 없음|응용 프로그램에는 ResultSet 개체를 사용 하 여 기존 행의에서 데이터를 변경할 수 있습니다. 응용 프로그램은 결과 집합 개체 외부에서 다른 사용자가 변경한 행에 변경 내용을 확인할 수 있어야도 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|해당 사항 없음|정방향 전용, 읽기 전용|해당 사항 없음|전체 또는 선택|정수 값 = 2003. 완전히 버퍼링되는 읽기 전용 클라이언트 쪽 커서를 제공합니다. 서버 커서가 만들어지지 않습니다.<br /><br /> CONCUR_READ_ONLY 동시성 유형만 지원됩니다. 이외에 다른 모든 동시성 유형을 이 커서 유형과 함께 사용하는 경우 예외가 발생합니다.|  
-|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|빠른 정방향|정방향 전용|해당 사항 없음|해당 사항 없음|정수 값 = 2004. 서버 커서를 사용하여 모든 데이터에 빠르게 액세스합니다. CONCUR_UPDATABLE 동시성 유형과 함께 사용하는 경우 업데이트할 수 있습니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.<br /><br /> 이 경우에 대해 선택 버퍼링을 가져오려면 응용 프로그램에 명시적으로 호출 된 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 제공 하는 **문자열**  값 "**적응"**합니다. 예제 코드를 보려면 참조 [큰 데이터 업데이트 샘플](../../connect/jdbc/updating-large-data-sample.md)합니다.|  
+|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|빠른 정방향|정방향 전용|해당 사항 없음|해당 사항 없음|정수 값 = 2004. 서버 커서를 사용하여 모든 데이터에 빠르게 액세스합니다. CONCUR_UPDATABLE 동시성 유형과 함께 사용하는 경우 업데이트할 수 있습니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.<br /><br /> 이 경우에 대해 선택 버퍼링을 가져오려면 응용 프로그램에 명시적으로 호출 된 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 제공 하는 **문자열**  값 "**적응"** 합니다. 예제 코드를 보려면 참조 [큰 데이터 업데이트 샘플](../../connect/jdbc/updating-large-data-sample.md)합니다.|  
 |TYPE_SS_SCROLL_STATIC|정적|다른 사용자의 업데이트는 반영 안 됨|해당 사항 없음|해당 사항 없음|정수 값 = 1004. 응용 프로그램에 데이터베이스 스냅숏이 필요합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_INSENSITIVE에 대 한 동의어 많고 동시성 설정 동작이 동일 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|Keyset|스크롤 가능, 읽기 전용. 외부 행 업데이트는 표시되며, 삭제는 데이터 누락으로 나타남<br /><br /> 외부 행 삽입은 표시되지 않음|해당 사항 없음|해당 사항 없음|정수 값 = 1005. 응용 프로그램은 기존 행의 변경된 데이터만 볼 수 있어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE에 대 한 동의어 있으며 동시성 설정 동작이 동일 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_UPDATABLE, CONCUR_SS_SCROLL_LOCKS, CONCUR_SS_OPTIMISTIC_CC, CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|스크롤 가능 및 업데이트 가능.<br /><br /> 외부 및 내부 행 업데이트는 표시되고 삭제는 데이터 누락으로 나타나며, 삽입은 표시되지 않음|해당 사항 없음|해당 사항 없음|정수 값 = 1005. 응용 프로그램은 기존 행의 데이터를 변경하거나 기존 행의 변경된 데이터를 볼 수 있어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE에 대 한 동의어 있으며 동시성 설정 동작이 동일 합니다.<br /><br /> 행이 인출 크기에 지정된 블록의 서버에서 검색됩니다.|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  동적 커서의 경우 업데이트된 행은 인출 버퍼로 정의된 창이 남아 있을 때까지 인출 버퍼 내에서 위치를 보존합니다. 업데이트된 행은 이후에 결과 집합 내에서 다른 위치에 다시 나타나거나 완전히 사라집니다. 결과 집합에서 일시적인 불일치를 방지해야 하는 응용 프로그램은 인출 크기 1(기본값: CONCUR_SS_SCROLL_LOCKS 동시성을 가진 8개 행 및 다른 동시성을 가진 128개 행)을 사용해야 합니다.  
   
 ## <a name="cursor-conversion"></a>커서 변환  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]요청 된 것과 다른 커서 유형을 구현 하도록 선택할 수 있습니다, 그리고 참조 되는 있는 암시적 커서 변환 (또는 커서 성능 저하). 암시적 커서 변환에 대 한 자세한 내용은의 "암시적 커서 변환 사용" 항목을 참조 하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 요청 된 것과 다른 커서 유형을 구현 하도록 선택할 수 있습니다, 그리고 참조 되는 있는 암시적 커서 변환 (또는 커서 성능 저하). 암시적 커서 변환에 대 한 자세한 내용은의 "암시적 커서 변환 사용" 항목을 참조 하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
   
  와 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]ResultSet.TYPE_SCROLL_SENSITIVE 및 ResultSet.CONCUR_UPDATABLE 결과 통해 데이터를 업데이트 하는 경우, 설정는 메시지 "는 커서가 읽기 전용"와 함께 예외가 throw 됩니다. 이 예외가 발생 하기 때문에 [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] 에서 해당 결과 집합 요청한 업데이트 가능 커서를 반환 하지 않았습니다에 대해 암시적 커서 변환을 수행 합니다.  
   

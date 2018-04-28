@@ -1,27 +1,28 @@
 ---
-title: "SQLServerPooledConnection 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerPooledConnection 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104f5060637181862c681227e331bef757de99ea
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e9d151ddf87ad3e750c6204804da6a9920bba3d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|지정 된 이벤트 수신기를 등록 하 여이 이벤트가 발생할 때 알림을 받이 됩니다 있도록 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체입니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|실제 연결을 닫습니다이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는입니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|실제 연결을 닫습니다이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는입니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|실제 연결에 대 한 개체 핸들을 만듭니다이 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체가 나타내는입니다.|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|지정된 이벤트 수신기를 제거합니다.|  
   

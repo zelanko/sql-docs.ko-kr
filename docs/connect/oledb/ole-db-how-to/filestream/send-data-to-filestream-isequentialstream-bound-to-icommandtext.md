@@ -3,7 +3,7 @@ title: FILESTREAM-ICommandText 변수에 바인딩된 ISequentialStream 데이�
 description: FILESTREAM-ICommandText에 바인딩된 ISequentialStream 데이터 보내기
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3443fc79379538d3bdd3ad8794477923cd645fd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b793bfcb5fd8024c3fcf229ef6b390c58be059fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM-ICommandText 변수에 바인딩된 ISequentialStream 데이터 보내기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제에서는 ICommandText 매개 변수에 바인딩된 ISequentialStream 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 보냅니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
   
 ## <a name="example"></a>예제  
  컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

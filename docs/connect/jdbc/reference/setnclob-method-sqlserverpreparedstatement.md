@@ -1,27 +1,28 @@
 ---
-title: "setNClob 메서드 (SQLServerPreparedStatement) | Microsoft Docs"
-ms.custom: 
+title: setNClob 메서드 (SQLServerPreparedStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63b4e908f8bf3aa45b9c6a2c720eb0672f1888d6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e59003ce9d2d29e763efaa5c30cbdc6fb2455ded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setnclob-method-sqlserverpreparedstatement"></a>setNClob 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[setNClob 메서드 &#40; int, java.sql.NClob &#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|지정 된 java.sql.NClob 개체에 지정된 된 매개 변수를 설정합니다.|  
-|[setNClob 메서드 &#40; int, java.io.Reader &#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|지정 된 java.io.Reader 개체에 지정된 된 매개 변수를 설정합니다.|  
-|[setNClob 메서드 &#40; int, java.io.Reader, long &#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader-long.md)|문자 길이의 지정 된 수는 지정 된 java.io.Reader 개체에 지정된 된 매개 변수를 설정 합니다.|  
+|[setNClob 메서드 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-sql-nclob.md)|지정 된 java.sql.NClob 개체에 지정된 된 매개 변수를 설정합니다.|  
+|[setNClob 메서드 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader.md)|지정 된 java.io.Reader 개체에 지정된 된 매개 변수를 설정합니다.|  
+|[setNClob 메서드 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setnclob-method-int-java-io-reader-long.md)|문자 길이의 지정 된 수는 지정 된 java.io.Reader 개체에 지정된 된 매개 변수를 설정 합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

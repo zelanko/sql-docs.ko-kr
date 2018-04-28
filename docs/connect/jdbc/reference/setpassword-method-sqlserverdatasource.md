@@ -1,30 +1,33 @@
 ---
-title: "setPassword 메서드 (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: setPassword 메서드 (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.setPassword
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.setPassword
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76eab641850ad7fefedf48f839661f74b9901909
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ee59817bbf0e1d202ab40ab5aa948572088913bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setPassword(java.lang.String password)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *암호*  
+ *password*  
   
  A **문자열** 암호가 포함 된 합니다.  
   

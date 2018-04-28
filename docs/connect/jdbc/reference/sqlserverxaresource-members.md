@@ -1,27 +1,28 @@
 ---
-title: "SQLServerXAResource 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerXAResource 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e61b22a719ea74b1097a50f811a4e1bde85db54
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4d0dd8ffe48528b439447a59e2540950c34527d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,16 +48,16 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[커밋](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|지정된 된 Xid 개체에서 지정 된 전역 트랜잭션을 커밋합니다.|  
+|[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|지정된 된 Xid 개체에서 지정 된 전역 트랜잭션을 커밋합니다.|  
 |[끝](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|트랜잭션 분기를 대신하여 수행되는 작업을 종료합니다.|  
 |[제거](../../../connect/jdbc/reference/forget-method-sqlserverxaresource.md)|발견적으로 완료된 트랜잭션 분기에 대해 잊도록 리소스 관리자에게 지시합니다.|  
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|이 대 한 설정 현재 트랜잭션 시간 제한 값을 가져옵니다. [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체입니다.|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|대상 개체가 나타내는 리소스 관리자 인스턴스가 지정 된 XAResource 개체가 나타내는 리소스 관리자 인스턴스와 동일 인지 여부를 확인 합니다.|  
 |[준비](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|지정된 된 Xid 개체에서 지정 된 트랜잭션의 트랜잭션 커밋을 준비 하도록 리소스 관리자 요청 수입니다.|  
 |[복구](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|리소스 관리자에서 준비된 트랜잭션 분기 목록을 가져옵니다.|  
-|[롤백](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|리소스 관리자에 트랜잭션 분기 대신 수행된 작업을 롤백하도록 요청합니다.|  
+|[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|리소스 관리자에 트랜잭션 분기 대신 수행된 작업을 롤백하도록 요청합니다.|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|이 대 한 현재 트랜잭션 시간 제한 값을 설정 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체입니다.|  
-|[시작](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Xid 개체에 지정 된 트랜잭션 분기를 대신 하 여 작업을 시작 합니다.|  
+|[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Xid 개체에 지정 된 트랜잭션 분기를 대신 하 여 작업을 시작 합니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  
   

@@ -1,8 +1,8 @@
 ---
 title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> 값의 범위 밖에 있는 될 수 있습니다 하는 경우 출력 매개 변수는 bigint 형식에 바인딩할 때는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), "값 범위를 벗어났습니다" 예외가 발생할 수 있습니다 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE PARAM_INT 사용 합니다. 따라서 기본 pdo:: PARAM_STR를 대신 사용 하 고은 최대 21 결과 문자열의 크기를 제공 합니다. 숫자를 bigint 값의 음수 기호를 포함 하 여 최대 수입니다. 
+
 ## <a name="example"></a>예제  
 이 코드 샘플은 입출력 매개 변수를 사용하는 방법을 보여 줍니다.  
   
@@ -125,7 +128,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다.
 
 ## <a name="example"></a>예제  
 이 코드 예제에는 10 진수 값을 입력된 매개 변수로 바인딩하는 방법을 보여 줍니다.  

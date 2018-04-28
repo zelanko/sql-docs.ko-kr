@@ -1,28 +1,29 @@
 ---
-title: "SQLServerCallableStatement 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerCallableStatement 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a930408957d61c61738c271914dca734920908f4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 45981047ce8b09d6b8f70b7d9e3f2872c8767c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +47,12 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 이 CallableStatement 개체의 명령 일괄 처리에 매개 변수 집합을 추가합니다.|  
-|[취소](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 CallableStatement 개체에 의해 현재 실행 되 고 있는 SQL 문을 취소 합니다.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 CallableStatement 개체에 의해 현재 실행 되 고 있는 SQL 문을 취소 합니다.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 이 CallableStatement 개체에 대 한 SQL 명령의 현재 목록을 비웁니다.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 현재 매개 변수 값을 즉시 지웁니다.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 CallableStatement 개체에 보고 되는 모든 경고를 지웁니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 데이터베이스와 JDBC 리소스를이 CallableStatement 개체에 자동으로 해제 될 때까지 기다리지 않고 즉시 해제 합니다.|  
-|[실행](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 모든 종류의 SQL 문 될 수 있는이 CallableStatement 개체에서 SQL 문을 실행 합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 데이터베이스와 JDBC 리소스를이 CallableStatement 개체에 자동으로 해제 될 때까지 기다리지 않고 즉시 해제 합니다.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 모든 종류의 SQL 문 될 수 있는이 CallableStatement 개체에서 SQL 문을 실행 합니다.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 실행할 명령 일괄 처리를 데이터베이스로 전송합니다. 모든 명령이 성공적으로 실행되면 업데이트 횟수의 배열을 반환합니다.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 이 CallableStatement 개체에서 SQL 쿼리를 실행 하 고 반환 된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 쿼리에 의해 생성 되는 개체입니다.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) SQL INSERT, UPDATE, MERGE 또는 DELETE 문; 있어야이 CallableStatement 개체에서 SQL 문을 실행합니다 또는 DDL 문 같이 아무 것도 반환 하는 SQL 문을 지정 합니다.|  
@@ -69,22 +70,22 @@ ms.lasthandoff: 11/18/2017
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|스트림으로 지정된 된 매개 변수의 값을 검색 **ASCII** 문자입니다.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 java.math.BigDecimal로 반환합니다.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 중단되지 않는 바이트의 이진 스트림으로 반환합니다.|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Java 프로그래밍 언어에 있는 Blob 개체와 지정된 된 JDBC Blob 매개 변수의 값을 검색합니다.|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)|Java 프로그래밍 언어에 있는 Blob 개체와 지정된 된 JDBC Blob 매개 변수의 값을 검색합니다.|  
 |[getboolean](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **부울** 값입니다.|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **바이트** 값입니다.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 바이트 배열로 반환합니다.|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **바이트** 값입니다.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 바이트 배열로 반환합니다.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 java.io.Reader 개체로 반환합니다.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Java 프로그래밍 언어에 Clob 개체와 지정된 된 JDBC Blob 매개 변수의 값을 검색합니다.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Date 개체로 반환합니다.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정 된 열의 값을 검색 하는[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **double** Java 프로그래밍 언어의에서 합니다.|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **float** Java 프로그래밍 언어의에서 합니다.|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **double** Java 프로그래밍 언어의에서 합니다.|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **float** Java 프로그래밍 언어의에서 합니다.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **int** Java 프로그래밍 언어의에서 합니다.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **긴** Java 프로그래밍 언어의에서 합니다.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|판독기 개체와 지정된 된 매개 변수의 값을 검색합니다.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|지정 된 JDBC의 값을 검색 **NCLOB** 로 매개 변수는 **NClob** Java 프로그래밍 언어의에서 개체입니다.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|지정된 된 값을 검색 **NCHAR**, **NVARCHAR** 또는 **LONGNVARCHAR** java에서 프로그래밍 언어 문자열 매개 변수입니다.|  
-|[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 개체로 반환합니다.|  
+|[GetObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 개체로 반환합니다.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 시간 (초)의 수를 검색 된 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 에서이 CallableStatement 개체가 실행 될 때까지 대기 합니다.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Java 프로그래밍 언어의 Ref 개체로 지정된 된 매개 변수의 값을 검색합니다.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 응답 버퍼링 모드를이 대 한 검색 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 결과 집합 유지 기능에 대 한 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 이 CallableStatement 개체에 의해 생성 된 개체입니다.|  
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 검색 결과 집합에 대 한 유형이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 이 CallableStatement 개체에 의해 생성 된 개체입니다.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **짧은** Java 프로그래밍 언어의에서 합니다.|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **문자열** Java 프로그래밍 언어의에서 합니다.|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)|로 지정된 된 매개 변수의 값을 검색 하는 **문자열** Java 프로그래밍 언어의에서 합니다.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 java.sql.SQLXML 개체로 반환합니다.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Time 개체로 반환합니다.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Timestamp 개체로 반환합니다.|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 지정 된 Blob 개체에 지정된 된 매개 변수를 설정합니다.|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|지정된 된 매개 변수 설정 하는 지정 된 **부울** 값입니다.|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlservercallablestatement.md)|지정된 된 매개 변수 설정 하는 지정 된 **바이트** 값입니다.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|지정 된 배열에 지정된 된 매개 변수를 설정 **바이트** 값입니다.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlservercallablestatement.md)|지정 된 배열에 지정된 된 매개 변수를 설정 **바이트** 값입니다.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)|지정된 된 판독기 개체를 지정된 된 매개 변수를 설정합니다.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(에서 상속 되며, [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) 지정된 매개 변수를 지정된 개체로 설정합니다.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) SQL 커서 이름을 이후 실행 메서드에 사용될 지정된 문자열로 설정합니다.|  

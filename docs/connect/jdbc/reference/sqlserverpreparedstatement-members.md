@@ -1,27 +1,28 @@
 ---
-title: "SQLServerPreparedStatement 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerPreparedStatement 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1926d376ac2653dcc7b4d6b0481bbe968d9469d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,12 +46,12 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|이 문은 개체의 명령 일괄 처리에 매개 변수 집합을 추가합니다.|  
-|[취소](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 문 개체에서 현재 실행 되 고 있는 SQL 문을 취소 합니다.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 문 개체에서 현재 실행 되 고 있는 SQL 문을 취소 합니다.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|이 대 한 SQL 명령의 현재 목록을 비웁니다 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|현재 매개 변수 값을 즉시 지웁니다.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 이 문 개체에서 보고 되는 모든 경고를 지웁니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|데이터베이스와 JDBC 리소스를의이 문 개체가 자동으로 해제 되기를 기다리지 않고 즉시 해제 합니다.|  
-|[실행](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|모든 종류의 SQL 문 될 수 있는이 문 개체에서 SQL 문을 실행 합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|데이터베이스와 JDBC 리소스를의이 문 개체가 자동으로 해제 되기를 기다리지 않고 즉시 해제 합니다.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|모든 종류의 SQL 문 될 수 있는이 문 개체에서 SQL 문을 실행 합니다.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|실행할 명령 일괄 처리를 데이터베이스로 전송합니다. 모든 명령이 성공적으로 실행되면 업데이트 횟수의 배열을 반환합니다.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|이 문 개체에서 SQL 쿼리를 실행 하 고 반환 된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 쿼리에 의해 생성 되는 개체입니다.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|SQL INSERT, UPDATE, MERGE 또는 DELETE 문; 것이 문 개체에서 SQL 문을 실행합니다 또는 DDL 문 같이 아무 것도 반환 하는 SQL 문을 지정 합니다.|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|지정된 된 Blob 개체에 지정된 된 매개 변수를 설정합니다.|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|지정 된 매개 변수를 지정 된 설정 **부울** 값입니다.|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|지정 된 매개 변수를 지정 된 설정 **바이트** 값입니다.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 바이트 배열로 설정합니다.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|지정된 매개 변수를 지정된 바이트 배열로 설정합니다.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|지정된 된 Reader 개체를 지정된 된 매개 변수를 설정합니다.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|지정 된 Clob 개체에 지정된 된 매개 변수를 설정합니다.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) SQL 커서 이름을 이후 실행 메서드에 사용될 지정된 문자열로 설정합니다.|  

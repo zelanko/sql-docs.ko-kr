@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버에 대 한 캐싱을 문 메타 데이터를 준비 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버에 대 한 캐싱을 문 메타 데이터를 준비 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13d4c0766552d9472038ffe7f2ff7fed6d73584d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: eb093c9102cbafde8e43fc69f2860831634bfee5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 드라이버에 대 한 캐싱을 준비 된 문의 메타 데이터
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

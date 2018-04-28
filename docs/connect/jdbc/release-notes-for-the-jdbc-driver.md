@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버에 대 한 릴리스 정보 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버에 대 한 릴리스 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 
+caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d5377db31ae77ea39ad5d73e26453182a7e6b09c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대 한 릴리스 정보
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ SQL Server 용 Microsoft JDBC 드라이버 6.4 JDBC 사양 4.1 및 4.2와 완벽
   
 Java 개발 키트 (JDK) 버전 9.0 JDK 8.0 및 7.0 외에도 지원 합니다.
   
-**JDBC 4.3 compliance**  
+**JDBC 4.3 규정 준수**  
   
 4.1 및 4.2 외에도 Java 데이터베이스 연결 API 4.3 사양에 대 한 지원. JDBC 4.3 API 메서드가 추가 되었지만 아직 구현 되지 않았습니다. 자세한 내용은 [JDBC 드라이버에 대 한 JDBC 4.3 준수](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md)합니다.
  

@@ -2,7 +2,7 @@
 title: 시스템 요구 사항을 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: ''
+caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f616a439b737e3228321247edab187975790bdde
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 44a18257abc758ee910fb9c4953cbdef02239fbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>시스템 요구 사항을 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/28/2018
 |5.5|       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   드라이버 파일의 버전은 PHP 확장 디렉터리에 있어야 합니다. 참조 [드라이버 버전](#driver-versions) 다른 드라이버 파일에 대 한 정보에 대 한 합니다.  드라이버를 다운로드하려면 [Microsoft Drivers for PHP for SQL Server](http://www.microsoft.com/download/details.aspx?id=20098)를 참조하세요. PHP에 대 한 드라이버를 구성 하는 방법에 대 한 정보를 참조 하십시오. [SQL Server 용 Microsoft Drivers for PHP 로드](../../connect/php/loading-the-php-sql-driver.md)합니다.
+-   드라이버 파일의 버전은 PHP 확장 디렉터리에 있어야 합니다. 참조 [드라이버 버전](#driver-versions) 다른 드라이버 파일에 대 한 정보에 대 한 합니다.  드라이버를 다운로드 하려면 [SQL Server 용 Microsoft Drivers for PHP 다운로드](download-drivers-php-sql-server.md)합니다. PHP에 대 한 드라이버를 구성 하는 방법에 대 한 정보를 참조 하십시오. [SQL Server 용 Microsoft Drivers for PHP 로드](../../connect/php/loading-the-php-sql-driver.md)합니다.
 
 -   웹 서버가 필요합니다. 웹 서버는 PHP를 실행하도록 구성되어야 합니다. IIS에서 PHP 응용 프로그램 호스팅에 대 한 정보를 참조 하십시오.는 [PHP의 웹 사이트의 자습서](http://php.net/manual/fa/install.windows.iis.php)합니다.  
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/28/2018
 ## <a name="odbc-driver"></a>ODBC 드라이버
 
 PHP가 실행 중인 컴퓨터에 올바른 버전의 Microsoft ODBC Driver for SQL Server 필요 합니다. 다음 링크에서 다운로드 하세요.
-- [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56567)
+- [17 Microsoft ODBC Driver for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56567)
 - [Microsoft ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=53339)
 - [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Microsoft ODBC Driver 11 for SQL Server](http://www.microsoft.com/download/details.aspx?id=36434)

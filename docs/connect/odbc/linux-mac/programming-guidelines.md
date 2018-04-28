@@ -1,32 +1,32 @@
 ---
-title: "프로그래밍 지침 (ODBC Driver for SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 프로그래밍 지침 (ODBC Driver for SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: e30ed328931cc33b62dd9d65301dee8921e1cc3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-프로그래밍 기능은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 및 Linux 기반으로 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client Windows Data Access Components의 ODBC 기반 ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+프로그래밍 기능은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 및 Linux 기반으로 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client Windows Data Access Components의 ODBC 기반 ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 결과 집합 MARS (Multiple Active) 오류 코드 및 기타 ODBC 응용 프로그램이 사용할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 포함 하 여 특정 기능 `/usr/local/include/msodbcsql.h` unixODBC 헤더를 포함 한 후 (`sql.h`, `sqlext.h`, `sqltypes.h`, 및 `sqlucode.h`). 다음에 대해 동일한 기호화 된 이름을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC 응용 프로그램에서 사용할 수 있는 특정 항목입니다.
 
@@ -119,7 +119,7 @@ SQLWCHAR 데이터는 UTF-16LE(Little Endian)이어야 합니다.
 
 인코딩 및 데이터 정렬에 대 한 자세한 내용은 참조 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)합니다.
 
-Windows 및 Linux와 macOS iconv 라이브러리의 여러 버전 간의 인코딩 변환 차이가 있습니다. 텍스트 데이터를 코드 페이지 1255 (히브리어) 유니코드로 변환할 때 다르게 동작 하는 하나의 코드 포인트 (0xCA)에 있습니다. Windows에서이 문자 0x05BA의 utf-16 코드 포인트를 변환합니다. MacOS 및 1.15 이전 버전 libiconv Linux에서 0x00CA 변환합니다. Linux iconv 라이브러리 Big5/CP950의 2003 수정 버전을 지원 하지 않는 (라는 `BIG5-2003`), 해당 버전을 사용 하 여 추가 문자는 올바르게 변환 하지 않습니다.
+Windows 및 Linux와 macOS iconv 라이브러리의 여러 버전 간의 인코딩 변환 차이가 있습니다. 텍스트 데이터를 코드 페이지 1255 (히브리어) 유니코드로 변환할 때 다르게 동작 하는 하나의 코드 포인트 (0xCA)에 있습니다. Windows에서이 문자 0x05BA의 utf-16 코드 포인트를 변환합니다. MacOS 및 1.15 이전 버전 libiconv Linux에서 0x00CA 변환합니다. Linux iconv 라이브러리 Big5/CP950의 2003 수정 버전을 지원 하지 않는 (라는 `BIG5-2003`), 해당 버전을 사용 하 여 추가 문자는 올바르게 변환 하지 않습니다. 코드 페이지 932 (일본어, Shift JIS), 원래 인코딩 표준에 정의 된 문자 디코딩 결과 달라 집니다. 예를 들어 0x80 바이트 Windows에서 U + 0080를 변환 하지만 Linux와 iconv 버전에 따라 macOS에서 U + 30FB 될 수 있습니다.
 
 ODBC Driver 13 및 13.1에서 u t F-8 멀티 바이트 문자 또는 utf-16 서로게이트가 SQLPutData 버퍼에서 분할 하는 경우 그 데이터 손상이 발생 합니다. 버퍼를 부분 문자 인코딩으로 끝나지 않는 SQLPutData 스트리밍에 사용합니다. ODBC 드라이버 17 이러한 제한이 제거 되었습니다.
 

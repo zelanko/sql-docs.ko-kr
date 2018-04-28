@@ -3,7 +3,7 @@ title: 큰 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs
 description: 큰 CLR 사용자 정의 형식(OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/06/2018
   
 |SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE] (바이트 배열\)|132 (oledb.h)|  
   
  UDT 값은 바이트 배열로 나타납니다. 16진수 문자열로의 변환 및 그 반대의 변환이 지원됩니다. 리터럴 값은 접두사 "0x"를 사용하여 16진수 문자열로 나타납니다. 16진수 문자열은 밑수가 16인 이진 데이터의 텍스트 표현입니다. 예제는 서버 유형으로 변환 되기 **varbinary(10)** 를 DBTYPE_STR로 줄어들고 결과적 모든 문자 쌍이 단일 바이트를 나타내는 20 자의 16 진수 표현입니다.  
   

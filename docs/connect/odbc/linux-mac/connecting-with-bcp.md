@@ -2,7 +2,7 @@
 title: Bcp를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>사용 가능한 옵션
 현재 릴리스에서 다음 구문 및 옵션 사용할 수 있습니다.  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*데이터베이스 ***.**]* 스키마 ***.*** 테이블 * **에** *data_file* | **아웃** *data_file*
 
 - -a *packet_size*  
 서버에서 전송되거나 서버로 전송되는 네트워크 패킷당 바이트 수를 지정합니다.  
@@ -149,7 +149,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -V (80 | 90 | 100)  
 이전 버전의 데이터 형식을 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
   
-- -x  
+- -X  
 서식 및 -f format_file 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다.  
   
 ## <a name="see-also"></a>관련 항목:

@@ -1,27 +1,28 @@
 ---
-title: "XA 트랜잭션 이해 | Microsoft Docs"
-ms.custom: 
+title: XA 트랜잭션 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1388ca846b426e4b544f991855942abab16e3507
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  다음 섹션의 코드 예제에서와 같이 로깅 기능을 설정합니다. 출력 로그 파일에서 "Server XA DLL version:..." 구를 검색합니다.  
   
-###  <a name="BKMK_ServerSide"></a>준비 되지 않은 트랜잭션의 자동 롤백에 대 한 서버 쪽 제한 시간 설정 구성  
+###  <a name="BKMK_ServerSide"></a> 준비 되지 않은 트랜잭션의 자동 롤백에 대 한 서버 쪽 제한 시간 설정 구성  
   
 > [!WARNING]  
 >  이 서버 쪽 옵션은 새 Microsoft JDBC Driver 4.2 (또는 이상) for SQL Server. 업데이트된 동작을 가져오려면 서버의 sqljdbc_xa.dll이 업데이트되어야 합니다. 클라이언트 쪽 제한 시간 설정에 대 한 자세한 내용은 참조 하십시오. [xaresource.settransactiontimeout ()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)합니다.  
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/18/2017
 > [!IMPORTANT]  
 >  유지 관리 창에 있는 동안 또는 프로세스에 MS DTC 트랜잭션이 없을 때 sqljdbc_xa.dll을 업그레이드해야 합니다.  
   
-1.  사용 하 여 sqljdbc_xa.dll을 언로드합니다는 [!INCLUDE[tsql](../../includes/tsql_md.md)] 명령 **DBCC sqljdbc_xa (FREE)**합니다.  
+1.  사용 하 여 sqljdbc_xa.dll을 언로드합니다는 [!INCLUDE[tsql](../../includes/tsql_md.md)] 명령 **DBCC sqljdbc_xa (FREE)** 합니다.  
   
 2.  JDBC 드라이버 설치 디렉터리에서의 Binn 디렉터리에 있는 새 sqljdbc_xa.dll을 복사 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 분산 트랜잭션에 참여 하는 컴퓨터입니다.  
   

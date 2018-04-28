@@ -3,7 +3,7 @@ title: IBCPSession (OLE DB)를 사용 하 여 파일에 대 한 FILESTREAM 열 �
 description: IBCPSession (OLE DB)를 사용 하 여 파일에 대 한 FILESTREAM 열 읽기
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3828927497b98a0c9c24a17e669c492dec60bde1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2d83f3cab28f30588825707db4aed1bb93c7fc3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   이 예제에서는 IBCPSession 인터페이스를 사용하여 파일에 대한 filestream 열을 읽고 서식 파일을 씁니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md)합니다.  
+ Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원](../../../oledb/features/filestream-support.md)합니다.  
   
 ## <a name="example"></a>예제  
  INCLUDE 환경 변수에 msoledbsql.h 포함 된 디렉터리에 포함 되어 있는지 확인 합니다.  

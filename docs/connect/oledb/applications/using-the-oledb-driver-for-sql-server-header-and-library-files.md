@@ -3,7 +3,7 @@ title: SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이�
 description: SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버를 사용 하 여
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>OLE DB 드라이버를 사용 하 여 SQL Server 헤더 및 라이브러리 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 헤더 및 라이브러리 파일은 설치 과정에서 OLE DB 드라이버에서 SQL Server SDK 옵션을 선택한 경우 설치 됩니다. 응용 프로그램을 개발할 때는 개발에 필요한 모든 파일을 사용자의 개발 환경으로 복사하고 설치해야 합니다. 설치 하 고 SQL Server 용 OLE DB Driver를 재배포 하는 방법에 대 한 자세한 내용은 참조 [설치 OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)합니다.  
   
  OLE DB Driver for SQL Server 헤더 및 라이브러리 파일은 다음 위치에 설치 됩니다.  
   
- *%PROGRAM FILES%*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *%PROGRAM FILES%* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  사용자 지정 응용 프로그램에 SQL Server 데이터 액세스 기능에 대 한 OLE DB 드라이버를 추가 하는 OLE DB Driver for SQL Server 헤더 파일 (msoledbsql.h)를 사용할 수 있습니다. 에 도입 된 새로운 기능을 활용 하는 데 필요한 인터페이스 및 정의 특성, 속성의 모든 OLE DB 드라이버에서 SQL Server 헤더 파일 포함 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다.  
   

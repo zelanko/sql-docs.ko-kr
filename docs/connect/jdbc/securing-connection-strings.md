@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a91ed021b749a0f23c08b1b4d01ef4d60d073814
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  사용자 ID와 암호를 제공하는 사용자처럼 외부 원본에서 연결 문자열 정보를 가져오는 경우 원본 입력의 유효성을 검사하여 입력이 올바른 형식을 따르며 연결에 영향을 주는 추가 매개 변수가 들어 있지 않은지 확인해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

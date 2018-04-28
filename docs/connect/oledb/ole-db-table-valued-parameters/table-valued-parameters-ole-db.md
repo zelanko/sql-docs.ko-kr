@@ -3,7 +3,7 @@ title: 테이블 반환 매개 변수 (OLE DB) | Microsoft Docs
 description: 테이블 반환 매개 변수(OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-table-valued-parameters
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4c96da8cea62a3357e1b0f50db7cb07341d2a56
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f4cddcc6ce6efb2697f1d6ae9d77f750ad64108d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-valued-parameters-ole-db"></a>테이블 반환 매개 변수(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/06/2018
 -   [OLE DB 테이블 반환 매개 변수 형식 지원 &#40;속성&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)   
+ [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [테이블 반환 매개 변수 사용 & #40; OLE db& #41;를 사용 하 여](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

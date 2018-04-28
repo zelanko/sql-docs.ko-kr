@@ -2,7 +2,7 @@
 title: Sqlcmd를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,7 +70,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k 제거 하거나 제어 문자를 바꿉니다.  
   
-- **-K***application_intent*  
+- **-K * * * application_intent*  
 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. 경우 **-K** 를 지정 하지 않으면 `sqlcmd` AlwaysOn 가용성 그룹에 보조 복제본에 대 한 연결을 지원 하지 않습니다. 자세한 내용은 참조 [macOS-고가용성 및 재해 복구 및 Linux 기반 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 - -m *error_level* 제어 stdout에는 오류 메시지를 보냅니다.  
   
-- **-M***multisubnet_failover*  
+- **-M * * * multisubnet_failover*  
 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 보다 빠르게 검색 하 고 장애 조치 (현재) 활성 서버 연결을 제공 합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], 참조 [macOS-고가용성 및 재해 복구 및 Linux 기반 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -q *commandline_query* 쿼리를 실행할 때 `sqlcmd` 시작 되지만 쿼리 실행이 완료 된 경우에 종료 하지 않습니다.  
 
-- -Q *commandline_query* 쿼리를 실행할 때 `sqlcmd` 시작 합니다. `sqlcmd`쿼리가 완료 될 때 종료 됩니다.  
+- -Q *commandline_query* 쿼리를 실행할 때 `sqlcmd` 시작 합니다. `sqlcmd` 쿼리가 완료 될 때 종료 됩니다.  
 
 - -r 리디렉션 오류 메시지를 stderr입니다.
 
@@ -104,7 +104,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char* 열 구분 기호 문자를 지정 합니다.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*프로토콜*:] *서버*[**, * * * 포트*]  
 인스턴스를 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 연결할 또는-D는 경우를 사용 하는 DSN입니다. Linux와 macOS에서 ODBC 드라이버-S. 필요 **tcp** 유일 하 게 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령 (또는 SQL 문) 시간 초과 되기 전의 시간 (초) 수를 지정 합니다.  
@@ -216,13 +216,13 @@ Linux 또는 macOS DSN에는 다음 항목이 지원 됩니다.
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **데이터베이스 =***database_name*  
+-   **데이터베이스 = * * * database_name*  
   
 -   **드라이버 ODBC Driver 11 for SQL Server =** 또는 **드라이버 ODBC Driver 13 for SQL Server =**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   

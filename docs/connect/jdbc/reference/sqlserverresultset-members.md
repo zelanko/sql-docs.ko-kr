@@ -1,27 +1,28 @@
 ---
-title: "SQLServerResultSet 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerResultSet 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767bc38218c81b81db91e5949bf2431ca4e98e95
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 610ace1ea15f69277cba1e4bd37b365a2c3e1cc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,29 +60,29 @@ ms.lasthandoff: 11/18/2017
 |[beforeFirst](../../../connect/jdbc/reference/beforefirst-method-sqlserverresultset.md)|이 첫 번째 행 앞에 커서를 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[cancelRowUpdates](../../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)|이 현재 행에 대 한 업데이트를 취소 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverresultset.md)|이 보고 된 모든 경고를 지웁니다 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|이 해제 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 데이터베이스와 JDBC 리소스를 자동으로 닫힐 때 동작을 기다리지 않고 즉시 해제 합니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|이 해제 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 데이터베이스와 JDBC 리소스를 자동으로 닫힐 때 동작을 기다리지 않고 즉시 해제 합니다.|  
 |[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)|이 통해 현재 행을 삭제[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체와 기본 데이터베이스입니다.|  
 |[마무리](../../../connect/jdbc/reference/finalize-method-sqlserverresultset.md)|이것을 명시적으로 닫으면 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[findColumn](../../../connect/jdbc/reference/findcolumn-method-sqlserverresultset.md)|이 지정 된 열 이름에 대 한 첫 번째 일치 하는 열의 인덱스를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[첫 번째](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|이 첫 번째 행으로 커서 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[first](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|이 첫 번째 행으로 커서 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Array 개체로 개체입니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) ASCII 문자의 스트림으로 개체입니다.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열 인덱스의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 java.math.BigDecimal로 반환 합니다.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 해석 되지 않은 바이트의 이진 스트림으로 개체입니다.|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 Blob 개체로 개체입니다.|  
-|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **부울** Java 프로그래밍 언어의에서 합니다.|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **바이트** Java 프로그래밍 언어의에서 합니다.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **바이트** Java 프로그래밍 언어의에서 배열입니다.|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 Blob 개체로 개체입니다.|  
+|[GetBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **부울** Java 프로그래밍 언어의에서 합니다.|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **바이트** Java 프로그래밍 언어의에서 합니다.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **바이트** Java 프로그래밍 언어의에서 배열입니다.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 java.io.Reader 개체로 반환 합니다.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 Clob 개체로 개체입니다.|  
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|이 동시성 모드를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|사용 하는 SQL 커서의 이름을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 java.sql.Date 개체로 개체입니다.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|지정 된 열의 값을 검색 하는[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **double** Java 프로그래밍 언어의에서 합니다.|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **double** Java 프로그래밍 언어의에서 합니다.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|이 대 한 인출 방향을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|이 대 한 인출 크기를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **float** Java 프로그래밍 언어의에서 합니다.|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **float** Java 프로그래밍 언어의에서 합니다.|  
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverresultset.md)|이 유지 기능을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **int** Java 프로그래밍 언어의에서 합니다.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **긴** Java 프로그래밍 언어의에서 합니다.|  
@@ -89,16 +90,16 @@ ms.lasthandoff: 11/18/2017
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|현재 행에서 지정 된 열의 값을 검색 하는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 판독기 개체로 개체입니다.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|현재 행에서 지정 된 열의 값을 검색 하는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)개체로 **NClob** Java 프로그래밍 언어의에서 개체입니다.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|현재 행에서 지정 된 열의 값을 검색 하는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 문자열로 java에서 프로그래밍 언어입니다.|  
-|[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 가져옵니다 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 개체로 개체입니다.|  
+|[GetObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 가져옵니다 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 개체로 개체입니다.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 Ref 개체로 개체입니다.|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|현재 행 번호를 검색합니다.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **짧은** Java 프로그래밍 언어의에서 합니다.|  
 |[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|검색 된 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 이 생성 한 개체를 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **문자열** Java 프로그래밍 언어의에서 합니다.|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **문자열** Java 프로그래밍 언어의에서 합니다.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|현재 행에서 지정 된 열의 값을 검색 하는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **SQLXML** 개체입니다.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 java.sql.Time 개체로 개체입니다.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 java.sql.Timestamp 개체로 개체입니다.|  
-|[getType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|이 커서 유형을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[GetType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|이 커서 유형을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[getUnicodeStream](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 유니코드 문자의 스트림으로 개체입니다.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) URL 개체로 개체입니다.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverresultset.md)|이 호출에서 보고 된 첫 번째 경고 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
@@ -108,16 +109,16 @@ ms.lasthandoff: 11/18/2017
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|나타냅니다 여부이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 잠겨 있습니다.|  
 |[isFirst](../../../connect/jdbc/reference/isfirst-method-sqlserverresultset.md)|커서가 첫 번째 행에 있는지 여부를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[isLast](../../../connect/jdbc/reference/islast-method-sqlserverresultset.md)|커서가 마지막 행에 있는지 여부를 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[마지막](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|커서의 마지막 행이 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|커서의 마지막 행이 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|커서를 저장된 커서 위치(대개 현재 행)로 이동합니다.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|커서를 삽입 행으로 이동합니다.|  
 |[다음](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|커서를 현재 위치에서 한 행 아래로 이동합니다.|  
 |[이전](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|이 이전 행으로 커서 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|데이터베이스의 최신 값으로 현재 행을 새로 고칩니다.|  
-|[상대](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|현재 행을 기준으로 지정된 행 수만큼 커서를 양의 방향 또는 음의 방향으로 이동합니다.|  
-|[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|행이 삭제되었는지 여부를 검색합니다.|  
+|[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|현재 행을 기준으로 지정된 행 수만큼 커서를 양의 방향 또는 음의 방향으로 이동합니다.|  
+|[RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|행이 삭제되었는지 여부를 검색합니다.|  
 |[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)|현재 행에 삽입된 내용이 있는지 여부를 검색합니다.|  
-|[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|현재 행이 업데이트되었는지 여부를 검색합니다.|  
+|[RowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|현재 행이 업데이트되었는지 여부를 검색합니다.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)|방향에 관한 힌트를 제공이 행 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 처리 됩니다.|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|데이터베이스에서이 대 한 추가 행이 필요할 때 인출 되는 행 수에 관한 힌트를 JDBC 드라이버에 제공 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|Array 개체와 지정된 된 열을 업데이트 합니다.|  

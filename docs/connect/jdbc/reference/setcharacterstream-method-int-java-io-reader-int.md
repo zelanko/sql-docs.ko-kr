@@ -1,30 +1,33 @@
 ---
-title: "setCharacterStream 메서드 (int, java.io.Reader, int) | Microsoft Docs"
-ms.custom: 
+title: setCharacterStream 메서드 (int, java.io.Reader, int) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setCharacterStream
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setCharacterStream
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35288adfce096a2afdc011c6517004dfd23f37d4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: aa6d1747a2737eb1affb487eab409c91c5f79321
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 메서드(int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,7 +64,7 @@ public final void setCharacterStream(int n,
   
  스트림의 길이에 지정 된 것과 다른 경우는 *길이* 매개 변수를 JDBC 드라이버는 경우 예외를 throw 행이 업데이트 되거나 삽입 합니다.  
   
- 스트림의 길이 알 수 없으면는 *길이* 드라이버의 길이 상관 없이 스트림을 수락 해야 함을 나타내려면 매개 변수를-1로 설정할 수 있습니다. Sqljdbc4.jar을 JDBC 4.0 메서드를 사용 하면 권장 [setCharacterStream 방법 &#40; int, java.io.Reader &#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md) 응용 프로그램에서 길이 알 수 없는 스트림에서 열을 업데이트 하려는 경우.  
+ 스트림의 길이 알 수 없으면는 *길이* 드라이버의 길이 상관 없이 스트림을 수락 해야 함을 나타내려면 매개 변수를-1로 설정할 수 있습니다. Sqljdbc4.jar을 JDBC 4.0 메서드를 사용 하면 권장 [메서드 setCharacterStream &#40;int, java.io.Reader&#41; ](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md) 응용 프로그램에서 길이 알 수 없는 스트림에서 열을 업데이트 하려는 경우.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

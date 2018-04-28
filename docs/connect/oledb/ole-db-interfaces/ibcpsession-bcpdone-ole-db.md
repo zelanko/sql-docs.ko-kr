@@ -3,7 +3,7 @@ title: 'Ibcpsession:: Bcpdone (OLE DB) | Microsoft Docs'
 description: IBCPSession::BCPDone(OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0195d193614894085b5d4ddc1dc8dee3372fb24c
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 0fd48f79a9c56f69d00eef7205e3904a1352f5e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **bcp 마스터... outfile.dat 파일-n-T-S에서 fltest** *서버*  
   
  이 예제를 컴파일할 때 msoledbsql.lib를 지정 해야 합니다.  
   

@@ -2,7 +2,7 @@
 title: sqlsrv_query | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: ''
+caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fb6aaec1fa37e9d8b5c3f54c1a84ee0ea4f3aea
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2186e670acc07f694212fbc008b545446870bf81
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,8 +66,8 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |-----------|---------------|  
     |*$value*|리터럴 값, PHP 변수 또는 PHP by-reference 변수입니다.|  
     |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\***  매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
-    |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
-    |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
+    |*$phpType*[선택 사항]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
+    |*$sqlType*[선택 사항]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
   
 *$options* [선택 사항]: 쿼리 속성을 설정 하는 결합형 배열입니다. 지원되는 키는 다음과 같습니다.  
   

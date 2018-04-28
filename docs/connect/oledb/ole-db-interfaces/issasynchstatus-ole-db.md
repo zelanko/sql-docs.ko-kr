@@ -3,7 +3,7 @@ title: ISSAsynchStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus(OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - ISSAsynchStatus interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48c141ef28cb51ece708048e568be19d598aff93
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 3485226a859f1dff0b3aa7df1553f93452b372a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,14 +44,14 @@ ms.lasthandoff: 03/30/2018
   
  다음 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 비동기적인 실행을 사용할 수 있습니다.  
   
--   **ICommand::Execute**  
+-   **Icommand:: Execute**  
   
 -   **IOpenRowset::OpenRowset**  
   
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>관련 항목:  
- [인터페이스 &#40; OLE db&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
+ [인터페이스 & #40; OLE db& #41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [비동기 작업 수행](../../oledb/features/performing-asynchronous-operations.md)  
   
   

@@ -20,14 +20,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: aec641b10888f2b3d57c4cd66e18cf63d3f43806
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="updateclob-method-int-javaioreader-long"></a>updateClob 메서드 (int, java.io.Reader, long)
+# <a name="updateclob-method-int-javaioreader-long"></a>updateClob 메서드(int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 문자 길이의 지정 된 판독기 개체를 사용 하 여 지정된 된 열을 업데이트 합니다.  
+  지정된 문자 길이의 지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,17 +47,17 @@ public void updateClob(int columnIndex,
   
  판독기 개체입니다.  
   
- *길이*  
+ *length*  
   
  매개 변수 데이터의 문자 수입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 updateClob 메서드는 java.sql.ResultSet 인터페이스의 updateClob 메서드에 의해 지정 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [updateClob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

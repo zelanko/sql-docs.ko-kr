@@ -1,27 +1,28 @@
 ---
-title: "JDBC 드라이버와 함께 대량 복사를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버와 함께 대량 복사를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  SQLServerBulkCopy 코드 샘플은 SQLServerBulkCopy를 사용하는 구문을  보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하면 더 쉽고 더 빠르게 데이터를 복사할 수 있습니다.  
   
-###  <a name="BKMK_TableSetup"></a>테이블 설정  
+###  <a name="BKMK_TableSetup"></a> 테이블 설정  
  코드 샘플을 올바르게 실행하는 데 필요한 테이블을 만들려면 SQL Server 데이터베이스에서 다음 TRANSACT-SQL 문을 실행해야 합니다.  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>트랜잭션 및 대량 복사 작업  
+##  <a name="BKMK_TransactionBulk"></a> 트랜잭션 및 대량 복사 작업  
  대량 복사 작업은 격리된 작업이나 여러 단계 트랜잭션의 일부로 수행할 수 있습니다. 후자 옵션을 사용하면 동일한 트랜잭션 내에서 둘 이상의 대량 복사 작업을 수행할 뿐만 아니라 전체 트랜잭션을 커밋하거나 롤백하면서 다른 데이터베이스 작업(예: 삽입, 업데이트 및 삭제)을 수행할 수 있습니다.  
   
  기본적으로 대량 복사 작업은 격리된 작업으로 수행됩니다. 대량 복사 작업은 트랜잭션되지 않은 방식으로 수행되어 롤백할 수 없습니다. 오류가 발생하여 대량 복사의 일부 또는 전체를 롤백해야 하는 경우 SQLServerBulkCopy 관리 트랜잭션을 사용하거나 기존 트랜잭션 내에서 대량 복사 작업을 수행할 수 있습니다.  

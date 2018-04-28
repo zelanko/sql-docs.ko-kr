@@ -1,27 +1,28 @@
 ---
-title: "1 단계: pyodbc Python 개발 환경 구성 | Microsoft Docs"
-ms.custom: 
+title: '1 단계: pyodbc Python 개발 환경 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886cf420228b622fb9c269423ce9a71c2c25ecaa
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 64ce99a11d0942efaaaee2ba70831cd0f5e6b236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>1 단계: pyodbc Python 개발에 대 한 개발 환경 구성
 

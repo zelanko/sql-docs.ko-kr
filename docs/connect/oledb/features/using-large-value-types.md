@@ -3,7 +3,7 @@ title: 큰 값 형식을 사용 하 여 | Microsoft Docs
 description: SQL Server 용 OLE DB Driver 큰 값 형식 사용
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252670fd1231efde3e9840ce28ab2ed2c4c42227
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8366d4ea0b307600f2e13a456dac8a437fd6ca45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ ms.lasthandoff: 04/06/2018
   
  열의 최대 크기를 보고할 때에 OLE DB Driver for SQL Server 보고 합니다.  
   
--   예를 들어는 2000에 대 한 정의 된 최대 크기는 **varchar (**2000**)** 열 또는  
+-   예를 들어는 2000에 대 한 정의 된 최대 크기는 **varchar (** 2000 **)** 열 또는  
   
 -   값 "무제한"의 경우에 한 **varchar (max)** 열 같음 ~ 0입니다. 이 값은 DBCOLUMN_COLUMNSIZE 메타데이터 속성에 대해 설정됩니다.  
   
- 에 표준 변환 규칙이 적용 됩니다는 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (**2000**)** 열에 대 한 유효한 됩니다는 **varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
+ 에 표준 변환 규칙이 적용 됩니다는 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (** 2000 **)** 열에 대 한 유효한 됩니다는 **varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
   
  큰 값 형식을 검색할 때 가장 효과적인 방법은 DBTYPE_IUNKNOWN으로 바인딩하고 행 집합 속성 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS로 설정하는 것입니다. 이렇게 하면 다음 예와 같이 값이 중간 버퍼링 없이 네트워크에서 직접 스트리밍됩니다.  
   

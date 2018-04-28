@@ -1,30 +1,33 @@
 ---
-title: "updateBoolean 메서드 (java.lang.String, boolean) | Microsoft Docs"
-ms.custom: 
+title: updateBoolean 메서드 (java.lang.String, boolean) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateBoolean (java.lang.String, boolean)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateBoolean (java.lang.String, boolean)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 823182c05831c710f98714a7d0fd58c90c81fa01
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7bb448c9c2e4f59e08d8281bf581b3cb61b076f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>updateBoolean 메서드(java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateBoolean(java.lang.String columnName,
  이 updateBoolean 메서드는 java.sql.ResultSet 인터페이스의 updateBoolean 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateBoolean 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
+ [updateBoolean 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

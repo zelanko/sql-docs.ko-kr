@@ -1,30 +1,31 @@
 ---
-title: "Linux와 macOS에서 ODBC 드라이버를 사용 하 여 데이터 액세스 추적 | Microsoft Docs"
-ms.custom: 
+title: Linux와 macOS에서 ODBC 드라이버를 사용 하 여 데이터 액세스 추적 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data access tracing
 - tracing
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a8c00866759a3cc9732083891e911eea9c2677b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4fadd1ddbcf4004b3a6652975c2495db9007d433
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux와 macOS에서 ODBC 드라이버를 사용 하 여 데이터 액세스 추적
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +43,7 @@ TraceFile=/home/myappuser/odbctrace.log
 
 응용 프로그램 추적을 마친 후 제거 `Trace=Yes` 에서 `odbcinst.ini` 추적의 성능 저하를 방지 하기 위해 파일을 불필요 한 추적 파일이 제거 되었는지 확인 합니다.
   
-추적에서 드라이버를 사용 하는 모든 응용 프로그램에 적용 됩니다. `odbcinst.ini`합니다. 모든 응용 프로그램 (예: 중요 한 사용자 정보를 공개 하지 않으려면)을 추적 하지, 개인의 위치를 제공 하 여 개별 응용 프로그램 인스턴스를 추적할 수 `odbcinst.ini`를 사용 하 여는 `ODBCSYSINI` 환경 변수입니다. 예를 들어  
+추적에서 드라이버를 사용 하는 모든 응용 프로그램에 적용 됩니다. `odbcinst.ini`합니다. 모든 응용 프로그램 (예: 중요 한 사용자 정보를 공개 하지 않으려면)을 추적 하지, 개인의 위치를 제공 하 여 개별 응용 프로그램 인스턴스를 추적할 수 `odbcinst.ini`를 사용 하 여는 `ODBCSYSINI` 환경 변수입니다. 예를 들어:  
   
 ```  
 $ ODBCSYSINI=/home/myappuser myapp

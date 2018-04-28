@@ -1,28 +1,28 @@
 ---
-title: "SQLServerConnection 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerConnection 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 181df7c774bdf48b87bfb139d4fcaa272ba25a87
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|만듭니다는 **java.sql.SQLXML** 데이터가 없는 개체입니다.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|이 대 한 현재 자동 커밋 모드를 검색 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|이 대 한 현재 카탈로그 이름을 검색 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.|  
-|[getClientConnectionID 메서드 &#40; SQLServerConnection &#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|연결 시도가 성공 또는 실패했는지 여부에 관계 없이 최근 연결 시도의 연결 ID를 가져옵니다.|  
+|[getClientConnectionID 메서드 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|연결 시도가 성공 또는 실패했는지 여부에 관계 없이 최근 연결 시도의 연결 ID를 가져옵니다.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|JDBC 드라이버에서 지원되는 클라이언트 정보 속성에 대한 정보를 검색합니다.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|값을 반환 **disableStatementPooling** 연결 속성입니다. 이 설정은 문 풀링을 사용 하는 여부 또는이 연결에 대해 제어 합니다.|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|현재 처리 중인 개수를 준비 반환 문을 준비 작업을 취소 합니다.|

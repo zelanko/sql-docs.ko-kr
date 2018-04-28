@@ -1,30 +1,33 @@
 ---
-title: "updateLong 메서드 (java.lang.String, long) | Microsoft Docs"
-ms.custom: 
+title: updateLong 메서드 (java.lang.String, long) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateLong (java.lang.String, long)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateLong (java.lang.String, long)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdcf686e83270d298cafd900ad5a7be37f308553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5a4db270b951d2ed60b21e94e279ecc0f5c490bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong 메서드(java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateLong(java.lang.String columnName,
  이 updateLong 메서드는 java.sql.ResultSet 인터페이스의 updateLong 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateLong 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [updateLong 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

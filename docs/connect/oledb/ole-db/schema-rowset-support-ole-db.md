@@ -3,7 +3,7 @@ title: 스키마 행 집합 지원 (OLE DB) | Microsoft Docs
 description: 스키마 행 집합 지원 (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3409a7a2d8ed7a047b2c2e5dcdf1a421084333ca
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0bf92e8fade8efd8989096aa3ba60d117af716eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/06/2018
  [LINKEDSERVERS 행 집합 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)   
+ [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [사용자 정의 형식 사용](../../oledb/features/using-user-defined-types.md)  
   
   

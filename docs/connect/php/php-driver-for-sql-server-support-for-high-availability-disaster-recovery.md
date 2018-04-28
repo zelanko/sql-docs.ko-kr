@@ -2,7 +2,7 @@
 title: 고가용성 Microsoft Drivers for PHP for SQL Server에 대 한 재해 복구에 대 한 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,13 +16,13 @@ ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 9d7faa964558281c21b3a5ee92736d26d8def56a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -78,6 +78,6 @@ ms.lasthandoff: 04/06/2018
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
   

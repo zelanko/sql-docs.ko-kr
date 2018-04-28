@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 921f96668cab29ad6fa2e8b43b8c3908f83e01ab
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,7 +43,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우에 다음 중 하나를 사용하
   
 -   [PDO::prepare](../../connect/php/pdo-prepare.md) 및 [PDOStatement::execute](../../connect/php/pdostatement-execute.md).  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [PDO_SQLSRV 드라이버 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)

@@ -2,7 +2,7 @@
 title: DSN 및 연결 문자열 키워드 및 SQL Server 용 ODBC 드라이버에서 사용 되는 특성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -13,13 +13,13 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a24fd4bba9a29733ab13147d5bbfe7537f2ef4e7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b5494a24e48b1d3e997079aba77682dddae7bda7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -165,7 +165,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 대화형 인증입니다.|
 | |SQL_AU_RESET|설정 되지 않은 경우. 모든 DSN 또는 연결 문자열 설정을 재정의합니다.|
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption-SQL_COPT_SS_COLUMN_ENCRYPTION
 
 투명 한 열 암호화 (상시 암호화)를 제어합니다. 참조 [항상 암호화를 사용 하 여 (ODBC)](using-always-encrypted-with-the-odbc-driver.md) 자세한 정보에 대 한 합니다.
 
@@ -175,7 +175,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 |사용 안 함|SQL_CE_DISABLED|(기본값) 상시 암호화를 해제 합니다.|
 | |SQL_CE_RESULTSETONLY|암호 해독만 (결과 및 반환 값)을 사용 하도록 설정 합니다.|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution-SQL_COPT_SS_TNIR
 
 컨트롤 더 빠르게 다시 연결할 수 있도록 MultiSubnetFailover와 상호 작용 하는 투명 네트워크 IP 확인 기능을 시도 합니다. 참조 [투명 네트워크 IP 확인 사용 하 여](using-transparent-network-ip-resolution.md) 자세한 정보에 대 한 합니다.
 

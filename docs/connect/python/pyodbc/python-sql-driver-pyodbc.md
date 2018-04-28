@@ -1,27 +1,28 @@
 ---
-title: "Python SQL 드라이버 pyodbc | Microsoft Docs"
-ms.custom: 
+title: Python SQL 드라이버 pyodbc | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a5d06d8a0002066a3b306bcb65a0bf4aa724e4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ee00cfa1322befabd0b21af718516e05290b0405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 pyodbc
 

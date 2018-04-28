@@ -2,7 +2,7 @@
 title: 'Pdo:: prepare | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fbac9059daa4af74aaeea4c6007d5ae1bf84a00
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a5c111c4184308311af4ef93853dba1b61f55faf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ $*statement*: SQL 문이 포함된 문자열입니다.
 |Key|Description|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|커서 동작을 지정합니다. 기본값은 PDO::CURSOR_FWDONLY입니다. PDO::CURSOR_SCROLL은 정적 커서입니다.<br /><br />`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`)을 입력합니다.<br /><br />PDO::CURSOR_SCROLL을 사용하는 경우 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE을 사용할 수 있으며 아래 설명되어 있습니다.<br /><br />참조 [커서 유형 &#40;PDO_SQLSRV 드라이버&#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) 결과 집합 및 커서 PDO_SQLSRV 드라이버에 대 한 자세한 내용은 합니다.|  
-|PDO::ATTR_EMULATE_PREPARES|Pdo:: ATTR_EMULATE_PREPARES에 때 자리 표시자에 준비 된 문에 바인딩된 매개 변수도 바뀝니다. 자리 표시 자가 포함 전체 SQL 문 실행 시 데이터베이스에 다음 전송 됩니다. <br /><br />Pdo:: ATTR_EMULATE_PREPARES SQL Server의 몇 가지 제한 사항을 무시 데 사용할 수 있습니다. 예를 들어 SQL Server 일부 Transact SQL 절에서 명명 된 또는 위치 매개 변수를 지원 하지 않습니다. 또한 SQL Server의 한 제한은 바인딩 2100 개의 매개 변수입니다.<br /><br />Pdo:: ATTR_EMULATE_PREPARES 특성을 true로 설정할 수 있습니다. 예를 들어<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />기본적으로 이 특성은 false로 설정됩니다.<br /><br />**참고:** `PDO::ATTR_EMULATE_PREPARES => true`를 사용하는 경우 매개 변수가 있는 쿼리의 보안이 적용되지 않습니다. 응용 프로그램은 매개 변수에 바인딩되는 데이터에 악성 Transact SQL 코드 없는지 확인 해야 합니다.<br /><br />**제한 사항:**: input_output 및 출력 매개 변수는 매개 변수는 데이터베이스 매개 변수가 있는 쿼리 기능을 사용 하 여 바인딩되지 않은 때문에 지원 되지 않습니다.|  
+|PDO::ATTR_EMULATE_PREPARES|Pdo:: ATTR_EMULATE_PREPARES에 때 자리 표시자에 준비 된 문에 바인딩된 매개 변수도 바뀝니다. 자리 표시 자가 포함 전체 SQL 문 실행 시 데이터베이스에 다음 전송 됩니다. <br /><br />Pdo:: ATTR_EMULATE_PREPARES SQL Server의 몇 가지 제한 사항을 무시 데 사용할 수 있습니다. 예를 들어 SQL Server 일부 Transact SQL 절에서 명명 된 또는 위치 매개 변수를 지원 하지 않습니다. 또한 SQL Server의 한 제한은 바인딩 2100 개의 매개 변수입니다.<br /><br />Pdo:: ATTR_EMULATE_PREPARES 특성을 true로 설정할 수 있습니다. 예를 들어:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />기본적으로 이 특성은 false로 설정됩니다.<br /><br />**참고:** `PDO::ATTR_EMULATE_PREPARES => true`를 사용하는 경우 매개 변수가 있는 쿼리의 보안이 적용되지 않습니다. 응용 프로그램은 매개 변수에 바인딩되는 데이터에 악성 Transact SQL 코드 없는지 확인 해야 합니다.<br /><br />**제한 사항:**: input_output 및 출력 매개 변수는 매개 변수는 데이터베이스 매개 변수가 있는 쿼리 기능을 사용 하 여 바인딩되지 않은 때문에 지원 되지 않습니다.|  
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8(기본값)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True이면 직접 쿼리 실행을 지정합니다. False는 준비된 문을 실행합니다. Pdo:: SQLSRV_ATTR_DIRECT_QUERY에 대 한 자세한 내용은 참조 [직접 문 실행 및 준비 된 문 실행 PDO_SQLSRV 드라이버에서](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)합니다.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)을 참조하세요.|  

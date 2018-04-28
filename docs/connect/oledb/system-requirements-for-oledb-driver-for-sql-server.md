@@ -3,7 +3,7 @@ title: SQL Server 용 OLE DB 드라이버에 대 한 시스템 요구 사항 | M
 description: SQL Server 용 OLE DB 드라이버에 대 한 요구 사항
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버에 대 한 시스템 요구 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
 
@@ -69,7 +71,7 @@ ms.lasthandoff: 04/06/2018
 
  IDBInfo::GetKeywords는 항상 영향을 받지 않는 연결에서 서버 버전에 해당 하는 키워드 목록을 반환 **DataTypeCompatibility**합니다.  
 
-|데이터 형식|OLE DB Driver for SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC 및<br /><br /> OLE DB Driver for SQL Server OLE DB 응용 프로그램 datatypecompatibility = 80|  
+|데이터 형식|SQL Server Native Client <br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC 및<br /><br /> OLE DB Driver for SQL Server OLE DB 응용 프로그램 datatypecompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<8kb =)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
@@ -83,5 +85,5 @@ ms.lasthandoff: 04/06/2018
 |time|time|varchar|varchar|Varchar|  
 
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [SQL Server용 OLE DB 드라이버 설치](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

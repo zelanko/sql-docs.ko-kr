@@ -25,23 +25,23 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5c3af56df60bdc8a1d02c18a62b3b79ee2c7cabc
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateref-method-sqlserverresultset"></a>updateRef 메서드 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 된 열을 java.sql.Ref 값으로 업데이트 합니다.  
+  지정된 열을 java.sql.Ref 값으로 업데이트합니다.  
   
-## <a name="overload-list"></a>오버 로드 목록  
+## <a name="overload-list"></a>오버로드 목록  
   
-|이름|설명|  
+|이름|Description|  
 |----------|-----------------|  
-|[updateRef (int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|열 인덱스가 지정 된을 java.sql.Ref 값으로 지정된 된 열을 업데이트 합니다.|  
-|[updateRef (java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|지정된 된 열을 java.sql.Ref 값 열 이름으로 업데이트 합니다.|  
+|[updateRef (int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|열 인덱스가 지정된 경우 지정된 열을 java.sql.Ref 값으로 업데이트합니다.|  
+|[updateRef (java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|열 이름이 지정된 경우 지정된 열을 java.sql.Ref 값으로 업데이트합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

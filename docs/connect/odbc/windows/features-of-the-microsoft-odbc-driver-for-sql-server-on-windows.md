@@ -1,27 +1,28 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server의 기능 | Microsoft Docs"
-ms.custom: 
+title: Microsoft ODBC Driver for SQL Server의 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 기반 Microsoft ODBC Driver for SQL Server의 기능
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 에
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 지원 [드라이버 인식 연결 풀링](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)합니다. 자세한 내용은 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)을 참조하세요.  
   
 ### <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 지원 [비동기 실행 (알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)합니다. 사용 예제를 참조 하세요. [비동기 실행 &#40; 알림 방법 &#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)합니다.  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 지원 [비동기 실행 (알림 방법)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)합니다. 사용 예제를 참조 하십시오. [비동기 실행 &#40;알림 방법&#41; 샘플](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)합니다.  
   
 ### <a name="connection-resiliency"></a>연결 복원력
 응용 프로그램이 Microsoft Azure SQL 데이터베이스에 연결되어 있는지 확인하려면 Windows 기반 ODBC 드라이버가 유휴 연결을 복원하면 됩니다. 자세한 내용은 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조하세요.  
@@ -58,7 +59,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 지
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client는 `-y0` 옵션에 대 한 `sqlcmd.exe` 출력이 디스플레이 width가 0 경우 1MB에서 잘립니다.
   
-ODBC Driver 11 for부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], 단일 열에 검색할 수 있는 데이터의 양에 제한이 없는 때 `–y0` 지정 합니다. `sqlcmd.exe`이제 2GB 정도의 열 스트림 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식 최대).  
+ODBC Driver 11 for부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], 단일 열에 검색할 수 있는 데이터의 양에 제한이 없는 때 `–y0` 지정 합니다. `sqlcmd.exe` 이제 2GB 정도의 열 스트림 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식 최대).  
   
 또 다른 차이점은 해당 둘 다 지정 하면 `-h` 및 `-y0` 이제에서 옵션이 호환 되지 않습니다 보고 오류를 생성 합니다. `-h`열 머리글 사이 출력할 행 수를 지정 하 고 호환 되지 `-y0`, 머리글이 인쇄 되지 않지만 무시 되었습니다.
   

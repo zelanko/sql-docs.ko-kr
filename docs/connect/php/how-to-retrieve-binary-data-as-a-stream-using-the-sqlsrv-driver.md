@@ -2,7 +2,7 @@
 title: '방법: SQLSRV 드라이버를 사용 하 여 스트림으로 이진 데이터를 검색 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: bc64286141b6ec0736ae6427d4a55af8afa75269
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

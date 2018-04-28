@@ -3,7 +3,7 @@ title: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL Server로 BLO
 description: IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용 하 여 SQL Server BLOB 데이터 보내기
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c807a15e52fc6ce9689693bd3d64f171afc80a8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 94557ee6be44c482a37604cfcdcf89fbd3f6b886
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

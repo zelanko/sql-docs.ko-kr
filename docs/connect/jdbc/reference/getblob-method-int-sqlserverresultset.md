@@ -1,30 +1,33 @@
 ---
-title: "getBlob 메서드 (int) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: getBlob 메서드 (int) (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getBlob (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getBlob (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ab35f25a26b60b0d8ebf9ccd8f517e1bcb347af
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c3322efef6b5c03804b3d81a0e992cc2a3d817a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob 메서드 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.sql.Blob getBlob(int i)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *i*  
+ *I*  
   
  **int** 열 인덱스를 나타내는입니다.  
   
@@ -53,7 +56,7 @@ public java.sql.Blob getBlob(int i)
  이 getBlob 메서드는 java.sql.ResultSet 인터페이스의 getBlob 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [getBlob 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -2,7 +2,7 @@
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: ''
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 52d4cbf24fe05ff73d85117ab8c9f10f566683a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,8 +69,8 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
     |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\***  매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)합니다.|  
-    |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.|  
-    |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.|  
+    |*$phpType*[선택 사항]|A **SQLSRV_PHPTYPE_\***  반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.|  
+    |*$sqlType*[선택 사항]|A **SQLSRV_SQLTYPE_\***  입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.|  
   
 *$options* [선택 사항]: 쿼리 속성을 설정 하는 결합형 배열입니다. 다음 표에서 지원 되는 키와 해당 값을 나열합니다.  
   

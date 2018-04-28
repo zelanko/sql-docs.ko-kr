@@ -2,7 +2,7 @@
 title: SQL Server에 대 한 ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -15,14 +15,14 @@ ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -357,8 +357,8 @@ ODBC Driver for SQL Server는 다음 기본 제공 키 저장소 공급자와 �
 
 | 이름 | Description | 공급자 (메타 데이터) 이름 |가용성|
 |:---|:---|:---|:---|
-|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
-|Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|창|
+|Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, Linux, macOS|
+|Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
 
@@ -391,7 +391,7 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**사용자 이름/암호**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -557,7 +557,7 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 
 |`ColumnEncryption`|BCP 방향|Description|
 |----------------|-------------|-----------|
-|`Disabled`|(클라이언트)를 초과 합니다.|암호 텍스트를 검색합니다. 관찰 된 데이터 형식이 **varbinary (max)**합니다.|
+|`Disabled`|(클라이언트)를 초과 합니다.|암호 텍스트를 검색합니다. 관찰 된 데이터 형식이 **varbinary (max)** 합니다.|
 |`Enabled`|(클라이언트)를 초과 합니다.|일반 텍스트를 검색합니다. 드라이버는 열 데이터 암호를 해독 합니다.|
 |`Disabled`|IN (서버)에|암호 텍스트를 삽입합니다. 이 불투명 하 게 요구 하지 않고 암호화 된 데이터를 이동 하기 위한 암호 해독 된 되도록 만들어졌습니다. 경우에 작업이 실패 합니다는 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 옵션은 사용자에 설정 되어 있지 않거나 BCPMODIFYENCRYPTED 연결 핸들에 설정 되지 않았습니다. 자세한 내용은 아래를 참조 하십시오.|
 |`Enabled`|IN (서버)에|일반 텍스트를 삽입합니다. 드라이버는 열 데이터를 암호화 합니다.|

@@ -1,27 +1,28 @@
 ---
-title: "SQLServerNClob 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerNClob 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ffd65361d92986838fcd623bc52c54f2c986c61
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a47b960f3f81acce23ca77b7e58d8589609f5f4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +42,12 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[있음](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|이 메서드는 **NCLOB** 개체를 보유 하는 리소스를 해제 합니다.|  
+|[무료](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|이 메서드는 **NCLOB** 개체를 보유 하는 리소스를 해제 합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|검색의 **NCLOB** 로 지정 된 값의 **java.sql.NClob** 을 ASCII 스트림으로 개체입니다.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|검색은 **NCLOB** 로 지정 된 값의 **java.sql.NClob** 개체입니다.|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|에 지정된 된 부분 문자열의 복사본을 검색는 **NCLOB** 로 지정 된 값은 **java.sql.NClob** 개체입니다.|  
-|[길이](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|에 있는 문자의 수를 검색는 **NCLOB** 로 지정 된 값은 **java.sql.NClob** 개체입니다.|  
-|[위치](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|지정 된 문자 위치를 검색 **java.sql.NClob** 부분 문자열 또는 개체는 **java.sql.NClob** 지정된 된 시작 위치에 따라 합니다.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|에 있는 문자의 수를 검색는 **NCLOB** 로 지정 된 값은 **java.sql.NClob** 개체입니다.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|지정 된 문자 위치를 검색 **java.sql.NClob** 부분 문자열 또는 개체는 **java.sql.NClob** 지정된 된 시작 위치에 따라 합니다.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|검색 ASCII를 쓰는 데 사용할 스트림을 문자 수는 **NCLOB** 값이 **java.sql.NClob** 개체가 나타내는, 지정된 된 위치에서 시작 합니다.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|유니코드 문자 스트림을 쓰는 데 사용할 스트림을 검색는 **NCLOB** 값이 **java.sql.NClob** 개체가 나타내는, 지정된 된 위치에서 시작 합니다.|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|지정 된 기록 **문자열** 에 **NCLOB** 지정된 된 위치에서 시작 합니다.|  

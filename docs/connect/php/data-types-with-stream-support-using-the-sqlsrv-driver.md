@@ -2,7 +2,7 @@
 title: SQLSRV 드라이버를 사용 하 여 스트림 지원이 포함 된 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1282bff80266a765af5e74553293289206f7ec01
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c8d4e97c1312f41b13fe529c97245005c157ba9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

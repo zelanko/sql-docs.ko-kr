@@ -1,30 +1,33 @@
 ---
-title: "updateClob 메서드 (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: updateClob 메서드 (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateClob
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateClob
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dd8c034488dafcf8d02d57a5b96c8cff7d615bae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 51f816241d25b7490caeeae923c2a9f67b293d2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>updateClob 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,11 +39,11 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[updateClob (int, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-int-java-sql-clob.md)|열 인덱스가 지정된 경우 지정된 열을 java.sql.Clob 값으로 업데이트합니다.|  
-|[updateClob 메서드 &#40; int, java.io.Reader &#41;](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
-|[updateClob 메서드 &#40;java.lang.String, java.io.Reader, long &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|지정된 문자 길이의 지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
+|[updateClob 메서드 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
+|[updateClob 메서드 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|지정된 문자 길이의 지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
 |[updateClob (java.lang.String, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-sql-clob.md)|열 이름이 지정된 경우 지정된 열을 java.sql.Clob 값으로 업데이트합니다.|  
-|[updateClob 메서드 &#40;java.lang.String, java.io.Reader &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader.md)|지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
-|[updateClob 메서드 &#40;java.lang.String, java.io.Reader, long &#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|지정된 문자 길이의 지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
+|[updateClob 메서드 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader.md)|지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
+|[updateClob 메서드 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updateclob-method-java-lang-string-java-io-reader-long.md)|지정된 문자 길이의 지정된 Reader 개체를 사용하여 지정된 열을 업데이트합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -3,7 +3,7 @@ title: 스키마 행 집합에서 분산 쿼리 지원 | Microsoft Docs
 description: 스키마 행 집합에서 분산 쿼리 지원
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26cf4847d1d4f9e6799b2751e81a44e9cc4bcc72
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: aa604a66d953a4e25c3df3f20fb32218e179451b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합-분산된 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에서 OLE DB Driver for SQL Server **IDBSchemaRowset** 인터페이스가 연결 된 서버에서 메타 데이터를 반환 합니다.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그에서 스키마 행 집합 출력을 제한 하는 경우는 OLE DB Driver for SQL Server 연결 된 서버 이름과 카탈로그를 포함 하는 두 부분으로 이루어진 이름을 인식 합니다. 지정 하는 두 부분으로 구성 된 카탈로그 이름을 아래 표의 스키마 행 집합에 대 한 *linked_server***.*** 카탈로그* 명명 된 연결 된 서버에 적용 가능한 카탈로그로 출력이 제한 합니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그에서 스키마 행 집합 출력을 제한 하는 경우는 OLE DB Driver for SQL Server 연결 된 서버 이름과 카탈로그를 포함 하는 두 부분으로 이루어진 이름을 인식 합니다. 지정 하는 두 부분으로 구성 된 카탈로그 이름을 아래 표의 스키마 행 집합에 대 한 *linked_server ***.*** 카탈로그* 명명 된 연결 된 서버에 적용 가능한 카탈로그로 출력이 제한 합니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  

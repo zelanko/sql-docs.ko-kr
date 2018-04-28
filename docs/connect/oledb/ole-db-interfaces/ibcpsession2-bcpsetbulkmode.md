@@ -3,7 +3,7 @@ title: 'Ibcpsession2:: Bcpsetbulkmode | Microsoft Docs'
 description: 'Ibcpsession2:: Bcpsetbulkmode를 사용 하 여 쿼리 또는 테이블 중 하나에서 대량 복사를 만들기'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ead348eeeb717f6d0581ab3fb4095dc99552f48b
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: f71f77faff7e457ba3c6283ac504719952f6f2d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ibcpsession2:: Bcpsetbulkmode 제공 하는 대신 [ibcpsession:: Bcpcolfmt &#40; OLE db&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 열 형식을 지정 하는 데 있습니다. Ibcpsession:: Bcpcolfmt를 개별 열 형식 특성을 설정 하는 달리 ibcpsession2:: Bcpsetbulkmode 모든 특성을 설정 합니다.  
+  Ibcpsession2:: Bcpsetbulkmode 제공 하는 대신 [ibcpsession:: Bcpcolfmt & #40; OLE db& #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 열 형식을 지정 하는 데 있습니다. Ibcpsession:: Bcpcolfmt를 개별 열 형식 특성을 설정 하는 달리 ibcpsession2:: Bcpsetbulkmode 모든 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -367,6 +367,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession2 &#40; OLE db&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 & #40; OLE db& #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

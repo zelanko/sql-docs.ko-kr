@@ -2,7 +2,7 @@
 title: 기본 SQL Server 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1facac748e24d465144f93d2e4ccdf38608e6b3
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 96e405234b2a6c14965ca13d6f4a7bbaa0e47295
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,30 +1,33 @@
 ---
-title: "updateString 메서드 (int, java.lang.String) | Microsoft Docs"
-ms.custom: 
+title: updateString 메서드 (int, java.lang.String) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateString (int, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateString (int, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f8d2f620-0cdf-4a3b-8af4-5e8c4462a42d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02c59edd4c4c64ffbac141384a6dd990244e2efe
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9c0d4be6e44023d4747bdcfc8dff352f23f4ac42
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatestring-method-int-javalangstring"></a>updateString 메서드(int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateString(int index,
  이 updateString 메서드는 java.sql.ResultSet 인터페이스의 updateString 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [updateString 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
+ [updateString 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP for SQL Server에 대 한 프로그래밍 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0979320b3dad5c8dc73c7d2d23aafe35e9ef4cbc
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: d930c8764225543ac5659f7cb791d309119e7661
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

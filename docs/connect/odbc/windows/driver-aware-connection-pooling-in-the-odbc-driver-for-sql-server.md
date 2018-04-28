@@ -1,27 +1,28 @@
 ---
-title: "SQL Server 용 ODBC 드라이버에서 드라이버 인식 연결 풀링 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 용 ODBC 드라이버에서 드라이버 인식 연결 풀링 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2567b047216edd151197446aaa79822ab19a93ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,50 +51,50 @@ ms.lasthandoff: 11/18/2017
   
     |키워드|ODBC Driver 13|ODBC Driver 11|
     |-|-|-|
-    |`Address`|예|예|
-    |`AnsiNPW`|예|예|
-    |`App`|예|예|
-    |`ApplicationIntent`|예|예|  
-    |`Authentication`|예|아니오|
+    |`Address`|예|사용자 계정 컨트롤|
+    |`AnsiNPW`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`App`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`ApplicationIntent`|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+    |`Authentication`|사용자 계정 컨트롤|아니오|
     |`ColumnEncryption`|예|아니오|
-    |`Database`|예|예|
-    |`Encrypt`|예|예|  
-    |`Failover_Partner`|예|예|
-    |`FailoverPartnerSPN`|예|예|
-    |`MARS_Connection`|예|예|
-    |`Network`|예|예|
-    |`PWD`|예|예|
-    |`Server`|예|예|
-    |`ServerSPN`|예|예|
-    |`TransparentNetworkIPResolution`|예|예|
-    |`Trusted_Connection`|예|예|
-    |`TrustServerCertificate`|예|예|
-    |`UID`|예|예|
-    |`WSID`|예|예|
+    |`Database`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`Encrypt`|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+    |`Failover_Partner`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`FailoverPartnerSPN`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`MARS_Connection`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`Network`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`PWD`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`Server`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`ServerSPN`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`TransparentNetworkIPResolution`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`Trusted_Connection`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`TrustServerCertificate`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`UID`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`WSID`|사용자 계정 컨트롤|예|
     
 - 다음 연결 특성에서 연결 문자열과 풀링된 연결 문자열 사이에 차이가 있는 경우 풀링된 연결이 사용되지 않습니다.  
   
     |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|예|예|
-    |`SQL_ATTR_PACKET_SIZE`|예|예|
-    |`SQL_COPT_SS_ANSI_NPW`|예|예|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|예|아니오|
+    |`SQL_ATTR_CURRENT_CATALOG`|예|사용자 계정 컨트롤|
+    |`SQL_ATTR_PACKET_SIZE`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_ANSI_NPW`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|사용자 계정 컨트롤|아니오|
     |`SQL_COPT_SS_AUTHENTICATION`|예|아니오|
-    |`SQL_COPT_SS_ATTACHDBFILENAME`|예|예|
-    |`SQL_COPT_SS_BCP`|예|예|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|예|아니오|
-    |`SQL_COPT_SS_CONCAT_NULL`|예|예|
-    |`SQL_COPT_SS_ENCRYPT`|예|예|
-    |`SQL_COPT_SS_FAILOVER_PARTNER`|예|예|
-    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|예|예|
-    |`SQL_COPT_SS_INTEGRATED_SECURITY`|예|예|
-    |`SQL_COPT_SS_MARS_ENABLED`|예|예|
-    |`SQL_COPT_SS_OLDPWD`|예|예|
-    |`SQL_COPT_SS_SERVER_SPN`|예|예|
-    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|예|예|
-    |`SSPROP_AUTH_REPL_SERVER_NAME`|예|예|
-    |`SQL_COPT_SS_TNIR`|예|아니요|
+    |`SQL_COPT_SS_ATTACHDBFILENAME`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_BCP`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|사용자 계정 컨트롤|아니오|
+    |`SQL_COPT_SS_CONCAT_NULL`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_ENCRYPT`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_FAILOVER_PARTNER`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_INTEGRATED_SECURITY`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_MARS_ENABLED`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_OLDPWD`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_SERVER_SPN`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SSPROP_AUTH_REPL_SERVER_NAME`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_TNIR`|사용자 계정 컨트롤|아니요|
  
 -   추가 네트워크를 호출하지 않고 드라이버가 다음 연결 키워드 및 특성을 재설정하고 조정할 수 있습니다. 드라이버는 연결에 잘못된 정보가 포함되지 않도록 이러한 매개 변수를 다시 설정합니다.  
   
@@ -101,36 +102,36 @@ ms.lasthandoff: 11/18/2017
   
     |키워드|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |`AutoTranslate`|예|예|
-    |`Description`|예|예|
-    |`MultisubnetFailover`|예|예|  
-    |`QueryLog_On`|예|예|
-    |`QueryLogFile`|예|예|
-    |`QueryLogTime`|예|예|
-    |`Regional`|예|예|
-    |`StatsLog_On`|예|예|
-    |`StatsLogFile`|  예|예|
+    |`AutoTranslate`|예|사용자 계정 컨트롤|
+    |`Description`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`MultisubnetFailover`|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+    |`QueryLog_On`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`QueryLogFile`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`QueryLogTime`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`Regional`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`StatsLog_On`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`StatsLogFile`|  사용자 계정 컨트롤|예|
   
      다음 연결 특성 중 하나를 변경하는 경우 기존 연결을 재사용할 수 있습니다.  필요에 따라 드라이버가 값을 재설정합니다. 드라이버가 추가로 네트워크를 호출하지 않고 클라이언트에서 이러한 특성을 재설정할 수 있습니다.  
   
     |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
-    |모든 문 특성|예|예|
-    |`SQL_ATTR_AUTOCOMMIT`|예|예|
-    |`SQL_ATTR_CONNECTION_TIMEOUT`|  예|예|
-    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|예|예|
-    |`SQL_ATTR_LOGIN_TIMEOUT`|예|예|
-    |`SQL_ATTR_ODBC_CURSORS`|  예|예|
-    |`SQL_COPT_SS_PERF_DATA`|예|예|
-    |`SQL_COPT_SS_PERF_DATA_LOG`|예|예|
-    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| 예|예| 
-    |`SQL_COPT_SS_PERF_QUERY`|예|예|
-    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|예|예|
-    |`SQL_COPT_SS_PERF_QUERY_LOG`|  예|예|
-    |`SQL_COPT_SS_PRESERVE_CURSORS`|예|예|
-    |`SQL_COPT_SS_TRANSLATE`|예|예|
-    |`SQL_COPT_SS_USER_DATA`|  예|예|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|예|예|  
+    |모든 문 특성|예|사용자 계정 컨트롤|
+    |`SQL_ATTR_AUTOCOMMIT`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_ATTR_CONNECTION_TIMEOUT`|  사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_ATTR_LOGIN_TIMEOUT`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_ATTR_ODBC_CURSORS`|  사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PERF_DATA`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PERF_DATA_LOG`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| 사용자 계정 컨트롤|사용자 계정 컨트롤| 
+    |`SQL_COPT_SS_PERF_QUERY`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PERF_QUERY_LOG`|  사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_PRESERVE_CURSORS`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_TRANSLATE`|사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_USER_DATA`|  사용자 계정 컨트롤|사용자 계정 컨트롤|
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|사용자 계정 컨트롤|예|  
   
 ## <a name="see-also"></a>관련 항목:  
  [Windows의 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

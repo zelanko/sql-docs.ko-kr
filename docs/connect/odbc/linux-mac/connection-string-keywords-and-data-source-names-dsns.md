@@ -1,32 +1,32 @@
 ---
-title: "SQL Server에 연결 | Microsoft Docs"
-ms.custom: 
+title: SQL Server에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: aff97d687a4519d2451895772ba33f2a2ec3c4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Server = [protocol:]server[,port]
  - **odbcinst -i -s -f** *template_file*  
  
 드라이버를 사용 하 여 작동 하는지 확인할 수 있습니다 `isql` 연결을 테스트 하려면이 명령을 사용 합니다.
- - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES 초과 outfile.dat 파일-S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>SSL(Secure Sockets Layer) 사용  
 Secure Sockets Layer (SSL)를 사용 하 여 연결을 암호화 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다. SSL 보호 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 사용자 이름 및 네트워크를 통해 암호입니다. SSL은 또한 MITM(메시지 가로채기) 공격으로부터 보호하기 위해 서버의 ID를 확인합니다.  

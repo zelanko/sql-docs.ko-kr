@@ -3,7 +3,7 @@ title: FILESTREAM 지원 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버에서 FILESTREAM 지원
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,16 +18,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb5c5abb611223d31af9832c512a418b18ac78a9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 7e08cf05033ff7815784aef4d08fb65f8e61d299
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Driver for SQL Server의 향상 된 FILESTREAM 기능을 지원 합니다. 샘플을 보려면 [Filestream 및 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)합니다.  
 
 FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상 된 FILESTREAM 지원에 대 한 자세한 내용은 참조 [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)합니다.  
   
@@ -35,11 +37,7 @@ FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또�
   
 Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   
-자세한 내용은 다음 항목을 참조하세요.  
-  
--   [FILESTREAM 지원 &#40;OLE DB&#41;](../../oledb/ole-db/filestream-support-ole-db.md)    
-  
--   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+자세한 내용은 참조 [opensqlfilestream FILESTREAM 데이터 액세스](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>FILESTREAM 열 쿼리  
 OLE DB의 스키마 행 집합은 열이 FILESTREAM 열인지 여부를 보고하지 않습니다. FILESTREAM 열을 만들 ITableDefinition OLE DB에서 사용할 수 없습니다.    
@@ -66,6 +64,12 @@ SQL Server 용 OLE DB 드라이버를 사용 하 여 클라이언트가 컴파�
   
 SQLOLEDB 또는 보다 먼저 발표 된 다른 공급자를 사용 하는 클라이언트는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **varbinary (max)** 매핑됩니다 이미지에 있습니다.  
   
+## <a name="comments"></a>설명
+- 보내고 받을 **varbinary (max)** 2GB 보다 큰 값을 응용 프로그램에서 사용 **DBTYPE_IUNKNOWN** 매개 변수와 결과 바인딩에 있습니다. 매개 변수에 대 한 공급자 및 ISequentialStream을 반환 하는 결과에 ISequentialStream 대 iunknown:: Queryinterface를 호출 해야 합니다.  
+
+-  OLE DB에 대 한 검사 ISequentialStream 값에 관련 완화 될 것입니다. 때 *wType* 은 **DBTYPE_IUNKNOWN** 에 **DBBINDING** 구조체 수 길이 검사 생략 하거나 사용 하지 않도록 설정 **DBPART_LENGTH** *dwPart* 또는 데이터의 길이 설정 하 여 (오프셋 *obLength* 데이터 버퍼에)를 ~ 0입니다. 이렇게 하면 공급자는 값의 길이를 검사하지 않고 스트림을 통해 사용할 수 있는 모든 데이터를 요청하고 반환합니다. 이러한 변경 사항은 모든 LOB(큰 개체) 형식과 XML에 적용되지만, 이는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상의 서버에 연결된 경우에만 해당됩니다. 이 기능은 개발자에게 더 나은 융통성을 제공할 뿐만 아니라 기존 응용 프로그램 및 하위 서버를 위한 일관성과 이전 버전과의 호환성을 유지할 수 있게 도와줍니다.  이 변경 사항은 irowset:: Getdata, icommand:: Execute, 및 irowsetfastload:: Insertrow 주로 데이터를 전송 하는 모든 인터페이스에 적용 합니다.
+ 
+
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   

@@ -3,7 +3,7 @@ title: OLE DB 드라이버와 함께 ADO를 사용 하 여 SQL server | Microsof
 description: SQL Server 용 OLE DB 드라이버와 함께 ADO를 사용
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3003fd77624f7e304f8e3f493148475c1187a86b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b4888cc0054a8cf3c22b49aa28baf2c23577a48d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버와 함께 ADO를 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   에 도입 된 새로운 기능을 활용 하기 위해 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 여러 활성 결과 집합 (MARS), 쿼리 알림, 사용자 정의 형식 (Udt) 또는 새 같은 **xml** 데이터 형식으로 ActiveX을 사용 하는 기존 응용 프로그램 데이터 개체 (ADO)으로 데이터 액세스 공급자의 SQL Server 용 OLE DB 드라이버를 사용 해야 합니다.  
   

@@ -3,7 +3,7 @@ title: 클라이언트 연결 (OLE DB)의 서비스 사용자 이름 (Spn) | Mic
 description: 클라이언트 연결 (OLE DB)의 서비스 사용자 이름 (Spn)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6593f30709c2db1201962dc37b4e3c133265feac
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 64ef857df576d9c7fae75be3136e0792b60b8e3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,6 +66,6 @@ ms.lasthandoff: 04/06/2018
 |IDBProperties::SetProperties|값을 설정할 새 데이터 원본 초기화 속성 SSPROP_INITSERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN idbproperties:: Setproperties는 호출할 수 있습니다.<br /><br /> 언제 든 지 이러한 속성을 설정할 수 있지만 데이터 원본이 열려 이미 있으면 다음 오류가 반환 됩니다: DB_E_ERRORSOCCURRED, "작업을 여러 단계 OLE DB 오류가 발생 했습니다. 각 OLE DB 상태 값이 있으면 확인해 보십시오. 완료된 작업이 없습니다.""라는 오류가 반환됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

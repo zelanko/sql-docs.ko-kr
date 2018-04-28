@@ -1,27 +1,28 @@
 ---
-title: "커서 유형 (PDO_SQLSRV 드라이버) | Microsoft Docs"
-ms.custom: 
+title: 커서 유형 (PDO_SQLSRV 드라이버) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9757631940208f0f3ded1fe90eec8fbfd1b061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>커서 유형 (PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,9 +36,9 @@ PDO_SQLSRV 드라이버를 사용 하 여 커서를 지정 하는 방법에 대 
   
 Pdo:: prepare 또는 pdostatement:: Setattribute를 사용 하 여 커서 유형 중 하나를 선택 하 여 서버 쪽 커서 유형을 나타낼 수 있습니다.  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_FWDONLY  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_SCROLL  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
 Pdo:: ATTR_CURSOR를 지정 하 여 키 집합 또는 동적 커서를 요청할 수 = > pdo:: CURSOR_SCROLL 및 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE에 적절 한 값 전달 합니다. Pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE에 전달할 수 있는 가능한 값은 같습니다.  
   

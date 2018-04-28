@@ -1,30 +1,33 @@
 ---
-title: "getProcedures 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getProcedures 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getProcedures
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getProcedures
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61aa101a7b43662b049497b091414ee13a3674bf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4752a12231cf57df6ff4e474faae5b0eec3b5ec7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +75,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |NUM_INPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |NUM_OUTPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |NUM_RESULT_SETS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
-|REMARKS|**문자열**|프로시저 열에 대한 설명입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.|  
+|REMARKS|**문자열**|프로시저 열에 대한 설명입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.  |  
 |PROCEDURE_TYPE|**smallint**|저장 프로시저의 형식입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> SQL_PT_UNKNOWN(0)<br /><br /> SQL_PT_PROCEDURE(1)<br /><br /> SQL_PT_FUNCTION(2)|  
   
 > [!NOTE]  

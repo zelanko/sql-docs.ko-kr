@@ -2,7 +2,7 @@
 title: 'Pdo:: query | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 93485e84b2e65ecbf7ab28ee23d8422e889b4554
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +57,7 @@ $ 다음 옵션을 지정할 수 있습니다*fetch_style*합니다.
 |style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|지정된 열의 데이터에 대한 쿼리입니다. 테이블의 첫 번째 열은 0입니다.|  
-|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  
+|Fetch_class, '*classname*', 배열 ( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  
 |PDO::FETCH_CLASS, '*classname*'|열 이름을 기존 클래스의 속성에 할당합니다.|  
   
 PDO::query를 다시 호출하기 전에 PDOStatement::closeCursor를 호출하여 PDOStatement 개체와 연결된 데이터베이스 리소스를 해제합니다.  

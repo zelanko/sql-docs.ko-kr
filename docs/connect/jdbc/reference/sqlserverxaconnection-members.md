@@ -1,27 +1,28 @@
 ---
-title: "SQLServerXAConnection 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerXAConnection 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88fc82e655317b6dadd5795c575d58d8edec3040
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ba66462ad12ce03bbf6220cce6ef5a698de69c10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/18/2017
 |이름|Description|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체에서 이벤트가 발생할 때 알림을 받이 됩니다 있도록 지정된 된 이벤트 수신기를 등록 합니다.|  
-|[닫기](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체가 나타내는 실제 연결을 닫습니다.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체가 나타내는 실제 연결을 닫습니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md))이 연결 개체가 나타내는 실제 연결에 대 한 개체 핸들을 만듭니다.|  
 |[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)|검색 한 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 이의 참여를 관리 하는 트랜잭션 관리자는 사용 하 여 개체 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 분산 트랜잭션에서 개체입니다.|  
 |[removeConnectionEventListener](../../../connect/jdbc/reference/removeconnectioneventlistener-method-sqlserverpooledconnection.md)|(에서 상속 되며, [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)) 지정된 된 이벤트 수신기를 제거 합니다.|  

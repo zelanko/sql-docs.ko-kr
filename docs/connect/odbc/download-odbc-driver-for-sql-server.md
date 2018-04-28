@@ -1,34 +1,34 @@
 ---
-title: "ODBC Driver for SQL Server 다운로드 | Microsoft Docs"
-ms.custom: 
+title: ODBC Driver for SQL Server 다운로드 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afd906dfbfe11310747cb8876e8e0e217854d5e3
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
-ms.translationtype: MT
+ms.openlocfilehash: c8ccbb5940ac3818e4f7977ff101f6f56d50371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 다운로드
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>17 Microsoft ODBC Driver for SQL Server
 
-### <a name="windows"></a>창
+### <a name="windows"></a>Windows
 
 - [17 기반 Microsoft ODBC Driver for SQL Server 다운로드](https://www.microsoft.com/download/details.aspx?id=56567)
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server
 
-### <a name="windows"></a>창
+### <a name="windows"></a>Windows
 
 - [Microsoft ODBC Driver 13.1 for SQL Server 다운로드](https://www.microsoft.com/download/details.aspx?id=53339)
 - [SQL Server 용 Microsoft 명령줄 유틸리티 13.1 다운로드](https://www.microsoft.com/download/details.aspx?id=53591)
@@ -94,13 +94,13 @@ ms.lasthandoff: 03/15/2018
 
 - [Microsoft ODBC Driver 13 for SQL Server-모든 플랫폼 다운로드](https://www.microsoft.com/download/details.aspx?id=50420)
 
-### <a name="windows"></a>창
+### <a name="windows"></a>Windows
 
 - [SQL Server 용 Microsoft 명령줄 유틸리티 13 다운로드](https://www.microsoft.com/download/details.aspx?id=52680)
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
 
-### <a name="windows"></a>창
+### <a name="windows"></a>Windows
 
 - [Microsoft ODBC Driver 11 for SQL Server 다운로드](https://www.microsoft.com/download/details.aspx?id=36434)  
 - [SQL Server 용 Microsoft 명령줄 유틸리티 11 다운로드](https://www.microsoft.com/download/details.aspx?id=36433)  

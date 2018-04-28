@@ -3,7 +3,7 @@ title: 테이블 반환 매개 변수 형식 검색 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 사용 하 여 테이블 반환 매개 변수 형식 검색
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-table-valued-parameters
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - table-valued parameters, type discovery
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5a15814b615f9775f9a70d2e24cc9dbb1db6365
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 87d6bf89729f27a9b0e75b9abe92891d2dbb8d1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-valued-parameter-type-discovery"></a>테이블 반환 매개 변수 형식 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

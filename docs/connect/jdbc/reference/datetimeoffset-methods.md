@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4a760475dfd439e57883a1bd6c6f2b82a0437dcb
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
   DateTimeOffset의 멤버에 대 한 정보를 참조 하십시오. [DateTimeOffset 멤버](../../../connect/jdbc/reference/datetimeoffset-members.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

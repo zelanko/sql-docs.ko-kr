@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 03423c0e7d1c95ce193f915c8e80db90b0c237fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 03/02/2018
 ### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC Driver 6.4에 대 한
  **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** 또는 **mssql-jdbc-6.4.0.jre9.jar** 파일이 다음 위치에 설치 됩니다.  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar 
+ \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \mssql-jdbc-6.4.0.jre7.jar 
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+ \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \mssql-jdbc-6.4.0.jre8.jar
  
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+ \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \mssql-jdbc-6.4.0.jre9.jar
   
  다음은 Windows 응용 프로그램에 사용되는 CLASSPATH 문의 예입니다.  
   

@@ -2,7 +2,7 @@
 title: 통합된 인증을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edc89fa38ae3b4554f44290cf36073d6c6a0625b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>통합된 인증을 사용 하 여 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ODBC 응용 프로그램에서  
 
-지정 하 여 Kerberos 통합된 인증을 사용할 수 있습니다 **Trusted_Connection = yes** 의 연결 문자열에 **SQLDriverConnect** 또는 **SQLConnect**합니다. 예를 들어  
+지정 하 여 Kerberos 통합된 인증을 사용할 수 있습니다 **Trusted_Connection = yes** 의 연결 문자열에 **SQLDriverConnect** 또는 **SQLConnect**합니다. 예를 들어:  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -89,7 +89,7 @@ Kerberos 자격 증명으로 설계 만료 되므로 응용 프로그램을 서�
   
 -   응용 프로그램 서버를 다른 데이터베이스로 인증 하 고 연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]다른 데이터베이스에 데이터베이스 사용자로 인증 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 다른 데이터베이스에 데이터베이스 사용자로 인증 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.  
   
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   
@@ -101,17 +101,17 @@ Kerberos 자격 증명으로 설계 만료 되므로 응용 프로그램을 서�
   
 사용 하면 오류가 발생 `-T` 와 `-U` 또는 `-P` 옵션입니다.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>가 등록 한 SPN에 대 한 지원 되는 구문[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>가 등록 한 SPN에 대 한 지원 되는 구문 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 Spn이 연결 문자열이 나 연결 특성에서 사용 하는 구문은 다음과 같습니다.  
 
-|구문|설명|  
+|구문|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. *port* 는 TCP 포트 번호입니다. *fqdn* 은 정규화된 도메인 이름입니다.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Linux 또는 macOS Active Directory를 사용 하 여 컴퓨터를 인증합니다.
 
-Kerberos를 구성 하려면 데이터를 입력할는 `krb5.conf` 파일입니다. `krb5.conf`에 `/etc/` 예: 구문을 사용 하 여 다른 파일을 참조할 수 있습니다 하지만 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`합니다. 다음은 예제 `krb5.conf` 파일:  
+Kerberos를 구성 하려면 데이터를 입력할는 `krb5.conf` 파일입니다. `krb5.conf` 에 `/etc/` 예: 구문을 사용 하 여 다른 파일을 참조할 수 있습니다 하지만 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`합니다. 다음은 예제 `krb5.conf` 파일:  
   
 ```  
 [libdefaults]  

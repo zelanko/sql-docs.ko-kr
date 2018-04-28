@@ -3,7 +3,7 @@ title: 대량 복사 변경 사항으로 향상 된 날짜 및 시간 형식 (OL
 description: 향상 된 날짜 및 시간 형식 (OLE DB)에 대 한 대량 복사 변경 사항
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: bebddc7a9ad8dc7d59f60fab73bcdca8b1192dab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>향상 된 날짜 및 시간 형식 (OLE DB)에 대 한 대량 복사 변경 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/06/2018
 |파일 저장 유형|호스트 파일 데이터 형식|Ibcpsession:: Bcpcolfmt와 함께 사용할 msoledbsql.h에 입력|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |날짜/시간|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
-|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
+|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |날짜|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
@@ -119,17 +119,17 @@ ms.lasthandoff: 04/06/2018
 |기호|의미|  
 |------------|-------------|  
 |-|변환이 지원되지 않습니다.<br />|  
-|1.|제공된 데이터가 유효하지 않으면 SQLSTATE 22007 및 "잘못된 날짜 시간 형식입니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다. datetimeoffset 값에서 시간 부분은 UTC 변환이 요청되지 않았더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 이는 TDS와 서버에서는 UTC에 맞게 datetimeoffset 값의 시간을 항상 정규화하기 때문입니다. 따라서 클라이언트에서는 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 합니다.|  
+|1.|제공 된 데이터가 유효 하지 않을 경우 오류가 게시 됩니다. datetimeoffset 값에서 시간 부분은 UTC 변환이 요청되지 않았더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 이는 TDS와 서버에서는 UTC에 맞게 datetimeoffset 값의 시간을 항상 정규화하기 때문입니다. 따라서 클라이언트에서는 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 합니다.|  
 |2|시간 구성 요소가 무시됩니다.|  
-|3|ODBC의 경우 잘림을 수행하여 데이터 손실이 발생하면 SQLSTATE 22001 및 '문자열 데이터의 오른쪽이 잘렸습니다.' 메시지가 포함된 진단 레코드가 생성됩니다. 소수 자릿수 초 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 7인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 ODBC에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..7** 10,16<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..7:** 21..27<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..7:** 28..34<br /><br /> OLE DB의 경우 잘림을 수행하여 데이터 손실이 발생하면 오류가 게시됩니다. datetime2의 경우 소수 자릿수 초의 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..9** 1..9<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..9:** 21..29<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..9:** 28..36|  
+|3|데이터 손실 유발 하는 잘림이 발생 하면 오류가 게시 됩니다. datetime2의 경우 소수 자릿수 초의 자릿수(소수 자릿수)는 다음 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> **형식** : DBTIME2<br /><br /> **암시된 소수 자릿수 0** 8<br /><br /> **암시된 소수 자릿수 1..9** 1..9<br /><br /> <br /><br /> **형식** : DBTIMESTAMP<br /><br /> **암시된 소수 자릿수 0:** 19<br /><br /> **암시된 소수 자릿수 1..9:** 21..29<br /><br /> <br /><br /> **형식** : DBTIMESTAMPOFFSET<br /><br /> **암시된 소수 자릿수 0:** 26<br /><br /> **암시된 소수 자릿수 1..9:** 28..36|  
 |4|날짜 구성 요소가 무시됩니다.|  
 |5|표준 시간대가 UTC로 설정됩니다(예: 00:00).|  
 |6|시간이 0으로 설정됩니다.|  
 |7|날짜가 1900-01-01로 설정됩니다.|  
 |8|표준 시간대 오프셋이 무시됩니다.|  
-|9|첫 번째 문장 부호 문자 및 나머지 구성 요소가 있는지 여부에 따라 문자열이 date, datetime, datetimeoffset 또는 time 값으로 구문 분석된 후 변환됩니다. 다음 문자열은이 프로세스에 의해 발견 된 원본 형식에 대 한이 문서의 끝에 있는 테이블에 규칙에 따라 대상 유형으로 변환 됩니다. 제공된 데이터를 오류 없이 구문 분석할 수 없거나, 구성 요소 중 하나라도 허용 범위 밖에 있거나, 리터럴 형식에서 대상 형식으로의 변환이 없으면, 오류가 게시되거나(OLE DB) SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다. datetime 및 smalldatetime 매개 변수의 경우 연도가 이러한 형식에서 지원하는 범위 밖에 있으면 오류가 게시되거나(OLE DB), SQLSATE 22007 및 "잘못된 날짜 시간 형식입니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다.<br /><br /> datetimeoffset의 경우 값은 UTC 변환이 요청되지 않더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 왜냐하면 TDS와 서버는 항상 datetimeoffset 값의 시간을 UTC에 맞게 정규화하므로 클라이언트에서 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 하기 때문입니다. 값이 지원되는 UTC 범위에 포함되지 않으면 오류가 게시되거나(OLE DB), SQLSTATE 22007 및 "잘못된 날짜 시간 형식입니다."라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다.|  
-|10|클라이언트에서 서버로의 변환 시 잘림을 수행하여 데이터 손실이 발생하면 오류가 게시되거나(OLE DB), SQLSTATE 22008 및 "Datetime 필드 오버플로"라는 메시지가 포함된 ODBC 진단 레코드가 생성됩니다. 이 오류는 값이 서버에서 사용된 UTC 범위로 표현할 수 있는 범위 밖에 있는 경우에도 발생합니다. 서버에서 클라이언트로의 변환 시 초 또는 소수 자릿수 초 잘림이 발생하면 경고만 표시됩니다.|  
-|11|잘림을 수행하여 데이터 손실이 발생하면 진단 레코드가 생성됩니다.<br /><br /> 서버에서 클라이언트로 변환할 경우에는 경고(ODBC SQLSTATE S1000)입니다.<br /><br /> 클라이언트에서 서버로 변환할 경우에는 오류(ODBC SQLSTATE 22001)입니다.|  
+|9|첫 번째 문장 부호 문자 및 나머지 구성 요소가 있는지 여부에 따라 문자열이 date, datetime, datetimeoffset 또는 time 값으로 구문 분석된 후 변환됩니다. 다음 문자열은이 프로세스에 의해 발견 된 원본 형식에 대 한이 문서의 끝에 있는 테이블에 규칙에 따라 대상 유형으로 변환 됩니다. 오류 없이 제공 하는 데이터를 구문 분석할 수 없는 경우 또는 모든 구성 요소 부분 허용 범위를 벗어나는 경우 또는 대상 유형의 리터럴 형식에서 변환 작업 없이 없으면, 오류가 게시 됩니다. Datetime 및 smalldatetime 매개 변수의 경우 연도가 이러한 형식 지원 범위를 벗어납니다 오류가 게시 됩니다.<br /><br /> datetimeoffset의 경우 값은 UTC 변환이 요청되지 않더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 왜냐하면 TDS와 서버는 항상 datetimeoffset 값의 시간을 UTC에 맞게 정규화하므로 클라이언트에서 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 하기 때문입니다. 값이 지원 되는 UTC 범위 내에서 오류가 게시 됩니다.|  
+|10|서버 변환에는 클라이언트에 대 한 데이터 손실 유발 하는 잘림이 발생 하는 경우는 오류가 게시 됩니다. 이 오류는 값이 서버에서 사용된 UTC 범위로 표현할 수 있는 범위 밖에 있는 경우에도 발생합니다. 서버에서 클라이언트로의 변환 시 초 또는 소수 자릿수 초 잘림이 발생하면 경고만 표시됩니다.|  
+|11|서버 변환에는 클라이언트에 대 한 데이터 손실 유발 하는 잘림이 발생 하는 경우는 오류가 게시 됩니다.|
 |12|초는 0으로 설정되고 소수 자릿수 초는 삭제됩니다. 잘림 오류가 발생하지 않습니다.|  
 |해당 사항 없음|기존 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 이전 동작이 유지됩니다.|  
   

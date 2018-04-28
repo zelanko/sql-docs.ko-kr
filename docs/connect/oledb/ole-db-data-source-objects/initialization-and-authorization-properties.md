@@ -3,7 +3,7 @@ title: 초기화 및 권한 부여 속성 | Microsoft Docs
 description: 초기화 및 권한 부여 속성
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-source-objects
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6a0a72d84bb9d761bc8dccbb81cdd4b687459f84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>초기화 및 권한 부여 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/06/2018
  공급자별 속성 집합 DBPROPSET_SQLSERVERDATASOURCEINFO에는 OLE DB Driver for SQL Server는 추가 속성;를 정의합니다. 참조 [데이터 원본 정보 속성](../../oledb/ole-db-data-source-objects/data-source-information-properties.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>SQL Server 문자열에 대 한 OLE DB 드라이버  
- OLE DB Driver for SQL Server 공급자 문자열 속성 값에는 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어  
+ OLE DB Driver for SQL Server 공급자 문자열 속성 값에는 ODBC 유사 구문을 인식합니다. 공급자 문자열 속성은 OLE DB 데이터 원본에 대한 연결이 설정될 때 OLE DB 초기화 속성 DBPROP_INIT_PROVIDERSTRING의 값으로 제공됩니다. 이 속성은 OLE DB 데이터 원본에 대한 연결을 구현하기 위해 필요한 OLE DB 공급자별 연결 데이터를 지정합니다. 문자열 내에서 요소는 세미콜론으로 구분됩니다. 문자열의 마지막 요소는 세미콜론으로 끝나야 합니다. 각 요소는 키워드, 등호 문자, 그리고 초기화 시 전달되는 값으로 구성됩니다. 예를 들어:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

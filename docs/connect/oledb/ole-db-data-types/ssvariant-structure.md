@@ -3,7 +3,7 @@ title: SSVARIANT 구조 | Microsoft Docs
 description: OLE DB Driver for SQL Server에에서 SSVARIANT 구조
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797c10dfeabd1361395c5416f65c88a0d6c82176
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 1d960b83b4ad000af919c76e98b30476fb2a9ec2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,6 +85,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 형식 &#40; OLE db&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [데이터 형식 & #40; OLE db& #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   
