@@ -1,30 +1,33 @@
 ---
-title: "deletesAreDetected 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: deletesAreDetected 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.deletesAreDetected
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.deletesAreDetected
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2556d8866102f2921c1e17a07f67687a710edf26
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ca58a443f5606cacf9c400895136e53243689478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,7 +76,7 @@ public boolean deletesAreDetected(int type)
  이 deletesAreDetected 메서드는 java.sql.DatabaseMetaData 인터페이스의 deletesAreDetected 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]검색이 정방향 및 동적 커서에 대해 일시적 이기는 하지만 모든 업데이트 가능 커서 유형에 대해 삭제 된 행을 검색 합니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 검색이 정방향 및 동적 커서에 대해 일시적 이기는 하지만 모든 업데이트 가능 커서 유형에 대해 삭제 된 행을 검색 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

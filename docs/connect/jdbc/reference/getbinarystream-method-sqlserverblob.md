@@ -1,27 +1,28 @@
 ---
-title: "getBinaryStream 메서드 (SQLServerBlob) | Microsoft Docs"
-ms.custom: 
+title: getBinaryStream 메서드 (SQLServerBlob) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c66543a7cbf10de8f2659fbae35800ab990bbe9b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4685e07fb455aa3a6976966a048f4ad180e0c224
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>getBinaryStream 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,8 +33,8 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[getBinaryStream 메서드 &#40; &#41;](../../../connect/jdbc/reference/getbinarystream-method.md)|BLOB에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
-|[getBinaryStream 메서드 &#40; long long &#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|지정된 시작 위치와 길이를 사용하여 부분적 BLOB 값이 들어 있는 입력 스트림 개체를 반환합니다.|  
+|[getBinaryStream 메서드&#40;&#41;](../../../connect/jdbc/reference/getbinarystream-method.md)|BLOB에서 데이터를 읽기 위한 입력 스트림을 반환합니다.|  
+|[getBinaryStream 메서드 &#40;long, long&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|지정된 시작 위치와 길이를 사용하여 부분적 BLOB 값이 들어 있는 입력 스트림 개체를 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

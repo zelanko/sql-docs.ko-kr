@@ -1,30 +1,33 @@
 ---
-title: "getDouble 메서드 (int) (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: getDouble 메서드 (int) (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getDouble (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getDouble (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bec782465d941749e686feae13b1df78143c450f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b2dab17e75c0ccb2debe158b2d39d374ba2cbd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble 메서드 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public double getDouble(int columnIndex)
  이 메서드는 Java 사용 하는 모든 숫자 기반 데이터 형식을 반환 **double** 충실도 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [getDouble 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
+ [getDouble 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,30 +1,33 @@
 ---
-title: "rowInserted 메서드 (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: rowInserted 메서드 (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.rowInserted
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.rowInserted
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4431409cc168ad07086516e5234f2a975916596
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 661268b75a5500ebf494965f1bf94fe7de2fafcd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted 메서드 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +53,7 @@ public boolean rowInserted()
  반환 되는 값에 따라 다릅니다.이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 표시 된 삽입 내용을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]모든 커서 유형에 대해 삽입 된 행을 검색 하지 않습니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 모든 커서 유형에 대해 삽입 된 행을 검색 하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

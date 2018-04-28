@@ -1,30 +1,33 @@
 ---
-title: "getTables 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getTables 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTables
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b020065a3285cb93f3230e75a929b85f1c9a3ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *카탈로그*  
+ *catalog*  
   
  A **문자열** 카탈로그 이름이 들어 있는입니다. 이 매개 변수에 null을 제공하면 카탈로그 이름을 사용할 필요가 없음을 나타냅니다.  
   
- *스키마*  
+ *schema*  
   
  A **문자열** 스키마 이름 패턴이 들어 있는입니다. 이 매개 변수에 null을 제공하면 스키마 이름을 사용할 필요가 없음을 나타냅니다.  
   
@@ -75,7 +78,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**문자열**|테이블 스키마 이름입니다.|  
 |TABLE_NAME|**문자열**|테이블 이름.|  
 |TABLE_TYPE|**문자열**|테이블 형식입니다.|  
-|REMARKS|**문자열**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.|  
+|REMARKS|**문자열**|테이블에 대한 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.  |  
 |TYPE_CAT|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |TYPE_SCHEM|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |TYPE_NAME|**문자열**|JDBC 드라이버에서는 지원되지 않습니다.|  

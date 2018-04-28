@@ -1,30 +1,33 @@
 ---
-title: "getColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *카탈로그*  
+ *catalog*  
   
  A **문자열** 카탈로그 이름이 들어 있는입니다.  
   
- *스키마*  
+ *schema*  
   
  A **문자열** 스키마 이름 패턴이 들어 있는입니다.  
   
@@ -82,7 +85,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|열의 소수 자릿수입니다.|  
 |NUM_PREC_RADIX|**smallint**|열의 기수입니다.|  
 |NULLABLE|**smallint**|열이 null을 허용하는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> columnNoNulls(0)<br /><br /> columnNullable(1)|  
-|REMARKS|**문자열**|열과 관련된 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상이 열에 대해 null을 반환 합니다.|  
+|REMARKS|**문자열**|열과 관련된 설명입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 항상이 열에 대해 null을 반환 합니다.  |  
 |COLUMN_DEF|**문자열**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|설명자의 TYPE 필드에 표시되는 SQL 데이터 형식의 값입니다. 이 열은 datetime 및 SQL-92 interval 데이터 형식을 제외하고는 DATA_TYPE 열과 동일합니다. 이 열은 항상 값을 반환합니다.|  
 |SQL_DATETIME_SUB|**smallint**|datetime 및 SQL-92 interval 데이터 형식에 대한 하위 형식 코드입니다. 이 열은 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  DATA_TYPE 열의 변경 사항은 다음과 같습니다.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]데이터 형식|JDBC 드라이버 2.0의 반환 형식 (또는에 연결 하는 경우 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 및 관련 숫자 상수|에 연결 된 경우 JDBC 드라이버 3.0의 반환 형식 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 이상 버전|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식 (또는에 연결 하는 경우 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) 및 관련 숫자 상수|에 연결 된 경우 JDBC 드라이버 3.0의 반환 형식 [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 이상 버전|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |8KB를 초과하는 사용자 정의 형식|LONGVARBINARY(-4)|VARBINARY(-3)|  
 |geography|LONGVARBINARY(-4)|VARBINARY(-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  COLUMN_SIZE 열의 변경 사항은 다음과 같습니다.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647(데이터베이스 메타데이터)|  
 |xml|1073741823|2147483647(데이터베이스 메타데이터)|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  BUFFER_LENGTH 열의 변경 사항은 다음과 같습니다.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |8KB를 초과하는 사용자 정의 형식||2147483647|  
   
  TYPE_NAME 열의 변경 사항은 다음과 같습니다.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  SQL_DATA_TYPE 열의 변경 사항은 다음과 같습니다.  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]데이터 형식|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 드라이버 2.0의에서 2008 데이터 값|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC 드라이버 3.0의에서 2008 데이터 값|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 데이터 형식|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 2.0의에서 2008 데이터 값|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC 드라이버 3.0의에서 2008 데이터 값|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

@@ -1,30 +1,33 @@
 ---
-title: "position 메서드 (java.sql.Blob, long) | Microsoft Docs"
-ms.custom: 
+title: position 메서드 (java.sql.Blob, long) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.position (java.sql.Blob.long)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.position (java.sql.Blob.long)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6289e392663ccd3d5bf25c94e7162bfe507630d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6f04fd72a933d7e8e0b401ceb48a7fbbdfc7d285
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="position-method-javasqlblob-long"></a>position 메서드(java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +43,11 @@ public long position(java.sql.Blob pattern,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *패턴*  
+ *pattern*  
   
  검색할 패턴입니다.  
   
- *시작*  
+ *start*  
   
  검색할 시작 인덱스입니다.  
   
@@ -58,7 +61,7 @@ public long position(java.sql.Blob pattern,
  이 위치 메서드는 java.sql.Blob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [방법 &#40; 배치 SQLServerBlob &#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [position 메서드 &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 멤버](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 클래스](../../../connect/jdbc/reference/sqlserverblob-class.md)  

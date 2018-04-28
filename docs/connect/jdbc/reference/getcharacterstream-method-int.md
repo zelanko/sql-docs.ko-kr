@@ -1,30 +1,33 @@
 ---
-title: "getCharacterStream 메서드 (int) | Microsoft Docs"
-ms.custom: 
+title: getCharacterStream 메서드 (int) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getCharacterStream (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getCharacterStream (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f345dc0fe0c52b4c70d280fbbd6c893095dbf36c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3fdbab059ec30a55882e4ebba1b45a738b91ae83
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public java.io.Reader getCharacterStream(int columnIndex)
  이 메서드는 읽기 전용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] nchar, nvarchar, nvarchar (max), 및 ntext와 같은 유니코드 문자 데이터 형식입니다. ASCII 문자 형식을 비롯한 다른 모든 데이터 형식에서는 예외가 발생합니다. ASCII 데이터 형식을 읽으려면, 사용 된 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 메서드.  
   
 ## <a name="see-also"></a>관련 항목:  
- [getCharacterStream 메서드 &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
+ [getCharacterStream 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

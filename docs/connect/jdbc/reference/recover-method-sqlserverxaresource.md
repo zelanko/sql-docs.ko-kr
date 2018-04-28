@@ -1,30 +1,33 @@
 ---
-title: "recover 메서드 (SQLServerXAResource) | Microsoft Docs"
-ms.custom: 
+title: recover 메서드 (SQLServerXAResource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerXAResource.recover
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerXAResource.recover
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73f341196b8dd86a098031afc8c556ceb7f26a2c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0ae101421d8ea82742a631b9f8908aa075a99920
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 메서드(SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *플래그*  
+ *flags*  
   
  **int** 다음 값 중 하나를 수행 하는 값: XAResource.TMSTARTRSCAN 또는 XAResource.TMENDRSCAN 또는 XAResource.TMNOFLAGS XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN 합니다.  
   

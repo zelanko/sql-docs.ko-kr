@@ -1,30 +1,33 @@
 ---
-title: "position 메서드 (java.lang.String, long) | Microsoft Docs"
-ms.custom: 
+title: position 메서드 (java.lang.String, long) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.position (java.lang.String, long)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.position (java.lang.String, long)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9769bdc5bde6059b08198139d91975028d6b211
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9c73da44080ea2fe1e6110f95466c8ea73745001
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="position-method-javalangstring-long"></a>position 메서드(java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public long position(java.lang.String searchstr,
   
  검색할 부분 문자열입니다.  
   
- *시작*  
+ *start*  
   
  검색을 시작할 위치이며, 첫 번째 위치는 1입니다.  
   
@@ -58,7 +61,7 @@ public long position(java.lang.String searchstr,
  이 위치 메서드는 java.sql.Clob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [방법 &#40; 배치 SQLServerClob &#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
+ [position 메서드 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 멤버](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 클래스](../../../connect/jdbc/reference/sqlserverclob-class.md)  

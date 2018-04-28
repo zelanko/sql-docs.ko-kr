@@ -1,30 +1,33 @@
 ---
-title: "getVersionColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getVersionColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 916191363743bd204b6841e1713e92cfeaddd46b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *카탈로그*  
+ *catalog*  
   
  A **문자열** 카탈로그 이름이 들어 있는입니다.  
   
- *스키마*  
+ *schema*  
   
  A **문자열** 스키마 이름 패턴이 들어 있는입니다.  
   
@@ -66,14 +69,14 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
 |이름|유형|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**짧은**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|SCOPE|**short**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |COLUMN_NAME|**문자열**|열 이름입니다.|  
-|DATA_TYPE|**짧은**|java.sql.Types의 SQL 데이터 형식입니다.|  
+|DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**문자열**|데이터 형식의 이름입니다.|  
 |COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
 |BUFFER_LENGTH|**int**|열의 길이(바이트)입니다.|  
-|DECIMAL_DIGITS|**짧은**|열의 소수 자릿수입니다.|  
-|PSEUDO_COLUMN|**짧은**|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> versionColumnUnknown(0)<br /><br /> versionColumnNotPseudo(1)<br /><br /> versionColumnPseudo(2)|  
+|DECIMAL_DIGITS|**short**|열의 소수 자릿수입니다.|  
+|PSEUDO_COLUMN|**short**|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> versionColumnUnknown(0)<br /><br /> versionColumnNotPseudo(1)<br /><br /> versionColumnPseudo(2)|  
   
 > [!NOTE]  
 >  GetVersionColumns 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_datatype_info (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  

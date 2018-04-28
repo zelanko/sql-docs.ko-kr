@@ -1,30 +1,33 @@
 ---
-title: "getBigDecimal 메서드 (SQLServerResultSet) | Microsoft Docs"
-ms.custom: 
+title: getBigDecimal 메서드 (SQLServerResultSet) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getBigDecimal
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getBigDecimal
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 672dceac-ddfe-43e1-851b-5172b78fed9c
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06c6c2e632ff61825cd6ca67e390d98d0658d8e7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6a115d539a69fc93726237beb02e848568a50f63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbigdecimal-method-sqlserverresultset"></a>getBigDecimal 메서드 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +38,10 @@ ms.lasthandoff: 11/18/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[getBigDecimal 메서드 &#40; int &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|이 현재 행에서 지정 된 열 인덱스의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 전체 자릿수가 java.math.BigDecimal로 반환 합니다.|  
-|[getBigDecimal 메서드 &#40; int, int &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(사용 되지 않음) 이 현재 행에서 지정 된 열 인덱스의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 소수 자릿수를 사용 하 여 개체입니다.|  
-|[getBigDecimal 메서드 #40;java.lang.String &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|이 현재 행에서 지정 된 열 이름의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 전체 자릿수가 java.math.BigDecimal로 반환 합니다.|  
-|[getBigDecimal 메서드 &#40;java.lang.String, int &#41; &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(사용 되지 않음) 이 현재 행에서 지정 된 열 이름의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 소수 자릿수를 사용 하 여 개체입니다.|  
+|[getBigDecimal 메서드 &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|이 현재 행에서 지정 된 열 인덱스의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 전체 자릿수가 java.math.BigDecimal로 반환 합니다.|  
+|[getBigDecimal 메서드 &#40;int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(사용 되지 않음) 이 현재 행에서 지정 된 열 인덱스의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 소수 자릿수를 사용 하 여 개체입니다.|  
+|[getBigDecimal 메서드 &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|이 현재 행에서 지정 된 열 이름의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 전체 자릿수가 java.math.BigDecimal로 반환 합니다.|  
+|[getBigDecimal 메서드 &#40;java.lang.String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(사용 되지 않음) 이 현재 행에서 지정 된 열 이름의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 지정 된 소수 자릿수를 사용 하 여 개체입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

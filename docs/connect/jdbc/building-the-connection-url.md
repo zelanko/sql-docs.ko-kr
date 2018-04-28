@@ -1,28 +1,28 @@
 ---
-title: "연결 URL 작성 | Microsoft Docs"
-ms.custom: 
+title: 연결 URL 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a19c9022d26ed7aa0af4443583553b441059e97c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서는 한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. 명명 된 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](기본 설정), 명명 된 인스턴스의 포트 번호를 지정 하거나, 또는 인스턴스 이름을 JDBC URL 속성으로 지정할 수 있습니다 또는 **datasource** 속성입니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. 명명 된 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](기본 설정), 명명 된 인스턴스의 포트 번호를 지정 하거나, 또는 인스턴스 이름을 JDBC URL 속성으로 지정할 수 있습니다 또는 **datasource** 속성입니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   

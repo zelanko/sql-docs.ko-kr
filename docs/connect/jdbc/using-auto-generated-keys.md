@@ -1,34 +1,35 @@
 ---
-title: "자동 생성 키 사용 | Microsoft Docs"
-ms.custom: 
+title: 자동 생성 키 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0b4689b22287f2c6bf96d89f5ff0540d513d4de
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b77a2d4dc10c6359fc6d5b27dea1d7c90247c5e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-auto-generated-keys"></a>자동 생성 키 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 생성 된 행 식별자를 자동으로 검색 하도록 선택적 JDBC 3.0 Api를 지원 합니다. 이 기능의 주된 목적은 쿼리 및 서버에 대한 추가 왕복을 수행하지 않고 데이터베이스 테이블을 업데이트하는 응용 프로그램에서 IDENTITY 값을 사용할 수 있도록 하는 것입니다.  
   
- 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 식별자에 대 한 의사 열을 지원 하지 않습니다, 자동 생성 키 기능을 사용 해야 하는 업데이트는 IDENTITY 열이 포함 된 테이블에 대해 작동 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]테이블당 하나의 IDENTITY 열만 허용 합니다. 반환 된 결과 집합 즉 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스에는 GENERATED_KEYS의 반환 된 열 이름으로 열이 하나만 갖습니다. IDENTITY 열이 없는 테이블에서 생성된 키를 요청하는 경우 JDBC 드라이버는 null 결과 집합을 반환합니다.  
+ 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 식별자에 대 한 의사 열을 지원 하지 않습니다, 자동 생성 키 기능을 사용 해야 하는 업데이트는 IDENTITY 열이 포함 된 테이블에 대해 작동 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 테이블당 하나의 IDENTITY 열만 허용 합니다. 반환 된 결과 집합 즉 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 의 메서드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스에는 GENERATED_KEYS의 반환 된 열 이름으로 열이 하나만 갖습니다. IDENTITY 열이 없는 테이블에서 생성된 키를 요청하는 경우 JDBC 드라이버는 null 결과 집합을 반환합니다.  
   
  예를 들어에 다음 테이블을 만듭니다는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스.  
   

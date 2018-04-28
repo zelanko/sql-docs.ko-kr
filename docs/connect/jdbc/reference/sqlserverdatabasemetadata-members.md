@@ -1,27 +1,28 @@
 ---
-title: "SQLServerDatabaseMetaData 멤버 | Microsoft Docs"
-ms.custom: 
+title: SQLServerDatabaseMetaData 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a467dca2697056235c1ac4584f6eea299d5f0e17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8552b0a4e59e1eed892dae11b37daa18e85288b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|이 데이터베이스에서 트랜잭션 내의 데이터 정의 문을 무시하는지 여부를 검색합니다.|  
 |[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|표시 되는 행의 삭제 여부를 검색을 호출 하 여 검색할 수는 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|검색의 반환 값에 대 한 여부는 [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 메서드에 SQL 데이터 형식 LONGVARCHAR 및 longvarbinary가 포함 되어 있습니다.|  
-|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|지정된 스키마 및 카탈로그에서 사용할 수 있는 사용자 정의 형식에 대해 지정된 형식의 지정된 특성에 대한 설명을 검색합니다.|  
+|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|지정된 스키마 및 카탈로그에서 사용할 수 있는 사용자 정의 형식에 대해 지정된 형식의 지정된 특성에 대한 설명을 검색합니다.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|테이블의 열 중 행을 고유하게 식별하는 최적의 열 집합에 대한 설명을 검색합니다.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|연결된 서버에서 사용할 수 있는 카탈로그 이름을 검색합니다.|  
 |[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|검색 된 **문자열** 이 데이터베이스가 카탈로그 및 테이블 이름 사이 구분 기호로 사용 하는 합니다.|  
@@ -119,10 +120,10 @@ ms.lasthandoff: 11/18/2017
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|지정된 카탈로그, 스키마 또는 테이블 이름 패턴에 사용할 수 있는 테이블에 대한 설명을 검색합니다.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 사용할 수 있는 테이블 형식을 검색합니다.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|이 데이터베이스와 함께 사용할 수 있는 시간 및 날짜 함수의 쉼표로 구분된 목록을 검색합니다.|  
-|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 지원하는 모든 표준 SQL 형식에 대한 설명을 검색합니다.|  
+|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|현재 데이터베이스에서 지원하는 모든 표준 SQL 형식에 대한 설명을 검색합니다.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|특정 스키마에 정의된 사용자 정의 형식에 대한 설명을 검색합니다.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|이 데이터베이스의 URL을 검색합니다.|  
-|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|이 데이터베이스에 알려진 사용자 이름을 검색합니다.|  
+|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|이 데이터베이스에 알려진 사용자 이름을 검색합니다.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|테이블에서 행 값이 업데이트될 때 자동으로 업데이트되는 열에 대한 설명을 검색합니다.|  
 |[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|메서드를 호출 하 여 표시 된 행 삽입을 검색할 수 아닌지 검색 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 의 메서드는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스입니다.|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|카탈로그가 정규화된 테이블 이름의 처음에 나타나는지 여부를 검색합니다.|  

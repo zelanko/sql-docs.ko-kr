@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버 개요 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 6ac8d19b9bc3147fd661b4911c970d950252e556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/02/2018
 |[Microsoft JDBC 드라이버 재배포](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Microsoft JDBC Driver를 재배포하도록 등록하는 방법을 설명합니다.|  
 |[추가 JDBC 드라이버 정보 찾기](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|외부 리소스 링크를 포함하여 Microsoft JDBC 드라이버에 대한 추가 리소스를 확인할 수 있는 위치를 소개합니다.|  
 |[SQL Server용 Microsoft JDBC 드라이버 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책입니다.|  
-|[질문 &#40; 질문과 대답 FAQ &#41; JDBC 드라이버에 대 한](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
+|[질문과 대답 &#40;FAQ&#41; JDBC 드라이버에 대 한](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
 |[Microsoft JDBC Driver for SQL Server의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server의 기능 종속성.|
 
 ## <a name="see-also"></a>관련 항목:  

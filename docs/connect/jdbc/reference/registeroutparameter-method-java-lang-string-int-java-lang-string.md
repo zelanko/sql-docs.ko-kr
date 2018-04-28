@@ -1,30 +1,33 @@
 ---
-title: "registerOutParameter 메서드를 형식 및 이름 | Microsoft Docs"
-ms.custom: 
+title: registerOutParameter 메서드를 형식 및 이름 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.registerOutParameter
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.registerOutParameter
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 693b1c7caa667514f058ff9cb9d087566c22eb38
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a7096a808e66b063e3a384907184c3c707494e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 메서드(java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public void registerOutParameter(java.lang.String s,
   
  java.sql.Types에 정의된 JDBC 형식 코드입니다.  
   
- *s1*  
+ *S1*  
   
  A **문자열** 정규화 된 SQL 유형 이름을 포함 하 합니다.  
   
@@ -60,7 +63,7 @@ public void registerOutParameter(java.lang.String s,
  이 registerOutParameter 메서드는 java.sql.CallableStatement 인터페이스의 registerOutParameter 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [registerOutParameter 메서드 &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
+ [registerOutParameter 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

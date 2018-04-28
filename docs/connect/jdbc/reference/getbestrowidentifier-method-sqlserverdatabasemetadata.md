@@ -1,30 +1,33 @@
 ---
-title: "getBestRowIdentifier 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getBestRowIdentifier 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getBestRowIdentifier
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getBestRowIdentifier
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f29cfff05ed331f2e5741c01d28f3e90afdf88ce
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a015cdf8b6b94f7abad12e3443e9f0635e63e2df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,11 +46,11 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *카탈로그*  
+ *catalog*  
   
  A **문자열** 카탈로그 이름이 들어 있는입니다.  
   
- *스키마*  
+ *schema*  
   
  A **문자열** 스키마 이름이 들어 있는입니다.  
   
@@ -65,7 +68,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession(2)  
   
- *null 허용*  
+ *Null 허용*  
   
  **true 이면** null 허용 열을 포함 하도록 합니다. 그렇지 않으면 **false**입니다.  
   

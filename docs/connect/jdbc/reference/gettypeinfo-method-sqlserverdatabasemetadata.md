@@ -1,30 +1,33 @@
 ---
-title: "getTypeInfo 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getTypeInfo 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,20 +55,20 @@ public java.sql.ResultSet getTypeInfo()
 |이름|유형|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**문자열**|데이터 형식의 이름입니다.|  
-|DATA_TYPE|**짧은**|java.sql.Types의 SQL 데이터 형식입니다.|  
+|DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |PRECISION|**int**|총 유효 자릿수입니다.|  
 |LITERAL_PREFIX|**문자열**|상수 앞에 사용되는 문자 또는 문자열입니다.|  
 |LITERAL_SUFFIX|**문자열**|상수 끝에 사용되는 문자 또는 문자열입니다.|  
 |CREATE_PARAMS|**문자열**|데이터 형식의 생성 매개 변수에 대한 설명입니다.|  
-|NULLABLE|**짧은**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typeNoNulls(0)<br /><br /> typeNullable(1)<br /><br /> typeNullableUnknown(2)|  
+|NULLABLE|**short**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typeNoNulls(0)<br /><br /> typeNullable(1)<br /><br /> typeNullableUnknown(2)|  
 |CASE_SENSITIVE|**boolean**|데이터 형식이 대/소문자를 구분하는지 여부를 나타냅니다. "**true**"형식이 고, 그러지 않으면 대/소문자 구분"하는 경우**false**"입니다.|  
-|SEARCHABLE|**짧은**|SQL WHERE 절에 열을 사용할 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typePredNone(0)<br /><br /> typePredChar(1)<br /><br /> typePredBasic(2)<br /><br /> typeSeachable(3)|  
+|SEARCHABLE|**short**|SQL WHERE 절에 열을 사용할 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> typePredNone(0)<br /><br /> typePredChar(1)<br /><br /> typePredBasic(2)<br /><br /> typeSeachable(3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|데이터 형식의 부호를 나타냅니다. "**true**"형식이 고, 그렇지 않으면 서명 되지 않은"경우**false**"입니다.|  
 |FIXED_PREC_SCALE|**boolean**|데이터 형식이 money 값일 수 있음을 나타냅니다. "**true**" 데이터 형식이 money 형식이 면 그렇지 않은 경우 "**false**"입니다.|  
 |AUTO_INCREMENT|**boolean**|데이터 형식이 자동으로 증가될 수 있음을 나타냅니다. "**true**"고, 그렇지 않으면 증가 유형을 자동 수"if**false**"입니다.|  
 |LOCAL_TYPE_NAME|**문자열**|데이터 형식의 지역화된 이름입니다.|  
-|MINIMUM_SCALE|**짧은**|소수점 이하의 최대 자릿수입니다.|  
-|MAXIMUM_SCALE|**짧은**|소수점 이하의 최소 자릿수입니다.|  
+|MINIMUM_SCALE|**short**|소수점 이하의 최대 자릿수입니다.|  
+|MAXIMUM_SCALE|**short**|소수점 이하의 최소 자릿수입니다.|  
 |SQL_DATA_TYPE|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |SQL_DATETIME_SUB|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
 |NUM_PREC_RADIX|**int**|열이 보유할 수 있는 최대 수를 계산하는 데 필요한 비트 수 또는 자릿수입니다.|  

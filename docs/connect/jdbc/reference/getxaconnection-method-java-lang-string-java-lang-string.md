@@ -1,30 +1,33 @@
 ---
-title: "getXAConnection 메서드 (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: 
+title: getXAConnection 메서드 (java.lang.String, java.lang.String) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b9cb48cab11159a3494f785921368010144bbe8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8c321e6462c30591210c6f366d4a201cc90ee2f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +43,11 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *사용자*  
+ *user*  
   
  A **문자열** 사용자 이름이 들어 있는입니다.  
   
- *암호*  
+ *password*  
   
  A **문자열** 암호가 포함 된 합니다.  
   
@@ -61,7 +64,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 >  이 메서드는 일반적으로 XA 연결 풀 구현에서 호출되며 일반적인 JDBC 응용 프로그램 코드에서는 호출되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [getXAConnection 메서드 &#40; SQLServerXADataSource &#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
+ [getXAConnection 메서드 &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource 메서드](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource 멤버](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource 클래스](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

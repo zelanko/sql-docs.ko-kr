@@ -1,30 +1,33 @@
 ---
-title: "isAutoIncrement 메서드 (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: isAutoIncrement 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isAutoIncrement
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isAutoIncrement
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c99050bfa4ac2dcc4ddd61adbc7e028267190ff3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: eae22287e2ac502b5aa5578e5609ec24b33c780d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>isAutoIncrement 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isAutoIncrement(int column)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
+ *column*  
   
  **int** 열 인덱스를 나타내는입니다.  
   

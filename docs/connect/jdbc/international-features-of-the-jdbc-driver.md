@@ -1,34 +1,35 @@
 ---
-title: "JDBC 드라이버의 국가별 기능 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버의 국가별 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7a9960483a410875f4c91d2b809b27f5c74c7d4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   국제화 기능은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 다음과 같습니다.  
   
--   와 동일한 언어로 완전히 지역화 된 경험에 대 한 지원[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   와 동일한 언어로 완전히 지역화 된 경험에 대 한 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   로캘 구분에 대 한 Java 언어 변환 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터  
   

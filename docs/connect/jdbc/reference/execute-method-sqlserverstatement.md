@@ -1,30 +1,33 @@
 ---
-title: "execute 메서드 (SQLServerStatement) | Microsoft Docs"
-ms.custom: 
+title: execute 메서드 (SQLServerStatement) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.execute
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.execute
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85f6068f09a2a80c40ab0e01763e307420a21b42
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 00e3a1114a532a42fdf898bdaa19a56bb74b1a2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +40,8 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행합니다.|  
 |[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|여러 결과 및 신호에 반환할 수 있는 지정된 된 SQL 문을 실행 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 모든 자동 생성 키 수 있도록 검색에 사용할 수 있습니다.|  
-|[(java.lang.String, int &#91; &#93;)를 실행 합니다.](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
-|[(java.lang.String, java.lang.String &#91; &#93;)를 실행 합니다.](../../../connect/jdbc/reference/execute-method-java-lang-string-java-lang-string.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
+|[실행 (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
+|[실행 (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string-java-lang-string.md)|여러 결과를 반환할 수 있는 지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

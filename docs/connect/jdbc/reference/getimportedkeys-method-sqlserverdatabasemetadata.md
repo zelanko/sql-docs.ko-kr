@@ -1,30 +1,33 @@
 ---
-title: "getImportedKeys 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getImportedKeys 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getImportedKeys
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getImportedKeys
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dc8dfc6d37fcd6ffb3c77105962e6d45b4be313
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5ed1492914aa1f149a641eead6605704daba6c10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +48,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  A **문자열** 카탈로그 이름이 들어 있는입니다.  
   
- *스키마*  
+ *schema*  
   
  A **문자열** 스키마 이름이 들어 있는입니다.  
   
@@ -74,12 +77,12 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 |FKTABLE_SCHEM|**문자열**|외래 키 테이블의 스키마 이름입니다.|  
 |FKTABLE_NAME|**문자열**|외래 키 테이블의 이름입니다.|  
 |FKCOLUMN_NAME|**문자열**|외래 키의 열 이름입니다.|  
-|KEY_SEQ|**짧은**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다.|  
-|UPDATE_RULE|**짧은**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyNoAction(3)<br /><br /> importedKeyCascade(0)<br /><br /> importedKeySetNull(2)<br /><br /> importedKeySetDefault(4)<br /><br /> importedKeyRestrict(1)|  
-|DELETE_RULE|**짧은**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyNoAction(3)<br /><br /> importedKeyCascade(0)<br /><br /> importedKeySetNull(2)<br /><br /> importedKeySetDefault(4)<br /><br /> importedKeyRestrict(1)|  
+|KEY_SEQ|**short**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다.|  
+|UPDATE_RULE|**short**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyNoAction(3)<br /><br /> importedKeyCascade(0)<br /><br /> importedKeySetNull(2)<br /><br /> importedKeySetDefault(4)<br /><br /> importedKeyRestrict(1)|  
+|DELETE_RULE|**short**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyNoAction(3)<br /><br /> importedKeyCascade(0)<br /><br /> importedKeySetNull(2)<br /><br /> importedKeySetDefault(4)<br /><br /> importedKeyRestrict(1)|  
 |FK_NAME|**문자열**|외래 키의 이름입니다.|  
 |PK_NAME|**문자열**|기본 키의 이름입니다.|  
-|DEFERRABILITY|**짧은**|커밋될 때까지 FOREIGN KEY 제약 조건의 확인을 지연시킬 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyInitiallyDeferred(5)<br /><br /> importedKeyInitiallyImmediate(6)<br /><br /> importedKeyNotDeferrable(7)|  
+|DEFERRABILITY|**short**|커밋될 때까지 FOREIGN KEY 제약 조건의 확인을 지연시킬 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> importedKeyInitiallyDeferred(5)<br /><br /> importedKeyInitiallyImmediate(6)<br /><br /> importedKeyNotDeferrable(7)|  
   
 > [!NOTE]  
 >  GetImportedKeys 메서드에 의해 반환 되는 데이터에 대 한 자세한 내용은 "sp_fkeys (TRANSACT-SQL)"를 참조 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 온라인 설명서.  

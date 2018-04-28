@@ -1,30 +1,33 @@
 ---
-title: "데이터베이스 트랜잭션 내에서 데이터 정의 문을 무시 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 트랜잭션 내에서 데이터 정의 문을 무시 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.dataDefinitionIgnoredInTransactions
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.dataDefinitionIgnoredInTransactions
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a395e2a38d83194bdcb07fb2a9383e579e1fade
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e859867f5224a73acb898154ee421fbe6d42c68a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

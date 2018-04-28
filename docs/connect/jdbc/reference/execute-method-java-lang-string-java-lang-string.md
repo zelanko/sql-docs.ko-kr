@@ -1,30 +1,33 @@
 ---
-title: "execute 메서드 (java.lang.String, java.lang.String) | Microsoft Docs"
-ms.custom: 
+title: execute 메서드 (java.lang.String, java.lang.String) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.execute (java.lang.String.java.lang.String[])
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.execute (java.lang.String.java.lang.String[])
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2563671069c6dc90b3cd346c64cf624cae392c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1a4bf40875bb8b165ae289136cc8bf5446e1cd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-method-javalangstring-javalangstring"></a>execute 메서드 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +61,7 @@ public final boolean execute(java.lang.String sql,
  이 execute 메서드는 java.sql.Statement 인터페이스의 execute 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [방법 &#40; 실행 SQLServerStatement &#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [execute 메서드 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 클래스](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

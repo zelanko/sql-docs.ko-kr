@@ -1,30 +1,33 @@
 ---
-title: "getProcedureColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs"
-ms.custom: 
+title: getProcedureColumns 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getProcedureColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getProcedureColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d8fa1fbb84392dba636c8aa5649f45cd54e397d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 457eb19095b87983e72b082f6b67945fa0f0cd31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,14 +78,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |PROCEDURE_SCHEM|**문자열**|저장 프로시저의 스키마입니다.|  
 |PROCEDURE_NAME|**문자열**|저장 프로시저의 이름입니다.|  
 |COLUMN_NAME|**문자열**|열 이름입니다.|  
-|COLUMN_TYPE|**짧은**|열의 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureColumnUnknown(0)<br /><br /> procedureColumnIn(1)<br /><br /> procedureColumnInOut(2)<br /><br /> procedureColumnOut(4)<br /><br /> procedureColumnReturn(5)<br /><br /> procedureColumnResult(3)|  
+|COLUMN_TYPE|**short**|열의 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureColumnUnknown(0)<br /><br /> procedureColumnIn(1)<br /><br /> procedureColumnInOut(2)<br /><br /> procedureColumnOut(4)<br /><br /> procedureColumnReturn(5)<br /><br /> procedureColumnResult(3)|  
 |DATA_TYPE|**smallint**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**문자열**|데이터 형식의 이름입니다.|  
 |PRECISION|**int**|총 유효 자릿수입니다.|  
 |LENGTH|**int**|데이터의 길이(바이트)입니다.|  
-|SCALE|**짧은**|소수점 이하 자릿수입니다.|  
-|RADIX|**짧은**|숫자 형식의 기수입니다.|  
-|NULLABLE|**짧은**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureNoNulls(0)<br /><br /> procedureNullable(1)<br /><br /> procedureNullableUnknown(2)|  
+|SCALE|**short**|소수점 이하 자릿수입니다.|  
+|RADIX|**short**|숫자 형식의 기수입니다.|  
+|NULLABLE|**short**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureNoNulls(0)<br /><br /> procedureNullable(1)<br /><br /> procedureNullableUnknown(2)|  
 |REMARKS|**문자열**|프로시저 열에 대한 설명입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 이 열에 대 한 값을 반환 하지 않습니다.|  
 |COLUMN_DEF|**문자열**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|이 열은 동일는 **DATA_TYPE** 열을 제외 하 고는 **datetime** 및 ISO **간격** 데이터 형식입니다.|  

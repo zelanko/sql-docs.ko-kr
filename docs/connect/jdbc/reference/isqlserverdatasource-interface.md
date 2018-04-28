@@ -1,27 +1,28 @@
 ---
-title: "ISQLServerDataSource 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: ISQLServerDataSource 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfdf94c7688cc27b614151bef5f2b7defd008c54
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 01de3dc02acbb47c472025f6ed2c856a6571832b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

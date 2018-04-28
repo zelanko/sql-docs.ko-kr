@@ -1,27 +1,28 @@
 ---
-title: "Azure SQL 데이터베이스에 연결 | Microsoft Docs"
-ms.custom: 
+title: Azure SQL 데이터베이스에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>세부 정보  
  에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 호출 하려면 master 데이터베이스에 연결 해야 **SQLServerDatabaseMetaData.getCatalogs**합니다.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]사용자 데이터베이스에서 카탈로그의 전체 집합을 반환을 지원 하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** 는 sys.databases 보기를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하십시오 [sys.databases (SQL Azure 데이터베이스)](http://go.microsoft.com/fwlink/?LinkId=217396) 이해 하려면 **SQLServerDatabaseMetaData.getCatalogs** 동작에는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]합니다.  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 사용자 데이터베이스에서 카탈로그의 전체 집합을 반환을 지원 하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** 는 sys.databases 보기를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하십시오 [sys.databases (SQL Azure 데이터베이스)](http://go.microsoft.com/fwlink/?LinkId=217396) 이해 하려면 **SQLServerDatabaseMetaData.getCatalogs** 동작에는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]합니다.  
   
  연결이 삭제됨  
  에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], 일정 한 비활성 기간 후 (예: 방화벽) 네트워크 구성 요소에서 유휴 연결을 종료할 수 있습니다. 유휴 연결에는  
@@ -85,7 +86,7 @@ shutdown /r /t 1
  암호화 사용에 hostNameInCertificate 설정 필요  
  에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true**합니다. (서버 이름이 연결 문자열의 경우 *shortName*. *domainName*로 설정 된 **hostNameInCertificate** 속성을 \*. *domainName*.)  
   
- 예를 들어  
+ 예를 들어:  
   
 ```  
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  

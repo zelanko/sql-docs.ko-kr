@@ -1,27 +1,28 @@
 ---
-title: "JDBC 드라이버와 함께 SQL Server에 연결 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버와 함께 SQL Server에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 624a6874931cb8af32bb69ea3ac0f8b395ef8915
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7950bb8bd50efbd9b4c0190fb4f696487e44d2a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC 드라이버로 SQL Server에 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[데이터 원본 속성 설정](../../connect/jdbc/setting-the-data-source-properties.md)|Java Platform, Enterprise Edition(Java EE) 환경에서 데이터 원본을 사용하는 방법에 대해 설명합니다.|  
 |[연결 작업](../../connect/jdbc/working-with-a-connection.md)|에 대 한 연결의 인스턴스를 만들 수 있는 다양 한 방법에 설명 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.|  
 |[연결 풀링 사용](../../connect/jdbc/using-connection-pooling.md)|JDBC 드라이버에서 연결 풀링의 사용을 지원하는 방법을 설명합니다.|  
-|[데이터베이스 미러링 &#40;를 사용 하 여 JDBC &#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC 드라이버에서 데이터베이스 미러링 사용을 지원하는 방법을 설명합니다.|  
+|[데이터베이스 미러링을 사용 하 여 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC 드라이버에서 데이터베이스 미러링 사용을 지원하는 방법을 설명합니다.|  
 |[고가용성, 재해 복구를 위한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 가용성 그룹에 연결할 응용 프로그램을 개발하는 방법을 설명합니다.|  
 |[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|응용 프로그램에 연결을 위한 Java 구현을 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Kerberos 통합된 인증을 사용 하 여 데이터베이스입니다.|  
 |[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure에서 데이터베이스의 연결 문제를 설명합니다.|  

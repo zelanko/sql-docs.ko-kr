@@ -2,7 +2,7 @@
 title: MacOS-고가용성 및 재해 복구 및 Linux 기반 ODBC 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 60f3022334ca505f5ae2d3ddadba623de292f418
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>MacOS 고가용성 및 재해 복구에 대 한 지원 및 Linux 기반 ODBC 드라이버
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -105,7 +105,7 @@ ODBC 연결 특성에 대 한 자세한 내용은 참조 [SQLSetConnectAttr](htt
 |[SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 모두 지원 **ApplicationIntent** 및 **MultiSubnetFailover** 데이터 원본 이름 (DSN) 또는 연결 특성을 통해.|  
 |[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 지원 **ApplicationIntent** 및 **MultiSubnetFailover** DSN, 연결 문자열 키워드 또는 연결 특성을 통해.|
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [연결 문자열 키워드 및 DSN(데이터 원본 이름)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 

@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP for SQL Server 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -12,16 +12,16 @@ ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: ''
+caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
 ms.workload: On Demand
-ms.openlocfilehash: 23159425e45fdc8974e0047859072654c5c77959
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 지원 매트릭스 용 Microsoft PHP 드라이버
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

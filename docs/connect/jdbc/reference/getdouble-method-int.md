@@ -1,30 +1,33 @@
 ---
-title: "getDouble 메서드 (int) | Microsoft Docs"
-ms.custom: 
+title: getDouble 메서드 (int) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getDouble (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getDouble (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2d25e9ccda7d821d6b1528924d63beff383f24a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3536a3544cd16047495f104bd7183ec8af13a225
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getdouble-method-int"></a>getDouble 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public double getDouble(int index)
  이 메서드는 Java 사용 하는 모든 숫자 기반 데이터 형식을 반환 **double** 충실도 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [getDouble 메서드 &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
+ [getDouble 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 클래스](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,30 +1,33 @@
 ---
-title: "isWritable 메서드 (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: isWritable 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isWritable
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isWritable
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30e616a736d4173777035c036238dac3c6b63ac4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: dda533387508ee51d7db1018d8bafd02f7087d00
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>isWritable 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isWritable(int column)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
+ *column*  
   
  **int** 열 인덱스를 나타내는입니다.  
   

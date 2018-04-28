@@ -1,30 +1,33 @@
 ---
-title: "getCatalogName 메서드 (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: getCatalogName 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getCatalogName
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getCatalogName
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72a03ba3b2b3d4631b25d1ade86cb6f7e959c2cb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 168c3e4ac6f5a3b7b6f3fe52b4def573a3228a6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.lang.String getCatalogName(int column)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
+ *column*  
   
  **int** 열 인덱스를 나타내는입니다.  
   

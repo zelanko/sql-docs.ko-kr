@@ -2,7 +2,7 @@
 title: '4 단계: ado.net SQL 탄력적 연결할 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4 단계: 탄력적 SQL ado.net 연결
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/18/2017
   
 서버 이름, 암호 및 등에 대 한 문자열 편집 해야 합니다. 라는 메서드에서 이러한 문자열을 찾을 수 있습니다 **GetSqlConnectionStringBuilder**합니다.  
   
-참고: 서버 이름에 대 한 연결 문자열은 대상으로 Azure SQL 데이터베이스의 4 가지 문자 접두사를 포함 하기 때문에 **tcp:**합니다. 하지만 Microsoft SQL Server에 연결할 서버 문자열을 조정할 수 있습니다.  
+참고: 서버 이름에 대 한 연결 문자열은 대상으로 Azure SQL 데이터베이스의 4 가지 문자 접두사를 포함 하기 때문에 **tcp:** 합니다. 하지만 Microsoft SQL Server에 연결할 서버 문자열을 조정할 수 있습니다.  
   
   
 ```CSharp  
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/18/2017
 코드 샘플에 포함 됩니다.  
   
 - 라는 작은 두 번째 클래스 **TestSqlException**, 속성 이라는 **번호**합니다.  
-- `//throw new TestSqlException(4060);`를 주석 처리 제거 수입니다.  
+- `//throw new TestSqlException(4060);` 를 주석 처리 제거 수입니다.  
   
 다음 실행의 throw 문 및 recompile 주석, **RetryAdo2.exe** 다음과 유사한 항목을 출력 합니다.  
   

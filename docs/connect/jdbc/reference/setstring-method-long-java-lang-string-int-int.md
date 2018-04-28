@@ -1,30 +1,33 @@
 ---
-title: "setString 메서드 (long, java.lang.String, int, int) | Microsoft Docs"
-ms.custom: 
+title: setString 메서드 (long, java.lang.String, int, int) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.setString (long, java.lang.String, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.setString (long, java.lang.String, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da7714cd9e4d397d02fc97276ec851ea0ab1f1f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2aac4300c26527265a026c061499e33a5155fcd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 메서드(long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +53,11 @@ public int setString(long pos,
   
  CLOB에 쓸 문자열입니다.  
   
- *오프셋*  
+ *offset*  
   
  문자열 내에서 문자를 읽기 시작할 위치의 오프셋입니다.  
   
- *len 함수*  
+ *len*  
   
  쓸 문자 수입니다.  
   
@@ -70,7 +73,7 @@ public int setString(long pos,
  문자 데이터는 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 덮어쓸 수 있습니다. 위치+1 값을 지정하면 문자열이 추가되고, 위치+2 이상(또는 0 이하)의 값을 지정하면 위치 오류가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [setString 메서드 &#40; SQLServerClob &#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString 메서드 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 멤버](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob 클래스](../../../connect/jdbc/reference/sqlserverclob-class.md)  

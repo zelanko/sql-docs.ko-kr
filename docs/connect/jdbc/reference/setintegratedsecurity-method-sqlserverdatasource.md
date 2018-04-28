@@ -1,30 +1,33 @@
 ---
-title: "setIntegratedSecurity 메서드 (SQLServerDataSource) | Microsoft Docs"
-ms.custom: 
+title: setIntegratedSecurity 메서드 (SQLServerDataSource) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.setIntegratedSecurity
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.setIntegratedSecurity
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c82fad6b2fe56afe748b22ea8c131e8aff0e25d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 320db4baa925a55039623180d092dd3845e0d691
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setIntegratedSecurity(boolean enable)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *사용 하도록 설정*  
+ *enable*  
   
  **true 이면** integratedSecurity가 사용 되는 경우. 그렇지 않으면 **false**입니다.  
   

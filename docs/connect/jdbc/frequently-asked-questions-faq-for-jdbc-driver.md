@@ -1,28 +1,28 @@
 ---
-title: "JDBC 드라이버에 대 한 대답 (FAQ) 질문과 대답 | Microsoft Docs"
-ms.custom: 
+title: JDBC 드라이버에 대 한 대답 (FAQ) 질문과 대답 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e2ca76d6aa4703349ea3232392dee17ace44643
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: b2872e0674a8195b2460c229a1244cc399a936b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>질문과 대답 (FAQ) JDBC 드라이버에 대 한
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -86,11 +86,11 @@ JDBC 드라이버는 오픈 소스 및 소스 코드에서 확인할 수 있습�
 |비 Windows|순수 Java Kerberos|  
 |비 Windows|SQL Server|  
 |비 Windows|Azure Active Directory 인증|
-|창|순수 Java Kerberos|  
-|창|SQL Server|
+|Windows|순수 Java Kerberos|  
+|Windows|SQL Server|
 |창|NTLM 백업을 사용하는 Kerberos|  
-|창|NTLM|  
-|창|Azure Active Directory 인증|  
+|Windows|NTLM|  
+|Windows|Azure Active Directory 인증|  
   
 **드라이버가 인터넷 프로토콜 버전 6 (IPv6)를 지원 하나요 주소?**  
  예, 이 드라이버는 연결 속성 컬렉션 및 serverName 연결 문자열 속성에 IPv6 주소를 사용하도록 지원합니다. 자세한 내용은 참조 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)합니다.  

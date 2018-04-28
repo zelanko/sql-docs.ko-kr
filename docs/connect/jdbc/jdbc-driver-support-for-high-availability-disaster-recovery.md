@@ -2,7 +2,7 @@
 title: 고가용성, 재해 복구에 대 한 JDBC 드라이버 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -16,13 +16,13 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 5ad954bb250765d29dd6600ca98e4a01844f1831
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -121,7 +121,7 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
 ## <a name="ssl-certificate-validation"></a>SSL 인증서의 유효성 검사  
  가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 에 대 한 지원을 추가 **주체 대체 이름** 여러 호스트가 같은 인증서와 연결 될 수 있도록 SSL 인증서에 있습니다. SSL에 대 한 자세한 내용은 참조 하십시오. [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버와 함께 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)  
   

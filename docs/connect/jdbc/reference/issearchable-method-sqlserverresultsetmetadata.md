@@ -1,30 +1,33 @@
 ---
-title: "isSearchable 메서드 (SQLServerResultSetMetaData) | Microsoft Docs"
-ms.custom: 
+title: isSearchable 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isSearchable
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isSearchable
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e12560af6cd1941669085b44e673c2fa2b9de49
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0b749e2109db6515914cd7a3551df3c69c36601d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isSearchable(int column)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
+ *column*  
   
  **int** 열 인덱스를 나타내는입니다.  
   
