@@ -1,8 +1,8 @@
 ---
 title: SQL Server 2016 릴리스 정보 | Microsoft 문서
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
-> [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016 다운로드
->
-> [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
->
-> [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**를 참조하세요.
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
+- [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
+- [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)** 를 참조하세요.
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 서비스 팩 2(SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2에는 2016 SP1 이후부터 CU8까지 모든 누적 업데이트가 포함되어 있습니다. 
+
+- [![Microsoft 다운로드 센터](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 서비스 팩 2(SP2) 다운로드](https://go.microsoft.com/fwlink/?linkid=869608)
+- 업데이트의 전체 목록은 [SQL Server 2016 서비스 팩 2 릴리스 정보](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)를 참조하세요.
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 수정 사항을 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 누적 업데이트를 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다.
 
 다음 기능은 SQL Server SP1의 Standard, Web, Express 및 Local DB 버전에서 사용할 수 있습니다(언급한 것과 같이).
 - 상시 암호화
@@ -159,24 +164,22 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.    
     
 -   **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
-    
+
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 문서의 온라인 버전이 브라우저에 표시됩니다. 문제는 로컬 도움말을 구성하고 설치한 경우에도 브라우저 기반 도움말입니다. 
-     
-**콘텐츠 업데이트:**    
-SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 응용 프로그램이 중단(정지)될 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.    
+
+**콘텐츠 업데이트:** SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 응용 프로그램이 중단(정지)될 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.    
     
-* 메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다.    
-    
-     
-```    
+* 메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다.
+
      Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+```
 
-## <a name="additional-information"></a>추가 정보
-+ [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")

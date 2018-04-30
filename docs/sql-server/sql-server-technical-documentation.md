@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서 | Microsoft Docs
-ms.date: 02/28/2018
+ms.date: 04/26/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -24,44 +24,79 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06ccc15f14599c1d9861af90d6a56d65b71e3e0e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d375db4cbc060dbd5245446e2e3de4ee3f8fe146
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+::: moniker-end
 
-::: moniker range="=sql-server-2017"
+::: moniker range="= sql-server-2016"
+SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+::: moniker-end
+
+
+
+
+
+<!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
+ at any one time, regardless of user's moniker choice.
+-->
+
+::: moniker range="= sqlallproducts-allversions"
+|새로운 기능  | 릴리스 정보  |
+|---------|---------|
+|[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
+|[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
+::: moniker-end
+
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
+
 ::: moniker range="=sql-server-2016"
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="=sql-server-2014"
+
+
+
+
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 콘텐츠가 곧 .docs 사이트에 병합됩니다.  현재는 다음을 참조하세요.
 - [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [이전 버전](https://docs.microsoft.com/en-us/previous-versions/sql/)
+
+::: moniker range="= sql-server-2016"
+**SQL Server를 사용해 보세요.**
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Windows용 SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **SQL Server를 사용해 보세요.**
-    + [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
-    + [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
-    + [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
-    + [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Windows용 SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Linux에 SQL Server 설치](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Linux에 SQL Server 설치](../linux/sql-server-linux-setup.md)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+::: moniker-end
 
-::: moniker range=">=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>SQL Server 기술
 
 |||
@@ -76,11 +111,22 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |![Master  Data  Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 마스터 데이터 관리를 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 작성된 솔루션을 사용하면 정확한 정보를 기반으로 보고와 분석을 수행할 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 사용하여 마스터 데이터에 대한 중앙 리포지토리를 만들고 시간 경과에 따라 변경되는 데이터의 감사 가능 및 보안 가능 레코드를 유지 관리합니다.|
 ::: moniker-end
 
+::: moniker range="= sql-server-2016"
 ## <a name="migrate-and-move-data"></a>데이터 마이그레이션 및 이동
 
 - [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
+
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data"></a>데이터 마이그레이션 및 이동
+
+- [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+- [Linux에서 SQL Server로 데이터 마이그레이션](../linux/sql-server-linux-migrate-overview.md)
+- [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+::: moniker-end
 
 ## <a name="update-your-version-of-sql-server"></a>SQL Server 버전 업데이트
 

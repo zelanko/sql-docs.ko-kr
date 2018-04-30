@@ -26,11 +26,13 @@
 ## [SQL Server 2012 참고](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 참고](sql-server-2008-r2-sp2-release-notes.md)
 
+# [Linux의 SQL Server](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [장애 조치(Failover) 클러스터](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [설치](../sql-server/install/planning-a-sql-server-installation.md)
+# [설치(Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [설치(Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [MDS(Master Data Services)](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 자습서](tutorials-for-sql-server-2016.md)
+# [SQL Server 도구](../tools/overview-sql-tools.md)
 
 # 리소스
 

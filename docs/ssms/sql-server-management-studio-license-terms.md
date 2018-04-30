@@ -1,27 +1,28 @@
 ---
-title: "SQL Server Management Studio - 사용 조건 | Microsoft 문서"
-ms.custom: 
+title: SQL Server Management Studio - 사용 조건 | Microsoft 문서
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 사용권 계약서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/17/2018
   
 **3.    인터넷 기반 서비스.** Microsoft는 소프트웨어와 함께 인터넷 기반 서비스를 제공합니다. Microsoft는 이러한 서비스를 언제라도 변경 또는 중단할 수 있습니다.  
   
-&nbsp;&nbsp;**a.    인터넷 기반 서비스에 대한 동의.** 아래 조항과 SQL Server 개인정보취급방침에 명시된 소프트웨어 기능은 인터넷을 통해 Microsoft 또는 서비스 공급자 컴퓨터 시스템에 연결됩니다. 어떤 경우에는 연결될 때 별도의 통지를 받지 못할 수도 있습니다. 이 기능을 해제하거나 사용하지 않을 수도 있습니다. 이 기능에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)을 참조하세요. **이 기능을 사용함과 동시에 귀하는 이러한 정보의 전송에 동의하게 됩니다.** Microsoft는 귀하의 신원을 식별하거나 귀하에게 연락할 목적으로 이 정보를 사용하지 않습니다.  
+&nbsp;&nbsp;**a.    인터넷 기반 서비스에 대한 동의.** 아래 조항과 SQL Server 개인정보취급방침에 명시된 소프트웨어 기능은 인터넷을 통해 Microsoft 또는 서비스 공급자 컴퓨터 시스템에 연결됩니다. 어떤 경우에는 연결될 때 별도의 통지를 받지 못할 수도 있습니다. 이 기능을 해제하거나 사용하지 않을 수도 있습니다. 이 기능에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)를 참조하세요. **이 기능을 사용함과 동시에 귀하는 이러한 정보의 전송에 동의하게 됩니다.** Microsoft는 귀하의 신원을 식별하거나 귀하에게 연락할 목적으로 이 정보를 사용하지 않습니다.  
   
 &nbsp;&nbsp;**i.    컴퓨터 정보.** 다음 기능은 인터넷 프로토콜을 사용하여 귀하가 사용하고 있는 인터넷 프로토콜 주소, 운영 체제 종류, 브라우저 및 소프트웨어의 이름과 버전, 소프트웨어를 설치한 장치의 언어 코드 등의 컴퓨터 정보를 해당 시스템에 전송합니다. Microsoft는 귀하에게 인터넷 기반 서비스를 제공할 목적으로 이 정보를 사용합니다.  
   
