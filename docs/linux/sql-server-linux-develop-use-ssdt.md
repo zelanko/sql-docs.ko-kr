@@ -1,25 +1,25 @@
 ---
-title: "개발 및 Linux 용 SQL Server 배포 데이터베이스 | Microsoft Docs"
-description: 
+title: 개발 및 Linux 용 SQL Server 배포 데이터베이스 | Microsoft Docs
+description: ''
 author: erickangMSFT
 ms.author: erickang
 manager: jroth
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 71ecd630b78d1a289aec4109a9eaa8c75dec3e90
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
 
@@ -47,7 +47,7 @@ SQL Server 2017 Linux에서 SSDT 17.0 RC 이상 버전에서 지원 됩니다.
 
 ## <a name="create-a-new-database-project-in-source-control"></a>소스 제어에서 새 데이터베이스 프로젝트 만들기
 
-1. Visual Studio를 시작 합니다.
+1. Visual Studio를 시작합니다.
 
 2. 선택 **팀 탐색기** 에 **보기** 메뉴. 
 
