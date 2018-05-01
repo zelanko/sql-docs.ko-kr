@@ -1,16 +1,16 @@
 ---
 title: CERTENCODED(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f6068562cf6694acc99c1e303dbd4ff10ff583ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-인증서의 공개 부분을 이진 형식으로 반환합니다. 이 함수는 인증서 ID를 가져와서 인코딩된 인증서를 반환합니다. 이진 결과를 **CREATE CERTIFICATE...WITH BINARY**에 전달하여 새 인증서를 만들 수 있습니다.
+이 함수는 인증서의 공개 부분을 이진 형식으로 반환합니다. 이 함수는 인증서 ID를 인수로 가져와서 인코딩된 인증서를 반환합니다. 새 인증서를 만들려면 이진 결과를 **CREATE CERTIFICATE … WITH BINARY**에 전달합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -44,13 +44,13 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>인수  
 *cert_id*  
-인증서의 **certificate_id**입니다. 이는 sys.certificates 또는 [CERT_ID&#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 함수를 통해 사용할 수 있습니다. *cert_id*는 **int** 형식입니다.
+인증서의 **certificate_id**입니다. sys.certificates에서 이 값을 찾습니다. [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)함수도 이를 반환합니다. *cert_id*는 **int** 데이터 형식을 갖습니다.
   
 ## <a name="return-types"></a>반환 형식
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-**CERTENCODED** 및 **CERTPRIVATEKEY**는 인증서의 서로 다른 부분을 이진 형식으로 반환하는 데 함께 사용됩니다.
+**CERTENCODED** 및 **CERTPRIVATEKEY**를 함께 사용하여 이진 형태로 인증서의 다른 부분을 반환합니다.
   
 ## <a name="permissions"></a>사용 권한  
 **CERTENCODED**는 누구나 사용할 수 있습니다.
@@ -58,25 +58,25 @@ CERTENCODED ( cert_id )
 ## <a name="examples"></a>예  
   
 ### <a name="simple-example"></a>간단한 예  
-다음 예에서는 이름이 `Shipping04`인 인증서를 만든 다음, **CERTENCODED** 함수를 사용하여 인증서의 이진 인코딩을 반환합니다.
+이 예에서는 이름이 `Shipping04`인 인증서를 만든 다음, **CERTENCODED** 함수를 사용하여 인증서의 이진 인코딩을 반환합니다. 이 예에서는 2040년 10월 31일을 인증서 만료 날짜로 설정합니다.
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>2. 다른 데이터베이스에 인증서 복사  
-조금 더 복잡한 다음 예에서는 `SOURCE_DB` 및 `TARGET_DB`라는 두 개의 데이터베이스를 만듭니다. 여기서 목표는 `SOURCE_DB`에서 인증서를 만든 다음 인증서를 `TARGET_DB`에 복사하고 `SOURCE_DB`에서 암호화된 데이터를 인증서 복사본을 사용하여 `TARGET_DB`에서 암호를 해독할 수 있는지 증명하는 것입니다.
+조금 더 복잡한 예에서는 `SOURCE_DB` 및 `TARGET_DB`라는 두 데이터베이스를 만듭니다. 그런 다음, `SOURCE_DB`에 인증서를 만들어 `TARGET_DB`에 복사합니다. 마지막으로, `SOURCE_DB`에서 암호화된 데이터가 인증서 사본을 사용하여 `TARGET_DB`에서 해독될 수 있음을 보여 줍니다.
   
-예제 환경을 만들려면 `SOURCE_DB` 및 `TARGET_DB` 데이터베이스를 만들고 각 데이터베이스에 하나의 마스터 키를 만듭니다. 그런 다음 `SOURCE_DB`에서 인증서를 만듭니다.
+예제 환경을 만들려면 `SOURCE_DB` 및 `TARGET_DB` 데이터베이스를 만들고 각 데이터베이스에 마스터 키를 만듭니다. 그런 다음, `SOURCE_DB`에서 인증서를 만듭니다.
   
 ```sql
 USE master;  
@@ -101,7 +101,7 @@ CREATE CERTIFICATE SOURCE_CERT WITH SUBJECT = 'SOURCE_CERTIFICATE';
 GO  
 ```  
   
-이제 인증서에 대한 이진 설명을 추출합니다.
+다음으로 인증서에 대한 이진 설명을 추출합니다.
   
 ```sql
 DECLARE @CERTENC VARBINARY(MAX);  
@@ -114,7 +114,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-`TARGET_DB` 데이터베이스에서 중복 인증서를 만듭니다. 이전 단계에서 반환된 두 이진 값을 삽입하여 다음 코드를 수정해야 합니다.
+그런 다음, `TARGET_DB` 데이터베이스에서 중복 인증서를 만듭니다. 이 작업을 위해 다음 코드를 수정하여 이전 단계에서 반환된 두 이진 값 @CERTENC 및 @CERTPVK를 삽입합니다. 이 값을 따옴표로 묶지 않습니다.
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -133,7 +133,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-단일의 일괄 처리로 실행되는 다음 코드는 `SOURCE_DB`에서 암호화된 데이터를 `TARGET_DB`에서 암호 해독할 수 있음을 증명합니다.
+단일 일괄 처리로 실행되는 다음 코드는 `SOURCE_DB`에서 암호화된 데이터를 `TARGET_DB`에서 해독할 수 있음을 보여 줍니다.
   
 ```sql
 USE SOURCE_DB;  

@@ -1,16 +1,16 @@
 ---
-title: "RESTORE 인수(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: RESTORE 인수(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
+caps.latest.revision: 154
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d97ddc0e186a4234fcebf895734e00cc37d36ec0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 로그나 전체 데이터베이스가 복원되는 데이터베이스입니다. 변수(**@***database_name_var*)로 제공된 경우, 이 이름은 문자열 상수(**@***database_name_var* = *database*_*name*)나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 로그나 전체 데이터베이스가 복원되는 데이터베이스입니다. 변수(**@***database_name_var*)로 제공된 경우, 이 이름은 문자열 상수(**@***database_name_var* = *database*_* name*)나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +98,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  모든 읽기/쓰기 파일 그룹을 선택합니다. 이 옵션은 읽기/쓰기 파일 그룹 다음에 복원할 읽기 전용 파일 그룹이 읽기 전용 파일 그룹 앞에 있는 경우에 특히 유용합니다.  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  전체 복구 모델 또는 대량 로그 복구 모델을 사용하는 데이터베이스에만 지원되는 페이지 복원의 페이지 목록을 지정합니다. 값은 다음과 같습니다.  
   
 PAGE  
@@ -135,7 +135,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 장치의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@***logical_backup_device_name_var*)로 제공한 경우 백업 장치 이름은 문자열 상수(**@***logical_backup_device_name_var* = *logical_backup_device_name*)나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 백업을 명명된 디스크 또는 테이프 장치에서 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@***physical_backup_device_name_var*)로 지정한 경우 장치 이름은 문자열 상수(**@***physical_backup_device_name_var* = '*physcial_backup_device_name*')나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 백업을 명명된 디스크 또는 테이프 장치에서 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@***physical_backup_device_name_var*)로 지정한 경우 장치 이름은 문자열 상수(**@***physical_backup_device_name_var* = '* physcial_backup_device_name*')나 **ntext** 또는 **텍스트** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
@@ -234,7 +234,7 @@ MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name
   
  *logical_file_name_in_backup*에 논리적 이름이 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하여 제거하도록 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.  
   
-*n*는 추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다. 기본적으로 *logical_file_name_in_backup* 파일은 원래 위치로 복원됩니다.  
+*n*은 추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다. 기본적으로 *logical_file_name_in_backup* 파일은 원래 위치로 복원됩니다.  
   
 > [!NOTE]  
 >  백업 세트에서 논리적 파일 목록을 가져오려면 RESTORE FILELISTONLY를 사용하십시오.  
@@ -354,7 +354,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  복원 작업에 사용되는 I/O 버퍼의 총 수를 지정합니다. 임의의 양의 정수를 지정할 수 있지만 버퍼 수가 많으면 Sqlservr.exe 프로세스의 부적절한 가상 주소 공간으로 인해 "메모리가 부족합니다"라는 오류가 발생할 수 있습니다.  
   
- 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다: *buffercount***\****maxtransfersize*.  
+ 버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다: *buffercount***\**** maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -434,7 +434,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 RESTORE 문 내에서 호환되지 않습니다.  
   
 > [!NOTE]  
->  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 장치 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+>  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  { **UNLOAD** | NOUNLOAD }  
  **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
@@ -511,7 +511,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  지정된 복구 지점으로의 복구를 지정합니다. 지정된 트랜잭션은 복구에 포함되지만 트랜잭션이 실제로 생성될 때 원래 커밋된 경우에만 커밋됩니다.  
   
  RESTORE DATABASE 및 RESTORE LOG는 모두 *lsn_number* 매개 변수를 지원합니다. 이 매개 변수는 로그 시퀀스 번호를 지정합니다.  
@@ -525,7 +525,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  자세한 내용은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구 &#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 및 [로그 시퀀스 번호로 복구 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)를 참조하세요.  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  지정된 복구 지점까지의 복구를 지정합니다. 지정된 트랜잭션은 복구에 포함되지 않으며 WITH RECOVERY가 사용될 때 롤백됩니다.  
   
  RESTORE DATABASE 및 RESTORE LOG는 모두 *lsn_number* 매개 변수를 지원합니다. 이 매개 변수는 로그 시퀀스 번호를 지정합니다.  

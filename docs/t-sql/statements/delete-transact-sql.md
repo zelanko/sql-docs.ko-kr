@@ -1,16 +1,16 @@
 ---
 title: DELETE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DELETE
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a30704357c724c3a7e5ecc78569aecdd62687e8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,10 +99,10 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  WITH \<common_table_expression>  
  DELETE 문 범위 내에 정의되고 공통 테이블 식이라고도 하는 명명된 임시 결과 집합을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다.  
   
- 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
+ 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
  TOP **(***expression***)** [ PERCENT ]  
- 삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
+ 삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  FROM  
  DELETE 키워드와 대상 *table_or_view_name* 또한 *rowset_function_limited* 사이에서 선택적으로 사용할 수 있는 키워드입니다.  
@@ -136,7 +137,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  \<OUTPUT_Clause>  
- 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
+ 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
   
  FROM *table_source*  
  FROM 절을 추가로 지정합니다. DELETE에 대한 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장을 사용하여 \<table_source>의 데이터를 지정하고 첫 번째 FROM 절에 있는 테이블에서 해당 행을 삭제할 수 있습니다.  
@@ -164,7 +165,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_name*이 전역 커서를 참조하도록 지정합니다.  
   
  *cursor_name*  
- 인출이 수행되는 열린 커서의 이름입니다. 이름이 *cursor_name*인 전역 커서와 로컬 커서가 모두 있는 경우 이 인수는 GLOBAL이 지정되면 전역 커서를 참조하고 그렇지 않으면 로컬 커서를 참조합니다. 커서는 업데이트될 수 있어야 합니다.  
+ 인출이 수행되는 열린 커서의 이름입니다. 이름이 *cursor_name*인 전역 커서와 로컬 커서가 모두 있는 경우 이 인수는 GLOBAL이 지정되면 전역 커서를 참조하고, 그렇지 않으면 로컬 커서를 참조합니다. 커서는 업데이트될 수 있어야 합니다.  
   
  *cursor_variable_name*  
  커서 변수의 이름입니다. 커서 변수는 업데이트를 허용하는 커서를 참조해야 합니다.  
@@ -189,7 +190,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  FILESTREAM 열이 있는 행을 삭제하면 해당 내부 파일 시스템 파일도 삭제됩니다. 기본 파일은 FILESTREAM 가비지 수집기를 통해 제거됩니다. 자세한 내용은 [Access FILESTREAM Data with Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)을 참조하세요.  
   
- INSTEAD OF 트리거가 정의된 뷰를 직접 또는 간접으로 참조하는 DELETE 문에 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)을 참조하세요.  
+ INSTEAD OF 트리거가 정의된 뷰를 직접 또는 간접으로 참조하는 DELETE 문에 FROM 절을 지정할 수 없습니다. INSTEAD OF 트리거에 대한 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  TOP을 DELETE와 함께 사용할 경우 참조된 행은 어떠한 순서로도 정렬되지 않으며 ORDER BY 절을 이 문에서 직접 지정할 수 없습니다. TOP을 사용하여 시간 순서로 행을 삭제해야 하는 경우에는 하위 SELECT 문에서 ORDER BY 절을 지정하는 방식으로 TOP을 사용해야 합니다. 이 항목의 뒷부분에 나오는 예 섹션을 참조하세요.  
@@ -220,7 +221,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ### <a name="permissions"></a>사용 권한  
  대상 테이블에 DELETE 권한이 필요합니다. 문에 WHERE 절이 포함되어 있을 경우 SELECT 권한도 필요합니다.  
   
- **sysadmin** 고정 서버 역할의 멤버, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 DELETE 권한이 부여됩니다. **sysadmin**, **db_owner** 및 the **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
+ **sysadmin** 고정 서버 역할의 멤버, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 DELETE 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -231,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 |[원격 테이블에서 행 삭제](#RemoteTables)|연결된 서버 • OPENQUERY 행 집합 함수 • OPENDATASOURCE 행 집합 함수|  
 |[DELETE 문의 결과 캡처](#CaptureResults)|OUTPUT 절|  
   
-###  <a name="BasicSyntax"></a>기본 구문  
+###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 DELETE 문의 기본 기능을 보여 줍니다.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>1. WHERE 절 없이 DELETE 사용  
@@ -483,7 +484,7 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

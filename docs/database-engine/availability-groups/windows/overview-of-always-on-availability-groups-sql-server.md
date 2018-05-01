@@ -1,15 +1,16 @@
 ---
-title: "Always On 가용성 그룹 개요(SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Always On 가용성 그룹 개요(SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: "121"
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 220fdffb83548c103e42249026bc862e7f66a724
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 이전 버전의 SQL Server와 관련된 내용은 [AlwaysOn 가용성 그룹 개요(SQL Server) ](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)를 참조하세요.
+ > 이전 버전의 SQL Server와 관련된 내용은 [AlwaysOn 가용성 그룹 개요(SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)를 참조하세요.
 
  이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 참조하세요.  
   
@@ -95,11 +96,11 @@ ms.lasthandoff: 01/18/2018
  자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)개념을 소개합니다.  
   
 ##  <a name="FormsOfFailover"></a> 장애 조치(Failover) 유형  
- 주 복제본과 보조 복제본 간의 섹션 컨텍스트 내에서 주 역할과 보조 역할은 *장애 조치(Failover)*라는 프로세스에서 서로 교환할 수 있습니다. 장애 조치(Failover) 중에 대상 보조 복제본은 주 역할로 전환되어 새로운 주 복제본이 됩니다. 새로운 주 복제본은 해당 데이터베이스를 주 데이터베이스로 온라인으로 전환하며 클라이언트 응용 프로그램은 이 데이터베이스에 연결할 수 있습니다. 이전의 주 복제본이 사용 가능한 경우 이 복제본은 보조 역할로 전환되어 보조 복제본이 됩니다. 이전의 주 복제본은 보조 데이터베이스가 되고 데이터 동기화가 다시 시작됩니다.  
+ 주 복제본과 보조 복제본 간의 섹션 컨텍스트 내에서 주 역할과 보조 역할은 *장애 조치(Failover)* 라는 프로세스에서 서로 교환할 수 있습니다. 장애 조치(Failover) 중에 대상 보조 복제본은 주 역할로 전환되어 새로운 주 복제본이 됩니다. 새로운 주 복제본은 해당 데이터베이스를 주 데이터베이스로 온라인으로 전환하며 클라이언트 응용 프로그램은 이 데이터베이스에 연결할 수 있습니다. 이전의 주 복제본이 사용 가능한 경우 이 복제본은 보조 역할로 전환되어 보조 복제본이 됩니다. 이전의 주 복제본은 보조 데이터베이스가 되고 데이터 동기화가 다시 시작됩니다.  
   
  자동, 수동 및 강제(데이터가 손실될 수 있음)라는 세 가지 형태의 장애 조치(Failover)가 있습니다. 지정된 보조 복제본에서 지원되는 장애 조치(Failover)의 형태는 가용성 모드에 따라 다르며 동기-커밋 모드의 경우 다음과 같이 주 복제본 및 대상 보조 복제본의 장애 조치(Failover) 모드에 따라 다릅니다.  
   
--   대상 보조 복제본이 avt1과 현재 동기화되어 있는 경우 동기-커밋 모드는*계획된 수동 장애 조치(Failover)* 및 *자동 장애 조치(Failover)*라는 두 가지 형태의 장애 조치(Failover)를 지원합니다. 이러한 형태의 장애 조치(Failover)에 대한 지원은 장애 조치(Failover) 파트너에서 *장애 조치(Failover) 모드 속성* 의 설정에 따라 다릅니다. 주 복제본 또는 보조 복제본에서 장애 조치(Failover) 모드가 "수동"으로 설정된 경우 해당 보조 복제본에 대해 수동 장애 조치(Failover)만 지원됩니다. 주 복제본과 보조 복제본에서 모두 장애 조치(Failover) 모드가 "자동"으로 설정된 경우 해당 보조 복제본에서는 자동 및 수동 장애 조치(Failover)가 모두 지원됩니다.  
+-   대상 보조 복제본이 avt1과 현재 동기화되어 있는 경우 동기-커밋 모드는*계획된 수동 장애 조치(Failover)* 및 *자동 장애 조치(Failover)* 라는 두 가지 형태의 장애 조치(Failover)를 지원합니다. 이러한 형태의 장애 조치(Failover)에 대한 지원은 장애 조치(Failover) 파트너에서 *장애 조치(Failover) 모드 속성* 의 설정에 따라 다릅니다. 주 복제본 또는 보조 복제본에서 장애 조치(Failover) 모드가 "수동"으로 설정된 경우 해당 보조 복제본에 대해 수동 장애 조치(Failover)만 지원됩니다. 주 복제본과 보조 복제본에서 모두 장애 조치(Failover) 모드가 "자동"으로 설정된 경우 해당 보조 복제본에서는 자동 및 수동 장애 조치(Failover)가 모두 지원됩니다.  
   
     -   **계획된 수동 장애 조치(Failover)** (데이터가 손실되지 않음)  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  동기화된 보조 복제본에 강제 장애 조치(failover) 명령을 실행하면 보조 복제본은 계획된 수동 장애 조치(failover)의 경우와 동일하게 작동하는 것을 참고하세요.  
   
--   비동기-커밋 모드에서 유일한 형태의 장애 조치(failover)는 일반적으로 *강제 장애 조치(failover)*라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)입니다. 강제 장애 조치(failover)는 수동으로만 시작될 수 있기 때문에 수동 장애 조치(failover)의 한 형태로 간주됩니다. 강제 장애 조치(failover)는 재해 복구 옵션입니다. 이것은 대상 보조 복제본이 주 복제본과 동기화되지 않은 경우 가능한 유일한 형태의 장애 조치(failover)입니다.  
+-   비동기-커밋 모드에서 유일한 형태의 장애 조치(failover)는 일반적으로 *강제 장애 조치(failover)* 라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)입니다. 강제 장애 조치(failover)는 수동으로만 시작될 수 있기 때문에 수동 장애 조치(failover)의 한 형태로 간주됩니다. 강제 장애 조치(failover)는 재해 복구 옵션입니다. 이것은 대상 보조 복제본이 주 복제본과 동기화되지 않은 경우 가능한 유일한 형태의 장애 조치(failover)입니다.  
   
  자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)개념을 소개합니다.  
   

@@ -1,16 +1,16 @@
 ---
 title: DATEPART(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +29,24 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.
   
-모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
+모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,7 +58,7 @@ DATEPART ( datepart , date )
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-**정수**가 반환되기 위한 *date*(날짜 또는 시간 값)의 부분입니다. 다음 표에서는 올바른 모든 *datepart*인수를 보여줍니다. 해당하는 사용자 정의 변수는 사용할 수 없습니다.
+**정수**가 반환되기 위한 *date*(날짜 또는 시간 값)의 부분입니다. 다음 표에는 올바른 *datepart* 인수가 모두 나열되어 있습니다. 해당하는 사용자 정의 변수는 사용할 수 없습니다.
   
 |*datepart*|약어|  
 |---|---|
@@ -89,7 +90,7 @@ DATEPART ( datepart , date )
   
 반환 값은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)를 사용하여 설정한 언어 환경과 로그인의 [Configure the default language Server Configuartion Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)에 따라 다릅니다. *date*가 특정 형식에 대한 문자열 리터럴인 경우 반환 값은 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)을 사용하여 지정된 형식에 따라 달라집니다. date가 날짜 또는 시간 데이터 형식의 열 식이면 SET DATEFORMAT은 반환 값에 영향을 주지 않습니다.
   
-다음 표에서는 `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` 문에 대한 모든 *datepart* 인수 및 해당 반환 값을 보여 줍니다. *date* 인수의 데이터 형식이 **datetimeoffset(7)**입니다. **nanosecond***datepart* 반환 값은 소수 자릿수는 9(.123456700)이며 마지막 두 자리는 항상 00입니다.
+다음 표에서는 `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` 문에 대한 모든 *datepart* 인수 및 해당 반환 값을 보여 줍니다. *date* 인수의 데이터 형식이 **datetimeoffset(7)** 입니다. **nanosecond***datepart* 반환 값은 소수 자릿수는 9(.123456700)이며 마지막 두 자리는 항상 00입니다.
   
 |*datepart*|반환 값|  
 |---|---|
@@ -111,7 +112,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week 및 weekday datepart 인수
 *datepart*가 **week**(**wk**, **ww**) 또는 **weekday**(**dw**)인 경우 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)를 사용하여 설정된 값에 따라 달라집니다.
   
-모든 해의 1 월 1은 **week***datepart*에 대한 시작 숫자를 정의합니다. 예를 들어 *xxxx*가 연도인 경우 DATEPART(**wk**, '1월 1일, *xxx*x') = 1입니다.
+모든 해의 1월 1일은 **week***datepart*에 대한 시작 숫자를 정의합니다. 예를 들어 DATEPART (** wk**, 'Jan 1, *xxx*x') = 1이며 여기서 *xxxx*는 연도입니다.
   
 다음 표에서는 각 SET DATEFIRST 인수의 '2007-04-21'에 대한 **week** 및 **weekday***datepart*의 반환 값을 보여줍니다. 2007년 1월 1일은 월요일입니다. 2007년 4월 21일은 토요일입니다. 미국 영어의 경우 SET DATEFIRST 7, 즉 일요일이 기본값입니다.
   

@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>인수  
 *Cert_ID*  
-인증서의 ID입니다. *Cert_ID*는 int입니다.
+int 데이터 형식의 인증서 ID 값입니다.
   
 *Expiry_Date*  
-인증서의 만료 날짜입니다.
+인증서 만료 날짜입니다.
   
 *Start_Date*  
 인증서가 유효하게 되는 날짜입니다.
   
 *Issuer_Name*  
-인증서의 발급자 이름입니다.
+인증서 발급자의 이름입니다.
   
 *Cert_Serial_Number*  
 인증서 일련 번호입니다.
   
 *Subject*  
-인증서의 주체입니다.
+인증서 주체입니다.
   
  *SID*  
 인증서 SID입니다. 또한 이 인증서에 매핑된 로그인이나 사용자의 SID이기도 합니다.
@@ -78,16 +78,16 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 ## <a name="return-types"></a>반환 형식
 속성 지정은 작은따옴표로 묶어야 합니다.
   
-반환 형식은 함수 호출에 지정된 속성에 따라 다릅니다. 모든 반환 값은 **sql_variant**의 반환 형식으로 래핑됩니다.
+반환 형식은 함수 호출에 지정된 속성에 따라 다릅니다. **sql_variant** 반환 형식은 모든 반환 값을 래핑합니다.
 -   *Expiry_Date* 및 *Start_Date*는 **datetime**을 반환합니다.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject* 및 *String_SID*는 **nvarchar**를 반환합니다.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* 및 *Subject*는 모두 **nvarchar**를 반환합니다.  
 -   *SID*는 **varbinary**를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
-인증서 정보는 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에 표시됩니다.
+[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰에서 인증서 정보를 참조합니다.
   
 ## <a name="permissions"></a>사용 권한  
-인증서에 대한 몇 가지 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW DEFINITION 권한이 거부되지 않아야 합니다.
+인증서에 대한 적절한 사용 권한이 필요하며 인증서에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다. 인증서 사용 권한에 대한 자세한 내용은 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) 및[GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
 다음 예에서는 인증서 주체를 반환합니다.
@@ -96,7 +96,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

@@ -1,16 +1,16 @@
 ---
-title: CHOOSE (Transact SQL) | Microsoft Docs
-ms.custom: 
+title: CHOOSE(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 47c1b132f83999e752f9f16392f521323d546663
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>논리 함수-CHOOSE (Transact SQL)
+# <a name="logical-functions---choose-transact-sql"></a>논리 함수 - CHOOSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 값 목록에서 지정된 인덱스에 있는 항목을 반환합니다.  
@@ -46,18 +46,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>인수  
- *인덱스*  
+ *index*  
  index 인수 다음에 나오는 항목 목록에 대한 1부터 시작하는 인덱스를 나타내는 정수 식입니다.  
   
- 지정 된 인덱스 값의 숫자 데이터 형식이 아닌 다른 **int**, 값은 암시적으로 정수로 변환 합니다. 인덱스 값이 값 배열 한계를 초과하면 CHOOSE는 Null을 반환합니다.  
+ **int** 이외의 숫자 데이터 형식으로 된 인덱스 값을 제공할 경우 값이 암시적으로 정수로 변환됩니다. 인덱스 값이 값 배열 한계를 초과하면 CHOOSE는 Null을 반환합니다.  
   
- *val_1... val_n*  
+ *val_1 … val_n*  
  임의의 데이터 형식으로 된 쉼표로 구분된 값 목록입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  함수에 전달된 형식 집합 중에서 우선 순위가 가장 높은 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  CHOOSE는 배열에서 인덱스와 같은 역할을 하며 배열은 index 인수 다음에 나오는 인수로 구성됩니다. index 인수는 다음 중 반환될 값을 결정합니다.  
   
 ## <a name="examples"></a>예  
@@ -129,7 +129,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [IIF &#40; Transact SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

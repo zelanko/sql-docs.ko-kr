@@ -1,9 +1,11 @@
-##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기 
-- [UserVoice-SQL Server를 개선 하기 위해 제안?](https://feedback.azure.com/forums/908035-sql-server)
-- [DBA 스택 Exchange (태그 sql 서버)-SQL Server 질문](https://dba.stackexchange.com/questions/tagged/sql-server)
-    - [오버플로 (태그 sql 서버)을 쌓습니다-역시 SQL 개발에 대 한 일부 답변](http://stackoverflow.com/questions/tagged/sql-server) 
-- [설치 및 업그레이드-MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Data Tools-MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기
+
+- [UserVoice - SQL Server 개선을 위한 제안](https://feedback.azure.com/forums/908035-sql-server)
+- [설치 및 업그레이드 -  MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
+- [SQL Server Data Tools - MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+- [Transaqt SQL - MSDN 포럼](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [DBA Stack Exchange(tag sql-server) - SQL Server 질문](https://dba.stackexchange.com/questions/tagged/sql-server)
+- [스택 오버플로(tag sql-server) - SQL 개발에 관한 몇 가지 질문 포함](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
 - [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/download/details.aspx?id=39299)
 - [비즈니스 사용자에 대한 지원 옵션](https://support.microsoft.com/gp/support-options-for-business)

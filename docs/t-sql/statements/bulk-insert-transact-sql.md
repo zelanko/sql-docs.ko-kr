@@ -1,8 +1,8 @@
 ---
 title: BULK INSERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: ''
+caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b7569b89a9ceffd99e15d11a5ef06c880411a479
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: d6ac507a908d77618aa4171bc222e60cbd051ed0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -125,9 +125,12 @@ BULK INSERT
 > [!NOTE]  
 >  MAXERRORS 옵션은 제약 조건 확인에 적용되지 않습니다.  
   
- CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  데이터 파일에서 데이터의 코드 페이지를 지정합니다. CODEPAGE는 문자 값이 **127**보다 크거나 **32**보다 작은 **char**, **varchar**또는 **text** 열이 데이터에 포함된 경우에만 적합합니다.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE는 Linux에서 지원되는 옵션이 아닙니다.
+
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [서식 파일](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)의 각 열에 대해 데이터 정렬 이름을 지정하는 것이 좋습니다.  
   
@@ -299,8 +302,8 @@ GO
   
 |데이터 형식|영향|  
 |---------------|------------|  
-|SQLCHAR 또는 SQLVARCHAR|데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다. 결과는 서식 파일을 지정하지 않고 DATAFILETYPE **='char'**를 지정하는 것과 같습니다.|  
-|SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다. 결과는 서식 파일을 지정하지 않고 DATAFILETYPE **= 'widechar'**를 지정하는 것과 같습니다.|  
+|SQLCHAR 또는 SQLVARCHAR|데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다. 결과는 서식 파일을 지정하지 않고 DATAFILETYPE **='char'** 를 지정하는 것과 같습니다.|  
+|SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다. 결과는 서식 파일을 지정하지 않고 DATAFILETYPE **= 'widechar'** 를 지정하는 것과 같습니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
@@ -394,7 +397,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n**은 **\r\n)**으로 자동으로 바뀝니다.  
+>  Microsoft Windows에서 텍스트 파일을 처리하는 방법으로 인해 **(\n**은 **\r\n)** 으로 자동으로 바뀝니다.  
   
 ### <a name="d-specifying-a-code-page"></a>4. 코드 페이지 지정  
  다음 예에서는 코드 페이지를 지정하는 방법을 보여 줍니다.  

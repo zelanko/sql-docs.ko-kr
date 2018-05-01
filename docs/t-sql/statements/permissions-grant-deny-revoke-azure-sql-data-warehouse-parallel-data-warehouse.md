@@ -1,30 +1,31 @@
 ---
-title: "GRANT-DENY-REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨어하우스 | Microsoft Docs"
-ms.custom: 
+title: GRANT-DENY-REVOKE Perms-Azure SQL 데이터 및 병렬 데이터 웨어하우스 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 45026cd63aa7461db65cb1927738cc1cc71295e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -264,7 +265,7 @@ REVOKE
   
 -   로그인 또는 사용자가 데이터베이스 또는 개체의 소유자가 되면 로그인 또는 사용자는 항상 데이터베이스 또는 개체에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한은 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 소유자에게 아무런 영향을 미치지 않습니다.  
   
--    **sa**  로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 **sa** 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 **sa** 로그인에 아무런 영향을 미치지 않습니다. **sa** 로그인은 이름을 바꿀 수 없습니다.  
+-   **sa** 로그인은 어플라이언스에 대한 모든 사용 권한을 가집니다. 소유권 사용 권한과 마찬가지로 **sa** 사용 권한도 변경할 수 없으며 명시적 사용 권한으로 표시되지 않습니다. **GRANT**, **DENY** 및 **REVOKE** 문은 **sa** 로그인에 아무런 영향을 미치지 않습니다. **sa** 로그인은 이름을 바꿀 수 없습니다.  
   
 -   **USE** 문은 사용 권한이 필요하지 않습니다. 모든 보안 주체는 모든 데이터베이스에서 **USE** 문을 실행할 수 있습니다.  
   

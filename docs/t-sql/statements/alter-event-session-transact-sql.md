@@ -1,16 +1,16 @@
 ---
 title: ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EVENT SESSION
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 593be40520403888b5ad2584515820f1935bb270
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee51bf09c10af0ec4382debe3276e092cb323db2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ON SERVER
 |*event_field_name*|조건자 원본을 식별하는 이벤트 필드의 이름입니다.|  
 |[event_module_guid].event_package_name.predicate_source_name|전역 조건자 원본의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 조건자 개체가 포함된 패키지입니다.<br />-   *predicate_source_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_source'로 정의됩니다.|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|이벤트와 연결할 조건자 개체의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 조건자 개체가 포함된 패키지입니다.<br />-   *predicate_compare_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_compare'로 정의된 전역 원본입니다.|  
-|DROP EVENT \<event_specifier>|*\<event_specifier>*로 식별되는 이벤트를 삭제합니다. \<event_specifier>는 이벤트 세션에서 유효해야 합니다.|  
+|DROP EVENT \<event_specifier>|*\<event_specifier>* 로 식별되는 이벤트를 삭제합니다. \<event_specifier>는 이벤트 세션에서 유효해야 합니다.|  
 |ADD TARGET \<event_target_specifier>|\<event_target_specifier>로 식별되는 대상을 이벤트 세션과 연결합니다.|
 |[*event_module_guid*].*event_package_name*.*target_name*|이벤트 세션에 있는 대상의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *target_name*은 동작입니다. 동작은 sys.dm_xe_objects 뷰에 object_type 'target'으로 표시됩니다.|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|대상 매개 변수를 설정합니다. 대상 매개 변수는 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *target_name*으로 표시됩니다.<br /><br /> **참고!** 링 버퍼 대상을 사용하는 경우 XML 출력의 데이터 잘림을 피하려면 max_memory 대상 매개 변수를 2048KB로 설정하는 것이 좋습니다. 다양한 대상 유형을 사용할 경우에 대한 자세한 내용은 [SQL Server 확장 이벤트 대상](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.|  

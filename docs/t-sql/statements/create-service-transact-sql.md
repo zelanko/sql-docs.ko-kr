@@ -1,16 +1,16 @@
 ---
 title: CREATE SERVICE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5298494b6c3be0685df771f6d86e11c7b788d002
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 31e92f6c96b5e7cbb3da9f7dbc1b196c63d2dc8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ CREATE SERVICE service_name
 >  *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. CREATE BROKER PRIORITY에서 서비스 이름에 ANY를 지정하면 모든 서비스에 대해 우선 순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
- 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
+ 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
  ON QUEUE [ *schema_name***.** ] *queue_name*  
  서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name*을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
@@ -69,7 +69,7 @@ CREATE SERVICE service_name
  *contract_name*  
  이 서비스를 대상으로 하는 계약을 지정합니다. 서비스 프로그램은 지정된 계약을 사용하여 이 서비스에 대한 대화를 시작합니다. 계약을 지정하지 않으면 이 서비스에서만 대화를 시작할 수 있습니다.  
   
- **[**DEFAULT**]**  
+ **[** DEFAULT **]**  
  서비스가 DEFAULT 계약을 준수하는 대화의 대상이 될 수 있음을 지정합니다. 이 절의 컨텍스트에서 DEFAULT는 키워드가 아니므로 식별자로 구분해야 합니다. DEFAULT 계약을 사용하면 대화 양측이 DEFAULT 메시지 유형의 메시지를 보낼 수 있습니다. DEFAULT 메시지 유형은 유효성 검사 NONE을 사용합니다.  
   
 ## <a name="remarks"></a>Remarks  
@@ -84,7 +84,7 @@ CREATE SERVICE service_name
   
  서비스에 대한 REFERENCES 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다. 서비스에 대한 SEND 권한은 기본적으로 서비스 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
- 서비스는 임시 개체일 수 없습니다. **#**으로 시작되는 서비스 이름을 사용할 수 있지만 영구 개체입니다.  
+ 서비스는 임시 개체일 수 없습니다. **#** 으로 시작되는 서비스 이름을 사용할 수 있지만 영구 개체입니다.  
   
 ## <a name="examples"></a>예  
   

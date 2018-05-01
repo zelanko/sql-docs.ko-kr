@@ -1,16 +1,16 @@
 ---
 title: UPDATE(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,8 +193,8 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  하나 이상의 인수를 사용하는 *udt_column_name*의 비정적 공용 변경자(mutator) 메서드입니다.  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
- *column_name* 값의 섹션이 수정되도록 지정합니다. *expression*은 *column_name*의 *@Offset*에서 시작하는 *@Length* 단위를 대체합니다. **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)**의 열만 이 절을 사용하여 지정될 수 있습니다. *column_name*은 NULL일 수 없으며 테이블 이름 또는 테이블 별칭으로 정규화될 수 없습니다.  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
+ *column_name* 값의 섹션이 수정되도록 지정합니다. *expression*은 *column_name*의 *@Offset*에서 시작하는 *@Length* 단위를 대체합니다. **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 의 열만 이 절을 사용하여 지정될 수 있습니다. *column_name*은 NULL일 수 없으며 테이블 이름 또는 테이블 별칭으로 정규화될 수 없습니다.  
   
  *expression*은 *column_name*에 복사된 값입니다. *expression*은 *column_name* 형식으로 평가되거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다. *expression*을 NULL로 설정하면 *@Length*가 무시되고 *column_name*의 값이 지정된 *@Offset*에서 잘립니다.  
   
@@ -336,21 +337,21 @@ GO
 >  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 응용 프로그램은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
- **.**WRITE(*expression***,** *@Offset***,***@Length*) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.**WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ **.** WRITE(*expression***,** *@Offset ***,***@Length*) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.** WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 UPDATE 문이 다음 중 한 가지 동작을 유발할 때 부분 업데이트를 전체 업데이트로 변환합니다.  
 -   분할된 뷰 또는 테이블의 키 열을 변경합니다.  
 -   하나 이상의 행을 변경하고 고유하지 않은 클러스터형 인덱스의 키를 상수가 아닌 값으로 업데이트합니다.  
   
-**.**WRITE 절을 사용하여 NULL 열을 업데이트하거나 *column_name*의 값을 NULL로 설정할 수 없습니다.  
+**.** WRITE 절을 사용하여 NULL 열을 업데이트하거나 *column_name*의 값을 NULL로 설정할 수 없습니다.  
   
 *@Offset* 및 *@Length*는 **varbinary** 및 **varchar** 데이터 형식의 경우 바이트 단위로 지정되며 **nvarchar** 데이터 형식의 경우 문자 단위로 지정됩니다. 오프셋은 DBCS(더블바이트 문자 집합) 데이터 정렬에 맞게 적절히 계산됩니다.  
   
 최상의 성능을 위해 8,040바이트의 배수인 청크 크기로 데이터를 삽입 또는 업데이트하는 것이 좋습니다.  
   
-**.**WRITE 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.***column_name*의 이전 이미지 또는 **inserted.***column_name*의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
+**.** WRITE 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.***column_name*의 이전 이미지 또는 **inserted.***column_name*의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
   
-다른 문자 또는 binary 데이터 형식에 대해 **.**WRITE의 기능과 동일한 결과를 얻으려면 [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)를 사용합니다.  
+다른 문자 또는 binary 데이터 형식에 대해 **.** WRITE의 기능과 동일한 결과를 얻으려면 [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)를 사용합니다.  
   
 ### <a name="updating-user-defined-type-columns"></a>사용자 정의 형식 열 업데이트  
  다음 중 한 가지 방법으로 사용자 정의 형식 열의 값을 업데이트할 수 있습니다.  
@@ -464,7 +465,7 @@ ID     Value
  UPDATE 문은 항상 수정하는 테이블에 대해 배타적(X) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 배타적 잠금이 설정되면 다른 트랜잭션에서 데이터를 수정할 수 없습니다. 테이블 힌트를 지정해 다른 잠금 방법을 지정하여 UPDATE 문의 기간에 이 기본 동작을 재정의할 수 있지만, 숙련된 개발자 및 데이터베이스 관리자가 최후의 수단으로만 힌트를 사용하시기 바랍니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
- UPDATE 문은 로깅되지만 **.**WRITE 절을 사용하는 큰 값 데이터 형식에 대한 부분 업데이트는 최소 로깅됩니다. 자세한 내용은 이전 섹션 “데이터 형식”에서 "큰 값 데이터 형식 업데이트"를 참조하세요.  
+ UPDATE 문은 로깅되지만 **.** WRITE 절을 사용하는 큰 값 데이터 형식에 대한 부분 업데이트는 최소 로깅됩니다. 자세한 내용은 이전 섹션 “데이터 형식”에서 "큰 값 데이터 형식 업데이트"를 참조하세요.  
   
 ## <a name="security"></a>보안  
   

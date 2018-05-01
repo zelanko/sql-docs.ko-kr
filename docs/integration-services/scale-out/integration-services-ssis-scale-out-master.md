@@ -1,28 +1,28 @@
 ---
-title: "SSIS(SQL Server Integration Services) Scale Out 마스터 | Microsoft Docs"
+title: SSIS(SQL Server Integration Services) Scale Out 마스터 | Microsoft Docs
 ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b04134faf050c47ec11deb4699ed927f6f86027
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 08ed4d094cd179bacc863af943be9bf09ade79b9
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services(SSIS) 규모 확장 마스터
 Scale Out 마스터는 SSISDB 카탈로그 및 Scale Out 마스터 서비스를 통해 Scale Out 시스템을 관리합니다. 
@@ -34,10 +34,10 @@ Scale Out 마스터 서비스는 Scale Out 작업자와의 통신을 담당하�
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>SSISDB의 Scale Out 보기 및 저장 프로시저
 
 ### <a name="views"></a>보기:
--   [[catalog].[master_properties(../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
+-   [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 -   [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
 
-####<a name="stored-procedures"></a>저장 프로시저:
+### <a name="stored-procedures"></a>저장 프로시저:
 
 -   Scale Out 작업자 관리:  
     -   [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)

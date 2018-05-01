@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 시작하기 | Microsoft 문서"
-ms.custom: 
+title: PolyBase 시작하기 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   SQL Server Management Studio(SSMS)에서 PolyBase 개체 관리 방법 이해  
   
--   PolyBase 개체를 사용하는 쿼리 예제  
-  
-## <a name="prerequisites"></a>사전 요구 사항  
- 다음이 포함된 [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)의 인스턴스  
-  
--   Microsoft .NET Framework 4.5  
-  
--   Oracle Java SE RunTime Environment(JRE) 버전 7.51 이상(64 비트) (두 [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 또는 [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) 작동). [Java SE 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/index.html)로 이동합니다. JRE가 없으면 설치 관리자가 실패합니다.   
-  
--   최소 메모리: 4GB  
-  
--   최소 하드 디스크 공간: 2GB    
-
--   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요. SQL Server Developer 및 Express Edition에서는 기본적으로 TCP/IP가 사용되지 않도록 설정되어 있습니다. PolyBase를 설치할 수 있지만 TCP/IP를 사용되도록 설정할 때까지 완전하게 시작되지 못합니다. PolyBase 기능을 사용하려면 수동으로 TCP/IP를 사용되도록 설정해야 합니다. 
-  
- 
- 외부 데이터 원본은 다음 개체 중 하나입니다.  
-  
--   Hadoop 클러스터. 지원되는 버전은 [PolyBase 구성](#supported)을 참조하세요.  
-
--   Azure BLOB 저장소
-
-> [!NOTE]
->   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다. 
+-   PolyBase 개체를 사용하는 쿼리 예제    
 
 ## <a name="install-polybase"></a>PolyBase 설치  
- PolyBase를 설치하지 않은 경우 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.  
+PolyBase를 설치하지 않은 경우 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요. 설치 문서에서는 필수 구성 요소를 설명합니다.
   
 ### <a name="how-to-confirm-installation"></a>설치 확인 방법  
  설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환 합니다. 그렇지 않으면 0이 반환됩니다.  

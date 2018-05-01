@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE(Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -174,10 +175,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
 
 `datetimeoffset` [ ( *n* ) ]  
- *n*에 대한 기본값은 7입니다.  
+ *n*의 기본값은 7입니다.  
   
  `datetime2` [ ( *n* ) ]  
-소수 자릿수 초 숫자를 지정할 수 있다는 점 외에는 `datetime`과 동일합니다. *n*에 대한 기본값은 `7`입니다.  
+소수 자릿수 초 숫자를 지정할 수 있다는 점 외에는 `datetime`과 동일합니다. *n*의 기본값은 `7`입니다.  
   
 |*n* 값|전체 자릿수|소수 자릿수|  
 |--:|--:|-:|  
@@ -200,7 +201,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  그레고리력에 따라 연도, 월 및 일에 대해 최대 10자를 사용하여 날짜를 저장합니다. 저장소 크기는 3바이트입니다. 날짜는 정수로 저장됩니다.  
   
  `time` [ ( *n* ) ]  
- *n*에 대한 기본값은 `7`입니다.  
+ *n*의 기본값은 `7`입니다.  
   
  `float` [ ( *n* ) ]  
  부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n*은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. 따라서 *n*은 전체 자릿수 및 저장소 크기를 결정합니다. *n*이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n*의 기본값은 `53`입니다.  
@@ -223,7 +224,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *전체 자릿수*  
  소수점 왼쪽과 오른쪽에 저장할 수 있는 10진수의 최대 총 수입니다. 전체 자릿수 값은 `1`에서 최대 전체 자릿수인 `38` 사이여야 합니다. 기본 전체 자릿수는 `18`입니다.  
   
- *소수 자릿수*  
+ *scale*  
  소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. *Scale* 값은 `0`에서 *precision* 사이여야 합니다. *precision*이 지정된 경우 *scale*만 지정할 수 있습니다 기본 비율은 `0`이므로 `0` <= *scale* <= *precision*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.  
   
 | 전체 자릿수 | 저장소 크기(바이트)  |  
@@ -258,19 +259,19 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  가변 길이 유니코드 문자 데이터입니다. *n*은 1부터 4000 사이의 값이 될 수 있습니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기(바이트)는 입력된 문자 수의 두 배 + 2바이트입니다. 입력된 데이터의 길이가 0일수도 있습니다.  
   
  `nchar` [ ( *n* ) ]  
- 길이가 *n*자인 고정 길이의 유니코드 문자 데이터입니다. *n*은 `1`과 `4000` 사이의 값이어야 합니다. 저장소 크기는 *n* 바이트의 두 배입니다.  
+ 길이가 *n*자인 고정 길이의 유니코드 문자 데이터입니다. *n*은 `1`과 `4000` 사이의 값이어야 합니다. 저장소 크기는 *n*바이트의 두 배입니다.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.   
- 길이가 *n*바이트인 가변 길이의 비유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
+ 길이가 *n*바이트인 가변 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
   
  `char` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이의 비유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n*바이트입니다. *n*에 대한 기본값은 `1`입니다.  
+ 길이가 *n*바이트인 고정 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n* 바이트입니다. *n*에 대한 기본값은 `1`입니다.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.  
- 가변 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 실제 입력된 데이터의 길이 + 2바이트입니다. *n*에 대한 기본값은 7입니다.  
+ 가변 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 실제 입력된 데이터의 길이 + 2바이트입니다. *n*의 기본값은 7입니다.  
   
  `binary` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n*바이트입니다. *n*에 대한 기본값은 `7`입니다.  
+ 길이가 *n*바이트인 고정 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n* 바이트입니다. *n*의 기본값은 `7`입니다.  
   
  `uniqueidentifier`  
  16바이트 GUID입니다.  

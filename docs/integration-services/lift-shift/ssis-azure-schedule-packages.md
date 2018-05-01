@@ -1,30 +1,31 @@
 ---
-title: "Azure에서 SSIS 패키지 실행 예약 | Microsoft Docs"
-ms.date: 01/16/2018
+title: Azure에서 SSIS 패키지 실행 예약 | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 실행 예약
 다음 예약 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 저장된 패키지의 실행을 예약할 수 있습니다.
 -   [SQL Server 에이전트](#agent)
 -   [SQL Database 탄력적 작업](#elastic)
--   [Azure Data Factory SQL Server 저장 프로시저 작업](#sproc)
+-   [Azure Data Factory SSIS 패키지 실행 작업](#activities)
+-   [Azure Data Factory SQL Server 저장 프로시저 작업](#activities)
 
 ## <a name="agent"></a> SQL Server 에이전트를 사용하여 패키지 예약
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Azure Data Factory SQL Server 저장 프로시저 작업을 사용하여 패키지 예약
+## <a name="activities"></a> Azure Data Factory를 통한 패키지 예약
 
-Azure Data Factory 저장 프로시저 작업을 사용하여 SSIS 패키지를 예약하는 방법에 대한 내용은 다음 문서를 참조하세요.
+Azure Data Factory 작업을 사용하여 SSIS 패키지를 예약하는 방법에 대한 내용은 다음 문서를 참조하세요.
 
--   Data Factory 버전 2의 경우: [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 호출](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Data Factory 버전 2의 경우: [Azure Data Factory에서 SSIS 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   Data Factory 버전 1의 경우: [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 호출](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Data Factory 버전 2의 경우: [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Data Factory 버전 1의 경우: [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.

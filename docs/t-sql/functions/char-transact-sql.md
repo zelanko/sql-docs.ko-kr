@@ -1,16 +1,16 @@
 ---
 title: CHAR(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 46b448a5d464cf0de9f9bf70373103da10f46b4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-**int** ASCII 코드를 문자로 변환합니다.
+이 함수는 **int** ASCII 코드를 문자 값으로 변환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +56,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>인수  
 *integer_expression*  
-0에서 255 사이의 정수입니다. 정수 식이 이 범위에 속하지 않으면 `NULL`이 반환됩니다.
+0에서 255 사이의 정수입니다. `CHAR`은 이 범위 밖의 정수 식에 대해 `NULL` 값을 반환합니다.
   
 ## <a name="return-types"></a>반환 형식
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-문자열에 제어 문자를 삽입하는 데 `CHAR`를 사용할 수 있습니다. 다음 표에서는 자주 사용되는 제어 문자를 보여 줍니다.
+문자열에 제어 문자를 삽입하는 데 `CHAR`를 사용합니다. 이 표에서는 자주 사용되는 제어 문자를 보여 줍니다.
   
 |제어 문자|값|  
 |---|---|
@@ -72,7 +73,7 @@ CHAR ( integer_expression )
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>1. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
-다음 예에서는 `New Moon` 문자열에서 각 문자의 ASCII 값과 문자를 인쇄합니다.
+이 예에서는 `New Moon` 문자열에서 각 문자의 ASCII 값과 문자를 인쇄합니다.
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +114,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>2. CHAR를 사용하여 제어 문자 삽입  
-다음 예에서는 결과가 텍스트로 반환될 때 `CHAR(13)`를 사용하여 직원의 이름과 전자 메일 주소를 별도의 줄에 인쇄합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
+이 예에서는 쿼리가 결과를 텍스트로 반환할 때 `CHAR(13)`를 사용하여 직원의 이름과 이메일 주소를 별도의 줄에 인쇄합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +136,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>3. ASCII 및 CHAR를 사용하여 문자열의 ASCII 값 인쇄  
-다음 예에서는 대상 문자열이 ASCII 문자 집합을 사용함을 전제로 하여 6개 ASCII 문자 숫자에 대한 문자값을 반환합니다.
+이 예에서는 ASCII 문자 집합이라고 가정합니다. 6가지 ASCII 문자 번호 값에 대해 문자 값을 반환합니다.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +153,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>4. CHAR를 사용하여 제어 문자 삽입  
-다음 예에서는 결과가 텍스트로 반환될 때 `CHAR(13)`을 사용하여 데이터베이스에 대한 정보를 별도 라인에 반환합니다.
+이 예에서는 쿼리가 결과를 텍스트로 반환할 때 `CHAR(13)`을 사용하여 데이터베이스에 대한 정보를 다른 줄에 반환합니다.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

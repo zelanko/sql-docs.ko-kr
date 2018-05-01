@@ -2,7 +2,7 @@
 title: TOP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>1. TOP를 사용하여 삭제되는 행 수 제한  
- Top (*n*)로 DELETE 절을 사용 하면 임의로 선택에서 삭제 작업이 수행 됩니다, *n* 행의 수입니다. DELETE 문은 즉, 선택 (*n*) WHERE 절에 정의 된 조건을 충족 하는 행의 수입니다. 다음 예에서는 `20` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `PurchaseOrderDetail`개의 행을 삭제합니다.  
+ DELETE 문과 함께 TOP (*n*) 절을 사용하면 임의로 선택된 *n*개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `20` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `PurchaseOrderDetail`개의 행을 삭제합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>3. TOP를 사용하여 업데이트되는 행 수 제한  
- 다음 예에서는 TOP 절을 사용하여 테이블의 행을 업데이트합니다. Top (*n*) 절을 사용 하 여 업데이트, 하면 정의 되지 않은 수의 행에서 업데이트 작업이 수행 됩니다. UPDATE 문 선택, 즉 (*n*) WHERE 절에 정의 된 조건을 충족 하는 행의 수입니다. 다음 예에서는 한 영업 직원의 고객 10명을 다른 영업 직원에게 지정합니다.  
+ 다음 예에서는 TOP 절을 사용하여 테이블의 행을 업데이트합니다. UPDATE 문과 함께 TOP (*n*) 절을 사용하면 정의되지 않은 수의 행에 대해 업데이트 작업이 수행됩니다. 즉, UPDATE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 한 영업 직원의 고객 10명을 다른 영업 직원에게 지정합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,7 +343,7 @@ FROM DimEmployee ORDER BY LastName;
   
  결과: Brown이라는 3명의 직원이 31행에 대해 동률이기 때문에 33개 행이 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

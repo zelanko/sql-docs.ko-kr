@@ -1,16 +1,16 @@
 ---
 title: DROP INDEX(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 
+caps.latest.revision: 99
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 042a2baab09ef96e1f89b71359e50ce6c933ea8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,7 +142,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Microsoft Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
  \<drop_clustered_index_option>  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
  클러스터형 인덱스 옵션을 제어합니다. 다른 인덱스 유형에는 이 옵션을 사용할 수 없습니다.  
   
@@ -170,7 +171,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 >  병렬 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ONLINE = ON | **OFF**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
@@ -185,7 +186,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 파일 그룹 이름으로 "default"를 지원합니다.  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. 인덱싱된 뷰나 비클러스터형 인덱스에는 MOVE TO를 사용할 수 없습니다. 파티션 구성표 또는 파일 그룹을 지정하지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파티션 구성표 또는 파일 그룹에 위치합니다.  
@@ -193,7 +194,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MOVE TO를 사용하여 클러스터형 인덱스를 삭제하면 기본 테이블의 모든 비클러스터형 인덱스는 다시 작성되지만 원본 파일 그룹 또는 파티션 구성표에는 그대로 남습니다. 기본 테이블을 다른 파일 그룹 또는 파티션 구성표로 옮기면 비클러스터형 인덱스는 기본 테이블의 새 위치(힙)에 일치하게 옮겨지지 않습니다. 따라서 비클러스터형 인덱스가 전에 클러스터형 인덱스에 맞추어 정렬되었다 하더라도 더 이상 힙에 정렬되지는 않습니다. 분할된 인덱스 정렬에 대한 자세한 내용은 [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
   
  *partition_scheme_name* **(** *column_name* **)**  
- **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+ **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
  파티션 구성표를 결과 테이블의 위치로 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 문을 실행하여 이미 생성되어 있어야 합니다. 지정된 위치가 없고 테이블이 분할되어 있다면 해당 테이블은 기존 클러스터형 인덱스와 동일한 파티션에 포함됩니다.  
   
@@ -204,13 +205,13 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  파일 그룹을 결과 테이블의 위치로 지정합니다. 지정된 위치가 없고 테이블이 분할되지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파일 그룹에 포함됩니다. 파일 그룹은 이미 존재해야 합니다.  
   
- **"**default**"**  
+ **"** default **"**  
  결과 테이블의 기본 위치를 지정합니다.  
   
 > [!NOTE]  
->  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"**default**"** 또는 MOVE TO **[**default**]**와 같이 구분되어야 합니다. **"**default**"**를 지정하면 현재 세션에 대한 QUOTED_IDENTIFIER 옵션이 ON으로 설정되어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+>  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션에 대한 QUOTED_IDENTIFIER 옵션이 ON으로 설정되어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 FILESTREAM 테이블을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. FILESTREAM ON은 인덱싱된 뷰나 비클러스터형 인덱스에는 사용할 수 없습니다. 파티션 구성표를 지정하지 않으면 데이터가 클러스터형 인덱스에 대해 정의된 것과 동일한 파티션 구성표에 위치하게 됩니다.  
@@ -223,11 +224,11 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *filestream_filegroup_name*  
  FILESTREAM 데이터의 FILESTREAM 파일 그룹을 지정합니다. 지정된 위치가 없고 테이블이 분할되지 않으면 데이터는 기본 FILESTREAM 파일 그룹에 포함됩니다.  
   
- **"**default**"**  
+ **"** default **"**  
  FILESTREAM 데이터의 기본 위치를 지정합니다.  
   
 > [!NOTE]  
->  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"**default**"** 또는 MOVE TO **[**default**]**와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+>  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
  비클러스터형 인덱스를 삭제하면 인덱스 정의가 메타데이터에서 제거되고 인덱스 데이터 페이지(B-트리)가 데이터베이스 파일에서 제거됩니다. 클러스터형 인덱스가 삭제되면 인덱스 정의가 메타데이터에서 제거되고 클러스터형 인덱스의 리프 수준에 저장된 데이터 행은 정렬되지 않은 결과 테이블인 힙에 저장됩니다. 인덱스가 이전에 점유하고 있던 모든 공간은 반환됩니다. 반환된 공간은 다른 데이터베이스 개체에서 사용할 수 있습니다.  
@@ -236,7 +237,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  인덱싱된 뷰의 클러스터형 인덱스를 삭제하면 해당 뷰의 모든 비클러스터형 인덱스와 자동 생성된 통계가 자동으로 삭제됩니다. 수동으로 생성된 통계는 삭제되지 않습니다.  
   
- *table_or_view_name***.***index_name* 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
+ *table_or_view_name ***.*** index_name* 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
   
  128개 이상의 익스텐트를 가진 인덱스가 삭제되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 트랜잭션이 커밋될 때까지 실제 페이지 할당 취소 및 관련 잠금을 연기합니다.  
   
@@ -266,7 +267,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 클러스터형 인덱스가 OFFLINE으로 삭제되면 클러스터형 인덱스의 상위 수준만 제거되므로 작업이 상당히 빠르게 수행됩니다. 클러스터형 인덱스를 ONLINE으로 삭제하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 1단계와 2단계에서 한 번씩, 총 두 번에 걸쳐 힙을 다시 작성합니다. 데이터 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
 ## <a name="xml-indexes"></a>XML 인덱스  
- XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 *table_or_view_name***.***index_name* 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
+ XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 *table_or_view_name ***.*** index_name* 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   
 ## <a name="spatial-indexes"></a>공간 인덱스  
  공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.***index_name*을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
@@ -302,7 +303,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>3. 온라인으로 클러스터형 인덱스 삭제 및 MAXDOP 옵션 설정  
  다음 예에서는 `ONLINE` 옵션을 `ON`으로 설정하고 `MAXDOP`를 `8`로 설정해 클러스터형 인덱스를 삭제합니다. MOVE TO 옵션을 지정하지 않았기 때문에 결과 테이블은 인덱스와 동일한 파일 그룹에 저장됩니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -403,12 +404,12 @@ GO
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE SPATIAL INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [CREATE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [sys.filegroups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   

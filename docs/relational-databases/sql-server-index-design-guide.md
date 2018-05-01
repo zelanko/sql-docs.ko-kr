@@ -1,8 +1,8 @@
 ---
-title: SQL Server 인덱스 디자인 가이드 | Microsoft 문서
+title: SQL Server 인덱스 아키텍처 및 디자인 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스 디자인 가이드에서는 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
+데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스 디자인 가이드에서는 인덱스 아키텍처에 대한 정보와, 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 모범 사례를 제공합니다.  
     
 이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](../relational-databases/indexes/indexes.md)을 참조하십시오.  
 
@@ -61,7 +62,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
 ##  <a name="Basics"></a> 인덱스 디자인 기본 사항  
  인덱스는 테이블이나 뷰와 관련된 디스크상 또는 메모리 내 구조로서 테이블이나 뷰의 행 검색 속도를 향상시킵니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 디스크상 인덱스의 경우 이러한 키는 SQL Server에서 키 값과 연결된 행을 빠르고 효율적으로 찾을 수 있는 구조(B-트리)에 저장됩니다.  
 
- 인덱스는 행과 열이 있는 테이블로 논리적으로 구성된 데이터를 저장하며, *rowstore*<sup>1</sup>라고 하는 행 단위 데이터 형식에 물리적으로 저장되거나 *[columnstore](#columnstore_index)*라고 하는 열 단위 데이터 형식으로 저장됩니다.  
+ 인덱스는 행과 열이 있는 테이블로 논리적으로 구성된 데이터를 저장하며, *rowstore*<sup>1</sup>라고 하는 행 단위 데이터 형식에 물리적으로 저장되거나 *[columnstore](#columnstore_index)* 라고 하는 열 단위 데이터 형식으로 저장됩니다.  
     
  데이터베이스에 적합한 인덱스를 선택하는 것은 쿼리 속도와 업데이트 비용 간의 균형을 조정해야 하는 복잡한 작업입니다. 좁은 인덱스나 인덱스 키의 열이 적은 인덱스는 디스크 공간과 유지 관리 오버헤드를 덜 요구합니다. 반대로 넓은 인덱스는 더 많은 쿼리를 처리합니다. 가장 효율적인 인덱스를 찾기 위해 여러 디자인을 시험해 봐야 할 수 있습니다. 데이터베이스 스키마나 응용 프로그램에 영향을 주지 않고 인덱스를 추가, 수정 및 삭제할 수 있습니다. 따라서 원하는 대로 여러 인덱스를 시험해 볼 수 있습니다.  
   
@@ -121,7 +122,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 -   클러스터형 인덱스의 인덱스 키 길이는 짧게 유지합니다. 또한 클러스터형 인덱스는 고유하거나 Null이 아닌 열에 만들어지는 이점이 있습니다.  
   
--   **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
+-   **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
   
 -   **xml** 데이터 형식은 XML 인덱스의 키 열만 될 수 있습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요. SQL Server 2012 SP1에서는 선택적 XML 인덱스라고 하는 새로운 유형의 XML 인덱스를 제공합니다. 이 새 인덱스를 통해 SQL Server에서 XML로 저장된 데이터에 대해 쿼리 성능을 향상시킬 수 있어 대량의 XML 데이터 작업의 인덱싱을 훨씬 빠르게 하고 인덱스 자체의 저장 비용을 감소시켜 확장성을 향상할 수 있습니다. 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
@@ -276,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
 
      > [!TIP]
      > 다르게 지정하지 않을 경우 [기본 키](../relational-databases/tables/create-primary-keys.md) 제약 조건을 만들면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 해당 제약 조건을 지원하기 위한 [클러스터형 인덱스](#clustered_index)를 만듭니다.
-     > *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*를 사용하여 기본 키로써 고유성을 적용할 수 있지만 효율적인 클러스터링 키가 아닙니다.
+     > *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* 를 사용하여 기본 키로써 고유성을 적용할 수 있지만 효율적인 클러스터링 키가 아닙니다.
      > 기본 키로 *uniqueidentifier*를 사용할 경우 비클러스터형 인덱스를 만들고 `IDENTITY` 같은 다른 열을 사용하여 클러스터형 인덱스를 만드는 것이 좋습니다.   
   
 -   순차적인 액세스  
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   인덱스 행을 줄이면 한 페이지에 표시됩니다. 이로 인해 I/O가 증가되고 캐시 효율성이 떨어집니다.  
   
--   인덱스를 저장할 디스크 공간이 더 필요합니다. 특히 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**또는 **xml** 데이터 형식을 키가 아닌 인덱스 열로 추가하면 상당히 많은 디스크 공간이 필요할 수 있습니다. 이는 열 값이 인덱스 리프 수준으로 복사되기 때문입니다. 따라서 열 값은 인덱스 및 기본 테이블 모두에 존재합니다.  
+-   인덱스를 저장할 디스크 공간이 더 필요합니다. 특히 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 또는 **xml** 데이터 형식을 키가 아닌 인덱스 열로 추가하면 상당히 많은 디스크 공간이 필요할 수 있습니다. 이는 열 값이 인덱스 리프 수준으로 복사되기 때문입니다. 따라서 열 값은 인덱스 및 기본 테이블 모두에 존재합니다.  
   
 -   인덱스 유지 관리를 위해 기본 테이블 또는 인덱싱된 뷰에 대해 수정, 삽입, 업데이트 또는 삭제하는 시간이 늘어납니다.  
   

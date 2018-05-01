@@ -1,16 +1,16 @@
 ---
 title: time(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 6/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81a0b19c21ac231e49dd6c6dad23de7beaaa6b35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,9 +53,9 @@ ms.lasthandoff: 11/21/2017
 |*소수 자릿수 초*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica의 경우 0에서 3 사이의 정수를 지정할 수 있습니다.<br /><br /> 기본 소수 자릿수는 7(100ns)입니다.|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |범위|00:00:00.0000000부터 23:59:59.9999999까지(Informatica의 경우 00:00:00.000부터 23:59:59.999까지)|  
-|요소 범위|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 0에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n\*은 0에서 9999999 사이에 속하는 0부터 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica의 경우 n\*은 0 ~ 3자릿수로, 0부터 999까지입니다.|  
+|요소 범위|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 0에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n\*은 0에서 9999999 사이에 속하는 0부터 7자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica의 경우 n\*은 0 ~ 3자릿수로, 0부터 999까지입니다.|  
 |문자 길이|최소 8자리(hh:mm:ss)부터 최대 16자리(hh:mm:ss.nnnnnnn)까지. Informatica의 경우 최댓값은 12(hh:mm:ss.nnn)입니다.|  
-|전체 자릿수, 소수 자릿수<br /><br /> (사용자는 소수 자릿수만 지정)|아래 표를 참조하십시오.|  
+|전체 자릿수, 소수 자릿수<br /><br /> (사용자는 소수 자릿수만 지정)|아래 표를 참조하세요.|  
 |저장소 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 5바이트(고정)가 기본값입니다. Informatica의 경우 기본값은 초 소수 부분 자릿수 기본값 1ms를 기준으로 4바이트(고정)입니다.|  
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
 |기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>time(n) 데이터 형식을 다른 Date 및 Time 형식으로 변환  
  이 섹션에서는 **time** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.  
   
- **time(n)**으로 변환되면 시간, 분 및 초가 복사됩니다. 대상 전체 자릿수가 원본 전체 자릿수보다 작으면 초 소수 부분 자릿수가 대상 전체 자릿수에 맞게 반올림됩니다. 다음 예에서는 `time(4)` 값을 `time(3)` 값으로 변환한 결과를 보여 줍니다.  
+ **time(n)** 으로 변환되면 시간, 분 및 초가 복사됩니다. 대상 전체 자릿수가 원본 전체 자릿수보다 작으면 초 소수 부분 자릿수가 대상 전체 자릿수에 맞게 반올림됩니다. 다음 예에서는 `time(4)` 값을 `time(3)` 값으로 변환한 결과를 보여 줍니다.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -129,7 +130,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
  변환이  
                     **date**으로 실행되는 경우는 변환이 실패하고 "피연산자 유형 충돌: 날짜가 시간과 호환되지 않습니다."라는 오류 메시지 206이 나타납니다.  
   
- **datetime**으로 변환되는 경우 시, 분, 초 값이 복사되고 날짜 구성 요소가 '1900-01-01'로 설정됩니다. **time(n)**값에 대한 초 소수 부분 자릿수의 전체 자릿수가 세 자리보다 크면 **datetime** 결과가 잘립니다. 다음 코드에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
+ **datetime**으로 변환되는 경우 시, 분, 초 값이 복사되고 날짜 구성 요소가 '1900-01-01'로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 세 자리보다 크면 **datetime** 결과가 잘립니다. 다음 코드에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -172,7 +173,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- **datetimeoffset(n)**으로 변환되는 경우 날짜는 '1900-01-01'로 복사되고 시간은 복사됩니다. 표준 시간대 오프셋이 +00:00으로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 **datetimeoffset(n)** 값의 전체 자릿수보다 크면 값이 이에 맞게 반올림됩니다. 다음 예에서는 `time(4)` 값을 `datetimeoffset(3)` 형식으로 변환한 결과를 보여 줍니다.  
+ **datetimeoffset(n)** 으로 변환되는 경우 날짜는 '1900-01-01'로 복사되고 시간은 복사됩니다. 표준 시간대 오프셋이 +00:00으로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 **datetimeoffset(n)** 값의 전체 자릿수보다 크면 값이 이에 맞게 반올림됩니다. 다음 예에서는 `time(4)` 값을 `datetimeoffset(3)` 형식으로 변환한 결과를 보여 줍니다.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -189,7 +190,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- **datetime2(n)**로 변환되는 경우 날짜는 '1900-01-01'로 설정되고 시간 구성 요소가 복사되며 표준 시간대 오프셋은 00:00으로 설정됩니다. **datetime2(n)** 값의 초 소수 부분 자릿수의 전체 자릿수가 **time(n)** 값보다 크면 값이 이에 맞게 반올림됩니다.  다음 예에서는 `time(4)` 값을 `datetime2(2)` 값으로 변환한 결과를 보여 줍니다.  
+ **datetime2(n)** 로 변환되는 경우 날짜는 '1900-01-01'로 설정되고 시간 구성 요소가 복사되며 표준 시간대 오프셋은 00:00으로 설정됩니다. **datetime2(n)** 값의 초 소수 부분 자릿수의 전체 자릿수가 **time(n)** 값보다 크면 값이 이에 맞게 반올림됩니다.  다음 예에서는 `time(4)` 값을 `datetime2(2)` 값으로 변환한 결과를 보여 줍니다.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  

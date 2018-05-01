@@ -1,23 +1,26 @@
 ---
-title: SET XACT_ABORT (Transact SQL) | Microsoft Docs
-ms.custom: 
+title: SET XACT_ABORT(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - XACT_ABORT_TSQL
 - XACT_ABORT
 - SET XACT_ABORT
 - SET_XACT_ABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - XACT_ABORT option
@@ -27,23 +30,24 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - SET XACT_ABORT statement
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c12ab84986210f559fe5d3b1a8842b70a885108e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38e51f72122f4c20c566398fca8dc5d5e58f3fa1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
->  **THROW** 문 따른다는 **XACT_ABORT RAISERROR 설정** 는 그렇지 않습니다. 새 응용 프로그램 사용 해야 **THROW** 대신 **RAISERROR**합니다.  
+>  **THROW** 문은 **SET XACT_ABORT**를 인식합니다. **RAISERROR**는 그렇지 않습니다. 새 응용 프로그램에서는 **RAISERROR** 대신 **THROW**를 사용해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 런타임 오류가 발생할 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 현재 트랜잭션을 자동으로 롤백할 것인지 여부를 지정합니다.  
   
@@ -63,7 +67,7 @@ SET XACT_ABORT { ON | OFF }
 SET XACT_ABORT ON   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SET XACT_ABORT 옵션을 ON으로 설정하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 런타임 오류가 발생할 경우 전체 트랜잭션이 종료된 후 롤백됩니다.  
   
  SET XACT_ABORT 옵션을 OFF로 설정하면 일부 경우에 오류를 일으킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 롤백되고 처리 작업을 계속합니다. SET XACT_ABORT 옵션을 OFF로 설정한 경우에도 오류 심각도에 따라 전체 트랜잭션이 롤백될 수도 있습니다. 기본 설정은 OFF입니다.  
@@ -134,8 +138,8 @@ SELECT *
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Throw&#40; Transact SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: CHECKSUM_AGG(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_AGG
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3499cd8fb118d12fdbf450c23f2919fd0003cee7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dc03a1662860aafe1a44e50b40e587f10ebc66ba
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-그룹에서 값의 체크섬을 반환합니다. Null 값은 무시됩니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)이 뒤에 올 수 있습니다.
+이 함수는 그룹에 있는 값의 체크섬을 반환합니다. `CHECKSUM_AGG`는 Null 값을 무시합니다. [OVER 절](../../t-sql/queries/select-over-clause-transact-sql.md)은 `CHECKSUM_AGG` 다음에 올 수 있습니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,28 +48,28 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
   
 ## <a name="arguments"></a>인수  
 **ALL**  
-모든 값에 집계 함수를 적용합니다. 기본값은 ALL입니다.
+모든 값에 집계 함수를 적용합니다. 기본 인수는 ALL입니다.
   
 DISTINCT  
-CHECKSUM_AGG가 고유한 값의 체크섬을 반환하도록 지정합니다.
+`CHECKSUM_AGG`가 고유한 값의 체크섬을 반환하도록 지정합니다.
   
 *expression*  
-정수 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
+정수 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. `CHECKSUM_AGG`에서는 집계 함수 또는 하위 쿼리를 사용할 수 없습니다.
   
 ## <a name="return-types"></a>반환 형식
 모든 *expression* 값의 체크섬을 **int**로 반환합니다.
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM_AGG는 테이블에서 변경 사항을 검색하는 데 사용할 수 있습니다.
+`CHECKSUM_AGG`는 테이블의 변경 내용을 감지할 수 있습니다.
   
-테이블의 행 순서는 CHECKSUM_AGG의 결과에 영향을 주지 않습니다. 또한 CHECKSUM_AGG 함수는 DISTINCT 키워드 및 GROUP BY 절과 함께 사용할 수 있습니다.
+`CHECKSUM_AGG` 결과는 테이블의 행 순서 종속되지 않습니다. 또한 `CHECKSUM_AGG` 함수에서는 DISTINCT 키워드 및 GROUP BY 절의 사용이 허용됩니다.
   
-식 목록에 있는 값을 하나라도 변경하면 일반적으로 목록의 체크섬도 바뀝니다. 그러나 체크섬이 바뀌지 않는 경우도 가끔 있습니다.
+식 목록 값이 바뀌면 목록 체크섬 값 목록도 적절하게 변경됩니다. 그러나 계산된 체크섬은 변경되지 않을 가능성도 일부는 존재합니다.
   
-CHECKSUM_AGG는 다른 집계 함수와 기능이 비슷합니다. 자세한 내용은 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)를 참조하세요.
+`CHECKSUM_AGG`에는 다른 집계 함수와 유사한 기능이 있습니다. 자세한 내용은 [집계 함수&#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
-다음 예에서는 `CHECKSUM_AGG`를 사용하여 `Quantity` 데이터베이스에 있는 `ProductInventory` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에서 변경된 사항을 검색합니다.
+이 예에서는 `CHECKSUM_AGG`를 사용하여 `Quantity` 데이터베이스에 있는 `ProductInventory` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에서 변경된 사항을 검색합니다.
   
 ```sql
 --Get the checksum value before the column value is changed.  

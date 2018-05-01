@@ -1,31 +1,32 @@
 ---
-title: "SQL Server 지침 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 지침 | Microsoft 문서
+ms.custom: ''
 ms.date: 05/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide
 - guide, list
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-caps.latest.revision: 
+caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fba22c6d7a563f9645c1cf63f74b1becfc2869b
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 647626aa8b261dd565b41b88dabffb2878d53c19
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 02/21/2018
 다음 가이드를 사용할 수 있습니다. 이러한 가이드는 해당 가이드에 다른 설명이 없는 한 일반 개념을 다루며 모든 버전의 SQL Server에 적용됩니다. 
 
 [Always On 가용성 그룹 문제 해결 및 모니터링 가이드](http://msdn.microsoft.com/library/dn135328)  
-[인덱스 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  
+[인덱스 아키텍처 및 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  
 [메모리 관리 아키텍처 가이드](../relational-databases/memory-management-architecture-guide.md)  
 [페이지 및 익스텐트 아키텍처 가이드](../relational-databases/pages-and-extents-architecture-guide.md)  
 [마이그레이션 후 유효성 검사 및 최적화 가이드](../relational-databases/post-migration-validation-and-optimization-guide.md)  

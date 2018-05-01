@@ -1,16 +1,16 @@
 ---
-title: "DENY 데이터베이스 범위 자격 증명(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 데이터베이스 범위 자격 증명(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DENY DATABASE SCOPED CREDENTIAL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - DENY statement, database scoped credentials
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-caps.latest.revision: 
+caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adcbe36f2ffabfc63521fe905933295402178977
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: eb3c49a6df30aea37c6bf1e9fa55e7e62051341b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 데이터베이스 범위 자격 증명l(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ DENY permission  [ ,...n ]
  *permission*  
  데이터베이스 범위 자격 증명에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- 데이터베이스 범위 자격 증명에서 **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
  사용 권한을 거부하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

@@ -1,16 +1,16 @@
 ---
 title: ALTER EXTERNAL RESOURCE POOL(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -19,20 +19,20 @@ dev_langs:
 helpviewer_keywords:
 - ALTER EXTERNAL RESOURCE POOL statement
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-caps.latest.revision: 
+caps.latest.revision: 10
 author: jeannt
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb4073a8114e953dc9df87614a63e074ab8c9683
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a0e15c7848fd7c91f48b4ef9e73c134980eaff54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
- [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] **에 적용됩니다**.
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] ~ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 외부 프로세스에서 사용할 수 있는 리소스를 지정하는 Resource Governor 외부 풀을 변경합니다. 
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 
 + SQL Server 2017의 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]에 대해 외부 풀은 이전 버전에 나열된 R 프로세스뿐 아니라 `python.exe`, `BxlServer.exe` 및 이들에 의해 생성된 다른 프로세스를 제어합니다.
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -78,7 +78,7 @@ CPU 경합이 있을 때 이 외부 리소스 풀의 모든 요청이 받을 수
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 외부 리소스 풀을 특정 UPU에 연결합니다. 기본값은 AUTO입니다.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** 외부 리소스 풀을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 CPU_IDs로 식별하는 CPU에 매핑합니다. AFFINITY NUMANODE = **(** \< NUMA_node_range_spec> **)**을 사용하는 경우 외부 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 물리적 CPU에 설정됩니다.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** 외부 리소스 풀을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 CPU_IDs로 식별하는 CPU에 매핑합니다. AFFINITY NUMANODE = **(** \< NUMA_node_range_spec> **)** 을 사용하는 경우 외부 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 물리적 CPU에 설정됩니다.
 
 
 MAX_MEMORY_PERCENT =*value*  

@@ -1,16 +1,16 @@
 ---
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE_CURSOR_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 06c6a0f6915c3120d3aca4d1d1bcfff9995e8c08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
-클러스터형 columnstore 인덱스가 있는 테이블에서 커서 또는 트리거를 사용할 수 없습니다. 비클러스터형 columnstore 인덱스에는 이러한 제한이 적용되지 않습니다. 즉 비클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 및 트리거를 사용할 수 있습니다. 
+클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 또는 트리거를 사용할 수 없습니다. 비클러스터형 columnstore 인덱스에는 이러한 제한이 적용되지 않습니다. 즉 비클러스터형 columnstore 인덱스가 있는 테이블에서는 커서 및 트리거를 사용할 수 있습니다. 
   
 ## <a name="examples"></a>예  
   

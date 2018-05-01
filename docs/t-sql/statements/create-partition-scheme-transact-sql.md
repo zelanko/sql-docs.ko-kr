@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +69,16 @@ AS PARTITION partition_function_name
  파티션 구성표를 사용하는 파티션 함수의 이름입니다. 파티션 함수로 생성한 파티션은 파티션 구성표에서 지정한 파일 그룹으로 매핑됩니다. *partition_function_name*이 데이터베이스에 이미 있어야 합니다. 단일 파티션에는 FILESTREAM 파일 그룹과 FILESTREAM이 아닌 파일 그룹이 둘 다 포함될 수 없습니다.  
   
  ALL  
- 모든 파티션이 *file_group_name*에서 제공한 파일 그룹에 매핑되거나 또는 **[**PRIMARY**]**가 지정된 경우 주 파일 그룹에 매핑되도록 지정합니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다.  
+ 모든 파티션이 *file_group_name*에서 제공한 파일 그룹에 매핑되거나 또는 **[** PRIMARY **]** 가 지정된 경우 주 파일 그룹에 매핑되도록 지정합니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다.  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  *partition_function_name*에 지정된 파티션을 보유할 파일 그룹의 이름을 지정합니다. *file_group_name*은 데이터베이스에 이미 있어야 합니다.  
   
- **[**PRIMARY**]**를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [**,***...n*]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [**,***...n*]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
+ **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [**,***...n*]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [**,***...n*]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
   
  *partition_function_name*이 파일 그룹보다 적은 파티션을 생성한 경우 할당되지 않은 첫 번째 파일 그룹이 NEXT USED로 표시되고 정보 메시지가 NEXT USED 파일 그룹에 표시됩니다. ALL을 지정하면 하나의 *file_group_name*만이 해당 *partition_function_name*의 NEXT USED 속성을 유지합니다. ALTER PARTITION FUNCTION 문에서 파티션을 생성한 경우 NEXT USED 파일 그룹이 추가 파티션을 받습니다. 할당되지 않은 파일 그룹을 추가로 만들어 새 파티션을 보유하려면 ALTER PARTITION SCHEME을 사용하십시오.  
   
- *file_group_name* [ 1**,***...n*]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[**PRIMARY**]**와 같이 구분해야 합니다.  
+ *file_group_name* [ 1 **,***...n*]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[** PRIMARY**]**와 같이 구분해야 합니다.  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 PRIMARY만 사용할 수 있습니다. 아래 예제 E를 참조하세요. 
   
