@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 쿼리 | Microsoft 문서"
-ms.custom: 
+title: PolyBase 쿼리 | Microsoft 문서
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 문서에서는 SQL Server 2016의 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 쿼리의 예제를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다( [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)참조).
+  이 아티클에서는 SQL Server(2016부터)의 [PolyBase](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 쿼리의 예제를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다( [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)참조).
   
 ## <a name="queries"></a>쿼리  
  외부 테이블에 대해 Transact-SQL 문을 실행하거나 BI 도구를 사용하여 외부 테이블을 쿼리합니다.
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 SQL Server에서 Hadoop 또는 Azure Storage로 데이터를 내보냅니다. 
 
-먼저, ‘PolyBase 내보내기 허용’의 `sp_configure` 값을 1로 설정하여 내보내기 기능을 사용하도록 설정합니다. 그런 다음 대상 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 
+먼저, ‘PolyBase 내보내기 허용’의 `sp_configure` 값을 1로 설정하여 내보내기 기능을 사용하도록 설정합니다. 그런 다음 대상 디렉터리를 가리키는 외부 테이블을 만듭니다. 대상 디렉터리가 아직 없는 경우 CREATE EXTERNAL TABLE 문은 대상 디렉터리를 만듭니다. 그런 다음, INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 
 
-INSERT INTO 문은 대상 디렉터리가 없을 경우 새로 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다. 외부 파일의 이름은 *QueryID_date_time_ID.format*입니다. 여기서 *ID* 는 증분 식별자이고 *형식* 은 내보낸된 데이터 형식입니다. 예를 들어 1개의 파일 이름이 QID776_20160130_182739_0.orc일 수 있습니다.
+SELECT 문의 결과는 지정된 파일 형식의 지정된 위치로 내보내집니다. 외부 파일의 이름은 *QueryID_date_time_ID.format*입니다. 여기서 *ID* 는 증분 식별자이고 *형식* 은 내보낸된 데이터 형식입니다. 예를 들어 1개의 파일 이름이 QID776_20160130_182739_0.orc일 수 있습니다.
+
 
 > [!NOTE]
 > PolyBase를 통해 데이터를 Hadoop 또는 Azure Blob Storage로 내보낼 때 CREATE EXTERNAL TABLE 명령에서 정의된 열 이름(메타데이터)이 아닌 데이터만 내보내집니다.

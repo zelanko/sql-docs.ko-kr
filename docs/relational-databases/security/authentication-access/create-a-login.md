@@ -2,7 +2,7 @@
 title: 로그인 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,17 +62,17 @@ ms.lasthandoff: 04/10/2018
   
 1.  개체 탐색기에서 새 로그인을 만들려는 서버 인스턴스의 폴더를 확장합니다.  
   
-2.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **로그인...**을 선택합니다.  
+2.  **보안** 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **로그인...** 을 선택합니다.  
   
 3.  **로그인 - 신규** 대화 상자의 **일반** 페이지에서 **로그인 이름** 상자에 사용자 이름을 입력합니다. 또는 **검색...** 을 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 엽니다.  
   
-     **검색...**을 클릭한 경우:  
+     **검색...** 을 클릭한 경우:  
   
-    1.  **개체 유형 선택**에서 **개체 유형...**을 클릭하여 **개체 유형** 대화 상자를 열고 **기본 제공 보안 주체**, **그룹**및 **사용자**중에서 일부 또는 모두를 선택합니다. **기본 제공 보안 주체** 및 **사용자** 는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
+    1.  **개체 유형 선택**에서 **개체 유형...** 을 클릭하여 **개체 유형** 대화 상자를 열고 **기본 제공 보안 주체**, **그룹**및 **사용자**중에서 일부 또는 모두를 선택합니다. **기본 제공 보안 주체** 및 **사용자** 는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
   
     2.  **찾을 위치 선택**에서 **위치...** 를 클릭하여 **위치** 대화 상자를 열고 사용 가능한 서버 위치 중 하나를 선택합니다. 완료되었으면 **확인**을 클릭합니다.  
   
-    3.  **선택할 개체 이름을 입력하세요(예제)**에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](http://technet.microsoft.com/library/cc771712.aspx)를 참조하세요.  
+    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 찾으려는 사용자 또는 그룹 이름을 입력합니다. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자](http://technet.microsoft.com/library/cc771712.aspx)를 참조하세요.  
   
     4.  고급 검색 옵션을 보려면 **고급...** 을 클릭하세요. 자세한 내용은 [사용자, 컴퓨터 또는 그룹 선택 대화 상자 - 고급 페이지](http://technet.microsoft.com/library/cc733110.aspx)를 참조하세요.  
   
@@ -145,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **지도**  
  아래 나열되는 데이터베이스에 해당 로그인이 액세스하는 것을 허용합니다.  
   
- **데이터베이스**  
+ **데이터베이스 백업**  
  서버의 사용 가능한 데이터베이스를 나열합니다.  
   
  **사용자**  
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/10/2018
  **데이터베이스 역할 멤버 자격:**  *database_name*  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
-### <a name="securables"></a>Securables  
+### <a name="securables"></a>보안 개체  
  **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **상단 표**  
@@ -170,23 +171,23 @@ ms.lasthandoff: 04/10/2018
   
 1.  **검색**을 클릭합니다.  
   
-2.  에 **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택: **특정 개체...** , **유형의 모든 개체...** , 또는 **서버 * * * server_name*합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 **특정 개체...**, **유형의 모든 개체...** 또는 **서버***server_name*옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **참고:** Selecting **서버 * * * server_name* 자동으로 상단 표에 해당 서버의 보안 개체의 모든 채워집니다.  
+    > **참고:** **서버***server_name*을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
-3.  **특정 개체...**를 선택한 경우:  
+3.  **특정 개체...** 를 선택한 경우:  
   
-    1.  **개체 선택** 대화 상자의 **개체 유형 선택**에서 **개체 유형...**을 클릭합니다.  
+    1.  **개체 선택** 대화 상자의 **개체 유형 선택**에서 **개체 유형...** 을 클릭합니다.  
   
     2.  **개체 유형 선택** 대화 상자에서 **끝점**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  **선택할 개체 이름을 입력하세요(예제)**에서 **찾아보기...**를 클릭합니다.  
+    3.  **선택할 개체 이름을 입력하세요(예제)** 에서 **찾아보기...** 를 클릭합니다.  
   
     4.  **개체 찾아보기** 대화 상자에서 **개체 유형 선택** 대화 상자에서 선택한 유형에 대해 사용 가능한 모든 개체를 선택하고 **확인**을 클릭합니다.  
   
     5.  **개체 선택** 대화 상자에서 **확인**을 클릭합니다.  
   
-4.  **선택한 유형의 모든 개체...**의 **개체 유형 선택** 대화 상자에서 **끝점**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  **선택한 유형의 모든 개체...** 의 **개체 유형 선택** 대화 상자에서 **끝점**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **이름**  
  표에 추가된 각 보안 주체 또는 보안 개체의 이름입니다.  
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/10/2018
   
 -   로그인에 사용 권한을 부여하려면 [보안 주체에 사용 권한 부여](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

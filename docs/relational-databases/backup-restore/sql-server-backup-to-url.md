@@ -1,28 +1,28 @@
 ---
-title: "URL에 대한 SQL Server 백업 | Microsoft 문서"
-ms.custom: 
+title: URL에 대한 SQL Server 백업 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 913ba155344eb6265789eb6947967eee42e34470
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 30b14ad1780029ace828a23fb2c39d394269a7a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/18/2018
   
 -   backupset 옵션 **RETAINDAYS** 및 **EXPIREDATE** 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL, ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되여, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL- ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   
@@ -210,7 +210,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
   
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 원하는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
+2.  **데이터베이스**를 확장하고 원하는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
   
 3.  **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **URL** 옵션을 사용할 수 있습니다.  **URL** 옵션은 Microsoft Azure Storage에 백업을 만드는 데 사용됩니다. **추가** 를 클릭하면 **백업 대상 선택** 대화 상자가 열립니다.
    
@@ -244,7 +244,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
 ##  <a name="RestoreSSMS"></a> SQL Server Management Studio를 사용하여 Microsoft Azure Storage에서 복원  
 데이터베이스 복원 태스크에는 **URL** 이 복원할 원본 장치로 포함됩니다.  다음 단계에서는 복원 작업을 사용하여 Microsoft Azure Blob 저장소 서비스에서 복원하는 방법을 설명합니다. 
   
-1.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다. 
+1.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다. 
   
 2.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
   

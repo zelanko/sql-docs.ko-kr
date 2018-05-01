@@ -1,28 +1,28 @@
 ---
-title: "SSIS(SQL Server Integration Services) Scale Out 문제 해결 | Microsoft Docs"
+title: SSIS(SQL Server Integration Services) Scale Out 문제 해결 | Microsoft Docs
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: e3d2408a91ed36358ab3683163dae47ff09b0f1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 
@@ -143,6 +143,8 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     값 데이터: **0(False)**
 
+4.  2단계에서 자체 서명되지 않은 모든 인증서를 정리할 수 없는 경우 3단계에서 레지스트리 키 값을 2로 설정합니다.
+
 ## <a name="http-request-error"></a>HTTP 요청 오류
 
 ### <a name="symptoms"></a>증상
@@ -166,7 +168,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>인증서 저장소를 열 수 없는 경우
 
 ### <a name="symptoms"></a>증상
-Scale Out 관리자에서 Scale Out 작업자를 Scale Out 마스터에 연결할 때 *"컴퓨터에서 인증서 저장소를 열 수 없음"*이라는 오류 메시지와 함께 유효성 검사가 실패했습니다.
+Scale Out 관리자에서 Scale Out 작업자를 Scale Out 마스터에 연결할 때 *"컴퓨터에서 인증서 저장소를 열 수 없음"* 이라는 오류 메시지와 함께 유효성 검사가 실패했습니다.
 
 ### <a name="solution"></a>해결 방법
 
@@ -201,9 +203,9 @@ SSISDB를 호스팅하는 SQL Server 인스턴스에서 SQL Server 인증이 허
 패키지 실행 보고서의 오류 메시지가 문제를 해결하는 데 충분하지 않습니다.
 
 ### <a name="solution"></a>해결 방법
-`WorkerSettings.config`에 구성된 `TasksRootFolder`에서 더 많은 실행 로그를 찾을 수 있습니다. 기본적으로 이 폴더는 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`입니다. *[계정]*은 기본값인 `SSISScaleOutWorker140`을 사용하여 Scale Out 작업자 서비스를 실행하는 계정입니다.
+`WorkerSettings.config`에 구성된 `TasksRootFolder`에서 더 많은 실행 로그를 찾을 수 있습니다. 기본적으로 이 폴더는 `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`입니다. *[계정]* 은 기본값인 `SSISScaleOutWorker140`을 사용하여 Scale Out 작업자 서비스를 실행하는 계정입니다.
 
-*[execution id]*를 사용하여 패키지 실행 로그를 찾으려면 다음 Transact-SQL 명령을 실행하여 *[task id]*를 가져옵니다. 그런 다음 `TasksRootFolder`에서 *[task ID]*가 포함된 하위 폴더 이름을 찾습니다.
+*[execution id]* 를 사용하여 패키지 실행 로그를 찾으려면 다음 Transact-SQL 명령을 실행하여 *[task id]* 를 가져옵니다. 그런 다음 `TasksRootFolder`에서 *[task ID]* 가 포함된 하위 폴더 이름을 찾습니다.
 
 ```sql
 SELECT [TaskId]

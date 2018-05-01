@@ -1,30 +1,30 @@
 ---
-title: "SQL Server 커넥터 유지 관리 &amp; 문제 해결 | Microsoft 문서"
-ms.custom: 
+title: SQL Server 커넥터 유지 관리 &amp; 문제 해결 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 218b9c66b055d92085307bcea5ff722ddc228215
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ ms.lasthandoff: 01/02/2018
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Azure 클래식 포털 [https://manage.windowsazure.com](https://manage.windowsazure.com)로 이동합니다.  
+1. Azure 클래식 포털[https://manage.windowsazure.com](https://manage.windowsazure.com)로 이동합니다.  
 2. 왼쪽 메뉴에서 아래로 스크롤하여 **설정**을 선택합니다.
 3. 현재 사용 중인 Azure 구독을 선택하고 화면 맨 아래에 있는 명령에서 **디렉터리 편집** 을 클릭합니다.
 4. 팝업 창에서 **디렉터리** 드롭다운을 사용하여 원하는 Active Directory를 선택합니다. 이 디렉터리가 기본 디렉터리로 설정됩니다.

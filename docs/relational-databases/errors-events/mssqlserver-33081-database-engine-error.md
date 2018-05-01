@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER_33081 | Microsoft 문서"
-ms.custom: 
+title: MSSQLSERVER_33081 | Microsoft 문서
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33081 (Database Engine error)
 ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb38e41684109a9199ff5ae65e54612bec5eeb4e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364182de23d57db1665b3fc28b8ecb027e1485ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>사용자 동작  
-문제를 검토하려면 MSDN(http://msdn.microsoft.com/)에서 Windows 오류 코드를 검색합니다. 오류를 해결하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS에 문의하여 자세한 정보를 확인합니다. CSS에 문의해야 할 경우 다음 정보를 수집하여 제공하면 지원 부서 직원이 문제를 해결하는 데 도움이 됩니다.  
+문제를 조사하려면 MSDN(http://msdn.microsoft.com/)에서 Windows 오류 코드를 검색합니다. 오류를 해결하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS에 문의하여 자세한 정보를 확인합니다. CSS에 문의해야 할 경우 다음 정보를 수집하여 제공하면 지원 부서 직원이 문제를 해결하는 데 도움이 됩니다.  
   
 -   암호화 공급자를 로드하지 못했다는 오류가 기록된 오류 로그  
   

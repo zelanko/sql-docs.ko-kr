@@ -1,30 +1,32 @@
 ---
-title: "Always On 가용성 그룹에 대한 클러스터된 DTC 만들기 | Microsoft Docs"
-ms.custom: 
+title: Always On 가용성 그룹에 대한 클러스터된 DTC 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c766dd57d08e1673c4fb3231a6a7ba86af26886f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다. 전체 구성을 완료하는 데 최대 한 시간이 걸릴 수 있습니다. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다. 전체 구성을 완료하는 데 최대 한 시간이 걸릴 수 있습니다. 
 
 이 연습에서는 클러스터된 DTC 리소스와 SQL Server 가용성 그룹을 만들어 [SQL Server 가용성 그룹에 대한 DTC 클러스터링](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)의 요구 사항에 맞춥니다.
 
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/18/2018
   - DTC IP 리소스: `DTCIP1`
 
 ## <a name="1-check-operating-system"></a>1. 운영 체제 확인
-지원되는 분산 트랜잭션의 경우 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 Windows Server 2016 또는 Windows Server 2012 R2에서 실행되어야 합니다.  Windows Server 2012 R2의 경우 [https://support.microsoft.com/ko-kr/kb/3090973](https://support.microsoft.com/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  이 스크립트는 운영 체제 버전 및 3090973 핫픽스를 설치해야 하는지 여부를 확인합니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
+지원되는 분산 트랜잭션의 경우 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 Windows Server 2016 또는 Windows Server 2012 R2에서 실행되어야 합니다.  Windows Server 2012 R2의 경우 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)에서 제공되는 KB3090973의 업데이트를 설치해야 합니다.  이 스크립트는 운영 체제 버전 및 3090973 핫픽스를 설치해야 하는지 여부를 확인합니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
 
 ```powershell  
 # A few OS checks

@@ -1,16 +1,16 @@
 ---
-title: "decimal 및 numeric(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: decimal 및 numeric(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decimal
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - numeric data type
 - numeric data type, about numeric data type
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 614025c21f0f021a4b1ad3a193afec8f5115b845
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 629e74bfffef65546c15ea6aa4c3404bbdafa972
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="arguments"></a>인수  
 **decimal**[ **(***p*[ **,***s*] **)**] 및 **numeric**[ **(***p*[ **,***s*] **)**]  
-고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(***p*, *s***)**입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
+고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(***p*,*s***)** 입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
   
 p(전체 자릿수)  
 소수점 왼쪽과 오른쪽에 저장할 최대 전체 자릿수입니다. 전체 자릿수 값은 1에서 최대 전체 자릿수인 38 사이여야 합니다. 기본 전체 자릿수는 18입니다.
@@ -65,7 +66,7 @@ p(전체 자릿수)
 >  Informatica(SQL Server PDW Informatica Connector를 통해 연결)는 지정된 최대 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>decimal 및 numeric 데이터 변환
-**decimal** 및 **numeric** 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 자릿수와 소수 자릿수의 각 특정 조합을 다른 데이터 형식으로 간주합니다. 예를 들어 **decimal(5,5)** 및 **decimal(5,0)**은 다른 데이터 형식으로 간주됩니다.
+**decimal** 및 **numeric** 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 자릿수와 소수 자릿수의 각 특정 조합을 다른 데이터 형식으로 간주합니다. 예를 들어 **decimal(5,5)** 및 **decimal(5,0)** 은 다른 데이터 형식으로 간주됩니다.
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 소수점이 있는 상수는 필요한 최소 전체 자릿수 및 소수 자릿수를 사용하여 **numeric** 데이터 값으로 자동 변환됩니다. 예를 들어 상수 12.345는 전체 자릿수가 5이고 소수 자릿수가 3인 **numeric** 값으로 변환됩니다.
   

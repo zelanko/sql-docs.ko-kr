@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트 | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -85,7 +85,7 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
 
-이때 SSIS용 **타사 구성 요소**(Attunity 및 SAP BI 구성 요소에 의한 Oracle 및 Teradata 구성 요소와 같은 Microsoft의 타사 구성 요소 포함)는 설치하거나 사용할 수 없습니다.
+추가 구성 요소를 설치할 수도 있습니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)를 참조하세요.
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 Azure에서 SSISDB에 프로젝트를 배포하는 경우 패키지 배포 모델이 아닌 **프로젝트 배포 모델**을 사용해야 합니다.

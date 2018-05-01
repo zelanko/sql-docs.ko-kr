@@ -1,30 +1,31 @@
 ---
-title: "Microsoft Azure의 SQL Server 데이터 파일 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Azure의 SQL Server 데이터 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a66db6640daa6df0ffb3b285f9f92e8b1a340711
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "Azure의 데이터 파일")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
  Microsoft Azure에서 SQL Server 데이터 파일을 통해 Microsoft Azure Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Microsoft Azure BLOB 저장소에서 사용자의 데이터에 대한 전용 저장소 위치를 갖는 Microsoft Azure의 가상 컴퓨터에서 데이터베이스를 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 Microsoft Azure Storage를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 저장소 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.
  
@@ -132,7 +133,7 @@ ON
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
- SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 https://teststorageaccnt.blob.core.windows.net/testcontainer/와 같이 저장소 컨테이너의 URL 경로를 입력할 수 있습니다.
+ SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 저장소 컨테이너의 URL 경로를 입력합니다(예: >https://teststorageaccnt.blob.core.windows.net/testcontainer/).
  
  여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   

@@ -1,25 +1,25 @@
 ---
-title: "SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
@@ -33,7 +33,11 @@ ms.lasthandoff: 01/09/2018
 
 ## <a name="requirements"></a>요구 사항
 
-**SharePoint Server 버전 지원:**  
+> [!IMPORTANT]
+> 현재 Reporting Services SharePoint 통합 모드를 이미 구성한 경우에는 이 웹 파트를 설치할 수 없습니다.
+>
+
+**SharePoint Server 버전 지원:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -81,7 +85,7 @@ ms.lasthandoff: 01/09/2018
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>*을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>* 을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
 
 3. **사이트 컬렉션 관리**에서 **사이트 컬렉션 기능**을 선택합니다.
 
@@ -121,7 +125,7 @@ SharePoint 중앙 관리에서 솔루션 취소 기능을 제공하기는 하지
 
     ![기어 아이콘에서 사이트 설정.](media/sharepoint-site-settings.png)
 
-    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>*을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
+    기본적으로 SharePoint 웹 응용 프로그램은 포트 80을 통해 액세스됩니다. 즉, *http://<computer name>* 을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.
 
 2. **웹 디자이너 갤러리** 아래에서 **웹 파트**를 선택합니다.
 
@@ -148,6 +152,26 @@ SharePoint 중앙 관리에서 솔루션 취소 기능을 제공하기는 하지
 * 러시아어(ru)
 * 중국어(간체 - zh-HANS 및 zh-CHS)
 * 중국어(번체 - zh-HANT 및 zh-CHT)
+
+## <a name="troubleshoot"></a>문제 해결
+
+* SharePoint 통합 모드가 구성된 경우, SSRS를 제거할 때 오류가 발생합니다.
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService는 [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService로 캐스팅할 수 없습니다. A 형식은 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 위치의 ‘기본값’ 컨텍스트에 있는 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'에서 발생합니다. B 형식은 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' 위치의 ‘기본값’ 컨텍스트에 있는 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'에서 발생합니다.
+    
+    해결 방법:
+    1. 보고서 뷰어 웹 파트 제거
+    2. SSRS 제거
+    3. 보고서 뷰어 웹 파트 다시 설치
+
+* SharePoint 통합 모드가 구성된 경우, SharePoint를 업그레이드하려고 할 때 오류가 발생합니다.
+
+    파일 또는 어셈블리 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 해당 종속성 중 하나를 로드할 수 없습니다. 시스템에서 지정한 파일을 찾을 수 없습니다. 00000000-0000-0000-0000-000000000000
+    
+    해결 방법:
+    1. 보고서 뷰어 웹 파트 제거
+    2. SSRS 제거
+    3. 보고서 뷰어 웹 파트 다시 설치
 
 ## <a name="next-steps"></a>다음 단계
 

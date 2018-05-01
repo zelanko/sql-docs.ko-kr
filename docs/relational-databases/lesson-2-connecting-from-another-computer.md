@@ -1,30 +1,30 @@
 ---
-title: "2단원: 다른 컴퓨터에서 연결 | Microsoft 문서"
-ms.custom: 
+title: '2단원: 다른 컴퓨터에서 연결 | Microsoft 문서'
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 465d8d500030e49b7b3e462d6da3be256d82ca3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/09/2018
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 ***<InstanceName>*에 대한 프로토콜**을 클릭합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 ***<InstanceName>* 에 대한 프로토콜**을 클릭합니다.  
   
     기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 는 설치하는 동안 이름을 변경하지 않는 한 **SQLEXPRESS**로 설치됩니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/09/2018
 보안을 강화하기 위해 Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]및 Windows 7에서는 모두 Windows 방화벽을 설정합니다. 다른 컴퓨터에서 이 인스턴스에 연결하려면 방화벽에서 통신 포트를 열어야 합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스는 포트 1433에서 수신하므로 고정 포트를 구성하지 않아도 됩니다. 그러나 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 을 포함한 명명된 인스턴스는 동적 포트에서 수신합니다. 방화벽에서 포트를 열려면 먼저 고정 포트 또는 정적 포트로 지정된 특정 포트에서 수신하도록 [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 구성해야 합니다. 이렇게 하지 않으면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 시작할 때마다 다른 포트에서 수신할 수 있습니다. 방화벽 및 기본 Windows 방화벽 설정에 대한 자세한 내용과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!NOTE]  
-> 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 이 목록은 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에서 볼 수 있습니다. 포트 번호는 49152에서 65535 사이의 숫자에서 할당해야 합니다.  
+> 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다. 포트 번호는 49152에서 65535 사이의 숫자에서 할당해야 합니다.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server가 특정 포트에서 수신하도록 구성  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  **서버에 연결** 대화 상자의 **서버 유형** 상자에서 **데이터베이스 엔진** 을 선택합니다.  
   
-3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:***<computer_name>*을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:***<computer_name>***,49172**를 입력합니다.  
+3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:***<computer_name>* 을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:***<computer_name>***,49172**를 입력합니다.  
   
     > [!NOTE]  
     > **서버 이름** 상자에서 **tcp:** 를 생략하면 클라이언트에서 설정된 모든 프로토콜을 클라이언트 구성에 지정된 순서대로 시도합니다.  

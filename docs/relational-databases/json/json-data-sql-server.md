@@ -2,10 +2,10 @@
 title: SQL Server에서 JSON 데이터 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: ''
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
@@ -15,16 +15,17 @@ helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 47
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3da48d5cad4e246ba57a162e7693ae4952b2c995
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON 텍스트에서 값을 추출하여 쿼리에서 사용
 데이터베이스 테이블에 저장된 JSON 텍스트가 있는 경우 다음과 같은 기본 제공 함수를 사용하여 JSON 텍스트의 값을 읽거나 수정할 수 있습니다.  
-  
--   **JSON_VALUE** JSON 문자열에서 스칼라 값을 추출합니다.
--   **JSON_QUERY** 는 JSON 문자열에서 개체 또는 배열을 추출합니다.
--   **ISJSON** 은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.
--   **JSON_MODIFY**는 JSON 문자열에 있는 값을 변경합니다.
+    
+-   [ISJSON(Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)은 JSON 문자열에서 스칼라 값을 추출합니다.
+-   [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)는 JSON 문자열에서 개체 또는 배열을 추출합니다.
+-   [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)는 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.
+-   [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)는 JSON 문자열에 있는 값을 변경합니다.
 
 **예제**
   
@@ -93,13 +94,19 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 자세한 내용은 [기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md), [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 및 [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)를 참조하세요.  
   
 ### <a name="change-json-values"></a>JSON 값 변경
-JSON 텍스트의 일부를 수정해야 하는 경우 **JSON_MODIFY** 함수를 사용하여 JSON 문자열에서 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환할 수 있습니다. 다음 예제에서는 JSON이 포함된 변수에서 속성 값을 업데이트합니다.  
+JSON 텍스트의 일부를 수정해야 하는 경우 [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 함수를 사용하여 JSON 문자열에서 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환할 수 있습니다. 다음 예제에서는 JSON이 포함된 변수에서 속성 값을 업데이트합니다.  
   
 ```sql  
-DECLARE @jsonInfo NVARCHAR(MAX)
-
-SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
+DECLARE @json NVARCHAR(MAX);
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
+SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SELECT modifiedJson = @json;
 ```  
+**결과**  
+
+|modifiedJson|  
+|--------|  
+|{"info":{"address":[{"town":"Belgrade"},{"town":"London"},{"town":"Madrid"}]}|  
   
 ### <a name="convert-json-collections-to-a-rowset"></a>JSON 컬렉션을 행 집합으로 변환
 SQL Server의 JSON 쿼리에는 사용자 지정 쿼리 언어가 필요 없습니다. JSON 데이터를 쿼리하려면 표준 T-SQL을 사용하면 됩니다. JSON 데이터에 대한 쿼리 또는 보고서를 만들어야 하는 경우 **OPENJSON** 행 집합 함수를 호출하여 JSON 데이터를 행 및 열로 쉽게 변환할 수 있습니다. 자세한 내용은 [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)을 참조하세요.  
@@ -137,7 +144,41 @@ FROM OPENJSON(@json)
 - 경로에서 선택적 **strict** 접두사는 지정된 속성의 값이 JSON 텍스트에 있어야 하도록 지정합니다.
 
 자세한 내용은 [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md) 및 [OPENJSON(Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)을 참조하세요.  
+
+JSON 문서에는 표준 관계형 열에 직접 매핑할 수 없는 하위 요소 및 계층적 데이터가 있을 수 있습니다. 이 경우 하위 배열과 부모 엔터티를 조인하여 JSON 계층 구조를 평면화할 수 있습니다.
+
+다음 예제에서 배열의 두 번째 개체에는 사람 기술을 나타내는 하위 배열이 있습니다. 모든 하위 개체는 추가 `OPENJSON` 함수 호출을 사용하여 구문 분석할 수 있습니다. 
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json =  
+N'[  
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
+ ]'  
+   
+SELECT *  
+FROM OPENJSON(@json)  
+  WITH (id int 'strict $.id',  
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json) 
+    outer apply openjson( a.skills ) 
+                     with ( skill nvarchar(8) '$' ) as b
+```  
+**기술** 배열은 첫 번째 `OPENJSON`에서 원래 JSON 텍스트 조각으로 반환되고 `APPLY` 연산자를 사용하여 다른 `OPENJSON` 함수로 전달됩니다. 두 번째 `OPENJSON` 함수는 JSON 배열을 구분 분석하고 문자열 값을 첫 번째 `OPENJSON`의 결과와 조인될 단일 열 행 집합으로 반환합니다. 이 쿼리의 결과는 다음 표에 표시됩니다.
+
+**결과**  
   
+|id|firstName|lastName|age|dateOfBirth|skill|  
+|--------|---------------|--------------|---------|-----------------|----------|  
+|2|John|Smith|25|||  
+|5|Jane|Smith||2005-11-04T12:00:00|SQL| 
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON`은 하위 배열과 첫 번째 수준 엔터티를 조인하고, 결과 집합을 평면화합니다. JOIN으로 인해 모든 기술에 대해 두 번째 행이 반복됩니다.
+
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>SQL Server 데이터를 JSON으로 변환하거나 JSON 내보내기
 **SELECT** 문에 **FOR JSON** 절을 추가하여 SQL Server 데이터 또는 SQL 쿼리 결과를 JSON으로 서식 지정합니다. **FOR JSON**을 사용하여 JSON 출력의 형식을 클라이언트 응용 프로그램에서 SQL Server로 위임합니다. 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
@@ -208,12 +249,15 @@ JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>SQL Server에서 JSON 데이터 저장 및 인덱싱
 
+JSON은 텍스트 형식이므로 JSON 문서는 SQL Database의 `NVARCHAR` 열에 저장될 수 있습니다. 모든 SQL Server 하위 시스템에서 `NVARCHAR` 형식이 지원되므로 **CLUSTERED COLUMNSTORE** 인덱스, **메모리 최적화** 테이블 또는 OPENROWSET 또는 Polybase를 사용하여 읽을 수 있는 외부 파일이 있는 테이블에 JSON 문서를 넣을 수 있습니다.
+
 SQL Server에서 JSON 데이터를 저장, 인덱싱 및 최적화하는 옵션에 대해 자세히 알아보려면 다음 문서를 참조하세요.
 -   [SQL Server 또는 SQL Database에 JSON 문서 저장](store-json-documents-in-sql-tables.md)
 -   [JSON 데이터 인덱싱](index-json-data.md)
 -   [메모리 내 OLTP를 통해 JSON 처리 최적화](optimize-json-processing-with-in-memory-oltp.md)
 
 ### <a name="load-json-files-into-sql-server"></a>SQL Server로 JSON 파일 로드  
+
 표준 JSON 또는 행으로 구분된 JSON으로 파일에 저장된 정보의 형식을 지정할 수 있습니다. SQL Server는 JSON 파일의 콘텐츠를 가져와 **OPENJSON** 또는 **JSON_VALUE** 함수를 사용하여 구문 분석하고 테이블에 로드할 수 있습니다.  
   
 -   JSON 문서가 로컬 파일, 공유 네트워크 드라이브 또는 SQL Server에서 액세스할 수 있는 Azure Files 위치에 저장된 경우 대량 가져오기를 사용하여 JSON 데이터를 SQL Server로 로드할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [OPENROWSET를 사용하여 SQL Server로 JSON 파일 가져오기(BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)를 참조하세요.  

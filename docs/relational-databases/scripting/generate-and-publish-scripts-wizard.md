@@ -1,16 +1,16 @@
 ---
-title: "스크립트 생성 및 게시 마법사 | Microsoft 문서"
-ms.custom: 
+title: 스크립트 생성 및 게시 마법사 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
@@ -45,23 +45,25 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2396034590be1d904988265a29a4f223f96eaad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **스크립트 생성 및 게시 마법사**를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
-  
-1.  **시작하기 전 주의 사항:**  [호스티드 서비스에 게시](#PubHostSvc), [사용 권한](#Permissions)  
-  
-2.  **스크립트를 생성하거나 게시하려면 다음을 사용합니다.**  [스크립트 생성 및 게시 마법사](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
+
+스크립트 생성 및 게시 마법사 사용에 대한 자세한 자습서는 [자습서: 스크립트 생성 마법사](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)를 참조하세요.
+
+
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  원본 및 대상 데이터베이스는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상을 실행하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 있을 수 있습니다.  
@@ -82,25 +84,19 @@ ms.lasthandoff: 01/24/2018
 1.  **개체 탐색기**에서 스크립팅할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
   
 2.  **태스크**를 가리킨 다음 **스크립트 생성**을 클릭합니다.  
+
+    ![스크립트 생성 마법사](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  마법사 대화 상자를 완료합니다.  
   
     -   [소개 페이지](#Introduction)  
-  
-    -   [개체 선택 페이지](#ChooseObjects)  
-  
+    -   [개체 선택 페이지](#ChooseObjects)   
     -   [스크립팅 옵션 설정 페이지](#SetScriptOpt)  
-  
     -   [고급 스크립팅 옵션 페이지](#AdvScriptOpt)  
-  
-    -   [공급자 관리 페이지](#MgProviders)  
-  
+    -   [공급자 관리 페이지](#MgProviders)   
     -   [고급 게시 옵션 페이지](#AdvPubOpts)  
-  
     -   [공급자 구성 페이지](#ProvConfig)  
-  
-    -   [요약 페이지](#Summary)  
-  
+    -   [요약 페이지](#Summary)   
     -   [스크립트 저장 또는 게시 페이지](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> 소개 페이지  
@@ -108,14 +104,14 @@ ms.lasthandoff: 01/24/2018
   
  **이 페이지를 다시 표시 안 함** - 다음에 **스크립트 생성 및 게시 마법사**를 시작할 때 이 페이지를 표시하지 않습니다.  
   
- **다음 >** - **방법 선택** 페이지로 진행합니다.  
-  
- **취소** - 데이터베이스에서 스크립트를 생성하거나 게시하지 않고 마법사를 종료합니다.  
+  ![소개 페이지](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> 개체 선택 페이지  
  이 페이지를 사용하여 이 마법사에서 생성된 스크립트에 포함할 개체를 선택할 수 있습니다. 다음 마법사 페이지에서는 이러한 스크립트를 사용자가 선택한 위치에 저장하거나, 스크립트를 사용하여 데이터베이스 개체를 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)가 설치되어 있는 원격 웹 호스팅 공급자에 게시할 수 있습니다.  
   
- **전체 데이터베이스 스크립팅 옵션** - 데이터베이스의 모든 개체에 대한 스크립트를 생성하고 데이터베이스 자체에 대한 스크립트를 포함하려면 클릭합니다.  
+ **전체 데이터베이스 스크립팅 옵션** - 데이터베이스의 모든 개체에 대한 스크립트를 생성하고 데이터베이스 자체에 대한 스크립트를 포함하려면 클릭합니다. 
+
+   ![모든 DB 스크립트](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **특정 데이터베이스 개체 선택** - 데이터베이스에서 선택한 특정 개체에 대해서만 스크립트를 생성하도록 마법사를 제한하려면 클릭합니다.  
   
@@ -124,6 +120,8 @@ ms.lasthandoff: 01/24/2018
 -   **모두 선택** - 사용 가능한 확인란을 모두 선택합니다.  
   
 -   **모두 선택 취소** - 모든 확인란을 선택 취소합니다. 작업을 계속하려면 데이터베이스 개체를 적어도 하나 이상 선택해야 합니다.  
+
+   ![특정 스크립트](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> 스크립팅 옵션 설정 페이지  
  이 페이지를 사용하여 마법사에서 스크립트를 사용자가 선택한 위치에 저장할지, 아니면 스크립트를 사용하여 데이터베이스 개체를 원격 웹 호스팅 공급자에 게시할지를 지정할 수 있습니다. 게시하려면 Database Publishing Services 웹 서비스를 사용하여 설치된 웹 서비스에 액세스할 수 있어야 합니다.  
@@ -131,8 +129,8 @@ ms.lasthandoff: 01/24/2018
  **옵션** - 마법사에서 사용자가 선택한 위치에 스크립트를 저장하려면 **특정 위치에 스크립트 저장**을 선택합니다. 나중에 데이터베이스 엔진 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]를 대상으로 스크립트를 실행할 수 있습니다. 데이터베이스 개체를 원격 웹 호스팅 공급자에 게시하려면 **웹 서비스에 게시**를 선택합니다.  
   
  **특정 위치에 스크립트 저장** - 하나 이상의 Transact-SQL 스크립트 파일을 지정한 위치에 저장합니다.  
-  
--   **고급** - 스크립트 생성을 위한 고급 옵션을 선택할 수 있는 **고급 스크립팅 옵션** 대화 상자를 표시합니다.  
+
+  ![저장](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **파일에 저장** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추(**…**)를 클릭합니다. 이름이 같은 파일이 이미 있을 경우 해당 파일을 바꾸려면 **기존 파일 덮어쓰기** 확인란을 선택합니다. 스크립트 생성 방식을 지정하려면 **단일 파일** 또는 **개체당 단일 파일** 을 클릭합니다. 또한 스크립트에 사용할 텍스트 유형을 지정하려면 **유니코드 텍스트** 또는 **ANSI 텍스트** 를 클릭합니다.  
   
@@ -152,6 +150,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvScriptOpt"></a> 고급 스크립팅 옵션 페이지  
  이 페이지를 사용하여 이 마법사에서 스크립트를 생성하는 방법을 지정할 수 있습니다. 여기에서는 다양한 옵션을 사용할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Database engine type **에 지정된 SQL Server 또는**버전에서 지원되지 않는 옵션은 회색으로 나타납니다.  
+
+![고급 옵션](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **옵션** - 각 옵션의 오른쪽에 있는 사용 가능한 설정 목록에서 값을 선택하여 고급 옵션을 지정합니다.  
   
@@ -240,6 +240,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvPubOpts"></a> 고급 게시 옵션 페이지  
  이 페이지를 사용하여 이 마법사에서 데이터베이스를 게시하는 방법을 지정할 수 있습니다. 여기에서는 다양한 옵션을 사용할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Database engine type **에 지정된 SQL Server 또는**버전에서 지원되지 않는 옵션은 회색으로 나타납니다.  
+
+  ![고급 게시](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **옵션** - 각 옵션의 오른쪽에 있는 사용 가능한 설정 목록에서 값을 선택하여 고급 옵션을 지정합니다.  
   
@@ -361,7 +363,7 @@ ms.lasthandoff: 01/24/2018
 위에 표시된 대로 기본 스크립팅 옵션으로 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 를 설정하면 이러한 지침은 무시될 수 있습니다. 그러나 다른 기본 스크립팅 옵션을 선택하면 오류가 발생할 수 있습니다. 오류를 방지하려면 다음 단계에 따라 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 대한 스크립트를 생성 및 게시합니다.  
 
 1. SQL 데이터 웨어하우스 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
-2. **스크립트 생성...**을 선택합니다.  
+2. **스크립트 생성...** 을 선택합니다.  
 3. 스크립팅하려는 개체를 선택합니다.  
 4. **스크립팅 옵션**에서 **고급**을 클릭합니다. **일반** 설정에서 다음을 수행합니다.  
     1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  

@@ -1,16 +1,16 @@
 ---
-title: "float 및 real(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: float 및 real(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - float
@@ -25,26 +25,27 @@ helpviewer_keywords:
 - floating point data [SQL Server]
 - real data type
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f955e5d367a17602959f5294f9fb5d393b186b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 87b6b785af338745f3c02cb1d6d0b77efb01240c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. **real**의 ISO 동의어는 **float(24)**입니다.
+부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. **real**의 ISO 동의어는 **float(24)** 입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
-**float** [ **(***n***)** ] 여기서 *n*은 과학적 표기법으로 **float** 숫자의 가수를 저장하는데 사용되는 비트 수로서, 전체 자릿수 및 저장소 크기를 결정합니다. *n*이 지정된 경우 그 값은 **1**에서 **53** 사이여야 합니다. *n*의 기본값은 **53**입니다.
+**float** [ **(***n***)** ] 여기서 *n*은 과학적 표기법으로 **float** 숫자의 가수를 저장하는 데 사용되는 비트 수로서, 전체 자릿수 및 저장소 크기를 결정합니다. *n*이 지정된 경우 그 값은 **1**에서 **53** 사이여야 합니다. *n*의 기본값은 **53**입니다.
   
 |*n* 값|전체 자릿수|저장소 크기|  
 |---|---|---|
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. **1**<=n<=**24**이면 *n*은 **24**로 처리됩니다. **25**<=n<=**53**이면 *n*은 **53**으로 처리됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **float**[**(n)**] 데이터 형식은 **1**부터 **53**까지 *n*의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)**입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **float**[**(n)**] 데이터 형식은 **1**부터 **53**까지 *n*의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
   
 ## <a name="remarks"></a>Remarks  
   

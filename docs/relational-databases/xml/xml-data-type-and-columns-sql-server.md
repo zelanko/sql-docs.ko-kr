@@ -1,32 +1,32 @@
 ---
-title: "XML 데이터 형식 및 열(SQL Server) | Microsoft 문서"
-ms.custom: 
+title: XML 데이터 형식 및 열(SQL Server) | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4fa1ea2ba7eb9742d4596a1ce403a42038d2d842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
+  이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
   
 ## <a name="relational-or-xml-data-model"></a>관계형 데이터 모델 또는 XML 데이터 모델  
  데이터가 알려진 스키마로 복잡하게 구조화된 경우 관계형 모델이 데이터 저장소에 가장 적합할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자에게 필요한 기능 및 도구를 제공합니다. 반면에 반구조화되어 있거나 구조화되지 않았거나 구조화 상태를 알 수 없는 경우에는 이러한 데이터의 모델링을 고려해야 합니다.  
@@ -60,16 +60,16 @@ ms.lasthandoff: 02/12/2018
   
 -   XML 데이터 관리를 위해 데이터베이스 서버의 관리 기능을 사용하고자 합니다. 예를 들어 이러한 기능에는 백업, 복구 및 복제가 포함될 수 있습니다.  
   
- 이러한 상황에 하나도 해당되지 않으면 **[n]varchar(max)** 또는 **varbinary(max)**와 같은 비-XML의 큰 개체 형식으로 데이터를 저장하는 것이 좋습니다.  
+ 이러한 상황에 하나도 해당되지 않으면 **[n]varchar(max)** 또는 **varbinary(max)** 와 같은 비-XML의 큰 개체 형식으로 데이터를 저장하는 것이 좋습니다.  
   
 ## <a name="xml-storage-options"></a>XML 저장소 옵션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 저장소 옵션에는 다음이 포함됩니다.  
   
 -   **xml** 데이터 형식의 네이티브 저장소  
   
-     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용은 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)를 참조하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
+     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
   
-     XML 스키마에 바인딩된 **xml** 데이터 형식인 형식화된 **xml** 데이터 형식에 대해 PSVI(Post-Schema Validation InfoSet)는 InfoSet에 유형 정보를 추가하고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)에서 W3C XML 스키마 사양을 참조하세요.  
+     XML 스키마에 바인딩된 **xml** 데이터 형식인 형식화된 **xml** 데이터 형식에 대해 PSVI(Post-Schema Validation InfoSet)는 InfoSet에 유형 정보를 추가하고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
   
 -   XML 및 관계형 저장소 간 매핑  
   

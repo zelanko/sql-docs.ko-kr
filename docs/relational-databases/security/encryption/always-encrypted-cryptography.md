@@ -1,30 +1,31 @@
 ---
-title: "상시 암호화되는 암호화 | Microsoft 문서"
-ms.custom: 
+title: 상시 암호화되는 암호화 | Microsoft 문서
+ms.custom: ''
 ms.date: 02/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6767e36da99208b872eb5872185e541e4fa902e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 578cbf195244f561fd65a14d40482103a59a72ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** 은 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생됩니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256**은 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생되었습니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
   
- 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256** 은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 모든 설명은 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)를 참조하세요.  
+ 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256** 은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 자세한 설명은 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)에 있습니다.  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 은 다음 단계를 통해 지정된 일반 텍스트 값에 대한 암호화 값을 계산합니다.  
   
@@ -136,7 +137,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 -   4바이트 길이 **int** 일반 텍스트 값은 암호화 후 65바이트 길이의 이진 값이 됩니다.  
   

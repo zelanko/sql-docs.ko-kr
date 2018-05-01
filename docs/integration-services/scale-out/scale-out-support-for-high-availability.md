@@ -1,36 +1,38 @@
 ---
-title: "고가용성에 대한 SSIS(SQL Server Integration Services) Scale Out 지원 | Microsoft Docs"
+title: 고가용성에 대한 SSIS(SQL Server Integration Services) Scale Out 지원 | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
 SSIS Scale Out에서 여러 Scale Out 작업자를 사용하여 패키지를 실행함으로써 Scale Out 작업자 쪽에 고가용성을 제공할 수 있습니다.
 
-[SSIS 카탈로그용 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 및 이 솔루션에서 클러스터링되는 Windows 장애 조치를 사용하여 Scale Out 마스터 쪽에 고가용성을 제공할 수 있습니다. Scale Out 마스터의 여러 인스턴스가 Windows 장애 조치 클러스터에서 호스팅됩니다. 주 노드에서 Scale Out 마스터 서비스 또는 SSISDB가 작동되지 않으면 보조 노드의 서비스 또는 SSISDB에서 계속하여 사용자 요청을 수락하고 Scale Out 작업자와 통신합니다. 
+Scale Out 마스터 쪽 고가용성은 [SSIS 카탈로그용 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 및 Windows 장애 조치(failover) 클러스터링을 사용하여 구현됩니다. 이 솔루션에서는 Scale Out 마스터의 여러 인스턴스가 Windows 장애 조치(failover) 클러스터에서 호스팅됩니다. 주 노드에서 Scale Out 마스터 서비스 또는 SSISDB가 작동되지 않으면 보조 노드의 서비스 또는 SSISDB에서 계속하여 사용자 요청을 수락하고 Scale Out 작업자와 통신합니다.
 
-Scale Out 마스터 쪽에 고가용성을 설정하려면 다음 작업을 수행합니다.
+또는 SQL Server 장애 조치(failover) 클러스터 인스턴스로 Scale Out 마스터 쪽에서 고가용성을 구현할 수 있습니다. [SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 Scale Out 지원](scale-out-failover-cluster-instance.md)을 참조하세요.
+
+SSIS 카탈로그에 Always On을 사용하려면 Scale Out 마스터 쪽에 고가용성을 설정하려면 다음 작업을 수행합니다.
 
 ## <a name="1-prerequisites"></a>1. 사전 요구 사항
 Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.
@@ -68,13 +70,13 @@ Scale Out 마스터의 보조 노드에 SQL Server 데이터베이스 엔진 서
 또한 SSISDB를 추가한 가용성 그룹의 가용성 그룹 수신기를 만들어야 합니다. [가용성 그룹 수신기 만들기 또는 구성](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 참조하세요.
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Scale Out 마스터 서비스 구성 파일 업데이트
-기본 및 보조 노드에서 Scale Out 마스터 서비스 구성 파일 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`를 업데이트합니다. **SqlServerName**을 *[가용성 그룹 수신기 DNS 이름],[포트]*로 업데이트합니다.
+기본 및 보조 노드에서 Scale Out 마스터 서비스 구성 파일 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`를 업데이트합니다. **SqlServerName**을 *[가용성 그룹 수신기 DNS 이름],[포트]* 로 업데이트합니다.
 
 ## <a name="6-enable-package-execution-logging"></a>6. 패키지 실행 로깅 사용
 
 SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수행되며, 이 로그인의 암호는 자동으로 생성됩니다. 모든 SSISDB 복제본에 대한 로깅을 만들려면 다음을 수행합니다.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 주 SQL Server에서 **##MS_SSISLogDBWorkerAgentLogin##**의 암호 변경
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 주 SQL Server에서 **##MS_SSISLogDBWorkerAgentLogin##** 의 암호 변경
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 보조 SQL Server에 로그인 추가
 

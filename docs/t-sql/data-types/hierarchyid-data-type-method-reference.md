@@ -1,16 +1,16 @@
 ---
 title: hierarchyid(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - hierarchyid
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Hierarchy data type
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f69a5bae73c7c1b6ab868bc008c98a652900ae6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 654bdd48517f903c61e30e847d6bd948bafde579
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.
   
 -   높은 압축성  
-     *n*개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
+     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
 -   깊이 우선 순서로 비교  
      두 개의 **hierarchyid** 값이 **a**와 **b**인 경우 **a<b**는 깊이 우선 트리 탐색에서 a가 b 앞에 온다는 의미입니다. **hierarchyid** 데이터 형식의 인덱스에는 깊이 우선 순서가 사용되며 깊이 우선 탐색에서 서로 가까이 있는 노드는 서로 가깝게 저장됩니다. 예를 들어 레코드의 자식은 해당 레코드에 인접하게 저장됩니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.  
 -   임의 삽입 및 삭제 지원  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 -   /0.1/0.2/  
   
-노드는 어느 위치에나 삽입할 수 있습니다. **/1/2/**와 **/1/3/** 사이에 삽입한 노드는 **/1/2.5/**로 나타낼 수 있습니다. 0 앞에 삽입된 노드의 논리 표현은 음수입니다. 예를 들어 **/1/1/** 앞에 오는 노드는 **/1/-1/**로 나타낼 수 있습니다. 노드에는 앞에 오는 0이 포함될 수 없습니다. 예를 들어 **/1/1.1/**은 유효하지만 **/1/1.01/**은 유효하지 않습니다. 오류가 발생하지 않도록 하려면 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 메서드를 사용하여 노드를 삽입합니다.
+노드는 어느 위치에나 삽입할 수 있습니다. **/1/2/** 와 **/1/3/** 사이에 삽입한 노드는 **/1/2.5/** 로 나타낼 수 있습니다. 0 앞에 삽입된 노드의 논리 표현은 음수입니다. 예를 들어 **/1/1/** 앞에 오는 노드는 **/1/-1/** 로 나타낼 수 있습니다. 노드에는 앞에 오는 0이 포함될 수 없습니다. 예를 들어 **/1/1.1/** 은 유효하지만 **/1/1.01/** 은 유효하지 않습니다. 오류가 발생하지 않도록 하려면 [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) 메서드를 사용하여 노드를 삽입합니다.
   
 ## <a name="data-type-conversion"></a>데이터 형식 변환
 **hierarchyid** 데이터 형식은 다음과 같이 다른 데이터 형식으로 변환할 수 있습니다.

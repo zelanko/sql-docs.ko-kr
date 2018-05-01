@@ -1,16 +1,16 @@
 ---
-title: "특정 TCP 포트에서 수신 대기하도록 서버 구성 | Microsoft Docs"
-ms.custom: 
+title: 특정 TCP 포트에서 수신 대기하도록 서버 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - fixed port
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 33ee433b3379f5e104f4ca2fbfbfa1442cd1a5aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  기본 Windows 방화벽 설정 방법과 데이터베이스 엔진, Analysis Services, Reporting Services 및 Integration Services에 영향을 주는 TCP 포트에 대한 설명은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 > [!TIP]  
->  포트 번호를 선택할 때 특정 응용 프로그램에 할당된 포트 번호 목록을 보려면 [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) 를 참조하세요. 할당되지 않은 포트 번호를 선택합니다. 자세한 내용은 [TCP/IP에 대한 기본 동적 포트 범위는 Windows Vista 및 Windows Server 2008에서 변경](http://support.microsoft.com/kb/929851)을 참조하세요.  
+>  포트 번호를 선택할 때 특정 응용 프로그램에 할당된 포트 번호 목록을 보려면 [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers)를 참조하세요. 할당되지 않은 포트 번호를 선택합니다. 자세한 내용은 [TCP/IP에 대한 기본 동적 포트 범위는 Windows Vista 및 Windows Server 2008에서 변경](http://support.microsoft.com/kb/929851)을 참조하세요.  
   
 > [!WARNING]  
 >  다시 시작할 때 데이터베이스 엔진은 새 포트에서 수신을 시작합니다. 그러나 데이터베이스 엔진이 사용하지 않을 수 있는 경우에도 구성을 변경하는 즉시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저 서비스가 레지스트리를 모니터링하고 새 포트 번호를 보고합니다. 데이터베이스 엔진을 다시 시작하여 일관성을 확인하고 연결 실패를 방지합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/23/2018
   
 5.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-6.  세부 정보 창에서 **SQL Server(**\<인스턴스 이름>**)**를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
+6.  세부 정보 창에서 **SQL Server(**\<인스턴스 이름>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
   
 ## <a name="connecting"></a>Connecting  
 특정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 후에 특정 포트를 통해 클라이언트 응용 프로그램과 연결하는 세 가지 방법은 다음과 같습니다.  

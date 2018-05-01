@@ -1,8 +1,8 @@
 ---
 title: SSIS를 통해 Excel에서 데이터 로드 | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
-ms.date: 03/27/2018
-ms.prod: sql-non-specified
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d7cb51f585055eefa1deff52b8cb25469bdb9ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 8c31229aab550138805a912ffe40a33d08143205
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 통해 Excel에서 데이터 로드
 
@@ -28,7 +28,20 @@ ms.lasthandoff: 04/04/2018
 
 SSIS 패키지를 만들고 Excel 연결 관리자 및 Excel 원본 또는 Excel 대상을 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보낼 수 있습니다. 또한 SSIS를 기반으로 하는 SQL Server 가져오기 및 내보내기 마법사를 사용할 수 있습니다.
 
-## <a name="get-the-files-you-need-to-connect-to-excel"></a>Excel에 연결하는 데 필요한 파일 가져오기
+이 아티클에는 SSIS에서 Excel을 성공적으로 사용하거나 일반적인 문제를 이해하고 해결하는 데 필요한 세 가지 정보 집합이 포함되어 있습니다.
+-   [필요한 파일](#files-you-need).
+-   Excel에서 또는 Excel로 데이터를 로드할 때 제공해야 하는 정보입니다.
+    -   데이터 원본으로 [Excel을 지정](#specify-excel)합니다.
+    -   [Excel 파일 이름 및 경로](#excel-file)를 제공합니다.
+    -   [Excel 버전](#excel-version)을 선택합니다.
+    -   [첫 번째 행에 열 이름을 포함](#first-row)할지 여부를 지정합니다.
+    -   [데이터를 포함하는 워크시트 또는 범위](#sheets-ranges)를 제공합니다.
+-   알려진 문제 및 제한 사항입니다.
+    -   [데이터 형식](#issues-types) 문제입니다.
+    -   [가져오기](#issues-importing) 문제입니다.
+    -   [내보내기](#issues-exporting) 문제입니다.
+
+## <a name="files-you-need"> </a> Excel에 연결하는 데 필요한 파일 가져오기
 
 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
 
@@ -46,7 +59,7 @@ Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메�
 
 2016 재배포 가능을 설치하는 데 문제가 있는 경우 [Microsoft Access 데이터베이스 엔진 2010 재배포 가능](https://www.microsoft.com/download/details.aspx?id=13255)에서 2010 재배포 가능 패키지를 대신 설치합니다. (Excel 2013용 재배포 가능 패키지는 없습니다.)
 
-## <a name="get-started"></a>시작
+## <a name="specify-excel"> </a> 시작
 
 첫 번째 단계는 Excel에 연결하려 함을 나타내는 것입니다.
 
@@ -64,7 +77,7 @@ SSIS에서 Excel 연결 관리자를 만들어 Excel 원본 또는 대상 파일
 
 데이터 원본의 목록에서 Excel이 표시되지 않는 경우 32비트 마법사를 실행하고 있는지 확인합니다. Excel 연결 구성 요소는 일반적으로 32비트 파일이며 64비트 마법사에는 표시되지 않습니다.
 
-## <a name="excel-file-and-file-path"></a>Excel 파일 및 파일 경로
+## <a name="excel-file"> </a> Excel 파일 및 파일 경로
 
 제공할 정보의 첫 번째 부분은 Excel 파일에 대한 경로 및 파일 이름입니다. 이 정보는 SSIS 패키지의 **Excel 연결 관리자 편집기**나 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 입력합니다.
 
@@ -79,7 +92,7 @@ SSIS에서 Excel 연결 관리자를 만들어 Excel 원본 또는 대상 파일
 > [!IMPORTANT]
 > 암호로 보호된 Excel 파일에는 연결할 수 없습니다.
 
-## <a name="excel-version"></a>Excel 버전
+## <a name="excel-version"></a> Excel 버전
 
 제공할 정보의 두 번째 부분은 Excel 파일의 버전입니다. 이 정보는 SSIS 패키지의 **Excel 연결 관리자 편집기**나 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 입력합니다.
 
@@ -87,7 +100,7 @@ SSIS에서 Excel 연결 관리자를 만들어 Excel 원본 또는 대상 파일
 
 이전 버전의 연결 구성 요소가 설치되어 있는 경우 목록에서 최신 버전의 Excel 버전을 선택하지 못할 수도 있습니다. **Excel 버전** 목록에는 SSIS가 지원하는 모든 버전의 Excel이 포함됩니다. 이 목록에 포함되었다고 해서 필요한 구성 요소가 설치되었다는 뜻은 아닙니다. 예를 들어 2016 연결 구성 요소를 설치하지 않은 경우에도 **Microsoft Excel 2016**이 목록에 표시됩니다.
 
-## <a name="first-row-has-column-names"></a>첫 행은 열 이름으로
+## <a name="first-row"></a> 첫 번째 행에 열 이름 포함
 
 Excel에서 데이터를 가져오는 경우 다음 단계는 데이터의 첫 번째 행에 열 이름을 포함할지 여부를 나타내는 것입니다. 이 정보는 SSIS 패키지의 **Excel 연결 관리자 편집기**나 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 페이지에서 입력합니다.
 
@@ -97,7 +110,7 @@ Excel에서 데이터를 가져오는 경우 다음 단계는 데이터의 첫 �
 
 Excel에서 데이터를 내보내고 이 옵션을 활성화한 경우 내보내는 데이터의 첫 번째 행은 열 이름을 포함합니다.
 
-## <a name="worksheets-and-ranges"></a>워크시트 및 범위
+## <a name="sheets-ranges"></a> 워크시트 및 범위
 
 데이터에 대해 데이터 원본이나 대상으로 사용할 수 있는 Excel 개체의 유형에는 워크시트, 명명된 된 범위 또는 해당 주소로 지정한 셀의 명명되지 않은 영역, 이렇게 세 가지가 있습니다.
 
@@ -146,7 +159,7 @@ SSIS에서 **Excel 원본 편집기** 또는 **Excel 대상 편집기**의 **연
 
 -   **미리 보기**를 선택하여 예상 대로 표시되는지 샘플 데이터를 미리 봅니다.
 
-## <a name="issues-with-data-types"></a>데이터 형식 문제
+## <a name="issues-types"></a> 데이터 형식 문제
 
 ### <a name="data-types"></a>데이터 형식
 
@@ -179,7 +192,7 @@ SSIS에서는 데이터 형식을 암시적으로 변환하지 않습니다. 따
 > [!TIP]
 > 가져오기 및 내보내기 마법사를 사용하고 이러한 변환의 일부가 필요한 데이터의 경우 마법사에서 필요한 변환을 구성합니다. 결과적으로, SSIS 패키지를 사용하려는 경우에도 가져오기 및 내보내기 마법사를 사용하여 초기 패키지를 만드는 데 유용할 수 있습니다. 마법사에서 사용자를 위해 연결 관리자, 원본, 변환 및 대상을 만들고 구성합니다.
 
-## <a name="issues-with-importing"></a>가져오기 문제
+## <a name="issues-importing"></a> 가져오기 문제
 
 ### <a name="empty-rows"></a>빈 행
 
@@ -209,7 +222,7 @@ Excel 열에 텍스트 데이터가 포함되어 있음이 확인되면 드라�
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-with-exporting"></a>가져오기 문제
+## <a name="issues-exporting"></a> 내보내기 문제
 
 ### <a name="create-a-new-destination-file"></a>새 대상 파일 만들기
 

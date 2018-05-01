@@ -1,16 +1,16 @@
 ---
-title: "char 및 varchar(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: char 및 varchar(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 고정 길이 또는 가변 길이의 데이터 형식입니다.  
   
 ## <a name="arguments"></a>인수  
-**char** [ ( *n* ) ] 고정 길이 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이여야 합니다. 저장소 크기는 *n*바이트입니다. ISO에서 정의한 **char**의 동의어는 **character**입니다.
+**char** [ ( *n* ) ] 고정 길이 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이의 값이어야 합니다. 저장소 크기는 *n*바이트입니다. ISO에서 정의한 **char**의 동의어는 **character**입니다.
   
-**varchar** [ ( *n* | **max** ) ] 가변 길이의 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이가 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다.
+**varchar** [ ( *n* | **max** ) ] 가변 길이의 비유니코드 문자열 데이터입니다. *n*은 문자열 길이를 정의하며 1에서 8,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다.
   
 ## <a name="remarks"></a>Remarks  
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 및 CONVERT 함수를 사용할 경우 *n*을 지정하지 않으면 기본 길이는 30입니다.
@@ -54,11 +55,11 @@ ms.lasthandoff: 11/21/2017
 여러 언어를 지원하는 사이트를 가진 경우에는 문자 변환 문제를 최소화할 수 있도록 유니코드 **nchar** 또는 **nvarchar** 데이터 형식의 사용을 고려하세요. **char** 또는 **varchar**를 사용하는 경우에는 다음과 같이 하는 것이 좋습니다.
 - 열 데이터 항목의 크기가 일관된 경우 **char**를 사용합니다.  
 - 열 데이터 항목의 크기가 비교적 큰 차이를 보일 경우 **varchar**를 사용합니다.  
-- 열 데이터 항목들의 크기가 비교적 큰 차이를 보이고 크기가 8,000바이트를 초과할 수 있는 경우 **varchar(max)**를 사용합니다.  
+- 열 데이터 항목들의 크기가 비교적 큰 차이를 보이고 크기가 8,000바이트를 초과할 수 있는 경우 **varchar(max)** 를 사용합니다.  
   
 CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 OFF면 NULL로 정의된 **char** 열이 **varchar**로 처리됩니다.
   
-데이터 정렬 코드 페이지에서 더블바이트 문자를 사용할 경우 저장소 크기는 계속 *n*바이트입니다. 문자열에 따라 *n*바이트의 저장소 크기가 *n*자보다 작을 수도 있습니다.
+데이터 정렬 코드 페이지에서 더블바이트 문자를 사용할 경우 저장소 크기는 계속 *n*바이트입니다. 문자열에 따라 *n* 바이트의 저장소 크기가 *n*자보다 작을 수도 있습니다.
 
 > [!WARNING]
 > Null이 아닌 각 varchar(max) 또는 nvarchar(max) 열은 24바이트의 추가 고정 할당이 필요하며 정렬 작업 시 여기에 8,060바이트의 행 제한이 적용됩니다. 이로 인해 null이 아닌 varchar(max) 또는 테이블에서 생성할 수 있는 nvarchar (max)열의 수에 묵시적 제한이 적용됩니다.  
@@ -67,7 +68,7 @@ CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 
 ##  <a name="_character"></a> 문자 데이터 변환  
 문자 식이 다른 크기의 문자 데이터 형식으로 변환되면 새 데이터 형식에 대해 너무 긴 값은 잘립니다. **uniqueidentifier** 형식은 문자 식에서 변환하기 위한 문자 형식으로 간주되므로, 문자 형식으로 변환하기 위한 잘림 규칙이 있습니다. 뒷부분에 나오는 예 섹션을 참조하세요.
   
-문자 식이 다른 데이터 형식 또는 크기의 문자 식으로 변환되는 경우(예: **char(5)**에서 **varchar(5)**로, 또는 **char(20)**에서 **char(15)**로) 입력 값의 데이터 정렬은 변환된 값에 적용됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절을 사용하여 특정 데이터 정렬을 할당할 수 있습니다.
+문자 식이 다른 데이터 형식 또는 크기의 문자 식으로 변환되는 경우(예: **char(5)** 에서 **varchar(5)** 로, 또는 **char(20)** 에서 **char(15)** 로) 입력 값의 데이터 정렬은 변환된 값에 적용됩니다. 문자 이외의 식을 문자 데이터 형식으로 변환하면 현재 데이터베이스의 기본 데이터 정렬이 변환된 값에 할당됩니다. 두 경우 모두 [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 절을 사용하여 특정 데이터 정렬을 할당할 수 있습니다.
   
 > [!NOTE]  
 >  **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 마찬가지로 코드 페이지 변환 중 데이터 손실은 보고되지 않습니다.  
@@ -161,7 +162,7 @@ String                                       TruncatedValue
 [nchar 및 nvarchar&#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [COLLATE&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [데이터베이스 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   

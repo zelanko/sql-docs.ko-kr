@@ -1,28 +1,29 @@
 ---
-title: "메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능 | Microsoft Docs"
-ms.custom: 
+title: 메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a2ccc853663dd125fec186b9e9e3834f28345c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0cdaeb155f34ec4adaf285c2b1345ab3af713980
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 
 |데이터베이스|허용함|Description|  
 |---------------|-------------|-----------------|  
-| 사용자 데이터베이스, **모델** 및 **msdb**. | 아니요 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
+| 사용자 데이터베이스, **모델** 및 **msdb**. | 아니오 | 대부분의 경우 데이터베이스 간 쿼리 및 트랜잭션은 지원되지 *않습니다*.<br /><br />메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저를 사용하는 쿼리는 다른 데이터베이스에 액세스할 수 없습니다. 이 제한 사항은 쿼리뿐 아니라 트랜잭션에도 적용됩니다.<br /><br />예외적으로 시스템 데이터베이스인 **tempdb** 및 **master**에는 액세스할 수 있습니다. 단, **master** 데이터베이스는 읽기 전용으로만 액세스할 수 있습니다. |
 | **리소스** 데이터베이스, **tempdb** | 예 | 메모리 내 OLTP 개체와 관련된 트랜잭션에서는 **리소스** 및 **tempdb** 시스템 데이터베이스를 추가 제한 없이 사용할 수 있습니다.
 
 
@@ -71,8 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 - 
             **MERGE INTO***target*(여기서 *target*은 메모리 최적화 테이블)은 사용할 수 없습니다.
-    - 
-            **MERGE USING***source* 는 메모리 최적화 테이블에 대해 지원됩니다.  
+    - **MERGE USING** *source*는 메모리 최적화 테이블에 대해 지원됩니다.  
   
 - ROWVERSION(TIMESTAMP) 데이터 형식은 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.
   
@@ -91,6 +91,6 @@ ms.lasthandoff: 11/17/2017
     - 포함된 데이터베이스 인증이 지원됩니다. 그러나 모든 메모리 내 OLTP 개체는 DMV(동적 관리 뷰) **dm_db_uncontained_entities**에 포함 위반으로 표시됩니다.
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 - [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

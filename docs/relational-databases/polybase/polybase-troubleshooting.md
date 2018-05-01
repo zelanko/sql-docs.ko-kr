@@ -1,16 +1,16 @@
 ---
-title: "PolyBase 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
@@ -18,20 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase 문제를 해결하려면 이 항목에 나와 있는 기술을 사용합니다.  
+  PolyBase 문제를 해결하려면 이 항목에 나와 있는 기술을 사용합니다.  
   
 ## <a name="catalog-views"></a>카탈로그 뷰  
  PolyBase 작업을 관리하려면 여기에 나와 있는 카탈로그 뷰를 사용합니다.  
@@ -243,7 +243,7 @@ PolyBase는 오늘 Zookeeper 또는 Knox와 같은 이름 노드 HA 서비스와
 
 ## <a name="error-messages-and-possible-solutions"></a>오류 메시지 및 가능한 해결 방법
 
-외부 테이블 오류 문제를 해결하려면 Murshed Zaman 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 설치 오류 및 가능한 해결 방법)를 참조하세요.
+외부 테이블 오류를 해결하려면 Murshed Zaman의 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ ](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 설치 오류 및 가능한 해결 방법")을 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:
 [PolyBase Kerberos 연결 문제 해결](polybase-troubleshoot-connectivity.md)

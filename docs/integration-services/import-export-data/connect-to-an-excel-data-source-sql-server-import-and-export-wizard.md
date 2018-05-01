@@ -18,20 +18,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
-이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Microsoft Excel** 데이터 원본에 연결하는 방법을 보여 줍니다.
+이 아티클에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Microsoft Excel** 데이터 원본에 연결하는 방법을 보여 줍니다.
 
 다음 스크린샷은 Microsoft Excel 통합 문서에 대한 샘플 연결을 보여 줍니다.
 
 ![Excel 연결](../../integration-services/import-export-data/media/excel-connection.png) 
 
-Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야 할 수도 있습니다. 자세한 내용은 [Excel에 연결하는 데 필요한 파일 가져오기](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel)를 참조하세요.
+Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야 할 수도 있습니다. 자세한 내용은 [Excel에 연결하는 데 필요한 파일 가져오기](../load-data-to-from-excel-with-ssis.md#files-you-need)를 참조하세요.
 
 > [!IMPORTANT]
 > Excel 파일 연결 및 Excel 파일에서 데이터를 로드할 때 제한 사항 및 알려진 문제에 대한 자세한 내용은 [SSIS(SQL Server Integration Services)를 통해 Excel로 데이터 로드](../load-data-to-from-excel-with-ssis.md)를 참조하세요.

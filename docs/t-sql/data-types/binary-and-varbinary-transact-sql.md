@@ -1,16 +1,16 @@
 ---
-title: "binary 및 varbinary(Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: binary 및 varbinary(Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 8/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - binary_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - varbinary data type
 - binary [SQL Server], about binary data type
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4ad5bce3cacc0f892f7087df785da8cedcb4e932
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2a214ab3c50af81bf38dbb6f7adaf6f95226d82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 및 varbinary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="arguments"></a>인수  
 **binary** [(*n*)] 길이가 *n*바이트인 고정 길이의 이진 데이터입니다. 여기서 *n*은 1부터 8,000까지의 값입니다. 저장소 크기는 *n*바이트입니다.
   
-**varbinary** [(*n* | **max**)] 가변 길이 이진 데이터입니다. *n*은 1부터 8,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
+**varbinary** [(*n* | **max**)] 가변 길이 이진 데이터입니다. *n*은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
   
 ## <a name="remarks"></a>Remarks  
-데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이는 1입니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이는 30입니다.
+데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.
 
 | 데이터 형식 | 사용 시기... |
 | --- | --- |

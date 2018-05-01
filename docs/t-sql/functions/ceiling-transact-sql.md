@@ -1,16 +1,16 @@
 ---
 title: CEILING(Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CEILING_TSQL
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8859077710b51556a9c61c546b91f37795afd8d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc2871d3cdb81cfd4f93000bab0b166a829b490e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ceiling-transact-sql"></a>CEILING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-지정한 숫자 식보다 크거나 같은 최소 정수를 반환합니다.
+이 함수는 지정한 숫자 식보다 크거나 같은 최소 정수를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +49,13 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>인수  
 *numeric_expression*  
-**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+정밀 숫자 또는 근사 숫자 데이터 형식 범주의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이 함수에는 **비트** 데이터 형식이 부적합합니다.
   
 ## <a name="return-types"></a>반환 형식
-*numeric_expression*과 같은 유형을 반환합니다.
+반환 값은 *numeric_expression*과 같은 형식입니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 값이 각각 양수, 음수, 0인 CEILING 함수를 보여 줍니다.
+이 예에서는 CEILING 함수에 대한 양수, 음수 및 0 값 입력을 보여 줍니다.
   
 ```sql
 SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  
