@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) 사용자와 작업 영역 설정 | Microsoft Docs
-description: SQL Operations Studio (preview) 사용자 및 작업 영역 설정을 수정 하는 방법.
+title: SQL 작업 Studio (미리 보기) 사용자와 작업 영역 설정 | Microsoft Docs
+description: SQL 작업 Studio (미리 보기) 사용자 및 작업 영역 설정을 수정 하는 방법.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>사용자 및 작업 영역 설정
 
 쉽게 구성할 수 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설정을 통해 원하는 대로 합니다. 거의 모든 부분의 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 편집기, 사용자 인터페이스 및 기능 동작에는 옵션이 수정할 수 있습니다.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]설정에 대 한 두 개의 서로 다른 범위를 제공합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설정에 대 한 두 개의 서로 다른 범위를 제공합니다.
 
 * **사용자** 이러한 설정은 전체적으로 적용 되므로 인스턴스로 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 열입니다.
 * **작업 영역** 작업 영역 설정은 특정 컴퓨터의 폴더로 설정 되며는 사용할 수 있는 경우에 해당 폴더는 탐색기 사이드바에서 열려 있습니다. 이 범위에 정의 된 설정은 사용자 범위를 재정의 합니다.
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>핫 종료
 
-기본적으로 종료할 때 SQL Operations Studio 파일에 저장 되지 않은 변경을 기억 합니다. 이 Visual Studio Code에서 핫 종료 기능와 동일 합니다.
+기본적으로 종료할 때 SQL 작업 Studio 파일에 저장 되지 않은 변경을 기억 합니다. 이 Visual Studio Code에서 핫 종료 기능와 동일 합니다.
 
 핫 종료는 기본적으로 해제 되어 있습니다. 실행 부하 과다 사용을 편집 하 여 종료는 `files.hotExit` 설정 합니다. 자세한 내용은 참조 [(Visual Studio Code 설명서)에서 핫 종료](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)합니다.
 
