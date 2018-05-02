@@ -1,34 +1,35 @@
 ---
-title: "SqlLocalDB 유틸리티 | Microsoft Docs"
-ms.custom: 
+title: SqlLocalDB 유틸리티 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqllocaldb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 18c5c10465a56b6d7081612df2ce079dcdaa77b5
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]사용 하 여는 **SqlLocalDB** 유틸리티의 인스턴스를 만드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**합니다. **SqlLocalDB** 유틸리티(SqlLocalDB.exe)는 사용자와 개발자가 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 인스턴스를 만들고 관리하는 데 사용할 수 있는 간단한 명령줄 도구입니다. **LocalDB**를 사용하는 방법에 대한 자세한 내용은 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)를 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SqlLocalDB** 유틸리티를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB** 인스턴스를 만들 수 있습니다. **SqlLocalDB** 유틸리티(SqlLocalDB.exe)는 사용자와 개발자가 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 인스턴스를 만들고 관리하는 데 사용할 수 있는 간단한 명령줄 도구입니다. **LocalDB**를 사용하는 방법에 대한 자세한 내용은 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +51,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>인수  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. **SqlLocalDB** 의 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 로 지정 된 바이너리  *\<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 지정하지 않으면 버전 번호는 기본적으로 **SqlLocalDB** 유틸리티 버전으로 지정됩니다. **–s** 를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. **SqlLocalDB**는 *\<instance-version>* 인수에 지정된 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 바이너리 버전을 사용합니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 버전 번호 11.0 또는 11.0.1186은 모두 허용됩니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 지정하지 않으면 버전 번호는 기본적으로 **SqlLocalDB** 유틸리티 버전으로 지정됩니다. **–s** 를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
   
  [ **share** | **h** ]  
  지정한 공유 이름을 사용하여 지정한 개인 **LocalDB** 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.  
@@ -70,7 +71,7 @@ SqlLocalDB.exe
  [ **info** | **i** ] [ *\<instance-name>* ]  
  현재 사용자가 소유한 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 의 모든 인스턴스를 나열합니다.  
   
- *\<인스턴스 이름 >* 이름을 반환 버전, 상태 (실행 중 또는 중지됨인), 마지막 시작 되는 지정된 된 인스턴스에 대 한 시간 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**, 및의 로컬 파이프 이름을 **LocalDB**합니다.  
+ *\<instance-name>* 은 지정된 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 인스턴스의 이름, 버전, 상태(실행 중 또는 중지됨), 마지막 시작 시간 및 **LocalDB**의 로컬 파이프 이름을 반환합니다.  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on**을 사용하여 현재 사용자에 대한 **SqlLocalDB** API 호출을 추적할 수 있습니다. **trace off** 를 사용하면 추적이 사용되지 않습니다.  
@@ -78,7 +79,7 @@ SqlLocalDB.exe
  **-?**  
  각 **SqlLocalDB** 옵션에 대한 간략한 설명을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *instance name* 인수는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자에 대한 규칙을 따르거나 큰따옴표로 묶어야 합니다.  
   
  인수 없이 SqlLocalDB를 실행하면 도움말 텍스트가 반환됩니다.  
@@ -117,7 +118,7 @@ EXIT
 sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
 [명령줄 관리 도구: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
   

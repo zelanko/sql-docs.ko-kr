@@ -1,30 +1,31 @@
 ---
-title: "Distributed Replay 구성 | Microsoft Docs"
-ms.custom: 
+title: Distributed Replay 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 구성 세부 정보는 Distributed Replay 컨트롤러, 클라이언트에 XML 파일에 지정 된 관리 도구가 설치 됩니다. 이러한 파일은 다음과 같습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 구성 세부 정보는 Distributed Replay 컨트롤러, 클라이언트 및 관리 도구가 설치되는 위치의 XML 파일에서 지정됩니다. 이러한 파일은 다음과 같습니다.  
   
 -   [컨트롤러 구성 파일](#DReplayController)  
   
@@ -37,11 +38,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayController"></a> 컨트롤러 구성 파일: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 컨트롤러 서비스가 시작되면 컨트롤러 구성 파일 `DReplayController.config`에서 로깅 수준을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
- **\<controller installation path>\DReplayController.config**  
+ **\<컨트롤러 설치 경로>\DReplayController.config**  
   
  컨트롤러 구성 파일에 지정되는 로깅 수준은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수임|  
+|설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |로깅 수준|`<LoggingLevel>`|컨트롤러 서비스에 대한 로깅 수준을 지정합니다.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|아니요. 기본값은 `CRITICAL`입니다.|  
   
@@ -58,11 +59,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayClient"></a> 클라이언트 구성 파일: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 클라이언트 서비스가 시작되면 클라이언트 구성 파일 `DReplayClient.config`에서 구성 설정을 로드합니다. 이 파일은 Distributed Replay 컨트롤러 서비스를 설치한 폴더에 있습니다.  
   
- **\<클라이언트 설치 경로 > \DReplayClient.config**  
+ **\<클라이언트 설치 경로>\DReplayClient.config**  
   
  클라이언트 구성 파일에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수임|  
+|설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |컨트롤러|`<Controller>`|컨트롤러의 컴퓨터 이름을 지정합니다. 클라이언트는 컨트롤러에 연결하여 Distributed Replay 환경에 등록합니다.|"`localhost`" 또는 "`.`"을 사용하여 로컬 컴퓨터를 참조할 수 있습니다.|아니요. 클라이언트는 기본적으로 로컬로 실행 중인("`.`") 컨트롤러 인스턴스(있는 경우)에 등록합니다.|  
 |클라이언트 작업 디렉터리|`<WorkingDirectory>`|클라이언트에서 디스패치 파일이 저장된 로컬 경로입니다.<br /><br /> 이 디렉터리의 파일은 다음 재생 시 덮어씁니다.|드라이브 문자로 시작하는 전체 디렉터리 이름|아니요. 지정된 값이 없으면 디스패치 파일이 기본 클라이언트 구성 파일과 같은 위치에 저장됩니다. 지정된 값이 있지만 해당 폴더가 클라이언트에 없으면 클라이언트 서비스가 시작되지 않습니다.|  
@@ -89,11 +90,11 @@ ms.lasthandoff: 01/17/2018
   
  기본 전처리 구성 파일은 관리 도구를 설치한 폴더에 있으면 위치는 다음과 같습니다.  
   
- **\<관리 도구 설치 경로 > \DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<관리 도구 설치 경로>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  전처리 구성 설정은 전처리 구성 파일에서 `<PreprocessModifiers>` 요소의 자식 요소인 XML 요소에 지정됩니다. 여기에는 다음과 같은 설정이 포함됩니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수임|  
+|설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
 |최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1` 은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
@@ -118,16 +119,16 @@ ms.lasthandoff: 01/17/2018
   
  기본 재생 구성 파일은 관리 도구를 설치한 폴더에 있으며 위치는 다음과 같습니다.  
   
- **\<관리 도구 설치 경로 > \DReplayAdmin\DReplay.exe.replay.config**  
+ **\<관리 도구 설치 경로>\DReplayAdmin\DReplay.exe.replay.config**  
   
  재생 구성 설정은 재생 구성 파일에서 `<ReplayOptions>` 및 `<OutputOptions>` 요소의 자식 요소인 XML 요소에 지정됩니다.  
   
 ### <a name="replayoptions-element"></a>\<ReplayOptions > 요소  
  재생 구성 파일의 `<ReplayOptions>` 요소에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수임|  
+|설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요, 서버 이름이 이미 사용 하 여 지정 된 경우는 **-s * * * 대상 서버* 매개 변수는 **재생** 관리 도구의 옵션입니다.|  
+|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **재생**옵션에 **-s***target server* 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
 |시퀀스 모드|`<SequencingMode>`|이벤트 예약에 사용되는 모드를 지정합니다.|`synchronization` &#124; `stress`|아니요. 기본값은 `stress`입니다.|  
 |스트레스 규모 세분성|`<StressScaleGranularity>`|스트레스 모드에서 SPID(Service Profile Identifier)에 대한 모든 연결의 배율을 함께 조정(SPID)해야 하는지 개별적으로 조정(연결)해야 하는지를 지정합니다.|SPID &#124; Connection|예 기본값은 `SPID`입니다.|  
 |연결 시간 조절|`<ConnectTimeScale>`|스트레스 모드에서 연결 시간을 조절하는 데 사용됩니다.|`1` 에서 `100`사이의 정수입니다.|아니요. 기본값은 `100`입니다.|  
@@ -140,7 +141,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="outputoptions-element"></a>\<OutputOptions > 요소  
  재생 구성 파일의 `<OutputOptions>` 요소에 지정되는 설정은 다음과 같습니다.  
   
-|설정|XML 요소|Description|허용되는 값|필수임|  
+|설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |행 개수 기록|`<RecordRowCount>`|각 결과 집합에 대해 행 개수를 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `Yes`입니다.|  
 |결과 집합 기록|`<RecordResultSet>`|모든 결과 집합의 내용을 기록할지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
@@ -169,11 +170,11 @@ ms.lasthandoff: 01/17/2018
 </Options>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 포럼](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay를 사용하여 SQL Server 테스트 로드 – 2단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 2단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Distributed Replay를 사용하여 SQL Server 테스트 로드 - 1단계](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

@@ -1,36 +1,37 @@
 ---
-title: "컨트롤러를 수정 및 클라이언트 서비스 계정 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤러 및 클라이언트 서비스 계정 수정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6b43b611e45de9da98954417d5e7a1bfad009eac
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 항목에서는 Distributed Replay controller 및 client 서비스 계정을 수정 하 고 다음 액세스 제어 목록 (Acl)을 다시 적용 하는 방법에 설명 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 Distributed Replay 컨트롤러 및 클라이언트 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>컴퓨터 관리를 사용하여 Distributed Replay 서비스를 시작 또는 중지하려면  
   
 1.  Distributed Replay 서비스가 설치된 컴퓨터에서 명령 프롬프트에 **dcomcnfg**을(를) 입력합니다.  
   
-2.  두 번 클릭 **서비스**, 아래로 스크롤하여 마우스 오른쪽 단추로 클릭  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름 >**, 클릭 하 고 **시작** 또는 **중지**합니다.  
+2.  **서비스**를 두 번 클릭하고 아래로 스크롤한 다음, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름>** 을 마우스 오른쪽 단추로 클릭하고 **시작** 또는 **중지**를 클릭합니다.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Distributed Replay Controller 서비스를 수정하려면  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
     -   가상 계정 및 MSA(관리 서비스 계정)  
   
-    -   네트워크 서비스, 로컬 서비스 및 시스템  
+    -   Network Services, 로컬 서비스 및 시스템  
   
      그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.  
   

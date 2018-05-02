@@ -1,26 +1,26 @@
 ---
-title: "SQL 전체 텍스트 필터 데몬 시작 관리자 (SQL Server 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: SQL 전체 텍스트 필터 데몬 시작 관리자(SQL Server 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0dc03db-5f76-4558-b041-1ac7b9b5bb16
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 123cbf16970be0820dbda43b0eb51a5e1bca4852
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
 ---

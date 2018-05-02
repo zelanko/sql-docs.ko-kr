@@ -18,11 +18,11 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 4f51786ac37a0d167c7c9c18b52710a06fea052b
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,55 @@ ms.lasthandoff: 04/26/2018
 
 - [![Microsoft 다운로드 센터](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [SQL Server 2016 서비스 팩 2(SP2) 다운로드](https://go.microsoft.com/fwlink/?linkid=869608)
 - 업데이트의 전체 목록은 [SQL Server 2016 서비스 팩 2 릴리스 정보](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)를 참조하세요.
+
+SQL Server 2016 SP2를 설치하면 설치 후 다시 부팅이 필요할 수 있습니다. SQL Server 2016 SP2 설치 후 다시 부팅을 계획하고 설치를 수행하는 것이 가장 좋습니다.
+
+SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
+|기능|Description|자세한 정보|
+|   --- |   --- |   --- |
+|향상된 배포 DB 정리 프로시저 |   대형 배포 데이터베이스 테이블로 인해 차단 및 교착 상태가 발생했었습니다. 향상된 정리 프로시저는 이러한 일부 차단 또는 교착 상태 시나리오를 제거하려고 합니다. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
+|변경 내용 추적 정리    |   변경 내용 추적 정리 성능 및 변경 내용 추적 측면 테이블에 대한 효율성이 개선되었습니다.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
+|CPU 시간 초과를 사용하여 Resource Governor 요청 취소   |   요청에 대한 CPU 임계값에 도달하면 요청을 실제로 취소하여 쿼리 요청 처리가 향상되었습니다. 이 동작은 추적 플래그 2422에서 활성화됩니다. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
+|파일 그룹에 대상 테이블을 만드는 SELECT INTO    |   SQL Server 2016 SP2부터, SELECT INTO T-SQL 구문은 T-SQL 구문에서 ON <Filegroup name> 키워드를 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다. |       |
+|TempDB에 대한 간접 검사점 향상    |   DPLists에 대한 Spinlock 경합을 최소화하도록 TempDB에 대한 간접 검사점이 향상되었습니다. 향상된 기능으로 인해 TempDB에 대한 간접 검사점이 ON이면 SQL Server 2016의 TempDB 워크로드 규모를 즉시 확장할 수 있습니다.    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
+|대형 메모리 시스템의 데이터베이스 백업 성능 향상  |   SQL Server 2016 SP2는 백업 중에 진행되는 I/O 드레이닝 방식을 최적화하여 중소 규모 데이터베이스의 백업 성능이 크게 향상되었습니다. 2TB 시스템에서 시스템 데이터베이스 백업을 수행할 때 성능이 100배 이상 향상되었습니다. 다양한 크기의 데이터베이스에 대한 광범위한 성능 테스트 결과가 아래에 제공되어 있습니다. 백업 및 백업 I/O에 대한 페이지가 버퍼 풀 반복에 비해 더 많은 시간이 소모되므로 데이터베이스 크기가 증가할수록 성능이 저하됩니다. 이러한 개선 사항은 대용량 메모리의 고급 서버에서 여러 개의 작은 데이터베이스를 호스팅하는 고객을 위해 백업 성능을 향상시키는 데 도움이 됩니다. |       |
+|TDE 가능 데이터베이스에 대한 VDI 백업 압축 지원   |   SQL Server 2016 SP2에 VDI 지원이 추가되어 VDI 백업 솔루션으로 TDE 지원 데이터베이스에 압축을 활용할 수 있습니다. 더불어, TDE 지원 데이터베이스의 백업 압축을 지원하기 위해 새로운 백업 형식이 도입되었습니다. SQL Server 엔진은 신규 및 기존 백업 형식을 투명하게 처리하여 백업을 복원합니다.   |       |
+|복제 에이전트 프로필 매개 변수를 동적으로 로드    |   새롭게 향상된 기능으로 인해 에이전트를 다시 시작하지 않고도 복제 에이전트 매개 변수를 동적으로 로드할 수 있습니다. 이러한 변화는 가장 일반적으로 사용되는 에이전트 프로필 매개 변수에만 적용됩니다. |       |
+|통계 생성/업데이트를 위한 MAXDOP 옵션 지원 |    CREATE/UPDATE statistics 문에 대해 MAXDOP 옵션을 지정할 수 있을 뿐만 아니라, 모든 유형의 인덱스에 대한 작성 또는 재작성 과정에서 통계가 업데이트될 때 올바른 MAXDOP 설정이 사용되도록(MAXDOP 옵션이 있는 경우) 할 수 있습니다.   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
+|증분 통계를 위한 자동 통계 업데이트 향상 |    특정 시나리오 즉, 테이블의 여러 파티션에서 증분된 통계에 대한 총 수정 카운터가 자동 업데이트 임계값을 초과할 만큼 데이터 변경이 많이 발생했지만 자동 업데이트 임계값을 초과하는 개별 파티션이 없는 경우, 테이블에서 훨씬 더 많은 수정이 발생할 때까지 통계 업데이트가 지연될 수 있습니다. 이 동작은 추적 플래그 11024에서 수정되었습니다.   |       |
+
+SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 포함되어 있습니다.
+|기능 |Description   |자세한 정보   |
+|   --- |   --- |   --- |
+|가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
+|TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트 |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.  |       |
+|검증된 클론 및 백업 생성을 위한 새 DBCC CLONEDATABASE 옵션   |   SQL Server 2016 SP2의 DBCC CLONEDATABASE에는 검증된 클론을 생생하거나 백업 복제본을 생성하는 두 가지 옵션이 제공됩니다. WITH VERIFY_CLONEDB 옵션을 사용하여 클론 데이터베이스를 만들면 일관된 데이터베이스 클론이 만들어지고 확인됩니다. 이 기능은 Microsoft에서 프로덕션용으로 지원됩니다. 클론이 확인되었는지 검증하기 위한 새로운 속성이 도입되었습니다. SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) BACKUP_CLONEDB 옵션을 사용하여 클론을 만들면 고객이 복제본을 다른 서버로 옮기거나 문제 해결을 위해 Microsoft CSS(Customer Support)에 쉽게 보낼 수 있도록 데이터 파일과 동일한 폴더에 백업이 생성됩니다.  |       |
+|DBCC CLONEDATABASE에 대한 SSB(Service Broker) 지원    |   DBCC CLONEDATABASE 명령이 SSB 개체의 스크립팅을 허용하도록 향상되었습니다.  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075)   |
+|TempDB 버전 저장소 공간 사용량을 모니터링하는 새로운 DMV    |   SQL Server 2016 SP2에 sys.dm_tran_version_store_space_usage DMV가 새롭게 도입되어 TempDB에서 버전 저장소 사용량을 모니터링 할 수 있습니다. 이제 DBA를 프로덕션 서버에서 실행할 때 성능 오버 헤드가 발생하지 않으면서, 데이터베이스당 버전 저장소 사용 요구 사항을 기반으로 TempDB 크기를 사전에 계획할 수 있습니다. |       |
+|복제 에이전트에 대한 완벽한 덤프 지원 | 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본적으로 예외 증상의 미니 덤프가 만들어집니다. 이렇게 하면 처리되지 않은 예외 문제를 해결하는 것이 매우 어렵습니다. 이번 변경을 통해 복제 에이전트에 대한 전체 덤프를 생성할 수 있는 새로운 레지스트리 키가 도입되었습니다.  |       |
+|가용성 그룹의 라우팅 실패 읽기에 대한 확장 이벤트 향상 |   전에는 라우팅 목록이 있으면 read_only_rout_fail xEvent가 발생했지만 라우팅 목록에 있는 모든 서버에 연결할 수 없었습니다. SQL Server 2016 SP2에는 문제 해결에 도움이 되는 추가 정보가 포함되며 xEvent가 실행되는 코드 포인트가 확장됩니다.  |       |
+|VLF 정보를 모니터링하는 새로운 DMV |   SQL Server 2016 SP2에 DMV sys.dm_db_log_info가 새로 도입되어 DBCC LOGINFO와 유사한 VLF 정보를 노출하여 고객이 겪을 수 있는 잠재적인 T-Log 문제를 모니터링, 경고 및 방지할 수 있습니다.    |       |
+|sys.dm_os_sys_info의 프로세서 정보|   sys.dm_os_sys_info DMV에 socket_count 및 cores_per_numa와 같은 프로세서 관련 정보를 노출하도록 새 열이 추가되었습니다.  |       |
+|sys.dm_db_file_space_usage의 익스텐트 수정 정보| 마지막 전체 백업 이후에 수정된 익스텐트의 수를 추적하는 새 열이 sys.dm_db_file_space_usage에 추가되었습니다.  |       |
+|sys.dm_exec_query_stats의 세그먼트 정보 |   total_columnstore_segment_reads 및 total_columnstore_segment_skips와 같이, 건너뛴 columnstore 세그먼트와 읽은 columnstore 세그먼트의 수를 추적하는 새 열이 sys.dm_exec_query_stats에 추가되었습니다.   |   [KB4051358](https://support.microsoft.com/en-us/help/4051358)   |
+|배포 데이터베이스에 맞는 호환성 수준 설정  |   서비스 팩을 설치하면 배포 데이터베이스 호환성 수준이 90으로 변경됩니다. 이것은 sp_vupgrade_replication 저장 프로시저의 코드 경로 때문입니다. 이제 배포 데이터베이스에 올바른 호환성 수준을 설정하도록 SP가 변경되었습니다.   |       |
+|마지막으로 알려진 양호한 DBCC CHECKDB 정보 노출    |   마지막으로 성공한 DBCC CHECKDB 실행 날짜를 프로그래밍 방식으로 반환하는 새 데이터베이스 옵션이 추가되었습니다. DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)를 쿼리하면 지정된 데이터베이스에서 마지막으로 성공한 DBCC CHECKDB가 실행된 날짜/시간을 나타내는 단일 값을 얻을 수 있습니다.  |       |
+|실행 계획 XML 향상| 통계 이름, 수정 카운터, 샘플링 비율 및 통계가 마지막으로 업데이트된 시간을 포함하는 [쿼리 계획을 컴파일하는데 사용되는 통계에 대한 정보](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/)입니다. 이 기능은 CE 모델 120 이상에만 추가됩니다. 예를 들어 CE 70에서는 지원되지 않습니다.| |
+| |쿼리 최적화 프로그램에서 "행 목표" 논리를 사용하는 경우 새로운 특성인 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/)이 실행 계획 XML에 추가됩니다.| |
+| |스칼라 UDF(사용자 정의 함수)에 소요된 시간을 추적하는 새 런타임 속성 [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/)이 실제 실행 계획 XML에 있습니다.| |
+| |실제 실행 계획 XML에 [상위 10개의 가능한 대기 목록](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/)을 추가하는 CXPACKET 대기 유형이 추가되었습니다. 병렬 쿼리 실행에는 CXPACKET 대기가 자주 포함되지만 이런 유형의 대기는 실제 실행 계획 XML에 보고되지 않았습니다. |       |
+| |병렬 처리 연산자 유출 중 TempDB에 기록된 페이지 수를 보고하는 런타임 유출 경고가 확장되었습니다.| |
+|보조 문자 데이터 정렬이 사용되는 데이터베이스에 대한 복제 지원  |   보조 문자 데이터 정렬을 사용하는 데이터베이스에서 복제가 지원됩니다. |       |
+|가용성 그룹 장애 조치(failover)를 사용하여 적절한 Service Broker 처리 |   가용성 그룹 데이터베이스에서 Service Broker를 사용할 수 있는 현재 구현에서는 AG 장애 조치(failover) 중 주 복제본에서 시작된 모든 Service Broker 연결이 열린 상태로 유지됩니다. 향상된 버전에서는 AG 장애 조치(failover) 중 열려있는 모든 연결을 닫는 것이 목표입니다. |       |
+|문제 해결에 대기하도록 병렬 처리 기능 향상 |   새로운 [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) 대기가 추가되었습니다.   |       |
+|동일한 정보에 대한 DMV 간의 일관성 향상 |   sys.dm_exec_session_wait_stats DMV가 CXPACKET 및 CXCONSUMER 대기를 sys.dm_os_wait_stats DMV와 일관되게 추적합니다. |       |
+|쿼리 내 병렬 처리 교착 상태 문제 해결 향상 | xEvent 필드 이름 worktable_physical_writes에 병렬 처리 연산자 유출 중 TempDB에 기록되는 페이지 수를 보고하는 새 exchange_spill 확장 이벤트가 있습니다.| |
+| |sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats DMV의 spills 열(예: total_spills)에 병렬 처리 연산자에 의해 유출되는 데이터도 포함됩니다.| |
+| |exchangeEvent 리소스에 더 많은 속성이 추가되어 병렬 처리 교착 상태 시나리오에 대한 XML Deadlock Graph가 향상되었습니다.| |
+| |SyncPoint 리소스에 더 많은 특성이 추가되어 배치 모드 연산자와 관련된 교착 상태에 대한 XML Deadlock Graph가 향상되었습니다.| |
+|일부 복제 에이전트 프로필 매개 변수를 동적으로 다시 로드 |   현재 복제 에이전트 구현에서 에이전트 프로필 매개 변수를 변경하려면 에이전트를 중지했다가 다시 시작해야 합니다. 향상된 버전에서는 복제 에이전트를 다시 시작하지 않고 매개 변수를 동적으로 다시 로드할 수 있습니다.   |       |
+
+![horizontal-bar.png](media/horizontal-bar.png)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 서비스 팩 1(SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 보안 업데이트 MS16-136을 포함하여 SQL Server 2016 RTM CU3에 대한 모든 누적 업데이트를 포함합니다. SQL Server 2016 최신 누적 업데이트에서 제공하는 솔루션의 롤업을 포함하며 최신 누적 업데이트(CU3 및 2016년 11월 8일에 릴리스된 보안 업데이트 MS16-136)를 포함합니다.
@@ -84,6 +133,8 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 - [SQL Server 2016 서비스 팩 1(SP1) 출시](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
 - [SQL Server 2016 서비스 팩 1 릴리스 정보](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. 
+
+![horizontal-bar.png](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch) 

@@ -1,29 +1,29 @@
 ---
-title: "TCP/IP 속성 (IP 주소 탭) | Microsoft Docs"
-ms.custom: 
+title: TCP/IP 속성 (IP 주소 탭) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
 ---
@@ -39,11 +39,11 @@ ms.lasthandoff: 02/03/2018
 ## <a name="dynamic-ports"></a>동적 포트  
  시작 시 동적 포트에서 수신하도록 구성된 SQL Server 인스턴스는 운영 체제에서 사용 가능한 포트를 확인하고 해당 포트의 끝점을 엽니다. 들어오는 연결은 연결할 포트 번호를 지정해야 합니다. SQL Server를 시작할 때마다 포트 번호가 변경될 수 있으므로 SQL Server에서는 포트를 모니터링하고 들어오는 연결을 해당 인스턴스의 현재 포트로 보내는 SQL Server Browser 서비스를 제공합니다. 동적 포트를 사용할 경우 SQL Server를 다시 시작할 때 포트 번호가 변경되어 방화벽 설정을 변경해야 할 수 있으므로 방화벽을 통해 SQL Server에 연결하는 것이 복잡해집니다. 방화벽을 통한 연결 문제를 방지하려면 정적 포트를 사용하도록 SQL Server를 구성하세요.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **활성**  
  컴퓨터에서 IP 주소가 활성 상태임을 나타냅니다. **IPAll**에는 사용할 수 없습니다.  
   
- **사용**  
+ **Enabled**  
  **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **아니요**로 설정되어 있으면 이 속성은 SQL Server가 IP 주소에서 수신하고 있는지 여부를 나타냅니다. **TCP/IP 속성(프로토콜 탭)** 의 **모두 수신합니다** 속성이 **예**로 설정되어 있으면 이 속성은 무시됩니다. **IPAll**에는 사용할 수 없습니다.  
   
  **IP 주소**  
@@ -67,9 +67,9 @@ ms.lasthandoff: 02/03/2018
 ## <a name="additional-topics-in-books-online"></a>온라인 설명서의 추가 항목  
  **특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)** 및 **여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성**과 같은 항목에 대해 MSDN을 검색합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [TCP/IP를 사용하여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 서비스](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

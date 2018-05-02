@@ -1,33 +1,34 @@
 ---
-title: "추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs"
-ms.custom: 
+title: 추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4f3f19c69cae22987767cd7b65ca8dc9718faa4e
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]재생은 저장된 된 추적을 열고 다시 재생 하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
   
  모니터링하려는 다른 이벤트 클래스 외에도 재생 기능을 사용하려면 특정 이벤트 클래스를 캡처해야 합니다. **TSQL_Replay** 추적 템플릿을 사용할 경우 이러한 이벤트는 기본적으로 캡처됩니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요.  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 01/17/2018
   
     -   **테이블에 저장**- 재생이 저장될 데이터베이스를 지정합니다.  
   
-5.  **추적한 순서대로 이벤트를 재생합니다.**또는 **여러 스레드를 사용하여 이벤트를 재생합니다.**를 선택합니다. 다음 표에서는 이 두 설정 사이의 차이점을 설명합니다.  
+5.  **추적한 순서대로 이벤트를 재생합니다.** 또는 **여러 스레드를 사용하여 이벤트를 재생합니다.** 를 선택합니다. 다음 표에서는 이 두 설정 사이의 차이점을 설명합니다.  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |**추적한 순서대로 이벤트를 재생합니다.**|기록된 순서대로 이벤트를 재생합니다. 이 옵션을 사용하면 디버깅할 수 있습니다.|  
     |**여러 스레드를 사용하여 이벤트를 재생합니다.**|이 옵션은 여러 스레드를 사용하여 순서와 관계없이 각 이벤트를 재생합니다. 이 옵션을 사용하면 성능이 최적화됩니다.|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [추적 재생](../../tools/sql-server-profiler/replay-traces.md)   
- [추적 파일 &#40; 열기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [추적 파일 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

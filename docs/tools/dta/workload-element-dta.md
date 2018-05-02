@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0f39cc50aa258df595bd7c010d992740a0a68976
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="workload-element-dta"></a>Workload 요소(DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]튜닝 세션에 사용할 작업을 지정 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 튜닝 세션에 사용할 작업을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -54,9 +54,9 @@ ms.lasthandoff: 01/17/2018
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**자식 요소**|[File 요소 &#40; DTA &#41;](../../tools/dta/file-element-dta.md)<br /><br /> [작업 &#40; DTA &#41;의 database 요소](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소 &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)|  
+|**자식 요소**|[File 요소&#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Workload의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 요소&#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 추적 파일 및 추적 테이블을 작업으로 사용할 수 있습니다.  
   
  XML 입력 파일에 작업을 지정하고 **dta** 도구를 사용하여 명령줄에 작업을 지정할 경우 명령줄에 지정한 작업이 튜닝에 사용됩니다. 명령줄에 지정한 모든 튜닝 옵션은 XML 입력 파일에 지정된 옵션보다 우선 적용됩니다. 단, 사용자 지정 구성을 XML 입력 파일에 평가 모드로 입력할 경우는 예외입니다. 예를 들어 XML 입력 파일의 **Configuration** 요소에 구성이 입력되었고 또한 **EvaluateConfiguration** 요소가 튜닝 옵션 중 하나로 지정될 경우 XML 입력 파일에 지정된 튜닝 옵션은 명령줄에 입력한 튜닝 옵션보다 우선 적용됩니다.  

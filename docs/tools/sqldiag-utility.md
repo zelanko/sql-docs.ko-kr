@@ -1,15 +1,16 @@
 ---
-title: "SQLdiag 유틸리티 | Microsoft Docs"
-ms.custom: 
+title: SQLdiag 유틸리티 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqldiag
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -31,19 +32,19 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="sqldiag-utility"></a>SQLdiag 유틸리티
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
+# <a name="sqldiag-utility"></a>SQLdiag Utility
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
 > [!NOTE]  
 >  이 유틸리티는 변경될 수 있으며 해당 명령줄 인수나 동작을 사용하는 응용 프로그램 또는 스크립트의 경우 후속 릴리스에서 제대로 작동하지 않을 수 있습니다.  
@@ -54,11 +55,11 @@ ms.lasthandoff: 01/17/2018
   
 -   Windows 이벤트 로그  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]추적  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적 정보  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]차단 정보  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 차단 정보  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]구성 정보  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 정보  
   
  SQLDiag.xml 구성 파일을 편집하여 **SQLdiag** 에서 수집할 정보 유형을 지정할 수 있습니다. 이에 대해서는 다음 섹션에서 설명합니다.  
   
@@ -117,10 +118,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 는 시작할 때 현재 출력 폴더에 출력을 추가하지 않습니다. 대신 기본 출력 폴더를 덮어쓰거나(옵션 1) 폴더의 이름을 바꾼 다음(옵션 2) SQLDIAG라는 새 기본 출력 폴더에 출력을 씁니다.  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
  구성 파일에 지정된 컴퓨터를 재정의합니다. 기본적으로 구성 파일은 SQLDiag.Xml이거나 **/I** 매개 변수를 사용하여 설정됩니다. 둘 이상의 컴퓨터를 지정할 경우 각 컴퓨터 이름을 공백으로 구분하십시오.  
   
- 사용 하 여  *@machinelistfile*  구성 파일에 저장할 컴퓨터 목록 파일 이름을 지정 합니다.  
+ *@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
  **/C** *file_compression_type*  
  **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
@@ -164,11 +165,11 @@ sqldiag
   
  *SQLdiag_application_name* 은 특정 **SQLdiag** 서비스 인스턴스를 시작하거나 중지하는 데 사용할 수 있습니다.  
   
- 예를 들어  
+ 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  **SQLDIAG START /A**  *SQLdiag_application_name*  
   
- 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어  
+ 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  **SQLDIAG /R /A** *SQLdiag_application_name*  
   
@@ -227,11 +228,11 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
   
- 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어  
+ 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  **SQLDIAG START**  
   
- 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어  
+ 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
  **SQLDIAG START /A** *SQLdiag_application_name*  
   
@@ -300,7 +301,7 @@ SQLDIAG STOP /A Instance1
 >  **SQLDiag STOP** 또는 **SQLDIAG STOP_ABORT** 를 사용하여 **SQLdiag** 서비스를 중지할 수 있습니다. **SQLdiag** 또는 기타 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스를 중지할 때는 Windows 서비스 콘솔을 사용하지 마세요.  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>SQLdiag 자동 시작 및 중지  
- 자동으로 시작 하 고 지정된 된 시간에 진단 데이터 수집을 중지 하려면 사용는 **/B * * * start_time* 및 **/E * * * stop_time* 인수를 24 시간제 표시법을 사용 합니다. 예를 들어 계속해서 02:00:00 경에 나타나는 문제를 해결하려면 01:00:00에 자동으로 진단 데이터 수집을 시작하여 03:00:00에 자동으로 중지하도록 **SQLdiag** 를 구성할 수 있습니다. 시작 시간과 중지 시간은 각각 **/B** 및 **/E** 인수를 사용하여 지정합니다. 24시간제 표시법을 사용하여 정확한 시작 및 중지 날짜와 시간을 YYYYMMDD_HH:MM:SS 형식으로 지정합니다. 현재를 기준으로 상대적인 시작 시간이나 중지 시간을 지정하려면 다음 예에서와 같이 시작 및 중지 시간 앞에 **+** 를 붙이고 날짜 부분(YYYYMMDD_)을 생략합니다. 그러면 **SQLdiag** 는 1시간 후부터 정보 수집을 시작하여 3시간 동안 정보를 수집한 다음 중지하고 종료합니다.  
+ 지정한 시간에 진단 데이터 수집을 자동으로 시작하고 중지하려면 24시간제 표시법을 사용하여 **/B***start_time* 및 **/E***stop_time* 인수를 사용합니다. 예를 들어 계속해서 02:00:00 경에 나타나는 문제를 해결하려면 01:00:00에 자동으로 진단 데이터 수집을 시작하여 03:00:00에 자동으로 중지하도록 **SQLdiag** 를 구성할 수 있습니다. 시작 시간과 중지 시간은 각각 **/B** 및 **/E** 인수를 사용하여 지정합니다. 24시간제 표시법을 사용하여 정확한 시작 및 중지 날짜와 시간을 YYYYMMDD_HH:MM:SS 형식으로 지정합니다. 현재를 기준으로 상대적인 시작 시간이나 중지 시간을 지정하려면 다음 예에서와 같이 시작 및 중지 시간 앞에 **+** 를 붙이고 날짜 부분(YYYYMMDD_)을 생략합니다. 그러면 **SQLdiag** 는 1시간 후부터 정보 수집을 시작하여 3시간 동안 정보를 수집한 다음 중지하고 종료합니다.  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -314,7 +315,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- 현재 시간이 08:00일 경우 실제로 진단 정보 수집을 시작하기 전에 종료 시간이 지났습니다. 이러한 경우 **SQLdiag** 에서 자동으로 시작 및 종료 날짜를 다음 날로 조정하기 때문에 이 예에서 진단 정보 수집은 오늘 09:00에 시작되어( **+**를 사용하여 상대 시작 시간 지정) 다음날 아침 08:30까지 계속됩니다.  
+ 현재 시간이 08:00일 경우 실제로 진단 정보 수집을 시작하기 전에 종료 시간이 지났습니다. 이러한 경우 **SQLdiag** 에서 자동으로 시작 및 종료 날짜를 다음 날로 조정하기 때문에 이 예에서 진단 정보 수집은 오늘 09:00에 시작되어( **+** 를 사용하여 상대 시작 시간 지정) 다음날 아침 08:30까지 계속됩니다.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>일일 진단 정보를 수집하는 SQLdiag 중지 및 다시 시작  
  수동으로 **SQLdiag**를 시작하고 중지할 필요 없이 지정한 진단 정보를 매일 수집하려면 **/L** 인수를 사용합니다. **/L** 인수를 사용하면 예약된 종료 후에 자동으로 다시 시작하여 **SQLdiag** 가 계속해서 실행됩니다. **/L** 을 지정한 경우 **SQLdiag** 가 **/E** 인수로 지정한 종료 시간에 도달해서 중지되거나 **/X** 인수를 사용하여 스냅숏 모드에서 실행되고 있기 때문에 중지되면 **SQLdiag** 가 종료되는 대신 다시 시작됩니다.  
@@ -361,12 +362,12 @@ SQLDIAG START /A Instance1
  **SQLdiag** 서비스를 일시 중지하는 작업은 지원되지 않습니다.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>여러 SQLdiag 인스턴스 실행  
- 여러 인스턴스를 실행할 **SQLdiag** 지정 하 여 동일한 컴퓨터에 **/A * * * SQLdiag_application_name* 명령줄에서. 이는 동일한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 다른 진단 정보 집합을 수집하는 데 유용합니다. 예를 들어 지속적으로 간단한 데이터 수집을 수행하도록 명명된 **SQLdiag** 인스턴스를 구성할 수 있습니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 특정 문제가 발생하는 경우 기본 **SQLdiag** 인스턴스를 실행하여 해당 문제에 대한 진단 정보를 수집하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 수집을 요청한 진단 정보 집합을 수집하여 문제를 진단할 수 있습니다.  
+ 명령줄에서 **/A***SQLdiag_application_name*을 지정하여 동일한 컴퓨터에서 여러 **SQLdiag** 인스턴스를 실행할 수 있습니다. 이는 동일한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 다른 진단 정보 집합을 수집하는 데 유용합니다. 예를 들어 지속적으로 간단한 데이터 수집을 수행하도록 명명된 **SQLdiag** 인스턴스를 구성할 수 있습니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 특정 문제가 발생하는 경우 기본 **SQLdiag** 인스턴스를 실행하여 해당 문제에 대한 진단 정보를 수집하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 수집을 요청한 진단 정보 집합을 수집하여 문제를 진단할 수 있습니다.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>클러스터형 SQL Server 인스턴스에서 진단 데이터 수집  
- **SQLdiag** 에서는 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 데이터를 수집할 수 있습니다. 클러스터 된에서 진단을 수집 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 경우 다음 사항을 확인 **"."**  에 대해 지정 된는 **이름** 특성에는  **\<컴퓨터 >** 는 구성 요소 SQLDiag.Xml 파일을 지정 하지 않는 **/G** 명령줄에서 인수입니다. 기본적으로 구성 파일에서 **name** 특성에는 **"."**가 지정되고 **/G** 인수는 해제되어 있습니다. 일반적으로 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 정보를 수집할 때는 구성 파일을 편집하거나 명령줄 인수를 변경할 필요가 없습니다.  
+ **SQLdiag** 에서는 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 데이터를 수집할 수 있습니다. 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 정보를 수집하려면 SQLDiag.Xml 구성 파일에서 **\<Machine>** 요소의 **name** 특성에 대해 **"."** 를 지정해야 하며 명령줄에서 **/G** 인수를 지정하면 안 됩니다. 기본적으로 구성 파일에서 **name** 특성에는 **"."** 가 지정되고 **/G** 인수는 해제되어 있습니다. 일반적으로 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 정보를 수집할 때는 구성 파일을 편집하거나 명령줄 인수를 변경할 필요가 없습니다.  
   
- **"."** 를 컴퓨터 이름으로 지정하면 **SQLdiag** 에서는 컴퓨터가 클러스터에서 실행 중임을 감지하고 해당 클러스터에 설치된 모든 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 진단 정보를 검색합니다. 가상 인스턴스 하나 에서만 진단 정보를 수집 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컴퓨터에서 실행 중인 해당 가상를 지정 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대 한는 **이름** 특성에는  **\<컴퓨터 >** SQLDiag.Xml에서에서 요소의 합니다.  
+ **"."** 를 컴퓨터 이름으로 지정하면 **SQLdiag** 에서는 컴퓨터가 클러스터에서 실행 중임을 감지하고 해당 클러스터에 설치된 모든 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 진단 정보를 검색합니다. 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가상 인스턴스 중 하나에서만 진단 정보를 수집하려면 SQLDiag.Xml에서 **\<Machine>** 요소의 **name** 특성에 해당 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   
 > [!NOTE]  
 >  클러스터형 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 추적 정보를 수집하려면 클러스터에서 관리 공유(ADMIN$)를 설정해야 합니다.  

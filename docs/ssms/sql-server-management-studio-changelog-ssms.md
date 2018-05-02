@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ SQL Database 관리되는 인스턴스:
    - SQL 에이전트 작업에 대한 지원
    - 연결된 서버에 대한 지원
 - [여기에서](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/) 관리되는 인스턴스에 대해 자세히 알아봅니다.
-
 
 개체 탐색기:
 - 개체 탐색기에서 쿼리 창으로 끌어다 놓을 때 이름 주변에 괄호를 적용하지 않도록 추가된 설정 (사용자 제안 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) 및 [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
@@ -109,7 +108,8 @@ SMO:
 
 ### <a name="known-issues"></a>알려진 문제
 
-- 현재 유지 관리 계획에서 일정을 구성할 때 SSMS 17.6이 충돌하는 알려진 문제가 있습니다.
+> [!WARNING]
+> [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md)를 사용할 때 SSMS 17.6이 불안정해지고 크래시되는 알려진 문제가 있습니다. Maintenance Plans를 사용하는 경우에는 SSMS 17.6을 설치하지 마세요. 이미 17.6을 설치했고 이 문제가 발생할 경우 SSMS 17.5로 다운그레이드합니다. 
 
 ## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
 
@@ -654,7 +654,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
-- [Generate Tasks]\(작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
+- [Generate Tasks](작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)

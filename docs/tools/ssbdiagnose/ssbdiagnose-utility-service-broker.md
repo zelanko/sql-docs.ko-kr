@@ -1,15 +1,16 @@
 ---
-title: "ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs"
-ms.custom: 
+title: ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssbdiagnose
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,19 +28,19 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**ssbdiagnose** 유틸리티의 문제는 보고 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 구성 하거나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스입니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -122,7 +123,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  지정된 *error_id* 의 오류 또는 메시지가 보고서에 포함되지 않도록 지정합니다. 여러 메시지 ID를 표시하지 않으려면 **-IGNORE** 를 여러 번 지정하면 됩니다.  
   
- **\<baseconnectionoptions>**  
+ **\<baseconnectionoptions >**  
  특정 절에 연결 옵션이 포함되어 있지 않은 경우 **ssbdiagnose** 에서 사용되는 기본 연결 정보를 지정합니다. 특정 절에 지정되는 연결 정보는 **baseconnectionoption** 정보보다 우선합니다. 이 작업은 각 매개 변수에 대해 별도로 수행됩니다. 예를 들어 **baseconnetionoptions** 에는 **-S** 와 **-d**가 둘 다 지정되고 **toconnetionoptions** 에는 **-d**만 지정된 경우 **ssbdiagnose** 는 **baseconnetionoptions** 의 -S와 **toconnetionoptions**의 -d를 사용합니다.  
   
  **CONFIGURATION**  
@@ -131,7 +132,7 @@ ssbdiagnose
  **FROM SERVICE** *service_name*  
  대화를 시작하는 서비스를 지정합니다.  
   
- **\<fromconnectionoptions>**  
+ **\<fromconnectionoptions >**  
  시작자 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 시작자 데이터베이스에 연결합니다. **fromconnectionoptions** 를 지정한 경우 시작자 서비스를 보유하는 데이터베이스를 포함해야 합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **baseconnectionoptions** 에서 시작자 데이터베이스를 지정해야 합니다.  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -147,13 +148,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions>**  
+ **\<toconnectionoptions >**  
  대상 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **toconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 대상 데이터베이스에 연결합니다.  
   
  **MIRROR**  
  연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스가 미러된 데이터베이스에서 호스팅되도록 지정합니다. **ssbdiagnose** 는 서비스에 대한 경로가 CREATE ROUTE에 MIRROR_ADDRESS가 지정된 미러된 경로인지 확인합니다.  
   
- **\<mirrorconnectionoptions>**  
+ **\<mirrorconnectionoptions >**  
  미러 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **mirrorconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 미러 데이터베이스에 연결합니다.  
   
  **ON CONTRACT** *contract_name*  
@@ -206,9 +207,9 @@ WHERE database_id = DB_ID();
  대화 ID는 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_id** 열에서 보고됩니다.  
   
  **-TIMEOUT** *timeout_interval*  
- **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-**만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
+ **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
   
- **\<runtimeconnectionoptions>**  
+ **\<runtimeconnectionoptions >**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
   
  **–E**  
@@ -236,7 +237,7 @@ WHERE database_id = DB_ID();
  **-P** 옵션을 암호 없이 지정할 경우 **ssbdiagnose** 는 기본 암호(NULL)를 사용합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]자세한 내용은 참조 [Strong Passwords](../../relational-databases/security/strong-passwords.md)합니다.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md)를 참조하세요.  
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
   
@@ -249,7 +250,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
- 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 연결 하는 데는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 해당 서버에 있습니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+ 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\*** instance_name*을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **-S** *database_name*  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  
@@ -260,7 +261,7 @@ WHERE database_id = DB_ID();
  **-?**  
  명령줄 도움말을 표시합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ssbdiagnose** 를 사용하여 다음을 수행할 수 있습니다.  
   
 -   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램에 구성 오류가 없음을 확인합니다.  
@@ -314,7 +315,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 환경 변수  
  **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  각 **connectionoptions** 절에서 **-E** 또는 **-U** 를 사용하여 지정된 로그인은 **-S** 에 지정된 인스턴스에 있는 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -451,22 +452,22 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [BEGIN DIALOG conversation&#40; Transact SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BROKER 우선 순위 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [CREATE BROKER PRIORITY&#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [계약 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE CONTRACT&#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [메시지 유형 &#40; 만들기 Transact SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [CREATE MESSAGE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [CREATE QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE REMOTE SERVICE BINDING&#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE&#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [수신 &#40; Transact SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "Distributed Replay 설치 | Microsoft Docs"
-ms.custom: 
+title: Distributed Replay 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Distributed Replay는 다음 세 가지 방법 중 하나에 설치할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있습니다.  
   
 -   [설치 마법사에서 Distributed Replay 설치](#bkmk_wizard)  
   
@@ -67,17 +68,17 @@ ms.lasthandoff: 01/17/2018
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
-     \- OR-  
+     \- 또는  
   
-     \<공유 기능 디렉터리 > \Tools\\(사용자가 입력 한 대체 공유 기능 디렉터리)  
+     \<공유 기능 디렉터리>\Tools\\(사용자가 입력한 대체 공유 기능 디렉터리)  
   
 -   64비트 시스템:  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- OR-  
+     \- 또는  
   
-     \<공유 기능 디렉터리 (x86) > \Tools\\(사용자가 입력 한 대체 공유 기능 (x86) 디렉터리)  
+     \<공유 기능 디렉터리 (x86)>\Tools\\(사용자가 입력한 공유 기능 대체(x86) 디렉터리)  
   
 #### <a name="to-install-distributed-replay-features"></a>Distributed Replay 기능을 설치하려면  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/17/2018
   
     -   가상 계정 및 MSA(관리 서비스 계정)  
   
-    -   네트워크 서비스, 로컬 서비스 및 시스템  
+    -   Network Services, 로컬 서비스 및 시스템  
   
      그룹 계정(로컬 또는 도메인) 및 다른 기본 제공 계정(예: Everyone)은 사용할 수 없습니다.  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  32비트 컴퓨터의 기본 설치 경로는 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  64 비트 컴퓨터의 기본 설치 경로 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  64비트 컴퓨터의 기본 설치 경로는 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** 입니다.  
   
 9. 작업이 완료되면 **다음**을 클릭합니다.  
   
@@ -220,11 +221,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  구성 파일에서는 암호를 구성할 수 없으므로 명령줄에서 두 암호를 모두 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

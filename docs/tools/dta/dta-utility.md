@@ -1,15 +1,16 @@
 ---
-title: "dta 유틸리티 | Microsoft Docs"
-ms.custom: 
+title: dta 유틸리티 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta 유틸리티
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  데이터베이스 엔진 튜닝 관리자와 마찬가지로 **dta** 유틸리티는 작업을 분석하고 이 작업에 대해 서버 성능을 향상시키기 위한 물리적 디자인 구조를 제안합니다. 작업은 계획 캐시, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 파일이나 테이블 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트일 수 있습니다. 물리적 디자인 구조에는 인덱스, 인덱싱된 뷰 및 분할이 포함됩니다. 작업을 분석한 후 **dta** 유틸리티는 실제 데이터베이스 디자인을 제안하며 이 제안 사항을 구현하는 데 필요한 스크립트를 생성할 수 있습니다. 명령 프롬프트에서 **-if** 또는 **-it** 인수를 사용하여 작업을 지정할 수 있습니다. 또한 명령 프롬프트에서 **-ix** 인수를 사용하여 XML 입력 파일을 지정할 수도 있습니다. 이러한 경우 작업은 XML 입력 파일에서 지정됩니다.  
   
@@ -134,7 +135,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어  
+ 작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -171,7 +172,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta** 는 기본적으로 **-fa****IDX**를 사용합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |IDX_IV|인덱스와 인덱싱된 뷰|  
 |IDX|인덱스만|  
@@ -182,8 +183,8 @@ dta -d AdventureWorks2012 ...
  필터링된 인덱스가 새 제안 사항을 만들 때 고려되도록 지정합니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
 **-fc**  
- Columnstore 인덱스를 새 권장 사항에 대 한 고려 지정 합니다. DTA는 모두 클러스터형 및 비클러스터형 columnstore 인덱스를 고려 합니다. 자세한 내용은 다음을 참조하세요.    
-[Columnstore 인덱스 권장 구성에서 데이터베이스 엔진 튜닝 관리자 (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)합니다.
+ ColumnStore 인덱스가 새 권장 사항으로 고려되도록 지정합니다. DTA는 모두 클러스터형 및 비클러스터형 columnstore 인덱스를 고려 합니다. 자세한 내용은 다음을 참조하세요.    
+[DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
  ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
@@ -192,7 +193,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  권장 구성을 생성할 때 **dta** 가 유지해야 할 기존의 실제 디자인 구조를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |없음|기존 구조 없음|  
 |ALL|기존의 모든 구조|  
@@ -203,7 +204,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** 가 제안하는 새 실제 디자인 구조(인덱스 및 인덱싱된 뷰)를 분할할 것인지 여부와 분할 방법을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |없음|분할 안 함|  
 |FULL|전체 분할(성능 향상 중심)|  
@@ -221,7 +222,7 @@ dta -d AdventureWorks2012 ...
  계획 캐시를 작업으로 사용할 수 있도록 지정합니다. 명시적으로 선택한 데이터베이스에 대한 상위 1,000개의 계획 캐시 이벤트가 분석됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  
  
 **-iq**  
- 쿼리 저장소 작업으로 사용할 수 있도록 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소에서 상위 1, 000 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  참조 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소에서 데이터베이스를 사용 하 여 작업 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) 자세한 정보에 대 한 합니다.
+ 쿼리 저장소 작업으로 사용할 수 있도록 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소에서 상위 1, 000 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
  ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
@@ -231,7 +232,7 @@ dta -d AdventureWorks2012 ...
  튜닝을 위한 입력으로 사용할 작업 파일의 경로와 이름을 지정합니다. 파일은 .trc(SQL Server Profiler 추적 파일), .sql(SQL 파일) 또는 .log([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 파일) 형식 중 하나여야 합니다. 작업 파일 또는 작업 테이블을 하나 지정해야 합니다.  
   
  **-it** *workload_trace_table_name*  
- 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 형식에서 이름은: [*database_name*]**.** [*owner_name*] **. * * * table_name*합니다.  
+ 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*]**.**[*owner_name*]**.***table_name* 형식으로 지정됩니다.  
   
  다음 표에서는 각 매개 변수의 기본값을 보여 줍니다.  
   
@@ -253,7 +254,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  물리적 디자인 구조를 온라인으로 만들 것인지 여부를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |OFF|권장되는 물리적 디자인 구조를 온라인으로 만들 수 없습니다.|  
 |ON|권장되는 모든 물리적 디자인 구조를 온라인으로 만들 수 있습니다.|  
@@ -306,7 +307,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  생성할 분석 보고서의 목록을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열합니다.  
   
-|Value|보고서|  
+|값|보고서|  
 |-----------|------------|  
 |ALL|모든 분석 보고서|  
 |STMT_COST|문 비용 보고서|  
@@ -366,11 +367,11 @@ dta -iq -I 48
  **-x**  
  튜닝 세션을 시작하고 종료합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  Ctrl+C를 한 번 누르면 튜닝 세션이 중지되고 이 지점까지 **dta** 가 완료한 분석을 기반으로 권장 구성이 생성됩니다. 권장 구성을 생성할지 여부를 결정하라는 메시지가 표시됩니다. Ctrl+C를 다시 누르면 권장 구성을 생성하지 않고 튜닝 세션이 중지됩니다.  
   
 ## <a name="examples"></a>예  
- **A. 권장 구성에 인덱스 및 인덱싱된 뷰가 포함 된 작업 튜닝**  
+ **A. 권장 구성에 인덱스 및 인덱싱된 뷰가 포함된 작업 튜닝**  
   
  이 예에서는 보안 연결(`-E`)을 통해 MyServer에 있는 **tpcd1G** 데이터베이스에 연결하여 작업을 분석하고 권장 구성을 만듭니다. 그리고 script.sql이라는 스크립트 파일에 출력 파일을 씁니다. script.sql이 이미 있을 경우 **인수를 지정했으므로** dta `-F` 는 이 파일을 덮어씁니다. 작업 분석이 완료될 때까지 제한 시간 없이(`-A 0`) 튜닝 세션이 실행됩니다. 권장 구성에서는 최소 향상률 값으로 5%(`-m 5`)를 지정해야 합니다. **dta** 는 최종 권장 구성(`-fa IDX_IV`)에 인덱스 및 인덱싱된 뷰를 포함합니다.  
   
@@ -386,7 +387,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
 dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
 ```  
   
- **C. 튜닝된 쿼리 수 제한**  
+ **C. 튜닝 쿼리 수 제한**  
   
  이 예에서는 orders_wkld.sql 파일에서 읽혀지는 최대 쿼리 수를 10(`-n 10`)개로 제한하고 15분(`-A 15`) 동안 실행합니다. 최대 쿼리 10개에 도달하거나 15분이 되면 종료됩니다. 10개 쿼리를 모두 튜닝하려면 `-A 0`을 사용하여 튜닝 시간을 무제한으로 지정합니다. 시간이 중요할 경우 다음 예와 같이 `-A` 인수로 튜닝할 수 있는 시간(분)을 지정하여 적절한 제한 시간을 설정합니다.  
   
@@ -394,7 +395,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
 ```  
   
- **D. 파일에 나열 된 특정 테이블 튜닝**  
+ **D. 파일에 나열된 특정 테이블 튜닝**  
   
  이 예에서는 *table_list_file* ( **-Tf** 인수)을 사용하는 방법을 보여 줍니다. table_list.txt 파일 내용은 다음과 같습니다.  
   
@@ -420,7 +421,7 @@ AdventureWorks2012.Production.Product  2000000
 dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

@@ -24,20 +24,20 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-2---viewing-tuning-recommendations"></a>단원 1-2-튜닝 권장 구성 보기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 태스크에서 만든 튜닝 세션을 사용 하 여 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)합니다. MyScript.sql [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 스크립트를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 튜닝하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장 구성** 탭에 해당 결과가 표시됩니다. 다음 태스크에서는 **튜닝 관리자 GUI(그래픽 사용자 인터페이스)의** 권장 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭을 소개하고 튜닝 세션 결과에 대해 제공된 정보를 탐색하는 과정을 안내합니다.  
+# <a name="lesson-1-2---viewing-tuning-recommendations"></a>1-2단원 - 튜닝 권장 사항 보기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 [작업 튜닝](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만든 튜닝 세션을 사용합니다. MyScript.sql [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 스크립트를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스를 튜닝하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장 구성** 탭에 해당 결과가 표시됩니다. 다음 태스크에서는 **튜닝 관리자 GUI(그래픽 사용자 인터페이스)의** 권장 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 탭을 소개하고 튜닝 세션 결과에 대해 제공된 정보를 탐색하는 과정을 안내합니다.  
   
 ### <a name="view-tuning-recommendations"></a>튜닝 권장 구성 보기  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 시작합니다. [데이터베이스 엔진 튜닝 관리자 시작](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 튜닝 [연습에서 사용한 것과 동일한](../../tools/dta/lesson-1-1-tuning-a-workload.md)인스턴스에 연결해야 합니다.  
   
-2.  **세션 모니터** 창에서 **MySession** 을 두 번 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]튜닝 관리자에서 이전 튜닝 세션에서 세션 정보를 로드 하 고 표시 된 **권장 사항을** 탭 합니다. 모든 튜닝 옵션 기본값을 적용하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 옵션 **탭에서** 분할 안 함 **을 선택했기 때문에** 튜닝 관리자에서 **파티션 권장 구성** 을 만들지 않았습니다.  
+2.  **세션 모니터** 창에서 **MySession** 을 두 번 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 이전 튜닝 세션의 세션 정보가 로드되고 **권장 구성** 탭이 표시됩니다. 모든 튜닝 옵션 기본값을 적용하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 옵션 **탭에서** 분할 안 함 **을 선택했기 때문에** 튜닝 관리자에서 **파티션 권장 구성** 을 만들지 않았습니다.  
   
-3.  **권장 구성** 탭에서 탭 페이지 맨 아래의 스크롤 막대를 사용하여 모든 **인덱스 권장 구성** 열을 볼 수 있습니다. 각 행은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장하는 데이터베이스 개체(인덱스 또는 인덱싱된 뷰)가 삭제되는지 만들어지는지 나타냅니다. 맨 오른쪽 열로 스크롤하여 **정의**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]튜닝 관리자를 표시 한 **SQL 스크립트 미리 보기** 창을 볼 수 있습니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만들거나 해당 행에는 데이터베이스 개체를 삭제 합니다. **닫기** 를 클릭하여 미리 보기 창을 닫습니다.  
+3.  **권장 구성** 탭에서 탭 페이지 맨 아래의 스크롤 막대를 사용하여 모든 **인덱스 권장 구성** 열을 볼 수 있습니다. 각 행은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장하는 데이터베이스 개체(인덱스 또는 인덱싱된 뷰)가 삭제되는지 만들어지는지 나타냅니다. 맨 오른쪽 열로 스크롤하여 **정의**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 해당 행에서 데이터베이스 개체를 만들거나 삭제하는 **스크립트를 볼 수 있는** SQL 스크립트 미리 보기 [!INCLUDE[tsql](../../includes/tsql-md.md)] 창이 표시됩니다. **닫기** 를 클릭하여 미리 보기 창을 닫습니다.  
   
     링크를 포함하는 **정의** 를 찾기 힘든 경우 탭 페이지 맨 아래에 있는 **기존 개체 표시** 확인란의 선택을 취소합니다. 그러면 표시되는 행 수가 줄어듭니다. 이 확인란의 선택을 취소하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 권장 구성을 생성한 개체만 표시합니다. 현재 **데이터베이스에 있는 모든 데이터베이스 개체를 보려면** 기존 개체 표시 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 확인란을 선택합니다. 탭 페이지 오른쪽의 스크롤 막대를 사용하여 모든 개체를 볼 수 있습니다.  
   

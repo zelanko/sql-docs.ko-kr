@@ -1,30 +1,30 @@
 ---
-title: "MSSQLSERVER 속성 (인증서 탭)에 대 한 프로토콜 | Microsoft Docs"
-ms.custom: 
+title: MSSQLSERVER에 대한 프로토콜 속성(인증서 탭) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.computermgr.cert.general.f1
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 64211b457a280ff14a9891e9885a7f224bb46419
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
 ---
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
  **MSSQLSERVER에 대한 프로토콜 속성**  
  보안 공급자가 결정하는 인증서 이름입니다. 속성 표에서 세부 정보를 보려면 인증서를 선택합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  만료 날짜  
  인증서 유효 기간의 마지막 날짜입니다.  
   

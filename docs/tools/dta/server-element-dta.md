@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 32f1958fcf5b69d9a3b8ef7b3fdf63f67216d9d0
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-dta"></a>Server 요소(DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]데이터베이스 튜닝 하려는 있는 서버에 대 한 식별 정보를 포함 합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 튜닝할 데이터베이스가 상주하는 서버에 대한 식별 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/17/2018
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[DTAInput 요소 &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**자식 요소**|[서버 &#40; DTA &#41;의 name 요소](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [서버 &#40; DTA &#41;의 database 요소](../../tools/dta/database-element-for-server-dta.md)|  
+|**부모 요소**|[DTAInput 요소&#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**자식 요소**|[Server의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Server의 Database 요소&#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Server** 요소에 하나의 **DTAInput** 요소만 지정할 수 있습니다. 이 요소는 DTA XML 스키마에서 **ServerDetailsTypecomplexType** 이름입니다. 이 **Server** 요소와 **Configuration** 요소의 자식 요소를 혼동하지 마십시오. 자세한 내용은 [Configuration의 Server 요소&#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  

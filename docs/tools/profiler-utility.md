@@ -1,15 +1,16 @@
 ---
-title: "프로파일러 유틸리티 | Microsoft Docs"
-ms.custom: 
+title: 프로파일러 유틸리티 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**프로파일러** 유틸리티를 실행 하는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구입니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 응용 프로그램 시작 방법을 제어할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 응용 프로그램 시작 방법을 제어할 수 있습니다.  
   
 > [!NOTE]  
 >  **profiler** 유틸리티는 추적 스크립팅을 위한 유틸리티가 아닙니다. 자세한 내용은 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)를 참조하세요.  
@@ -87,7 +88,7 @@ profiler
  프로파일러를 시작할 때 로드할 추적 테이블을 지정합니다. 데이터베이스, 사용자나 스키마 및 테이블을 지정해야 합니다.  
   
  **/T"** *template_name* **"**  
- 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어  
+ 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 /T "standard"  
@@ -123,7 +124,7 @@ profiler
  **/Z**  *file_size*  
  추적 파일 크기(MB)를 지정합니다. 기본 크기는 5MB입니다. 롤오버를 사용하는 경우 모든 롤오버 파일이 이 인수에서 지정한 값으로 제한됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  특정 템플릿을 사용하여 추적을 시작하려면 **/S** 와 **/T** 옵션을 함께 사용합니다. 예를 들어 MyServer\MyInstance에 있는 Standard 템플릿을 사용하여 추적을 시작하려면 명령 프롬프트에서 다음을 입력합니다.  
   
 ```  
