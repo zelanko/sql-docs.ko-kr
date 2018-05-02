@@ -2,7 +2,7 @@
 title: 메모리 내 OLTP에 대한 예제 데이터베이스 | Microsoft 문서
 ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: in-memory-oltp
@@ -18,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 85285889b4bd41bdca10091217254a4079202dba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,12 +54,12 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP의 하드웨어에 대한 일반 지침은 다음 블로그 게시물을 참조하세요.[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  다음 단계를 수행하여 예제를 설치합니다.  
   
-1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) 에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  
+1.  [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502)에서 로컬 폴더(예: 'c:\temp')에 AdventureWorks2016CTP3.bak 및 SQLServer2016CTP3Samples.zip을 다운로드합니다.  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 백업을 복원합니다.  
   
@@ -457,7 +458,9 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> 샘플의 메모리 및 디스크 공간 사용률  
  아래에서는 예제 데이터베이스의 메모리 및 디스크 공간 사용률 측면에서 기대하는 것에 대해 설명합니다. 또한 논리적 코어가 16개인 테스트 서버에서 관찰한 결과도 보여 줍니다.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> 메모리 최적화 테이블의 메모리 사용률  
+###  
+            <a name="Memoryutilizationforthememory-optimizedtables">
+            </a> 메모리 최적화 테이블의 메모리 사용률  
   
 #### <a name="overall-utilization-of-the-database"></a>데이터베이스의 전체 사용률  
  다음 쿼리를 사용하여 시스템에서 메모리 내 OLTP의 총 메모리 사용률을 얻을 수 있습니다.  
