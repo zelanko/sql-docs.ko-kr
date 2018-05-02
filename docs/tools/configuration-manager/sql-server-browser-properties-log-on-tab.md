@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Browser 속성 (로그온 탭) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Browser 속성 (로그온 탭) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ae22b36ded826c9bc1acef37d7986010ddad9283
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/03/2018
 ---
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/03/2018
   
  계정의 암호를 변경하면 서비스를 다시 시작하지 않고 즉시 적용됩니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
  **로컬 시스템 계정**  
  로컬 시스템 계정의 보안 컨텍스트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 실행합니다. 가능하면 이보다 낮은 권한의 계정을 사용하십시오.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/03/2018
  **재개**  
  일시 중지한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 재개합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   
