@@ -2,7 +2,7 @@
 title: SQLdiag 유틸리티 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqldiag
@@ -37,14 +37,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1ffe7e5295013d49615c068d6705cce649ffd771
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
 > [!NOTE]  
 >  이 유틸리티는 변경될 수 있으며 해당 명령줄 인수나 동작을 사용하는 응용 프로그램 또는 스크립트의 경우 후속 릴리스에서 제대로 작동하지 않을 수 있습니다.  

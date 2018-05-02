@@ -2,7 +2,7 @@
 title: sqllogship 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqllogship
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 28422037d2a1bca822dc89c93f6c7582dfed6118
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqllogship-application"></a>sqllogship 응용 프로그램
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **sqllogship** 응용 프로그램은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **sqllogship** 응용 프로그램은 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행합니다. 이 작업은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 특정 인스턴스에서 특정 데이터베이스에 대해 수행됩니다.  
   
  ![항목 링크 아이콘](../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") 구문 표기 규칙에 대 한 참조 [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../tools/command-prompt-utility-reference-database-engine.md)합니다.  
   

@@ -2,7 +2,7 @@
 title: '2단원: 데이터베이스 엔진 튜닝 관리자 사용 | Microsoft'
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3cdd13f27f832bf2370115cd553c2943ed4b4c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 0234da9aad2aa09abc9d455a282888faf7d3ae10
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>2단원: 데이터베이스 엔진 튜닝 관리자 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스를 튜닝하고 튜닝 세션을 관리하며 튜닝 권장 구성을 확인할 수 있습니다. 물리적 디자인 구조에 대해 잘 아는 사용자라면 이 도구를 사용하여 탐구적인 데이터베이스 튜닝 분석을 수행할 수 있습니다. 데이터베이스 튜닝에 대해 잘 모르는 사용자도 이 도구를 사용하여 자신이 튜닝하는 작업에 가장 적합한 물리적 디자인 구조 구성을 찾을 수 있습니다. 이 단원에서는 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스를 처음 접하는 데이터베이스 관리자와 물리적 디자인 구조에 대한 광범위한 지식이 없는 시스템 관리자에게 기본 연습을 제공합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스를 튜닝하고 튜닝 세션을 관리하며 튜닝 권장 구성을 확인할 수 있습니다. 물리적 디자인 구조에 대해 잘 아는 사용자라면 이 도구를 사용하여 탐구적인 데이터베이스 튜닝 분석을 수행할 수 있습니다. 데이터베이스 튜닝에 대해 잘 모르는 사용자도 이 도구를 사용하여 자신이 튜닝하는 작업에 가장 적합한 물리적 디자인 구조 구성을 찾을 수 있습니다. 이 단원에서는 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스를 처음 접하는 데이터베이스 관리자와 물리적 디자인 구조에 대한 광범위한 지식이 없는 시스템 관리자에게 기본 연습을 제공합니다.  
   
 다음 항목이 포함됩니다.  
   

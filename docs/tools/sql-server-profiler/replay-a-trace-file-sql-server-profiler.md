@@ -2,7 +2,7 @@
 title: 추적 파일 (SQL Server Profiler) 재생 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f3f19c69cae22987767cd7b65ca8dc9718faa4e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 4e32aac4b840db94bc1698d9e1b8eb680fb22866
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>추적 파일 재생(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  재생은 저장된 추적을 열고 나중에 재생하는 기능입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 응용 프로그램이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정할 때 수정된 응용 프로그램이나 프로세스에 대해 잠재적인 문제를 발견한 추적을 실행합니다. 원래 추적을 재생한 다음 결과를 비교합니다.  
   
  모니터링하려는 다른 이벤트 클래스 외에도 재생 기능을 사용하려면 특정 이벤트 클래스를 캡처해야 합니다. **TSQL_Replay** 추적 템플릿을 사용할 경우 이러한 이벤트는 기본적으로 캡처됩니다. 자세한 내용은 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)을 참조하세요.  
   

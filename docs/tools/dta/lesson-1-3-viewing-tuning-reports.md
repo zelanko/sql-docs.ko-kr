@@ -2,7 +2,7 @@
 title: 튜닝 보고서 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: b8886f3907f8fab2536ce46eeea69e4c4c2dd8a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>1-3단원 - 튜닝 보고서 보기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]이 단원의 이전 연습에서 MySession 튜닝 세션의 결과로 생성된 데이터베이스 엔진 튜닝 관리자 구성에서 데이터베이스 개체를 만들거나 삭제하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보았습니다. MySession 튜닝 세션은 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 단원의 이전 연습에서 MySession 튜닝 세션의 결과로 생성된 데이터베이스 엔진 튜닝 관리자 구성에서 데이터베이스 개체를 만들거나 삭제하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보았습니다. MySession 튜닝 세션은 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  
   
 튜닝 결과를 구현하는 데 사용할 수 있는 스크립트를 보면 매우 도움이 되지만 데이터베이스 엔진 튜닝 관리자에서 제공하는 여러 가지 보고서를 보아도 유용합니다. 이러한 보고서는 튜닝하고 있는 데이터베이스의 기존 물리적 디자인 구조와 권장 구조에 대한 정보를 제공합니다. 튜닝 보고서는 다음 연습에서 설명하는 대로 **보고서** 탭을 클릭하여 볼 수 있습니다. 이 연습에서는 [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) 및 [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)에서 만든 MySession 및 EvaluateMySession 튜닝 세션을 사용합니다.  
   

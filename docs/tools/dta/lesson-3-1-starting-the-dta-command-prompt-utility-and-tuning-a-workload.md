@@ -2,7 +2,7 @@
 title: dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 25b59bda5868291a00cbf9477b6d428ec9412c98
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>3-1단원 - dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음, 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](../../tools/dta/lesson-1-1-tuning-a-workload.md)에 대해 만든 MyScript.sql 작업을 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](../../tools/dta/lesson-1-1-tuning-a-workload.md)에 대해 만든 MyScript.sql 작업을 사용합니다.  
   
 이 자습서에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. 예제 데이터베이스를 설치하려면 [SQL Server 예제 및 예제 데이터베이스](http://sqlserversamples.codeplex.com)를 참조하세요.  
   

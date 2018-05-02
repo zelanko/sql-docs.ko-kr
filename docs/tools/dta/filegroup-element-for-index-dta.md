@@ -2,7 +2,7 @@
 title: Filegroup 요소 (DTA) 인덱스에 대 한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e7517d17dea7e452e282debd0c9a2c63a92f93b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: c88f3ecff9d95d81c6764f26683f27924fc2693f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index의 Filegroup 요소(DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 사용자 지정 구성에서 인덱스를 만들려는 파일 그룹을 지정합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  사용자 지정 구성에서 인덱스를 만들려는 파일 그룹을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   

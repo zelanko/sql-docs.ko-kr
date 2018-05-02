@@ -2,7 +2,7 @@
 title: Distributed Replay 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 1e127b3aaf9af2c37ee25339a46d81c9119982bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
   
 ## <a name="user-and-service-accounts"></a>사용자 및 서비스 계정  
  다음 표에서는 Distributed Replay에 사용되는 계정에 대해 설명합니다. Distributed Replay를 설치한 후 컨트롤러 및 클라이언트 서비스 계정이 실행될 보안 주체를 할당해야 합니다. 따라서 Distributed Replay 기능을 설치하기 전에 해당 도메인 사용자 계정을 구성하는 것이 좋습니다.  

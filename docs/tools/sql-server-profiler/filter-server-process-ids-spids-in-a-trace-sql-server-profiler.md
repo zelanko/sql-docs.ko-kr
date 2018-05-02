@@ -2,7 +2,7 @@
 title: 추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67926fa0506f797c4f39988061c4d1b7b731e5fa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: ef105f93fcc998e57bbaafa6d66f4a1c1e4ceddc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에서 SPID(서버 프로세스 식별자)를 필터링하는 방법을 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에서 SPID(서버 프로세스 식별자)를 필터링하는 방법을 설명합니다.  
   
 ### <a name="to-filter-system-ids-in-a-trace"></a>추적에서 시스템 ID를 필터링하려면  
   

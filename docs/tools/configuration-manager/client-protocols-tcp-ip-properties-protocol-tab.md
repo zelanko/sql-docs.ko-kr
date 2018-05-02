@@ -2,7 +2,7 @@
 title: 클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa2175534441ab464452a1f549833742daaa185
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 6a3228a1815675fe413fd244ac222234397cc3ae
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **TCP/IP 속성** 대화 상자의 **프로토콜** 탭을 사용하여 다음 옵션을 확인 또는 지정할 수 있습니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **TCP/IP 속성** 대화 상자의 **프로토콜** 탭을 사용하여 다음 옵션을 확인 또는 지정할 수 있습니다. 다른 포트에 연결하려면 **기본 포트** 입력란에 포트 번호를 입력하십시오. 연결 문자열에 대한 자세한 내용은 [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)를 참조하세요.  
   
 ## <a name="options"></a>변수  
  **기본 포트**  

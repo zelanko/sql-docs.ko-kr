@@ -2,7 +2,7 @@
 title: 추적 파일 또는 추적 테이블에서 템플릿 파생(SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02f621e6b63a03ea6875dfc68fa6bae86b2d7ae4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 8d06af9997f5bfa3e159385dfd0f97edfe5021a0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>추적 파일 또는 추적 테이블에서 템플릿 파생(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 파일이나 테이블에서 추적 템플릿을 만드는 방법에 대해 설명합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 파일이나 테이블에서 추적 템플릿을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>추적 파일 또는 추적 테이블에서 템플릿을 파생시키려면  
   

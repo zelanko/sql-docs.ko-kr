@@ -2,7 +2,7 @@
 title: sqlservr 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sqlservr
@@ -30,14 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2c3a63c23d2a7ecdb374269af72861c16638984
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 61727cc06d6406864c864e7923a901a1b4c6b6c1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -77,7 +78,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 시작하면 한 사용자만 연결할 수 있습니다. 디스크 캐시에 있는 완료된 트랜잭션이 정기적으로 데이터베이스 장치에 기록되도록 하는 CHECKPOINT 메커니즘이 시작되지 않았습니다. 대개 시스템 데이터베이스에 문제가 있어서 복구해야 하는 경우 이 옵션을 사용합니다. **sp_configure allow updates** 옵션을 설정합니다. 기본적으로 **allow updates** 는 사용할 수 없습니다.  
   
  **-n**  
- 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. **-n** 옵션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  
+ 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  
   
  **-T** *trace#*  
  지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  

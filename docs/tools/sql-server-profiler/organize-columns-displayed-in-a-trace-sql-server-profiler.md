@@ -2,7 +2,7 @@
 title: 추적에 표시된 열 구성(SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 51eb0fba8e20415c42542400f303c0e726af234d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성**을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   
  **열 구성** 을 사용하여 선택한 데이터 열을 기준으로 추적 이벤트를 그룹화하거나 그룹화한 후 집계할 수 있습니다.  
   

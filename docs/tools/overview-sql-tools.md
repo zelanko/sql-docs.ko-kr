@@ -2,7 +2,7 @@
 title: SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: misc
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ed45931b82f3b316b6738eb8783af45e1572c8c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 295704322a3ddb1e630c9dafbdf1ebcf37fdefad
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

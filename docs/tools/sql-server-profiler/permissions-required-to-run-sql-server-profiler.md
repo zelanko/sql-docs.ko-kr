@@ -2,7 +2,7 @@
 title: SQL Server 프로파일러 실행에 필요한 권한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0746ac193588e1d2a19bb65097ade1c56cf24fc5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 2c57d40f366b40de050085ca3950ad6a5baf1e8b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 기본적으로 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 추적 작성에 사용된 Transact-SQL 저장 프로시저와 동일한 사용자 권한이 있어야 합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)을 참조하세요.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  기본적으로 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 실행하려면 추적 작성에 사용된 Transact-SQL 저장 프로시저와 같은 동일한 사용자 권한이 있어야 합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SHOWPLAN, ALTER TRACE 또는 VIEW SERVER STATE 권한이 있는 사용자는 실행 계획 출력에 캡처된 쿼리를 볼 수 있습니다. 이러한 쿼리에는 암호 같은 중요한 정보가 포함되어 있을 수 있습니다. 따라서 db_owner 고정 데이터베이스 역할의 멤버나 sysadmin 고정 서버 역할의 멤버 같이 중요한 정보를 볼 지위에 있는 사용자에게만 이러한 권한을 부여하는 것이 좋습니다. 또한 실행 계획 파일을 저장하거나 실행 계획 관련 이벤트가 포함된 파일을 추적할 때는 NTFS 파일 시스템이 적용된 위치만 사용하고 중요한 정보를 볼 지위에 있는 사용자에게만 해당 위치에 대한 액세스 권한을 부여하는 것이 좋습니다.  

@@ -2,7 +2,7 @@
 title: SQL Server 서비스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b932a110e49ededd17a3895eb7aeb3efee3e106c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: b5a3b11af26632d835e8558fd7aef2ce08b39375
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-services"></a>SQL Server 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
+  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   
 > [!NOTE]  
 >  리소스를 호스트하지 않는 클러스터의 노드에서 **SQL Server 구성 관리자** 를 열면 서비스가 중지된 상태로 표시됩니다.  

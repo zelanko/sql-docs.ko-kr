@@ -2,7 +2,7 @@
 title: SQL Server Profiler를 사용하여 추적 보기 및 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b15547e2d5d49a9709d118f69ea8d4590e5ff1c0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 526eb2b2fbe378c542789665ee6f2fb73f14899b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 보기 및 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 추적에서 캡처한 이벤트를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 정의된 추적 속성을 기반으로 데이터를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 분석하는 한 가지 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 같은 다른 프로그램으로 데이터를 복사하는 것입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 **Text** 데이터 열이 추적에 포함되어 있는 경우 SQL 일괄 처리와 RPC(원격 프로시저 호출) 이벤트가 있는 추적 파일을 사용할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 사용할 수 있도록 올바른 이벤트와 열이 캡처되었는지 확인하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  추적에서 캡처한 이벤트를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 정의된 추적 속성을 기반으로 데이터를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 분석하는 한 가지 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 같은 다른 프로그램으로 데이터를 복사하는 것입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 **Text** 데이터 열이 추적에 포함되어 있는 경우 SQL 일괄 처리와 RPC(원격 프로시저 호출) 이벤트가 있는 추적 파일을 사용할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 사용할 수 있도록 올바른 이벤트와 열이 캡처되었는지 확인하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 열 때 추적 파일이 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 SQL 추적 시스템 저장 프로시저로 생성된 경우 추적 파일에 .trc 파일 확장명이 없어도 됩니다.  
   

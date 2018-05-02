@@ -2,7 +2,7 @@
 title: SQL Server Profiler 템플릿 및 권한 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe9d9cbe084c3e721f41ab6f0546c6cf52b9fe1a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: e5ecb04dcca4a3e73f1d2351f569960cfd7fec0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 템플릿 및 권한
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 쿼리를 해결하는 방법을 보여 줍니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 내부적으로 쿼리를 해결하는 방법을 보여 줍니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
   

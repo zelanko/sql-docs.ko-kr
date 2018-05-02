@@ -2,7 +2,7 @@
 title: 클라이언트 프로토콜 속성 (순서 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: 5ae4db3ad7f7589fd95711dbe5667d1cc73d4164
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-**클라이언트 프로토콜 속성** 대화 상자의 **순서**페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
+  **클라이언트 프로토콜 속성** 대화 상자의 **순서**페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
   
  선택한 프로토콜을 **사용할 수 없는 프로토콜** 또는 **사용할 수 있는 프로토콜** 목록으로 이동하려면 해당 프로토콜을 클릭한 다음 **사용** 또는 **사용 안 함** 을 클릭합니다.  
   

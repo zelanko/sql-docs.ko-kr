@@ -2,7 +2,7 @@
 title: SQL Server Profiler로 교착 상태 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -27,14 +27,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7b4d3aa4c583a32fc84570900e79624380b97748
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
   
  교착 상태 이벤트를 추적하려면 **Deadlock graph** 이벤트 클래스를 추적에 추가합니다. 이 이벤트 클래스는 교착 상태와 관련된 프로세스 및 개체에 대한 XML 데이터로 추적 시 **TextData** 데이터 열을 채웁니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 XML 문서를 교착 상태 XML(.xdl) 파일로 추출할 수 있습니다. 이 XML 파일은 나중에 SQL Server Management Studio에서 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 구성하여 모든 **Deadlock graph** 이벤트가 포함되어 있는 단일 파일로 **Deadlock graph** 이벤트를 추출하거나 개별 파일로 추출할 수도 있습니다. 다음과 같은 방법으로 추출할 수 있습니다.  
   
