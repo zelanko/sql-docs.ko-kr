@@ -1,0 +1,135 @@
+---
+title: SchemaEnum | Microsoft Docs
+ms.prod: sql
+ms.prod_service: drivers
+ms.service: ''
+ms.component: ado
+ms.technology:
+- drivers
+ms.custom: ''
+ms.date: 01/19/2017
+ms.reviewer: ''
+ms.suite: sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apitype: COM
+f1_keywords:
+- SchemaEnum
+helpviewer_keywords:
+- SchemaEnum enumeration [ADO]
+ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
+caps.latest.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1d2904852d7e44e28eb4ad1331f1276f3ef45234
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/03/2018
+---
+# <a name="schemaenum"></a>SchemaEnum
+스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 검색 합니다.  
+  
+## <a name="remarks"></a>주의  
+ 항목에서 각 ADO 상수를 찾을 수 함수 및 열에 대 한 자세한 내용은 반환 [부록 b: 스키마 행 집합](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) OLE DB 프로그래머 참조 합니다. 각 항목의 이름은 다음 표에서의 설명 섹션에 있는 괄호에 나열 됩니다.  
+  
+ 항목에서 각 ADO MD 상수를 찾을 수 함수 및 열에 대 한 자세한 내용은 반환 [OLAP 개체와 스키마 행 집합에 대 한 OLE DB](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) OLE DB의 온라인 분석 처리 (OLAP) 설명서에 대 한 합니다. 각 항목의 이름은 다음 표의 설명 열에 대 한 괄호 안에 나열 됩니다.  
+  
+ ADO의 Description 열 참조 하 여 ADO 데이터 형식에 OLE DB 설명서에 있는 열의 데이터 형식으로 변환할 수 있습니다 있습니다 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 항목입니다. 예를 들어에서 OLE DB 데이터 형식 **DBTYPE_WSTR** 에서 ADO 데이터 형식에 해당 **adWChar**합니다.  
+  
+ 상수에 대 한 스키마와 비슷한 결과 생성 하는 ADO **adSchemaDBInfoKeywords** 및 **adSchemaDBInfoLiterals**합니다. ADO 만듭니다는 **레코드 집합**, 후 각 행에서 각각 반환 값으로 채우는 **IDBInfo::GetKeywords** 및 **IDBInfo::GetLiteralInfo** 메서드. 이러한 메서드에 대 한 추가 정보를 찾을 수는 [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 프로그래머 참조 섹션에 있습니다.  
+  
+|상수|Value|Description|제약 조건 열|  
+|--------------|-----------|-----------------|------------------------|  
+|**adSchemaAsserts**|0|카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
+|**adSchemaCatalogs**|1.|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
+|**adSchemaCharacterSets**|2|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 집합을 반환 합니다.<br /><br /> (CHARACTER_SETS 행 집합)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
+|**adSchemaCheckConstraints**|5|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 check 제약을 반환 합니다.<br /><br /> (CHECK_CONSTRAINTS) 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
+|**adSchemaCollations**|3|문자 데이터 정렬을 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 반환 합니다.<br /><br /> (데이터 정렬 행 집합)|COLLATION_CATALOG COLLATION_SCHEMA 데이터 정렬 이름|  
+|**adSchemaColumnPrivileges**|13|가 사용할 수 있거나 지정된 된 사용자가 부여한 카탈로그에 정의 된 테이블의 열에 권한을 반환 합니다.<br /><br /> (COLUMN_PRIVILEGES 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
+|**adSchemaColumns**|4|테이블 (뷰 포함)는 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 열을 반환 합니다.<br /><br /> (COLUMNS 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|지정된 된 사용자가 소유 하 고 카탈로그에 정의 된 도메인에 의존 하는 카탈로그에 정의 된 열을 반환 합니다.<br /><br /> (COLUMN_DOMAIN_USAGE 행 집합)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
+|**adSchemaConstraintColumnUsage**|6|열에서 참조 제약 조건, unique 제약 조건, check 제약 조건 및 어설션을 사용 하는 카탈로그에 정의 하 고 지정된 된 사용자가 소유 하 고 반환 합니다.<br /><br /> (CONSTRAINT_COLUMN_USAGE 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaConstraintTableUsage**|7|참조 제약 조건, unique 제약 조건, check 제약 조건 및 어설션이 지정된 된 사용자가 소유 하 고 카탈로그에 정의에서 사용 되는 테이블을 반환 합니다.<br /><br /> (CONSTRAINT_TABLE_USAGE 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaCubes**|32|스키마 (또는 카탈로그 공급자 스키마를 지원 하지 않는 경우)에 사용할 수 있는 큐브에 대 한 정보를 반환 합니다.<br /><br /> (큐브 행 집합 *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
+|**adSchemaDBInfoKeywords**|30|공급자 관련 키워드 목록을 반환합니다.<br /><br /> (IDBInfo::GetKeywords)|\<없음 >|  
+|**adSchemaDBInfoLiterals**|31|텍스트 명령에서 사용 되는 공급자 특정 리터럴 목록을 반환 합니다.<br /><br /> (IDBInfo::GetLiteralInfo)|\<없음 >|  
+|**adSchemaDimensions**|33|지정된 된 큐브와 차원에 대 한 정보를 반환합니다. 행을 하나씩 각 차원에 대 한 합니다.<br /><br /> (차원 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
+|**adSchemaForeignKeys**|27|지정된 된 사용자가 카탈로그에 정의 된 외래 키 열을 반환 합니다.<br /><br /> (FOREIGN_KEYS 행 집합)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
+|**adSchemaHierarchies**|34|차원에 사용할 수 있는 계층에 대 한 정보를 반환 합니다.<br /><br /> (계층 구조 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
+|**adSchemaIndexes**|12|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 인덱스를 반환 합니다.<br /><br /> (인덱스 행 집합)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME 형식 TABLE_NAME|  
+|**adSchemaKeyColumnUsage**|8|지정된 된 사용자가 키로 제한 되는 카탈로그에 정의 된 열을 반환 합니다.<br /><br /> (KEY_COLUMN_USAGE 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaLevels**|35|차원에 사용할 수 있는 수준에 대 한 정보를 반환합니다.<br /><br /> (수준 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
+|**adSchemaMeasures**|36|사용 가능한 측정값에 대 한 정보를 반환합니다.<br /><br /> (측정값 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
+|**adSchemaMembers**|38|사용 가능한 구성원에 대 한 정보를 반환합니다.<br /><br /> (멤버 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE Tree 연산자. 자세한 내용은 OLE DB에 대 한 온라인 분석 처리 (OLAP) 참조 합니다.|  
+|**adSchemaPrimaryKeys**|28|지정된 된 사용자가 카탈로그에 정의 된 기본 키 열을 반환 합니다.<br /><br /> (PRIMARY_KEYS 행 집합)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
+|**adSchemaProcedureColumns**|29|프로시저가 반환한 행 집합의 열에 대한 정보를 반환합니다.<br /><br /> (PROCEDURE_COLUMNS 행 집합)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
+|**adSchemaProcedureParameters**|26|프로시저의 매개 변수와 반환 코드에 대한 정보를 반환합니다.<br /><br /> (PROCEDURE_PARAMETERS 행 집합)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
+|**adSchemaProcedures**|16|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 프로시저를 반환 합니다.<br /><br /> (프로시저 행 집합)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
+|**adSchemaProperties**|37|차원의 각 수준에 대해 사용 가능한 속성에 대 한 정보를 반환합니다.<br /><br /> (속성 행 집합)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
+|**adSchemaProviderSpecific**|-1|공급자는 자체 비표준 스키마 쿼리를 정의 하는 경우 사용 합니다.|\<특정 공급자 >|  
+|**adSchemaProviderTypes**|22|데이터 공급자가 지 원하는 기본 데이터 형식을 반환 합니다.<br /><br /> (PROVIDER_TYPES 행 집합)|DATA_TYPE BEST_MATCH|  
+|**AdSchemaReferentialConstraints**|9|참조 제약 조건을 카탈로그에 정의 된 지정된 된 사용자가 소유 하는 반환 합니다.<br /><br /> (REFERENTIAL_CONSTRAINTS 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
+|**adSchemaSchemata**|17|지정된 된 사용자가 소유 하는 스키마 (데이터베이스 개체)를 반환 합니다.<br /><br /> (스키마 행 집합)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
+|**adSchemaSQLLanguages**|18|받는 규칙 수준, 옵션 및 카탈로그에 정의 된 SQL 구현 처리 데이터에서 지 원하는 언어를 반환 합니다.<br /><br /> (SQL_LANGUAGES 행 집합)|\<없음 >|  
+|**adSchemaStatistics**|19|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 통계를 반환 합니다.<br /><br /> (통계 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaTableConstraints**|10|테이블 제약 조건 카탈로그에 정의 된 지정된 된 사용자가 소유 하는 반환 합니다.<br /><br /> (TABLE_CONSTRAINTS 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
+|**adSchemaTablePrivileges**|14|가 사용할 수 있거나 지정된 된 사용자가 부여한 카탈로그에 정의 된 테이블 대 한 권한을 반환 합니다.<br /><br /> (TABLE_PRIVILEGES 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
+|**adSchemaTables**|20|테이블 (뷰 포함)는 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 반환 합니다.<br /><br /> (테이블 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
+|**adSchemaTranslations**|21|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 번역을 반환 합니다.<br /><br /> (번역 행 집합)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
+|**adSchemaTrustees**|39|나중에 사용하도록 예약되어 있습니다.||  
+|**adSchemaUsagePrivileges**|15|를 사용할 수 있거나 지정된 된 사용자가 부여한 카탈로그에 정의 된 개체에 사용 권한을 반환 합니다.<br /><br /> (USAGE_PRIVILEGES 행 집합)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR 피부 여자에 게|  
+|**adSchemaViewColumnUsage**|24|종속 된 열을 표시, 카탈로그에 정의 및 지정된 된 사용자가 소유 하 고 반환 합니다.<br /><br /> (VIEW_COLUMN_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViews**|23|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 보기를 반환 합니다.<br /><br /> (뷰 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaViewTableUsage**|25|종속 된 테이블이 표시 카탈로그에 정의 하 고 지정된 된 사용자가 소유 하 고 반환 됩니다.<br /><br /> (VIEW_TABLE_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+  
+## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
+ Package: **com.ms.wfc.data**  
+  
+|상수|  
+|--------------|  
+|AdoEnums.Schema.ASSERTS|  
+|AdoEnums.Schema.CATALOGS|  
+|AdoEnums.Schema.CHARACTERSETS|  
+|AdoEnums.Schema.CHECKCONSTRAINTS|  
+|AdoEnums.Schema.COLLATIONS|  
+|AdoEnums.Schema.COLUMNPRIVILEGES|  
+|AdoEnums.Schema.COLUMNS|  
+|AdoEnums.Schema.COLUMNSDOMAINUSAGE|  
+|AdoEnums.Schema.CONSTRAINTCOLUMNUSAGE|  
+|AdoEnums.Schema.CONSTRAINTTABLEUSAGE|  
+|AdoEnums.Schema.CUBES|  
+|AdoEnums.Schema.DBINFOKEYWORDS|  
+|AdoEnums.Schema.DBINFOLITERALS|  
+|AdoEnums.Schema.DIMENSIONS|  
+|AdoEnums.Schema.FOREIGNKEYS|  
+|AdoEnums.Schema.HIERARCHIES|  
+|AdoEnums.Schema.INDEXES|  
+|AdoEnums.Schema.KEYCOLUMNUSAGE|  
+|AdoEnums.Schema.LEVELS|  
+|AdoEnums.Schema.MEASURES|  
+|AdoEnums.Schema.MEMBERS|  
+|AdoEnums.Schema.PRIMARYKEYS|  
+|AdoEnums.Schema.PROCEDURECOLUMNS|  
+|AdoEnums.Schema.PROCEDUREPARAMETERS|  
+|AdoEnums.Schema.PROCEDURES|  
+|AdoEnums.Schema.PROPERTIES|  
+|AdoEnums.Schema.PROVIDERSPECIFIC|  
+|AdoEnums.Schema.PROVIDERTYPES|  
+|AdoEnums.Schema.REFERENTIALCONTRAINTS|  
+|AdoEnums.Schema.SCHEMATA|  
+|AdoEnums.Schema.SQLLANGUAGES|  
+|AdoEnums.Schema.STATISTICS|  
+|AdoEnums.Schema.TABLECONSTRAINTS|  
+|AdoEnums.Schema.TABLEPRIVILEGES|  
+|AdoEnums.Schema.TABLES|  
+|AdoEnums.Schema.TRANSLATIONS|  
+|AdoEnums.Schema.TRUSTEES|  
+|AdoEnums.Schema.USAGEPRIVILEGES|  
+|AdoEnums.Schema.VIEWCOLUMNUSAGE|  
+|AdoEnums.Schema.VIEWS|  
+|AdoEnums.Schema.VIEWTABLEUSAGE|  
+  
+## <a name="applies-to"></a>적용 대상  
+ [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)
