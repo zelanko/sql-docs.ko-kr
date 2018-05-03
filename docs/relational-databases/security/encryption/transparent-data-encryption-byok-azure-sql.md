@@ -19,11 +19,11 @@ ms.topic: article
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +66,10 @@ TDE가 Key Vault의 TDE 보호기를 사용하도록 처음 구성되면, 서버
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Azure Key Vault 구성 지침
 
-- 키 또는 키 자격 증명 모음이 우발적 또는 악의적으로 삭제되는 경우 데이터 손실을 방지하기 위해 [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)가 설정된 키 자격 증명 모음을 사용합니다.  이것은 BYOK가 적용된 TDE의 **하드 요구 사항**입니다.  
-  - 일시 삭제된 리소스는 복구되거나 제거되지 않는 한 90일 동안 보존됩니다.
-  - **복구** 및 **제거** 작업에는 키 자격 증명 모음 액세스 정책에 정의된 고유 권한이 있습니다. 
+- 키 또는 키 자격 증명 모음이 우발적으로 삭제되는 경우 데이터 손실을 방지하기 위해 [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)가 설정된 키 자격 증명 모음을 만듭니다.  키 자격 증명 모음에서 ["일시 삭제" 속성을 활성화하는 PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell)을 사용해야 합니다(이 옵션은 아직 AKV 포털에서 사용할 수 없으나 SQL에서 필요함).  
+  - 일시 삭제된 리소스는 복구되거나 제거되지 않는 한 설정된 기간인 90일 동안 보존됩니다.
+  - **복구** 및 **제거** 작업에는 키 자격 증명 모음 액세스 정책과 연결된 고유 권한이 있습니다. 
+
 - Azure AD(Azure Active Directory) ID를 사용하여 키 자격 증명 모음에 대한 논리 서버 액세스 권한을 부여합니다.  포털 UI를 사용하는 경우 Azure AD ID가 자동으로 생성되며 키 자격 증명 모음 액세스 권한이 서버에 부여됩니다.  PowerShell을 사용하여 BYOK 기반 TDE를 구성하면 Azure AD ID가 생성되어야 하며 완료를 확인해야 합니다. PowerShell을 사용하는 경우 자세한 단계별 지침은 [BYOK 기반 TDE 구성](transparent-data-encryption-byok-azure-sql-configure.md)을 참조하세요.
 
   >[!NOTE]

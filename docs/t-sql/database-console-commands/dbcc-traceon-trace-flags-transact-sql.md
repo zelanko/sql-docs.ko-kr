@@ -28,11 +28,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b0500c39e158f07c7371f853be7262ee9b82930
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/20/2018
 |**2371**|고정 자동 업데이트 통계 임계값을 동적 자동 업데이트 통계 임계값으로 변경합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754171)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 130보다 낮은 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)부터 이 동작은 엔진에서 제어되며, 2371 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**2389**|오름차순 키에 대해 자동으로 생성되는 빠른 통계를 사용하도록 설정합니다(히스토그램 수정). 2389 추적 플래그가 설정되고 선행 통계 열이 오름차순으로 표시되면, 카디널리티를 추정하는 데 사용되는 히스토그램이 쿼리 컴파일 시간에 조정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상에 적용되지 않습니다. 대신 4139 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**2390**|오름차순 또는 알 수 없는 키에 대해 자동으로 생성되는 빠른 통계를 사용하도록 설정합니다(히스토그램 수정). 2390 추적 플래그가 설정되고 선행 통계 열이 오름차순 또는 알 수 없음으로 표시되면, 카디널리티를 추정하는 데 사용되는 히스토그램이 쿼리 컴파일 시간에 조정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상에 적용되지 않습니다. 대신 4139 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
-|**2422**|REQUEST_MAX_CPU_TIME_SEC Resource Governor 구성에 설정된 최대 시간이 초과되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 요청을 중단할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4038419)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역|
+|**2422**|REQUEST_MAX_CPU_TIME_SEC Resource Governor 구성에 설정된 최대 시간이 초과되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 요청을 중단할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/4038419)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역|
 |**2430**|대체 잠금 클래스 정리를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2754301)를 참조하세요.<br /><br />**범위**: 전역만| 
 |**2453**|충분한 수의 행이 변경되면 테이블 변수에서 다시 컴파일을 트리거하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/2952444)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**2469**|분할된 columnstore 인덱스로 `INSERT INTO ... SELECT`에 대한 대체 교환을 활성화합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/3204769)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/20/2018
 |**10204**|columnstore 인덱스 재구성 중에 병합/재압축을 사용하지 않도록 설정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 columnstore 인덱스가 다시 구성되면, 압축된 작은 행 그룹을 압축된 큰 행 그룹으로 자동으로 병합하고 삭제된 행 수가 많은 행 그룹을 다시 압축할 수 있는 새 기능이 있습니다.<br /><br />**참고:** 10204 추적 플래그는 메모리 최적화 테이블에서 만든 columnstore 인덱스에 적용되지 않습니다.<br /><br />**범위**: 전역 또는 세션|   
 |**10316**|[내부 메모리 최적화 준비 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)의 기본 인덱스 옆에 추가 인덱스를 만들 수 있도록 합니다. 기본 인덱스에서 다루지 않는 항목이 포함된 특정 쿼리 패턴이 있는 경우 추가 인덱스를 추가하는 것이 좋습니다.<br /><br />**참고:** 메모리 최적화 테이블에 대한 시스템 버전 관리 임시 테이블은 높은 트랜잭션 처리량을 제공하도록 설계되었습니다. 추가 인덱스를 작성하면 현재 테이블의 행을 업데이트하거나 삭제하는 DML 작업에 대한 오버헤드가 발생할 수 있습니다. 추가 인덱스를 사용하면 임시 쿼리 성능과 추가 DML 오버헤드 간에 적절한 찾아야 합니다.<br /><br />**범위**: 전역 또는 세션|
 |**11023**|샘플 속도가 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문의 일부로 명시적으로 지정되지 않은 모든 후속 통계 업데이트에 마지막 지속형 샘플 속도를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/4039284)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|    
-|**11024**|모든 파티션의 수정 횟수가 로컬 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)을 초과하는 경우 통계의 자동 업데이트를 트리거할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/4041811)를 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
+|**11024**|모든 파티션의 수정 횟수가 로컬 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)을 초과하는 경우 통계의 자동 업데이트를 트리거할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/4041811)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역 또는 세션| 
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 쿼리, 세션 및 전역이라는 세 가지 유형의 추적 플래그가 있습니다. 쿼리 추적 플래그는 특정 쿼리의 컨텍스트에 대해 활성화됩니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 전역으로만 설정할 수 있는 플래그도 있고 전역 또는 세션 범위에서 설정할 수 있는 플래그도 있습니다.  

@@ -34,11 +34,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8316cf6275d8025213f56831604841fb1377fd1b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74c5a8618dd48ec388f2b4affe9aeb6b8e789bd7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -183,7 +183,7 @@ CREATE STATISTICS statistics_name
  통계 업데이트를 다시 활성화하려면 [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md)를 사용하여 통계를 제거한 다음, NORECOMPUTE 옵션 없이 CREATE STATISTICS를 실행합니다.  
   
 > [!WARNING]  
->  이 옵션을 사용하면 최적이 아닌 쿼리 계획이 생성될 수 있습니다. 이 옵션은 자격 있는 시스템 관리자가 꼭 필요한 경우에만 사용하는 것이 좋습니다.  
+> 이 옵션을 사용하면 최적이 아닌 쿼리 계획이 생성될 수 있습니다. 이 옵션은 자격 있는 시스템 관리자가 꼭 필요한 경우에만 사용하는 것이 좋습니다.  
   
  AUTO_STATISTICS_UPDATE 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 통계 업데이트를 비활성화하고 다시 활성화하는 방법은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
@@ -203,7 +203,7 @@ CREATE STATISTICS statistics_name
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   

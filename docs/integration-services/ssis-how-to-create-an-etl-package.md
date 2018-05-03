@@ -2,7 +2,7 @@
 title: SSIS에서 ETL 패키지를 만드는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 83e51e583e0c83d8d0cbc8dbd213a78baa766ffb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b35b1f9ac19d76f9c78165a973044c67c4aab7d4
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL 패키지를 만드는 방법
 
@@ -40,9 +40,6 @@ ms.lasthandoff: 04/18/2018
 이 자습서에서는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 간단한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만드는 방법을 배웁니다. 사용자가 만든 패키지는 플랫 파일로부터 데이터를 가져와서 데이터 형식을 바꾼 다음 바뀐 데이터를 팩트 테이블에 삽입합니다. 다음 단원에서는 패키지를 확장하여 루핑, 패키지 구성, 로깅 및 오류 흐름을 보여 줍니다.  
   
 자습서에서 사용하는 예제 데이터를 설치하면 자습서의 각 단원에서 만들 패키지의 완성된 버전도 함께 설치됩니다. 원하는 경우 단원을 건너뛰고 완성된 패키지를 사용하여 이후 단원에서 자습서를 시작할 수 있습니다. 이 자습서로 패키지 또는 새 개발 환경 작업을 처음으로 수행하는 경우에는 1단원부터 시작하는 것이 좋습니다.  
-
-> [!IMPORTANT]
-> 이 자습서를 실행하는 데 필요한 샘플 파일이 최근에 이전 위치에서 온라인으로 제공되지 않았습니다. 불편을 끼쳐 드려 죄송합니다. 새 위치에서 파일을 제공하고 있으며 이 문서의 링크도 업데이트되었습니다.
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)란?
 
@@ -53,12 +50,15 @@ ms.lasthandoff: 04/18/2018
   
 ## <a name="requirements"></a>요구 사항  
 이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다.  
-  
+
+> [!IMPORTANT]
+> 이 자습서를 실행하는 데 필요한 샘플 파일이 최근에 이전 위치에서 온라인으로 제공되지 않았습니다. 불편을 끼쳐 드려 죄송합니다. 새 위치에서 파일을 제공하고 있으며 이 문서의 다운로드 링크도 업데이트되었습니다.
+
 이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AdventureWorksDW2012 **데이터베이스가 있는** . **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorksDW2012.bak`를 다운로드하고 백업을 복원하세요.  
 
--   데이터 샘플링 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터 및 단원 패키지를 Zip 파일로 다운로드하려면 [여기를 클릭하세요](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip).  
+-   데이터 샘플링 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 - 간단한 ETL 패키지 만들기](https://www.microsoft.com/download/details.aspx?id=56827)를 참조하세요.  
 
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
