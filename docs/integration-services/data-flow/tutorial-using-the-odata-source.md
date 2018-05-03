@@ -1,31 +1,31 @@
 ---
-title: "자습서: OData 원본 사용 | Microsoft Docs"
-ms.custom: 
+title: '자습서: OData 원본 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4721c9e3854aba63a2d38209212435e2b0f5f4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9d76faeea7d4ab860dc4cd8311bb768857a6eea2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-using-the-odata-source"></a>자습서: OData 원본 사용
-  이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출하고 이를 플랫 파일로 로드하는 프로세스에 대해 설명합니다.  
+  이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Integration Services 프로젝트 만들기  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  연결에 대해 **새로 만들기...** 를 클릭해서 새 OData 연결 관리자를 추가합니다.  
   
-6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서에서는 서비스 문서에 대한 URL [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)를 입력합니다.  
+6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서의 목적을 위해 서비스 문서에 대한 URL([http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/))을 입력합니다.  
   
 7.  OData 서비스에 액세스하는 데 사용할 **인증** 으로 **Windows 인증** 이 선택되었는지 확인합니다. 기본적으로**Windows 인증** 이 선택됩니다.  
   

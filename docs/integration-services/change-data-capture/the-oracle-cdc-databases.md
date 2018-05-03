@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC 데이터베이스 | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC 데이터베이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 566392a8118eba1139ef7aef539d29f4b7832ea0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/15/2018
 |항목|Description|  
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
-|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) 을 참조하세요.|  
+|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
 |use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  

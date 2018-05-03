@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78e3660935d5969e2a67afed85f295998e496153
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +108,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 기본적으로 최대 시간이 초과하는 경우 Resource Governor가 요청을 종료하지는 않지만 이벤트가 생성됩니다. 자세한 내용은 [CPU Threshold Exceeded 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)를 참조하세요. 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터는 [추적 플래그 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 Resource Governor가 최대 시간을 초과하는 경우 요청을 중단합니다.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 [2422 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 최대 시간이 초과되면 Resource Governor에서 요청을 중단합니다.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  메모리(작업 버퍼 메모리)가 부여될 때까지 쿼리가 대기할 수 있는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  
->  메모리 부여 제한 시간에 도달할 때마다 쿼리가 실패하지는 않습니다. 쿼리는 너무 많은 쿼리가 동시에 실행되는 경우에만 실패합니다. 그렇지 않을 경우 쿼리에 최소한의 메모리만 부여되어 쿼리 성능이 떨어질 수 있습니다.  
+> 메모리 부여 제한 시간에 도달할 때마다 쿼리가 실패하지는 않습니다. 쿼리는 너무 많은 쿼리가 동시에 실행되는 경우에만 실패합니다. 그렇지 않을 경우 쿼리에 최소한의 메모리만 부여되어 쿼리 성능이 떨어질 수 있습니다.  
   
  *value*는 양의 정수여야 합니다. *value*의 기본 설정인 0은 쿼리 비용에 따른 내부 계산을 사용하여 최대 시간을 결정합니다.  
   
@@ -122,10 +122,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  병렬 요청의 최대 DOP(병렬 처리 수준)를 지정합니다. *value*는 0 또는 1~255 범위의 양의 정수여야 합니다. *value*가 0이면 서버는 최대 병렬 처리 수준을 선택합니다. 이 값은 기본값이며 권장 설정입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 MAX_DOP에 설정하는 실제 값은 지정된 값보다 작을 수 있습니다. 최종 값은 min(255, CPU 수) 수식에 의해 결정됩니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 MAX_DOP에 설정하는 실제 값은 지정된 값보다 작을 수 있습니다. 최종 값은 min(255, CPU 수) 수식에 의해 결정됩니다.  
   
 > [!CAUTION]  
->  MAX_DOP를 변경하면 서버 성능이 저하될 수 있습니다. MAX_DOP를 변경해야 할 경우에는 단일 NUMA 노드에 있는 하드웨어 스케줄러의 최대 수보다 작거나 같은 값으로 설정하는 것이 좋습니다. MAX_DOP를 8보다 큰 값으로 설정하면 성능에 영향을 줄 수 있습니다.  
+> MAX_DOP를 변경하면 서버 성능이 저하될 수 있습니다. MAX_DOP를 변경해야 할 경우에는 단일 NUMA 노드에 있는 하드웨어 스케줄러의 최대 수보다 작거나 같은 값으로 설정하는 것이 좋습니다. MAX_DOP를 8보다 큰 값으로 설정하면 성능에 영향을 줄 수 있습니다.  
   
  MAX_DOP는 다음과 같이 처리합니다.  
   
@@ -148,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  "default" 옵션은 시스템 예약어인 DEFAULT와의 충돌을 피하기 위해 ALTER WORKLOAD GROUP과 함께 사용될 경우 따옴표("") 또는 대괄호([])로 묶어야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 > [!NOTE]  
->  "default" 옵션은 대/소문자를 구분합니다.  
+> "default" 옵션은 대/소문자를 구분합니다.  
   
 ## <a name="remarks"></a>Remarks  
  ALTER WORKLOAD GROUP은 기본 그룹에서 허용됩니다.  
@@ -160,7 +160,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   MAX_DOP을 1에서 0 또는 1보다 큰 값으로 변경하는 경우 DBCC FREEPROCCACHE를 실행하지 않아도 됩니다. 그러나 직렬 계획이 병렬로 실행될 수 없으므로 해당 캐시의 제거로 새 계획이 잠재적으로 병렬 처리를 사용하여 컴파일될 수 있습니다.  
   
 > [!CAUTION]  
->  하나 이상의 작업 그룹에 연결된 리소스 풀에서 캐시된 계획을 삭제하면 *pool_name*에 의해 식별된 사용자 정의 리소스 풀과 함께 모든 작업 그룹에 영향을 미칩니다.  
+> 하나 이상의 작업 그룹에 연결된 리소스 풀에서 캐시된 계획을 삭제하면 *pool_name*에 의해 식별된 사용자 정의 리소스 풀과 함께 모든 작업 그룹에 영향을 미칩니다.  
   
  DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
@@ -176,7 +176,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>예  
  다음 예에서는 기본 그룹에 있는 요청의 중요도를 `MEDIUM`에서 `LOW`로 변경하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +186,7 @@ GO
   
  다음 예에서는 작업 그룹을 현재 속해 있는 풀에서 기본 풀로 이동하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

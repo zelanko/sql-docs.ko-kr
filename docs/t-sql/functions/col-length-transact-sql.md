@@ -28,16 +28,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9e7ff86386eac4bdc30680cc763a2b11e522076c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-열의 정의된 길이(바이트)를 반환합니다.
+이 함수는 정의된 열의 길이(바이트)를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,24 +49,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## <a name="arguments"></a>인수  
 **'** *table* **'**  
-열 길이 정보를 확인할 테이블의 이름입니다. *table*은 **nvarchar** 형식의 식입니다.
+열 길이 정보를 확인하려는 테이블의 이름입니다. *table*은 **nvarchar** 형식의 식입니다.
   
 **'** *column* **'**  
-길이를 확인할 열의 이름입니다. *column*은 **nvarchar** 형식의 식입니다.
+확인하려는 길이의 열 이름입니다. *column*은 **nvarchar** 형식의 식입니다.
   
 ## <a name="return-type"></a>반환 형식
 **smallint**
   
 ## <a name="exceptions"></a>예외  
-오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.
+오류가 발생하거나 호출자에게 개체를 볼 수 있는 올바른 권한이 없으면 NULL을 반환합니다.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 COL_LENGTH와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 올바른 권한이 없으면 COL_LENGTH와 같은 메타데이터 내보내기 기본 제공 함수에서 NULL을 반환할 수 있습니다. 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
   
 ## <a name="remarks"></a>Remarks  
-**max** 지정자(**varchar(max)**)로 선언된 **varchar** 형식의 열에서는 COL_LENGTH가 값 -1을 반환합니다.
+**max** 지정자(**varchar(max)**)로 선언된 **varchar** 열의 경우 COL_LENGTH는 -1 값을 반환합니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 `varchar(40)` 형식의 열과 `nvarchar(40)` 형식의 열에 대한 반환 값을 보여 줍니다.
+다음 예제에서는 `varchar(40)` 형식 및 `nvarchar(40)` 형식의 열에 대한 반환 값을 보여 줍니다.
   
 ```sql
 USE AdventureWorks2012;  

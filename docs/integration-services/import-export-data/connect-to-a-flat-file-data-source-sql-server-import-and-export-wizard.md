@@ -1,28 +1,28 @@
 ---
-title: "플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
-ms.custom: 
+title: 플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57326cdaab173fa0ab3255da4b336eb4b294e19b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **플랫 파일**(텍스트 파일) 데이터 원본에 연결하는 방법을 보여 줍니다. 플랫 파일의 경우, 마법사의 이 두 페이지는 다양한 옵션 집합을 제시하므로 이 항목에서는 플랫 파일 원본과 플랫 파일 대상을 별도로 설명합니다.
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/25/2018
 |속성|Description|  
 |--------------|-----------------|  
 |**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|
-|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표{,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|
+|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
 |**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 이 값은 문자 수입니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다.|

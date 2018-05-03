@@ -1,7 +1,7 @@
 ---
 title: DATABASEPROPERTYEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b003969b1b42ded9cc0abc86efdc5d9f83b57a3b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsArithmeticAbortEnabled|쿼리 실행 시 오버플로나 0으로 나누기 오류가 발생하면 쿼리가 종료됩니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoClose|마지막 사용자가 끝낸 후 데이터베이스가 완전히 종료되고 리소스가 해제됩니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoCreateStatistics|쿼리 최적화 프로그램에서 필요할 경우 단일 열 통계를 작성하여 쿼리 성능을 향상시킵니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|IsAutoCreateStatisticsIncremental|가능하면 자동으로 만든 단일 열 통계는 증분합니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|IsAutoCreateStatisticsIncremental|가능하면 자동으로 만든 단일 열 통계는 증분합니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoShrink|데이터베이스 파일을 주기적으로 자동 축소합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsAutoUpdateStatistics|쿼리에서 통계를 사용하여 기존 통계가 더 이상 최신 통계가 아니게 되면 쿼리 최적화 프로그램에서 기존 통계를 업데이트합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|
-|IsClone|데이터베이스는 사용자 데이터베이스의 스키마 및 통계 전용 사본입니다.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서비스 팩 2<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**| 
+|IsClone|데이터베이스는 DBCC CLONEDATABASE로 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/3177838)를 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**| 
 |IsCloseCursorsOnCommitEnabled|트랜잭션이 커밋될 때 열린 커서를 닫습니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsFulltextEnabled|데이터베이스에 전체 텍스트 및 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> **참고:** 이 속성의 값은 아무런 영향을 주지 않습니다. 사용자 데이터베이스는 전체 텍스트 검색을 사용하도록 항상 설정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 이 열이 제거됩니다. 새 개발 작업에서는 이 열을 사용하지 말고 이러한 열을 사용 중인 응용 프로그램을 가능한 한 빨리 수정하세요.|  
 |IsInStandBy|데이터베이스가 로그 복원이 허용된 읽기 전용으로 온라인 상태입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
@@ -88,8 +88,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsRecursiveTriggersEnabled|트리거를 재귀적으로 실행하도록 설정합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsSubscribed|데이터베이스가 게시를 구독합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |IsSyncWithBackup|데이터베이스는 게시된 데이터베이스이거나 배포 데이터베이스이므로 트랜잭션 복제를 중단하지 않고도 복원할 수 있습니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 시작하는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**| 
+|IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/3177838)를 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**| 
+|IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|LastGoodCheckDbTime|지정된 데이터베이스에서 실행된 DBCC CHECKDB가 마지막으로 성공한 날짜와 시간입니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> NULL = 입력이 잘못되었습니다.<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스의 복구 모델입니다.|FULL = 전체 복구 모델<br /><br /> BULK_LOGGED = 대량 로그 복구 모델<br /><br /> SIMPLE = 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  

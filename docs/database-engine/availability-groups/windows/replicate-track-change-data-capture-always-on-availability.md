@@ -1,7 +1,7 @@
 ---
 title: 복제, 변경 내용 추적 및 변경 데이터 캡처 - 가용성 그룹 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1036f577a72aa66fd2e91a9ac956fb8d30cbbd35
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
      다음 예에서는 캡처 작업을 만듭니다.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
      새 주 데이터베이스에서 적절한 정리가 수행되도록 하려면 항상 로컬 정리 작업을 만들어야 합니다. 다음 예에서는 정리 작업을 만듭니다.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
      CDC 데이터베이스를 호스팅하는 가용성 그룹에 대해 가용성 그룹 수신기 이름이 정의되었는지 여부를 확인하려면 다음 쿼리를 사용합니다. 이 쿼리는 가용성 그룹 수신기 이름이 만들어진 경우 이를 반환합니다.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
      다음 쿼리를 사용하면 읽기 가능한 보조 복제본에 연결하기 위해 읽기 전용 의도가 필요한지 여부를 확인할 수 있습니다.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/16/2018
   
      보조 복제본에 액세스하기 위해 **sp_addlinkedserver** 를 사용하여 연결된 서버를 만들 경우, 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 *@datasrc* 매개 변수가 사용되고 읽기 전용 의도를 지정하기 위해 *@provstr* 매개 변수가 사용됩니다.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +207,6 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
     -   끌어오기 구독: 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
   
--   배포 데이터베이스는 가용성 그룹에 배치할 수 없습니다.  
-  
 -   게시자 인스턴스는 Always On 가용성 그룹에 참여하는 데 필요한 모든 사전 요구 사항을 충족합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에서 지원됩니다.  
   
 ### <a name="restrictions"></a>Restrictions  
@@ -224,7 +222,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
  *복제본 데이터베이스에 대한 장애 조치(Failover)는 수동 절차입니다. 자동 장애 조치(Failover)는 제공되지 않습니다.  
   
- **배포자 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
+ **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   
 ### <a name="considerations"></a>고려 사항  
   

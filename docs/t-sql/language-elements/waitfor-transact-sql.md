@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bee373167ee406e9383053af0f312925441b8895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ WAITFOR
  일괄 처리, 저장 프로시저 또는 트랜잭션을 실행하기 전에 대기하도록 지정된 시간으로 최대 24시간이 될 수 있습니다.  
   
  '*time_to_pass*'  
- 대기할 총 시간입니다. *time_to_pass*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다.  
+ 대기할 총 시간입니다. *time_to_pass*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다. 이 형식은 hh:mm[[:ss].mss]로 지정됩니다.
   
  TIME  
  일괄 처리, 저장 프로시저 또는 트랜잭션을 실행하도록 지정된 시간입니다.  
   
  '*time_to_execute*'  
- WAITFOR 문이 종료되는 시간입니다. *time_to_execute*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다.  
+ WAITFOR 문이 종료되는 시간입니다. *time_to_execute*는 **datetime** 데이터로 사용할 수 있는 형식 중 하나를 사용하여 지정하거나 지역 변수로 지정할 수 있습니다. 날짜를 지정할 수 없으므로 **datetime** 값의 날짜 부분은 허용되지 않습니다. 이 형식은 hh:mm[[:ss].mss]로 지정되고, 선택적으로 1900-01-01의 날짜를 포함할 수 있습니다.
   
  *receive_statement*  
  유효한 RECEIVE 문입니다.  

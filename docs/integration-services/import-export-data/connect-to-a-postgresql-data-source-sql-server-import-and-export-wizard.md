@@ -1,28 +1,28 @@
 ---
-title: "PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs"
-ms.custom: 
+title: PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 082366abdb89202ee956bf5678a743c53e25ea49
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **PostgreSQL** 데이터 원본에 연결하는 방법을 보여 줍니다. 
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 ![스택 작성기로 PostgreSQL ODBC 드라이버 설치](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>또는 최신 ODBC 드라이버 다운로드
-또는 FTP 사이트 [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/)에서 최신 버전의 PostgreSQL ODBC 드라이버(psqlODBC) Windows Installer를 다운로드합니다. .zip 파일에서 파일을 추출하여 .msi 파일을 실행합니다.
+또는 이 FTP 사이트([https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/))에서 직접 최신 버전의 PostgreSQL ODBC 드라이버(psqlODBC)에 대한 Windows Installer를 다운로드합니다. .zip 파일에서 파일을 추출하여 .msi 파일을 실행합니다.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>PostgreSQL ODBC 드라이버(psqlODBC)를 사용하여 PostgreSQL에 연결
 ODBC 드라이버는 데이터 원본의 드롭다운 목록에 나열되지 않습니다. ODBC 드라이버를 연결하려면 먼저 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 데이터 원본으로 **.NET Framework Data Provider for ODBC**를 선택합니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼 역할을 합니다.
@@ -58,7 +58,7 @@ PostgreSQL ODBC 드라이버를 사용하여 PostgreSQL에 연결하려면 다�
 > 도움을 받아 연결 문자열을 적절하게 조합합니다. 또는 연결 문자열을 제공하는 대신 기존 DSN(데이터 원본 이름)을 제공하거나 새 DSN을 만듭니다. 이러한 옵션에 대한 자세한 내용은 [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.
 
 **드라이버**  
-ODBC 드라이버의 이름 - **PostgreSQL ODBC 드라이버(유니코드)**이거나 **PostgreSQL ODBC 드라이버(ANSI)**입니다.
+ODBC 드라이버의 이름 - **PostgreSQL ODBC 드라이버(유니코드)** 이거나 **PostgreSQL ODBC 드라이버(ANSI)** 입니다.
 
 **Server**  
 PostgreSQL 서버의 이름입니다. 

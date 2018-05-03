@@ -1,16 +1,16 @@
 ---
-title: "다중 플랫 파일 연결 관리자 | Microsoft Docs"
-ms.custom: 
+title: 다중 플랫 파일 연결 관리자 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: ae8dcef03332abeccda6f4287bc38b86b6446809
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
@@ -79,11 +79,11 @@ ms.lasthandoff: 03/20/2018
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
- **Description**  
+ **설명**  
  연결에 대한 설명을 입력합니다. 해당 연결의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
  **파일 이름**  
@@ -104,7 +104,7 @@ ms.lasthandoff: 03/20/2018
  **형식**  
  구분 기호로 분리됨, 고정 폭, 왼쪽 정렬 중 어떤 서식을 사용할지를 지정합니다. 모든 파일의 데이터 형식은 동일해야 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |구분 기호로 분리됨|**열** 페이지에 지정된 구분 기호로 열을 구분합니다.|  
 |고정 폭|열에 고정 폭이 지정됩니다. 폭은 **열** 페이지의 표식 줄을 끌어 지정할 수 있습니다.|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 03/20/2018
  **머리글 행 구분 기호**  
  구분 기호 목록에서 머리글 행 구분 기호를 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|머리글 행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|머리글 행을 캐리지 리턴으로 구분합니다.|  
@@ -142,7 +142,7 @@ ms.lasthandoff: 03/20/2018
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
- **Description**  
+ **설명**  
  연결에 대한 설명을 입력합니다. 해당 연결의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
 ### <a name="flat-file-format-dynamic-options"></a>플랫 파일 형식 동적 옵션  
@@ -151,7 +151,7 @@ ms.lasthandoff: 03/20/2018
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 03/20/2018
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -206,7 +206,7 @@ ms.lasthandoff: 03/20/2018
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -227,11 +227,11 @@ ms.lasthandoff: 03/20/2018
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결 관리자에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
- **Description**  
+ **설명**  
  연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
   
  **각 열의 속성을 구성하십시오.**  
@@ -252,7 +252,7 @@ ms.lasthandoff: 03/20/2018
  **새로 만들기**  
  **새로 만들기**를 클릭하여 새 열을 추가합니다. 기본적으로 **새로 만들기** 단추는 목록 끝에 새 열을 추가합니다. 이 단추의 드롭다운 목록에서 다음 옵션도 사용할 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**열 추가**|목록 끝에 새 열을 추가합니다.|  
 |**앞에 삽입**|선택한 열 앞에 새 열을 삽입합니다.|  
@@ -269,11 +269,11 @@ ms.lasthandoff: 03/20/2018
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>옵션  
+### <a name="options"></a>변수  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
- **Description**  
+ **설명**  
  연결에 대한 설명을 입력합니다. 해당 연결의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
  **건너뛸 데이터 행**  
@@ -282,9 +282,9 @@ ms.lasthandoff: 03/20/2018
  **행 미리 보기**  
  선택한 옵션을 사용하여 열과 행으로 구분해서 첫 번째로 선택한 플랫 파일에 있는 샘플 데이터를 검토합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [플랫 파일 원본](../../integration-services/data-flow/flat-file-source.md)   
  [플랫 파일 대상](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

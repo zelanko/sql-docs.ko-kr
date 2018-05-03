@@ -1,7 +1,7 @@
 ---
 title: 동적 데이터 마스킹 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
   
 -   	`SELECT INTO` 또는 `INSERT INTO` 을 사용하여 데이터를 마스크된 열에서 다른 테이블로 복사하면 대상 테이블에 마스크된 데이터가 생성됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 실행 시 동적 데이터 마스킹이 적용됩니다. 마스크된 열을 포함한 데이터베이스는 마스크된 데이터로 백업 파일이 생성되며( **UNMASK** 권한이 없는 사용자가 내보냈다고 가정하고) 가져온 데이터베이스는 정적으로 마스크된 데이터를 포함하게 됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 실행 시 동적 데이터 마스킹이 적용됩니다. 마스킹된 열을 포함한 데이터베이스를 사용하면 마스킹된 데이터가 있는 내보내는 데이터 파일이 생성되며(**UNMASK** 권한이 없는 사용자가 내보낸다고 가정), 가져온 데이터베이스에는 정적으로 마스킹된 데이터가 포함됩니다.  
   
 ## <a name="querying-for-masked-columns"></a>마스크된 열에 대한 쿼리  
  **sys.masked_columns** 뷰를 사용하여 마스킹 함수가 적용되어 있는 테이블-열에 대해 쿼리합니다. 이 보기는 **sys.columns** 보기에서 상속됩니다. **sys.columns** 뷰의 모든 열과 열이 마스킹되었는지, 그렇다면 정의된 마스킹 함수가 무엇인지 나타내는 **is_masked** 및 **masking_function** 열을 반환합니다. 이 보기는 마스킹 함수가 적용된 열만 보여줍니다.  

@@ -2,7 +2,7 @@
 title: DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: install-windows
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fdb613954e8e2aefcb4c806c3253a2a79b75da8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 364dcacbe7539c9ab8b8e753016bcd8eb3221d91
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 04/18/2018
 3.  데이터베이스 마스터 키에 대한 암호를 입력하라는 메시지가 표시됩니다. 데이터베이스 마스터 키는 나중에 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)에서 참조 데이터 공급자를 설정할 때 DQS_MAIN 데이터베이스에 저장되는 참조 데이터 서비스 공급자 키를 암호화하기 위해 필요합니다.  
   
     > [!IMPORTANT]  
-    >  암호는 8자 이상이어야 하며 다음 4개 범주 중 3개의 문자를 포함해야 합니다. 영어 대문자(A, B, C... Z), 영어 소문자(a, b, c,... z), 숫자(0, 1, 2... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
+    >  암호는 8자 이상이어야 하며 다음 4개 범주 중 3개의 문자를 포함해야 합니다. 영어 대문자(A, B, C... Z), 영어 소문자(a, b, c,... z), 숫자(0, 1, 2... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?//)로 분류되는 4가지 범주입니다. 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
   
 4.  암호를 제공하고, 다시 암호를 확인한 다음 Enter 키를 눌러 설치를 계속합니다.  
   

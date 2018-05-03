@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 019664c48635fc96dd3e5151475157e028b858aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98fe1b4321645a7b4d91bfa051949d97817b9078
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 |Cmdlet|Description|지원되는 위치|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlwaysOn**|서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하지 않도록 설정합니다.|**Path**, **InputObject**또는 **Name** 매개 변수에 지정된 서버 인스턴스( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전이어야 함)|  
+|[**Disable-SqlAlwaysOn**](/powershell/module/sqlps/disable-sqlalwayson?view=sqlserver-ps)|서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하지 않도록 설정합니다.|**Path**, **InputObject**또는 **Name** 매개 변수에 지정된 서버 인스턴스( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전이어야 함)|  
 |**Enable-SqlAlwaysOn**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 지원하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하도록 설정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 지원에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지원하는 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]버전|  
 |**New-SqlHadrEndPoint**|서버 인스턴스에서 새 데이터베이스 미러링 끝점을 만듭니다. 이 끝점은 주 데이터베이스와 보조 데이터베이스 간에 데이터를 이동하는 데 필요합니다.|다음의 모든 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**Set-SqlHadrEndpoint**|기존 데이터베이스 미러링 끝점의 속성(예: 이름, 상태 또는 인증 속성)을 변경합니다.|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 지원하고 데이터베이스 미러링 끝점이 부족한 서버 인스턴스|  

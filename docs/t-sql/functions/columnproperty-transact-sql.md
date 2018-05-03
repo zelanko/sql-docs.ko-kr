@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c26df937a654289c6a5313631a612bfbd386cc6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a330534bfb6178e3fe700ccda06d72036ff48e02
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-열 또는 매개 변수에 대한 정보를 반환합니다.
+이 함수는 열 또는 매개 변수 정보를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,55 +48,55 @@ COLUMNPROPERTY ( id , column , property )
   
 ## <a name="arguments"></a>인수  
 *id*  
-테이블이나 프로시저의 식별자(ID)가 포함된 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+테이블 또는 프로시저의 식별자(ID)가 포함된 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 *column*  
-열이나 매개 변수의 이름이 포함된 식입니다.
+열 또는 매개 변수의 이름이 포함된 식입니다.
   
 *property*  
-*id*에 대해 반환될 정보를 포함하는 식이며 다음 값 중 하나일 수 있습니다.
+*id* 인수를 사용하는 경우 *property* 인수는 `COLUMNPROPERTY` 함수에서 반환할 정보 유형을 지정합니다. *property* 인수에는 다음 값 중 하나가 있을 수 있습니다.
   
 |값|Description|반환 값|  
 |---|---|---|
-|**AllowsNull**|Null 값을 허용합니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
+|**AllowsNull**|Null 값을 허용합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
 |**ColumnId**|**sys.columns.column_id**에 해당하는 열 ID 값입니다.|열 ID<br /><br /> **참고:** 여러 열을 쿼리할 때 열 ID 값의 시퀀스에 간격이 나타날 수 있습니다.|  
-|**FullTextTypeColumn**|*열*의 문서 유형 정보를 보관하는 테이블의 TYPE COLUMN입니다.|이 속성의 두 번째 매개 변수로 전달된 열에 대한 전체 텍스트 TYPE COLUMN의 ID입니다.|  
-|**IsComputed**|열이 계산 열입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsCursorType**|프로시저 매개 변수가 CURSOR 형식입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsDeterministic**|열이 결정적입니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다. 계산 열 또는 뷰 열이 아닙니다.|  
-|**IsFulltextIndexed**|전체 텍스트 인덱싱을 위해 등록된 열입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsIdentity**|IDENTITY 속성을 사용하는 열입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsIdNotForRepl**|IDENTITY_INSERT 설정을 확인하는 열입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsIndexable**|열을 인덱싱할 수 있습니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsOutParam**|프로시저 매개 변수가 출력 매개 변수입니다.|1 = TRUE<br /><br /> 0 = FALSE NULL = 입력이 잘못되었습니다.|  
-|**IsPrecise**|열이 정확합니다. 이 속성은 확정적인 열에만 적용할 수 있습니다.|1 = TRUE<br /><br /> 0 = FALSE NULL = 입력이 잘못되었습니다. 확정적인 열이 아닙니다.|  
-|**IsRowGuidCol**|**uniqueidentifier** 데이터 형식을 가지며 ROWGUIDCOL 속성이 정의된 열입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsSystemVerified**|열의 확정성과 전체 자릿수 속성은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 확인할 수 있습니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsXmlIndexable**|XML 인덱스에서 XML 열을 사용할 수 있습니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**정밀도**|열 또는 매개 변수 데이터 형식의 길이입니다.|지정한 열 데이터 형식의 길이<br /><br /> -1 = **xml** 또는 큰 값 형식입니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**소수 자릿수**|열 또는 매개 변수 데이터 형식의 소수 자릿수입니다.|소수 자릿수<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**StatisticalSemantics**|열에 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|1 = TRUE<br /><br /> 0 = FALSE|  
-|**SystemDataAccess**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 시스템 카탈로그나 가상 시스템 테이블에 있는 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스)<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**UserDataAccess**|뷰와 임시 테이블을 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 저장된 사용자 테이블의 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스)<br /><br /> 0 = FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**UsesAnsiTrim**|테이블을 처음 만들었을 때 ANSI_PADDING을 ON으로 설정했습니다. 이 속성은 **char** 또는 **varchar** 형식의 열 또는 매개 변수에만 적용됩니다.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsSparse**|열이 스파스 열입니다. 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**IsColumnSet**|열이 열 집합입니다. 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = 입력이 잘못되었습니다.|  
-|**GeneratedAlwaysType**|시스템에서 생성된 열 값입니다. **sys.columns.generated_always_type**에 해당합니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 항상 생성되지 않음<br /><br /> 1 = 항상 행 시작으로 생성됨<br /><br /> 2 - 항상 행 끝으로 생성됨|  
-|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 숨겨져 있지 않음<br /><br /> 1 = 숨김|  
+|**FullTextTypeColumn**|*열*의 문서 종류 정보를 보관하는 테이블의 TYPE COLUMN입니다.|이 함수의 두 번째 매개 변수로 전달된 열 이름 식에 대한 전체 텍스트 TYPE COLUMN의 ID입니다.|  
+|**GeneratedAlwaysType**|시스템에서 생성된 열 값입니다. **sys.columns.generated_always_type**에 해당합니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 항상 생성되지 않음<br /><br /> 1 = 항상 행 시작에 생성됨<br /><br /> 2 - 항상 행 끝에 생성됨|  
+|**IsColumnSet**|열이 열 집합입니다. 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsComputed**|열이 계산 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsCursorType**|프로시저 매개 변수가 CURSOR 형식입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsDeterministic**|열이 결정적입니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력 계산 열 또는 뷰 열이 아닙니다.|  
+|**IsFulltextIndexed**|열이 전체 텍스트 인덱싱을 위해 등록됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsHidden**|시스템에서 생성된 열 값입니다. **sys.columns.is_hidden**에 해당합니다.|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 0 = 숨기지 않음<br /><br /> 1 = 숨김|  
+|**IsIdentity**|IDENTITY 속성을 사용하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsIdNotForRepl**|IDENTITY_INSERT 설정을 확인하는 열입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsIndexable**|열을 인덱싱할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsOutParam**|프로시저 매개 변수가 출력 매개 변수입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsPrecise**|열이 정확합니다. 이 속성은 확정적인 열에만 적용할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력 확정적인 열이 아닙니다.|  
+|**IsRowGuidCol**|열이 **uniqueidentifier** 데이터 형식이며, ROWGUIDCOL 속성으로 정의됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsSparse**|열이 스파스 열입니다. 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 열의 결정성과 전체 자릿수 속성을 확인할 수 있습니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**IsXmlIndexable**|XML 인덱스에서 XML 열을 사용할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**정밀도**|열 또는 매개 변수의 데이터 형식 길이입니다.|지정한 열 데이터 형식의 길이<br /><br /> -1 = **xml** 또는 큰 값 형식<br /><br /> NULL = 잘못된 입력|  
+|**소수 자릿수**|열 또는 매개 변수 데이터 형식에 대한 소수 자릿수입니다.|소수 자릿수 값<br /><br /> NULL = 잘못된 입력|  
+|**StatisticalSemantics**|열에 의미 체계 인덱싱을 사용하도록 설정되어 있습니다.|1: TRUE<br /><br /> 0: FALSE|  
+|**SystemDataAccess**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 시스템 카탈로그나 가상 시스템 테이블에 있는 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스를 나타냄)<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**UserDataAccess**|뷰와 임시 테이블을 포함하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 저장된 사용자 테이블의 데이터에 액세스하는 함수에서 열이 파생됩니다. 이 속성은 계산 열과 뷰 열에만 적용됩니다.|1 = TRUE(읽기 전용 액세스를 나타냄)<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
+|**UsesAnsiTrim**|테이블을 만들 때 ANSI_PADDING이 ON으로 설정되었습니다. 이 속성은 **char** 또는 **varchar** 형식의 열 또는 매개 변수에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
   
 ## <a name="return-types"></a>반환 형식
  **int**  
   
 ## <a name="exceptions"></a>예외  
-오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.
+오류가 발생하거나 호출자에게 개체를 볼 수 있는 권한이 없으면 NULL을 반환합니다.
   
-사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 COLUMNPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
+사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자에게 개체에 대한 올바른 권한이 없으면 `COLUMNPROPERTY`와 같은 메타데이터 내보내기 기본 제공 함수에서 NULL을 반환할 수 있습니다. 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
   
 ## <a name="remarks"></a>Remarks  
-어떤 열의 확정적 속성을 확인할 때는 먼저 그 열이 계산 열인지 확인하세요. **IsDeterministic**은 계산되지 않은 열에 대해 NULL을 반환합니다. 계산 열을 인덱스 열로 지정할 수 있습니다.
+열의 결정적 속성을 확인하는 경우 먼저 해당 열이 계산 열인지 확인하세요. **IsDeterministic** 인수는 계산되지 않은 열에 대해 NULL을 반환합니다. 계산 열을 인덱스 열로 지정할 수 있습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 `LastName` 열의 길이를 반환하는 방법을 보여 줍니다.
+다음 예제에서는 `LastName` 열의 길이를 반환합니다.
   
 ```sql
 USE AdventureWorks2012;  
