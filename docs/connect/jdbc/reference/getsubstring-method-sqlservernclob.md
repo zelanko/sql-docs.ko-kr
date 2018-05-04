@@ -1,28 +1,24 @@
 ---
-title: getSubString 메서드(SQLServerNClob) | Microsoft Docs
+title: getSubString 메서드 (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 769f543a2b84474746743bca1e42253cbdc132a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 8740faa9070f785b8610c847f0b5871f0e21dbd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,12 +48,12 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getSubString 메서드 java.sql.NClob 인터페이스의 getSubString 메서드에 의해 지정됩니다.  
+## <a name="remarks"></a>주의  
+ 이 getSubString 메서드 java.sql.NClob 인터페이스의 getSubString 메서드에 의해 지정 됩니다.  
   
  null 또는 길이가 0인 NCLOB에서 0개의 문자를 가져오려고 하면 빈 문자열이 반환됩니다. 길이가 0인 NCLOB에서 위치 1이 아닌 다른 위치에 있는 임의 길이의 문자를 가져오려고 하면 위치 예외가 발생합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 멤버](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 클래스](../../../connect/jdbc/reference/sqlservernclob-class.md)  
