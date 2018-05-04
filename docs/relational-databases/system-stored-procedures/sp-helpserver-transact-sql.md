@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  정보를 보고할 대상이 되는 서버입니다. 때 *서버* 를 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 은 **sysname**, 기본값은 NULL입니다.  
   
  [  **@optname =** ] **'***옵션***'**  
- 서버를 설명하는 옵션입니다. *옵션* 은 **varchar (**35**)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
+ 서버를 설명하는 옵션입니다. *옵션* 은 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**원격 데이터 정렬 사용**|로컬 서버가 아닌 원격 열의 데이터 정렬을 사용합니다.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- 지정한 서버와 다른 서버의 관계입니다. *show_topology* 은 **varchar (**1**)**, 기본값은 NULL입니다. 경우 *show_topology* 과 같지 않은 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 같으면 **t**, 결과 집합에 나열 된 열과 함께 **sp_helpserver** 도 반환 **topx** 및 **topy** 정보입니다.  
+ 지정한 서버와 다른 서버의 관계입니다. *show_topology* 은 **varchar (** 1 **)**, 기본값은 NULL입니다. 경우 *show_topology* 과 같지 않은 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 같으면 **t**, 결과 집합에 나열 된 열과 함께 **sp_helpserver** 도 반환 **topx** 및 **topy** 정보입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|서버 이름입니다.|  
 |**network_name**|**sysname**|서버의 네트워크 이름입니다.|  
-|**상태**|**varchar (**70**)**|서버 상태입니다.|  
-|**id**|**char (**4**)**|서버의 ID입니다.|  
+|**상태**|**varchar (** 70 **)**|서버 상태입니다.|  
+|**id**|**char (** 4 **)**|서버의 ID입니다.|  
 |**collation_name**|**sysname**|서버의 데이터 정렬입니다.|  
 |**connect_timeout**|**int**|연결된 서버에 대한 연결 시간 제한 값입니다.|  
 |**query_timeout**|**int**|연결된 서버에 대한 쿼리 시간 제한 값입니다.|  

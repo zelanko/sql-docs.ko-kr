@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a0ac22fd71b80aa973d3e114a76e1f1bd192fc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ccfc4bfd03b7a7fba693bfd9e6eb86494057a665
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>인수  
  [ **@principal_id** = ] *principal_id*  
- 데이터베이스 사용자 또는 역할의 id는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 은 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'**합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
+ 데이터베이스 사용자 또는 역할의 id는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 은 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'** 합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- 데이터베이스 사용자 또는 역할의 이름인는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 은 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'**합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
+ 데이터베이스 사용자 또는 역할의 이름인는 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 은 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 하려면 보안 주체 ID를 제공 **0** 또는 사용자 이름 **'public'** 합니다. 어느 *principal_id* 또는 *principal_name* 지정 해야 합니다.  
   
  [ **@profile_id** = ] *profile_id*  
  삭제할 연결에 대한 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 NULL입니다. 어느 *profile_id* 또는 *profile_name* 지정 해야 합니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbd64e21c5a992507be3aa430e05b828e34b6f62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 224631e19059547b7ae4a99ddc0e849009913e63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  지정한 자식 아티클을 있는 부모 아티클입니다 *문서*, 지정한 조인 절을 사용 하 여 가입 되어 있어야 *join_filterclause*충족 하는 자식 아티클의 행이 결정 하려면 병합 필터의 필터 조건을 충족 합니다. *join_articlename* 은 **sysname**, 기본값은 없습니다. 에 지정 된 게시에 아티클이 있어야 *게시*합니다.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
- 지정한 자식 아티클을 조인 하는 데 사용 해야 하는 조인 절로 *문서*에서 지정한 부모 아티클을 *join_article*을 병합 필터 조건에 맞는 행을 결정 하도록 합니다. *join_filterclause* 은 **nvarchar (1000)**합니다.  
+ 지정한 자식 아티클을 조인 하는 데 사용 해야 하는 조인 절로 *문서*에서 지정한 부모 아티클을 *join_article*을 병합 필터 조건에 맞는 행을 결정 하도록 합니다. *join_filterclause* 은 **nvarchar (1000)** 합니다.  
   
  [  **@join_unique_key=** ] *join_unique_key*  
  지정 하는 경우 자식 아티클 간의 조인 *문서*과 부모 아티클인 *join_article*대 다, 한 일, 다 대 일 또는 다 대 다 됩니다. *join_unique_key* 은 **int**, 기본값은 0입니다. **0** 다 대 일 또는 다 대 다 조인을 나타냅니다. **1** 한 한 일 대 다 조인을 나타냅니다. 이 값은 **1** 조인 열에 고유 키를 구성 하는 경우 *join_article*, if 또는 *join_filterclause* 의 외래 키 범위에 속함 *문서* 에서 기본 키 및 *join_article*합니다.  

@@ -1,5 +1,5 @@
 ---
-title: createSQLXML 메서드 (SQLServerConnection) | Microsoft Docs
+title: createSQLXML 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  만듭니다는 **SQLXML** 데이터가 없는 개체입니다.  
+  데이터가 없는 **SQLXML** 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,10 +42,10 @@ public java.sql.SQLXML createSQLXML()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>주의  
- 이 createSQLXML 메서드는 java.sql.Connection 인터페이스의 createSQLXML 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>Remarks  
+ 이 createSQLXML 메서드는 java.sql.Connection 인터페이스의 createSQLXML 메서드에 의해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -27,12 +27,11 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d413a9a07af247a62611946bf687c53e6f42d878
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74f62d7f55ac1ad62d7b5fdd1a04f3fb574a3532
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.lasthandoff: 04/16/2018
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|서버의 SID(보안 ID 번호)입니다.|  
-|**rmtloginame**|**nvarchar(**128**)**|원격 로그인의 이름입니다 **loginsid** 연결에 대해 매핑한 **rmtservid**합니다.|  
-|**rmtpassword**|**nvarchar(**128**)**|NULL을 반환합니다.|  
-|**loginsid**|**varbinary(**85**)**|매핑될 로컬 로그인의 SID입니다.|  
+|**rmtloginame**|**nvarchar(** 128 **)**|원격 로그인의 이름입니다 **loginsid** 연결에 대해 매핑한 **rmtservid**합니다.|  
+|**rmtpassword**|**nvarchar(** 128 **)**|NULL을 반환합니다.|  
+|**loginsid**|**varbinary(** 85 **)**|매핑될 로컬 로그인의 SID입니다.|  
 |**상태**|**smallint**|1인 경우 매핑에 사용자의 자격 증명을 사용해야 합니다.|  
 |**changedate**|**datetime**|매핑 정보가 마지막으로 변경된 날짜입니다.|  
   

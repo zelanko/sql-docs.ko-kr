@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25fcce9f83befaeed78abd62ea2e0ad088460756
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0aee19c773e85f5dfe0782384441afa6ac959f23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helparticle [ @publication = ] 'publication'
  게시의 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [  **@article=**] **'***문서***'**  
- 게시에 있는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **%**합니다. 경우 *문서* 가 제공 되지 않으면 지정된 된 게시에 대 한 모든 아티클에 대 한 정보 반환 됩니다.  
+ 게시에 있는 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 **%** 합니다. 경우 *문서* 가 제공 되지 않으면 지정된 된 게시에 대 한 모든 아티클에 대 한 정보 반환 됩니다.  
   
  [  **@returnfilter=**] *returnfilter*  
  필터 절을 반환해야 하는지 여부를 지정합니다. *returnfilter* 은 **비트**, 기본값은 **1**, 필터 절을 반환 하는 합니다.  

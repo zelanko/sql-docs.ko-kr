@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81cc3f4ce5fcfdaa9ba36828b3ba1133c3825ed4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a571ce63cd2870185109aeeb96ee4dd12548ee3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>주의  
  이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에서 일정을 제거 하려면 사용 하 여 **sp_detach_schedule**합니다. 일정을 삭제 하려면 사용 **sp_delete_schedule**합니다.  
   
-> **참고:****sp_delete_jobschedule** 여러 작업에 연결 된 일정을 지원 하지 않습니다.   기존 스크립트를 호출 하는 경우 **sp_delete_jobschedule** 둘 이상의 작업에 연결 된 일정을 제거 하는 프로시저가 오류를 반환 합니다.  
+> **참고:****sp_delete_jobschedule** 여러 작업에 연결 된 일정을 지원 하지 않습니다. 기존 스크립트를 호출 하는 경우 **sp_delete_jobschedule** 둘 이상의 작업에 연결 된 일정을 제거 하는 프로시저가 오류를 반환 합니다.  
   
 ## <a name="permissions"></a>Permissions  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  

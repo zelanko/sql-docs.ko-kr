@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3eb400fed1fe0cbd25ef884dc56a89fe448717fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** **varchar (10)**, 기본값은 NULL입니다. 하지 않는 한 **모든** 지정, 첫 번째 사용 권한 경로만 표시 됩니다.  
   
  [  **@privilege =** ] *variable_name*  
- 지정한 Windows 계정의 사용 권한 수준을 반환하는 출력 매개 변수입니다. *variable_name* 은 **varchar (10)**는 기본값은 ' Not w'를 사용 합니다. 권한 수준을 반환은 **사용자**, **admin**, 또는 **null**합니다.  
+ 지정한 Windows 계정의 사용 권한 수준을 반환하는 출력 매개 변수입니다. *variable_name* 은 **varchar (10)** 는 기본값은 ' Not w'를 사용 합니다. 권한 수준을 반환은 **사용자**, **admin**, 또는 **null**합니다.  
   
  OUTPUT  
  지정 되 면 저장 *variable_name* 에서 출력 매개 변수입니다.  

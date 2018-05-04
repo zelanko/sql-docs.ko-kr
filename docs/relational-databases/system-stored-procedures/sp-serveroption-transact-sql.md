@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  옵션을 설정할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
  [  **@optname =** ] **'***option_name***'**  
- 지정한 서버에 설정할 옵션입니다. *option_name* 은 **varchar (**35**)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
+ 지정한 서버에 설정할 옵션입니다. *option_name* 은 **varchar (** 35 **)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**원격 프로시저 트랜잭션 승격**|이 옵션을 사용하여 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호할 수 있습니다. 이 옵션을 TRUE (또는) 분산된 트랜잭션을 시작 하 고 MS DTC를 사용해이 트랜잭션을 참여 시킵니다 원격 저장된 프로시저를 호출 합니다. 원격 저장 프로시저를 호출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 트랜잭션 주관자이며 트랜잭션의 완료를 제어합니다. 이후 연결에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 MS DTC에서 관련 컴퓨터 간의 분산 트랜잭션 완료를 관리하도록 요청합니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작되면 연결된 서버로 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 원격 저장 프로시저를 호출할 수 있습니다. 연결된 서버를 모두 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션에 참여시키고 MS DTC는 각 연결된 서버에 대해 트랜잭션이 완료되도록 합니다.<br /><br /> 이 옵션을 FALSE(또는 OFF)로 설정하면 연결된 서버에서 원격 프로시저를 호출하는 동안에는 로컬 트랜잭션이 분산 트랜잭션으로 승격되지 않습니다.<br /><br /> 서버 간 프로시저 호출을 수행하기 전에 트랜잭션이 이미 분산 트랜잭션인 경우 이 옵션은 영향을 주지 않습니다. 연결된 서버에 대한 프로시저 호출은 동일 분산 트랜잭션에서 실행됩니다.<br /><br /> 서버 간 프로시저 호출을 수행하기 전에 연결에 활성 상태인 트랜잭션이 없는 경우 이 옵션은 영향을 주지 않습니다. 그런 다음 활성 상태의 트랜잭션 없이 연결된 서버에 대해 프로시저가 실행됩니다.<br /><br /> 이 옵션의 기본값은 TRUE(또는 ON)입니다.|  
   
  [  **@optvalue =**] **'***option_value***'**  
- 지정 여부는 *option_name* 설정할지 (**TRUE** 또는 **에**) 또는 사용 안 함 (**FALSE** 또는 **해제**). *option_value* 은 **varchar (**10**)**, 기본값은 없습니다.  
+ 지정 여부는 *option_name* 설정할지 (**TRUE** 또는 **에**) 또는 사용 안 함 (**FALSE** 또는 **해제**). *option_value* 은 **varchar (** 10 **)**, 기본값은 없습니다.  
   
  *option_value* 는 음수가 아닌 정수에 대 한 수의 **연결 시간 제한** 및 **쿼리 제한 시간** 옵션입니다. 에 대 한는 **데이터 정렬 이름** 옵션을 *option_value* 데이터 정렬 이름 또는 NULL이 될 수 있습니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributiondb (Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad675b3330585ff791c72bf1c4faafd4502bf04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,9 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -110,6 +111,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ MSRepl_Transactions 테이블에서 만료 된 트랜잭션을 정리 중에 사용할 일괄 처리 크기를 지정 합니다. *deletebatchsize_xact* 은 **int**, 기본값은 5000입니다. 이 매개 변수 뒤에 SQL Server 2012 s p 4 및 SQL Server 2016 s p 2에서 릴리스는 SQL Server 2017 년에 처음 도입 되었습니다.  
+
+ [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ MSRepl_Commands 테이블에서 만료 된 명령 중 정리 중에 사용할 일괄 처리 크기를 지정 합니다. *deletebatchsize_cmd* 은 **int**, 기본값은 2000입니다. 이 매개 변수 뒤에 SQL Server 2012 s p 4 및 SQL Server 2016 s p 2에서 릴리스는 SQL Server 2017 년에 처음 도입 되었습니다. 
+ 
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

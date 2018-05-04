@@ -24,13 +24,12 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f255eaa4837ac7193925265f6427706d55009b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5f3b8d866149c615422e35a8f1922103c0596218
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -75,7 +74,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 저장소 통계를 반환합니다. 개체 또는 데이터베이스 스트레치 사용 데이터베이스를 없으면 때와 동일한 통계를 반환 합니다. @mode = ALL입니다.|  
 |REMOTE_ONLY|개체 또는 데이터베이스의 원격 부분에 저장소 통계를 반환합니다. 이 옵션 다음 조건 중 하나에 오류가 발생 합니다.<br /><br /> 테이블을 스트레치에 사용 되지 않습니다.<br /><br /> 테이블이 stretch를 사용 하지만 데이터 마이그레이션을 사용 하도록 설정 하지 했습니다. 이 경우 원격 테이블이 아직 없는 스키마.<br /><br /> 사용자가 원격 테이블을 삭제 수동으로.<br /><br /> 성공, 상태를 반환 하는 원격 데이터 보관의 프로 비전 하지만 실제로 실패 했습니다.|  
   
- *모드* 은 **varchar(11)**, 기본값은 **N'ALL'**합니다.  
+ *모드* 은 **varchar(11)**, 기본값은 **N'ALL'** 합니다.  
   
  [ **@oneresultset=**] *oneresultset*  
  단일 결과 집합을 반환할 것인지를 나타냅니다. *oneresultset* 인수는 다음 값을 가질 수 있습니다.  

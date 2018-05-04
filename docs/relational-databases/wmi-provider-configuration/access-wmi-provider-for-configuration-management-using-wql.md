@@ -21,12 +21,11 @@ caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 38ab1d924ad4bb81b13fd013d837652c304bb8e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c12449103010f14ff9466a28543b0c59c979c88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL을 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +43,6 @@ ms.lasthandoff: 04/16/2018
   
 4.  클릭 **쿼리**합니다. 로컬 컴퓨터에서 실행 중인 현재 서비스를 반환 하는 쿼리를 입력: **선택 \* 에서 SqlService 합니다.** **적용**을 클릭합니다.  
   
-5.  추가 하 여 쿼리를 구체화 **여기서 ServiceName = "MSSQLSERVER"**합니다.  
+5.  추가 하 여 쿼리를 구체화 **여기서 ServiceName = "MSSQLSERVER"** 합니다.  
   
   
