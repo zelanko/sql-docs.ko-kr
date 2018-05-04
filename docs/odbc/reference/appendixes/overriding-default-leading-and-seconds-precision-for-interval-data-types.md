@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - precision [ODBC], interval data types
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0336aa9334195a706ef59edd7beb1ec482a590d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5d972bbd388edf1fca47f708501d59643c184bef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>기본 선행 및 초의 전체 자릿수가 Interval 데이터 형식에 대 한 재정의
 호출 하 여는 카드가의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 된 경우 **SQLBindCol** 또는 **SQLSetDescField**의 SQL_DESC_PRECISION 필드 (간격 (초)을 포함 합니다. 전체 자릿수)는 다음과 같은 기본값으로 설정 됩니다.  

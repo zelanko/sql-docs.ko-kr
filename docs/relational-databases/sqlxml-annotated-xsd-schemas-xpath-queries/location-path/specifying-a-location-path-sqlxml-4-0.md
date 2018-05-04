@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e433aea6a3ecc401ba85080d1c1b25d053ce3089
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,9 +56,9 @@ ms.lasthandoff: 04/16/2018
   
 -   **노드 테스트**  
   
-     노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성**, 및 **자체**)에 주 노드 유형이 있습니다. 에 대 한는 **특성** 축의 주 노드 유형은입니다  **\<특성 >**합니다. 에 대 한는 **부모**, **자식**, 및 **자체** 축의 주 노드 유형은입니다  **\<요소 >**합니다.  
+     노드 테스트는 위치 단계에서 선택되는 노드 유형을 지정합니다. 모든 축 (**자식**, **부모**, **특성**, 및 **자체**)에 주 노드 유형이 있습니다. 에 대 한는 **특성** 축의 주 노드 유형은입니다  **\<특성 >** 합니다. 에 대 한는 **부모**, **자식**, 및 **자체** 축의 주 노드 유형은입니다  **\<요소 >** 합니다.  
   
-     예를 들어 위치 경로 지정 하는 경우 **:: customer**,  **\<고객 >** 컨텍스트 노드의 요소 자식이 선택 됩니다. 때문에 **자식** 축에  **\<요소 >** 주 노드 종류로 노드 테스트 Customer는 TRUE이 고객은 프로그램  **\<요소 >**노드.  
+     예를 들어 위치 경로 지정 하는 경우 **:: customer**,  **\<고객 >** 컨텍스트 노드의 요소 자식이 선택 됩니다. 때문에 **자식** 축에  **\<요소 >** 주 노드 종류로 노드 테스트 Customer는 TRUE이 고객은 프로그램  **\<요소 >** 노드.  
   
 -   **선택 조건자 (0 개 이상)**  
   

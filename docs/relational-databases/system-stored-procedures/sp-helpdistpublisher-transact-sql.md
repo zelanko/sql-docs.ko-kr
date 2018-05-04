@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce3c9b89c29bb9e387819ddbc15996d6d072b979
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 11901d38105ed0c8c6618028e622fb33035ad2a0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="arguments"></a>인수  
  [  **@publisher=** ] **'***게시자***'**  
- 속성이 반환되는 게시자입니다. *게시자* 은 **sysname**, 기본값은 **%**합니다.  
+ 속성이 반환되는 게시자입니다. *게시자* 은 **sysname**, 기본값은 **%** 합니다.  
   
  [  **@check_user=** ] *check_user*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC]
 - ODBC architecture [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f33e9b5ebd9ae699240170990b7daeeaefbea8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d9a9c70743ee59ef347426fdac54e1e8667b33a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-driver-manager"></a>드라이버 관리자
 *드라이버 관리자* 은 응용 프로그램 및 드라이버 간의 통신을 관리 하는 라이브러리입니다. 예를 들어 Microsoft® Windows® 플랫폼 드라이버 관리자는 Microsoft가 작성 하 고 재배포 가능 MDAC 2.8 s p 1 SDK의 사용자가 재배포할 수 있는 동적 연결 라이브러리 (DLL)입니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 602591882866418ac4850f62d99b2bd20ee613fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f4a7ec9525c8602888cf97d839b811ad3090b12d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>바인딩 (명명 된 매개 변수) 이름으로 매개 변수
 특정 Dbms 프로시저 호출에서 위치에 따라이 대신 이름으로 저장된 프로시저에 매개 변수를 지정 하는 응용 프로그램을 허용 합니다. 이러한 매개 변수가 호출 *명명 된 매개 변수*합니다. ODBC는 명명 된 매개 변수 사용을 지원합니다. Odbc에서 명명 된 매개 변수 저장된 프로시저에 대 한 호출에만 사용 되 고 다른 SQL 문에서 사용할 수 없습니다.  

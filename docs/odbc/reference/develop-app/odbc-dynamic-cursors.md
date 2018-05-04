@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a4b547af3899f1f3775e5075605a23b3a4f6f3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eeb438f0fb1e495e1c09c390a18b107aa382f503
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
 동적 커서는 해당: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 두 개의 행을 인출 하는 동적 커서 및 다른 응용 프로그램에서 다음 행 중 하나를 업데이트 하 고 다른 삭제 합니다. 동적 커서는 행을 다시 인출 하려고 합니다, 삭제 된 행을 찾지 못합니다 이지만 업데이트 된 행에 대 한 새 값을 반환 합니다.  

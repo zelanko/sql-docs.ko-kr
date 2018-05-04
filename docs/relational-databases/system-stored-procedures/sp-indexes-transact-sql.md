@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bebd14116b2b8cea0c1f0836571c994ba3fbd340
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f30211d37fb84df1c4b1a24920a98beaa778fa9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|데이터 정렬에 사용되는 순서입니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 A를 반환합니다.|  
 |CARDINALITY|**int**|테이블의 열 번호 또는 인덱스의 고유한 값입니다.|  
 |PAGES|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
-|FILTER_CONDITION|**nvarchar (**4000**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="permissions"></a>Permissions  
  스키마에 대한 SELECT 권한이 필요합니다.  

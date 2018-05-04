@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0387b4dac0a8d0419b5ffccb8ac8520a0bc1bd0c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 32283e740f6b9e206e629ed4ac8cb2bcfeb60ac4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="remarks"></a>주의  
  데이터베이스 메일에 대 한 별도 매개 변수를 제공 **@email_address**, **@display_name**, 및 **@replyto_address**합니다. **@email_address** 매개 변수는 메시지를 보낸 주소입니다. **@display_name** 매개 변수는에 표시 된 이름에서 **에서:** 전자 메일 메시지의 필드입니다. **@replyto_address** 매개 변수는 전자 메일 메시지 회신을 보낼 수 있는 주소입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용된 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에만 사용되는 전자 메일 주소에서 전자 메일 메시지를 보낼 수 있습니다. 해당 주소에서 보낸 메시지는 쉽게 알아 볼 수 있는 이름으로 표시되므로 수신자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 메시지를 보냈는지를 쉽게 확인할 수 있습니다. 수신자가 메시지에 회신하면 회신은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 주소가 아니라 데이터베이스 관리자에게 전달되어야 합니다. 계정을 사용 하 여이 시나리오에서는 **SqlAgent@Adventure-Works.com** 전자 메일 주소로 합니다. 표시 이름으로 설정 됩니다 **SQL Server Agent Automated Mailer**합니다. 계정을 사용 하 여 **danw@Adventure-Works.com** 회신 주소와이 계정에서 보내는 메시지에 대 한 응답으로가 서에 대 한 전자 메일 주소가 아니라 데이터베이스 관리자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다. 이 세 매개 변수에 독립된 설정을 제공하면 데이터베이스 메일에서 사용자 요구 사항에 맞게 메시지를 구성할 수 있습니다.  
   
- **@mailserver_type** 매개 변수 값을 지원 **'SMTP'**합니다.  
+ **@mailserver_type** 매개 변수 값을 지원 **'SMTP'** 합니다.  
   
  때 **@use_default_credentials** 1 메일의 자격 증명을 사용 하 여 SMTP 서버에 전송 되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 때 **@use_default_credentials** 0 및 **@username** 및 **@password** 계정에서는 SMTP 인증 계정에 대해 지정 됩니다. **@username** 및 **@password** 는 자격 증명에 대 한 자격 증명이 아니라 SMTP 서버에 대 한 계정을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 컴퓨터에 있는 네트워크입니다.  
   

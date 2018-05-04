@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 77825744ef9967f030def2942170637a133163d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>사용자 고유의 사용자 지정된 처리기 작성
 RDS 지원, 기본 IIS 서버 관리자 모르는 경우 자신만 처리기를 작성 하려는 수 있지만 사용자 요청 더 자세하게 제어 및 액세스 권한을 합니다.  

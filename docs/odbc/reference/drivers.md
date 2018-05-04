@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 96e2052feaeef1a7b752afc8f2b81babe820e08a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0ce162d2f7d1f443ebdb8a742bb1af120a847120
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drivers"></a>드라이버
 *드라이버* 는 ODBC api에서 함수를 구현 하는 라이브러리입니다. 각 작업은 특정 DBMS;에 특정 예를 들어 Oracle에 대 한 드라이버 Informix DBMS의 데이터에 직접 액세스할 수 없습니다. 기본 Dbms;의 기능을 제공 하는 드라이버 DBMS에 의해 지원 되지 않습니다는 기능을 구현 하 필요는 없습니다. 예를 들어 외부 조인 다음 모두 기본 DBMS를 지원 하지 않는 경우 드라이버를 해야 합니다. 주 예외가 Xbase, 같은 독립 실행형 데이터베이스 엔진, 갖지 않는 Dbms에 대 한 드라이버 최소한 최소한 SQL의 사용을 지원 하는 데이터베이스 엔진을 구현 해야 합니다.  

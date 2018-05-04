@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7a70341a6506ca585afca3adbff9f9e7ad7b2ff3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8dbbda5d1aa43b71820da792cb67c6ad68314adc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fields-collection-ado"></a>Fields 컬렉션 (ADO)
 모든 포함 된 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  

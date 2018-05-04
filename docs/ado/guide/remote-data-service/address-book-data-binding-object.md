@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4c5945e4f8e89bd60a90da3a9901075b08faa9bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램이 사용 하 여 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에서 데이터를 바인딩할 SQL Server 데이터베이스 (이 경우 DHTML 테이블)에 시각적 개체를 응용 프로그램의 HTML 클라이언트 페이지 개체입니다. 이벤트 기반 VBScript 프로그램 논리를 사용 하 여는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  

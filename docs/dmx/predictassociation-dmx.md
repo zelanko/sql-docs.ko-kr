@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,13 +56,13 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
   
  INCLUDE_STATISTICS 반환 **$Probability** 및 **$AdjustedProbability**합니다.  
   
- 경우 숫자 매개 변수가  *n*  지정는 **PredictAssociation** 확률을 기반으로 상위 n 가능성이 가장 높은 값을 반환 하는 함수:  
+ 경우 숫자 매개 변수가 *n* 지정는 **PredictAssociation** 확률을 기반으로 상위 n 가능성이 가장 높은 값을 반환 하는 함수:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 포함 하는 경우 **$AdjustedProbability**, 위쪽 반환  *n*  값에 따라는 **$AdjustedProbability**합니다.  
+ 포함 하는 경우 **$AdjustedProbability**, 위쪽 반환 *n* 값에 따라는 **$AdjustedProbability**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 **PredictAssociation** 네 개의 제품을 Adventure works에서 데이터베이스를 반환 하도록 함수 되 함께 판매 될 가능성이 큽니다.  
@@ -91,8 +90,8 @@ SHAPE {
 
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

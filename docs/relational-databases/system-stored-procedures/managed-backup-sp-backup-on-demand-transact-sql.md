@@ -27,12 +27,11 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8807e3e16266eb1be45d05aa7a516ea83357ab6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cb3620bc20ae46dd2aac4fa89d4031ab996ed0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ EXEC managed_backup.sp_backup_on_demand
  백업을 수행할 데이터베이스의 이름입니다. @database_name 은 **SYSNAME**합니다.  
   
  @type  
- 수행할 백업 유형: 데이터베이스 또는 로그입니다. @type 매개 변수는 **nvarchar (32)**합니다.  
+ 수행할 백업 유형: 데이터베이스 또는 로그입니다. @type 매개 변수는 **nvarchar (32)** 합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

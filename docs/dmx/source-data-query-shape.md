@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b79237879b2e23682bfdd89dcf1d2ba59824aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리와&gt; -셰이프
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +72,7 @@ APPEND ({ <child table query> }
  부모 테이블 및 자식 테이블에 관련되는 열을 기준으로 쿼리를 정렬해야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 내에서 사용할 수 있습니다는 [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md) 중첩된 테이블이 포함 된 모델을 학습 하는 문입니다. 내의 두 테이블에서 **셰이프** 문을 통해 관련 된 **OrderNumber** 열.  
+ 다음 예제에서는 내에서 사용할 수 있습니다는 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) 중첩된 테이블이 포함 된 모델을 학습 하는 문입니다. 내의 두 테이블에서 **셰이프** 문을 통해 관련 된 **OrderNumber** 열.  
   
 ```  
 SHAPE {  
@@ -86,9 +85,9 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [&#60; 원본 데이터 쿼리와 &#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

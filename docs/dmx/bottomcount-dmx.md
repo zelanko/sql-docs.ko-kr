@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a910facd4ae35c6ac4a0591f2b57bd5e6caf5efa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,10 +112,10 @@ NATURAL PREDICTION JOIN
  **참고** 이 예제는 BottomCount의 사용을 설명 하기 위해 제공 됩니다. 데이터 집합의 크기에 따라 이 쿼리를 실행하는 데 시간이 오래 걸릴 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40; DMX &#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40; DMX &#41;](../dmx/topcount-dmx.md)  
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
+ [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
+ [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
   
   

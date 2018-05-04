@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - identifiers [ODBC], case
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 122f4dfdfab25f246858b36f7753413d25f2eea4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c709fa4512611dd67387583dd1bc1807402cece9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifier-case"></a>식별자 대/소문자
 SQL 문 및 카탈로그 함수 인수 식별자와 따옴표 붙은 식별자 일 수 대/소문자 구분 또는 응용 프로그램이 호출 하 여 확인할 수 있는, **SQLGetInfo** SQL_IDENTIFIER_CASE 및 SQL_QUOTED_ IDENTIFIER_CASE 옵션입니다.  

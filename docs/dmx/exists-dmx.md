@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>인수  
- *하위 쿼리*  
+ *subquery*  
  SELECT 문의 폼 선택의 * FROM \<열 이름 > [여기서 \<조건자 목록 >].  
   
 ## <a name="result-type"></a>결과 유형  
@@ -70,7 +69,7 @@ WHERE [[Model] = 'Patch kit'
  이 쿼리에서 반환 되는 동일한 데이터를 보려면 또 다른 방법은 연결 뷰어에서 모델을 열고, 항목 집합을 마우스 오른쪽 단추로 클릭 하는 것 **Patch kit = Existing**, 선택는 **드릴스루** 옵션을 선택한 다음 선택 **모델 사례만**합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [모델 필터 구문 및 예제 &#40; Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [모델 필터 구문 및 예 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

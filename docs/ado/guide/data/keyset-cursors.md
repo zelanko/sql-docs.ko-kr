@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88772fa9ede31acdf5b719cec7cb9311b15cb864
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 986365fe86b46499ac2f486c78e7b55c339ba237
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 변경 내용을 검색 하는 기능에는 정적 및 동적 커서 간의 기능을 제공 합니다. 정적 커서와 같은 검색 되지 않으면 항상의 멤버 자격과 결과 집합의 순서를 변경 합니다. 동적 커서와 같은 결과 집합의 값 행의 변경 내용을 검색지 않습니다 것.  

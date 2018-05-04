@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>(나누기) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,10 +55,10 @@ Dividend / Divisor
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. Divisor가 Null 값으로 계산되는 경우에는 오류가 발생합니다. Divisor와 Dividend가 모두 Null 값으로 계산되는 경우 연산자는 Null 값을 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [산술 연산자 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [나누기 &#40; SSIS 식 &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; 나누기 &#41; &#40; Transact SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [나누기 &#40;SSIS 식&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;나누기&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

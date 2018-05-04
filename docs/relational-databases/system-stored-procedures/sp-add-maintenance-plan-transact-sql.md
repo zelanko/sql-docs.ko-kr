@@ -24,12 +24,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4341a200b2028b13c1a309bb92dad0800830ee9e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a3c4db2ec801329da10374b9c46b7beb6f730afd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
   
 ## <a name="arguments"></a>인수  
  [ **@plan_name =**] **'***plan_name***'**  
- 추가할 유지 관리 계획의 이름을 지정합니다. *plan_name* 은 **varchar (128)**합니다.  
+ 추가할 유지 관리 계획의 이름을 지정합니다. *plan_name* 은 **varchar (128)** 합니다.  
   
  **@plan_id = '** *plan_id* **'**  
  유지 관리 계획의 ID를 지정합니다. *plan_id* 은 **uniqueidentifier**합니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab3ba71bedbd76f2d7837a660c3a6f9d7a5ba588
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="captured-column-data-types"></a>캡처된 열 데이터 형식  
  이 테이블에 포함된 캡처된 열의 데이터 형식과 값은 다음 항목을 제외하고 해당하는 원본 열과 동일합니다.  
   
--   **타임 스탬프** 로 정의 **binary (8)**합니다.  
+-   **타임 스탬프** 로 정의 **binary (8)** 합니다.  
   
 -   **Identity** 열으로 정의 됩니다 **int** 또는 **bigint**합니다.  
   

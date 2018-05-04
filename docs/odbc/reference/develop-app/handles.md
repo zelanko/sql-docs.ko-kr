@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
 - driver handles [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef9fe627d79c0a2040500cd2894dcd90a83bee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac96dc4ab020d94449d9106038890d5e61fbbe0a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handles"></a>핸들
 핸들은; 특정 항목을 식별 하는 불투명 한 32 비트 값 odbc에서이 항목에는 환경, 연결, 문 또는 설명자 수 있습니다. 응용 프로그램 호출 하는 경우 **SQLAllocHandle**, 드라이버 또는 드라이버 관리자 지정 된 형식의 새 항목을 만들고 응용 프로그램에 해당 핸들을 반환 합니다. 나중에 응용 프로그램 ODBC 함수를 호출할 때 해당 항목을 식별 하는 핸들을 사용 합니다. 드라이버 관리자와 드라이버 핸들을 사용 하 여 항목에 대 한 정보를 찾을 수 있습니다.  

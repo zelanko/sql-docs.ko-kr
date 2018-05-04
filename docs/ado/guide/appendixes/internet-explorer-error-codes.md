@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 877a6d577cc502a1e4200beebb66538e259cfb51
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® Internet Explorer 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수로 변환한 음의 10 진수로 변환한 전체 오류 코드 및 16 진수 값의 표시 됩니다.

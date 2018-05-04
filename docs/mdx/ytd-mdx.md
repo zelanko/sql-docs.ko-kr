@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd** 매개 변수 없이 지정 된, 즉 조합에서 자주 사용 된 [CurrentMember &#40; Mdx&#41; ](../mdx/currentmember-mdx.md) 다음 쿼리에서와 같이 함수가 보고서에서 연도-날짜까지 누적 합계 표시 됩니다.  
+ **Ytd** 매개 변수 없이 지정 된, 즉 조합에서 자주 사용 된 [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) 에 표시 된 대로 함수가 보고서에서 연도-날짜까지 누적 합계 표시 됩니다는 다음 쿼리:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -80,6 +79,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

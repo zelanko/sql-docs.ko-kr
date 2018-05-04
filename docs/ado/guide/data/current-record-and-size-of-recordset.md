@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 90b5953c0a2232816fc3c1d228fe358aa5ae9c59
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 51407df229debf21a3f841c1e8cf1603b2dc43a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드와 레코드 집합의 크기
 이 섹션에서는 샘플에는 커서의 현재 위치를 찾는 방법을 설명 **레코드 집합** 에 [JScript 코드 예제에서는 레코드 집합을 반환 하려면](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)합니다.  

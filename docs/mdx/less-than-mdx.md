@@ -1,5 +1,5 @@
 ---
-title: '&lt;(보다 작음) (MDX) | Microsoft Docs'
+title: '&lt; (보다 작음) (MDX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 99be3c9f3896f84dbee770859c14725f299b63ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4f1b4b0698461f04c3bddd7ce60195cbba2a7508
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lt-less-than-mdx"></a>&lt;(보다 작음) (MDX)
+# <a name="lt-less-than-mdx"></a>&lt; (보다 작음) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   하나의 MDX 식의 값이 다른 MDX 식의 값보다 작은지 확인하는 비교 연산을 수행합니다.  
@@ -75,7 +74,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목:  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a7e013914fea52e8325acdb76d4aee10d7edd9ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 970000b8a2817da45a63833ee01325087c3e6f78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="arguments"></a>인수  
  [ **@class=**] **'***class***'**  
- 정보를 요청한 대상 클래스입니다. *클래스* 은 **varchar(8)**의 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
+ 정보를 요청한 대상 클래스입니다. *클래스* 은 **varchar(8)** 의 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

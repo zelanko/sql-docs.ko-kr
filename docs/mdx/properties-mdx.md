@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ebfef6e411c6360212251460a9d8fc51e20d9173
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  멤버 속성 이름의 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>주의  
- **속성** 함수는 지정 된 멤버 속성에 대 한 지정된 된 멤버의 값을 반환 합니다. 멤버 속성와 같은 기본 멤버 속성 중 하나일 수 있습니다 **이름**, **ID**, **키**, 또는 **캡션**, 사용자 정의 멤버 속성이 될 수도 있습니다. 자세한 내용은 참조 [내장 멤버 속성 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 및 [사용자 정의 멤버 속성 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **속성** 함수는 지정 된 멤버 속성에 대 한 지정된 된 멤버의 값을 반환 합니다. 멤버 속성와 같은 기본 멤버 속성 중 하나일 수 있습니다 **이름**, **ID**, **키**, 또는 **캡션**, 사용자 정의 멤버 속성이 될 수도 있습니다. 자세한 내용은 참조 [내장 멤버 속성 &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 및 [사용자 정의 멤버 속성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)합니다.  
   
  기본적으로 값은 문자열로 변환됩니다. 경우 **형식화** 반환 값은 강력한 형식이 지정 된 합니다.  
   
@@ -119,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [멤버 속성 &#40;를 사용 하 여 Mdx&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

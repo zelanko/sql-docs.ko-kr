@@ -23,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8377a1fc877856de2ee9fcb97f1cd2e3e23ff14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 91216e314108febc7231c16235c02bb723b875b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS LineSeparator 속성 및 SkipLine 메서드 예제 (VB)
 이 예제에는 한 번에 한 줄씩 텍스트 스트림을 조작 하는 방법을 보여 줍니다. 기본 캐리지 리턴/줄 바꿈에서 선 구분 기호가 변경 결과 (**adCRLF**)을 단순히 줄 바꿈 (**adLF**) 또는 캐리지 리턴 (**adCR**) 표시 됩니다.  

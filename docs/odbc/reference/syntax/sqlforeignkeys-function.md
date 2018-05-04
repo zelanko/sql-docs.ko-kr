@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLForeignKeys
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02608a02190062b3530d27466d6ec319cf71b8f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 함수
 **규칙**  
@@ -164,9 +163,9 @@ SQLRETURN SQLForeignKeys(
   
  VARCHAR 열의 길이; 테이블에 표시 되지 않습니다. 실제 길이 데이터 원본에 따라 달라 집니다. PKTABLE_CAT 또는 FKTABLE_CAT, PKTABLE_SCHEM FKTABLE_SCHEM의 실제 길이 확인 하려면 PKTABLE_NAME FKTABLE_NAME 및 PKCOLUMN_NAME 또는 FKCOLUMN_NAME 열 응용 프로그램이 호출할 수 **SQLGetInfo** 는 SQL_MAX_와 CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN, 및 SQL_MAX_COLUMN_NAME_LEN 옵션입니다.  
   
- ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다*. x.* 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다 *. x.* 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
   
-|ODBC 2.0 열|ODBC 3*.x* 열|  
+|ODBC 2.0 열|ODBC 3 *.x* 열|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
@@ -186,8 +185,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|NULL이 아닌 Varchar|외래 키 테이블 이름입니다.|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|NULL이 아닌 Varchar|외래 키 열 이름입니다. 드라이버는 이름이 없는 열에 대 한 빈 문자열을 반환 합니다.|  
 |KEY_SEQ (ODBC 1.0)|9|NULL이 아닌 Smallint|시퀀스 번호 (1부터 시작) 하는 키 열입니다.|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|SQL 작업이 때 외래 키에 적용 되도록 동작 **업데이트**합니다. 다음 값 중 하나일 수 있습니다. (참조 테이블은 기본 키가 테이블, 참조 하는 테이블은 외래 키가 있는 테이블)<br /><br /> SQL_CASCADE: 참조 된 테이블의 기본 키 업데이트 될 때 참조 하는 테이블의 외래 키도 업데이트 됩니다.<br /><br /> SQL_NO_ACTION: 경우의 기본 키를 업데이트 하는 참조 되는 테이블을 하면 "현 수 참조" 참조 테이블 에서도 (즉, 참조 하는 테이블의 행은 포함 된 없습니다 함수와 참조 되는 테이블에서) 업데이트가 거부 되었습니다. 참조 하는 테이블의 외래 키를 업데이트 하는 참조 되는 테이블의 기본 키의 값으로 존재 하지 않는 값을 도입 하는 경우 업데이트가 거부 됩니다. (이 작업은 ODBC 2에서 SQL_RESTRICT 동작 동일*.x*.)<br /><br /> SQL_SET_NULL: 참조 된 테이블에 하나 이상의 행이 기본 키의 하나 이상의 구성 요소가 변경 되는 방식으로 업데이트 되는 기본 키의 변경 된 구성 요소에 해당 하는 참조 하는 테이블의 외래 키의 구성 요소 설정 참조 하는 테이블의 모든 일치 하는 행에는 NULL입니다.<br /><br /> SQL_SET_DEFAULT: 참조 된 테이블에 하나 이상의 행이 기본 키의 하나 이상의 구성 요소가 변경 되는 방식으로 업데이트 되는 기본 키의 변경 된 구성 요소에 해당 하는 참조 하는 테이블의 외래 키의 구성 요소는 참조 하는 테이블의 모든 일치 하는 행의 적용 가능한 기본 값으로 설정 합니다.<br /><br /> 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|SQL 작업이 때 외래 키에 적용 되도록 동작 **삭제**합니다. 다음 값 중 하나일 수 있습니다. (참조 테이블은 기본 키가 테이블, 참조 하는 테이블은 외래 키가 있는 테이블)<br /><br /> SQL_CASCADE: 참조 된 테이블의 행이 삭제 되 면 참조 테이블에 일치 하는 모든 행도 삭제 됩니다.<br /><br /> SQL_NO_ACTION: 경우의 행을 삭제 하는 참조 되는 테이블을 하면 "현 수 참조" 참조 하는 테이블에 (즉, 참조 하는 테이블의 행은 포함 된 없습니다 함수와 참조 되는 테이블에서) 업데이트가 거부 되었습니다. (이 작업은 ODBC 2에서 SQL_RESTRICT 동작 동일*.x*.)<br /><br /> SQL_SET_NULL: 참조 된 테이블에 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 하는 테이블의 모든 행의 NULL로 설정 됩니다.<br /><br /> SQL_SET_DEFAULT: 참조 된 테이블에 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 하는 테이블의 모든 일치 하는 행에서 해당 기본값으로 설정 됩니다.<br /><br /> 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|SQL 작업이 때 외래 키에 적용 되도록 동작 **업데이트**합니다. 다음 값 중 하나일 수 있습니다. (참조 테이블은 기본 키가 테이블, 참조 하는 테이블은 외래 키가 있는 테이블)<br /><br /> SQL_CASCADE: 참조 된 테이블의 기본 키 업데이트 될 때 참조 하는 테이블의 외래 키도 업데이트 됩니다.<br /><br /> SQL_NO_ACTION: 경우의 기본 키를 업데이트 하는 참조 되는 테이블을 하면 "현 수 참조" 참조 테이블 에서도 (즉, 참조 하는 테이블의 행은 포함 된 없습니다 함수와 참조 되는 테이블에서) 업데이트가 거부 되었습니다. 참조 하는 테이블의 외래 키를 업데이트 하는 참조 되는 테이블의 기본 키의 값으로 존재 하지 않는 값을 도입 하는 경우 업데이트가 거부 됩니다. (이 작업은 ODBC 2에서 SQL_RESTRICT 동작 동일 *.x*.)<br /><br /> SQL_SET_NULL: 참조 된 테이블에 하나 이상의 행이 기본 키의 하나 이상의 구성 요소가 변경 되는 방식으로 업데이트 되는 기본 키의 변경 된 구성 요소에 해당 하는 참조 하는 테이블의 외래 키의 구성 요소 설정 참조 하는 테이블의 모든 일치 하는 행에는 NULL입니다.<br /><br /> SQL_SET_DEFAULT: 참조 된 테이블에 하나 이상의 행이 기본 키의 하나 이상의 구성 요소가 변경 되는 방식으로 업데이트 되는 기본 키의 변경 된 구성 요소에 해당 하는 참조 하는 테이블의 외래 키의 구성 요소는 참조 하는 테이블의 모든 일치 하는 행의 적용 가능한 기본 값으로 설정 합니다.<br /><br /> 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|SQL 작업이 때 외래 키에 적용 되도록 동작 **삭제**합니다. 다음 값 중 하나일 수 있습니다. (참조 테이블은 기본 키가 테이블, 참조 하는 테이블은 외래 키가 있는 테이블)<br /><br /> SQL_CASCADE: 참조 된 테이블의 행이 삭제 되 면 참조 테이블에 일치 하는 모든 행도 삭제 됩니다.<br /><br /> SQL_NO_ACTION: 경우의 행을 삭제 하는 참조 되는 테이블을 하면 "현 수 참조" 참조 하는 테이블에 (즉, 참조 하는 테이블의 행은 포함 된 없습니다 함수와 참조 되는 테이블에서) 업데이트가 거부 되었습니다. (이 작업은 ODBC 2에서 SQL_RESTRICT 동작 동일 *.x*.)<br /><br /> SQL_SET_NULL: 참조 된 테이블에 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 하는 테이블의 모든 행의 NULL로 설정 됩니다.<br /><br /> SQL_SET_DEFAULT: 참조 된 테이블에 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 하는 테이블의 모든 일치 하는 행에서 해당 기본값으로 설정 됩니다.<br /><br /> 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
 |FK_NAME (ODBC 2.0)|12|Varchar|외래 키 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|기본 키 이름입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다.|  
 |연기 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE 합니다.|  

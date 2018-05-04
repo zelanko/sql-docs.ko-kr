@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 경우는 **MSmerge_conflict_Customers** 테이블에 대 한 충돌 행은 **WA** 및 **CA** 게시에 게시 이름을 전달 **CA**  에 충돌이 검색 된 **CA** 게시 합니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 경우는 **MSmerge_conflict_Customers** 테이블에 대 한 충돌 행은 **WA** 및 **CA** 게시에 게시 이름을 전달 **CA**  에 충돌이 검색 된 **CA** 게시 합니다.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이상 버전에서 충돌 테이블 이름을 지정 하는 형식 이름으로 사용 하 여 **MSmerge_conflict_*게시*_*문서 * * *, 각 게시에 대 한 테이블이 있는 아티클을 말합니다.  
+ 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이상 버전에서 충돌 테이블 이름을 지정 하는 형식 이름으로 사용 하 여 **MSmerge_conflict_* 게시 *_* 문서 * * *, 각 게시에 대 한 테이블이 있는 아티클을 말합니다.  
   
  [ **@publisher=**] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 은 **sysname**, 기본값은 NULL입니다.  

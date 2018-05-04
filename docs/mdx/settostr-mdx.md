@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1443875129e9376210032e3431c4f77b70b35c8c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c07337023c90e9ac3c2dd9ec04da276b0c891641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="settostr-mdx"></a>SetToStr(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ SetToStr(Set_Expression)
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>주의  
- 이 함수를 사용하여 집합의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환되는 문자열은 중괄호로 {}로 묶이고 집합 내의 각 항목은 쉼표로 구분됩니다.  
+ 이 함수를 사용하여 집합의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 묶여 {}, 쉼표로 구분 하 여 집합의 각 항목입니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Geography.Country 특성 계층의 모든 멤버를 포함하는 문자열을 반환합니다.  
@@ -58,6 +57,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

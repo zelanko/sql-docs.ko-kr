@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallTranslator
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbd15cc8f2fc51d8d3c85269aad2854692ee966d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 36e1c76e85aec665e8b9554a305ccef0444d27f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator 함수
 **규칙**  
@@ -40,4 +39,4 @@ ms.lasthandoff: 04/16/2018
  **요약**  
  ODBC 3.0에서 **SQLInstallTranslator** 로 대체 되었습니다 [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)합니다. 에 대 한 호출이 **SQLInstallTranslator** 매핑됩니다 **SQLInstallTranslatorEx**합니다. 자세한 내용은 참조 **SQLInstallTranslatorEx**합니다.  
   
- **SQLInstallTranslator** 응용 프로그램이 ODBC 3에서 호출 하는 경우에 FALSE를 반환 합니다*.x* 와 드라이버 관리자는 *lpszInfFile* 인수는 NULL이 아닌 값으로 설정 합니다. ODBC 2에 사용 된 Odbc.inf 파일입니다. *x* ODBC 3에서 더 이상 지원*.x*이전 버전과 호환성에 대 한도입니다.
+ **SQLInstallTranslator** 응용 프로그램이 ODBC 3에서 호출 하는 경우에 FALSE를 반환 합니다 *.x* 와 드라이버 관리자는 *lpszInfFile* 인수는 NULL이 아닌 값으로 설정 합니다. ODBC 2에 사용 된 Odbc.inf 파일입니다. *x* ODBC 3에서 더 이상 지원 *.x*이전 버전과 호환성에 대 한도입니다.

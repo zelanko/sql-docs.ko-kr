@@ -32,12 +32,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 315ab1f6f066cad8a0a6652bac5fb24617ac29c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,7 +111,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   동거 자녀 두 명  
   
- 쿼리는 사람이 자전거를 반환 하는 테이블 형식 값의 집합을 구입 여부를 설명 하는 부울 값을 반환 TM Decision Tree 마이닝 모델 및 주체에 대 한 알려진된 특징을 사용 하는 [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) 예측을 만든 하는 방법을 설명 하는 함수입니다.  
+ 쿼리는 사람이 자전거를 반환 하는 테이블 형식 값의 집합을 구입 여부를 설명 하는 부울 값을 반환 TM Decision Tree 마이닝 모델 및 주체에 대 한 알려진된 특징을 사용 하 여 [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) 예측을 만든 하는 방법을 설명 하는 함수입니다.  
   
 ```  
 SELECT  
@@ -186,7 +185,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [Predict &#40; DMX &#41;](../dmx/predict-dmx.md) 함수는 다형성 및 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. **선택** NATURAL PREDICTION JOIN 절 뒤에 오는 목록에는 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
+ [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) 함수는 다형성 및 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. **선택** NATURAL PREDICTION JOIN 절 뒤에 오는 목록에는 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
   
 ```  
 SELECT FLATTENED  
@@ -210,9 +209,9 @@ NATURAL PREDICTION JOIN
  예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자가 계층적 행 집합을 지원 하지 하는 경우 사용할 수 있습니다는 **FLATTENED** 결과 보다 쉽게 볼 수 있도록이 예제에 표시 된 대로 키워드입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SELECT&#40; DMX &#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

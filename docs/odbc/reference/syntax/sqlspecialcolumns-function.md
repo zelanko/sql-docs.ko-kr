@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSpecialColumns
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: be502c9fd52c78cd587aa9307380c235fe2c0184
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 함수
 **규칙**  
@@ -157,9 +156,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** 범위로 정렬 하 여 표준 결과 집합으로 결과 반환 합니다.  
   
- ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다*.x*합니다. 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다 *.x*합니다. 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
   
-|ODBC 2.0 열|ODBC 3*.x* 열|  
+|ODBC 2.0 열|ODBC 3 *.x* 열|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

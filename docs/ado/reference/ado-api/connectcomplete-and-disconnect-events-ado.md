@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 268f9bb86667b94437ea2745753a823b4fdb9dbe
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 777e4de5a3d4899bb94ac709f640697a8f96091c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 연결 끊기 이벤트 (ADO) 및
 **ConnectComplete** 이벤트 연결이 시작 된 후 호출 됩니다. **연결 끊기** 이벤트 연결이 종료 된 후 호출 됩니다.  

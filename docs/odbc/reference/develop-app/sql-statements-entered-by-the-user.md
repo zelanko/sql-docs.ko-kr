@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-entered SQL statements [ODBC]
 - SQL statements [ODBC], constructing
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9bd1fa00f6d642436a8ae440f70fa406078cad0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f8f2115e41c21438837bf3911eb8bd6940265f1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-statements-entered-by-the-user"></a>사용자가 입력 한 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 SQL 문을 직접 입력할 수 있습니다. 예를 들어:  

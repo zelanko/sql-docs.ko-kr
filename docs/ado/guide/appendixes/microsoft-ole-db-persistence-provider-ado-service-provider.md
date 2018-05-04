@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d612484c8200a33be44e9b8b8ed230866be9ab95
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9b3851a5ba05e965114ba0c9f50df1f2cb59d4fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에 개체를 나중에 복원 하는 **레코드 집합** 파일에서 개체입니다. 스키마 정보, 데이터를 하 고 보류 중인 변경 내용이 보존 됩니다.

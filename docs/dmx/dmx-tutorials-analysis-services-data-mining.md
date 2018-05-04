@@ -21,12 +21,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7d0f8228564ec7aa4d873e0472a0b7ea4903b00d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8aaeb0565af6f57a4af8404998c5d95e31c04454
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 자습서(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,16 +42,16 @@ ms.lasthandoff: 01/08/2018
  이 자습서에서는 동시에 구입되는 경향이 있는 제품을 예측하는 마이닝 모델을 만드는 방법을 배웁니다. 또한 데이터 마이닝에서 중첩 테이블을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)  
   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)  
   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
-## <a name="related-sections"></a>관련 섹션  
- [다차원 모델 데이터 액세스 &#40; Analysis Services-다차원 데이터 &#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+## <a name="related-sections"></a>관련 단원  
+ [다차원 모델 데이터 액세스 &#40;Analysis Services-다차원 데이터&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

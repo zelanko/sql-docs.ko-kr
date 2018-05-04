@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ea84e234291056901c9d759e9aa206301a24641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>선택 된 데이터 원본이 나 드라이버
 데이터 원본 또는 응용 프로그램에서 사용 되는 드라이버는 응용 프로그램에 하드 코드는 경우도 있습니다. 예를 들어 사용자 지정 작성 한 응용 프로그램 전송할 MIS 부서 간에 데이터를 하나의 데이터 원본에는 데이터 원본의 이름이 포함 됩니다-응용 프로그램 단순히 다른 데이터 소스와 작동 하지 않습니다. 다른 예로 주문 입력에 사용 되는 등의 수직 응용 프로그램. 이러한 응용 프로그램 항상 동일한 데이터 원본에 응용 프로그램으로 인식 하는 미리 정의 된 스키마를 사용 합니다.  

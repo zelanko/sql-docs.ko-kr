@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  업데이트할 정책 범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**, 이며 필수입니다.  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  범주 구독의 대상 유형입니다. *target_type* 은 **sysname**, 기본값은 NULL입니다.  
   
  지정 하는 경우 *target_type*, 값 'DATABASE'으로 설정 되어 있어야 합니다.  
   
- [  **@target_object=** ] **'**target_object**'**  
+ [  **@target_object=** ] **'** target_object **'**  
  정책 범주를 구독할 데이터베이스의 이름이입니다. *target_object* 은 **sysname**, 기본값은 NULL입니다.  
   
- [  **@policy_category=** ] **'**policy_category**'**  
+ [  **@policy_category=** ] **'** policy_category **'**  
  데이터베이스에서 구독하도록 할 정책 범주의 이름입니다. *policy_category* 은 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

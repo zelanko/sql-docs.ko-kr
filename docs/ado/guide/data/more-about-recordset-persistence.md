@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 11bceb2bdeeced8ddbe98e7ddc1164e216644264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="more-about-recordset-persistence"></a>지 속성 레코드 집합에 대 한 자세한 정보
 ADO 레코드 집합 개체의 콘텐츠를 저장 하도록 지원는 **레코드 집합** 개체를 사용 하 여 파일에 해당 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 영구적으로 저장 된 파일은 로컬에 있을 수 있습니다 드라이브, 서버 또는 사이트는 웹에서 URL로 합니다. 사용 하 여 파일을 복원할 수 나중의 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 의 메서드는 **레코드 집합** 개체 또는 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 의 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  

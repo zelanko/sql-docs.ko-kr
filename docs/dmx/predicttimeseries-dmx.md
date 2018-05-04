@@ -26,12 +26,11 @@ caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6adc5668f43a6db002c3622cc65b7ea1f09dee78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +58,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  예측할 열의 이름을 지정합니다. 열에는 스칼라 또는 테이블 형식 데이터가 포함될 수 있습니다.  
   
  *n*  
- 예측할 다음 단계의 수를 지정합니다. 에 대 한 값을 지정 하지 않으면  *n* , 기본값은 1입니다.  
+ 예측할 다음 단계의 수를 지정합니다. 에 대 한 값을 지정 하지 않으면 *n*, 기본값은 1입니다.  
   
- *n*0 일 수 없습니다. 하나 이상의 예측을 만들지 않으면 함수에서 오류가 반환됩니다.  
+ *n* 0 일 수 없습니다. 하나 이상의 예측을 만들지 않으면 함수에서 오류가 반환됩니다.  
   
  *n 시작, 끝 n*  
  시계열 단계의 범위를 지정합니다.  
@@ -88,7 +87,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="remarks"></a>주의  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  
   
- PREDICTION JOIN에서 예측 프로세스는 항상 원래 학습 계열이 끝난 직후의 시간 단계에서 시작됩니다. 이는 새 데이터를 추가하는 경우에도 마찬가지입니다. 따라서는  *n*  매개 변수 및 *n 시작* 매개 변수 값에는 0 보다 큰 정수 여야 합니다.  
+ PREDICTION JOIN에서 예측 프로세스는 항상 원래 학습 계열이 끝난 직후의 시간 단계에서 시작됩니다. 이는 새 데이터를 추가하는 경우에도 마찬가지입니다. 따라서는 *n* 매개 변수 및 *n 시작* 매개 변수 값에는 0 보다 큰 정수 여야 합니다.  
   
 > [!NOTE]  
 >  새 데이터의 길이는 예측의 시작 지점에 영향을 미치지 않습니다. 따라서 새 데이터를 추가하고 새 예측도 수행하려면 예측 시작 지점을 새 데이터의 길이보다 큰 값으로 설정하거나 예측 종료 지점을 새 데이터 길이만큼 늘려야 합니다.  
@@ -102,7 +101,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   세 번째 예는 EXTEND_MODEL_CASES 매개 변수를 사용하여 마이닝 모델을 새 데이터로 업데이트하는 방법을 보여 줍니다.  
   
- 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 데이터 마이닝 자습서를 참조 하십시오. [2 단원: 예측 시나리오 &#40; 중급 데이터 마이닝 자습서 &#41; 구축](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 및 [시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
+ 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 데이터 마이닝 자습서를 참조 하십시오. [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 및 [시간 시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
   
 > [!NOTE]  
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
@@ -136,7 +135,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예제 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
  특정 지역에 대한 데이터가 잘못된 것을 발견하고 모델의 패턴을 사용하여 새 데이터와 일치하도록 예측을 조정하려 한다고 가정합니다. 다른 지역의 추세가 더 안정적이라는 것을 발견하고 가장 안정적인 모델을 여러 지역의 데이터에 적용하려고 할 수도 있습니다.  
   
- 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오는 전체 연습은 참조 [고급 시계열 예측 &#40; 중급 데이터 마이닝 자습서 &#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  
+ 이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오는 전체 연습은 참조 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  
   
  다음 PREDICTION JOIN 쿼리에서는 데이터를 바꾸고 새 예측을 만드는 구문을 보여 줍니다. 데이터를 바꾸기 위해 이 예에서는 Amount 및 Quantity 열의 값을 검색하여 각 값에 2를 곱합니다.  
   
@@ -270,8 +269,8 @@ OR [Model Region] = 'M200 North America'
 >  이 예에서는 결과를 보다 쉽게 표 형식으로 나타낼 수 있도록 FLATTENED 키워드가 사용되었지만, 공급자에서 계층적 행 집합을 지원하는 경우 FLATTENED 키워드를 생략할 수 있습니다. FLATTENED 키워드를 생략하면 쿼리에서 두 개의 열이 반환됩니다. 첫 번째 열에는 `[Model Region]` 데이터 계열을 식별하는 값이 포함되고 두 번째 열에는 통계 중첩 테이블이 포함됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [시계열 모델 쿼리 예제](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [예측 &#40; DMX &#41;](../dmx/predict-dmx.md)  
+ [예측 & #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

@@ -25,12 +25,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0421998c359dbf40eb2afa36d2487b200bca52f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,12 +62,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>주의  
- The **SELECT FROM** *\<model>***. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열에 있는 값을 반환 합니다.  
+ **SELECT FROM**  *\<모델 > * * *입니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열에 있는 값을 반환 합니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
->  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델에 대 한 참조 [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델에 대 한 참조 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
   
 |CONTENT 행 집합 열|Description|  
 |---------------------------|-----------------|  
@@ -137,9 +136,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1.|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1.|6383|0.493314784759255|0||  
   
  다음 예에서는 하위 SELECT 문을 사용하여 중첩 테이블에서 일부 열만 반환하는 방법을 보여 줍니다. 이와 같이 중첩 테이블의 이름에 별칭을 지정하면 간단하게 표시할 수 있습니다.  
   
@@ -157,11 +156,11 @@ WHERE NODE_TYPE = 26
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1|6383|  
+|TM_NaiveBayes|Bike Buyer|1.|6383|  
   
 ## <a name="see-also"></a>관련 항목:  
- [SELECT&#40; DMX &#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21bb3a47c11a5377114a1333383669598b633df6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ StructureColumn('structure column name')
   
  사용 하는 쿼리에서 반환 되는 결과 **StructureColumn** 모델에 필터가 있는지 여부의 영향을 받는 함수입니다. 즉, 모델 필터에 의해 마이닝 모델에 포함되어 있는 사례가 제어됩니다. 따라서 구조 열에 대한 쿼리는 마이닝 모델에 사용된 사례만 반환할 수 있습니다. 마이닝 모델 필터가 사례 테이블과 중첩 테이블에 미치는 영향을 보여 주는 코드 예는 이 항목의 예 섹션을 참조하십시오.  
   
- DMX SELECT 문에서이 함수를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SELECT FROM &#60; 모델 &#62;. 경우 &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) 또는 [SELECT FROM &#60; 구조 &#62;. 경우](../dmx/select-from-structure-cases.md)합니다.  
+ DMX SELECT 문에서이 함수를 사용 하는 방법에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) 또는 [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)합니다.  
   
 ## <a name="error-messages"></a>오류 메시지  
  사용자에게 부모 마이닝 구조에 대한 드릴스루 권한이 없는 경우 다음과 같은 보안 오류 메시지가 나타납니다.  
@@ -150,8 +149,8 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

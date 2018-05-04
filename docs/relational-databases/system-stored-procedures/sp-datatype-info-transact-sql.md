@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 868d88651994ea31e118569a02236edde712ccad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +62,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS에 종속된 데이터 형식입니다.|  
 |DATA_TYPE|**smallint**|ODBC 형식의 열이 모두 매핑되는 해당 형식의 코드입니다.|  
 |PRECISION|**int**|데이터 원본에 있는 데이터 형식의 최대 전체 자릿수입니다. 전체 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다. PRECISION 열의 값은 10진수로 반환됩니다.|  
-|LITERAL_PREFIX|**varchar(**32**)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 대해 0 x에 대 한 합니다.|  
-|LITERAL_SUFFIX|**varchar(**32**)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 따옴표가 사용 되지 않습니다.|  
-|CREATE_PARAMS|**varchar(**32**)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 이 NULL 이면 및 **varchar** 는 "max_length"입니다.|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 대해 0 x에 대 한 합니다.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은 따옴표 (**'**) 문자 형식 및 이진에 따옴표가 사용 되지 않습니다.|  
+|CREATE_PARAMS|**varchar(** 32 **)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 는 "precision, scale", **float** 이 NULL 이면 및 **varchar** 는 "max_length"입니다.|  
 |NULLABLE|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL 값을 허용합니다.<br /><br /> 0 = NULL 값을 허용하지 않습니다.|  
 |CASE_SENSITIVE|**smallint**|대/소문자 구분 여부를 지정합니다.<br /><br /> 1 = 이 형식의 열은 모두 데이터 정렬 시 대/소문자를 구분합니다.<br /><br /> 0 = 이 형식의 열은 모두 대/소문자를 구분하지 않습니다.|  
 |SEARCHABLE|**smallint**|열 형식에 대한 검색 기능을 지정합니다.<br /><br /> 1 = 검색할 수 없습니다.<br /><br /> 2 = LIKE를 사용하여 검색할 수 있습니다.<br /><br /> 3 = WHERE를 사용하여 검색할 수 있습니다.<br /><br /> 4 = WHERE 또는 LIKE를 사용하여 검색할 수 있습니다.|  

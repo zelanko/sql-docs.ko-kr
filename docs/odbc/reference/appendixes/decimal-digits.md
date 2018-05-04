@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b4aaf614ac165d7ca867b3bf394ea942a992e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-digits"></a>10 진수
 *10 진수* decimal 및 numeric 데이터 형식 소수점 오른쪽 자릿수 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수 눈금 정의 되지 않습니다 소수점 오른쪽 자릿수 하지 고정 되어 있으므로. 초 구성 요소가 포함 된 날짜/시간 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수의 수로 정의 됩니다.  

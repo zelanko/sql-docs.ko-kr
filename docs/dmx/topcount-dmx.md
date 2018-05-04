@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cd3ed46a927a40804b09e674fe6d814d2b085ab1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ TopCount(<table expression>, <rank expression>, <count>)
   
  TopCount 함수는 원래 연결 예측 수 있도록 도입 되었으며 일반적으로 포함 하는 문으로 동일한 결과 생성 **SELECT TOP** 및 **ORDER BY** 절. 사용 하는 경우 연결 예측에 대해 더 나은 성능을 받습니다는 **예측 (DMX)** 함수는 많은 예측이 반환 되도록 지정할 수 있습니다.  
   
- 그러나 TopCount 사용 해야 여전히 있는 경우가 있습니다. 예를 들어 DMX 지원 하지 않습니다는 **TOP** 하위 select 문 한정자입니다. [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) 함수 추가 지원 하지 않습니다 **TOP**합니다.  
+ 그러나 TopCount 사용 해야 여전히 있는 경우가 있습니다. 예를 들어 DMX 지원 하지 않습니다는 **TOP** 하위 select 문 한정자입니다. [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 함수 추가 지원 하지 않습니다 **TOP**합니다.  
   
 ## <a name="examples"></a>예  
  다음 예는를 사용 하 여 작성 하는 연결 모델에 대 한 예측 쿼리는 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다. 쿼리에서 동일한 결과 반환 하지만 TopCount와을 사용 하 여 첫 번째 예제 하 고 두 번째 예에서는 Predict 함수를 사용 합니다.  
@@ -122,13 +121,13 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- 결과에는 지원 값으로 정렬된 최상위 3개 예측이 포함됩니다. $SUPPORT를 $PROBABILITY 또는 $ADJUSTED_PROBABILITY로 대체하여 확률 또는 조정된 확률로 등급이 지정된 예측을 반환할 수 있습니다. 자세한 내용은 참조 **예측 (DMX)**합니다.  
+ 결과에는 지원 값으로 정렬된 최상위 3개 예측이 포함됩니다. $SUPPORT를 $PROBABILITY 또는 $ADJUSTED_PROBABILITY로 대체하여 확률 또는 조정된 확률로 등급이 지정된 예측을 반환할 수 있습니다. 자세한 내용은 참조 **예측 (DMX)** 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)  
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

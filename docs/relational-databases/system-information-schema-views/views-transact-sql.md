@@ -25,13 +25,12 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a66a77296c7bbef81bc2f319ae0c4750e25e010b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bf49802b5b37ab17b9ec4a91b345d0dc7e75ddd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-transact-sql"></a>VIEWS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +41,12 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|뷰 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
-|**TABLE_NAME**|**nvarchar(**128**)**|뷰 이름입니다.|  
-|**VIEW_DEFINITION**|**nvarchar (**4000**)**|정의의 길이 보다 큰 경우 **nvarchar (**4000**)**,이 열은 NULL입니다. 그렇지 않으면 이 열은 뷰 정의 텍스트입니다.|  
-|**CHECK_OPTION**|**varchar (**7**)**|WITH CHECK OPTION의 유형입니다. 원래 뷰를 WITH CHECK OPTION으로 만든 경우에는 CASCADE입니다. 그렇지 않으면 NONE이 반환됩니다.|  
-|**IS_UPDATABLE**|**varchar (**2**)**|뷰를 업데이트할 수 있는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|뷰 한정자입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|뷰 이름입니다.|  
+|**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|정의의 길이 보다 큰 경우 **nvarchar (** 4000 **)**,이 열은 NULL입니다. 그렇지 않으면 이 열은 뷰 정의 텍스트입니다.|  
+|**CHECK_OPTION**|**varchar (** 7 **)**|WITH CHECK OPTION의 유형입니다. 원래 뷰를 WITH CHECK OPTION으로 만든 경우에는 CASCADE입니다. 그렇지 않으면 NONE이 반환됩니다.|  
+|**IS_UPDATABLE**|**varchar (** 2 **)**|뷰를 업데이트할 수 있는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

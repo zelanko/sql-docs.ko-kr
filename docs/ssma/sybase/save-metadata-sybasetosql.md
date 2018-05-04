@@ -8,10 +8,9 @@ ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd8e999697080f7f0daf1ff5cd89a673b87d7740
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: f87940bfd4778bb3518e7fafc9094c7f8e778bd0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-metadata--sybasetosql"></a>메타 데이터 (SybaseToSQL)를 저장 합니다.
 **메타 데이터 저장** SSMA 프로젝트에 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 이 게 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일을 제공 합니다.  

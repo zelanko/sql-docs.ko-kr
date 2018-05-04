@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a2dc2c3d91eea67e9e08a87d5aa7735a1b45b1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cb36bf3b80f253ed58ed71c52e069610b6a64466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +93,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="sqldatatype-annotation"></a>sql:datatype 주석  
  **sql: datatype** 주석은 지정 하는 데 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식이 아니므로이 주석은 때 지정 해야 합니다:  
   
--   에 대량 로드 하는 경우는 **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xsd에서 열 **dateTime**, **날짜**, 또는 **시간** 형식. 이 경우 식별 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식을 사용 하 여 **sql: datatype = "dateTime"**합니다. 이 규칙은 updategram에도 적용됩니다.  
+-   에 대량 로드 하는 경우는 **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xsd에서 열 **dateTime**, **날짜**, 또는 **시간** 형식. 이 경우 식별 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 데이터 형식을 사용 하 여 **sql: datatype = "dateTime"** 합니다. 이 규칙은 updategram에도 적용됩니다.  
   
 -   열에 대량 로드 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** 형식과 XSD 값이 중괄호를 포함 하는 GUID ({및}). 지정 하는 경우 **sql: datatype = "uniqueidentifier"**, 열에 삽입 하기 전에 중괄호가 값에서 제거 됩니다. 경우 **sql: datatype** 을 지정 하지 않으면 값 중괄호와 삽입 이나 업데이트가 실패와 함께 보내집니다.  
   

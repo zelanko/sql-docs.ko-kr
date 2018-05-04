@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0641b18cc77a0f7e913014ac6669f82d85a68b77
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5ae807573775648268f415fe6ee855b1c78c187a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS 사용량 및 보안
 이 단원의 정보를 사용 하 여 서버를 설정 및 RDS를 신속 하 게 사용 합니다. 이 섹션에서는 일부 RDS와 다른 기술 간의 키 관계에 설명 RDS를 구현 하는 경우 수행 해야 할 수 있는 특정 구성 단계 및 솔루션을 설정할 때 발생할 수 있는 문제를 식별할 수 있는 RDS 솔루션입니다.  

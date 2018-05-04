@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], driver manager error checking
 - state transition checks [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53cf8af6c63ce781d6aab5544056edd56fa272e9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 58a02120f43de726a581fa43df2dba7593f302ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transition-checks"></a>상태 전환 검사
 드라이버 관리자의 환경, 연결 또는 문이 상태 호출 함수에 대 한 적절 한 하는지 확인 합니다. 예를 들어 한 연결 이어야 합니다는 할당 된 상태의 **SQLConnect** 가 호출 되는 문 준비에 있어야 하면 상태로 **SQLExecute** 호출 됩니다. 드라이버 관리자는 상태 전환 오류에 대 한 SQL_ERROR를 반환합니다.

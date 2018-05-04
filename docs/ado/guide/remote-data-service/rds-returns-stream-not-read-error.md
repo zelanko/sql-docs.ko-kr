@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d197487ed4d7e46d8e89b968c8fff4bcd9b80784
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e3237adf15c1b311c60751c8895e2a8606031c75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>반환 &quot;하지 읽기 스트림&quot; 오류
 "Stream 개체 로드할 수 비어 있는 경우 또는 현재 위치가 스트림 끝에 때문입니다. 비어 있지 않은 스트림에 대 한 현재 위치를 위치 속성으로 설정 합니다. 스트림을 비어 있는지를 확인 하려면 크기 속성을 확인 합니다. "  

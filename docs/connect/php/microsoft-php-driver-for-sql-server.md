@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e57c57acf704a2b9f6e9366733b88e15216ae89d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL 용 PHP 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 SQL Server와의 통합을 설정 합니다. 드라이버는 읽기 및 쓰기 PHP 스크립트 내에서 SQL Server 데이터를 허용 하는 PHP 확장입니다. 드라이버는 모든 버전의 SQL Server 2005 및 나중에 (Express Edition 포함) 및 Azure SQL 데이터베이스의 데이터에 액세스 하기 위한 인터페이스를 제공 합니다. 드라이버는 PHP 스트림을 비롯 한 읽기 및 쓰기 큰 개체, 한 PHP 기능을 사용 하 여 확인 합니다.  
   
@@ -45,7 +44,7 @@ Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 S
 * [지원 리소스에 대해 Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>다운로드  
-* ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL 용 PHP 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+* ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[SQL 용 php 드라이버를 다운로드 하려면](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>샘플  
 * [Microsoft Drivers for PHP for SQL Server에 대 한 코드 샘플](code-samples-for-php-sql-driver.md)

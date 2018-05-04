@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>문자 데이터 및 C 문자열
 가변 길이 문자 데이터 (예: 열 이름, 동적 매개 변수 및 문자열 특성 값)를 참조 하는 입력된 매개 변수는 연결 된 길이 매개 변수를 갖습니다. 응용 프로그램이 종료 C에서 일반적인 경우 처럼 null 문자를 사용 하 여 문자열, 바이트 (null 종결자 제외)는 문자열의 길이 또는 SQL_NTS (Null-Terminated 문자열)를 인수로 제공 합니다. 음수가 아닌 길이 인수는 연결된 문자열의 실제 길이 지정합니다. 길이 인수에는 NULL 값을와 다릅니다. 길이가 0 인 문자열을 지정 하려면 0 일 수 있습니다. 음수 값 SQL_NTS null 종결 문자를 배치 하 여 문자열의 길이 확인 하는 드라이버를 보냅니다.  

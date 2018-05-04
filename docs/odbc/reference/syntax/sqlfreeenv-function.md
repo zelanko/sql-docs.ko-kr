@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 함수
 **규칙**  
  도입 된 버전: ODBC 1.0 표준 준수: 사용 되지 않음  
   
  **요약**  
- ODBC 3에서*.x*, ODBC 2.0 함수 **SQLFreeEnv** 로 대체 되었습니다 **SQLFreeHandle**합니다. 자세한 내용은 참조 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
+ ODBC 3에서 *.x*, ODBC 2.0 함수 **SQLFreeEnv** 로 대체 되었습니다 **SQLFreeHandle**합니다. 자세한 내용은 참조 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   
 > [!NOTE]  
->  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 3 작동*.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
+>  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 3 작동 *.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   

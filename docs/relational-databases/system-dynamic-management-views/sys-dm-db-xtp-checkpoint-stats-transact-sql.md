@@ -26,13 +26,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3fe44cb92654807147c96cd4becc1a3489ae3081
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 76173cf1247f13d7f900b0a98bb19cc79c40cb9c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 상당히 다른 보다 최신 버전에서 항목에서 더 아래로 설명 이며 [SQL Server 2014](#bkmk_2014)합니다.**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
- 다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**합니다.  
+ 다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
 |열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
@@ -90,7 +89,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|Serialize 된 데이터의 양입니다. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**합니다.  
+ 다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 합니다.  
   
 |열 이름|유형|Description|  
 |-----------------|----------|-----------------|  

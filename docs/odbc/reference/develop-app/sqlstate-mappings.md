@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 매핑(SQLSTATE Mappings)
 이 항목에서는 ODBC 2에 대 한 SQLSTATE 값을 설명 합니다. *x* 및 ODBC 3. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  경우는 ODBC 2. *x* 응용 프로그램은 ODBC 3으로 업그레이드 됩니다. *x* 응용 프로그램을 응용 프로그램은 ODBC 3 기대 하는 변경할 수 있습니다. *x* SQLSTATEs 대신 ODBC 2. *x* Sqlstate입니다. 다음 표에서 ODBC 3. *x* Sqlstate는 각 ODBC 2. *x* SQLSTATE 매핑됩니다.  
   
- SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하면 드라이버는 ODBC 2를 게시 합니다. *x* SQLSTATEs 대신 ODBC 3. *x* SQLSTATEs 때 **SQLGetDiagField** 또는 **SQLGetDiagRec** 호출 됩니다. 특정 매핑 ODBC 2를 확인 하 여 확인할 수 있습니다*.x* ODBC 3에 해당 하는 다음 표의 열 1의에서 SQLSTATE입니다. *x* 열 2의에서 SQLSTATE입니다.  
+ SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하면 드라이버는 ODBC 2를 게시 합니다. *x* SQLSTATEs 대신 ODBC 3. *x* SQLSTATEs 때 **SQLGetDiagField** 또는 **SQLGetDiagRec** 호출 됩니다. 특정 매핑 ODBC 2를 확인 하 여 확인할 수 있습니다 *.x* ODBC 3에 해당 하는 다음 표의 열 1의에서 SQLSTATE입니다. *x* 열 2의에서 SQLSTATE입니다.  
   
 |ODBC 2입니다. *x* SQLSTATE|ODBC 3입니다. *x* SQLSTATE|설명|  
 |-------------------------|-------------------------|--------------|  

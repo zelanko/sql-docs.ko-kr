@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dirty reads [ODBC]
 - isolation levels [ODBC]
@@ -28,12 +28,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 28e0bd9447d5975a34e963477eceb61f654d824d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9ae915d748f59b48bf4a4a8a4a6e8b9cc168ae57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 *트랜잭션 격리 수준* 는 트랜잭션 격리 성공 범위의 측정값입니다. 특히, 트랜잭션 격리 수준은 다음과 같은 현상이의 유무 의해 정의 됩니다.  

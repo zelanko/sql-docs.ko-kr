@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>인수  
  [  **@objname =** ] **'***개체***'**  
- 현재 데이터베이스의 기존 테이블, 뷰, 사용자 정의 함수 또는 저장 프로시저의 이름입니다. *개체* 는 **nvarchar(776)**, 기본값은 없습니다. *개체* 형태로 기존 개체의 소유자를 정규화 할 수 있습니다 *existing_owner***.*** 개체* 스키마와 스키마 소유자 이름이 같은 경우입니다.  
+ 현재 데이터베이스의 기존 테이블, 뷰, 사용자 정의 함수 또는 저장 프로시저의 이름입니다. *개체* 는 **nvarchar(776)**, 기본값은 없습니다. *개체* 형태로 기존 개체의 소유자를 정규화 할 수 있습니다 *existing_owner ***.*** 개체* 스키마와 스키마 소유자 이름이 같은 경우입니다.  
   
  [  **@newowner=**] **' * * * 소유자* **'**  
  개체의 새 소유자가 될 보안 계정의 이름입니다. *소유자* 은 **sysname**, 기본값은 없습니다. *소유자* 유효한 데이터베이스 사용자, 서버 역할 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 또는 현재 데이터베이스에 액세스할 수 있는 Windows 그룹입니다. 새 소유자가 해당하는 데이터베이스 수준의 보안 주체가 없는 Windows 사용자 또는 Windows 그룹이면 데이터베이스 사용자가 생성됩니다.  

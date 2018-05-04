@@ -1,5 +1,5 @@
 ---
-title: '&gt;(보다 큼) (DMX) | Microsoft Docs'
+title: '&gt; (보다 큼) (DMX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -21,14 +21,13 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 58c959cb74a2a6b402cdfba2b80a1dca82d56a0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4184641970fc24e8ae1e9dbd87b915c86375f0ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-dmx"></a>&gt;(보다 큼) (DMX)
+# <a name="gt-greater-than-dmx"></a>&gt; (보다 큼) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   DMX(Data Mining Extensions) 식의 값이 다른 DMX 식의 값보다 큰지 확인하는 비교 연산을 수행합니다.  
@@ -48,8 +47,8 @@ DMX_Expression > DMX_Expression
  두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 크면 부울 값에 TRUE가 포함됩니다. 두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 작거나 같으면 부울 값에 FALSE가 포함됩니다. 매개 변수 중 하나 또는 둘 모두가 Null 값으로 계산되면 부울 값에 Null 값이 포함됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [비교 연산자 &#40; DMX &#41;](../dmx/operators-comparison.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [비교 연산자 &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

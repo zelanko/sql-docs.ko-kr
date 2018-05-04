@@ -24,13 +24,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 34ae6277d51c38fbe85dcb909706dc6aa2816749
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8bda4a2221e0e91d45d9957ae0fb95bb661ce181
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 데이터 원본
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DSN(데이터 원본 이름)은 ODBC 응용 프로그램이 특정 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 데 필요한 모든 정보가 포함된 ODBC 데이터 원본을 식별합니다. ODBC 데이터 원본 이름은 다음 두 가지 방법으로 정의할 수 있습니다.  
   
--   클라이언트 컴퓨터에서 관리 도구 제어판을 열고 두 번 클릭 **데이터 원본 (ODBC)**합니다. DSN을 만드는 데 사용하는 ODBC 데이터 원본 관리자가 열립니다.  
+-   클라이언트 컴퓨터에서 관리 도구 제어판을 열고 두 번 클릭 **데이터 원본 (ODBC)** 합니다. DSN을 만드는 데 사용하는 ODBC 데이터 원본 관리자가 열립니다.  
   
 -   ODBC 응용 프로그램에서 호출 [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)합니다.  
   

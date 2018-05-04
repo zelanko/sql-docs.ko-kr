@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - SQL data types [ODBC], identifiers
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 046b9a9b8eda25dd0f3ecee885031423706742a4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 98c78940a3e01943da03b92f5791dc8f146b14c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-type-identifiers"></a>SQL 유형 식별자
 각 데이터 원본 자체 SQL 데이터 형식을 정의합니다. ODBC 형식 식별자를 정의 하 고 각 형식 식별자에 매핑될 수 있는 SQL 데이터 형식의 일반적인 특성을 설명 합니다. 드라이버 관련 odbc SQL 형식 식별자에 매핑되는 데이터 원본에서 각 데이터 형식 방법을 이며합니다  

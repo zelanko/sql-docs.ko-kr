@@ -27,13 +27,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b0b69c68a213531d66162b42267cb0fac634de18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5d16205902435c3564bc7dc1617a75615e3f1bd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.lasthandoff: 04/18/2018
 |**연결**|**connection_failed**|9|**재구성**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**연결**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
 |**연결**|**connection_terminated**|1.|**재구성**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
-|**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >*합니다. 자세한 내용은 참조 [엔진 제한](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
+|**연결**|**제한**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 참조 [엔진 제한](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 참조 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 참조 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**연결**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL 데이터베이스 V11에만 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 참조 [리소스 제한](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  

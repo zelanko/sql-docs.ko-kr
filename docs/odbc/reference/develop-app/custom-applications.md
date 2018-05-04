@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], custom applications
 - custom applications [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f2a4eab813bc691fd435dc00778cbfe41c8bdcc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 634c0988707b52e5517dcc90e006a5513eb90d97
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-applications"></a>사용자 지정 응용 프로그램
 사용자 지정 응용 프로그램은 일반적으로 몇 가지 Dbms에 대 한 특정 작업을 수행 합니다. 예를 들어 응용 프로그램 단일 DBMS에서 데이터를 검색할 수 있습니다 및 보고서를 생성 또는 여러 Dbms 간에 데이터를 전송할 수 있습니다. 어떻게 이러한 응용 프로그램의 공통점은 이러한 Dbms 응용 프로그램 기록 하기 전에 알려진 응용 프로그램의 수명 기간 동안 변경 되지 않을입니다.  

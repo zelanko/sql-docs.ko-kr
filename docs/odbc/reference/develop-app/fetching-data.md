@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], defined
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fc493dc580824113bcbfc01b4451c1e2c6bfa51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 664124afd649e97248bbe13740f863841c9ef482
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-data"></a>데이터 페치
 결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하기는 프로세스 라고 *인출*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  

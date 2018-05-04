@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd4cad291b909a0ed2b86d56f2df489b6de8e6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union---mdx-operator-reference"></a>공용 구조체-MDX 연산자 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ Set_Expression + Set_Expression
  지정된 두 집합의 멤버가 포함된 집합입니다.  
   
 ## <a name="remarks"></a>주의  
- **+ (Union)** 연산자는 기능적으로 동일는 [Union &#40; Mdx&#41; ](../mdx/union-mdx.md) 함수입니다.  
+ **+ (Union)** 연산자는 기능적으로 동일는 [Union &#40;MDX&#41; ](../mdx/union-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

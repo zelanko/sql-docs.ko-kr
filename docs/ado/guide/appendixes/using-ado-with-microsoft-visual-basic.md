@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f0a27c38bde206b841829956ef3a555c5c655f8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8739cf13333794f1bd43678b41cca903832a6812
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic ADO를 사용 하 여 응용 프로그램에 대 한
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성은 유사 사용할지 Visual Basic 또는 Visual Basic 응용 프로그램에 대 한 합니다. 이 항목 응용 프로그램에 대 한 Visual Basic 및 Visual Basic 모두와 함께 ADO를 사용 및 차이 인식 합니다.

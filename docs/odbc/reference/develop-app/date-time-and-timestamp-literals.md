@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
@@ -19,17 +19,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 19cc77adb85cca9aa2c273c02f3090bc2ae0ae19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
   
- **{***-형식* **'** *값* **'을 (를)**   
+ **{***-형식* **'** *값* **'을 (를)**  
   
  여기서 *리터럴 형식이* 값 중 하나는 다음 표에 나열 됩니다.  
   

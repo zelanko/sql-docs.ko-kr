@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default subkey [ODBC]
 - registry entries for components [ODBC], default subkey
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 64edd0f2a796c36b9c8a6efad971c7841b61a7ec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c527f50ad8e71879a91b9b8f13262c5dce1a893f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-driver-subkey"></a>기본 드라이버의 하위 키
 기본 하위 키에서 기본 데이터 원본을 사용 하는 드라이버를 설명 하는 단일 값을 포함 합니다. 이 값의 형식은 다음 표에 표시 됩니다.  

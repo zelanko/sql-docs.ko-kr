@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c019c6669dcefe0992c27b786df83e4ce9c03c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4e948411681bb31f9aafbbf69b8eb0b25074c98
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>바인딩 매개 변수 배열
 응용 프로그램의 매개 변수 배열을 사용 하는 SQL 문의 매개 변수를 배열을 바인딩합니다. 두 바인딩 스타일 가지가 있습니다.  

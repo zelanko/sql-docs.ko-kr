@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b609ca6b6ec82964a3adc114f4dcf72bd036b90d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 19ac7451ddd8a405c9729c2a11409a660c48d07e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-vb"></a>(VB) 메서드 예제 찾기
 사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾고의 비즈니스 이름 수를 계산 하는 메서드는 ***Pubs*** 데이터베이스입니다. 이 예제에서는 기본 공급자와 비슷한 기능을 지원 하지 않습니다 가정 합니다.  

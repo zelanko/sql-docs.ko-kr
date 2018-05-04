@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a032b71e3c2ec400bb402300573df5f6bc4a70ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,13 +62,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>관련 예측 함수  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
   
--   사용 하 여는 [클러스터 &#40; DMX &#41;](../dmx/cluster-dmx.md) 가장 가능성이 높은 클러스터를 반환 하는 함수입니다.  
+-   사용 하 여는 [클러스터 &#40;DMX&#41; ](../dmx/cluster-dmx.md) 가장 가능성이 높은 클러스터를 반환 하는 함수입니다.  
   
--   사용 하 여는 [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md) 사례가 특정 클러스터에 속할 확률을 가져오는 함수를 합니다. 이 값은 클러스터 거리의 역수가 됩니다.  
+-   사용 하 여 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) 사례가 특정 클러스터에 속할 확률을 가져오는 함수를 합니다. 이 값은 클러스터 거리의 역수가 됩니다.  
   
--   사용 하 여는 [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) 함수를 모델의 클러스터의 각 입력 사례 기존 가능성의 히스토그램을 반환 합니다.  
+-   사용 하 여는 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 함수를 모델의 클러스터의 각 입력 사례 기존 가능성의 히스토그램을 반환 합니다.  
   
--   사용 하 여는 [PredictCaseLikelihood &#40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md) 알고리즘에서 학습 된 모델을 고려할 때 존재 한 가능성 입력된 사례를 나타내는 1로 0에서 측정값은 반환 하는 함수입니다.  
+-   사용 하 여는 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) 알고리즘에서 학습 된 모델을 고려할 때 존재 한 가능성 입력된 사례를 나타내는 1로 0에서 측정값은 반환 하는 함수입니다.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>예제 1: 가장 가능성이 높은 클러스터 클러스터 거리 가져오기  
  다음 예에서는 지정된 사례와 해당 사례가 속할 가능성이 가장 높은 클러스터 사이의 거리를 반환합니다.  
@@ -139,9 +138,9 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>관련 항목:  
- [클러스터 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

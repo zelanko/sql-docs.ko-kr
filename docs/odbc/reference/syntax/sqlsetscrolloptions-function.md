@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetScrollOptions
 apilocation:
@@ -26,25 +26,24 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0146c332bd8f21cfaa659c9ca27287c0cf61a91d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79ab0c408748fcbea30fdc2c792e433db8a4309d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 함수
 **규칙**  
  도입 된 버전: ODBC 1.0 표준 준수: 사용 되지 않음  
   
  **요약**  
- ODBC 3에서*.x*, ODBC 2.0 함수 **SQLSetScrollOptions** 에 대 한 호출으로 대체 되었습니다 **SQLGetInfo** 및 **SQLSetStmtAttr**합니다.  
+ ODBC 3에서 *.x*, ODBC 2.0 함수 **SQLSetScrollOptions** 에 대 한 호출으로 대체 되었습니다 **SQLGetInfo** 및 **SQLSetStmtAttr**합니다.  
   
 > [!NOTE]  
->  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 3 작동*.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
+>  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 3 작동 *.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   
 > [!NOTE]  
->  드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한*.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.  
+>  드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한 *.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.  
   
 ## <a name="remarks"></a>주의  
  를 64 비트 운영 체제에서 응용 프로그램를 실행 하는 경우 참조 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)합니다.  

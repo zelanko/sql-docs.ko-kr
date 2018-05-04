@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
 - catalog functions [ODBC], arguments
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81eb0874d8737ec76736bf4caffb8e646bee29cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>카탈로그 함수에서 인수
 모든 카탈로그 함수는 응용 프로그램 반환 되는 데이터의 범위를 제한 하는 데 수 있는 인수를 수락 합니다. 예를 들어 첫 번째 및 두 번째에 대 한 호출 **SQLTables** 다음 코드에서 세 번째 호출은 Orders 테이블에 대 한 정보를 반환 하는 동안 모든 테이블에 대 한 정보를 포함 한 결과 집합을 반환 합니다.  

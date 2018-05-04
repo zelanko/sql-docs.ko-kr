@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d0f6f20a4903aaabb7a6c8062cb714b847134cae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9638f9df784ca2be8b1b0936316c32cf3a70de5d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-drivers-and-data-sources"></a>드라이버 및 데이터 원본에 대 한
 *드라이버* ODBC 요청을 처리 하 고 응용 프로그램에 데이터를 반환 하는 구성 요소입니다. 필요한 경우 드라이버는 데이터 원본에서 인식 하는 형식으로 응용 프로그램의 요청을 수정 합니다. 드라이버의 설치 프로그램을 사용 하 여를 추가 하 여 드라이버를 컴퓨터에서 삭제 해야 합니다.  

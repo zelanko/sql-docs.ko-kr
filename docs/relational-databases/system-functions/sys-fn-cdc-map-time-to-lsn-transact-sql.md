@@ -29,12 +29,11 @@ caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95ee3e6306b47f74d0787bf62e4bfe3ecd5e07c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f463c01205b574334dd52263cb056f3a2daea62f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  **'**< relational_operator >**'** {보다 작은 가장 큰 | 보다 작은 가장 큰 크거나 | 보다 큰 가장 작은 | 최소 크기 보다 크거나 같은}  
  내에 있는 고유한 LSN 값을 식별 하는 데 사용 되는 **cdc.lsn_time_mapping** 가 연결 된 테이블 **tran_end_time** 비교 했을 때 관계를 충족 하는 *tracking_time*  값입니다.  
   
- *relational_operator* 은 **nvarchar (30)**합니다.  
+ *relational_operator* 은 **nvarchar (30)** 합니다.  
   
  *tracking_time*  
  대조할 날짜/시간 값입니다. *tracking_time* 은 **datetime**합니다.  

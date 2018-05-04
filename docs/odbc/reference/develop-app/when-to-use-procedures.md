@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 12f6f62ee39b38378557f84a6c70010471e186f4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c8af54a32480f7ae2cd382de53a586f801e7d189
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="when-to-use-procedures"></a>프로시저를 사용 하는 경우
 모든 프로시저를 사용 하 여 있다는 사실에 기반으로 SQL 문을에서 이동 데이터 원본에 응용 프로그램, 다양 한 프로시저를 사용 하 여 장점이 있습니다. 응용 프로그램에서 남아 상호 운용 가능한 프로시저 호출입니다. 이러한 이점 중 하나:  

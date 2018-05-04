@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dcfa1cd158e0e853315c57581b48a1abfffd4bdf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: db32f3bf2f6c70bb300852c5f1b994e0896c8c6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_notify_operator
   
 ## <a name="arguments"></a>인수  
  [  **@profile_name=** ] **'***profilename***'**  
- 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 은 **nvarchar (128)**합니다. 경우 *profilename* 를 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
+ 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 은 **nvarchar (128)** 합니다. 경우 *profilename* 를 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
   
  [ **@id=** ] *id*  
  메시지를 받을 운영자의 식별자입니다. *id* 은 **int**, 기본값은 NULL입니다. 중 하나 *id* 또는 *이름* 지정 해야 합니다.  
@@ -75,7 +74,7 @@ sp_notify_operator
  전자 메일 메시지에 첨부할 파일의 이름입니다. *첨부 파일* 은 **nvarchar (512)**, 기본값은 없습니다.  
   
  [ **@mail_database=** ] **'***mail_host_database***'**  
- 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 은 **nvarchar (128)**합니다. 없는 경우 *mail_host_database* 지정는 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
+ 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 은 **nvarchar (128)** 합니다. 없는 경우 *mail_host_database* 지정는 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

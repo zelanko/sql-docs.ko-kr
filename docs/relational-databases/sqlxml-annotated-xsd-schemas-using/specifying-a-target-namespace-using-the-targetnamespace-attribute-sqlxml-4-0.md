@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,13 +25,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f66bb00ee4b1a40bdcbba3bf97dad1a0e1f8595f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +84,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **CustomerType** 및 **OrderType** 형식 선언은 전역, 따라서 스키마의 대상 네임 스페이스에 포함 됩니다. 이러한 종류의 선언에서 참조 되는 경우에 결과적으로,  **\<고객 >** 요소 및 해당  **\<순서 >** 자식 요소에 연결 된 접두사가 지정 됩니다 대상 네임 스페이스입니다.  
   
--    **\<고객 >** 스키마에서 전역 요소 이기 때문에 스키마의 대상 네임 스페이스에 요소도 포함 되어 있습니다.  
+-   **\<고객 >** 스키마에서 전역 요소 이기 때문에 스키마의 대상 네임 스페이스에 요소도 포함 되어 있습니다.  
   
  스키마에 대해 다음 XPath 쿼리를 실행합니다.  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
  이 인스턴스 문서 urn: MyNamespace 네임 스페이스를 정의 하 고 접두사 (y0)를을 연결 합니다. 접두사에만 적용 되는  **\<고객 >** 전역 요소입니다. (의 자식으로 선언 되어 있어이 요소는 전역  **\<xsd: schema >** 스키마의 요소입니다.)  
   
- 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다 값 **elementFormDefault** 및 **attributeFormDefault** 특성으로 설정 되어 **"unqualified"**스키마에 있습니다.  **\<순서 >** 요소는 해당 선언의 자식으로 표시 되기 때문에 로컬는  **\<complexType >** 정의 하는 요소는  **\< CustomerType >** 요소입니다. 마찬가지로, 해당 특성 (**CustomerID**, **OrderID**, 및 **ContactName**)은 로컬, 전역이 아니라 합니다.  
+ 때문에 로컬 요소 및 특성에는 접두사가 적용 되지 않습니다 값 **elementFormDefault** 및 **attributeFormDefault** 특성으로 설정 되어 **"unqualified"** 스키마에 있습니다. **\<순서 >** 요소는 해당 선언의 자식으로 표시 되기 때문에 로컬는  **\<complexType >** 정의 하는 요소는  **\< CustomerType >** 요소입니다. 마찬가지로, 해당 특성 (**CustomerID**, **OrderID**, 및 **ContactName**)은 로컬, 전역이 아니라 합니다.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>이 스키마의 작업 예제를 만들려면  
   

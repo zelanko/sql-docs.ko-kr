@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  만들려고 하는 연결된 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
  [  **@srvproduct=** ] **'***product_name***'**  
- 연결된 서버로 추가할 OLE DB 데이터 원본의 제품 이름입니다. *product_name* 은 **nvarchar (**128**)**, 기본값은 NULL입니다. 경우 **SQL Server**, *provider_name*, *data_source*, *위치*, *provider_string*, 및 *카탈로그* 지정할 필요가 없습니다.  
+ 연결된 서버로 추가할 OLE DB 데이터 원본의 제품 이름입니다. *product_name* 은 **nvarchar (** 128 **)**, 기본값은 NULL입니다. 경우 **SQL Server**, *provider_name*, *data_source*, *위치*, *provider_string*, 및 *카탈로그* 지정할 필요가 없습니다.  
   
  [  **@provider=** ] **'***provider_name***'**  
- 이 데이터 원본에 해당하는 OLE DB 공급자의 고유 PROGID(프로그래밍 ID)입니다. *provider_name* 현재 컴퓨터에 설치 된 지정된 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 은 **nvarchar (**128**)**, 기본값은 NULL입니다; 그러나 경우 *provider_name* 은 생략 하면 SQLNCLI가 사용 됩니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. OLE DB 공급자는 지정한 PROGID와 함께 레지스트리에 등록됩니다.  
+ 이 데이터 원본에 해당하는 OLE DB 공급자의 고유 PROGID(프로그래밍 ID)입니다. *provider_name* 현재 컴퓨터에 설치 된 지정된 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 은 **nvarchar (** 128 **)**, 기본값은 NULL입니다; 그러나 경우 *provider_name* 은 생략 하면 SQLNCLI가 사용 됩니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. OLE DB 공급자는 지정한 PROGID와 함께 레지스트리에 등록됩니다.  
   
  [  **@datasrc=** ] **'***data_source***'**  
- OLE DB 공급자가 해석하는 데이터 원본의 이름입니다. *data_source* 은 **nvarchar (**4000**)**합니다. *data_source* OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다.  
+ OLE DB 공급자가 해석하는 데이터 원본의 이름입니다. *data_source* 은 **nvarchar (** 4000 **)** 합니다. *data_source* OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다.  
   
  [  **@location=** ] **'***위치***'**  
- OLE DB 공급자에 의해 해석된 데이터베이스의 위치입니다. *위치* 은 **nvarchar (**4000**)**, 기본값은 NULL입니다. *위치* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다.  
+ OLE DB 공급자에 의해 해석된 데이터베이스의 위치입니다. *위치* 은 **nvarchar (** 4000 **)**, 기본값은 NULL입니다. *위치* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다.  
   
  [  **@provstr=** ] **'***provider_string***'**  
- 고유한 데이터 원본을 나타내는 OLE DB 공급자의 연결 문자열입니다. *provider_string* 은 **nvarchar (**4000**)**, 기본값은 NULL입니다. *provstr* IDataInitialize에 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 합니다.  
+ 고유한 데이터 원본을 나타내는 OLE DB 공급자의 연결 문자열입니다. *provider_string* 은 **nvarchar (** 4000 **)**, 기본값은 NULL입니다. *provstr* IDataInitialize에 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 합니다.  
   
  에 대해 연결 된 서버를 만들 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 인스턴스를 서버로 서버 키워드를 사용 하 여 지정할 수 =*servername*\\*instancename*의 특정 인스턴스를 지정 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *servername* 되는 컴퓨터의 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 중인 및 *instancename* 의 특정 인스턴스 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 연결 되어야 합니다.  
   

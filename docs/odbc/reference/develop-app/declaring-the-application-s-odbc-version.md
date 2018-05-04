@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
 - data sources [ODBC], declaring ODBC version
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89e3363eeefaf85aa81c29266bdf565066c626a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램을 선언&#39;s ODBC 버전
 응용 프로그램이 할당 한 연결을 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 이 특성은 응용 프로그램이 ODBC 2 따르는지를 알려 줍니다. *x* 또는 ODBC 3. *x* 사양에 다음 항목을 사용 하는 경우:  
@@ -49,9 +48,9 @@ ms.lasthandoff: 04/16/2018
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***SQLTables 인수**합니다.   Odbc 2. *x*에서 와일드 카드 문자 ("%" 및 "_")는 *CatalogName* 인수 리터럴로 취급 됩니다. Odbc 3. *x*, 와일드 카드 문자로 처리 됩니다. 따라서 응용 프로그램 뒤에 오는 ODBC 2. *x* 사양을 사용할 수 없습니다. 이러한 와일드 카드 문자는 문자를 리터럴로 사용 하는 경우 이러한 이스케이프 하지 않습니다. ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양이 와일드 카드 문자로 사용 하 여 또는 이스케이프 고, 리터럴로 사용할 수 있습니다. 자세한 내용은 참조 [카탈로그 함수의 인수와](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  
+-   *CatalogName***SQLTables 인수**합니다. Odbc 2. *x*에서 와일드 카드 문자 ("%" 및 "_")는 *CatalogName* 인수 리터럴로 취급 됩니다. Odbc 3. *x*, 와일드 카드 문자로 처리 됩니다. 따라서 응용 프로그램 뒤에 오는 ODBC 2. *x* 사양을 사용할 수 없습니다. 이러한 와일드 카드 문자는 문자를 리터럴로 사용 하는 경우 이러한 이스케이프 하지 않습니다. ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양이 와일드 카드 문자로 사용 하 여 또는 이스케이프 고, 리터럴로 사용할 수 있습니다. 자세한 내용은 참조 [카탈로그 함수의 인수와](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  
   
- ODBC 3*.x* 드라이버 관리자와 ODBC 3*.x* 드라이버는 응용 프로그램이 작성 되는 ODBC 사양의 버전을 확인 하 고 적절 하 게 응답 합니다. 예를 들어 응용 프로그램이 ODBC 2를 따릅니다. *x* 사양 및 호출 **SQLExecute** 호출 하기 전에 **SQLPrepare**, ODBC 3*.x* 드라이버 관리자 SQLSTATE S1010 (반환 함수 시퀀스 오류)입니다. 응용 프로그램 뒤 ODBC 3*.x* 사양에서는 드라이버 관리자 반환 SQLSTATE HY010 (함수 시퀀스 오류). 자세한 내용은 참조 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  
+ ODBC 3 *.x* 드라이버 관리자와 ODBC 3 *.x* 드라이버는 응용 프로그램이 작성 되는 ODBC 사양의 버전을 확인 하 고 적절 하 게 응답 합니다. 예를 들어 응용 프로그램이 ODBC 2를 따릅니다. *x* 사양 및 호출 **SQLExecute** 호출 하기 전에 **SQLPrepare**, ODBC 3 *.x* 드라이버 관리자 SQLSTATE S1010 (반환 함수 시퀀스 오류)입니다. 응용 프로그램 뒤 ODBC 3 *.x* 사양에서는 드라이버 관리자 반환 SQLSTATE HY010 (함수 시퀀스 오류). 자세한 내용은 참조 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  
   
 > [!IMPORTANT]  
 >  ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양 ODBC 3 새 기능을 사용 하지 않는 조건부 코드를 사용 해야 합니다. *x* ODBC 2 작업할 때. *x* 드라이버입니다. ODBC 2입니다. *x* 드라이버는 ODBC 3 새 기능을 지원 하지 않습니다. *x* 해 서 응용 프로그램 선언 ODBC 3을 따릅니다. *x* 사양입니다. 또한 ODBC 3. *x* ODBC 3 새 기능을 지 원하는 드라이버를 중단 하지 않습니다. *x* 응용 프로그램을 ODBC 2 따릅니다 선언 해 서. *x* 사양입니다.

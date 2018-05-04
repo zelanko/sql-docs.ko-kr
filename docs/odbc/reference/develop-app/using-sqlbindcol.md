@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f057dd64e65a60fd168acc72903e45e604967621
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol를 사용 하 여
 응용 프로그램 호출 하 여 열을 바인딩하는 **SQLBindCol**합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 응용 프로그램이 다음을 지정합니다.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
  예를 들어 다음 코드는 영업 사원 및 CustID 열에 변수를 바인딩합니다. 에 열에 대 한 데이터를 반환할 *판매원* 및 *CustID*합니다. 때문에 *판매원* 문자 버퍼는 드라이버를 데이터를 자를지 여부를 결정할 수 있도록 응용 프로그램 (11)의 바이트 길이 지정 합니다. 반환 된 바이트 길이 제목, 또는 NULL 인지에서 반환할 *SalesPersonLenOrInd*합니다.  
   
- 때문에 *CustID* 정수 변수 이며 고정 길이 바이트 길이 지정할 필요가 없습니다; 드라이버가 것으로 간주 **sizeof (**SQLUINTEGER**)**합니다. 반환 된 고객의 바이트 길이 데이터, ID 또는 NULL 인지 여부에 반환 됩니다 *CustIDInd*합니다. 바이트 길이 항상 때문에 응용 프로그램의 급여가 NULL 인지 여부에 interested가 참고 **sizeof (**SQLUINTEGER**)**합니다.  
+ 때문에 *CustID* 정수 변수 이며 고정 길이 바이트 길이 지정할 필요가 없습니다; 드라이버가 것으로 간주 **sizeof (** SQLUINTEGER **)** 합니다. 반환 된 고객의 바이트 길이 데이터, ID 또는 NULL 인지 여부에 반환 됩니다 *CustIDInd*합니다. 바이트 길이 항상 때문에 응용 프로그램의 급여가 NULL 인지 여부에 interested가 참고 **sizeof (** SQLUINTEGER **)** 합니다.  
   
 ```  
 SQLCHAR       SalesPerson[11];  

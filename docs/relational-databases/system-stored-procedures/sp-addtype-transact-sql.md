@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  소수점 오른쪽에 저장할 수 있는 최대 십진 자릿수를 표시하는 음이 아닌 정수이며 전체 자릿수보다 작거나 같아야 합니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
  [  **@nulltype =** ] **'***null_type***'**  
- 별칭 데이터 형식의 NULL 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (**8**)**, 기본값은 NULL이 고와 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 합니다. 경우 *null_type* 에서 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 경우 **@phystype** 은 **비트**, 및 **@nulltype** 를 지정 하지 않으면 기본값은 NULL입니다.  
+ 별칭 데이터 형식의 NULL 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (** 8 **)**, 기본값은 NULL이 고와 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 합니다. 경우 *null_type* 에서 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 경우 **@phystype** 은 **비트**, 및 **@nulltype** 를 지정 하지 않으면 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *null_type* 매개 변수만이 데이터 형식에 대 한 기본 null 허용 여부를 정의 합니다. 테이블을 만드는 동안 별칭 데이터 형식을 사용할 때 NULL 허용 여부를 명시적으로 정의하면 정의된 NULL 허용 여부보다 우선적으로 적용됩니다. 자세한 내용은 참조 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) 및 [CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)합니다.  

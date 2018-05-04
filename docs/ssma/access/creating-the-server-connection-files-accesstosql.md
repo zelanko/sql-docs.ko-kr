@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02a337c32f3dcea132edb7ae60559b7edfd467d7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2abdbca69149765402415f2af8d1165119172e8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 (AccessToSQL) 만들기
 서버 정보 수 스크립트 파일의 서버 섹션에서 지정 합니다. 별도 서버 연결 파일에 서버 정보를 지정할 수도 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트와 서버 둘 다 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  

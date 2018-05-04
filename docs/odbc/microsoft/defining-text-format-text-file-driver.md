@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55a900ec55e4dc93b53168a2949de06fa9f2e879
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6f5954e7ffe41a7b2d1f6ea66ea651e1db8024a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-text-format-text-file-driver"></a>텍스트 형식 (텍스트 파일 드라이버)를 정의합니다.
 텍스트 드라이버를 사용 하는 경우 사용할 수 있습니다는 **텍스트 서식 정의** 대화 상자에서 선택한 파일 열에 대 한 형식을 정의할 수 있습니다. 이 대화 상자를 사용 하면 각 데이터 테이블에 대 한 스키마를 지정할 수 있습니다. 이 정보는 데이터 원본 디렉터리에 Schema.ini 파일에 기록 됩니다. 별도 Schema.ini 파일은 각 텍스트 데이터 원본 디렉터리에 대해 생성 됩니다.  

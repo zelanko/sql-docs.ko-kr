@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54c20f748133b02604a59c96ae75004e7bbc6a93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc273a0c9ab017d400beddca2b00eaa23ab9c1a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  원격 서버의 이름입니다. *게시자* 은 **sysname**, 기본값은 **%**, 모든 게시자에 대 한 정보를 반환 하는 합니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 **%**를 반환 하는 모든 게시자 데이터베이스입니다.  
+ 게시자 데이터베이스의 이름입니다. *publisher_db* 은 **sysname**, 기본값은 **%** 를 반환 하는 모든 게시자 데이터베이스입니다.  
   
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**를 반환 하는 모든 게시 합니다. 이 매개 변수 모두 끌어오기 구독만 independent_agent와 같은 = **0** 반환 됩니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 를 반환 하는 모든 게시 합니다. 이 매개 변수 모두 끌어오기 구독만 independent_agent와 같은 = **0** 반환 됩니다.  
   
  [  **@show_push=**] **'***show_push***'**  
  모든 밀어넣기 구독을 반환할지 여부입니다. *show_push*은 **nvarchar (5)**, 기본값은 FALSE 반환 하지 않는 밀어넣기 구독입니다.  

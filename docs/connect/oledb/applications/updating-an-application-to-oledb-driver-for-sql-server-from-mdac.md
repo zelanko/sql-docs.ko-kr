@@ -22,12 +22,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4b3f50c791d7cc53d3fa3161aaf8293abbd8b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC에서 SQL Server 용 OLE DB 드라이버로 응용 프로그램 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +58,6 @@ ms.lasthandoff: 04/16/2018
 -   OLE DB Driver for SQL Server XML 통합을 포함 되지 않습니다. OLE DB Driver for SQL Server 지원 선택... XML 쿼리, 하지만 다른 XML 기능은 지원 하지 않습니다. 그러나 OLE DB Driver for SQL Server는 지원의 **xml** 에 도입 된 데이터 형식 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다.  
 
 -   OLE DB Driver for SQL Server 연결 문자열 특성을 사용 하 여 클라이언트 쪽 네트워크 라이브러리 구성 지원 합니다. 보다 완전한 네트워크 라이브러리 구성이 필요한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용해야 합니다.  
-
--   OLE DB Driver for SQL Server odbcbcp.dll와 호환 되지 않습니다. SQL Server 용 OLE DB 드라이버를 사용 하려면 msoledbsql.lib와 연결 하려면 응용 프로그램을 빌드해야 합니다.    
 
 -   MDAC 연결 문자열을 부울 값을 사용 (**true**)에 대 한는 **Trusted_Connection** 키워드입니다. OLE DB Driver for SQL Server 연결 문자열을 사용 해야 **예** 또는 **없습니다**합니다.  
 

@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c53f5c6c240404975318764716a1b6a333064536
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fee382cd27de7bbe1435b4c509dc38a5c068423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lead-mdx"></a>Lead(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lead( Index )
   
  지정한 간격이 음수 이면는 **발생할** 함수는 이전 멤버를 반환 합니다.  
   
- `Lead(1)`해당 하는 [NextMember](../mdx/nextmember-mdx.md) 함수입니다. `Lead(-1)`해당 하는 [PrevMember](../mdx/prevmember-mdx.md) 함수입니다.  
+ `Lead(1)` 해당 하는 [NextMember](../mdx/nextmember-mdx.md) 함수입니다. `Lead(-1)` 해당 하는 [PrevMember](../mdx/prevmember-mdx.md) 함수입니다.  
   
  **발생할** 함수는 비슷합니다는 [지연](../mdx/lag-mdx.md) 함수와 **지연** 반대 방향으로 함수를 찾습니다는 **발생할** 함수입니다. 즉, `Lead(n)`은 `Lag(-n)`과 동일합니다.  
   
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

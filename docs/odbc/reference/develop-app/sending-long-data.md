@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 260c62d849f1b771b6d9fc40245fd1b0bfd2c5ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>Long 데이터를 전송합니다.
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 254 자 같은 특정 크기에 대 한 이진 데이터입니다. 긴 텍스트 문서 또는 비트맵 항목이 나타내는 하는 경우와 같은 메모리에 긴 데이터의 전체 항목을 저장 하려면 하지 못할 수도 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 데이터 원본에 전송으로 파트를 지정 된 드라이버 **SQLPutData** 문이 실행 되는 경우. 매개 변수를 실행 시 데이터 보내집니다 라고 *실행 시 데이터 매개 변수*합니다.  

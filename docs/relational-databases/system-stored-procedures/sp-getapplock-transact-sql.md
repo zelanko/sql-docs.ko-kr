@@ -25,13 +25,12 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61c8dddc5d4a7b4673de1cc2fda057d444a03bef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>인수  
  [ @Resource=] '*resource_name*'  
- 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 응용 프로그램은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열 보다 긴 경우 **nvarchar (255)**로 잘립니다 **nvarchar (255)**합니다.  
+ 잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 응용 프로그램은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열 보다 긴 경우 **nvarchar (255)** 로 잘립니다 **nvarchar (255)** 합니다.  
   
  *resource_name* 은 이진 비교 되어 있으므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
   
@@ -62,10 +61,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  응용 프로그램 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode=] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)**이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **Shared**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **단독** .  
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **Shared**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **단독** .  
   
  [ @LockOwner=] '*lock_owner*'  
- 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)**입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값은 **트랜잭션**, 만든 사람 기본값 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
   
  [ @LockTimeout=] '*값*'  
  잠금 제한 시간 값(밀리초)입니다. 기본값은에서 반환 된 값과 같으면@LOCK_TIMEOUT합니다. 즉시 허가할 수 없는 잠금 요청이 대기하지 않고 오류를 반환하도록 하려면 0을 지정하세요.  

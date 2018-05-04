@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -29,12 +28,11 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56fc8975af4f801158ad9eeaa9b2536a3d3b8df5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 41059621a839bd953d441442afc2d430e88db7cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migration-wizard-accesstosql"></a>마이그레이션 마법사 (AccessToSQL)
 마이그레이션 마법사는 과정을 안내해 하나 이상의 데이터베이스 마이그레이션에 대 한 액세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 마법사를 사용 하 여 있습니다 됩니다 프로젝트 만들기, 프로젝트에 데이터베이스를 추가에 연결 하 고 마이그레이션하려는 개체를 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 있습니다는 또한 변환, 로드 및 액세스 스키마 및 데이터 마이그레이션. 필요에 따라 액세스 테이블을 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 테이블입니다.  

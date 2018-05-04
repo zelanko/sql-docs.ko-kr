@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a2ed3efb39a681e2f3cb4e935e7b7e6d8d41a75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4679437d3c520d8e53fbbe79725e8efd340c42a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OAMethod objecttoken , methodname
  *methodname*  
  호출할 OLE 개체의 메서드 이름입니다.  
   
- *returnvalue***출력**   
+ *returnvalue***출력**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
  메서드가 하나의 값을 반환 하는 경우에 대 한 지역 변수를 지정 하거나 *returnvalue*, 지역 변수에 값을 반환 하거나 지정 하지 않으면 메서드가 반환 하는 *returnvalue*를 반환 하는 메서드는 단일 열 단일 행 결과 집합으로 클라이언트에 값을 반환 합니다.  
@@ -76,7 +75,7 @@ sp_OAMethod objecttoken , methodname
   
  출력 매개 변수의 반환 값을 얻기 위해 *매개 변수* 적절 한 데이터 형식의 지역 변수 이어야 합니다 및 **출력** 지정 해야 합니다. 상수 매개 변수를 지정 하거나 **출력** 를 지정 하지 않으면 모든 반환 출력 매개 변수 값은 무시 됩니다.  
   
- 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다.  **@** *parametername*않습니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 (**@ * *), 제거 및 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다. **@** *parametername*않습니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 (**@ * *), 제거 및 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  

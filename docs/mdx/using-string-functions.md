@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf114f9b706497512f10e3629e871ba64ecaaee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>문자열 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,13 +111,13 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  **StrToMember** 및 **StrToSet** 주의 하 여 함수를 사용 해야 합니다. 이러한 함수를 계산 정의 내에 사용할 때 쿼리 성능이 저하될 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [생성 &#40; Mdx&#41;](../mdx/generate-mdx.md)   
- [이름 &#40; Mdx&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; Mdx&#41;](../mdx/uniquename-mdx.md)   
- [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)   
- [저장된 프로시저 &#40;를 사용 하 여 Mdx&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40; Mdx&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40; Mdx&#41;](../mdx/strtoset-mdx.md)  
+## <a name="see-also"></a>관련 항목:  
+ [생성 &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [이름 &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   
+ [저장된 프로시저를 사용 하 여 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

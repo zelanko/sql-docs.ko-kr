@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input buffers [ODBC]
 - length/indicator buffers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0d63aa103ac71aa89d245f6b8e4770b2c4943f2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffers"></a>버퍼
 버퍼는 드라이버 및 응용 프로그램 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리의 일부입니다. 예를 들어 응용 프로그램 버퍼에 연결할 수 있는, 또는 *하면서 바인딩된* 결과 집합으로 열 **SQLBindCol**합니다. 각 행을 인출할 때 이러한 버퍼에 각 열에 대 한 데이터가 반환 됩니다. *입력 버퍼* 드라이버;에 응용 프로그램에서 데이터를 전달 하는 데 사용 됩니다 *출력 버퍼* 응용 프로그램에는 드라이버에서 데이터를 반환 하는 데 사용 됩니다.  

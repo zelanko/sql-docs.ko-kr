@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>데이터베이스 미러링-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|이 행이 해당하는 데이터베이스의 ID입니다.|  
 |**file_id**|**int**|해당 페이지가 있는 파일의 ID입니다.|  
 |**page_id**|**bigint**|파일에 있는 페이지의 ID입니다.|  
-|**error_type**|**int**|오류 유형입니다. 값은 다음이 될 수 있습니다.<br /><br /> **-**1 = 모든 하드웨어 823 오류<br /><br /> 1 = 824 잘못 된 체크섬 이나 조각난된 페이지 (예: 잘못 된 페이지 ID) 이외의 다른 오류<br /><br /> 2 = 잘못된 체크섬<br /><br /> 3 = 조각난 페이지|  
+|**error_type**|**int**|오류 유형입니다. 값은 다음이 될 수 있습니다.<br /><br /> **-** 1 = 모든 하드웨어 823 오류<br /><br /> 1 = 824 잘못 된 체크섬 이나 조각난된 페이지 (예: 잘못 된 페이지 ID) 이외의 다른 오류<br /><br /> 2 = 잘못된 체크섬<br /><br /> 3 = 조각난 페이지|  
 |**page_status**|**int**|페이지 복구 시도의 상태입니다.<br /><br /> 2 = 파트너의 요청에 대해 대기 중입니다.<br /><br /> 3 = 파트너에게 요청이 전송되었습니다.<br /><br /> 4 = 자동 페이지 복구를 위해 대기 중입니다(파트너로부터 응답을 수신함).<br /><br /> 5 = 자동 페이지 복구가 성공적으로 수행되었으며 해당 페이지를 사용할 수 있습니다.<br /><br /> 6 = 복구할 수 없습니다. 이는 페이지 복구 시도 중 오류가 발생했음을 나타냅니다. 예를 들어 파트너에서도 페이지가 손상되었거나 파트너와의 연결이 끊어졌거나 네트워크 문제가 발생한 경우입니다. 페이지에서 다시 손상이 발생할 경우 파트너가 다시 해당 페이지를 요청하므로 이 상태가 최종 상태는 아닙니다.|  
 |**modification_time**|**datetime**|페이지 상태가 마지막으로 변경된 시간입니다.|  
   

@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의-설정 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,9 +66,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>주의  
  명명된 집합은 다시 사용할 수 있도록 만드는 일련의 차원 멤버(또는 집합을 정의하는 식)입니다. 예를 들어 명명된 집합을 사용하면 판매량 기준으로 상위 10개의 판매점 집합으로 구성되는 차원 멤버 집합을 정의할 수 있습니다. 정적으로 또는 같은 함수를 사용 하 여이 집합을 정의할 수 있습니다 [TopCount](../mdx/topcount-mdx.md)합니다. 그런 다음에는 상위 10개의 판매점이 필요할 때마다 이 명명된 집합을 사용할 수 있습니다.  
   
- CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 참조 [Creating Session-Scoped 계산 멤버 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 참조 [Creating Session-Scoped 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
   
- 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 참조 하십시오. [Creating Query-Scoped 명명 된 집합 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 참조 [Creating Query-Scoped 명명 된 집합 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
   
  *Set_Expression* 절에는 MDX 구문을 지 원하는 함수가 포함 될 수 있습니다. SESSION 절을 지정하지 않는 CREATE SET 문으로 만든 집합에는 세션 범위가 포함됩니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  
   
@@ -79,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  사용자 정의 집합은 다음 표에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 참조 [Creating Query-Scoped 명명 된 집합 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 참조 [Creating Query-Scoped 명명 된 집합 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
   
  세션 범위  
  집합의 표시 여부 및 수명은 집합이 생성될 때의 세션에 따라 결정됩니다. DROP SET 문이 집합에서 실행되는 경우 수명은 세션 기간보다 짧습니다. CREATE SET 문은 세션 범위로 집합을 만듭니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  
@@ -118,7 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|클라이언트 응용 프로그램이 집합을 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및에서 제공 하는 클라이언트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 집합에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [DROP SET 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-drop-set.md)   
- [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP SET 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

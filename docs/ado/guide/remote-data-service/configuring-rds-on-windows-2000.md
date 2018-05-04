@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: defb200c5e15c65fe1045e8cf1678700395819b8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c1a85b322b48a19bd8b8d7bbf8777fe03c780371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000에서 RDS를 구성합니다.
 Windows 2000으로 업그레이드 한 후 올바르게 작동 하려면 RDS를 시작 하는 데 문제가 발생 하는 경우 문제를 해결 하려면 다음이 단계를 수행 합니다.  

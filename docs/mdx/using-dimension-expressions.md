@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>차원 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   일반적으로 MDX(Multidimensional Expressions)에서 함수에 매개 변수를 전달할 때 차원 식과 계층 식을 사용하여 계층의 멤버, 집합 또는 튜플을 반환합니다.  
   
- 차원 식은 개체 식별자이므로 간단한 식만 될 수 있습니다. 참조 [식 &#40; Mdx&#41; ](../mdx/expressions-mdx.md) 에 대 한 설명은 간단한 식 및 복잡 한 식입니다.  
+ 차원 식은 개체 식별자이므로 간단한 식만 될 수 있습니다. 참조 [식 &#40;MDX&#41; ](../mdx/expressions-mdx.md) 에 대 한 설명은 간단한 식 및 복잡 한 식입니다.  
   
 ## <a name="dimension-expressions"></a>차원 식  
  차원 식에는 차원 식별자 또는 차원 함수가 포함됩니다.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- 계층 식별자로 표시 *Dimension_Name**.* *Hierarchy_Name* MDX 문을 설명 하는 데 사용 되는 BNF 표기법의 합니다.  
+ 계층 식별자로 표시 *Dimension_Name **.** Hierarchy_Name* MDX 문을 설명 하는 데 사용 되는 BNF 표기법의 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
+ [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2c9c8ffbcd8c53054bfc3ce1638aa0f5f1bec8c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 함수
 **규칙**  
@@ -86,7 +85,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="comments"></a>설명  
  커서 이름은 위치 지정된 업데이트에만 사용 되며 및 delete 문 (예를 들어 **업데이트** *테이블 이름* ... **WHERE CURRENT OF** *커서 이름을*). 자세한 내용은 참조 [배치 Update 및 Delete 문이](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않는 **SQLSetCursorName** 드라이버 SQL_CUR 문자로 시작 하 고 길이가 18 자를 초과 하지 않는 추가 하는 이름을 생성 하는 쿼리 문 실행에 커서 이름을 정의할 수 있습니다.  
   
- 연결 내에서 모든 커서 이름은 고유 해야 합니다. 커서 이름의 최대 길이 드라이버에 의해 정의 됩니다. 상호 운용성을 극대화 응용 프로그램 커서 이름은 최대 18 자로 제한 하는 좋습니다. ODBC 3에서*.x*, 커서 이름을 따옴표 붙은 식별자는 대/소문자 구분 방식으로 처리 됩니다 및 문자는 SQL 구문을 허용 합니다 또는 공백 같은 특수, 취급 또는 예약 된 키워드를 포함할 수 있습니다. 커서 이름은 대/소문자 구분 방식으로 취급 되어야, 따옴표 붙은 식별자로 전달 되어야 합니다.  
+ 연결 내에서 모든 커서 이름은 고유 해야 합니다. 커서 이름의 최대 길이 드라이버에 의해 정의 됩니다. 상호 운용성을 극대화 응용 프로그램 커서 이름은 최대 18 자로 제한 하는 좋습니다. ODBC 3에서 *.x*, 커서 이름을 따옴표 붙은 식별자는 대/소문자 구분 방식으로 처리 됩니다 및 문자는 SQL 구문을 허용 합니다 또는 공백 같은 특수, 취급 또는 예약 된 키워드를 포함할 수 있습니다. 커서 이름은 대/소문자 구분 방식으로 취급 되어야, 따옴표 붙은 식별자로 전달 되어야 합니다.  
   
  와 관련 된 문을 사용 하 여 삭제 될 때까지 설정 명시적으로 또는 암시적으로 상태를 유지 하는 커서 이름을 설정 **SQLFreeHandle**합니다. **SQLSetCursorName** 으로 커서가 할당 또는 준비 된 상태에 있는 문에서 커서의 이름을 바꾸려면 호출할 수 있습니다.  
   

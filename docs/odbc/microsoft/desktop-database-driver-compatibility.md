@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
 - Unicode [ODBC], desktop database drivers
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 557a7254e9cea7476ee3de706da86519f9ef1fec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1a8390be6d2aa4fa7999f19018a4a2750c7d44fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>데스크톱 데이터베이스 드라이버 호환성
 유니코드는 소프트웨어 문자 인코딩 메서드는 2 바이트의 고정된 폭을 가진 것으로 모든 문자를 처리 합니다. 이 메서드는 1 바이트의 문자를 나타내기 때문에 256 자로 제한 Windows ANSI 문자 인코딩을 하는 대신 사용 됩니다. 해당 문자가 표현 되지 않는 많은 언어를 수용 유니코드 65000 개 문자를 나타낼 수 있습니다, 때문에 ANSI 인코딩으로 합니다.  

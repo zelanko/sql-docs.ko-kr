@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d2d1e9e081984645fcad82d59d6229f30225502
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 78ce076807f9f8f75358e0cc1b4adaecac2809ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
   
 ## <a name="arguments"></a>인수  
  [ **@type** =] **'***형식***'**  
- 제거되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 은 **varchar (16)**이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
+ 제거되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 은 **varchar (16)** 이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

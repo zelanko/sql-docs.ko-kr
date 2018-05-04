@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
 - numeric data type [ODBC], literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b4b5a40b9cda29b528280b6bb873a8fda747d9ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-literals"></a>숫자 리터럴
 숫자 리터럴은 숫자 데이터 값은 문자열에 저장 된 경우 사용 됩니다. 숫자 SQL 데이터를 SQL_C_CHAR 문자열로의 변환 또는 SQL_CHAR 또는 SQL_VARCHAR 문자열로 숫자 C 데이터 변환에 대 한 대상에 저장 된 항목을 지정 하는 숫자 리터럴 구문을 사용 됩니다. 숫자 SQL 데이터를 SQL_C_CHAR 문자열로 저장 하는 숫자 또는 SQL_CHAR 문자열로 숫자 C 데이터에 저장 된 숫자의 변환의 경우 원본에 저장 된 항목의 유효성을 검사 하는이 구문이 사용 됩니다.  

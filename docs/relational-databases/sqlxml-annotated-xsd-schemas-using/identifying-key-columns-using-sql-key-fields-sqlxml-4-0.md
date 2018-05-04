@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f73239547d4b0ff90c7d0e82a3fdf50ed4d00f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,11 +51,11 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
  이 예에서는 where **sql:-필드** 지정 해야 합니다.  
   
- 다음과 같은 스키마를 살펴 보십시오. 간의 계층을 지정 하는 스키마는  **\<순서 >** 및  **\<고객 >** 요소가 들어는  **\<순서 >**요소는 부모 및  **\<고객 >** 는 자식 요소입니다.  
+ 다음과 같은 스키마를 살펴 보십시오. 간의 계층을 지정 하는 스키마는  **\<순서 >** 및  **\<고객 >** 요소가 들어는  **\<순서 >** 요소는 부모 및  **\<고객 >** 는 자식 요소입니다.  
   
-  **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 에 제공 된 정보  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 **sql:-필드** 주석을 생성 되는 계층은 정확 합니다.  
+ **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 에 제공 된 정보  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 **sql:-필드** 주석을 생성 되는 계층은 정확 합니다.  
   
- 와 **sql:-필드** 에 지정 된  **\<순서 >**주석은 부모 (Sales.SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소 아래에 표시는 부모입니다.  
+ 와 **sql:-필드** 에 지정 된  **\<순서 >** 주석은 부모 (Sales.SalesOrderHeader 테이블)의 행을 고유 하 게 식별 하 고 해당 자식 요소 아래에 표시는 부모입니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>2. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
- 다음 스키마에는 사용 하 여 지정 된 계층이  **\<sql: relationship >**합니다. 스키마 지정 해야는 **sql:-필드** HumanResources.Employee 테이블의 직원을 고유 하 게 식별 하는 주석입니다.  
+ 다음 스키마에는 사용 하 여 지정 된 계층이  **\<sql: relationship >** 합니다. 스키마 지정 해야는 **sql:-필드** HumanResources.Employee 테이블의 직원을 고유 하 게 식별 하는 주석입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

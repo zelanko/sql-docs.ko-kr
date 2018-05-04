@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 792f2d89dc1f0cecc7aba0b001266b2308a14c9f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;구조&gt;합니다. 경우
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -105,9 +104,9 @@ WHERE IsTestCase();
  학습 사례를 반환하려면 `IsTrainingCase()` 함수를 대체합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SELECT&#40; DMX &#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

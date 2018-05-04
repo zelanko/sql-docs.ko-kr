@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0c92f72b54b5b3d420e2e4cbdbfe616f9e6f090f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>인수  
  [  **@name =** ] **'***object_statement***'**  
- 보고서에 대한 사용 권한을 가진 현재 데이터베이스에 있는 개체 또는 문의 이름입니다. *object_statement* 은 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름은 형식에서 소유자의 한정자를 포함할 수 있습니다 *소유자***.*** 개체*합니다.  
+ 보고서에 대한 사용 권한을 가진 현재 데이터베이스에 있는 개체 또는 문의 이름입니다. *object_statement* 은 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름은 형식에서 소유자의 한정자를 포함할 수 있습니다 *소유자 ***.*** 개체*합니다.  
   
  경우 *object_statement* 는 문 CREATE 문일 수 있습니다.  
   

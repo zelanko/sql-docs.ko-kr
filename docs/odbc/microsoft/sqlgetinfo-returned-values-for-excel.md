@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], returned values for dBase
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1159b3eb29886f36d5befeee8873a1bf9d31810a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9c7d0df7e4fe66693aa523018dcbcc640afc2bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo Excel에 대 한 반환 값
 다음 표에서 C 언어 #에 대 한 defines는 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #에 대 한 defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 된 값에 대 한 자세한 내용은 **SQLGetInfo**, 참조는 *ODBC Programmer's Reference*합니다.  

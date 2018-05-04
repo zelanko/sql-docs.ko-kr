@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>호환성 매트릭스
 다음 표에서 응용 프로그램 및 드라이버를이 섹션에서는 이전에 정의 된 유형의의 호환성을 설명 합니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  [3]이이 구성에에서 있기 때문에 기능 ODBC 2에서 실행 되도록 실패할 수 있습니다. *x* 책갈피 등 표준에 없는 합니다.  
   
- [4]이이 구성에에서 있기 때문에 기능 ODBC 3에서 실행 되도록 실패할 가능성이*.x* 책갈피 등 표준에 없는 합니다.  
+ [4]이이 구성에에서 있기 때문에 기능 ODBC 3에서 실행 되도록 실패할 가능성이 *.x* 책갈피 등 표준에 없는 합니다.  
   
  [5]이이 구성은 ODBC 2.x 또는 3.x와 같은 드라이버를 드라이버 관련에 없는 기능 ODBC 3.8에 있기 때문에 실패할 가능성이 [odbc에서 C 데이터 형식을](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)합니다.  
   

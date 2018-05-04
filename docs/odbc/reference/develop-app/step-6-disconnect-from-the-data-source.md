@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], disconnecting from data source
 - data sources [ODBC], disconnecting
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5271ba2554e726cc3855cb933f10882afad76fa0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d9d35aa0d9f7fddb8aa713ca4ef9e6ec5f7968e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>6 단계: 데이터 소스에서 연결 끊기
 마지막 단계는 다음 그림에 나와 있는 것 처럼 데이터 소스에서 연결을 끊으려면입니다. 응용 프로그램 호출 하 여 모든 문 핸들을 해제 하는 첫째, **SQLFreeHandle**합니다. 자세한 내용은 참조 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  

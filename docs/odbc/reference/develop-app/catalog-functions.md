@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], about catalog functions
 - data dictionary [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9ef633c9d5ee19489e8c796e99562ec26ec9d03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d9f6b9990799027270c913cb332ce5a0ffc71171
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스는 데이터베이스에 데이터가 저장 되는 요약 된 구조가 있습니다. 예를 들어 판매 주문 간단한 데이터베이스에는 ID 열을 사용 하 여 테이블을 연결를 다음 그림에 표시 되는 구조는 있습니다.  

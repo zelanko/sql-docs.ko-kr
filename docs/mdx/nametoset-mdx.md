@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7b9f52f494665d00f7a75811b839d543c3da5ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 365181e10812a1f28bf39385a75215e6be304b23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nametoset-mdx"></a>NameToSet(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ NameToSet(Member_Name)
  지정 된 멤버 이름이 있는 경우는 **NameToSet** 함수는 해당 멤버를 포함 하는 집합을 반환 합니다. 그렇지 않으면 빈 집합을 반환합니다.  
   
 > [!NOTE]  
->  멤버는 멤버 식이 아니라 멤버 이름으로만 지정해야 합니다. 멤버 식을 사용 하려면 참조 [StrToSet &#40; Mdx&#41; ](../mdx/strtoset-mdx.md).  
+>  멤버는 멤버 식이 아니라 멤버 이름으로만 지정해야 합니다. 멤버 식을 사용 하려면 참조 [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 지정된 멤버 이름의 기본 측정값을 반환합니다.  
@@ -60,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

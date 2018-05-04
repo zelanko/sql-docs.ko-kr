@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], thread-safe
 - thread-safe drivers [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e2ad7121936734e30795de2153c06c14595f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822dcc213a28211a15a07e1bb4586c8a14f7cdd0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multithreading"></a>다중 스레딩
 다중 스레드 운영 체제에서 드라이버는 스레드로부터 안전 하 게 보호 되어야 합니다. 즉, 둘 이상의 스레드에서 같은 핸들을 사용 하도록 응용 프로그램에 대 한 수 있어야 합니다. 드라이버 관련 되는 다음과 가능성이 드라이버를 동시에 두 개의 서로 다른 스레드에서 동일한 핸들을 사용 하려는 모든 시도 serialize 합니다.  

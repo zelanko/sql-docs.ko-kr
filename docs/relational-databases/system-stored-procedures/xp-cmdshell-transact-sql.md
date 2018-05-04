@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f9296b1ff21ee5412aa83f7a5edc2736793777f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ The command(s) completed successfully.
 >  경우 **xp_cmdshell** 일괄 처리 내에서 실행 되 고 오류를 반환 일괄 처리에 실패 합니다. 이 동작은 기존 버전과 달라진 동작입니다. 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일괄 처리가 계속 실행 합니다.  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell  프록시 계정  
- 멤버인 사용자가 호출 될 때는 **sysadmin** 고정 서버 역할, **xp_cmdshell** Windows 계정 이름 및 명명 된 자격 증명에 저장 된 암호를 사용 하 여 연결 **# # xp_cmdshell_proxy_account # #**합니다. 프록시 자격 증명이 없으면 **xp_cmdshell** 실패 합니다.  
+ 멤버인 사용자가 호출 될 때는 **sysadmin** 고정 서버 역할, **xp_cmdshell** Windows 계정 이름 및 명명 된 자격 증명에 저장 된 암호를 사용 하 여 연결 **# # xp_cmdshell_proxy_account # #** 합니다. 프록시 자격 증명이 없으면 **xp_cmdshell** 실패 합니다.  
   
  프록시 계정 자격 증명을 실행 하 여 만들 수 있습니다 **sp_xp_cmdshell_proxy_account**합니다. 이 저장 프로시저는 Windows  사용자 이름과 암호를 인수로 사용합니다. 예를 들어 다음 명령은 Windows  암호가 `SHIPPING\KobeR`인 Windows  도메인 사용자 `sdfh%dkc93vcMt0`에 대한 프록시 자격 증명을 만듭니다.  
   

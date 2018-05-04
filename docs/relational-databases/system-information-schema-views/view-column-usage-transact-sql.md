@@ -25,13 +25,12 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83980a1e4dbb60593aa40d140cbe7c5497d13cce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74b6a43e00d0cbc041ddf7f519101e63142fbaa0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewcolumnusage-transact-sql"></a>VIEW_COLUMN_USAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**nvarchar(**128**)**|뷰 한정자입니다.|  
-|**VIEW_SCHEMA**|**nvarchar(**128**)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**VIEW_CATALOG**|**nvarchar(** 128 **)**|뷰 한정자입니다.|  
+|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|뷰가 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**VIEW_NAME**|**sysname**|뷰 이름입니다.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 한정자입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**sysname**|기본 테이블입니다.|  
 |**COLUMN_NAME**|**sysname**|열 이름입니다.|  
   

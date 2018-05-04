@@ -26,13 +26,12 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 507a42fbb349ce9dca17d3221fe3b001dffe4bbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2ed4d33a41227dad1a0084a880bd26591ff2e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/16/2018
  자세한 내용은 참조 [저장소 만들기 및 관리 메모리 액세스에 최적화 개체에 대 한](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)합니다.  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
- 다음 표에서 설명에 대 한 열 `sys.dm_db_xtp_checkpoint_files`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**합니다.  
+ 다음 표에서 설명에 대 한 열 `sys.dm_db_xtp_checkpoint_files`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
 |열 이름|유형|Description|  
 |-----------------|----------|-----------------|  
@@ -74,7 +73,7 @@ ms.lasthandoff: 04/16/2018
 |encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 1 키로 암호화<br /><br /> 2 = &GT; 2 키로 암호화 합니다. 활성 파일에 대해서만 유효 합니다.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 다음 표에서 설명에 대 한 열 `sys.dm_db_xtp_checkpoint_files`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**합니다.  
+ 다음 표에서 설명에 대 한 열 `sys.dm_db_xtp_checkpoint_files`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 합니다.  
   
 |열 이름|유형|Description|  
 |-----------------|----------|-----------------|  

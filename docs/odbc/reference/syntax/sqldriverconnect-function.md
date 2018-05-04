@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  여기서 *문자열* 에 0 개 이상의 문자가; *식별자* 에 하나 이상의 문자가; *특성 키워드*  /소문자를 구분 하지 않습니다 *특성-값* 대/소문자 구분; 수 있습니다의 값은 **DSN** 키워드 공백의로 구성 되어 있지 않습니다.  
   
- 연결 문자열 및 초기화 파일 문법, 키워드 및 특성 값이 문자를 포함 하는 **{} (),? \*=! @** 묶지와 중괄호 피해 야 합니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 시스템 정보 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자.  
+ 연결 문자열 및 초기화 파일 문법, 키워드 및 특성 값이 문자를 포함 하는 **{}(),? \*=! @** 묶지와 중괄호 피해 야 합니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 시스템 정보 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자.  
   
  응용 프로그램 다음 특성 값은 주변에 중괄호가 추가할 필요가 없습니다는 **드라이버** 키워드 특성에 세미콜론 (;)를 포함 하지 않는 한이 경우 중괄호는 필수입니다. 특성 값을 수신 하는 중괄호를 포함 하는 경우 드라이버를 제거 하지 않아야 하지만 반환 된 연결 문자열의 일부 수 있어야 합니다.  
   
- 묶은 중괄호 ({})는 문자를 포함 하는 DSN 또는 연결 문자열 값 **{} (),? \*=! @** 드라이버에 그대로 전달 됩니다. 키워드에 이러한 문자를 사용할 때 드라이버 관리자 파일 Dsn 사용 하는 경우 오류를 반환 하지만 일반 연결 문자열에 대 한 드라이버에는 연결 문자열에 전달 합니다. 키워드 값에 포함 된 중괄호를 사용 하지 마십시오.  
+ 중괄호로 묶인 DSN 또는 연결 문자열 값 ({}) 포함 하는 문자 **{}(),? \*=! @** 드라이버에 그대로 전달 됩니다. 키워드에 이러한 문자를 사용할 때 드라이버 관리자 파일 Dsn 사용 하는 경우 오류를 반환 하지만 일반 연결 문자열에 대 한 드라이버에는 연결 문자열에 전달 합니다. 키워드 값에 포함 된 중괄호를 사용 하지 마십시오.  
   
  연결 문자열에는 드라이버 정의 된 키워드를 개수에 관계 없이 포함 될 수 있습니다. 때문에 **드라이버** 키워드 시스템 정보에서 정보를 사용 하지 않으므로, 드라이버는 드라이버는 연결 문자열에 정보만 사용 하 여 데이터 원본에 연결할 수 있도록 충분 한 키워드를 정의 해야 합니다. (자세한 내용은 "드라이버," 나중에이 섹션의 지침 참조). 드라이버는 데이터 원본에 연결 하는 데 필요한 어떤 키워드를 정의 합니다.  
   

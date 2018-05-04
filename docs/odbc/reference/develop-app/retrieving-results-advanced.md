@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offsets [ODBC]
 - result sets [ODBC], about result sets
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19be52004708fb448b00f2de115fd1a670302655
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b8f8683d8ec1b467b17e5434803c5deb1ee3a554
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-results-advanced"></a>검색 결과 (고급)
 응용 프로그램에서 오프셋 바인딩된 데이터 버퍼 주소 및 해당 길이/표시기 추가 되어 있는지를 지정할 수 때 버퍼 주소 **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos** 호출 됩니다. 추가 하는이 코드의 결과 이러한 작업에 사용 되는 주소를 결정 합니다.  

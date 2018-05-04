@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +20,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3649869472321de1c5f55c2d26c0ec969f30f676
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
  이 문서에서는  **\<고객 >** 요소 노드인지를 **cid** 는 특성 노드 및 **"중요"** 는 텍스트 노드입니다.  
   
- XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 집합이 제공 된  **\<고객 >** XPath 노드 모두를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값**"7/14/1999"**합니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
+ XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 집합이 제공 된  **\<고객 >** XPath 노드 모두를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값 **"7/14/1999"** 합니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
  XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. 에 있는 W3C XPath 사양의 하위 집합을 구현 하는 SQLXML 4.0 http://www.w3.org/TR/1999/PR-xpath-19991008.html합니다.  
   

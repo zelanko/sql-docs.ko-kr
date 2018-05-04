@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], SQLDriverConnect
 - connecting to data source [ODBC], SqlDriverConnect
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ad3954780f42bc82daf6ae3233b9e1bac667cd0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f85b319ec264f9784953f12f93100660db614cbb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-directly-to-drivers"></a>드라이버에 직접 연결
 설명한 대로 [데이터 원본이 나 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)이 섹션의 앞부분에 나오는 데이터 소스를 전혀 사용 하지 않으려는 일부 응용 프로그램입니다. 대신, 드라이버에 직접 연결 하려고 합니다. **SQLDriverConnect** 데이터 소스를 지정 하지 않고 드라이버에 직접 연결 하는 응용 프로그램에 대 한 방법을 제공 합니다. 개념적으로 임시 데이터 원본에서 런타임에 생성 됩니다.  

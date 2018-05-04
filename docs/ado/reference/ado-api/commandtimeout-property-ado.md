@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a1e5d670917520db70812a0eb17141c643b4e8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7b5be90a77b2d286b7c4eb7d0b2e10f65ff2f863
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성 (ADO)
 시도 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 시간을 나타냅니다.  

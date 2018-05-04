@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51df250577d539c48acb55e26e9906cf1d5a15d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1e401e3c69397ce7aa1bf0941528a9e31219e2dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-mdx"></a>=(같음)(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   하나의 MDX 식의 값이 다른 MDX 식의 값과 같은지 확인하는 비교 연산을 수행합니다.  
   
 > [!NOTE]  
->  사용 하 여 개체를 비교 하려면는 [IS &#40; Mdx&#41; ](../mdx/is-mdx.md) 연산자입니다. 예를 들어 쿼리 축에 있는 현재 멤버가 특정 멤버인지 확인할 때 IS 연산자를 사용합니다.  
+>  사용 하 여 개체를 비교 하려면는 [IS &#40;MDX&#41; ](../mdx/is-mdx.md) 연산자입니다. 예를 들어 쿼리 축에 있는 현재 멤버가 특정 멤버인지 확인할 때 IS 연산자를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -90,6 +89,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

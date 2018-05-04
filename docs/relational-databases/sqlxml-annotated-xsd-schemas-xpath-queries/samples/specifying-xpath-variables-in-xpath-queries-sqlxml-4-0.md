@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +19,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 204090742dac5af439c0de1caf558ebee53fc133
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89284fcb0d4451b6516f240ce75c5e38918fb6f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 XPath 변수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>예  
   
 ### <a name="a-use-the-xpath-variables"></a>1. XPath 변수 사용  
- 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 에 지정 된 기본값을 갖는 두 개의 매개 변수가  **\<sql:header >**합니다.  
+ 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 에 지정 된 기본값을 갖는 두 개의 매개 변수가  **\<sql:header >** 합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

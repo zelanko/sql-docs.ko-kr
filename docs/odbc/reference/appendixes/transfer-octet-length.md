@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transfer octet length of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5cb7bde54dd58d874e2ef7d994afc6372d9591c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59b790845ee6360edcb5c5ea796e9ad910c397a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transfer-octet-length"></a>8 진수 길이 전송 합니다.
 열의 전송 8 진수 길이의 기본 C 데이터 형식에 데이터를 전송할 때 응용 프로그램에 반환 된 바이트의 최대 수입니다. 문자 데이터에 대 한 전송 8 진수 길이 null 종결 문자에 대 한 공간이 포함 되지 않습니다. 열의 전송 8 진수 길이 보다 데이터 원본에 데이터를 저장 하는 데 필요한 바이트 수가 달라질 수 있습니다.  

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1852a8ee9c0c96a58c5ad71e25eafa1730d0ec49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 287c6f9805a645f552af0e5c4e7097aab39208c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 04/16/2018
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. NULL 매개 변수 값을 전달 하려면 지정 된 **nullvalue** 특성입니다. 에 할당 된 값은 **nullvalue** 특성은 그런 다음 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->   **\<sql:header >** 및  **\<updg:header >**를 지정 해야는 **nullvalue** 를 unqualified로 반면,  **\<updg:sync >**, 지정 된 **nullvalue** 를 qualified로 (예를 들어 **updg: nullvalue**).  
+>  **\<sql:header >** 및  **\<updg:header >** 를 지정 해야는 **nullvalue** 를 unqualified로 반면,  **\<updg:sync >**, 지정 된 **nullvalue** 를 qualified로 (예를 들어 **updg: nullvalue**).  
   
 ## <a name="examples"></a>예  
  다음 예에서는 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - fetches [ODBC], long data
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e681bac1af7f778d0e8c813129a344af6c21dd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-long-data"></a>긴 데이터 가져오기
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정 크기에 대 한 이진 데이터입니다. 이 데이터 만큼 작지 않아서 몇 천 문자의 파트 설명 등의 단일 버퍼에 저장 될 수 있습니다. 그러나 너무 길어 긴 텍스트 문서 또는 비트맵 처럼 메모리에 저장할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 사용 하 여 파트에서 드라이버에서 검색 된 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  

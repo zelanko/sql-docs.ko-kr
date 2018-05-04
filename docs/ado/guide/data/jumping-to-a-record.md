@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8c106af02d632e6709bde2c9fe6033392ea44e7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4391866aa2e66aa406b87b973b0f1cea013868db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하면에서 앞 이나 뒤로 이동할 수는 **레코드 집합** 지정된 된 수의 다음 구문을 사용 하 여 레코드:  

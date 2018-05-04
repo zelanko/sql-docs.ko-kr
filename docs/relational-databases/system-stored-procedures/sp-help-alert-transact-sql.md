@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0457cac86f031b9428eb0c49ea1d043046dba777
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 ## <a name="arguments"></a>인수  
  [ **@alert_name =**] **'***alert_name***'**  
- 경고 이름입니다. *alert_name* 은 **nvarchar (128)**합니다. 경우 *alert_name* 은 지정 하지 않으면 모든 경고에 대 한 정보가 반환 됩니다.  
+ 경고 이름입니다. *alert_name* 은 **nvarchar (128)** 합니다. 경우 *alert_name* 은 지정 하지 않으면 모든 경고에 대 한 정보가 반환 됩니다.  
   
  [ **@order_by =**] **'***order_by***'**  
  결과를 생성하는 데 사용할 정렬 순서입니다. *order_by*은 **sysname**, N의 기본값 '*이름*'.  

@@ -19,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e8368710b3377520771a2cfa3bc936bb3fbd1653
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 4 개 이하의 축 및 보통 두 또는 세 컬렉션을 구성 됩니다. *축* 은 찾거나 큐브에서 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  

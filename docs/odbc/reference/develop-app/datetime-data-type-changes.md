@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
 - datetime data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-changes"></a>날짜/시간 데이터 형식 변경
 Odbc 3. *x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP에서 time 및 timestamp SQL 데이터 형식 변경 (의 인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서)를 통해 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (의 인스턴스와 **#define** 91이 고, 92, 및 93 헤더 파일에), 각각. 해당 C 형식 식별자는 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP, SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP에서 변경 되었습니다.  
@@ -38,7 +37,7 @@ Odbc 3. *x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP�
   
  이러한 변경에 영향을 **SQLDescribeCol**, **SQLDescribeParam**, 및 **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, 및 **SQLGetData**; 및 **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, 및 **SQLSpecialColumns**합니다.  
   
- 다음 표는 ODBC 3*.x* 드라이버 관리자에 입력 된 날짜, 시간 및 타임 스탬프 C 데이터 형식 매핑 수행는 *TargetType* 의 인수 **SQLBindCol**및 **SQLGetData** 또는 *ValueType* 의 인수 **SQLBindParameter**합니다.  
+ 다음 표는 ODBC 3 *.x* 드라이버 관리자에 입력 된 날짜, 시간 및 타임 스탬프 C 데이터 형식 매핑 수행는 *TargetType* 의 인수 **SQLBindCol**및 **SQLGetData** 또는 *ValueType* 의 인수 **SQLBindParameter**합니다.  
   
 |데이터 형식<br /><br /> 입력 한 코드|2.*x* 앱을<br /><br /> 2.*x* 드라이버|2.*x* 앱을<br /><br /> 3.*x* 드라이버|3.*x* 앱을<br /><br /> 2.*x* 드라이버|3.*x* 앱을<br /><br /> 3.*x* 드라이버|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -53,7 +52,7 @@ Odbc 3. *x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP�
   
  [2]의 결과로이 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 3. *x* 카탈로그 함수에서 반환 되는 결과 집합에서 반환 되는 날짜, 시간 또는 타임 스탬프 코드를 사용할 수 있습니다.  
   
- 다음 표는 ODBC 3*.x* 드라이버 관리자에 입력 된 날짜, 시간 및 타임 스탬프 SQL 데이터 형식 매핑 수행는 *ParameterType* 의 인수 **SQLBindParameter**  또는 *DataType* 의 인수 **SQLGetTypeInfo**합니다.  
+ 다음 표는 ODBC 3 *.x* 드라이버 관리자에 입력 된 날짜, 시간 및 타임 스탬프 SQL 데이터 형식 매핑 수행는 *ParameterType* 의 인수 **SQLBindParameter**  또는 *DataType* 의 인수 **SQLGetTypeInfo**합니다.  
   
 |데이터 형식<br /><br /> 입력 한 코드|2.*x* 앱을<br /><br /> 2.*x* 드라이버|2.*x* 앱을<br /><br /> 3.*x* 드라이버|3.*x* 앱을<br /><br /> 2.*x* 드라이버|3.*x* 앱을<br /><br /> 3.*x* 드라이버|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  

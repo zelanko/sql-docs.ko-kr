@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  선택 **전송 데이터를 지정 하는 쿼리를 작성할** 및 **다음**합니다.  입력 프로그램 **SQL 문을** 선택 ProductID, Name, ProductNumber FROM Production.Product 및 **다음**  
   
-6.  구성 확인: 행 구분 기호는 {CR}{LF}로, 열 구분 기호는 쉼표({,})로 유지할 수 있습니다.  선택 **매핑 편집**... 있는지 여부를 확인 하 고 데이터 **형식** 은 각 열 (예: 다른 항목에 대 한 ProductID 및 유니코드 문자열에 대 한 정수)에 적합 합니다.  
+6.  구성을 확인 하십시오: {CR} {LF}로 행 구분 기호 및 열 구분 기호는 쉼표 그대로 두면 {,}합니다.  선택 **매핑 편집**... 있는지 여부를 확인 하 고 데이터 **형식** 은 각 열 (예: 다른 항목에 대 한 ProductID 및 유니코드 문자열에 대 한 정수)에 적합 합니다.  
   
 7.  로 건너뛰십시오 **마침** 내보내기를 실행 합니다.  
   

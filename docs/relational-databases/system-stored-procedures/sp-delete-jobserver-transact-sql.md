@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95410b08fca279b65b1c8a119504e248f19084e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 71608242267079dff50cfd5f77722e9f29746b5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 >  어느 *job_id* 또는 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
   
  [ **@server_name=** ] **'***server***'**  
- 지정된 작업에서 제거할 대상 서버의 이름입니다. *서버* 은 **nvarchar (30)**, 기본값은 없습니다. *서버* 수 **(LOCAL)**또는 원격 대상 서버의 이름입니다.  
+ 지정된 작업에서 제거할 대상 서버의 이름입니다. *서버* 은 **nvarchar (30)**, 기본값은 없습니다. *서버* 수 **(LOCAL)** 또는 원격 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

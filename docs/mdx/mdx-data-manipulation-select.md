@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fc495e44fd9c2bc49ba54afbb17cc48a5a855ac6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 선택
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,9 +130,9 @@ FROM
   
  하위 SELECT 문에 NON VISUAL 옵션을 사용하면 필터링된 합계 대신 순 합계를 유지하면서 멤버를 필터링할 수 있습니다. 즉, 상위 10개 매출 정보(사람/제품/지역)를 쿼리한 후 상위 10개의 매출 합계 값 대신 쿼리한 모든 멤버의 매출 순 합계를 반환 결과로 얻을 수 있습니다. 자세한 내용은 아래 예를 참조하십시오.  
   
- 계산된 멤버에 포함 될 수 \<t query axis > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
+ 계산된 멤버에 포함 될 수 \<t query axis > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [XMLA 속성 지원 &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
-## <a name="autoexists"></a>AUTOEXIST  
+## <a name="autoexists"></a>Autoexists  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -354,7 +353,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists 동작은 AUTOEXISTS를 사용 하 여 수정할 수 있습니다 = [1 | 2 | 3]; 연결 문자열 매개 변수 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다.  
+ Autoexists 동작은 AUTOEXISTS를 사용 하 여 수정할 수 있습니다 = [1 | 2 | 3]; 연결 문자열 매개 변수 참조 [XMLA 속성 지원 &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다.  
   
 ## <a name="examples"></a>예  
  합계를 반환 하는 다음 예제에서는 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년의 첫 8 개월 동안 집계는 `Date` 차원에서의 **Adventure Works** 큐브.  
@@ -478,9 +477,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX &#40;의 주요 개념 Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [쿼리 및 Slicer 축 &#40;으로 쿼리 제한 Mdx&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [MDX & #40;의 주요 개념 Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [쿼리 및 Slicer 축 & #40;으로 쿼리 제한 Mdx& #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

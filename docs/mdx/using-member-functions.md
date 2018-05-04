@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7df4670e57def09628b0ccca1be2c2b567aef3bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f7aa6bf39c27a16cd70b222b6417d7059445dd44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-member-functions"></a>멤버 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)   
+ [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   
  [튜플 함수 사용](../mdx/using-tuple-functions.md)   
  [집합 함수 사용](../mdx/using-set-functions.md)  
   

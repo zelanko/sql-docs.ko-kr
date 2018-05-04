@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC], updating data
 - data updates [ODBC], SQLBulkOperations
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df37a52b772c5bca3465e12d17ea425440a12a4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e354cb1bb69618a7a56a0286aeb90ea2ba24692e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations 사용 하 여 업데이트 데이터
 응용 프로그램을 호출 하 여 데이터 원본에서 원본 테이블에 대량 업데이트, 삭제, fetch, 또는 삽입 작업을 수행할 수 **SQLBulkOperations**합니다. 호출 **SQLBulkOperations** 편리 하 게 하는 대신 하면 작성 하 고 SQL 문을 실행 합니다. 데이터 소스 위치 지정 된 SQL 문을 지원 하지 않는 경우에 위치 지정된 업데이트를 지 원하는 ODBC 드라이버를 수 있습니다. 함수 호출을 사용 하 여 완전 한 데이터베이스 액세스를 얻기 위한 패러다임의 일부인 것입니다.  

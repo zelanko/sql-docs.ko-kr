@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application parameter descriptor [ODBC]
 - automatically allocated descriptors [ODBC]
@@ -30,12 +30,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c597d1b4505550c8fed6a551720246d706c53923
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8af53ab1826f2e7a6ee634ec70c4badb20ef6c96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptor-handles"></a>설명자 핸들
 A *설명자* 응용 프로그램 또는 드라이버에서 인식 되는 SQL 문의 매개 변수 또는 결과 집합의 열에 설명 하는 메타 데이터의 컬렉션 (라고도 *구현*). 따라서 설명자를 4 개의 역할 중 하나를 작성할 수 있습니다.  

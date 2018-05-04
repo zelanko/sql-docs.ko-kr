@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4b85f18478d1cc34050804845f62e2283b57462
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd1e979a3613dc95566875a57fc422c59dbc5074
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 이 구문을 사용 하는 방법에 대 한 자세한 내용은 참조 [SELECT FROM &#60; 모델 &#62;. 콘텐츠 &#40; DMX &#41; ](../dmx/select-from-model-content-dmx.md). 마이닝 모델 콘텐츠 스키마 행 집합에 대 한 자세한 내용은 참조 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
+ 이 구문을 사용 하는 방법에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)합니다. 마이닝 모델 콘텐츠 스키마 행 집합에 대 한 자세한 내용은 참조 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)합니다.  
   
  경우는 \<노드 캡션 >을 지정 하지 않으면 함수는 입력된 사례와 가장 가능성 있는 클러스터에 속할 확률을 반환 합니다. 사용 하 여는 **클러스터** 가장 가능성이 높은 클러스터를 반환 하는 함수입니다.  
   
@@ -75,9 +74,9 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [클러스터 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

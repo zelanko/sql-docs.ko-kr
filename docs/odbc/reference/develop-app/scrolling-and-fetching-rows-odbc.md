@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - fetches [ODBC], scrollable cursors
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 273046a04849b0b1501e2dd4be476c9abb540c5f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f218912ed78d887dc230466fd50065667d95f42f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>스크롤 및 인출 행 (ODBC)
 응용 프로그램 호출 하는 스크롤 가능한 커서를 사용할 때 **SQLFetchScroll** cursor와 fetch 행 위치입니다. **SQLFetchScroll** 상대 스크롤 지원 (다음, 이전, 및 상대 *n* 행), 절대 스크롤 (이름, 성 및 행 *n*), 및 책갈피에서 위치 지정 합니다. *FetchOrientation* 및 *FetchOffset* 인수에 **SQLFetchScroll** 다음 다이어그램에 나와 있는 것 처럼를 인출 하는 행 집합을 지정 합니다.  

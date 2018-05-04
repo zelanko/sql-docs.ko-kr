@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - read-only status for Excel driver [ODBC]
 - Excel driver [ODBC], read-only status
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b61c66536c40aeb39033fb93e315b320d83070cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d0cdfec3129dbe01e5b25f0c8595b8bd4e528ba8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-only-status-excel-driver"></a>읽기 전용 상태 (Excel 드라이버)
 Microsoft Excel 드라이버를 사용 하면 데이터 원본 테이블 읽기 전용으로 기본적으로 열리고 한 번에 한 명의 사용자만 열 수 있습니다. 그러나 테이블을 확보 하더라도 읽기 전용 상태 응용 프로그램을 수행할 수는 삽입 및 업데이트 Microsoft Excel 테이블에 대 한 합니다.  

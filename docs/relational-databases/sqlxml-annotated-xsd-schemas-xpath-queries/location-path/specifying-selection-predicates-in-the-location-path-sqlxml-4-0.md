@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,13 +23,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67cbd749cf3293b6a20b55581648ff6cbfa6ddf5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b20a8f5f8957aa26fbb0f5ccce9f4955cd63f25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer` 노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 노드 >**때문에,  **\<요소 >** 에 대 한 주 노드 유형는 `child` 축). `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서 `attribute` 는 축이고와 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 는 컨텍스트 노드의 특성 때문에  **\<특성 >** 보안 주체 노드 유형이 **특성** 축).  
+ 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer` 노드 테스트 (TRUE 이면 `Customer` 는  **\<요소 노드 >** 때문에,  **\<요소 >** 에 대 한 주 노드 유형는 `child` 축). `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서 `attribute` 는 축이고와 `CustomerID` 는 노드 테스트 (TRUE 이면 **CustomerID** 는 컨텍스트 노드의 특성 때문에  **\<특성 >** 보안 주체 노드 유형이 **특성** 축).  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   

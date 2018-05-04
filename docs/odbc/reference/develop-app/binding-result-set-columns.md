@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>바인딩 결과 집합 열
 응용 프로그램은 모든 열이 없는 바인딩 포함 하 여 결과 선택에 따라 집합의 수가 많거나 적은 열으로 바인딩할 수 있습니다. 데이터 행을 인출할 때 드라이버는 응용 프로그램에 바인딩된 열에 대 한 데이터를 반환 합니다. 응용 프로그램 결과 집합의 모든 열으로 바인딩합니다 되는 여부는 응용 프로그램에 따라 달라 집니다. 예를 들어 일반적으로 보고서를 생성 하는 응용 프로그램을 고정된 형식으로에 이러한 응용 프로그램의 모든 보고서에 사용 되는 열을 포함 하는 결과 집합 및 바인딩할 만들고 모든 이러한 열에 대 한 데이터를 검색 합니다. 경우에 따라 데이터의 전체 화면을 표시 하는 응용 프로그램은 사용자에 게 표시할; 열을 허용 이러한 응용 프로그램 사용자 수를 있지만 바인딩 및 사용자가 선택한 열에 대해서만 데이터를 검색 하는 모든 열을 포함 한 결과 집합을 만듭니다.  

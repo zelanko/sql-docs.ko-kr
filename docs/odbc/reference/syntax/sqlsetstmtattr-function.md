@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetStmtAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a1a861de024a59313bcf883b58d98b867261276
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 함수
 **규칙**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetStmtAttr** 문과 관련 된 특성을 설정 합니다.  
   
 > [!NOTE]  
->  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 2와 작동*.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 2와 작동 *.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -131,10 +130,10 @@ SQLRETURN SQLSetStmtAttr(
  정보의 형식을 사용 하 여 설정 *ValuePtr* 했는지에 따라 지정 된 *특성*합니다. **SQLSetStmtAttr** 두 가지 형식 중 하나에 대 한 특성 정보를 수락: 문자열 또는 정수 값입니다. 각각의 형식 특성의 설명에 표시 됩니다. 각 특성에 대해 반환 되는 정보에이 형식을 적용 **SQLGetStmtAttr**합니다. 가 가리키는 문자열은 *ValuePtr* 의 인수 **SQLSetStmtAttr** 길이 *StringLength*합니다.  
   
 > [!NOTE]  
->  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지*.x*합니다. ODBC 3*.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3*.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
+>  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지 *.x*합니다. ODBC 3 *.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3 *.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
   
 > [!NOTE]  
->  ODBC 3*.x* 드라이버 ODBC 2와 작동 해야 하는 경우이 기능을 지원만 필요한*.x* ODBC 2를 설정 하는 응용 프로그램*.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 아래의 "설정 문 옵션에는 연결 수준" 참조 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
+>  ODBC 3 *.x* 드라이버 ODBC 2와 작동 해야 하는 경우이 기능을 지원만 필요한 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 아래의 "설정 문 옵션에는 연결 수준" 참조 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>설명자 필드를 설정 하는 문 특성  
  여러 문 특성 설명자의 헤더 필드에 해당합니다. 설명자 필드의 설정에 실제로 결과 이러한 특성을 설정 합니다. 호출 하 여 필드를 설정 하는 설정 **SQLSetStmtAttr** 대신에 **SQLSetDescField** 설명자 핸들 있어서는 안 함수 호출에 대해 설정할 수 있다는 이점이 있습니다.  
@@ -194,16 +193,16 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN \* 처리 되 면 오류 집합을 포함 하 여 매개 변수 집합의 수를 반환 하는 버퍼를 가리키는 레코드 필드입니다. 이 null 포인터 이면 번호가 없으면 반환 됩니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ROWS_PROCESSED_PTR 필드는 IPD 헤더 설정 합니다.<br /><br /> 경우에 대 한 호출 **SQLExecDirect** 또는 **SQLExecute** 을이 특성에서 가리키는 버퍼의 채우기 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 하지 않도록, 버퍼의 내용을 정의 되지 않습니다.<br /><br /> 자세한 내용은 참조 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)합니다.|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|각 매개 변수에 대 한 값의 수를 지정 하는 SQLULEN 값입니다. SQL_ATTR_PARAMSET_SIZE 1 보다 크면 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 APD의 SQL_DESC_OCTET_LENGTH_PTR 배열을 가리킵니다. 각 배열의 카디널리티는이 필드의 값과 같습니다.<br /><br /> 바인딩된 매개 변수가 없는 경우이 특성은 무시 됩니다.<br /><br /> 자세한 내용은 참조 [매개 변수의 배열을 사용 하 여](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_SIZE 필드 APD 헤더 설정 합니다.|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|응용 프로그램에 반환 하기 전에 실행할 SQL 문이 될 때까지 기다리는 시간 (초) 번호에 해당 하는 SQLULEN 값입니다. 경우 *ValuePtr* 은 0 (기본값) 같음, 시간 제한은 없습니다.<br /><br /> 지정된 된 제한 시간 데이터 원본에 대 한 최대 제한 시간을 초과 하거나 최소 제한 시간 보다 작은 경우 **SQLSetStmtAttr** 해당 값을 대체 하 고 SQLSTATE 01 s 02 반환 (옵션 값이 변경 됨).<br /><br /> 응용 프로그램을 호출 하지 않아도 **SQLCloseCursor** 경우 문을 다시 사용 하는 **선택** 문을 시간이 초과 되었습니다.<br /><br /> 이 문 특성에 설정 하는 쿼리 제한 시간 동기 및 비동기 모드에서 유효 합니다.|  
-|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 값:<br /><br /> SQL_RD_ON = **SQLFetchScroll** 고 ODBC 3*.x*, **SQLFetch** 지정 된 위치에 커서 위치에 배치 된 후 데이터를 검색 합니다. 기본값입니다.<br /><br /> SQL_RD_OFF = **SQLFetchScroll** 고 ODBC 3*.x*, **SQLFetch** 커서 위치에 배치 된 후 데이터를 검색 하지 않습니다.<br /><br /> SQL_RETRIEVE_DATA SQL_RD_OFF를 설정, 응용 프로그램 행 또는 존재 하는 행에 대 한 책갈피 행을 검색 하는 오버 헤드를 초래 하지 않고 검색할 확인할 수 있습니다. 자세한 내용은 참조 [행 인출 및 스크롤](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)합니다.<br /><br /> 열려 있는 커서;에이 특성의 값을 설정할 수 있습니다. 그러나 설정 수에 적용 되지 즉시 경우 드라이버는 SQLSTATE 01 s 02 반환 합니다 (옵션 값 변경) 원래 값을 특성으로 다시 설정 합니다.|  
+|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 값:<br /><br /> SQL_RD_ON = **SQLFetchScroll** 고 ODBC 3 *.x*, **SQLFetch** 지정 된 위치에 커서 위치에 배치 된 후 데이터를 검색 합니다. 기본값입니다.<br /><br /> SQL_RD_OFF = **SQLFetchScroll** 고 ODBC 3 *.x*, **SQLFetch** 커서 위치에 배치 된 후 데이터를 검색 하지 않습니다.<br /><br /> SQL_RETRIEVE_DATA SQL_RD_OFF를 설정, 응용 프로그램 행 또는 존재 하는 행에 대 한 책갈피 행을 검색 하는 오버 헤드를 초래 하지 않고 검색할 확인할 수 있습니다. 자세한 내용은 참조 [행 인출 및 스크롤](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)합니다.<br /><br /> 열려 있는 커서;에이 특성의 값을 설정할 수 있습니다. 그러나 설정 수에 적용 되지 즉시 경우 드라이버는 SQLSTATE 01 s 02 반환 합니다 (옵션 값 변경) 원래 값을 특성으로 다시 설정 합니다.|  
 |SQL_ATTR_ROW_ARRAY_SIZE (ODBC 3.0)|각 호출에 의해 반환 된 행 수를 지정 하는 SQLULEN 값 **SQLFetch** 또는 **SQLFetchScroll**합니다. 대량 책갈피 작업에 사용 되는 책갈피 배열에 있는 행 수 이기도 **SQLBulkOperations**합니다. 기본값은 1입니다.<br /><br /> 지정 된 행 집합 크기가 데이터 원본에서 지 원하는 최대 행 집합 크기를 초과 하는 경우 드라이버 해당 값을 대체 하 고 SQLSTATE 01 s 02를 반환 합니다 (옵션 값이 변경 됨).<br /><br /> 자세한 내용은 참조 [행 집합 크기](../../../odbc/reference/develop-app/rowset-size.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_SIZE 필드 헤더 설정 합니다.|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 열 데이터의 바인딩을 변경에 대 한 포인터에 추가 하는 오프셋을 가리키는 값입니다. 이 필드가 null이 아닌 경우 드라이버는 포인터를 역참조, 설명자 레코드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR)의 지연 된 필드의 각 역참조 된 값을 추가 및 새 포인터 값을 사용 하 여 바인딩할 때. 설정은 기본적으로 null로 합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_BIND_OFFSET_PTR 필드 헤더 설정 합니다.|  
 |SQL_ATTR_ROW_BIND_TYPE (ODBC 1.0)|바인딩 방향을 설정 하는 SQLULEN 값 될 때 사용할 **SQLFetch** 또는 **SQLFetchScroll** 관련된 문을에서 호출 됩니다. 열 단위 바인딩은을 sql_bind_by_column으로 값을 설정 하 여 선택 됩니다. 행 단위 바인딩은 결과 열이 바인딩될 버퍼 인스턴스나 구조체의 길이 값을 설정 하 여 선택 됩니다.<br /><br /> 길이 지정 하는 경우 모든 바운드 열 및 구조 또는 바인딩된 열의 주소가 지정 된 길이로 증가 하는 경우 결과를 가리키는지 확인 번째에 있는 동일한 열의 시작 부분에는 버퍼의 패딩에 대 한 공간에 포함 되어야 e 다음 행입니다. 사용 하는 경우는 **sizeof** 구조체 또는 공용 구조체 ANSI c에서와 연산자를이 동작이 유지 됩니다.<br /><br /> 에 대 한 기본 바인딩 방향은 열 단위 바인딩은 **SQLFetch** 및 **SQLFetchScroll**합니다.<br /><br /> 자세한 내용은 참조 [블록 커서와 함께 사용 하기 위해 열 바인딩](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_BIND_TYPE 필드 헤더 설정 합니다.|  
 |SQL_ATTR_ROW_NUMBER (ODBC 2.0)|집합는 SQLULEN 값 전체 결과의 현재 행의 수입니다. 현재 행의 번호를 확인할 수 없거나 현재 행이 없습니다, 드라이버 0을 반환 합니다.<br /><br /> 호출 하 여이 특성을 검색할 수 있습니다 **SQLGetStmtAttr** 하지만를 호출 하 여 설정 되지 **SQLSetStmtAttr**합니다.|  
 |SQL_ATTR_ROW_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 값 배열을 가리키는 값을 사용 하 여 대량 작업 중에 행이 무시 데 **SQLSetPos**합니다. 각 값 (대량 작업에 포함 시킬 행)에 대 한 SQL_ROW_PROCEED 또는 SQL_ROW_IGNORE (행에 대해 대량 작업에서 제외)으로 설정 됩니다. (이 배열에 대 한 호출 하는 동안 사용 하 여 행을 무시할 수 없는 **SQLBulkOperations**.)<br /><br /> 이 문 특성 경우 드라이버는 행 상태 값을 반환 하지 않습니다는 null 포인터를 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있지만 새 값은 전 까지는 사용 되지 **SQLSetPos** 호출 됩니다.<br /><br /> 자세한 내용은 참조 [SQLSetPos이 있는 행 집합의 행 업데이트](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md) 및 [SQLSetPos이 있는 행 집합에서 행 삭제](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드는를 설정 합니다.|  
-|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 배열을 가리키는 값을 호출한 후에 행 상태 값을 포함 값 **SQLFetch** 또는 **SQLFetchScroll**합니다. 배열에는 행 집합의 행이 더 많은 요소가 있습니다.<br /><br /> 이 문 특성 경우 드라이버는 행 상태 값을 반환 하지 않습니다는 null 포인터를 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있지만 새 값은 전 까지는 사용 되지 **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, 또는  **SQLSetPos** 호출 됩니다.<br /><br /> 자세한 내용은 참조 [수의 행 인출 및 상태](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드 IRD 헤더 설정 합니다.<br /><br /> ODBC 2에 의해이 특성 매핑됩니다*.x* 드라이버에는 *rgbRowStatus* 배열에 대 한 호출에서 **SQLExtendedFetch**합니다.|  
+|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 배열을 가리키는 값을 호출한 후에 행 상태 값을 포함 값 **SQLFetch** 또는 **SQLFetchScroll**합니다. 배열에는 행 집합의 행이 더 많은 요소가 있습니다.<br /><br /> 이 문 특성 경우 드라이버는 행 상태 값을 반환 하지 않습니다는 null 포인터를 설정할 수 있습니다. 언제 든 지가이 특성을 설정할 수 있지만 새 값은 전 까지는 사용 되지 **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, 또는  **SQLSetPos** 호출 됩니다.<br /><br /> 자세한 내용은 참조 [수의 행 인출 및 상태](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ARRAY_STATUS_PTR 필드 IRD 헤더 설정 합니다.<br /><br /> ODBC 2에 의해이 특성 매핑됩니다 *.x* 드라이버에는 *rgbRowStatus* 배열에 대 한 호출에서 **SQLExtendedFetch**합니다.|  
 |SQL_ATTR_ROWS_FETCHED_PTR (ODBC 3.0)|SQLULEN \* 값에 대 한 호출 후 가져온 행 수를 반환 하는 버퍼를 가리키는 **SQLFetch** 또는 **SQLFetchScroll**; 수행 된 대량 작업에 의해 영향을 받는 행 수 호출 하 여 **SQLSetPos** 와 *작업* 인수에서 수행 하는 대량 작업에 영향을 받는 행의 수 또는 SQL_REFRESH; **SQLBulkOperations**. 이 숫자는 오류 행을 포함합니다.<br /><br /> 자세한 내용은 참조 [수의 행 인출 및 상태](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)합니다.<br /><br /> 이 문 특성 설정 SQL_DESC_ROWS_PROCESSED_PTR 필드 IRD 헤더 설정 합니다.<br /><br /> 경우에 대 한 호출 **SQLFetch** 또는 **SQLFetchScroll** 을이 특성에서 가리키는 버퍼의 채우기 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 하지 않도록, 버퍼의 내용을 정의 되지 않습니다.|  
 |SQL_ATTR_SIMULATE_CURSOR (ODBC 2.0)|이러한 문의 단일 행에 영향을 보장 하는 배치 된 드라이버를 시뮬레이션 하는 update 및 delete 문 있는지 여부를 지정 하는 SQLULEN 값.<br /><br /> 하려면 시뮬레이션 위치 지정된 update 및 delete 문, 대부분의 드라이버를 생성 하는 검색 결과 **업데이트** 또는 **삭제** 문을 포함 하는 **여기서** 절을 지정 하는 현재 행에 있는 각 열의 값입니다. 이러한 열을 고유 키를 구성 하지 않으면 이러한 문을 둘 이상의 행에 영향을 수 있습니다.<br /><br /> 이러한 문이 하나의 행만 영향을 줄을 보장 하기 위해 드라이버의 고유 키 열을 결정 하 고 결과 집합에 이러한 열을 추가 합니다. 결과 집합의 열이 고유 키를 구성 하는 보장 하는 응용 프로그램, 드라이버 그러려면 않아도 됩니다. 실행 시간이 줄어들 수 있습니다.<br /><br /> SQL_SC_NON_UNIQUE 드라이버 = 시뮬레이션 보장 하지 업데이트 배치 또는 delete 문이 하나의 행에 영향을 줍니다 응용 프로그램의 작업을 수행 해야 합니다. 문이 둘 이상의 행에 영향을 **SQLExecute**, **SQLExecDirect**, 또는 **SQLSetPos** SQLSTATE 01001 (커서 작업 충돌)를 반환 합니다.<br /><br /> SQL_SC_TRY_UNIQUE 보장 하기 위해 시뮬레이션 업데이트에 배치 되는 드라이버 시도 = 또는 문의 영향을 하나의 행을 삭제 합니다. 예를 들어 둘 이상의 행에 영향을 줄 수 있는 경우에 항상 드라이버 이러한 문의 실행 고유 키가 있습니다. 문이 둘 이상의 행에 영향을 **SQLExecute**, **SQLExecDirect**, 또는 **SQLSetPos** SQLSTATE 01001 (커서 작업 충돌)를 반환 합니다.<br /><br /> SQL_SC_UNIQUE 위치 지정된 업데이트를 시뮬레이션 하 여 드라이버 보증 = 또는 문의 영향을 하나의 행을 삭제 합니다. 드라이버는이 지정 된 문에서 보장할 수 없습니다 경우 **SQLExecDirect** 또는 **SQLPrepare** 에서 오류를 반환 합니다.<br /><br /> 드라이버 커서를 시뮬레이션 하지 않습니다 및 네이티브 SQL 위치 지정된 업데이트에 대 한 지원 및 delete 문을 제공 하는 데이터 원본, SQL_SC_UNIQUE SQL_SIMULATE_CURSOR에 대 한 요청 된 경우 SQL_SUCCESS가 반환 됩니다. SQL_SC_TRY_UNIQUE 또는 SQL_SC_NON_UNIQUE을 요청할 경우 SQL_SUCCESS_WITH_INFO가 반환 됩니다. 데이터 원본에서 SQL_SC_TRY_UNIQUE 수준의 지원 제공 하는 경우 드라이버는 그렇지 않습니다 SQL_SUCCESS SQL_SC_NON_UNIQUE에 SQL_SC_TRY_UNIQUE 및 SQL_SUCCESS_WITH_INFO가 반환에 대해 반환 됩니다.<br /><br /> 데이터 원본에서 지정 된 커서 시뮬레이션 유형이 지원 되지 않는 드라이버 다른 시뮬레이션 형식을 대체 하 고 SQLSTATE 01 s 02 반환 (옵션 값이 변경 됨). SQL_SC_UNIQUE에 대 한 드라이버를 대체, SQL_SC_TRY_UNIQUE 또는 SQL_SC_NON_UNIQUE 순서로 합니다. SQL_SC_TRY_UNIQUE, 드라이버 SQL_SC_NON_UNIQUE을 대체합니다.<br /><br /> 기본값은 SQL_SC_UNIQUE 합니다.<br /><br /> 자세한 내용은 참조 [시뮬레이션 배치 Update 및 Delete 문이](../../../odbc/reference/develop-app/simulating-positioned-update-and-delete-statements.md)합니다.|  
-|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|커서와 함께 응용 프로그램에서 책갈피를 사용할지 여부를 지정 하는 SQLULEN 값:<br /><br /> SQL_UB_OFF = Off (기본값)<br /><br /> SQL_UB_VARIABLE = 응용 프로그램은 커서를 책갈피를 사용 하며 지원 되는 경우 드라이버에서 가변 길이 책갈피를 제공 합니다. ODBC 3에서 SQL_UB_FIXED는 사용 되지 않습니다.*.x*합니다. ODBC 3*.x* ODBC 2를 사용 하는 경우에 응용 프로그램에서 다양 한 길이의 책갈피, 항상 사용 해야*.x* 드라이버: (4 바이트, 고정 길이 책갈피 지원 됨). 고정 길이의 책갈피는 가변 길이 책갈피의 특별 한 경우 바로 때문입니다. ODBC 2 작업할 때*.x* 드라이버를 드라이버 관리자 SQL_UB_VARIABLE SQL_UB_FIXED에 매핑됩니다.<br /><br /> 커서와 책갈피를 사용 하려면 응용 프로그램이 커서를 열기 전에 SQL_UB_VARIABLE 값으로이 특성을 지정 해야 합니다.<br /><br /> 자세한 내용은 참조 [검색 책갈피](../../../odbc/reference/develop-app/retrieving-bookmarks.md)합니다.|  
+|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|커서와 함께 응용 프로그램에서 책갈피를 사용할지 여부를 지정 하는 SQLULEN 값:<br /><br /> SQL_UB_OFF = Off (기본값)<br /><br /> SQL_UB_VARIABLE = 응용 프로그램은 커서를 책갈피를 사용 하며 지원 되는 경우 드라이버에서 가변 길이 책갈피를 제공 합니다. ODBC 3에서 SQL_UB_FIXED는 사용 되지 않습니다.*.x*합니다. ODBC 3 *.x* ODBC 2를 사용 하는 경우에 응용 프로그램에서 다양 한 길이의 책갈피, 항상 사용 해야 *.x* 드라이버: (4 바이트, 고정 길이 책갈피 지원 됨). 고정 길이의 책갈피는 가변 길이 책갈피의 특별 한 경우 바로 때문입니다. ODBC 2 작업할 때 *.x* 드라이버를 드라이버 관리자 SQL_UB_VARIABLE SQL_UB_FIXED에 매핑됩니다.<br /><br /> 커서와 책갈피를 사용 하려면 응용 프로그램이 커서를 열기 전에 SQL_UB_VARIABLE 값으로이 특성을 지정 해야 합니다.<br /><br /> 자세한 내용은 참조 [검색 책갈피](../../../odbc/reference/develop-app/retrieving-bookmarks.md)합니다.|  
   
  [설명자가 구현 설명자, 응용 프로그램 설명자 하지 하는 경우에 1]이이 함수를 비동기적으로 호출할 수 있습니다.  
   

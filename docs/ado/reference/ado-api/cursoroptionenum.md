@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4acc97166d85e5c55b96405505f4267ee9c8386e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 46dbaded7bafcb7e553a58d2807e32466f7e6edf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 어떤 기능을 지정 된 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 테스트 해야 합니다.  

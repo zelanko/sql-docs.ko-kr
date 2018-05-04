@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d82828ccf7e1628140a6a20f51685334dd01982
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 19cae7ca2fa4612779b8225526ab7694d576ee0a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 에 대 한 규칙을 준수 해야 [식별자](../../relational-databases/databases/database-identifiers.md) 숫자 기호 시작할 수 없습니다 (#). 최대 길이 *plan_guide_name* 는 124 자입니다.  
   
  [ @plan_handle =] *plan_handle*  
- 계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 은 **varbinary(64)**합니다. *plan_handle* 에서 가져올 수는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
+ 계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 은 **varbinary(64)** 합니다. *plan_handle* 에서 가져올 수는 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
  지정 된 일괄 처리 안에 있는 문의 시작 위치를 식별 *plan_handle*합니다. *statement_start_offset* 은 **int**, 기본값은 NULL입니다.  

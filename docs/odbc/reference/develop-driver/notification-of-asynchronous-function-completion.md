@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e5b0c8ceb6924171e304f3bc14d3c0438baa3306
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f9ef152274bd9ceea650ebd3c74f97c51c18500c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>비동기 함수 완료
 Windows 8 SDK ODBC 비동기 작업이 완료 되는 알림으로"완료" 하는 경우 응용 프로그램에 알리기 위해 하는 메커니즘을 추가 합니다. (참조 [비동기 실행 (알림 방법)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) 자세한 정보에 대 한 합니다.) 이 항목에서는 드라이버 개발자를 위한 일부의 문제를 설명 합니다.  

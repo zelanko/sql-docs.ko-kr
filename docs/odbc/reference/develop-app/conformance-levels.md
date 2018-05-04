@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17e11f8dd61de45f7ce046241695f3dcc901e254
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4eaed0a59daf6a2e9abeb08e5be60ef953733c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conformance-levels"></a>받는 규칙 수준
 ODBC 드라이버는 다양 한 데이터 원본에 응용 프로그램 액세스를 제공합니다. 각 드라이버 수는 응용 프로그램 실행 시 어떤 ODBC 기능 및 어떤 SQL 문법을 드라이버 확인 하 고 각 데이터 원본 지원 합니다. 단순히 해당 드라이버 또는 드라이버의 기능에 이러한 응용 프로그램을 쓸 수 있으므로 단일 드라이버 또는 드라이버의 알려진된 된 작은 집합을 사용 하도록 디자인 된 응용 프로그램의 요구 사항은 아닙니다. 규칙의 두 가지 영역을 사용할 수 있는 응용 프로그램의 드라이버 및 데이터 원본 기능을 검색 하: ODBC 인터페이스 및 SQL 문법입니다.  

@@ -22,13 +22,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8732727cda17efddabfbb68eb1ebc7f3e415e911
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
      Db-library,는 *varlen* 값이-1 이면 가변 길이 데이터가 제공 되는 ODBC의 *cbData* 에 NULL 값만 제공 되 고 의미로 해석 됩니다. 모든 Db-library 변경 *varlen* SQL_VARLEN_DATA로-1과 모든 사양 *varlen* 사양 SQL_NULL_DATA로 0입니다.  
   
--   Db-library  **bcp_colfmt * * * file_collen* 및 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * 에서도 같은 문제가로 **bcp_bind * * * varlen*및 *cbData* 위에 설명 된 매개 변수입니다. 모든 Db-library 변경 *file_collen* SQL_VARLEN_DATA로-1과 모든 사양 *file_collen* 사양 SQL_NULL_DATA로 0입니다.  
+-   Db-library  **bcp_colfmt * * * file_collen* 및 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 에서도 같은 문제가로 **bcp_bind * * * varlen*및 *cbData* 위에 설명 된 매개 변수입니다. 모든 Db-library 변경 *file_collen* SQL_VARLEN_DATA로-1과 모든 사양 *file_collen* 사양 SQL_NULL_DATA로 0입니다.  
   
 -   *iValue* ODBC의 매개 변수 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 함수는 void 포인터입니다. Db-library, *iValue* 는 정수 였습니다. ODBC에 대 한 값을 캐스팅 *iValue* void * 합니다.  
   

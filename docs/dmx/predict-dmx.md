@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>반환 형식  
  \<스칼라 열 참조 >  
   
- 로 구분하거나 여러  
+ 또는  
   
  \<테이블 열 참조 >  
   
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 매개 변수는 결과로 $NODEID 열을 반환합니다. NODE_ID는 특정 사례에 대한 예측이 실행되는 내용 노드입니다. 테이블 열에 예측을 사용 하는 경우이 매개 변수는 선택 사항입니다.  
   
-  *n*  매개 변수는 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출에서 **PredictAssociation** 함수입니다.  
+ *n* 매개 변수는 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출에서 **PredictAssociation** 함수입니다.  
   
  **Predict** 함수는 다형성을 지원 합니다.  
   
@@ -101,8 +100,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

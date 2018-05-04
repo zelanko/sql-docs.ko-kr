@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 80c969bb4c5b8f6d6ac288279af6d8ce28905f68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dedc5659d4a6f0d613e3c0883e8255cfa9b680e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---comparison"></a>연산자-비교
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,25 +35,25 @@ ms.lasthandoff: 01/08/2018
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[&#60; &#40; 보다 작거나 &#41; &#40; DMX &#41;](../dmx/less-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 크거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#62; &#40; 보다 큰 &#41; &#40; DMX &#41;](../dmx/greater-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크면 TRUE를 반환하고 작거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[= &#40; Equal To &#41; &#40; DMX &#41;](../dmx/equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 같으면 TRUE를 반환하고 다르면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#60; &#62; &#40; 하지 같음 &#41; &#40; DMX &#41;](../dmx/not-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 다르면 TRUE를 반환하고 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#60; = &#40; 보다 작거나 같으면 &#41; &#40; DMX &#41;](../dmx/less-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작거나 같으면 TRUE를 반환하고 크면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
-|[&#62; = &#40; 보다 큼 또는 같음 &#41; &#40; DMX &#41;](../dmx/greater-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크거나 같으면 TRUE를 반환하고 작으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;&#40;미만&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 크거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#62;&#40;보다 큰&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크면 TRUE를 반환하고 작거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[= &#40;같음&#41; &#40;DMX&#41;](../dmx/equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 같으면 TRUE를 반환하고 다르면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;&#62;&#40;같지 않은&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값과 오른쪽의 인수 값이 다르면 TRUE를 반환하고 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#60;= &#40;보다 작거나&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작거나 같으면 TRUE를 반환하고 크면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
+|[&#62;= &#40;보다 크거나 같음&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크거나 같으면 TRUE를 반환하고 작으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
   
  DMX 문과 함수에 비교 연산자를 사용하여 조건을 찾을 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [식 &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [식 &#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   

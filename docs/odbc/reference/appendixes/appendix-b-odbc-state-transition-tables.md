@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 b: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 해당 형식의 핸들 (환경, 연결, 문 또는 설명자)를 사용 하는 함수를 호출할 수 있습니다 결정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림에 나와 있는 것 처럼 대략 겹칩니다. 예를 들어 연결의 정확한 겹치는 C5 내용과 C6 하 문 S12 통해 S1을 데이터 원본 – 종속 트랜잭션이 서로 다른 데이터 원본에 대해 서로 다른 시간에 시작 하 고 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태 state D1e (명시적으로 할당 된 설명자)는 모든 문은의 상태와 무관입니다. 각 상태에 대 한 참조 [환경이 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md), [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는 합니다.  

@@ -25,13 +25,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70bd9f0161b84636d4cea081576ca5b54f0bc158
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6980d71bf921065c0d460fcc9107a8d525dcd60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|별칭 데이터 형식이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  데이터 형식의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|별칭 데이터 형식이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  데이터 형식의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
 |**DOMAIN_NAME**|**sysname**|별칭 데이터 형식입니다.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|테이블 소유자입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 한정자입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블 소유자입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**sysname**|별칭 데이터 형식이 사용되는 테이블입니다.|  
 |**COLUMN_NAME**|**sysname**|별칭 데이터 형식을 사용하는 열입니다.|  
   

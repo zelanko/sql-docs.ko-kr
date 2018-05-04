@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6369e90d0709db855a922079afc7b60d7551264a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>1 단계: Node.js 개발을 위한 개발 환경 구성
 Node.js 드라이버를 사용 하 여 SQL Server에 대 한 응용 프로그램을 개발 하기 위해 필수 구성 요소 개발 환경을 구성 해야 합니다.  가장 일반적인 방법은 번거로운 모듈을 설치 하는 노드 패키지 관리자 (npm)를 사용 하는 것에 직접 번거로운 모듈을 다운로드할 수 있습니다 하지만 [Github](https://github.com/pekim/tedious) 하려는 경우.  

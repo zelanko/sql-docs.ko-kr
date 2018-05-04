@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +20,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71ccab162c0281afc2237b79d8d1e682ff2d1ba5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 37918a3197685a89c9e33fb4516068871ec48514
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>주석 해석-sql: relationship 및 키 순서 지정 규칙
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +65,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 로  **\<고객 >** 요소 노드가 범위 시작, XML 대량 로드가 고객 레코드를 생성 합니다. 이 레코드 읽고 XML 대량 로드 될 때까지 계속  **\</Customer >**합니다. 처리에서는  **\<순서 >** 요소 노드, XML 대량 로드 사용 하 여  **\<sql: relationship >** CustOrder 테이블의 CustomerID 외래 키 열 값을 얻기 위해  **\<고객 >** 때문에 부모 요소를는  **\<순서 >** 요소 지정 하는 **CustomerID** 특성입니다. 즉, 해당 정의는  **\<고객 >** 지정 해야 요소는 **CustomerID** 지정 하기 전에 스키마의 특성  **\<sql: 관계 >**합니다. 그렇지 않으면, 경우에는  **\<순서 >** 요소의 범위가 시작, XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 및 XML 대량 로드에 도달는  **\</순서 >** 끝 태그 레코드를 보냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CustomerID 외래 키 열 값이 없는 합니다.  
+ 로  **\<고객 >** 요소 노드가 범위 시작, XML 대량 로드가 고객 레코드를 생성 합니다. 이 레코드 읽고 XML 대량 로드 될 때까지 계속  **\</Customer >** 합니다. 처리에서는  **\<순서 >** 요소 노드, XML 대량 로드 사용 하 여  **\<sql: relationship >** CustOrder 테이블의 CustomerID 외래 키 열 값을 얻기 위해  **\<고객 >** 때문에 부모 요소를는  **\<순서 >** 요소 지정 하는 **CustomerID** 특성입니다. 즉, 해당 정의는  **\<고객 >** 지정 해야 요소는 **CustomerID** 지정 하기 전에 스키마의 특성  **\<sql: 관계 >** 합니다. 그렇지 않으면, 경우에는  **\<순서 >** 요소의 범위가 시작, XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 및 XML 대량 로드에 도달는  **\</순서 >** 끝 태그 레코드를 보냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CustomerID 외래 키 열 값이 없는 합니다.  
   
  이 예에서 제공하는 스키마를 SampleSchema.xml로 저장합니다.  
   

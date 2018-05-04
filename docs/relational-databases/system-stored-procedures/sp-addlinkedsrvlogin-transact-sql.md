@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
  로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 은 **sysname**, 기본값은 없습니다.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | ' NULL'  
- 에 연결할지 여부를 결정 *rmtsrvname* 로컬 로그인을 가장 하거나 로그인 및 암호를 명시적으로 제출 합니다. 데이터 형식이 **varchar (**8**)**, 기본값은 TRUE입니다.  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | ' NULL'  
+ 에 연결할지 여부를 결정 *rmtsrvname* 로컬 로그인을 가장 하거나 로그인 및 암호를 명시적으로 제출 합니다. 데이터 형식이 **varchar (** 8 **)**, 기본값은 TRUE입니다.  
   
  값이 true 이면 로그인에 연결 하는 데 자신의 자격 증명을 사용 한다는 지정 *rmtsrvname*와 *rmtuser* 및 *rmtpassword* 인수를 무시 합니다. FALSE를 지정 하는 *rmtuser* 및 *rmtpassword* 인수에 연결 하는 데 사용 됩니다 *rmtsrvname* 지정 된 *locallogin* . 경우 *rmtuser* 및 *rmtpassword* 로그인 또는 암호를 NULL로 설정 하는 데 연결된 된 서버에 연결 됩니다.  
   

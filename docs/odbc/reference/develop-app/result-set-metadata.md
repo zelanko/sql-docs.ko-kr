@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ed379bf246bb25e60865092be5a0526fddc2aef0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d41ebb87e7f30d0e7595310a972ea7dad2cf598
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="result-set-metadata"></a>결과 집합 메타 데이터
 *메타 데이터* 는 다른 데이터를 설명 하는 데이터입니다. 예를 들어 결과 집합 메타 데이터는 결과 집합은 결과 집합의 열 수, 열, 이름, 전체 자릿수, null 허용 여부, 및 등의 데이터 형식 등을 설명합니다.  

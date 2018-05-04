@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b077e7f0e7ff9a4ac46bab298586cb738850112e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 32b276f97950405caabd5e5d30d45cd2b3fba297
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 공급자 (ADO)
 OLE DB는 다양 한 소스에 저장 된 데이터에 일관 되 게 액세스 응용 프로그램에 제공 되는 COM 인터페이스의 집합을 정의 합니다. 이 방법을 통해 데이터 원본을 지 원하는 데이터 원본에 적합 한 DBMS 기능 인터페이스를 통해 데이터를 공유할 수 있습니다. 기본적으로 OLE DB의 성능 우선 아키텍처는 유연 하 고 구성 요소 기반 서비스 모델의 용도 기반으로 합니다. 지정 된 수의 데이터와 응용 프로그램 간에 중간 계층 대신 OLE DB에는 특정 작업을 수행 하는 데 필요한 만큼의 구성 하는 때에 필요 합니다.  

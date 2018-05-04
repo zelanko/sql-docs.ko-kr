@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1bd4d07e87af049ac59bc63faf119e84872bbc45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>문 핸들
 A *문을* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문을 SQL 문을 보다 더-예: 문에 의해 만들어진 결과 집합 및 매개 변수는 문 실행에 사용 되는 해당 SQL 문이와 관련 된 정보를 모두 이루어져 있습니다. 문을 하지 않아도 응용 프로그램 정의 된 SQL 문이 있습니다. 예를 들어 때 카탈로그 함수가 같은 **SQLTables** 실행 되는 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 하는 문에서 합니다.  

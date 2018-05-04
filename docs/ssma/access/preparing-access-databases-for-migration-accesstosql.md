@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -31,12 +30,11 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: On Demand
-ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 04da7fa5eb877398ef0341894b087adb60915969
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 마이그레이션 (AccessToSQL) 준비
 Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하려면 데이터베이스를 결정 해야 합니다.  

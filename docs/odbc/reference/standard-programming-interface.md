@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c91448833c6dacecaadfa4b0c11892e1a0c5e439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f9f86769510e7f9bd83cbab27ae99643b15b34e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-programming-interface"></a>표준 프로그래밍 인터페이스
 가장 확실 한 후보 표준화에 대 한 프로그래밍 인터페이스가입니다. 사실, ODBC 개발 시 ANSI 및 ISO 이미 제공 된 표준 포함 된 SQL 및 SQL에 대 한 모듈입니다. CLI의 SQL 액세스 그룹 데이터베이스에 대 한 없는 표준 있었지만-데이터베이스 공급 업체는 업계 컨소시엄-; 만들 것인지를 고려할 되었습니다 ODBC의 일부를 나중에 작업에 대 한 기본 업체가 되었습니다.  

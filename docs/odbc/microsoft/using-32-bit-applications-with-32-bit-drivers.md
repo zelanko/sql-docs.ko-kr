@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cfffd8474f11c0e10fe521e9ea222c72127a6d63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 비트 응용 프로그램을 사용 하 여 32 비트 드라이버와
 32 비트 드라이버와 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 >  WindowsNT/windows 2000에서 DLL의 32 비트 썽킹 설치 관리자를 사용 하지 마십시오. DLL의 32 비트 설치 관리자와 동일한 파일 이름을 있지만 다른 DLL입니다.  
   
 ## <a name="administration"></a>관리  
- ODBC 데이터 원본 관리자를 사용 하 여 32 비트 드라이버에 대 한 데이터 원본을 관리할 수 있습니다. Windows 2000을 실행 하는 컴퓨터에서 ODBC 관리자를 열려면 Windows 제어판을 열고, 두 번 클릭 **관리 도구**를 두 번 클릭 하 고 **데이터 원본 (ODBC)**합니다. 이전 버전의 Microsoft Windows를 실행 하는 컴퓨터에 있는 아이콘 라는 **32 비트 ODBC** 또는 단순히 **ODBC**합니다.  
+ ODBC 데이터 원본 관리자를 사용 하 여 32 비트 드라이버에 대 한 데이터 원본을 관리할 수 있습니다. Windows 2000을 실행 하는 컴퓨터에서 ODBC 관리자를 열려면 Windows 제어판을 열고, 두 번 클릭 **관리 도구**를 두 번 클릭 하 고 **데이터 원본 (ODBC)** 합니다. 이전 버전의 Microsoft Windows를 실행 하는 컴퓨터에 있는 아이콘 라는 **32 비트 ODBC** 또는 단순히 **ODBC**합니다.  
   
 ## <a name="components"></a>Components  
  ODBC 구성 요소는 32 비트 드라이버와 32 비트 응용 프로그램을 실행 하기 위한 다음 파일을 포함 합니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  

@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 555f1592bb16746f351101d4500c64b03ab78efe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dcfe77009969d9e6cfcea306449149073f8b0f32
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>인수  
  *plan_handle*  
- 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary(64)**합니다. 계획 핸들을 가져올 수 있습니다는 [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 동적 관리 뷰.  
+ 실행된 일괄 처리에 대한 쿼리 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary(64)** 합니다. 계획 핸들을 가져올 수 있습니다는 [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 동적 관리 뷰.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   

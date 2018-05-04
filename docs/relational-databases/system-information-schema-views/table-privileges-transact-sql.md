@@ -25,13 +25,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3a75f550772704ef29fbc7e99e9013d416a723
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: efefb3b57ad124afe2af77be8d5eb81b434d3f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**GRANTOR**|**nvarchar(**128**)**|권한을 부여한 사용자입니다.|  
-|**피부 여자에 게**|**nvarchar(**128**)**|권한을 부여 받은 사용자입니다.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**GRANTOR**|**nvarchar(** 128 **)**|권한을 부여한 사용자입니다.|  
+|**피부 여자에 게**|**nvarchar(** 128 **)**|권한을 부여 받은 사용자입니다.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 한정자입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다.|  
-|**PRIVILEGE_TYPE**|**varchar (**10**)**|권한의 유형입니다.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|피부여자가 다른 사람에게 사용 권한을 부여할 수 있는지 여부를 지정합니다.|  
+|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|권한의 유형입니다.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|피부여자가 다른 사람에게 사용 권한을 부여할 수 있는지 여부를 지정합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

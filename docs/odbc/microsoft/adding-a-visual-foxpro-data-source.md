@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], adding
 - adding data sources [ODBC], Visual FoxPro ODBC driver
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 79fab65c8ad544eb3ffd8c60af9d7d0c18112115
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d59ad4b7663202b0ca66fc0eabb4ad6405760d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 소스 추가
 Visual FoxPro 데이터의 응용 프로그램에 액세스 하려면 데이터 원본에 있어야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  

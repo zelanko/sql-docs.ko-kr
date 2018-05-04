@@ -25,13 +25,12 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad7851a091b531c0f13980023e22f4f2d545163b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0ec828f2deee5f77290b7a20edc006dd4823047d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
 ## <a name="arguments"></a>인수  
  [ **@sequence_name** =] **N**'*시퀀스*'  
- 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar(776)**합니다.  
+ 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 은 **nvarchar(776)** 합니다.  
   
  [ **@range_size** =] *range_size*  
  시퀀스에서 인출할 값의 수입니다. **@range_size** **bigint**합니다.  

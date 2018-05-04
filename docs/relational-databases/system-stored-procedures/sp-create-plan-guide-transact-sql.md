@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  응용 프로그램에서 전송한 일괄 처리와 일치 하는 계획 지침에 대 한 *batch_tex*t 같은 형식으로 제공 되어야-문자에 전송 된 것 처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
- [*schema_name*.] *object_name* 의 이름을 지정는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 된 DML 트리거 *statement_text*. 경우 *schema_name* 를 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 @type 'SQL', 값 = @module_or_batch 의 값으로 설정 되어 @stmt합니다. 경우 @type = ' 템플릿**'**, @module_or_batch NULL 이어야 합니다.  
+ [*schema_name*.] *object_name* 의 이름을 지정는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 된 DML 트리거 *statement_text*. 경우 *schema_name* 를 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 @type 'SQL', 값 = @module_or_batch 의 값으로 설정 되어 @stmt합니다. 경우 @type = ' 템플릿 **'**, @module_or_batch NULL 이어야 합니다.  
   
  [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
  정의에 포함 된 모든 매개 변수를 지정 *statement_text*합니다. @params 인 경우에 다음 중 하나 true 적용 됩니다.  
@@ -107,7 +106,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  쿼리의 OPTION 절에 지정된 기존 힌트는 쿼리에 적용되지 않음을 나타냅니다. 자세한 내용은 참조 [OPTION 절 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)합니다.  
   
 ## <a name="remarks"></a>주의  
- sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =**을 지정한 경우 **@stmt =** , **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =**을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+ sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =** 을 지정한 경우 **@stmt =** , **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =** 을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
  같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   
@@ -123,7 +122,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  @type이 'SQL'이고 @module_or_batch가 NULL로 설정된 경우 @module_or_batch 값은 @stmt 값으로 설정됩니다. 즉, 값에 대 한 *statement_text* 정확히 같은 형식으로 제공 되어야-문자에 전송 된 것 처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 값과 일치 *statement_text* 를 *batch_text* 및  *@parameter_name data_type* [,*...n* ], 또는 경우 @type = **'**개체 ', 내에서 해당 쿼리 텍스트에 *object_name*, 다음 문자열 요소가 무시 됩니다.  
+ 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 값과 일치 *statement_text* 를 *batch_text* 및  *@parameter_name data_type* [,*...n* ], 또는 경우 @type = **'** 개체 ', 내에서 해당 쿼리 텍스트에 *object_name*, 다음 문자열 요소가 무시 됩니다.  
   
 -   문자열 안에 있는 공백 문자(탭, 공백, 캐리지 리턴 또는 줄 바꿈)  
   

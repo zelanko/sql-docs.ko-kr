@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79367f55de35eb285803a08646677eb3b624e16e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +63,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 소유자를 지정하지 않았으며 현재 사용자가 지정된 이름의 테이블을 소유하고 있지 않은 경우 이 프로시저는 데이터베이스 소유자가 소유한 지정된 이름의 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
  [  **@table_qualifier=** ] **'***한정자***'**  
- 테이블 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대 한 세 부분으로 구성 된 이름 (*한정자***.*** 소유자***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 테이블 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대 한 세 부분으로 구성 된 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ **,** [  **@table_type=** ] **"'***형식***'**, **'**형식**'"** ]  
+ [ **,** [  **@table_type=** ] **"'***형식***'**, **'** 형식 **'"** ]  
  쉼표로 구분된 값 목록으로서 지정된 테이블 유형의 모든 테이블에 대한 정보를 제공합니다. 여기에 **테이블**, **SYSTEMTABLE**, 및 **보기**합니다. *형식* 은 **varchar(100)**, 기본값은 NULL입니다.  
   
 > [!NOTE]  

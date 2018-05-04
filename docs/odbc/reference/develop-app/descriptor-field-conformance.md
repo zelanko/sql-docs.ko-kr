@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
 - conformance levels [ODBC], descriptor field
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae086302a922824036d76f002eaf70c994a41fe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a33f5d6c754de05f2cfe0a06e4450c20d003b87
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptor-field-conformance"></a>설명자 필드 규칙
 다음 표에서이 잘 정의 된 각 ODBC 설명자 헤더 필드의 규칙 수준과 보여 줍니다.  

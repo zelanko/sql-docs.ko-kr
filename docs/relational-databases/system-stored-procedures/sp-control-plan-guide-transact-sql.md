@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  로 지정 된 계획 지침을 활성화 *plan_guide_name*합니다. 계획 지침을 활성화하면 적합한 쿼리에 맞출 수 있습니다. 기본적으로 계획 지침은 만들어질 때 활성화됩니다.  
   
  ENABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'***plan_guide_name***'**모두 사용 지정 된 경우 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'***plan_guide_name***'** 모두 사용 지정 된 경우 지정할 수 없습니다.  
   
 ## <a name="remarks"></a>주의  
  활성화 여부에 관계없이 계획 지침에서 참조하는 함수, 저장 프로시저 또는 DML 트리거를 삭제하거나 수정하려고 하면 오류가 발생합니다.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  계획 지침은 모든 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 실행할 수 있습니다 **sp_control_plan_guide** 의 모든 버전에서 DROP 또는 DROP ALL 옵션으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="permissions"></a>Permissions  
- 실행할 **sp_control_plan_guide** OBJECT 유형의 계획 지침에서 (지정 만든  **@type ='**개체**'** ) 된 개체에 대 한 ALTER 권한이 필요 하는 계획 지침에서 참조 됩니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
+ 실행할 **sp_control_plan_guide** OBJECT 유형의 계획 지침에서 (지정 만든  **@type ='** 개체 **'** ) 된 개체에 대 한 ALTER 권한이 필요 하는 계획 지침에서 참조 됩니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   

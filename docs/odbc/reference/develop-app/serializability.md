@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], serialization
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa983da3ad05b6f4c4ac29fbdf986a7a8a350e34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7262105a1f6911affb56464bf4bc410cceabf71f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="serializability"></a>순차성
 트랜잭션을 여야 가장 바람직합니다 *직렬화 가능*합니다. 에 트랜잭션을 동시에 실행의 결과 동일한 결과를 직렬로 실행 하는 경우 직렬화 가능 트랜잭션이 있다고-즉, 하나씩 있습니다. 중요 하지 않습니다 트랜잭션 실행 먼저는 결과 트랜잭션의 모든 혼합을 반영 하지 않습니다.  

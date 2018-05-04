@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6090b9e4c1bfec3ca6e4dfcd4b8d9291e35faee8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 08a9f6ba0f81c1818125bd38d5c66097c21971de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
 두 개의 ADO 개체 이벤트를 발생 시킬 수 있습니다:는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. **ConnectionEvent** 에 작업에 관련 된 제품군의 **연결** 개체 및 **RecordsetEvent** 제품군 관련 작업에는  **레코드 집합** 개체입니다.

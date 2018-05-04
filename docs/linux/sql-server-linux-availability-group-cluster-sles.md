@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터를 구성 합니다.
 
@@ -189,16 +188,31 @@ Linux 서버에 가용성 그룹을 구성 하 고 클러스터 리소스를 구
 
 모든 노드를 추가한 후의 아니요-쿼럼-정책 전역 클러스터 옵션을 조정 해야 하는 경우를 확인 합니다. 이 2 노드 클러스터에 대 한 특히 중요 합니다. 자세한 내용은 옵션 no 쿼럼 정책 4.1.2, 섹션을 참조 합니다. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>클러스터 속성을 false 시작 실패-은-치명적이 지 설정
+## <a name="set-cluster-property-cluster-recheck-interval"></a>클러스터 속성 클러스터-다시 확인-간격 설정
 
-`Start-failure-is-fatal` 노드의 리소스를 시작 하지 해당 노드에서 시작 시도 하면 추가 하는지 여부를 나타냅니다. 로 설정 하면 `false`, 클러스터 리소스의 현재 오류 개수 및 마이그레이션 임계값에 따라 다시 동일한 노드에서 시작 여부를 결정 합니다. 따라서 장애 조치 발생 후 Pacemaker 다시 시도 시작 하는 가용성 그룹 리소스에 기본 전자 SQL 인스턴스를 사용할 수 있는 합니다. 보조 복제본의 수준 내리기 pacemaker 맡고을 가용성 그룹 하는 자동으로 다시 참여 합니다. 또한 경우 `start-failure-is-fatal` 로 설정 된 `false`, 클러스터 마이그레이션 임계값을 사용 하 여 구성 하는 구성 된 failcount 제한이로 대체 합니다. 마이그레이션 임계값에 대 한 기본값에 따라 업데이트 되었는지 확인 합니다.
+`cluster-recheck-interval` 리소스 매개 변수, 제약 조건 또는 기타 클러스터 옵션의 변경 내용에 대 한 클러스터를 확인 하는 폴링 간격을 나타냅니다. 클러스터를 연결 된 간격으로 복제본을 다시 시작 하려고 복제본의 작동이 중지 하는 경우는 `failure-timeout` 값 및 `cluster-recheck-interval` 값입니다. 예를 들어 경우 `failure-timeout` 60 초로 설정 되어 및 `cluster-recheck-interval` 설정 120 초로 다시 60 초 보다 작거나 120 초 보다 큰 간격으로 시도 됩니다. 60 초 및 클러스터-다시 확인-간격을 60 초 보다 큰 값을 실패 제한 시간을 설정 하는 것이 좋습니다. 클러스터 다시 확인 간격을 작은 값으로 설정 권장 되지 않습니다.
 
-업데이트 하려면 속성 값을 false 실행:
+속성 값을 업데이트 하려면 `2 minutes` 실행:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-속성의 기본값에 있으면 `true`리소스 실패, 사용자 작업을 시작 하려면 첫 번째 시도 자동 장애 조치는 리소스 실패 횟수를 정리 하 고 사용 하 여 구성을 다시 설정 된 후 필요한 경우,: `sudo crm resource cleanup <resourceName>` 명령입니다.
+
+> [!IMPORTANT] 
+> Pacemaker 클러스터에서 관리 하는 가용성 그룹 리소스가 이미 있는 경우에 최신 사용 가능한 Pacemaker 패키지 1.1.18-11.el7를 사용 하는 모든 분포 인해 경우 설정을 시작 실패-은-치명적이 지 클러스터에 대 한 동작 변경 하는지 유의 해당 값은 false입니다. 이 변경은 장애 조치 워크플로가 영향을 줍니다. 주 복제본에 중단 되, 사용 가능한 보조 복제본 중 하나로 장애 조치 클러스터 사용할 수 있습니다. 대신, 사용자가 클러스터 유지 실패 한 주 복제본을 시작 하려는 것을 알 수 있습니다. 해당 기본 하지 온라인 상태가 된 경우 (으로 인해 영구 작동 중단)를 클러스터 하지 장애 조치 다른 사용 가능한 보조 복제본으로 합니다. 이러한 변경으로 인해 시작 실패-은-치명적이 지 설정 하려면 이전에 권장 되는 구성이 더 이상 유효 하 고 설정의 기본 값으로 다시 되돌릴 수 해야 `true`합니다. AG 리소스를 포함 하도록 업데이트 해야 하는 또한는 `failover-timeout` 속성입니다. 
+>
+>속성 값을 업데이트 하려면 `true` 실행:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>기존 AG 리소스 속성을 업데이트 `failure-timeout` 를 `60s` 실행 (대체 `ag1` 가용성 그룹 리소스의 이름으로): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Pacemaker 클러스터 속성에 대 한 자세한 내용은 참조 하십시오. [클러스터 리소스 구성](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)합니다.
 
@@ -239,22 +253,23 @@ sudo crm configure property stonith-enabled=true
 1. Crm 프롬프트 리소스 속성을 구성 하려면 다음 명령을 실행 합니다.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

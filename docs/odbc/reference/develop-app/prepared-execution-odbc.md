@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prepared execution [ODBC]
 - SQL statements [ODBC], prepared execution
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50a07209bdd4e5a49c70e5ab3b2e9a9b4d8bc7eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 80de464d4ccebb6511d5c6ad58541f4c9f9e5c13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-execution-odbc"></a>준비 된 실행 ODBC
 준비 된 실행은 문을 두 번 이상 실행 하는 효율적인 방법입니다. 문은 먼저 컴파일 또는 *준비* 액세스 계획으로 합니다. 액세스 계획이 하나를 실행 하거나 나중에 번 더입니다. 액세스 계획에 대 한 자세한 내용은 참조 [SQL 문 처리](../../../odbc/reference/processing-a-sql-statement.md)합니다.  

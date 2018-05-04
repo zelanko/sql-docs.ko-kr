@@ -28,13 +28,12 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb58db9e3e74ad34e01faa4fbb2520813dc135b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,16 +54,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>인수  
  *path*  
- 읽을 파일 파일의 경로입니다. *경로* 파일의 이름을 포함 하 고 와일드 카드를 포함할 수 있습니다. *경로* 은 **nvarchar (260)**합니다. 기본값은 없습니다. Azure SQL 데이터베이스 환경에서이 값은 Azure 저장소에서 파일에 HTTP URL입니다.
+ 읽을 파일 파일의 경로입니다. *경로* 파일의 이름을 포함 하 고 와일드 카드를 포함할 수 있습니다. *경로* 은 **nvarchar (260)** 합니다. 기본값은 없습니다. Azure SQL 데이터베이스 환경에서이 값은 Azure 저장소에서 파일에 HTTP URL입니다.
   
  *mdpath*  
- 파일 또는 지정 된 파일에 해당 하는 메타 데이터 파일의 경로를 *경로* 인수입니다. *mdpath* 은 **nvarchar (260)**합니다. 기본값은 없습니다. SQL Server 2016 부터는이 매개 변수를 null로 지정할 수 있습니다.
+ 파일 또는 지정 된 파일에 해당 하는 메타 데이터 파일의 경로를 *경로* 인수입니다. *mdpath* 은 **nvarchar (260)** 합니다. 기본값은 없습니다. SQL Server 2016 부터는이 매개 변수를 null로 지정할 수 있습니다.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 필요 하지 않습니다는 *mdpath* 매개 변수입니다. 그러나 이전 버전의 SQL Server에서 생성된 로그 파일의 경우 이전 버전과의 호환성을 위해 이 매개 변수가 유지됩니다.  
   
  *initial_file_name*  
- 읽을 첫 번째 파일 *경로*합니다. *initial_file_name* 은 **nvarchar (260)**합니다. 기본값은 없습니다. 경우 **null** 에서 모든 파일을 찾을 인수로 지정 *경로* 읽혀집니다.  
+ 읽을 첫 번째 파일 *경로*합니다. *initial_file_name* 은 **nvarchar (260)** 합니다. 기본값은 없습니다. 경우 **null** 에서 모든 파일을 찾을 인수로 지정 *경로* 읽혀집니다.  
   
 > [!NOTE]  
 >  *initial_file_name* 및 *initial_offset* 는 쌍을 이루는 인수입니다. 둘 중 한 인수의 값을 지정하는 경우 다른 한 인수의 값도 지정해야 합니다.  

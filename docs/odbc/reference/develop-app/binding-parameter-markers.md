@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 096ac0cd8d1841fcf3235b60f8693e686bfc1784
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c401f34eae3868fc102e214623cd58a9f1822548
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-parameter-markers"></a>바인딩 매개 변수 표식
 응용 프로그램 호출 하 여 매개 변수를 바인딩할 **SQLBindParameter**합니다. **SQLBindParameter** 한 번에 하나의 매개 변수를 바인딩합니다. 응용 프로그램이 다음을 지정합니다.  

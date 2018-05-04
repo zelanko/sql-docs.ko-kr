@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aec3a3d79de42a38b4282014b193c2784e5d543a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 502db73d4ac1748db4fc763c0fcb194729cac557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 속성 예제 (JScript)
 이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **ActiveCommandJS.asp**합니다.  

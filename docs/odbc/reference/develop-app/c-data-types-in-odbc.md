@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -21,19 +21,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05a8ce31caf23a29a51cd9329c2c85950e15580e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 815dcb47a34d2e0729111b2a34693f1e6f4de557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types-in-odbc"></a>Odbc에서 C 데이터 형식
 ODBC 응용 프로그램 변수 및 해당 되는 형식 id에서 사용 되는 C 데이터 형식을 정의 합니다. 이러한 문 매개 변수 및 결과 집합 열에 바인딩된 버퍼에서 사용 됩니다. 예를 들어, 응용 프로그램에서 문자 형식으로 결과 집합 열에서 데이터를 검색 하려고 합니다. SQLCHAR 사용 하 여 변수를 선언 * 데이터 입력 하 고이 변수를 SQL_C_CHAR의 형식 식별자를 가진 결과 집합 열에 바인딩합니다. C 데이터 형식 및 유형 식별자의 전체 목록은 참조 하십시오. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  ODBC C 데이터 형식으로 각 SQL 데이터 형식에서 기본 매핑을 정의합니다. 예를 들어 데이터 원본에 2 바이트 정수는 2 바이트 정수 응용 프로그램에 매핑됩니다. 기본 매핑을 사용 하려면 응용 프로그램 SQL_C_DEFAULT 유형 식별자를 지정 합니다. 그러나이 식별자의 사용은 상호 운용성의 이유로 권장 되지 않습니다.  
   
- ODBC 1에 정의 된 모든 정수 C 데이터 형식과*.x* 서명 되었습니다. 부호 없는 C 데이터 형식 및 해당 되는 형식 id ODBC 2.0에서 추가 되었습니다. 이 인해 응용 프로그램 및 드라이버 필요한 1 다룰 때는 특히 주의를 기울여야*.x* 버전입니다.  
+ ODBC 1에 정의 된 모든 정수 C 데이터 형식과 *.x* 서명 되었습니다. 부호 없는 C 데이터 형식 및 해당 되는 형식 id ODBC 2.0에서 추가 되었습니다. 이 인해 응용 프로그램 및 드라이버 필요한 1 다룰 때는 특히 주의를 기울여야 *.x* 버전입니다.  
   
 ## <a name="c-data-type-extensibility"></a>C 데이터 형식 확장성  
  ODBC 3.8 드라이버 관련 C 데이터 형식을 지정할 수 있습니다. 이렇게 하면 호출 하는 경우 SQL 형식 ODBC 응용 프로그램에서 드라이버 관련 C 형식으로 바인딩할 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), 또는 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다. 이 기존 C 데이터 형식은 새로운 서버 데이터 형식에 제대로 나타나지 않을 수 있습니다 때문에 새 서버 유형을 지 원하는 데 유용할 수 있습니다. 드라이버 관련 C 형식을 사용 하 여 드라이버 수행할 수 있는 변환의 수를 늘릴 수 있습니다.  

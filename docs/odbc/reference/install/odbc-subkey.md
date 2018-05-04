@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - registry entries for data sources [ODBC], ODBC subkey
 - subkeys [ODBC], ODBC subkey
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a78553cbf67f4056ac50db78b0249189f2e27f26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: afe654fd97e65a3d068c703eb9fa93164ef8531b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-subkey"></a>ODBC 하위 키
 ODBC 하위 키 아래의 값 ODBC 추적 옵션을 지정합니다. 이 옵션이 설정 하 여 표시 된 ODBC 데이터 원본 관리자 대화 상자의 추적 탭을 통해 **SQLManageDataSources**합니다. ODBC 하위 키 자체는 선택 사항입니다. 다음 표에 나와 있는 것 처럼 이러한 값의 형식은입니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], drivers
 - Unicode [ODBC], functions
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: afa94d02f8bfabe8b8c94ac99be76b304ff8bd4f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26e96eaf558b82c780cba9f74c6f8636a7ab7ac7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 유니코드 드라이버 또는 ANSI 드라이버는 드라이버 수 있는지 여부를 전적으로의 데이터 소스 특성에 따라 달라 집니다. 데이터 소스에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 여야 합니다. 데이터 원본에서만 ANSI 데이터를 지 원하는 경우 드라이버는 ANSI 드라이버를 유지 해야 합니다.  

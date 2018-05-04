@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a46aa0480b83727aeb0a9882745ff9221b992c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>MDX 스크립팅-IF
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ IF expression THEN assignment END IF
  하위 큐브 또는 계산 속성에 값을 할당하는 MDX 식입니다.  
   
 ## <a name="remarks"></a>주의  
- IF 문은 달리 제어 흐름에 사용 된 [IIf &#40; Mdx&#41; ](../mdx/iif-mdx.md) 함수 및 [CASE 문 &#40; Mdx&#41; ](../mdx/case-statement-mdx.md) 있는 수에 사용할 값 이나 개체를 반환 합니다.  
+ 과 달리 제어 흐름에 IF 문을 사용는 [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) 함수 및 [CASE 문에 &#40;MDX&#41; ](../mdx/case-statement-mdx.md) 있는 수에 사용할 값 이나 개체를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Customers 차원에 있는 Customers Geography 계층의 Country 수준으로 범위를 제한합니다. 현재 측정값이 Internet Sales Amount이면 Internet Sales Amount는 10으로 설정됩니다.  
@@ -59,6 +58,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

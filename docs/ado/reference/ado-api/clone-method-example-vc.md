@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae0127126af623b63e6f1ca4d6f68d7d47fc2467
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2db09c14902dc481315dd76d57b23459af1262bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clone-method-example-vc"></a>Clone 메서드 예제 (VC + +)
 사용 하 여이 예제는 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만들고 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 배치 하는 사용자 지정할 수 있도록 합니다.  

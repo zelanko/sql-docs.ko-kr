@@ -27,12 +27,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 895b90d5bad14747355182a42cdcfd1b937009fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ FROM <existing model>
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *expression*  
- 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 참조 [마이닝 모델 &#40;에 대 한 필터 Analysis Services-데이터 마이닝 &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 참조 [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
  *기존 모델*  
  복사할 기존 모델의 이름입니다.  
@@ -93,8 +92,8 @@ FROM [TM Clustering]
 >  이 예와 같이 SELECT INTO 문을 사용하면 사례 테이블에 적용된 필터를 변경할 수 있지만, 원래 모델에 중첩 테이블에 대한 필터가 들어 있는 경우 중첩 테이블 필터는 이 구문을 사용하여 변경하거나 제거할 수 없습니다. 이러한 필터는 원래 모델에서 그대로 복사됩니다. 중첩 테이블에 대해 다른 필터를 사용하여 모델을 만들려면 ALTER STRTUCTURE...ADD MODEL 구문을 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

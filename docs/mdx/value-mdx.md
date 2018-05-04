@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2605c0984a772ca3af031a4fc3d6b13d64c02452
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 14cdd865f2c209db59f77dd2d188c3402358da62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-mdx"></a>Value(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ Member_Expression[.Value]
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>주의  
- **값** 함수를 문자열로 지정된 된 멤버의 값을 반환 합니다. **값** 인수는 선택 사항 때문 멤버의 값은 멤버의 기본 속성은 다른 값을 지정 하지 경우 멤버에 대해 반환 되는 값입니다. 멤버의 속성에 대 한 자세한 내용은 참조 [내장 멤버 속성 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 및 [사용자 정의 멤버 속성 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **값** 함수를 문자열로 지정된 된 멤버의 값을 반환 합니다. **값** 인수는 선택 사항 때문 멤버의 값은 멤버의 기본 속성은 다른 값을 지정 하지 경우 멤버에 대해 반환 되는 값입니다. 멤버의 속성에 대 한 자세한 내용은 참조 [내장 멤버 속성 &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 및 [사용자 정의 멤버 속성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 멤버 값을 반환하고 멤버 이름을 명시적으로 반환합니다.  
@@ -67,10 +66,10 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MemberValue &#40; Mdx&#41;](../mdx/membervalue-mdx.md)   
- [속성 &#40; Mdx&#41;](../mdx/properties-mdx.md)   
- [이름 &#40; Mdx&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; Mdx&#41;](../mdx/uniquename-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
+ [속성 & #40; Mdx& #41;](../mdx/properties-mdx.md)   
+ [이름 &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

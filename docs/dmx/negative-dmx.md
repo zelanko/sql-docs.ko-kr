@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a2109ad0957e2ef847d0953148c0903e67f68dab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d2a2f4fb32566e14bb760eb84a2fde389fd34d7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="--negative-dmx"></a>-(음수)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,8 +47,8 @@ ms.lasthandoff: 01/08/2018
  지정한 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [단항 연산자 &#40; DMX &#41;](../dmx/operators-unary.md)  
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [단항 연산자 &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

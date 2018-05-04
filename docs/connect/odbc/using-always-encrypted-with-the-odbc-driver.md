@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.workload: On Demand
-ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c22b57b88d211b6c984db6e767a08a11cc358107
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d4925e42b7039564096be578b02df8f8fcd036c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e699cc8c0272a1221b0148a8d7b2c65da9e3e6c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="number-of-rows-fetched-and-status"></a>인출 된 행 수 및 상태
 에 대 한 호출에 의해 인출 된 행 수를 반환 하는 버퍼를 지정 SQL_ATTR_ROWS_FETCHED_PTR 문 특성 설정 된 경우 **SQLFetch** 또는 **SQLFetchScroll**, 및 오류 행. (이 숫자는 SQL_ROW_NO_ROWS 상태를 갖지 않는 모든 행의 수입니다.) 호출한 후 **SQLBulkOperations** 또는 **SQLSetPos**, 버퍼는 함수에 의해 수행 대량 작업에 의해 영향을 받는 행 수를 포함 합니다. SQL_ATTR_ROW_STATUS_PTR을 문 특성 설정 된 경우 **SQLFetch** 또는 **SQLFetchScroll** 반환 된 *행 상태 배열이* 각 상태를 제공 하는 반환 된 행입니다. 이러한 필드가 가리키는 버퍼의 둘 다 응용 프로그램에 의해 할당 되 고 드라이버에 의해 채워집니다. 응용 프로그램은 이러한 포인터는 커서를 닫을 때까지 유효한 상태로 있는지 확인 해야 합니다.  

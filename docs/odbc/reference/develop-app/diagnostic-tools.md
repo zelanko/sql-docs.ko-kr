@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic tools [ODBC]
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ab084db5e3a0761f089020ec5378fc2d154a39e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2741275779ec772206b96058f00cd086fb0f46d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-tools"></a>진단 도구
 ODBC 응용 프로그램에서 문제를 진단 하는 두 개의 시설 지원할 수 있습니다. ODBC 관리자에서 사용 가능 하 고 구현 된 드라이버 관리자에서 둘 다 있습니다. *추적* 함수 호출의 시퀀스를 로그 파일에 기록 하는 수단을 제공 합니다. Visual Studio Analyzer 분산된 환경에 구성 요소와의 상호 작용에 대 한 정보 분석을 허용합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver error checking [ODBC]
 - diagnostic information [ODBC], driver error checking
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d05f69bd03e904745f4b4d3d81179472a7ff1375
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72dd41eeac88d1562b728e153db9889e9e22a081
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-of-the-driver"></a>드라이버의 역할
 드라이버는 모든 오류 및 경고 드라이버 관리자에서 확인 하지 확인 하 고 생성 하는 상태 레코드의 순서입니다. (ODBC 2입니다. *x* 드라이버 상태 레코드 순서를 지정 하지 않습니다.) 이 오류 및 경고 데이터 잘림, 데이터 변환, 구문 및 일부 상태 전환에 포함합니다. 드라이버는 오류 및 경고 부분적으로 드라이버 관리자에서 확인 됨에 확인할 수 있습니다. 예를 들어 드라이버 관리자를 확인 하지만 여부의 값 *작업* 에 **SQLSetPos** 는 드라이버가 지원 되는지 여부를 확인 해야 사용할 수 있습니다.  

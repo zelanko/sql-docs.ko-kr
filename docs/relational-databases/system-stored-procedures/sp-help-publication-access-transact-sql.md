@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b9fb4ee142f179c4570fb24516a891e41045fd8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: df895be66ead24b7c55405b9d9891ef16a9d1278
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_publication_access [ @publication = ] 'publication'
  로그인 ID입니다. *return_granted* 은 **비트**, 기본값은 1입니다. 경우 **0** 지정 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용 되는 배포자 게시자에 있는 사용 가능한 로그인 반환 됩니다. 경우 **0** 지정 및 Windows 인증이 사용 되는, 하나에 액세스 거부 되지 않은 로그인 게시자 또는 배포자가 반환 됩니다.  
   
  [  **@login=**] **'***로그인***'**  
- 표준 보안 로그인 ID입니다. *로그인* 은 **sysname**, 기본값은 **%**합니다.  
+ 표준 보안 로그인 ID입니다. *로그인* 은 **sysname**, 기본값은 **%** 합니다.  
   
  [  **@initial_list =**] *initial_list*  
  게시 액세스 권한이 있는 모든 멤버를 반환할지 또는 목록에 새 멤버가 추가되기 전에 액세스 권한을 가졌던 멤버만 반환할지 지정합니다. *initial_list* 는 bit 이며 기본값은 **0**합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버 관련된 DBMS 정의 하는 SQL 데이터 유형만 표시 합니다. ODBC 정의 SQL 형식 식별자에 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL가 입력 하 고 호출을 통해 반환 되는 드라이버 매핑되는 방법을 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자 **SQLGetTypeInfo**합니다. 열 및 매개 변수를 호출 하 여 데이터 형식을 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  

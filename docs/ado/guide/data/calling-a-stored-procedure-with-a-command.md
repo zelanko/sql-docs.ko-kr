@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 01e11ece22cc6cee531dccfe45179446643c04ac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2c2a31f5196482ae77fa231a3572f0835f080086
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령 사용 하 여 저장된 프로시저 호출
 저장된 프로시저를 호출 하는 명령을 사용할 수 있습니다. 이 항목의 끝에 있는 코드 샘플 CustOrdersOrders 다음과 같이 정의 된 호출 Northwind 샘플 데이터베이스의 저장된 프로시저를 참조 합니다.  

@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4355a60ff964b33868ed883940e0e1d20ddfc3b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5155074fbfc1b7adc612f69a270359ca29087521
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-jscript"></a>찾을 메서드 예제 (JScript)
 사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 찾아서 표시에 있는 회사는 ***Northwind*** G. 잘라내기 문자로 시작 되는 이름의 데이터베이스 및 붙여넣기 다음 코드를 메모장 이나 다른 텍스트 편집기를 및로 저장 **붙여 넣고 FindJS.asp**합니다.  

@@ -24,13 +24,12 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 911828ded03593503026c573c0f921398cf5da43
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 270a40f5a8abc9b35b1a12debcbd2148509ac010
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,16 +64,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  테이블 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대 한 세 부분으로 구성 된 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @col_type=] '*col_type*'  
- 열 유형입니다. *col_type* 은 **char (**1**)**, 기본값은 R 유형은 최적 열 또는 열 집합을 반환 된 열 또는 열에서 값을 검색 하 여,의 지정 된 모든 행에 대해 허용 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
+ 열 유형입니다. *col_type* 은 **char (** 1 **)**, 기본값은 R 유형은 최적 열 또는 열 집합을 반환 된 열 또는 열에서 값을 검색 하 여,의 지정 된 모든 행에 대해 허용 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
   
  [ @scope=] '*scope*'  
- ROWID에 필요한 최소 범위입니다. *범위* 은 **char (**1**)**, c 기본값 지정는 ROWID가 해당 행에 있는 경우에 유효 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
+ ROWID에 필요한 최소 범위입니다. *범위* 은 **char (** 1 **)**, c 기본값 지정는 ROWID가 해당 행에 있는 경우에 유효 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
   
  [ @nullable=] '*nullable*'  
- 특수 열이 Null 값을 허용할 수 있는지 여부입니다. *null 허용* 은 **char (**1**)**, 기본값은 u입니다. O는 null 값을 허용 하지 않는 특수 열을 지정 합니다. U는 부분적으로 Null을 허용하는 열을 지정합니다.  
+ 특수 열이 Null 값을 허용할 수 있는지 여부입니다. *null 허용* 은 **char (** 1 **)**, 기본값은 u입니다. O는 null 값을 허용 하지 않는 특수 열을 지정 합니다. U는 부분적으로 Null을 허용하는 열을 지정합니다.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- 사용하고 있는 ODBC 버전입니다. *ODBCVer* 은 **int (**4**)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
+ 사용하고 있는 ODBC 버전입니다. *ODBCVer* 은 **int (** 4 **)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  InclusionThresholdSetting  
@@ -88,7 +87,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|ODBC SQL 데이터 형식입니다.|  
 |TYPE_NAME|**sysname**|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어 **char**, **varchar**, **money**, 또는 **텍스트**합니다.|  
 |PRECISION|**Int**|데이터 원본의 행 전체 자릿수입니다. 이 필드는 항상 값을 반환합니다.|  
-|LENGTH|**Int**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (**10**)**, 4에 대 한 **정수**, 2 **smallint** .|  
+|LENGTH|**Int**|길이 (바이트)를 필요한 데이터 원본의 형태의 이진 데이터 형식에 대 한 예를 들어 10에 대 한 **char (** 10 **)**, 4에 대 한 **정수**, 2 **smallint** .|  
 |SCALE|**smallint**|데이터 원본의 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |PSEUDO_COLUMN|**smallint**|열이 의사(pseudo) 열인지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 1을 반환합니다.<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

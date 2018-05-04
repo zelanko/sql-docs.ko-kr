@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c28d008a3eba995afce4cb302ecdc1428a5be397
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,13 +73,13 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**합니다. 경우 *게시* 을 지정 하지 않으면 모든 게시에 적용 됩니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 합니다. 경우 *게시* 을 지정 하지 않으면 모든 게시에 적용 됩니다.  
   
  [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. 이 이름은 게시에 대해 고유해야 합니다. *문서* 은 **sysname**, 기본값은 **%**합니다. 경우 *문서* 을 지정 하지 않으면 모든 아티클에 적용 됩니다.  
+ 아티클의 이름입니다. 이 이름은 게시에 대해 고유해야 합니다. *문서* 은 **sysname**, 기본값은 **%** 합니다. 경우 *문서* 을 지정 하지 않으면 모든 아티클에 적용 됩니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
- 상태를 변경할 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%**합니다. 경우 *구독자* 를 지정 하지 않으면 지정 된 아티클에 모든 구독자에 대 한 상태가 변경 합니다.  
+ 상태를 변경할 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%** 합니다. 경우 *구독자* 를 지정 하지 않으면 지정 된 아티클에 모든 구독자에 대 한 상태가 변경 합니다.  
   
  [  **@status =**] **'***상태***'**  
  구독 상태는 **syssubscriptions** 테이블입니다. *상태* 은 **sysname**, 기본값은 없고 수와 이러한 값 중 하나 여야 합니다.  
@@ -95,7 +94,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  구독의 이전 상태입니다. *previous_status* 은 **sysname**, 기본값은 NULL입니다. 이 매개 변수를 사용 하면 특정 구독 집합에 그룹 함수를 허용 하므로 해당 상태에 현재 있는 모든 구독을 변경할 수 있습니다 (예를 들어 모든 활성 설정 구독을 다시 **구독**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은 **%**합니다.  
+ 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은 **%** 합니다.  
   
  [  **@frequency_type=**] *frequency_type*  
  배포 태스크를 예약하는 빈도입니다. *frequency_type* 은 **int**, 기본값은 NULL입니다.  

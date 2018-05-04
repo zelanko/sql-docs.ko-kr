@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 398618005633883f9cdd7bac7c6d747a3b5b7a1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c387759745c7fa2776f202d29c3214125417813
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
  이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. *@succeeded* **비트**합니다.  
   
  **@user_defined_information**  
- 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. *@user_defined_information* **nvarchar (4000)**합니다.  
+ 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. *@user_defined_information* **nvarchar (4000)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

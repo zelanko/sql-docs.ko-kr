@@ -13,12 +13,11 @@ ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ec260eb6c82bfcac0e38251375fc9b58af55db1
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ce47957f23e703133b0531dfbe709d598319cb3b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: 테이블 공간 사용량 통찰력 위젯 사용한 샘플을 사용 하도록 설정 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

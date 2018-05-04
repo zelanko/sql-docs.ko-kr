@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ad14958f2dc3967fe8bc041c8144f932b99ec5a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aa4d602f1ea0e74b51cca8960b76243a471b176c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trace-dll"></a>추적 DLL
 추적을 수행 하는 DLL ODBC 핵심 구성 요소 중 하나입니다. 추적 DLL Windows SDK의 ODBC 구성 요소에는 샘플 DLL로 서 현재 제공 되었으며 Microsoft 데이터 액세스 구성 요소 (MDAC) SDK 포함 합니다. 따라서 레지스트리 항목, 인터페이스 및 추적 DLL에 대 한 샘플 코드를 사용할 수 있습니다. 이 DLL은 DLL ODBC 사용자 또는 타사 공급 업체 중 하나에서 생성 되는 추적으로 바꿀 수 있습니다. 사용자 지정 추적 DLL에는 원래 샘플 추적 DLL 다른 이름이 지정 되어야 합니다. 시스템 디렉터리에 추적 Dll을 설치 해야 하거나 로드 되지 것입니다. 연결 문자열 전달 되지 않습니다 추적 DLL에 드라이버 관리자가 있습니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetConnectOption
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 518fa715656e16672c118e0e56588c7c15d16a15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 97fd7e5b388a30c91748e651d764e1a869f2d5bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 함수
 **규칙**  
  도입 된 버전: ODBC 1.0 표준 준수: 사용 되지 않음  
   
  **요약**  
- ODBC 3에서*.x*, ODBC 2.0 함수 **SQLSetConnectOption** 로 대체 되었습니다 **SQLSetConnectAttr**합니다. 자세한 내용은 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)을 참조하세요.  
+ ODBC 3에서 *.x*, ODBC 2.0 함수 **SQLSetConnectOption** 로 대체 되었습니다 **SQLSetConnectAttr**합니다. 자세한 내용은 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)을 참조하세요.  
   
 > [!NOTE]  
->  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 3 작동*.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
+>  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 2에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 3 작동 *.x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>주의  
  참조 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)응용 프로그램이 64 비트 운영 체제에서 실행 되는 경우.  

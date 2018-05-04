@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81ecc4cba94db62ff6f7fb6960d989a205ca8eae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**size**|**nvarchar(18)**|파일 크기(MB)입니다.|  
 |**maxsize**|**nvarchar(18)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar(18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
-|**사용**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'**합니다.|  
+|**사용**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'** 합니다.|  
   
 ## <a name="remarks"></a>주의  
  **상태** 는 결과의 열 집합 보고서 데이터베이스의 옵션을 ON으로 설정 되어 있어야 합니다. 모든 데이터베이스 옵션에서 보고 되지 않습니다는 **상태** 열입니다. 현재 데이터베이스 옵션 설정의 전체 목록을 보려면는 **sys.databases** 카탈로그 뷰에 있습니다.  

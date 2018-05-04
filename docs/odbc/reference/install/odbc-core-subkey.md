@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], core subkey
 - registry entries for components [ODBC], core subkey
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 915c42e52c768a1b43a00b1a537a6885269f8a85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cf8e143a8d5d329fe3eb68185a3ebdf8f7f6cd6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-core-subkey"></a>ODBC 핵심 하위 키
 ODBC 핵심 하위 키 아래에 있는 값의 핵심 구성 요소 (드라이버 관리자, 커서 라이브러리, DLL, 설치 관리자 및 등)에 대 한 사용 개수를 제공합니다. 이 값의 형식은 다음 표에 표시 됩니다.  

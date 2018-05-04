@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c689b04d7772edbc25879f08a13d692a335f64c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 99042a222df100d5f5fc1ba20d9bbc803bb4025d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-is-metadata-used"></a>메타 데이터 사용은 어떻게 합니까?
 응용 프로그램에서는 대부분의 결과 집합 작업에 대해 메타데이터를 요구합니다. 예를 들어 응용 프로그램에서는 열의 데이터 형식을 사용하여 해당 열에 바인딩할 변수의 종류를 확인하고 문자 열의 바이트 길이 사용 하 여 해당 열의 데이터를 표시 하는 데 필요한 공간의 크기를 결정 합니다. 응용 프로그램에서 열의 메타데이터를 확인하는 방법은 응용 프로그램 종류에 따라 다릅니다.  

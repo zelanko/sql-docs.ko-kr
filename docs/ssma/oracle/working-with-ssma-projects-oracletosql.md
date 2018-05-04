@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Customizing Project Settings
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
@@ -19,12 +18,11 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: e34ac2455e6de1f35925045504e0e3224ee56560
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 80f2581ac5212f7fe0b1c7684b4eb548c0fa8c2e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 (OracleToSQL) 작업
 Oracle 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  

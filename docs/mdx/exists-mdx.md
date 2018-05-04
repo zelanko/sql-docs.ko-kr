@@ -20,17 +20,16 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb7bbf571b29294d7637d68d21e9e961d388edc1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. 에 대 한 자세한 내용은 존재에 대 한 참조 [MDX &#40;의 주요 개념 Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. 에 대 한 자세한 내용은 존재에 대 한 참조 [MDX의 주요 개념 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)합니다.  
   
  경우 선택적 \<측정값 그룹 이름 > 함수는 지정 된 측정값 그룹의 팩트 테이블의 행을 연결 하는 튜플 및 두 번째 집합에서 하나 이상의 튜플과 함께 존재 하는 튜플을 반환 제공 됩니다.  
   
@@ -105,10 +104,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)   
- [크로스 조인 &#40; Mdx&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40; Mdx&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [비어 있지 않은 &#40; Mdx&#41;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40; Mdx&#41;](../mdx/isempty-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
+ [비어 있지 않은 &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

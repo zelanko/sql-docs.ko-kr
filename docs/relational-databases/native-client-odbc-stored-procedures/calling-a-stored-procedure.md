@@ -24,13 +24,12 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b1dfc08ad0ff42c5a7e5409d729b6f62a4f4d36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 451a7538ac011c1dce455122909c7ae88ac8242c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  프로시저를 호출하는 ODBC CALL 이스케이프 시퀀스는 다음과 같습니다.  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
   
  여기서 *procedure_name* 프로시저의 이름을 지정 하 고 *매개 변수* 프로시저 매개 변수를 지정 합니다. 명명된 매개 변수는 ODBC CALL 이스케이프 시퀀스를 사용하는 문에서만 지원됩니다.  
   

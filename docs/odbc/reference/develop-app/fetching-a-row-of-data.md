@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], fetching a row of data
 - cursors [ODBC], fetching rows
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81fff470f916155e9b6d85571db46c46d9e63454
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f70d67650f3a32f43f4663a744bf4e208cb766af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-a-row-of-data"></a>데이터 행을 인출합니다.
 데이터의 행을 인출 하는 응용 프로그램 호출 **SQLFetch**합니다. **SQLFetch** 모든 종류의 커서를 호출할 수 있지만 앞 으로만 이동 가능한 방향으로 행 집합 커서를 이동 합니다. **SQLFetch** 다음 행으로 커서를 이동 하 고 호출 하 여 바인딩된 열에 대 한 데이터를 반환 **SQLBindCol**합니다. 커서는 결과의 끝에 도달 하면 때 설정 **SQLFetch** SQL_NO_DATA를 반환 합니다. 호출에 대 한 예제 **SQLFetch**, 참조 [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.  

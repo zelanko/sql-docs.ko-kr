@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - buffers [ODBC], data
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1618c59df49bd16311b73c8df593dd12462a6425
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8f48565b36b821ebcfffd14a89162d75c90e7bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-buffer-length"></a>데이터 버퍼 길이
 응용 프로그램 데이터 버퍼의 바이트 길이 드라이버에 전달 명명 된 인수로 *BufferLength* 또는 비슷한 이름입니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, 응용 프로그램의 길이 지정 된 *ValuePtr* 버퍼 (**sizeof (***ValuePtr***)**):  

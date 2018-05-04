@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
 - committing transactions [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 113ef34f3d056da2a24f6cd4ab7a7417a96e1715
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>커밋 및 트랜잭션 롤백
 응용 프로그램이 호출 커밋하거나 수동 커밋 모드에서 트랜잭션을 롤백하려면 **SQLEndTran**합니다. 실행 하 여이 함수를 구현 하는 트랜잭션을 지 원하는 일반적으로 Dbms에 대 한 드라이버는 **커밋** 또는 **롤백** 문을 합니다. 드라이버 관리자가 호출 하지 않으면 **SQLEndTran** 자동 커밋 모드에 연결 된 경우 단순히 반환 SQL_SUCCESS, 응용 프로그램에서 트랜잭션을 하려고 하는 경우에 합니다. 구현 하거나 수 트랜잭션을 지원 하지 않는 Dbms에 대 한 드라이버가 자동 커밋 모드에서 항상 되므로 **SQLEndTran** 아무 작업도 수행 하지 않고 관계 없이 SQL_SUCCESS를 반환 하거나 전혀 구현 하지 않습니다.  

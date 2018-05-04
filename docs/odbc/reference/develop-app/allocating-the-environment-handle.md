@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], environment handles
 - allocating environment handles [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcbfc5e9a8be2bf1fc543e9d458658a918e40b6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23851cae822210fd13061b5e4f5de67e0c510e89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 모든 ODBC 응용 프로그램에 대 한 첫 번째 작업은 드라이버 관리자; 로드 이 과정은 운영 체제 따라 다릅니다. 예를 들어 Microsoft® Windows NT® 서버/Windows 2000 Server, Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98을 실행 하는 컴퓨터에서 응용 프로그램 중 하나에 연결 드라이버 관리자 라이브러리 또는 호출  **LoadLibrary** 드라이버 관리자 DLL을 로드할 수 있습니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 911d6dd9613803aff79187a22f4ebf6bc0b7a4cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 040d5a0490457d9edd0ce9cc0e6674fcfc45e7b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 텍스트 매개 변수: **char**, **nchar**, **varchar**, **nvarchar**, **텍스트**, **ntext** 또는 **xml**합니다.  
   
- 기본값은  **\<xmlns:mp 루트 = ":-microsoft-com:xml-metaprop" >**합니다. *xpath_namespaces* 올바른 형식의 XML 문서를 사용 하 여 OPENXML의 XPath 식에 사용 되는 접두사에 대 한 네임 스페이스 Uri를 제공 합니다. *xpath_namespaces* 네임 스페이스를 참조 하는 데 사용 해야 하는 접두사를 선언 **:-microsoft-com:xml-metaprop**;이 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. 접두사 **mp** 여전히 유효한 **:-microsoft-com:xml-metaprop** 경우에 *xpath_namespaces* 이러한 선언이 없는 포함 합니다.  
+ 기본값은  **\<xmlns:mp 루트 = ":-microsoft-com:xml-metaprop" >** 합니다. *xpath_namespaces* 올바른 형식의 XML 문서를 사용 하 여 OPENXML의 XPath 식에 사용 되는 접두사에 대 한 네임 스페이스 Uri를 제공 합니다. *xpath_namespaces* 네임 스페이스를 참조 하는 데 사용 해야 하는 접두사를 선언 **:-microsoft-com:xml-metaprop**;이 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. 접두사 **mp** 여전히 유효한 **:-microsoft-com:xml-metaprop** 경우에 *xpath_namespaces* 이러한 선언이 없는 포함 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 >0(실패)  

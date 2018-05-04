@@ -27,17 +27,16 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b269d7e574e27de90ff4854cde1233312d444dd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  기존 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다.  사용 하는 경우는 **ALTER MINING STRUCTURE** 구조 새 마이닝 모델을 만드는 문을 이미 존재 해야 합니다. 반면, 사용 하는 경우에 문에서 [마이닝 모델 만들기 &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), 모델을 만들고 동시에 해당 기본 마이닝 구조를 자동으로 생성 합니다.  
+  기존 마이닝 구조를 기반으로 새 마이닝 모델을 만듭니다.  사용 하는 경우는 **ALTER MINING STRUCTURE** 구조 새 마이닝 모델을 만드는 문을 이미 존재 해야 합니다. 반면, 사용 하는 경우에 문에서 [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), 모델을 만들고 동시에 해당 기본 마이닝 구조를 자동으로 생성 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -130,10 +129,10 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |용어|정의|  
-|**REGRESSOR**|회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다.|  
+|**회귀 변수**|회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다.|  
 |**MODEL_EXISTENCE_ONLY**|특성의 존재 여부가 특성 열의 값보다 더 중요함을 나타냅니다.|  
   
- 열 하나에 대해 여러 개의 모델링 플래그를 정의할 수 있습니다. 모델링 플래그를 사용 하는 방법에 대 한 자세한 내용은 참조 [모델링 플래그 &#40; DMX &#41;](../dmx/modeling-flags-dmx.md)합니다.  
+ 열 하나에 대해 여러 개의 모델링 플래그를 정의할 수 있습니다. 모델링 플래그를 사용 하는 방법에 대 한 자세한 내용은 참조 [모델링 플래그 &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)합니다.  
   
 ### <a name="prediction-clause"></a>예측 절  
  예측 절은 예측 열의 사용 방법을 설명합니다. 다음 표에서는 가능한 절을 보여 줍니다.  
@@ -148,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
   
  필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 조건자는 일반 논리 연산자를 사용 하 여 결합할 수 있습니다: 하 고, OR, not 합니다.  
   
- 마이닝 모델에 사용 되는 필터에 대 한 자세한 내용은 참조 하십시오. [마이닝 모델 &#40;에 대 한 필터 Analysis Services-데이터 마이닝 &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ 마이닝 모델에 사용 되는 필터에 대 한 자세한 내용은 참조 [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
 > [!NOTE]  
 >  필터의 열은 마이닝 구조 열이어야 합니다. 모델 열이나 별칭이 지정된 열에 대한 필터는 만들 수 없습니다.  
@@ -156,7 +155,7 @@ USING <algorithm> [(<parameter list>)]
  DMX 연산자 및 구문에 대 한 자세한 내용은 참조 [마이닝 모델 열](../analysis-services/data-mining/mining-model-columns.md)합니다.  
   
 ## <a name="parameter-definition-list"></a>매개 변수 정의 목록  
- 매개 변수 목록에 알고리즘 매개 변수를 추가하여 모델의 성능과 기능을 조정할 수 있습니다. 사용할 수 있는 매개 변수는 USING 절에 지정한 알고리즘에 따라 달라집니다. 각 알고리즘에 연관 된 매개 변수 목록에 대 한 참조 [Data Mining Algorithms &#40; Analysis Services-데이터 마이닝 &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 매개 변수 목록에 알고리즘 매개 변수를 추가하여 모델의 성능과 기능을 조정할 수 있습니다. 사용할 수 있는 매개 변수는 USING 절에 지정한 알고리즘에 따라 달라집니다. 각 알고리즘에 연관 된 매개 변수 목록에 대 한 참조 [Data Mining Algorithms &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  
   
  매개 변수 목록의 구문은 다음과 같습니다.  
   
@@ -220,8 +219,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3d789ff36cb20074a1dbb70a2175aa0c28e5966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e2352f373be56877f7a55af7fa9daeed2655678a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 쿼리에서 `child` 는 축이고와 `OrderDetail` 는 노드 테스트 (TRUE 이면 **OrderDetail** 는  **\<요소 노드 >**때문에  **\< 요소 >** 노드는에 대 한 주 노드는 **자식** 축). 모든는  **\<OrderDetail >** 요소 노드 조건자의 테스트가 적용 되 고 조건을 충족 하는 노드만 반환 됩니다.  
+ 쿼리에서 `child` 는 축이고와 `OrderDetail` 는 노드 테스트 (TRUE 이면 **OrderDetail** 는  **\<요소 노드 >** 때문에  **\< 요소 >** 노드는에 대 한 주 노드는 **자식** 축). 모든는  **\<OrderDetail >** 요소 노드 조건자의 테스트가 적용 되 고 조건을 충족 하는 노드만 반환 됩니다.  
   
 > [!NOTE]  
 >  XPath의 숫자는 배정밀도 부동 소수점 숫자이며 이 예와 같이 부동 소수점 숫자를 비교하면 반올림됩니다.  

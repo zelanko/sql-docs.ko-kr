@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab2bee2085b2b86015225f67a99bb01d833efb9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 652983ee8143f8ef23001bb702c323b25a13e36b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +56,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|특성의 ID 번호입니다.|  
-|**ATTRIBUTE_NAME**|**varchar (**60**)**|특성 이름입니다.|  
-|**ATTRIBUTE_VALUE**|**varchar (**255**)**|특성의 현재 설정입니다.|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|특성 이름입니다.|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|특성의 현재 설정입니다.|  
   
  다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 클라이언트 라이브러리는 특성에 현재 사용 하 여 **1**, **2**, **18**, **22**, 및 **500** 연결 시 시간입니다.  
   

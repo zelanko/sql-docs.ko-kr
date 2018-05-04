@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6be1e147ad1e2b59f8742f7656ca24c86c055f2b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d61cf3aa4d755f93ddf5603d9a25a96cb020a0fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-in-odbc"></a>ODBC의 데이터 형식
 두 데이터 형식 집합을 사용 하 여 ODBC: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식은 데이터 원본에 사용 됩니다 하 고 응용 프로그램의 C 코드에서 C 데이터 형식은 사용 됩니다.  

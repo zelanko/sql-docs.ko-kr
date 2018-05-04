@@ -20,12 +20,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 796494ac0d73b6dfaf955da58ed79b8b51b54638
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>튜플 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  튜플 함수는 멤버 함수 및 집합 함수와 마찬가지로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용되는 다차원 구조를 처리하는 데 필수적입니다.  
   
- 세 가지 튜플 함수가 mdx에서 [현재 &#40; Mdx&#41; ](../mdx/current-mdx.md), [항목 &#40; 튜플 &#41; &#40; Mdx&#41; ](../mdx/item-tuple-mdx.md) 및 [StrToTuple &#40; Mdx&#41; ](../mdx/strtotuple-mdx.md). 다음 예제 쿼리에서는 이러한 각 튜플 함수를 사용하는 방법을 보여 줍니다.  
+ 세 가지 튜플 함수가 mdx에서 [현재 &#40;MDX&#41;](../mdx/current-mdx.md), [항목 &#40;튜플&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) 및 [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). 다음 예제 쿼리에서는 이러한 각 튜플 함수를 사용하는 방법을 보여 줍니다.  
   
  `WITH`  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)   
+ [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   
  [멤버 함수를 사용 하 여](../mdx/using-member-functions.md)   
  [집합 함수 사용](../mdx/using-set-functions.md)  
   

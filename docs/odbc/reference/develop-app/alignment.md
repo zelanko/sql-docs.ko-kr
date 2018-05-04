@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ede36175f606b28c742e72bb005cf5fa7563bfc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment"></a>맞춤
 ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응용 프로그램에 보다 합니다. 즉, 대부분의 ODBC 응용 프로그램 문제가 없거나 거의 맞춤. 주소 정렬 되어 있지 않기에 의해 엄격히 규제 되어 하드웨어 및 운영 체제와 다르며 성능이 약간 저하 같은 사소한 문제로 또는 런타임 오류로 같이 주요 될 수 있습니다. 따라서 ODBC 응용 프로그램 및 휴대용 ODBC 응용 프로그램, 특히 주의 해야 데이터를 제대로 정렬 합니다.  

@@ -25,12 +25,11 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f3e7d92f5412c07c128c1225a95b6a4616e97d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6fa03e5df9670274d7bf6b4ff4fdca1b8a9a4bb1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +125,7 @@ sp_syscollector_update_collection_set
  에 대 한 기본값 *logging_level* 는 1입니다.  
   
  [  **@description =** ] '*설명*'  
- 컬렉션 집합에 대한 설명입니다. *설명* 은 **nvarchar (4000)**합니다.  
+ 컬렉션 집합에 대한 설명입니다. *설명* 은 **nvarchar (4000)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

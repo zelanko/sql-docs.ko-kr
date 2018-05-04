@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - type identifiers [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a3de97dbf1ce632f1204a2218ead0c7ddd8cdf2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c3ff74fc2f220812963555bce97d57c4beb26fa0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-identifiers"></a>유형 식별자
 ODBC SQL 및 C 데이터 형식을 설명 하기 위해 두 개의 집합이 이미 정의 되어 *형식 식별자*합니다. 형식 식별자에는 SQL 열 또는 C 버퍼의 형식을 설명합니다. 한 **#define** 값 이며 일반적으로 함수 인수로 전달 하거나 메타 데이터의 반환 합니다.  

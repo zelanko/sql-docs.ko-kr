@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c64fc572ca27962c461c9340e714e77c0cedc35d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eb05d9f5e05fc01a1480ef93a74e49336d4b0262
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-dll-function-summary"></a>변환 DLL 함수 요약
 다음 표에서 변환 DLL 함수를 설명합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 [번역 DLL 함수 참조](../../../odbc/reference/syntax/translation-dll-api-reference.md)합니다.  

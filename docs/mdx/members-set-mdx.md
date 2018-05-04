@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f643eeb5d864b37e9d18e82178ec1cf0eb179584
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-set-mdx"></a>Members(집합)(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ Level_Expression.Members
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>주의  
- 계층 식이 지정 되는 **Members (집합)** 함수 계산된 멤버를 포함 하지 않고 지정된 된 계층 내의 모든 멤버 집합을 반환 합니다. 계산 하는 모든 멤버 집합을 구하거 나, 계층 구조를 사용 하 여 [AllMembers &#40; Mdx&#41; ](../mdx/allmembers-mdx.md) 함수  
+ 계층 식이 지정 되는 **Members (집합)** 함수 계산된 멤버를 포함 하지 않고 지정된 된 계층 내의 모든 멤버 집합을 반환 합니다. 계산 하는 모든 멤버 집합을 구하거 나, 계층 구조를 사용 하 여 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) 함수  
   
  수준 식이 지정 되는 **Members (집합)** 함수는 지정 된 수준 내의 모든 멤버 집합을 반환 합니다.  
   
@@ -84,7 +83,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

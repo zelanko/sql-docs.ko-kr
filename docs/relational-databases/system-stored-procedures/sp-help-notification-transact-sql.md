@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cfc84d05393174ba804a5c3fc407da0e2fbe2159
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ sp_help_notification
   
 ## <a name="arguments"></a>인수  
  [ **@object_type =**] **'***object_type***'**  
- 반환할 정보 유형입니다. *object_type*은 **char (9)**, 기본값은 없습니다. *object_type* 수 경고를 제공된 된 운영자 이름에 할당 된 경고를 나열 하*,* 또는 제공된 된 경고 이름을 담당 운영자를 나열 하는 연산자*합니다.*  
+ 반환할 정보 유형입니다. *object_type*은 **char (9)**, 기본값은 없습니다. *object_type* 수 경고를 제공된 된 운영자 이름에 할당 된 경고를 나열 하 *,* 또는 제공된 된 경고 이름을 담당 운영자를 나열 하는 연산자*합니다.*  
   
  [ **@name =**]  **'***name***'**  
  운영자 이름 (경우 *object_type* 운영자) 또는 경고 이름 (경우 *object_type* 가 경고). *이름* 은 **sysname**, 기본값은 없습니다.  
   
  [ **@enum_type =**] **'***enum_type***'**  
- *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*은 **char (10)**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
+ *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*은 **char (10)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

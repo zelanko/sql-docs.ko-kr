@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - row-wise binding [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbe734fa37ece0609a24527162c061298294d4ac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9bc72bbffc1518e5c2a93adbb8fac75ba555159b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>블록 커서와 함께 사용 하기 위해 열 바인딩
 블록 커서 여러 행을 반환 하므로 사용 하는 응용 프로그램을 사용 하 여 변수의 배열을 단일 변수 대신 각 열에 바인딩해야 합니다. 이러한 배열은 이라고 통칭는 *행 집합 버퍼*합니다. 바인딩의 두 가지 스타일은 다음과 같습니다.  

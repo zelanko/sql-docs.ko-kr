@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7d51f87a2fbb3552dd323469d60bd50c7bab7f22
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 46c361b901d682c214ed1c4f724686137d07234b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름은 유효한 모든 문자 (예: 공백)을 포함할 수 있습니다. 열 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 역 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  

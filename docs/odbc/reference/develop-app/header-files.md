@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
@@ -19,19 +19,18 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75a2e7bcee4f777a3f0442425c0395be99000668
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 174710258b62e0cceb7039854138b07b69c8de74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="header-files"></a>헤더 파일
 헤더 파일 Sql.h 함수 및 기능 ODBC 핵심 인터페이스 규칙 수준에 대 한 프로토타입이 포함 되어 있습니다. Sqlext.h 헤더 파일에는 함수 및 기능 수준 1 및 수준 2 API 받는 규칙 수준에 대 한 프로토타입이 포함 됩니다. 형식 정 및 SQL 데이터 형식에 대 한 표시기 Sqltypes.h 헤더 파일에 포함 되어 있습니다.  
   
  모두 포함 하는 헤더 파일을 **#define**, 응용 프로그램 또는 드라이버는 ODBC의 버전 마다 컴파일할 설정할 수 있는 ODBCVER 합니다.  
   
- ISO CLI 및 Open 그룹 CLI 맞춰 헤더 파일에 대 한 호출에 사용 되는 정보 종류에 대 한 별칭을 포함 **SQLGetInfo**합니다. 다음 표에서 "ODBC name" 열에는 정보 유형은 ODBC 이름을 나타냅니다. [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)합니다. "헤더 파일에서 별칭" 열에는 ISO CLI 및 Open 그룹 CLI에 사용 되는 이름을 나타냅니다. 이러한 매니페스트 이름의 실제 숫자 값은 ODBC와 표준 Cli에 같습니다. 이러한 별칭을 통해 표준 호환 응용 프로그램 또는 드라이버는 ODBC 3로 컴파일하려면*.x* 헤더 파일입니다.  
+ ISO CLI 및 Open 그룹 CLI 맞춰 헤더 파일에 대 한 호출에 사용 되는 정보 종류에 대 한 별칭을 포함 **SQLGetInfo**합니다. 다음 표에서 "ODBC name" 열에는 정보 유형은 ODBC 이름을 나타냅니다. [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)합니다. "헤더 파일에서 별칭" 열에는 ISO CLI 및 Open 그룹 CLI에 사용 되는 이름을 나타냅니다. 이러한 매니페스트 이름의 실제 숫자 값은 ODBC와 표준 Cli에 같습니다. 이러한 별칭을 통해 표준 호환 응용 프로그램 또는 드라이버는 ODBC 3로 컴파일하려면 *.x* 헤더 파일입니다.  
   
  이러한 별칭 이름을 더 이해할 수 있도록 ODBC 이름에 약어의 확장을 포함 합니다. "MAX" 확장 되어 "최대", "LEN"를 "LENGTH", "MULT"를 "OUTER_JOIN"를 "여러", "OJ" 및 "트랜잭션"을 "TXN"  
   

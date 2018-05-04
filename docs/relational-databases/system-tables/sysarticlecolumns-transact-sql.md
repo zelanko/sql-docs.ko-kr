@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 030b409328d896f0f8b76fc9ef02a6f351c029c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6e236dd702339d48af99bbc7b7e25a87c890eb6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 |**colid**|**smallint**|아티클의 열을 식별합니다.|  
 |**is_udt**|**bit**|열이 UDT(사용자 정의 데이터 형식) 열인지 여부를 나타냅니다. 값이 **1** UDT 열을 나타냅니다.|  
 |**is_xml**|**bit**|열이 있는지 여부를 나타내는 **xml** 열입니다. 값이 **1** xml 열을 나타냅니다.|  
-|**is_max**|**bit**|열에 큰 값 데이터 형식 열이 있는지 여부를 나타냅니다 **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)**합니다. 값이 **1** 큰 값 열을 나타냅니다.|  
+|**is_max**|**bit**|열에 큰 값 데이터 형식 열이 있는지 여부를 나타냅니다 **varchar (max)**, **nvarchar (max)**, 및 **varbinary (max)** 합니다. 값이 **1** 큰 값 열을 나타냅니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

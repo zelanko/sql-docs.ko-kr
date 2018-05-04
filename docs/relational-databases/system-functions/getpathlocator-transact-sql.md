@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15d4c04f98677d1e7749c2ee94b6410e2a845560
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 15dbae2535db57734c6017e6c6152011e8f497df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>인수  
  *filenamespace_path*  
- FileTable의 네임스페이스 경로입니다. 형식의 네임 스페이스 경로 **nvarchar (max)**합니다.  
+ FileTable의 네임스페이스 경로입니다. 형식의 네임 스페이스 경로 **nvarchar (max)** 합니다.  
   
  데이터베이스는 Always On 가용성 그룹에 속해 있을 때 면 **GetPathLocator** 함수 (VNN) 가상 네트워크 이름 또는 컴퓨터 이름을 허용 합니다.  
   

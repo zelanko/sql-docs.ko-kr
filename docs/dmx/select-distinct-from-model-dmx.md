@@ -26,12 +26,11 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1b3840bebc367e1733b38a74a4bbb8ef04233cd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +64,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>주의  
  **SELECT DISTINCT FROM** 문이 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
- **SELECT DISTINCT FROM** 문을 사용 하면 중첩된 테이블 안의 열을 직접 참조할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ **SELECT DISTINCT FROM** 문을 사용 하면 중첩된 테이블 안의 열을 직접 참조할 수 있습니다. 예를 들어:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -152,8 +151,8 @@ FROM [TM Decision Tree]
 >  최소 버킷의 최소값과 최대 버킷의 최대값은 단순히 관측 값 중 가장 높은 값과 가장 낮은 값입니다. 이러한 관측 범위에서 벗어나는 값은 최소 버킷과 최대 버킷에 속하는 것으로 간주됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SELECT&#40; DMX &#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

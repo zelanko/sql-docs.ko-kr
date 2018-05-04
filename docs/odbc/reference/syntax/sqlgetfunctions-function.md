@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [입력] 연결 핸들입니다.  
   
  *FunctionId*  
- [입력] A **#define** 관심; ODBC 함수를 식별 하는 값 **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**합니다. **SQL_API_ODBC3_ALL_FUNCTIONS** ODBC 3에서 사용 하는*.x* 응용 프로그램을 ODBC 3의 지원을 확인*.x* 및 이전 함수입니다. **SQL_API_ALL_FUNCTIONS** 는 ODBC 2에서 사용 하는*.x* 응용 프로그램을 ODBC 2의 지원을 확인*.x* 및 이전 함수입니다.  
+ [입력] A **#define** 관심; ODBC 함수를 식별 하는 값 **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**합니다. **SQL_API_ODBC3_ALL_FUNCTIONS** ODBC 3에서 사용 하는 *.x* 응용 프로그램을 ODBC 3의 지원을 확인 *.x* 및 이전 함수입니다. **SQL_API_ALL_FUNCTIONS** 는 ODBC 2에서 사용 하는 *.x* 응용 프로그램을 ODBC 2의 지원을 확인 *.x* 및 이전 함수입니다.  
   
  목록은 **#define** ODBC 함수를 식별 하는 값 "설명" 표를 참조 하십시오.  
   
  *SupportedPtr*  
  [출력]  경우 *FunctionId* 단일 ODBC 함수를 식별 *SupportedPtr* 단일 지점을 SQLUSMALLINT 값 즉 SQL_TRUE 없는 경우 지정된 된 함수, 드라이버 및 SQL_FALSE에서 지원 되는 경우 지원 됩니다.  
   
- 경우 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS은 *SupportedPtr* SQL_API_ODBC3_ALL_FUNCTIONS_SIZE 같은 요소의 수가 있는 SQLSMALLINT 배열을 가리킵니다. 이 배열은 ODBC 3 지 여부를 결정 하는 데 사용할 수 있는 4, 000 비트 비트맵으로 드라이버 관리자에서 처리는*.x* 또는 이전 함수는 지원 합니다. SQL_FUNC_EXISTS 매크로 기능 지원을 확인 하기 위해 호출 됩니다. ("주석" 참조) ODBC 3*.x* 응용 프로그램에서 호출할 수 **SQLGetFunctions** 중 하나는 ODBC 3에 대해 SQL_API_ODBC3_ALL_FUNCTIONS와*.x* 또는 ODBC 2*.x* 드라이버입니다.  
+ 경우 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS은 *SupportedPtr* SQL_API_ODBC3_ALL_FUNCTIONS_SIZE 같은 요소의 수가 있는 SQLSMALLINT 배열을 가리킵니다. 이 배열은 ODBC 3 지 여부를 결정 하는 데 사용할 수 있는 4, 000 비트 비트맵으로 드라이버 관리자에서 처리는 *.x* 또는 이전 함수는 지원 합니다. SQL_FUNC_EXISTS 매크로 기능 지원을 확인 하기 위해 호출 됩니다. ("주석" 참조) ODBC 3 *.x* 응용 프로그램에서 호출할 수 **SQLGetFunctions** 중 하나는 ODBC 3에 대해 SQL_API_ODBC3_ALL_FUNCTIONS와 *.x* 또는 ODBC 2 *.x* 드라이버입니다.  
   
- 경우 *FunctionId* SQL_API_ALL_FUNCTIONS은 *SupportedPtr* 100 요소의 SQLUSMALLINT 배열을 가리킵니다. 배열의 기준으로 인덱싱되어 있으면 **#define** 사용 하는 값 *FunctionId* 각 ODBC 함수를 식별 하는 배열의 일부 요소는 사용 되지 않고 나중에 사용할 목적으로 예약 된 합니다. ODBC 2를 식별 하는 경우 요소 이면 SQL_TRUE*.x* 또는 드라이버에서 지원 되는 이전 함수입니다. 드라이버에서 지원 되지 않습니다는 ODBC 함수를 식별 하거나 ODBC 함수를 식별 하지 못할 경우 SQL_FALSE를은 합니다.  
+ 경우 *FunctionId* SQL_API_ALL_FUNCTIONS은 *SupportedPtr* 100 요소의 SQLUSMALLINT 배열을 가리킵니다. 배열의 기준으로 인덱싱되어 있으면 **#define** 사용 하는 값 *FunctionId* 각 ODBC 함수를 식별 하는 배열의 일부 요소는 사용 되지 않고 나중에 사용할 목적으로 예약 된 합니다. ODBC 2를 식별 하는 경우 요소 이면 SQL_TRUE *.x* 또는 드라이버에서 지원 되는 이전 함수입니다. 드라이버에서 지원 되지 않습니다는 ODBC 함수를 식별 하거나 ODBC 함수를 식별 하지 못할 경우 SQL_FALSE를은 합니다.  
   
  반환 된 배열이 **SupportedPtr* 0부터 시작 하는 인덱스를 사용 합니다.  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1]는 ODBC 2를 작업할 때*.x* 드라이버 **SQLBulkOperations** 는 반환 에서만 지원 되는 경우 다음 두 가지 모두: ODBC 2*.x* 드라이버 지원 **SQLSetPos**, 정보 유형 SQL_POS_OPERATIONS SQL_POS_ADD 비트 집합으로 반환 합니다.  
+ [1]는 ODBC 2를 작업할 때 *.x* 드라이버 **SQLBulkOperations** 는 반환 에서만 지원 되는 경우 다음 두 가지 모두: ODBC 2 *.x* 드라이버 지원 **SQLSetPos**, 정보 유형 SQL_POS_OPERATIONS SQL_POS_ADD 비트 집합으로 반환 합니다.  
   
  다음은에 대 한 유효한 값 목록이 *FunctionId* 이상 버전에서 ODBC 3.8을 도입 하는 함수에 대 한:  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle** 반환할만 지원 드라이버가 둘 다를 지 원하는 **SQLCancel** 및 **SQLCancelHandle**합니다. 경우 **SQLCancel** 사용할 수 있지만 **SQLCancelHandle** 는 사용 되지 않는 응용 프로그램이 호출할 수 **SQLCancelHandle** 문 핸들에서 에매핑됩니다때문에 **SQLCancel**합니다.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 매크로  
- SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다*.x* 또는 이전 함수 후 **SQLGetFunctions**  호출한는 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. 응용 프로그램으로 SQL_FUNC_EXISTS 호출는 *SupportedPtr* 인수로 설정는 *SupportedPtr* 전달 된 *SQLGetFunctions*와  *FunctionID* 인수로 설정 된 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않으면 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
+ SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다 *.x* 또는 이전 함수 후 **SQLGetFunctions**  호출한는 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. 응용 프로그램으로 SQL_FUNC_EXISTS 호출는 *SupportedPtr* 인수로 설정는 *SupportedPtr* 전달 된 *SQLGetFunctions*와  *FunctionID* 인수로 설정 된 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않으면 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
   
 > [!NOTE]  
->  ODBC 2 작업할 때*.x* 드라이버에서 ODBC 3*.x* 드라이버 관리자에 대 한 SQL_TRUE를 반환 합니다 **SQLAllocHandle** 및 **SQLFreeHandle**때문에 **SQLAllocHandle** 에 매핑된 **SQLAllocEnv**, **SQLAllocConnect**, 또는 **SQLAllocStmt**, 및 때문에 **SQLFreeHandle** 에 매핑된 **SQLFreeEnv**, **SQLFreeConnect**, 또는 **SQLFreeStmt**합니다. **SQLAllocHandle** 또는 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC의 인수 지원 되지 않는 반면 SQL_TRUE 있기 때문에 함수에 대해 반환 되는 경우에 없습니다 ODBC 2*.x* 이 예제의를 매핑하 함수입니다.  
+>  ODBC 2 작업할 때 *.x* 드라이버에서 ODBC 3 *.x* 드라이버 관리자에 대 한 SQL_TRUE를 반환 합니다 **SQLAllocHandle** 및 **SQLFreeHandle**때문에 **SQLAllocHandle** 에 매핑된 **SQLAllocEnv**, **SQLAllocConnect**, 또는 **SQLAllocStmt**, 및 때문에 **SQLFreeHandle** 에 매핑된 **SQLFreeEnv**, **SQLFreeConnect**, 또는 **SQLFreeStmt**합니다. **SQLAllocHandle** 또는 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC의 인수 지원 되지 않는 반면 SQL_TRUE 있기 때문에 함수에 대해 반환 되는 경우에 없습니다 ODBC 2 *.x* 이 예제의를 매핑하 함수입니다.  
   
 ## <a name="code-example"></a>코드 예  
  다음 세 가지 예제 응용 프로그램에서 사용 하는 방법을 보여 줍니다 **SQLGetFunctions** 드라이버를 지원 하는지 확인 하 **SQLTables**, **SQLColumns**, 및  **SQLStatistics**합니다. 드라이버는 이러한 함수를 지원 하지 않으면, 응용 프로그램이 드라이버에서 연결을 끊습니다. 첫 번째 예제에서는 호출 **SQLGetFunctions** 각 함수에 대해 한 번씩입니다.  

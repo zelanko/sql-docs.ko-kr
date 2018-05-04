@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c62b78264a5dbd715cc79e1f07515350d8c6cd3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38dc5fb0ed2286b3077e6198bc978808063b5d2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-of-parameter-values"></a>매개 변수 값의 배열
 종종 응용 프로그램의 매개 변수 배열을 전달 하는 것이 유용 합니다. 예를 들어, 매개 변수 및 매개 변수가 있는 배열을 사용 하 여 **삽입** 문, 응용 프로그램은 행 수를 한 번에 삽입할 수 있습니다. 배열을 사용 하 여 여러 가지 장점이 있습니다. 첫째, (데이터 원본에서는 기본적으로 매개 변수 배열 지원) 하는 경우 단일 패킷을 많은 문에 대 한 데이터 전송 되므로 네트워크 트래픽이 줄어듭니다. 둘째, 일부 데이터 원본에는 동일한 수의 별도 SQL 문 실행할 때 보다 더 빠르게 배열을 사용 하 여 SQL 문을 실행할 수 있습니다. 마지막으로 사용할 경우는 경우 화면 데이터에 대 한 데이터를 배열에 저장 됩니다, 응용 프로그램 바인딩할 수의 모든 행을 단일 호출 하 여 특정 열에 **SQLBindParameter** 단일 문을 실행 하 여 서버를 업데이트 하 고 있습니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bc5ed5d56541436e80eeafdccb1b1cdfe3ec6c9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 03167b2b5544b4800cde32bed572f51bc82bd077
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,15 +195,15 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x04**|IDENTITY 속성을 사용하여 ID 열이 스크립팅됩니다.|  
 |**0x08**|복제 **타임 스탬프** 열입니다. 그렇지 않은 경우 설정, **타임 스탬프** 열은로 복제 **이진**합니다.|  
 |**0x10**|해당 클러스터형 인덱스를 생성합니다. 이 옵션을 설정하지 않아도 게시된 테이블에 이미 정의되어 있으면 기본 키 및 UNIQUE 제약 조건과 관련된 인덱스가 생성됩니다.|  
-|**0x20**|사용자 정의 데이터 형식(UDT)을 구독자에서의 기본 데이터 형식으로 변환합니다. UDT 열에 CHECK 또는 DEFAULT 제약 조건이 있거나 UDT 열이 기본 키의 일부이거나 계산 열이 UDT 열을 참조하는 경우 이 옵션을 사용할 수 없습니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**0x20**|사용자 정의 데이터 형식(UDT)을 구독자에서의 기본 데이터 형식으로 변환합니다. UDT 열에 CHECK 또는 DEFAULT 제약 조건이 있거나 UDT 열이 기본 키의 일부이거나 계산 열이 UDT 열을 참조하는 경우 이 옵션을 사용할 수 없습니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
 |**0x40**|해당 비클러스터형 인덱스를 생성합니다. 이 옵션을 설정하지 않아도 게시된 테이블에 이미 정의되어 있으면 기본 키 및 UNIQUE 제약 조건과 관련된 인덱스가 생성됩니다.|  
 |**0x80**|PRIMARY KEY 제약 조건을 복제합니다. 제약 조건에 연결 된 인덱스가 모두 복제 됩니다 경우에 옵션 **0x10** 및 **0x40** 을 사용할 수 없습니다.|  
-|**0x100**|정의된 경우 테이블 아티클에 사용자 트리거를 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
-|**0x200**|FOREIGN KEY 제약 조건을 복제합니다. 참조되는 테이블이 게시되지 않는 경우 게시된 테이블의 모든 FOREIGN KEY 제약 조건은 복제되지 않습니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
-|**0x400**|CHECK 제약 조건을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
-|**0 x 800**|기본값을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**0x100**|정의된 경우 테이블 아티클에 사용자 트리거를 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
+|**0x200**|FOREIGN KEY 제약 조건을 복제합니다. 참조되는 테이블이 게시되지 않는 경우 게시된 테이블의 모든 FOREIGN KEY 제약 조건은 복제되지 않습니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
+|**0x400**|CHECK 제약 조건을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
+|**0 x 800**|기본값을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
 |**0x1000**|열 수준 데이터 정렬을 복제합니다.<br /><br /> **참고:** 대/소문자 구분 비교를 사용 하려면 Oracle 게시자에 대해이 옵션을 설정 해야 합니다.|  
-|**0x2000**|게시된 아티클 원본 개체와 연관된 확장 속성을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**0x2000**|게시된 아티클 원본 개체와 연관된 확장 속성을 복제합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
 |**0x4000**|UNIQUE 제약 조건을 복제합니다. 제약 조건에 연결 된 인덱스가 모두 복제 됩니다 경우에 옵션 **0x10** 및 **0x40** 을 사용할 수 없습니다.|  
 |**0x8000**|이 옵션은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 게시자에 적합하지 않습니다.|  
 |**0x10000**|동기화하는 동안 CHECK 조건이 강제 적용되지 않도록 해당 제약 조건을 NOT FOR REPLICATION으로 복제합니다.|  
@@ -293,13 +292,13 @@ sp_addarticle [ @publication = ] 'publication'
 >  *auto_identity_range* 사용 되지 않으며 이전 버전과 호환성을 위해 제공 됩니다. 사용 해야 *identityrangemanagementoption* id 범위 관리 옵션을 지정 하는 데 있습니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
  [  **@pub_identity_range =** ] *pub_identity_range*  
- 기술 자료 문서에 경우 게시자 범위 크기를 제어 *identityrangemanagementoption* 로 설정 **자동** 또는 *auto_identity_range* 로 설정 **true** . *pub_identity_range* 은 **bigint**, 기본값은 NULL입니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ 기술 자료 문서에 경우 게시자 범위 크기를 제어 *identityrangemanagementoption* 로 설정 **자동** 또는 *auto_identity_range* 로 설정 **true** . *pub_identity_range* 은 **bigint**, 기본값은 NULL입니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@identity_range =** ] *identity_range*  
- 기술 자료 문서에 있는 경우 구독자의 범위 크기를 제어 *identityrangemanagementoption* 로 설정 **자동** 또는 *auto_identity_range* 로 설정 **true** . *identity_range* 은 **bigint**, 기본값은 NULL입니다. 경우에 사용 *auto_identity_range* 로 설정 된 **true**합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ 기술 자료 문서에 있는 경우 구독자의 범위 크기를 제어 *identityrangemanagementoption* 로 설정 **자동** 또는 *auto_identity_range* 로 설정 **true** . *identity_range* 은 **bigint**, 기본값은 NULL입니다. 경우에 사용 *auto_identity_range* 로 설정 된 **true**합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@threshold =** ] *임계값*  
- 배포 에이전트가 새로운 ID 범위를 할당하는 시기를 지정하는 백분율 값입니다. 에 지정 된 값의 백분율 *임계값* 는 사용 하는 배포 에이전트가 새 id 범위를 만듭니다. *임계값* 은 **bigint**, 기본값은 NULL입니다. 경우에 사용 *identityrangemanagementoption* 로 설정 된 **자동** 또는 *auto_identity_range* 로 설정 된 **true**합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ 배포 에이전트가 새로운 ID 범위를 할당하는 시기를 지정하는 백분율 값입니다. 에 지정 된 값의 백분율 *임계값* 는 사용 하는 배포 에이전트가 새 id 범위를 만듭니다. *임계값* 은 **bigint**, 기본값은 NULL입니다. 경우에 사용 *identityrangemanagementoption* 로 설정 된 **자동** 또는 *auto_identity_range* 로 설정 된 **true**합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 는 **비트**, 기본값은 0입니다.  

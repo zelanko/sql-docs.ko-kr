@@ -28,12 +28,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d4364f6cba3a5eb28cfac72e4f5f727ddf1bd1ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 58c7e6bf72656b83f3fc43b35bd5d27dce43178b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sys.sp_cdc_disable_table
   
  *source_name* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'**모든**'**  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** 모든 **'**  
  지정된 원본 테이블에 대해 비활성화할 캡처 인스턴스의 이름입니다. *capture_instance* 은 **sysname** NULL 일 수 없습니다.  
   
  모든 캡처 인스턴스에 대해 정의 된 'all'을 지정 하는 경우 *source_name* 을 사용할 수 없습니다.  

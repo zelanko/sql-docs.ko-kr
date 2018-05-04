@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86231be99be321361310dfcbd7fb2669a002a418
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7614a2c23d21d88652c32fef480367df4db65be8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제와 같이 ADO 업데이트에 대 한 가능한 한 데이터 값의 의미 체계를 유지 하기 위해 각 열에 대 한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열과 소속 된 행 집합의 이름을 합니다. 다음은 최소한의 스키마의 예가입니다.  

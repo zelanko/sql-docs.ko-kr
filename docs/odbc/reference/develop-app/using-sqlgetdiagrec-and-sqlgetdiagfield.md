@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
 - SQLGetDiagField function [ODBC], and SQLGetDiagRec
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d01e70929d8cc4d9465828d208c0e774ba8b5428
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField를 사용 하 여
 응용 프로그램 호출 **SQLGetDiagRec** 또는 **SQLGetDiagField** 진단 정보를 검색 합니다. 이러한 함수는 환경, 연결, 문 또는 설명자 핸들에 동의 하 고 진단 마지막 해당 핸들을 사용 하는 함수 반환 합니다. 특정 핸들에 기록 하는 진단 해당 핸들을 사용 하는 새 함수를 호출할 때 삭제 됩니다. 함수가 여러 진단 레코드를 반환 하는 경우 응용 프로그램에서는 이러한 함수를 여러 번; 상태 레코드의 총 수를 호출 하 여 검색 **SQLGetDiagField** SQL_DIAG_NUMBER 옵션 헤더 레코드 (레코드 0)에 대 한 합니다.  

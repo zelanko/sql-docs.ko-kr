@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], drivers
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca8032b7eda2f96b4c8e8275c131dadd96d27538
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7e84628c88937674ae5b2c1c992a40a8d3396cc2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>이전 버전과 호환성에 대 한 부록 g: 드라이버 지침
 이 부록에서는 ODBC 3에서 작업 하는 드라이버 작성기에 대 한 정보를 제공 합니다. *x* ODBC 2를 지원 해야 하는 드라이버. *x* 응용 프로그램입니다. 이전 버전과 호환성에 대 한 자세한 내용은 참조 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, table name limitations
 - table name limitations [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22e0983e807c954f96ac1a3649a2fac24893749a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8ffba1295cf16c48402987165e90c61bc9c5cc65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="table-name-limitations"></a>테이블 이름 제한 사항
 테이블 이름 (예: 공백) 모든 유효한 문자를 포함할 수 있습니다. 테이블 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 이름은 역 따옴표 (')에 포함 하 여 구분 되어야 합니다.  

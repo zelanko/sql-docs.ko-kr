@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 24eb58744008984fca4dab647b12226769f4ab81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0529245668d3456af58e6907635c42570a70a882
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,12 +54,12 @@ Set_Expression1 * Set_Expression2 [* ...n]
 ## <a name="remarks"></a>주의  
  **Crossjoin** 이상 지정 된 집합 또는 함수 2의 교차곱을 반환 합니다. 결과 집합에서 튜플의 순서는 집합의 조인 순서 및 해당 멤버의 순서에 따라 달라집니다. 예를 들어 때 첫 번째 집합은 구성의 {x1, x2,..., x*n*}, 두 번째 집합은 구성 및 {y1, y2,..., y*n*}, 이러한 집합의 교차곱은:  
   
- {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2 y2),...,  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)을 (를)  
   
 > [!IMPORTANT]  
->  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 참조 [MDX &#40;의 주요 개념 Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 참조 [MDX의 주요 개념 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)합니다.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 쿼리의 Columns 및 Rows 축에서 Crossjoin 함수를 사용하는 간단한 예를 보여 줍니다.  
@@ -107,7 +106,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
  다음 세 개의 예에서는 동일한 결과, 즉 미국 내의 주에 대한 주별 인터넷 판매 금액(Internet Sales Amount)을 반환합니다. 처음 두 개의 예에서는 두 개의 크로스 조인 구문을 사용하고, 세 번째 예에서는 WHERE 절을 사용하여 동일한 정보를 반환하는 방법을 보여 줍니다.  
   
-### <a name="example-1"></a>예 1  
+### <a name="example-1"></a>예제 1  
   
 ```  
 SELECT CROSSJOIN  
@@ -130,7 +129,7 @@ FROM [Adventure Works]
 WHERE Measures.[Internet Sales Amount]  
 ```  
   
-### <a name="example-3"></a>예제 3  
+### <a name="example-3"></a>예 3  
   
 ```  
 SELECT   
@@ -142,6 +141,6 @@ WHERE (Measures.[Internet Sales Amount],
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -27,12 +27,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 631c54b0ec1ed261ca5225a5ceec78206f3cf4ec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 46c4fa67915703250f3ec7fa17054905d471d2f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ EXEC managed_backup.sp_backup_config_advanced
  암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)을 참조하세요.  
   
  @encryptor_type  
- 'CERTIFICATE' 될 수 있는 암호기의 유형 또는 ' ASYMMETRIC_KEY "입니다. @encryptor_type 은 **nvarchar (32)**합니다. 이 매개 변수는 선택 사항에 대 한 NO_ENCRYPTION을 지정한 경우는 @encryption_algorithm 매개 변수입니다.  
+ 'CERTIFICATE' 될 수 있는 암호기의 유형 또는 ' ASYMMETRIC_KEY "입니다. @encryptor_type 은 **nvarchar (32)** 합니다. 이 매개 변수는 선택 사항에 대 한 NO_ENCRYPTION을 지정한 경우는 @encryption_algorithm 매개 변수입니다.  
   
  @encryptor_name  
  백업 암호화에 사용되는 비대칭 키 또는 기존 인증서의 이름입니다. @encryptor_name 은 **SYSNAME**합니다. 비대칭 키를 사용하는 경우 EKM(확장 키 관리)와 함께 구성해야 합니다. 이 매개 변수는 선택 사항에 대 한 NO_ENCRYPTION을 지정한 경우는 @encryption_algorithm 매개 변수입니다.  

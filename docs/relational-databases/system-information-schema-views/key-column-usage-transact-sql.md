@@ -25,12 +25,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 310840a228c61b2e7fd8234c38e4a5198a9c3706
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a5833eae71a8d26f9f03d78a02581be9d11c3f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|제약 조건 한정자입니다.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
-|**제약 조건 이름**|**nvarchar(**128**)**|제약 조건 이름입니다.|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|테이블 한정자입니다.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
-|**TABLE_NAME**|**nvarchar(**128**)**|테이블 이름입니다.|  
-|**COLUMN_NAME**|**nvarchar(**128**)**|열 이름입니다.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|제약 조건 한정자입니다.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**제약 조건 이름**|**nvarchar(** 128 **)**|제약 조건 이름입니다.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|테이블 한정자입니다.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|테이블이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|테이블 이름입니다.|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|열 이름입니다.|  
 |**ORDINAL_POSITION**|**int**|열의 서수 위치입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  

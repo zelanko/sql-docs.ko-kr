@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: mdx
-ms.date: 02/03/2018
-ms.openlocfilehash: dfb13d22768f0ec1de95a7aa903fddaf61d62b7b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: 862c6828c3d2133a893466c76ebd75e2d66d3d24
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-multidimensional-expressions-mdx-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: MDX (Multidimensional Expressions) for SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
+- *날짜 범위 업데이트:* &nbsp; **2018-02-03** &nbsp; 을 아래와 같이 &nbsp; **2018-04-28**
 - *주제 영역:* &nbsp; **MDX (Multidimensional Expressions) for SQL Server**합니다.
 
 
@@ -85,40 +87,36 @@ ms.lasthandoff: 04/26/2018
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새 + 업데이트 (11 + 6): &nbsp; &nbsp; **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새 + 업데이트 (18 + 0): &nbsp; &nbsp; **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (218 + 14): **SQL에 연결** docs](../connect/new-updated-connect.md)
+- [새 + 업데이트 (14 + 0): &nbsp; &nbsp; **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
+- [새 + 업데이트 (3 + 2): &nbsp; &nbsp; **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [새 + 업데이트 (3 + 3): &nbsp; &nbsp; **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
+- [새 + 업데이트 (7 + 10): &nbsp; &nbsp; **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
+- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [새 + 업데이트 (1 + 3): &nbsp; &nbsp; **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새 + 업데이트 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [새 + 업데이트 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
-- [새 + 업데이트 (0 + 0): **ADO ActiveX Data Objects ()에 대 한 SQL** docs](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 데이터 품질 서비스** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [새 + 업데이트 (0 + 0): **확장 DMX (Data Mining) sql** docs](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새 + 업데이트 (0 + 0): **MDX (Multidimensional Expressions)에 대 한 SQL** docs](../mdx/new-updated-mdx.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 PowerShell** docs](../powershell/new-updated-powershell.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 샘플** docs](../samples/new-updated-samples.md)
 - [새 + 업데이트 (0 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 XQuery** docs](../xquery/new-updated-xquery.md)
-
 

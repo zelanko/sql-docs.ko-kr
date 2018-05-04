@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], buffers
 - data buffers [ODBC], types
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 815fcb78b64930cf911cfbb8c775cd5b13fc0966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7f2f6e48c4fd01106b1ccf4a371d4e522587db1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 종류
 버퍼의 C 데이터 형식은 응용 프로그램에 의해 지정 됩니다. 을 단일 변수로 경우가이 응용 프로그램 변수를 할당 합니다. 일반적인 메모리 사용-메모리 즉, void 형식의 포인터에서 가리키는-이 응용 프로그램 메모리를 특정 형식으로 캐스팅 때 발생 합니다. 드라이버는이 이와 같은 두 가지 방법으로 검색 됩니다.  

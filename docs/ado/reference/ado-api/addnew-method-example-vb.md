@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 76de88956eb0efd7ec1aa4f11ec6ce8c18d0316b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0727aabd304071283e4dbb18f2eff20387f35474
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addnew-method-example-vb"></a>AddNew 메서드 예제 (VB)
 사용 하 여이 예제는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정 된 이름의 새 레코드를 만듭니다.  

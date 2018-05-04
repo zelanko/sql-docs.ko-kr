@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSpecialColumns function [ODBC], Desktop Database Drivers
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f8305a2c39eb6b1dadd57c925a0e96564b2f03b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c2d2bfda1bb8732e3036c3803628bbe8247f9e76
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (데스크톱 데이터베이스 드라이버)
 고유 인덱스 반환 됩니다 (있는 경우)에서 SQL_BEST_ROWID 플래그를 *fColType*합니다. SQL_ROWVER 플래그에 대 한 결과 집합이 반환 됩니다.  

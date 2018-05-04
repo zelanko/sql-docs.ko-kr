@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f042e3948af90c8eeda86490e1bdda53a181f8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6216c36edeb2fac643e9ad28f5e823f39945456d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |**restore_date**|**datetime**|복원 작업의 완료 날짜 및 시간입니다. NULL일 수 있습니다.|  
 |**destination_database_name**|**nvarchar(128)**|복원 작업용 대상 데이터베이스의 이름입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|복원 작업을 수행한 사용자의 이름입니다. NULL일 수 있습니다.|  
-|**backup_set_id**|**int**|복원되는 백업 세트를 나타내는 고유 ID입니다. 참조 **backupset (backup_set_id)**합니다.|  
+|**backup_set_id**|**int**|복원되는 백업 세트를 나타내는 고유 ID입니다. 참조 **backupset (backup_set_id)** 합니다.|  
 |**restore_type**|**char(1)**|복원 작업의 유형입니다.<br /><br /> D = 데이터베이스<br /><br /> F = 파일<br /><br /> G = 파일 그룹<br /><br /> I = 차등<br /><br /> L = 로그<br /><br /> V = Verifyonly<br /><br /> NULL일 수 있습니다.|  
 |**replace**|**bit**|복원 작업이 REPLACE 옵션을 지정했는지 여부를 나타냅니다.<br /><br /> 1 = 지정됨<br /><br /> 0 = 지정되지 않음<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스가 데이터베이스 스냅숏으로 되돌린 경우 0만 사용합니다.|  
 |**recovery**|**bit**|복원 작업이 RECOVERY 또는 NORECOVERY 옵션을 지정했는지 여부를 나타냅니다.<br /><br /> 1 = RECOVERY<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌린 경우 1이 유일한 옵션입니다.<br /><br /> 0 = NORECOVERY|  

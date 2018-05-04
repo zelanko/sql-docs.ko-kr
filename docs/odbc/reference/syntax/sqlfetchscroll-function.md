@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
@@ -94,11 +93,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 열에 대해 반환 된 이진 데이터의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다.|  
-|01S01|행 하는 동안 오류가 발생 했습니다.|하나 이상의 행을 인출 하는 동안 오류가 발생 했습니다.<br /><br /> (이 SQLSTATE 때 ODBC 3에 반환 되 면*.x* 응용 프로그램이 ODBC 2와 작동*.x* 드라이버를 무시할 수 있습니다.)|  
+|01S01|행 하는 동안 오류가 발생 했습니다.|하나 이상의 행을 인출 하는 동안 오류가 발생 했습니다.<br /><br /> (이 SQLSTATE 때 ODBC 3에 반환 되 면 *.x* 응용 프로그램이 ODBC 2와 작동 *.x* 드라이버를 무시할 수 있습니다.)|  
 |01S06|결과 집합은 첫 번째 행을 반환 하기 전에 반입 하려고 합니다.|요청 된 행 집합 겹쳐진 FetchOrientation SQL_FETCH_PRIOR, 현재 위치는 첫 번째 행을 초과 했습니다 였으며 현재 행의 수는 행 집합 크기 보다 작거나 때 결과 집합의 시작 합니다.<br /><br /> 요청 된 행 집합 겹쳐진 FetchOrientation SQL_FETCH_PRIOR, 현재 위치를 결과 집합의 끝을 넘어 이며 행 집합 크기는 결과 집합 크기 보다 큰 경우 결과 집합의 시작 합니다.<br /><br /> 요청 된 행 집합 겹쳐진 FetchOrientation SQL_FETCH_RELATIVE, FetchOffset 졌습니다 이며 FetchOffset의 절대 값 보다 작거나 행 집합 크기와 같은 경우 결과 집합의 시작 합니다.<br /><br /> 요청 된 행 집합 겹쳐진 FetchOrientation SQL_FETCH_ABSOLUTE, FetchOffset 졌습니다 이며 FetchOffset의 절대 값의 결과 집합 크기 보다 큰 경우 결과 집합의 시작 되지만 행 집합 크기입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S07|일부가 잘렸습니다.|열에 대해 반환 되는 데이터가 잘렸습니다. 숫자 데이터 형식에 대 한 수의 소수 부분이 잘렸습니다. 시간, 타임 스탬프 및 interval 데이터 형식을 시간 구성 요소가 포함 된 경우 시간의 소수 부분이 잘렸습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|지정한 데이터 형식으로 결과 집합에 있는 열의 데이터 값을 변환할 수 없습니다 *TargetType* 에 **SQLBindCol**합니다.<br /><br /> 0 열 SQL_C_BOOKMARK의 데이터 형식과 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성이 SQL_UB_VARIABLE로 설정 된 되었습니다.<br /><br /> SQL_C_VARBOOKMARK의 데이터 형식으로 열 0 바인딩 되었습니다 및 SQL_UB_VARIABLE를 SQL_ATTR_USE_BOOKMARKS 문 특성 설정 되지 않았습니다.|  
-|07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는*.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
+|07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는 *.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 되는 다양 한 길이의 책갈피가 잘렸습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)이 null 포인터입니다.|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 359facef0aecb21eabfd931970d41b3ea3f5d9c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72caeafe09b823f2f00be6a93048d659de452994
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
 에 나열 된 각 C 간격 데이터 형식의 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 섹션은 동일한 구조를 사용 하 여 간격 데이터를 포함 시키십시오. 때 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** 은, 드라이버 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 하 여는 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 정보를 표시 하 고는 *interval_type* 구조의 필드는 *enum* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는 *interval_type* 간격의 유형을 결정 하도록 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 의해 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b16699f67a74232730b2b96a2fdeeb4545d1fe46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 13f39771ed48501e4ab90494bdff9d3253219bba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources"></a>데이터 원본
 A *데이터 소스* 데이터의 원본을 하기만 하면 됩니다. 라이브 데이터 피드의 또는 DBMS에 있는 특정 데이터베이스 파일을 수 있습니다. 데이터에는 프로그램과 동일한 컴퓨터에서 또는 네트워크의 임의 위치에서 다른 컴퓨터에 있을 수 있습니다. 예를 들어 데이터 원본 액세스 하 여 Novell® Netware; OS/2® 운영 체제에서 실행 되는 Oracle DBMS 됩니다. 게이트웨이;를 통해 액세스 하는 IBM DB2 DBMS 서버 디렉터리;에 있는 Xbase 파일의 컬렉션 또는 로컬 Microsoft® Access 데이터베이스 파일을 추가 합니다.  

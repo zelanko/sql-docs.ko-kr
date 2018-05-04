@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], driver manager error checking
 - driver manager [ODBC], error checking
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f212af4169b4c0be2a840f6ff8d7310abb40f53
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7b33f4b2b9e1e27a8afb41b0c5d1b438d1594fe0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 확인
 드라이버 관리자는 완전히 또는 부분적으로 다양 한 기능을 구현 하 고 오류 및 해당 함수에는 경고의 전체 또는 일부 따라서 검사 합니다.  

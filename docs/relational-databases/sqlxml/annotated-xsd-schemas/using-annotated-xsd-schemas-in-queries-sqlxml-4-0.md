@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,19 +27,18 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 47d16a95d65a6a155c906f81ba324bac684704af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f01b4ac920c98ebe180ee6b5f54e6601af1f8748
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>쿼리에 주석이 추가된 XSD 스키마 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   템플릿에 XDR 스키마에 대한 XPath 쿼리를 지정하는 방식으로 주석이 추가된 스키마에 대해 쿼리를 지정하여 데이터베이스에서 데이터를 검색할 수 있습니다.  
   
-  **\<sql:xpath-쿼리 >** 요소를 사용 하면 주석이 추가 된 스키마에서 정의 된 XML 뷰에 대해 XPath 쿼리를 지정할 수 있습니다. 대상 XPath 쿼리를 실행할 수는 주석이 추가 된 스키마를 사용 하 여 식별 됩니다는 **매핑 스키마** 특성에는  **\<sql:xpath-쿼리 >** 요소입니다.  
+ **\<sql:xpath-쿼리 >** 요소를 사용 하면 주석이 추가 된 스키마에서 정의 된 XML 뷰에 대해 XPath 쿼리를 지정할 수 있습니다. 대상 XPath 쿼리를 실행할 수는 주석이 추가 된 스키마를 사용 하 여 식별 됩니다는 **매핑 스키마** 특성에는  **\<sql:xpath-쿼리 >** 요소입니다.  
   
  템플릿은 하나 이상의 쿼리를 포함하는 유효한 XML 문서입니다. FOR XML 및 XPath 쿼리는 문서 조각을 반환합니다. 템플릿은 문서 조각의 컨테이너 역할을 하며 단일 최상위 요소를 지정하는 방법을 제공합니다.  
   

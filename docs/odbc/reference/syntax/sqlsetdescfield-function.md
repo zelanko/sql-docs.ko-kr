@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee9cd8b485584d863e7eac942a7c81792bb22bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 **규칙**  
@@ -99,7 +98,7 @@ SQLRETURN SQLSetDescField(
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수는 IRD 연관 된 및 *FieldIdentifier* 인수 되지 않았거나 SQL_DESC_ARRAY_STATUS_PTR SQL_DESC_ROWS_PROCESSED_PTR 합니다.|  
 |HY021|일관성 없는 설명자 정보|SQL_DESC_TYPE 및 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 (Apd 또는 ARDs)에 유효한 ODBC SQL 형식 또는 유효한 드라이버별 SQL 형식 (Ipd)에 대 한 유효한 ODBC C 형식을 형성 하지 않습니다.<br /><br /> 일관성 확인을 하는 동안 체크 설명자 정보 일관 되지 않았습니다. ("일관성 확인이"를 참조 하십시오. **SQLSetDescRec**.)|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*ValuePtr* , 문자열 및 *BufferLength* 가 0 보다 작은 SQL_NTS이 아닙니다.<br /><br /> (DM) 드라이버는 ODBC 2는*.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*ValuePtr* , 문자열 및 *BufferLength* 가 0 보다 작은 SQL_NTS이 아닙니다.<br /><br /> (DM) 드라이버는 ODBC 2는 *.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
 |HY091|잘못 된 설명자 필드 식별자입니다.|에 지정 된 값은 *FieldIdentifier* 인수 ODBC 정의 필드 되었으며 구현에서 정의 된 값이 아닙니다.<br /><br /> *FieldIdentifier* 인수에 대해 올바르지 않습니다는 *DescriptorHandle* 인수입니다.<br /><br /> *FieldIdentifier* ODBC 정의 읽기 전용 필드에 인수가 있습니다.|  
 |HY092|잘못 된 특성/옵션 식별자|값  *\*ValuePtr* 에 대해 올바르지 않습니다는 *FieldIdentifier* 인수입니다.<br /><br /> *FieldIdentifier* SQL_DESC_UNNAMED, 되었습니다 및 *ValuePtr* SQL_NAMED 되었습니다.|  
 |HY105|잘못 된 매개 변수 형식|(DM)으로 필드에 대 한 지정 된 값 올바르지 않습니다. (자세한 내용은 참조는 "*InputOutputType* 인수" 섹션 **SQLBindParameter**.)|  
@@ -422,7 +421,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [All]**  
  이 SQLULEN 레코드 필드에는 문자에서는 문자열의 최대 또는 실제 길이 또는 바이트의 이진 데이터 형식입니다. 고정 길이 데이터 형식에 대 한 최대 길이 또는 가변 길이 데이터 형식에 대 한 실제 길이 않습니다. 항상 값 문자열을 종료 하는 null 종료 문자를 제외 합니다. 값의 SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP, 또는 SQL interval 데이터 형식 중 하나는 형식의 경우이 필드의 날짜/시간 또는 간격 값의 문자 문자열 표현의 문자는 길이입니다.  
   
- 이 필드의 값 길이 대 한""로 ODBC 2에 정의 된 값과에서 다를 수 있습니다*.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값 길이 대 한""로 ODBC 2에 정의 된 값과에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  이 읽기 전용 SQLCHAR * 레코드 필드에이 데이터 형식의 리터럴에 접두사로 드라이버에서 인식 하는 문자 (들)입니다. 이 변수는 리터럴 접두사 적용 되지 않는 데이터 형식에 대 한 빈 문자열을 포함 합니다.  
@@ -468,7 +467,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [All]**  
  이 SQLSMALLINT 레코드 필드에 정확한 숫자 형식가 수 (이진 정밀도 이며) 근사치 숫자 형식에에서는 비트 수 또는 자릿수 SQL_TYPE SQL_TYPE_TIME에 대 한 소수 자릿수 초 구성 요소에서 숫자 자릿수 _TIMESTAMP, 또는 SQL_INTERVAL_SECOND 데이터 형식입니다. 이 필드는 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
   
- 이 필드의 값은 "precision"로 ODBC 2에 정의 된에 대 한 값과에서 다를 수 있습니다*.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값은 "precision"로 ODBC 2에 정의 된에 대 한 값과에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  **SQL_DESC_ROWVER [구현 설명자]**  
  이 SQLSMALLINTrecord 필드 (예: SQL Server에서 "timestamp" 유형의 열) 행이 업데이트 될 때 열은 DBMS에 의해 수정 자동으로 여부를 나타냅니다. 그렇지 않은 경우이 레코드 필드의 값은 열이 행 버전 관리 열 이면 SQL_TRUE를 SQL_FALSE를 설정 됩니다. 이 열 특성은 호출과 비슷하지만 **SQLSpecialColumns** IdentifierType의 SQL_ROWVER는 열이 자동으로 업데이트 하는지 여부를 확인 하려면 사용 합니다.  
@@ -476,7 +475,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[All] SQL_DESC_SCALE**  
  이 SQLSMALLINT 레코드 필드 decimal 및 numeric 데이터 형식에 대해 정의 된 소수 자릿수를 포함합니다. 필드가 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
   
- 이 필드의 값은 ODBC 2에 정의 된 대로 "scale"에 대 한 값과에서 다를 수 있습니다*.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값은 ODBC 2에 정의 된 대로 "scale"에 대 한 값과에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  이 읽기 전용 SQLCHAR * 레코드 필드에 열이 포함 된 기본 테이블의 스키마 이름을 포함 합니다. 반환 값 또는 열이 보기의 일부 열이 식 드라이버 종속은 합니다. 데이터 원본에서 스키마를 지원 하지 않거나 스키마 이름을 확인할 수 없거나,이 변수는 빈 문자열을 포함 합니다.  
@@ -484,11 +483,11 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  이 읽기 전용 SQLSMALLINT 레코드 필드는 다음 값 중 하나로 설정 됩니다.  
   
--   열에 사용할 수 없는 경우 SQL_PRED_NONE는 **여기서** 절. (이 ODBC 2에서 SQL_UNSEARCHABLE 값과 같으면*.x*.)  
+-   열에 사용할 수 없는 경우 SQL_PRED_NONE는 **여기서** 절. (이 ODBC 2에서 SQL_UNSEARCHABLE 값과 같으면 *.x*.)  
   
--   SQL_PRED_CHAR 열에 사용할 수 있는 경우는 **여기서** 절만는 **같은** 조건자입니다. (이 ODBC 2에서 SQL_LIKE_ONLY 값과 같으면*.x*.)  
+-   SQL_PRED_CHAR 열에 사용할 수 있는 경우는 **여기서** 절만는 **같은** 조건자입니다. (이 ODBC 2에서 SQL_LIKE_ONLY 값과 같으면 *.x*.)  
   
--   SQL_PRED_BASIC 열에 사용할 수 있는 경우는 **여기서** 절을 제외한 모든 비교 연산자를 **같은**합니다. (이 ODBC 2에서 SQL_EXCEPT_LIKE 값과 같으면*.x*.)  
+-   SQL_PRED_BASIC 열에 사용할 수 있는 경우는 **여기서** 절을 제외한 모든 비교 연산자를 **같은**합니다. (이 ODBC 2에서 SQL_EXCEPT_LIKE 값과 같으면 *.x*.)  
   
 -   열에 사용할 수 있는 경우 SQL_PRED_SEARCHABLE는 **여기서** 모든 비교 연산자와 함께 절.  
   

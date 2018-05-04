@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eee22f6b4845abb0cc9a3afb68b7dc89c87a2c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-glossary"></a>ODBC 용어집
 ## <a name="a"></a>변수를 잠그기 위한  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="b"></a>B  
  **동작 변경**  
- ODBC 3 자에서 특정 기능 변경*.x* 동작을 ODBC 2. *x* 동작 또는 그 반대의 경우도 마찬가지입니다. SQL_ATTR_ODBC_VERSION 환경 특성을 변경할 경우에 발생 합니다.  
+ ODBC 3 자에서 특정 기능 변경 *.x* 동작을 ODBC 2. *x* 동작 또는 그 반대의 경우도 마찬가지입니다. SQL_ATTR_ODBC_VERSION 환경 특성을 변경할 경우에 발생 합니다.  
   
  **이진 대형 개체 (BLOB)**  
  특정 개수의 같은 255 바이트를 통해 모든 이진 데이터입니다. 일반적으로 훨씬 더 오래 걸립니다. 일반적으로 이러한 데이터도 전송 되 고 부분에서 데이터 원본에서 검색 합니다. 라고도 *긴 데이터*합니다.  

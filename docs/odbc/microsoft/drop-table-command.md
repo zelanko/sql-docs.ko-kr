@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd9798d5394f4291b0ff77abba55cb7c780aa4f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b8ce286468012ec778814176db93d9b9efb840e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
 데이터 소스와 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  

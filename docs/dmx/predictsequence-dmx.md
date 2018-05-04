@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b8ef0b3f0ba361e368695b31d15b26cd013ed6e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +46,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
  A \<테이블 식 > 합니다.  
   
 ## <a name="remarks"></a>주의  
- 경우는  *n*  매개 변수가 지정 된, 다음 값을 반환 합니다.  
+ 경우는 *n* 매개 변수가 지정 된, 다음 값을 반환 합니다.  
   
--   경우  *n*  0, 다음의 가장 가능성이 높은 시퀀스 값 보다 크면  *n*  단계입니다.  
+-   경우 *n* 0, 다음의 가장 가능성이 높은 시퀀스 값 보다 크면 *n* 단계입니다.  
   
 -   두 *n 시작* 및 *n 간* 지정 된 시퀀스에서 값 *n 시작* 를 *n 엔드*합니다.  
   
@@ -64,8 +63,8 @@ From
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

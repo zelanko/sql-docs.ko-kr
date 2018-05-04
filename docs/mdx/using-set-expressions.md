@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ba59d13932b4d93f7d4992b8f26b6830ba67b395
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26ebed881d32bb9d550ae9630ee7b60cb15cd153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  집합은 3개의 튜플로 구성됩니다. 각 튜플은 Product 차원의 Product Categories 계층 및 Date 차원의 Calendar 계층에 있는 멤버에 대한 두 개의 명시적 참조를 포함합니다.  
   
- 집합을 반환 하는 함수의 예 참조 [멤버, 튜플 및 집합 &#40; 사용 Mdx&#41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ 집합을 반환 하는 함수의 예 참조 [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
+ [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

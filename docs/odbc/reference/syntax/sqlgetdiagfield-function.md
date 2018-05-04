@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 **규칙**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  드라이버는 진단 데이터 구조에 드라이버별 헤더 및 레코드 필드를 정의할 수 있습니다.  
   
- ODBC 3*.x* 작업 하는 ODBC 2 응용 프로그램*.x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME, 또는 SQL_DIAG_SQLSTATE의 인수입니다. 다른 모든 진단 필드는 SQL_ERROR를 반환 합니다.  
+ ODBC 3 *.x* 작업 하는 ODBC 2 응용 프로그램 *.x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME, 또는 SQL_DIAG_SQLSTATE의 인수입니다. 다른 모든 진단 필드는 SQL_ERROR를 반환 합니다.  
   
 ## <a name="header-fields"></a>헤더 필드  
  다음 표에 나열 된 헤더 필드에 포함 될 수는 *DiagIdentifier* 인수입니다.  
@@ -240,7 +239,7 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
 -   특정 행에 관련 된 모든 레코드에 대 한 레코드가 SQL_DIAG_ROW_NUMBER 필드에 값으로 정렬 됩니다. 모든 오류 및 영향을 받는 첫 번째 행의 경고 나열 되 고 모든 오류 및 경고는 다음의 행이 영향을 받는, 고 까지입니다.  
   
 > [!NOTE]  
->  ODBC 3*.x* 드라이버 관리자 정렬 되지 않은 상태 레코드 진단 큐에 있는 경우 SQLSTATE 01S01 (행에서 오류)는 ODBC 2가 반환한*.x* 드라이버 경우 SQLSTATE 01S01는 ODBC에서 반환 (행에서 오류) 3*.x* 드라이버 때 **SQLExtendedFetch** 라고 또는 **SQLSetPos** 으로 배치 된 하는 커서에 라고 **SQLExtendedFetch** .  
+>  ODBC 3 *.x* 드라이버 관리자 정렬 되지 않은 상태 레코드 진단 큐에 있는 경우 SQLSTATE 01S01 (행에서 오류)는 ODBC 2가 반환한 *.x* 드라이버 경우 SQLSTATE 01S01는 ODBC에서 반환 (행에서 오류) 3 *.x* 드라이버 때 **SQLExtendedFetch** 라고 또는 **SQLSetPos** 으로 배치 된 하는 커서에 라고 **SQLExtendedFetch** .  
   
  각 행 내에서 또는 또는 행에 있는 행 번호 알 수 없는, 해당 하지 않는 모든 레코드에 대 한 SQL_NO_ROW_NUMBER 같은 행 번호를 가진 이러한 모든 레코드를 나열 된 첫 번째 레코드 집합 정렬 규칙을 사용 하 여 결정 됩니다. 첫 번째 레코드를 다음 행에 영향을 주는 다른 레코드의 순서 정의 되지 않습니다. 응용 프로그램 오류 경고를 앞에 첫 번째 레코드 후 가정할 수 없습니다. 응용 프로그램 완전 한 진단 데이터 구조는 함수에 대 한 실패 한 호출에 대 한 전체 정보를 검색 해야 합니다.  
   

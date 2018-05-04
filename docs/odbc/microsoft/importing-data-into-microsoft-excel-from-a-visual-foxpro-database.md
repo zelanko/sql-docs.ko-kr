@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - importing data [ODBC]
 - FoxPro ODBC driver [ODBC], Excel
@@ -23,12 +23,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0fac6cd5b43f83f447f7ad1c8082243f5bc9491f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fa6da8abaca5b3b14c48bc4324a50301d5a36d87
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기
 에 대 한 데이터 원본을 정의 하면 Microsoft Excel 워크시트로 Visual FoxPro 데이터를 가져올 수 있습니다. Visual FoxPro 데이터 원본을 만드는 방법은 참조 [Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스 하](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)합니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6b114c4ebdb2a8e143e7ab30cb7619b93bf5b48a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dde934f923aa200c516132303835c6e6ac0d567
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comment-mdx"></a>주석 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,8 +68,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-double-slash.md)   
- [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [&#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [-& #40; 설명 & #41; & #40; Mdx& #41;](../mdx/comment-mdx-operator-reference.md)   
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

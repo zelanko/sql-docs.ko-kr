@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 880b8a12da960269ff559653880ebf62d01947ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Qtd( [ Member_Expression ] )
 ## <a name="remarks"></a>주의  
  경우 지정 되지 않은 멤버 expressionis, 기본값은 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 *분기* 유형의 첫 번째 차원에 *시간* 측정값 그룹에 있습니다.  
   
- **Qtd** 함수에 대 한 바로 가기 함수는는 [PeriodsToDate &#40; Mdx&#41; ](../mdx/periodstodate-mdx.md) 함수는 수준 식 인수가 설정은 *분기*합니다. 즉, `Qtd(Member_Expression)`은 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`과 동일합니다.  
+ **Qtd** 함수에 대 한 바로 가기 함수는는 [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) 함수는 수준 식 인수가 설정은 *분기*합니다. 즉, `Qtd(Member_Expression)`은 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`과 동일합니다.  
   
 ## <a name="example"></a>예제  
  합계를 반환 하는 다음 예제는 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년 3 분기의 첫 2 개월에 걸쳐 집계는 `Date` 차원에서는 **Adventure Works** 큐브.  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

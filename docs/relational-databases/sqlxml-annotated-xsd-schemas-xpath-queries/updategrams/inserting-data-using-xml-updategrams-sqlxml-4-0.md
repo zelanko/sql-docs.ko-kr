@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -40,13 +39,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f7a3cf98b627804c0f4d683ac9df9eeeaf5956fd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="before-block"></a>\<하기 전에 > 블록  
-  **\<하기 전에 >** 삽입 작업에 대 한 블록을 생략할 수 있습니다. 경우 선택적 **매핑 스키마** 특성을 지정 하지 않으면는  **\<ElementName >** updategram 맵을 데이터베이스 테이블 및 자식 요소에 지정 된 또는 특성이 매핑됩니다 테이블의 열입니다.  
+ **\<하기 전에 >** 삽입 작업에 대 한 블록을 생략할 수 있습니다. 경우 선택적 **매핑 스키마** 특성을 지정 하지 않으면는  **\<ElementName >** updategram 맵을 데이터베이스 테이블 및 자식 요소에 지정 된 또는 특성이 매핑됩니다 테이블의 열입니다.  
   
 ## <a name="after-block"></a>\<후 > 블록  
  하나 이상의 레코드를 지정할 수는  **\<후 >** 블록입니다.  

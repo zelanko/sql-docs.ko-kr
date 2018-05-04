@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1c71b9e9dd0aba9631cfb276baa1f88072a8960
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 92c464cb751bccc4393c219f0312ec8a89691df1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiling-an-embedded-sql-program"></a>포함 된 SQL 프로그램 컴파일
 포함된 된 SQL 프로그램에는 다양 한 SQL 및 호스트 언어 문 포함 된, 호스트 언어에 대 한 컴파일러에 직접 전송할 수 없습니다. 대신 다중 단계 프로세스를 통해 컴파일됩니다. 이 프로세스 다른 제품으로 있지만 단계는 대략 모든 제품에 대해 동일 합니다.  

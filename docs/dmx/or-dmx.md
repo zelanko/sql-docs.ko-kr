@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1ff5d2351d7641c16c739efeea42b126a0c4e1b2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f58bb4e4324d8932f14f5c1e87c021f373abc006
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-dmx"></a>OR(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,8 +63,8 @@ Expression1 OR Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [논리 연산자 &#40; DMX &#41;](../dmx/operators-logical.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [논리 연산자 &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

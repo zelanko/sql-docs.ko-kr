@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 98095d2d8910a9e69d74712b99e1ccc7954826ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6ee1ec5bd94bd310fa4e696b22529cda47863533
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtoset-mdx"></a>StrToSet(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>주의  
  **StrToSet** 함수는 문자열 식에 지정 된 집합을 반환 합니다. **StrToSet** 함수는 대개 다시 MDX 문으로 경우, 또는 MDX 쿼리에 매개 변수가 외부 함수의 집합 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
   
--   CONSTRAINED 플래그를 사용할 경우 집합 사양에는 정규화되거나 정규화되지 않은 멤버 이름이 포함되거나 중괄호 {}로 묶은 정규화되거나 정규화되지 않은 멤버 이름이 들어 있는 튜플 집합이 포함되어야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 다음 오류가 표시 됩니다는 문자열이 직접 확인할 수 없는 정규화 되거나 정규화 되지 않은 멤버 이름이 아닌 경우 이면: "CONSTRAINED 설정한 제한을 STRTOSET 함수에서 플래그 위반 했습니다."  
+-   CONSTRAINED 플래그를 사용 하는 경우 해당 집합 사양 정규화 되거나 정규화 되지 않은 멤버 이름이 나 괄호로 묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 들어 있는 튜플 집합이 포함 되어야 합니다 {}합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 다음 오류가 표시 됩니다는 문자열이 직접 확인할 수 없는 정규화 되거나 정규화 되지 않은 멤버 이름이 아닌 경우 이면: "CONSTRAINED 설정한 제한을 STRTOSET 함수에서 플래그 위반 했습니다."  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정한 집합 사양은 집합을 반환하는 유효한 MDX 식으로 확인될 수 있습니다.  
   
@@ -82,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14dcd7871d43146f2300d54b8b47c9c1377fa773
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: eba8663d07e5ce26a6ffa84991c89677f6e9342c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-property-example-vc"></a>항목 속성 예제 (VC + +)
 이 예제에서는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 합니다. 열고는 ***작성자*** 목차는 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  

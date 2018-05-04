@@ -8,10 +8,9 @@ ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +21,11 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 424c5166984e5ad73041c4d1b8816638240726c9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: c1278cdd2bbccc459bd93e16bfa1556ad95450ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 (SybaseToSQL) 사용 하 고
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례 및 테스트 결과 나중에 사용할 수 있습니다. 리포지토리 데이터는 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 및 **RunTestCaseResultRepository** 스키마에 **ssma_sybase_utilities** 의 **ssmatesterdb_syb** 데이터베이스입니다.  

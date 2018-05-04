@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75d372bcd162fda196333d62acaf68c3d5cd5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +107,7 @@ ms.lasthandoff: 04/16/2018
 >  이 모델에서는 끝 태그에 도달할 때(또는 노드가 범위를 벗어날 때) 레코드가 삽입되므로 레코드와 관련된 모든 데이터를 노드 범위 내에 정의해야 합니다.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>레코드 하위 집합 및 키 순서 지정 규칙  
- 사용 하는 매핑 스키마를 지정 하는 경우  **\<sql: relationship >**, 하위 집합 이라는 용어는 관계의 외래 쪽에서 생성 되는 레코드 집합을 나타냅니다. 다음 예에서는 CustOrder 레코드가 외래 쪽에 지  **\<sql: relationship >**합니다.  
+ 사용 하는 매핑 스키마를 지정 하는 경우  **\<sql: relationship >**, 하위 집합 이라는 용어는 관계의 외래 쪽에서 생성 되는 레코드 집합을 나타냅니다. 다음 예에서는 CustOrder 레코드가 외래 쪽에 지  **\<sql: relationship >** 합니다.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="exceptions-to-the-record-generation-rule"></a>레코드 생성 규칙의 예외  
  노드가 IDREF 또는 IDREFS 형식인 경우 XML 대량 로드는 범위가 시작될 때 노드에 대한 레코드를 생성하지 않습니다. 따라서 스키마의 특정 위치에 레코드의 완전한 설명이 존재해야 합니다. **dt: type = "nmtokens"** IDREFS 형식이 무시 처럼 주석은 무시 됩니다.  
   
- 예를 들어 다음 XSD 스키마를 설명 하는 것이 좋습니다  **\<고객 >** 및  **\<순서 >** 요소입니다.  **\<고객 >** 요소를 포함 한 **OrderList** IDREFS 유형의 특성입니다.  **\<sql: relationship >** 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정 합니다.  
+ 예를 들어 다음 XSD 스키마를 설명 하는 것이 좋습니다  **\<고객 >** 및  **\<순서 >** 요소입니다. **\<고객 >** 요소를 포함 한 **OrderList** IDREFS 유형의 특성입니다. **\<sql: relationship >** 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정 합니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -268,7 +266,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 대량 로드가 IDREFS 형식의 노드를 무시 하므로 레코드가 생성 되지 않습니다 때는 **OrderList** 특성 노드의 범위가 시작 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<순서 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다.  **\<순서 >** 요소는 CustOrder 테이블에 대 한 레코드를 입력 하는 데 필요한 모든 특성을 설명 합니다.  
+ 대량 로드가 IDREFS 형식의 노드를 무시 하므로 레코드가 생성 되지 않습니다 때는 **OrderList** 특성 노드의 범위가 시작 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<순서 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다. **\<순서 >** 요소는 CustOrder 테이블에 대 한 레코드를 입력 하는 데 필요한 모든 특성을 설명 합니다.  
   
  있어야는 **CustomerID** 및 **OrderID** 값에  **\<고객 >** 요소 값과 일치는  **\<순서 >** 요소입니다. 참조 무결성을 유지하는 책임은 사용자에게 있습니다.  
   

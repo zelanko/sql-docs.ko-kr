@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56d4da0d330b83baebffbf28a825bf3c5108c6d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2de08aec6bd4a0bf876775e6d88546e720b6c46
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-data-stream-protocol"></a>표준 데이터 스트림 프로토콜
 표준 데이터 스트림 프로토콜은 한 가지 방법은 데이터 유형이 다른 Dbms에 액세스할 수 있습니다. 사실, 표준 데이터 스트림을 프로토콜은 이미: ANSI/ISO 원격 데이터베이스 액세스 RDA () 표준 ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615))는 IBM DRDA 분산 관계형 데이터베이스 아키텍처 () 및 ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). 두 시스템 프라미스 서 표시, 모두 오늘 구현 광범위 하 게 됩니다.

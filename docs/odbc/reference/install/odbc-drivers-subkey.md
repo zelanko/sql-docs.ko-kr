@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], drivers subkey
 - registry entries for components [ODBC], drivers subkey
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 925e24f295602d7e66fe37935b53724b4d162adf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 17e0a418957aa4413d0fd7d02ebdc0243596d013
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 드라이버의 하위 키
 ODBC 드라이버 하위 키 아래의 값 설치 된 드라이버를 나열합니다. 이러한 값의 서식은 다음 표에 표시 됩니다.  

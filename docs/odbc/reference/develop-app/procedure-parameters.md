@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc40885f18679bdcaa36a40ee2fd27147d97ac6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 46c4c4d42d19acc47154e9ab4c58177a2c783f36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-parameters"></a>프로시저 매개 변수
 프로시저 호출에서 매개 변수 입력 될 수, 입/출력 또는 출력 매개 변수입니다. 이 다른 모든 SQL 문의 입력된 매개 변수가 항상 이며의 매개 변수에서 다릅니다.  

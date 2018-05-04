@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], SQL grammar
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90aba694c610f34d2f6da93a3e5d155cb4fc4ab0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f33ff806f5283be5dd5973a1527664834ecc1411
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 문법과 선택
 첫 번째로 결정 해야 SQL 문을 생성할 때 사용 하는 문법을입니다. Open Group, ANSI 및 ISO를 같은 다양 한 표준 기관에서 사용할 수 있는 문법 외에도 거의 모든 DBMS 공급 업체는 표준에서 조금 다름는 각각 자체 문법을 정의 합니다.  

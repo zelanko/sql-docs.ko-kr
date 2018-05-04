@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,12 +74,12 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*합니다. ] *referencing_entity_name*  
  참조 엔터티의 이름입니다. *schema_name* 은 참조 클래스가 개체인 경우 필요 합니다.  
   
- *schema_name.referencing_entity_name* 은 **nvarchar (517)**합니다.  
+ *schema_name.referencing_entity_name* 은 **nvarchar (517)** 합니다.  
   
  *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  지정된 참조 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referencing_class >* 은 **nvarchar (60)**합니다.  
+ *< referencing_class >* 은 **nvarchar (60)** 합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
 |is_all_columns_found|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체에 대한 모든 열 종속성을 찾을 수 있습니다.<br /><br /> 0 = 개체에 대한 열 종속성을 찾을 수 없습니다.|
 |is_insert_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 (개체 수준만 해당) 열 목록 없이 INSERT 문에 사용 됩니다.|  
-|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] s p 2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br /> 1 = 개체 또는 열 바인딩 오류 개이고 완전 하지 않습니다.|
+|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 개체 또는 열 바인딩 오류 개이고 완전 하지 않습니다.|
   
 ## <a name="exceptions"></a>예외  
  다음과 같은 경우 빈 결과 집합을 반환합니다.  

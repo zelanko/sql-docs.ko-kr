@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0b56bfd04724c8506b5ba0fe7b5fd01a57a02e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c0e8e41468636254288186c5b9f810514c7fdee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>ODBC 문 핸들 해제
 앞서 언급 했 듯이 스키마를 삭제 하는 보다 새로 할당 문을 다시 사용 하려면 더 효율적입니다. 문에서 새 SQL 문을 실행 하기 전에 응용 프로그램에서 현재 문 설정이 적절 한지 있을 수 있습니다. 이러한 설정에는 문 특성, 매개 변수 바인딩 및 결과 집합 바인딩이 포함됩니다. 일반적으로 매개 변수 및 결과 집합에 대 한 이전 SQL 문의 해야 바인딩 해제 될 (호출 하 여 **SQLFreeStmt** SQL_RESET_PARAMS 및 SQL_UNBIND 옵션과 함께) 하 고 새 SQL 문에 대 한 다시 합니다.  

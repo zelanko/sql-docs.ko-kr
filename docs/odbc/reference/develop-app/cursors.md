@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>커서
 사용 하 여 데이터를 인출 하는 응용 프로그램을 *커서*합니다. 커서는 결과 집합에서 다른: 결과 집합은 특정 검색 조건과 일치 하는 행 집합, 응용 프로그램에는 행을 반환 하는 반면 커서는 소프트웨어입니다. 이름을 *커서* 데이터베이스에 적용 될 때 아마도 터미널 컴퓨터에 깜박이 커서가에서 시작 합니다. 해당 커서 화면과 형식화 된 단어가 표시 되는 위치 다음에 현재 위치에 표시 하는 대로만 결과 집합에서 커서에서 결과 집합은 다음 어떤 행이 반환 되 고 현재 위치를 나타냅니다.  

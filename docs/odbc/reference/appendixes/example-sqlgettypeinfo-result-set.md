@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0960798cf388e3968c4a7f093d8187f85116d88
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 113dfa21be16df908280d896638acd30fcd0d0e5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합 예제
 응용 프로그램이 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식 특성에서 지원 되는 데이터 유형을 확인 하려면. 다음 표에서에서 반환 된 결과 집합 예를 보여 줍니다. **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  

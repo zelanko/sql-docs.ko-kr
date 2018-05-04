@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9f7f9a3cdb4faa7946744d9f4b0913ee866e5a04
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 631029611e4541debb625c385a9256b32edbbd5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
 ## <a name="remarks"></a>주의  
  이 함수는 계층별로 정렬된 자식 멤버의 집합을 반환하며, 첫 번째 집합의 지정된 멤버 중 두 번째 집합에도 있는 멤버를 포함시킵니다. 첫 번째 집합에 부모 멤버와 하나 이상의 자식이 포함된 경우 부모 멤버는 드릴다운되지 않습니다. 첫 번째 집합은 어떠한 차원도 될 수 있지만 두 번째 집합은 1차원 집합을 포함해야 합니다. 이때 함수의 결과 집합에 포함되는 모든 자식 멤버가 해당 부모 멤버 바로 아래에 포함된다는 점만 제외하고 첫 번째 집합의 원래 멤버 순서가 유지됩니다. 이 함수는 첫 번째 집합의 멤버 중 두 번째 집합에도 있는 각 멤버에 대해 자식 항목을 검색하여 결과 집합을 구성합니다. 경우 **재귀** 함수를 재귀적으로 계속 되 면 지정 된 결과 대 한 결과의 각 멤버에 대 한 자식을 검색 하는 두 번째 집합은 집합의 멤버 집합을 비교는 두 번째 집합에서 멤버를 결과 집합 더 이상를 찾을 수 있습니다 때까지 두 번째 집합에도 존재 합니다.  
   
- 쿼리는 XMLA 속성인 **MdpropMdxDrillFunctions** 는 서버에서 드릴 함수에 제공 하는 지원 수준을 확인할 수 있습니다; 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 대 한 자세한 내용은 합니다.  
+ 쿼리는 XMLA 속성인 **MdpropMdxDrillFunctions** 는 서버에서 드릴 함수에 제공 하는 지원 수준을 확인할 수 있습니다; 참조 [XMLA 속성 지원 &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)세부 정보에 대 한 합니다.  
   
  첫 번째 집합에는 멤버 대신 튜플이 포함될 수 있습니다. 튜플 드릴다운은 멤버 대신 튜플 집합을 반환하는 OLE DB의 확장 기능입니다.  
   
@@ -95,6 +94,6 @@ SELECT DrilldownMember
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

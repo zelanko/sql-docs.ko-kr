@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d533d6e5e0d62219f144b325b97142039e4eb5bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonempty-mdx"></a>NonEmpty(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  이 함수는 지정된 첫 번째 집합의 튜플 중 두 번째 집합의 튜플에 대해 계산될 때 비어 있지 않은 튜플을 반환합니다. **NonEmpty** 계산 함수는 사용 및 중복 튜플을 유지 합니다. 두 번째 집합이 지정되지 않은 경우 이 식은 큐브의 특성 계층 멤버와 측정값의 현재 좌표 컨텍스트에서 계산됩니다.  
   
 > [!NOTE]  
->  대신이 함수는 사용 되지 않는 사용 하 여 [NonEmptyCrossjoin &#40; Mdx&#41; ](../mdx/nonemptycrossjoin-mdx.md) 함수입니다.  
+>  대신이 함수는 사용 되지 않는 사용 하 여 [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) 함수입니다.  
   
 > [!IMPORTANT]  
 >  비어 있지 않음 특성은 튜플 자체가 아니라 튜플에서 참조하는 셀의 특성입니다.  
@@ -99,10 +98,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [DefaultMember &#40; Mdx&#41;](../mdx/defaultmember-mdx.md)   
- [필터 &#40; Mdx&#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40; Mdx&#41;](../mdx/isempty-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40; Mdx&#41;](../mdx/nonemptycrossjoin-mdx.md)  
+ [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
+ [필터 & #40; Mdx& #41;](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

@@ -29,12 +29,11 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bfc1d85252bc07700e093f992f24a887734612b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |\<열을 @column_list>|**달라 집니다.**|식별 되는 열은 **column_list** sp_cdc_generate_wrapper_function 래퍼를 만드는 스크립트를 생성 하 라고 하는 경우에 인수입니다. 경우 *column_list* 가 null 인 경우 모든 추적 된 원본 열은 결과 집합에 표시 됩니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|행을 대상 환경에 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 작업 인수의 값에 따라 달라 집니다 *row_filter_option* 다음 호출에 제공 되는:<br /><br /> *row_filter_option* 'all', 'all with mask' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업<br /><br /> *row_filter_option* 'all with merge' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'M' - 삭제 작업 또는 업데이트 작업|  
-|\<열을 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그는 null이 아닌 값에는 경우에만 *row_filter_option* **'all with mask' =** 및 \__CDC_OPERATION **= ' u N '**합니다. 쿼리 창 내에서 해당 열이 수정된 경우 이 플래그는 1로 설정됩니다. 그렇지 않으면 0입니다.|  
+|\<열을 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그는 null이 아닌 값에는 경우에만 *row_filter_option* **'all with mask' =** 및 \__CDC_OPERATION **= ' u N '** 합니다. 쿼리 창 내에서 해당 열이 수정된 경우 이 플래그는 1로 설정됩니다. 그렇지 않으면 0입니다.|  
   
 ## <a name="remarks"></a>주의  
  fn_net_changes_<capture_instance> 함수는 cdc.fn_cdc_get_net_changes_<capture_instance> 쿼리 함수의 래퍼 역할을 합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  

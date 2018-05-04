@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,15 +25,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>응용 프로그램의 이전 버전과 호환성에 대 한 매핑 대체 함수
-ODBC 3*.x* ODBC 3를 통해 작업 하는 응용 프로그램*.x* ODBC 2에 대 한 드라이버 관리자가 작동 합니다. *x* 드라이버 있다면 없는 새로운 기능이 사용 됩니다. 그러나 둘 다 중복 기능 및 변경 된 동작 방식에 영향를 수행 하는 ODBC 3. *x* 응용 프로그램이 ODBC 2에서 작동 합니다. *x* 드라이버입니다. ODBC 2 작업할 때는. *x* 드라이버, 드라이버 관리자 매핑합니다 다음 ODBC 3. *x* 는 하나 이상의 ODBC 2를 대체 하는 함수. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  
+ODBC 3 *.x* ODBC 3를 통해 작업 하는 응용 프로그램 *.x* ODBC 2에 대 한 드라이버 관리자가 작동 합니다. *x* 드라이버 있다면 없는 새로운 기능이 사용 됩니다. 그러나 둘 다 중복 기능 및 변경 된 동작 방식에 영향를 수행 하는 ODBC 3. *x* 응용 프로그램이 ODBC 2에서 작동 합니다. *x* 드라이버입니다. ODBC 2 작업할 때는. *x* 드라이버, 드라이버 관리자 매핑합니다 다음 ODBC 3. *x* 는 하나 이상의 ODBC 2를 대체 하는 함수. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  
   
 |ODBC 3입니다. *x* 함수|ODBC 2입니다. *x* 함수|  
 |-------------------------|-------------------------|  
@@ -108,7 +107,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      드라이버 관리자 SQLSTATE HY091 인 sql_error가 반환 (잘못 된 설명자 필드 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
-2.  드라이버 관리자 매핑됩니다 SQL_COLUMN_COUNT, SQL_COLUMN_NAME, 또는 SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME, 또는 SQL_DESC_NULLABLE, 각각. (ODBC 2*.x* 드라이버 필요만 SQL_COLUMN_COUNT, SQL_COLUMN_NAME, 및 SQL_COLUMN_NULLABLE, 하지 SQL_DESC_COUNT, SQL_DESC_NAME, 및 지원 SQL_DESC_NULLABLE.) SQLColAttribute에 대 한 호출에 매핑됩니다.  
+2.  드라이버 관리자 매핑됩니다 SQL_COLUMN_COUNT, SQL_COLUMN_NAME, 또는 SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME, 또는 SQL_DESC_NULLABLE, 각각. (ODBC 2 *.x* 드라이버 필요만 SQL_COLUMN_COUNT, SQL_COLUMN_NAME, 및 SQL_COLUMN_NULLABLE, 하지 SQL_DESC_COUNT, SQL_DESC_NAME, 및 지원 SQL_DESC_NULLABLE.) SQLColAttribute에 대 한 호출에 매핑됩니다.  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -240,7 +239,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      *BufferLength* 및 *StringLengthPtr* 무시 됩니다.  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- 때 ODBC 3. *x* 작업 하는 ODBC 2 응용 프로그램*.x* 드라이버 호출 **SQLGetData** 와 *ColumnNumber* 0 ODBC 3인수*.x* 드라이버 관리자에 대 한 호출에이 매핑합니다 **SQLGetStmtOption** 와 *옵션* 특성이 SQL_GET_BOOKMARK로 설정 합니다.  
+ 때 ODBC 3. *x* 작업 하는 ODBC 2 응용 프로그램 *.x* 드라이버 호출 **SQLGetData** 와 *ColumnNumber* 0 ODBC 3인수 *.x* 드라이버 관리자에 대 한 호출에이 매핑합니다 **SQLGetStmtOption** 와 *옵션* 특성이 SQL_GET_BOOKMARK로 설정 합니다.  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  드라이버 관리자는이를 매핑합니다 **SQLGetStmtOption**합니다. 다음에 대 한 호출 **SQLGetStmtAttr**:  
@@ -410,15 +409,15 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>오류 처리  
  Odbc 3. *x*호출, **SQLFetch** 또는 **SQLFetchScroll** SQL_DESC_ARRAY_STATUS_PTR IRD 및 지정된 된 진단 레코드의 SQL_DIAG_ROW_NUMBER 필드를 채웁니다. 이 레코드에 관련 된 행 집합의 행 수가 포함 됩니다. 이 사용 하 여, 응용 프로그램 간에 상관 관계 수 오류 메시지가 특정된 행 위치와 합니다.  
   
- ODBC 2입니다. *x* 드라이버가이 기능을 제공할 수 없습니다. 그러나 SQLSTATE 01S01와 오류 경계를 제공 합니다 (행에서 오류). ODBC 3입니다. *x* 사용 중인 응용 프로그램이 **SQLFetch** 또는 **SQLFetchScroll** ODBC 2에 대 한 이동 하는 동안. *x* 드라이버가 이러한 사실을 알고 있어야 합니다. 이러한 응용 프로그램을 호출할 수 없게 됩니다는 또한 참고 **SQLGetDiagField** 가져올 실제로 요 SQL_DIAG_ROW_NUMBER 필드에 있습니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE, 또는 SQL_DIAG_의 인수 SQLSTATE입니다. ODBC 3*.x* 드라이버 관리자는 ODBC 2 작업할 때 진단 데이터 구조를 유지 합니다. *x* 드라이버, 있지만 ODBC 2. *x* 드라이버는 이러한 4 개의 필드에만 반환 합니다.  
+ ODBC 2입니다. *x* 드라이버가이 기능을 제공할 수 없습니다. 그러나 SQLSTATE 01S01와 오류 경계를 제공 합니다 (행에서 오류). ODBC 3입니다. *x* 사용 중인 응용 프로그램이 **SQLFetch** 또는 **SQLFetchScroll** ODBC 2에 대 한 이동 하는 동안. *x* 드라이버가 이러한 사실을 알고 있어야 합니다. 이러한 응용 프로그램을 호출할 수 없게 됩니다는 또한 참고 **SQLGetDiagField** 가져올 실제로 요 SQL_DIAG_ROW_NUMBER 필드에 있습니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE, 또는 SQL_DIAG_의 인수 SQLSTATE입니다. ODBC 3 *.x* 드라이버 관리자는 ODBC 2 작업할 때 진단 데이터 구조를 유지 합니다. *x* 드라이버, 있지만 ODBC 2. *x* 드라이버는 이러한 4 개의 필드에만 반환 합니다.  
   
- 경우는 ODBC 2. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 작업에는 드라이버 관리자에 의해 반환 될 여러 오류가 발생할 수 있습니다 하는 경우 서로 다른 오류 반환 되는 ODBC 3*.x* 드라이버 관리자가 ODBC 2. *x* 드라이버 관리자입니다.  
+ 경우는 ODBC 2. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 작업에는 드라이버 관리자에 의해 반환 될 여러 오류가 발생할 수 있습니다 하는 경우 서로 다른 오류 반환 되는 ODBC 3 *.x* 드라이버 관리자가 ODBC 2. *x* 드라이버 관리자입니다.  
   
 ## <a name="mappings-for-bookmark-operations"></a>책갈피 작업에 대 한 매핑  
- ODBC 3*.x* 드라이버 관리자는 때 ODBC 3 다음 매핑을 수행 합니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 책갈피 작업을 수행 합니다.  
+ ODBC 3 *.x* 드라이버 관리자는 때 ODBC 3 다음 매핑을 수행 합니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 책갈피 작업을 수행 합니다.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLBindCol** 0 열로 바인딩할 *fCType* SQL_C_VARBOOKMARK, ODBC 3 같음*.x* 확인 하는 드라이버 관리자 여부는 *BufferLength* 인수 보다 작거나 4 보다 크거나 4, 이며이 경우 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). 경우는 *BufferLength* 인수는 4, 드라이버 관리자를 호출 **SQLBindCol** 바꾼 후 드라이버에서 *fCType* SQL_C_BOOKMARK 사용 합니다.  
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLBindCol** 0 열로 바인딩할 *fCType* SQL_C_VARBOOKMARK, ODBC 3 같음 *.x* 확인 하는 드라이버 관리자 여부는 *BufferLength* 인수 보다 작거나 4 보다 크거나 4, 이며이 경우 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). 경우는 *BufferLength* 인수는 4, 드라이버 관리자를 호출 **SQLBindCol** 바꾼 후 드라이버에서 *fCType* SQL_C_BOOKMARK 사용 합니다.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLColAttribute** 와 *ColumnNumber* 드라이버 관리자 반환 인수를 0으로 설정 된 *FieldIdentifier* 값 다음 표에 나열 합니다.  

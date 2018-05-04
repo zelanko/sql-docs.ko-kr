@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b52fcef9fd7d1ee4e0aa7ceb207f548a1186fd2b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d45c918f5e7c788956e860a2a9068fabc10ce0eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>특성 및 이름 속성 예 (VC + +)
 값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 및 **속성** 개체입니다.  

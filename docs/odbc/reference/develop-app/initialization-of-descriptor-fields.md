@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - initializing descriptor fields [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f982613a92246c96b4980997026e09d8f30e7cf4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1875f69e3ba26a331b5042ebcdaaa803559f772a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initialization-of-descriptor-fields"></a>설명자 필드의 초기화
 응용 프로그램 행 설명자를 할당할 때 해당 필드에 표시 된 대로 초기 값을 수신 하는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다. SQL_DESC_TYPE 필드의 초기 값은 SQL_DEFAULT 합니다. 이 응용 프로그램에 표시 하기 위해 데이터베이스 데이터의 표준 처리를 제공합니다. 응용 프로그램 설명자 레코드의 필드를 설정 하 여 데이터의 서로 다른 처리를 지정할 수 있습니다.  

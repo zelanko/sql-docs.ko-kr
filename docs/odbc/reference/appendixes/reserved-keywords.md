@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb908b1fe38e0bd193a17ac66c753d4057fed4a7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f62e74939ab7be81696f90b39af85239332a88c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords"></a>예약 키워드
 다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어; 최소 SQL 문법을 강요 하지 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하려면 이러한 키워드를 사용 하 여를 하지 않아야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  

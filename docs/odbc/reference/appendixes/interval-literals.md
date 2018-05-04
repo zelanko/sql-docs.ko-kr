@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f119398650dc537ce553268c99ed34b0788b6601
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 976a56ea43eb5cb0f6161cc4c3cd4b7e735061ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-literals"></a>간격 리터럴
 ODBC는 모든 드라이버 SQL_CHAR 또는 SQL_VARCHAR 데이터 형식의 모든 C interval 데이터 형식 변환할 지 필요 합니다. 그러나 데이터 원본에는 interval 데이터 형식을 지원 하지 않으면, 드라이버 알아야 SQL_CHAR 필드의 값이 올바른 형식의 하려면 이러한 변환을 지원 합니다. 마찬가지로, ODBC 드라이버를 어떤 형식 문자 필드에 저장 된 간격을 알고 있어야 하므로 유형 SQL_CHAR 또는 SQL_VARCHAR, 변환할 수 있는 모든 ODBC C 있어야 필요 합니다. 이 섹션에는 드라이버 기록기로 SQL_CHAR 필드 또는 C interval 데이터 형식에서 변환 하는 동안 유효성을 검사 하는 간격 리터럴 구문을 설명 합니다.  

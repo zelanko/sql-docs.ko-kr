@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4562fd7fdc9d034a0170ccb444f3b0cf05e8f87c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_create_removable
  시스템 카탈로그 테이블을 포함하는 파일의 논리적 이름입니다. *syslogical* 은 **sysname**합니다.  
   
  [ **@sysphysical=** ] **'***sysphysical***'**  
- 물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 은 **nvarchar (260)**합니다.  
+ 물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 은 **nvarchar (260)** 합니다.  
   
  [  **@syssize=** ] *syssize*  
  시스템 카탈로그 테이블을 보유하고 있는 파일의 크기(MB)입니다. *syssize* 은 **int**합니다. 최소 *syssize* 는 1입니다.  
@@ -78,7 +77,7 @@ sp_create_removable
  트랜잭션 로그가 있는 파일의 논리적 이름입니다. *loglogical* 은 **sysname**합니다.  
   
  [  **@logphysical=** ] **'***logphysical***'**  
- 물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 은 **nvarchar (260)**합니다.  
+ 물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 은 **nvarchar (260)** 합니다.  
   
  [  **@logsize=** ] *logsize*  
  트랜잭션 로그가 있는 파일의 크기(MB)입니다. *logsize* 은 **int**합니다. 최소 *logsize* 는 1입니다.  
@@ -89,7 +88,7 @@ sp_create_removable
  1개에서 16개까지의 데이터 파일이 있어야 합니다. 일반적으로 데이터베이스가 대형일 것으로 예상되며 여러 디스크에 배포되어야 할 때 두 개 이상의 데이터 파일이 작성됩니다.  
   
  [  **@dataphysical1=** ] **'***dataphysical***'**  
- 물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 은 **nvarchar (260)**합니다.  
+ 물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 은 **nvarchar (260)** 합니다.  
   
  [  **@datasize1=** ] **'***datasize***'**  
  데이터 테이블이 있는 파일의 크기(MB)입니다. *datasize* 은 **int**합니다. 최소 *datasize* 는 1입니다.  

@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>인수  
  [ @table_name=] '*table_name*'  
- 카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 은 **nvarchar (**384**)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
+ 카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 은 **nvarchar (** 384 **)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
   
  [ @table_owner=] '*table_owner*'  
- 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner*은 **nvarchar (**384**)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
+ 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner*은 **nvarchar (** 384 **)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
   
  현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자가 지정 된 테이블을 소유 하지 *이름*,이 프로시저는 지정 된 테이블에 대 한 찾습니다 *table_name* 소유한는 데이터베이스 소유자입니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   

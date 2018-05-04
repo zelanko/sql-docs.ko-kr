@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
@@ -20,15 +20,14 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f33f43451d88d69e47f5f647fa2b5e10eb89a9db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5a34db1972437578b2f38e9c42ecec8afcbb9d69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 매핑
-응용 프로그램 호출 하는 경우 **SQLSetScrollOptions** ODBC 3*.x* 드라이버 및 드라이버를 지원 하지 않습니다 **SQLSetScrollOptions**에 대 한 호출  
+응용 프로그램 호출 하는 경우 **SQLSetScrollOptions** ODBC 3 *.x* 드라이버 및 드라이버를 지원 하지 않습니다 **SQLSetScrollOptions**에 대 한 호출  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -106,4 +105,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      와  *\*ValuePtr* 로 설정 된 *RowsetSize* 인수 **SQLSetScrollOptions**합니다.  
   
     > [!NOTE]  
-    >  드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한*.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.
+    >  드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한 *.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.

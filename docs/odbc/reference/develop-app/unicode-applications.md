@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], compiling as Unicode application
 - Unicode [ODBC], functions
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce235380abcbc2d793f1d5ce0e9e487eca904fdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1749c6d2e2127af4ff32e97723604dfca82a1c3e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-applications"></a>유니코드 응용 프로그램
 두 가지 방법 중 하나에서 유니코드 응용 프로그램으로 응용 프로그램을 다시 컴파일할 수 있습니다.  

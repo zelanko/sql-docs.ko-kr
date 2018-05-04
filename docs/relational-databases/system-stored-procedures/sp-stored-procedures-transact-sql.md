@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efbb8829890dda1895237dde5bb65b5a4b3ab40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   현재 데이터베이스의 **dbo** 스키마  
   
  [  **@qualifier =** ] **'***한정자***'**  
- 프로시저 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블 형식에 대 한 세 부분으로 구성 된 이름 (*한정자***.*** 스키마***.*** 이름*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 프로시저 한정자의 이름입니다. *한정자* 은 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블 형식에 대 한 세 부분으로 구성 된 이름 (*한정자 ***.*** 스키마 ***.*** 이름*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  밑줄(_), 백분율(%), 대괄호([ ])가 와일드카드 문자로 인식되는지 여부를 결정합니다. *fUsePattern* 은 **비트**, 기본값은 1입니다.  

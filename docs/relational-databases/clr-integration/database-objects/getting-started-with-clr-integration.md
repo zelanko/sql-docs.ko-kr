@@ -31,12 +31,11 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c66ea7d5067752cf6929f0b2a8e238dd6a0dc65
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 457736ddac8d3b5a55e899ca915ef699417d7525
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 통합으로 작업 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ End Class
   
 ```  
   
- 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 새로운 클래스 두 개 사용 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 및  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**관리 되는 만들기, 데이터베이스 개체를 단순 텍스트로 출력 메시지. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
+ 이 간단한 프로그램에는 공용 클래스에 대한 정적 메서드 하나가 포함되어 있습니다. 이 메서드는 새로운 클래스 두 개 사용 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 및  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** 관리 되는 만들기, 데이터베이스 개체를 단순 텍스트로 출력 메시지. 또한 이 메서드는 "Hello world!"라는 문자열을 out 매개 변수 값으로 할당합니다. 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저로 선언한 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 같은 방식으로 실행할 수 있습니다.  
   
  이 프로그램을 라이브러리로 컴파일에 로드할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 저장 프로시저 실행 합니다.  
   

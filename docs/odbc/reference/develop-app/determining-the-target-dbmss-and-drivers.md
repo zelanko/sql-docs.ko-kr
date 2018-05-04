@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 904383158c521cad2e29889020d35bf2374ad517
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f275e344b49f62f1ecc55430c603c0f31f333aa6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>대상 Dbms 및 드라이버를 확인합니다.
 다음 질문을 고려해 야 응용 프로그램에 대 한 대상 Dbms 이란 이며, 이러한 Dbms를 지 원하는 어떤 드라이버를 사용할 수 있습니까? 때문에 일반 응용 프로그램 상호 운용 가능성이 높은 수, 대상 Dbms의 질문은 사용자 지정 및 세로 응용 프로그램에 가장 적합 합니다. 그러나 대상 드라이버 질문 드라이버 속도, 품질, 기능 지원 및 가용성에 있어 매우 다양 하기 때문에 모든 응용 프로그램에 적용 됩니다. 또한 드라이버 응용 프로그램과 함께 재배포할 수 있는지, 비용 및 라이선스 계획의 가용성을 고려해 야 할 합니다.  

@@ -25,13 +25,12 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bbfeb2ec7f2517f34d0d0c204aeab7c33e8209f7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 44b2ec56a6d5ac8bddd56dd0f86bf887ae21e87b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="domainconstraints-transact-sql"></a>DOMAIN_CONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|규칙이 존재하는 데이터베이스입니다.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|규칙이 존재하는 데이터베이스입니다.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|제약 조건이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**제약 조건 이름**|**sysname**|규칙 이름입니다.|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|별칭 데이터 형식이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  데이터 형식의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|별칭 데이터 형식이 포함된 스키마의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  데이터 형식의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
 |**DOMAIN_NAME**|**sysname**|별칭 데이터 형식입니다.|  
-|**IS_DEFERRABLE**|**varchar (**2**)**|제약 조건 검사를 연기할 수 있는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
-|**INITIALLY_DEFERRED**|**varchar (**2**)**|제약 조건 검사가 처음에 연기되는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
+|**IS_DEFERRABLE**|**varchar (** 2 **)**|제약 조건 검사를 연기할 수 있는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
+|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|제약 조건 검사가 처음에 연기되는지 여부를 지정합니다. 항상 NO를 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 뷰 &#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

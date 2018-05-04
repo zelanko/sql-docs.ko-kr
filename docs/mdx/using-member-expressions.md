@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bc1574fc06eeaa032fb68d395106721fc33ec699
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3e4fb83517c88df521780d86428825c204479df9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-member-expressions"></a>멤버 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   멤버 식은 멤버 식별자, 멤버 함수 또는 멤버로 변환될 수 있는 식을 포함합니다.  
   
- 멤버 식별자의 형식은 여러 가지일 수 있습니다. 가장 간단한 형식의 멤버 식별자는 멤버 이름으로 구성됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 멤버 식별자의 형식은 여러 가지일 수 있습니다. 가장 간단한 형식의 멤버 식별자는 멤버 이름으로 구성됩니다. 예를 들어:  
   
 ```  
 SELECT Amount ON 0  
@@ -69,12 +68,12 @@ Dimension_Name
   
 ```  
   
- 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록을 보려면 참조 [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록을 보려면 참조 [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  멤버 이름과 멤버 키에 대 한 자세한 내용은 참조 [멤버, 튜플 및 집합 &#40; 사용 Mdx&#41; ](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  멤버 이름과 멤버 키에 대 한 자세한 내용은 참조 [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
+ [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

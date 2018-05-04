@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result-generating statements [ODBC]
 - batches [ODBC], result-generating statements
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 373d1b2c3d850fd46352ca4dcbbd59a482b84ca2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1cc68c7ca0528d2a8af2af5d33d92fb8bf92c64f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="result-generating-and-result-free-statements"></a>결과 생성 하 고 결과 필요 없는 문
 SQL 문은 다음과 같은 5 개의 범주로 느슨하게 나눌 수 있습니다.  

@@ -25,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ff52edbfae39e7937ba43a32831eb5d03d80da31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +54,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>인수  
  *from_lsn*  
- 결과 집합에 포함할 LSN 범위의 하위 끝점을 나타내는 LSN 값입니다. *from_lsn* 은 **binary (10)**합니다.  
+ 결과 집합에 포함할 LSN 범위의 하위 끝점을 나타내는 LSN 값입니다. *from_lsn* 은 **binary (10)** 합니다.  
   
  행만 [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 변경 테이블의 값이 있는 **__ $start_lsn** 보다 크거나 *from_lsn* 결과 집합에 포함 됩니다.  
   
  *to_lsn*  
- 결과 집합에 포함할 LSN 범위의 상위 끝점을 나타내는 LSN 값입니다. *to_lsn* 은 **binary (10)**합니다.  
+ 결과 집합에 포함할 LSN 범위의 상위 끝점을 나타내는 LSN 값입니다. *to_lsn* 은 **binary (10)** 합니다.  
   
  행만 [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) 변경 테이블의 값이 있는 **__ $start_lsn** 보다 작거나 *from_lsn* 같음 *to_lsn* 포함 결과 집합입니다.  
   

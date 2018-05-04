@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 함수
 **규칙**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  에 대 한 모든 호출 **SQLGetInfo** 경우를 제외 하 고 연결을 열어야는 *정보 항목* SQL_ODBC_VER 드라이버 관리자의 버전을 반환 하는 합니다.  
   
 ## <a name="information-types"></a>정보 유형  
- 이 섹션에서는 지원 되는 정보 유형과 **SQLGetInfo**합니다. 정보 유형이 해커나 그룹화 되 고 사전순으로 나열 됩니다. ODBC 3에 대 한 이름이 변경 되거나 추가 된 정보 유형이*.x* 도 나열 됩니다.  
+ 이 섹션에서는 지원 되는 정보 유형과 **SQLGetInfo**합니다. 정보 유형이 해커나 그룹화 되 고 사전순으로 나열 됩니다. ODBC 3에 대 한 이름이 변경 되거나 추가 된 정보 유형이 *.x* 도 나열 됩니다.  
   
 ## <a name="driver-information"></a>드라이버 정보  
  다음 값은 *정보 항목* 인수 활성 문, 데이터 원본 이름 및 인터페이스 표준 준수 수준 수와 같은 ODBC 드라이버에 대 한 정보를 반환 합니다.  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>ODBC에 대 한 추가 정보 유형이 3.x  
- 다음 값은 *정보 항목* ODBC 3에 대 한 인수를 추가한*.x*:  
+ 다음 값은 *정보 항목* ODBC 3에 대 한 인수를 추가한 *.x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>ODBC에 대 한 이름을 변경 하는 정보 유형이 3.x  
- 다음 값은 *정보 항목* ODBC 3에 대 한 인수 이름이 바뀐*.x*합니다.  
+ 다음 값은 *정보 항목* ODBC 3에 대 한 인수 이름이 바뀐 *.x*합니다.  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>ODBC에서 지원 되지 않는 정보 유형이 3.x  
- 다음 값은 *정보 항목* ODBC 3에서 인수 사용이 중단 된*.x*합니다. ODBC 3*.x* 드라이버는 ODBC 2 이전 버전과 호환성에 대 한 이러한 정보 형식을 지원 하기 위해 계속 해야*.x* 응용 프로그램입니다. (이러한 형식에 대 한 자세한 내용은 참조 [SQLGetInfo 지원](../../../odbc/reference/appendixes/sqlgetinfo-support.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에서.)  
+ 다음 값은 *정보 항목* ODBC 3에서 인수 사용이 중단 된 *.x*합니다. ODBC 3 *.x* 드라이버는 ODBC 2 이전 버전과 호환성에 대 한 이러한 정보 형식을 지원 하기 위해 계속 해야 *.x* 응용 프로그램입니다. (이러한 형식에 대 한 자세한 내용은 참조 [SQLGetInfo 지원](../../../odbc/reference/appendixes/sqlgetinfo-support.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에서.)  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  데이터 원본 "데이터베이스" 라는 명명된 된 개체를 정의 하는 경우 사용 중인 현재 데이터베이스의 이름을 문자 문자열입니다.  
   
 > [!NOTE]  
->  ODBC 3에서*.x*,이 대 한 값이 반환 *정보 항목* 호출 하 여 반환 될 수 있습니다 **SQLGetConnectAttr** 와 *특성* SQL_ATTR_CURRENT_CATALOG의 인수입니다.  
+>  ODBC 3에서 *.x*,이 대 한 값이 반환 *정보 항목* 호출 하 여 반환 될 수 있습니다 **SQLGetConnectAttr** 와 *특성* SQL_ATTR_CURRENT_CATALOG의 인수입니다.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  데이터 원본에서 지 원하는 SQL 92 datetime 리터럴은 열거 SQLUINTEGER 비트 마스크입니다. Sql-92 사양에 나열 된 날짜/시간 리터럴 하 고 하는 별개임 ODBC에 정의 된 날짜/시간 리터럴의 이스케이프 절을 참고 합니다. ODBC 날짜/시간 리터럴의 이스케이프 절에 대 한 자세한 내용은 참조 [Date, Time 및 Timestamp 리터럴](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)합니다.  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ACOS SQL_FN_NUM_ASIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ATAN SQL_FN_NUM_ATAN2 (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_CEILING SQL_FN_NUM_COS (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_COT SQL_ SQL_FN_NUM_DEGREES (ODBC 2.0) FN_NUM_EXP (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_FLOOR SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) (ODBC 1.0) SQL_FN_NUM_MOD SQL_FN_NUM_PI (ODBC 1.0) (ODBC 2.0) SQL_FN_NUM_RADIANS SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_ SQL_FN_NUM_POWER (ODBC 2.0) NUM_ROUND (ODBC 2.0) (ODBC 1.0) SQL_FN_NUM_SIGN SQL_FN_NUM_SIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_SQRT SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- ODBC 3의 수준을 표시 하는 SQLUINTEGER 값*.x* 드라이버 준수 하는 인터페이스입니다.  
+ ODBC 3의 수준을 표시 하는 SQLUINTEGER 값 *.x* 드라이버 준수 하는 인터페이스입니다.  
   
  SQL_OIC_CORE: 준수 하도록 최소한 일부 ODBC 드라이버는 필요 합니다. 이 수준은 연결 함수, 준비 하 고 SQL 문 실행에 대 한 함수, 기본 결과 집합 메타 데이터 함수, 기본 카탈로그 함수 등의 기본 인터페이스 요소를 포함 합니다.  
   

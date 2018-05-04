@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, ALTER TABLE statement limitations
 - ALTER TABLE statement limitations [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06af545611da90d51ad0fc82136a4cb1ecc3984c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9ccff64afd3a4df26b813bb30a84322d50519bd2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER 테이블 문 제한 사항
 DBASE 또는 Paradox 드라이버는 사용 경우 만든 후에 인덱스에 새 레코드가 추가 인덱스를 삭제 하 고 테이블의 내용이 삭제 하지 않으면 ALTER TABLE 문에서 테이블의 구조를 변경할 수 없습니다.  

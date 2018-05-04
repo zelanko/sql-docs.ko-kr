@@ -21,12 +21,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e591f000488220b9d1db784c39b82a991837401d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fff3b831a076ad4c6d2dfb5f2cdeb134bd3341cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-stored-procedures-mdx"></a>저장 프로시저 사용(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,6 +53,6 @@ WHERE [Measures].[Reseller Freight Cost]
 >  Microsoft VBA(Visual Basic for Applications) COM 어셈블리는 자동으로 등록됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [함수 &#40; MDX 구문 &#41;](../mdx/functions-mdx-syntax.md)  
+ [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)  
   
   

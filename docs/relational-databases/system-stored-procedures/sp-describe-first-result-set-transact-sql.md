@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: acb21fb540012216aec4477193cf836bb7c19153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,10 +49,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>인수  
  [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)** 합니다.  
   
  [  **@params =** ] **N'***매개 변수***'**  
- @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게를 합니다. 매개 변수가 필요할 수 **nvarchar (n)** 또는 **nvarchar (max)**합니다.  
+ @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게를 합니다. 매개 변수가 필요할 수 **nvarchar (n)** 또는 **nvarchar (max)** 합니다.  
   
  하나의 문자열에 포함 된 모든 매개 변수 정의 포함 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 @params합니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리, 매개 변수가 없으면 @params 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
@@ -80,7 +79,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**비트 NOT NULL**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
 |**system_type_id**|**int NOT NULL**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256) NULL**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**NULL이 아닌 Smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 또는 **xml**합니다.<br /><br /> 에 대 한 **텍스트** 열은 **max_length** 값은 16 또는 값 설정 됩니다 **sp_tableoption 'text in row'**합니다.|  
+|**max_length**|**NULL이 아닌 Smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 또는 **xml**합니다.<br /><br /> 에 대 한 **텍스트** 열은 **max_length** 값은 16 또는 값 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**소수 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname NULL**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  

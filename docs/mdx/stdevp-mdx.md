@@ -22,17 +22,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 697f1da527f797a203a8536c80894ba8bffe5dec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 617cd92b6728aa19fbb6599f71fab5374a331857
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdevp-mdx"></a>StdevP(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  편향된 모집단 수식을 사용 하 여 집합에 대해 계산 된 숫자 식의 모집단 표준 편차를 반환 합니다 (으로 나누는  *n* ).  
+  편향된 모집단 수식을 사용 하 여 집합에 대해 계산 된 숫자 식의 모집단 표준 편차를 반환 합니다 (으로 나누는 *n*).  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,6 +65,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

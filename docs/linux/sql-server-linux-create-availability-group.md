@@ -13,12 +13,11 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: On Demand
-ms.openlocfilehash: f02ec690caec1c33b4a316707c0011c8be032580
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 7e02a70e9f8542f11dbd08d8aca8afe9c7b29a46
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들기 및 Linux에서 SQL Server에 대 한 가용성 그룹 구성
 

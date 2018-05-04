@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52afd45e6458db3cc39dc62d882c7d741d76fc7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,24 +66,24 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  업데이트할 작업의 ID입니다. *job_id*은 **uniqueidentifier**합니다.  
   
  [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name*은 **nvarchar (128)**합니다.  
+ 작업의 이름입니다. *job_name*은 **nvarchar (128)** 합니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@new_name =**] **'***new_name***'**  
- 작업의 새 이름입니다. *new_name*은 **nvarchar (128)**합니다.  
+ 작업의 새 이름입니다. *new_name*은 **nvarchar (128)** 합니다.  
   
  [ **@enabled =**] *enabled*  
  작업이 사용 되는지 여부를 지정 합니다 (**1**) 또는 사용 안 함 (**0**). *활성화*은 **tinyint**합니다.  
   
  [ **@description =**] **'***description***'**  
- 작업에 대한 설명입니다. *설명* 은 **nvarchar (512)**합니다.  
+ 작업에 대한 설명입니다. *설명* 은 **nvarchar (512)** 합니다.  
   
  [ **@start_step_id =**] *step_id*  
  작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*은 **int**합니다.  
   
  [ **@category_name =**] **'***category***'**  
- 작업 범주입니다. *범주*은 **nvarchar (128)**합니다.  
+ 작업 범주입니다. *범주*은 **nvarchar (128)** 합니다.  
   
  [ **@owner_login_name =**] **'***login***'**  
  작업을 소유하는 로그인의 이름입니다. *로그인*은 **nvarchar (128)** 의 구성원만는 **sysadmin** 고정된 서버 역할 작업 소유권을 변경할 수 있습니다.  
@@ -109,13 +108,13 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  해당 작업이 완료될 때 페이지를 보낼 시기를 지정합니다. *page_level*은 **int**합니다. *page_level*같은 값을 사용 하 여 *eventlog_level*합니다.  
   
  [ **@notify_email_operator_name =**] **'***operator_name***'**  
- 에 전자 메일을 받을 때 운영자의 이름 *email_level* 에 도달 합니다. *email_name* 은 **nvarchar (128)**합니다.  
+ 에 전자 메일을 받을 때 운영자의 이름 *email_level* 에 도달 합니다. *email_name* 은 **nvarchar (128)** 합니다.  
   
  [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- 네트워크 메시지를 받을 운영자의 이름입니다. *netsend_operator* 은 **nvarchar (128)**합니다.  
+ 네트워크 메시지를 받을 운영자의 이름입니다. *netsend_operator* 은 **nvarchar (128)** 합니다.  
   
  [ **@notify_page_operator_name =**] **'***page_operator***'**  
- 페이지를 받을 운영자의 이름입니다. *page_operator* 은 **nvarchar (128)**합니다.  
+ 페이지를 받을 운영자의 이름입니다. *page_operator* 은 **nvarchar (128)** 합니다.  
   
  [ **@delete_level =**] *delete_level*  
  작업 삭제 시기를 지정합니다. *delete_value*은 **int**합니다. *delete_level*같은 값을 사용 하 여 *eventlog_level*합니다.  

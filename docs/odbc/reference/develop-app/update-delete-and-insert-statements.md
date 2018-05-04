@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
 - DELETE [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b590f45a6cb7bb3e80b5b52835bd7fd65ba27af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59e98d80962a059f885bd82ed8be465415a55774
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  

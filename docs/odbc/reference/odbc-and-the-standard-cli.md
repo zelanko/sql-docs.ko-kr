@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
 - CLI [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef863329a0f0c8a7c7b8aaef6f55717fbbc1f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d1b9654979f7c71ce1b3c8d238e62e056e75264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 및 표준 CLI
 ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (이러한 표준의 각각의 상위 집합 ODBC 기능에는 있습니다.)  
@@ -41,7 +40,7 @@ ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로
   
 -   ODBC 3은 Open Group 및 ISO CLI 사양에 작성 된 응용 프로그램 작동 합니다. *x* 드라이버 또는 ODBC 3로 컴파일할 때 표준 규격 드라이버입니다. *x* 헤더 파일 및 연결 된 ODBC 3. *x* 라이브러리가 ODBC 3를 통해 드라이버에 액세스할 때 및. *x* 드라이버 관리자입니다.  
   
--   Open Group 및 ISO CLI 사양을 작성 된 드라이버는 ODBC 3 작동할지*.x* 응용 프로그램 또는 ODBC 3로 컴파일할 때 표준 호환 응용 프로그램*.x* 헤더 파일 및 연결 ODBC 3*.x* 라이브러리, 응용 프로그램에서 ODBC 3를 통해 드라이버에 대 한 액세스를 획득 하는 경우 및*.x* 드라이버 관리자입니다. (자세한 내용은 참조 [표준 호환 응용 프로그램 및 드라이버](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)합니다.  
+-   Open Group 및 ISO CLI 사양을 작성 된 드라이버는 ODBC 3 작동할지 *.x* 응용 프로그램 또는 ODBC 3로 컴파일할 때 표준 호환 응용 프로그램 *.x* 헤더 파일 및 연결 ODBC 3 *.x* 라이브러리, 응용 프로그램에서 ODBC 3를 통해 드라이버에 대 한 액세스를 획득 하는 경우 및 *.x* 드라이버 관리자입니다. (자세한 내용은 참조 [표준 호환 응용 프로그램 및 드라이버](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)합니다.  
   
  핵심 인터페이스 규칙 수준 ISO CLI의 모든 기능 및 모든 nonoptional 기능 Open 그룹 CLI에 포함 됩니다. Open 그룹 CLI의 선택적 기능이 더 높은 인터페이스 받는 규칙 수준에 나타납니다. 때문에 모든 ODBC 3. *x* true, 드라이버는 핵심 인터페이스 규칙 수준에서 기능을 지 원하는 데 필요 합니다.  
   

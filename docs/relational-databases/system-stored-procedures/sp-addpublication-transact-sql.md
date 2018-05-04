@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,9 +105,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Description|  
 |-----------|-----------------|  
-|**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
 |**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대 한* **문자** *은 스냅숏 복제에만 유효*합니다.|  
-|**동시**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅숏을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**동시**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅숏을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
 |**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성하지만 스냅숏을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다.|  
 |**데이터베이스 스냅숏**|데이터베이스 스냅숏에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
 |**데이터베이스 스냅숏 문자**|데이터베이스 스냅숏에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
@@ -133,7 +132,7 @@ sp_addpublication [ @publication = ] 'publication'
 |**활성**|구독자가 게시 데이터를 즉시 사용할 수 있습니다.|  
 |**비활성** (기본값)|게시가 처음 작성될 때 구독자가 게시 데이터를 사용할 수 없습니다. 구독할 수는 있으나 구독이 처리되지 않습니다.|  
   
- *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@independent_agent=**] **'***independent_agent***'**  
  해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다. *independent_agent* 은 **nvarchar (5)**, 기본값은 FALSE입니다. 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 경우 **false**, 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 공유 에이전트가 있습니다.  
@@ -181,7 +180,7 @@ sp_addpublication [ @publication = ] 'publication'
  스냅숏의 대체 폴더 위치를 지정합니다. *alternate_snapshot_folder* 은 **nvarchar (255)** 기본값은 NULL입니다.  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
- 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 은 **nvarchar (255),**기본값은 NULL입니다. 배포 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
+ 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 은 **nvarchar (255),** 기본값은 NULL입니다. 배포 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
   
  [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
  에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 은 **nvarchar (255)**, 기본값은 NULL입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
@@ -222,13 +221,13 @@ sp_addpublication [ @publication = ] 'publication'
 |**sub wins**|충돌 시 구독자 내용을 적용합니다.|  
 |NULL(기본값)|기본 정책 수, NULL이 고 게시가 스냅숏 게시가 경우 **sub reinit**합니다. 가 기본 정책이 됩니다 없으면 NULL이 고 게시가 스냅숏 게시, **pub wins**합니다.|  
   
- *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@centralized_conflicts =** ] **'***centralized_conflicts***'**  
- 게시자에 충돌 레코드를 저장하는지 여부를 지정합니다. *centralized_conflicts* 은 **nvarchar (5)**, 기본값은 TRUE입니다. 경우 **true**, 충돌 레코드가 게시자에 저장 됩니다. 경우 **false**, 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 충돌 레코드가 저장 됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ 게시자에 충돌 레코드를 저장하는지 여부를 지정합니다. *centralized_conflicts* 은 **nvarchar (5)**, 기본값은 TRUE입니다. 경우 **true**, 충돌 레코드가 게시자에 저장 됩니다. 경우 **false**, 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 충돌 레코드가 저장 됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@conflict_retention =** ] *conflict_retention*  
- 충돌 보존 기간(일)을 지정합니다. 피어 투 피어 트랜잭션 복제 및 지연 업데이트 구독에 대해 충돌 메타데이터가 저장되는 기간입니다. *conflict_retention* 은 **int**, 기본값은 14입니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ 충돌 보존 기간(일)을 지정합니다. 피어 투 피어 트랜잭션 복제 및 지연 업데이트 구독에 대해 충돌 메타데이터가 저장되는 기간입니다. *conflict_retention* 은 **int**, 기본값은 14입니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@queue_type =** ] **'***queue_type***'**  
  사용할 큐의 유형을 지정합니다. *queue_type* 은 **nvarchar (10)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
@@ -241,7 +240,7 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 사용이 더 이상 지원되지 않습니다. 값을 지정 **msmq** 를 경고, 되 고 복제 값이 자동으로 설정 됩니다 **sql**합니다.  
   
- *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+ *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  [  **@add_to_active_directory =** ] **' * * * 추가**_**to_active_directory * * * '**  
  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시 정보를 추가할 수 없습니다.  

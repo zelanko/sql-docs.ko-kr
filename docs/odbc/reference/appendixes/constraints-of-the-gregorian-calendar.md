@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 36cbe4802912e2497408498b32e48f8f201479f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1ffc08dc5c5a65d4a8b29b6a681d04c7263efee5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>일반 달력의 제약 조건
 Date 및 datetime 데이터 형식 및 간격 데이터 형식의 후행 필드는 일반 달력의 제약 조건에 따라야 합니다. 이러한 제약 조건은 다음과 같습니다.  

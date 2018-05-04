@@ -26,13 +26,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc77b29c4186dde8cac9e7d4d08b2fe32efcae8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d5309f0dfd6d8645ef9a9b98eeb1fa43815cc347
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,7 +61,7 @@ fn_ check_object_signatures (
  @*클래스* 은 **sysname**합니다.  
   
  {@*지문* }  
- 키 암호화에 사용되는 인증서의 SHA-1 해시이거나 비대칭 키의 GUID입니다. @*지문* 은 **varbinary(20)**합니다.  
+ 키 암호화에 사용되는 인증서의 SHA-1 해시이거나 비대칭 키의 GUID입니다. @*지문* 은 **varbinary(20)** 합니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서 열을 나열 하는 **fn_check_object_signatures** 반환 합니다.  

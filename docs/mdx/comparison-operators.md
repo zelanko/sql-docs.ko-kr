@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e99997bd3d87dbe949c8658ac7f866c648959430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5a2ba472fe36b0b7a1415793c97f3b577adcb0e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-operators"></a>비교 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |[<=(작거나 같음)](../mdx/less-than-or-equal-to-mdx.md)|Null이 아닌 인수의 경우 왼쪽 인수가 오른쪽 인수보다 더 작거나 같은 값을 가지고 있으면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환합니다.<br /><br /> 인수 중 하나 또는 모두가 Null 값으로 계산되는 경우 이 연산자는 Null 값을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [연산자 &#40; MDX 구문 &#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [연산자 &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
   
   

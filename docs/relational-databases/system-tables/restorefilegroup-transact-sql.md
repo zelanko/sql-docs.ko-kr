@@ -25,12 +25,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fee154a45e39af4c83e455c07254853565f726aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6baab7ce12ff1a67976dcba0898a45f545051fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. 참조 **restorehistory (restore_history_id)**합니다.|  
+|**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. 참조 **restorehistory (restore_history_id)** 합니다.|  
 |**filegroup_name**|**nvarchar(128)**|복원되는 파일 그룹의 이름입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
   
 ## <a name="remarks"></a>주의  

@@ -25,12 +25,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: adc995b312ea396c8fba84cbb5e5b43d2f3545e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8ea3efdd53390b14e3e934a708bf75682145bde
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|백업 세트를 포함한 파일의 고유한 ID입니다. 참조 **backupset (backup_set_id)**합니다.|  
+|**backup_set_id**|**int**|백업 세트를 포함한 파일의 고유한 ID입니다. 참조 **backupset (backup_set_id)** 합니다.|  
 |**first_family_number**|**tinyint**|해당 백업 파일을 포함한 첫 번째 미디어의 패밀리 번호입니다. NULL일 수 있습니다.|  
 |**first_media_number**|**smallint**|해당 백업 파일을 포함한 첫 번째 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
 |**filegroup_name**|**nvarchar(128)**|백업된 데이터베이스 파일이 포함된 파일 그룹의 이름입니다. NULL일 수 있습니다.|  

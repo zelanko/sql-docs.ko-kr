@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], connecting to data source
 - data sources [ODBC], connections
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8774e88d3a0301abb3af79b2983870215583532f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05cf6b5d89b136be487951e1729a8e2cc40fae3d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1-connect-to-the-data-source"></a>1 단계: 데이터 원본에 연결
 첫 번째 단계는 응용 프로그램에서 데이터 원본에 연결 하는 것입니다. 필요한 함수를 포함 하 여이 단계는 다음 그림에 표시 됩니다.  

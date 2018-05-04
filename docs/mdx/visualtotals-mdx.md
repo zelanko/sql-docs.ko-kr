@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3270bf4f47b4ceafe6d5e1479e870d0492c7c37b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0cb3e14d9eb45f0354e0196a4861333a95630d4e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *패턴*  
+ *Pattern*  
  부모 이름의 대체 문자로 별표(*)가 들어 있는 집합의 부모 멤버에 대한 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>주의  
@@ -81,6 +80,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

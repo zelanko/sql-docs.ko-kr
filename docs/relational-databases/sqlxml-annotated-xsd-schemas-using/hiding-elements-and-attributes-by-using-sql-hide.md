@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,13 +30,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 807d4a2289cef978c888414a712a37af4f95e177
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>1. 특성에 sql:hide 지정  
  이 예에서 XSD 스키마 구성는  **\<Person.Contact >** 요소 **ContactID**, **FirstName**, 및 **LastName** 특성입니다.  
   
-  **\<Person.Contact >** 요소는 복합 유형 및, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성을  **\<Person.Contact >** 요소는 단순 유형 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 같은 이름의 열에 매핑됩니다. 스키마에는 **sql: hide** 에 주석을 지정는 **ContactID** 특성입니다. 이 스키마에 대해 XPath 쿼리는 지정 된 **ContactID** XML 문서에 반환 되지 않습니다.  
+ **\<Person.Contact >** 요소는 복합 유형 및, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성을  **\<Person.Contact >** 요소는 단순 유형 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 같은 이름의 열에 매핑됩니다. 스키마에는 **sql: hide** 에 주석을 지정는 **ContactID** 특성입니다. 이 스키마에 대해 XPath 쿼리는 지정 된 **ContactID** XML 문서에 반환 되지 않습니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

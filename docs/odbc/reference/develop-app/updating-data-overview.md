@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
 - data updates [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e5accaa3a443f7cc850fd6b4012430043d402203
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce36f2467ce4da80f726c0f9370180422edddf49
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-data-overview"></a>업데이트 데이터 개요
 SQL 문을 실행 하 여 또는 호출 하 여 응용 프로그램 데이터를 업데이트할 수 **SQLSetPos** 또는 **SQLBulkOperations**합니다. **업데이트**, **삭제**, 및 **삽입** 문 데이터 원본에 직접 역할 및 일반적으로 드라이버에서 지원 합니다. 업데이트 검색 및 delete 문을 변경 하려면 행의 지정을 포함 합니다. 배치 update 및 delete 문 및 **SQLSetPos** 커서를 통해 데이터 원본에 대해 작동 하 고 덜 광범위 하 게 지원 됩니다.  

@@ -21,12 +21,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9fcd1cd05485a7b03590cc01da1ef7b755a87a37
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3c877e2e55e5db9b88b3cf78376b181a86c964c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-multiply-dmx"></a>*(곱하기)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,8 +50,8 @@ Numeric_Expression * Numeric_Expression
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 식 하나가 Null 값으로 계산되는 경우 연산자는 Null 값을 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [산술 연산자 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

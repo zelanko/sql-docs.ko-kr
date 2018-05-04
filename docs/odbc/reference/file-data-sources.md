@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 160d907704a3d2e6aea182bdbecc74b4d7f616a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-data-sources"></a>파일 데이터 원본
 *파일 데이터 원본을* 파일에 저장 되 고 연결 정보를 단일 사용자가 반복적으로 사용 하거나 여러 사용자가 공유를 허용 합니다. 파일 데이터 원본을 사용 되는 경우 드라이버 관리자.dsn 파일에 정보를 사용 하 여 데이터 원본에 연결을 만듭니다. 이 파일은 다른 파일 처럼 조작할 수 있습니다. 파일 데이터 원본이 없는 데이터 원본 이름 처럼 컴퓨터 데이터 소스를 수행 하 고 하나의 사용자 또는 컴퓨터에 등록 되어 있지 않습니다.  

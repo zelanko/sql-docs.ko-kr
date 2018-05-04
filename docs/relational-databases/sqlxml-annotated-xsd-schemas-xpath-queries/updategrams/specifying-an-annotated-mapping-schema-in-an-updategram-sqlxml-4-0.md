@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -27,13 +26,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7d9b0918551889ee6474e00bdfb46c83eb5598dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7dd3b05c321ac09d38bc06ea49207586377d954a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="dealing-with-data-types"></a>데이터 형식 처리  
  스키마를 지정 하는 경우는 **이미지**, **이진**, 또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (사용 하 여 **sql: datatype**) 않지만 XML 데이터 형식 지정 updategram에서는 XML 데이터 형식 이라고 가정 **이진 base 64**합니다. 데이터가 있으면 **bin.base** 형식 종류를 명시적으로 지정 해야 합니다 (**dt:type=bin.base** 또는 **유형 "xsd:hexBinary" =**).  
   
- 스키마를 지정 하는 경우는 **dateTime**, **날짜**, 또는 **시간** XSD 데이터 형식으로 지정 해야 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여  **sql: datatype = "dateTime"**합니다.  
+ 스키마를 지정 하는 경우는 **dateTime**, **날짜**, 또는 **시간** XSD 데이터 형식으로 지정 해야 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여  **sql: datatype = "dateTime"** 합니다.  
   
  매개 변수를 처리 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** 형식을 명시적으로 지정 해야 **sql: datatype = "money"** 매핑 스키마의 적절 한 노드에 있습니다.  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- 다음 Updategram은 Sales.Customer 테이블에 레코드를 삽입하고 이전 매핑 스키마를 사용하여 이 데이터를 테이블에 올바르게 매핑합니다. 공지는 updategram은 동일한 요소 이름, 사용 하 여  **\<고객 >**스키마에 정의 된 대로 합니다. Updategram에서 특정 스키마를 지정하기 때문에 이 작업은 필수입니다.  
+ 다음 Updategram은 Sales.Customer 테이블에 레코드를 삽입하고 이전 매핑 스키마를 사용하여 이 데이터를 테이블에 올바르게 매핑합니다. 공지는 updategram은 동일한 요소 이름, 사용 하 여  **\<고객 >** 스키마에 정의 된 대로 합니다. Updategram에서 특정 스키마를 지정하기 때문에 이 작업은 필수입니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>2. 매핑 스키마에 지정된 부모-자식 관계를 사용하여 레코드 삽입  
- 스키마 요소를 연결할 수 있습니다.  **\<sql: relationship >** 요소는 스키마 요소 간의 부모-자식 관계를 지정 합니다. 이 정보는 기본 키/외래 키 관계가 있는 해당 테이블을 업데이트하는 데 사용됩니다.  
+ 스키마 요소를 연결할 수 있습니다. **\<sql: relationship >** 요소는 스키마 요소 간의 부모-자식 관계를 지정 합니다. 이 정보는 기본 키/외래 키 관계가 있는 해당 테이블을 업데이트하는 데 사용됩니다.  
   
  다음 매핑 스키마 (SampleSchema.xml) 두 요소로 구성  **\<순서 >** 및  **\<OD >**:  
   

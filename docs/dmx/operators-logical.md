@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09d51ab41f3c228952a606183a3207db467e8af9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f3da957d4b2ed72a26cbc0adf77d5727e9386dd4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---logical"></a>연산자-논리
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,20 +35,20 @@ ms.lasthandoff: 01/08/2018
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[및 &#40; DMX &#41;](../dmx/and-dmx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
-|[하지 &#40; DMX &#41;](../dmx/not-dmx.md)|숫자 식에 논리 부정을 수행합니다.|  
-|[또는 &#40; DMX &#41;](../dmx/or-dmx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
+|[및 &AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
+|[하지 &AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|숫자 식에 논리 부정을 수행합니다.|  
+|[또는 &AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [식 &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [식 &#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a5b21c4ee2fef1191b8521f2201891d5b82811
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8b2fa1cef78164bf13dd1ca7373376cea1fda1f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>인수  
  '*query_text*'  
- 매개 변수가 있는 버전을 생성할 쿼리입니다. '*query_text*' N 유니코드 지정자 뒤에 야 하 고 작은따옴표로 묶어야 합니다. N'*query_text*'에 할당 된 값은 @querytext 매개 변수입니다. 형식임 **nvarchar (max)**합니다.  
+ 매개 변수가 있는 버전을 생성할 쿼리입니다. '*query_text*' N 유니코드 지정자 뒤에 야 하 고 작은따옴표로 묶어야 합니다. N'*query_text*'에 할당 된 값은 @querytext 매개 변수입니다. 형식임 **nvarchar (max)** 합니다.  
   
  @templatetext  
- Output 매개 변수 형식의 **nvarchar (max)**받을 매개 변수가 있는 형식으로 표시 된 바와 같이 제공 *query_text* 문자열 리터럴로 합니다.  
+ Output 매개 변수 형식의 **nvarchar (max)** 받을 매개 변수가 있는 형식으로 표시 된 바와 같이 제공 *query_text* 문자열 리터럴로 합니다.  
   
  @parameters  
- Output 매개 변수 형식의 **nvarchar (max)**표시 된 바에서 매개 변수가 매개 변수 이름과 데이터 형식 문자열 리터럴로 같이 제공 @templatetext합니다.  
+ Output 매개 변수 형식의 **nvarchar (max)** 표시 된 바에서 매개 변수가 매개 변수 이름과 데이터 형식 문자열 리터럴로 같이 제공 @templatetext합니다.  
   
 ## <a name="remarks"></a>주의  
  다음 경우 sp_get_query_template은 오류를 반환합니다.  

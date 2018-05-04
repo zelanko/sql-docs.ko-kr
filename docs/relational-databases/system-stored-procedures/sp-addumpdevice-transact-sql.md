@@ -25,12 +25,11 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 444dbea29259eca54e815ce49c73df3986db8e11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 63b5f8f4f80bbb02db1267aec0a1fa2710ee294a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>인수  
  [ **@devtype=** ] **'***device_type***'**  
- 백업 장치의 유형입니다. *device_type* 은 **varchar (20)**이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
+ 백업 장치의 유형입니다. *device_type* 은 **varchar (20)** 이며 기본값은 없고 수는 다음 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

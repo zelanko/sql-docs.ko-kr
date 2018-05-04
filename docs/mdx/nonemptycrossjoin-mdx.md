@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ffa983a749245022d0815906fe8e17850f9aabdf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f628360e5396bfa8ad46085ed668b59557e0371b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,6 +59,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 >  이 함수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 유지되어 있습니다. 이 함수 대신 를 대신 사용 해야는 [Exists (MDX)](../mdx/exists-mdx.md) 측정값 그룹 이름 인수를 함수 또는 [NonEmpty (MDX)](../mdx/nonempty-mdx.md) 함수입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

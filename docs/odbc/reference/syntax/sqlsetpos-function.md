@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetPos
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a32c882450a07f4588f46849753835dfe501fc44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]  
->  에 대 한 SQL_ADD 값은 *작업* ODBC 3에 대 한 인수를 더 이상 사용 되지*.x*합니다. ODBC 3입니다. *x* 드라이버 SQL_ADD 이전 버전과 호환성에 대 한 지원 해야 합니다. 이 기능에 대 한 호출으로 대체 되었습니다 **SQLBulkOperations** 와 *작업* SQL_ADD입니다. 때 ODBC 3. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 드라이버 관리자에 대 한 호출 매핑합니다 **SQLBulkOperations** 와 *작업* 에 SQL_ADD의 **SQLSetPos** 와  *작업* SQL_ADD입니다.  
+>  에 대 한 SQL_ADD 값은 *작업* ODBC 3에 대 한 인수를 더 이상 사용 되지 *.x*합니다. ODBC 3입니다. *x* 드라이버 SQL_ADD 이전 버전과 호환성에 대 한 지원 해야 합니다. 이 기능에 대 한 호출으로 대체 되었습니다 **SQLBulkOperations** 와 *작업* SQL_ADD입니다. 때 ODBC 3. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 드라이버 관리자에 대 한 호출 매핑합니다 **SQLBulkOperations** 와 *작업* 에 SQL_ADD의 **SQLSetPos** 와  *작업* SQL_ADD입니다.  
   
  자세한 내용은 "설명"을 참조 하십시오.  
   
@@ -129,7 +128,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>설명  
   
 > [!CAUTION]  
->  없다는 문에 대 한 정보에 대 한 **SQLSetPos** 에서 호출할 수 있습니다 및 ODBC 2와 호환성을 위해 수행 하는 데*.x* 응용 프로그램 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)합니다.  
+>  없다는 문에 대 한 정보에 대 한 **SQLSetPos** 에서 호출할 수 있습니다 및 ODBC 2와 호환성을 위해 수행 하는 데 *.x* 응용 프로그램 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)합니다.  
   
 ## <a name="rownumber-argument"></a>RowNumber 인수  
  *RowNumber* 로 지정 된 작업을 수행할 행 집합의 행 수를 지정 하는 인수는 *작업* 인수입니다. 경우 *RowNumber* 가 0 이면 행 집합의 모든 행에 작업 적용 됩니다. *RowNumber* 행 집합의 행 수를 0 사이의 값 이어야 합니다.  

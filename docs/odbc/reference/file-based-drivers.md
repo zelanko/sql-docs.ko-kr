@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e63c8026b31140f5ad1f94c99f143670d31c5c78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c827972d0d4478431f085a6aa4d69f70f020be89
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-based-drivers"></a>파일 기반 드라이버
 파일 기반 드라이버는 드라이버에 대 한 독립 실행형 데이터베이스 엔진을 제공 하지 않는 dBASE 등의 데이터 원본에 사용 됩니다. 이러한 드라이버는 실제 데이터에 직접 액세스 및는 데이터베이스 엔진의 SQL 문 처리할을 구현 해야 합니다. 표준 방법으로 파일 기반 드라이버에서 데이터베이스 엔진 구현 되는 최소 SQL 규칙 수준;에 정의 된 ODBC SQL의 하위 집합 이 규칙 수준에서 SQL 문 목록은 참조 [부록 c: SQL 문법을](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  

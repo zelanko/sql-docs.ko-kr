@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 213fa7b4c8a46966fa7054c6c20fbf79c5896d74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="was-a-result-set-created"></a>결과 집합 생성 되었습니까?
 대부분의 경우 응용 프로그램 프로그래머는 응용 프로그램을 실행 하는 문을 결과 집합을를 만들 됩니다 있는지 여부를 알고 합니다. 이 경우 응용 프로그램에서 프로그래머가 작성 된 하드 코드 된 SQL 문은 사용 하는 경우입니다. 일반적으로 응용 프로그램 런타임 시 SQL 문을 생성 하는 경우: 프로그래머가 쉽게 플래그를 지정 하는 코드를 포함 시킬 수 있는지 여부를 **선택** 문 또는 **삽입** 문이 되 고 구성 됩니다. 몇 가지 상황에서 프로그래머가 알 수 없습니다 수는 문은 결과 집합을 만듭니다 여부. 응용 프로그램 사용자가 입력 하 고 SQL 문을 실행 하는 방법을 제공 하는 경우에 마찬가지입니다. 응용 프로그램에서 런타임에 프로시저를 실행 하는 문을 생성 하는 경우에 마찬가지입니다.  

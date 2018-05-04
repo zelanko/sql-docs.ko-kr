@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetConnectAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 52fe25460bc4eafa3c415cbf926aa8e016d1fad0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 함수
 **규칙**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetConnectAttr** 연결의 측면을 제어 하는 특성을 설정 합니다.  
   
 > [!NOTE]  
->  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 2와 작동*.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 2와 작동 *.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -126,9 +125,9 @@ SQLRETURN SQLSetConnectAttr(
  현재 정의 된 특성 및 이러한 기능이 도입 된 ODBC 버전입니다;이 섹션의 뒷부분에 나오는 표에 표시 됩니다. 다른 데이터 원본 활용 하기 위해 더 많은 특성을 정의할는 사용할 수 있습니다. 특성의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 드라이버 관련 사용을 위해 값을 예약 해야 합니다.  
   
 > [!NOTE]  
->  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지*.x*합니다. ODBC 3*.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3*.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
+>  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지 *.x*합니다. ODBC 3 *.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3 *.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
 >   
->  ODBC 3*.x* 드라이버 ODBC 2와 작동 해야 하는 경우이 기능을 지원만 필요한*.x* ODBC 2를 설정 하는 응용 프로그램*.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 참조 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
+>  ODBC 3 *.x* 드라이버 ODBC 2와 작동 해야 하는 경우이 기능을 지원만 필요한 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 참조 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   
  응용 프로그램에서 호출할 수 **SQLSetConnectAttr** 언제 든 지는 시간 사이의 연결이 할당 되 고 해제 합니다. 성공적으로 연결에 대 한 응용 프로그램을 설정 하는 모든 연결 및 문 특성 될 때까지 지속 **SQLFreeHandle** 연결에서 호출 됩니다. 예를 들어, 응용 프로그램을 호출 하는 경우 **SQLSetConnectAttr** 특성으로 데이터 원본에 연결 하기 전에 계속 되 면 경우에 **SQLSetConnectAttr** 응용 프로그램에 연결 하는 경우 드라이버에서 작동 하지 않습니다는 데이터 소스 응용 프로그램에 드라이버별 특성 설정, 응용 프로그램 연결에서 다른 드라이버에 연결 하는 경우에 특성 유지 합니다.  
   
@@ -172,7 +171,7 @@ SQLRETURN SQLSetConnectAttr(
   
  설정 하는 정보의 형식을 \* *ValuePtr* 지정 된 버퍼에 따라 달라 집니다 *특성*합니다. **SQLSetConnectAttr** 두 가지 형식 중 하나에 대 한 특성 정보를 수락할: null로 끝나는 문자열 또는 정수 값입니다. 각각의 형식 특성의 설명에 표시 됩니다. 가 가리키는 문자열은 *ValuePtr* 의 인수 **SQLSetConnectAttr** 길이 *StringLength* 바이트입니다.  
   
- *StringLength* 인수 길이 특성으로 정의 되어 있으면 ODBC 2에 도입 된 모든 특성의 경우 처럼*.x* 또는 이전 버전입니다.  
+ *StringLength* 인수 길이 특성으로 정의 되어 있으면 ODBC 2에 도입 된 모든 특성의 경우 처럼 *.x* 또는 이전 버전입니다.  
   
 |*특성*|*ValuePtr* 내용|  
 |-----------------|-------------------------|  

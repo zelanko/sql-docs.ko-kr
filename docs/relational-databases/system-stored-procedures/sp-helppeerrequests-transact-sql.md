@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5266359d366acad62f7ef5e4def8c176ea12682
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee270d9434bea19eea08f7473dd4a6b103cb7651
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  상태 요청이 전송된 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 은 **sysname**, 기본값은 없습니다.  
   
  [ **@description**= ] **'***description***'**  
- 호출할 때 제공 되는 정보를 정의 사용자에 따라 반환 된 응답을 필터링 할 수 있도록 하는 개별 상태 요청을 식별 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명* 은 **nvarchar (4000)**, 기본값은 **%**합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 되 *설명*문자열 일치를 사용 하 여 여기서는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
+ 호출할 때 제공 되는 정보를 정의 사용자에 따라 반환 된 응답을 필터링 할 수 있도록 하는 개별 상태 요청을 식별 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명* 은 **nvarchar (4000)**, 기본값은 **%** 합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 되 *설명*문자열 일치를 사용 하 여 여기서는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
   
 ## <a name="result-sets"></a>결과 집합  
   

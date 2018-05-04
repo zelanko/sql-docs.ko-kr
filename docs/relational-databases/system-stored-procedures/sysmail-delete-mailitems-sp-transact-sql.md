@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81911e04266abf51f28a8906910290bf3d0179f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>주의  
- 데이터베이스 메일 메시지 및 첨부 파일에 저장 됩니다는 **msdb** 데이터베이스입니다. 방지 하기 위해 메시지를 주기적으로 삭제 해야 **msdb** 예상 보다 더 크게 증가 하 고 조직의 문서 보존 프로그램 준수 하도록 합니다. 사용 하 여 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다는 **sent_status** 인수입니다. 인수에 대해 제공 해야 **@sent_before** 또는 **@sent_status**합니다. 사용 하 여 모든 메시지를 삭제 하려면  **@sent_before getdate () =**합니다.  
+ 데이터베이스 메일 메시지 및 첨부 파일에 저장 됩니다는 **msdb** 데이터베이스입니다. 방지 하기 위해 메시지를 주기적으로 삭제 해야 **msdb** 예상 보다 더 크게 증가 하 고 조직의 문서 보존 프로그램 준수 하도록 합니다. 사용 하 여 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다는 **sent_status** 인수입니다. 인수에 대해 제공 해야 **@sent_before** 또는 **@sent_status**합니다. 사용 하 여 모든 메시지를 삭제 하려면  **@sent_before getdate () =** 합니다.  
   
  전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도의 해당 항목은 삭제 되지 않습니다 **sysmail_event_log**합니다. 사용 하 여 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 를 로그에서 항목을 삭제 합니다.  
   

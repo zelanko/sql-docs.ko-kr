@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - Jet-based ODBC drivers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c21c46ca8c9171ad33894f2f63c53a5009fe06c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 데스크톱 데이터베이스 드라이버
 ODBC는 데이터베이스 액세스 언어와 언어 SQL (구조적 쿼리)를 사용 하는 API입니다. 응용 프로그램의 소스 코드에 직접 통합 된 동일한 ODBC 소스 코드로 구성 된 다양 한 데이터베이스 관리 시스템 (Dbms)에 액세스할 수 있습니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버와 ODBC 사용 응용 프로그램의 사용자 수, 쿼리를 열고 ODBC 인터페이스를 통해 데스크톱 데이터베이스를 업데이트 합니다.  

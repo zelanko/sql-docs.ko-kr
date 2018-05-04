@@ -1,7 +1,7 @@
 ---
 title: Word 제한 사항 예약 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>예약 된 단어인 제한 사항
-예약 된 단어의 부록 C에서 SQL 문법에 나열 된 사용 하지 마십시오는 *ODBC Programmer's Reference* (또는 이러한 예약 된 단어의 약식) 식별자 (즉, 테이블 또는 열 이름), 단어 뒤에 입력 하지 않으면 따옴표 (')입니다.
+# <a name="reserved-keyword-limitations"></a>예약 된 키워드 제한 사항
+
+SQL 테이블 또는 관련된 개체에서 식별자로 ODBC 예약 된 키워드를 사용 하지 마십시오. 홀수 경우 예약된 된 키워드를 식별자로 사용 해야 경우, 식별자의 쌍으로 둘러싸야 *backticks* ('). 에 다른 이름을 *억음 악센트 기호* 은 *억음 악센트*합니다.
+
+예약 된 키워드 제한의 예약 된 키워드의 약식 부분도에 적용 됩니다.
+
+ODBC 예약 된 키워드 목록은에서 찾을 수 있습니다:
+
+- [ODBC 예약 된 키워드](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)합니다.
+
+- 에 *ODBC 프로그래머 참조 가이드*, 참조 [부록 c: SQL 문법을](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)합니다.
+

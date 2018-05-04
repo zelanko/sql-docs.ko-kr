@@ -16,13 +16,12 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f5e7bdd599222eb0c37f851901a59f663cc2658
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 820a622fdf4f5e69cbd1c6121ecc965f0ad50e57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>새로운 날짜 및 시간 기능과 이전 SQL Server 버전 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 -   전환 **datetime2** 날짜 및 시간에 대 한이 기본 설정된 된 데이터 형식입니다.  
   
- Icommandwithparameters:: Getparameterinfo 또는 스키마 행 집합을 통해 가져온 서버 메타 데이터를 사용 하 여 icommandwithparameters:: Setparameterinfo 통해 매개 변수 형식 정보를 설정 하는 응용 프로그램은 클라이언트 변환 도중 실패 있는 문자열 소스 형식으로 나타낸 대상 유형의 문자열 표현 보다 큽니다. 예를 들어 클라이언트 바인딩 DBTYPE_DBTIMESTAMP를 사용 하 고 서버 열은 날짜, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 "yyyy dd 밀리미터 hh:mm:ss.fff"에 값을 변환 하지만 서버 메타 데이터를로 반환 됩니다 **nvarchar (10)**합니다. 결과 오버플로는 DBSTATUS_E_CATCONVERTVALUE를 유발합니다. 비슷한 문제가 발생 하는 데이터 변환 IRowsetChange, 하 여 행 집합 메타 데이터는 결과 집합 메타 데이터에서 설정 되어 있기 때문입니다.  
+ Icommandwithparameters:: Getparameterinfo 또는 스키마 행 집합을 통해 가져온 서버 메타 데이터를 사용 하 여 icommandwithparameters:: Setparameterinfo 통해 매개 변수 형식 정보를 설정 하는 응용 프로그램은 클라이언트 변환 도중 실패 있는 문자열 소스 형식으로 나타낸 대상 유형의 문자열 표현 보다 큽니다. 예를 들어 클라이언트 바인딩 DBTYPE_DBTIMESTAMP를 사용 하 고 서버 열은 날짜, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 "yyyy dd 밀리미터 hh:mm:ss.fff"에 값을 변환 하지만 서버 메타 데이터를로 반환 됩니다 **nvarchar (10)** 합니다. 결과 오버플로는 DBSTATUS_E_CATCONVERTVALUE를 유발합니다. 비슷한 문제가 발생 하는 데이터 변환 IRowsetChange, 하 여 행 집합 메타 데이터는 결과 집합 메타 데이터에서 설정 되어 있기 때문입니다.  
   
 ### <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터  
  이 섹션의 버전으로 컴파일된 클라이언트에 대 한 매개 변수, 결과 열 및 스키마 행 집합에 대 한 메타 데이터를 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], multiple results
 - row counts [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e408c76354f6a4c958ebd209bc3778d0175dcef0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 373f81c453799a8c99d906671fc72a4f7faea3f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 문제가 원본에서 반환 되는 데이터는 문이 실행 된 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합을 행 합니다. *행* 는 업데이트에 의해 영향을 받는 행의 수, 삭제 또는 insert 문이 됩니다. 에 설명 된 일괄 처리, [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 개의 결과 생성할 수 있습니다.  

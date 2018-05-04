@@ -23,12 +23,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a510ca656d7a17bc80878c49bab20fb3254c81e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 연산자 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ Set_Expression * Set_Expression
  지정된 두 매개 변수의 교차곱을 포함하는 집합입니다.  
   
 ## <a name="remarks"></a>주의  
-  **\* (Crossjoin)** 연산자는 기능적으로 동일는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
+ **\* (Crossjoin)** 연산자는 기능적으로 동일는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
@@ -69,6 +68,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

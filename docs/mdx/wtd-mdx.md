@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 83fc733e36f6e68674d3f32b47087090499cf7cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wtd-mdx"></a>Wtd(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +50,9 @@ Wtd( [ Member_Expression ] )
  **Wtd** 함수에 대 한 바로 가기 함수는는 [PeriodsToDate](../mdx/periodstodate-mdx.md) 경우 수준으로 설정 되어 함수 *주*합니다. 즉, `Wtd(Member_Expression)`은 `PeriodsToDate(Week_Level_Expression,Member_Expression)`과 동일합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Qtd &#40; Mdx&#41;](../mdx/qtd-mdx.md)   
- [Mtd &#40; Mdx&#41;](../mdx/mtd-mdx.md)   
- [Ytd &#40; Mdx&#41;](../mdx/ytd-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

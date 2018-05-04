@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], time and date functions
@@ -24,30 +24,29 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b47cd46b93878b6b394d302ff4493a6ec5bbd032
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서; Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 날짜 및 시간 함수를 보여 줍니다. Visual FoxPro 문법 동일한 기능에 대 한 ODBC 구문을 다를 경우 해당 Visual FoxPro 나열 됩니다.  
   
 |ODBC 문법|Visual FoxPro 문법|  
 |------------------|---------------------------|  
-|CURDATE*)*|날짜*)*|  
-|CURTIME*)*|시간*)*|  
-|DAYNAME*(date_exp)*|CDOW*(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|DAY*)*|  
-|시간*(time_exp)*||  
-|분*(time_exp)*||  
-|월*(time_exp)*||  
-|MONTHNAME*(date_exp)*|CMONTH*(date_exp)*|  
-|지금은*)*|날짜/시간*)*|  
-|두 번째*(time_exp)*|SEC*(time_exp)*|  
-|주*(date_exp)*||  
-|연도*(date_exp)*||  
+|CURDATE *)*|날짜 *)*|  
+|CURTIME *)*|시간 *)*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYOFMONTH (*date_exp)*|DAY *)*|  
+|시간 *(time_exp)*||  
+|분 *(time_exp)*||  
+|월 *(time_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|지금은 *)*|날짜/시간 *)*|  
+|두 번째 *(time_exp)*|SEC *(time_exp)*|  
+|주 *(date_exp)*||  
+|연도 *(date_exp)*||  
   
  다음 날짜 및 시간 함수는 지원 되지 않습니다.  
   

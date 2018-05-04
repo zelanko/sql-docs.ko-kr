@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39bb6f6f61d8477fae1f0a07b2960b77dd987643
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a7261481c5d484f3cff774b00e0318432c0e085d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-up-the-cursor"></a>커서 설정
 응용 프로그램 집합 결과 만드는 문을 실행 하기 전에 커서 유형을 지정할 수 있습니다. SQL_ATTR_CURSOR_TYPE 문 특성으로 수행합니다. 응용 프로그램에서 형식을 명시적으로 지정 하지 않으면, 정방향 전용 커서가 사용 됩니다. 혼합된 커서를 가져오려면 응용 프로그램 키 집합 커서를 지정 하지만 결과 집합 크기 보다 작은 키 집합 크기를 선언 합니다.  

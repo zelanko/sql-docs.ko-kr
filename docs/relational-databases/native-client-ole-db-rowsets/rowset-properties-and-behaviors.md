@@ -21,13 +21,12 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79bb2a21057cd73e4d414550054eac8ae1b903e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ ms.lasthandoff: 04/16/2018
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 설정은 변경 표시 유형 속성 원인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서를 행 집합을 지원 합니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.|  
 |DBPROP_QUICKRESTART|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: VARIANT_TRUE로 설정 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합에 대 한 서버 커서를 사용 하려고 합니다.|  
 |DBPROP_REENTRANTEVENTS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합은 재진입용 이며 소비자가 알림 콜백에서 재진입용이 아닌 행 집합 메서드에 액세스 하려고 하는 경우 DB_E_NOTREENTRANT를 반환할 수 있습니다.|  
-|DBPROP_REMOVEDELETED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 변경의 표시 여부에 따라 속성의 값을 변경는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합에 의해 노출 되는 데이터입니다.<br /><br /> VARIANT_TRUE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 됩니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> VARIANT_FALSE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 되지 않습니다. 삭제된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행에 대한 행 상태 값은 DBROWSTATUS_E_DELETED입니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> 이 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서에서 지원하는 행 집합에 대한 값만 갖습니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.<br /><br /> DBPROP_REMOVEDELETED 속성이 키 집합 커서 행 집합에 구현 된 경우 삭제 된 행 인출 시간에 제거 되 고 수에 대 한 행 인출 메서드 같은 **GetNextRows** 및 **GetRowsAt,**를 S_OK와 요청 된 수보다 적은 수의 행을 반환 합니다. 이 동작은 DB_S_ENDOFROWSET 조건을 나타내지 않으며 남은 행이 있는 경우 반환되는 행의 수는 0이 되지 않습니다.|  
+|DBPROP_REMOVEDELETED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대 한 변경의 표시 여부에 따라 속성의 값을 변경는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합에 의해 노출 되는 데이터입니다.<br /><br /> VARIANT_TRUE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 됩니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> VARIANT_FALSE: 소비자 또는 기타 의해 삭제 된 행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합을 새로 고칠 때 사용자가 행 집합에서 제거 되지 않습니다. 삭제된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행에 대한 행 상태 값은 DBROWSTATUS_E_DELETED입니다. DBPROP_OTHERINSERT는 VARIANT_TRUE입니다.<br /><br /> 이 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서에서 지원하는 행 집합에 대한 값만 갖습니다. 자세한 내용은 참조 [행 집합 및 SQL Server 커서](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)합니다.<br /><br /> DBPROP_REMOVEDELETED 속성이 키 집합 커서 행 집합에 구현 된 경우 삭제 된 행 인출 시간에 제거 되 고 수에 대 한 행 인출 메서드 같은 **GetNextRows** 및 **GetRowsAt,** 를 S_OK와 요청 된 수보다 적은 수의 행을 반환 합니다. 이 동작은 DB_S_ENDOFROWSET 조건을 나타내지 않으며 남은 행이 있는 경우 반환되는 행의 수는 0이 되지 않습니다.|  
 |DBPROP_REPORTMULTIPLECHANGES|이 행 집합 속성 구현 되지 않습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. 이 속성 값을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_RETURNPENDINGINSERTS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 행을 인출 하는 메서드가 호출 될 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 보류 된 삽입 행을 반환 하지 않습니다.|  
 |DBPROP_ROWRESTRICT|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합은 행 기반의 액세스 권한을 지원 하지 않습니다. 경우는 **IRowsetChange** 인터페이스는 행 집합에 노출 되는 **SetData** 소비자에서 메서드를 호출할 수 있습니다.|  

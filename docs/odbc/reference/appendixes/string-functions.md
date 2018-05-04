@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>문자열 함수
 다음 표에서 문자열 조작 함수를 나열합니다. 응용 프로그램에서 호출 하 여 드라이버를 통해 지원 되는 문자열 함수를 확인할 수 **SQLGetInfo** 와 *정보 유형* SQL_STRING_FUNCTIONS입니다.  
@@ -64,5 +63,5 @@ ms.lasthandoff: 04/16/2018
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|문자를 반환 *string_exp* 후행 공백을 제거 합니다.|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|데이터 소스에 따라 다릅니다를 나타내는 문자열에 있는 단어의 소리 반환 *string_exp*합니다. SQL Server;는 4 자리 SOUNDEX 코드를 반환 하는 예를 들어 Oracle 각 단어의 발음을 반환합니다.|  
 |**공간 (** *count* **)** (ODBC 2.0)|구성 된 문자열을 반환 *count* 공간입니다.|  
-|**SUBSTRING (** *string_exp*, *시작*, 길이**)** (ODBC 1.0)|파생 된 문자열을 반환 *string_exp*로 지정 된 문자 위치에서 시작, *시작* 에 대 한 *길이* 문자입니다.|  
+|**SUBSTRING (** *string_exp*, *시작*, 길이 **)** (ODBC 1.0)|파생 된 문자열을 반환 *string_exp*로 지정 된 문자 위치에서 시작, *시작* 에 대 한 *길이* 문자입니다.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|문자열을 반환 *string_exp*, 모든 소문자를 대문자로 변환 합니다.|

@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 429a9706d6a751da691812f14142ced5f30aed8f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8192e5042873243feb5a2d14b23935d83ffd5a49
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="receiving-results"></a>결과 받기
 ADO에서 대부분의 명령을 호출자에 게 반환 하는 몇 가지 정보 발생 합니다. 행 집합을 반환 하는 명령에 대 한 결과에서 수신 되는 **레코드 집합** 개체 수는 가장 많이 사용 되는 ADO 개체입니다.  

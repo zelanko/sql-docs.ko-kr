@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +37,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c02932c224c95c0977347e0d770b7e11453608cf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -391,7 +389,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다.  **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
+ 스키마 지정는  **\<순서 >** 인 요소는  **\<제품 >** 자식 요소입니다. **\<순서 >** 요소 Ord 테이블에 매핑됩니다 및  **\<제품 >** 요소는 데이터베이스의 Product 테이블에 매핑됩니다. 에 지정 된 체인 관계는  **\<제품 >** 요소는 OrderDetail 테이블이 나타내는 M:N 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
   
  이 스키마를 사용하여 XML 문서를 대량 로드하는 경우 Ord, Product 및 OrderDetail 테이블에 레코드가 추가됩니다.  
   

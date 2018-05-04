@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,13 +28,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e9be2b6f6aed162d28cfb6ee5cb960f79ee53ce2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 문서를 사용 하 여 sql에서 스키마 요소 제외: 매핑된
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
  이 XSD 스키마를 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑하 **sql: 매핑된** 에 지정 된 **HomeAddress** Employees 테이블의 홈을 저장 하지 않으므로 특성 직원의 주소입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다.  **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에 같은 이름의 열에 매핑됩니다.  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. **\<Person.Contact >** 요소는 Person.Contact 테이블에 매핑되고 모든 특성은 Person.Contact 테이블에 같은 이름의 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

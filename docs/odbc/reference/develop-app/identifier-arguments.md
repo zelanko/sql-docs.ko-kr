@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identifier arguments [ODBC]
 - catalog functions [ODBC], arguments
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4aed40268b5e9bb3dd3d4a37d43b45a7b6856ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5cbeb7d146cf82a752beed19befca0cf52eeb2ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수에 문자열에 따옴표를 드라이버 선행 및 후행 공백을 제거 하 고 따옴표 안에 문자열 리터럴로 처리 합니다. 문자열에 따옴표가 사용 되지 드라이버 제거 후행 공백 및 접기 문자열을 대문자로 합니다. SQL_ERROR 및 SQLSTATE HY009 반환 식별자 인수는 null 포인터를 설정 (잘못 된 null 포인터)를 사용 하는 경우가 아니면 인수가 카탈로그 이름을 카탈로그는 지원 되지 않습니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 975e70038bc78962691ea30f885dd0050e508753
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>데스크톱 데이터베이스 드라이버 아키텍처
 이러한 드라이버는 사용 하 여 Microsoft Windows 95 이상 또는 Windows NT 4.0 및 Windows 2000 위한 것입니다. Windows 95 이상; 32 비트 응용 프로그램만 지원 됩니다. 16 비트 및 32 비트 응용 프로그램은 Windows NT 4.0 및 Windows 2000에서 지원 됩니다.  

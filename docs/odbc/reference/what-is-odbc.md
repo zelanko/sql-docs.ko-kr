@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
@@ -19,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ed2f843b8b3c5da54f339d0d3e7f4602246a8d69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f503c1c55bd2ec10c8d74452c5c65d1751ab3c08
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-odbc"></a>ODBC 란?
 ODBC에 대 한 많은 오해 컴퓨팅 환경에 존재합니다. 최종 사용자에 게는 Microsoft® Windows® 제어판에 있는 아이콘 응용 프로그램 프로그래머를 데이터 액세스 루틴을 포함 하는 라이브러리입니다. 봄으로써을 상상한 적이 모든 데이터베이스 액세스 문제에 대 한 대답입니다.  

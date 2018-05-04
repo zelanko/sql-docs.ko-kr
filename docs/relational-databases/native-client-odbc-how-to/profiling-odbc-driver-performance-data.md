@@ -18,13 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ae87c30858c7c0c56b7304121cf716497478608
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 25563f1d5fc427f101a1bc872ff75b2ddf04326e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC 드라이버 성능 데이터 프로 파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC 관리자를 사용하여 드라이버 성능 데이터를 기록하려면  
   
-1.  **제어판**를 두 번 클릭 **관리 도구** 두 번 클릭 하 고 **데이터 원본 (ODBC)**합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
+1.  **제어판**를 두 번 클릭 **관리 도구** 두 번 클릭 하 고 **데이터 원본 (ODBC)** 합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
   
 2.  클릭는 **사용자 DSN**, **시스템 DSN**, 또는 **파일 DSN** 탭 합니다.  
   

@@ -26,12 +26,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c1a69ce5647abb9b0b75dce96f755db0dbf6721
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_execute_external_script
  유효한 값은 `Python` 또는 `R`합니다. 
   
  @script = N'*스크립트*'  
- 리터럴 또는 변수 입력으로 지정 하는 외부 언어 스크립트입니다. *스크립트* 은 **nvarchar (max)**합니다.  
+ 리터럴 또는 변수 입력으로 지정 하는 외부 언어 스크립트입니다. *스크립트* 은 **nvarchar (max)** 합니다.  
   
  [ @input_data_1_name = N'*input_data_1_name*']  
  정의 된 쿼리를 나타내는 데 사용 된 변수의 이름을 지정 @input_data_1합니다. 외부 스크립트의 변수 데이터 형식이 언어에 따라 달라 집니다. R을 입력된 변수는 데이터 프레임입니다. Python의 경우 입력은 테이블 형식 이어야 합니다. *input_data_1_name* 은 **sysname**합니다.  
@@ -69,7 +68,7 @@ sp_execute_external_script
  기본값은 `InputDataSet`합니다.  
   
  [ @input_data_1 = N'*input_data_1*']  
- 외부 스크립트의 형태로 사용 하는 입력된 데이터를 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 데이터 형식이 *input_data_1* 은 **nvarchar (max)**합니다.
+ 외부 스크립트의 형태로 사용 하는 입력된 데이터를 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 데이터 형식이 *input_data_1* 은 **nvarchar (max)** 합니다.
   
  [ @output_data_1_name = N'*output_data_1_name*']  
  반환할 데이터를 포함 하는 외부 스크립트에서 변수의 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장된 프로시저 호출이 완료 되 면입니다. 외부 스크립트의 변수 데이터 형식이 언어에 따라 달라 집니다. R을 출력 데이터 프레임을 이어야 합니다. Python에 대 한 출력 팬더 데이터 프레임을 이어야 합니다. *output_data_1_name* 은 **sysname**합니다.  

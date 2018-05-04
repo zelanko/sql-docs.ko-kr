@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5888d8043fbc2c5db660060b0e1fe13c39c592a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e246e21a768ff0a92a66833c2aa5e69e2389e6ab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-cursors"></a>동적 커서
 동적 커서는 커서 내부 또는 커서 외부의 다른 사용자가 변경 내용을에서 발생 하는지 여부에 관계 없이 결과 집합의 행에 대 한 모든 변경 내용을 검색 합니다. Insert, update 및 delete 문은 모든 사용자가 수행한 모든 커서를 통해 표시 됩니다. 동적 커서는 변경 내용이 행, 순서 및 커서가 열린 후에 결과 집합의 값을 검색할 수 있습니다. 커밋될 때까지 (아닌 경우 커서 트랜잭션 격리 수준을 "커밋되지 않은"로 설정 됨)에 업데이트 커서 밖에 서 표시 되지 않습니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9b4680b203ee09b509d21c8dcbdc59b2f351859
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a9e66a5e92c7aa61820d91f79feffecc35bb62a8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC의 트랜잭션
 ODBC의 트랜잭션은 연결 수준 완료 즉, 응용 프로그램에 트랜잭션이 완료 되 면 커밋 또는 해당 연결에서 모든 문 핸들을 통해 수행 된 모든 작업을 롤백합니다.  

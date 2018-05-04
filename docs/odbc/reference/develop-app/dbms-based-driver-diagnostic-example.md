@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DBMS-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d67e352a67beca887a4283e7c89c5e97f993a0b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e688fff2771a14d85a659ae7c69d6a515ce88f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS 기반 드라이버 진단 예제
 DBMS 기반 드라이버 DBMS에 요청을 보내고 드라이버 관리자를 통해 응용 프로그램에 정보를 반환 합니다. 형식 및에 대 한 인수를 반환 합니다. 드라이버가 드라이버 관리자와 교류 하는 구성 요소 이므로 **SQLGetDiagRec**합니다.  

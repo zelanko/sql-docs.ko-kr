@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 402c687551d76b81487377a1c701c05c283b5228
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4e66c3cea7f4eefa711aa4250d4474b10cf68d65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 요구 하는 대화 상자를 표시할지 여부를 지정 합니다.  

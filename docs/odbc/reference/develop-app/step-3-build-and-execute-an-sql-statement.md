@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9d3ee89477b2037f2eb11bdde1a6b08d53ad3065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>작성 하 고 SQL 문을 실행 하는 3 단계:
 다음 그림에 나와 있는 것 처럼 작성 하 고 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 메서드는 매우 달라 집니다. 응용 프로그램 사용자 입력에 따라 SQL 문을 작성, SQL 문을 입력 하 라는 하거나 하드 코드 된 SQL 문을 사용 될 수 있습니다. 자세한 내용은 참조 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], generic applications
 - interoperability [ODBC], levels
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae9c4bc73af6fdb777abf617cbed8b81eed5c043
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7434e85819ca16df1141e5b6421530eb3da4b982
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generic-applications"></a>일반 응용 프로그램
 일반 응용 프로그램 데이터베이스에서 데이터를 검색 하는 스프레드시트와 같은 하드 코드 된 작업을 수행 하는 경우가 있습니다. 또한 다양 한 사용자가 입력 하 고 SQL 문을 실행할 수 있도록 일반 쿼리 응용 프로그램과 같은 사용자 정의 작업을 수행할 수 있습니다. 어떤 일반 응용 프로그램 서로 공통 되는 이며 다양 한 다른 Dbms와 작동 해야 하는지는 개발자 모르면 미리 이러한 Dbms는 것입니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog position
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8691e7a8f8e9f015f6c468f3deeb06973d017ab3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e68869d46c9b4470f3eb89500c36af5bfbc5de19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-position"></a>카탈로그 위치
 데이터 원본에 데이터 원본의 식별자 및 식별자의 나머지 부분에서 어떻게 분리 되는지에서 카탈로그 이름의 위치 달라 집니다. 예를 들어 Xbase 데이터 원본에 카탈로그 이름이 디렉터리와, Microsoft® Windows®에서 구별 (즉, 파일 이름) 테이블 이름에 백슬래시가 (\\). 다음 그림에서는이 문제를 보여 줍니다.  

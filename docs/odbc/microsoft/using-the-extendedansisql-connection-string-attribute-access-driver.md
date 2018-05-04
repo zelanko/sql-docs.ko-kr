@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], ExtendedAnsiSql
 - extendedANSISQL [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e1abd62f873d785b968cc02ea678b845e930c367
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5d3107cda0c5c6db25b8b60a896a7b8ad9794246
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>ExtendedAnsiSQL 연결 문자열 특성 (Access 드라이버)를 사용 하 여
 Jet 4.0에 ODBC 데스크톱 데이터베이스 드라이버 버전 4.0에서에서 기본적으로 활성화 되지 않은 몇 가지 새로운 기능이 있습니다. 이러한 새 기능을 이용 하려면 응용 프로그램이 새 연결 특성을 설정, 연결 문자열에 새 특성을 추가 또는 DSN에서 특성을 설정 해야 합니다. ExtendedAnsiSQL 라고 특성과 이상 Microsoft ODBC 데스크톱 데이터베이스 드라이버 4.0에만 관련 된 합니다.  

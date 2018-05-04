@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], files to use
 - desktop database drivers [ODBC], files to use
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8021641e4ae34e525166b8591cfbcdba989b8cf0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5cfaabf4dfc45213fd22b92b4c52697ea6cdbffd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버와 함께 사용할 파일
 ODBC 데스크톱 데이터베이스 드라이버는 Microsoft Jet 데이터베이스 엔진, 설치 가능한 ISAM 파일 및 Microsoft ODBC 파일에 사용 됩니다. 모든 제품의 재배포를 위해 필요 하며 일부는 핵심 구성 요소입니다.  

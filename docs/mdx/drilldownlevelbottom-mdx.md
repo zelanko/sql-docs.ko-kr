@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0811bbd1e0f3cf81ebe87ff200906e2489036092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2628ef6a691772a4fc085130e1d1482b2bd4cb2e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +62,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
   
  **DrilldownLevelBottom** 함수는 비슷합니다는 [DrilldownLevel](../mdx/drilldownlevel-mdx.md) 함수 하지만 지정 된 수준의 각 멤버에 대해 모든 자식을 포함 하는 **DrilldownLevelBottom** 함수 맨 개수의 자식 멤버를 반환 합니다.  
   
- XMLA 속성 MdpropMdxDrillFunctions 쿼리는 서버에서 드릴 함수;에 제공 하는 지원 수준을 확인할 수 있습니다. 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 대 한 자세한 내용은 합니다.  
+ XMLA 속성 MdpropMdxDrillFunctions 쿼리는 서버에서 드릴 함수;에 제공 하는 지원 수준을 확인할 수 있습니다. 참조 [XMLA 속성 지원 &#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 세부 정보에 대 한 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 기본 측정값을 기준으로 Product Category 수준에서 하위 세 개의 자식을 반환합니다. Adventure Works 샘플 큐브에서 Accessories의 맨 아래 세 하위는 Tires and Tubes, Pumps 및 Panniers입니다. Management Studio의 MDX 쿼리 창에서 Products | Product Categories | Members | All Products | Accessories로 이동하여 전체 목록을 볼 수 있습니다. Count 인수를 늘려 더 많은 구성원을 반환할 수 있습니다.  
@@ -95,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [DrilldownLevel &#40; Mdx&#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel & #40; Mdx& #41;](../mdx/drilldownlevel-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

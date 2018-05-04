@@ -26,12 +26,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 03143000dd2ca4563f6d60d6945e3934ecf5283a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의-멤버를 만들려면
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,9 +64,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  계산 멤버 속성의 값을 정의하는 유효한 스칼라 식입니다.  
   
 ## <a name="remarks"></a>주의  
- CREATE MEMBER 문은 세션 전체에서 사용할 수 있는 계산 멤버를 정의하므로 세션 중에 여러 쿼리에서 사용할 수 있습니다. 자세한 내용은 참조 [Creating Session-Scoped 계산 멤버 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ CREATE MEMBER 문은 세션 전체에서 사용할 수 있는 계산 멤버를 정의하므로 세션 중에 여러 쿼리에서 사용할 수 있습니다. 자세한 내용은 참조 [Creating Session-Scoped 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
   
- 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 참조 [Creating Query-Scoped 계산 멤버 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 참조 [Creating Query-Scoped 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
   
  *Property_Name* 표준 나 선택적 계산된 멤버 속성이 속성 중 하나를 참조할 수 있습니다. 표준 멤버 속성은 이 항목의 후반부에 나열되어 있습니다. 없이 CREATE MEMBER로 만든 계산 멤버는 **세션** 값 세션 범위를 가집니다. 또한 계산 멤버 정의 내부의 문자열은 큰따옴표로 구분됩니다. 이것은 문자열이 작은따옴표로 구분되어야 한다고 지정하는 OLE DB에 의해 정의된 메서드와는 다릅니다.  
   
@@ -79,7 +78,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  계산 멤버는 다음 테이블에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 참조 [Creating Query-Scoped 계산 멤버 &#40; Mdx&#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 참조 [Creating Query-Scoped 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
   
  세션 범위  
  계산 멤버의 표시 여부 및 수명은 계산 멤버를 만들 때의 세션에 따라 결정됩니다. DROP MEMBER 문이 계산 멤버에서 실행되는 경우 수명은 세션 기간보다 짧습니다. CREATE MEMBER 문은 세션 범위로 계산 멤버를 만듭니다.  
@@ -132,14 +131,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|계산 멤버가 다른 계산 멤버를 참조하는 경우(즉, 계산 멤버가 서로 교차하는 경우) 계산 멤버를 확인하는 순서입니다.|  
 |FORMAT_STRING|셀 값을 표시할 때 클라이언트 응용 프로그램이 사용할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 스타일 서식 문자열입니다.|  
 |VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다.  계산 된 집합에 멤버를 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성에 대 한 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
-|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> **\*\*경고 \* \***  이 속성은 사용 되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)을 참조하세요.|  
+|NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> **\*\* 경고 \* \***  이 속성은 사용 되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)을 참조하세요.|  
 |CAPTION|클라이언트 응용 프로그램이 멤버에 대한 캡션으로 사용하는 문자열입니다.|  
 |DISPLAY_FOLDER|클라이언트 응용 프로그램이 멤버를 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및에서 제공 하는 클라이언트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [DROP MEMBER 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [UPDATE MEMBER 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-update-member.md)   
- [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [UPDATE MEMBER 문은 &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5b40c23fb1e5ca20b97431c3f99e45603fe32ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 저장 된 텍스트 데이터의 전체 텍스트 인덱스를 만들 수 **varbinary (max)** 또는 **이미지** 데이터 형식입니다. 이미지와 그림은 인덱싱되지 않습니다.  
   
  [  **@action=** ] **'***동작***'**  
- 수행할 동작입니다. *동작* 은 **varchar (20)**수 없고 기본 값, 다음 값 중 하나 여야 합니다.  
+ 수행할 동작입니다. *동작* 은 **varchar (20)** 수 없고 기본 값, 다음 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

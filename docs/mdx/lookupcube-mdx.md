@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a2b5e06839166528482a52fffc594d933a30ee57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3cc97425397a1ddbc025e53a81526b7a37ed2ad5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lookupcube-mdx"></a>LookupCube(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  문자열을 반환하는 셀 좌표의 유효한 문자열 식으로서, 일반적으로 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  숫자 식이 지정 되는 **LookupCube** 함수는 지정 된 큐브의 특정된 숫자 식을 계산 하 고 결과 숫자 값을 반환 합니다.  
   
  문자열 식이 지정 되는 **LookupCube** 함수는 지정 된 큐브의 특정된 문자열 식을 계산 하 고 결과 문자열 값을 반환 합니다.  
@@ -78,7 +77,7 @@ LookupCube(Cube_Name, String_Expression )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>참고 항목  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목:  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

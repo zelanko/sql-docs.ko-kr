@@ -23,12 +23,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f4ac4a2231ea983e93c9c418bdd309cf45ed6cc2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 128b31d8ed9b541d47882ace6f9898056c0c4c2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버 연결 문자열 키워드 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +125,7 @@ ms.lasthandoff: 04/16/2018
   
  `quote ::= " | '`  
   
- 속성 사용은 해당 범위에 허용되는 구문을 따라야 합니다.  예를 들어 **WSID** 중괄호를 사용 하 여 (**{}**) 인용 문자 및 **응용 프로그램 이름** 사용 하 여 단일 (**'**) 또는 큰따옴표 (**"**) 인용 문자입니다. 문자열 속성만 따옴표로 묶을 수 있습니다. 정수나 열거 속성을 따옴표로 묶으면 "연결 문자열이 OLE DB 사양을 따르지 않습니다." 오류가 발생합니다.  
+ 속성 사용은 해당 범위에 허용되는 구문을 따라야 합니다.  예를 들어 **WSID** 중괄호를 사용 하 여 (**{}**) 인용 문자 및 **응용 프로그램 이름** 사용 하 여 단일 (**'**) 또는 double (**"**) 인용 문자입니다. 문자열 속성만 따옴표로 묶을 수 있습니다. 정수나 열거 속성을 따옴표로 묶으면 "연결 문자열이 OLE DB 사양을 따르지 않습니다." 오류가 발생합니다.  
   
  특성 값을 작은따옴표나 큰따옴표로 묶을 수 있으며 그렇게 하는 것이 좋습니다. 그러면 값에 영숫자가 아닌 문자가 있을 경우 발생할 수 있는 문제를 막을 수 있습니다. 큰따옴표를 사용할 경우 값에 큰따옴표를 포함해도 됩니다.  
   

@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 392d51cacb557b9f141a7cbcf71f3bb28fee857d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6375b4904163860509e2b8c0115e068270fafb88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-data-service-rds"></a>원격 데이터 서비스 (RDS)
 원격 데이터 서비스 (RDS)에 있는 클라이언트 응용 프로그램 또는 웹 페이지에는 서버에서 데이터를 이동할 클라이언트에서 데이터를 조작 하 고 사용할 수는 단일 왕복에서 서버에 업데이트를 반환 하는 ADO의 기능입니다.  

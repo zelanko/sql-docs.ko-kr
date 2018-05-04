@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d7d762425310722d53de8c8bd7e92f497a334c78
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8a98b74d1cd3639cffc1ff762777938cbb5e0c75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
  **NOT NULL**  
  특성 열 값에는 Null 값을 포함할 수 없습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다. 이 플래그는 마이닝 구조 열에 정의됩니다.  
   
- **REGRESSOR**  
+ **회귀 변수**  
  회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다. 이 플래그는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 선형 회귀 알고리즘 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 사용할 수 있으며 마이닝 모델 열에 정의됩니다.  
   
  **MODEL_EXISTENCE_ONLY**  
@@ -62,21 +61,21 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>마이닝 모델에 모델링 플래그 지정  
- 구문에 대 한 예제는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마이닝 구조 열에 플래그를 지정 하는 데 지원 참조 [마이닝 구조 만들기 &#40; DMX &#41;](../dmx/create-mining-structure-dmx.md)합니다.  
+ 구문에 대 한 예제는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마이닝 구조 열에 플래그를 지정 하는 데 지원 참조 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)합니다.  
   
- 예를 보려면 마이닝 모델 열에 모델링 플래그를 지정 하는 구문은 참조 [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
+ 예를 보려면 마이닝 모델 열에 모델링 플래그를 지정 하는 구문은 참조 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
  마이닝 모델 열 사용에 대 한 자세한 내용은 참조 [마이닝 모델 열](../analysis-services/data-mining/mining-model-columns.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 마이닝 알고리즘 &#40; Analysis Services-데이터 마이닝 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   

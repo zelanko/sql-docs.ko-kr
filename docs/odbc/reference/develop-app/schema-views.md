@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema views [ODBC]
 - functions [ODBC], catalog functions
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b8e3ca94b82f74c8ba067faef9485359ff99aee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ed8fdc07b884605f1fd2b3c185cf5bef2eedc66b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-views"></a>스키마 뷰
 ODBC 카탈로그 함수를 호출 하 여 또는 INFORMATION_SCHEMA 뷰를 사용 하 여 응용 프로그램 DBMS에서 메타 데이터 정보를 검색할 수 있습니다. 뷰는 ANSI sql-92 표준에서 정의 됩니다.  

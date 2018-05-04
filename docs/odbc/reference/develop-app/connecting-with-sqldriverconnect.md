@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - functions [ODBC], data source or driver connections
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: df0467bdcb168e219639f3518069faa265edfe9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: be52bf2e14316c63b417563d0ccf829d7413ff11
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect를 사용 하 여 연결
 **SQLDriverConnect** 연결 문자열을 사용 하 여 데이터 원본에 연결 하는 데 사용 됩니다. **SQLDriverConnect** 대신 사용 됩니다 **SQLConnect** 이유는 다음과 같습니다.  

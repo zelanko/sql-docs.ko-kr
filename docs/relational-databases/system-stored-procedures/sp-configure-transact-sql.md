@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81e174922753ed4a40111caba8aa34efd359e866
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7aec930d639bd5f1e2549ef5d49fd76963667b0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -70,7 +69,7 @@ RECONFIGURE
   
 ## <a name="arguments"></a>인수  
  [ **@configname=** ] **'***option_name***'**  
- 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)**이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
+ 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
  사용 가능한 구성 옵션 및 해당 설정에 대 한 정보를 참조 하십시오. [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
   
@@ -108,7 +107,7 @@ RECONFIGURE
   
  RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어는 **최소 서버 메모리** 및 **최대 서버 메모리** 서버 메모리 옵션에서 동적으로 업데이트 되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]; 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면, 실행 중인 값을 다시 구성는 **채우기 비율** 옵션을 사용 하려면 다시 시작은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다.  
   
- 구성 옵션에서 RECONFIGURE를 실행 한 후 확인할 수 있습니다는 옵션을 실행 하 여 동적으로 업데이트 되었습니다 여부 **sp_configure'***option_name***'**합니다. 값은 **run_value** 및 **config_value** 동적으로 업데이트 되는 옵션에 대 한 열이 일치 해야 합니다. 어떤 옵션을 확인 하 여 동적 참조를 확인할 수 있습니다는 **is_dynamic** 의 열은 **sys.configurations** 카탈로그 뷰.  
+ 구성 옵션에서 RECONFIGURE를 실행 한 후 확인할 수 있습니다는 옵션을 실행 하 여 동적으로 업데이트 되었습니다 여부 **sp_configure'***option_name***'** 합니다. 값은 **run_value** 및 **config_value** 동적으로 업데이트 되는 옵션에 대 한 열이 일치 해야 합니다. 어떤 옵션을 확인 하 여 동적 참조를 확인할 수 있습니다는 **is_dynamic** 의 열은 **sys.configurations** 카탈로그 뷰.  
   
 > [!NOTE]  
 >  지정 된 경우 *값* 는 옵션에 대해 너무 높기는 **run_value** 열 사실을 반영 하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 유효 하지 않은 설정을 사용 하지 않고 하지 못했습니다. 동적 메모리 합니다.  

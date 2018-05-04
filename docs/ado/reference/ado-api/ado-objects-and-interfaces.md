@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9888255ff5560cf432b29850b1104f5470df9a6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1510df90d317a68bb2057e4a3cc67d978bcc6b5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계에 표시 됩니다는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  

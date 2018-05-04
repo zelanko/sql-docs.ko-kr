@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: faae1bf56dd28f83fa3fec5c340bcf67c302def3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 522476043c86b26bc617f13a0704d07c7990e1cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 규칙
 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 트랜잭션과 같은 추가 기능을 포함 하는 핵심 인터페이스 규칙에 따라 수준 기능 수준 1 인터페이스 규칙 수준에 포함 되어 있습니다. 수준 1 드라이버 인터페이스 –와 호환 되는 핵심 인터페이스 규칙 수준에서 기능 외에도 다음을 수행 하는 응용 프로그램 수 있습니다.  

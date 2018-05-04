@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -27,13 +26,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f8af5d1b82119588d21a7e4ffb15c13f3bcc4d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
  기본 키 열에서 업데이트 하는 열을 지정 하 여이 보호 수준을 얻을 수는  **\<하기 전에 >** 블록입니다.  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다.  **\<하기 전에 >** 블록 지정는 **전화** 특성을 특성 값이 업데이트 된 값을 적용 하기 전에 데이터베이스에 해당 하는 열에서 값과 일치 하는지 확인 .  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<하기 전에 >** 블록 지정는 **전화** 특성을 특성 값이 업데이트 된 값을 적용 하기 전에 데이터베이스에 해당 하는 열에서 값과 일치 하는지 확인 .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
   
 -   타임 스탬프 열 (있는 경우)을 지정 된  **\<하기 전에 >** 블록입니다.  
   
-     모든 레코드 열을 지정 하는 대신는  **\<전에**> 블록 지정 해도 타임 스탬프 열 (테이블에 있는 경우 하나)에 기본 키 열과 함께  **\<하기 전에 >** 블록입니다. 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 타임 스탬프 열을 스키마에 지정 해야 하는 따라서 **dt:type="bin.hex"**, **dt:type="bin.base64"**, 또는 **sql: datatype = "timestamp"**합니다. (하나를 지정할 수는 **xml** 데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.)  
+     모든 레코드 열을 지정 하는 대신는  **\<전에**> 블록 지정 해도 타임 스탬프 열 (테이블에 있는 경우 하나)에 기본 키 열과 함께  **\<하기 전에 >** 블록입니다. 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 타임 스탬프 열을 스키마에 지정 해야 하는 따라서 **dt:type="bin.hex"**, **dt:type="bin.base64"**, 또는 **sql: datatype = "timestamp"** 합니다. (하나를 지정할 수는 **xml** 데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.)  
   
 #### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   

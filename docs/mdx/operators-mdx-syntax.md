@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
  MDX는 다음 테이블에 나열된 연산자를 지원합니다.  
   
-|원하는 연산|이후|  
+|원하는 연산|찾기 옵션|  
 |---------------------------------------|---------|  
 |변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[대입 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 -   DISTINCT  
   
--   으로 디코딩된 문자입니다.  
+-   :  
   
 -   ^  
   
@@ -86,18 +85,18 @@ ms.lasthandoff: 01/08/2018
   
 -   NOT  
   
--   AND  
+-   및  
   
 -   XOR  
   
--   또는  
+-   OR  
   
- MDX의 연산자에에서 대 한 자세한 내용은 참조 하십시오. [MDX 연산자 참조 &#40; Mdx&#41; ](../mdx/mdx-operator-reference-mdx.md).  
+ MDX의 연산자에에서 대 한 자세한 내용은 참조 하십시오. [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)합니다.  
   
 ### <a name="determining-results"></a>결과 확정  
  간단한 식들을 결합하여 복잡한 식을 구성하는 경우 연산자에 대한 규칙을 데이터 형식 우선 순위에 대한 규칙과 결합하면 결과 값의 데이터 형식이 결정됩니다.  
   
- 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 참조 하십시오. [언어 및 데이터 정렬 &#40; Analysis Services &#41; ](../analysis-services/languages-and-collations-analysis-services.md).  
+ 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 참조 [언어 및 데이터 정렬 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)합니다.  
   
  간단한 식의 전체 자릿수, 소수 자릿수 및 길이를 기준으로 결과의 전체 자릿수, 소수 자릿수 및 길이를 결정하는 규칙도 있습니다.  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/08/2018
 |Tuple|스칼라|\<튜플 >.value|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

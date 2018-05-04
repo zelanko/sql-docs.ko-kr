@@ -25,12 +25,11 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba13be54b517541ee0e14ac291d871aa8654561f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,22 +73,22 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  메시지를 보내는 프로필의 이름입니다. *profile_name* 유형의 **sysname**, 기본값은 NULL입니다. *profile_name* 기존 데이터베이스 메일 프로필의 이름 이어야 합니다. No *profile_name* 지정 된 **sp_send_dbmail** 현재 사용자에 대 한 기본 개인 프로필을 사용 합니다. 사용자에 기본 개인 프로필이 없는 경우 **sp_send_dbmail** 에 대 한 기본 공개 프로필을 사용 하 여는 **msdb** 데이터베이스입니다. 사용자에 기본 개인 프로필이 없고 데이터베이스에 대 한 기본 공개 프로필이 있으면 **@profile_name** 지정 해야 합니다.  
   
  [  **@recipients=** ] **'***받는 사람에 게***'**  
- 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 받는 사람 목록에 유형임 **varchar (max)**합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
+ 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
   
  [ **@copy_recipients=** ] **'***copy_recipients***'**  
- 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 복사 받는 사람 목록에 유형임 **varchar (max)**합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
+ 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 복사 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
   
  [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- 숨은 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 숨은 받는 사람 목록에 유형임 **varchar (max)**합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
+ 숨은 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 숨은 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상을 **@recipients**, **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 에서 오류를 반환 합니다.  
   
  [ **@from_address=** ] **'***from_address***'**  
- 전자 메일 메시지의 '보낸 사람 주소' 값입니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)**합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
+ 전자 메일 메시지의 '보낸 사람 주소' 값입니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
   
  [ **@reply_to=** ] **'***reply_to***'**  
- 전자 메일 메시지의 '회신 주소' 값입니다. 전자 메일 주소만 유효한 값으로 허용됩니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)**합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
+ 전자 메일 메시지의 '회신 주소' 값입니다. 전자 메일 주소만 유효한 값으로 허용됩니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
   
  [ **@subject=** ] **'***subject***'**  
- 전자 메일 메시지의 제목입니다. 제목은 형식의 **nvarchar (255)**합니다. 제목을 지정하지 않으면 기본값은 'SQL Server Message'입니다.  
+ 전자 메일 메시지의 제목입니다. 제목은 형식의 **nvarchar (255)** 합니다. 제목을 지정하지 않으면 기본값은 'SQL Server Message'입니다.  
   
  [  **@body=** ] **'***본문***'**  
  전자 메일 메시지의 본문입니다. 메시지 본문은 형식의 **nvarchar (max)**, 기본값은 NULL입니다.  
@@ -104,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  기본값은 TEXT입니다.  
   
  [  **@importance=** ] **'***중요도***'**  
- 메시지의 중요도입니다. 이 매개 변수는 형식 **varchar(6)**합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+ 메시지의 중요도입니다. 이 매개 변수는 형식 **varchar(6)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   낮음  
   
@@ -115,7 +114,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  기본값은 Normal입니다.  
   
  [  **@sensitivity=** ] **'***민감도***'**  
- 메시지의 기밀성입니다. 이 매개 변수는 형식 **varchar(12)**합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+ 메시지의 기밀성입니다. 이 매개 변수는 형식 **varchar(12)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   보통  
   
@@ -128,7 +127,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  기본값은 Normal입니다.  
   
  [  **@file_attachments=** ] **'***file_attachments***'**  
- 전자 메일 메시지에 첨부되는 파일 이름 목록으로, 각 파일 이름은 세미콜론으로 구분되어 있습니다. 목록의 파일은 절대 경로로 지정해야 합니다. 첨부 파일 목록은 유형 **nvarchar (max)**합니다. 기본적으로 데이터베이스 메일의 첨부 파일은 파일당 1MB로 제한됩니다.  
+ 전자 메일 메시지에 첨부되는 파일 이름 목록으로, 각 파일 이름은 세미콜론으로 구분되어 있습니다. 목록의 파일은 절대 경로로 지정해야 합니다. 첨부 파일 목록은 유형 **nvarchar (max)** 합니다. 기본적으로 데이터베이스 메일의 첨부 파일은 파일당 1MB로 제한됩니다.  
   
  [  **@query=** ] **'***쿼리***'**  
  실행할 쿼리입니다. 쿼리 결과를 파일로 첨부할 수도 있고 전자 메일 메시지의 본문에 포함할 수도 있습니다. 유형의 쿼리는 **nvarchar (max)**, 유효한 포함 될 수 있습니다 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 합니다. 스크립트 호출에서 하므로 지역 변수는 별도 세션에서 쿼리가 실행 되는 참고 **sp_send_dbmail** 는 쿼리에 사용할 수 없습니다.  
@@ -151,7 +150,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  쿼리 결과에 서식을 지정할 때 사용하는 문자 줄 너비입니다. *query_result_width* 유형의 **int**, 기본값은 256입니다. 10과 32767 사이의 값을 지정해야 합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
  [ **@query_result_separator=** ] **'***query_result_separator***'**  
- 쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다. 구분 기호는 형식의 **char(1)**합니다. 기본값은 ' '(공백)입니다.  
+ 쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다. 구분 기호는 형식의 **char(1)** 합니다. 기본값은 ' '(공백)입니다.  
   
  [ **@exclude_query_output=** ] *exclude_query_output*  
  쿼리 실행 출력을 전자 메일 메시지로 반환할지 여부를 지정합니다. **exclude_query_output** 는 bit 이며 기본값은 0입니다. 경우이 매개 변수는 0, 실행의는 **sp_send_dbmail** 저장된 프로시저는 콘솔에는 쿼리 실행의 결과로 반환 되는 메시지를 인쇄 합니다. 이 매개 변수는 1, 실행 하는 경우는 **sp_send_dbmail** 저장된 프로시저를 인쇄 하지 않을 쿼리 실행 메시지가 콘솔에 있습니다.  

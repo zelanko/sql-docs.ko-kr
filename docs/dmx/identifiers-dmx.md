@@ -25,12 +25,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c5726b7550b0c7a9b1dab63344631502b2fa06b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 73201cc7d431cec2626b5cfb127da92445eede99
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-dmx"></a>식별자(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
  개체 식별자는 개체를 정의할 때 생성됩니다. 그런 다음 이 식별자를 사용하여 개체를 참조할 수 있습니다. 식별자 길이는 100자로 제한됩니다.  
   
-##  <a name="RegularIdentifiers"></a>일반 식별자  
+##  <a name="RegularIdentifiers"></a> 일반 식별자  
  DMX의 일반 식별자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 식별자 형식 규칙을 따릅니다. DMX의 일반 식별자에는 구분 기호가 필요하지 않습니다. 다음은 구분 기호를 사용하지 않는 일반 식별자를 사용하는 DMX 문의 예입니다.  
   
 ```  
@@ -69,13 +68,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   밑줄(_)  
   
-3.  DMX 예약어는 식별자로 사용할 수 없습니다. DMX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 참조 [예약 된 키워드 &#40; DMX &#41;](../dmx/reserved-keywords-dmx.md)합니다.  
+3.  DMX 예약어는 식별자로 사용할 수 없습니다. DMX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 참조 [예약 된 키워드 &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)합니다.  
   
 4.  식별자에는 중간 공백 또는 특수 문자가 포함될 수 없습니다.  
   
  DMX 문에서 이러한 규칙을 따르지 않는 식별자를 사용하려면 대괄호로 구분해야 합니다.  
   
-##  <a name="DelimitedIdentifiers"></a>구분된 식별자  
+##  <a name="DelimitedIdentifiers"></a> 구분된 식별자  
  구분 식별자는 대괄호([ ])로 묶입니다.  다음은 이 규칙을 따르는 구분 식별자가 있는 DMX 문의 예입니다.  
   
 ```  
@@ -113,13 +112,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  정규화된 개체 이름을 사용할 때는 개체 이름을 구성하는 식별자 중 둘 이상을 구분해야 합니다. 각 식별자를 개별적으로 구분해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   

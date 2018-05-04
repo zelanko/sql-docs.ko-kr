@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], diagnostic information
 - desktop database drivers [ODBC], diagnostic information
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2a3120fd230d15a8a940a6e631275e41bb79ed50
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23e5933bb5a17d4e870e6d50b8821b6407ccd277
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버에 대 한 진단
 모든 오류와 경고를 선택 하거나 일부만 드라이버 관리자가 선택 되어 하지 드라이버에 의해 처리 됩니다. 드라이버 매핑됩니다.이 형식은 네이티브 오류 또는 Sqlstate를 데이터 원본에 의해 반환 되는 오류입니다. 에 나열 된 각 함수는 *ODBC Programmer's Reference* 조건 및 메시지를 지정 하는 "진단" 섹션을 포함 합니다.  

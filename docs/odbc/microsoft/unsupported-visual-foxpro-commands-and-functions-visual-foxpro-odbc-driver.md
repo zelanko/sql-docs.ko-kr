@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
 - functions [ODBC], Visual FoxPro
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5f91ce7f6f27595f43ed81c1be3497d0bb15f4b2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원 되지 않는 Visual FoxPro 명령 및 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버에서 지원 되지 않지만 Microsoft® Visual FoxPro®에서 사용할 수 있는 FoxPro 명령 및 함수를 나열 합니다.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - translator subkey [ODBC]
 - registry entries for components [ODBC], translator specification subkeys
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de1d072bf36203fd8755726f5a06edbb786d7eb5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fbba8b7f6b89b891a0537a212a460995b2398e32
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translator-specification-subkeys"></a>변환기 사양 하위 키
 ODBC 변환기 하위 키에 나열 된 각 변환기 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 변환기 하위 키 아래에서 해당 값으로 동일한 이름을 있습니다. 이 하위 키 아래의 값 변환기 및 변환기 설치 Dll 및 사용 횟수의 전체 경로 나열합니다. 다음 표에 표시 된은 값의 형식입니다.  

@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09ca15b99b44bda1bb58078f3b5e273826561ee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 95d43d77c240d103f2fa96add77ba982684fc73f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rangemid-dmx"></a>RangeMid(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ RangeMid(<scalar column reference>)
  스칼라 값  
   
 ## <a name="remarks"></a>주의  
- 와 함께 사용할 경우 [SELECT FROM &#60; 모델 &#62; 예측 조인 &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, 및 **RangeMax** 함수 지정 된 버킷의 실제 경계 값을 반환 합니다. 예를 들어 불연속화된 열에 대해 예측을 수행하면 해당 쿼리는 불연속화된 열의 예측 버킷 번호를 반환합니다. **RangeMin**, **RangeMid**, 및 **RangeMax** 함수는 예측이 지정 하는 버킷을 설명 합니다. 경우는 **RangeMid** 함수는 PREDICTION JOIN 문을 함께 사용, 스칼라 열 참조에는 예측 가능한 불연속 열만 포함할 수 있습니다.  
+ 와 함께 사용할 경우 [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, 및 **RangeMax**  함수 지정 된 버킷의 실제 경계 값을 반환 합니다. 예를 들어 불연속화된 열에 대해 예측을 수행하면 해당 쿼리는 불연속화된 열의 예측 버킷 번호를 반환합니다. **RangeMin**, **RangeMid**, 및 **RangeMax** 함수는 예측이 지정 하는 버킷을 설명 합니다. 경우는 **RangeMid** 함수는 PREDICTION JOIN 문을 함께 사용, 스칼라 열 참조에는 예측 가능한 불연속 열만 포함할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 TM Decision Tree 마이닝 모델의 Yearly Income 연속 열에 대한 최대값, 최소값 및 평균값을 반환합니다.  
@@ -62,10 +61,10 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)   
- [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
+ [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
   
   

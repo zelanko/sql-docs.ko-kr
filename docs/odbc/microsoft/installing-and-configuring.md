@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], configuring
 - Visual FoxPro ODBC driver [ODBC], configuring
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d6badbc1952714773d841e53f960ea7244153a9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4571ca64ab0be87d6694cb5bd2d54dd1ef7d8609
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installing-and-configuring"></a>설치 및 구성
 Visual FoxPro ODBC 드라이버를 다운로드 하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트](http://go.microsoft.com/fwlink/?LinkId=121318)합니다.  

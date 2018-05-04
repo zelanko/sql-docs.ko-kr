@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  데이터베이스에 새 마이닝 구조를 만들고 필요에 따라 학습 및 테스트 파티션을 정의합니다. 마이닝 구조를 만든 후 사용할 수 있습니다는 [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) 마이닝 구조에 모델을 추가 하는 문입니다.  
+  데이터베이스에 새 마이닝 구조를 만들고 필요에 따라 학습 및 테스트 파티션을 정의합니다. 마이닝 구조를 만든 후 사용할 수 있습니다는 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) 마이닝 구조에 모델을 추가 하는 문입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  구조 열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그의 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [데이터 형식 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [콘텐츠 형식 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [콘텐츠 형식 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [열 배포 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [열 배포 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [모델링 플래그 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [모델링 플래그 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
 ### <a name="column-relationships"></a>열 관계  
- 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]다음의 사용을 지원 \<열 관계 > 절.  
+ 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다음의 사용을 지원 \<열 관계 > 절.  
   
  **관련 된**  
  값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  다음 예에서는 DMX를 사용하여 홀드아웃이 있는 마이닝 구조를 만드는 방법을 보여 줍니다.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 학습 집합을 포함하지 않는 구조 추가  
- 다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법을 알아보려면 참조 [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
+ 다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법을 알아보려면 참조 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,8 +194,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

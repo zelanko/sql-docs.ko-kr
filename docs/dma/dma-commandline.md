@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - sql-dma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
@@ -20,12 +20,11 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bf0437354f90a03f1d1cf68be074df3f4234676
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 084ab21808c1dca1e5a0276ca78e421ea283acaf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>실행 명령줄에서 데이터 마이그레이션 길잡이
 데이터 마이그레이션 도우미를 설치 버전 2.1 이상에서 때도 설치 됩니다. dmacmd.exe에 *% ProgramFiles %\\Microsoft 데이터 마이그레이션 길잡이\\* 합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 하 고 JSON 또는 CSV 파일에 결과 출력 합니다. 여러 데이터베이스 또는 대규모 데이터베이스에 액세스할 때 특히 유용 합니다. 

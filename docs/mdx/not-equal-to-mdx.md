@@ -1,5 +1,5 @@
 ---
-title: '&lt;&gt;(같지 않음) (MDX) | Microsoft Docs'
+title: '&lt;&gt; (같지 않음) (MDX) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f515685f01b1795c361b38f031fa9e8d871dbb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dea54629c9a1e1d5add6659e0eaaca2dc9d91c92
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt;(같지 않음) (MDX)
+# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (같지 않음) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   하나의 MDX 식의 값이 다른 MDX 식의 값과 다른지 확인하는 비교 연산을 수행합니다.  
@@ -56,6 +55,6 @@ MDX_Expression <> MDX_Expression
 -   매개 변수 중 하나가 Null이거나 둘 다 Null인 경우 Null입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

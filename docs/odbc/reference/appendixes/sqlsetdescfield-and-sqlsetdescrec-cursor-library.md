@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 및 SQLSetDescRec (커서 라이브러리)
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  커서 라이브러리에 대 한 호출 실행 **SQLSetDescRec** 책갈피 열에 대 한 합니다.  
   
- ODBC 2 작업할 때는. *x* 드라이버 커서 라이브러리 반환 SQLSTATE HY090 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLSetDescField** 또는 **SQLSetDescRec** 는 SQL_DESC_OCTET_ 설정 하기 위해 호출 4 같지 않은 값으로 카드가의 책갈피 레코드의 필드 길이입니다. ODBC 3 작업할 때*.x* 드라이버 커서 라이브러리의 규모에 버퍼를 허용 합니다.  
+ ODBC 2 작업할 때는. *x* 드라이버 커서 라이브러리 반환 SQLSTATE HY090 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLSetDescField** 또는 **SQLSetDescRec** 는 SQL_DESC_OCTET_ 설정 하기 위해 호출 4 같지 않은 값으로 카드가의 책갈피 레코드의 필드 길이입니다. ODBC 3 작업할 때 *.x* 드라이버 커서 라이브러리의 규모에 버퍼를 허용 합니다.  
   
  커서 라이브러리 실행 **SQLSetDescField** SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE, 또는 SQL_DESC_ROW_STATUS_PTR 필드의 값을 반환 하도록 호출 됩니다. 이러한 필드는 책갈피 행 뿐 아니라 행에 대해 반환할 수 있습니다.  
   

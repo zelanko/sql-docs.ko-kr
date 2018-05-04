@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c0d246c2ed8ea670f2d8c2fc05bca828ce152ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc7dde2cbd3ec6b3361785b7d9f02931f812b730
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**size**|**nvarchar(15)**|파일 크기(KB)입니다.|  
 |**maxsize**|**nvarchar(15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar(15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
-|**사용**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'**합니다.|  
+|**사용**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터에만 해당'** 및 값은 로그 파일에 대 한 **'로그 만'** 합니다.|  
   
 ## <a name="permissions"></a>Permissions  
  **public** 역할의 멤버 자격이 필요합니다.  

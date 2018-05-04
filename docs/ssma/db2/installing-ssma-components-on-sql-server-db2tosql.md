@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44b9f03fd178e01b356ada74ec5a9c5761db7e98
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 397d50ab21c75b7e571f89266b67bb3054607737
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 SSMA 구성 요소 설치
 이 버전의 SSMA은 없어도 별도 설치를 위한에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA 확장 팩 서버 간 연결을 허용 하도록 DB2 공급자 및 데이터 마이그레이션을 지원 합니다.  

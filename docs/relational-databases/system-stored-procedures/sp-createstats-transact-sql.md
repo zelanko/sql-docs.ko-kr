@@ -24,13 +24,12 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17d061eec260c1553fb03623ed392444f02ea939
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5ba9ae425213492b710e44c5c0934ce5ee5c879f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_createstats
   
 ## <a name="arguments"></a>인수  
  [  **@indexonly=** ] **'indexonly'**  
- 기존 인덱스에 있으며 인덱스 정의의 첫 번째 열이 아닌 열에 대해서만 통계를 만듭니다. **indexonly** 은 **char (9)**합니다. 기본값은 NO입니다.  
+ 기존 인덱스에 있으며 인덱스 정의의 첫 번째 열이 아닌 열에 대해서만 통계를 만듭니다. **indexonly** 은 **char (9)** 합니다. 기본값은 NO입니다.  
   
  [  **@fullscan=** ] **'fullscan'**  
- 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **FULLSCAN** 옵션입니다. **fullscan** 은 **char (9)**합니다.  기본값은 NO입니다.  
+ 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **FULLSCAN** 옵션입니다. **fullscan** 은 **char (9)** 합니다.  기본값은 NO입니다.  
   
  [  **@norecompute=** ] **'norecompute'**  
- 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **NORECOMPUTE** 옵션입니다. **norecompute** 은 **char(12)**합니다.  기본값은 NO입니다.  
+ 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **NORECOMPUTE** 옵션입니다. **norecompute** 은 **char(12)** 합니다.  기본값은 NO입니다.  
   
  [  **@incremental=** ] **'증분'**  
- 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **INCREMENTAL = ON** 옵션입니다. **증분** 은 **char(12)**합니다.  기본값은 NO입니다.  
+ 사용 하 여는 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문을 **INCREMENTAL = ON** 옵션입니다. **증분** 은 **char(12)** 합니다.  기본값은 NO입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

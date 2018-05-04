@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3219fc1832d781e3156ec4a2284c3a8e861db67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 864b6d3fdaddf900d416685499571ccd6d9dd198
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +127,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  게시자에 연결할 때 에이전트가 사용하는 보안 모드입니다. *publisher_security_mode* 은 **int**, 기본값은 없습니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 지정 해야 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- 게시자에 연결할 때 사용하는 로그인입니다. *publisher_login* 은 **sysname**, 기본값은 없습니다. *publisher_login* 지정 해야 *publisher_security_mode* 은 **0**합니다. 경우 *publisher_login* 이 NULL이 고 게시자*_ * * security_mode* 은 **1**에 지정 된 Windows 계정이 *job_login* 됩니다 게시자에 연결할 때 사용 합니다.  
+ 게시자에 연결할 때 사용하는 로그인입니다. *publisher_login* 은 **sysname**, 기본값은 없습니다. *publisher_login* 지정 해야 *publisher_security_mode* 은 **0**합니다. 경우 *publisher_login* 이 NULL이 고 게시자 *_ * * security_mode* 은 **1**에 지정 된 Windows 계정이 *job_login* 됩니다 게시자에 연결할 때 사용 합니다.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  게시자에 연결할 때 사용하는 암호입니다. *publisher_password* 은 **nvarchar (524)**, 기본값은 없습니다.  

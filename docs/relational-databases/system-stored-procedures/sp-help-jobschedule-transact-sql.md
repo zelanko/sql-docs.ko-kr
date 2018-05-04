@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**job_count**|**int**|반환된 작업 수입니다.|  
   
-> **참고:****sp_help_jobschedule** 에서 값을 반환 된 **dbo.sysjobschedules** 및 **dbo.sysschedules** 시스템 테이블 **msdb** .   **sysjobschedules** 20 분 마다 업데이트 됩니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
+> **참고:****sp_help_jobschedule** 에서 값을 반환 된 **dbo.sysjobschedules** 및 **dbo.sysschedules** 시스템 테이블 **msdb** . **sysjobschedules** 20 분 마다 업데이트 됩니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>주의  
  매개 변수 **sp_help_jobschedule** 특정 조합에만 사용할 수 있습니다. 경우 *schedule_id* 지정한 경우에 *job_id* 나 *job_name* 지정할 수 있습니다. 그렇지 않은 경우는 *job_id* 또는 *job_name* 매개 변수는 함께 사용할 수 있습니다 *schedule_name*합니다.  

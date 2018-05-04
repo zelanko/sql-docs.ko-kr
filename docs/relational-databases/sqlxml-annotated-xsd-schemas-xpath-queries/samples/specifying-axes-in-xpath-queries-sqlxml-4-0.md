@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5eb440c409e7819d35b90b335004e9be7bb69c51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69549a2df3ae93e5f87777eaa70bf68bf76b447e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +166,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- XPath 쿼리로 지정 된 경우 `Customer/Order/OrderDetail`, 일치 하는 각 노드에서  **\<고객 >** 쿼리를 탐색 해당  **\<순서 >** 요소입니다. 와 일치 하는 각 노드  **\<순서 >**는 노드를 추가 하는 쿼리  **\<OrderDetail >** 결과에 합니다. 만  **\<OrderDetail >** 결과 집합에 반환 됩니다.  
+ XPath 쿼리로 지정 된 경우 `Customer/Order/OrderDetail`, 일치 하는 각 노드에서  **\<고객 >** 쿼리를 탐색 해당  **\<순서 >** 요소입니다. 와 일치 하는 각 노드  **\<순서 >** 는 노드를 추가 하는 쿼리  **\<OrderDetail >** 결과에 합니다. 만  **\<OrderDetail >** 결과 집합에 반환 됩니다.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>3. ..를 사용하여 부모 축 지정  
  다음 쿼리는 모든 검색 된  **\<순서 >** 된 부모 요소  **\<고객 >** 인 요소는 **CustomerID** 특성 1의 값입니다. 쿼리에서 사용 하 여는 **자식** 의 부모를 찾을 조건자에서는 축에서  **\<순서 >** 요소입니다.  
@@ -190,7 +188,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 > [!NOTE]  
->  XPath 쿼리 `/Order[../@CustomerID="1"]` 의 부모가 없기 때문에 오류가 반환 됩니다  **\<순서 >**합니다. 매핑 스키마에 포함 된 요소가 있을 수 있지만  **\<순서 >**, XPath; 중 하나에서 시작 되지 않은 따라서  **\<순서 >** 것으로 간주 됩니다는 문서에서 최상위 요소 형식입니다.  
+>  XPath 쿼리 `/Order[../@CustomerID="1"]` 의 부모가 없기 때문에 오류가 반환 됩니다  **\<순서 >** 합니다. 매핑 스키마에 포함 된 요소가 있을 수 있지만  **\<순서 >**, XPath; 중 하나에서 시작 되지 않은 따라서  **\<순서 >** 것으로 간주 됩니다는 문서에서 최상위 요소 형식입니다.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

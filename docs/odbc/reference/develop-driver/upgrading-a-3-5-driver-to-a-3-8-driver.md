@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 577fd4f157c67c80c666f988e1ced40cdd8d084d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 15a97c470d18bab1d5c62e1f2c194ba9f69b20b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.8 드라이버에 3.5 드라이버를 업그레이드합니다.
 이 항목에서는 ODBC 3.8 드라이버에 ODBC 3.5 드라이버 업그레이드 시 고려 사항 및 지침을 제공 합니다.  

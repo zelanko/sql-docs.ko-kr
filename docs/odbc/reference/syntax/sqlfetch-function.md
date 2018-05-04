@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
@@ -64,10 +63,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|문자열 또는 열에 대해 반환 된 이진 데이터의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 했습니다. 문자열 값 경우 오른쪽 잘림 없었습니다.|  
-|01S01|행 하는 동안 오류가 발생 했습니다.|하나 이상의 행을 인출 하는 동안 오류가 발생 했습니다.<br /><br /> (이 SQLSTATE 때 ODBC 3에 반환 되 면*.x* 응용 프로그램이 ODBC 2와 작동*.x* 드라이버를 무시할 수 있습니다.)|  
+|01S01|행 하는 동안 오류가 발생 했습니다.|하나 이상의 행을 인출 하는 동안 오류가 발생 했습니다.<br /><br /> (이 SQLSTATE 때 ODBC 3에 반환 되 면 *.x* 응용 프로그램이 ODBC 2와 작동 *.x* 드라이버를 무시할 수 있습니다.)|  
 |01S07|일부가 잘렸습니다.|열에 대해 반환 되는 데이터가 잘렸습니다. 숫자 데이터 형식에 대 한 수의 소수 부분이 잘렸습니다. 시간, 타임 스탬프 및 시간 구성 요소를 포함 하는 interval 데이터 형식에 대 한 시간의 소수 부분이 잘렸습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|지정한 데이터 형식으로 결과 집합에 있는 열의 데이터 값을 변환할 수 없습니다 *TargetType* 에 **SQLBindCol**합니다.<br /><br /> 0 열 SQL_C_BOOKMARK의 데이터 형식과 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성이 SQL_UB_VARIABLE로 설정 된 되었습니다.<br /><br /> SQL_C_VARBOOKMARK의 데이터 형식으로 열 0 바인딩 되었습니다 및 SQL_UB_VARIABLE를 SQL_ATTR_USE_BOOKMARKS 문 특성 설정 되지 않았습니다.|  
-|07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는*.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
+|07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는 *.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 되는 다양 한 길이의 책갈피가 잘렸습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)이 null 포인터입니다.|  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>설명  
  **SQLFetch** 결과 집합의 다음 행 집합을 반환 합니다. 결과 집합이 존재 하는 동안에 호출할 수 있습니다: 즉, 결과 집합을 호출한 후에 만들어지는 하 고 결과 집합 위에 커서 앞 닫힙니다. 열에 바인딩된 경우 해당 열에 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열이 또는, 가져온 행 수를 반환 하는 버퍼에 대 한 포인터를 지정 하는 경우 **SQLFetch** 도이 정보를 반환 합니다. 에 대 한 호출이 **SQLFetch** 호출을 혼합할 수 **SQLFetchScroll** 와 함께 혼합할 수 없고 있지만 **SQLExtendedFetch**합니다. 자세한 내용은 참조 [행의 데이터를 인출](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)합니다.  
   
- ODBC 3 경우*.x* 는 ODBC 2와 작동 하는 응용 프로그램*.x* 드라이버, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLExtendedFetch** 에 대 한는 ODBC 2*.x* 를 지 원하는 드라이버 **SQLExtendedFetch**합니다. 경우 ODBC 2*.x* 드라이버가 지원 하지 않으면 **SQLExtendedFetch**, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLFetch** ODBC 2 *.x* 단일 행만 가져올 수 있는 드라이버입니다.  
+ ODBC 3 경우 *.x* 는 ODBC 2와 작동 하는 응용 프로그램 *.x* 드라이버, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLExtendedFetch** 에 대 한는 ODBC 2 *.x* 를 지 원하는 드라이버 **SQLExtendedFetch**합니다. 경우 ODBC 2 *.x* 드라이버가 지원 하지 않으면 **SQLExtendedFetch**, 드라이버 관리자 매핑합니다 **SQLFetch** 에 대 한 호출이 **SQLFetch** ODBC 2 *.x* 단일 행만 가져올 수 있는 드라이버입니다.  
   
  자세한 내용은 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   

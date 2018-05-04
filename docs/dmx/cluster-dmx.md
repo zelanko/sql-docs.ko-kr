@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fed486ce6ec5ad2a2b0edf1f470734ae40e8c2e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>Cluster(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ Cluster()
  **클러스터** 으로 사용할 수는 `<`클러스터 열 참조`>` 에 대 한는 **PredictHistogram** 함수입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 단일 쿼리를 사용 하 여는 [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) TM Clustering 마이닝 모델 및는 개별 사례를 각 클러스터에 있는지 확률의 각 클러스터에서 개별 사례의 거리를 반환 하는 함수를 클러스터 합니다.  
+ 다음 예제에서는 단일 쿼리를 사용 하 여는 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 클러스터 TM Clustering 마이닝 모델의 각 클러스터에서 개별 사례의 거리를 반환 하는 함수 및 확률은 개별 사례를 각 클러스터에 있는지입니다.  
   
 ```  
 SELECT  
@@ -69,9 +68,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,13 +28,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f5f58be3eabef0899d34a2f793ba83bb0da1e9f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9657997303096097517286f5d31d8c9a91c1585c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 04/16/2018
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>1. ID 및 IDREFS 유형 지정  
- 다음 스키마에는  **\<고객 >** 요소는  **\<순서 >** 자식 요소입니다.  **\<순서 >** 요소는 자식 요소에는  **\<OrderDetail >** 요소입니다.  
+ 다음 스키마에는  **\<고객 >** 요소는  **\<순서 >** 자식 요소입니다. **\<순서 >** 요소는 자식 요소에는  **\<OrderDetail >** 요소입니다.  
   
  **OrderIDList** 특성  **\<고객 >** 참조 하는 IDREFS 형식 특성은는 **OrderID** 특성에는  **\< 순서 >** 요소입니다.  
   

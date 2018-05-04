@@ -24,13 +24,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8daa2b463054d8dd33db156f85190223ab7a2e1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_fulltext_table
  한 부분 또는 두 부분으로 구성된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 은 **nvarchar (517)**, 기본값은 없습니다.  
   
  [  **@action=**] **'***동작***'**  
- 수행할 동작입니다. *동작* 은 **nvarchar (50)**이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
+ 수행할 동작입니다. *동작* 은 **nvarchar (50)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나 여야 합니다.  
   
 |Value|Description|  
 |-----------|-----------------|  

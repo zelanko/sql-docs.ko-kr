@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - length/indicator buffers [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c3a817aa541d397a46ae75d09ed09ccbb550842
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aa4cb7310d579fb787a3e08da8e309d4e5c6e4d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-length-and-indicator-values"></a>길이 표시기 값을 사용 하 여
 길이/표시기 버퍼 데이터 버퍼 또는 데이터가 NULL 인지 여부를 나타내는 SQL_NULL_DATA 등 특별 한 표시기에 있는 데이터의 바이트 길이 전달 하는 데 사용 됩니다. 사용 되는 함수에 따라 길이/표시기 버퍼는 SQLINTEGER 또는 SQLSMALLINT 되도록 정의 됩니다. 따라서을 설명 하는 하나의 인수가 필요 합니다. 데이터 버퍼가 nondeferred 입력된 버퍼 경우이 인수 자체 데이터의 바이트 길이 또는 표시기 값을 포함 합니다. 종종 라는 *StrLen_or_Ind* 또는 비슷한 이름입니다. 예를 들어 다음 코드 호출 **SQLPutData** 버퍼를 전달할 데이터의 전체; 바이트 길이 (*ValueLen*) 때문에 직접 전달 데이터 버퍼 (*ValuePtr*)은 입력된 버퍼입니다.  

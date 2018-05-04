@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 22068e036009c938cda5f67ad813021a863f8638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e51f127fa141d151875621209dc4195393670744
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_depends [ @objname = ] '<object>'
 |**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
 |**column**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
- 다음 결과 집합에 종속 된 개체를 보여 줍니다.  *\<개체 >*합니다.  
+ 다음 결과 집합에 종속 된 개체를 보여 줍니다.  *\<개체 >* 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

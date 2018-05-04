@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.workload: Active
-ms.openlocfilehash: d422a4a755061837c08a6f4f8de4e1889768ac5d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 841f5b737742a23e8126d5b5b9bf0d9c7ed55399
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 하는 빠른 시작:
 
@@ -59,13 +58,13 @@ ms.lasthandoff: 04/26/2018
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-      -p 1401:1433 --name sql1 \
+      -p 1433:1433 --name sql1 \
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-      -p 1401:1433 --name sql1 `
+      -p 1433:1433 --name sql1 `
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
@@ -81,7 +80,7 @@ ms.lasthandoff: 04/26/2018
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
-   | **-p 1401:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트에서 1401 포트에 노출됩니다. |
+   | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1433 포트에 노출 됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
@@ -229,14 +228,14 @@ SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에�
 
 1. 컨테이너를 호스팅하는 컴퓨터에 대한 IP 주소를 찾습니다. Linux에서 **ifconfig** 또는 **ip 주소**를 사용합니다. Windows에서 **ipconfig**를 사용합니다.
 
-1. 컨테이너의 포트 1433에 매핑된 IP 주소와 포트를 지정하는 sqlcmd를 실행합니다. 이 예제에서 그것은 호스트 컴퓨터의 1401 포트입니다.
+1. 컨테이너의 포트 1433에 매핑된 IP 주소와 포트를 지정하는 sqlcmd를 실행합니다. 이 예제에서는 동일한 포트를 호스트 컴퓨터에서 1433입니다. 호스트 컴퓨터에 매핑된 다른 포트를 지정 하는 경우 여기 사용할가 있습니다.
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
+   sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. Transact-SQL 명령을 실행합니다. 완료되면 `QUIT`을 입력합니다.

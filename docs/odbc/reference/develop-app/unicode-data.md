@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], data
 - data types [ODBC], Unicode
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70b5a27c4c034cbb9c2d7ee1cfd10808f3aa323f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7871576f95ebb49708036d531c4f2d8eebbac863
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 고유 하 게 하는 DBMS에서 유니코드로에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 응용 프로그램 데이터를 유니코드 버퍼에 바인딩할 수 있도록 제공 됩니다. 드라이버 관리자 유니코드 C 형식 있도록 (SQL_C_WCHAR)에서 데이터를 변환할 수는 ANSI 드라이버로 함수입니다.  

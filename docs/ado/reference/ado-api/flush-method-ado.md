@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6353f34a445a7bd999090ef0552233dbefb4abb3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d6fbf389b2cf0d8726dbce5585bce8bff1ca0b4e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flush-method-ado"></a>Flush 메서드 (ADO)
 내용을 강제로 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 원본 개체는 ADO 버퍼에에서 남아 있는 **스트림** 연결 합니다.  

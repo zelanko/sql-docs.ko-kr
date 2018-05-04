@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f02221f02c41c74f56d37b4c8b414103e5238bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74352c77e64a07b3c41bae784560b946ea620ebb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-function-summary"></a>ODBC 함수 요약
 다음 표에서 ODBC 함수를 그룹화 하는 작업의 유형별로 목록과 규칙 지정 및 각 함수의 용도에 대 한 간략 한 설명을 포함 되어 있습니다. 규칙에 따라 지정에 대 한 자세한 내용은 참조 [ODBC 및 표준 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)합니다.  

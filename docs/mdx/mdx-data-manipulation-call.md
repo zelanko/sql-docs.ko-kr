@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2f2614b552fe5b5f96dcb50dcd0bc85c857540b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX 데이터 조작-호출
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +65,7 @@ CALL SP_Name
 >  저장된 프로시저가 클라이언트에 등록 되지 않은 경우는 **호출** 문에서의 인스턴스에서 저장된 프로시저를 호출 하려고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [저장된 프로시저 &#40;를 사용 하 여 Mdx&#41;](../mdx/using-stored-procedures-mdx.md)  
+ [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [저장 프로시저 사용 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

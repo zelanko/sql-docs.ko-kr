@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -25,23 +25,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61809072272ae91c32d4780971735c29c53fe977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x 응용 프로그램 작성
 경우는 ODBC 2. *x* 응용 프로그램은 ODBC 3으로 업그레이드 됩니다. *x*, 모두 ODBC 2와 함께 작동 되도록 작성 합니다. *x* 및 3. *x* 드라이버입니다. 응용 프로그램이 ODBC 3을 모두 활용 하려면 조건부 코드를 통합 해야 합니다. *x* 기능입니다.  
   
- SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 해야 합니다. 이 방법을 사용 하면 드라이버는 ODBC 2 비슷하게*.x* 드라이버 섹션에서 설명한 변경과 관련 하 여 [변경 된 동작](../../../odbc/reference/develop-app/behavioral-changes.md)합니다.  
+ SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 해야 합니다. 이 방법을 사용 하면 드라이버는 ODBC 2 비슷하게 *.x* 드라이버 섹션에서 설명한 변경과 관련 하 여 [변경 된 동작](../../../odbc/reference/develop-app/behavioral-changes.md)합니다.  
   
- 응용 프로그램 섹션에서 설명 하는 기능의 사용은 [새로운 기능](../../../odbc/reference/develop-app/new-features.md), 조건부 코드를 사용 하 여 드라이버는 ODBC 3 인지 여부를 확인 해야 합니다. *x* 또는 ODBC 2*.x* 드라이버입니다. 응용 프로그램이 사용 **SQLGetDiagField** 및 **SQLGetDiagRec** 가져오려면 ODBC 3. *x* SQLSTATEs 오류 이러한 조건부 코드 조각에 대 한 처리를 수행 하는 중입니다. 새로운 기능에 대해 다음 사항은 고려해 야 합니다.  
+ 응용 프로그램 섹션에서 설명 하는 기능의 사용은 [새로운 기능](../../../odbc/reference/develop-app/new-features.md), 조건부 코드를 사용 하 여 드라이버는 ODBC 3 인지 여부를 확인 해야 합니다. *x* 또는 ODBC 2 *.x* 드라이버입니다. 응용 프로그램이 사용 **SQLGetDiagField** 및 **SQLGetDiagRec** 가져오려면 ODBC 3. *x* SQLSTATEs 오류 이러한 조건부 코드 조각에 대 한 처리를 수행 하는 중입니다. 새로운 기능에 대해 다음 사항은 고려해 야 합니다.  
   
 -   변경 행 집합 크기 동작에 영향을 받는 응용 프로그램 호출 하지 않도록 주의 해야 합니다. **SQLFetch** 배열 크기가 1 보다 큰 경우. 이러한 응용 프로그램에 대 한 호출을 대체 해야 **SQLExtendedFetch** 호출 하 여 **SQLSetStmtAttr** SQL_ATTR_ARRAY_STATUS_PTR 문 특성을 설정 하 고 **SQLFetchScroll**, 모두 ODBC 3 사용 가능한 공통 코드를 더 합니다. *x* 및 ODBC 2. *x* 드라이버입니다. 때문에 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여에 매핑할 수는 **SQLSetStmtAttr** 와 SQL_ROWSET_SIZE ODBC 2. *x* 드라이버, 응용 프로그램 설정 SQL_ATTR_ROW_ARRAY_SIZE 다중 행 인출 작업에 대 한 합니다.  
   
--   업그레이드 하는 대부분의 응용 프로그램 실제로 SQLSTATE 코드에 있는 변경 내용의 영향을 받지 않습니다. 영향을 받는 응용 프로그램, 기계적 검색 수 있으며 대부분의 경우 "SQLSTATE 매핑" 섹션의 오류 변환 테이블을 사용 하 여 ODBC 3 변환할 바꿉니다. *x* 오류 코드를 ODBC 2*.x* 코드입니다. ODBC 3 이후*.x* 드라이버 관리자는 ODBC 2에서 매핑을 수행 됩니다. *x* SQLSTATEs odbc 3. *x* SQLSTATEs, 이러한 응용 프로그램 작성자 검사만 ODBC 3에 대 한 필요 합니다. *x* SQLSTATEs 하며 ODBC 2를 포함 하는 방법에 대 한 걱정 하지 않습니다. *x* 조건부 코드의 Sqlstate입니다.  
+-   업그레이드 하는 대부분의 응용 프로그램 실제로 SQLSTATE 코드에 있는 변경 내용의 영향을 받지 않습니다. 영향을 받는 응용 프로그램, 기계적 검색 수 있으며 대부분의 경우 "SQLSTATE 매핑" 섹션의 오류 변환 테이블을 사용 하 여 ODBC 3 변환할 바꿉니다. *x* 오류 코드를 ODBC 2 *.x* 코드입니다. ODBC 3 이후 *.x* 드라이버 관리자는 ODBC 2에서 매핑을 수행 됩니다. *x* SQLSTATEs odbc 3. *x* SQLSTATEs, 이러한 응용 프로그램 작성자 검사만 ODBC 3에 대 한 필요 합니다. *x* SQLSTATEs 하며 ODBC 2를 포함 하는 방법에 대 한 걱정 하지 않습니다. *x* 조건부 코드의 Sqlstate입니다.  
   
 -   응용 프로그램은 날짜, 시간 및 타임 스탬프 데이터 형식을의 훌륭한 사용, 응용 프로그램 자체는 ODBC 2로 선언할 수 있습니다. *x* 조절 코드를 사용 하는 대신 코드의 기존 응용 프로그램 및 사용 합니다.  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 -   에 대 한 모든 호출을 대체 **SQLTransact** 호출 하 여 **SQLEndTran**합니다. 경우에 가장 오른쪽에 있는 유효한 핸들은 **SQLTransact** 호출은 환경 핸들을는 *HandleType* SQL_HANDLE_ENV의 인수에 사용 해야는 **SQLEndTran** 하 여 호출 적절 한 *처리* 인수입니다. 경우에 가장 오른쪽에 있는 유효한 핸들 프로그램 **SQLTransact** 호출 되는 연결 핸들을는 *HandleType* sql_handle_dbc 라는의 인수에 사용 해야는 **SQLEndTran** 하 여 호출 적절 한 *처리* 인수입니다.  
   
--   에 대 한 모든 호출을 대체 **SQLColAttributes** 호출 하 여 **SQLColAttribute**합니다. 경우는 *FieldIdentifier* 인수가 SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, 또는 SQL_COLUMN_LENGTH, 함수 이름이 아닌 다른 값을 변경 하지 마십시오. 그렇지 않은 경우 변경 *FieldIdentifier* SQL_DESC_XXXX SQL_COLUMN_XXXX에서 합니다. 경우 *FieldIdentifier* SQL_DESC_CONCISE_TYPE 이며 데이터 형식은 datetime 데이터 형식, 해당 ODBC 3으로 변경*.x* 데이터 형식입니다.  
+-   에 대 한 모든 호출을 대체 **SQLColAttributes** 호출 하 여 **SQLColAttribute**합니다. 경우는 *FieldIdentifier* 인수가 SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, 또는 SQL_COLUMN_LENGTH, 함수 이름이 아닌 다른 값을 변경 하지 마십시오. 그렇지 않은 경우 변경 *FieldIdentifier* SQL_DESC_XXXX SQL_COLUMN_XXXX에서 합니다. 경우 *FieldIdentifier* SQL_DESC_CONCISE_TYPE 이며 데이터 형식은 datetime 데이터 형식, 해당 ODBC 3으로 변경 *.x* 데이터 형식입니다.  
   
 -   블록 커서, 스크롤 가능 커서 또는 둘 다를 사용 하 여 응용 프로그램은 다음을 수행 합니다.  
   

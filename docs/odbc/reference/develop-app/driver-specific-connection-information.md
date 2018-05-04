@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>드라이버 관련 연결 정보
 **SQLConnect** 가정 하는 데이터 원본 이름, 사용자 ID 및 암호는 데이터 원본에 연결 하기에 충분 하 고 다른 모든 연결 정보는 시스템에 저장할 수 있습니다. 이 경우가 자주 있습니다. 예를 들어 한 사용자 ID와 암호 DBMS에 로그온 하는 서버 및 다른 사용자 ID 및 암호에 로그온 할 수는 드라이버 해야 합니다. 때문에 **SQLConnect** 단일 사용자 ID와 암호를 허용 합니다. 즉,는 다른 사용자 ID와 암호를 저장 해야 시스템에 데이터 소스 정보로 **SQLConnect** 사용할 합니다. 잠재적인 보안 위반 이며 암호를 암호화 하지 않는 한 피해 야 합니다.  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  **DSN** 데이터 원본 이름을 지정 (데이터 원본 이름) 키워드는 **UID** 및 **PWD** 사용자 ID와 서버에 대 한 암호를 지정 하는 키워드와 **UIDDBMS**  및 **PWDDBMS** 키워드는 DBMS에 대 한 사용자 ID와 암호를 지정 합니다. 최종 세미콜론은 선택 사항 확인 합니다. **SQLDriverConnect** 이 문자열을 구문 분석; XYZ Corp 데이터 원본 이름을 사용 하 여 서버 주소; 같은 시스템에서 추가 연결 정보를 검색 하 고, 서버 및 지정 된 사용자 Id와 암호를 사용 하 여 DBMS에 로그온 합니다.  
   
- 키워드-값 쌍 **SQLDriverConnect** 특정 구문 규칙을 따라야 합니다. 키워드와 값 포함 되 면 안는 **{} (),? \*=! @** 문자입니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자. 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다.  
+ 키워드-값 쌍 **SQLDriverConnect** 특정 구문 규칙을 따라야 합니다. 키워드와 값 포함 되 면 안는 **{}(),? \*=! @** 문자입니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자. 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다.  
   
  **FILEDSN** 키워드에 대 한 호출에서 사용할 수 있습니다 **SQLDriverConnect** 데이터 원본 정보를 포함 하는 파일의 이름을 지정 하려면 (참조 [연결 파일을 데이터 원본 사용](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)이 섹션의 뒷부분에 나오는). **SAVEFILE** 에 대 한 호출에서 성공적인 연결 키워드-값 쌍 구성.dsn 파일의 이름을 지정 하려면 키워드를 사용할 수 있습니다 **SQLDriverConnect** 저장 됩니다. 파일 데이터 원본에 대 한 자세한 내용은 참조는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.

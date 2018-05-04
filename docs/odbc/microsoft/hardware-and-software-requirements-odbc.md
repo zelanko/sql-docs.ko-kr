@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hardware requirements [ODBC], desktop database drivers
 - software requirements [ODBC], desktop database drivers
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 164ad4c1ac1c93367291046c2e74986e7b6dc6c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 45bea6f16f079367caeb36b42370c87e1885c56b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>하드웨어 및 소프트웨어 요구 사항 (ODBC)
 이 항목에서는 ODBC 데스크톱 데이터베이스 드라이버를 사용 하기 위한 요구 사항을 나열 합니다.  

@@ -26,13 +26,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cfa8eb9681552557fbed1a251ef9b8fad7fec0c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e9303dd028cdc979e978e05ea87afe7718a566ba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>인수  
  *plan_handle*  
- 실행된 일괄 처리에 대한 쿼리 실행 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary(64)**합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+ 실행된 일괄 처리에 대한 쿼리 실행 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 은 **varbinary(64)** 합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
 -   [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   

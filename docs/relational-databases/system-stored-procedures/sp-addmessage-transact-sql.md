@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05769a0a060de4a78bdcf425e20d004ef9ae9099
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@lang =** ] **'***언어***'**  
  이 메시지의 언어입니다. *언어* 은 **sysname** 기본값은 NULL입니다. 여러 언어를 동일한 서버에 설치할 수 있으므로 *언어* 각 메시지 작성 되는 언어를 지정 합니다. 때 *언어* 은 생략 하면 언어는 기본 언어는 세션에 대 한 합니다.  
   
- [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
  오류가 발생할 때 Windows 응용 프로그램 로그에 기록할지 여부입니다. **@with_log** **varchar(5)** 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 구성원만는 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
   
 > [!NOTE]  

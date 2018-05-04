@@ -22,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 80972c7888cab4c64e30e346064d321715e5f2ce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f9a8e00801b3e0e901e6be1a1934bc9a1ec1153c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ PredictStdev(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 지정 된 형식의 스칼라 값  *\<스칼라 열 참조 >*합니다.  
+ 지정 된 형식의 스칼라 값  *\<스칼라 열 참조 >* 합니다.  
   
 ## <a name="remarks"></a>주의  
  열 참조가 불연속 유형인 경우 **PredictStdev** 불연속 값의 표준 편차를 계산할 수 없기 때문에 0을 반환 합니다.  
@@ -68,8 +67,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

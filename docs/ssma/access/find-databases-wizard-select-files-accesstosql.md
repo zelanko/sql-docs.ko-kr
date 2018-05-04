@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +21,11 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a984e654c14f4ee5b65d49a88dc911b082682581
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: eec542f62d71f8d5974e7eae2d703b6e49646559
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 파일 선택 페이지는 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 선택 확인 페이지를 볼 수 있습니다.  

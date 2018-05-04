@@ -24,12 +24,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 050eb8a82a7c4e9b3204af812072ea83fec7ecea
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 037f6f4ac2f5fef59eb8250c2acbb361ebe53761
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="arguments"></a>인수  
  [ **@dbname=**] **'***dbname***'**  
- 데이터베이스의 이름입니다. *dbname* 은 **sysname**, 기본값은 **%**합니다. 경우 **%**, 다음 결과 집합에 게시자에서 모든 데이터베이스가 포함 되지만, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
+ 데이터베이스의 이름입니다. *dbname* 은 **sysname**, 기본값은 **%** 합니다. 경우 **%**, 다음 결과 집합에 게시자에서 모든 데이터베이스가 포함 되지만, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
   
  [  **@type=**] **'***형식***'**  
  결과 집합에 데이터베이스만 포함 되도록 제한 지정한 복제 옵션인 *형식* 값이 설정 된 합니다. *형식* 은 **sysname**, 다음 값 중 하나가 될 수 있습니다.  

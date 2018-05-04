@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC]
 - functions [ODBC], diagnostic information
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6ffbcdac7a478f8edd6560610811ddff6952b0d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f51d8e70d4f9bc4e855079c61ed431931bdb8da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostics"></a>진단
 Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드 진단 레코드는 함수에 대 한 자세한 정보를 제공 하는 동안 전반적인 성공 또는 실패는 함수를 나타냅니다. 하나 이상의 진단 레코드-헤더 레코드-함수가 성공 하는 경우에 반환 됩니다.  

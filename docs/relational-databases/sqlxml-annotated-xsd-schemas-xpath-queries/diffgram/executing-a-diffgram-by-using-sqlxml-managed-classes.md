@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fa04e87ef14c0a863cbace5e2dfa41a31ec2c7a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b1ebbf5aaed5145b1b360423528e3fa01186cb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML 관리되는 클래스를 사용하여 DiffGram 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
-  **\<하기 전에 >** 블록을 포함 한  **\<고객 >** 요소 (**diffgr: id = "Customer1"**).  **\<DataInstance >** 블록은 해당 포함  **\<고객 >** 가 같은 요소 **id**합니다.  **\<고객 >** 요소에는  **\<NewDataSet >** 지정 **diffgr: haschanges = "modified"**합니다. 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. 되는 경우는 **diffgr: haschanges** 특성이 지정 되지 않은 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트가 수행 되지 않습니다.  
+ **\<하기 전에 >** 블록을 포함 한  **\<고객 >** 요소 (**diffgr: id = "Customer1"**). **\<DataInstance >** 블록은 해당 포함  **\<고객 >** 가 같은 요소 **id**합니다.  **\<고객 >** 요소에는  **\<NewDataSet >** 지정 **diffgr: haschanges = "modified"** 합니다. 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. 되는 경우는 **diffgr: haschanges** 특성이 지정 되지 않은 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트가 수행 되지 않습니다.  
   
  다음은 C# 자습서 응용 프로그램에 위의 DiffGram을 실행 하 고 두 개의 테이블 (Cust, Ord)에서 만들도 업데이트를 SQLXML 관리 되는 클래스를 사용 하는 방법을 보여 주는 코드는 **tempdb** 데이터베이스입니다.  
   

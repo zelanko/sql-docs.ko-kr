@@ -27,12 +27,11 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 375c289c67f951b68255d67d4092a02f343587b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cb69062f30a60a95d2aa844ed05a9a5af4082c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 |**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**encrypted**|**bit**|프로시저 정의가 난독 처리되었는지 여부를 나타냅니다.<br /><br /> 0  =  난독 처리되지 않음<br /><br /> 1  =  난독 처리됨<br /><br /> **\*\* 중요 한 \* \***  저장된 프로시저 정의 난독 처리를 사용 하 여 CREATE PROCEDURE에 ENCRYPTION 키워드입니다.|  
 |**compressed**|**bit**|항상 0을 반환합니다. 이것은 프로시저가 압축되었음을 의미합니다.|  
-|**text**|**nvarchar(4000)**|SQL  정의 문의 실제 텍스트입니다.<br /><br /> 디코딩된 식의 의미 체계는 원본 텍스트와 동일하지만 구문은 일치하지 않을 수 있습니다. 예를 들어 공백은 디코딩된 식에서 제거됩니다.<br /><br /> 이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-호환 뷰는 현재에서 정보를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구조 및 보다 많은 문자를 반환할 수 있습니다는 **nvarchar (4000)** 정의 합니다. **sp_help** 반환 **nvarchar (4000)** 텍스트 열의 데이터 형식으로 합니다. 작업할 때 **syscomments** 를 사용 하는 것이 좋습니다 **nvarchar (max)**합니다. 새로운 개발 작업에서는 사용 하지 마십시오 **syscomments**합니다.|  
+|**text**|**nvarchar(4000)**|SQL  정의 문의 실제 텍스트입니다.<br /><br /> 디코딩된 식의 의미 체계는 원본 텍스트와 동일하지만 구문은 일치하지 않을 수 있습니다. 예를 들어 공백은 디코딩된 식에서 제거됩니다.<br /><br /> 이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-호환 뷰는 현재에서 정보를 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구조 및 보다 많은 문자를 반환할 수 있습니다는 **nvarchar (4000)** 정의 합니다. **sp_help** 반환 **nvarchar (4000)** 텍스트 열의 데이터 형식으로 합니다. 작업할 때 **syscomments** 를 사용 하는 것이 좋습니다 **nvarchar (max)** 합니다. 새로운 개발 작업에서는 사용 하지 마십시오 **syscomments**합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

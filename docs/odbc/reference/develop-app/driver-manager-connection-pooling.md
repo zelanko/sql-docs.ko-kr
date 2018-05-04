@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 사용할 때마다 다시 설정에 필요 하지 않은 연결 풀에서 연결을 사용 하도록 응용 프로그램입니다. 연결이 만들어지고 풀에 배치 된 후 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
  드라이버 관리자에 전달 된 인수에 따라 풀에서 특정 연결을 사용할 것인지 여부를 결정 **SQLConnect** 또는 **SQLDriverConnect**, 연결 특성에 따라 연결 할당 된 후 설정 합니다.  
   
- 드라이버 관리자는 연결 풀링 하는 경우 연결 전달 하기 전에 연결이 계속 작동 하는지 확인 하려면 필요 합니다. 그렇지 않으면 일시적인 네트워크 오류가 발생할 때마다 드라이버 관리자 응용 프로그램에 배달 못 한 연결 제한 전달에 유지 합니다. ODBC 3에는 새로운 연결 특성이 정의 되어*.x*: SQL_ATTR_CONNECTION_DEAD 합니다. SQL_CD_TRUE 또는 SQL_CD_FALSE를 반환 하는 읽기 전용 연결 특성입니다. 값 SQL_CD_TRUE SQL_CD_FALSE 즉, 연결이 아직 활성 상태인 동안 연결에 손실 된 것을 의미 합니다. (이전 버전의 ODBC에 맞는 드라이버가이 특성 지원할 수도 수 있습니다.)  
+ 드라이버 관리자는 연결 풀링 하는 경우 연결 전달 하기 전에 연결이 계속 작동 하는지 확인 하려면 필요 합니다. 그렇지 않으면 일시적인 네트워크 오류가 발생할 때마다 드라이버 관리자 응용 프로그램에 배달 못 한 연결 제한 전달에 유지 합니다. ODBC 3에는 새로운 연결 특성이 정의 되어 *.x*: SQL_ATTR_CONNECTION_DEAD 합니다. SQL_CD_TRUE 또는 SQL_CD_FALSE를 반환 하는 읽기 전용 연결 특성입니다. 값 SQL_CD_TRUE SQL_CD_FALSE 즉, 연결이 아직 활성 상태인 동안 연결에 손실 된 것을 의미 합니다. (이전 버전의 ODBC에 맞는 드라이버가이 특성 지원할 수도 수 있습니다.)  
   
  드라이버를 효율적으로이 옵션을 구현 해야 하거나 연결 풀링 성능을 약화 됩니다. 특히,이 연결 속성을 가져오는 데 대 한 호출 서버 왕복을 발생 하지 않습니다. 대신, 드라이버는 연결의 마지막으로 알려진된 상태를 방금 반환 해야 합니다. 서버에 대 한 마지막 번 실패 한 경우 비활성 및 마지막 여행에 성공한 경우 데드 연결이 있습니다.  
   

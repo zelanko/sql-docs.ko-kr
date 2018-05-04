@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b5f7a213825b56e212d97ce9b8ab2277da54ce5e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3a65cef80607e816212796f12866d1c9a515d3bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>실행, Requery, 및 메서드 (VBScript) 예제를 지웁니다.
 이 예제에서는 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 에 현재 데이터를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [지우기](../../../ado/reference/ado-api/clear-method-ado.md) 의 내용을 삭제 하는 메서드는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 절차는이 절차를 실행 하려면 필요 합니다.  

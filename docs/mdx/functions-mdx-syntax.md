@@ -22,12 +22,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4321a81e2b823ca6ce38f11a0a04cfef2e745f8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-mdx-syntax"></a>함수(MDX 구문)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   MDX에는 특정 작업을 수행하는 여러 범주의 내장 함수가 있습니다. 다음 표에서는 MDX에서 사용 가능한 함수 범주를 나열합니다.  
   
 > [!NOTE]  
->  개별 함수에 대 한 자세한 내용은 참조 [MDX 함수 참조 &#40; Mdx&#41; ](../mdx/mdx-function-reference-mdx.md).  
+>  개별 함수에 대 한 자세한 내용은 참조 [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)합니다.  
   
 |함수 범주|Description|  
 |-----------------------|-----------------|  
-|배열 함수|저장 프로시저에서 사용할 배열을 제공합니다.<br /><br /> 자세한 내용은 참조 [를 사용 하 여 저장 프로시저 &#40; Mdx&#41; ](../mdx/using-stored-procedures-mdx.md).|  
+|배열 함수|저장 프로시저에서 사용할 배열을 제공합니다.<br /><br /> 자세한 내용은 참조 [저장 프로시저를 사용 하 여 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)합니다.|  
 |차원 함수|계층, 수준 또는 멤버에서 차원으로 참조를 반환합니다.<br /><br /> 자세한 내용은 참조 [를 사용 하 여 차원, 계층 및 수준 함수](../mdx/using-dimension-hierarchy-and-level-functions.md)합니다.|  
 |계층 함수|수준 또는 멤버에서 계층으로 참조를 반환합니다.<br /><br /> 자세한 내용은 참조 [를 사용 하 여 차원, 계층 및 수준 함수](../mdx/using-dimension-hierarchy-and-level-functions.md)합니다.|  
 |수준 함수|멤버, 차원, 계층 또는 문자열 식에서 수준으로 참조를 반환합니다.<br /><br /> 자세한 내용은 참조 [를 사용 하 여 차원, 계층 및 수준 함수](../mdx/using-dimension-hierarchy-and-level-functions.md)합니다.|  
@@ -54,6 +53,6 @@ ms.lasthandoff: 01/08/2018
  임의의 MDX 식에서 함수를 사용하거나 포함시킬 수 있습니다. 함수를 중첩(어떤 함수를 다른 함수 내에서 사용하는 것)할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLProcedures
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5420d0adf427a95dec7cbfe224d4b77621c9a5d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: daec499cca74ef63978b3eede0216e192435bdaa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 함수
 **규칙**  
@@ -121,9 +120,9 @@ SQLRETURN SQLProcedures(
 > [!NOTE]  
 >  **SQLProcedures** 모든 프로시저를 반환할 수 있습니다. 응용 프로그램에 의해 반환 되는지 여부에 관계 없이 유효한 모든 절차를 사용할 수 **SQLProcedures**합니다.  
   
- ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다*.x*합니다. 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC 3에 대 한 다음 열의 이름이 바뀌었습니다 *.x*합니다. 열 이름 변경 응용 프로그램 열 번호에 의해 바인딩될 있기 때문에 이전 버전과 호환성 영향을 주지 않습니다.  
   
-|ODBC 2.0 열|ODBC 3*.x* 열|  
+|ODBC 2.0 열|ODBC 3 *.x* 열|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
 |프로시저 _OWNER|프로시저 _SCHEM|  

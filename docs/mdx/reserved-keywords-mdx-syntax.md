@@ -22,17 +22,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 28b75d9b7bb728eb5794892917a3075095adde15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>예약어(MDX 구문)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 배타적으로 사용할은 예약어입니다. 예약 된 키워드 목록은 참조 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 배타적으로 사용할 특정 키워드를 예약합니다. 예약 된 키워드 목록은 참조 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
   
  예약어는 다음 지침을 따릅니다.  
   
@@ -43,6 +42,6 @@ ms.lasthandoff: 01/08/2018
 -   예약어를 사용하지 않는 명명 규칙을 적용하십시오. 개체 이름이 예약어와 같을 때는 자음이나 모음을 제거할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
