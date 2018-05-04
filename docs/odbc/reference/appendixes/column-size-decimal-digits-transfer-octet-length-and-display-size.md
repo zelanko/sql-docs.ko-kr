@@ -3,15 +3,12 @@ title: 열 크기, 10 진수 숫자, 전송 8 진수 길이 대 한 표시 크�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - data types [ODBC], column size
@@ -28,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2ce63d73b21d7eee16d0b17100ff9c18cde265d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f4a63c37dae0e8cbb06f00f5d043576028dd0508
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>열 크기를 10 진수 숫자, 8 진수 길이 전송 하 고, 표시 크기-ODBC
 데이터 형식 열 (또는 매개 변수) 크기, 소수 자릿수, 길이, 특징 및 크기를 표시 합니다. 다음과 같은 ODBC 함수가 데이터 원본에는 SQL 문의 매개 변수에 대 한 또는 SQL 데이터 형식에 대 한 이러한 특성을 반환합니다. 각 ODBC 함수를 다음과 같이 다양 한 이러한 특성을 반환합니다.  

@@ -1,11 +1,9 @@
 ---
 title: UpdateRule 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 415a171e7a640ef85cd8c07ce15c9f25fa73e99a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c4ff1ee3ac7e7513ccd67368b2ee3b2c9defcf2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성 (ADOX)
 작업을 수행할 때 주 나타냅니다 [키](../../../ado/reference/adox-api/key-object-adox.md) 업데이트 됩니다.  

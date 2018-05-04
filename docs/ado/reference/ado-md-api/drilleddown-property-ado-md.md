@@ -1,11 +1,9 @@
 ---
 title: ADO MD DrilledDown 속성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4ef9f5091a1f0a8a4b1e15cbabbf78dae7fc511
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c34f12d84c53d782b2629a408d9182ac36a37db0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilleddown-property-ado-md"></a>ADO MD DrilledDown 속성
 자식 즉시 따르는지 여부를 나타냅니다는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 축에 있습니다.  

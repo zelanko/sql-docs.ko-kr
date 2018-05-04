@@ -3,15 +3,12 @@ title: Update 및 Delete 문을 배치 시뮬레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - data updates [ODBC], positioned update or delete
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1448481938ff0ef8e20ba4e6a85801b65024cbcc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문을 시뮬레이션
 데이터 원본 위치 지정된 업데이트를 지원 하지 않으며 delete 문의 하는 경우 이러한 드라이버 시뮬레이션할 수 있습니다. 예를 들어 ODBC 커서 라이브러리 시뮬레이션 위치 지정된 update 및 delete 문을 합니다. 위치 지정된 update 및 delete 문을 시뮬레이트하기 위한 일반적인 전략 검색 결과 프로토콜로 위치 지정 된 문을 변환 하는 것입니다. 대체 하 여 이렇게는 **WHERE CURRENT OF** 절은 검색 결과를 **여기서** 현재 행을 식별 하는 절.  

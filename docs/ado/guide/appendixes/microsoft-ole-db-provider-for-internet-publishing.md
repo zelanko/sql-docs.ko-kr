@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Provider for 인터넷 게시 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26b77c49d4275ace0bcb95ec1495f0637e5b19f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for 인터넷 게시 개요
 Microsoft OLE DB Provider for Internet Publishing Microsoft FrontPage 또는 Microsoft Internet Information Server에 의해 처리 리소스에 액세스 하도록 ADO 수 있습니다. 리소스에는 HTML 파일 또는 Windows 2000 웹 폴더와 같은 웹 원본 파일이 포함 됩니다.

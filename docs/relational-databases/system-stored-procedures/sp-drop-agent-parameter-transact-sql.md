@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c86a5544697c55fd647a57086fb54cc5e55439b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 없습니다.  
   
  [  **@parameter_name=**] **'***p a r a***'**  
- 삭제할 매개 변수의 이름입니다. *p a r a* 은 **sysname**, 기본값은 **%**합니다. 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
+ 삭제할 매개 변수의 이름입니다. *p a r a* 은 **sysname**, 기본값은 **%** 합니다. 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

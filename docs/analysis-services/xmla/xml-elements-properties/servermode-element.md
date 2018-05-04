@@ -1,31 +1,31 @@
 ---
-title: "ServerMode 요소 | Microsoft Docs"
-ms.custom: 
+title: ServerMode 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c0d0def053cf923474f8d8d3cd066a87bdc31833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b1b22939e400f34e54000ccd0c23763913ab74dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servermode-element"></a>ServerMode 요소
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ServerMode** 서버 요소는 서버가 작동 모드를 지정 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  **ServerMode** Server 요소는 서버가 작동하고 있는 모드를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|(없음)|  
@@ -51,12 +51,12 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  서버는 다음 모드 중 하나에서 작동합니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*다차원*|다차원 및 데이터 마이닝 모드|  
 |*테이블 형식*|테이블 형식 모드|  

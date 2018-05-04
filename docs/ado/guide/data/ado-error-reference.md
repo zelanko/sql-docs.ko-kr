@@ -1,11 +1,9 @@
 ---
 title: ADO 오류 참조 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e1b20ffe6165688a438f97c2c23a7ac573ad320
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cf0631384cf390752d60e6465372558748880278
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-errors"></a>ADO 오류
 **ErrorValueEnum** 상수는 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 상수의 전체 목록은 참조 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션은 더 흥미로운 오류 중 일부를 검토 하 고, 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 특정 한 상황을 설명 합니다. 두는 **ErrorValueEnum** 상수 및 짧은 10 진수 양수 나열 됩니다.

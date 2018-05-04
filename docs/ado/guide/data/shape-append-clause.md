@@ -1,11 +1,9 @@
 ---
 title: APPEND 절 셰이프 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령 APPEND 절은 **레코드 집합**합니다. 대부분의 경우 이러한 열은 장 열을 참조 하는 자식 **레코드 집합**합니다.  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  다음 중 하나 또는 0 (생략할 수 있습니다는 *부모 명령이* 완전히):  
   
--   반환 하는 공급자 명령 중괄호 ("{")는 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
+-   공급자 명령을 중괄호 ("{}")를 반환 하는 **레코드 집합** 개체. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
   
 -   다른 도형 명령 괄호에 포함 합니다.  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>주의  
  *child-recordset*  
- -   반환 하는 공급자 명령 중괄호 ("{")는 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
+ -   공급자 명령을 중괄호 ("{}")를 반환 하는 **레코드 집합** 개체. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
   
 -   다른 도형 명령 괄호에 포함 합니다.  
   

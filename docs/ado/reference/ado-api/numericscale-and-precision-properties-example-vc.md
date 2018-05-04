@@ -1,11 +1,9 @@
 ---
 title: NumericScale 및 전체 자릿수 속성 예 (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07b8f08ec1eedc9475eb0e745e8772258a0595da
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 09cd79d4f547dfd721ea1f04f3ca2e9faad6e1b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 및 전체 자릿수 속성 예 (VC + +)
 사용 하 여이 예제는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 소수 자릿수 및 필드에 전체 자릿수를 표시 하는 속성의 ***할인*** 목차는  ***Pubs*** 데이터베이스입니다.  

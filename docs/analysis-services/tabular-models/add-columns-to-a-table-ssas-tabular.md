@@ -1,31 +1,29 @@
 ---
-title: "테이블에 열 추가 | Microsoft Docs"
-ms.custom: 
+title: 테이블에 열 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ac4b677edc906b6e5081e1c7a16b5089865c75eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-table"></a>테이블에 열 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 기존 테이블에 열을 추가 하는 방법을 설명 합니다.  
+  이 문서에서는 기존 테이블에 열을 추가 하는 방법을 설명 합니다.  
   
 ## <a name="add-columns-from-the-datasource"></a>데이터 원본에서 열을 추가 합니다.  
  데이터 원본 테이블에서 데이터를 가져오기 위해 테이블 가져오기 마법사를 사용할 경우 원본 테이블의 모든 열을 포함하거나 미리 보기 및 필터 기능을 사용하여 특정 열을 필터링하여 제외하도록 선택한 경우 해당 열 및 선택한 필터링된 데이터를 포함하는 새 테이블이 모델에서 만들어집니다. 가져올 특정 열만 지정하는 SQL 쿼리를 작성할 수도 있습니다. 그러나 나중에 추가로 원본 테이블의 다른 열을 모델 테이블에 가져오거나 DAX 수식에서 값을 유추하는 계산 열을 추가할 수 있습니다.  

@@ -3,15 +3,12 @@ title: 값 인수 패턴 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5befe078127bb526f4fe9a103ec823f2142039f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 일부 인수 카탈로그에서 함수가 *TableName* 인수 **SQLTables**, 검색 패턴을 사용할 합니다. 이 인수는 검색 패턴을 사용할 SQL_ATTR_METADATA_ID 문 특성이 SQL_FALSE;로 설정 된 경우 이 특성은 SQL_TRUE로 설정 하는 경우 검색 패턴을 허용 하지 않는 식별자 인수 않은 것입니다.  
@@ -51,6 +47,6 @@ ms.lasthandoff: 04/16/2018
  검색 패턴의에서 이스케이프 문자 검색 패턴을 허용 하는 인수를 특별히 주의 해야 합니다. 식별자에서 일반적으로 사용 되는 밑줄 문자에 대 한 경우 특히 그렇습니다. 응용 프로그램에서 일반적인 실수는 하나의 카탈로그 함수에서 값을 검색 하 고 다른 카탈로그 함수에서는 검색 패턴 인수에 해당 값을 전달 하는 것입니다. 예를 들어, 응용 프로그램 검색 결과에서 MY_TABLE 설정에 대 한 테이블 이름 **SQLTables** 전달 하려면이 **SQLColumns** MY_TABLE에 있는 열의 목록을 검색할 수 있습니다. 대신, MY_TABLE에 대 한 열을 가져올 응용 프로그램 MY_TABLE, MY1TABLE, MY2TABLE, 등 MY_TABLE 검색 패턴과 일치 하는 모든 테이블의 열을을 받습니다.  
   
 > [!NOTE]  
->  ODBC 2입니다. *x* 드라이버의 검색 패턴을 지원 하지 않습니다는 *CatalogName* 인수 **SQLTables**합니다. ODBC 3*.x* SQL_OV_ODBC2로 설정 된 경우이 인수의 검색 패턴을 받지 않는; 드라이버 SQL_ATTR_ ODBC_VERSION 환경 특성이 SQL_OV_ODBC3로 설정 된 경우이 인수의 검색 패턴을 허용 합니다.  
+>  ODBC 2입니다. *x* 드라이버의 검색 패턴을 지원 하지 않습니다는 *CatalogName* 인수 **SQLTables**합니다. ODBC 3 *.x* SQL_OV_ODBC2로 설정 된 경우이 인수의 검색 패턴을 받지 않는; 드라이버 SQL_ATTR_ ODBC_VERSION 환경 특성이 SQL_OV_ODBC3로 설정 된 경우이 인수의 검색 패턴을 허용 합니다.  
   
  Null 포인터는 검색 패턴 인수를 전달 인수에 지정 된;에 대 한 검색을 제한 하지 않습니다. 즉, null 포인터와 검색 패턴 % (문자)는 동일 합니다. 길이가 0 인 패턴을 검색 하는 반면-즉,에 대 한 유효한 포인터는 문자열 길이 0-빈 문자열만 일치 ("").

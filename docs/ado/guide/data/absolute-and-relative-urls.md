@@ -1,11 +1,9 @@
 ---
 title: 절대 곡선과 상대 Url | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ba1ab2c9bdc1adbc063cd05e88cf9d0001efb15c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absolute-and-relative-urls"></a>절대 곡선과 상대 Url
 URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등의 대상이 될 수 있습니다*합니다.*  

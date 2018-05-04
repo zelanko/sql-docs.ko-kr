@@ -1,11 +1,9 @@
 ---
 title: Jscript에서 오류 처리 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f34566a3b97a1cfaf85e24966e897ae51ca6bfc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8a1e965f08a9176da74724b549dd411065ca549c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-in-jscript"></a>Jscript에서 오류 처리
 Microsoft® JScript® 코드를 확인 해야 합니다는 **Count** 의 속성은 **연결** 개체의 **오류** 컬렉션입니다. 값 0 보다 큰 경우 컬렉션을 반복 하 고 다른 언어에서 마찬가지로 값을 출력 합니다.  

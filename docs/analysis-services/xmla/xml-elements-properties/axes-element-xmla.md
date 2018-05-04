@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -30,15 +29,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a64f078995d5984e4ff9bc6d5267febacd44cff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axes-element-xmla"></a>Axes 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 에 포함 된 축 데이터를 나타내는 요소는 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 요소를 사용 하는 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  컬렉션을 포함 [축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) 에 포함 된 축 데이터를 나타내는 요소는 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 요소를 사용 하는 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) 데이터 형식입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,10 +54,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|전체|  
-|기본값|InclusionThresholdSetting|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -66,10 +65,10 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|자식 요소|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|자식 요소|[축](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>주의  
- 아래는 **축** 요소는 **축** 요소는 0부터 시작 되는 데이터 집합에서 발생 하는 순서로 나열 됩니다. **a x** XMLA 속성 설정은 결정 방법을 **축** 요소의 형식이 지정 합니다. 에 대 한 자세한 내용은 **a x** 속성 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ 아래는 **축** 요소는 **축** 요소는 0부터 시작 되는 데이터 집합에서 발생 하는 순서로 나열 됩니다. **a x** XMLA 속성 설정은 결정 방법을 **축** 요소의 형식이 지정 합니다. 에 대 한 자세한 내용은 **a x** 속성 참조 [XMLA 속성 지원 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.  
   
  축은 튜플의 집합을 나타내며 여기서 집합의 모든 튜플은 차원이 동일합니다. 집합은 각기 다른 이점이 있는 다양한 방식으로 나타낼 수 있습니다. 예를 들어 다음 네 튜플의 집합은 2차원 튜플의 컬렉션 또는 1차원 집합 두 개의 카티션 곱으로 나타낼 수 있습니다.  
   
@@ -125,7 +124,7 @@ CrossProduct (
  클라이언트가 사용할 수는 **a x** 속성을 특정 표현을 요청할 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDDataSet 데이터 형식 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [MDDataSet 데이터 형식 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: "복원 명령 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 복원 명령 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75c285d9cc6b82d610e4249bb5a26489b4416876
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-command-tmsl"></a>복원 명령 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]백업 파일에서 Analysis Services 데이터베이스를 복원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  백업 파일에서 Analysis Services 데이터베이스를 복원합니다.  
   
 ## <a name="request"></a>요청  
   
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 ||||  
 |-|-|-|  
 |**속성**|**Default**|**설명**|  
-|database|[필수]|복원할 데이터베이스 개체의 이름입니다.|  
+|데이터베이스|[필수]|복원할 데이터베이스 개체의 이름입니다.|  
 |파일|[필수]|백업 파일 이름/경로입니다.|  
 |password|비어 있음|백업 파일 암호 해독에 사용할 암호입니다.|  
 |allowOverwrite|False|True 이면 나타내고 백업 파일이 이미 존재 하는 Boolean 덮어쓰게 됩니다. 그렇지 않으면 false입니다.|  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>사용 현황 (끝점)  
- Command 요소에이의 문에 사용 되는 [메서드 실행 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
+ Command 요소에이의 문에 사용 되는 [메서드 실행 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
   
 -   SQL Server Management Studio (SSMS)의 XMLA 창으로  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS의 복원 대화 상자에서 스크립트 단추를 클릭 하 여이 명령에 대 한 기본으로 제공 되는 스크립트를 생성할 수 있습니다.  
   
- [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
+ [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
   
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   

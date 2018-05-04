@@ -1,11 +1,9 @@
 ---
 title: IsolationLevel 및 모드 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd99808954a10c715eef8526c01f8c7dfc90e64a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2fd00358b9abd333dec26bb93ee70970aec650a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 모드 속성 예제 (VB)
 사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  

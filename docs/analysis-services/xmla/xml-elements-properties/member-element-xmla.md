@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d199517ff2d79be1c3b3b3f2a6acad482282e635
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-element-xmla"></a>Member 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]단일 멤버를 부모 나타냅니다 [멤버](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) 또는 [튜플](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  부모 [Members](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) 또는 [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) 요소의 단일 멤버를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -70,10 +69,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -85,7 +84,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|Attribute|설명|  
 |---------------|-----------------|  
 |계층|필수 **String** 특성입니다(부모 **Tuple** 요소에만 해당). **Member** 요소가 나타내는 멤버가 속하는 계층의 이름입니다.|  
   
@@ -93,6 +92,6 @@ ms.lasthandoff: 01/08/2018
  **Member** 요소는 지정된 계층 내에서 멤버를 식별하고 표시하는 데 필요한 정보를 포함합니다. 부모 **Members** 요소의 경우 계층은 부모 요소의 **Hierarchy** 특성에 의해 이미 지정되어 있습니다. 부모 **Tuple** 요소의 경우 계층은 **Hierarchy** 요소의 **Member** 특성을 사용하여 지정됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

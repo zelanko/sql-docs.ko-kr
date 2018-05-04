@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7276608bf6d50410cd157fe82ec96d006639d5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5529333ef2e81b8fee7d78765e0fb528ecb02577
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="head-mdx"></a>Head(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,10 +68,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [비상 &#40; Mdx&#41;](../mdx/tail-mdx.md)   
- [항목 &#40; 튜플 &#41; &#40; Mdx&#41;](../mdx/item-tuple-mdx.md)   
- [항목 &#40; 멤버 &#41; &#40; Mdx&#41;](../mdx/item-member-mdx.md)   
- [순위 &#40; Mdx&#41;](../mdx/rank-mdx.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [비상 &#40;MDX&#41;](../mdx/tail-mdx.md)   
+ [항목 &#40;튜플&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
+ [항목 &#40;멤버&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
+ [순위 &#40;MDX&#41;](../mdx/rank-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

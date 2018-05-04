@@ -1,11 +1,9 @@
 ---
 title: ADO MD ChildCount 속성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3db4a082b388624f2e644e568585f36aab610c57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: da861dbc7648edbe93926e8f4df7b560fc4a415f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="childcount-property-ado-md"></a>ADO MD ChildCount 속성
 에 대 한 멤버 수를 나타내는 현재 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체는 계층의 부모입니다.  

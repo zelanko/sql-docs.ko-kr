@@ -1,11 +1,9 @@
 ---
 title: 범위란 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c6361dca137a27c5b54149fd400ee5cd29d9160
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moverecord-method-ado"></a>범위란 메서드 (ADO)
 이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -60,7 +57,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  (선택 사항) A **부울** 값 때 **True**,이 작업은 비동기 되지 않아야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 값입니다. 일반적으로 값 *대상* 반환 됩니다. 그러나 반환 된 정확한 값은 공급자에 따라 다릅니다.  
+ **문자열** 값입니다. 일반적으로 값 *대상* 반환 됩니다. 그러나 반환 된 정확한 값은 공급자에 따라 다릅니다.  
   
 ## <a name="remarks"></a>주의  
  값 *소스* 및 *대상* 않아야 고, 그렇지 않으면 동일 하면 런타임 오류가 발생 합니다. 최소한 서버, 경로 및 리소스 이름은 달라 야 합니다.  

@@ -1,36 +1,34 @@
 ---
-title: "마이닝 구조 및 구조 열에 대 한 속성 | Microsoft Docs"
-ms.custom: 
+title: 마이닝 구조 및 구조 열에 대 한 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1ec47ef02b2ff18e28d49e8902ec2cf9a499c153
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
+  데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  
   
 > [!NOTE]  
 >  마이닝 구조에서 속성의 값을 변경하는 경우 이름이나 설명과 같은 메타데이터, 마이닝 구조 및 해당 모델도 다시 처리해야 모델을 보거나 쿼리할 수 있습니다.  
@@ -74,8 +72,8 @@ ms.lasthandoff: 02/15/2018
 |**ModelingFlags**|알고리즘에서 사용 가능한 추가 매개 변수를 설정합니다.|  
 |**이름**|열 이름입니다.|  
 |**NameColumn**|부모 요소의 이름을 제공하는 열을 식별합니다.|  
-|**원본**|열의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)**입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
-|**SourceMeasureGroup**|측정값 그룹의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)**입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
+|**원본**|열의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)** 입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
+|**SourceMeasureGroup**|측정값 그룹의 원본을 표시합니다.<br /><br /> 관계형 데이터 원본의 경우 값은 항상 **(없음)** 입니다.<br /><br /> OLAP 큐브를 기반으로 하는 구조의 경우 값은 중첩 테이블의 원본으로 사용되는 조각을 정의하는 MDX 문입니다.|  
 |**형식**|열에 있는 내용의 데이터 형식입니다.|  
   
  속성을 설정하거나 변경하는 방법은 [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)을 참조하세요.  

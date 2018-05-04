@@ -1,15 +1,14 @@
 ---
-title: "Analysis Services에서의 번역 지원 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services에서의 번역 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - attribute translations [Analysis Services]
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 8b1428374e50b2f6aa13a8f8da412e1f1e782b6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services에서의 번역 지원
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -53,8 +51,8 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [언어 및 데이터 정렬 &#40; Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [언어 및 데이터 정렬 & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [열 데이터 정렬 설정 또는 변경](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [세계화 팁 및 모범 사례 &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [세계화 팁 및 모범 사례 & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e5b6dd001beca704248c23f764086efeb56f2b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d58a77aeb3bcf9f341263082cd6093bcbca4eada
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**synctran**|즉시 업데이트 구독에 대한 지원을 설정합니다.|  
 |**큐에 대기 중인된 tran**|지연 업데이트 구독을 설정합니다. 구독자에서 데이터를 수정하고 큐에 저장한 후 게시자에 전파할 수 있습니다.|  
 |**장애 조치**|즉시 업데이트를 기본으로 사용하고 장애 조치(Failover)로 지연 업데이트를 사용합니다. 구독자에서 데이터를 수정하고 게시자에 즉시 전파할 수 있습니다. 게시자와 구독자가 연결되지 않은 경우 구독자에서의 데이터 수정 내용은 구독자와 게시자가 다시 연결될 때까지 큐에 저장됩니다.|  
-|**지연된 장애 조치**|구독을 지연 업데이트 구독으로 설정하며 즉시 업데이트 모드로 변경할 수 있는 기능을 포함합니다. 구독자에서 데이터를 수정한 후 구독자와 게시자가 연결될 때까지 수정 내용을 큐에 저장할 수 있습니다. 지속적 연결이 설정되는 경우 업데이트 모드를 즉시 업데이트로 변경할 수 있습니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.|  
+|**지연된 장애 조치**|구독을 지연 업데이트 구독으로 설정하며 즉시 업데이트 모드로 변경할 수 있는 기능을 포함합니다. 구독자에서 데이터를 수정한 후 구독자와 게시자가 연결될 때까지 수정 내용을 큐에 저장할 수 있습니다. 지속적 연결이 설정되는 경우 업데이트 모드를 즉시 업데이트로 변경할 수 있습니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.|  
   
  [  **@immediate_sync =**] *immediate_sync*  
  스냅숏 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다. *immediate_sync* 은 **비트** 기본값 1은 동일한 값으로 설정 해야 *immediate_sync* 에 **sp_addpublication**. *immediate_sync* 게시의 속성 이며 동일한 값이 있어야 게시자에서이 있습니다.  

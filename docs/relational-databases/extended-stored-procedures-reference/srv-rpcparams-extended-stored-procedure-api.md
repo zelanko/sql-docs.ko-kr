@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77a86deb5cf34c6f1a2a8cfb9d1fbb30650ff766
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 03db3667bc81b62d488629d0e60b4600e0fa8c63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvrpcparams-extended-stored-procedure-api"></a>srv_rpcparams(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ srvproc
 ## <a name="returns"></a>반환 값  
  원격 저장 프로시저의 매개 변수 수. 현재 원격 저장 프로시저가 없거나 원격 저장 프로시저에 매개 변수가 없으면 -1이 반환되고 알림 오류가 발생합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 현재 원격 저장 프로시저의 매개 변수의 수를 반환하며 일반적으로 원격 저장 프로시저에서 호출됩니다.  
   
  매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 이 오류가 발생하면 원격 저장 프로시저 처리기가 호출되지만 이 처리기에 매개 변수가 전달되지 않고 **srv_rpcparams**가 0을 변환합니다.  

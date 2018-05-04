@@ -1,35 +1,33 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: SystemGetCrossValidationResults (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SystemGetCrossValidationResults
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ddb4255fb09131bb2612e47b44a0bedfc22e4be4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-마이닝 구조를 지정된 수의 교집합 영역으로 분할하고 각 파티션의 모델을 학습한 다음 각 파티션의 정확도 메트릭을 반환합니다.  
+  마이닝 구조를 지정된 수의 교집합 영역으로 분할하고 각 파티션의 모델을 학습한 다음 각 파티션의 정확도 메트릭을 반환합니다.  
   
 > [!NOTE]  
 >  이 저장 프로시저는 클러스터링 모델 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘이나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 모델에 대해 교차 유효성 검사를 실행하는 데 사용할 수 없습니다. 별도의 저장 프로시저인 [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)를 사용하여 클러스터링 모델의 교차 유효성 검사를 실행할 수 있습니다.  
@@ -119,7 +117,7 @@ SystemGetCrossValidationResults(
  기본값은 **null**입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 오류가 발생하지 않지만( *state threshold* 를 0.0으로 설정한 경우) 이 값은 사용해서는 안 됩니다. 실제로 임계값이 0.0이면 확률이 0%인 예측이 올바른 것으로 간주됨을 의미합니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설정 하는 경우 오류가 발생 하지 것입니다 *상태 임계값* 를 0.0으로이 값에 절대 사용 하지만 합니다. 실제로 임계값이 0.0이면 확률이 0%인 예측이 올바른 것으로 간주됨을 의미합니다.  
   
  (옵션)  
   
@@ -195,8 +193,8 @@ NULL
   
 ## <a name="see-also"></a>관련 항목:  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

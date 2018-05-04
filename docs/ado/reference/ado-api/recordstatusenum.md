@@ -1,11 +1,9 @@
 ---
 title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400d920692f8ee8d130caa5f3f98b46a11710a3d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0b46c441bf8b54103c8a3b277e1ef21f18cdfca6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트 및 다른 대량 작업과 관련 된 레코드의 합니다.  

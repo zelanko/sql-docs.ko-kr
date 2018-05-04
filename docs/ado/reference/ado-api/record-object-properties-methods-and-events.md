@@ -1,11 +1,9 @@
 ---
 title: 개체 속성, 메서드 및 이벤트를 기록 합니다. | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef1846c2a1afb9ee50f4b5c22d074bb2c192a073
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ff72e34bde43cdc2ba85a72f096e8872f354487c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-object-properties-methods-and-events"></a>개체 속성, 메서드 및 이벤트를 기록 합니다.
 ## <a name="propertiescollections"></a>속성/컬렉션  

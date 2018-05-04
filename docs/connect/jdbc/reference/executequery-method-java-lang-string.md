@@ -3,15 +3,12 @@ title: executeQuery 메서드 (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.executeQuery (java.lang.String)
 apilocation:
@@ -22,17 +19,16 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 492cda13e6481a31915b85940d78847e3782205f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 5c336fa7b11186dfbc94f35daef99853175ffc86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 된 SQL 문을 실행 하 고는 단일 반환 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
+  지정된 SQL 문을 실행하고 단일 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +40,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>매개 변수  
  *sql*  
   
- A **문자열** SQL 문이 들어 있는입니다.  
+ SQL 문이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  
@@ -60,7 +56,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
   
  이 메서드를 호출 개체가 만들어질 때 SQLServerPreparedStatement 개체에 대 한 SQL 문이 지정 된 후 예외가 발생 합니다.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 이외의 노드에 단일 지정된 된 SQL 문을 생성 되는 경우 throw 되 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
+ 지정된 SQL 문에서 단일 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 이외의 개체를 생성하면 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)이 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [executeQuery 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

@@ -1,33 +1,31 @@
 ---
-title: "Kpi 만들기 및 관리 | Microsoft Docs"
-ms.custom: 
+title: Kpi 만들기 및 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16307f79552529c2afc0c1d298c68a85ff1f2a1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d40b0ee9275beeaaa14759b4128fef0b4608553b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-kpis"></a>Kpi 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에는 만들기, 편집 또는 테이블 형식 모델에 KPI (핵심 성과 지표)를 삭제 하는 방법을 설명 합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
+  이 문서에는 만들기, 편집 또는 테이블 형식 모델에 KPI (핵심 성과 지표)를 삭제 하는 방법을 설명 합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
   
 ## <a name="tasks"></a>태스크  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 02/23/2018
 |추세|Alt+T|  
   
 ## <a name="see-also"></a>참고 항목  
- [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [만들기 및 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   

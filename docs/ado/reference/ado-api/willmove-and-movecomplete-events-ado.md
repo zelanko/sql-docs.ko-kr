@@ -1,11 +1,9 @@
 ---
 title: WillMove 및 두 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7063e8dd77058ea4cbe05b925a1de29cfe63f00
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1ab75264b6cbd3fe8e3ef99b5339763ea469a4f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 및 두 이벤트 (ADO)
 **WillMove** 이벤트는 보류 중인 작업의 현재 위치를 변경 하기 전에 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. **두** 이벤트에서 현재 위치 이후에 호출 됩니다는 **레코드 집합** 변경 합니다.  

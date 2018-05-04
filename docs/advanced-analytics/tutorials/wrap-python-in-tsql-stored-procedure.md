@@ -7,11 +7,11 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b0c32ba91698345adea542ed5929a494b00059e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b7ffeac0dfe1e441f188aae67e28004e294fc3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>저장된 프로시저에서 Python 코드를 래핑하십시오.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ ms.lasthandoff: 04/16/2018
 2. 이 프로젝트에 대 한 새 데이터베이스를 만들고의 컨텍스트를 변경 하면 **쿼리** 창에서 새 데이터베이스를 사용 합니다.
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 
     T-SQL을 처음 접하는 경우 지불 하는 것 외우는 `DROP...IF` 문. SQL Server는 오류를 반환 하 고 있는 테이블을 만들려고 시도 하는 경우: "이미입니다. 데이터베이스에 ' iris_data' 라는 개체." 이러한 오류를 방지 하기 위해 가지 방법은 코드의 일환으로 기존 테이블 또는 다른 개체를 삭제 하는 것입니다.
 
-4. 학습된 된 모델을 저장 하는 데 사용 되는 테이블을 만들려면 다음 코드를 실행 합니다. SQL Server에서 Python (또는 R) 모델을 저장 하려면 수 직렬화 하 고 되어야 형식의 열에 저장 된 **varbinary (max)**합니다. 
+4. 학습된 된 모델을 저장 하는 데 사용 되는 테이블을 만들려면 다음 코드를 실행 합니다. SQL Server에서 Python (또는 R) 모델을 저장 하려면 수 직렬화 하 고 되어야 형식의 열에 저장 된 **varbinary (max)** 합니다. 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

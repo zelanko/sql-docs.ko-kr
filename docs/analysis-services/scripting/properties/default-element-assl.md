@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 598c483bce16630e2f07d3edc575324fe5804596
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d51514893b3579dec3d649af296fc1b1e8189556
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-element-assl"></a>Default 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]결정 여부는 [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) 이 기본 드릴스루 동작 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  결정 여부는 [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) 이 기본 드릴스루 동작 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|**False**|  
@@ -61,12 +60,12 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  부모에 해당 하는 요소 **기본** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DrillThroughAction>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

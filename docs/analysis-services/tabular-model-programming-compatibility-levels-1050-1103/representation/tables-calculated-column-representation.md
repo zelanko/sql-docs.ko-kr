@@ -1,33 +1,31 @@
 ---
-title: "계산 열 표현 (테이블 형식) | Microsoft Docs"
-ms.custom: 
+title: 계산 열 표현 (테이블 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94d8e0cf692041673fe4a728981d77a759167bb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables---calculated-column-representation"></a>테이블-계산된 열 표현
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  
+  계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  
   
 ## <a name="calculated-column-representation"></a>계산 열 표현  
   

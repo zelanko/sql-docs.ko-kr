@@ -1,11 +1,9 @@
 ---
 title: 레코드 집합 개체 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fb2a9bee0cf7f092ffa30e1450dd11e34fd1eed1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체 (ADO)
 기본 테이블이 나 실행 된 명령의 결과에서 레코드의 전체 집합을 나타냅니다. 언제 든 지는 **레코드 집합** 개체가 현재 레코드로 집합 내에서 단일 레코드로 참조 합니다.  

@@ -1,11 +1,9 @@
 ---
 title: Clear 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b1e19263664607c1237d00b17523b492d4be013d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 238a936bb0bf0abe518b8a6268ace23406aac114
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clear-method-ado"></a>Clear 메서드 (ADO)
 모든 제거는 [오류](../../../ado/reference/ado-api/error-object.md) 에서 개체는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션입니다.  

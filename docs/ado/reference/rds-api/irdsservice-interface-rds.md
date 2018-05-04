@@ -1,11 +1,9 @@
 ---
 title: IRDSService 인터페이스 (RDS) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e452cd1282debede2131703ccb8566e3e9dec416
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c9fce6711b2467647e8427d76322bbb5d9bdd5ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스 (RDS)
 노출 된 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 기능이 더 많은 버전의 개체에 요청된 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 메서드.  

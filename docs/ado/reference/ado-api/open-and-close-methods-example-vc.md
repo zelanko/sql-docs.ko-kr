@@ -1,11 +1,9 @@
 ---
 title: 열기 및 닫기 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50f19761cb4c7f9a926affc9273cc25b639eee4e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6d1c87f8d225d8add1ff9a6ea9fbaba44f244c9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 및 Close 메서드 예제 (VC + +)
 사용 하 여이 예제는 **열려** 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에 대 한 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  

@@ -1,11 +1,9 @@
 ---
 title: 입력 속성 예제 (속성) (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aaa756ce6f9a314a15421b68872cb28e610c1411
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c2b9ad60d89b7feff377c76f58bb1a45f395ab4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-property-example-property-vc"></a>형식 속성 예제 (속성) (VC + +)
 이 예제에서는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 모델의 이름 및 컬렉션의 형식과 같은 나열 하기 위한 유틸리티입니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  

@@ -3,15 +3,12 @@ title: 설치 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 - ODBC [ODBC], component installation
@@ -20,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1e8d3c6f5362cef672c5aa02b7547fa86040b4aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c5fe2538d1567630121f05a4798583099de7200
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-components"></a>설치 구성 요소
 > [!NOTE]  
@@ -36,7 +32,7 @@ ms.lasthandoff: 04/16/2018
  ![설치 구성 요소 간의 관계](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]  
->  ODBC 2에서 사용 된 Odbc.inf 파일입니다. *x* ODBC 3 사용 되지 않는 구성 요소의 각 ODBC에 필요한 파일을 설명 하기 위해*.x*합니다. ODBC 3 제공 드라이버를*.x* 구성 요소를 Odbc.inf 파일을 만들 필요가 없습니다. 제거 하 고 **SQLInstallDriver** 및 **SQLInstallODBC**, 및의 사용 중단 **SQLInstallTranslator**, 불필요 한 Odbc.inf을 렌더링 해야 합니다. Odbc.inf의 드라이버 키워드 섹션에서 사용 되는 드라이버 정보에서 제공 됩니다는 *lpszDriver* 인수 **SQLInstallDriverEx**합니다. [ODBC 변환기]에 포함 되도록 사용 하는 변환기 정보 및 Odbc.inf의 변환기 사양 섹션에서 제공 됩니다는 *lpszTranslator* 의 인수 **SQLInstallTranslatorEx**합니다. 이러한 변경 내용을 통해 플랫폼 간에 이식 가능 하도록 ODBC 설치 합니다.  
+>  ODBC 2에서 사용 된 Odbc.inf 파일입니다. *x* ODBC 3 사용 되지 않는 구성 요소의 각 ODBC에 필요한 파일을 설명 하기 위해 *.x*합니다. ODBC 3 제공 드라이버를 *.x* 구성 요소를 Odbc.inf 파일을 만들 필요가 없습니다. 제거 하 고 **SQLInstallDriver** 및 **SQLInstallODBC**, 및의 사용 중단 **SQLInstallTranslator**, 불필요 한 Odbc.inf을 렌더링 해야 합니다. Odbc.inf의 드라이버 키워드 섹션에서 사용 되는 드라이버 정보에서 제공 됩니다는 *lpszDriver* 인수 **SQLInstallDriverEx**합니다. [ODBC 변환기]에 포함 되도록 사용 하는 변환기 정보 및 Odbc.inf의 변환기 사양 섹션에서 제공 됩니다는 *lpszTranslator* 의 인수 **SQLInstallTranslatorEx**합니다. 이러한 변경 내용을 통해 플랫폼 간에 이식 가능 하도록 ODBC 설치 합니다.  
   
  이러한 구성 요소에 대 한 자세한 내용은이 섹션의 끝에 다음 항목을 참조 합니다.  
   

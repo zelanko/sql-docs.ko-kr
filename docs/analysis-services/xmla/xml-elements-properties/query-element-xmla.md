@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 230141d3a6fd5d3b2e02c1dce8e397d3f9bdce3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 22c8ca110a83838dffc17b31fee6186c414f1b21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-element-xmla"></a>Query 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]내에서 쿼리를 포함는 [쿼리](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) 사용 하는 컬렉션의 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) 사용 빈도 기반 최적화 중 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  내에서 쿼리를 포함는 [쿼리](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md) 사용 하는 컬렉션의 [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) 사용 빈도 기반 최적화 중 명령입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,10 +51,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|문자열|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -63,10 +62,10 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[쿼리](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
- **DesignAggregations** 명령은 명령의 **Query** 컬렉션에 하나 이상의 **Queries** 요소를 포함하여 사용 빈도 기반 최적화를 지원합니다. 각 **Query** 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 인스턴스에서 저장 된 정보를 사용할 수 있습니다 또는 사용자 고유의 목표 쿼리를 지정 하거나 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 가장 자주에 대 한 정보를 검색 하는 쿼리 로그에 쿼리를 사용 합니다.  
+ **DesignAggregations** 명령은 명령의 **Query** 컬렉션에 하나 이상의 **Queries** 요소를 포함하여 사용 빈도 기반 최적화를 지원합니다. 각 **Query** 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 사용자 고유의 목표 쿼리를 지정하거나 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 의해 쿼리 로그에 저장된 정보를 사용하여 가장 자주 사용하는 쿼리에 대한 정보를 검색할 수 있습니다.  
   
  만 첫 번째 범위에서 목표 쿼리를 전달 해야 집계를 반복적으로 디자인 하는 경우 **DesignAggregations** 있기 때문에 명령을 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스가 이러한 목표 쿼리를 저장 하 고 이러한 쿼리를 사용 하 여 후속 중 **DesignAggregations** 명령입니다. 반복 프로세스의 첫 번째 **DesignAggregations** 명령에서 목표 쿼리를 전달하면 **DesignAggregations** 속성에 목표 쿼리를 포함하는 모든 후속 **Queries** 명령은 오류를 생성합니다.  
   
@@ -83,12 +82,12 @@ ms.lasthandoff: 01/08/2018
  예를 들어 문자열 "011"은 세 개의 특성이 있는 차원을 사용하는 쿼리를 참조하며 여기서 두 번째 및 세 번째 특성이 쿼리에 포함됩니다.  
   
 > [!NOTE]  
->  일부 특성은 데이터 집합에서 고려되지 않습니다. 제외 된 특성에 대 한 자세한 내용은 참조 [속성 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)합니다.  
+>  일부 특성은 데이터 집합에서 고려되지 않습니다. 제외되는 특성에 대한 자세한 내용은 [Properties (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)를 참조하십시오.  
   
  집계 디자인을 포함하는 측정값 그룹의 각 차원은 *Query* 요소의 **Dataset** 값으로 나타납니다. *Dataset* 값의 순서는 측정값 그룹에 포함된 차원의 순서와 일치해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [집계 &#40; 디자인 XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [집계 & #40; 디자인 XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

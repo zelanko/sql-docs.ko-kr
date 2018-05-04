@@ -1,29 +1,27 @@
 ---
-title: "계산 멤버 정의 | Microsoft Docs"
-ms.custom: 
+title: 계산 멤버 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20eafffb3ee40d09b70b5e87fd311b3e80a66dec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>단원 6-1-정의 계산 멤버
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/15/2018
   
     ![계산 식 창 양식](../analysis-services/media/l6-calculatedmembers-02.gif "계산 식 창 양식")  
   
-3.  **이름** 상자에서 계산 측정값의 이름을 **[Total Sales Amount]**로 변경합니다.  
+3.  **이름** 상자에서 계산 측정값의 이름을 **[Total Sales Amount]** 로 변경합니다.  
   
     계산 멤버의 이름에 공백이 들어 있으면 계산 멤버 이름을 대괄호로 묶어야 합니다.  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   
-8.  **형식 문자열** 목록에서 **"Currency"**를 선택합니다.  
+8.  **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
   
 9. **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount** 및 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -97,13 +95,13 @@ ms.lasthandoff: 02/15/2018
   
 12. **계산** 탭의 도구 모음에서 **폼 보기**를 클릭하고 **스크립트 구성 도우미** 창에서 **[Total Sales Amount]** 가 선택되어 있는지 확인한 후 **새 계산 멤버**를 클릭합니다.  
   
-13. 이 새 계산 멤버의 이름을 **[Total Product Cost]**로 변경한 후 **식** 상자에 다음 식을 만듭니다.  
+13. 이 새 계산 멤버의 이름을 **[Total Product Cost]** 로 변경한 후 **식** 상자에 다음 식을 만듭니다.  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. **형식 문자열** 목록에서 **"Currency"**를 선택합니다.  
+14. **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
   
 15. **비어 있지 않은 동작** 목록에서 **Internet Sales-Total Product Cost** 및 **Reseller Sales-Total Product Cost**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -113,7 +111,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  **스크립트 구성 도우미** 창에서 **[Total Product Cost]** 가 선택되어 있는지 확인한 다음 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭합니다.  
   
-2.  **이름** 상자에서 이 새 계산 측정값의 이름을 **[Internet GPM]**으로 변경합니다.  
+2.  **이름** 상자에서 이 새 계산 측정값의 이름을 **[Internet GPM]** 으로 변경합니다.  
   
 3.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -123,13 +121,13 @@ ms.lasthandoff: 02/15/2018
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+4.  **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 5.  **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
 6.  **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-7.  **이름** 상자에서 이 새 계산 측정값의 이름을 **[Reseller GPM]**으로 변경합니다.  
+7.  **이름** 상자에서 이 새 계산 측정값의 이름을 **[Reseller GPM]** 으로 변경합니다.  
   
 8.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -139,13 +137,13 @@ ms.lasthandoff: 02/15/2018
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+9. **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 10. **비어 있지 않은 동작** 목록에서 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
 11. **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-12. **이름** 상자에서 이 계산 측정값의 이름을 **[Total GPM]**으로 변경합니다.  
+12. **이름** 상자에서 이 계산 측정값의 이름을 **[Total GPM]** 으로 변경합니다.  
   
 13. **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -157,7 +155,7 @@ ms.lasthandoff: 02/15/2018
   
     이 계산 멤버는 다른 계산 멤버를 참조하고 있습니다. 이 계산 멤버는 자신이 참조하는 계산 멤버 다음에 계산되므로 유효한 계산 멤버입니다.  
   
-14. **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+14. **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 15. **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount** 및 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -177,11 +175,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  **계산** 탭의 도구 모음에서 **폼 보기**를 클릭합니다.  
   
-2.  **스크립트 구성 도우미** 창에서 **[Total GPM]**을 선택한 후 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭합니다.  
+2.  **스크립트 구성 도우미** 창에서 **[Total GPM]** 을 선택한 후 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭합니다.  
   
     **새 계산 멤버** 를 클릭하기 전에 **스크립트 구성 도우미** 창에서 최종 계산 멤버를 클릭하면 새 계산 멤버가 스크립트 끝에 삽입됩니다. 스크립트는 **스크립트 구성 도우미** 창에 나타난 순서대로 실행됩니다.  
   
-3.  이 새 계산 멤버의 이름을 **[Internet Sales Ratio to All Products]**로 변경합니다.  
+3.  이 새 계산 멤버의 이름을 **[Internet Sales Ratio to All Products]** 로 변경합니다.  
   
 4.  **식** 입력란에 다음 식을 입력합니다.  
   
@@ -198,13 +196,13 @@ ms.lasthandoff: 02/15/2018
   
     이 MDX 식은 각 제품의 총 인터넷 판매에 영향을 미치는 요인을 계산합니다. Case 문을 IS EMPTY 함수와 함께 사용하면 제품 판매가 없을 때 0으로 나누기 오류가 발생하지 않습니다.  
   
-5.  **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+5.  **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 6.  **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
 7.  **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-8.  이 계산 멤버의 이름을 **[Reseller Sales Ratio to All Products]**로 변경합니다.  
+8.  이 계산 멤버의 이름을 **[Reseller Sales Ratio to All Products]** 로 변경합니다.  
   
 9. **식** 입력란에 다음 식을 입력합니다.  
   
@@ -219,13 +217,13 @@ ms.lasthandoff: 02/15/2018
         End  
     ```  
   
-10. **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+10. **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 11. **비어 있지 않은 동작** 목록에서 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
 12. **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-13. 이 계산 멤버의 이름을 **[Total Sales Ratio to All Products]**로 변경합니다.  
+13. 이 계산 멤버의 이름을 **[Total Sales Ratio to All Products]** 로 변경합니다.  
   
 14. **식** 입력란에 다음 식을 입력합니다.  
   
@@ -240,7 +238,7 @@ ms.lasthandoff: 02/15/2018
         End  
     ```  
   
-15. **형식 문자열** 목록에서 **"Percent"**를 선택합니다.  
+15. **형식 문자열** 목록에서 **"Percent"** 를 선택합니다.  
   
 16. **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount** 및 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   

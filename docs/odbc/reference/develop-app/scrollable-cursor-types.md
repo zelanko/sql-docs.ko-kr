@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a777db13717dcd2bda9e308e7d7df27c8edb237e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67ff8ec894db15c313de3f458836cade02001bc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursor-types"></a>스크롤 가능 커서 유형
 스크롤 가능 커서는 네 가지 유형의 정적, 동적, 키 집합 커서 및 혼합 됩니다. 정적 커서 없는 변경 내용을 거의 검색 되지만 상대적으로 경제적인 구현 하는 합니다. 동적 커서는 모든 변경 내용을 검색 하지만 구현 하는 데 큰 비용이 듭니다. 키 집합 커서와 혼합 커서는 중간으로 대부분의 변경 내용을 검색 하지만 동적 커서 보다 더 적은 비용으로에 두 유형의 합니다.  

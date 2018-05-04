@@ -1,17 +1,17 @@
 ---
-title: "언어 및 데이터 정렬 (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: 언어 및 데이터 정렬 (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: "Analysis Services 테스트"
+keywords:
+- Analysis Services 테스트
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -185,7 +184,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [세계화 팁 및 모범 사례 &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [세계화 팁 및 모범 사례 & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

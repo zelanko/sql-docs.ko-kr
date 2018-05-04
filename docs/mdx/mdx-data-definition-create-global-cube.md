@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -28,17 +27,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc74fe731c98609a0840c12f0cd216b89d53e0a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의-글로벌 큐브 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  논리적 지속형 큐브를 서버에 있는 큐브의 하위 큐브에 따라 만들고 채웁니다. 논리적 지속형 큐브에 대한 연결 시에는 서버 연결이 필요하지 않습니다. 로컬 큐브에 대 한 자세한 내용은 참조 [로컬 큐브 &#40; Analysis Services-다차원 데이터 &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  논리적 지속형 큐브를 서버에 있는 큐브의 하위 큐브에 따라 만들고 채웁니다. 논리적 지속형 큐브에 대한 연결 시에는 서버 연결이 필요하지 않습니다. 로컬 큐브에 대 한 자세한 내용은 참조 [로컬 큐브 &#40;Analysis Services-다차원 데이터&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -217,7 +215,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [SESSION CUBE 문 &#40; 만들기 Mdx&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE SESSION CUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

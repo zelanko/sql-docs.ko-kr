@@ -3,15 +3,12 @@ title: getBigDecimal 메서드 (int, int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBigDecimal (int, int)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dd7b7b9d9fc4bd6e03c1b4a1d699d1932af84555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 3fd5b0d2110328adcb3112b6e42b00a97226671f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbigdecimal-method-int-int-sqlserverresultset"></a>getBigDecimal 메서드 (int, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +44,7 @@ public java.math.BigDecimal getBigDecimal(int columnIndex,
 #### <a name="parameters"></a>매개 변수  
  *columnIndex*  
   
- **int** 열 인덱스를 나타내는입니다.  
+ 열 인덱스를 나타내는 **int**입니다.  
   
  *소수 자릿수*  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a7dbabb100117f33cc209e05ab2254220620b74c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f417e1bb882fb8aa97e071799e2526b5b43b7f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Null 변환 오류가 발생할 경우 수행할 동작을 지정 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Null 변환 오류가 발생할 때 수행할 동작을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*IgnoreError*|  
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  키 열에 null 값은 있어서로 해석 하는 경우 null 변환 오류가 발생 된 **알 수 없는** 멤버입니다. 경우에이 오류가 발생 하는 반면는 [NullProcessing](../../../analysis-services/scripting/properties/nullprocessing-element-assl.md) 에 대 한 요소는 [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) 의 상위 항목은 **ErrorConfiguration** 로 설정 된 부모  *UnknownMember*합니다.  
@@ -77,7 +76,7 @@ ms.lasthandoff: 01/08/2018
  에 대 한 허용된 된 값에 해당 하는 열거형 **NullKeyConvertedToUnknown** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.ErrorOption>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [ErrorConfiguration 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)   
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [ErrorConfiguration 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)   
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

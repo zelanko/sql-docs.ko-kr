@@ -1,29 +1,27 @@
 ---
-title: "배포 된 Analysis Services 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 배포 된 Analysis Services 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c797c7f1acffb41de751a022d9c2e36b7fbaab4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>단원 2-5-Analysis Services 프로젝트 배포
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 02/15/2018
     프로젝트의 배포 속성을 검토합니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 통해 모든 프로젝트를 로컬 컴퓨터의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 인스턴스에 증분식으로 배포하며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트와 같은 이름으로 데이터베이스를 만들고 기본 처리 옵션을 사용하여 배포 후에 개체를 처리하도록 해당 프로젝트를 구성합니다. 자세한 내용은 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
   
     > [!NOTE]  
-    > 프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로컬 컴퓨터에서 또는 원격 서버의 인스턴스에 변경는 **서버** 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName**>\\<**InstanceName * * >*합니다.  
+    > 프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 로컬 컴퓨터에서 또는 원격 서버의 인스턴스에 변경는 **서버** 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName**>\\<** InstanceName * * >* 합니다.  
   
 3.  **확인**을 클릭합니다.  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/15/2018
     > [!NOTE]  
     > 배포 중에 오류가 발생하는 경우 SQL Server Management Studio를 사용하여 데이터베이스 사용 권한을 확인하십시오. 데이터 원본 연결에 대해 지정한 계정에는 SQL Server 인스턴스에서 로그인이 있어야 합니다. 로그인을 두 번 클릭하면 사용자 매핑 속성을 볼 수 있습니다. 계정에는 **AdventureWorksDW2012** 데이터베이스에 대한 db_datareader 사용 권한이 있어야 합니다.  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 배포 과정 중에 **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창이 표시됩니다.  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 배포 과정 중에 **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창이 표시됩니다.  
   
     필요한 경우 **보기** 메뉴에서 **출력** 을 클릭하여 출력 창을 엽니다. **출력** 창에는 전체적인 배포 진행률이 표시됩니다. **배포 진행률 - Analysis Services Tutorial** 창에는 배포 진행 단계가 자세히 표시됩니다. 자세한 내용은 [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   

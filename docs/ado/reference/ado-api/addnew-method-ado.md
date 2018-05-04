@@ -1,11 +1,9 @@
 ---
 title: AddNew 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cee18a3fe0997243308dbb3bf71620ba5920adb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="addnew-method-ado"></a>AddNew 메서드 (ADO)
 업데이트할 수 있는 작업에 대 한 새 레코드를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

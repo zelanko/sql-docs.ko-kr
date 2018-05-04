@@ -3,15 +3,12 @@ title: 버퍼를 지연 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], deferred
 - deferred buffers [ODBC]
@@ -20,12 +17,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5273f48c96039e543e24c2945cd5cda14d352e6d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14c1514759765699826c48a0cfb68e0eeba7a583
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-buffers"></a>지연 된 버퍼
 A *지연 된 버퍼* 시간에는 값이 사용 되는 *후* 함수 호출에 지정 되어 있습니다. 예를 들어 **SQLBindParameter** 를 연결 하는 데 사용 됩니다 또는 *바인딩* SQL 문에서 매개 변수를 사용 하 여 데이터 버퍼입니다. 응용 프로그램 매개 변수 수를 지정 하 고는 주소, 바이트 길이 및 버퍼의 종류를 전달 합니다. 드라이버는이 정보는 저장 되지만 버퍼의 내용을 검사 하지 않습니다. 이상에서는 문을 실행 하는 응용 프로그램, 드라이버 정보를 검색 한 하는 매개 변수 데이터를 검색 하 고 데이터 원본에 보내는 데 사용 합니다. 따라서 버퍼에 데이터의 입력 지연 됩니다. 지연 된 버퍼 하나의 함수에 지정 된 다른 사용 되는, 되므로 응용 프로그램 프로그래밍 오류를 드라이버 여전히 기대에 존재 하는 동안 지연 된 버퍼를 해제 자세한 내용은 참조 [Allocating 및 버퍼 해제](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)이 섹션의 뒷부분에 나오는 합니다.  

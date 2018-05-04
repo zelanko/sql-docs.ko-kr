@@ -3,15 +3,12 @@ title: 진단 레코드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - handles [ODBC], diagnostic records
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 191be40ee4d85cc3dcb0915887aa4ef734f67e04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d6395d87e5691dc33b5a08267ef83c459f94c0d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-records"></a>진단 레코드
 환경에 연결 된 각, 연결, 문 및 설명자 핸들은 *진단 레코드*합니다. 이러한 레코드는 특정 핸들을 사용 하는 마지막 함수 호출에 대 한 진단 정보를 포함 합니다. 레코드는이 핸들을 사용 하 여 다른 함수를 호출할 경우에 대체 됩니다. 한 번에 저장할 수 있는 진단 레코드의 수 제한은 없습니다.  

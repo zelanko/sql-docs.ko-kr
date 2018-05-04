@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ad1fed7c000a978c096692fa4f4c59d655132e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c73bc1f9a1b3a1cb7130cb52c5c8b199a9a3be8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 되는 알고리즘 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  사용 되는 알고리즘 정의 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|String|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|문자열|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타날 수 있는 필수 요소.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  값은 **알고리즘** 요소는 알고리즘을 식별 하는 문자열입니다. 예를 들어, 문자열 될 수 *Microsoft_Naive_Bayes*, *Microsoft_Decision_Trees*, 또는 *Microsoft_Clustering 합니다.* 제공 하는 알고리즘을 식별 하는 문자열 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 및 사용자가 제공 하는 사용자 지정 알고리즘입니다. 에 대 한 사용 가능한 값은 **알고리즘** 의 SERVICE_NAME 열에서 요소를 검색할 수는 [DMSCHEMA_MINING_SERVICES](../../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md) 스키마 행 집합입니다.  
@@ -69,8 +68,8 @@ ms.lasthandoff: 01/08/2018
  부모에 해당 하는 요소 **알고리즘** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningModel>합니다. AMO 개체 모델에서 밀접하게 관련된 요소는 <xref:Microsoft.AnalysisServices.MiningModelAlgorithms>입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [AlgorithmParameter 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)   
- [AlgorithmParameters 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/algorithmparameters-element-assl.md)   
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [AlgorithmParameter 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)   
+ [AlgorithmParameters 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/collections/algorithmparameters-element-assl.md)   
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

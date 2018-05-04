@@ -1,36 +1,34 @@
 ---
-title: "분석에서 테이블 형식 개체 모델 (TOM)에 AMO Services | Microsoft Docs"
-ms.custom: 
+title: 분석에서 테이블 형식 개체 모델 (TOM)에 AMO Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e8b2c640bf61a323aeb3e8a04dadd5fe47626a98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO의에서 테이블 형식 개체 모델 (TOM) 소개
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-테이블 형식 개체 모델 (TOM)에 호환성 수준 1200 이상에서 작성 된 테이블 형식 모델에 대 한 프로그래밍 시나리오를 지원 하기 위해 만든 관리 개체 AMO (Analysis Services) 클라이언트 라이브러리의 확장입니다. AMO에서와 마찬가지로 TOM 범주 예측자 변수, 가져오기 및 데이터를 새로 고칠 및 역할과 사용 권한을 할당와 같은 관리 기능을 처리 하는 프로그래밍 방법을 제공 합니다.  
+  테이블 형식 개체 모델 (TOM)에 호환성 수준 1200 이상에서 작성 된 테이블 형식 모델에 대 한 프로그래밍 시나리오를 지원 하기 위해 만든 관리 개체 AMO (Analysis Services) 클라이언트 라이브러리의 확장입니다. AMO에서와 마찬가지로 TOM 범주 예측자 변수, 가져오기 및 데이터를 새로 고칠 및 역할과 사용 권한을 할당와 같은 관리 기능을 처리 하는 프로그래밍 방법을 제공 합니다.  
   
 TOM와 같은 기본 테이블 형식 메타 데이터를 노출 **모델**, **테이블**, **열**, 및 **관계** 개체입니다.  아래에 제공 된 개체 모델 트리의 상위 수준 뷰 구성 요소 부분 관계를 보여 줍니다.  
   
  TOM AMO의 확장 이므로 SQL Server 2016에 도입 된 새 테이블 형식 개체를 나타내는 모든 클래스가 새 Microsoft.AnalysisServices.Tabular.dll 어셈블리에 구현 됩니다. AMO의 범용 클래스 Microsoft.AnalysisServices.Core 어셈블리로 이동 되었습니다. 코드는 어셈블리를 모두 참조 해야 합니다.
-참조 [설치, 배포 하 고 테이블 형식 개체 모델 &#40; 참조 Microsoft.AnalysisServices.Tabular &#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) 대 한 자세한 내용은 합니다.  
+참조 [설치, 배포 하 고 테이블 형식 개체 모델 참조 &#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) 세부 정보에 대 한 합니다.  
   
  현재는 API는.NET framework를 통해 관리 되는 코드에만 사용할 수 있습니다. 옵션을 스크립트와 쿼리 언어 지원을 포함 하 여 프로그래밍의 전체 목록을 검토 하려면 참조 [호환성 수준 1200에 대 한 테이블 형식 모델 프로그래밍](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)합니다.  
   

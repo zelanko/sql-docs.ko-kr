@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 168e8f528459f30b612219e9fa1e2d3cdc7e0af1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bba6f8ec611e522edc696723d76eb04d63175fb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="orderby-element-assl"></a>OrderBy 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특성에 포함 된 멤버를 정렬 하는 방법을 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  특성에 포함된 멤버의 정렬 방식을 설명합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*이름*|  
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
@@ -69,13 +68,13 @@ ms.lasthandoff: 01/08/2018
 |값|Description|  
 |-----------|-----------------|  
 |*이름*|멤버 이름별로 정렬합니다.|  
-|*키*|멤버 키별로 정렬합니다.|  
+|*Key*|멤버 키별로 정렬합니다.|  
 |*AttributeKey*|에 지정 된 특성의 멤버 키별로 정렬는 [OrderByAttributeID](../../../analysis-services/scripting/properties/orderbyattributeid-element-assl.md) 요소의 **DimensionAttribute**합니다.|  
 |*AttributeName*|**OrderByAttributeID** 의 **DimensionAttribute**요소에 지정된 특성의 멤버 이름별로 정렬합니다.|  
   
  에 대 한 허용된 된 값에 해당 하는 열거형 **OrderBy** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.OrderBy>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

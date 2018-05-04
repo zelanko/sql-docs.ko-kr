@@ -1,11 +1,9 @@
 ---
 title: 매개 변수가 없는 명령 작업을 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수가 없는 명령 작업을
 매개 변수가 없는 명령에 대 한 모든 공급자 명령이 실행 됩니다 및 **레코드 집합** 명령 실행 중에 만들어집니다. 이 명령은 동기적으로 실행 되는 경우 모든는 **레코드 집합** 완전히 채울 수 있습니다. 비동기 채우기 모드를 선택한 경우의 채워진된 상태는 **레코드 집합** 채우기 모드와의 크기에 따라 달라 집니다는 **레코드 집합**합니다.  

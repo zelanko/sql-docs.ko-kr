@@ -1,35 +1,33 @@
 ---
-title: "마이닝 시계열 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 마이닝 시계열 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ba4dba10f9c576acd04f314437289f88ff08e795
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-모든 마이닝 모델은 동일한 구조를 사용하여 콘텐츠를 저장합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
+  모든 마이닝 모델은 동일한 구조를 사용하여 콘텐츠를 저장합니다. 이 구조는 데이터 마이닝 콘텐츠 스키마 행 집합에 따라 정의됩니다. 그러나 해당 표준 구조 내에서 정보를 포함하는 노드는 다양한 종류의 트리를 나타내기 위해 서로 다른 방법으로 정렬됩니다. 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 기반으로 하는 마이닝 모델에 대해 노드가 구성되는 방법과 각 노드의 의미에 대해 설명합니다.  
   
  모든 모델 유형에 적용되는 일반 마이닝 모델 콘텐츠에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  다음 섹션에서는 이러한 각 모델 유형 내에 노드가 정렬되는 방식에 대해 설명합니다.  
   
 ### <a name="structure-of-an-artxp-model"></a>ARTXP 모델의 구조  
- ARTXP 알고리즘은 의사 결정 트리 모델과 비슷한 모델을 만듭니다. 이 알고리즘은 예측 가능한 특성을 그룹화하고 큰 차이가 발견될 때마다 이러한 특성을 분할합니다. 따라서 각 ARTXP 모델은 각 예측 가능한 특성에 대해 별도의 분기를 포함합니다. 예를 들어 기본 데이터 마이닝 자습서에서는 여러 지역의 판매 금액을 예측하는 모델을 만듭니다. 이 경우 **[Amount]** 가 예측 가능한 특성이고 각 지역에 대해 별도의 분기가 만들어집니다. 두 개의 예측 가능한 특성인 **[Amount]** 및 **[Quantity]**가 있을 경우 각 특성 및 지역의 조합에 대해 별도의 분기가 만들어집니다.  
+ ARTXP 알고리즘은 의사 결정 트리 모델과 비슷한 모델을 만듭니다. 이 알고리즘은 예측 가능한 특성을 그룹화하고 큰 차이가 발견될 때마다 이러한 특성을 분할합니다. 따라서 각 ARTXP 모델은 각 예측 가능한 특성에 대해 별도의 분기를 포함합니다. 예를 들어 기본 데이터 마이닝 자습서에서는 여러 지역의 판매 금액을 예측하는 모델을 만듭니다. 이 경우 **[Amount]** 가 예측 가능한 특성이고 각 지역에 대해 별도의 분기가 만들어집니다. 두 개의 예측 가능한 특성인 **[Amount]** 및 **[Quantity]** 가 있을 경우 각 특성 및 지역의 조합에 대해 별도의 분기가 만들어집니다.  
   
  ARTXP 분기의 최상위 노드는 의사 결정 트리 루트 노드에 있는 것과 동일한 정보를 포함합니다. 여기에는 해당 노드의 자식 수(CHILDREN_CARDINALITY), 이 노드의 조건을 충족하는 사례 수(NODE_SUPPORT) 및 다양한 설명 통계(NODE_DISTRIBUTION)가 포함됩니다.  
   
@@ -314,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> ARIMA 트리 이해  
  ARIMA 모델의 각 구조는 *주기성* 또는 *주기 구조*에 해당합니다. 주기 구조는 데이터 계열 전체에서 반복되는 데이터 패턴입니다. 통계적 한도 내에서 약간의 패턴 변형이 허용됩니다. 주기성은 학습 데이터에 사용된 기본 시간 단위에 따라 측정됩니다. 예를 들어 학습 데이터가 각 날에 대한 판매 데이터를 제공할 경우 기본 시간 단위는 1일이고 모든 주기 구조는 지정된 일 수로 정의됩니다.  
   
- 알고리즘으로 검색되는 각 기간에는 고유한 구조 노드가 지정됩니다. 예를 들어 일일 판매 데이터를 분석하는 경우 모델은 주를 나타내는 주기 구조를 검색할 수 있습니다. 이 경우 알고리즘은 완성된 모델에서 두 개의 주기 구조, 즉 \{1\}로 표시된 기본 일일 기간에 대한 주기 구조와 \{7\}로 표시된 주에 대한 주기 구조를 만듭니다.  
+ 알고리즘으로 검색되는 각 기간에는 고유한 구조 노드가 지정됩니다. 예를 들어 일일 판매 데이터를 분석하는 경우 모델은 주를 나타내는 주기 구조를 검색할 수 있습니다. 이 경우 알고리즘은 완성된 모델에서 두 개의 주기 구조, 즉 {1}로 표시된 기본 일일 기간에 대한 주기 구조와 {7}로 표시된 주에 대한 주기 구조를 만듭니다.  
   
  예를 들어 다음 쿼리는 마이닝 모델의 모든 ARIMA 구조를 반환합니다.  
   
@@ -378,7 +376,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA에 대한 시계열 수식  
  임의 ARIMA 노드에 대한 전체 수식을 보려면 이미 일관된 형식으로 작성된 자동 회귀 차수, 이동 평균 및 수식의 기타 요소를 제공하는 **Microsoft 시계열 뷰어** 의 [마이닝 범례](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)를 사용하는 것이 좋습니다.  
   
--   [시계열에 대 한 수식을 보려면 모델 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [시계열에 대 한 수식을 보려면 모델 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  이 섹션에서는 예제 수식을 제공하고 기본 항에 대해 설명합니다.  
   
@@ -389,7 +387,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- 이 수식은 계수 및 절편의 값을 포함하는 긴 ARIMA 형식입니다. 이 수식의 약식 표현은 {1,0,7}입니다. 여기서 1은 기간을 시간 조각 수로 나타내고 0은 항 차수를 나타내며 7은 계수 수를 나타냅니다.  
+ 이 수식은 계수 및 절편의 값을 포함하는 긴 ARIMA 형식입니다. 이 수식의 약식 표현이 것 {1,0,7}, 여기서 1은 시간 조각 수로 기간, 0은 항 차수를 나타냅니다. 및 7 계수 수를 나타냅니다.  
   
 > [!NOTE]  
 >  상수는 Analysis Services에서 분산 계산을 위해 계산되지만 상수 자체는 사용자 인터페이스에 표시되지 않습니다. 그러나 **차트** 뷰에서 **편차 표시** 를 선택할 경우 계열의 임의 지점에 대한 분산을 이 상수의 함수로 볼 수 있습니다. 각 데이터 계열에 대한 도구 설명에는 예측된 특정 지점에 대한 분산이 표시됩니다.  
@@ -444,7 +442,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  각 분할에 대한 정보가 트리 내의 서로 다른 위치에 있으므로 ARTXP 트리의 정보를 검색하기 어려울 수 있습니다. 따라서 ARTXP 모델을 사용할 경우 모든 부분을 가져온 다음 완전한 수식을 다시 구성하기 위해 약간의 처리 작업을 수행해야 합니다. ARIMA 모델에서 수식을 검색할 경우에는 트리 전체에서 수식을 사용할 수 있으므로 검색 작업이 보다 쉽습니다. 쿼리를 만들어 이 정보를 검색하는 방법은 [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

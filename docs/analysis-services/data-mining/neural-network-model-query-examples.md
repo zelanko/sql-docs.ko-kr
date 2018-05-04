@@ -1,35 +1,33 @@
 ---
-title: "신경망 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: 
+title: 신경망 모델 쿼리 예제 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74feda323c3a1fadcfa9471e80706ede0ad213df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
+  데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 기반으로 하는 모델에 대해 쿼리를 만드는 방법을 설명합니다.  
   
@@ -188,7 +186,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> 예측 쿼리 5: 단일 예측 쿼리 만들기  
  신경망 모델에 대한 예측 쿼리를 작성하는 가장 쉬운 방법은 **와** 의 데이터 마이닝 디자이너에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에 제공되는 예측 쿼리 작성기를 사용하는 것입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어에서 모델을 찾아서 관심 있는 특성을 필터링하고 추세를 확인한 다음 **마이닝 모델 예측** 탭으로 전환하여 쿼리를 만들고 해당 추세에 대한 새 값을 예측할 수 있습니다.  
   
- 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이 위해 열고 모델 뷰어에서 **입력**선택,  **\<모든 >**합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
+ 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이 위해 열고 모델 뷰어에서 **입력**선택,  **\<모든 >** 합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
   
  뷰어에서 결과를 보면 특정 요일에 주문량이 적고 운영자의 수를 늘릴수록 판매량이 많아지는 상관 관계가 있다는 것을 알 수 있습니다. 그런 다음 모델에 대한 예측 쿼리를 사용하여 "가상 분석" 가설을 테스트하고 주문량이 적은 요일의 수준 2 운영자 수를 늘리면 주문이 늘어날지 예측할 수 있습니다. 이렇게 하려면 다음과 같은 쿼리를 만듭니다.  
   
@@ -218,13 +216,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
 |[PredictVariance&#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|예측 값의 분산을 반환합니다.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|예측 값의 표준 편차를 반환합니다.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|신경망 및 로지스틱 회귀 모델의 경우에는 모델 전체에 대한 학습 집합의 크기를 나타내는 단일 값을 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|예측 값의 표준 편차를 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|신경망 및 로지스틱 회귀 모델의 경우에는 모델 전체에 대한 학습 집합의 크기를 나타내는 단일 값을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통적인 함수 목록은 [알고리즘 참조(Analysis Services - 데이터 마이닝)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
@@ -232,6 +230,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [5 단원: 구축 신경망 네트워크 및 로지스틱 회귀 모델 &#40; 중급 데이터 마이닝 자습서 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [5 단원: 구축 신경망 네트워크 및 로지스틱 회귀 모델 & #40; 중급 데이터 마이닝 자습서 & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

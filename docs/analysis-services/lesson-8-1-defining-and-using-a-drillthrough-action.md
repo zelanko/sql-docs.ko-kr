@@ -1,29 +1,27 @@
 ---
-title: "정의 하 고 드릴스루 동작을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 정의 하 고 드릴스루 동작을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ba544bf0d557b0ee7462a18fcc762427806a9041
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>8-1-정의 하 고 드릴스루 동작을 사용 하 여 단원
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -116,9 +114,9 @@ ms.lasthandoff: 02/15/2018
   
 6.  **Order Date Key** 특성의 **Name** 속성을 **Order Date** 로 변경합니다. 그런 다음 **Name Column** 속성의 찾아보기 단추를 클릭하고 **Name Column** 대화 상자에서 원본 테이블로 **Date** 를, 원본 열로 SimpleDate를 선택합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **Due Date Key** 특성의 **Name** 속성을 **Due Date**로 변경한 후 **Order Date Key** 특성에서와 같은 방법을 사용하여 이 특성의 **Name Column** 속성을 **Date.SimpleDate (WChar)**로 변경합니다.  
+7.  **Due Date Key** 특성의 **Name** 속성을 **Due Date**로 변경한 후 **Order Date Key** 특성에서와 같은 방법을 사용하여 이 특성의 **Name Column** 속성을 **Date.SimpleDate (WChar)** 로 변경합니다.  
   
-8.  **Ship Date Key** 특성의 **Name** 속성을 **Ship Date**로 변경한 후 이 특성의 **Name Column** 속성을 **Date.SimpleDate (WChar)**로 변경합니다.  
+8.  **Ship Date Key** 특성의 **Name** 속성을 **Ship Date**로 변경한 후 이 특성의 **Name Column** 속성을 **Date.SimpleDate (WChar)** 로 변경합니다.  
   
 9. **Tutorial 큐브에 대한 큐브 디자이너의** 동작 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭으로 전환합니다.  
   

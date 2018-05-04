@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e843192c1ad00c9e7ef6742938d7dfe3dcc1bd07
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 494532b71b708f59c4ba3e09960b977cecec7c16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-and-lock-characteristics"></a>커서와 잠금 특성
 커서의 특징 공급자의 기능에 따라 다르지만, 하는 동안 다음과 같은 장점 및 단점 일반적으로 적용에 다양 한 유형의 커서 및 잠금.  

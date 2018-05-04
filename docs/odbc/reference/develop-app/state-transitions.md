@@ -3,15 +3,12 @@ title: 상태 전환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - unallocated state [ODBC]
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 424c421b29dce6bedad9a73c1d27acb01b6e77c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transitions"></a>상태 전환
 ODBC에 정의 되어 불연속 *상태* 각 환경, 각 연결 및 각 문에 대 한 합니다. 예를 들어 환경에 가능한 상태는 세: (할당 되는 환경이)에 할당 되지 않은, 할당 된 (있는 환경 할당 되었지만 연결이 없는 할당) 및 (중인 환경 및 하나 이상의 연결을 연결 할당 됨). 연결 있는 7 가지 가능한 상태입니다. 문은 사항이 13 가능한 상태입니다.  

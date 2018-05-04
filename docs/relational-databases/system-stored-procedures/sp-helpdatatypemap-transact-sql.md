@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e594c9b1d13730df2ccc93bf04d0348a5d2175b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac4661f7a7ae18487c63a3e4576fde06501a3fce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
   
  [ **@destination_version**=] **'***destination_version***'**  
- 대상 DBMS의 제품 버전입니다. *destination_version*은 **varchar (10)**를 지정 하지 않으면 하는 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
+ 대상 DBMS의 제품 버전입니다. *destination_version*은 **varchar (10)** 를 지정 하지 않으면 하는 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
   
  [ **@destination_type**=] **'***destination_type***'**  
  대상 DBMS에 나열된 데이터 형식입니다. *destination_type*은 **sysname**를 지정 하지 않으면 하는 경우 대상 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 대상 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  

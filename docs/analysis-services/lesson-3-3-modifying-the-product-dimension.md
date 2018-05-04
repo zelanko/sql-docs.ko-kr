@@ -1,29 +1,27 @@
 ---
-title: "Product 차원 수정 | Microsoft Docs"
-ms.custom: 
+title: Product 차원 수정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e1e3500180a7fc82f37b4de03f066647d82ee37c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>단원 3-3-Product 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  **원본 열** 목록의 맨 아래에서 **ProductLineName** 을 선택하고 **확인**을 클릭합니다.  
   
-    이제 NameColumn 필드에 **Product.ProductLineName (WChar)**텍스트가 포함됩니다. **Product Line** 특성 계층의 멤버가 약식 제품 라인 이름이 아니라 전체 제품 라인 이름을 표시합니다.  
+    이제 NameColumn 필드에 **Product.ProductLineName (WChar)** 텍스트가 포함됩니다. **Product Line** 특성 계층의 멤버가 약식 제품 라인 이름이 아니라 전체 제품 라인 이름을 표시합니다.  
   
 5.  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
   
-    이제 NameColumn 필드에 **Product.EnglishProductName (WChar)**텍스트가 포함됩니다.  
+    이제 NameColumn 필드에 **Product.EnglishProductName (WChar)** 텍스트가 포함됩니다.  
   
 8.  속성 창에서 위로 스크롤하여 **Name** 속성 필드를 클릭하고 **Product Name**을 입력합니다.  
   
@@ -192,7 +190,7 @@ ms.lasthandoff: 02/15/2018
 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰 &#40; 명명 된 계산을 정의 합니다. Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[데이터 원본 뷰 & #40; 명명 된 계산을 정의 합니다. Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [사용자 정의 계층 만들기](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [특성 계층에 대해 &#40;All&#41; 수준 구성](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

@@ -1,32 +1,31 @@
 ---
-title: "테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 원본을 추가 | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 원본을 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a963d02e3d3119b7afc5874029450d6897ffeb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>테이블 형식 모델 (Analysis Services AMO-TOM)에 데이터 소스 추가
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+**DataSource** Microsoft.AnalysisServices.Tabular 네임 스페이스의 클래스 값은 데이터 새로 고침 작업 중 유형을 지정 하는 테이블 형식 모델의 데이터 원본에 대 한 추상화 및 가져온된 데이터의 위치입니다. 
 
-파생 된 클래스의 개체를 인스턴스화하고 테이블 형식 모델에 데이터 소스를 추가할 수 있습니다 **DataSource**, 다음에 추가 하는 **DataSources** 모델 개체의 컬렉션입니다. 호출 서버에 변경 내용을 커밋 **Model.SaveChanges()** 또는 **Database.Update(UpdateOptions.ExpandFull)**합니다. 
+파생 된 클래스의 개체를 인스턴스화하고 테이블 형식 모델에 데이터 소스를 추가할 수 있습니다 **DataSource**, 다음에 추가 하는 **DataSources** 모델 개체의 컬렉션입니다. 호출 서버에 변경 내용을 커밋 **Model.SaveChanges()** 또는 **Database.Update(UpdateOptions.ExpandFull)** 합니다. 
 
 SQL Server 2016 Analysis Services 데이터 공급자가 데이터 형식으로 테이블 및 열을 표시 하는 관계형 데이터베이스에서 데이터 가져오기를 지원 합니다. 이와 같이 테이블 형식 개체 모델 (데이터 원본에서 파생) ProviderDataSource 클래스를 사용 하 여이 기능을 노출 합니다. 
 

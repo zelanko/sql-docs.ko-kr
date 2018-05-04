@@ -1,7 +1,6 @@
 ---
 title: 레코드 집합 및 SourceRecordset 속성 예 (VBScript) | Microsoft Docs
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +20,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 23748908966cc2aaae3b747844308e7021392b5a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f0529863a3c693be35860df0d5e5751f04588359
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>레코드 집합 및 SourceRecordset 속성 예 (VBScript)
 > [!IMPORTANT]

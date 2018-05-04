@@ -1,33 +1,31 @@
 ---
-title: "KpiStatus 요소 (CSDLBI) | Microsoft Docs"
-ms.custom: 
+title: KpiStatus 요소 (CSDLBI) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af4c2fd061dcfcce4316fd16dd0272bbac45c6c9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8895d3fce311650e60de08304abe211ba5306c96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpistatus-element-csdlbi"></a>KpiStatus 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KpiStatus 요소는 KPI(핵심 성과 지표)의 상태 지표 값이 포함된 열에 대한 참조를 정의합니다.  
+  KpiStatus 요소는 KPI(핵심 성과 지표)의 상태 지표 값이 포함된 열에 대한 참조를 정의합니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 KpiStatus 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  
@@ -88,6 +86,6 @@ KpiStatus 요소는 KPI(핵심 성과 지표)의 상태 지표 값이 포함된 
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [KPI 요소 &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
+ [KPI 요소 & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)  
   
   

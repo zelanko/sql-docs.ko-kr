@@ -1,11 +1,9 @@
 ---
 title: Clustered 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e2b4a3f65eac00d21295af597cef610973bdc58
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d0550867bb66b87d8396e87d0e883a81a2ffae51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제 (VB)
 이 예제에서는 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. Microsoft Jet 데이터베이스는 클러스터형된 인덱스, 지원 하지 않으므로이 예제는 반환 되는 참고 **False** 에 대 한는 **Clustered** 에 모든 인덱스의 속성은 **Northwind** 데이터베이스입니다.  

@@ -1,33 +1,31 @@
 ---
-title: "테이블 형식 모델 쿼리 | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델 쿼리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7a37259a2f5edcdf023a9329b654b00e261e01ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="querying-a-tabular-model"></a>테이블 형식 모델 쿼리
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 달성 하려면 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하 여 또는 MDX 및 검색 데이터를 큐브에서 들어온 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  
+  개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 달성 하려면 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하 여 또는 MDX 및 검색 데이터를 큐브에서 들어온 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  
   
 ## <a name="querying-with-adomdnet"></a>ADOMD.Net을 사용하여 쿼리  
  ADOMD.Net을 사용하여 테이블 형식 모델을 쿼리하는 작업은 단순하고 유연합니다. DAX의 테이블 형식 쿼리 식 또는 MDX 문을 서버로 보내 결과를 가져올 수 있습니다.  

@@ -3,15 +3,12 @@ title: CONCUR_SS_OPTIMISTIC_CC 필드 (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.CONCUR_SS_OPTIMISTIC_CC
 apilocation:
@@ -22,17 +19,16 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af3b181cc07c2b81c665429781faef560a524556
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 8c4b3116c47a7a5a1a13b51d92385e96741ee181
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurssoptimisticcc-field-sqlserverresultset"></a>CONCUR_SS_OPTIMISTIC_CC 필드 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형 행 잠금이 없는 합니다.  
+  행 잠금을 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -1,30 +1,29 @@
 ---
-title: "Tables 개체 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: Tables 개체 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: befd3f17f034151924cc962eb5355bd7543ffddb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables 개체 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  모델에 포함 된 테이블을 정의 합니다. 모델 테이블에에서 있는 데이터를 가져오거나 쿼리, 외부 데이터베이스의 테이블 또는 계산된 하는 DAX 식에서 생성 된 테이블에 하거나 바인딩됩니다. 하나 이상의 테이블 내에서 **파티션** 개체 데이터 소스를 설명 합니다.  테이블 간에 **관계** 카디널리티, 필터 방향 및 관계의 다른 속성을 지정 하는 개체입니다.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **테이블** 개체에는 다음과 같은 속성이 있습니다.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
  클라이언트 응용 프로그램에 대한 논리적 계층 드릴다운 경로를 제공하는 수준 컬렉션을 나타냅니다. Table 개체의 자식입니다.  
   
 ## <a name="usage"></a>사용법  
- 테이블 개체에서 사용 되므로 [명령 &#40; 변경 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [명령 &#40; 만들기 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [명령 &#40; 삭제 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [명령 &#40; 새로 고침 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ 테이블 개체에서 사용 되므로 [Alter 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [만들기 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령을 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Delete 명령을 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [새로 고침 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40;&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  를 만들 때 교체 또는 테이블 개체는 개체 정의의 모든 읽기 / 쓰기 속성을 지정 합니다. 읽기 / 쓰기 속성을 생략 삭제 것으로 간주 됩니다.  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="full-syntax"></a>전체 구문  
- 다음은 모델의 테이블 개체의 스키마 표시 합니다. 이 정의의 크기를 줄이려면 파티션 개체는 다른 곳에서 설명 되어 있습니다. 참조 [개체 &#40; 분할 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+ 다음은 모델의 테이블 개체의 스키마 표시 합니다. 이 정의의 크기를 줄이려면 파티션 개체는 다른 곳에서 설명 되어 있습니다. 참조 [파티션 개체 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)합니다.  
   
 ```  
 "tables": {  

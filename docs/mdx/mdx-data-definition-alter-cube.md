@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 데이터 정의-ALTER 큐브
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,7 +135,7 @@ CELL CALCULATION Calculation_Name
  WITH DESCENDANTS 절을 사용하지 않을 경우 삭제된 멤버의 자식은 삭제된 멤버의 부모의 자식이 됩니다. WITH DESCENDANTS 절을 사용하면 모든 하위 항목과 차원 테이블의 해당 행도 삭제됩니다.  
   
 > [!NOTE]  
->  계산된 멤버, 명명 된 집합, 동작 및 셀 계산 삭제에 대 한 정보를 참조 하세요. [DROP MEMBER 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-member.md), [DROP SET 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-action.md), 및 [DROP CELL CALCULATION 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  계산된 멤버, 명명 된 집합, 동작 및 셀 계산 삭제에 대 한 정보를 참조 하십시오. [DROP MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET 문을 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), 및 [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)합니다.  
   
 ## <a name="updating-the-default-dimension-member"></a>기본 차원 멤버 업데이트  
  이 절은 큐브의 기본 멤버를 업데이트하며, MDX 계산 스크립트에서 기본 멤버를 정의하는 데 사용됩니다. 기본 멤버는 데이터베이스 차원, 큐브 차원 또는 사용자 로그인에 대해 지정할 수 있습니다. 또한 기본 멤버는 세션 동안 변경될 수 있습니다.  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  계산 멤버 속성의 값을 정의하는 유효한 MDX 스칼라 식입니다.  
   
 ## <a name="creating-a-cell-calculation"></a>셀 계산 만들기  
- ALTER CUBE 문을 사용 하 여 셀 계산을 만드는 방법에 대 한 자세한 내용은 참조 [DROP CELL CALCULATION 문 &#40; Mdx&#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ ALTER CUBE 문을 사용 하 여 셀 계산을 만드는 방법에 대 한 자세한 내용은 참조 [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

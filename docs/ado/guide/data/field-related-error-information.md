@@ -1,11 +1,9 @@
 ---
 title: 필드와 관련 된 오류 정보 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec0241e4d57a53776e1d124d697657d464f4e515
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b53698e1042af197db9d9fa7ddfc4af555721607
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="field-related-error-information"></a>필드와 관련 된 오류 정보
 필드와 관련이 직접 오류가 발생 하는 경우-예를 들어 데이터가 누락 되어 또는 필드에 대 한 잘못 된 형식이 된 경우-검사 하 여 문제의 원인에 대 한 자세한 정보를 검색할 수 있습니다는 **필드** 개체의 **상태**  속성입니다. 이 속성의 문제에 대 한 특정 정보를 제공 하도록 향상 되었습니다. 따라서, 예를 들어를 호출할 때 **UpdateBatch** 실패 하면 문제의 원인을 검토 하 여 확인할 수 있습니다는 **상태** 의 속성은 **필드** 는 영향을 받는 각 레코드가 있습니다. 속성의 값 중 하나가 포함 됩니다는 **FieldStatusEnum** 상수입니다. 다음 표에서 오류가 발생 한 경우 특정 관심 있는 해당 값을 포함 합니다.  

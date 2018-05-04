@@ -1,11 +1,9 @@
 ---
 title: 간단한 Microsoft OLE DB Provider | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7e4a5742b9d5b084d10540737ac87c55d441d0a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 공급자 간단한 개요
 Microsoft OLE DB 간단한 공급자 (OSP)는에 대 한 공급자를 썼는지를 사용 하 여 데이터에 액세스할 수는 ADO를 사용 하면는 [OLE DB 간단한 공급자 (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)합니다. 간단한 공급자는 메모리 내 배열 또는 XML 문서와 같은 기본만 OLE DB 지원 해야 하는 데이터 원본에 액세스 하는 데 사용 됩니다.

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +27,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL에서 C 데이터 형식으로 데이터를 변환
 응용 프로그램 호출 하는 경우 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData**, 드라이버는 데이터 원본에서 데이터를 검색 합니다. 하는 경우 필요에 따라 데이터를 변환할 드라이버 검색 하 고 데이터 형식으로 지정 된 데이터 형식에서는 *TargetType* 인수 **SQLBindCol** 또는 **SQLGetData 합니다.** 마지막으로, 데이터에서 가리키는 위치에 저장 된 *TargetValuePtr* 인수에 **SQLBindCol** 또는 **SQLGetData** (및는 카드가의 SQL_DESC_DATA_PTR 필드가).  
   
  다음 표에서 ODBC SQL에서 지원 되는 변환은 데이터 형식을 ODBC C 데이터 형식에를 보여 줍니다. 채워진된 원이 나타냅니다 SQL 데이터 형식에 대 한 기본 변환 (C 데이터 형식에 데이터 변환할 때의 값 *TargetType* SQL_C_DEFAULT는). 흰색 원 변환이 지원된를 나타냅니다.  
   
- ODBC 3에 대 한*.x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버, 드라이버 관련 데이터 형식이 지원 되지 않는 변환 합니다.  
+ ODBC 3에 대 한 *.x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버, 드라이버 관련 데이터 형식이 지원 되지 않는 변환 합니다.  
   
  변환된 된 데이터의 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.  
   

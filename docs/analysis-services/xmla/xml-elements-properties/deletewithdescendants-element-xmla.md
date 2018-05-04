@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9d740654a701ebc4a81e1bf9e2b5084f706dfbbb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9844e13de56dddae48afc59d0e44fc5203cfdd40
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]부모도도 특성 멤버의 하위 항목을 삭제할 수 있는지 여부를 나타냅니다. [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  부모 [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령으로도 특성 멤버의 하위 항목을 삭제할 수 있는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|False|  
@@ -62,8 +61,8 @@ ms.lasthandoff: 01/08/2018
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|부모 요소|[drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  **DeleteWithDescendants** 요소는 **Drop** 명령이 [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) 요소에서 식별하는 특성 멤버뿐만 아니라 해당 특성 멤버의 하위 항목도 함께 삭제할 수 있는지 여부를 결정합니다.  
@@ -74,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  특성 멤버 삭제 및 업데이트에 대한 자세한 내용은 [멤버 삽입, 업데이트 및 삭제&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

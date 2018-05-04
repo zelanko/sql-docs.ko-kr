@@ -1,11 +1,9 @@
 ---
 title: 메서드를 추가, 속성 예제 (VC + +)을 이름 열과 테이블 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4bb86906fbaad143f0f911b24646a1730abaedb1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6496c812083d154205c0b96efa47badf35e56c82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>테이블 및 열 이름 속성 예제 (VC + +) 메서드 추가
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  

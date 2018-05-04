@@ -1,11 +1,9 @@
 ---
 title: GetChunk 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a34e3c3c862443b8b3c28c1583110524c6e55fae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 38397b5573cfb7ddb10a7454833f4e9b512b769b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 메서드 (ADO)
 큰 텍스트 또는 이진 데이터의 내용 중 일부 또는 모두 반환 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  

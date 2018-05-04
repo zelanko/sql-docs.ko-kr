@@ -1,30 +1,29 @@
 ---
-title: "DirectQuery 모드에서 모델을 테스트 | Microsoft Docs"
-ms.custom: 
+title: DirectQuery 모드에서 모델을 테스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad389541ba4bb964df0c3a0ca7cb08277d1bd1d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c57766209690f9509f4fd9c321358faa534cd96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>DirectQuery 모드에서 모델 테스트
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]디자인부터 개발의 각 단계에서 DirectQuery 모드에서 테이블 형식 모델을 테스트 하기 위한 옵션을 검토 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  디자인부터 시작하여 각 개발 단계에서 DirectQuery 모드로 테이블 형식 모델을 테스트하기 위한 옵션을 검토합니다.  
   
 ## <a name="test-in-excel"></a>Excel에서 테스트 
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
--   [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
+-   [SQL Server Profiler를 사용 하 여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  Oracle 또는 Teradata를 사용하는 경우 해당 시스템용 추적 모니터링 도구를 사용하세요.  
   

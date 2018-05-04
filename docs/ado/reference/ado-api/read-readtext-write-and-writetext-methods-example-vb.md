@@ -1,11 +1,9 @@
 ---
 title: 읽기, readtext 문, 쓰기 및 WriteText 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd98336d35b5c113abf4c08595d9dbb1ef2316b7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5a6478b0df357d4c4c23398733c1a9d76b3eb95b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>읽기, readtext 문, 쓰기 및 WriteText 메서드 예제 (VB)
 이 예제에서는 텍스트 입력란의 내용을 읽고 하 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 및 이진 **스트림**합니다. 다른 속성 및 표시 된 메서드로 [위치](../../../ado/reference/ado-api/position-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), 및 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  

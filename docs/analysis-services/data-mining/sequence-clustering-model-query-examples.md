@@ -1,35 +1,33 @@
 ---
-title: "시퀀스 클러스터링 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: 
+title: 시퀀스 클러스터링 모델 쿼리 예제 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cc61342fb89d01cd10b2866efb7592b187c8fca2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+  데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  시퀀스 클러스터링 모델에 대한 예측 쿼리는 일반적으로 시퀀스와 전환, 모델에 포함된 비시퀀스 특성, 또는 시퀀스 특성과 비시퀀스 특성의 조합 중 하나에 따라 권장 구성을 생성합니다.  
   
@@ -265,16 +263,16 @@ AS t
 |[ClusterDistance&#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.|  
 |[ClusterProbability&#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
 |[IsInNode&#40;DMX&#41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
 |[PredictAssociation&#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|연관된 멤버 자격을 예측합니다.|  
 |[PredictCaseLikelihood&#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|지정된 열의 예측에 대한 히스토그램을 나타내는 테이블을 반환합니다.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|사례가 분류되어 있는 노드의 Node_ID를 반환합니다.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|지정한 상태에 대한 확률을 반환합니다.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|지정된 열의 예측에 대한 히스토그램을 나타내는 테이블을 반환합니다.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|사례가 분류되어 있는 노드의 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|지정한 상태에 대한 확률을 반환합니다.|  
 |[PredictSequence&#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|지정한 시퀀스 데이터 집합에 대한 미래의 시퀀스 값을 예측합니다.|  
 |[PredictStdev&#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
@@ -282,6 +280,6 @@ AS t
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [시퀀스 클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [시퀀스 클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

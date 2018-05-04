@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ab57383e7702b981566b67a6c1b21f3e9f767de
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3a0f319b92afac55101bfe3bca9766a53a91744d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 마지막 문의 시간입니다. 일반적으로 상호 운용 가능한 응용 프로그램을 개발 noninteroperable 하나 개발 보다 오래 걸립니다. 이유는 응용 프로그램 해야 DBMS 기능을 확인, 다른 Dbms에 대 한 동일한 작업을 다르게 수행, 다른 하지만 일부 Dbms에서 지 원하는 기능을 해결 등입니다.  

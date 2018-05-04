@@ -30,12 +30,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c22aff659dc4de5bd5a16cf927aaf391fa856af4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-dmx"></a>SELECT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ SELECT FLATTENED <select list> FROM ...
  식을 사용 하 여 쿼리 결과 정렬할 수 및의 조합을 사용 하 여 결과의 하위 집합을 반환한 다음 수는 **ORDER BY** 및 **TOP** 절. 이 함수는 응답할 가능성이 높은 사람에게만 결과를 보내도록 메일 대상을 지정하는 시나리오 등에서 유용합니다. 예측 확률에 따라 예측 쿼리를 발송 대상의 결과 정렬 하 고 다음 반환할 상위 수 \<n > 결과입니다.  
   
 ## <a name="select-list"></a>select list  
-  *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
+ *\<select 목록 >* 스칼라 열 참조, 예측 함수 및 식을 포함할 수 있습니다. 사용 가능한 옵션은 알고리즘과 다음 컨텍스트에 따라 달라집니다.  
   
 -   마이닝 구조를 쿼리하는지 아니면 마이닝 모델을 쿼리하는지 여부  
   
@@ -113,9 +112,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>예측  
  예측을 만들 때 사용할 수 있는 구문에는 두 가지 유형이 있습니다.  
   
--   [SELECT FROM &#60; 모델 &#62; 예측 조인 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60; 모델 &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM &#60;모델&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  첫 번째 예측 유형을 사용하면 실시간 또는 일괄 처리로 복잡한 예측을 만들 수 있습니다.  
   
@@ -132,26 +131,26 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>절 구문  
  찾는 복잡성으로 인해는 **선택** 문, 자세한 구문 요소 및 인수는 절로 설명 됩니다. 각 절에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
- [SELECT DISTINCT FROM &#60; 모델 &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62;. 콘텐츠 &#40; DMX &#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM &#60;모델&#62;합니다. 콘텐츠 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62;. 경우 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62;. SAMPLE_CASES &#40; DMX &#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM &#60;모델&#62;합니다. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62;. DIMENSION_CONTENT &#40; DMX &#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM &#60;모델&#62;합니다. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62; 예측 조인 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60; 모델 &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM &#60;모델&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60; 구조 &#62;. 경우](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)  
   
   

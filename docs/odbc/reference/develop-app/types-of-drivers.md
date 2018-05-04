@@ -3,15 +3,12 @@ title: 유형의 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -22,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 711e71809a4c75eb4cb4507fc6528efa10dd07ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-drivers"></a>유형의 드라이버
 ODBC 드라이버는 다음과 같이 분류할 수 있습니다.  
@@ -35,7 +31,7 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
 -   **32 비트 ODBC 2입니다.**  
      ***x* 드라이버** 32 비트 드라이버입니다.  
   
-    -   ODBC 2만 내보냅니다*.x* 함수입니다.  
+    -   ODBC 2만 내보냅니다 *.x* 함수입니다.  
   
     -   ODBC 2에서 보여 줍니다. *x* 동작 변경 내용에 대 한 동작입니다.  
   

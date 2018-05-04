@@ -1,11 +1,9 @@
 ---
 title: MoveRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fc64189ae993456d5c4f9f6dc15e362b5e637d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 18508d9103b0be9a0dae3cff013ca2732a00035c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 동작을 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [범위란](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드.  

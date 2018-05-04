@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3bf406938a92ec3b3c8829b3e1cb59098ea62524
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3bf71b6d2b228d3178d4dba420aecefe34e14668
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestors-mdx"></a>Ancestors(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Ancestors(Member_Expression, Distance)
  *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>주의  
  와 **상위** 함수를 제공 하는 함수 MDX 멤버 식을 사용 하 여 고 해당 멤버의 상위 항목인 수준의 MDX 식 또는 해당 멤버 위의 수준 수를 나타내는 숫자 식을 제공 합니다. 이 정보는 **상위** 함수는 해당 수준의 멤버 (한 멤버의 구성 된 집합을 됩니다)의 집합을 반환 합니다.  
   
 > [!NOTE]  
@@ -111,7 +110,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목:  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,13 +27,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6c3d51e64669f2410ca6e99926734b767dba1f45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 참조 [주석이 추가 된 XSD 스키마 & #40; 소개 SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). XDR을 사용 하는 레거시 응용 프로그램에 대 한 참조 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 더 이상 사용&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram의 필수 네임스페이스  
- Updategram에서 키워드와 같은  **\<동기화 >**,  **\<하기 전에 >**, 및  **\<후 >**는 에**:-microsoft-com:xml-updategram** 네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에는 **updg** 접두사 나타냅니다는 **updategram** 네임 스페이스입니다.  
+ Updategram에서 키워드와 같은  **\<동기화 >**,  **\<하기 전에 >**, 및  **\<후 >** 는 에 **:-microsoft-com:xml-updategram** 네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에는 **updg** 접두사 나타냅니다는 **updategram** 네임 스페이스입니다.  
   
 ## <a name="reviewing-syntax"></a>구문 검토  
  Updategram은 있는 템플릿이  **\<동기화 >**,  **\<하기 전에 >**, 및  **\<후 >** 블록의 구문을 구성 하는 updategram입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
@@ -117,7 +114,7 @@ ms.lasthandoff: 04/16/2018
  Updategram에 매핑 스키마가 지정되지 않은 기본 매핑의 경우 updategram 요소는 테이블에 매핑되고 자식 요소(요소 중심 매핑)와 특성(특성 중심 매핑)은 열에 매핑됩니다.  
   
 ### <a name="element-centric-mapping"></a>요소 중심 매핑  
- 요소 중심 updategram의 경우 요소에는 요소의 속성을 나타내는 자식 요소가 포함됩니다. 한 가지 예로 다음 updategram을 참조하십시오.  **\<Person.Contact >** 요소에 포함 된  **\<FirstName >**및  **\<LastName >** 자식 요소입니다. 이러한 자식 요소는 속성의는  **\<Person.Contact >** 요소입니다.  
+ 요소 중심 updategram의 경우 요소에는 요소의 속성을 나타내는 자식 요소가 포함됩니다. 한 가지 예로 다음 updategram을 참조하십시오. **\<Person.Contact >** 요소에 포함 된  **\<FirstName >** 및  **\<LastName >** 자식 요소입니다. 이러한 자식 요소는 속성의는  **\<Person.Contact >** 요소입니다.  
   
  Updategram은 암시적 매핑을 사용 하 여이 updategram은 매핑 스키마를 지정 하지 않으므로, 여기서는  **\<Person.Contact >** 요소 Person.Contact 테이블에 매핑되고 자식 요소가 매핑되는 FirstName로 및 LastName 열입니다.  
   

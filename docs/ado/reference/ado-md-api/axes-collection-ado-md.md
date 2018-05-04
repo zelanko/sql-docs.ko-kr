@@ -1,11 +1,9 @@
 ---
 title: 축 컬렉션 ADO MD | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2728d025ee0ba850712ff56cad7ef46bcb0b996
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 04ffa05b5912b00a59389b7f2d5e6665541662eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axes-collection-ado-md"></a>Axes 컬렉션 (ADO MD)
 포함 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 셀 집합을 정의 하는 개체입니다.  

@@ -1,30 +1,28 @@
 ---
-title: "Analysis Services 개발자 설명서 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 개발자 설명서 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6feb651ac8a473bf717d86cdeccef6c16bc1a74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +71,14 @@ Analysis Services에서는 여러 가지 방법을 코드를 통해 솔루션을
 
 [Analysis Services 스키마 행 집합](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md) 서버 상태, 서버 작업 및 데이터베이스 개체에 대 한 정보를 제공 하는 스키마 행 집합을 설명 합니다.
 
-[XML for Analysis &#40; XMLA &#41; 참조](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) 설명 XMLA 개념 수 있는 XMLA 사용자 지정 솔루션에 기여 하는 방법을 이해 합니다. 또한 XMLA 1.1 사양과의 호환성 수준에 대해서도 설명합니다.
+[분석에 대 한 XML &#40;XMLA&#41; 참조](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) 설명 XMLA 개념 수 있는 XMLA 사용자 지정 솔루션에 기여 하는 방법을 이해 합니다. 또한 XMLA 1.1 사양과의 호환성 수준에 대해서도 설명합니다.
 
-[스크립팅 언어 &#40; analysis Services ASSL XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) ASSL 확장 XMLA에 설명 합니다. ASSL은 XMLA 사양을 보완하는 Analysis Services 다차원 모델에 대한 데이터 정의 및 조작 언어를 제공합니다.
+[Analysis Services Scripting Language &#40;xmla ASSL&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) ASSL 확장 XMLA에 설명 합니다. ASSL은 XMLA 사양을 보완하는 Analysis Services 다차원 모델에 대한 데이터 정의 및 조작 언어를 제공합니다.
 
-[테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL은 호환성 수준 1200 이상에서 테이블 형식 모델의 JSON 표현입니다. 개체 정의 테이블 형식 메타 데이터는 테이블, 열 및 관계 대신 테이블 형식 모드에서 처음 Analysis Services 데이터를 모델링 하는 경우에 익숙하지 않을 수 있는 다차원 메타 데이터를 기반으로 합니다.
+[테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL은 호환성 수준 1200 이상에서 테이블 형식 모델의 JSON 표현입니다. 개체 정의 테이블 형식 메타 데이터는 테이블, 열 및 관계 대신 테이블 형식 모드에서 처음 Analysis Services 데이터를 모델링 하는 경우에 익숙하지 않을 수 있는 다차원 메타 데이터를 기반으로 합니다.
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 관리 기능 및 범용는 사용 되는 cmdlet에 설명 **Invoke-ascmd** 스크립트 또는 쿼리를 입력으로 허용 하는 cmdlet입니다.
 
 ## <a name="see-also"></a>관련 항목:
 [기술 참조 ](../analysis-services/powershell/technical-reference-ssas.md) 
- [쿼리 및 식 언어 참조 &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+ [쿼리 및 식 언어 참조 &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

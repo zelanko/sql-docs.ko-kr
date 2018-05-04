@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>사용자 및 작업 영역 설정
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 
 사용자와 작업 영역 설정을 열 수 있습니다는 **명령 팔레트** (**Ctrl + Shift + P**)와 **기본 설정: 사용자 설정을 열고** 및  **기본 설정: 작업 영역 설정 열기** 하거나 바로 가기 키를 사용 하 여 (**Ctrl +**).
 
-다음 예에서는 편집기에서 줄 번호를 사용 하지 않도록 설정 하 고 줄의 텍스트 편집기의 크기에 따라 자동으로 배치 하려면를 구성 합니다.
+다음 예에서는 편집기에서 줄 번호를 사용 하지 않도록 설정 하 고 줄의 코드를 자동으로 들여쓰기를 구성 합니다.
 
 ![설정 예](media/settings/sample-settings.png)
 

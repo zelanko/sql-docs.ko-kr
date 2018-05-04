@@ -1,11 +1,9 @@
 ---
 title: XML 보안 고려 사항 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cbfee8717021fbc1eb621591987ee63ab54362e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 36394ea9806dc7345c391e3e5a6fd6733d08181d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-security-considerations"></a>XML 보안 고려 사항
 ADO 저장 및 레코드 집합 개체에서 Open 메서드 Internet Explorer에서 실행 하도록 안전 하 게 보호 작업을 고려 하지 않습니다. 따라서 응용 프로그램 또는 브라우저에서 호스팅되는 컨트롤에서 실행 되는 스크립트 코드에서 이러한 메서드를 사용 하면 브라우저의 보안 구성 동작에 영향을 줄 됩니다.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c2a84992bdc1cce94bdc997ce017825c0a2fb8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 905ead01709a932639f72e874f1246228f2f9c21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +48,16 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 ## <a name="argument"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**합니다. 경우 *게시* 은 **%**, 모든 병합 게시 및 현재 데이터베이스에서 구독 하는 방법에 대 한 정보가 반환 됩니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 합니다. 경우 *게시* 은 **%**, 모든 병합 게시 및 현재 데이터베이스에서 구독 하는 방법에 대 한 정보가 반환 됩니다.  
   
  [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자*은 **sysname**, 기본값은 **%**합니다.  
+ 게시자의 이름입니다. *게시자*은 **sysname**, 기본값은 **%** 합니다.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db*은 **sysname**, 기본값은 **%**합니다.  
+ 게시자 데이터베이스의 이름입니다. *publisher_db*은 **sysname**, 기본값은 **%** 합니다.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- 끌어오기 구독을 표시할지 여부입니다. *subscription_type*은 **nvarchar (10)**, 기본값은 **'pull'**합니다. 유효한 값은 **'push'**, **'pull'**, 또는 **'both'**합니다.  
+ 끌어오기 구독을 표시할지 여부입니다. *subscription_type*은 **nvarchar (10)**, 기본값은 **'pull'** 합니다. 유효한 값은 **'push'**, **'pull'**, 또는 **'both'** 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 신경망 알고리즘 | Microsoft Docs"
-ms.custom: 
+title: Microsoft 신경망 알고리즘 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -25,20 +24,19 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 359807ec110635df193ee1b2b1c69e1243cbb226
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 신경망 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 기계 학습을 위해 널리 사용되고 조정 가능한 신경망 아키텍처의 구현입니다.  이 알고리즘은 예측 가능한 특성의 가능한 각 상태에 대해 입력 특성의 가능한 각 상태를 테스트하고 학습 데이터를 기반으로 각 조합의 확률을 계산합니다. 이러한 확률을 분류 또는 회귀 작업에 사용하여 일부 입력 특성을 기반으로 결과를 예측할 수 있습니다. 신경망은 연결 분석에도 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 기계 학습을 위해 널리 사용되고 조정 가능한 신경망 아키텍처의 구현입니다.  이 알고리즘은 예측 가능한 특성의 가능한 각 상태에 대해 입력 특성의 가능한 각 상태를 테스트하고 학습 데이터를 기반으로 각 조합의 확률을 계산합니다. 이러한 확률을 분류 또는 회귀 작업에 사용하여 일부 입력 특성을 기반으로 결과를 예측할 수 있습니다. 신경망은 연결 분석에도 사용할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 마이닝 모델을 만들 때 여러 출력을 포함할 수 있으며 알고리즘은 여러 네트워크를 만듭니다. 단일 마이닝 모델에 포함된 네트워크의 수는 입력 열의 상태(또는 특성 값) 수뿐만 아니라 마이닝 모델에서 사용하는 예측 가능한 열의 수와 해당 열에 있는 상태 수에 따라 달라집니다.  
   

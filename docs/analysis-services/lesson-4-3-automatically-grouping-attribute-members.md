@@ -1,29 +1,27 @@
 ---
-title: "자동으로 특성 멤버의 그룹화 | Microsoft Docs"
-ms.custom: 
+title: 자동으로 특성 멤버의 그룹화 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b97f1c25cc46c0518c8dbf2e924d9ab99da32cd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lesson 4-3-자동으로 특성 멤버 그룹화
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +31,10 @@ ms.lasthandoff: 02/15/2018
 **DiscretizationMethod** 속성은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 그룹화 생성 여부 및 수행되는 그룹화 유형을 결정합니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 그룹화를 수행하지 않습니다. 자동 그룹화를 사용하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 구조에 따라 최적의 그룹화 방법을 자동으로 결정하도록 허용하거나 다음 목록에서 그룹화 알고리즘 중 하나를 선택하여 그룹화 방법을 지정할 수 있습니다.  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 총 차원 멤버 수가 그룹 전체에 동일하게 분포되도록 그룹 범위를 만듭니다.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 총 차원 멤버 수가 그룹 전체에 동일하게 분포되도록 그룹 범위를 만듭니다.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 가우스 분포와 함께 K-Means 클러스터링 메서드를 사용하여 입력 값에 단일 차원 클러스터링을 수행하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 가우스 분포와 함께 K-Means 클러스터링 메서드를 사용하여 입력 값에 단일 차원 클러스터링을 수행하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.  
   
 그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 02/15/2018
 [특성 계층 숨기기 및 비활성화](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[특성 멤버 그룹화 &#40; 불연속화 &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[특성 멤버 그룹화 & #40; 불연속화 & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

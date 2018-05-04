@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 신경망 알고리즘 기술 참조 | Microsoft Docs"
-ms.custom: 
+title: Microsoft 신경망 알고리즘 기술 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -30,20 +29,19 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 19ec21f8f56eb7ea9c06b69c626db690b88ecca0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론*으로 구성된 *다중 계층 퍼셉트론* 신경망(*역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론*으로 구성된 *다중 계층 퍼셉트론* 신경망(*역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
  다중 계층 퍼셉트론 신경망에 대한 자세한 내용은 이 설명서에서 다루지 않습니다. 이 항목에서는 입력 및 출력 값을 정규화하는 데 사용되는 방법과 특성 카디널리티를 줄이는 데 사용되는 기능 선택 방법을 포함하여 알고리즘의 기본 구현에 대해 설명합니다. 또한 이 항목에서는 알고리즘의 동작을 사용자 지정하는 데 사용할 수 있는 매개 변수 및 기타 설정을 설명하고 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
   

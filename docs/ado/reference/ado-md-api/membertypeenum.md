@@ -1,11 +1,9 @@
 ---
 title: MemberTypeEnum | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00ec57e460d77f01921d788a95f3083a10c6284f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0fea8c8e217275906b1f04f06a2c20b697255f0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 에 대 한 설정을 지정 하는 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성의는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  

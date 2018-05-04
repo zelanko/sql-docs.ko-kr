@@ -1,31 +1,29 @@
 ---
-title: "디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가 | Microsoft Docs"
-ms.custom: 
+title: 디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b1be4ea32b401a80698da1e04f5a10f410761634
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-DirectQuery 모드에서는 모델링 디자인 중에 사용하는 샘플 데이터 하위 집합을 만들거나 전체 데이터 뷰의 대안을 만들기 위해 테이블 파티션을 사용합니다.
+ DirectQuery 모드에서는 모델링 디자인 중에 사용하는 샘플 데이터 하위 집합을 만들거나 전체 데이터 뷰의 대안을 만들기 위해 테이블 파티션을 사용합니다.
  
  DirectQuery 테이블 형식 모델을 배포하는 경우 테이블당 파티션 한 개만 허용되며 해당 파티션은 전체 데이터 뷰여야 합니다. 추가 파티션은 전체 데이터 뷰 또는 샘플 데이터를 대체합니다. 이 항목에서는 데이터 하위 집합을 사용하여 샘플 파티션을 만드는 방법을 설명합니다.
  
@@ -43,11 +41,11 @@ DirectQuery 모드에서는 모델링 디자인 중에 사용하는 샘플 데�
   
 2.  **테이블** > **속성** 을 클릭하여 파티션 관리 대화 상자를 엽니다.  
   
-    기본 파티션에 **(Direct Query) \<테이블 이름 >**합니다. 전체 데이터 뷰입니다. 이 파티션을 삭제하지 마세요. 이 파티션은 모델을 배포할 때 사용됩니다.  
+    기본 파티션에 **(Direct Query) \<테이블 이름 >** 합니다. 전체 데이터 뷰입니다. 이 파티션을 삭제하지 마세요. 이 파티션은 모델을 배포할 때 사용됩니다.  
   
 4.  파티션을 선택하고 **복사**를 클릭합니다.  
 
-    기본 파티션의 복사본이 생성됩니다. 그러나 이 복사본에는 쿼리에서 지정한 샘플 데이터가 포함됩니다. 예를 들어
+    기본 파티션의 복사본이 생성됩니다. 그러나 이 복사본에는 쿼리에서 지정한 샘플 데이터가 포함됩니다. 예를 들어:
   
      ![ssas_tabularproject_copypartition](../../analysis-services/tabular-models/media/ssas-tabularproject-copypartition.jpg "ssas_tabularproject_copypartition")  
   

@@ -1,11 +1,9 @@
 ---
 title: 로그 파일 공간 사용을 최소화 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b333875afe103eb0438b567666e54c9985c51997
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7b0a0b3ba5bdaba5f334bce70acf87e52656c13b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="minimizing-log-file-space-usage"></a>로그 파일 공간 사용을 최소화합니다.
 로그 파일을 빠르게 채울 수 있습니다 (따라서 서버 중지) SQL Server 데이터베이스에 볼륨이 큰 경우. 로그 파일 설정할 수 있습니다 **검사점에서 Truncate** 현저 하 게 늘릴 데이터베이스에 대 한 로그 파일의 수명을 합니다.  

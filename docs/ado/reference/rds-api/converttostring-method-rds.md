@@ -1,11 +1,9 @@
 ---
 title: ConvertToString 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec84e0a0816ffab9246aaee4653507ee07dc3dab
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: da21cb2208e11ffa502b3788e36a1bc034ae1c33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 메서드 (RDS)
 변환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) MIME 나타내는 문자열을 레코드 집합 데이터를 합니다.  

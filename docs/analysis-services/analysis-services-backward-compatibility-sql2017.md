@@ -1,9 +1,8 @@
 ---
 title: SQL Server 2017 Analysis Services 이전 버전과 호환성 | Microsoft Docs
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,13 +22,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3ce7f9d39c8e07a4e3d002a00343f821b0cbbeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 이전 버전과 호환성 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +46,9 @@ A *사용 되지 않는 기능* 이후 릴리스의 제품에서 사용 중단 �
 |다차원|원격으로 연결된 측정값 그룹|
 |테이블 형식|1100 및 1103 호환성 수준에서 모델|
 |테이블 형식|테이블 형식 개체 모델 속성: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
+|Tools|추적 재생용 Server Profiler <br />대체 기능 대체 기능은 없습니다.|  
+|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> 추적 구성: Microsoft.SqlServer.Management.XEvent<br />추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
 
 
 ## <a name="discontinued-features"></a>지원 되지 않는 기능
@@ -63,9 +64,7 @@ A *기능은 지원 되지 않는* 이전 버전에서 사용 되지 않았습�
 |다차원|원격으로 연결된 측정값 그룹|  
 |다차원|차원 쓰기(writeback)|  
 |다차원|연결된 차원|
-|Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
-|Tools|추적 재생용 Server Profiler <br />대체 기능 대체 기능은 없습니다.|  
-|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> 추적 구성: Microsoft.SqlServer.Management.XEvent<br />추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
+
 
 ## <a name="breaking-changes"></a>주요 변경 내용
 A *주요 변경 내용* 기능, 데이터 모델, 응용 프로그램 코드 또는 스크립트가 더 이상 작동 현재 버전으로 업그레이드 한 후에 발생 합니다.

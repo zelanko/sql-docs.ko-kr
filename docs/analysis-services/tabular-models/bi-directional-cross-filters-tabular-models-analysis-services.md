@@ -1,31 +1,29 @@
 ---
-title: "양방향 교차 필터 테이블 형식 모델에서 | Microsoft Docs"
-ms.custom: 
+title: 양방향 교차 필터 테이블 형식 모델에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 72a14c23993a3e18c4ca804fab04247090f10596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>테이블 형식 모델에서 양방향 교차 필터
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
+  SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방향 교차 필터* 를 사용하는 기본 제공 접근 방식이 있습니다. 이 방식을 사용하면 테이블 관계에서 필터 컨텍스트를 전파하기 위한 수동 DAX 해결 방법이 필요 없습니다.  
   
  개념을 해당 구성 요소로 세분화해 보겠습니다. *교차 필터링* 은 관련 테이블의 값에 따라 테이블에 대한 필터 컨텍스트를 설정하는 기능이고, *양방향* 은 테이블 관계의 반대편에 있는 두 번째 관련 테이블로 필터 컨텍스트를 전달하는 것입니다. 이름에서 알 수 있듯이 한 방향이 아니라 관계의 양방향으로 분할할 수 있습니다.  내부적으로 양방향 필터링은 필터 컨텍스트를 확장하여 데이터의 상위 집합을 쿼리합니다.  
   
@@ -112,7 +110,7 @@ SQL Server 2016의 새로운 기능에는 테이블 형식 모델에서 *양방�
   
 4.  모델 호환성 수준이 설정 되어 있는지 확인 **SQL Server 2016 RTM (1200)** 이상.  
   
-     **확인** 을 클릭하여 프로젝트를 만듭니다.  
+     **확인**을 클릭해 프로젝트를 만듭니다.  
   
 ### <a name="add-data"></a>데이터 추가  
   

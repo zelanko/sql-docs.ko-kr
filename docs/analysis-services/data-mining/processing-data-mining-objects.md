@@ -1,16 +1,15 @@
 ---
-title: "데이터 마이닝 개체 처리 | Microsoft Docs"
-ms.custom: 
+title: 데이터 마이닝 개체 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 73b88832b2cf7aa2eb419c9cbc6231ee34dc90e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-data-mining-objects"></a>데이터 마이닝 개체 처리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
+  데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
   
  **마이닝 구조 처리:** 마이닝 구조는 외부 데이터 원본에서 열 바인딩 및 사용법 메타데이터에 의해 정의된 데이터를 가져와서 읽습니다. 이 데이터 전체를 읽은 다음 분석하여 다양한 통계를 추출합니다. Analysis Services에서는 데이터 마이닝 알고리즘으로 분석하는 데 적합한 데이터의 압축된 표현을 로컬 캐시에 저장합니다. 이 캐시는 보관하거나 모델 처리 후 제거할 수 있습니다. 기본적으로 캐시는 저장됩니다. 자세한 내용은 [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md)를 참조하세요.  
   
@@ -63,9 +61,9 @@ ms.lasthandoff: 02/15/2018
  자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [마이닝 모델 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [논리적 아키텍처 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [드릴스루 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [논리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

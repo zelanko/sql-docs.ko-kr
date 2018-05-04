@@ -1,29 +1,27 @@
 ---
-title: "데이터 원본 정의 | Microsoft Docs"
-ms.custom: 
+title: 데이터 원본 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 98af0d465fb2d22946b46425a2ce498521c880be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>단원 1-2-데이터 원본 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,13 +38,13 @@ ms.lasthandoff: 02/15/2018
   
 3.  **연결 정의 방법 선택** 페이지에서 새 연결, 기존 연결 또는 이전에 정의한 데이터 원본 개체를 기반으로 데이터 원본을 정의할 수 있습니다. 이 자습서에서는 새 연결을 기반으로 데이터 원본을 정의합니다. **기존 연결 또는 새 연결을 사용하여 데이터 원본 만들기** 가 선택되어 있는지 확인한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0**이 선택되어 있는지 확인합니다.  
+4.  **연결 관리자** 대화 상자에서 데이터 원본에 대한 연결 속성을 정의합니다. **공급자** 목록 상자에서 **네이티브 OLE DB\SQL Server Native Client 11.0** 이 선택되어 있는지 확인합니다.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 **공급자** 목록에 표시된 다른 공급자도 지원합니다.  
   
 5.  **서버 이름** 입력란에 **localhost**를 입력합니다.  
   
-    로컬 컴퓨터의 명명된 인스턴스에 연결하려면 **localhost\\<instance name>**를 참조하세요. 로컬 컴퓨터 대신 특정 컴퓨터에 연결하려면 컴퓨터 이름 또는 IP 주소를 입력합니다.  
+    로컬 컴퓨터의 명명된 인스턴스에 연결하려면 **localhost\\<instance name>** 를 참조하세요. 로컬 컴퓨터 대신 특정 컴퓨터에 연결하려면 컴퓨터 이름 또는 IP 주소를 입력합니다.  
   
 6.  **Windows 인증 사용** 이 선택되어 있는지 확인합니다. **데이터베이스 이름 선택 또는 입력** 목록에서 **AdventureWorksDW2012**를 선택합니다.  
   

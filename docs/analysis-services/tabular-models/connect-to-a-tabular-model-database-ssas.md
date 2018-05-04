@@ -1,31 +1,29 @@
 ---
-title: "테이블 형식 모델 데이터베이스에 연결 | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델 데이터베이스에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e733d7e8964dcdd714ac095dc44a4432ac4835b7
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: a41de4bd38cfa26b77d4039064e9050d76f9c572
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 연결  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 문서에서는 설명 사용 권한 및 클라이언트 응용 프로그램에서 데이터베이스에 연결 하는 방법을 하는 방법입니다.  
+  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 응용 프로그램에서 사용할 수 있도록 권한을 설정해야 합니다. 이 문서에서는 설명 사용 권한 및 클라이언트 응용 프로그램에서 데이터베이스에 연결 하는 방법을 하는 방법입니다.  
   
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  

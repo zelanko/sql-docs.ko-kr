@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -30,12 +29,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 22c4cb48c762f2686f4cad86499b64cad0cc7e8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 데이터 정의-작업 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +108,7 @@ FOR
 |**데이터 집합**|동작 문자열로 반환된은 설정 하 여 실행 해야 하는 MDX 문의 **ICommand::SetText** 명령 개체를 문자열로 호출의 메서드는 **icommand:: Execute** 메서드. 요청된 된 인터페이스 ID (IID) 해야 **i d a**합니다. 데이터 집합이 생성된 경우 명령이 성공한 것입니다. 클라이언트 응용 프로그램에서는 사용자가 반환된 데이터 집합을 검색할 수 있어야 합니다.|  
 |**행 집합**|비슷한 **DATASET**의 IID를 요청 하지 않고 **i d a**, 클라이언트 응용 프로그램의 IID를 요청 해야 **IRowset**합니다. 행 집합이 생성된 경우 명령이 성공한 것입니다. 클라이언트 응용 프로그램에서는 사용자가 반환된 행 집합을 검색할 수 있어야 합니다.|  
 |**명령줄**|클라이언트 응용 프로그램에서 동작 문자열을 실행합니다. 이 문자열은 명령 줄입니다.|  
-|**소유**|응용 프로그램에 특정 동작에 대한 특수한 사용자 지정 지식이 없으면 클라이언트 응용 프로그램에서 동작이 표시되거나 실행되지 않습니다. 클라이언트 응용 프로그램에 적절 한 제한을 설정 하 여이 명시적으로 요청 하지 않으면 소유 동작이 클라이언트 응용 프로그램에 반환 되지 않습니다는 **i o n _**합니다.|  
+|**소유**|응용 프로그램에 특정 동작에 대한 특수한 사용자 지정 지식이 없으면 클라이언트 응용 프로그램에서 동작이 표시되거나 실행되지 않습니다. 클라이언트 응용 프로그램에 적절 한 제한을 설정 하 여이 명시적으로 요청 하지 않으면 소유 동작이 클라이언트 응용 프로그램에 반환 되지 않습니다는 **i o n _** 합니다.|  
   
 ## <a name="invocation-types"></a>호출 유형  
  다음 표에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용할 수 있는 여러 유형의 호출에 대해 설명합니다. 호출 유형은 클라이언트 응용 프로그램에서 동작 호출 시기를 결정하기 위해서만 사용됩니다. 호출 유형은 작업의 호출 동작을 결정하지 않습니다.  
@@ -143,6 +141,6 @@ FOR
  집합에만 적용되는 동작을 위한 범위입니다. 이름, **이름은**, 동작의 식 내에서 응용 프로그램 사용 되도록 예약 되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

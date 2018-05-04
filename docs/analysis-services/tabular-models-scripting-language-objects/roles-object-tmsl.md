@@ -1,30 +1,29 @@
 ---
-title: "역할 개체 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 역할 개체 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 257ead3072f8b359bff275709ee372483989fccf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f5df85cb50629292fefdfa1fe3f93616bc05e27
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles-object-tmsl"></a>역할 개체 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]사용 권한 컬렉션을 지정 하는 모델에는 역할을 정의 합니다. Windows 보안 주체 역할 멤버 자격으로 구성 됩니다. 특정 개체에 대 한 액세스를 제한 하려면 역할에서 필터를 설정할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  사용 권한 컬렉션을 지정 하는 모델에는 역할을 정의 합니다. Windows 보안 주체 역할 멤버 자격으로 구성 됩니다. 특정 개체에 대 한 액세스를 제한 하려면 역할에서 필터를 설정할 수 있습니다.  
   
 ## <a name="object-definition"></a>개체 정의  
  모든 개체 이름, 유형, 설명, properties 컬렉션 및 주석을 포함 하 여 속성의 공통 집합을 가집니다. **역할** 개체에는 다음과 같은 속성이 있습니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
                   읽기,  
                   readRefresh,  
                   새로 고침  
-                  및 관리자입니다. 참조 [역할 및 사용 권한 &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) 데이터베이스 사용 권한에 대 한 정보에 대 한 합니다.  
+                  및 관리자입니다. 참조 [역할 및 사용 권한 &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) 데이터베이스 사용 권한에 대 한 정보에 대 한 합니다.  
   
  멤버  
  멤버는 멤버 이름 및 ID, 멤버 이름은 별칭 또는 Windows 보안 주체의 이름 및 ID 보안 식별자입니다. 여기서 구성 됩니다. 역할 정의에 모두 지정 됩니다. 참조 [SID 구성 요소](https://msdn.microsoft.com/en-us/library/windows/desktop/aa379597\(v=vs.85\).aspx) 식별자에 대 한 세부 정보에 대 한 합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
  테이블 사용 권한은 DAX 식을 통해 정의 된 권한으로 명명된 된 개체입니다. 이 속성은 선택 사항, 보안 필터를 적용 하는 데 사용 합니다.  
   
 ## <a name="usage"></a>사용법  
- **역할** 개체에서 사용 되므로 [명령 &#40; 변경 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [명령 &#40; 만들기 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), 및 [명령 &#40; 삭제 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ **역할** 개체에서 사용 되므로 [Alter 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [만들기 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령을 &#40;TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), 및 [Delete 명령을 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)합니다.  
   
  A **역할** 개체 모델의 속성 이지만 모델 및 데이터베이스 간의 일대일 매핑이 지정 하는 데이터베이스 개체의 속성으로 지정 될 수도 있습니다.  
   
@@ -265,6 +264,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [역할 및 사용 권한 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: "파티션 개체 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 파티션 개체 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 782b480475e9174f21121b43fbba46660ba4ace1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>파티션 개체 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]파티션 또는 테이블 행 집합의 논리적 조각화를 정의합니다. 모델링 환경에서 또는 DirectQuery 통해 통과 쿼리 실행을 통해 전체 데이터 쿼리로 샘플 데이터에 대 한 데이터를 가져오는 데 사용 되는 SQL 쿼리는 파티션 구성 됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  파티션 또는 테이블 행 집합의 논리적 조각화를 정의합니다. 모델링 환경에서 또는 DirectQuery 통해 통과 쿼리 실행을 통해 전체 데이터 쿼리로 샘플 데이터에 대 한 데이터를 가져오는 데 사용 되는 SQL 쿼리는 파티션 구성 됩니다.  
   
  파티션에 속성 테이블에 대 한 데이터를 원본으로 방법을 결정 합니다.  개체 계층 구조에서 부모 개체는 파티션의 테이블 개체가입니다.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**가져오기**|요청은 가져온된 데이터를 저장 하는 메모리 내 분석 엔진에 대해 발생 하는 쿼리를 나타냅니다.|  
 |**DirectQuery**|외부 관계형 데이터베이스에 쿼리 실행을 통해 전달 합니다. DirectQuery 모드에서 모델 디자인 중 사용 되는 샘플 데이터를 제공 하기 파티션을 사용 합니다. 프로덕션 서버를 배포할 때 전체 데이터 뷰로 다시 전환 해야 합니다. DirectQuery 모드에서는 테이블당 하나의 파티션이 되 고 모델에 대해 하나의 데이터 원본 점에 유의 하세요.|  
-|**기본값**|모델 또는 데이터베이스 수준에서 개체 트리를 더 높은 모드 전환 하려는 경우이 설정 합니다. 기본값을 선택 하면 쿼리 모드 import 또는 DirectQuery 됩니다.|  
+|**default**|모델 또는 데이터베이스 수준에서 개체 트리를 더 높은 모드 전환 하려는 경우이 설정 합니다. 기본값을 선택 하면 쿼리 모드 import 또는 DirectQuery 됩니다.|  
   
  원본(source)  
  데이터를 쿼리할 수의 위치를 식별 합니다. 유효한 값은 **쿼리, 계산**, 또는 **none**합니다. 이 값은 필수 사항입니다.  
@@ -55,14 +54,14 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**없음**|가져오기 모드, 데이터가 로드 되 고 메모리에 저장에 사용 합니다.|  
-|**쿼리**|DirectQuery 모드의 경우이 모델에 지정 된 관계형 데이터베이스에 대해 실행 되는 SQL 쿼리는 **DataSource**합니다. 참조 [DataSources 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**query**|DirectQuery 모드의 경우이 모델에 지정 된 관계형 데이터베이스에 대해 실행 되는 SQL 쿼리는 **DataSource**합니다. 참조 [데이터 원본 개체 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)합니다.|  
 |**계산**|테이블을 만들 때 지정 하는 식에서 계산 된 테이블 원본으로 제공 합니다. 이 식은 계산된 된 테이블에 대해 만든 파티션의 원본으로 간주 됩니다.|  
   
  dataview  
  DirectQuery 파티션에 대 한 추가 된 추가 dataView 속성 데이터를 검색 하는 쿼리 예제 또는 전체 데이터 집합 인지를 지정 합니다. 유효한 값은 **전체**, **샘플**, 또는 **기본** (상속 됨). 설명한 대로, 샘플 데이터 모델링 및 테스트 중에 사용 됩니다. 참조 [디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="usage"></a>사용법  
- 파티션 개체에서 사용 되므로 [명령 &#40; 변경 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [명령 &#40; 만들기 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [명령 &#40; 삭제 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [명령 &#40; 새로 고침 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ 파티션 개체에서 사용 되므로 [Alter 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [만들기 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령을 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Delete 명령을 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [새로 고침 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40;&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  를 만들 때 바꾸거나, 파티션 개체는 개체 정의의 모든 읽기 / 쓰기 속성을 지정 합니다. 읽기 / 쓰기 속성을 생략 삭제 것으로 간주 됩니다. 읽기 / 쓰기 속성 이름, 설명, 모드 및 원본 포함 됩니다.  
   

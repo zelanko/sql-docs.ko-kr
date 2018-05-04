@@ -3,26 +3,22 @@ title: 비동기 실행 (알림 방법) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5c2504962a81d9e9e3a5ac8bd4f57f3fe74f9441
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)
 ODBC 연결 및 문 작업의 비동기 실행을 허용 합니다. 비동기 모드에서 ODBC 함수를 호출할 수는 응용 프로그램 스레드 및 함수는 작업이 완료 되 면 다른 작업을 수행 하는 응용 프로그램 스레드를 허용 하기 전에 반환할 수 있습니다. Windows 7 SDK 비동기 문이나 연결 작업에 대 한 응용 프로그램 비동기 작업이 폴링 메서드를 사용 하 여 완료 되었음을 확인 했습니다. 자세한 내용은 참조 [비동기 실행 (폴링 방법)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)합니다. Windows 8 SDK부터, 비동기 작업이 알림 방법을 사용 하 여 완료 되었음을 확인할 수 있습니다.  

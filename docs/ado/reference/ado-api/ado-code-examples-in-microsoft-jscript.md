@@ -1,11 +1,9 @@
 ---
 title: Microsoft jscript에서 ADO 코드 예제 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fcd2be2403a5aa96ee070c1907693173c72dddf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ef0f2f2e7238fde0655de5df584492e22afecb0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft jscript에서 ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 방법에 알아봅니다.  

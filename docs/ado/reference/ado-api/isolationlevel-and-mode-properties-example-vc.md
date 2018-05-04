@@ -1,11 +1,9 @@
 ---
 title: IsolationLevel 및 모드 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1734e3642ecc109a5d20ac29d0b01f96e8d10d4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 42663a71291a107bad179ad9ef3c614ed75b40be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 모드 속성 예제 (VC + +)
 사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  

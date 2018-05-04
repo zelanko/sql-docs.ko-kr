@@ -3,26 +3,22 @@ title: JDBC 드라이버에 대 한 대답 (FAQ) 질문과 대답 | Microsoft Do
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2872e0674a8195b2460c229a1244cc399a936b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>질문과 대답 (FAQ) JDBC 드라이버에 대 한
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,11 +1,9 @@
 ---
 title: 인터넷 게시 시나리오 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a56198a0168e3a1653a3e7df9031cd495a1de4b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a596bd0aa66f79bc45e7e6a51fe1251b42bd1f58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-publishing-scenario"></a>인터넷 게시 시나리오
 이 코드 예제에는 Microsoft OLE DB provider for Internet Publishing ADO를 사용 하는 방법을 보여 줍니다. 이 시나리오에서 사용 하는 Visual Basic 응용 프로그램을 만듭니다 **레코드 집합**, **레코드**, 및 **스트림** 게시 된 리소스의 내용을 표시 하는 개체 인터넷 공급자를 게시 합니다.  

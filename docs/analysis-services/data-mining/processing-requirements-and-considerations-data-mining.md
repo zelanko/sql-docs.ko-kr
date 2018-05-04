@@ -1,35 +1,33 @@
 ---
-title: "처리 요구 사항 및 고려 사항 (데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 처리 요구 사항 및 고려 사항 (데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 26c7d21cbf5886fab1ce49a571f7ed2814dbe1ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)를 참조하세요.  
+  이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)를 참조하세요.  
   
  [관계형 저장소에 대한 쿼리](#bkmk_QueryReqs)  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
  모델을 처리할 때 모델은 데이터 원본에서 데이터를 다시 읽지 않고 대신 마이닝 구조에서 데이터의 요약을 가져옵니다. 캐시된 인덱스와 함께 만든 큐브를 사용하여 사례 데이터가 캐시되면 서버는 모델 학습을 위한 독립 스레드를 만듭니다.  
   
- 병렬 모델 처리를 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+ 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병렬 모델 처리를 지 원하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ##  <a name="bkmk_ProcessStructures"></a> 마이닝 구조 처리  
  모든 종속 모델과 함께 또는 따로 마이닝 구조를 처리할 수 있습니다. 일부 모델이 처리하는 데 오랜 시간이 소요될 것으로 예상되어 해당 작업을 지연시키려는 경우 마이닝 구조를 모델과 따로 처리하는 것이 유용할 수 있습니다.  
@@ -94,8 +92,8 @@ ms.lasthandoff: 02/15/2018
  자세한 내용은 [데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

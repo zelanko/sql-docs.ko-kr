@@ -1,29 +1,27 @@
 ---
-title: "알 수 없는 멤버 및 Null 처리 속성 정의 | Microsoft Docs"
-ms.custom: 
+title: 알 수 없는 멤버 및 Null 처리 속성 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d59f09c5f227f684103434ae4371d4b41379482
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>단원 4-7-알 수 없는 멤버 및 Null 처리 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 02/15/2018
   
     **테이블 추가/제거** 대화 상자가 열립니다.  
   
-2.  **포함된 개체** 목록에서 **DimProduct (dbo)**를 선택한 후 **관련 테이블 추가**를 클릭합니다.  
+2.  **포함된 개체** 목록에서 **DimProduct (dbo)** 를 선택한 후 **관련 테이블 추가**를 클릭합니다.  
   
     **DimProductSubcategory (dbo)** 및 **FactProductInventory (dbo)** 가 둘 다 추가됩니다. **DimProductSubcategory (dbo)** 테이블만 **포함된 개체** 목록에 추가되도록 **FactProductInventory (dbo)** 를 제거합니다.  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  해당 프로젝트를 작성 및 배포하려면 **예** 를 클릭한 후 **실행** 을 클릭하여 **Product** 차원을 처리합니다.  
   
-3.  처리가 성공하면 **처리 진행률** 대화 상자의 **차원 'Product' 처리가 완료되었습니다.** , **차원 특성 'Product Name' 처리가 완료되었습니다.**및 **SQL 쿼리 1**을 차례로 확장합니다.  
+3.  처리가 성공하면 **처리 진행률** 대화 상자의 **차원 'Product' 처리가 완료되었습니다.** , **차원 특성 'Product Name' 처리가 완료되었습니다.** 및 **SQL 쿼리 1**을 차례로 확장합니다.  
   
 4.  SELECT DISTINCT 쿼리를 클릭한 후 **자세히 보기**를 클릭합니다.  
   

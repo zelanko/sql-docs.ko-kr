@@ -3,15 +3,12 @@ title: SQLFreeHandle 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 94b40ad74f4925b0e5c2b1cbfa4795e85a2bbb15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle** 특정 환경, 연결, 문 또는 설명자 핸들과 연결 된 리소스를 해제 합니다.  
   
 > [!NOTE]  
->  이 기능은 핸들을 해제 하기 위한 제네릭 기능에 설명 합니다. ODBC 2.0 함수를 대체 **SQLFreeConnect** (에 대 한 연결 핸들을 해제) 및 **SQLFreeEnv** (에 대 한 환경 핸들을 해제) 합니다. **SQLFreeConnect** 및 **SQLFreeEnv** 는 둘 다에서 지원 되지 않는 ODBC 3*.x*합니다. **SQLFreeHandle** 또한 ODBC 2.0 함수를 대체 **SQLFreeStmt** (의 SQL_DROP와 *옵션*) 문 핸들 해제에 대 한 합니다. 자세한 내용은 "설명"을 참조 하십시오. 어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은*.x* 응용 프로그램이 ODBC 2와 작동*.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  이 기능은 핸들을 해제 하기 위한 제네릭 기능에 설명 합니다. ODBC 2.0 함수를 대체 **SQLFreeConnect** (에 대 한 연결 핸들을 해제) 및 **SQLFreeEnv** (에 대 한 환경 핸들을 해제) 합니다. **SQLFreeConnect** 및 **SQLFreeEnv** 는 둘 다에서 지원 되지 않는 ODBC 3 *.x*합니다. **SQLFreeHandle** 또한 ODBC 2.0 함수를 대체 **SQLFreeStmt** (의 SQL_DROP와 *옵션*) 문 핸들 해제에 대 한 합니다. 자세한 내용은 "설명"을 참조 하십시오. 어떤 드라이버 관리자는이 함수를 경우 맵을 ODBC 3에 대 한 자세한 내용은 *.x* 응용 프로그램이 ODBC 2와 작동 *.x* 드라이버 참조 [뒤로 대 한 대체 함수 매핑 응용 프로그램 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -90,7 +86,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|자동으로 할당 된 설명자 핸들 사용이 잘못 되었습니다.|DM ()는 *처리* 인수는 자동으로 할당 된 설명자에 대 한 핸들을 설정 했습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
-|IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 이며 드라이버는 ODBC 2*.x* 드라이버입니다.<br /><br /> DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.|  
+|IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 이며 드라이버는 ODBC 2 *.x* 드라이버입니다.<br /><br /> DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.|  
   
 ## <a name="comments"></a>설명  
  **SQLFreeHandle** 다음 섹션에 설명 된 대로 환경, 연결, 문 및 설명자에 대 한 핸들을 해제 하는 데 사용 됩니다. 핸들에 대 한 일반 정보를 참조 하십시오. [핸들](../../../odbc/reference/develop-app/handles.md)합니다.  
@@ -116,7 +112,7 @@ SQLRETURN SQLFreeHandle(
  에 대 한 호출 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC의에서 설명자 핸들을 해제 *처리*합니다. 에 대 한 호출 **SQLFreeHandle** 모든 포인터 필드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 포함)에서 참조 될 수 있는 응용 프로그램에 의해 할당 된 메모리를 해제 하지 않습니다 설명자 레코드 *처리*합니다. 포인터 필드가 없는 필드에 대해 드라이버에서 할당 된 메모리는 핸들이 해제 될 때 해제 됩니다. 사용자 할당 된 설명자 핸들 해제 되 면 해당 각 자동으로 할당 된 설명자 핸들에 해제 된 핸들에 연결 된 모든 문이 되돌립니다.  
   
 > [!NOTE]  
->  ODBC 2*.x* 드라이버 설명자 핸들 할당을 지원 하지 않는 것 처럼 해제 설명자 핸들을 지원 하지 않습니다.  
+>  ODBC 2 *.x* 드라이버 설명자 핸들 할당을 지원 하지 않는 것 처럼 해제 설명자 핸들을 지원 하지 않습니다.  
   
  다음에 유의 **SQLDisconnect** 자동으로 연결에서 모든 문 및 설명자 열기를 삭제 합니다. 문 핸들을 해제 하는 응용 프로그램, 드라이버는 핸들과 관련 된 모든 자동으로 생성 된 설명자를 해제 합니다.  
   

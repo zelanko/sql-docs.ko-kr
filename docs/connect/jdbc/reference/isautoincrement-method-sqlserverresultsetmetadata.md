@@ -3,13 +3,10 @@ title: isAutoIncrement 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b638526d1ad9299fc0b68c1baa27467565ed8dda
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8a81d4b4e2b12fb25888c76cfc6dc7c2010f56ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public boolean isAutoIncrement(int column)
 #### <a name="parameters"></a>매개 변수  
  *column*  
   
- **int** 열 인덱스를 나타내는입니다.  
+ 열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  **true 이면** 열 번호가 자동으로 매겨 지 면 합니다. 그렇지 않으면 **false**입니다.  

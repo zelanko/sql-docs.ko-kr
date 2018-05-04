@@ -3,15 +3,12 @@ title: getString 메서드 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getString
 apilocation:
@@ -22,24 +19,23 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a79fb7593725b5fcf1ea44b9d3ac8b25eee53536
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 216f5e568f8311298b10acd267e005c1e4edd06e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getstring-method-sqlservercallablestatement"></a>getString 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  로 지정된 된 매개 변수의 값을 검색 하는 **문자열** Java 프로그래밍 언어의에서 합니다.  
+  지정된 매개 변수의 값을 Java 프로그래밍 언어의**문자열**로 검색합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
 |이름|Description|  
 |----------|-----------------|  
-|[getString (int)](../../../connect/jdbc/reference/getstring-method-int.md)|로 지정된 된 매개 변수의 값을 검색 하는 **문자열** java 프로그래밍 언어 매개 변수 인덱스가 지정 합니다.|  
-|[getString (java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string.md)|로 지정된 된 매개 변수의 값을 검색 하는 **문자열** java 프로그래밍 언어 매개 변수 이름이 지정 됩니다.|  
+|[getString(int)](../../../connect/jdbc/reference/getstring-method-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 **문자열**로 검색합니다.|  
+|[getString(java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 **문자열**로 검색합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

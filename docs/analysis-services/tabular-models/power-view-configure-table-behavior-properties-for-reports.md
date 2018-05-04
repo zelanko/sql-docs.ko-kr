@@ -1,35 +1,33 @@
 ---
-title: "Power View 보고서의 테이블 동작 속성 구성 | Microsoft Docs"
-ms.custom: 
+title: Power View 보고서의 테이블 동작 속성 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6d1f8a5db3ea6f76a8510954d2638da57584b73b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-보고서에 대 한 테이블 동작 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
+  테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 다른 보고 응용 프로그램과 달리 사용 중인 표시 형식을 기준으로 보고서 필드 목록에 배치되는 열을 평가하여 보고서 디자인 중에 항목을 자동으로 그룹화합니다. 대부분의 경우 기본 그룹화를 통해 최적의 결과가 만들어집니다. 그러나 정보 데이터가 포함된 일부 테이블의 경우 그룹화되지 않아야 할 행이 기본 그룹화 동작에 의해 그룹화되는 경우도 있습니다. 이러한 테이블의 경우 그룹 평가 방법을 변경하는 속성을 설정할 수 있습니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]수 있으므로 사용 중인 표시 형식 기준으로 보고서 필드 목록에 배치 하는 열을 평가 하 여 보고서 디자인 중 항목을 자동으로 그룹화 합니다 것 한다는 점에서 다른 보고 응용 프로그램에서 다릅니다. 대부분의 경우 기본 그룹화를 통해 최적의 결과가 만들어집니다. 그러나 정보 데이터가 포함된 일부 테이블의 경우 그룹화되지 않아야 할 행이 기본 그룹화 동작에 의해 그룹화되는 경우도 있습니다. 이러한 테이블의 경우 그룹 평가 방법을 변경하는 속성을 설정할 수 있습니다.  
   
  테이블 동작 속성은 직원 또는 고객 레코드와 같이 개별 행이 주요 대상인 테이블에 대해 설정하는 것이 좋습니다. 반대로 조회 테이블로 사용되는 테이블(예: 상대적으로 적은 수의 행과 열로 구성되는 데이터 테이블, 제품 범주 테이블 또는 부서 테이블)이나 요약할 때만 필요한 행이 포함된 요약 테이블(예: 성별, 연령별 또는 지역별로 롤업되는 인구 조사 데이터)의 경우 이러한 속성이 유용하지 않습니다. 조회 및 요약 테이블의 경우 기본 그룹화 동작으로 최상의 결과가 만들어집니다.  
   

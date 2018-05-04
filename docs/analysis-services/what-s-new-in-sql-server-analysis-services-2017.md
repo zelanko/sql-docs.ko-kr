@@ -3,7 +3,6 @@ title: SQL Server 2017 Analysis Services의 새로운 기능 | Microsoft Docs
 ms.date: 10/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -14,13 +13,12 @@ ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 964bfc1e81a212bc340dd639cf554f0ce35502d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e6e14fa59fc175b35d67b1bbe1657aeda1e802a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services의 새로운 기능
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -43,7 +41,7 @@ SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호�
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를 **SQL Server 2017 (1400)**합니다. 
+솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를 **SQL Server 2017 (1400)** 합니다. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 

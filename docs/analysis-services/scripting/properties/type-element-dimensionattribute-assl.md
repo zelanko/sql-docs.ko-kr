@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 25fed477ca48cb539ccf6c98f789f2243d67d078
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 요소(DimensionAttribute)(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특성의 유형을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  특성의 유형을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|*일반*|  
+|기본값|*Regular*|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 01/08/2018
 |*CaptionAbbreviation*|약어를 나타내는 특성입니다.|  
 |*CaptionDescription*|설명을 나타내는 특성입니다.|  
 |*채널*|채널을 나타내는 특성입니다.|  
-|*도시*|구/군/시를 나타내는 특성입니다.|  
+|*City*|구/군/시를 나타내는 특성입니다.|  
 |*회사*|회사를 나타내는 특성입니다.|  
 |*대륙*|대륙을 나타내는 특성입니다.|  
 |*국가*|국가/지역을 나타내는 특성입니다.|  
@@ -108,11 +107,11 @@ ms.lasthandoff: 01/08/2018
 |*DateModified*|수정한 날짜를 나타내는 특성입니다.|  
 |*DateStart*|시작 날짜를 나타내는 특성입니다.|  
 |*DayOfHalfYears*|반기 일자 서수를 나타내는 특성입니다.|  
-|*DayOfMonth*|월간 일자 서수를 나타내는 특성입니다.|  
+|*dayOfMonth*|월간 일자 서수를 나타내는 특성입니다.|  
 |*DayOfQuarter*|사분기 일자 서수를 나타내는 특성입니다.|  
 |*DayOfTrimester*|삼분기 일자 서수를 나타내는 특성입니다.|  
-|*DayOfWeek*|요일 서수를 나타내는 특성입니다.|  
-|*DayOfYear*|연간 일자 서수를 나타내는 특성입니다.|  
+|*dayOfWeek*|요일 서수를 나타내는 특성입니다.|  
+|*dayOfYear*|연간 일자 서수를 나타내는 특성입니다.|  
 |*(일)*|날짜를 나타내는 특성입니다.|  
 |*DaysOfTenDays*|10일 기준 일자 서수를 나타내는 특성입니다.|  
 |*FiscalDay*|회계 달력의 일자를 나타내는 특성입니다.|  
@@ -221,7 +220,7 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalVolume*|부피를 나타내는 특성입니다.|  
 |*PhysicalWeight*|무게를 나타내는 특성입니다.|  
 |*PhysicalWidth*|너비를 나타내는 특성입니다.|  
-|*Point*|포인트를 나타내는 특성입니다.|  
+|*점*|포인트를 나타내는 특성입니다.|  
 |*PostalCode*|우편 번호를 나타내는 특성입니다.|  
 |*Product*|제품을 나타내는 특성입니다.|  
 |*ProductBrand*|제품 브랜드를 나타내는 특성입니다.|  
@@ -233,7 +232,7 @@ ms.lasthandoff: 01/08/2018
 |*ProjectEnddate*|프로젝트 종료일을 나타내는 특성입니다.|  
 |*프로젝트 이름*|프로젝트 이름을 나타내는 특성입니다.|  
 |*ProjectStartDate*|프로젝트 시작일을 나타내는 특성입니다.|  
-|*프로 모션*|홍보 행사를 나타내는 특성입니다.|  
+|*홍보 행사*|홍보 행사를 나타내는 특성입니다.|  
 |*QtyRangeHigh*|수량 범위 상한을 나타내는 특성입니다.|  
 |*QtyRangeLow*|수량 범위 하한을 나타내는 특성입니다.|  
 |*정량*|정량 특성을 나타내는 특성입니다.|  
@@ -243,7 +242,7 @@ ms.lasthandoff: 01/08/2018
 |*속도*|요율을 나타내는 특성입니다.|  
 |*RateType*|요율 유형을 나타내는 특성입니다.|  
 |*Region*|사용자 정의 지역을 나타내는 특성입니다.|  
-|*일반*|일반 특성을 나타내는 특성입니다.|  
+|*Regular*|일반 특성을 나타내는 특성입니다.|  
 |*RelationToParent*|부모와의 관계를 나타내는 특성입니다.|  
 |*ReportingDay*|보고 달력의 일자를 나타내는 특성입니다.|  
 |*ReportingDayOfHalfYears*|보고 달력의 반기 일자 서수를 나타내는 특성입니다.|  
@@ -305,8 +304,8 @@ ms.lasthandoff: 01/08/2018
  부모에 해당 하는 요소 **형식** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.DimensionAttribute>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Attributes 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [요소 특성 &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

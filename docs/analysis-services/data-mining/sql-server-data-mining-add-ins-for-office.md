@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 데이터 마이닝 추가 기능에 대 한 Office | Microsoft Docs"
-ms.custom: 
+title: SQL Server 데이터 마이닝 추가 기능에 대 한 Office | Microsoft Docs
+ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea4c810eb5c3dfca0588efc02407cf5a5729f68e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2852d573a665566e048afca18be259d2b00b2203
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
 
@@ -81,10 +79,10 @@ ms.lasthandoff: 01/08/2018
   
 -   Business Intelligence  
   
--   표준  
+-   Standard  
   
  연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   
- 설치 관련 추가 도움말은 다운로드 센터에서 다음 페이지를 참조하세요. [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 설치 관련 추가 도움말에 대 한 다운로드 센터에서이 페이지를 참조 합니다. [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

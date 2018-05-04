@@ -1,11 +1,9 @@
 ---
 title: 컬렉션 예제 (VB)를 필드를 보면서 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80f426969f62fef9df393b9cf6b4139814695a84
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b227a5deb4442e2b5f358f59d6d89db50e21a42a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-and-fields-collections-example-vb"></a>뷰 및 필드 컬렉션 예제 (VB)
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 뷰에 대 한 필드 정보를 검색할 개체입니다.  

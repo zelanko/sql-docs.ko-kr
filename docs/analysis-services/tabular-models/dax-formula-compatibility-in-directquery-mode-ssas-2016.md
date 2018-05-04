@@ -1,27 +1,25 @@
 ---
-title: "DirectQuery 모드에서의 DAX 수식 호환성 | Microsoft Docs"
-ms.custom: 
+title: DirectQuery 모드에서의 DAX 수식 호환성 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: cda8483509593db5d30323a43e86a0afaddd58e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 모드에서의 DAX 수식 호환성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/23/2018
 
 특정 함수가 DirectQuery에 대해 최적화되지 않은 이유는 기본 관계형 엔진에서 xVelocity 엔진에서 수행한 것과 동일한 계산을 수행할 수 없거나 수식을 동등한 SQL 식으로 변환할 수 없기 때문입니다. 다른 경우에는 변환된 식 및 결과 계산의 성능이 허용 가능한 수준이 아닐 수 있습니다.
 
-모든 DAX 함수에 대해 확인하려면 [DAX 함수 참조](https://msdn.microsoft.com/en-us/library/ee634396.aspx)를 참조하세요.
+일부 DAX 함수에 대해 알아보려면 참조 [DAX 함수 참조]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 모드의 DAX 연산자
 모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완벽 하 게 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.

@@ -1,11 +1,9 @@
 ---
 title: 최적화 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f51f4b06cc81464a90c30cfe42737cc971d23a2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vb"></a>속성 예제 (VB)를 최적화 합니다.
 이 예제에서는 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 동적 **최적화** 속성입니다. ***zip*** 필드는 ***작성자*** 테이블에 ***Pubs*** 데이터베이스 인덱싱되지 않았습니다. 설정의 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 ***zip*** 의 성능을 개선 하는 인덱스를 작성 하는 ADO를 인증 하는 필드는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  

@@ -1,31 +1,30 @@
 ---
-title: "테이블 형식 모델 개체 수준 보안 | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델 개체 수준 보안 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: 
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords: ''
+ms.assetid: ''
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 64084e6c4272a916d4260b766232d95e83f1b80e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-level-security"></a>개체 수준 보안
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+데이터 모델 보안을 효과적으로 구현 하 여 시작 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md) 및 행 수준 필터를 데이터 모델 개체 및 데이터에 사용자 권한을 정의 합니다. 테이블 형식 1400 모델 부터는 정의할 수도 있습니다 테이블 수준 보안 및 열 수준 보안을 포함 하는 개체 수준 보안은 [역할 개체](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)합니다.
 
 ## <a name="table-level-security"></a>테이블 수준 보안
 
@@ -78,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   }
 ```
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>제한 사항
 
 *  관계 체인을 중단 하는 경우 모델에 대 한 테이블 수준 보안을 설정할 수 없습니다. 디자인 타임에 오류가 발생 합니다.
  예를 들어 테이블 A 및 B, 및 B와 C 간의 관계가 있는 경우 표 2. 보호할 수 없습니다. 표 A에 대 한 쿼리 테이블 A와 B 및 B, C. 간의 관계를 통과 없습니다 테이블 B를 보호 하는 경우 이 경우 테이블 A와 B. 간에 별도 관계는 구성할 수 없습니다.

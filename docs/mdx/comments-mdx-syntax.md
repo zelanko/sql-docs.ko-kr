@@ -25,12 +25,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9430eeb2613b77ce1f34918382cd57e4958ac512
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4d3a333b2a8fdbb89f718d67a849c08142da8f79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-mdx-syntax"></a>주석(MDX 구문)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,17 +38,17 @@ ms.lasthandoff: 01/08/2018
   
  MDX의 주석은 다음 지침을 따릅니다.  
   
--   주석에는 모든 영숫자 문자나 기호를 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 주석 내의 모든 문자는 무시 합니다.  
+-   주석에는 모든 영숫자 문자나 기호를 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 주석 내의 모든 문자를 무시합니다.  
   
 -   문 또는 스크립트 내에서 주석의 길이는 제한이 없습니다. 주석은 한 개 이상의 줄을 포함할 수 있습니다.  
   
  MDX는 세 가지 유형의 주석 문자를 지원합니다.  
   
  //(이중 슬래시)  
- 이 주석 문자는 실행 코드와 같은 행 또는 별도의 행에 사용할 수 있습니다. 이중 슬래시에서 시작하여 행 끝까지 주석으로 처리되며 주석이 여러 행일 경우 각 주석 행의 시작 부분에 이중 슬래시를 입력해야 합니다. 자세한 내용은 참조 [&#40; 설명 &#41; &#40; Mdx&#41; ](../mdx/comment-mdx-double-slash.md).  
+ 이 주석 문자는 실행 코드와 같은 행 또는 별도의 행에 사용할 수 있습니다. 이중 슬래시에서 시작하여 행 끝까지 주석으로 처리되며 주석이 여러 행일 경우 각 주석 행의 시작 부분에 이중 슬래시를 입력해야 합니다. 자세한 내용은 참조 [ &#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)합니다.  
   
  -- (이중 하이픈)  
- 이 주석 문자는 실행 코드와 같은 행 또는 별도의 행에 사용할 수 있습니다. 이중 하이픈에서 시작하여 행 끝까지 주석으로 처리되며 주석이 여러 행일 경우 각 주석 행의 시작 부분에 이중 하이픈을 입력해야 합니다. 자세한 내용은 참조 [-&#40; 설명 &#41; &#40; Mdx&#41; ](../mdx/comment-mdx-operator-reference.md).  
+ 이 주석 문자는 실행 코드와 같은 행 또는 별도의 행에 사용할 수 있습니다. 이중 하이픈에서 시작하여 행 끝까지 주석으로 처리되며 주석이 여러 행일 경우 각 주석 행의 시작 부분에 이중 하이픈을 입력해야 합니다. 자세한 내용은 참조 [- &#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)합니다.  
   
  /* ... \*/ (슬래시-별표 문자 쌍)  
  실행 코드와 같은 행이나 별도의 행은 물론 실행 코드 내에서도 사용할 수 있는 주석 문자입니다. 주석 문자에 이르기까지 (/\*)부터 닫는 주석 문자 (\*/) 설명의 일부로 간주 됩니다. 여러 줄 주석이 일 경우 오픈 주석 문자 (/\*) 메모를 하 고 닫는 주석 문자 쌍 시작 해야 합니다 (\*/) 주석으로 처리를 종료 해야 합니다. 주석 행 내에서는 다른 주석 문자를 포함할 수 없습니다. 자세한 내용은 참조 [/ *... \*/ (Comment)](../mdx/comment-mdx.md).  
@@ -80,6 +79,6 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 구문 요소 &#40; Mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

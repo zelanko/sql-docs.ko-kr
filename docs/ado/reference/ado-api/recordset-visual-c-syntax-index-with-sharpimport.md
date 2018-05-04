@@ -1,11 +1,9 @@
 ---
 title: '레코드 집합 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f69ea1f0c67f03eff0f398a1243712ecdd3354ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 38823d46e6a7cd8e0d95dfcca6a5da6cb2f52703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>레코드 집합 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="methods"></a>메서드  

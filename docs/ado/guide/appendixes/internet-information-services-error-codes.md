@@ -1,11 +1,9 @@
 ---
 title: 인터넷 정보 서비스 오류 코드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8049c588ff230a5f9339bb932af10e9f9fe65eb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4c34a826e664ce5b0396807023f36b230c974d7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 인터넷 정보 서비스 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® 인터넷 정보 서비스 (IIS) 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수로 변환한 음의 10 진수로 변환한 전체 오류 코드 및 16 진수 값의 표시 됩니다.

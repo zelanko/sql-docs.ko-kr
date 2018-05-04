@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c50ff4e923e046a157c06ccb139e1b8645d1e9aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3c398efea03ccf69d7a5cd494189a3b936e77490
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancel-element-xmla"></a>Cancel 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]현재 실행 중인 명령을 취소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  현재 실행 중인 명령을 취소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,10 +54,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -75,10 +74,10 @@ ms.lasthandoff: 01/08/2018
   
  일반적으로 **Cancel** 명령은 현재 활성 세션에서 실행 중인 명령을 취소하는 데 사용됩니다. 이때 **Cancel** 명령의 자식 요소는 지정하지 않아야 합니다. 또한 관리자는 **Cancel** 명령을 사용하여 현재 활성 세션을 제외한 세션 또는 연결에서 실행되는 명령을 취소할 수 있습니다. 특정 데이터베이스에 대한 관리자 권한이 있는 역할 멤버는 해당 데이터베이스에 해당하는 연결 또는 세션 명령을 취소할 수 있고, 서버 관리자는 특정 Analysis Services 인스턴스의 연결 및 세션 명령을 취소할 수 있습니다.  
   
- 현재 연결 및 세션에 대 한 정보를 검색 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 **Discover** DISCOVER_CONNECTIONS 및 DISCOVER_SESSIONS 스키마 행 집합 각각 요청 하는 메서드를 실행할 수 있습니다. 특정 데이터베이스에 대한 관리자 권한이 있는 역할 멤버는 DISCOVER_SESSIONS 스키마 행 집합의 SESSION_CURRENT_DATABASE 제한 열에 해당 데이터베이스를 지정하여 해당 데이터베이스에 대한 세션만 반환할 수 있습니다. 에 대 한 자세한 내용은 **Discover** 메서드를 참조 [검색 방법 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
+ 현재 연결 및 세션에 대 한 정보를 검색 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 **Discover** DISCOVER_CONNECTIONS 및 DISCOVER_SESSIONS 스키마 행 집합 각각 요청 하는 메서드를 실행할 수 있습니다. 특정 데이터베이스에 대한 관리자 권한이 있는 역할 멤버는 DISCOVER_SESSIONS 스키마 행 집합의 SESSION_CURRENT_DATABASE 제한 열에 해당 데이터베이스를 지정하여 해당 데이터베이스에 대한 세션만 반환할 수 있습니다. 에 대 한 자세한 내용은 **Discover** 메서드를 참조 [메서드 검색 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [일괄 처리 요소 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [명령 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [일괄 처리 요소 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [명령 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,15 +22,15 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 27ab6ae7456c2028d58ad5218b517056da134e68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 요소
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]테스트 집합을 포함 하는 반복 가능한 홀드 아웃 파티션의 초기값을 지정 된 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) 요소입니다. 이 초기값은 다시 처리하는 동안 모델 내용이 동일하게 유지되도록 합니다. 지정 되지 않았거나 0으로 설정 하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 구조의 이름에 해시 알고리즘을 사용 하 여 초기값을 만듭니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  테스트 집합을 포함 하는 반복 가능한 홀드 아웃 파티션의 초기값을 지정 된 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) 요소입니다. 이 초기값은 다시 처리하는 동안 모델 내용이 동일하게 유지되도록 합니다. 지정 되지 않았거나 0으로 설정 하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 구조의 이름에 해시 알고리즘을 사용 하 여 초기값을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Long|  
 |기본값|0|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  마이닝 구조를 처음 만들면 ID 및 이름이 같습니다. 마이닝 구조의 이름을 변경할 수도 있습니다. 따라서 파티션을 반복할 수 있게 하려면 이름으로 만든 초기값에 따를 필요가 없으며 초기값을 명시적으로 설정해야 합니다.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 01/08/2018
  부모에 해당 하는 요소 **HoldoutSeed** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MiningStructure>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [속성 &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize 요소](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [HoldoutMaxPercent 요소](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutMaxCases 요소](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  

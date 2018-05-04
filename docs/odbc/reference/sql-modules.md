@@ -3,15 +3,12 @@ title: SQL 모듈 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL modules [ODBC]
 - sending SQL statements to DBMS [ODBC]
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a345d64e7ed9353513ce67c71f5442d317df701f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 10957c8e4a847f13d2dbf4b427382e65ea404c1f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-modules"></a>SQL 모듈
 DBMS SQL 문을 보내기 위한 두 번째 방법은 모듈을 통해 것입니다. 짧게 모듈은 호스트 프로그래밍 언어에서에서 호출 된 프로시저의 그룹으로 구성 됩니다. 각 프로시저는 단일 SQL 문 있어서 데이터가 하 고 프로시저에서 매개 변수를 통해 전달 됩니다.  

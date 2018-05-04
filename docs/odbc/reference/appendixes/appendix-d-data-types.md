@@ -3,15 +3,12 @@ title: '부록 d: 데이터 형식 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -22,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04d25dd57849514636c53092276ef49dc44187bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea62ceaba74b56087ecbb8fa28c8a0108426380
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-d-data-types"></a>부록 d: 데이터 형식
 ODBC에는 두 가지 데이터 형식 정의: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식에는 데이터 원본에 저장 된 데이터의 데이터 형식을 나타냅니다. C 데이터 형식에는 응용 프로그램 버퍼에 저장 된 데이터의 데이터 형식을 나타냅니다.  

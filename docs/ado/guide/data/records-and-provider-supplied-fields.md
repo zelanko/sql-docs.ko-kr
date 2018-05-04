@@ -1,11 +1,9 @@
 ---
 title: 레코드 및 필드 공급자가 제공한 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 필드 공급자 제공
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 열릴, 소스에서 현재 열린 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 절대 URL 또는 열린와 함께에서 상대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  

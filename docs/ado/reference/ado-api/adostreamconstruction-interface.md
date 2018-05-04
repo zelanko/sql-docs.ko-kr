@@ -1,11 +1,9 @@
 ---
 title: ADOStreamConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0be1e9a290fc95303220c9a6c4b80df7e75e2905
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 55e7f81233b7cc5cbdf79ea2a71858b3376f46f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 **ADOStreamConstruction** 인터페이스 사용 하는 ADO 생성 **스트림** OLE DB에서 개체 **IStream** C/c + + 응용 프로그램의 개체입니다.  

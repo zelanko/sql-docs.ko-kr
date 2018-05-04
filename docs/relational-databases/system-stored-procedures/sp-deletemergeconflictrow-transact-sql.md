@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c29bd82383b4df740dc3aac6c64529c8c8aafb5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 971d7dcce23ed908e5bd880da1f96681be6ad88c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
   
 ## <a name="arguments"></a>인수  
  [  **@conflict_table=**] **'***conflict_table***'**  
- 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은 **%**합니다. 경우는 *conflict_table* NULL로 지정 되어 또는 **%**, 삭제 충돌 하 고 일치 하는 행이 되도록 간주 되며 *rowguid* 및 *origin_datasource* 및 *source_object* 에서 삭제 되는 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
+ 충돌 테이블의 이름입니다. *conflict_table* 은 **sysname**, 기본값은 **%** 합니다. 경우는 *conflict_table* NULL로 지정 되어 또는 **%**, 삭제 충돌 하 고 일치 하는 행이 되도록 간주 되며 *rowguid* 및 *origin_datasource* 및 *source_object* 에서 삭제 되는 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
   
  [  **@source_object=**] **'***source_object***'**  
  원본 테이블의 이름입니다. *source_object* 은 **nvarchar (386)**, 기본값은 NULL입니다.  

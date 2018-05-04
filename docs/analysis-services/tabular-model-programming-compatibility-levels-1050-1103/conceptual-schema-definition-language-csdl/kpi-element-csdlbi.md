@@ -1,33 +1,31 @@
 ---
-title: "KPI 요소 (CSDLBI) | Microsoft Docs"
-ms.custom: 
+title: KPI 요소 (CSDLBI) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 28f4f65bc65ac1a5d231717ddbc552e83ef302de
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b7b3fc50b6369453cdb2bb3dc7cb0bf5bf2079f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KPI 요소는 KPI(핵심 성과 지표)로 사용할 수 있는 계산을 정의합니다. 비즈니스 인텔리전스 데이터 모델에서 KPI는 측정값을 기반으로 하며, KPI 정의처럼 측정값과 관련된 모든 메타데이터뿐 아니라 KPI 값을 표시하는 데 필요한 기본 그래픽 등의 정보를 포함합니다.  
+  KPI 요소는 KPI(핵심 성과 지표)로 사용할 수 있는 계산을 정의합니다. 비즈니스 인텔리전스 데이터 모델에서 KPI는 측정값을 기반으로 하며, KPI 정의처럼 측정값과 관련된 모든 메타데이터뿐 아니라 KPI 값을 표시하는 데 필요한 기본 그래픽 등의 정보를 포함합니다.  
   
  Kpi 요소는 측정값 정의에 포함되는 수식을 지정하는 것이 아니라 KPI로 사용되는 측정값과 관련된 추가 메타데이터를 지정합니다. 측정값을 KPI로 지정한 후에는 이를 다른 컨텍스트에서 측정값으로 사용할 수 없습니다.  
   

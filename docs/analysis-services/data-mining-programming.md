@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: e16641bf77362128b0c00f8a5ae2127503b875b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/22/2018
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]클라이언트 응용 프로그램과 통신을 위한 프로토콜로 XML for Analysis (XMLA)을 지원합니다. 추가 명령은 XML for Analysis 사양을 확장한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원됩니다.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램과 통신을 위한 프로토콜로 XML for Analysis (XMLA)을 지원합니다. 추가 명령은 XML for Analysis 사양을 확장한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 지원됩니다.  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 데이터 정의, 데이터 조작 및 데이터 제어 지원을 위해 XMLA를 사용하므로 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 제공하는 비주얼 도구를 사용하여 마이닝 구조 및 마이닝 모델을 만든 다음 DMX(Data Mining Extensions) 및 ASSL(Analysis Services Scripting Language) 스크립트를 사용하여 만든 데이터 마이닝 개체를 확장할 수 있습니다.  
   
@@ -68,14 +66,14 @@ ms.lasthandoff: 01/22/2018
  [ADOMD.NET을 사용 하 여 개발](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  ADOMD.NET 클라이언트 및 서버 프로그래밍 개체를 소개합니다.  
   
- [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [분석 관리 개체 & #40;를 사용 하 여 개발 AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO 프로그래밍 라이브러리를 소개합니다.  
   
- [스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [스크립팅 언어 & #40; Analysis Services를 사용 하 여 개발 ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XMLA(XML for Analysis) 및 해당 확장을 소개합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services 개발자 설명서](../analysis-services/analysis-services-developer-documentation.md)   
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

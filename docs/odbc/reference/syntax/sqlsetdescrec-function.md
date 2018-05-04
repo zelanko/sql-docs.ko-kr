@@ -3,15 +3,12 @@ title: SQLSetDescRec 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescRec
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 085543aca838cfe1a8123f891c30f618b86eb15d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 함수
 **규칙**  
@@ -107,7 +103,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수 IRD에 연결 되었습니다.|  
 |HY021|일관성 없는 설명자 정보|*형식* 필드나 다른 필드는 설명자의 SQL_DESC_TYPE 필드와 연결 된 되지 않았거나 잘못 일치 합니다.<br /><br /> 일관성 확인을 하는 동안 체크 설명자 정보 일관 되지 않았습니다. ("일관성 검사,"이이 섹션의 뒷부분에 나오는 참조).|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) 드라이버는 ODBC 2는*.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) 드라이버는 ODBC 2는 *.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *DescriptorHandle* 함수를 지원 하지 않습니다.|  

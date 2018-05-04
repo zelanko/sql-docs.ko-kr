@@ -1,11 +1,9 @@
 ---
 title: SchemaObjectTypeEnum | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eea1ddb12ae180bdf0d8d2fd8c406f7cbaffe8c4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7d955c79e8cf826f13d72c246bd23c824ce76684
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 검색할 개체의 유형을 지정는 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) 메서드.  

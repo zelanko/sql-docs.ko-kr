@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>데이터 형식(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|**decimal** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVFLT4|**real**|4바이트 **real** 데이터 형식입니다.|  
 |SRVFLT8|**float**|8바이트 **float** 데이터 형식입니다.|  
-|SRVFLTN|**real** &#124; **null을 고정 해제**|**real** 또는 **float** 데이터 형식으로 null 값이 허용됩니다.|  
+|SRVFLTN|**real** &#124; **float null**|**real** 또는 **float** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVIMAGE|**image**|**image** 데이터 형식입니다.|  
 |SRVINT1|**tinyint**|1바이트 **tinyint** 데이터 형식입니다.|  
 |SRVINT2|**smallint**|2바이트 **smallint** 데이터 형식입니다.|  

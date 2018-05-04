@@ -1,11 +1,9 @@
 ---
 title: 정적 커서 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02867f7cfa2595f9d7427023092d1cdd9cae2754
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a837ce0d285f24772be5a88e29c0929e398e6582
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-cursors"></a>정적 커서
 정적 커서는 결과 집합을 커서가 처음 열릴 때 항상 표시 합니다. 구현에 따라 정적 커서는 읽기 전용 또는 읽기/쓰기 및 앞으로 및 뒤로 스크롤을 제공 합니다. 정적 커서 일반적으로 변경 내용을 멤버 자격, 순서 또는 커서가 열린 후에 결과 집합의 값을 검색 하지 않습니다. 이렇게 하려면 필요 하지 않지만 정적 커서는 자신의 업데이트, 삭제 및 삽입을 검색할 수 있습니다.  

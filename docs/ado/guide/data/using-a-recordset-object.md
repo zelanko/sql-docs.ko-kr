@@ -1,11 +1,9 @@
 ---
 title: 레코드 집합 개체를 사용 하 여 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c649b61f96913d7c9508e238cb82cf6e9014636f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f72e3283e58276aca4846a81a63603ed9bac856
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-recordset-object"></a>레코드 집합 개체를 사용 하 여
 사용할 수 있습니다 **Recordset.Open** 하 암시적으로 연결을 설정 하 고 한 번에 해당 연결에 대해 명령을 실행 합니다. Visual Basic의 예를 들어:  

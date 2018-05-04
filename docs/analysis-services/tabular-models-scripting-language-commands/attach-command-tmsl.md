@@ -1,30 +1,29 @@
 ---
-title: "Attach 명령 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: Attach 명령 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33c4c414596584d90f6880adc37bd4d0feee6f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach 명령 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 파일 서버에 연결 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Analysis Services 파일 서버에 연결 합니다.  
   
   
 ## <a name="request"></a>요청  
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 ||||  
 |-|-|-|  
 |**속성**|**Default**|**설명**|  
-|database|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
+|데이터베이스|[필수]|연결할 데이터베이스 개체의 이름입니다.|  
 |폴더|[필수]|연결 된 데이터베이스를 포함 하는 폴더입니다.|  
 |password|비어 있음|연결된 된 데이터베이스의 암호를 암호화 하는 데 암호입니다.|  
 |readWriteMode|ReadWrite|데이터베이스에 허용 된 액세스 모드를 나타내는 열거형 값입니다.<br /><br /> **열거형 값은 다음과 같습니다.**<br /><br /> readWrite-읽기 / 쓰기 액세스가 허용 됩니다.<br /><br /> 읽기 전용-읽기 전용 권한이 허용 됩니다.<br /><br /> readOnlyExclusive-읽기 전용 단독 액세스가 허용 됩니다.|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  명령이 성공 하는 경우 빈 결과 반환 합니다. 그렇지 않은 경우 XMLA 예외가 반환 됩니다.  
   
 ## <a name="usage-endpoints"></a>사용 현황 (끝점)  
- Command 요소에이의 문에 사용 되는 [메서드 실행 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
+ Command 요소에이의 문에 사용 되는 [메서드 실행 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
   
 -   SQL Server Management Studio (SSMS)의 XMLA 창으로  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS에서 데이터베이스 연결 대화 상자에서 스크립트 단추를 클릭 하 여이 명령에 대 한 기본으로 제공 되는 스크립트를 생성할 수 있습니다.  
   
- [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
+ [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 [테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 지원 되는 기능에 대 한 설명은  
 
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   

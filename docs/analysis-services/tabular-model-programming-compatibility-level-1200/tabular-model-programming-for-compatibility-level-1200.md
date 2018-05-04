@@ -1,27 +1,25 @@
 ---
-title: "1200 호환성 수준의 테이블 형식 모델 프로그래밍 | Microsoft Docs"
-ms.custom: 
+title: 1200 호환성 수준의 테이블 형식 모델 프로그래밍 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 171106f6b1cb34631c3a785c1967844574c7fc4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1200 이상
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,13 +39,13 @@ ms.lasthandoff: 02/23/2018
   
  AMO PowerShell TMSL 스크립트를 입력으로 받아들입니다.  
   
- 참조 [테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 및 [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) 자세한 정보에 대 한 합니다.  
+ 참조 [테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) 및 [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="query-languages"></a>쿼리 언어  
  DAX 및 MDX 모든 테이블 형식 모델에 대해 사용할 수 있습니다.  
   
 ## <a name="expression-language"></a>식 언어  
- DAX의 필터와 측정값 및 Kpi를 포함 하 여 계산 된 개체를 만드는 데 사용 되는 식은 공식화 됩니다. 참조 [테이블 형식 모델의 DAX 이해](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) 및 [데이터 분석 식 &#40; DAX &#41; Analysis Services에서](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)합니다.  
+ DAX의 필터와 측정값 및 Kpi를 포함 하 여 계산 된 개체를 만드는 데 사용 되는 식은 공식화 됩니다. 참조 [테이블 형식 모델의 DAX 이해](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) 및 [Data Analysis Expressions &#40;DAX&#41; Analysis Services의](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)합니다.  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>테이블 형식 모델 및 데이터베이스에 대 한 관리 되는 코드  
  AMO는 프로그래밍 방식으로 모델 작업에 대 한 Microsoft.AnalysisServices.Tabular, 새 네임 스페이스를 포함 합니다. 참조 [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) 자세한 정보에 대 한 합니다.  

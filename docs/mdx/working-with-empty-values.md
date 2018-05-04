@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2dda44151b465d31cc6b3a88232f6843cf868eb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>빈 값 작업
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,14 +124,14 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 자세한 내용은 참조 [NonEmpty &#40; Mdx&#41; ](../mdx/nonempty-mdx.md).  
+ 자세한 내용은 참조 [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)합니다.  
   
 ## <a name="empty-values-and-comparison-operators"></a>빈 값과 비교 연산자  
  데이터에 빈 값이 있는 경우 논리 및 비교 연산자는 단순히 TRUE 또는 FALSE가 아니라 EMPTY라는 제3의 결과가 반환할 가능성도 있습니다. 이와 같이 세 가지 결과를 가져오는 논리는 대부분 응용 프로그램에서 오류의 원인이 됩니다. 다음은 빈 값 비교 결과를 정리한 테이블입니다.  
   
  이 테이블에서는 두 개의 부울 피연산자에 AND 연산자를 적용한 결과를 보여 줍니다.  
   
-|AND|TRUE|EMPTY|FALSE|  
+|및|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
 |**빈**|FALSE|EMPTY|FALSE|  
@@ -141,7 +139,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  이 테이블에서는 두 개의 부울 피연산자에 OR 연산자를 적용한 결과를 보여 줍니다.  
   
-|또는|TRUE|FALSE|  
+|OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**빈**|TRUE|TRUE|  
@@ -156,8 +154,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

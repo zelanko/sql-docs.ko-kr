@@ -1,29 +1,27 @@
 ---
-title: "6 단원: 계산 정의 | Microsoft Docs"
-ms.custom: 
+title: '6 단원: 계산 정의 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: baad90c825fe642849b4e799ad2a0c30c2935216
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,11 +60,11 @@ ms.lasthandoff: 02/15/2018
 이 태스크에서는 명명된 집합의 정의 방법을 배웁니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[7 단원: 핵심 성과 지표 &#40; 정의 Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[7 단원: 핵심 성과 지표 & #40; 정의 Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링 &#40; Adventure Works 자습서 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [명명 된 집합 만들기](../analysis-services/multidimensional-models/create-named-sets.md)  
 [계산된 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)  
   

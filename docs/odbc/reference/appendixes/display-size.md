@@ -3,15 +3,12 @@ title: 표시 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f0cd835b31863fa8427f4cb175c66ded5f7e308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd66f8e88187447209ea55ac9dea77437f34bbaa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-size"></a>표시 크기
 표시 열 크기가 문자 형식에서 데이터를 표시 하는 데 필요한 문자의 최대 수입니다. 다음 표에서 각 ODBC SQL 데이터 형식에 대 한 표시 크기를 정의합니다.  

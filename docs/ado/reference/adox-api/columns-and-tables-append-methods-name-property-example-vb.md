@@ -1,11 +1,9 @@
 ---
 title: 메서드를 추가, 속성 예제 (VB) 이름 열과 테이블 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1360537021ac712857849ab470dc3f456fefa633
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 922e2cf68402fe47a358d46ba2209b8506a46e3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>테이블 및 열 이름 속성 예제 (VB) 메서드 추가
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  

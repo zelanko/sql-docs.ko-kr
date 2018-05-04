@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac75426f9d3f965d85ba9005b95726b71299b33c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,11 +69,11 @@ ms.lasthandoff: 04/16/2018
   
  열의 최대 크기를 보고할 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 보고 합니다.  
   
--   예를 들어에 2000 적용 되 정의 된 최대 크기는 **varchar (**2000**)** 열 또는  
+-   예를 들어에 2000 적용 되 정의 된 최대 크기는 **varchar (** 2000 **)** 열 또는  
   
 -   값 "무제한"의 경우에 한 **varchar (max)** 열 같음 ~ 0입니다. 이 값은 DBCOLUMN_COLUMNSIZE 메타데이터 속성에 대해 설정됩니다.  
   
- 에 표준 변환 규칙이 적용 됩니다는 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (**2000**)** 열에 대 한 유효한 됩니다는 **varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
+ 에 표준 변환 규칙이 적용 됩니다는 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (** 2000 **)** 열에 대 한 유효한 됩니다는 **varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
   
  큰 값 형식을 검색할 때 가장 효과적인 방법은 DBTYPE_IUNKNOWN으로 바인딩하고 행 집합 속성 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS로 설정하는 것입니다. 이렇게 하면 다음 예와 같이 값이 중간 버퍼링 없이 네트워크에서 직접 스트리밍됩니다.  
   
@@ -708,7 +706,7 @@ _ExitProcessResultSet:
   
 -   값 "무제한"의 경우에 한 **varchar (max)** 열이 0입니다.  
   
- 에 표준 변환 규칙이 적용 된 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (**2000**)** 열은 적합도됩니다**varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
+ 에 표준 변환 규칙이 적용 된 **varchar (max)** 열에서 모든 변환은에 유효한는 **varchar (** 2000 **)** 열은 적합도됩니다**varchar (max)** 열입니다. 같은 기준이 **nvarchar (max)** 및 **varbinary (max)** 열입니다.  
   
  다음은 큰 값 데이터 형식 작업을 위해 향상된 ODBC  API  함수 목록입니다.  
   

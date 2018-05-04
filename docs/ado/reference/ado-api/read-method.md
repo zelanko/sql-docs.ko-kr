@@ -2,10 +2,8 @@
 title: Read 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: drivers
-ms.service: ''
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e73ea6c8a837322b10aeea877eef10ba37a0b560
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 53e3f6c3b780d9d78697fb33dfea5574457a6b2c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-method"></a>Read 메서드
 이진 파일에서 지정 된 바이트 수를 읽고 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  

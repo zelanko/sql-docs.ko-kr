@@ -1,11 +1,9 @@
 ---
 title: ADO 구문 인덱스 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b61b43238c94958931d73f3abae65a1dc7acab39
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d685b68c9ff400b2a702ecddcc7a475389534e7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-syntax-indexes"></a>ADO 구문 인덱스
 ADO 메서드 및 속성을 호출 하기 위한 구문을 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 사용 합니다. 그러나 프로그래밍 언어 및 방법에 따라 보다 구체적인 예제에 대 한 다음 섹션을 참조 하세요.  

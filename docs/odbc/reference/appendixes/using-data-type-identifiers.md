@@ -3,15 +3,12 @@ title: 데이터 형식 식별자를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 283a4b6ed0fe2af5d29b619301f5a5dd283d22b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8a43271157667e98dd9157edb3a2cfd0e85eeee4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-data-type-identifiers"></a>데이터 형식 식별자를 사용 하 여
 응용 프로그램 데이터 형식 식별자를 사용 하 여 두 가지 방법으로: 드라이버에 해당 버퍼를 설명 하 고 결과 데이터를 저장 하는 데 어떤 유형의 C 버퍼링 확인할 수 있는 드라이버에서 집합에 대 한 메타 데이터를 검색 합니다. 이러한 작업을 수행 하려면 다음 함수를 호출 하는 응용 프로그램:  

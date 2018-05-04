@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8dd8323e268ec31c33db3b850ee2b449264ed3f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2b1b05e575530b09f2f17fa707d73d2ae86b9141
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-based-driver-diagnostic-example"></a>파일 기반 드라이버 진단 예제
 파일 기반 드라이버는 ODBC 드라이버 및 데이터 원본으로 사용 됩니다. ODBC 연결에 및 데이터 원본으로 오류 및 경고를 모두 구성 요소로 생성 따라서 것입니다. 이기 때문에 드라이버 관리자와 교류 하는 구성 요소 형식 및 인수에 대 한 반환 **SQLGetDiagRec**합니다.  

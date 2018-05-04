@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e5d7c2462551e31d9a32ad62bacd0a281fb9249
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3a5ac85804c0dc94682e089dfc7b962e757447b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,18 +57,18 @@ sp_describe_cursor_columns
  커서 출력을 수신하기 위해 선언된 커서 변수의 이름입니다. *output_cursor_variable* 은 **커서**은 없으며 기본적에 연결할 수 있는 모든 커서 sp_describe_cursor_columns가 호출 된 시점입니다. 반환된 커서는 스크롤할 수 있으며 동적인 읽기 전용 커서입니다.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'을 (를)  
- 보고할 커서를 로컬 커서, 전역 커서 또는 커서 변수의 이름 중 어느 것을 사용하여 지정할지 결정합니다. 매개 변수는 **nvarchar (30)**합니다.  
+ 보고할 커서를 로컬 커서, 전역 커서 또는 커서 변수의 이름 중 어느 것을 사용하여 지정할지 결정합니다. 매개 변수는 **nvarchar (30)** 합니다.  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- LOCAL 키워드를 갖거나 LOCAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *local_cursor_name* 은 **nvarchar (128)**합니다.  
+ LOCAL 키워드를 갖거나 LOCAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *local_cursor_name* 은 **nvarchar (128)** 합니다.  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- GLOBAL 키워드를 갖거나 GLOBAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *global_cursor_name* 은 **nvarchar (128)**합니다.  
+ GLOBAL 키워드를 갖거나 GLOBAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *global_cursor_name* 은 **nvarchar (128)** 합니다.  
   
  *global_cursor_name* ODBC 응용 프로그램에서 열리고 다음 SQLSetCursorName를 호출 하 여 명명 된 API 서버 커서의 이름일 수도 있습니다.  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- 열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)**합니다.  
+ 열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  InclusionThresholdSetting  

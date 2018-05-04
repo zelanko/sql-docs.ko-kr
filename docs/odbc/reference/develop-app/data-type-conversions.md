@@ -3,15 +3,12 @@ title: 데이터 형식 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], conversions
 - SQL data types [ODBC], conversions
@@ -23,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0501e4bf627d8dafddfbf5020345d43135af9d6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-conversions"></a>데이터 형식 변환
 데이터가 변환 될 수 한 형식에서 다른 4 배 중 하나에서: 전송 될 때 데이터는 하나의 응용 프로그램 변수에서 (C에 C)를 다른 응용 프로그램 변수에서 데이터를 문 매개 변수 (C)에서 SQL로 보낼 때 결과 집합 열에는 데이터에 반환 될 때 응용 프로그램 변수 (SQL에서 C로) 및 때 데이터가 전송 되는지 하나의 데이터 원본 열에서 다른 SQL (to SQL)입니다.  

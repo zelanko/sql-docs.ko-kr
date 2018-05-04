@@ -3,15 +3,12 @@ title: ConfigDSN 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7a8b75fb1b87a4f6199999e5d5e33d8cd0083bac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 함수
 **규칙**  
@@ -88,7 +84,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>설명  
  **ConfigDSN** 키워드-값 쌍의 형식에 특성의 목록으로 DLL 설치 관리자에서 연결 정보를 받습니다. 각 쌍은 null 바이트를으로 종료 되 고 전체 목록을 바이트 null로 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다. **ConfigDSN** 키워드에 대 한 유효한 키워드를 수락할 수 있는 **SQLBrowseConnect** 및 **SQLDriverConnect**합니다. **ConfigDSN** 에서는 반드시 지원에 대 한 유효한 키워드는 모든 키워드 **SQLBrowseConnect** 및 **SQLDriverConnect**합니다. (**ConfigDSN** 을 허용 하지 않습니다는 **드라이버** 키워드입니다.) 사용 하는 키워드는 **ConfigDSN** 함수는 다시 설치 프로그램의 자동 설정 기능을 사용 하 여 데이터 소스를 만드는 데 필요한 모든 옵션을 지원 해야 합니다. 때의 용도 **ConfigDSN** 값과 연결 문자열 값은 동일한, 동일한 키워드를 사용 해야 합니다.  
   
- 와 같이 **SQLBrowseConnect** 및 **SQLDriverConnect**, 키워드 및 해당 값 포함 되 면 안는 **{} (),? \*=! @** 문자와의 값은 **DSN** 키워드 공백으로 구성 될 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자.  
+ 와 같이 **SQLBrowseConnect** 및 **SQLDriverConnect**, 키워드 및 해당 값 포함 되 면 안는 **{}(),? \*=! @** 문자와의 값은 **DSN** 키워드 공백으로 구성 될 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자.  
   
  **ConfigDSN** 호출 해야 **SQLValidDSN** 데이터 원본 이름의 길이 확인 하 고 이름에 잘못 된 문자가 포함 되어 있는지 확인 합니다. 데이터 원본 이름 SQL_MAX_DSN_LENGTH 보다 길면 또는 잘못 된 문자를 포함 하는 경우 **SQLValidDSN** 에서 오류를 반환 하 고 **ConfigDSN** 에서 오류를 반환 합니다. 데이터 원본 이름의 길이 확인란도 선택 하 여 **SQLWriteDSNToIni**합니다.  
   

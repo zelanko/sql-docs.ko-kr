@@ -1,11 +1,9 @@
 ---
 title: 직접 실행 모드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88c1b79ea9a119710469bbc448df2331bd20febc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6acd34e06c4660cff3e90c8ef2dd760996d77259
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드 적용 되는 경우는 **LockType** 속성이로 설정 되어 **adLockOptimistic** 또는 **adLockPessimistic**합니다. 직접 실행 모드에서 변경 내용이 레코드에 전파 되는 데이터 소스에 호출 하 여 행에 대 한 작업 완료를 선언 하는 즉시는 **업데이트** 메서드.  

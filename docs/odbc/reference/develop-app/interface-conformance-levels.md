@@ -3,15 +3,12 @@ title: 받는 규칙 수준 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be780023002dba4422a6523f57866661fde593b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 890684bf513b80cd484f7b15c75a04c38553513b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 받는 규칙 수준
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. 함수 기반 평준화 체계 충분히이 목표를 달성 하지 않습니다. Odbc 3. *x*, 드라이버는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 기능; 포함 될 수 있습니다. 반환 된 정보 유형에 대해 지원 되는 설명자 필드, 문 특성, "Y" 값을 포함할 수 **SQLGetInfo**등입니다.  
@@ -43,7 +39,7 @@ ms.lasthandoff: 04/16/2018
  세 가지 ODBC 인터페이스 규칙에 따라 수준이 있습니다: 코어, 수준 1 및 수준 2입니다.  
   
 > [!NOTE]  
->  이러한 받는 규칙 수준 ODBC 2에 동일한 이름의 ODBC API 받는 규칙 수준 보다 각기 요구 사항이*.x*합니다. 특히, 모든 기능 사용 권한에 포함 된 ODBC 2*.x* API 규칙에 따라 수준 1 코어 인터페이스 규칙 수준에 포함 되었는지 합니다. 결과적으로, 대부분의 ODBC 드라이버는 핵심 수준 인터페이스 규칙을 보고할 수 있습니다.  
+>  이러한 받는 규칙 수준 ODBC 2에 동일한 이름의 ODBC API 받는 규칙 수준 보다 각기 요구 사항이 *.x*합니다. 특히, 모든 기능 사용 권한에 포함 된 ODBC 2 *.x* API 규칙에 따라 수준 1 코어 인터페이스 규칙 수준에 포함 되었는지 합니다. 결과적으로, 대부분의 ODBC 드라이버는 핵심 수준 인터페이스 규칙을 보고할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

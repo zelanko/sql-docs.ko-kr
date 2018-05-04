@@ -1,11 +1,9 @@
 ---
 title: ADORecordConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 079bc873b78a40248d60c36e994750d4c95c076d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 **ADORecordConstruction**인터페이스 사용 하는 ADO 생성 **레코드** OLE DB에서 개체 **행** C/c + + 응용 프로그램의 개체입니다.  

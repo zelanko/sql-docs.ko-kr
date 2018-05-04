@@ -1,11 +1,9 @@
 ---
 title: ADOX 개체 모델 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdefd4a38405f8bc3b4237de463415d26b913d6d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8f3ed90b40a5d069ef1b6d6911f74a4ef3c63e7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
 다음 다이어그램에는 개체를 표시 하 고 ADOX 관련 된 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하십시오. 또는 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 및 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  

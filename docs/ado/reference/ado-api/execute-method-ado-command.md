@@ -1,11 +1,9 @@
 ---
 title: Execute 메서드 (ADO 명령) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8eaf057d8ac52d1d1664bafd9304fe1f92ab0ae2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드 (ADO 명령)
 쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 되는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 의 속성은 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다.  
@@ -59,7 +56,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>주의  
  사용 하는 **Execute** 에서 메서드는 **명령** 에 지정 된 쿼리를 실행 하는 개체는 **CommandText** 속성 또는 **CommandStream** 개체의 속성입니다.  
   
- 결과가 반환 됩니다는 **레코드 집합** 기본적으로 이진 정보 스트림 또는 합니다. 이진 스트림에 구하려면 지정 **adExecuteStream** 에 *옵션*, 다음을 설정 하 여 스트림을 제공 **Command.Properties ("출력 스트림")**합니다. ADO **스트림** 는 결과 얻으려면 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림을 호출 하기 전에 지정 된 경우 **Execute** 와 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 는 공급자 특정 합니다.  
+ 결과가 반환 됩니다는 **레코드 집합** 기본적으로 이진 정보 스트림 또는 합니다. 이진 스트림에 구하려면 지정 **adExecuteStream** 에 *옵션*, 다음을 설정 하 여 스트림을 제공 **Command.Properties ("출력 스트림")** 합니다. ADO **스트림** 는 결과 얻으려면 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림을 호출 하기 전에 지정 된 경우 **Execute** 와 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 는 공급자 특정 합니다.  
   
  공급자가 반환 하는 경우 명령을 위한 용도가 아닙니다 (예: SQL UPDATE 쿼리) 결과를 반환할 **아무** 옵션으로 긴 **adExecuteNoRecords** 에 지정 됩니다. 그렇지 않으면 반환을 실행 한 닫힌 **레코드 집합**합니다. 일부 응용 프로그램 언어 사용 되지 않은 경우이 반환 값을 무시 하도록 하면 **레코드 집합** 이 필요 합니다.  
   

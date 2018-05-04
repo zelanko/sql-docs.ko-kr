@@ -1,31 +1,29 @@
 ---
-title: "새 테이블 형식 모델 프로젝트 (Analysis Services) 만들기 | Microsoft Docs"
-ms.custom: 
+title: 새 테이블 형식 모델 프로젝트 (Analysis Services) 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 65a4f062cb8ddc70c62853a448393e21607ec0ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 46e472074a9748348aedd824bfb8a0993f0f60d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-new-tabular-model-project"></a>새 테이블 형식 모델 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서 새로운 빈 테이블 형식 모델 프로젝트를 만드는 방법을 설명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 모델 프로젝트를 만든 후 데이터 원본에서 데이터를 가져와서 모델 프로젝트 제작을 시작할 수 있습니다.  
+  이 문서에서 새로운 빈 테이블 형식 모델 프로젝트를 만드는 방법을 설명 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 모델 프로젝트를 만든 후 데이터 원본에서 데이터를 가져와서 모델 프로젝트 제작을 시작할 수 있습니다.  
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>빈 테이블 형식 모델 프로젝트를 새로 만들려면  
   

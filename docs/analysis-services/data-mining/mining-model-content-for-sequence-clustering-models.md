@@ -1,37 +1,35 @@
 ---
-title: "마이닝 모델 콘텐츠 시퀀스 클러스터링 모델에 대 한 | Microsoft Docs"
-ms.custom: 
+title: 마이닝 모델 콘텐츠 시퀀스 클러스터링 모델에 대 한 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 989fe80b2914870110b37dd4cd12fc61681a9ec7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 Microsoft 시퀀스 클러스터링 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+  이 항목에서는 Microsoft 시퀀스 클러스터링 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>시퀀스 클러스터링 모델 구조에 대한 이해  
- 시퀀스 클러스터링 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드(NODE_TYPE = 1)가 있습니다. **(All)**이라는 레이블이 지정된 부모 노드에는 학습 데이터에서 검색된 모든 전환이 나열되는 관련 시퀀스 노드(NODE_TYPE = 13)가 있습니다.  
+ 시퀀스 클러스터링 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드(NODE_TYPE = 1)가 있습니다. **(All)** 이라는 레이블이 지정된 부모 노드에는 학습 데이터에서 검색된 모든 전환이 나열되는 관련 시퀀스 노드(NODE_TYPE = 13)가 있습니다.  
   
  ![시퀀스 클러스터링 모델의 구조](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "시퀀스 클러스터링 모델의 구조")  
   
@@ -268,7 +266,7 @@ ORDER BY Count(*) DESC
  모델 콘텐츠를 쿼리하여 관찰된 경로 목록을 가져오는 방법이나 시퀀스 클러스터링 모델에 대한 다른 쿼리 예를 보려면 [시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   

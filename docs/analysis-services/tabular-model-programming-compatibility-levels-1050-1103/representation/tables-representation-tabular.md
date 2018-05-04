@@ -1,33 +1,31 @@
 ---
-title: "테이블 표현 (테이블 형식) | Microsoft Docs"
-ms.custom: 
+title: 테이블 표현 (테이블 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e4b05c59281b64258a4037c2764b667615e75a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 655ad710eabbfa846dd929067fbbbc4fa19dc806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-representation-tabular"></a>테이블 표현(테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-테이블 형식 모델에서 테이블은 데이터의 기본 표현입니다.  
+  테이블 형식 모델에서 테이블은 데이터의 기본 표현입니다.  
   
 ## <a name="tables-representation"></a>테이블 표현  
   

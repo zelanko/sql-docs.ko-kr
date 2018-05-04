@@ -1,11 +1,9 @@
 ---
 title: 데이터 정의 언어 및 보안 (ADOX) ADO 확장 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +15,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: afa2d41ee415797942cc47a4bda8f402b38b5938
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3a00d4241ee228c490da22c09ab75eb7756eb04f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>데이터 정의 언어 및 보안 (ADOX) ADO 확장
 이 섹션에서는 다음 항목을 다룹니다.  

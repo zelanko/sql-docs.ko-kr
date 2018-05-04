@@ -29,12 +29,11 @@ caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6d3d8471754918eaff793bb6787f383b67f33a77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  모델 이름에 "_structure"가 추가되어 마이닝 구조의 이름이 정해지므로 구조 이름이 모델 이름과 달리 고유합니다.  
   
- 기존 마이닝 구조에 대 한 마이닝 모델을 만들려면 사용는 [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) 문.  
+ 기존 마이닝 구조에 대 한 마이닝 모델을 만들려면 사용는 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) 문입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -115,15 +114,15 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [데이터 형식 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [콘텐츠 형식 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [콘텐츠 형식 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [열 배포 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [열 배포 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [모델링 플래그 &#40; 데이터 마이닝 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [모델링 플래그 & #40; 데이터 마이닝 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]다음의 사용을 지원 \<열 관계 > 절.  
+ 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다음의 사용을 지원 \<열 관계 > 절.  
   
  **관련 된**  
  이 형식은 값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
@@ -142,7 +141,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 각 알고리즘에 연관 된 매개 변수 목록에 대 한 참조 [Data Mining Algorithms &#40; Analysis Services-데이터 마이닝 &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 각 알고리즘에 연관 된 매개 변수 목록에 대 한 참조 [Data Mining Algorithms &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  
   
 ## <a name="remarks"></a>주의  
  기본 제공 테스트 데이터 집합이 있는 모델을 만들려는 경우 CREATE MINING STRUCTURE 문과 ALTER MINING STRUCTURE 문을 차례로 사용해야 합니다. 그러나 모든 모델 유형이 홀드아웃 데이터 집합을 지원하는 것은 아닙니다. 자세한 내용은 [CREATE MINING STRUCTURE&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)를 참조하세요.  
@@ -208,8 +207,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

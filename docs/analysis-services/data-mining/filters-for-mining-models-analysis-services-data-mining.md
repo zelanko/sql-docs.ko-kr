@@ -1,16 +1,15 @@
 ---
-title: "마이닝 모델에 대 한 필터 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 마이닝 모델에 대 한 필터 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 83f507f3839a7ca0f40b820ded0e1d0f30da0ffc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 기반 모델 필터링을 사용하면 마이닝 구조에서 데이터의 하위 집합을 사용하는 마이닝 모델을 만들 수 있습니다. 포괄적인 데이터 원본 뷰를 기반으로 단일 마이닝 구조를 만들 수 있으므로 필터링을 사용하면 마이닝 구조 및 데이터 원본을 유연하게 디자인할 수 있습니다. 그런 다음 데이터의 각 하위 집합에 대해 서로 다른 구조 및 관련 모델을 작성하는 대신 다양한 모델의 학습 및 테스트에 해당 데이터의 일부만 사용하기 위한 필터를 만들 수 있습니다.  
+  데이터 기반 모델 필터링을 사용하면 마이닝 구조에서 데이터의 하위 집합을 사용하는 마이닝 모델을 만들 수 있습니다. 포괄적인 데이터 원본 뷰를 기반으로 단일 마이닝 구조를 만들 수 있으므로 필터링을 사용하면 마이닝 구조 및 데이터 원본을 유연하게 디자인할 수 있습니다. 그런 다음 데이터의 각 하위 집합에 대해 서로 다른 구조 및 관련 모델을 작성하는 대신 다양한 모델의 학습 및 테스트에 해당 데이터의 일부만 사용하기 위한 필터를 만들 수 있습니다.  
   
  예를 들어 Customers 테이블 및 관련 테이블에 대한 데이터 원본 뷰를 정의합니다. 그런 다음 필요한 모든 필드를 포함하는 단일 마이닝 구조를 정의합니다. 마지막으로 Region과 같은 특정 고객 특성으로 필터링되는 모델을 만듭니다. 그러면 해당 모델의 복사본을 쉽게 만들고, 필터 조건만 변경하여 다른 지역을 기반으로 하는 새 모델을 생성할 수 있습니다.  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="creating-model-filters-using-data-mining-designer"></a>데이터 마이닝 디자이너를 사용하여 모델 필터 만들기  
  데이터 마이닝 디자이너에서 마이닝 모델의 **Filter** 속성을 변경하여 모델을 필터링합니다. 필터 식을 **속성** 창에 직접 입력하거나 필터 대화 상자를 열어 조건을 작성할 수 있습니다.  
   
- 두 개의 필터 대화 상자가 있습니다. 첫 번째 대화 상자를 사용하면 사례 테이블에 적용되는 조건을 만들 수 있습니다. 데이터 원본에 여러 테이블이 포함되어 있는 경우 먼저 테이블을 선택한 다음 열을 선택하고 해당 열에 적용할 연산자와 조건을 지정합니다. **AND**/**OR** 연산자를 사용하여 여러 조건을 연결할 수 있습니다. 값을 정의하는 데 사용할 수 있는 연산자는 열에 불연속 값이 포함되어 있는지, 아니면 연속 값이 포함되어 있는지에 따라 달라집니다. 예를 들어 연속 값의 경우 **greater than** 및 **less than** 연산자를 사용할 수 있습니다. 그러나 불연속 값의 경우에는 **=(같음)**, **!=(같지 않음)**및 **is null** 연산자만 사용할 수 있습니다.  
+ 두 개의 필터 대화 상자가 있습니다. 첫 번째 대화 상자를 사용하면 사례 테이블에 적용되는 조건을 만들 수 있습니다. 데이터 원본에 여러 테이블이 포함되어 있는 경우 먼저 테이블을 선택한 다음 열을 선택하고 해당 열에 적용할 연산자와 조건을 지정합니다. **AND**/**OR** 연산자를 사용하여 여러 조건을 연결할 수 있습니다. 값을 정의하는 데 사용할 수 있는 연산자는 열에 불연속 값이 포함되어 있는지, 아니면 연속 값이 포함되어 있는지에 따라 달라집니다. 예를 들어 연속 값의 경우 **greater than** 및 **less than** 연산자를 사용할 수 있습니다. 그러나 불연속 값의 경우에는 **=(같음)**, **!=(같지 않음)** 및 **is null** 연산자만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  **LIKE** 키워드는 지원되지 않습니다. 여러 불연속 특성을 포함하려는 경우 별도의 조건을 만들고 **OR** 연산자를 사용하여 연결해야 합니다.  

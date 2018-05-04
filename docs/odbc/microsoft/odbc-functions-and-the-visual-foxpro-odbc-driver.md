@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
 - ODBC level 1 API functions [ODBC]
@@ -27,12 +27,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 403f4b6e0e4a90b17d346e46948411a4514b7fe9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 679a5d1a69aea383a172b6af679abbd956ae695c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 및 ODBC 함수
 이 단원의 항목에서는 ODBC API 함수에 대 한 간단한 요약 및 모든 Visual FoxPro 관련 세부 정보를 제공 합니다.  

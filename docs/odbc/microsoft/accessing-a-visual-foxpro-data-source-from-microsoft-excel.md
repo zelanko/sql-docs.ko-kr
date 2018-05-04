@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Excel
 - Visual FoxPro data [ODBC], Excel
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ba64814f954ab9c689f5f452f24a6ab36f73cc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7526a9fec1a1c7871879d7b382a1cf31d7ab808d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 설치 된 Microsoft 쿼리를 사용 하도록 설정한 경우 Visual FoxPro 데이터에 연결 되는 Microsoft Excel에서 데이터 원본을 만들 수 있습니다.  

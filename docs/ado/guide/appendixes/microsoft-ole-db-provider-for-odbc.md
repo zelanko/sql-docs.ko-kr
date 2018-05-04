@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -71,7 +68,7 @@ MSDASQL
 
  공급자는 ADO에서 정의 된 권한과 함께 특정 연결 매개 변수를 지원 하지 않습니다. 그러나 공급자는 ODBC 드라이버 관리자를 비 ADO 연결 매개 변수를 전달 합니다.
 
- 생략할 수 있으므로 **공급자** 매개 변수를 구성할 수 있습니다 따라서 동일한 데이터 원본에 대 한 ODBC 연결 문자열과 동일 하 게 ADO 연결 문자열입니다. 동일한 매개 변수 이름을 사용 하 여 (**드라이버 =**, **데이터베이스 =**, **DSN =**등), 값 및 구문으로는 ODBC 연결 문자열을 작성할 때. 또는 미리 정의 된 데이터 원본 이름 (DSN) 또는 FileDSN 없이 연결할 수 있습니다.
+ 생략할 수 있으므로 **공급자** 매개 변수를 구성할 수 있습니다 따라서 동일한 데이터 원본에 대 한 ODBC 연결 문자열과 동일 하 게 ADO 연결 문자열입니다. 동일한 매개 변수 이름을 사용 하 여 (**드라이버 =**, **데이터베이스 =**, **DSN =** 등), 값 및 구문으로는 ODBC 연결 문자열을 작성할 때. 또는 미리 정의 된 데이터 원본 이름 (DSN) 또는 FileDSN 없이 연결할 수 있습니다.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>DSN 또는 FileDSN 구문:
 

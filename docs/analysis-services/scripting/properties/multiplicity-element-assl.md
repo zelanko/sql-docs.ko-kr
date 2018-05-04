@@ -1,33 +1,31 @@
 ---
-title: "Multiplicity 요소 (ASSL) | Microsoft Docs"
-ms.custom: 
+title: Multiplicity 요소 (ASSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9aa018ac9f692eac5de76743fb2d74c0d9832e56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1bb693999eb5fadbb3456751c06cd75e8cba20da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-RelationshipEnd의 특성이 관계의 "일" 쪽인지 "다" 쪽인지를 나타냅니다.  
+  RelationshipEnd의 특성이 관계의 "일" 쪽인지 "다" 쪽인지를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   

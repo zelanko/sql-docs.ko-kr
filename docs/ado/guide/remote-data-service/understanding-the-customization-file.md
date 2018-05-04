@@ -1,6 +1,6 @@
 ---
 title: 사용자 지정 파일을 이해 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 4 개의 섹션 형식 리터럴 문자열으로 표시 됩니다 **연결**, **sql**, **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -61,7 +61,7 @@ identifier
   
  특정 섹션은 다음과 같은 상황에서 사용 됩니다.  
   
--   A **연결** 섹션을 사용 하는 클라이언트의 값 부분 연결 문자열 키워드 "**데이터 원본 = * * * 값*", 일치 하는 **연결** 섹션 식별자*.*  
+-   A **연결** 섹션을 사용 하는 클라이언트의 값 부분 연결 문자열 키워드 "**데이터 원본 = * * * 값*", 일치 하는 **연결** 섹션 식별자 *.*  
   
 -   **sql** 섹션을 사용 하는 클라이언트 명령 문자열 일치 하는 문자열을 포함 하는 경우는 **sql** 섹션 식별자입니다.  
   

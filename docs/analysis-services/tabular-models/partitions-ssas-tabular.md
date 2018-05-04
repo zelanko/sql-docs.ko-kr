@@ -1,31 +1,29 @@
 ---
-title: "파티션 | Microsoft Docs"
-ms.custom: 
+title: 파티션 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2130a0e6a8b6f734ec77564e7a41e3057e15572
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b012ae919b376151a465557941739df847310b1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions"></a>파티션
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 SSDT에서 파티션 대화 상자를 사용 하 여 만든 파티션은 모델 작업 영역 데이터베이스에 적용 됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. 있습니다 수 추가로 만들고 SSMS에서 파티션 대화 상자를 사용 하 여 배포 된 모델 데이터베이스에 대 한 파티션을 관리 합니다.  이 항목에서 제공 하는 정보는 SSDT에서 파티션 관리자 대화 상자를 사용 하 여 모델 제작 중에 만든 파티션을 설명 합니다. 배포 된 모델에 대 한 파티션을 만들고 관리 하는 방법에 대 한 내용은 [만들기 및 테이블 형식 모델 파티션 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)합니다.  
+  파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 SSDT에서 파티션 대화 상자를 사용 하 여 만든 파티션은 모델 작업 영역 데이터베이스에 적용 됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. 있습니다 수 추가로 만들고 SSMS에서 파티션 대화 상자를 사용 하 여 배포 된 모델 데이터베이스에 대 한 파티션을 관리 합니다.  이 항목에서 제공 하는 정보는 SSDT에서 파티션 관리자 대화 상자를 사용 하 여 모델 제작 중에 만든 파티션을 설명 합니다. 배포 된 모델에 대 한 파티션을 만들고 관리 하는 방법에 대 한 내용은 [만들기 및 테이블 형식 모델 파티션 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_benefits"></a> 이점  
  테이블 형식 모델에서 파티션은 테이블을 논리적 파티션 개체로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리할 수 있습니다. 예를 들어 한 테이블에 거의 변경되지 않는 데이터를 포함하는 행 집합과 자주 변경되는 데이터를 포함하는 행 집합이 들어 있을 수 있습니다. 이때 데이터의 일부만 처리하려고 할 경우 데이터를 모두 처리할 필요가 없습니다. 파티션을 사용하면 자주 처리해야 하는 데이터 부분을 자주 처리할 필요 없는 데이터와 분리할 수 있습니다.  

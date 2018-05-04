@@ -1,11 +1,9 @@
 ---
 title: 데이터를 유지 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-data"></a>데이터 유지
 (예: 랩톱을 사용 하 여) 휴대용 컴퓨팅 연결 되거나 연결이 끊긴 상태에서 실행할 수 있는 응용 프로그램에 대 한 필요 하 게 되었습니다. ADO는 커서를 저장 하는 기능을 개발자에 게 제공 하 여이 대 한 지원을 추가 했습니다 **레코드 집합** 디스크에 나중에 다시 로드 합니다.  

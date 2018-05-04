@@ -1,31 +1,29 @@
 ---
-title: "계산된 테이블 만들기 | Microsoft Docs"
-ms.custom: 
+title: 계산된 테이블 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4d2b864184f74c2d3e094c579eef88634e007815
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-calculated-table"></a>계산된 테이블 만들기 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-*계산 테이블* 은 DAX 쿼리 또는 식을 기반으로 계산된 개체이며 같은 모델에 포함된 다른 테이블의 전체 또는 일부에서 파생됩니다.  
+  *계산 테이블* 은 DAX 쿼리 또는 식을 기반으로 계산된 개체이며 같은 모델에 포함된 다른 테이블의 전체 또는 일부에서 파생됩니다.  
   
  계산 테이블이 해결할 수 있는 일반적인 디자인 문제는 클라이언트 응용 프로그램의 쿼리 구조로 노출할 수 있도록 특정 컨텍스트에서 롤플레잉 차원을 겉으로 드러내는 것입니다.  롤플레잉 차원은 여러 컨텍스트에 표면화되는 테이블입니다. 전형적인 예에는 외래 키 관계에 따라서 OrderDate, ShipDate, 또는 DueDate으로 표시되는 날짜 테이블이 있습니다. ShipDate의 계산 테이블을 명시적으로 만들면, 쿼리에 사용할 수 있는 다른 테이블처럼 완벽하게 작동되는 독립 실행형 테이블을 갖게 됩니다.  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>참고 항목  
  [호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [데이터 분석 식 &#40; DAX &#41; Analysis Services에서](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [Data Analysis Expressions &#40;DAX&#41; Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [테이블 형식 모델의 DAX 이해](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

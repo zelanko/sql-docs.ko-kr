@@ -1,7 +1,6 @@
 ---
 title: SortDirection 속성 (RDS) | Microsoft Docs
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0a2f3a562830e9a9ebf3030edd8bc14483a57bc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a5e90064c340e36df27bccd4a8122d6d40a27ff8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 속성 (RDS)
 정렬 순서를 오름차순 이나 내림차순 있는지 여부를 나타냅니다.  

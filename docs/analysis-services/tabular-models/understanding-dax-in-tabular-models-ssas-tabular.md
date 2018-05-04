@@ -1,31 +1,29 @@
 ---
-title: "테이블 형식 모델의 DAX | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델의 DAX | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e1fb8bb03a256dfb0e2acbaebd15be4680c437f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-in-tabular-models"></a>테이블 형식 모델의 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
+  데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
   
  Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에 DAX가 사용 하는 동안 SQL Server Data Tools (SSDT) 작성 하는 Analysis Services 테이블 형식 모델 프로젝트에이 항목 더 적용 합니다.  
   
@@ -400,7 +398,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [계산 된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [지원되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

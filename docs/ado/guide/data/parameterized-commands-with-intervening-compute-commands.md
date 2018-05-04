@@ -1,11 +1,9 @@
 ---
 title: 매개 변수가 있는 중간 계산 명령 사용 하 여 명령 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e03709adbc901a8f9f365c291e1809ec48e1ed9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2affa34fd504397b045e100ec8f07232d6dfec7e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간으로 매개 변수화 된 명령을 계산 명령
 일반적으로 매개 변수가 있는 shape APPEND 명령에는 부모 만드는 **레코드 집합** 쿼리 명령 및 절 자식 **레코드 집합** 매개 변수가 있는 쿼리 명령- 즉, 매개 변수 자리 표시자를 포함 하는 명령 (매개 변수 "?"). 명령의 결과로 만들어지는 셰이핑된 **레코드 집합** 부모는 상위 수준 차지 하는 두 개의 수준이 및 자식 하위 수준을 차지 합니다.  

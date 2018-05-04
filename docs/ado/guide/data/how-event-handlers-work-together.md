@@ -1,11 +1,9 @@
 ---
 title: 이벤트 처리기 함께 작동 하는 방법 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e8c279565b17cf236223c641a13c23727fd4c00
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4ef9af3c4ba076048e0d04d31601b20e9d9ca321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기 함께 작동 하는 방법
 Visual Basic의 경우에 대 한 모든 이벤트 처리기에서 프로그래밍 하는 경우가 아니면 **연결** 및 **레코드 집합** 여부 실제로 처리의 모든 이벤트에 관계 없이 이벤트에 구현, 되어야 합니다. 구현 작업을 수행 해야 하는 프로그래밍 언어에 따라 다릅니다. 자세한 내용은 참조 [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  

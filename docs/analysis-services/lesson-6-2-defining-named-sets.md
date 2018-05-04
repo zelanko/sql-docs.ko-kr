@@ -1,29 +1,27 @@
 ---
-title: "명명 된 집합 정의 | Microsoft Docs"
-ms.custom: 
+title: 명명 된 집합 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7eda2cde35da166c5c7bd55a0fc8ff27ceaac686
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>단원 2-6-명명 된 집합 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/15/2018
   
     **계산** 탭에서 새 계산을 정의할 때 계산은 **스크립트 구성 도우미** 창에 나타나는 순서대로 수행된다는 사실에 유의하세요. 새 계산을 만들 때 해당 창 내의 포커스에 따라 계산 실행 순서가 결정됩니다. 즉, 새로운 계산은 포커스된 계산 바로 다음에 정의됩니다.  
   
-3.  **이름** 상자에서 새 명명된 집합의 이름을 **[Core Products]**로 변경합니다.  
+3.  **이름** 상자에서 새 명명된 집합의 이름을 **[Core Products]** 로 변경합니다.  
   
     **스크립트 구성 도우미** 창에는 스크립트 명령이나 계산 멤버에서 명명된 집합을 구분할 수 있는 고유 아이콘이 표시됩니다.  
   
@@ -59,9 +57,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  **스크립트 구성 도우미** 창에서 **[Core Products]** 를 마우스 오른쪽 단추로 클릭한 후 **새 명명된 집합**을 클릭합니다.  
   
-2.  **이름** 상자에서 이 명명된 집합의 이름을 **[Large Resellers]**로 변경합니다.  
+2.  **이름** 상자에서 이 명명된 집합의 이름을 **[Large Resellers]** 로 변경합니다.  
   
-3.  **식** 상자에 **Exists()**를 입력합니다.  
+3.  **식** 상자에 **Exists()** 를 입력합니다.  
   
     Exists 함수를 사용하여 직원 수 특성 계층에서 직원 수가 가장 많은 멤버 집합과 공통되는 Reseller Name 특성 계층의 멤버 집합을 반환합니다.  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 02/15/2018
     ![설정 하는 두 개의 명명 된 포함 된 필터 창](../analysis-services/media/l6-named-set-05.gif "설정 하는 두 개의 명명 된 포함 된 필터 창")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[7 단원: 핵심 성과 지표 &#40; 정의 Kpi &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[7 단원: 핵심 성과 지표 & #40; 정의 Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [새 명명된 집합](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

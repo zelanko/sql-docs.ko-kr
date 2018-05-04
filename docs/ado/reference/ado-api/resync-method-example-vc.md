@@ -1,11 +1,9 @@
 ---
 title: 메서드 예제 (VC + +)를 다시 동기화 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 617b832139e11c40212709bfc55f72dfa935226b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dc310864a557ae3157d047f0d6fc05dd3e24b729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resync-method-example-vc"></a>Resync 메서드 예제 (VC + +)
 사용 하 여 보여 주는이 예제는 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터를 새로 고치려면 메서드.  

@@ -1,36 +1,34 @@
 ---
-title: "모델 필터 구문 및 예 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 모델 필터 구문 및 예 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
 - filters [data mining]
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 604ebf923421203002abc9ab64cebc9600897f6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
+  이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
   
  [필터 구문](#bkmk_Syntax)  
   
@@ -319,7 +317,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 &#40;에 대 한 필터 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [테스트 및 유효성 검사 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [마이닝 모델 & #40;에 대 한 필터 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

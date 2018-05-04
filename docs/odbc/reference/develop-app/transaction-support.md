@@ -3,15 +3,12 @@ title: 트랜잭션 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], degree of support
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87749f1401ebd435e32537bee2d721d013339ad7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2f3e62cd93f3823a2205ed2c2721ed95749f7a1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
 트랜잭션에 대 한 지원 수준을 드라이버 정의입니다. ODBC가 해당 데이터에 대 한 여러 업데이트를 관리할 필요가 없는 단일 사용자 또는 데스크톱 데이터베이스에서 구현 하도록 설계 되었습니다. 트랜잭션을 지 원하는 일부 데이터베이스의 경우에 SQL;의 데이터 조작 언어 (DML) 문을 수행 하는 또한 제한이 나 특별 한 트랜잭션 의미 체계 데이터 정의 언어 (DDL)를 사용 하면 됩니다 트랜잭션이 활성 상태입니다. 즉, 수 및 트랜잭션 중 테이블의 정의 변경 하지 않습니다 테이블에 여러 동시 업데이트에 대 한 트랜잭션 지원이 있을 수 있습니다.  

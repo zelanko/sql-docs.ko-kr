@@ -1,11 +1,9 @@
 ---
 title: UpdateBatch 및 CancelBatch 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7967949692de5fc53ff8064f77a4b8593246db8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 479b8f0bcad30e575b79d66848959f9b31234f9a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch 및 CancelBatch 메서드 예제 (VB)
 이 예제에서는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드와 함께 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드.  

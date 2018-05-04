@@ -1,31 +1,29 @@
 ---
-title: "SSMS에서 DirectQuery 모드를 사용 하도록 설정 | Microsoft Docs"
-ms.custom: 
+title: SSMS에서 DirectQuery 모드를 사용 하도록 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 629f130bd16e91d3e6f86aed112e417ac1f5a142
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS에서 DirectQuery 모드를 사용하도록 설정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이미 배포된 테이블 형식 모델의 데이터 액세스 속성을 변경하여 메모리 내 상주하는 캐시된 데이터가 아닌 백 엔드 관계형 데이터 원본에 대해 쿼리가 실행되는 DirectQuery 모드를 사용하도록 설정합니다.  
+  이미 배포된 테이블 형식 모델의 데이터 액세스 속성을 변경하여 메모리 내 상주하는 캐시된 데이터가 아닌 백 엔드 관계형 데이터 원본에 대해 쿼리가 실행되는 DirectQuery 모드를 사용하도록 설정합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DirectQuery 구성 단계는 모델의 호환성 수준에 따라 다릅니다. 아래에서 모든 호환성 수준에 대해 해당하는 단계를 찾을 수 있습니다.  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** > **호환성 수준**을 선택합니다.  
   
-     값은 **SQL Server 2016(1200)** 또는 **SQL Server 2012 SP1 이상(1103)**과 같은 이전 수준입니다. 다음 단계에서는 호환성 수준에 적용되는 지침을 따릅니다.  
+     값은 **SQL Server 2016(1200)** 또는 **SQL Server 2012 SP1 이상(1103)** 과 같은 이전 수준입니다. 다음 단계에서는 호환성 수준에 적용되는 지침을 따릅니다.  
   
  테이블 형식 모델을 DirectQuery 모드로 변경하면 새 데이터 저장소 모드가 즉시 적용됩니다.  
   

@@ -1,11 +1,9 @@
 ---
 title: MaxRecords 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f59c12cae5ff2b8ce4c78602b7f47d13fbde6f5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9aa666a38ea427f1852884bf20fa7b6e86cfdd6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 속성 예제 (VB)
 사용 하 여이 예제는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성 열을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 10 개의 가장 비싼 책 제목을 포함 하는 ***타이틀*** 테이블입니다.  

@@ -22,17 +22,16 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72db0f9fdccee0d33336cca468a087140d3c1918
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  테이블 또는 인덱싱된 뷰에 관한 행 개수 또는 체크섬 정보를 반환하거나 제공된 행 개수 또는 체크섬 정보를 지정된 테이블 또는 인덱싱된 뷰와 비교합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에서 실행됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.*합니다.  
+  테이블 또는 인덱싱된 뷰에 관한 행 개수 또는 체크섬 정보를 반환하거나 제공된 행 개수 또는 체크섬 정보를 지정된 테이블 또는 인덱싱된 뷰와 비교합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에서 실행됩니다. *Oracle 게시자에 대해 지원 되지 않습니다.* 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

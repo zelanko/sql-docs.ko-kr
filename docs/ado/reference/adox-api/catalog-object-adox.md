@@ -1,11 +1,9 @@
 ---
 title: 카탈로그 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca653196f3f56508351d376ba48b4e7f737439b7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체 (ADOX)
 컬렉션을 포함 ([테이블](../../../ado/reference/adox-api/tables-collection-adox.md), [뷰](../../../ado/reference/adox-api/views-collection-adox.md), [사용자](../../../ado/reference/adox-api/users-collection-adox.md), [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md))를 데이터 원본의 스키마 카탈로그에 설명 합니다.  

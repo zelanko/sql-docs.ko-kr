@@ -3,15 +3,12 @@ title: getBigDecimal 메서드 (java.lang.String) (SQLServerResultSet) | Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getBigDecimal (java.lang.String)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 40cbeef87883a9ce1601284c856c780753d8ea04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: c45eaa28eef97b78402268009dd11e05f5ea5aa0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbigdecimal-method-javalangstring-sqlserverresultset"></a>getBigDecimal 메서드 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
 #### <a name="parameters"></a>매개 변수  
  *columnName*  
   
- A **문자열** 열 이름이 들어 있는입니다.  
+ 열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  BigDecimal 개체입니다.  

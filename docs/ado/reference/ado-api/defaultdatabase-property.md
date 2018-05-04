@@ -1,11 +1,9 @@
 ---
 title: DefaultDatabase 속성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f90b450fa2421d47a16946b20fdc707cc266b3e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fd4eee432fd8fb8e9cc6fb34b141f3c5845d595d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 속성
 에 대 한 기본 데이터베이스를 나타내지는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  

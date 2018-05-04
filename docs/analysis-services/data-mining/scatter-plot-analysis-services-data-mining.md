@@ -1,36 +1,34 @@
 ---
-title: "산 점도 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 산 점도 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
 - mining models [Analysis Services], validating
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 14f83d4b7235f3633c05c35afd2c648397e4f8a0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0d6c19559e2dde4435611504b759b00e0b69efdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>산점도(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
+  *산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
   
 ## <a name="understanding-the-scatter-plot"></a>산점도 이해  
  마케팅 부서에서 발송된 홍보 전자 메일에 포함된 링크가 클릭된 횟수를 기반으로 일일 판매를 예측하는 모델이 있다고 가정합니다. 클릭 횟수와 판매량 모두 연속적인 숫자 값이므로 클릭 횟수를 독립 변수로 사용하고 판매를 종속 변수로 사용하여 해당 값을 그래프로 표시할 수 있습니다. 이렇게 하면 직선으로 예상 선형 관계가 표시되고 해당 선 주위에 흩어져 있는 점으로 실제 데이터와 예상 데이터의 차이가 표시됩니다. 이 분석을 통해 사용자는 결과 집합과 특정 입력 간의 상관 관계 및 이상적인 모델과의 편차를 한 눈에 확인할 수 있습니다.  

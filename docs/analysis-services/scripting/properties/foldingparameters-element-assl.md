@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 01fb643c1a870e85bc08645ab7cd9babd64d95a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>FoldingParameters 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]사용 하는 매개 변수를 지정 된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 마이닝 모델의 교차 유효성 검사를 수행 하는 경우에 서버입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에서 마이닝 모델의 교차 유효성 검사를 수행할 때 사용하는 매개 변수를 지정합니다.  
   
 > [!NOTE]  
 >  이러한 매개 변수는 내부에서 사용하기 위한 것입니다. 여기에 제공된 정보는 참조용일 뿐입니다.  
@@ -76,9 +75,9 @@ ms.lasthandoff: 01/08/2018
   
  교차 유효성 검사를 사용 하는 방법에 대 한 내용은 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], 참조 [교차 유효성 검사 보고서의 측정값](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)합니다.  
   
- 사용 하 여 교차 유효성 검사를 수행 하는 방법에 대 한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 저장된 프로시저 참조 [데이터 마이닝 저장 프로시저 &#40; Analysis Services-데이터 마이닝 &#41; ](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ 사용 하 여 교차 유효성 검사를 수행 하는 방법에 대 한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 저장된 프로시저 참조 [Stored Procedures &#40;Analysis Services-데이터 마이닝&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

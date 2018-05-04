@@ -3,15 +3,12 @@ title: SQLSetPos와 행 집합의 행이 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 868728a48781c03c6f1df7ec3d43108d989d5913
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c5e971d597178501ecc7107da4bbaeb6158f0c99
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos와 행 집합의 행 업데이트
 업데이트 작업과 **SQLSetPos** 은 데이터 원본 ()를 제외 길이/표시기 버퍼의 값 SQL_COLUMN_IGNORE 응용 프로그램 버퍼의 데이터를 바인딩된 각 열에 대 한 사용 하는 테이블의 하나 이상의 선택 된 행을 업데이트 합니다. 바인딩되지 않은 열을 업데이트 하지 않습니다.  

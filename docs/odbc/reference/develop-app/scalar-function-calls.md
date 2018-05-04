@@ -3,15 +3,12 @@ title: 스칼라 함수 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
@@ -19,17 +16,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ee7070453f7d6303bdaebe15c7bbdd89710d5c28
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  
   
- **{fn***스칼라 함수* **}**   
+ **{fn***스칼라 함수* **}**  
   
  여기서 *스칼라 함수* 에 나열 된 함수 중 하나인 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)합니다. 스칼라 함수 이스케이프 시퀀스에 대 한 자세한 내용은 참조 [스칼라 함수 이스케이프 시퀀스](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) 부록 c: SQL 문법에 있습니다.  
   

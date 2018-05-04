@@ -3,15 +3,12 @@ title: 행 집합 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
 - cursors [ODBC], block
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0fa3d2feb8bcd3c4c342567e67f403edfb8029a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-size"></a>행 집합 크기
 응용 프로그램에 사용 하는 행 집합 크기에 따라 다릅니다. 일반적으로 화면 기반 응용 프로그램 두 가지 전략 중 하나를 수행 합니다. 첫 번째 화면에 표시 되는 행의 수는 행 집합 크기를 설정 하는 사용자가 화면을 응용 프로그램에 따라 행 집합 크기를 변경 합니다. 두 번째에 더 큰 숫자를 100, 데이터 원본에 대 한 호출 수를 줄일 수 있는를 행 집합 크기를 설정 하는 것입니다. 응용 프로그램이 로컬로 가능 하면 행 집합 내의 스크롤하고 행 집합 외부 스크롤 하는 경우에 새 행을 인출 합니다.  

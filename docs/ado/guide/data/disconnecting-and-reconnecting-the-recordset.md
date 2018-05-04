@@ -1,11 +1,9 @@
 ---
 title: 연결을 끊고 다시 연결 하는 레코드 집합 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8a3f26ec756ac328c7b717f5f25b566d543d0ff
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9c801632ede4bf71dbfafdc799f5329179abb536
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>연결을 끊고 다시 연결 하는 레코드 집합
 ADO에서 볼 수 있는 가장 강력한 기능 중 하나에 데이터 원본에서 클라이언트 레코드 집합을 연 다음 데이터 원본에서 레코드 집합을 분리 하는 기능입니다. 레코드 집합의 연결이 끊어지면 데이터 원본에 대 한 연결 종료 되므로 유지 관리 하는 데 사용 하는 서버에 있는 리소스를 해제 합니다. 보고 연결이 끊어져도 레코드 집합의 데이터를 편집 하 계속 지정 하 고 나중에 데이터 원본에 연결 한 일괄 처리 모드에서 업데이트를 보냅니다.  

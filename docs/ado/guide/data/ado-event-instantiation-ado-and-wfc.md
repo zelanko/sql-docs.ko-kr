@@ -1,11 +1,9 @@
 ---
 title: 'ADO 이벤트 인스턴스화: ADO 및 WFC | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -17,12 +15,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa47c181873d3bfedd0f3c062f96ebad6fe5e9e9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 89fefc8d733f515ef6f085e39b69268a808cefd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스화: ADO 및 WFC
 ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕으로 하며 단순화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC 차단 ADO 이벤트, 이벤트 매개 변수는 단일 이벤트 클래스를 통합 하 고 이벤트 처리기를 호출 합니다.  

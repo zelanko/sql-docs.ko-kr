@@ -3,15 +3,12 @@ title: 반환 코드 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 94516e72196f3dfd2e49d8600a380a43954835a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 12751f87c9f9832567dc04ba7df7659e80e66897
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-codes-odbc"></a>ODBC 반환 코드
 ODBC에서 각 함수 라고 하는 코드를 반환 합니다. 해당 *코드를 반환* 전반적인 성공 또는 실패는 함수의 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  

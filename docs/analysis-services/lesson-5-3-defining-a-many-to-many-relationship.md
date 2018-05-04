@@ -1,29 +1,27 @@
 ---
-title: "다 대 다 관계 정의 | Microsoft Docs"
-ms.custom: 
+title: 다 대 다 관계 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 40bbfb602aadc6e30b58f9f44417b892b4f5b003
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-다 대 다 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  속성 창에서 **DimSalesReason** 테이블의 **FriendlyName** 속성을 **SalesReason**으로 변경한 다음 **FactInternetSalesReason** 테이블의 **FriendlyName** 속성을 **InternetSalesReason**으로 변경합니다.  
   
-8.  **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)**을 확장하고 **SalesOrderNumber**를 클릭한 다음 속성 창에서 이 데이터 열의 **DataType** 속성을 검토합니다.  
+8.  **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)** 을 확장하고 **SalesOrderNumber**를 클릭한 다음 속성 창에서 이 데이터 열의 **DataType** 속성을 검토합니다.  
   
     **SalesOrderNumber** 열의 데이터 형식은 문자열 데이터 형식입니다.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
     이 테이블의 다른 두 개의 열에 대한 데이터 형식은 숫자 데이터 형식입니다.  
   
-10. **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 탐색**을 클릭합니다.  
+10. **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)** 을 마우스 오른쪽 단추로 클릭한 다음 **데이터 탐색**을 클릭합니다.  
   
     다음 이미지에서와 같이 각 주문에서 각 줄 번호의 키 값은 해당 줄 항목의 구매에 대한 판매 이유를 식별합니다.  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 11. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-12. **특성** 차원에 대한 차원 디자이너의 **특성** 창에서 **특성 Key**를 선택한 후 속성 창의 **Name** 속성을 **특성.**으로 변경합니다.  
+12. **특성** 차원에 대한 차원 디자이너의 **특성** 창에서 **특성 Key**를 선택한 후 속성 창의 **Name** 속성을 **특성.** 으로 변경합니다.  
   
 13. 차원 디자이너의 **계층** 창에서 **Sales Reason Type** 수준과 **Sales Reason** 수준이 순서대로 포함된 **Sales Reasons** 사용자 계층을 만듭니다.  
   
@@ -183,7 +181,7 @@ ms.lasthandoff: 02/15/2018
 [측정값 그룹의 차원 세분성 정의](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰 디자이너 &#40;에서 다이어그램 작업 Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [다 대 다 관계 및 다 대 다 관계 속성 정의](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

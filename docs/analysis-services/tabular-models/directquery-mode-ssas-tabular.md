@@ -1,33 +1,31 @@
 ---
-title: "DirectQuery 모드 | Microsoft Docs"
-ms.custom: 
+title: DirectQuery 모드 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 
+caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fd7eea172e333bb38d5e014a5dffe32fa4d9a8d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery 모드
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 설명 *DirectQuery 모드* 1200 이상 호환성 수준에서 Analysis Services 테이블 형식 모델에 대 한 합니다. SSDT에서 디자인하는 모델에 대해 DirectQuery 모드를 설정하거나 이미 배포된 테이블 형식 모델에 대해 SSMS에서 DirectQuery 모드로 변경할 수 있습니다. DirectQuery 모드를 선택하기 전에 이점과 제한 사항을 이해하는 것이 중요합니다.
+  이 문서에서는 설명 *DirectQuery 모드* 1200 이상 호환성 수준에서 Analysis Services 테이블 형식 모델에 대 한 합니다. SSDT에서 디자인하는 모델에 대해 DirectQuery 모드를 설정하거나 이미 배포된 테이블 형식 모델에 대해 SSMS에서 DirectQuery 모드로 변경할 수 있습니다. DirectQuery 모드를 선택하기 전에 이점과 제한 사항을 이해하는 것이 중요합니다.
   
 ##  <a name="bkmk_Benefits"></a> 이점
  기본적으로 테이블 형식 모델은 메모리 내 캐시를 사용하여 데이터를 저장하고 쿼리합니다. 테이블 형식 모델이 메모리에 있는 데이터를 쿼리할 경우 복잡한 쿼리도 아주 빨리 처리할 수 있습니다. 그러나 캐시된 데이터를 사용할 경우 몇 가지 제한 사항이 있습니다. 다시 말해, 큰 데이터 집합은 사용 가능한 메모리를 초과할 수 있으며 데이터 새로 고침 요건을 정기적인 프로세싱 일정으로 수행하는 것이 (불가능하지 않다면) 어려울 수 있습니다.  

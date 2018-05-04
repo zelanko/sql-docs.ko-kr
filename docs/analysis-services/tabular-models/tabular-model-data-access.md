@@ -1,31 +1,29 @@
 ---
-title: "테이블 형식 모델 데이터 액세스 | Microsoft Docs"
-ms.custom: 
+title: 테이블 형식 모델 데이터 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 52f00f6e7be210c9c45fa5973fd9d8b8ff019bad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
+  Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  이 문서에서는 클라이언트, 쿼리 언어 및 테이블 형식 모델과 함께 작동 하는 프로그래밍 인터페이스를 설명 합니다.  
   
@@ -91,7 +89,7 @@ Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 �
 ### <a name="data-and-metadata"></a>데이터 및 메타데이터  
  ADOMD.NET을 사용하여 관리 응용 프로그램의 테이블 형식 모델에서 데이터 및 메타데이터를 검색할 수 있습니다. 
   
--   [사용 하 여 동적 관리 뷰 &#40; Dmv &#41; Analysis Services를 모니터링 하려면](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [사용 하 여 동적 관리 뷰 & #40; Dmv & #41; Analysis Services를 모니터링 하려면](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  관리되지 않는 클라이언트 응용 프로그램에서 Analysis Services 9.0 OLE DB 공급자를 사용하여 테이블 형식 모델에 대한 OLE DB 액세스를 지원할 수 있습니다. 테이블 형식 모델 액세스를 사용하도록 설정하려면 업데이트된 버전의 Analysis Services OLE DB 공급자가 필요합니다. 테이블 형식 모델과 함께 사용되는 공급자에 대한 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 를 참조하세요.  
   

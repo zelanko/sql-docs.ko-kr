@@ -3,15 +3,12 @@ title: SQLGetEnvAttr 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1a31f7d374a06a4e9cfe963c92b73fa681a41d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 함수
 **규칙**  
@@ -92,10 +88,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>설명  
  특성 목록이 참조 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)합니다. 드라이버 관련 환경 특성이 없는 합니다. 경우 *특성* 지정는 문자열을 반환 하는 특성 *ValuePtr* 문자열을 반환 하는 버퍼에 대 한 포인터 여야 합니다. Null 종료 바이트를 포함 하 여 문자열의 최대 길이 됩니다 *BufferLength* 바이트입니다.  
   
- **SQLGetEnvAttr** 언제 든 지 할당 및 환경 핸들의 해제 간의 호출할 수 있습니다. 모든 환경 특성 환경에 대 한 응용 프로그램에 의해 성공적으로 설정 될 때까지 지속 **SQLFreeHandle** 라고 하는 *EnvironmentHandle* 와 *HandleType*SQL_HANDLE_ENV입니다. ODBC 3에서 개 이상의 환경 핸들을 동시에 할당 될 수*.x*합니다. 다른 환경에서 할당 한 환경에 대 한 환경 특성 영향을 주지 않습니다.  
+ **SQLGetEnvAttr** 언제 든 지 할당 및 환경 핸들의 해제 간의 호출할 수 있습니다. 모든 환경 특성 환경에 대 한 응용 프로그램에 의해 성공적으로 설정 될 때까지 지속 **SQLFreeHandle** 라고 하는 *EnvironmentHandle* 와 *HandleType*SQL_HANDLE_ENV입니다. ODBC 3에서 개 이상의 환경 핸들을 동시에 할당 될 수 *.x*합니다. 다른 환경에서 할당 한 환경에 대 한 환경 특성 영향을 주지 않습니다.  
   
 > [!NOTE]  
->  SQL_ATTR_OUTPUT_NTS 환경 특성은 표준 호환 응용 프로그램에서 지원 됩니다. 때 **SQLGetEnvAttr** 호출 되는 ODBC 3*.x* 드라이버 관리자에서이 특성에 대 한이 SQL_TRUE을 항상 반환 합니다. 에 대 한 호출에 의해서만 SQL_ATTR_OUTPUT_NTS SQL_TRUE로 설정할 수 있습니다 **SQLSetEnvAttr**합니다.  
+>  SQL_ATTR_OUTPUT_NTS 환경 특성은 표준 호환 응용 프로그램에서 지원 됩니다. 때 **SQLGetEnvAttr** 호출 되는 ODBC 3 *.x* 드라이버 관리자에서이 특성에 대 한이 SQL_TRUE을 항상 반환 합니다. 에 대 한 호출에 의해서만 SQL_ATTR_OUTPUT_NTS SQL_TRUE로 설정할 수 있습니다 **SQLSetEnvAttr**합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

@@ -1,36 +1,34 @@
 ---
-title: "기본 데이터 모델링 및 배포 속성 구성 | Microsoft Docs"
-ms.custom: 
+title: 기본 데이터 모델링 및 배포 속성 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
 - sql13.asvs.bidtoolset.deployment.f1
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1d499f04939ed3db6d308ad5bbbd8fee893ba991
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties"></a>기본 데이터 모델링 및 배포 속성 구성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 기본 호환성 모드를 구성 하는 방법을 설명, 배포 및 각각의 새 테이블 형식 모델 프로젝트에 대 한 미리 정의 될 수 있는 작업 영역 데이터베이스 속성 설정에서 만드는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
+  이 문서에서는 기본 호환성 모드를 구성 하는 방법을 설명, 배포 및 각각의 새 테이블 형식 모델 프로젝트에 대 한 미리 정의 될 수 있는 작업 영역 데이터베이스 속성 설정에서 만드는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 호환성 수준 속성 설정을 구성하려면  
   

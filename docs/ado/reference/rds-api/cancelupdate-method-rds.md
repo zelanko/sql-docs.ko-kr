@@ -1,11 +1,9 @@
 ---
 title: CancelUpdate 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fcfca6a612abc9462f64e547041a85e0a2a75ae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 209d0c496f3c9467acb947e44165b91a6619af7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 메서드 (RDS)
 현재 또는 새 행에 대해 모든 변경 내용을 취소 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

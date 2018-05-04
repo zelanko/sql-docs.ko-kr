@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8b771edea6a71767e05e9d24c3ddd542bae2930c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
-  **\<xsd: schema >** 요소에 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema합니다.  
+ **\<xsd: schema >** 요소에 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema합니다.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 스키마에 주석 추가  
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
  사용된 네임스페이스 접두사는 임의로 지정되었습니다. 이 설명서에는 **sql** 접두사는 주석 네임 스페이스를 나타내고이 네임 스페이스의 주석을 다른 네임 스페이스에 있는 구분 하기 위해 사용 됩니다.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>주석이 추가된 XSD 스키마 예  
- 다음 예제에서는 XSD 스키마를 사용 하는 구성의 되어는  **\<Person.Contact >** 요소입니다.  **\<직원 >** 요소에는 **ContactID** 특성 및  **\<FirstName >** 및  **\< LastName >** 자식 요소:  
+ 다음 예제에서는 XSD 스키마를 사용 하는 구성의 되어는  **\<Person.Contact >** 요소입니다. **\<직원 >** 요소에는 **ContactID** 특성 및  **\<FirstName >** 및  **\< LastName >** 자식 요소:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  

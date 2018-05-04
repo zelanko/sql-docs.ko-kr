@@ -1,11 +1,9 @@
 ---
 title: 참여할 수 있 및 범위란 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af05e941113e554d0bd5859433292fca15fb74ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e2e85295b4a6078e6b4b8c66f0bec9fe5ff76383
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>참여할 수 있 및 범위란 메서드 예제 (VB)
 이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 하는 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [소스](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  

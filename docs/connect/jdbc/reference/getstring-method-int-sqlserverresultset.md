@@ -3,13 +3,10 @@ title: getString 메서드 (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0729936ae20c54d12fefa82429bcf709b5ef853b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 51332e0e8d3b09723130585b770fff3d9d4b6e80
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,10 +40,10 @@ public java.lang.String getString(int columnIndex)
 #### <a name="parameters"></a>매개 변수  
  *columnIndex*  
   
- **int** 열 인덱스를 나타내는입니다.  
+ 열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 값입니다.  
+ **문자열** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,7 +51,7 @@ public java.lang.String getString(int columnIndex)
 ## <a name="remarks"></a>주의  
  이 getString 메서드는 java.sql.ResultSet 인터페이스의 getString 메서드에 의해 지정 됩니다.  
   
- 모든 열 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] String으로 반환 될 수 있습니다. 즉, 한 **문자열** 모든 숫자 기반 및 문자 기반 형식 표현과 binary, varbinary, varbinary (max), 이미지, 타임 스탬프 및 uniqueidentifier 같은 이진 열의 16 진수 문자열 표현 될 수 있습니다 반환 됩니다.  
+ 모든 열 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] String으로 반환 될 수 있습니다. 즉, 모든 숫자 기반 및 문자 기반 형식의 **문자열** 표현과 binary, varbinary, varbinary(max), image, timestamp 및 uniqueidentifier 같은 이진 열의 16진수 문자 표현이 반환될 수 있습니다.  
   
  money, smallmoney, datetime, smalldatetime, float, real, decimal 및 numeric과 같이 위치에 영향을 받는 형식은 해당 형식의 기본 값에 대해 정규 toString() 형식을 반환합니다.  
   

@@ -1,35 +1,34 @@
 ---
-title: "만들기 명령 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 만들기 명령 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 466863efaf71bc8eb9049b771fe477745cdb6080
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-command-tmsl"></a>만들기 명령 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]지정된 된 개체와 모든 지정 된 하위 개체를 만듭니다. 개체가 이미 존재 하는 경우 명령에서 오류가 발생 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  지정된 된 개체와 모든 지정 된 하위 개체를 만듭니다. 개체가 이미 존재 하는 경우 명령에서 오류가 발생 합니다.  
   
 ## <a name="request"></a>요청  
  요청의 구조 개체에 따라 다릅니다. 부모와 형제의 전체 개체 정의 필요 없지만 부모인 개체 해당 자식을 모두 포함 해야 합니다.  
   
- [데이터베이스 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) 데이터베이스 서버를 추가 합니다.  
+ [데이터베이스 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) 데이터베이스 서버를 추가 합니다.  
   
 ```  
 {   
@@ -51,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [데이터 원본 개체 &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [데이터 원본 개체 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 테이블에 열을 추가 합니다.  
+ [Tables 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 테이블에 열을 추가 합니다.  
   
 ```  
 {   
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [파티션 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) 부모 테이블 개체에 파티션을 추가 합니다.  
+ [파티션 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) 부모 테이블 개체에 파티션을 추가 합니다.  
   
 ```  
 {  
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [역할 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) 최소한 데이터베이스, 하지 않고 멤버 자격 또는 필터 역할을 추가 합니다.  
+ [역할 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) 최소한 데이터베이스, 하지 않고 멤버 자격 또는 필터 역할을 추가 합니다.  
   
 ```  
 {  
@@ -170,7 +169,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>사용 현황 (끝점)  
- Command 요소에이의 문에 사용 되는 [메서드 실행 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
+ Command 요소에이의 문에 사용 되는 [메서드 실행 &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) 다음과 같은 방법으로 노출 하는 XMLA 끝점을 통해 호출 합니다.  
   
 -   SQL Server Management Studio (SSMS)의 XMLA 창으로  
   
@@ -180,7 +179,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS에서이 명령에 대 한 기본으로 제공 되는 스크립트를 생성할 수 있습니다.  예를 들어 기존 데이터베이스 단추로 > **스크립트** > **스크립트 데이터베이스** > **CREATE To**합니다.  
   
- [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 ([테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md))에 대 한 지원 되는 기능에 대 한 설명입니다.  
+ [ \[MS-SSAS-T\]: QL Server Analysis Services 테이블 (SQL Server 기술 프로토콜)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 테이블 형식 메타 데이터 명령 및 개체의 구조를 설명 하는 섹션 3.1.5.2.2 문서를 포함 합니다. 현재 문서에서는 명령과 기능은 아직 구현 되지 않은 TMSL 스크립트에서 다룹니다. 항목을 참조 ([테이블 형식 모델 스크립팅 언어 &#40;TMSL&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md))에 대 한 지원 되는 기능에 대 한 설명입니다.  
 
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

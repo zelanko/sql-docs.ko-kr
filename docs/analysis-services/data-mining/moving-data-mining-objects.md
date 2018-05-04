@@ -1,16 +1,15 @@
 ---
-title: "데이터 마이닝 개체 이동 | Microsoft Docs"
-ms.custom: 
+title: 데이터 마이닝 개체 이동 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af5fab1c549b2a4bcc8ed3bc9f670ac80444856e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-data-mining-objects"></a>데이터 마이닝 개체 이동
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 개체를 이동하기 위한 가장 일반적인 시나리오는 테스트 또는 분석 환경에서 프로덕션 환경으로 모델을 배포하거나 다른 사용자와 모델을 공유하는 것입니다.  
+  데이터 마이닝 개체를 이동하기 위한 가장 일반적인 시나리오는 테스트 또는 분석 환경에서 프로덕션 환경으로 모델을 배포하거나 다른 사용자와 모델을 공유하는 것입니다.  
   
  이 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 도구와 스크립트 언어를 사용하여 데이터 마이닝 개체를 이동하는 방법에 대해 설명합니다.  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/15/2018
  Analysis Services 솔루션 배포에 대한 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   
 ### <a name="scripting"></a>스크립팅  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 개체를 스크립팅하는 데 사용할 수 있는 여러 언어를 제공합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]개체를 스크립팅 하는 데 사용할 수 있는 여러 언어를 제공 합니다.  
   
 -   **XMLA**: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체를 마우스 오른쪽 단추로 클릭하면 XMLA를 사용하여 개체를 스크립팅할 수 있습니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
   
@@ -80,9 +78,9 @@ ms.lasthandoff: 02/15/2018
 ### <a name="exporting-and-importing"></a>내보내기 및 가져오기  
  DMX 문을 사용하여 마이닝 모델 및 구조를 내보낸 다음 다시 가져오는 것은 개별 관계형 데이터 마이닝 개체를 이동하거나 백업하는 가장 쉬운 방법입니다. 이러한 작업에 사용하는 DMX 구문에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [내보내기 &#40; DMX &#41;](../../dmx/export-dmx.md)  
+-   [내보내기 & #40; DMX & #41;](../../dmx/export-dmx.md)  
   
--   [가져오기 &#40; DMX &#41;](../../dmx/import-dmx.md)  
+-   [가져오기 & #40; DMX & #41;](../../dmx/import-dmx.md)  
   
  INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetPos function [ODBC], deleting rows
 - updating data [ODBC], SQLSetPos
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 828ab8f154669473a6e90b60126d3b047c45e515
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 60d225926a6c11ac81ae8fe6fea8935ee88f1778
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos이 있는 행 집합의 행 삭제
 삭제 작업의 **SQLSetPos** 은 데이터 원본 테이블의 하나 이상의 선택 된 행을 삭제 합니다. 행을 삭제 하려면 **SQLSetPos**, 응용 프로그램 호출 **SQLSetPos** 와 *작업* SQL_DELETE로 설정 하 고 *RowNumber* 로 설정는 삭제할 행의 수입니다. 경우 *RowNumber* 가 0 이면 행 집합의 모든 행이 삭제 됩니다.  

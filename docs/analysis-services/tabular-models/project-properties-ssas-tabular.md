@@ -1,34 +1,32 @@
 ---
-title: "프로젝트 속성 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.depservconfig.f1
 - sql13.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c24ad4d059199fad6e59e1c3dafe070a523ce52d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9573987a960ed42dcf0053908ac08a5deefc88b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-properties"></a>프로젝트 속성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 모델 프로젝트 속성을 설명 합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+  이 문서에서는 모델 프로젝트 속성을 설명 합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
  이 항목의 섹션:  
   

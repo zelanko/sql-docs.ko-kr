@@ -1,29 +1,27 @@
 ---
-title: "번역 정의 및 찾아보기 | Microsoft Docs"
-ms.custom: 
+title: 번역 정의 및 찾아보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f523e518746d3c4dc6843ac625537df4ab19e4bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lesson 9-2-번역 정의 및 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/15/2018
   
     언어 목록이 **언어 선택** 대화 상자에 표시됩니다.  
   
-3.  **스페인어(스페인)**를 클릭한 후 **확인**을 클릭합니다.  
+3.  **스페인어(스페인)** 를 클릭한 후 **확인**을 클릭합니다.  
   
     번역할 메타데이터 개체를 스페인어로 번역하도록 정의할 수 있는 새 열이 나타납니다. 이 자습서에서는 진행 과정을 보여 주기 위해 몇 개의 개체만 번역해 보겠습니다.  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 02/15/2018
   
     언어 목록이 **언어 선택** 대화 상자에 표시됩니다.  
   
-3.  **스페인어(스페인)**를 선택한 후 **확인**을 클릭합니다.  
+3.  **스페인어(스페인)** 를 선택한 후 **확인**을 클릭합니다.  
   
     번역할 메타데이터 개체를 스페인어로 번역하도록 정의할 수 있는 새 열이 나타납니다. 이 자습서에서는 진행 과정을 보여 주기 위해 몇 개의 개체만 번역해 보겠습니다.  
   

@@ -1,11 +1,9 @@
 ---
 title: 필터 및 RecordCount 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eefb5a795be9a94e5ea0c174423eebf885e7d240
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cf3f3b971a2dca5a9b51467f42ae028c70ec0793
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>필터 및 RecordCount 속성 예제 (JScript)
 이 예제는 **레코드 집합** Northwind 데이터베이스 및 다음 사용 하 여 회사 테이블에는 [필터](../../../ado/reference/ado-api/filter-property.md) 문자로 시작 CompanyName 필드에는 표시 되는 레코드를 제한 하는 속성 4. 잘라내기, 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣고로 저장 **붙여 넣고 FilterJS.asp**합니다.  

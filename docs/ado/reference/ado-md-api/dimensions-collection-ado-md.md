@@ -1,11 +1,9 @@
 ---
 title: Dimensions 컬렉션 ADO MD | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a055f46b067a56c54f06a6f000ab349c2b7d78b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 000de578e95841fd9826be942fe7a2cfd1bedcf6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-collection-ado-md"></a>ADO MD 차원 컬렉션
 포함 된 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 큐브에 구성 하는 개체입니다.  

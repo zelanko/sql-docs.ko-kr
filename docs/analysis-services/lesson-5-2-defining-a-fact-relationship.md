@@ -1,29 +1,27 @@
 ---
-title: "팩트 관계 정의 | Microsoft Docs"
-ms.custom: 
+title: 팩트 관계 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d27a6da971ebd1927080235a56ccab9239ff02d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lesson 5-2-팩트 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +73,7 @@ ms.lasthandoff: 02/15/2018
   
 14. **특성** 차원에 대한 차원 디자이너의 **특성** 창에서 **Sales Order Number**를 선택한 후 속성 창의 **Name** 속성을 **Item Description**으로 변경합니다.  
   
-15. **NameColumn** 속성 셀에서 찾아보기 단추 **(…)**를 클릭합니다. **이름 열** 대화 상자의 **원본 테이블** 목록에서 **Product** 를 선택하고 **원본 열** 에 **EnglishProductName**을 선택한 후 **확인**을 클릭합니다.  
+15. **NameColumn** 속성 셀에서 찾아보기 단추 **(…)** 를 클릭합니다. **이름 열** 대화 상자의 **원본 테이블** 목록에서 **Product** 를 선택하고 **원본 열** 에 **EnglishProductName**을 선택한 후 **확인**을 클릭합니다.  
   
 16. **데이터 원본 뷰** 창에서 **InternetSales** 테이블의 **SalesOrderNumber** 열을 **특성** 창으로 끌어다 놓아 **Sales Order Number** 특성을 차원에 추가합니다.  
   

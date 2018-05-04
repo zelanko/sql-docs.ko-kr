@@ -1,11 +1,9 @@
 ---
 title: onReadyStateChange 이벤트 (RDS) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1422d6187a86c8d2908c8ed6976f730cf6c80d71
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 152acad43fbecebc5ee7808284a1d1fba90e1380
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 이벤트 (RDS)
 **onReadyStateChange** 라고 이벤트 때마다의 값은 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성 변경 합니다.  

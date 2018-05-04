@@ -1,11 +1,9 @@
 ---
 title: Visual c + + ADO 프로그래밍 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 37c00d7256beef1041ee9c24484449971c3dceee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce5a300ec2dd17109f888c9023b934c686289504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual c + + ADO 프로그래밍
 ADO API 참조는 ADO 응용 프로그램 프로그래밍 인터페이스의 (API) Microsoft Visual Basic과 유사한 구문을 사용 하 여 기능을 설명 합니다. ADO 프로그래머 Visual Basic, Visual c + + 등의 다양 한 언어를 사용 하지만 사용자는 모든 사용자, (하거나 사용 하지 않고는 **#import** 지시문), 및 Visual J++ (ADO/WFC 클래스 패키지)와 함께 합니다.  

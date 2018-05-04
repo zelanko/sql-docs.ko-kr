@@ -1,33 +1,31 @@
 ---
-title: "IMDEmbeddedData 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: IMDEmbeddedData 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 645f672d00fe685cbb19d6494a6f0f37a61c174b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 인터페이스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
+  IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
   
 -   컨테이너 문서의 포함된 스트림에 대한 식별자를 가져옵니다.  
   

@@ -1,11 +1,9 @@
 ---
 title: 예제 (VB) 카탈로그 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2a322d7d732fceb8df38ad3fedeaa0734129e08
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 58f73e76b0d26128a57fdf157e3a9f3f268ea0f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-example-vb"></a>카탈로그 예제 (VB)
 이 Visual Basic 프로젝트 MDX를 사용 하 여 새 큐브를 만듭니다. 그런 다음 Microsoft Word 문서에서 큐브의 구조를 설명합니다.  

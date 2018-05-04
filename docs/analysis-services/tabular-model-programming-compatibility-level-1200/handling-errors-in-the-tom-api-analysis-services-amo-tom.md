@@ -1,30 +1,29 @@
 ---
-title: "TOM API (Analysis Services AMO-TOM)에서 오류 처리 | Microsoft Docs"
-ms.custom: 
+title: TOM API (Analysis Services AMO-TOM)에서 오류 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fe73f11bb44968e7091fe522f4905e3640c95282
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5b023664cb70997b9aee688178a5c72eb2c06e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>TOM API (Analysis Services AMO-TOM)에서 오류 처리
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]관리 되는 라이브러리와 같은 Analysis Services Management Objects (AMO) 테이블 형식 개체 모델 (TOM)에 대 한 일반적으로 사용자에 게 오류 상태를 보고 하기 위한 메커니즘으로 예외를 사용 하는 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+관리 되는 라이브러리와 같은 Analysis Services Management Objects (AMO) 테이블 형식 개체 모델 (TOM)에 대 한 일반적으로 사용자에 게 오류 상태를 보고 하기 위한 메커니즘으로 예외를 사용 하는 것입니다.  
 
 AMO TOM에서 오류가 검색 되 면 throw 이외의 몇 가지 표준.NET 예외와 같은 **ArgumentException** 및 **InvalidOperationException**, TOM 수 예외를 throw 할 몇 가지 TOM 관련 됩니다.  
 

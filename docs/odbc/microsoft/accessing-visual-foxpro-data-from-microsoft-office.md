@@ -3,15 +3,12 @@ title: Microsoft Office에서 Visual FoxPro 데이터에 액세스 | Microsoft D
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Microsoft Office
 - Visual FoxPro data [ODBC], Microsoft Office
@@ -22,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61268fbac5c301c4c2685ad331a7604307e48927
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59167f4673335dc4167f41ab52b9aafe3bad1f4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Microsoft Office에서 Visual FoxPro 데이터에 액세스
 Windows 98 또는 Windows 95 응용 프로그램에 대 한 Microsoft Office 프로그램에서 Visual FoxPro 데이터에 액세스 하는 Microsoft Visual FoxPro ODBC 드라이버를 사용할 수 있습니다.  

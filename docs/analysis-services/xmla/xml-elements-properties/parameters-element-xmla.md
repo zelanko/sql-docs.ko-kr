@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8756ded720e9884596a7a7aaab6fdd6e2271ef7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 037f8d2363a7c454bc89a3922b0452a338cfd741
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-element-xmla"></a>Parameters 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]컬렉션을 포함 [매개 변수](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) 에서 사용 되는 요소는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  [Execute](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) 메서드에서 사용하는 [Parameter](../../../analysis-services/xmla/xml-elements-methods-execute.md) 요소의 컬렉션을 포함합니다.  
   
  **Namespace:**`urn:schemas-microsoft-com:xml-analysis`  
   
@@ -56,17 +55,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[실행](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|부모 요소|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |자식 요소|[매개 변수](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>주의  
@@ -75,6 +74,6 @@ ms.lasthandoff: 01/08/2018
  XMLA 명령이 **Parameters** 요소를 사용하지 않는 경우 **Execute** 메서드를 호출할 때 이 요소를 생략할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "테스트 및 유효성 검사 태스크 및 방법 (데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 테스트 및 유효성 검사 태스크 및 방법 (데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
 - predictive modeling [Analysis Services]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31dcf6975fb2ed24e2957f1d9171473b01da891a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 18b2af1dd2e684feb86e5a21989f3707852b6ff3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>테스트 및 유효성 검사 태스크 및 방법(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**에서 데이터 마이닝 디자이너의** 마이닝 정확도 차트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조에 있는 마이닝 모델의 예측 정확도를 비교할 수 있습니다.  
+  **에서 데이터 마이닝 디자이너의** 마이닝 정확도 차트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조에 있는 마이닝 모델의 예측 정확도를 비교할 수 있습니다.  
   
  다음 4개의 차트를 만들 수 있습니다.  
   

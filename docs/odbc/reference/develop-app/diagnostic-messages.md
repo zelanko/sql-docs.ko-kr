@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 829d6528f9743d8b5dab5d378eb798a40a994631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
 각 sqlstate 진단 메시지가 반환 됩니다. 동일한 SQLSTATE 종종 서로 다른 메시지 수가 반환 됩니다. 예를 들어 SQL 구문에서 대부분의 오류에 대 한 SQLSTATE 42000 (구문 오류 또는 액세스 위반) 반환 됩니다. 그러나 각 구문 오류는 서로 다른 메시지에 의해 기술 할 합니다.  
@@ -57,4 +56,4 @@ ms.lasthandoff: 04/16/2018
   
  [1]이 경우 드라이버 역할을 하는 드라이버와 데이터 원본.  
   
- 대괄호 (**[ ]**) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.
+ 대괄호 (**[]**) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.

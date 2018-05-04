@@ -1,11 +1,9 @@
 ---
 title: 속성 예제 (VB) 준비 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4eeaad753c494b5b1a4be3de61704244309cc659
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a2a104e2b18f80d390e940c6edfea4368ffa7300
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-property-example-vb"></a>준비 속성 예제 (VB)
 이 예제에서는 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 열어 두는 속성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체-준비 및 준비 되지 않았습니다.  

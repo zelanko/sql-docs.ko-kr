@@ -3,15 +3,12 @@ title: SQLExtendedFetch 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1a02b1c2e050b6fc7a0724286c7f023cb376e7bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 함수
 **규칙**  
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** 결과 집합에서 데이터의 지정 된 행 집합을 인출 하 고 모든 바운드 열에 대 한 데이터를 반환 합니다. 책갈피 또는 절대 또는 상대 위치에서 행 집합을 지정할 수 있습니다.  
   
 > [!NOTE]  
->  ODBC 3에서*.x*, **SQLExtendedFetch** 로 대체 되었습니다 **SQLFetchScroll**합니다. ODBC 3*.x* 응용 프로그램을 호출 하지 않아야 **SQLExtendedFetch**; 대신 호출 해야 **SQLFetchScroll**합니다. 드라이버 관리자 매핑합니다 **SQLFetchScroll** 를 **SQLExtendedFetch** 는 ODBC 2 작업할 때*.x* 드라이버입니다. ODBC 3*.x* 드라이버를 지원 해야 **SQLExtendedFetch** ODBC 2를 사용 하는 경우*.x* 메서드를 호출 하는 응용 프로그램입니다. 자세한 내용은 "설명"을 참조 하십시오. 및 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
+>  ODBC 3에서 *.x*, **SQLExtendedFetch** 로 대체 되었습니다 **SQLFetchScroll**합니다. ODBC 3 *.x* 응용 프로그램을 호출 하지 않아야 **SQLExtendedFetch**; 대신 호출 해야 **SQLFetchScroll**합니다. 드라이버 관리자 매핑합니다 **SQLFetchScroll** 를 **SQLExtendedFetch** 는 ODBC 2 작업할 때 *.x* 드라이버입니다. ODBC 3 *.x* 드라이버를 지원 해야 **SQLExtendedFetch** ODBC 2를 사용 하는 경우 *.x* 메서드를 호출 하는 응용 프로그램입니다. 자세한 내용은 "설명"을 참조 하십시오. 및 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -129,9 +125,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   에 대 한 호출이 **SQLExtendedFetch** 와 함께 혼합할 수 없고 **SQLFetch** 또는 **SQLFetchScroll**, 쓰고 **SQLBulkOperations** 라고 모든 인출 함수를 호출 하기 전에 **SQLExtendedFetch** 커서를 닫았다가 다시 열 때까지를 호출할 수 없습니다. 즉, **SQLExtendedFetch** S7 문 상태에만 호출할 수 있습니다. 자세한 내용은 참조 [문을 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 표에 합니다.  
   
- 응용 프로그램 호출 하는 경우 **SQLFetchScroll** ODBC 2를 사용 하는 동안*.x* 드라이버, 드라이버 관리자 매핑합니다이 호출으로 **SQLExtendedFetch**합니다. 자세한 내용은 참조 하십시오. "SQLFetchScroll 및 ODBC 2*.x* 드라이버"에서 [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)합니다.  
+ 응용 프로그램 호출 하는 경우 **SQLFetchScroll** ODBC 2를 사용 하는 동안 *.x* 드라이버, 드라이버 관리자 매핑합니다이 호출으로 **SQLExtendedFetch**합니다. 자세한 내용은 참조 하십시오. "SQLFetchScroll 및 ODBC 2 *.x* 드라이버"에서 [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)합니다.  
   
- ODBC 2에서*.x*, **SQLExtendedFetch** 여러 행을 인출 하 호출한 및 **SQLFetch** 단일 행을 인출 하기 위해 호출 되었습니다. ODBC 3에서*.x*반면에, **SQLFetch** 여러 행을 인출 하기 위해 호출할 수 있습니다.  
+ ODBC 2에서 *.x*, **SQLExtendedFetch** 여러 행을 인출 하 호출한 및 **SQLFetch** 단일 행을 인출 하기 위해 호출 되었습니다. ODBC 3에서 *.x*반면에, **SQLFetch** 여러 행을 인출 하기 위해 호출할 수 있습니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

@@ -1,31 +1,29 @@
 ---
-title: "Analysis Services 가져오기 마법사를 사용 하 여 데이터 마이닝 프로젝트 가져오기 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 가져오기 마법사를 사용 하 여 데이터 마이닝 프로젝트 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4927ceadd8dd122e285680f908010ba2dbfba79a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트** 템플릿을 사용하여 다른 서버의 기존 데이터 마이닝 프로젝트에서 메타데이터를 가져와 새로운 데이터 마이닝 프로젝트를 만드는 방법을 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트** 템플릿을 사용하여 다른 서버의 기존 데이터 마이닝 프로젝트에서 메타데이터를 가져와 새로운 데이터 마이닝 프로젝트를 만드는 방법을 설명합니다.  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>기존 데이터 마이닝 프로젝트에서 데이터 원본, 마이닝 구조 및 마이닝 모델 가져오기  
  **서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트**템플릿을 사용하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 새 데이터 마이닝 프로젝트를 만든 다음 지정된 데이터 마이닝 프로젝트에서 메타데이터를 복사합니다. 새 프로젝트에는 가져온 ssASnoversion 데이터베이스와 동일한 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델이 포함됩니다. 그러나 프로젝트를 사용하려면 먼저 아래 설명된 대로 특정 속성을 업데이트하고 개체를 처리해야 합니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**, **Analysis Services**, **서버에서 가져오기(다차원 및 데이터 마이닝)**를 차례로 클릭합니다.  
+2.  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**, **Analysis Services**, **서버에서 가져오기(다차원 및 데이터 마이닝)** 를 차례로 클릭합니다.  
   
 3.  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
   

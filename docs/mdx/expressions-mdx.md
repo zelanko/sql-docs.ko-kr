@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -24,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e199f69578b2e4407d93788fdab966531425103a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-mdx"></a>식(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 01/08/2018
  스칼라 함수는 MDX 내의 계산에서 단일 값을 반환합니다. 대부분의 MDX 식, 문, 및 스크립트는 단일 데이터 요소로 계산되지 않고 셀 또는 멤버와 같은 데이터 요소 그룹을 대상으로 반복적으로 계산되므로 이러한 차이는 MDX의 스칼라 함수 계산 방식을 이해하는 데 중요합니다. 스칼라 함수를 계산할 때 함수는 보통 단일 데이터 요소를 검토합니다.  
   
  개체 식별자  
- 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 참조 하십시오. [식별자 &#40; Mdx&#41; ](../mdx/identifiers-mdx.md).  
+ 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 참조 하십시오. [식별자 &#40;MDX&#41;](../mdx/identifiers-mdx.md)합니다.  
   
  이러한 엔터티를 연산자로 연결하여 복합 식을 만들 수도 있습니다.  
   
@@ -100,7 +98,7 @@ WHERE [Product].[Category].[Bikes]
 |[빈 값 작업](../mdx/working-with-empty-values.md)|비어 있는 값의 의미와 처리 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 &#40; Mdx&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

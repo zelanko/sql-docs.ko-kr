@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 505b80b7a7e884dc9af76ae6a6f72447ff26d3d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>root 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]반환 된 결과 포함는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 또는 XML for Analysis (XMLA) 명령을 사용 하 여 실행 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  반환 된 결과 포함는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 또는 XML for Analysis (XMLA) 명령을 사용 하 여 실행 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,10 +55,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|아래 표를 참조 합니다.|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|아래 표를 참조하세요.|  
+|기본값|없음|  
 |카디널리티|1-n: 두 번 이상 나타날 수 있는 필수 요소입니다.|  
   
 |상위 항목|데이터 형식|  
@@ -72,12 +71,12 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[결과](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [반환](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  **루트** 요소에서 반환 된 정보를 포함는 [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) 요소는 단일 반환 **Discover** 메서드 호출 또는 [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) 요소는 단일 실행 하는 단일 XMLA 명령에서 반환 된 **Execute** 메서드를 호출 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

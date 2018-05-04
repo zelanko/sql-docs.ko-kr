@@ -1,30 +1,29 @@
 ---
-title: "모델 개체 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 모델 개체 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4bbc2865e6a6bd46f7111cc8c9656909e5855069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>모델 개체 TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  테이블 형식 모델을 정의합니다. 데이터베이스 및 지정한 명령에 지정할 수 하나의 데이터베이스에 하나의 모델만이 있습니다. 데이터베이스 개체에는 부모 개체가입니다.  
   
  모델 정의 너무 커서 한 항목의 전체 구문을 재현 합니다. 이러한 이유로 자식 개체에 대 한 링크가 있는 주요 부분을 강조 표시 하는 부분 구문 아래 찾을 수 있습니다.  
   
@@ -53,13 +52,13 @@ ms.lasthandoff: 01/08/2018
  데이터 정렬 시퀀스입니다. 참조 [Analysis Services의 세계화 시나리오](../../analysis-services/globalization-scenarios-for-analysis-services.md) 자세한 정보에 대 한 합니다.  
   
  테이블  
- 파티션, 열, 측정값, Kpi 및 주석을 포함 하 여 모델 테이블의 전체 컬렉션입니다. 참조 [개체 &#40; 테이블 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 대 한 자세한 내용은 합니다.  
+ 파티션, 열, 측정값, Kpi 및 주석을 포함 하 여 모델 테이블의 전체 컬렉션입니다. 참조 [Tables 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 세부 정보에 대 한 합니다.  
   
  관계  
- 필터 방향 및 보안을 설정 하는 속성을 비롯 하 여 테이블의 각 쌍 간의 관계를 지정 합니다. 참조 [관계 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) 대 한 자세한 내용은 합니다.  
+ 필터 방향 및 보안을 설정 하는 속성을 비롯 하 여 테이블의 각 쌍 간의 관계를 지정 합니다. 참조 [관계 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) 세부 정보에 대 한 합니다.  
   
  데이터 원본  
- 하나 이상의 연결 모델에 데이터를 제공 하거나에 사용 되는 외부 데이터베이스에 쿼리를 통해 전달 합니다. 참조 [DataSources 개체 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) 대 한 자세한 내용은 합니다.  
+ 하나 이상의 연결 모델에 데이터를 제공 하거나에 사용 되는 외부 데이터베이스에 쿼리를 통해 전달 합니다. 참조 [데이터 원본 개체 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) 세부 정보에 대 한 합니다.  
   
  역할  
  데이터베이스 사용 권한, 멤버 계정 및 필요에 따라 사용자 지정 액세스 제어에 대 한 DAX의 보안 필터를 연결 하는 개체입니다.  
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/08/2018
  를 만들 때 바꾸거나, 모델 개체는 개체 정의의 모든 읽기 / 쓰기 속성을 지정 합니다. 읽기 / 쓰기 속성을 생략 삭제 것으로 간주 됩니다.  
   
 ## <a name="partial-syntax"></a>부분 구문  
- 이 개체 정의 너무 크기 때문에 첫 번째 수준 속성에 대해서만 나열 됩니다. 참조 [개체 정의에서 테이블 형식 모델 스크립팅 언어 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) 자식 개체의 목록에 대 한 합니다.  
+ 이 개체 정의 너무 크기 때문에 첫 번째 수준 속성에 대해서만 나열 됩니다. 참조 [테이블 형식 모델 스크립팅 언어의 개체 정의 &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) 자식 개체의 목록에 대 한 합니다.  
   
 ```  
     "model": {  

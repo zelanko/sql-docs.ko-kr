@@ -1,31 +1,29 @@
 ---
-title: "Analysis Services 테이블 형식 모델에서 지원 되는 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 테이블 형식 모델에서 지원 되는 데이터 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6abf28f71db46d89ee33a91d92940d2c8f8aa90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지원 되는 데이터 형식
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
+  이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
 
   
 ##  <a name="bkmk_data_types"></a> 테이블 형식 모델에서 사용 되는 데이터 형식  
@@ -72,7 +70,7 @@ ms.lasthandoff: 02/23/2018
   
  각 DAX 함수에는 입력 및 출력으로 사용되는 데이터 형식과 관련된 특정 요구 사항이 있습니다. 예를 들어 정수와 날짜를 인수로 사용해야 하는 함수도 있고 텍스트 또는 테이블을 인수로 사용해야 하는 함수도 있습니다.  
   
- 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 암시적으로 데이터를 필요한 데이터 형식으로 변환 합니다. 예를 들어  
+ 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 암시적으로 데이터를 필요한 데이터 형식으로 변환 합니다. 예를 들어:  
   
 -   숫자(예: "123")를 문자열로 입력할 수 있습니다. DAX는 문자열을 구문 분석 하 고 숫자 데이터 형식으로 지정 하려고 합니다.  
   

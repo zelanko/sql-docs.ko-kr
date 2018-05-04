@@ -1,28 +1,27 @@
 ---
-title: "7 단원: 측정값 만들기 | Microsoft Docs"
-ms.custom: 
+title: '7 단원: 측정값 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3729aa2c15bf633ce76af5395175dfd07b3e9ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-create-measures"></a>6 단원: 측정값 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 이 단원에 소요되는 예상 시간: **30분**  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [5 단원: 계산 열 만들기](../analysis-services/lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  
@@ -92,9 +91,9 @@ ms.lasthandoff: 01/08/2018
   
 1.  자동 합계 기능을 사용하여 다음과 같이 측정값을 만들고 이름을 지정합니다.  
   
-    |측정값 이름|Column|자동 합계(∑)|수식|  
+    |측정값 이름|열|자동 합계(∑)|수식|  
     |----------------|----------|-----------------|-----------|  
-    |InternetOrderLinesCount|SalesOrderLineNumber|개수|=COUNTA([SalesOrderLineNumber])|  
+    |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
     |InternetTotalUnits|OrderQuantity|합계|=SUM([OrderQuantity])|  
     |InternetTotalDiscountAmount|DiscountAmount|합계|=SUM([DiscountAmount])|  
     |InternetTotalProductCost|TotalProductCost|합계|=SUM([TotalProductCost])|  

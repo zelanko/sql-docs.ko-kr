@@ -1,11 +1,9 @@
 ---
 title: 다중 레코드 집합을 받는 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e504f49e2f062e77323d1b411686fcbcdf2e5b1f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a603e1c5f3498daa6140915be5d05494b1b968f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="receiving-multiple-recordsets"></a>다중 레코드 집합 받기
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 여러 반환 지원 **레코드 집합** 여러 SQL 문을 포함 하는 단일 명령에 대 한 개체 하나 **레코드 집합**SQL 문당 합니다. 되는 순서는 **레코드 집합**명령 텍스트에 SQL 문이 배치 되는 순서에 따라 반환 됩니다.  

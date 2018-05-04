@@ -1,36 +1,34 @@
 ---
-title: "Microsoft 시퀀스 클러스터링 알고리즘 | Microsoft Docs"
-ms.custom: 
+title: Microsoft 시퀀스 클러스터링 알고리즘 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 235347cd727627c8db54c8787d10388bc802c90a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 시퀀스 클러스터링 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 클러스터링과 함께 시퀀스 분석을 결합하는 고유한 알고리즘입니다. 이 알고리즘을 사용하여 *시퀀스*로 연결할 수 있는 이벤트가 들어 있는 데이터를 탐색할 수 있습니다. 이 알고리즘은 가장 일반적인 시퀀스를 찾고 클러스터링을 수행하여 유사한 시퀀스를 찾습니다. 다음 예제에서는 일반적인 문제나 비즈니스 시나리오에 대한 통찰력을 제공하기 위해 기계 학습에 대한 데이터로 캡처할 수 있는 시퀀스의 종류를 보여 줍니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 클러스터링과 함께 시퀀스 분석을 결합하는 고유한 알고리즘입니다. 이 알고리즘을 사용하여 *시퀀스*로 연결할 수 있는 이벤트가 들어 있는 데이터를 탐색할 수 있습니다. 이 알고리즘은 가장 일반적인 시퀀스를 찾고 클러스터링을 수행하여 유사한 시퀀스를 찾습니다. 다음 예제에서는 일반적인 문제나 비즈니스 시나리오에 대한 통찰력을 제공하기 위해 기계 학습에 대한 데이터로 캡처할 수 있는 시퀀스의 종류를 보여 줍니다.  
   
 -   사용자가 웹 사이트를 탐색하거나 이동할 때 생성된 클릭스트림 또는 클릭 경로  
   

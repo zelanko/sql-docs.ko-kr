@@ -1,11 +1,9 @@
 ---
 title: COMPUTE 절 셰이프 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  다음 중 하나를 구성 됩니다.  
   
--   자식 항목을 반환 하는 쿼리 명령이 중괄호 ("{") 안에 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
+-   중괄호 안에 쿼리 명령 ("{}")는 자식 항목을 반환 하는 **레코드 집합** 개체입니다. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
   
 -   기존 모양 이름 **레코드 집합**합니다.  
   

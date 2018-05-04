@@ -1,11 +1,9 @@
 ---
 title: ADO MD FilterAxis 속성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7c137f5b555dca6711ad46ae4c20ac1f6d5805d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c7ba6b397879039064943fcb6264ef3dd76aa8fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filteraxis-property-ado-md"></a>ADO MD FilterAxis 속성
 현재에 대 한 필터 정보를 나타냅니다 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  

@@ -1,11 +1,9 @@
 ---
 title: Open 메서드 (ADO 레코드) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e20982964185f3e72d2f867050d78cb541869606
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-method-ado-record"></a>Open 메서드 (ADO 레코드)
 기존 엽니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 또는 개체를 나타내는 새 항목을 만듭니다는 **레코드**, 예: 파일 또는 디렉터리입니다.  

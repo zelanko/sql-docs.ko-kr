@@ -3,15 +3,12 @@ title: getParameterMetaData 메서드 (SQLServerPreparedStatement) | Microsoft D
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.getParameterMetaData
 apilocation:
@@ -22,17 +19,16 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8045aa82a5b36801884b8d5d0ffd3b87b35814e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 450423a201e3c6a172ff82156fb51703350e2eeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>getParameterMetaData 메서드 (SQLServerPreparedStatement)
+# <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>getParameterMetaData 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  수, 형식 및이 매개 변수의 속성을 검색 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체입니다.  
+  이 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체에 대한 매개 변수의 수, 형식 및 속성을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +38,7 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 개체입니다.  
+ [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

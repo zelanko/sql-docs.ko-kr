@@ -1,11 +1,9 @@
 ---
 title: 연결 개체를 사용 하 여 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7aa8e57d79b7f65ede84c7e88f03d18a5131f449
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 24dd06d812a1234fd9a7458600e71f77cccdcf63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-connection-object"></a>연결 개체를 사용 하 여
 열기 전에 **연결** 개체를 데이터 원본 및 연결의 종류에 대 한 정보를 정의 해야 합니다. 이 정보의 대부분 보유는 *ConnectionString* 의 매개 변수는 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표 내에 포함 된 값을 가진 세미 콜론으로 구분 된 인수/값 쌍의 목록으로 구성 합니다. 예를 들어:  

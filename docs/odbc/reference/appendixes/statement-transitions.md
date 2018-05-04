@@ -3,15 +3,12 @@ title: 문 전환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>문 전환
 ODBC 문 상태를 갖습니다.  
@@ -330,7 +326,7 @@ ODBC 문 상태를 갖습니다.
   
  [1]이이 행 표시 전환 때 *옵션* SQL_CLOSE 되었습니다.  
   
- [2]이이 행 표시 전환 때 *옵션* SQL_UNBIND 되었거나 SQL_RESET_PARAMS 합니다. 경우는 *옵션* 인수 SQL_DROP 였으며 기본 드라이버는 ODBC 3*.x* 드라이버, 드라이버 관리자 매핑합니다이에 대 한 호출을 **SQLFreeHandle** 와  *HandleType* 여로 설정 합니다. 자세한 내용은 전환 표를 참조 하십시오. [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
+ [2]이이 행 표시 전환 때 *옵션* SQL_UNBIND 되었거나 SQL_RESET_PARAMS 합니다. 경우는 *옵션* 인수 SQL_DROP 였으며 기본 드라이버는 ODBC 3 *.x* 드라이버, 드라이버 관리자 매핑합니다이에 대 한 호출을 **SQLFreeHandle** 와  *HandleType* 여로 설정 합니다. 자세한 내용은 전환 표를 참조 하십시오. [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

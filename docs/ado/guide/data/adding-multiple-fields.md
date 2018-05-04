@@ -1,11 +1,9 @@
 ---
 title: 여러 필드를 추가 합니다. | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 691ad7a1a48ea0f733db145a4a03ddd841383962
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 601531f0598db412a8cc42b46c53c01a73385204
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-multiple-fields-and-values"></a>여러 필드 및 값 추가
 때때로 필드와 해당 값을 배열에 전달 하는 것 수 있습니다는 **AddNew** 설정이 아닌 메서드를 **값** 각 새 필드에 대해 여러 번입니다. 경우 *FieldList* 배열 *값* 배열을 수도 있어야 같은 멤버의 숫자, 그렇지 않으면 오류가 발생 합니다. 필드 이름은 순서에는 각 배열에 있는 필드 값의 순서와 일치 해야 합니다. 다음 코드는 필드의 배열 및 값의 배열을 전달는 **AddNew** 메서드.

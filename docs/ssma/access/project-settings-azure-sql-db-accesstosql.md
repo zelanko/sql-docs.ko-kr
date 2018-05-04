@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -23,12 +22,11 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9034a699a604bfe70ea7c2fb52c7a8b6ee58cc4
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 46ca8a13ba5efa782200c4ed74a276d03cd48ed9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>프로젝트 설정 (Azure SQL DB) (AccessToSQL)
 SQL Azure 프로젝트 설정에 연결 대화 상자에 추가 하 고 SQL Azure 연결에서 하트 비트 메커니즘을 구현 허용할 SQL Azure 데이터베이스 접미사를 구성할 수 있습니다.  

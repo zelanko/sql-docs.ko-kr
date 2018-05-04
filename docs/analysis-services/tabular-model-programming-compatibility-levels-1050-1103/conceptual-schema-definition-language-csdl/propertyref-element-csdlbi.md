@@ -1,33 +1,31 @@
 ---
-title: "PropertyRef 요소 (CSDLBI) | Microsoft Docs"
-ms.custom: 
+title: PropertyRef 요소 (CSDLBI) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0320a3d05b7ed787835feaae505bc53e1085e862
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 요소(CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-PropertyRef 요소는 단순 유형으로, 다른 속성에 필요한 값을 공급하는 열 참조를 제공합니다.  
+  PropertyRef 요소는 단순 유형으로, 다른 속성에 필요한 값을 공급하는 열 참조를 제공합니다.  
   
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  다음 표는 PropertyRef 요소를 정의하는 특성과 해당 요소를 보여 줍니다.  

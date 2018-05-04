@@ -1,31 +1,29 @@
 ---
-title: "File Load and Save 데이터 열 | Microsoft Docs"
-ms.custom: 
+title: File Load and Save 데이터 열 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 86d56ee6a267e3d672328feeee69138debbbe94d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>File Load and Save 데이터 열
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-File Load and Save 이벤트 범주에는 다음 이벤트 클래스가 있습니다.  
+  File Load and Save 이벤트 범주에는 다음 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
 |------------------|--------------------|---------------------------|  

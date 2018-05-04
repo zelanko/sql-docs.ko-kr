@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e00420643c9579cbb963060a73f61a9fa22ef242
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cb5387d011b3987262415e3a88b5fd8bc65a8e2f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +51,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="arguments"></a>인수  
  [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%**합니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. Null 인 경우 또는 **%**, 모든 병합 게시 및 현재 데이터베이스에서 구독 하는 방법에 대 한 정보가 반환 됩니다.  
+ 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 합니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. Null 인 경우 또는 **%**, 모든 병합 게시 및 현재 데이터베이스에서 구독 하는 방법에 대 한 정보가 반환 됩니다.  
   
  [  **@subscriber=**] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%**합니다. NULL 또는 %인 경우 지정한 게시에 대한 모든 구독에 관한 정보가 반환됩니다.  
+ 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%** 합니다. NULL 또는 %인 경우 지정한 게시에 대한 모든 구독에 관한 정보가 반환됩니다.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
  구독 데이터베이스의 이름입니다. *subscriber_db*은 **sysname**, 기본값은 **%**, 모든 구독 데이터베이스에 대 한 정보를 반환 하는 합니다.  

@@ -25,12 +25,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce2a6f5a8b9f2af96891185e04b3b39945c7badc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce2eb8739618bd9d47ecdc0267617e81f1e7499b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_dropdevice [ @logicalname = ] 'device'
  에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다 **master.dbo.sysdevices.name**합니다. *장치* 은 **sysname**, 기본값은 없습니다.  
   
  [ **@delfile=** ] **'***delfile***'**  
- 물리적 백업 장치 파일의 삭제 여부를 지정합니다. *delfile* 은 **varchar(7)**합니다. 로 지정 하는 경우 **DELFILE**, 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
+ 물리적 백업 장치 파일의 삭제 여부를 지정합니다. *delfile* 은 **varchar(7)** 합니다. 로 지정 하는 경우 **DELFILE**, 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

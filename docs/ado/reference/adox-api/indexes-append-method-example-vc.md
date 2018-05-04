@@ -1,11 +1,9 @@
 ---
 title: 인덱스 추가 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1edfe0a3c1ba6613c3aa34d3645691d3dc1bc141
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f8376004abf7d3e63938a449b7057ff582e8be9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-append-method-example-vc"></a>인덱스 추가 메서드 예제 (VC + +)
 다음 코드에는 새 인덱스를 만드는 방법을 보여 줍니다. 인덱스는 테이블의 두 열 켜져 있습니다.  

@@ -3,15 +3,12 @@ title: SQLBulkOperations 가진 행을 인출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
 - SQLBulkOperations function [ODBC], fetching rows
@@ -24,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 764320d44ac0844b96f0c2873213909b1b1e4ddd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2481fe60919a120c0e286c6b7bf3554923bdd0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations 가진 행을 인출합니다.
 에를 호출 하 여 책갈피를 사용 하 여 행 집합에 데이터를 따라 다시 인출 수 수 **SQLBulkOperations 합니다.** 가져와야 하는 행 바인딩된 책갈피 열에 있는 책갈피로 식별 됩니다. 열 값이 SQL_COLUMN_IGNORE는 페치 되지 않습니다.  

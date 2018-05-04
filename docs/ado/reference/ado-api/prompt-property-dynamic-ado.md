@@ -1,11 +1,9 @@
 ---
 title: 동적 속성 (ADO)를 확인 합니다. | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 31494acb082c2816669ec57896733e19bd094606
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dc7285d03db3edf52ddb89a91b2b73c5d3ae74c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 속성 동적 (ADO)
 OLE DB 공급자에 게 초기화 정보 메시지를 표시 하는지 여부를 지정 합니다.  

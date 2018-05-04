@@ -3,15 +3,12 @@ title: 추적 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
@@ -20,15 +17,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7511981cfe9ec533455ee61c4cf75d33ec020cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ff139b0074a22adc14903174ec031cd4176dca6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tracing"></a>추적
-ODBC 드라이버 관리자에 대 한 ODBC 응용 프로그램 기록 하 고 로그 파일에 변환 된 하는 함수 호출의 시퀀스를 허용 하는 추적 기능을 있습니다. DLL 및 드라이버 관리자와 드라이버는 응용 프로그램 및 드라이버 관리자 간의 호출을 캡처하는 추적으로 추적을 수행 합니다. 추적의이 메서드는 ODBC 2에서 수행 하는 추적을 대신*.x* ODBC 2에서 수행 하는 드라이버 관리자와 추적*.x* ODBC Spy 여 합니다.  
+ODBC 드라이버 관리자에 대 한 ODBC 응용 프로그램 기록 하 고 로그 파일에 변환 된 하는 함수 호출의 시퀀스를 허용 하는 추적 기능을 있습니다. DLL 및 드라이버 관리자와 드라이버는 응용 프로그램 및 드라이버 관리자 간의 호출을 캡처하는 추적으로 추적을 수행 합니다. 추적의이 메서드는 ODBC 2에서 수행 하는 추적을 대신 *.x* ODBC 2에서 수행 하는 드라이버 관리자와 추적 *.x* ODBC Spy 여 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

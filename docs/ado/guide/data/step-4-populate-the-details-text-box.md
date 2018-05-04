@@ -1,11 +1,9 @@
 ---
 title: '4 단계: 세부 정보 텍스트 상자 채우기 | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +15,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec55effbd2433a777e58617fd01f50d4c271f5ae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8bd4c4026795c72a3a1e4afdaa1e19ad53da2642
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-4-populate-the-details-text-box"></a>4 단계: 세부 정보 텍스트 상자 채우기
 정보 텍스트 상자를 채우려면 라는 새 서브루틴을 만들 **recFields** 하 고 다음 코드를 삽입 합니다.  

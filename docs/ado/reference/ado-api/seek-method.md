@@ -1,11 +1,9 @@
 ---
 title: Seek 메서드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11fe64054cef55d1098c293f5acc0ade4540f74c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="seek-method"></a>Seek 메서드
 인덱스를 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 신속 하 게 지정된 된 값과 일치 하 고 해당 행에는 현재 행 위치를 변경 하는 행을 찾을 수 있습니다.  

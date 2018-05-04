@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -24,12 +23,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cb1766ed1c16901bec84f735ecc2357939a65a11
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a315594676ee7439c1875675ffcd2ed95b6e03d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,10 +83,10 @@ ms.lasthandoff: 01/08/2018
  하위 큐브 식별자로 표시 *Subcube_Name*합니다. 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [기본 MDX 쿼리 &#40; Mdx&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [MDX &#40;로 하위 큐브 작성 Mdx&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [SUBCUBE 문 &#40; 만들기 Mdx&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [식 &#40; Mdx&#41;](../mdx/expressions-mdx.md)   
- [SCOPE 문 &#40; Mdx&#41;](../mdx/mdx-scripting-scope.md)  
+ [기본 MDX 쿼리 & #40; Mdx& #41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [MDX로 하위 큐브 작성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
+ [CREATE SUBCUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [SCOPE 문 & #40; Mdx& #41;](../mdx/mdx-scripting-scope.md)  
   
   

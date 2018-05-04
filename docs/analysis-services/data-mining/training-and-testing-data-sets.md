@@ -1,36 +1,34 @@
 ---
-title: "학습 및 테스트 데이터 집합 | Microsoft Docs"
-ms.custom: 
+title: 학습 및 테스트 데이터 집합 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1da8ecdb7bcc469ab5714f4ca8a4812ddc6fd6f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터를 학습 집합과 테스트 집합으로 분할하는 작업은 데이터 마이닝 모델 평가의 중요한 부분입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  
+  데이터를 학습 집합과 테스트 집합으로 분할하는 작업은 데이터 마이닝 모델 평가의 중요한 부분입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  
   
  학습 집합을 사용하여 모델을 처리한 후에는 테스트 집합에 대한 예측을 만들어 모델을 테스트합니다. 테스트 집합의 데이터에는 예측할 특성의 알려진 값이 이미 포함되어 있으므로 모델의 예측이 올바른지 여부를 쉽게 확인할 수 있습니다.  
   
@@ -111,7 +109,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |모델의 필터가 학습 및 테스트 데이터 집합과 상호 작용하는 방법에 대해 설명합니다.|[마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
 |학습 및 테스트 데이터를 사용하는 방법에 따라 교차 유효성 검사에 미치는 영향에 대해 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |마이닝 구조에서 학습 및 테스트 집합을 사용하는 프로그래밍 인터페이스에 대한 정보를 제공합니다.|[AMO 개념 및 개체 모델](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 요소&#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|홀드아웃 집합을 만들기 위한 DMX 구문을 제공합니다.|[만들기 마이닝 구조 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
+|홀드아웃 집합을 만들기 위한 DMX 구문을 제공합니다.|[만들기 마이닝 구조 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
 |학습 및 테스트 집합에서 사례에 대한 정보를 검색합니다.|[데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>관련 항목:  

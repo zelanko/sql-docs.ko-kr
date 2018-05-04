@@ -1,11 +1,9 @@
 ---
 title: XML DOM 개체에 저장 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37cc9b3b5c2235edc5cd5a19fde6154a250977ae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3c53d65a0ff66c560f43361cb6de97a2bc36146
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="saving-to-the-xml-dom-object"></a>XML DOM 개체에 저장
 다음 Visual Basic 코드에서와 같이 MSXML DOM 개체의 인스턴스를 XML 형식의 레코드 집합을 저장할 수 있습니다.  

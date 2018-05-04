@@ -3,15 +3,12 @@ title: SQLGetConnectOption 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
@@ -20,15 +17,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d4682ae8fcf0c745816ed9b2155ebf5072a538d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9ec36a536732299337efde3cf58cc98fbf4c46e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 매핑
-응용 프로그램 호출 하는 경우 **SQLGetConnectOption** ODBC 3*.x* 드라이버에 대 한 호출  
+응용 프로그램 호출 하는 경우 **SQLGetConnectOption** ODBC 3 *.x* 드라이버에 대 한 호출  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -58,4 +54,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  ODBC 정의 문자열 연결 옵션에 대 한 드라이버 관리자는 다음과 같이 설정 됩니다.는 *BufferLength* 호출에 인수 **SQLGetConnectAttr** 미리 정의 된 최대 길이 (SQL_MAX_OPTION_STRING_LENGTH); 문자열이 아닌 연결 옵션에 대 한 *BufferLength* 0으로 설정 됩니다.  
   
- ODBC 3에 대 한*.x* 드라이버를 드라이버 관리자는 더 이상 있는지 여부를 확인 *옵션* 사이 SQL_CONN_OPT_MIN 및 SQL_CONN_OPT_MAX, 또는 SQL_CONNECT_OPT_DRVR_START 보다 큽니다. 드라이버 옵션 값의 유효성을 검사 해야 합니다.
+ ODBC 3에 대 한 *.x* 드라이버를 드라이버 관리자는 더 이상 있는지 여부를 확인 *옵션* 사이 SQL_CONN_OPT_MIN 및 SQL_CONN_OPT_MAX, 또는 SQL_CONNECT_OPT_DRVR_START 보다 큽니다. 드라이버 옵션 값의 유효성을 검사 해야 합니다.

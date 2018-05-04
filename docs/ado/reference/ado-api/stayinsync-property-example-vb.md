@@ -1,11 +1,9 @@
 ---
 title: StayInSync 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6330252f69b9d847fe85d28864b967ca14d75b3f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cad6d7a6187430e8243695a07fe1b0752074a6df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제 (VB)
 이 예제에서는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성에 액세스 하는 중 행을 계층적 용이 하 게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

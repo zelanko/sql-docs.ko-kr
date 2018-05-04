@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7669ac3c34d1b388ed077dd61e6b493b30ff580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 21d29aa0ceb7ba16216db3f52e18379f55b775dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  확장 저장 프로시저는 프로토타입이 다음과 같은 함수입니다.  
   
- SRVRETCODE *xp_extendedProcName* **(**SRVPROC **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  접두사 xp_는 필요에 따라 사용할 수 있습니다. 확장 저장 프로시저의 이름은 서버에 설치된 코드 페이지/정렬 순서에 관계없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 참조할 때는 대/소문자를 구분합니다. DLL을 빌드하는 경우 다음 작업을 수행합니다.  
   

@@ -6,23 +6,19 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
-ms.topic: article
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef69bb70de8af6b6dc56df66e652f7f4dae7529c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용 하 여 연결
 
@@ -222,9 +218,9 @@ You have successfully logged on as: <your user name>
     7. 맨 아래에 "만들기"를 클릭 합니다.
     9. Azure 포털에서 계속 하는 동안 응용 프로그램의 "설정" 탭을 클릭 하 고 "속성" 탭을 엽니다.
     10. "응용 프로그램 ID" 즉, 클라이언트 ID () 값을 찾아 복사 제외 하 고, 지정 해야이 나중에 응용 프로그램 (예를 들어 1846943b-ad04-4808-aa13-4702d908b5c1)을 구성 합니다. 스냅숏을 참조 합니다.
-    11. "앱 ID URL" 값을 찾아 복사, STS URL입니다.
-    12. "키" 섹션에서 이름 필드에 입력, 키의 기간을 선택 하 고 (값 필드를 비워 둠) 구성을 저장 하 여 키를 만듭니다. 값 필드 여야 합니다 저장 한 후 자동으로 가득 차면 생성 되는 값을 복사 합니다. 클라이언트 암호입니다.
-
+    11. "키" 섹션에서 이름 필드에 입력, 키의 기간을 선택 하 고 (값 필드를 비워 둠) 구성을 저장 하 여 키를 만듭니다. 값 필드 여야 합니다 저장 한 후 자동으로 가득 차면 생성 되는 값을 복사 합니다. 클라이언트 암호입니다.
+    12. 왼쪽 패널에서 Azure Active Directory를 클릭 합니다. "응용 프로그램 등록"에서 "끝점" 탭을 찾습니다. "OATH 2.0 토큰 끝점" 아래에서 URL을 복사, STS URL입니다.
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Azure Active Directory 관리자 및 주 응용 프로그램에 대 한 포함된 된 데이터베이스 사용자 T-SQL 명령 프로 비전을 사용 하 여 Azure SQL Server의 사용자 데이터베이스에 로그온 합니다. 참조는 [SQL 데이터베이스 또는 SQL 데이터 웨어하우스를 사용 하 여 Azure Active Directory 인증 여 연결할](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Azure Active Directory 관리자 및 포함된 된 데이터베이스 사용자를 만드는 방법에 대 한 자세한 내용은 합니다.
 
@@ -255,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

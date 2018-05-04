@@ -1,11 +1,9 @@
 ---
 title: 서 수 속성 (ADO MD 위치) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d69e1504984f2246b16589b500dfb6ebfe0f3aab
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 31ad0a0c6fa263aa33d53afb8537f673d1df4d0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ordinal-property-ado-md-position"></a>서 수 속성 (ADO MD 위치)
 고유 하 게 식별 한 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 축을 따라 합니다.  

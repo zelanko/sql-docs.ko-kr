@@ -1,31 +1,29 @@
 ---
-title: "데이터 원본 개체 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 데이터 원본 개체 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f05628f84a33f72332f5e4b9aac2712d0c0baf00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasources-object-tmsl"></a>데이터 원본 개체 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-모델 또는 DirectQuery 모드를 통해 쿼리를 통해 패스에서 모델에 데이터를 추가 하는 가져오기 중에 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
+  모델 또는 DirectQuery 모드를 통해 쿼리를 통해 패스에서 모델에 데이터를 추가 하는 가져오기 중에 사용 되는 데이터 원본에 대 한 연결을 정의 합니다.  DirectQuery 모드의 모델 하나만 **DataSource** 개체입니다.  
   
  을 만들면 교체, 또는 자체 데이터 원본 개체를 변경 (예: 파티션 스크립트) 스크립트에서 참조 하는 모든 데이터 원본에서 기존 이어야 합니다 하지 않는 한 **DataSource** 개체 모델에서.  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 02/23/2018
  관계형 데이터베이스에 대 한 연결에서 사용 되는 그렇지 않은 경우 연결 문자열에 다르게 지정 하는 관리 되는 데이터 공급자의 이름을 식별 하는 선택적 문자열입니다.  
   
 ## <a name="usage"></a>사용법  
- **데이터 원본** 개체에서 사용 되므로 [명령 &#40; 변경 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [명령 &#40; 만들기 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [명령 &#40; 삭제 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [명령 &#40; 새로 고침 TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **데이터 원본** 개체에서 사용 되므로 [Alter 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [만들기 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace 명령을 &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Delete 명령을 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [새로 고침 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), 및 [MergePartitions 명령 &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)합니다.  
   
  A **DataSource** 개체 모델의 속성 이지만 모델 및 데이터베이스 간의 일대일 매핑이 지정 하는 데이터베이스 개체의 속성으로 지정 될 수도 있습니다.  SQL 쿼리를 기반으로 파티션을 지정는 **DataSource**, 속성 중 일부만에 합니다.  
   
@@ -189,6 +187,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="see-also"></a>관련 항목:  
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [인터넷 정보 서비스 &#40; IIS &#41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [인터넷 정보 서비스 & #40; IIS & #41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

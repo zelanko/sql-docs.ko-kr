@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a455bfe51ac57408c075a20128054574b86962f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_describe_undeclared_parameters
   
 ## <a name="arguments"></a>인수  
  [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
+ 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 수 **nvarchar (***n***)** 또는 **nvarchar (max)** 합니다.  
   
  [  **@params =** ] **N'***매개 변수***'**  
- @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql 유사 하 게 작동 합니다. *매개 변수* 수 **nvarchar (***n***)** 또는 **nvarchar (max)**합니다.  
+ @params 에 대 한 매개 변수에 대 한 선언 문자열을 제공 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql 유사 하 게 작동 합니다. *매개 변수* 수 **nvarchar (***n***)** 또는 **nvarchar (max)** 합니다.  
   
  정의에 포함 된 모든 매개 변수를 포함 하는 하나의 문자열 *Transact SQL_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Transact SQL 문 또는 문의 일괄 처리에 매개 변수가 없는 경우 @params 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
@@ -202,7 +201,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **숫자 (38, 19)** -다른 숫자 또는 10 진수 데이터 형식은 고려 되지 않습니다.  
   
-    -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, 및 **nvarchar (max)** -다른 문자열 데이터 형식 (예: **텍스트**, **char (8000)**, **nvarchar (30)**등)는 고려 되지 않습니다.  
+    -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, 및 **nvarchar (max)** -다른 문자열 데이터 형식 (예: **텍스트**, **char (8000)**, **nvarchar (30)** 등)는 고려 되지 않습니다.  
   
     -   **varbinary (8000)** 및 **varbinary (max)** -다른 이진 데이터 형식 고려 되지 않습니다 (예: **이미지**, **binary(8000)**, **varbinary (30)** 등.).  
   
@@ -239,7 +238,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      이 규칙은 규칙 1에 따라 연결된 모든 데이터 형식과 우선 순위가 가장 높은 데이터 형식 간에 암시적 변환이 있는 경우에만 적용됩니다. 암시적 변환이 없으면 데이터 형식 추론이 오류와 함께 실패합니다. 예를 들어 쿼리에서 `SELECT @p FROM t`, 데이터 형식에 대 한 모든 데이터 형식 추론이 실패 @p 동일 합니다. 예를 들어는에서 암시적 변환이 **int** 를 **xml**합니다.  
   
-3.  두 개의 비슷한 데이터 형식이 규칙 1에 따라 예를 들어 연결할 **varchar(8000)** 및 **varchar (max)**보다 작은 데이터 형식 (**varchar(8000)**)을 선택 합니다. 에 동일한 원칙이 적용 됩니다. **nvarchar** 및 **varbinary** 데이터 형식입니다.  
+3.  두 개의 비슷한 데이터 형식이 규칙 1에 따라 예를 들어 연결할 **varchar(8000)** 및 **varchar (max)** 보다 작은 데이터 형식 (**varchar(8000)**)을 선택 합니다. 에 동일한 원칙이 적용 됩니다. **nvarchar** 및 **varbinary** 데이터 형식입니다.  
   
 4.  규칙 1의 목적상, 형식 추론 알고리즘에서 선호하는 변환에는 우선 순위가 있습니다. 가장 선호하는 변환부터 순서대로 나열하면 다음과 같습니다.  
   
