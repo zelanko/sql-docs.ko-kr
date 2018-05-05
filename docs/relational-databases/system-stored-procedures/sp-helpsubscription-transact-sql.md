@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 695442f30d62a651521dc5b90027a4d43daa7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0634a1b6cd117b82d31324e58590d9217f402528
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +57,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  구독 정보를 가져올 구독자의 이름입니다. *구독자* 은 **sysname**, 기본값은 **%**, 선택한 게시 및 아티클에 대 한 모든 구독 정보를 반환 하는 합니다.  
   
  [  **@destination_db=** ] **'***destination_db***'**  
- 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은 **%**합니다.  
+ 대상 데이터베이스의 이름입니다. *destination_db* 은 **sysname**, 기본값은 **%** 합니다.  
   
- [  **@found=** ] **'***발견***'**출력  
+ [  **@found=** ] **'***발견***'** 출력  
  행을 반환하는지 여부를 나타내는 플래그입니다. *찾을*은 **int** 및 출력 매개 변수, 기본값은 23456입니다.  
   
  **1** 은 게시를 찾았음을 나타냅니다.  

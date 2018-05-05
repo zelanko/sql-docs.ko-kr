@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c593cab9b3de64c0b2442c7c8be1390553b01497
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b99afab30584db1a13444f2d259ffafa0459c967
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ len
  *field*  
  반환할 연결 데이터를 지정합니다.  
   
-|Value|반환 값|  
+|값|반환 값|  
 |-----------|-------------|  
 |SRV_APPLNAME|연결을 설정할 때 클라이언트가 제공한 응용 프로그램 이름입니다.|  
 |SRV_BCPFLAG|플래그로, 클라이언트가 대량 복사 작업을 준비 중이면 TRUE이고, 그렇지 않으면 FALSE입니다.|  
