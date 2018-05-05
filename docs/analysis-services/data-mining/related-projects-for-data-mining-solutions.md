@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: ad03c455c6ee0b623fca0544901ee4c6c6e397d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +107,11 @@ ms.lasthandoff: 04/03/2018
   
  DMX 쿼리가 데이터 원본인 경우 Reporting Services를 사용하는 방법은 다음 링크를 참조하세요.  
   
- [데이터 마이닝 모델 &#40; DMX &#41;에서 데이터를 검색 합니다. &#40; Ssrs&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [데이터 마이닝 모델 & #40; DMX & #41;에서 데이터를 검색 합니다. & #40; Ssrs& #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX &#40; analysis Services 연결 유형 Ssrs&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX & #40; analysis Services 연결 유형 Ssrs& #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  DMX를 데이터 원본으로 사용할 필요는 없습니다. 데이터 마이닝용 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소는 예측 쿼리의 결과를 관계형 데이터베이스에 저장할 수 있도록 지원합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 모델을 업데이트하는 워크플로를 설정한 경우 예측 및 기타 데이터 마이닝 쿼리 결과를 SQL Server에 저장하면 보고를 위해 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 또는 DMX와 인터페이스하지 않는 다른 도구를 사용할 수 있습니다.  
   

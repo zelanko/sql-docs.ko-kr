@@ -1,11 +1,9 @@
 ---
 title: RecordCount 속성 (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7c2a7900d47b2e80227e470219fd7a7566dc41e4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 속성 (ADO)
 
@@ -53,7 +50,7 @@ ms.lasthandoff: 04/18/2018
 - **adApproxPosition** 대략적인 위치와 관련이 있습니다.
 
 > [!NOTE]
-> ADO 2.8 및 이전 버전에서는 SQLOLEDB 공급자를 인출 모든 레코드를 반환 하는 경우에도 서버 쪽 커서를 사용 하면 **True** 둘 다에 대해 **지원 (adApproxPosition)** 및 **지원 (adBookmark)**합니다.
+> ADO 2.8 및 이전 버전에서는 SQLOLEDB 공급자를 인출 모든 레코드를 반환 하는 경우에도 서버 쪽 커서를 사용 하면 **True** 둘 다에 대해 **지원 (adApproxPosition)** 및 **지원 (adBookmark)** 합니다.
   
 커서 유형의 **레코드 집합** 개체 레코드의 수를 확인할 수 있는지 여부에 영향을 줍니다. **RecordCount** 속성은 데이터 원본에 따라 동적 커서에 대 한 실제 개수 또는-1을 정방향 전용 커서, 정적 실제 개수 또는 키 집합 커서; 및-1을 반환 합니다.
   

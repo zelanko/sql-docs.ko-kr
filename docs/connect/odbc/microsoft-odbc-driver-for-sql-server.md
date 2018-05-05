@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[ODBC 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC는 C 및 c + +로 작성 된 SQL Server에 대 한 응용 프로그램에 대 한 기본 네이티브 데이터 액세스 API입니다. 대부분의 데이터 원본에 대 한 ODBC 드라이버가 있습니다. ODBC를 사용할 수 있는 다른 언어는 COBOL, Perl, PHP 및 Python을 포함 합니다. ODBC는 데이터 통합 시나리오에서 널리 사용 됩니다.
 
@@ -33,15 +32,15 @@ ODBC 드라이버와 같은 도구와 함께 제공 [ **sqlcmd** ](../../tools/s
 
 ## <a name="code-example-in-c"></a>C + +의 코드 예제에서
 
-ODBC를 사용 하 여 c + + 프로그램의 소스 코드를 포함 하는 작은.zip 파일을 해야 합니다.
+다음 c + + 샘플에는 ODBC Api를 사용 하 여 연결 하 고 데이터베이스에 액세스 하는 방법을 보여 줍니다.
 
 - [C + + 코드 예제에서는 ODBC를 사용 하 여](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>다운로드
 
-- ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[ODBC 드라이버를 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![아래쪽 화살표-Circled 다운로드](../../ssdt/media/download.png)[ODBC 드라이버를 다운로드 하려면](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>설명서  
+## <a name="documentation"></a>설명서
 
 ### <a name="features"></a>기능
 

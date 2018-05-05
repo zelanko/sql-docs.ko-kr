@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ef6d95e700e8eda518a33eb5d9482ef8a77d82b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-mdx"></a>Root(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  구성 된 튜플을 반환 된 **모든** 큐브, 차원 또는 튜플의 현재 범위 내에서 각 특성 계층 멤버입니다. 범위에 대 한 자세한 내용은 참조 [SCOPE 문 &#40; Mdx&#41; ](../mdx/mdx-scripting-scope.md).  
+  구성 된 튜플을 반환 된 **모든** 큐브, 차원 또는 튜플의 현재 범위 내에서 각 특성 계층 멤버입니다. 범위에 대 한 자세한 내용은 참조 [SCOPE 문 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)합니다.  
   
 > [!NOTE]  
 >  특성 계층에 없는 경우는 **모든** 멤버를 튜플에 해당 계층에 대 한 기본 멤버를 포함 합니다.  
@@ -91,6 +90,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

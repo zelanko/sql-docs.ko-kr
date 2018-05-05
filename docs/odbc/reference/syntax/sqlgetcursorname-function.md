@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f8e2490321aae6b155da3486cb78b1f5740738c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 함수(SQLGetCursorName Function)
 **규칙**  
@@ -80,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetCursorName** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY015|커서 이름이 없습니다.|(DM) 드라이버는 ODBC 2는*.x* 드라이버 문에서 했습니다 열려 있는 커서 및 커서 이름이으로 설정 된 **SQLSetCursorName**합니다.|  
+|HY015|커서 이름이 없습니다.|(DM) 드라이버는 ODBC 2는 *.x* 드라이버 문에서 했습니다 열려 있는 커서 및 커서 이름이으로 설정 된 **SQLSetCursorName**합니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
@@ -90,7 +89,7 @@ SQLRETURN SQLGetCursorName(
  커서 이름은 위치 지정된 업데이트에만 사용 되며 및 delete 문 (예를 들어 **업데이트** *테이블 이름* ... **WHERE CURRENT OF** *커서 이름을*). 자세한 내용은 참조 [배치 Update 및 Delete 문이](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)합니다. 응용 프로그램을 호출 하지 않는 **SQLSetCursorName** 커서 이름을 정의 하려면 드라이버는 이름을 생성 합니다. 이 이름은 SQL_CUR 문자로 시작합니다.  
   
 > [!NOTE]  
->  ODBC 2에서*.x*열려 있는 커서 했습니다 및 이름이 없는를 호출 하 여 설정 된 경우 **SQLSetCursorName**에 대 한 호출 **SQLGetCursorName** SQLSTATE HY015 반환 (커서 이름 없음 사용 가능). ODBC 3에서*.x*,이 더 이상 true이 고, 경우에 관계 없이 **SQLGetCursorName** 은 호출 드라이버 커서 이름을 반환 합니다.  
+>  ODBC 2에서 *.x*열려 있는 커서 했습니다 및 이름이 없는를 호출 하 여 설정 된 경우 **SQLSetCursorName**에 대 한 호출 **SQLGetCursorName** SQLSTATE HY015 반환 (커서 이름 없음 사용 가능). ODBC 3에서 *.x*,이 더 이상 true이 고, 경우에 관계 없이 **SQLGetCursorName** 은 호출 드라이버 커서 이름을 반환 합니다.  
   
  **SQLGetCursorName** 이름을 명시적으로 또는 암시적으로 만들어진 여부는 커서의 이름을 반환 합니다. 커서 이름을 경우 암시적으로 생성 **SQLSetCursorName** 호출 되지 않습니다. **SQLSetCursorName** 으로 커서가 할당 또는 준비 된 상태에 있는 문에서 커서의 이름을 바꾸려면 호출할 수 있습니다.  
   

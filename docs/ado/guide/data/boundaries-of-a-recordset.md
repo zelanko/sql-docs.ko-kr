@@ -1,11 +1,9 @@
 ---
 title: 레코드 집합의 경계 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0eb328f331847d30a5e408369c77646d5a967e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드 집합** 지원는 **BOF** 및 **EOF** 속성을 데이터 집합의 시작과 끝을 각각 설명 합니다. 생각할 수 있으며 **BOF** 및 **EOF** 의 시작과 끝에 배치 됩니다 "팬텀" 레코드로 **레코드 집합**합니다. 계산 **BOF** 및 **EOF**, 샘플 **레코드 집합** 는 이제 다음과 같이 표시 됩니다.  

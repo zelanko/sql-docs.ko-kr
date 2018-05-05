@@ -1,11 +1,9 @@
 ---
 title: Size 속성 (ADO 매개 변수) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 643e5e4603b91eb66e57bf3519b31a647fb49d5d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="size-property-ado-parameter"></a>Size 속성 (ADO 매개 변수)
 바이트 또는 문자, 최대 크기를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  

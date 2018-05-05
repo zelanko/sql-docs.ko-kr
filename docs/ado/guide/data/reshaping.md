@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58a09ecb5ad1828a94bdc5e5b82e59de61396be6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5cd2fa8e2d514edd61e102c136049b5a568f6d2d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reshaping"></a>모양 변경
 A **레코드 집합** 만든 도형의 절에 의해 명령을 할당할 수 있습니다는 *별칭* 이름 (일반적으로 AS 키워드가). 모양의의 별칭 **레코드 집합** 완전히 다른 명령에서 참조할 수 있습니다. 즉, 다시 사용할 수 있습니다, 또는 *변형*, 이전에 모양의 **레코드 집합** 새 shape 명령에서 합니다. 이 기능을 지원 하려면 ADO에는 속성을 제공 [이름 변형](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)합니다.  

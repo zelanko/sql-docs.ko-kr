@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 47e9d94d3a3f6e39864d27fee1c82f8e69f24b37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f46136c5dd8058e19aec6d7550f86c9cb1fd675c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deferred-fields"></a>지연 된 필드
 값 *필드 지연* 시간을 설정 하지만 드라이버는 지연 된 효과 대 한 변수의 주소를 저장 하는 경우에 사용 되지 않습니다. 변수의 내용을에 대 한 호출 시 드라이버는 응용 프로그램 매개 변수 설명자에 대 한 사용 **SQLExecDirect** 또는 **SQLExecute**합니다. 응용 프로그램 행 설명자를 사용 하는 드라이버 변수의 내용을 인출 시간에 사용합니다.  

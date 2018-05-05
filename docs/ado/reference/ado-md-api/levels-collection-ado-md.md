@@ -1,11 +1,9 @@
 ---
 title: ADO MD 컬렉션 수준 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc644909b698c42d54b9e5b1768f6d547195d562
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6756b6faecca40f7d284a4bbf9425ba7affcc3fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-collection-ado-md"></a>ADO MD 수준 컬렉션
 포함 된 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 계층 구조로 구성 하는 개체입니다.  

@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Remoting Provider (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자 수 있습니다. 원격 컴퓨터에서 로컬 사용자 인 경우와 마찬가지로 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스할 수는 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 경우에 따라 원격 컴퓨터를 액세스할 수 있습니다.
@@ -56,7 +53,7 @@ Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급�
 |**DFMode**|DataFactory 모드를 나타냅니다. 원하는 버전을 지정 하는 문자열은 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 서버 개체입니다. 특정 버전의 요청에 대 한 연결을 열기 전에이 속성을 설정 합니다.는 **DataFactory**합니다. 요청 된 버전에 사용할 수 없는 경우 이전 버전을 사용 하는 시도가 수행 됩니다. 이전 버전이 없는 경우 오류가 발생 합니다. 경우 **DFMode** 가 사용할 수 있는 버전 보다 작은 오류가 발생 합니다. 연결 된 후이 속성은 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21"-버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자가 서버에 전송 되는 명령 (행 집합) 속성의 문자열에 추가 될 값을 나타냅니다. 이 문자열에 대 한 기본값은 vt_empty 합니다.|
 |**현재 DFMode**|실제 버전 수를 나타내는 **DataFactory** 서버에 있습니다. 버전에서 요청 된 경우를 확인 하려면이 속성을 확인는 **DFMode** 속성 적용 합니다.<br /><br /> 다음과 같은 올바른 정수 (Long) 값 중 하나일 수 있습니다.<br /><br /> -25-버전 2.5 (기본값)<br />-21-버전 2.1<br />-20-버전 2.0<br />-15-버전 1.5<br /><br /> 추가 "DFMode = 20;" 연결 문자열을 사용 하는 경우에 **MSRemote** 데이터를 업데이트할 때 공급자 서버 성능이 향상 시킬 수 있습니다. 이 설정을 통해는 **업데이트할** 많이 모드를 사용 하는 서버에서 개체입니다. 그러나 다음과 같은 기능을이 구성에서 사용할 수 없습니다.<br /><br /> -매개 변수가 있는 쿼리를 사용 합니다.<br />-호출 하기 전에 매개 변수 또는 열 정보를 가져오는 **Execute** 메서드.<br />-설정 **업데이트 Transact** 를 **True**합니다.<br />-행 상태 가져오기<br />-호출는 **Resync** 메서드.<br />-새로 고침 (명시적으로 또는 자동으로)를 통해는 **업데이트 Resync** 속성입니다.<br />-설정 **명령** 또는 **레코드 집합** 속성입니다.<br />-를 사용 하 여 **adCmdTableDirect**합니다.|
-|**Handler**|기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (또는 처리기)의 이름을 나타냅니다는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및 매개 변수 처리기가 사용 되는*,* 쉼표 (로 모두 분리 된 ","). A **문자열** 값입니다.|
+|**Handler**|기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (또는 처리기)의 이름을 나타냅니다는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및 매개 변수 처리기가 사용 되는 *,* 쉼표 (로 모두 분리 된 ","). **문자열** 값입니다.|
 |**인터넷 제한 시간**|서버에서 이동 하는 요청 될 때까지 기다리는 시간 (밀리초)의 최대 수를 나타냅니다. (기본값은 5 분입니다.)|
 |**원격 공급자**|원격 서버에서 사용 가능 하도록 데이터 공급자의 이름을 나타냅니다.|
 |**원격 서버**|이 연결에서 사용할 서버 이름 및 통신 프로토콜을 나타냅니다. 이 속성은 해당 하는 [.rds입니다 DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [서버](../../../ado/reference/rds-api/server-property-rds.md) 속성입니다.|

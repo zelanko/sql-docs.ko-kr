@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 문 참조(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +37,11 @@ ms.lasthandoff: 01/08/2018
   
 |항목|Description|  
 |-----------|-----------------|  
-|[MDX 스크립팅 문 &#40; Mdx&#41;](../mdx/mdx-scripting-statements-mdx.md)|MDX 스크립트 내의 쿼리 컨텍스트, 범위 및 제어 흐름을 관리하는 MDX 스크립팅 문에 대한 정보가 포함됩니다.|  
-|[MDX 데이터 정의 문 &#40; Mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)|다차원 개체를 만들고, 삭제하고, 조작하는 MDX 데이터 정의 문에 대한 정보가 포함됩니다.|  
-|[MDX 데이터 조작 문 &#40; Mdx&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|다차원 개체로부터 데이터를 검색하고 조작하는 MDX 데이터 조작 문에 대한 정보가 포함됩니다.|  
+|[MDX 스크립팅 문 & #40; Mdx& #41;](../mdx/mdx-scripting-statements-mdx.md)|MDX 스크립트 내의 쿼리 컨텍스트, 범위 및 제어 흐름을 관리하는 MDX 스크립팅 문에 대한 정보가 포함됩니다.|  
+|[MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|다차원 개체를 만들고, 삭제하고, 조작하는 MDX 데이터 정의 문에 대한 정보가 포함됩니다.|  
+|[MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|다차원 개체로부터 데이터를 검색하고 조작하는 MDX 데이터 조작 문에 대한 정보가 포함됩니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 &#40; Mdx&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

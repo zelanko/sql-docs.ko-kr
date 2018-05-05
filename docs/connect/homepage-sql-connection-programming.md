@@ -1,24 +1,24 @@
 ---
-title: "SQL 클라이언트 프로그래밍에 대 한 홈 페이지 | Microsoft Docs"
-description: "다운로드 및 언어와 SQL Server 나 Azure SQL 데이터베이스에 연결 하기 위한 운영 체제의 다양 한 조합에 대 한 설명서에 대 한 주석이 추가 된 링크가 있는 허브 페이지입니다."
+title: SQL 클라이언트 프로그래밍에 대 한 홈 페이지 | Microsoft Docs
+description: 다운로드 및 언어와 SQL Server 나 Azure SQL 데이터베이스에 연결 하기 위한 운영 체제의 다양 한 조합에 대 한 설명서에 대 한 주석이 추가 된 링크가 있는 허브 페이지입니다.
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology:
+- drivers
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 234ce07b25a0d120e72d8972b8e7b05f32c88201
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server를 프로그래밍 하는 클라이언트에 대 한 홈 페이지
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/29/2017
 - 적절 한 영역 및 특정 언어에 대 한 계층적 문서의 하위 영역을 표시 합니다.
 
 
-#### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 지정된 된 언어에서 SQL Server에 연결 하는 코드는 Azure SQL 데이터베이스에 연결 하기 위한 코드에 거의 동일 합니다.
 
@@ -56,9 +56,9 @@ Azure SQL 데이터베이스에 연결 하기 위한 연결 문자열에 대 한
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework는.NET Framework의][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![큰 더하기 cpp][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework의 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![큰 더하기 cpp][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +107,7 @@ EF 다음 기술과 함께 직접 또는 간접 관계에 있습니다.
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), 또는 [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 향상 된 구문은 언어와 같은  **=>**  C#에서 연산자.
+- 향상 된 구문은 언어와 같은 **=>** C#에서 연산자.
 - SQL 데이터베이스의 테이블에 매핑되는 클래스에 대 한 소스 코드를 생성 하는 편리한 프로그램. 예를 들어, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)합니다.
 
 

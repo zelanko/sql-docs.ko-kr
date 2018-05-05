@@ -1,31 +1,29 @@
 ---
-title: "Analysis Services 테이블 형식 모델에서 가장 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 테이블 형식 모델에서 가장 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1db24fc8afb1bb0ec53375fe5f76395b4e4ab0a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>가장 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-이 문서에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
+  이 문서에서는 테이블 형식 모델 작성자 사용 하는 방법 로그온 자격 증명은 Analysis Services에서 데이터 원본에 연결할 때를 가져오고 데이터 처리 (새로 고침) 이해를 제공 합니다.  
 
 ##  <a name="bkmk_conf_imp_info"></a> 가장 구성  
  모델이 있는 위치 및 컨텍스트에 가장 정보를 구성 하는 방법을 결정 합니다. 새 모델 프로젝트를 만들 때에 가장 데이터를 가져오는 데이터 원본에 연결할 때 SQL Server Data Tools (SSDT)에 구성 됩니다. 모델을 배포한 후 SQL Server Management Studio (SSMS)를 사용 하 여 모델 데이터베이스 연결 문자열 속성의 가장을 구성할 수 있습니다. Azure Analysis Services에서 테이블 형식 모델에 대 한 SSMS를 사용할 수 있습니다 또는 **로 볼: 스크립트** json에서 Model.bim 파일을 편집 하려면 브라우저 기반 디자이너의 모드입니다.
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/23/2018
  
 |옵션|Description|  
 |------------|-----------------|  
-|**계정 가장**|모델 사용 가져오거나 데이터 원본에서 데이터를 처리 하는 Windows 사용자 계정을 지정 합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>**합니다.|  
+|**계정 가장**|모델 사용 가져오거나 데이터 원본에서 데이터를 처리 하는 Windows 사용자 계정을 지정 합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>** 합니다.|  
 |**현재 사용자를 가장**|요청을 보낸 사용자에 게의 id를 사용 하 여 데이터 원본에서 데이터에 액세스 해야 지정 합니다. 이 모드는 직접 쿼리 모드에만 적용 됩니다.|  
 |**Id를 가장**|데이터 원본에 액세스 하려면 사용자 이름을 지정 하지만 계정의 암호를 지정할 필요가 없습니다. 이 모드는 Kerberos 위임을 사용 하 고 S4U 인증을 사용 하도록 지정 하는 경우에 적용 됩니다.|  
 |**서비스 계정 가장**|모델 사용 하 여 모델을 관리 하는 Analysis Services 서비스 인스턴스와 연결 된 보안 자격 증명을 지정 합니다.|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/23/2018
  
 |옵션|Description|  
 |------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호**|이 옵션은 모델을 사용을 가져오거나 데이터 원본에서 데이터를 처리 하는 Windows 사용자 계정을 지정 합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>**합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호**|이 옵션은 모델을 사용을 가져오거나 데이터 원본에서 데이터를 처리 하는 Windows 사용자 계정을 지정 합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
 |**서비스 계정**|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
 ##  <a name="bkmk_impers_sec"></a> 보안  

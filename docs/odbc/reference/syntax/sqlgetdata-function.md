@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
@@ -124,10 +123,10 @@ SQLRETURN SQLGetData(
 |HY009|Null 포인터를 잘못 사용 했습니다.|(DM) 인수 *TargetValuePtr* 는 null 포인터입니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute** 또는 카탈로그 함수입니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetData** 함수를 호출 했습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 *StatementHandle* 된 실행된 상태에 있지만 결과 집합이 연관 된는 *StatementHandle*합니다.<br /><br /> 에 대 한 호출 **SQLExeceute**, **SQLExecDirect**, 또는 **SQLMoreResults** SQL_PARAM_DATA_AVAILABLE를 반환 하지만 **SQLGetData** 호출한 를 대신 **SQLParamData**합니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대해 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> 인수에 지정 된 값 *BufferLength* 보다 작거나 4는 *Col_or_Param_Num* 인수는 0으로 설정 된 되었으며 드라이버는 ODBC 2*.x* 드라이버입니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대해 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> 인수에 지정 된 값 *BufferLength* 보다 작거나 4는 *Col_or_Param_Num* 인수는 0으로 설정 된 되었으며 드라이버는 ODBC 2 *.x* 드라이버입니다.|  
 |HY109|잘못 된 커서 위치|커서가 있었기 (여 **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, 또는 **SQLBulkOperations**)에 삭제 된 행에 대해 또는 가져올 수 없습니다.<br /><br /> 커서는 정방향 전용 커서 였으며 행 집합 크기가 1 보다 큽니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
-|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 사용을 지원 하지 않습니다 **SQLGetData** 에 여러 행이 있는 **SQLFetchScroll**합니다. 이 설명은에서 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BLOCK 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> 드라이버 또는 데이터 원본 변환의 조합으로 지정 하는 지원 하지 않습니다는 *TargetType* 인수 및 해당 열의 SQL 데이터 형식입니다. 이 오류는 SQL 데이터 형식 열의 드라이버별 SQL 데이터 형식에 매핑된 경우에 적용 됩니다.<br /><br /> 드라이버는 ODBC 2만 지원*.x*, 인수 및 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 에 나열 된 모든 C interval 데이터 형식 및 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 지원 3.50, 및 인수는 이전 ODBC 버전 *TargetType* SQL_C_GUID 되었습니다.|  
+|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 사용을 지원 하지 않습니다 **SQLGetData** 에 여러 행이 있는 **SQLFetchScroll**합니다. 이 설명은에서 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BLOCK 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> 드라이버 또는 데이터 원본 변환의 조합으로 지정 하는 지원 하지 않습니다는 *TargetType* 인수 및 해당 열의 SQL 데이터 형식입니다. 이 오류는 SQL 데이터 형식 열의 드라이버별 SQL 데이터 형식에 매핑된 경우에 적용 됩니다.<br /><br /> 드라이버는 ODBC 2만 지원 *.x*, 인수 및 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 에 나열 된 모든 C interval 데이터 형식 및 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 지원 3.50, 및 인수는 이전 ODBC 버전 *TargetType* SQL_C_GUID 되었습니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *StatementHandle* 함수를 지원 하지 않습니다.|  
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
@@ -153,14 +152,14 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND 합니다. 이 옵션은 반환 되 면 **SQLGetData** 바인딩되지 않은 열 뿐만 아니라 바인딩된 열에 대해 호출할 수 있습니다.  
   
- 이러한 제한 사항 및 이러한 완화 하는 드라이버의 기능을 두 가지 예외가 있습니다. 첫째, **SQLGetData** 호출 되 면 안 정방향 전용 커서에 대 한 행 집합 크기가 1 보다 큰 경우. 둘째, 드라이버 책갈피를 지 원하는 경우 지원 해야 합니다 항상 호출 하는 기능 **SQLGetData** 0, 응용 프로그램 호출을 허용 하지 않는 경우에 열에 대 한 **SQLGetData** 마지막 하기 전에 다른 열에 대 한 바인딩된 열입니다. (ODBC 2를 응용 프로그램은 사용 하는 경우*.x* 드라이버 **SQLGetData** 책갈피를 사용 하 여 호출을 반환 하는 *Col_or_Param_Num* 을 호출한 후에 0 **SQLFetch**때문에, **SQLFetch** ODBC 3 매핑할*.x* 드라이버 관리자를 **SQLExtendedFetch** 는 와 *FetchOrientation* 는 SQL_FETCH_NEXT, 및 **SQLGetData** 와 *Col_or_Param_Num* ODBC 3 0 매핑할*.x* 드라이버 관리자를 **SQLGetStmtOption** 와 *fOption* SQL_GET_BOOKMARK입니다.)  
+ 이러한 제한 사항 및 이러한 완화 하는 드라이버의 기능을 두 가지 예외가 있습니다. 첫째, **SQLGetData** 호출 되 면 안 정방향 전용 커서에 대 한 행 집합 크기가 1 보다 큰 경우. 둘째, 드라이버 책갈피를 지 원하는 경우 지원 해야 합니다 항상 호출 하는 기능 **SQLGetData** 0, 응용 프로그램 호출을 허용 하지 않는 경우에 열에 대 한 **SQLGetData** 마지막 하기 전에 다른 열에 대 한 바인딩된 열입니다. (ODBC 2를 응용 프로그램은 사용 하는 경우 *.x* 드라이버 **SQLGetData** 책갈피를 사용 하 여 호출을 반환 하는 *Col_or_Param_Num* 을 호출한 후에 0 **SQLFetch**때문에, **SQLFetch** ODBC 3 매핑할 *.x* 드라이버 관리자를 **SQLExtendedFetch** 는 와 *FetchOrientation* 는 SQL_FETCH_NEXT, 및 **SQLGetData** 와 *Col_or_Param_Num* ODBC 3 0 매핑할 *.x* 드라이버 관리자를 **SQLGetStmtOption** 와 *fOption* SQL_GET_BOOKMARK입니다.)  
   
  **SQLGetData** 호출 하 여 방금 삽입 한 행에 대 한 책갈피를 검색 하는 데 사용할 수 없습니다 **SQLBulkOperations** SQL_ADD 옵션을 사용 하므로 커서는 행에 위치 하지 않습니다. 응용 프로그램 호출 하기 전에 바인딩 열 0 하 여 이러한 행에 대 한 책갈피를 검색할 수 **SQLBulkOperations** 경우에서 SQL_ADD와 **SQLBulkOperations** 바인딩된 버퍼에 책갈피를 반환 합니다. **SQLFetchScroll** 해당 행에서 커서 위치를 변경 하려면 SQL_FETCH_BOOKMARK로 호출할 수 있습니다.  
   
  경우는 *TargetType* 인수가의 SQL_DESC_DATETIME_INTERVAL_PRECISION 및 SQL_DESC_PRECISION 필드에 설정 된 대로 기본 간격 선행 자릿수 (2)와 기본 간격 초 자릿수 (6), 간격 데이터 형식 각각의 카드가 데이터에 사용 됩니다. 경우는 *TargetType* 인수는 SQL_C_NUMERIC 데이터 형식, 기본 전체 자릿수 (드라이버 정의 됨) 및 기본 크기 (0)는 카드가의 SQL_DESC_PRECISION 및 SQL_DESC_SCALE 필드에 설정 된 대로, 데이터에 사용 됩니다. 모든 기본 전체 자릿수 또는 소수 자릿수를 적절 한 없으면 응용 프로그램이 명시적으로 설정 해야 적절 한 설명자 필드를 호출 하 여 **SQLSetDescField** 또는 **SQLSetDescRec**합니다. SQL_DESC_CONCISE_TYPE 필드 SQL_C_NUMERIC 및 호출을 설정할 수 있습니다 **SQLGetData** 와 *TargetType* 로 인해 전체 자릿수 및 소수 자릿수 값의 설명자 필드는 SQL_ARD_TYPE의 인수 사용할 수 있습니다.  
   
 > [!NOTE]  
->  ODBC 2에서*.x*, 응용 프로그램 집합 *TargetType* SQL_C_DATE, SQL_C_TIME, 또는 SQL_C_TIMESTAMP 임을 나타내는 \* *TargetValuePtr* 날짜, 시간, 또는 타임 스탬프 구조입니다. ODBC 3에서*.x*, 응용 프로그램 집합 *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 또는 SQL_C_TYPE_TIMESTAMP 합니다. 드라이버 관리자를 통해 적절 한 매핑을 필요한을 기반으로 하는 경우 응용 프로그램 및 드라이버 버전에 있습니다.  
+>  ODBC 2에서 *.x*, 응용 프로그램 집합 *TargetType* SQL_C_DATE, SQL_C_TIME, 또는 SQL_C_TIMESTAMP 임을 나타내는 \* *TargetValuePtr* 날짜, 시간, 또는 타임 스탬프 구조입니다. ODBC 3에서 *.x*, 응용 프로그램 집합 *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 또는 SQL_C_TYPE_TIMESTAMP 합니다. 드라이버 관리자를 통해 적절 한 매핑을 필요한을 기반으로 하는 경우 응용 프로그램 및 드라이버 버전에 있습니다.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>가변 길이 데이터 부분에서 검색  
  **SQLGetData** 부분에 가변 길이 데이터를 포함 하는 열에서 데이터를 검색 하는 데 사용 될-때 SQL 데이터 형식의 열 식별자 즉, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, 또는 가변 길이 유형에 대 한 드라이버 관련 식별자입니다.  

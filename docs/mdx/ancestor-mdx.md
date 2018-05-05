@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f5271c7e096ef7a6b09efc7cc818b31ccd1ec699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ Ancestor(Member_Expression, Distance)
  와 **상위** 함수를 제공 하는 함수 MDX 멤버 식을 사용 하 여 고 멤버의 상위 항목인 수준의 MDX 식 또는 해당 멤버 위의 수준 수를 나타내는 숫자 식을 제공 합니다. 이 정보는 **상위** 함수는 해당 수준의 상위 멤버를 반환 합니다.  
   
 > [!NOTE]  
->  상위 멤버 뿐 아니라 상위 멤버를 포함 하는 집합을 반환 하려면 사용 된 [상위 요소 &#40; Mdx&#41; ](../mdx/ancestors-mdx.md) 함수입니다.  
+>  상위 멤버 뿐 아니라 상위 멤버를 포함 하는 집합을 반환 하려면 사용 된 [상위 &#40;MDX&#41; ](../mdx/ancestors-mdx.md) 함수입니다.  
   
  수준 식이 지정 되는 **상위** 함수는 지정된 된 수준에서 지정 된 멤버의 상위 항목을 반환 합니다. 지정된 멤버가 지정된 수준과 동일한 계층 내에 없으면 이 함수는 오류를 반환합니다.  
   
@@ -113,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 &#40; Mdx&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

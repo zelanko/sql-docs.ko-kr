@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc1afae648ab14db8aca25b9730de2e5cb916f1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f5e586112df85e44950abf17a8c874e83749bc2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
   
 ## <a name="arguments"></a>인수  
  [ **@backup_file_name=** ] **'***backup_file_name***'**  
- 백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)**합니다.  
+ 백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)** 합니다.  
   
  [ **@database_name=** ] **'***database_name***'**  
  데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  

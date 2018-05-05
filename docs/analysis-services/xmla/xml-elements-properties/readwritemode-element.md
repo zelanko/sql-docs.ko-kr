@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,15 +19,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 695cf49a79bebe5540cb07c28f474d9b73cbb669
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 요소
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ReadWriteMode** 데이터베이스 속성에 있는지 여부를 데이터베이스 **ReadWrite** 모드 또는 **ReadOnly** 모드. 이 속성 값은 두 가지만 가능합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  **ReadWriteMode** 데이터베이스 속성은 데이터베이스가 **ReadWrite** 모드에 있는지 또는 **ReadOnly** 모드에 있는지를 지정합니다. 이 속성 값은 두 가지만 가능합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|ReadWrite|  
@@ -54,14 +53,14 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[데이터베이스](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  **ReadWrite** 모드에서만 데이터베이스를 만들 수 있으며 **ReadOnly** 모드에서는 데이터베이스를 만들 수 없습니다.  
   
  **ReadWriteMode** 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*읽기 전용*|데이터베이스에 변경 또는 업데이트를 적용할 수 없습니다.|  
 |*ReadWrite*|데이터베이스에 변경 또는 업데이트를 적용할 수 있습니다.|  

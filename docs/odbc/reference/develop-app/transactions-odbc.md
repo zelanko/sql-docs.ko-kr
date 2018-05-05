@@ -3,15 +3,12 @@ title: 트랜잭션 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: be280a9fab2b0f98ef83f0e2e4e36603e6c6fa68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-odbc"></a>ODBC 트랜잭션
 A *트랜잭션* 는 작업의 단위를 단일 원자성 작업으로 이루어집니다; 작업이 성공 하거나 전체 실패 즉, 합니다. 예를 들어 은행 계좌에서 간에 자금을 이체 하는 것이 좋습니다. 이 두 단계: 첫 번째 계정에서 금액을 취소 하 고 두 번째에서 입출금 계좌 합니다. 성공 하는 단계를 모두; 반드시 성공 하려면 1 단계 및 실패에 대 한 허용 되지 않습니다. 트랜잭션을 지 원하는 데이터베이스는이 보장할 수 있습니다.  

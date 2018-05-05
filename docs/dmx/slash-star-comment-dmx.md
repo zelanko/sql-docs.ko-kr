@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 900b602a00e11cc58cd6500cafc99eb90dcca62d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad69726d5cdba7b421c33bdde86f46c187af4049
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slash-star-comment-dmx"></a>슬래시 별 (주석) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,16 +45,16 @@ ms.lasthandoff: 01/08/2018
  주석 텍스트를 포함하는 문자열입니다.  
   
 ## <a name="remarks"></a>주의  
- 여러 줄로 이루어진 주석은로 표시 되어야 합니다 / * 및 \*/ 합니다.  
+ 여러 줄로 이루어진 주석은 /* 및 \*/로 표시되어야 합니다.  
   
  주석의 길이에는 제한이 없습니다.  
   
- DMX에서 다른 종류의 주석 사용 하는 방법에 대 한 자세한 내용은 참조 [의견 &#40; DMX &#41;](../dmx/comments-dmx.md)합니다.  
+ DMX에서 다른 종류의 주석 사용 하는 방법에 대 한 자세한 내용은 참조 [주석 &#40;DMX&#41;](../dmx/comments-dmx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [이중 슬래시 &#40; 설명 &#41; &#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [-&#40; 설명 &#41; &#40; DMX &#41; 요약](../dmx/comment-dmx-summary.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [이중 슬래시 &#40;주석&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [- &#40;주석&#41; &#40;DMX&#41; 요약](../dmx/comment-dmx-summary.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

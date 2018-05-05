@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fd9353044e5c6ab8edde8989cfb8eb0c663f29b8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31c558a3deb0080c11b8ba4f055f7341fd1a4443
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +110,7 @@ msglen
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  클라이언트에 오류 메시지 또는 정보 메시지를 보내는 함수입니다. 보낼 각 메시지에 대해 한 번씩 호출됩니다.  
   
  **srv_sendrow**를 사용하여 모든 행(있는 경우)을 보내기 전후에 **srv_sendmsg**를 사용하여 순서에 상관없이 클라이언트에 메시지를 보낼 수 있습니다. **srv_senddone**을 사용하여 완료 상태를 보내기 전에는 모든 메시지(있는 경우)를 클라이언트로 보내야 합니다.  

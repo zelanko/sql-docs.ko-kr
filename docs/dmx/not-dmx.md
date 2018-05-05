@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c242a6767e60b04249d69d340806d0cf78a374e2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e2ffe861c7076c9e85adf65a81b131d505dda7c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="not-dmx"></a>NOT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,8 +56,8 @@ NOT Expression1
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [논리 연산자 &#40; DMX &#41;](../dmx/operators-logical.md)   
- [연산자 &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [논리 연산자 &#40;DMX&#41;](../dmx/operators-logical.md)   
+ [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

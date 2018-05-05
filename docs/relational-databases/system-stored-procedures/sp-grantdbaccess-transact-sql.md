@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35cf1ad4a7181ef39b04e355092f98ff1adda230
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c03c8932e8948fde5c0c116d5517f66dda4f407a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame =** ]  **' * * * 로그인* **'** Windows 그룹, Windows 로그인의 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 데이터베이스에 매핑할 로그인 사용자입니다. Windows 그룹과 Windows 로그인의 이름은 Windows 도메인 이름 형식에서으로 정규화 해야 *도메인*\\*로그인 *; 예를 들어, **LONDON\Joeb**합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *로그인* 는 **sysname**, 기본값은 없습니다.  
+ [  **@loginame =** ]  **' * * * 로그인* **'** Windows 그룹, Windows 로그인의 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 데이터베이스에 매핑할 로그인 사용자입니다. Windows 그룹과 Windows 로그인의 이름은 Windows 도메인 이름 형식에서으로 정규화 해야 *도메인*\\* 로그인 *; 예를 들어, **LONDON\Joeb**합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *로그인* 는 **sysname**, 기본값은 없습니다.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **출력**]  
  새 데이터베이스 사용자의 이름입니다. *name_in_db* 데이터 형식의 OUTPUT 변수는 **sysname**, 및 기본값은 NULL입니다. 지정 하지 않으면 *로그인* 사용 됩니다. 값이 NULL 인 OUTPUT 변수로 지정 된 경우 **@name_in_db** 로 설정 된 *로그인*합니다. *name_in_db* 현재 데이터베이스에 아직 없는 해야 합니다.  
