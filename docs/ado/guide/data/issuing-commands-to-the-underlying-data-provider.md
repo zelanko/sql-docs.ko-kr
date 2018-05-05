@@ -1,11 +1,9 @@
 ---
 title: 기본 데이터 공급자에 명령을 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 30734d534d1ac8e82bfb064570c130d3547c8cc4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 19327273acb2d39875a0d85af5a157a240cf4c67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>기본 데이터 공급자에 명령을
 셰이프를 시작 하지 않는 모든 명령은 통해 데이터 공급자에 전달 됩니다. "{공급자 명령} 모양" 형태로 shape 명령을 실행 하는 것과 같습니다. 이러한 명령 *하지* 생성할 필요가 **레코드 집합**합니다. 예를 들어, "셰이프 {놓기 테이블 MyTable}는 완벽 하 게 유효한 셰이프 명령 DROP TABLE 데이터 공급자가 지 원하는 것으로 가정 합니다.  

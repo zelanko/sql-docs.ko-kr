@@ -1,11 +1,9 @@
 ---
 title: 항목 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cf4f6c78b5dd6c93dfcb0ae43a5fa1b271c64c2d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3beaf6111b432427d2a40f9f0362c6a9084a5246
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-property-example-vb"></a>항목 속성 예제 (VB)
 이 예제에서는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 합니다. 열고는 ***작성자*** 목차는 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  

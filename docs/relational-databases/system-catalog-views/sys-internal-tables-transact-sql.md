@@ -27,19 +27,18 @@ caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f0f30bc972bf0af35d582b908da6e163917b965
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cbdff6493fca5bbb9aae67a8a7c7be58b7554556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블에 표시 된 **sys** 모든 데이터베이스의 스키마가 예를 들어 해당 기능을 나타내는, 시스템에서 생성 된 고유 이름 및 **xml_index_nodes_2021582240_32001** 또는  **queue_messages_1977058079**  
   
- 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예: SELECT 문을 실행할 수 없습니다 예를 들어 \* FROM  *\<sys.internal_table_name >*합니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
+ 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예: SELECT 문을 실행할 수 없습니다 예를 들어 \* FROM  *\<sys.internal_table_name >* 합니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
   
   
 |열 이름|데이터 형식|Description|  

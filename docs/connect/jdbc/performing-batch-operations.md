@@ -3,26 +3,22 @@ title: 일괄 처리 작업 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7d2354686c312a353766d4af8b0b52d4f63e1e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-batch-operations"></a>일괄 작업 수행
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,27 +1,25 @@
 ---
-title: "시퀀스 명령 (TMSL) | Microsoft Docs"
-ms.custom: 
+title: 시퀀스 명령 (TMSL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/12/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d1c5a1108ca775694122b6e9c5518913b47d85aa
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 2faf4ebe89154d43d9af45f751d00002fd4b3277
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-command-tmsl"></a>시퀀스 명령 TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

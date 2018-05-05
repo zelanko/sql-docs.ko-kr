@@ -1,16 +1,15 @@
 ---
-title: "Microsoft 클러스터링 알고리즘 | Microsoft Docs"
-ms.custom: 
+title: Microsoft 클러스터링 알고리즘 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 
+caps.latest.revision: 62
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74a6989ebbf0a0d60f4708da667d5ea339512a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 클러스터링 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 비슷한 특성을 포함하는 클러스터로 그룹화하는 데이터 집합의 사례를 반복하는 *세그먼트화* 또는 *클러스터링* 알고리즘입니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 비슷한 특성을 포함하는 클러스터로 그룹화하는 데이터 집합의 사례를 반복하는 *세그먼트화* 또는 *클러스터링* 알고리즘입니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
   
  클러스터링 모델은 관찰만 가지고는 논리적으로 이끌어 낼 수 없을 수 있는 데이터 집합 내 관계를 식별합니다. 예를 들어 자전거로 통근하는 사람은 일반적으로 회사에서 먼 곳에 살지 않는다는 사실을 쉽게 추측할 수 있습니다. 그러나 알고리즘은 자전거 통근자에 대해 확연하게 드러나지 않는 다른 특징을 찾아낼 수 있습니다. 다음 다이어그램에서 클러스터 A는 자가용으로 통근하는 사람에 대한 데이터를 나타내고 클러스터 B는 자전거로 통근하는 사람에 대한 데이터를 나타냅니다.  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [클러스터링 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

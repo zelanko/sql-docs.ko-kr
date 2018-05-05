@@ -25,13 +25,12 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e814026040e37b8467407ddca9f73c57438fa4bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 446c6645f850ac11b546929006e4b20b51c8c38b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,10 +40,10 @@ ms.lasthandoff: 04/16/2018
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|현재 데이터베이스의 이름입니다.|  
-|**SCHEMA_NAME**|**nvarchar(**128**)**|스키마 이름을 반환합니다.|  
-|**SCHEMA_OWNER**|**nvarchar(**128**)**|스키마 소유자의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
-|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (**6**)**|항상 NULL을 반환합니다.|  
-|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (**3**)**|항상 NULL을 반환합니다.|  
+|**SCHEMA_NAME**|**nvarchar(** 128 **)**|스키마 이름을 반환합니다.|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|스키마 소유자의 이름입니다.<br /><br /> **\*\* 중요 한 \* \***  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 신뢰할 수 있는 유일한 개체 스키마 검색 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|항상 NULL을 반환합니다.|  
+|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|기본 문자 집합의 이름을 반환합니다.|  
 
 **예제**  

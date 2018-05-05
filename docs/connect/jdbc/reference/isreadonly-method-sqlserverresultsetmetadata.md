@@ -3,13 +3,10 @@ title: isReadOnly 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 184ed5c14d07d4000737b563ddfbecf6e57953bc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5c63a6b595808ff18981b99983713ae6967089d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public boolean isReadOnly(int column)
 #### <a name="parameters"></a>매개 변수  
  *column*  
   
- **int** 열 인덱스를 나타내는입니다.  
+ 열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
  **true 이면** 열이 읽기 전용입니다. 그렇지 않으면 **false**입니다.  

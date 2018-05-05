@@ -26,12 +26,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 518c243c35ffba9cdf07991dd23ca36d3d5b50c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59e6f1c08440f2053c8f3d4bc3a74f0dcfd60ef3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restorefile-transact-sql"></a>restorefile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. 참조 **restorehistory (restore_history_id)**합니다.|  
+|**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. 참조 **restorehistory (restore_history_id)** 합니다.|  
 |**file_number**|**numeric(10,0)**|복원된 파일의 파일 ID입니다. 이 번호는 각 데이터베이스 내에서 고유해야 합니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
 |**destination_phys_drive**|**nvarchar(260)**|파일이 복원된 드라이브 또는 파티션입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
 |**destination_phys_name**|**nvarchar(260)**|드라이브 또는 파티션 정보 없이 파일이 복원된 위치에 있는 파일의 이름입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  

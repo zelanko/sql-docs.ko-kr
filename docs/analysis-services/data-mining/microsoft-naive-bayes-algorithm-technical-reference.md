@@ -1,16 +1,15 @@
 ---
-title: "Microsoft Naive Bayes 알고리즘 기술 참조 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Naive Bayes 알고리즘 기술 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - MAXIMUM_OUTPUT_ATTRIBUTES parameter
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b5a4374d0d050e7bb74c3bcc2924a76f0cf68ed5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘 구현  
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘은 입력 특성 값과 출력 특성 값의 각 쌍을 고려합니다.  
@@ -108,6 +106,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft Naive Bayes 알고리즘](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Naive Bayes 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

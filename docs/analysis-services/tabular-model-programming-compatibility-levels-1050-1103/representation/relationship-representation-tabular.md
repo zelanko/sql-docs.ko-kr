@@ -1,33 +1,31 @@
 ---
-title: "관계 표현 (테이블 형식) | Microsoft Docs"
-ms.custom: 
+title: 관계 표현 (테이블 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c0fef50d7a63d51955dcc523e07957c237d530ff
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8369ee6e990f23ffc6f9714672062b0c92bcf58d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationship-representation-tabular"></a>관계 표현(테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다.  
+  관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다.  
   
  관계 표현을 만들고 조작하는 방법에 대한 자세한 내용은 [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) 을 참조하십시오.  
   

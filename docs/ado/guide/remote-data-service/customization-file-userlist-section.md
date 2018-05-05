@@ -1,11 +1,9 @@
 ---
 title: 사용자 지정 파일 UserList 섹션 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0184e0289a5f56904e87360900be2409b6d2f248
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
 **userlist** 관련 섹션의 **연결** 의 동일한 영역 *식별자* 매개 변수입니다.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a37335ba9fff07cab70f2e2d694f13f3eb4da4be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0db032921a9709e74cc2b43376d5feb939b68b04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ len
 ## <a name="returns"></a>반환 값  
  현재 원격 저장 프로시저의 원격 저장 프로시저 이름 구성 요소의 null로 끝나는 문자열에 대한 DBCHAR 포인터입니다. 현재 원격 저장 프로시저가 없으면 NULL이 반환되고 *len* 이 -1로 설정됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 원격 저장 프로시저의 이름만 반환합니다. 소유자, 데이터베이스 이름 및 원격 저장 프로시저 번호에 대한 선택적 지정자는 포함되지 않습니다.  
   
  원격 저장 프로시저가 없는 경우에도 **srv_rpcname** 을 호출할 수 있으므로(정보 오류가 발생하지 않음) 이 함수를 사용하여 원격 저장 프로시저가 있는지 여부를 확인할 수 있습니다.  

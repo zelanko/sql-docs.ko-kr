@@ -1,7 +1,6 @@
 ---
 title: Refresh 메서드 (RDS) | Microsoft Docs
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +22,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89e9088aeec78213f7da9a79ba78255de4b94b97
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e86c8965180eb6cec2fda86a2c5141d0c3e6fa75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-rds"></a>Refresh (RDS) 메서드
 에 지정 된 데이터 원본 다시 쿼리는 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성 및 쿼리 결과 업데이트 합니다.  

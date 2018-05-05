@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,17 +28,17 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 511cca07c0505db7bd1aaa21bed923498137e04f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8caf151bcde6ebdf2bba26e13ddad93fed389d5d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 요소(XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]SOAP 요청 메시지의 SOAP 헤더를 사용 하 여의 인스턴스 간의 프로토콜 기능을 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램 및입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  SOAP 요청 메시지의 SOAP 헤더를 사용 하 여의 인스턴스 간의 프로토콜 기능을 식별 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 클라이언트 응용 프로그램 및입니다.  
   
- **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,17 +60,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|InclusionThresholdSetting|  
+|부모 요소|없음|  
 |자식 요소|[기능](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
 ## <a name="remarks"></a>주의  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/08/2018
  프로토콜 기능은 명시적으로 협상될 필요가 없습니다. 즉 클라이언트 응용 프로그램은 SOAP 요청의 일부로 **ProtocolCapabilities** 요소를 포함하지 않아도 됩니다. SOAP 요청에 포함 되어 있지 않으면는 **ProtocolCapabilities** 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 동일한 형식을 사용 하 여 SOAP 요청에 응답 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [관리 연결 및 세션 &#40; XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [헤더 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+ [관리 연결 및 세션 & #40; XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [헤더 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

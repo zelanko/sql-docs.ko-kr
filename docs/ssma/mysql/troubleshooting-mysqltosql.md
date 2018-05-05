@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2bacab63460d36c7e3e7edaf8384943aafc2508
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: ce78317dc4a4fb45f1268f782d2bf0c9613b7062
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-mysqltosql"></a>문제 해결 (MySQLToSQL)
 마이그레이션 문제의 중간에 있는 콘솔 스크립트 또는 명령을 실행 하는 일반적이 지 않습니다.  

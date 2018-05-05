@@ -1,35 +1,33 @@
 ---
-title: "테이블의 데이터를 필터링 합니다. | Microsoft Docs"
-ms.custom: 
+title: 테이블의 데이터를 필터링 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.notallitemsshowing.f1
 - sql13.asvs.bidtoolset.autofiltermenu.f1
 - sql13.asvs.bidtoolset.customfilterdb.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9b9fbee486fe2817a34c589041e1e8566585b96
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 817ee61a90eb9810b42765f9031641ba15d45aef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-data-in-a-table"></a>테이블의 데이터 필터링 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-데이터를 가져올 때 필터를 적용하여 테이블에 로드되는 행을 제어할 수 있습니다. 데이터를 가져온 후에는 개별 행을 삭제할 수 없습니다. 그러나 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어할 수 있습니다. 필터링 조건을 충족하지 않는 행은 숨겨집니다. 하나 이상의 열을 기준으로 필터링할 수 있습니다. 필터는 가산적이므로 현재 필터를 기준으로 필터를 추가할 때마다 데이터의 하위 집합이 줄어듭니다.  
+  데이터를 가져올 때 필터를 적용하여 테이블에 로드되는 행을 제어할 수 있습니다. 데이터를 가져온 후에는 개별 행을 삭제할 수 없습니다. 그러나 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어할 수 있습니다. 필터링 조건을 충족하지 않는 행은 숨겨집니다. 하나 이상의 열을 기준으로 필터링할 수 있습니다. 필터는 가산적이므로 현재 필터를 기준으로 필터를 추가할 때마다 데이터의 하위 집합이 줄어듭니다.  
   
 > [!NOTE]  
 >  필터 미리 보기 창에서는 표시되는 서로 다른 값의 수가 제한됩니다. 제한을 초과하는 경우 메시지가 표시됩니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  필터를 지우려는 열의 머리글에 있는 화살표를 클릭합니다.  
   
-2.  클릭 **에서 필터 지우기 \<열 이름 >**합니다.  
+2.  클릭 **에서 필터 지우기 \<열 이름 >** 합니다.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>테이블에 대한 필터를 모두 지우려면  
   

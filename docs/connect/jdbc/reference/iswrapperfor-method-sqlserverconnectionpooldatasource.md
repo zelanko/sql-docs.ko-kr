@@ -3,26 +3,22 @@ title: isWrapperFor 메서드 (SQLServerConnectionPoolDataSource) | Microsoft Do
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 09ed10eb-6e46-437b-a7c0-3c55574aad38
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9cb522667a1946bc1d05c563169cda37431e33cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 0a3d68baf8755d9e1258b52defd3ebed53f9f24b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iswrapperfor-method-sqlserverconnectionpooldatasource"></a>isWrapperFor 메서드(SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

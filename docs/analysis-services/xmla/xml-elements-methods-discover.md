@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/14/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -31,15 +30,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c7825925accedb8a32ab05af2f67efc02e5ae94b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be47521c735d60c405d1d8ee429a5e7b0ccadb2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---methods---discover"></a>XML 요소 방법-검색
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]인스턴스에서 특정 개체에 대 한 정보 또는 사용 가능한 데이터베이스 목록과 같은 정보를 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. **Discover** 메서드로 검색되는 데이터는 해당 메서드로 전달되는 매개 변수의 값에 따라 달라집니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  인스턴스에서 특정 개체에 대 한 정보 또는 사용 가능한 데이터베이스 목록과 같은 정보를 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. **Discover** 메서드로 검색되는 데이터는 해당 메서드로 전달되는 매개 변수의 값에 따라 달라집니다.  
   
  **네임스페이스** urn:schemas-microsoft-com:xml-analysis  
   
@@ -58,10 +57,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -99,10 +98,10 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 데이터 형식 &#40; XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [방법 &#40; 실행 XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
- [방법 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML 요소 &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+ [XML 데이터 형식 & #40; XMLA & #41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [Execute 메서드 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [메서드 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
+ [XML 요소 & #40; XMLA & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services 스키마 행 집합](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

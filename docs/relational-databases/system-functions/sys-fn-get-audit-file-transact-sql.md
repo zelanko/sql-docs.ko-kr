@@ -27,13 +27,12 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6dc30f57484714d70c7777a30ee43246c5980fcf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0f98aa670816f0337e943dff8d68513fcb95706c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>인수  
  *file_pattern*  
- 읽을 감사 파일 집합의 디렉터리나 경로와 파일 이름을 지정합니다. 형식이 **nvarchar (260)**합니다. 
+ 읽을 감사 파일 집합의 디렉터리나 경로와 파일 이름을 지정합니다. 형식이 **nvarchar (260)** 합니다. 
  
  - **SQL Server**:
     
@@ -76,7 +75,7 @@ fn_get_audit_file ( file_pattern,
 >  파일 이름 패턴 없이 경로를 전달하면 오류가 생성됩니다.  
   
  *initial_file_name*  
- 감사 파일 집합에서 감사 레코드를 읽기 시작할 특정 파일의 경로와 이름을 지정합니다. 형식이 **nvarchar (260)**합니다.  
+ 감사 파일 집합에서 감사 레코드를 읽기 시작할 특정 파일의 경로와 이름을 지정합니다. 형식이 **nvarchar (260)** 합니다.  
   
 > [!NOTE]  
 >  *initial_file_name* 인수에 유효한 항목이 또는 기본 있어야 합니다. | NULL 값입니다.  

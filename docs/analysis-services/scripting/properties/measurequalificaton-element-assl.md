@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ba9069f1b7437dfec366ff2d41019063650b8b75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 68514314f0ff1cdc5c7984f13f20d52d731f4bb2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]측정값에 대 한 접두사 적용 여부를 결정은 [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  측정값에 대 한 접두사 적용 여부를 결정은 [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*없음*|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[측정값 그룹](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
@@ -73,9 +72,9 @@ ms.lasthandoff: 01/08/2018
  부모에 해당 하는 요소 **MeasureQualification** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.MeasureGroup>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Cube 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Dimension 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [MeasureGroup 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)   
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Cube 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Dimension 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [MeasureGroup 요소 &#40;ASSL&#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)   
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

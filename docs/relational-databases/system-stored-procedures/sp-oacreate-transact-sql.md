@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f09e5cdf526a798fde6f4f49f98575011d4e9462
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  예를 들어 SQLDMO입니다. Sql Server는 SQL-DMO의 ProgID **SQLServer** 개체입니다. SQL-DMO의 구성 요소 이름은 SQLDMO는 **SQLServer** 개체 유효 하다 고 (모든 SQL-DMO와 같은 개체)는 **SQLServer** 지원 개체 **IDispatch**합니다.  
   
  *clsid*  
- 만들 OLE 개체의 CLSID(클래스 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 및 형식은: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**합니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다는 **IDispatch** 인터페이스입니다.  
+ 만들 OLE 개체의 CLSID(클래스 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 및 형식은: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'** 합니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다는 **IDispatch** 인터페이스입니다.  
   
  예를 들어 {00026BA1-0000-0000-C000-000000000046}은 SQL-DMO의 CLSID **SQLServer** 개체입니다.  
   

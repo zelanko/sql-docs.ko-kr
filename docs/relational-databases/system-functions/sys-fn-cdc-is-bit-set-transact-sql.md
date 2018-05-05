@@ -29,12 +29,11 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82a4e3fc6d80188ddd9dd5bfd82f798785e97ea9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 022c6857023016a4c9609d8dbb390a89275f6ff6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
  검사할 마스크의 서수 위치입니다. *위치* 은 **int**합니다.  
   
  *update_mask*  
- 업데이트된 열을 식별하는 마스크입니다. *update_mask* 은 **varbinary(128)**합니다.  
+ 업데이트된 열을 식별하는 마스크입니다. *update_mask* 은 **varbinary(128)** 합니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **bit**  

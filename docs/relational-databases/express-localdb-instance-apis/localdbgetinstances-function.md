@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
@@ -22,9 +21,9 @@ caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ebb48bf66b58fa8504a0778825c098c31fe77f66
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 3121049938af0707ce30c68a4da6d9ca96ec7763
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

@@ -1,11 +1,9 @@
 ---
 title: 서 수 속성 (ADO MD 셀) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 31452f956589b03cb27a91575d250c63a77cd0c1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 26d56708b4b38dd47dd77889c03497f4574e4e42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ordinal-property-ado-md-cell"></a>서 수 속성 (ADO MD 셀)
 고유 하 게 식별 한 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 셀 집합 내에서 위치입니다.  

@@ -1,35 +1,33 @@
 ---
-title: "중첩 테이블 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
+title: 중첩 테이블 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 
+caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dcbf70dda0c85927429e1ad20fe2de307afd6e71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>중첩 테이블(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용 하 여 이러한 사례를 처리 하는 고유한 방법을 제공 *중첩 테이블*합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용 하 여 이러한 사례를 처리 하는 고유한 방법을 제공 *중첩 테이블*합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
   
  ![중첩된 테이블을 사용 하 여 두 테이블 결합](../../analysis-services/data-mining/media/nested-tables.gif "중첩된 테이블을 사용 하 여 두 테이블 결합")  
   
@@ -74,6 +72,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

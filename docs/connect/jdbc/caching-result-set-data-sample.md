@@ -3,26 +3,22 @@ title: 결과 집합 데이터 샘플 캐싱 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 30c8ee3487ac216676e23d35caa4dc6b4f482244
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 4ef120e92505134ef98b772a5ab2a5b3f51402ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caching-result-set-data-sample"></a>결과 집합 데이터 샘플 캐싱
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

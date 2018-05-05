@@ -1,11 +1,9 @@
 ---
 title: ExecuteOptions 및 FetchOptions 속성 예 (VBScript) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f35f6b4c00b33eeea463a99540eba40abf76ebe
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1e848a71bdf1080cf320e9d9255e5a60827ffabc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예 (VBScript)
 > [!IMPORTANT]

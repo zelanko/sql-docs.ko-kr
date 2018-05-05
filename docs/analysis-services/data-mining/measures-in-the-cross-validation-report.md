@@ -1,16 +1,15 @@
 ---
-title: "교차 유효성 검사 보고서의 측정값 | Microsoft Docs"
-ms.custom: 
+title: 교차 유효성 검사 보고서의 측정값 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
 - cross-validation [data mining]
@@ -18,24 +17,23 @@ helpviewer_keywords:
 - log score [data mining]
 - likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 16431d09b0c505cf91a16ce00a09ed1d3a1f96ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
+  교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
   
  보고서에는 데이터의 접기 수 및 각 접기의 데이터 양에 대한 기본 정보와, 데이터 분포를 설명하는 일반 메트릭 집합이 포함됩니다. 각 교집합 영역에 대한 일반 메트릭을 비교하여 구조 또는 모델의 안정성을 평가할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 모델에 대한 자세한 측정값 집합도 표시합니다. 이 측정값은 모델 유형 및 분석되는 특성의 유형(예: 특성이 불연속 특성인지 아니면 연속 특성인지)에 따라 달라집니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 마이닝 모델에 대한 자세한 측정값 집합도 표시합니다. 이 측정값은 모델 유형 및 분석되는 특성의 유형(예: 특성이 불연속 특성인지 아니면 연속 특성인지)에 따라 달라집니다.  
   
  이 섹션에서는 **교차 유효성 검사** 보고서에 포함되는 측정값의 목록과 의미를 제공합니다. 각 측정값을 계산하는 방법에 대한 자세한 내용은 [교차 유효성 검사 수식](../../analysis-services/data-mining/cross-validation-formulas.md)을 참조하세요.  
   

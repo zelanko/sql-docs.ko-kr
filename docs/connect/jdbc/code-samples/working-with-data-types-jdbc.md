@@ -3,25 +3,22 @@ title: 데이터 형식 (JDBC) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd46c8a8afa60558d93a70f97c8ad4622a7b0512
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 6ccecd482516979a2f3ace2a4ce2c039af3ad1c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

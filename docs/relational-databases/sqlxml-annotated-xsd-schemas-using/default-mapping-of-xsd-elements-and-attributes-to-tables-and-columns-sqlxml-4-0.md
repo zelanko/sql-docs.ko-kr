@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -33,13 +31,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2fb1d00e1ec69ede259af652c6d463084ba0501c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b8093c30d058b926d79f6494aa3dd08bd59a1c8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 기본 매핑(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.lasthandoff: 04/16/2018
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 참조 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-default-mapping"></a>1. 기본 매핑 지정  
- 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다.  **\<Person.Contact >** 요소는 복합 유형 및, 따라서 기본적으로 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑합니다. 모든 특성 (ContactID, FirstName, LastName)은  **\<Person.Contact >** 요소는 단순 유형이 고 기본적으로 Person.Contact 테이블에서 같은 이름의 열에 매핑됩니다.  
+ 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. **\<Person.Contact >** 요소는 복합 유형 및, 따라서 기본적으로 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑합니다. 모든 특성 (ContactID, FirstName, LastName)은  **\<Person.Contact >** 요소는 단순 유형이 고 기본적으로 Person.Contact 테이블에서 같은 이름의 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -100,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>2. XML 요소를 데이터베이스 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다.  **\<Person.Contact >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. 요소  **\<FirstName >** 및  **\<LastName >** 및 **EmployeeID** 특성은 단순 유형이 고, 따라서에 매핑됩니다는 같은 이름의 열입니다. 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Person.Contact >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. 요소  **\<FirstName >** 및  **\<LastName >** 및 **EmployeeID** 특성은 단순 유형이 고, 따라서에 매핑됩니다는 같은 이름의 열입니다. 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -154,7 +151,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>3. XML 요소를 XML 데이터 형식 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다.  **\<Production.ProductModel >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. **ProductModelID** 특성은 단순 유형의 이며, 따라서 동일한 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은는  **\<지침 >** 요소를 사용 하는 열에 매핑된다는 **xml** 데이터 형식을 사용 하 여는 **xsd: anyType** 유형입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Production.ProductModel >** 요소는 복합 유형 및 데이터베이스에 같은 이름의 테이블에 매핑됩니다. **ProductModelID** 특성은 단순 유형의 이며, 따라서 동일한 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은는  **\<지침 >** 요소를 사용 하는 열에 매핑된다는 **xml** 데이터 형식을 사용 하 여는 **xsd: anyType** 유형입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

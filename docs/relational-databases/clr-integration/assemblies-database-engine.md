@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -20,9 +19,9 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48f58f33759d438863351cf621aaeaee34e406cc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 80fbed0b759f3b05688ee51156a9092294fe0ceb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

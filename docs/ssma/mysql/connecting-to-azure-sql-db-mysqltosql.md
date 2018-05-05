@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -23,12 +22,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da22355440bec434796794b60b4914ca099c3c04
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: bb49a6e0604fd3bd713857bab18cde30804b0f42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL)에 연결
 MySQL 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 에 연결할 때 SSMA는 SQL Azure의 인스턴스에서 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 SQL Azure에 연결 되어 있지만 암호를 저장 하지 않는 인스턴스 정보를 저장 합니다.  

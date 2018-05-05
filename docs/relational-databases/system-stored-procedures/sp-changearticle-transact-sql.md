@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f68944355ce8af106d46ebba123e4c1fff05b04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +57,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
  속성을 변경할 아티클의 이름입니다. *문서* 은 **sysname**, 기본값은 NULL입니다.  
   
  [  **@property=**] **'***속성***'**  
- 변경할 아티클 속성입니다. *속성* 은 **nvarchar (100)**합니다.  
+ 변경할 아티클 속성입니다. *속성* 은 **nvarchar (100)** 합니다.  
   
  [  **@value=**] **'***값***'**  
- 아티클 속성의 새 값입니다. *값* 은 **nvarchar (255)**합니다.  
+ 아티클 속성의 새 값입니다. *값* 은 **nvarchar (255)** 합니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
@@ -85,7 +83,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|대상 테이블을 삭제합니다.|  
 ||**truncate**|대상 테이블을 자릅니다.|  
 |**pub_identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
-|**schema_option**||지정한 아티클에 대한 스키마 생성 옵션의 비트맵을 지정합니다. *schema_option* 은 **binary (8)**합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
+|**schema_option**||지정한 아티클에 대한 스키마 생성 옵션의 비트맵을 지정합니다. *schema_option* 은 **binary (8)** 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
 ||**0x00**|스냅숏 에이전트가 스크립팅을 사용하지 않습니다.|  
 ||**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등).|  
 ||**0x02**|정의된 경우 아티클에 대한 변경 내용을 전파하는 저장 프로시저를 생성합니다.|  

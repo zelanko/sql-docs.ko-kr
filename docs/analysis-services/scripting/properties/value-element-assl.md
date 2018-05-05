@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 007c2b2da48f72655bfd131eedf61db9f8989a3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b13a948614fdd6dca996624db7a11bbfd8b03deb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-element-assl"></a>Value 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소의 값을 포함합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  부모 요소의 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,24 +49,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|아래 표를 참조 합니다.|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|아래 표를 참조하세요.|  
+|기본값|없음|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 |상위 항목 또는 부모|데이터 형식|  
 |------------------------|---------------|  
 |[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)|모든 simpleType|  
 |[ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|모든 simpleType|  
-|나머지|String|  
+|나머지|문자열|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AlgorithmParameter](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md), [주석](../../../analysis-services/scripting/objects/annotation-element-assl.md), [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md), [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md), [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md), [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md)|  
-|자식 요소|InclusionThresholdSetting|  
+|자식 요소|없음|  
   
 ## <a name="remarks"></a>주의  
  **값** 요소는 부모 개체와 연결 된 값을 포함 합니다. 예상 값은 **값** 다음 표에 설명 된 대로 요소는 부모 요소에 따라 달라 집니다.  
@@ -84,6 +83,6 @@ ms.lasthandoff: 01/08/2018
  부모에 해당 하는 요소 **값** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.AlgorithmParameter>, <xref:Microsoft.AnalysisServices.Annotation>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.ReportParameter>, 및 <xref:Microsoft.AnalysisServices.ServerProperty>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [속성 &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [속성 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
