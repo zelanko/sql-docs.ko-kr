@@ -2,16 +2,14 @@
 title: 스크립트 파일 (AccessToSQL) 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +18,11 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: Inactive
-ms.openlocfilehash: 7b249b133ffb2316046f65786e0ac41f3a034e0e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 5d1b0fda2c6c822d6d080bb2cf48958964e230ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-script-files-accesstosql"></a>스크립트 파일 (AccessToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  

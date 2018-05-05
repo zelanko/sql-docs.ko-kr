@@ -2,7 +2,6 @@
 title: SSMA 콘솔 (AccessToSQL)의 명령줄 옵션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b12ad50a60434fda6115c94020f2168906d1da62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 361ef1f9fcac31f864350098a2c3d223c59e2afe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

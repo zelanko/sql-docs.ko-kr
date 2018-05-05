@@ -2,16 +2,14 @@
 title: 샘플 콘솔 스크립트 FilesExecuting SSMA 콘솔 작업 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c071001883bd23c54593920c952e6b29e09a78b8
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a581236e29da44646eee8fa55f432ad92e9d586c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>샘플 콘솔 스크립트 FilesExecuting SSMA 콘솔 (AccessToSQL) 사용
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  

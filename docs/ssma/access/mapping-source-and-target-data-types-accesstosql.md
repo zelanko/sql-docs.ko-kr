@@ -2,7 +2,6 @@
 title: 매핑 소스 및 대상 데이터 형식 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,9 +24,9 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3bb6bd72d6b20ef207653b904607a9df942c2858
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: af10741f0041525b058341f398b86c5e62f7a7e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
