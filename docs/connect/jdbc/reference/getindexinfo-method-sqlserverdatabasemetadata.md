@@ -3,15 +3,12 @@ title: getIndexInfo 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getIndexInfo
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,7 +63,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  **true 이면** 결과 대략적인 되었거나 사용 되지 않는 값을 반영 하는 경우. **false** 는 결과가 정확 하면입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

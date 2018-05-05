@@ -3,13 +3,10 @@ title: NULL이 아닌 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,9 +17,9 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50276561653a3cd4d89eb6aa048db121b9ea2016
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 9c0d0f3268d2af0408411b1a84bfb6179b0780bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

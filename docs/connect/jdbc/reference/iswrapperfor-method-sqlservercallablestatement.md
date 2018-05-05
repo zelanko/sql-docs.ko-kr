@@ -3,26 +3,22 @@ title: isWrapperFor 메서드 (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2bf03b3e0ea5a2879dd7536a5f9c730953fb8acf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: b4b0474c6301b450bcb8f43ffaaad66cfdcb56aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

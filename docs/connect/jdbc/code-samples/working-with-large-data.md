@@ -3,25 +3,22 @@ title: 큰 데이터 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7add5ea12b79ec18e9883cf3b8be375ceca1010
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 126775f2b56bdf2cf1847334b0c8faad7cfcfafb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-large-data"></a>큰 데이터 작업
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

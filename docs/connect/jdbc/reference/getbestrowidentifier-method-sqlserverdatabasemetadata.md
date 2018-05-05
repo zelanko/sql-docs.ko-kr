@@ -3,15 +3,12 @@ title: getBestRowIdentifier 메서드 (SQLServerDatabaseMetaData) | Microsoft Do
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a015cdf8b6b94f7abad12e3443e9f0635e63e2df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,7 +69,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  **true 이면** null 허용 열을 포함 하도록 합니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
+ [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

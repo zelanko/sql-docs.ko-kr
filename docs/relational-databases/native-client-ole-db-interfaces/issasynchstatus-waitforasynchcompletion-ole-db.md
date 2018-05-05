@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
@@ -23,9 +22,9 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e8674fe49659d71dd825c9501a7215f523df1e4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 0ab8eec0f1eabc796a4acac57abd0af86d8c1982
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

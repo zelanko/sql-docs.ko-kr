@@ -3,15 +3,12 @@ title: setDate 메서드 날짜 및 달력-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setDate (int, java.sql.Date, java.util.Calendar)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0895f8b5f296a9a07499118a208aea3d1d2ca908
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c995909200a7eef7173b3a642b6d19aa13547
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>setDate 메서드(int, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

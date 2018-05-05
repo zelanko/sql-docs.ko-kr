@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ff184bbcfc3e638bf15badc98a060e88cac3e0d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0f6a370d3a45a07c57f4de30fb22afdd55ea5f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결 된 서버 이름 및 카탈로그 이름을 구성한 후의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 이루어진 이름을 사용 하 여 카탈로그에서 정보를 가져오지 지원 *linked_server_name과***.*** 카탈로그* 에 대 한 *CatalogName* 다음 odbc 카탈로그 함수:  
+ 연결 된 서버 이름 및 카탈로그 이름을 구성한 후의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 이루어진 이름을 사용 하 여 카탈로그에서 정보를 가져오지 지원 *linked_server_name과 ***.*** 카탈로그* 에 대 한 *CatalogName* 다음 odbc 카탈로그 함수:  
   
 -   **SQLColumnPrivileges**  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **SQLTables**  
   
- 두 부분 *linked_server_name과***.*** 카탈로그* 에 지원 됩니다 *FKCatalogName* 및 *PKCatalogName* 에 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)합니다.  
+ 두 부분 *linked_server_name과 ***.*** 카탈로그* 에 지원 됩니다 *FKCatalogName* 및 *PKCatalogName* 에 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)합니다.  
   
  SQLLinkedServers 및 SQLLinkedCatalogs를 사용하려면 다음 파일이 필요합니다.  
   
