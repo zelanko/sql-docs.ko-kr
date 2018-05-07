@@ -1,11 +1,9 @@
 ---
 title: 사용자 지정 파일을 이해 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: HT
+ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 4 개의 섹션 형식 리터럴 문자열으로 표시 됩니다 **연결**, **sql**, **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  

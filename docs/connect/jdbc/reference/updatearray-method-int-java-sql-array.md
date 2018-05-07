@@ -3,13 +3,10 @@ title: updateArray 메서드 (int, java.sql.Array) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7238734bd32625f237df5eda7e95e8397aa5129c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 80491fd2fe637dae26860e2b6b02dd06fe5fc04e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -44,7 +41,7 @@ public void updateArray(int columnIndex,
 #### <a name="parameters"></a>매개 변수  
  *columnIndex*  
   
- **int** 열 인덱스를 나타내는입니다.  
+ 열 인덱스를 나타내는 **int**입니다.  
   
  *x*  
   

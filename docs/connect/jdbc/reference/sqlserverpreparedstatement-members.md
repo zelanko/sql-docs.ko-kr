@@ -3,13 +3,10 @@ title: SQLServerPreparedStatement 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
@@ -17,9 +14,9 @@ caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0d92258f45f976d18c679059ba831a1c892638
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 275115e8d23c48a564528de57fee14ae19513e00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -65,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|수, 형식 및이 문 개체에 대 한 매개 변수의 속성을 검색합니다.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 응답 버퍼링 모드를이 대 한 검색 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체입니다.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 시간 (초)의 수를 검색 된 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 에서이 문 개체가 실행 될 때까지 대기 합니다.|  
-|[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 현재 결과 검색 한 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 현재 결과를 검색하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 반환합니다.|  
 |[getResultSetConcurrency](../../../connect/jdbc/reference/getresultsetconcurrency-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 결과 집합 동시성을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 이 문 개체에서 생성 되는 개체입니다.|  
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 결과 집합 유지 기능에 대 한 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 이 문 개체에서 생성 되는 개체입니다.|  
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(에서 상속 되며, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) 검색 결과 집합에 대 한 유형이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 이 문 개체에서 생성 되는 개체입니다.|  

@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 066e2b7f88f9afd82b8f76418bfd2efc1e32b85a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9844048e1dc45e61c87d4598f2f03b4865c68e11
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
  바인딩이 해제된 규칙이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 은 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
->  *object_name* 괄호를 사용할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+>  *object_name* 괄호를 사용할 수 있습니다 **** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
  별칭 데이터 형식에서 규칙의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 은 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 은 **futureonly**, 해당 데이터 형식의 기존 열에 지정된 된 규칙 손실 되지 않습니다.  

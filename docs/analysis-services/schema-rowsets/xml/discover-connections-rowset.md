@@ -1,41 +1,30 @@
 ---
 title: DISCOVER_CONNECTIONS 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CONNECTIONS rowset
-ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de0346d7412f55e597db4b7b44cd533114a297a5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버에서 현재 열린된 연결에 대 한 리소스 사용량 및 작업 정보를 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  서버에서 현재 열린 연결에 대한 리소스 사용량 및 작업 정보를 제공합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_CONNECTIONS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|Restrictions|Description|  
+|열 이름|유형 표시기|제한 사항|Description|  
 |-----------------|--------------------|------------------|-----------------|  
 |**CONNECTION_ID**|**DBTYPE_I4**|예|연결을 식별하는 고유 번호입니다.|  
 |**CONNECTION_USER_NAME**|**DBTYPE_WSTR**|예|연결 사용자 이름입니다.|  
@@ -63,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |인수|값|  
 |--------------|-----------|  
 |GUID|a07ccd25-8148-11d0-87bb-00c04fc33942|  
-|ADOMDNAME|Connections|  
+|ADOMDNAME|연결|  
   
 ## <a name="see-also"></a>관련 항목:  
  [XML for Analysis 스키마 행 집합](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

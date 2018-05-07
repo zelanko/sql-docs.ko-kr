@@ -1,41 +1,23 @@
 ---
 title: Columns 요소 (ASSL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Columns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- COLUMNS
-helpviewer_keywords:
-- Columns element
-ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ebff40f4dce500da857990ccba3f90351385e98f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columns-element-assl"></a>Columns 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소와 연결 된 열의 컬렉션을 포함 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  부모 요소와 연결된 열의 컬렉션을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,11 +40,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
-|카디널리티|아래 표를 참조 합니다.|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
+|카디널리티|아래 표를 참조하세요.|  
   
 |상위 항목 또는 부모|카디널리티|  
 |------------------------|-----------------|  
@@ -74,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[동작](../../../analysis-services/scripting/objects/action-element-assl.md) 형식의 [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [이벤트](../../../analysis-services/scripting/objects/event-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|자식 요소|아래 표를 참조 합니다.|  
+|자식 요소|아래 표를 참조하세요.|  
   
 |상위 항목 또는 부모|자식 요소|  
 |------------------------|--------------------|  
@@ -91,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  AMO(Analysis Management Objects) 개체 모델의 일부 해당 요소는 <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> 및 <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [컬렉션 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [컬렉션 & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

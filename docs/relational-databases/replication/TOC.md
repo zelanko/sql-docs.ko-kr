@@ -293,3 +293,6 @@
 ## [트랜잭션 복제 구성](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [병합 복제 구성](tutorial-replicating-data-with-mobile-clients.md)  
 
+# 문제 해결사
+## [트랜잭션 복제시 오류](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

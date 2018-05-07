@@ -9,16 +9,15 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4df344b9062eec02ec83322747bc61dfcd67d52
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f12e3ce00f7e3627405de6b2a64f2ff973e415d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

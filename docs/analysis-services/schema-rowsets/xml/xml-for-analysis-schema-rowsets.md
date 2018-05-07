@@ -1,38 +1,23 @@
 ---
 title: XML for Analysis Schema Rowsets | Microsoft Docs
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- rowsets [Analysis Services], XML for Analysis
-- XML for Analysis, schema rowsets
-- schema rowsets [Analysis Services], XML for Analysis
-- schema rowsets [XML for Analysis]
-ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 44222381092f973f00ca79583c78e27bd0780f6e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 서버 상태, 작업 및 개체에 대한 메타데이터를 반환하는 스키마 행 집합을 포함합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 서버 상태, 작업 및 개체에 대한 메타데이터를 반환하는 스키마 행 집합을 포함합니다. 구조와 특성이 가변적인 Analysis Services 모델에 연결하는 클라이언트 응용 프로그램을 개발하려는 경우 메타데이터 검색이 필요합니다.  
   
  스키마 행 집합은 서버를 모니터링하고 문제를 해결하는 데 도움이 되는 내부 프로세스 및 작업에 대한 정보를 제공합니다. 임시 관리 태스크를 더욱 잘 지원하기 위해 대부분의 스키마 행 집합에 대해 DMV(동적 관리 뷰) 쿼리를 실행할 수 있습니다. DMV 쿼리는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 볼 수 있는 읽기 가능한 테이블 형식으로 결과를 반환됩니다.  
   
@@ -52,7 +37,7 @@ ms.lasthandoff: 02/15/2018
 |[DISCOVER_DIMENSION_STAT 행 집합](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|지정된 차원에 대한 통계를 반환합니다.|  
 |[DISCOVER_ENUMERATORS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|특정 데이터 원본에 대해 XMLA 공급자에서 지원하는 열거자의 이름, 데이터 형식 및 열거 값 목록을 반환합니다.|  
 |[DISCOVER_JOBS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|서버에서 실행되는 활성 작업에 대한 정보를 제공합니다.|  
-|[DISCOVER_KEYWORDS 행 집합 &#40; XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA 공급자에 예약된 키워드에 대한 정보를 반환합니다.|  
+|[DISCOVER_KEYWORDS 행 집합 & #40; XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA 공급자에 예약된 키워드에 대한 정보를 반환합니다.|  
 |[DISCOVER_LITERALS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|XMLA 공급자에서 지원되는 데이터 형식 및 값을 포함한 리터럴 정보를 반환합니다.|  
 |[DISCOVER_LOCATIONS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|백업 파일의 콘텐츠에 대한 정보를 반환합니다.|  
 |[DISCOVER_LOCKS 행 집합](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|서버에서 현재 고정된 잠금에 대한 정보를 제공합니다.|  
@@ -80,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [사용 하 여 동적 관리 뷰 &#40; Dmv &#41; Analysis Services를 모니터링 하려면](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [동적 관리 뷰를 사용 하 여 &#40;Dmv&#41; Services 분석을 모니터링 하려면](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [분석 데이터 원본에서 메타데이터 검색](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

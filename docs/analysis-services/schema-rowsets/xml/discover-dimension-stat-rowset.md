@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_DIMENSION_STAT 행 집합 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_DIMENSION_STAT 행 집합 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e70810469afe11b6f63c21a9c040e1a3bd32549
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-차원이 포함된 데이터베이스 이름, 차원 이름, 해당 특성 및 각 특성의 멤버 수를 비롯한 차원에 대한 정보를 제공합니다. 테이블 형식 모델에서 이 항목은 테이블에 있는 열과 각 열에 있는 값의 수에 해당합니다.  
+  차원이 포함된 데이터베이스 이름, 차원 이름, 해당 특성 및 각 특성의 멤버 수를 비롯한 차원에 대한 정보를 제공합니다. 테이블 형식 모델에서 이 항목은 테이블에 있는 열과 각 열에 있는 값의 수에 해당합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   

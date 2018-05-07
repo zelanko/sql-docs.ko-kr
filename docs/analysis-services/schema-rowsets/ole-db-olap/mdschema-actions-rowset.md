@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_ACTIONS 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_ACTIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_ACTIONS rowset
-ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a68f7e2aa7f12d42c08e7d9226ee5306d0b07021
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]클라이언트 응용 프로그램에 사용할 수 있는 작업에 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  클라이언트 응용 프로그램에 사용할 수 있는 동작을 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **MDSCHEMA_ACTIONS** 행 집합에는 다음과 같은 열을 포함 합니다.  
@@ -47,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 |**COORDINATE_TYPE**|**DBTYPE_I4**||지정 하는 비트맵 방법을 **조정** 제한 열은 해석 됩니다. 이 비트맵에 대해 다음 비트 값 상수가 Msmd.h 파일에 정의됩니다.<br /><br /> **MDACTION_COORDINATE_CUBE** (**1**)<br /><br /> **MDACTION_COORDINATE_DIMENSION** (**2**): 차원 계층을 가리킵니다.<br /><br /> **MDACTION_COORDINATE_LEVEL** (**3**)<br /><br /> **MDACTION_COORDINATE_MEMBER** (**4**)<br /><br /> **MDACTION_COORDINATE_SET** (**5**)<br /><br /> **MDACTION_COORDINATE_CELL** (**6**)|  
 |**ACTION_CAPTION**|**DBTYPE_WSTR**||DDL에 지정된 캡션과 지정된 번역이 없는 경우 동작 이름입니다.<br /><br /> 캡션 또는 번역이 지정 된 경우 및 **CaptionIsMDX** 이 false 이면 다음 문자열 중 하나:<br /><br /> -적절 한 언어에 대 한 변환입니다.<br /><br /> 지정된 된 언어에 대 한 변환을 찾을 수 없으면-지정 된 캡션<br /><br /> 변환을 찾을 수 없으면-작업 이름 및 캡션에 DDL에 지정 되지 않았습니다.<br /><br /> 캡션 또는 번역이 지정 된 경우 및 **CaptionIsMDX** 가 true 이면 지정된 된 언어 또는 DDL 캡션의 지정 된 번역에 대 한 적절 한 번역을 찾아서 계산 결과 문자열이 고 문자열을 만드는 수식입니다.<br /><br /> MDX 스크립트에 동작이 지정된 경우 번역이 없고 캡션은 항상 MDX 식으로 처리됩니다.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||동작에 대한 알기 쉬운 설명입니다.|  
-|**콘텐츠**|**DBTYPE_WSTR**||실행할 동작의 식 또는 내용입니다.|  
+|**CONTENT**|**DBTYPE_WSTR**||실행할 동작의 식 또는 내용입니다.|  
 |**응용 프로그램**|**DBTYPE_WSTR**||동작을 실행하는 데 사용할 응용 프로그램의 이름입니다.|  
 |**호출**|**DBTYPE_I4**||동작이 호출되는 방법에 대한 정보입니다.<br /><br /> **MDACTION_INVOCATION_INTERACTIVE** (**1**) 정상 작업 중 사용 되는 일반 동작을 나타냅니다. 이 열의 기본값입니다.<br /><br /> **MDACTION_INVOCATION_ON_OPEN** (**2**) 큐브가 처음 열릴 때 동작을 수행 해야 함을 나타냅니다.<br /><br /> **MDACTION_INVOCATION_BATCH** (**4**) 작업 일괄 처리 작업의 일환으로 수행 됨을 나타냅니다 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 작업 합니다.<br /><br /> <br /><br /> 이 열거형 값 Msmd.h 파일에 정의 되어 있는지 확인 합니다.|  
   
@@ -82,14 +68,14 @@ ms.lasthandoff: 01/08/2018
 |COORDINATE 개체 유형|COORDINATE_TYPE|  
 |----------------------------|----------------------|  
 |**Cube**|**MDACTION_COORDINATE_CUBE**|  
-|**Dimension**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
-|**Hierarchy**|**MDACTION_COORDINATE_DIMENSION**|  
+|**차원**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
+|**계층 구조**|**MDACTION_COORDINATE_DIMENSION**|  
 |**Level**|**MDACTION_COORDINATE_LEVEL**|  
 |**멤버**|**MDACTION_COORDINATE_MEMBER**|  
 |**설정**|**MDACTION_COORDINATE_SET**|  
 |**셀**|**MDACTION_COORDINATE_CELL**|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLAP용 OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLAP 스키마 행 집합 용 OLE DB](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

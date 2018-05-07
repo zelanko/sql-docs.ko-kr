@@ -2,7 +2,6 @@
 title: Azure SQL DB (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,9 +21,9 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb49a6e0604fd3bd713857bab18cde30804b0f42
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: caa08a1a450e53e42e2b27bad33a7610e65220bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

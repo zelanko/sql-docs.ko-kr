@@ -44,6 +44,7 @@
 #### [게시자 속성](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [임대, 클러스터 및 상태 확인 제한 시간](availability-group-lease-healthcheck-timeout.md)
 ## [수신기, 클라이언트 및 장애 조치(Failover)](listeners-client-connectivity-application-failover.md)  
 ## [로그인 및 작업](logins-and-jobs-for-availability-group-databases.md)  
 ## [복제본 간의 세션 동안 발생 가능한 오류](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  

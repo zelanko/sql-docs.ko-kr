@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_SERVICE_PARAMETERS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
-ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 497396bf0679afbabbebe9936ba6c5f443942bec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: caaee84cfe87aba1e5c5f2c52a46264838a63411
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>DMSCHEMA_MINING_SERVICE_PARAMETERS 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서버의 알고리즘에 대 한 매개 변수를 설명 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  서버의 알고리즘 매개 변수에 대해 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_SERVICE_PARAMETERS** 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -57,7 +43,7 @@ ms.lasthandoff: 01/08/2018
 |**SERVICE_NAME**|**DBTYPE_WSTR**|(선택 사항)|  
 |**P A R A**|**DBTYPE_WSTR**|(선택 사항)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 스키마 행 집합](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

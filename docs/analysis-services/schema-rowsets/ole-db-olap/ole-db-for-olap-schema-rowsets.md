@@ -1,38 +1,23 @@
 ---
-title: "OLAP 스키마 행 집합 용 OLE DB | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: OLAP 스키마 행 집합 용 OLE DB | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- schema rowsets [Analysis Services], OLE DB for OLAP
-- OLE DB for OLAP schema rowsets
-- schema rowsets [OLE DB for OLAP]
-- rowsets [Analysis Services], OLE DB for OLAP
-ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a8e3413b951cb12796139c3ff390a2d1951c02ab
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLAP용 OLE DB 스키마 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 다음과 같은 OLAP용 OLE DB 스키마 행 집합을 지원합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XMLA(XML for Analysis) 공급자는 다음과 같은 OLAP용 OLE DB 스키마 행 집합을 지원합니다.  
   
 > [!NOTE]  
 >  에 특정 데이터 원본 공급자가 행 집합을 지원 하는지 여부를 확인 하려면 사용는 **DISCOVER_ENUMERATIONS** 포함 된 행 집합의 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드.  
@@ -44,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 |스키마 행 집합<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|서버의 인스턴스를 설명합니다.|  
-|[DISCOVER_KEYWORDS 행 집합 &#40; OLE DB OLAP &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|공급자에서 예약된 단어 목록을 열거합니다.|  
+|[DISCOVER_KEYWORDS 행 집합 & #40; OLE DB OLAP & #41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|공급자에서 예약된 단어 목록을 열거합니다.|  
 |[MDSCHEMA_ACTIONS 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|클라이언트 응용 프로그램에 사용할 수 있는 동작을 설명합니다.|  
 |[MDSCHEMA_CUBES 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|데이터베이스 내의 큐브 구조를 설명합니다.|  
 |[MDSCHEMA_DIMENSIONS 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|데이터베이스 내의 공유 차원과 전용 차원을 설명합니다.|  
