@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
-ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 771ce7da7719b186dffef3ae0f3095a215c71e48
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 65d850860cc680b3e25776ebc4695fe1f592a949
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingmodelcontentpmml-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT_PMML 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]마이닝 모델의 XML 구조를 반환합니다. XML 문자열 형식은 PMML(Predictive Model Markup Language) 2.1 표준을 따릅니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  마이닝 모델의 XML 구조를 반환합니다. XML 문자열 형식은 PMML(Predictive Model Markup Language) 2.1 표준을 따릅니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_MODEL_CONTENT_PMML** 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -44,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_TYPE**|**DBTYPE_WSTR**||모델 유형입니다. 공급자별 문자열입니다. **NULL**일 수 있습니다.|  
 |**MODEL_GUID**|**DBTYPE_GUID**||모델을 식별하는 GUID입니다. GUID를 사용하여 테이블을 식별하지 않는 공급자는 **NULL**을 반환합니다.|  
 |**MODEL_PMML**|**DBTYPE_WSTR**||PMML 형식으로 된 모델 내용의 XML 표현입니다.|  
-|**크기**|**DBTYPE_UI4**||XML 문자열의 바이트 수입니다.|  
+|**SIZE**|**DBTYPE_UI4**||XML 문자열의 바이트 수입니다.|  
 |**위치**|**DBTYPE_WSTR**||XML 파일의 위치입니다. 사용할 수 있는 위치가 없으면 **NULL** 입니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
@@ -59,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |**모델 이름**|**DBTYPE_WSTR**|(선택 사항)|  
 |**MODEL_TYPE**|**DBTYPE_WSTR**|(선택 사항)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 스키마 행 집합](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

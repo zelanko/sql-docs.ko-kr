@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50af5fe7e6c40a1133ee585b416189e61ed461e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6b73c58233d37fa34b4d305bb58a4823731ef559
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +59,15 @@ SRV_PROC * srvproc,intn, int *len );
  매개 변수 이름의 길이(바이트)를 포함하는 **int** 변수에 대한 포인터를 제공합니다. *len*이 NULL이면 원격 저장 프로시저 매개 변수 이름의 길이가 반환되지 않습니다.  
   
 ## <a name="returns"></a>반환 값  
- 매개 변수 이름을 포함하는 null로 끝나는 문자열에 대한 포인터입니다. 매개 변수 이름의 길이는 *len*에 저장됩니다. 없는 경우 없는 *n*번째 매개 변수가 없거나 원격 저장된 프로시저가 없으면 NULL을 반환 *len* -1로 설정 되어 정보 오류 메시지가 전송 됩니다. 매개 변수 이름이 NULL이면 *len*이 0으로 설정되고 null로 끝나는 빈 문자열이 반환됩니다.  
+ 매개 변수 이름을 포함하는 null로 끝나는 문자열에 대한 포인터입니다. 매개 변수 이름의 길이는 *len*에 저장됩니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 NULL을 반환하고 *len*이 -1로 설정되며 정보 오류 메시지가 전송됩니다. 매개 변수 이름이 NULL이면 *len*이 0으로 설정되고 null로 끝나는 빈 문자열이 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 원격 저장 프로시저 호출 매개 변수의 이름을 가져옵니다. 매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 이 경우에도 SRV_RPC 핸들러는 호출되지만 매개 변수가 없는 것과 같이 처리되며 **srv_rpcparams**는 0을 반환합니다.  
   
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [srv_rpcparams(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

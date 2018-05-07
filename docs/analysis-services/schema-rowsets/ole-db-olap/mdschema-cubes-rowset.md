@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_CUBES 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_CUBES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_CUBES rowset
-ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 82a07fda14984582ae9461d861df0fa47920b527
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터베이스 내의 큐브 구조를 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  데이터베이스 내의 큐브 구조를 설명합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **MDSCHEMA_CUBES** 행 집합에는 다음 열이 포함되어 있습니다.  
@@ -41,7 +27,7 @@ ms.lasthandoff: 01/08/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|데이터베이스의 이름입니다.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|지원되지 않습니다.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|큐브 또는 차원의 이름입니다. 차원 이름 앞에는 달러 기호($)가 붙습니다.<br /><br /> 참고: 서버 및 데이터베이스 관리자만 차원에서 만든 큐브를 볼 권한이 있어야 합니다.|  
-|**CUBE_TYPE**|**DBTYPE_WSTR**|큐브의 유형입니다. 유효한 값은<br /><br /> **큐브**<br /><br /> **차원**|  
+|**CUBE_TYPE**|**DBTYPE_WSTR**|큐브의 유형입니다. 유효한 값은 다음과 같습니다.<br /><br /> **큐브**<br /><br /> **차원**|  
 |**CUBE_GUID**|**DBTYPE_GUID**|지원되지 않습니다.|  
 |**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|지원되지 않습니다.|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|큐브가 마지막으로 처리된 시간입니다.|  
@@ -71,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 |**기본 Cube_Name**|**DBTYPE_WSTR**|(선택 사항)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [OLAP용 OLE DB 스키마 행 집합](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLAP 스키마 행 집합 용 OLE DB](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

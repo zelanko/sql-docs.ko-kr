@@ -1,37 +1,23 @@
 ---
 title: DISCOVER_XML_METADATA 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DISCOVER_XML_METADATA
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_XML_METADATA rowset
-ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 64fe5c240808b727c0985f432bb634d83cb68e91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a01f73cb3ef8647f179143e4be8b71f9dceee755
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]요청된 된 개체를 설명 하는 XML 문서를 반환 합니다. 반환되는 행 집합은 항상 하나의 행과 하나의 열로 구성됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  요청된 개체를 설명하는 XML 문서를 반환합니다. 반환되는 행 집합은 항상 하나의 행과 하나의 열로 구성됩니다.  
   
  호출 하는 경우는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드는 **DISCOVER_XML_METATDATA** 열거 값은 [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) 요소는 **Discover**메서드가 반환 되는 **DISCOVER_XML_METATDATA** 행 집합입니다.  
   
@@ -40,7 +26,7 @@ ms.lasthandoff: 01/08/2018
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**메타 데이터**|**DBTYPE_WSTR**||제한에 의해 요청된 개체를 설명하는 XML 문서입니다.|  
+|**METADATA**|**DBTYPE_WSTR**||제한에 의해 요청된 개체를 설명하는 XML 문서입니다.|  
   
  이 스키마 행 집합은 정렬되지 않습니다.  
   
@@ -66,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |**DataSourceID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**MiningStructureID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**AggregationDesignID**|**DBTYPE_WSTR**|(선택 사항)|  
-|**Traceid가**|**DBTYPE_WSTR**|(선택 사항)|  
+|**TraceID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**MiningStructurePermissionID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**CubePermissionID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**AssemblyID**|**DBTYPE_WSTR**|(선택 사항)|  
@@ -75,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 |**DataSourcePermissionID**|**DBTYPE_WSTR**|(선택 사항)|  
 |**ObjectExpansion**|**DBTYPE_WSTR**|(선택 사항)|  
   
- 제한은 **ObjectExpansion**의 모든 주요 개체에 사용할 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 일반적으로 클라이언트는 제한을 사용하여 DDL이 반환되는 OLAP 개체를 설명하며, **ObjectExpansion** 제한을 사용하여 반환된 DDL의 확장 수준을 정의합니다. 다음 표는 열거형 값에 대 한 허용 되는지 여부를 나타냅니다. [Alter 요소 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) 명령입니다.  
+ 제한은 **ObjectExpansion**의 모든 주요 개체에 사용할 수 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 일반적으로 클라이언트는 제한을 사용하여 DDL이 반환되는 OLAP 개체를 설명하며, **ObjectExpansion** 제한을 사용하여 반환된 DDL의 확장 수준을 정의합니다. 다음 표는 열거형 값에 대 한 허용 되는지 여부를 나타냅니다. [Alter 요소 &#40;XMLA&#41; ](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) 명령입니다.  
   
 |열거 값|Description|  
 |-----------------------|-----------------|  

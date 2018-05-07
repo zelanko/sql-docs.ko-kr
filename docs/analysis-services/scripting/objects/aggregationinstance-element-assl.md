@@ -1,39 +1,23 @@
 ---
 title: AggregationInstance 요소 (ASSL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- AggregationInstance Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AggregationInstance element
-ms.assetid: 2e77e9e1-9f2c-4df4-9aa6-5b7b911016a3
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d4ec54603b07f2e84e2de045426e56196e33242d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 414284bc1cc0bc1b8d6b99697ace00b770dd7a02
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregationinstance-element-assl"></a>AggregationInstance 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]파티션에 대 한 집계 인스턴스를 정의합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  파티션에 대한 집계 인스턴스를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,10 +37,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -64,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[AggregationInstances](../../../analysis-services/scripting/collections/aggregationinstances-element-assl.md)|  
-|자식 요소|[AggregationID](../../../analysis-services/scripting/properties/aggregationid-element-assl.md), [AggregationType](../../../analysis-services/scripting/properties/aggregationtype-element-assl.md), [주석](../../../analysis-services/scripting/collections/annotations-element-assl.md), [차원](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [측정값](../../../analysis-services/scripting/collections/measures-element-assl.md), [ 소스](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
+|자식 요소|[AggregationID](../../../analysis-services/scripting/properties/aggregationid-element-assl.md), [AggregationType](../../../analysis-services/scripting/properties/aggregationtype-element-assl.md), [주석](../../../analysis-services/scripting/collections/annotations-element-assl.md), [차원](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [측정값](../../../analysis-services/scripting/collections/measures-element-assl.md), [소스](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
   
 ## <a name="remarks"></a>주의  
  경우는 [파티션](../../../analysis-services/scripting/objects/partition-element-assl.md) 요소 사용 하 여는 [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) 해당 파티션에 대 한 집계를 생성 하는 요소가 각 [집계](../../../analysis-services/scripting/objects/aggregation-element-assl.md) 에  **AggregationDesign** 해당 파티션에 대해 인스턴스화됩니다. 여러 파티션에서 하나의 집계 디자인을 사용하여 정의된 집계에 대한 여러 개의 인스턴스를 생성할 수 있습니다. **AggregationInstance** 요소는 정의 된 집계의 인스턴스를 나타냅니다.  
@@ -72,6 +56,6 @@ ms.lasthandoff: 01/08/2018
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationInstance>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [개체 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

@@ -3,13 +3,10 @@ title: setWorkstationID 메서드 (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e505445d3ea1a7f9ba96b46b2764893d4628ed3
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ae8a5eeefcad88ae35c2ce4388d09b555a495a30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ public void setWorkstationID(java.lang.String workstationID)
 #### <a name="parameters"></a>매개 변수  
  *workstationID*  
   
- A **문자열** 클라이언트 컴퓨터 이름이 들어 있는입니다.  
+ 클라이언트 컴퓨터 이름이 포함된 **문자열**입니다.  
   
 ## <a name="remarks"></a>주의  
  workstationID는 클라이언트 컴퓨터 또는 워크스테이션의 이름입니다. WorkstationID 속성이 설정 하지 않으면 기본값 InetAddress.getLocalHost().getHostName() 메서드를 호출 하 여 생성 됩니다. GetHostName 빈 값을 반환할 경우 getHostAddress().toString() 메서드 호출 됩니다.  

@@ -1,70 +1,18 @@
 ---
-title: "로그 속성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- QueryLogFileSize property
-- QueryLogTableName property
-- TraceBackgroundDistributionPeriod property
-- TraceMaxRowsetSize property
-- NullKeyConvertedToUnknown property
-- CrashReportsFolder property
-- TraceDefinitionFile property
-- SQLDumperFlagsOn property
-- KeyErrorLimit property
-- SnapshotDefinitionFile property
-- MinidumpErrorList property
-- ErrorLogFileName property
-- KeyDuplicate property
-- IgnoreDataTruncation property
-- logs [Analysis Services]
-- Enabled property
-- FileSizeMB property
-- TraceFileWriteTrailerPeriod property
-- TraceQueryResponseTextChunkSize property
-- File property
-- FileBufferSize property
-- TraceRowsetBackgroundFlushPeriod property
-- ErrorLogFileSize property
-- TraceRequestParameters property
-- KeyErrorLimitAction property
-- CreateQueryLogTable property
-- LogDir property
-- TraceBackgroundFlushPeriod property
-- TraceFileBufferSize property
-- SQLDumperFlagsOff property
-- QueryLogConnectionString property
-- KeyNotFound property
-- KeyErrorLogFile property
-- TraceReportFQDN property
-- KeyErrorAction property
-- QueryLogFileName property
-- MessageLogs property
-- MiniDumpFlagsOn property
-- SnapshotFrequencySec property
-- QueryLogSampling property
-- CreateAndSendCrashReports property
-- LogDurationSec property
-ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8add9f86817ba2a4a6ae32b0b3151b7f488966e1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1f22d08c5b6f0c89b254fa6189fcfe1eb6be7083
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="log-properties"></a>로그 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="error-log"></a>오류 로그  
- 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리 &#40;에 대 한 오류 구성 SSAS-다차원 데이터 &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 자세한 정보에 대 한 합니다.  
+ 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리에 대 한 오류 구성 &#40;SSAS-다차원 데이터&#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 자세한 정보에 대 한 합니다.  
   
  **ErrorLog\ErrorLogFileName**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  

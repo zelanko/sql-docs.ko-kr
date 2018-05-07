@@ -3,13 +3,10 @@ title: SQLServerResultSet 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
@@ -17,9 +14,9 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b89a2fa6131229470720120decaf9587456007
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: cf318137b6d3f23a2161de97999df29b7f29ed8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -35,8 +32,8 @@ ms.lasthandoff: 05/03/2018
   
 |이름|Description|  
 |----------|-----------------|  
-|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형 행 잠금이 없는 합니다.|  
-|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형 행 잠금이 없는 합니다.|  
+|[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|행 잠금을 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.|  
+|[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|행 잠금을 사용하지 않는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형을 지정하는 데 사용됩니다.|  
 |[CONCUR_SS_SCROLL_LOCKS](../../../connect/jdbc/reference/concur-ss-scroll-locks-field-sqlserverresultset.md)|지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 읽기/쓰기 낙관적 동시성 유형 행 잠금 사용 합니다.|  
 |[TYPE_SS_DIRECT_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-direct-forward-only-field-sqlserverresultset.md)|지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 빠른 정방향 전용, 읽기 전용 커서 유형입니다.|  
 |[TYPE_SS_SCROLL_DYNAMIC](../../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)|지정 하는 데는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 동적 커서 유형입니다.|  
@@ -56,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[절대](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|지정된 된 행이 커서 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|이 마지막 행 뒤에 커서를 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
-|[beforeFirst](../../../connect/jdbc/reference/beforefirst-method-sqlserverresultset.md)|이 첫 번째 행 앞에 커서를 이동 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[beforeFirst](../../../connect/jdbc/reference/beforefirst-method-sqlserverresultset.md)|커서를 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 첫 번째 행 앞으로 이동합니다.|  
 |[cancelRowUpdates](../../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)|이 현재 행에 대 한 업데이트를 취소 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverresultset.md)|이 보고 된 모든 경고를 지웁니다 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|이 해제 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 데이터베이스와 JDBC 리소스를 자동으로 닫힐 때 동작을 기다리지 않고 즉시 해제 합니다.|  
@@ -93,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 Ref 개체로 개체입니다.|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|현재 행 번호를 검색합니다.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **짧은** Java 프로그래밍 언어의에서 합니다.|  
-|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|검색 된 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 이 생성 한 개체를 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.|  
+|[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 생성한 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 검색합니다.|  
 |[GetString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **문자열** Java 프로그래밍 언어의에서 합니다.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|현재 행에서 지정 된 열의 값을 검색 하는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체로 **SQLXML** 개체입니다.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|이 현재 행에서 지정 된 열의 값을 검색 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java 프로그래밍 언어의에서 java.sql.Time 개체로 개체입니다.|  

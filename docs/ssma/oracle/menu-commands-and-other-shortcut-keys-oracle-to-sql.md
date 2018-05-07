@@ -2,7 +2,6 @@
 title: 메뉴 명령 및 기타 바로 가기 키 (Oracle To SQL) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,9 +15,9 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1cc95a93cb4ac3700b3c2b5df8fc309f22898f4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 090f24ff2535a8bdd4a3b57886b9c2a92d7695e6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

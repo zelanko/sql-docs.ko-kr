@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_LOCATIONS 행 집합 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_LOCATIONS 행 집합 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 6d3a1171-8e4d-4022-ade0-b785cf795d70
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61f69caeab165c4d6822f8f25667ad544d6014ec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63a3f01b25b189f34df3f328c1709255752f7210
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverlocations-rowset"></a>DISCOVER_LOCATIONS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-백업 파일의 콘텐츠에 대한 정보를 반환합니다. 백업 파일 위치에 액세스할 수 있는 권한이 있어야 합니다.  
+  백업 파일의 콘텐츠에 대한 정보를 반환합니다. 백업 파일 위치에 액세스할 수 있는 권한이 있어야 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_LOCATIONS** 행 집합에는 다음 열이 포함되어 있습니다.  

@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 110e5af35638c0eddb5cf0610955a737965373e3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-테이블 형식에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 및 세그먼트 수준 정보를 제공 하거나 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
+  테이블 형식에서 실행 되는 Analysis Services 데이터베이스에서 사용 되는 저장소 테이블에 대 한 열 및 세그먼트 수준 정보를 제공 하거나 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. 이 행 집합은 주로 문제 해결 및 분석을 위해 사용됩니다.  
   
  **다음에 적용:** 테이블 형식 모델  
   
@@ -43,7 +33,7 @@ ms.lasthandoff: 02/15/2018
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||차원의 이름입니다.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||테이블 세그먼트의 내부 ID입니다.|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||열의 내부 ID입니다.|  
-|**SEGMENT _NUMBER**|**DBTYPE_I8**||테이블 세그먼트의 서수입니다.|  
+|**세그먼트 수 (_N)**|**DBTYPE_I8**||테이블 세그먼트의 서수입니다.|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||파티션의 서수입니다.|  
 |**RECORDS_COUNT**|**DBTYPE_I8**||파티션에 있는 레코드 수입니다.|  
 |**ALLOCATED_SIZE**|**DBTYPE_UI8**||열 세그먼트에 할당된 크기(바이트)입니다.|  

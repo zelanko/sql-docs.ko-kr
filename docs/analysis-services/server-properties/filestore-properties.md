@@ -1,41 +1,19 @@
 ---
-title: "Filestore 속성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- Income property
-- InitialBonus property
-- PercentScanPerPrice property
-- FileStore properties
-- BackgroundTrimCost property
-- Tax property
-- PerformanceTrace property
-- MinimumBalance property
-- UnbufferedThreshold property
-- BackgroundTrimAmount property
-- MaximumBalance property
-- MemoryLimitMin property
-- MemoryLimit property
-ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
-caps.latest.revision: 
-author: Minewiskan
+title: Filestore 속성 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24a18751c7686de2d3d3731806374fe7a6db2080
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ec29a17677032a764ae4604368ccc8cec243c11c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filestore-properties"></a>FileStore 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
  특히 대용량 리소스 및 여러 NUMA 노드가 있는 고성능 시스템에서는 임의 파일 액세스를 사용하는 편이 좋습니다. 임의 액세스 모드에서 Windows는 디스크에서 시스템 파일 캐시로 데이터를 읽는 페이지 매핑 작업을 건너뛰므로 캐시 경합을 줄일 수 있습니다.  
   
- 이 속성을 변경한 결과로 쿼리 성능이 향상되는지 여부를 확인하려면 비교 테스트를 실행해야 합니다. 캐시를 지우고 일반적인 실수를 피하는 등 비교 테스트 실행에 대한 최상의 방법을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오. 이 속성 사용 제어에 대한 자세한 내용은 [http://support.microsoft.com/kb/2549369](http://support.microsoft.com/kb/2549369)를 참조하세요.  
+ 이 속성을 변경한 결과로 쿼리 성능이 향상되는지 여부를 확인하려면 비교 테스트를 실행해야 합니다. 캐시를 지우고 일반적인 실수를 피하는 등 비교 테스트 실행에 대한 최상의 방법을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오. 이 속성을 사용 하 여 절충 작업에 대 한 추가 정보를 참조 하십시오. [ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369)합니다.  
   
  Management Studio에서 이 속성을 보거나 수정하려면 서버 속성 페이지에서 고급 설정 목록을 사용합니다. msmdsrv.ini 파일에서 속성을 변경할 수도 있습니다. 이 속성을 설정한 후 서버를 다시 시작하는 것이 좋습니다. 그렇지 않으면 이미 열려 있는 파일이 이전 모드로 계속 액세스됩니다.  
   

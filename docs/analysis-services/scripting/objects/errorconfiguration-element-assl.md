@@ -1,41 +1,23 @@
 ---
 title: ErrorConfiguration 요소 (ASSL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- ErrorConfiguration Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ErrorConfiguration
-helpviewer_keywords:
-- ErrorConfiguration element
-ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4376e18ce31decebd96cd0c0fa859501f72a4c8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93da0afe3e8fcdb2bef8826022572c7ebfc7fc6e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="errorconfiguration-element-assl"></a>ErrorConfiguration 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]부모 요소가 처리 될 때 발생할 수 있는 오류를 처리 하기 위한 설정을 지정 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  부모 요소가 처리될 때 발생할 수 있는 오류 처리에 대한 설정을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,10 +41,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-1: 한 번만 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -76,6 +58,6 @@ ms.lasthandoff: 01/08/2018
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.ErrorConfiguration>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [개체 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

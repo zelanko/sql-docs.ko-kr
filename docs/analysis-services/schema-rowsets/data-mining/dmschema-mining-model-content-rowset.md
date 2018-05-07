@@ -1,44 +1,30 @@
 ---
 title: DMSCHEMA_MINING_MODEL_CONTENT 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT rowset
-ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3051859883cd3343f11aecff66fb37ff3ba8c12
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]클라이언트 응용 프로그램을 데이터 마이닝 모델의 내용을 검색할 수 있습니다. 클라이언트 응용 프로그램에서는 이 항목의 마지막에 설명된 특수 트리 작업 제한을 사용하여 마이닝 모델의 내용을 탐색할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  클라이언트 응용 프로그램에서 데이터 마이닝 모델의 내용을 찾아볼 수 있습니다. 클라이언트 응용 프로그램에서는 이 항목의 마지막에 설명된 특수 트리 작업 제한을 사용하여 마이닝 모델의 내용을 탐색할 수 있습니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_MODEL_CONTENT** 행 집합에는 다음과 같은 열을 포함 합니다.  
   
 |열 이름|유형 표시기|길이|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||카탈로그 이름입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이 열을 모델이 멤버인 데이터베이스의 이름으로 채웁니다.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||카탈로그 이름입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이 열을 모델이 멤버인 데이터베이스의 이름으로 채웁니다.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||정규화되지 않은 스키마 이름입니다. 이 열에서 지원 하지 않는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 항상 포함 **VT_NULL**합니다.|  
 |**모델 이름**|**DBTYPE_WSTR**||이 행에서 설명하는 내용이 연결되는 모델의 이름입니다.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||이 노드에 해당하는 특성의 이름입니다.|  
@@ -78,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  제한은 **TREE_OPERATION**의 특정 열에는 **DMSCHEMA_MINING_MODEL_CONTENT** 행 집합 아니라, tree 연산자를 지정 합니다. 소비자를 지정할 수는 **NODE_UNIQUE_NAME** 제한과 tree 연산자 (**상위**, **자식**, **형제**,  **부모**, **하위 항목**, **자체**) 요청 된 멤버 집합을 가져올 수 있습니다. **자체** 연산자 반환 된 행의 목록에서 노드 자체에 대 한 행이 포함 됩니다. 다음 표에서 설명에 대 한 비트맵 정의 구성 하는 상수는 **TREE_OPERATION** 제한 합니다. 논리를 사용 하 여 혼합 **또는** 연산자입니다.  
   
-|상수|값|  
+|상수|Value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  

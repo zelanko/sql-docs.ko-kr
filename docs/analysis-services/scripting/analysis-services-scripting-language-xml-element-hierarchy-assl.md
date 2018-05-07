@@ -1,44 +1,23 @@
 ---
-title: "Analysis Services Scripting Language XML 요소 계층 (ASSL) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services Scripting Language XML 요소 계층 (ASSL) | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Analysis Services Scripting Language XML Element Hierarchy
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Services Scripting Language, elements
-- elements [Analysis Services Scripting Language]
-- ASSL, elements
-- objects [Analysis Services Scripting Language]
-- hierarchies [Analysis Services Scripting Language]
-ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b45f5737bacd5b86d10584f8c6e0b131e1e658cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 42503eb0eed2a34541f34dc6ea4e9ed25933439b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services Scripting Language XML 요소 계층(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-다음 표에서는 ASSL(Analysis Services Scripting Language)의 개체 계층을 보여 줍니다.  
+  다음 표에서는 ASSL(Analysis Services Scripting Language)의 개체 계층을 보여 줍니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -1943,8 +1922,8 @@ ms.lasthandoff: 02/15/2018
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [스크립팅 언어 XML 요소 &#40; analysis Services ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
- [Analysis Services Scripting Language XML 데이터 형식 계층 구조 &#40; ASSL &#41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
- [스크립팅 언어 &#40; analysis Services ASSL XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [스크립팅 언어 XML 요소 & #40; analysis Services ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-elements-assl.md)   
+ [Analysis Services Scripting Language XML 데이터 형식 계층 구조 & #40; ASSL & #41;](../../analysis-services/scripting/analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)   
+ [Analysis Services Scripting Language &#40;ASSL XMLA에 대 한&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

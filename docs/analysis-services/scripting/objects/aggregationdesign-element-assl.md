@@ -1,41 +1,23 @@
 ---
 title: AggregationDesign 요소 (ASSL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- AggregationDesign Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationDesign
-helpviewer_keywords:
-- AggregationDesign element
-ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 535cf75969963c8b94992fa267034bf4f73c9735
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da7013f6e6b3e35ebf58b35c902471b8f86076d0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 요소(ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]데이터베이스의 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  데이터베이스의 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,10 +39,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특징|설명|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|InclusionThresholdSetting|  
-|기본값|InclusionThresholdSetting|  
+|데이터 형식 및 길이|없음|  
+|기본값|없음|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -74,9 +56,9 @@ ms.lasthandoff: 01/08/2018
  Analysis Management Objects (AMO) 개체 모델의 해당 요소는 <xref:Microsoft.AnalysisServices.AggregationDesign>합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Partition 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Aggregation 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Aggregations 요소 &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [개체 &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [요소를 파티션 &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Aggregation 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Aggregations 요소 &#40;ASSL&#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [개체 & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

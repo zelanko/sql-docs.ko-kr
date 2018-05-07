@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_OBJECT_ACTIVITY 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_OBJECT_ACTIVITY rowset
-ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e5ac394fea6e7f430d1eadd0dc5b0fb1e0e3865
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]서비스의 시작 된 이후의 개체별 리소스 사용량을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  서비스가 시작된 이후의 개체별 리소스 사용량을 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_OBJECT_ACTIVITY** 행 집합에는 다음 열이 포함되어 있습니다.  

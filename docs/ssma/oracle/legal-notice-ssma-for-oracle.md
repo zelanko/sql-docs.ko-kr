@@ -2,7 +2,6 @@
 title: 법적 고 지 사항 (SSMA for Oracle) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,9 +15,9 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 387f98c6cc2f3794966efd2ddd4c9d0a38972753
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: b18843200b8358fd1dd9a4d8c5695d7095a7ae3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

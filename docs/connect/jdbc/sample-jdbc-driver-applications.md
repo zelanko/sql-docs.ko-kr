@@ -3,13 +3,10 @@ title: 샘플 JDBC 드라이버 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
@@ -17,16 +14,16 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90fa4a58b6ccb24646c8cadf2bb206e8e96072b0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a93b47d03f4cbd5f2a8dbdffe3d0e14c59b19cc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>샘플 JDBC 드라이버 응용 프로그램
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램은 JDBC 드라이버의 다양 한 기능을 보여 줍니다. 또한 함께 JDBC 드라이버를 사용 하는 경우 참고할 수 있는 바람직한 프로그래밍 방식도 보여 주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램은 JDBC 드라이버의 다양한 기능을 보여줍니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스와 함께 JDBC 드라이버를 사용할 때 참고할 수 있는 바람직한 프로그래밍 방식도 보여줍니다.  
   
  모든 샘플 응용 프로그램은 로컬 컴퓨터에서 컴파일 및 실행된 *.java 코드 파일 형식으로 포함되며 다음 위치에 있는 여러 하위 폴더에 들어 있습니다.  
   
@@ -38,10 +35,10 @@ ms.lasthandoff: 05/03/2018
   
 |항목|Description|  
 |-----------|-----------------|  
-|[데이터 연결 및 검색](../../connect/jdbc/connecting-and-retrieving-data.md)|이러한 샘플 응용 프로그램에 연결 하는 방법을 보여 주기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다. 또한 데이터를 검색할 수 있는 다른 방법으로 보여 줍니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.|  
-|[데이터 형식 작업 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)|이러한 샘플 응용 프로그램의 데이터를 사용 하려면 JDBC 드라이버 데이터 형식 메서드를 사용 하는 방법을 보여 주기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.|  
-|[결과 집합 작업](../../connect/jdbc/working-with-result-sets.md)|이러한 샘플 응용 프로그램에 결과 집합을 사용 하 여에 포함 된 데이터를 처리 하는 방법을 보여 주기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스입니다.|  
-|[대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)|이러한 샘플 응용 프로그램에서 큰 값 데이터를 검색할 선택 버퍼링을 사용 하는 방법을 보여 주기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 서버 커서 오버 헤드 없이 데이터베이스.|  
+|[데이터 연결 및 검색](../../connect/jdbc/connecting-and-retrieving-data.md)|이 샘플 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 연결하는 방법을 보여줍니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 데이터를 검색하는 다양한 방법도 보여줍니다.|  
+|[데이터 형식 작업 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)|이 샘플 응용 프로그램은 JDBC 드라이버 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스의 데이터로 작업하는 방법을 보여줍니다.|  
+|[결과 집합 작업](../../connect/jdbc/working-with-result-sets.md)|이 샘플 응용 프로그램은 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에 포함된 데이터를 처리하는 방법을 소개합니다.|  
+|[대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)|이러한 샘플 응용 프로그램은 선택 버퍼링을 사용하여 서버 커서 오버헤드 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

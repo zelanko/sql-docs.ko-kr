@@ -27,12 +27,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 068472c2e03701fffc051741f4a403b4741ed027
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 예측 쿼리의 구조 및 사용법
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,18 +82,18 @@ ms.lasthandoff: 01/08/2018
   
  **ON** 요소 외부 데이터 집합의 열에 마이닝 모델에 정의 된 열을 매핑합니다. 빈 예측 조인 쿼리나 자연 예측 조인을 만드는 경우에는 이 요소를 포함하지 않아도 됩니다.  
   
- 사용할 수는 **여기서** 예측 쿼리의 결과 필터링 하려면 절. 사용할 수 있습니다는 **TOP** 또는 **ORDER BY** 절 가능성이 가장 높은 예측을 선택할 수 있습니다. 이러한 절을 사용 하는 방법에 대 한 자세한 내용은 참조 [select&#40; DMX &#41;](../dmx/select-dmx.md)합니다.  
+ 사용할 수는 **여기서** 예측 쿼리의 결과 필터링 하려면 절. 사용할 수 있습니다는 **TOP** 또는 **ORDER BY** 절 가능성이 가장 높은 예측을 선택할 수 있습니다. 이러한 절을 사용 하는 방법에 대 한 자세한 내용은 참조 [선택 &#40;DMX&#41;](../dmx/select-dmx.md)합니다.  
   
- 예측 문의 구문에 대 한 자세한 내용은 참조 [SELECT FROM &#60; 모델 &#62; 예측 조인 &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md) 및 [SELECT FROM &#60; 모델 &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)합니다.  
+ 예측 문의 구문에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) 및 [SELECT FROM &#60;모델&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

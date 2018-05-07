@@ -1,33 +1,23 @@
 ---
-title: "RelationshipEndVisualizationProperties 데이터 형식 (ASSL) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: RelationshipEndVisualizationProperties 데이터 형식 (ASSL) | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 11f9a10f-d36c-4faf-b595-3fe969d1935e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b8fa56020ae0da50ae320d5d983aa0f1ccae680
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5c40285375da2dc3fb741b01a3ae79bf1652d1cd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationshipendvisualizationproperties-data-type-assl"></a>RelationshipEndVisualizationProperties 데이터 형식(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-관계의 관계 End를 나타내는 기본 데이터 형식을 정의합니다.  
+  관계의 관계 End를 나타내는 기본 데이터 형식을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   

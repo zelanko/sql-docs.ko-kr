@@ -2,7 +2,6 @@
 title: 샘플 콘솔 스크립트 파일 (MySQLToSQL) 작업 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,9 +20,9 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 290e57b03d2ef35f7eedf4add88ffe86969da11e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f683e6a1be376b63c5cf95f1e7535b686bc8321a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---

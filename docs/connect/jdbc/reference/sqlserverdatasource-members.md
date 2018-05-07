@@ -3,13 +3,10 @@ title: SQLServerDataSource 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
@@ -17,9 +14,9 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65485de46704db4e949eb33f253ecd86271b48dd
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 52f0cd9f341e7bc2ee4c45997542057d7e32983d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -62,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|값을 반환 된 **multiSubnetFailover** 연결 속성입니다.|  
 |[getPacketSize](../../../connect/jdbc/reference/getpacketsize-method-sqlserverdatasource.md)|와 통신 하는 데 사용 되는 현재 네트워크 패킷 크기를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], 바이트 단위로 지정 합니다.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|와 통신 하는 데 사용 되는 현재 포트 번호를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]합니다.|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)|이에 대 한 참조를 반환 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체입니다.|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)|이 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체에 대한 참조를 반환합니다.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverdatasource.md)|응답 버퍼링 모드를이 대 한 반환 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체입니다.|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|이 사용 하 여 만들어진 모든 결과 집합에 사용 되는 기본 커서 유형을 반환 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체입니다.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|반환 된 **부울** 문자열 매개 변수를 서버에 유니코드 형식으로 보낼 사용 되는지 여부를 나타내는 값입니다.|  

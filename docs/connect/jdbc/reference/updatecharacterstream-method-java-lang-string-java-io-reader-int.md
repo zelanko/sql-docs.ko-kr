@@ -3,13 +3,10 @@ title: updateCharacterStream 메서드 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4deb98700fc4e1c5371c29a080a5728d779d08e1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5394ea8b5f7c270a5cda01ef3e781b3263119a52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -45,7 +42,7 @@ public void updateCharacterStream(java.lang.String columnName,
 #### <a name="parameters"></a>매개 변수  
  *columnName*  
   
- A **문자열** 열 이름이 들어 있는입니다.  
+ 열 이름이 포함된 **문자열**입니다.  
   
  *readerValue*  
   

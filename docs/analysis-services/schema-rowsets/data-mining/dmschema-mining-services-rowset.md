@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_SERVICES 행 집합 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_SERVICES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_SERVICES rowset
-ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5e01e9a31c182ffc68800b1c159f88d26c9611ac
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES 행 집합
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]공급자가 지 원하는 각 데이터 마이닝 알고리즘에 대 한 설명을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  공급자가 제공하는 각 데이터 마이닝 알고리즘에 대한 설명을 제공합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DMSCHEMA_MINING_SERVICES** 행 집합에는 다음과 같은 열을 포함 합니다.  
@@ -39,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 |열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|알고리즘의 이름입니다. 이 열은 공급자별로 다릅니다.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|이 열에는 마이닝 서비스를 설명하는 비트맵이 포함됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이 열을 다음 값 중 하나로 채웁니다.<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|이 열에는 마이닝 서비스를 설명하는 비트맵이 포함됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이 열을을 다음 값 중 하나로 채웁니다.<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|알고리즘의 지역화 가능한 표시 이름입니다.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|알고리즘의 GUID입니다.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|알고리즘에 대한 알기 쉬운 설명입니다.|  
@@ -73,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |**SERVICE_NAME**|**DBTYPE_WSTR**|(선택 사항)|  
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|(선택 사항)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 스키마 행 집합](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

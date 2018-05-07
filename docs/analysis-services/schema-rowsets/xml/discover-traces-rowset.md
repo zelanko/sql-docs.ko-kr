@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_TRACES 행 집합 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_TRACES 행 집합 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 986cc5c34a1e6f047f7276d6dbef49c10a303056
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-서버에서 현재 활성 상태인 추적에 대한 정보를 제공합니다.  
+  서버에서 현재 활성 상태인 추적에 대한 정보를 제공합니다.  
   
  **적용 대상:** 테이블 형식 모델, 다차원 모델  
   
@@ -41,7 +31,7 @@ ms.lasthandoff: 02/15/2018
 |**LogFileName**|**DBTYPE_WSTR**|추적 로그 파일 이름입니다.|  
 |**LogFileSize**|**DBTYPE_I4**|추적 로그 파일 크기입니다.|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true이면 로그 파일이 롤오버되어야 함을 나타내고, 그렇지 않으면 false입니다.|  
-|**AutoRestart**|**DBTYPE_BOOL**|true이면 자동 다시 시작 옵션을 사용할 수 있음을 나타내고, 그렇지 않으면 false입니다.|  
+|**자동 다시 시작**|**DBTYPE_BOOL**|true이면 자동 다시 시작 옵션을 사용할 수 있음을 나타내고, 그렇지 않으면 false입니다.|  
 |**CreationTime**|**DBTYPE_TIME**|추적을 만든 날짜와 시간입니다.|  
 |**StopTime**|**DBTYPE_TIME**|추적 중지 시간입니다.|  
 |**형식**|**PF_DBTYPE_WSTR**|추적의 유형입니다.|  

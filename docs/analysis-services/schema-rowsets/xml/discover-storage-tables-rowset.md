@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLES 행 집합 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLES 행 집합 | Microsoft Docs
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0685808f47364f7e88f82b48540034ef0d0e688a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-클라이언트가 테이블 형식 또는 SharePoint 모드에서 실행되는 Analysis Services 데이터베이스에 포함된 테이블을 확인할 수 있도록 합니다.  
+  클라이언트가 테이블 형식 또는 SharePoint 모드에서 실행되는 Analysis Services 데이터베이스에 포함된 테이블을 확인할 수 있도록 합니다.  
   
 ## <a name="rowset-columns"></a>행 집합 열  
  **DISCOVER_STORAGE_TABLES** 행 집합에는 다음 열이 포함되어 있습니다.  
