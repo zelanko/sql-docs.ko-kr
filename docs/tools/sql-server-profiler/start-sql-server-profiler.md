@@ -1,8 +1,8 @@
 ---
-title: SQL Server 프로파일러 실행 | Microsoft Docs
+title: SQL Server Profiler 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 7/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b875fa70017ce162ca50aa7d6d0235627d2f5f8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0179f93aa874667098d6f8ba2550129dec281ada
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 다양한 시나리오에서 추적 출력 수집을 지원하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 여러 가지 다른 방법으로 실행할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 Windows 10 **시작** 메뉴, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 시작할 수 있습니다.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  다양한 시나리오에서 추적 출력 수집을 지원하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 여러 가지 방법으로 실행할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 Windows 10 **시작** 메뉴, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 시작할 수 있습니다.  
   
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 처음 시작하고 **파일** 메뉴에서 **새 추적**을 선택하면 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정할 수 있는 **서버에 연결** 대화 상자가 표시됩니다.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 시작 메뉴에서 SQL Server Profiler를 시작하려면  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/17/2018
 -  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
 
 ### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>쿼리 편집기에서 SQL Server Profiler를 시작하려면  
-- 쿼리 편집기에서 마우스 오른쪽 단추를 클릭한 다음 **SQL Server Profiler에서 쿼리 추적**을 선택합니다.  
+- 쿼리 편집기에서 마우스 오른쪽 단추를 클릭한 다음, **SQL Server Profiler에서 쿼리 추적**을 선택합니다.  
 
   > [!NOTE]  
   >  연결 컨텍스트는 편집기 연결이고, 추적 템플릿은 TSQL_SP이며, 적용된 필터는 SPID = 쿼리 창 SPID입니다.  

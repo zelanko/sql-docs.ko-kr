@@ -1,30 +1,26 @@
 ---
-title: 분석 서버 속성 (고급 탭) | Microsoft Docs
+title: Analysis Server 속성(고급 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: configuration-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ddb2930a7645662afcc43d6c8f4704af03b99a5b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b27173afb4898a0a21abf7203a992e492e5ae288
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="analysis-server-properties-advanced-tab"></a>분석 서버 속성(고급 탭)
+# <a name="analysis-server-properties-advanced-tab"></a>Analysis Server 속성(고급 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   이 서비스는 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]입니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
