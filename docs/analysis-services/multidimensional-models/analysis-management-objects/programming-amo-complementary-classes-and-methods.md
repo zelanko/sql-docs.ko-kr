@@ -1,38 +1,19 @@
 ---
-title: "AMO 보완 클래스 및 메서드 프로그래밍 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 보완 클래스 및 메서드 프로그래밍 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8972d0659180558689302c77994f0c14f931593d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 보완 클래스 및 메서드 프로그래밍
   이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [CaptureLog 클래스 및 CaptureXML 특성](#CL)  
   
-##  <a name="Assembly">Assembly 클래스</a>  
+##  <a name="Assembly"></a> Assembly 클래스  
  어셈블리의 기능을 확장 하는 사용자가 수 있도록 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 새 저장된 프로시저 또는 MDX (Multidimensional Expressions) 함수를 추가 하 여 합니다. 자세한 내용은 참조 [AMO 기타 클래스 및 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)합니다.  
   
  어셈블리를 추가하거나 삭제하는 작업은 간단하며 온라인으로 수행할 수 있습니다. 단, 어셈블리를 데이터베이스에 추가하려면 데이터베이스 관리자여야 하며 서버 개체에 추가하려면 서버 관리자여야 합니다.  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace 클래스</a>  
+##  <a name="TRC"></a> Trace 클래스  
  서버 작업을 모니터링하려면 세션 추적과 서버 추적이라는 두 종류의 추적 기능을 사용해야 합니다. 서버를 추적하면 서버에서 현재 태스크가 수행되고 있는 방식을 확인하거나(세션 추적) 서버에 연결하지 않고도 서버의 전체 작업에 대한 정보를 확인할 수 있습니다(서버 추적).  
   
  세션 추적을 통해 현재 작업을 추적할 때 서버에서는 해당 서버에서 발생하는 이벤트 중 응용 프로그램으로 인해 발생한 이벤트에 대한 알림을 현재 응용 프로그램에 보냅니다. 이벤트는 현재 응용 프로그램의 이벤트 처리기를 사용하여 캡처됩니다. 먼저 <xref:Microsoft.AnalysisServices.SessionTrace> 개체에 이벤트 처리 루틴을 할당한 다음 세션 추적을 시작합니다.  
@@ -287,8 +268,8 @@ static public string TestCaptureLog(Server svr)
  <xref:Microsoft.AnalysisServices>   
  [AMO 클래스 소개](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 다른 클래스와 메서드](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [다차원 모델 &#40; 처리 Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [논리적 아키텍처 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

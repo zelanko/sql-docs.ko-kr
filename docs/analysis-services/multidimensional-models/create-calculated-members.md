@@ -1,36 +1,23 @@
 ---
-title: "계산된 멤버 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 계산된 멤버 만들기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculated members [Analysis Services]
-- custom measures [Analysis Services]
-- members [Analysis Services], calculated
-- calculations [Analysis Services], calculated members
-ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e819f86b102dd979f529a4eb3ffd9cc12966482b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
+  큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
   
  계산 멤버의 정의는 저장되지만, 값은 메모리에만 존재합니다. 위의 예에서는 유로 값이 최종 사용자에게 표시되기만 하고 큐브 데이터로 저장되지는 않습니다.  
   

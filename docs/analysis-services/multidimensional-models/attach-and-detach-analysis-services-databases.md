@@ -1,39 +1,23 @@
 ---
-title: "Analysis Services 데이터베이스 연결 및 분리 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 데이터베이스 연결 및 분리 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.AttachDatabase.f1
-- sql13.asvs.ssms.attachdatabase.f1
-- sql13.asvs.ssmsimbi.DetachDatabase.f1
-- sql13.asvs.ssms.detachdatabase.f1
-helpviewer_keywords:
-- databases [Analysis Services], attach
-- databases [Analysis Services], detach
-ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ead2b7b28bb716473beb071b7d91f6b1148f965b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services 데이터베이스 연결 및 분리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 종종 일정 기간 동안 데이터베이스를 오프라인 상태로 유지하다가 동일한 서버 인스턴스 또는 다른 서버 인스턴스에서 해당 데이터베이스를 다시 온라인 상태로 되돌려야 하는 경우가 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이러한 모든 상황은 물론 다른 상황에서도 **DBA는** Attach **및** Detach [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 아주 간단히 데이터베이스를 오프라인 상태로 유지하다가 다시 온라인 상태로 만들 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 종종 일정 기간 동안 데이터베이스를 오프라인 상태로 유지하다가 동일한 서버 인스턴스 또는 다른 서버 인스턴스에서 해당 데이터베이스를 다시 온라인 상태로 되돌려야 하는 경우가 있습니다. 이러한 경우는 보다 나은 성능, 데이터베이스 확장에 따른 공간 확보, 또는 제품 업그레이드를 위해 데이터베이스를 다른 디스크로 이동하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이러한 모든 상황은 물론 다른 상황에서도 **DBA는** Attach **및** Detach [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 사용하여 아주 간단히 데이터베이스를 오프라인 상태로 유지하다가 다시 온라인 상태로 만들 수 있습니다.  
   
 ## <a name="attach-and-detach-commands"></a>Attach 및 Detach 명령  
  **Attach** 명령을 사용하면 오프라인 상태였던 데이터베이스를 온라인 상태로 만들 수 있습니다. 데이터베이스를 원래 서버 인스턴스나 다른 인스턴스에 연결할 수 있습니다. 데이터베이스를 연결하면 사용자가 데이터베이스에 대해 **ReadWriteMode** 설정을 지정할 수 있습니다. **Detach** 명령을 사용하면 데이터베이스를 서버로부터 오프라인 상태로 만들 수 있습니다.  

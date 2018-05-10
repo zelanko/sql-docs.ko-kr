@@ -1,39 +1,23 @@
 ---
-title: "이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- backward compatibility [Analysis Services]
-- holdout [data mining]
-- deploy [Analysis Services]
-- time series [Analysis Services]
-- deploying [Analysis Services - data mining]
-- synchronization [Analysis Services]
-- deployment [Analysis Services]
-ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f082d488439f1331c009352bc7d691b7703f0e32
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1065afdc558defa467c440f8a767078ace97d5cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
+  이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
   
  SQL Server 2000 Analysis Services 인스턴스로의 배포는 지원되지 않습니다.  
   

@@ -1,35 +1,23 @@
 ---
-title: "의사 결정 트리 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 의사 결정 트리 모델 쿼리 예제 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- decision tree algorithms [Analysis Services]
-- content queries [DMX]
-- decision trees [Analysis Services]
-ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 123de8ac0fd3b29be624528b063056caca12a650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>의사 결정 트리 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 의사 결정 트리 모델에 대한 내용 쿼리는 각 트리 수준의 사례 수에 대한 통계를 제공하거나 사례를 구분하는 규칙을 제공할 수 있습니다. 또한 예측 쿼리는 권장 사항, 분류 등을 생성하기 위해 모델을 새 데이터에 매핑합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+  데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 의사 결정 트리 모델에 대한 내용 쿼리는 각 트리 수준의 사례 수에 대한 통계를 제공하거나 사례를 구분하는 규칙을 제공할 수 있습니다. 또한 예측 쿼리는 권장 사항, 분류 등을 생성하기 위해 모델을 새 데이터에 매핑합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 하는 모델에 대한 쿼리를 만드는 방법에 대해 설명합니다.  
   
@@ -265,16 +253,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|지정된 열의 예측 표준 편차를 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
@@ -282,6 +270,6 @@ WHERE NODE_TYPE = 25
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [의사 결정 트리 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

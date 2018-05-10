@@ -1,35 +1,23 @@
 ---
-title: "사용자 연결 끊기에 Analysis Services 서버와 세션 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 사용자 연결 끊기에 Analysis Services 서버와 세션 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- ending user activity [Analysis Services]
-- connections [Analysis Services]
-- sessions [Analysis Services]
-ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9878a5d6577cdeb1e7c5f29b40378af3f4733074
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: da6f41a06097af6e386b940804be2563fc287c80
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Analysis Services 서버에서 사용자와 세션 연결 끊기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 관리자는 작업 관리 중에 사용자 작업을 종료할 수 있습니다. 사용자 작업을 종료하려면 세션 및 연결을 취소합니다. 세션은 쿼리 실행 시(암시적) 또는 관리자가 쿼리 생성 시 이름을 지정하면(명시적) 자동으로 구성될 수 있습니다. 연결은 쿼리를 실행할 수 있는 열린 통로입니다. 세션과 연결 모두 활성 상태에서 종료할 수 있습니다. 예를 들어 관리자는 처리 시간이 너무 오래 걸리거나 실행 중인 명령이 올바르게 작성되었다는 확신이 없을 경우 세션 처리를 종료할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 관리자는 작업 관리 중에 사용자 작업을 종료할 수 있습니다. 사용자 작업을 종료하려면 세션 및 연결을 취소합니다. 세션은 쿼리 실행 시(암시적) 또는 관리자가 쿼리 생성 시 이름을 지정하면(명시적) 자동으로 구성될 수 있습니다. 연결은 쿼리를 실행할 수 있는 열린 통로입니다. 세션과 연결 모두 활성 상태에서 종료할 수 있습니다. 예를 들어 관리자는 처리 시간이 너무 오래 걸리거나 실행 중인 명령이 올바르게 작성되었다는 확신이 없을 경우 세션 처리를 종료할 수 있습니다.  
   
 ## <a name="ending-sessions-and-connections"></a>세션 및 연결 종료  
  DMV(동적 관리 뷰) 및 XMLA를 사용하여 세션 및 연결을 관리할 수 있습니다.  
@@ -79,9 +67,9 @@ ms.lasthandoff: 02/15/2018
  이 항목에서 참조하는 XMLA에 대한 자세한 내용은 [Execute 메서드&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md) 및 [Cancel 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [관리 연결 및 세션 &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
- [EndSession 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
+ [관리 연결 및 세션 & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [BeginSession 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)   
+ [EndSession 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
+ [Session 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
   
   

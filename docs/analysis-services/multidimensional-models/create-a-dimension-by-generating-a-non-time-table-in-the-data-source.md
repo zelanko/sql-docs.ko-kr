@@ -1,36 +1,23 @@
 ---
-title: "데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data sources [Analysis Services], dimensions without data source
-- dimensions [Analysis Services], standard
-- dimensions [Analysis Services], creating without data source
-- standard dimensions [Analysis Services]
-ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e4c37f93352f149a1368081170ce47dc80d4aa04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 데이터 원본 없이 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 데이터 원본 없이 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
   
  차원 마법사에서는 일반적인 차원 유형을 작성할 수 있는 예제 차원 템플릿을 제공합니다. 다음 차원 유형 중에서 선택할 수 있습니다.  
   

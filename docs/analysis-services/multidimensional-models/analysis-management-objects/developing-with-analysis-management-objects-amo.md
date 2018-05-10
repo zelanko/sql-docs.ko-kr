@@ -1,32 +1,19 @@
 ---
-title: "Analysis Management Objects (AMO)를 사용 하 여 개발 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
-- AMO, programming
-ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Management Objects (AMO)를 사용 하 여 개발 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4a44da0b795bcb7e8ed05510d8caf0178bb789e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: edd91a0d4608f03dd622ef2b25820d10f9b4f455
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-with-analysis-management-objects-amo"></a>AMO(Analysis Management Objects)를 사용하여 개발
 Analysis Management Objects (AMO)가 실행 중인 인스턴스를 관리 하 여 응용 프로그램 프로그래밍 방식으로 액세스 하는 개체의 전체 라이브러리 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.
@@ -44,5 +31,5 @@ AMO는 SQL Server 2016에서 여러 어셈블리로 리팩터링 되었습니다
 사용자 지정 스크립트와 AMO의 이전 버전에 대해 작성 된 응용 프로그램은 수정 하지 않으면 작업할 계속 됩니다. 그러나 스크립트가 있는 응용 프로그램 SQL Server 2016를 대상으로 하는 구체적으로, 또는 사용자 지정 솔루션을 다시 작성 하는 경우 해야 프로젝트에 새 어셈블리 및 네임 스페이스를 추가 합니다.
 
 ## <a name="see-also"></a>관련 항목:
-[스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41; ](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md) 
- [Analysis Services에서 XMLA를 사용 하 여 개발](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)
+[개발 analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)
+[Analysis Services에서 XMLA를 사용 하 여 개발](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)

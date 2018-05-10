@@ -1,31 +1,19 @@
 ---
-title: "ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ReadOnly property
-- ReadWriteMode command
-- operations [Analysis Services - multidimensional data]
-ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c53754f5ba059cfd790a015b7a1c77bd4de81b73
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bb7d87db7f561f0f238b692b95522e21d3828b4b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,11 +33,11 @@ ms.lasthandoff: 02/15/2018
   
      위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...**를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...** 를 선택합니다.  
   
 3.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
-4.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...**을 선택합니다.  
+4.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
   
 5.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
   
@@ -104,7 +92,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...**를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...** 를 선택합니다.  
   
 3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 XMLA 탭을 엽니다.  
   

@@ -1,39 +1,23 @@
 ---
-title: "데이터 마이닝 모델 뷰어 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 마이닝 모델 뷰어 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- displaying data mining models
-- mining models [Analysis Services], viewing
-- data mining [Analysis Services], models
-- viewing data mining models
-- mining model content
-- support [data mining]
-- exploring data mining models [Analysis Services]
-ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60d9d0bc1d8f78e4baa7c2d36291c76e00c88015
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 76dc68cc88dc8b27bf9569917f452e3230fbc6fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-model-viewers"></a>데이터 마이닝 모델 뷰어
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 모델의 성향을 습득한 후 모델에서 관심 있는 추세를 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 모델의 성향을 습득한 후 모델에서 관심 있는 추세를 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
   
  모델 작성 시 사용하는 알고리즘에 따라 다른 유형의 결과가 반환됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 알고리즘에 대해 별개의 뷰어를 제공합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어를 사용하여 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다.  
   

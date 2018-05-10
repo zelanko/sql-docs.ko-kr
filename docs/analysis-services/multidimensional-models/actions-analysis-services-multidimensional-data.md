@@ -1,37 +1,23 @@
 ---
-title: "Actions (Analysis Services-다차원 데이터) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Actions (Analysis Services-다차원 데이터) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- actions [Analysis Services]
-- actions [Analysis Services], about actions
-- MDX [Analysis Services], actions
-- cubes [Analysis Services], actions
-- OLAP objects [Analysis Services], actions
-ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: cbd2f2755cfcfa3fcd139dbd2778b94f64bcbe02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
+  동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
   
 -   동작이 발생하는 큐브에서 선택된 셀에 대한 기본 데이터를 나타내는 행 집합을 반환하는 드릴스루 동작  
   

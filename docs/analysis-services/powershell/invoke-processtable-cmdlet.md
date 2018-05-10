@@ -1,31 +1,23 @@
 ---
-title: "호출 ProcessTable cmdlet | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 호출 ProcessTable cmdlet | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 560d7eec3587b3ee4802db0511dc1f04cac0ee16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-특정 **RefreshType** 이 있는 **Table** 에서 **Process**작업을 수행합니다.  
+  특정 **RefreshType** 이 있는 **Table** 에서 **Process**작업을 수행합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.

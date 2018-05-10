@@ -1,30 +1,23 @@
 ---
-title: "Restore-asdatabase 등이 cmdlet | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Restore-asdatabase 등이 cmdlet | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9730e74afa160e952723894a6b4ad1d72c762f28
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase cmdlet
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services 인스턴스에 다차원 또는 테이블 형식 데이터베이스 백업 파일 (.abf)을 복원합니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Analysis Services 인스턴스로 다차원 또는 테이블 형식 데이터베이스 백업(.abf) 파일을 복원합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -50,13 +43,13 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-name-string"></a>-이름 \<문자열 >  
+### <a name="-name-string"></a>-Name \<string>  
  복원할 Analysis Services 데이터베이스를 지정합니다.  
   
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1|  
+|위치|1.|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
@@ -144,7 +137,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|True(ByValue)|  
 |와일드카드 문자 허용|false|  
   
-### <a name="commonparameters"></a>\<일반 매개 변수 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  이 cmdlet은 공통 매개 변수 -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer 및 -OutVariable을 지원합니다. 자세한 내용은 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)를 참조하세요.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  
@@ -155,7 +148,7 @@ ms.lasthandoff: 01/08/2018
 |입력|System.string<br /><br /> 문자열 값을 cmdlet에 파이프할 수 있습니다.|  
 |출력|없음|  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
   
 ```  
 PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase awtest.abf testawrestoredb –security:CopyAll  

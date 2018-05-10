@@ -1,39 +1,19 @@
 ---
-title: "트랜잭션 관리 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XML for Analysis, transactions
-- XMLA, transactions
-- explicit transactions [XMLA]
-- implicit transactions
-- transactions [XML for Analysis]
-- rolling back transactions, XMLA
-- reference counts [XML for Analysis]
-- committing transactions
-- starting transactions
-ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
-caps.latest.revision: 
-author: Minewiskan
+title: 트랜잭션 관리 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9d7a8aefc8c018c56327cd4b5d0101523032dd60
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d34410453fea22927b36ed7791830f170a0a3a09
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-transactions-xmla"></a>트랜잭션 관리(XMLA)
   인스턴스로 보낸 Analysis (XMLA) 명령에 대 한 모든 XML [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 현재 암시적 또는 명시적 세션에서 트랜잭션 컨텍스트 내에서 실행 됩니다. 이러한 트랜잭션을 각각 관리 하려면 사용 된 [BeginTransaction](../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md), [CommitTransaction](../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md), 및 [RollbackTransaction](../../analysis-services/xmla/xml-elements-commands/rollbacktransaction-element-xmla.md) 명령입니다. 이러한 명령을 사용하여 암시적 또는 명시적 트랜잭션을 만들거나 트랜잭션 참조 횟수를 변경하거나 트랜잭션을 시작, 커밋 또는 롤백할 수 있습니다.  
@@ -50,7 +30,7 @@ ms.lasthandoff: 02/15/2018
  또한 활성 트랜잭션이 완료되기 전에 현재 세션이 끝나면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 암시적 트랜잭션과 명시적 트랜잭션을 모두 롤백합니다.  
   
 ## <a name="transactions-and-reference-counts"></a>트랜잭션 및 참조 횟수  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 각 세션에 대 한 트랜잭션 참조 횟수를 유지 관리합니다. 그러나 세션별로 하나의 활성 트랜잭션만 유지 관리되는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 중첩된 트랜잭션을 지원하지 않습니다. 현재 세션에 활성 트랜잭션이 없는 경우 트랜잭션 참조 횟수가 0으로 설정됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 각 세션의 트랜잭션 참조 횟수를 유지 관리합니다. 그러나 세션별로 하나의 활성 트랜잭션만 유지 관리되는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 중첩된 트랜잭션을 지원하지 않습니다. 현재 세션에 활성 트랜잭션이 없는 경우 트랜잭션 참조 횟수가 0으로 설정됩니다.  
   
  즉, 각 **BeginTransaction** 명령은 참조 횟수를 1 씩 늘리고 각 **CommitTransaction** 씩 참조 횟수를 명령 감소 합니다. 경우는 **CommitTransaction** 트랜잭션 개수를 0으로 설정 하는 명령 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 트랜잭션을 커밋합니다.  
   

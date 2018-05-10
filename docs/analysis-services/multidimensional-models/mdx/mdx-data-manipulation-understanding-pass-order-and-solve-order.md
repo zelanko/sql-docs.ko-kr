@@ -1,39 +1,23 @@
 ---
-title: "패스 순서 및 계산 순서 (MDX) 이해 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 패스 순서 및 계산 순서 (MDX) 이해 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- evaluation order [MDX]
-- calculation order [MDX]
-- SOLVE_ORDER property
-- queries [MDX], solve orders
-- solve orders [MDX]
-- pass orders [MDX]
-- expressions [MDX], solve orders
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 522c76ebc4f76e382f12490872e2e8ba54e5fe94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 데이터 조작-이해 패스 순서 및 계산 순서
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
+  MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
   
  계산 패스는 계산 패스 번호라는 서수 위치로 참조될 수 있습니다. 큐브의 모든 셀 계산을 완전히 마치는 데 필요한 계산 패스 개수를 큐브의 계산 패스 깊이라고 합니다.  
   
@@ -220,9 +204,9 @@ FROM [Adventure Works]
  계산 멤버, 사용자 지정 롤업 수식 또는 계산 셀이 포함된 차원 수가 높은 큐브에서는 특히 계산 순서를 다루기가 매우 복잡할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 MDX 쿼리를 계산할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MDX 쿼리에 지정된 큐브의 차원을 비롯하여 지정된 패스 내에 관련된 모든 사항에 대한 계산 순서 값을 고려합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [CalculationCurrentPass &#40; Mdx&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40; Mdx&#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [MEMBER 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [데이터 &#40; 조작 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass & #40; Mdx& #41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue & #40; Mdx& #41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [MEMBER 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [데이터 & #40; 조작 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

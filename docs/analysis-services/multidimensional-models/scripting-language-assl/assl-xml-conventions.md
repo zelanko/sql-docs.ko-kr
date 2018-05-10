@@ -1,47 +1,23 @@
 ---
-title: "ASSL XML 표기 규칙 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- whitespace [Analysis Services Scripting Language]
-- trailing whitespace
-- XSD data types [Analysis Services Scripting Language]
-- inheritance [Analysis Services Scripting Language]
-- cardinality [Analysis Services Scripting Language]
-- white space [Analysis Services Scripting Language]
-- ASSL, XML conventions
-- defaults [Analysis Services Scripting Language]
-- leading whitespace
-- Analysis Services Scripting Language, XML conventions
-- XML [Analysis Services Scripting Language]
-- hierarchies [Analysis Services Scripting Language]
-- inherited defaults [Analysis Services Scripting Language]
-ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 
-author: Minewiskan
+title: ASSL XML 표기 규칙 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b6646ffae66115e30fe3138f09fa1db2305e4682
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
+  ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
   
  개체 계층을 나타내기 위해 ASSL에서는 다음과 같은 XML 표기 규칙을 사용합니다.  
   

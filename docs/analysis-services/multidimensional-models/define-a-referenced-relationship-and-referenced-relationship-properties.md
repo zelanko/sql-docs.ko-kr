@@ -1,34 +1,23 @@
 ---
-title: "참조 관계를 정의 및 참조 관계 속성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 참조 관계를 정의 및 참조 관계 속성 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- referenced dimension relationship
-- relationships [Analysis Services], referenced dimensions
-ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96804fae479d3332eebc07e7477a1807fa4831be
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 492fc3827f854ba18412801b6e1411c4c8569ac3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>참조 관계 및 참조 관계 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-참조 차원 관계는 큐브 디자이너의 **차원 용도** 탭에서 다음을 지정하여 정의됩니다.  
+  참조 차원 관계는 큐브 디자이너의 **차원 용도** 탭에서 다음을 지정하여 정의됩니다.  
   
 -   조인할 중간 차원. 일반 차원이나 다른 참조 차원이 될 수 있습니다.  
   

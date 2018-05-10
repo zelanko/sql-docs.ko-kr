@@ -1,31 +1,23 @@
 ---
-title: "CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a8e73be1fc5851ca1cb54b08083218c232e74303
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>CA의 SharePoint 웹 앱에 Power Pivot 서비스 응용 프로그램 연결
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-팜의 여러 SharePoint 웹 응용 프로그램에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 해당 응용 프로그램을 추가합니다.  
+  팜의 여러 SharePoint 웹 응용 프로그램에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있도록 하려면 서비스 연결 목록에 해당 응용 프로그램을 추가합니다.  
   
 > [!IMPORTANT]  
 >  기본 그룹에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 하나 있어야 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드가 제대로 작동합니다. 기본 그룹에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 둘 이상 추가하지 마세요. 같은 서비스 응용 프로그램 유형의 여러 항목을 추가하는 구성은 지원되지 않으며 오류가 발생할 수 있습니다. 추가 서비스 응용 프로그램을 만들 경우 사용자 지정 목록에 추가하십시오.  
@@ -58,7 +50,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  웹 응용 프로그램의 관리에서 **서비스 연결**을 클릭합니다.  
   
-4.  **다음 연결 그룹 편집**에서 **[사용자 지정]**을 선택합니다.  
+4.  **다음 연결 그룹 편집**에서 **[사용자 지정]** 을 선택합니다.  
   
 5.  사용할 각 서비스 응용 프로그램 연결 옆에 있는 확인란을 선택합니다. 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램( **파워 피벗 서비스 응용 프로그램 프록시**로 설정된 형식으로 표시)이 있는 경우 하나만 선택해야 합니다.  
   

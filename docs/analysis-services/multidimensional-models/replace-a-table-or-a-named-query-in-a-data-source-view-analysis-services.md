@@ -1,37 +1,23 @@
 ---
-title: "테이블 또는 데이터 원본 뷰 (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 테이블 또는 데이터 원본 뷰 (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- replacing tables
-- data source views [Analysis Services], tables
-- named queries [Analysis Services], replacing tables
-- tables [Analysis Services], data source views
-- partitions [Analysis Services], named queries
-ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c8d82321d439301915c4c0b50234293f628dc94d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6cf977f8018aa2208f0af65501be972ef5a0f423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 원본 뷰 디자이너에서 데이터 원본 뷰(DSV)의 테이블, 뷰 또는 명명된 쿼리를 같은 데이터 원본이나 다른 데이터 원본의 다른 테이블 또는 뷰와 바꾸거나 DSV에 정의된 명명된 쿼리와 바꿀 수 있습니다. 테이블을 바꾸는 경우 DSV의 테이블에 대한 개체 ID는 변경되지 않으므로 해당 테이블에 대한 참조를 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 또는 프로젝트의 다른 모든 개체는 계속해서 이 테이블을 참조합니다. 이름 및 열 유형 일치를 기반으로 관련된 모든 관계는 유지됩니다. 반면 테이블을 삭제한 다음 추가하면 참조 및 관계가 모두 손실되며 다시 만들어야 합니다.  
+  데이터 원본 뷰 디자이너에서 데이터 원본 뷰(DSV)의 테이블, 뷰 또는 명명된 쿼리를 같은 데이터 원본이나 다른 데이터 원본의 다른 테이블 또는 뷰와 바꾸거나 DSV에 정의된 명명된 쿼리와 바꿀 수 있습니다. 테이블을 바꾸는 경우 DSV의 테이블에 대한 개체 ID는 변경되지 않으므로 해당 테이블에 대한 참조를 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 또는 프로젝트의 다른 모든 개체는 계속해서 이 테이블을 참조합니다. 이름 및 열 유형 일치를 기반으로 관련된 모든 관계는 유지됩니다. 반면 테이블을 삭제한 다음 추가하면 참조 및 관계가 모두 손실되며 다시 만들어야 합니다.  
   
  테이블을 다른 테이블로 바꾸려면 프로젝트 모드에서 데이터 원본 뷰 디자이너의 원본 데이터에 대한 활성 연결이 있어야 합니다.  
   

@@ -1,37 +1,23 @@
 ---
-title: "데이터 마이닝 솔루션 배포 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 마이닝 솔루션 배포 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], deploying
-- deploying [Analysis Services], production environments
-- deploying [Analysis Services - data mining]
-- solutions [Analysis Services], deploying
-- models [Analysis Services], data mining
-ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 192601b35384308e4c75e8a62294cf383c75f29c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>데이터 마이닝 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 프로세스의 마지막 단계는 모델을 프로덕션 환경에 배포하는 것입니다. 배포 작업을 수행해야 사용자가 모델을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
+  데이터 마이닝 프로세스의 마지막 단계는 모델을 프로덕션 환경에 배포하는 것입니다. 배포 작업을 수행해야 사용자가 모델을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   모델을 사용하여 예측을 만들고 비즈니스 의사 결정을 내릴 수 있습니다. 쿼리를 만드는 데 사용할 수 있는 도구에 대한 자세한 내용은 [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)를 참조하세요.  
   
@@ -91,6 +77,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [처리 요구 사항 및 고려 사항 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

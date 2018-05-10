@@ -1,31 +1,23 @@
 ---
-title: "데이터 원본 뷰를 사용 하 여 큐브 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 데이터 원본 뷰를 사용 하 여 큐브 만들기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2ec11a7d770d87f157d191a791b31545d42fb146
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>데이터 원본 뷰를 사용하여 큐브 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-기존 데이터 원본 뷰를 사용하려는 경우 새 큐브를 생성하는 이 방법을 사용합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  
+  기존 데이터 원본 뷰를 사용하려는 경우 새 큐브를 생성하는 이 방법을 사용합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  
   
  데이터 원본을 사용하여 큐브를 만들려면 솔루션 탐색기에서 **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택합니다. 큐브 마법사가 열립니다.  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
   
  트리의 개체를 큐브에서 제거하려면 해당 개체 옆에 있는 확인란을 취소합니다. 개체 옆에 있는 확인란을 취소하면 그 밑에 있는 모든 개체도 제거됩니다. 개체 간에는 종속성이 적용되므로 특성을 제거하면 특성에 종속된 계층 수준도 제거됩니다. 예를 들어, 계층 옆에 있는 확인란을 취소하면 계층 안의 모든 수준 옆에 있는 확인란도 취소되고 계층뿐 아니라 수준도 제거됩니다. 차원의 키 특성은 제거할 수 없습니다.  
   
- 이름을 바꿀 수 있습니다 차원, 특성, 계층 또는 수준 중 하나 클릭 이름 또는 이름을 마우스 오른쪽 단추로 클릭 한 후 바로 가기 메뉴에서 **이름 바꾸기 \<개체 >**여기서  **\< 개체 >** 은 **차원**, **특성**, 또는 **수준**합니다.  
+ 이름을 바꿀 수 있습니다 차원, 특성, 계층 또는 수준 중 하나 클릭 이름 또는 이름을 마우스 오른쪽 단추로 클릭 한 후 바로 가기 메뉴에서 **이름 바꾸기 \<개체 >** 여기서  **\< 개체 >** 은 **차원**, **특성**, 또는 **수준**합니다.  
   
  마법사의 **팩트 및 차원 테이블 식별** 페이지에서 정의한 차원 테이블의 수와 마법사의 이 페이지에 나열된 차원 수 사이에 반드시 일 대 일 관계가 있는 것은 아닙니다. 데이터 원본 뷰에서 테이블 간의 관계에 따라 마법사는 두 개 이상의 테이블을 사용하여 차원을 생성할 수 있습니다(예를 들어, 눈송이 스키마에 따라 필요한 수).  
   

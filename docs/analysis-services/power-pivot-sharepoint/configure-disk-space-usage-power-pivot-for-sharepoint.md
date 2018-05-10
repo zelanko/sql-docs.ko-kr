@@ -1,31 +1,23 @@
 ---
-title: "디스크 공간 사용 (SharePoint 용 파워 피벗) 구성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 디스크 공간 사용 (SharePoint 용 파워 피벗) 구성 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7388a8f44b3dc60729674a6cd14014d4bbfa15f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스를 캐시합니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
+  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스를 캐시합니다. 메모리에 로드되는 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
   
  이 항목에서는 디스크 공간 사용량에 대한 제한을 설정하는 방법에 대해 설명합니다.  
   
@@ -57,11 +49,11 @@ SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서�
   
  시스템 수준에서 디스크 공간이 부족할 때 알리는 전자 메일 경고를 만들 수 있습니다. Microsoft System Center에는 전자 메일 경고 기능이 포함되어 있습니다. 파일 서버 리소스 관리자, 작업 스케줄러 또는 PowerShell 스크립트를 사용하여 경고를 설정할 수도 있습니다. 부족한 디스크 공간에 대한 알림을 설정하는 데 대한 유용한 정보를 얻으려면  
   
--   [파일 서버 리소스 관리자의 새로운 기능](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)  
+-   [파일 서버 리소스 관리자의 새로운 소식](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)합니다.  
   
--   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (Windows Server 2008 R2의 파일 서버 리소스 관리자 단계별 가이드)(http://go.microsoft.com/fwlink/?LinkID=204875)  
+-   [Windows Server 2008 r 2 용 파일 서버 리소스 관리자 단계별 가이드](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)합니다.  
   
--   [Setting low disk space alerts on Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) (Windows Server 2008에서 부족한 디스크 공간 경고 설정)(http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Windows Server 2008에서 부족 한 디스크 공간 경고 설정](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870)합니다.  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>캐시된 파일의 저장에 사용되는 디스크 공간 크기를 제한하는 방법  
   

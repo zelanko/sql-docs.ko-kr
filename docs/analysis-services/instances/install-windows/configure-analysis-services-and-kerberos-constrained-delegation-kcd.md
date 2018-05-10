@@ -1,31 +1,23 @@
 ---
-title: "분석 구성 서비스 및 Kerberos 제한 위임 (KCD) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 분석 구성 서비스 및 Kerberos 제한 위임 (KCD) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 644ac2ac09f331bf60be08ac7aacecd16734ba0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services 및 KCD(Kerberos 제한 위임) 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KCD(Kerberos 제한 위임)는 Windows 인증 시 사용자 환경 전체에서 서비스 간에 클라이언트 자격 증명을 위임하도록 구성할 수 있는 인증 프로토콜입니다. KCD에는 추가 인프라(예: 도메인 컨트롤러) 및 사용자 환경의 추가 구성이 필요합니다. KCD는 SharePoint 2016에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터와 관련된 일부 시나리오의 요구 사항입니다. SharePoint 2016에서는 Excel Services가 SharePoint 팜에서 별도의 새로운 서버인 **Office Online Server**로 이동되었습니다. Office Online Server는 별도의 서버이므로 두 가지 홉 시나리오에서 클라이언트 자격 증명을 위임할 방법이 필요합니다.  
+  KCD(Kerberos 제한 위임)는 Windows 인증 시 사용자 환경 전체에서 서비스 간에 클라이언트 자격 증명을 위임하도록 구성할 수 있는 인증 프로토콜입니다. KCD에는 추가 인프라(예: 도메인 컨트롤러) 및 사용자 환경의 추가 구성이 필요합니다. KCD는 SharePoint 2016에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터와 관련된 일부 시나리오의 요구 사항입니다. SharePoint 2016에서는 Excel Services가 SharePoint 팜에서 별도의 새로운 서버인 **Office Online Server**로 이동되었습니다. Office Online Server는 별도의 서버이므로 두 가지 홉 시나리오에서 클라이언트 자격 증명을 위임할 방법이 필요합니다.  
   
 ## <a name="overview"></a>개요  
  KCD를 사용하면 리소스에 대한 액세스를 제공하기 위한 목적으로 하나의 계정이 다른 계정을 가장할 수 있습니다. 가장하는 계정은 웹 응용 프로그램에 할당된 서비스 계정 또는 웹 서버의 컴퓨터 계정이고, 가장된 계정은 리소스에 대한 액세스가 필요한 사용자 계정입니다. KCD는 서비스 수준에서 작동하므로 서버의 선택된 서비스에는 가장하는 계정에 의해 액세스 권한이 부여될 수 있지만 동일한 서버의 다른 서비스 또는 다른 서버의 서비스는 액세스가 거부됩니다.  
@@ -78,7 +70,7 @@ KCD(Kerberos 제한 위임)는 Windows 인증 시 사용자 환경 전체에서 
   
     3.  **속성**을 클릭합니다.  
   
-    4.  **인터넷 프로토콜 버전 6(TCP/IPv6)**을 클릭합니다.  
+    4.  **인터넷 프로토콜 버전 6(TCP/IPv6)** 을 클릭합니다.  
   
     5.  **속성**을 클릭합니다.  
   

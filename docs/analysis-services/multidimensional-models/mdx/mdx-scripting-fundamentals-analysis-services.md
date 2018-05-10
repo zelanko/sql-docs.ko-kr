@@ -1,38 +1,23 @@
 ---
-title: "MDX 스크립팅 기본 사항 (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDX 스크립팅 기본 사항 (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], scripts
-- calculations [Analysis Services], scripts
-- MDX [Analysis Services], scripts
-- scripts [MDX]
-- cubes [Analysis Services], calculations
-- Multidimensional Expressions [Analysis Services], scripts
-ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bba357ff7e84870c9b734591b80712c25de2b750
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 07966beb130bae8e144b0380c332ade91cfe466c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>MDX 스크립팅 기본 사항(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX(Multidimensional Expressions) 스크립트는 계산으로 큐브를 채우는 한 개 이상의 MDX 식 또는 문으로 구성됩니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX(Multidimensional Expressions) 스크립트는 계산으로 큐브를 채우는 한 개 이상의 MDX 식 또는 문으로 구성됩니다.  
   
  MDX 스크립트는 큐브의 계산 프로세스를 정의합니다. MDX 스크립트는 또한 큐브 자체의 일부로 간주됩니다. 따라서 큐브와 관련된 MDX 스크립트를 변경하면 해당 큐브의 계산 프로세스가 즉시 변경됩니다.  
   
@@ -44,13 +29,13 @@ ms.lasthandoff: 02/15/2018
   
 |항목|Description|  
 |-----------|-----------------|  
-|[기본 MDX 스크립트 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)|각 큐브에서 제공되는 기본 MDX 스크립트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 큐브 안에서 MDX 스크립트가 작동하는 방식을 포함하여 기본 MDX 스크립트에 대해 설명합니다.|  
-|[관리 범위 및 컨텍스트 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md)|[CALCULATE](../../../mdx/mdx-scripting-calculate.md) 문, [SCOPE](../../../mdx/mdx-scripting-scope.md) 문, 그리고 [This](../../../mdx/this-mdx.md) 함수를 사용하여 MDX 스크립트에서 컨텍스트 및 범위를 관리하는 방법을 설명합니다.|  
-|[변수 및 매개 변수 사용 &#40;를 사용 하 여 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md)|MDX 스크립트에서 변수 및 매개 변수를 사용하는 방법을 설명합니다.|  
-|[오류 처리 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/error-handling-mdx.md)|MDX 스크립트 내의 오류 처리 방법을 설명합니다.|  
-|[지원 되는 MDX &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md)|MDX 스크립트에서 지원되는 MDX 연산자, 문 및 함수 목록을 제공합니다.|  
+|[기본 MDX 스크립트 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)|각 큐브에서 제공되는 기본 MDX 스크립트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 큐브 안에서 MDX 스크립트가 작동하는 방식을 포함하여 기본 MDX 스크립트에 대해 설명합니다.|  
+|[관리 범위 및 컨텍스트 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md)|[CALCULATE](../../../mdx/mdx-scripting-calculate.md) 문, [SCOPE](../../../mdx/mdx-scripting-scope.md) 문, 그리고 [This](../../../mdx/this-mdx.md) 함수를 사용하여 MDX 스크립트에서 컨텍스트 및 범위를 관리하는 방법을 설명합니다.|  
+|[변수 및 매개 변수 사용 & #40;를 사용 하 여 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md)|MDX 스크립트에서 변수 및 매개 변수를 사용하는 방법을 설명합니다.|  
+|[오류 처리 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/error-handling-mdx.md)|MDX 스크립트 내의 오류 처리 방법을 설명합니다.|  
+|[지원 되는 MDX & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md)|MDX 스크립트에서 지원되는 MDX 연산자, 문 및 함수 목록을 제공합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 &#40; Mdx&#41;](../../../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)  
   
   

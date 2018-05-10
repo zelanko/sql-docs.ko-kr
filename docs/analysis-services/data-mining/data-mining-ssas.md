@@ -1,32 +1,23 @@
 ---
 title: 데이터 마이닝 (SSAS) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 82b5649d8893714b72aa38be381f8d2fbd0833fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지났습니다 예측 분석에서 선두 2000 버전의 데이터 마이닝을 제공 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝의 조합은 데이터 정리 및 준비, 기계 학습 및 보고를 포함하는 예측 분석에 대한 통합된 플랫폼을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에는 EM 및 K-means 클러스터링 모델, 신경망, 로지스틱 회귀 분석 및 선형 회귀, 의사 결정 트리 및 naive bayes 분류자를 비롯하여 여러 표준 알고리즘이 포함됩니다. 모든 모델은 모델을 개발하고 구체화하고 평가할 수 있도록 시각화를 통합했습니다.  비즈니스 인텔리전스 솔루션에 데이터 마이닝을 통합하면 복잡한 문제에 대한 지능형 의사 결정을 수행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝을 제공함으로써 2000 릴리스 이후 예측 분석에 앞장서 왔습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝의 조합은 데이터 정리 및 준비, 기계 학습 및 보고를 포함하는 예측 분석에 대한 통합된 플랫폼을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에는 EM 및 K-means 클러스터링 모델, 신경망, 로지스틱 회귀 분석 및 선형 회귀, 의사 결정 트리 및 naive bayes 분류자를 비롯하여 여러 표준 알고리즘이 포함됩니다. 모든 모델은 모델을 개발하고 구체화하고 평가할 수 있도록 시각화를 통합했습니다.  비즈니스 인텔리전스 솔루션에 데이터 마이닝을 통합하면 복잡한 문제에 대한 지능형 의사 결정을 수행할 수 있습니다.  
   
 ## <a name="benefits-of-data-mining"></a>데이터 마이닝의 장점  
  데이터 마이닝(예측 분석 및 기계 학습이라고도 함)은 다양한 연구 결과를 기반으로 하는 통계 원칙을 사용하여 데이터에서 패턴을 검색합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘을 데이터에 적용하면 추세를 예측하고 패턴을 식별하여 규칙과 권장 사항을 만들 수 있으며 복잡한 데이터 집합에서 이벤트의 시퀀스를 분석하여 새로운 통찰력을 얻을 수 있습니다.  
@@ -57,9 +48,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [데이터 마이닝 개념](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
@@ -73,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [데이터 마이닝 아키텍처](../../analysis-services/data-mining/data-mining-architecture.md)  
   
--   [보안 개요&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+-   [보안 개요 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  

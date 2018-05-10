@@ -1,35 +1,23 @@
 ---
-title: "부모-자식 차원의 단항 연산자 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 부모-자식 차원의 단항 연산자 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- UnaryOperatorColumn property
-- attributes [Analysis Services], unary operators
-- unary operators
-ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4646fd5e9a58ba275c10549aa5a9ae0600c41070
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
   
  데이터 원본 뷰의 차원 테이블에서 명명된 계산을 만들고 단항 연산자 열로 지정할 수 있습니다. '+'와 같은 단순한 식은 모든 멤버에 동일한 연산자를 반환합니다. 그러나 모든 멤버에 연산자를 반환하기만 하면 어떤 식도 사용할 수 있습니다.  
   

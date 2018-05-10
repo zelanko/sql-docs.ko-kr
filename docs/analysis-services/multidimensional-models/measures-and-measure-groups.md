@@ -1,41 +1,23 @@
 ---
-title: "측정값 및 측정값 그룹 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 측정값 및 측정값 그룹 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services]
-- measures [Analysis Services], about measures
-- OLAP objects [Analysis Services], measures
-- aggregate functions [Analysis Services]
-- granularity
-- measure groups [Analysis Services], about measure groups
-- measures [Analysis Services]
-- aggregations [Analysis Services], measures
-- fact tables [Analysis Services]
-ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 171ee494ad3d4b89ab923b4b2f0a769da0d7012c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
+  큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  
   
  이 항목에서는 [Measures](#bkmk_measure) 및 [Measure Groups](#bkmk_mg)에 대해 설명합니다. 또한 측정값 및 측정값 그룹을 만들고 구성하는 절차 단계에 대한 링크가 들어 있는 다음 표도 제공됩니다.  
   

@@ -1,38 +1,23 @@
 ---
-title: "OLAP 엔진 서버 구성 요소 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Services, architecture
-- ports [Analysis Services]
-- XML/A listener
-- server architecture [Analysis Services]
-ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
-caps.latest.revision: 
-author: Minewiskan
+title: OLAP 엔진 서버 구성 요소 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 462dc47d0bb6545517fd8d11cab487196c00bfcb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 43d15eaa7500362cc34f21994441b19f080c5773
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="olap-engine-server-components"></a>OLAP 엔진 서버 구성 요소
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-서버 구성 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 **msmdsrv.exe** 응용 프로그램을 Windows 서비스로 실행 됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+  서버 구성 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 **msmdsrv.exe** 응용 프로그램을 Windows 서비스로 실행 됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -71,8 +56,8 @@ ms.lasthandoff: 02/15/2018
  참조 [Analysis Services 액세스를 허용 하도록 Windows 방화벽을 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 내용을 확인 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [명명 규칙 &#40; 개체 Analysis Services &#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
- [물리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [개체 명명 규칙 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
+ [물리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [논리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

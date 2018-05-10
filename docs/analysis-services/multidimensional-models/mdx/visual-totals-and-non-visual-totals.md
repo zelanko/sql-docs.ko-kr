@@ -1,31 +1,23 @@
 ---
-title: "보이는 값 합계 및 보이지 않는 값 합계 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 보이는 값 합계 및 보이지 않는 값 합계 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4d85d2ce789793c03fa99d51451e1a64d0868962
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0df374422d7879bf88404371de4ba728482181e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-보이는 값 합계는 열이나 행에서 볼 수 있는 모든 항목이 더해지는 열이나 행의 끝에 있는 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 **보이지 않는 값 합계**라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  
+  보이는 값 합계는 열이나 행에서 볼 수 있는 모든 항목이 더해지는 열이나 행의 끝에 있는 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 **보이지 않는 값 합계**라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  
   
  다음 시나리오에서는 보이지 않는 값 합계의 동작을 보여 줍니다. 첫 번째 단계에서는 보이는 값 합계의 기본 동작을 보여 줍니다.  
   
@@ -104,12 +96,12 @@ ms.lasthandoff: 02/15/2018
  이전 결과와 비교하면 [All Resellers] 행에는 [Value Added Reseller] 및 [Warehouse]에 표시된 값에 대한 합계가 표시되고 [All Products] 열에는 표시되지 않은 제품을 포함한 모든 제품의 합계 값이 표시되는 것을 알 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [멤버, 튜플 및 집합 &#40; 사용 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [기본 MDX 쿼리 &#40; Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [쿼리 및 Slicer 축 &#40;으로 쿼리 제한 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
- [쿼리 &#40; 큐브 컨텍스트 설정 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
+ [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [기본 MDX 쿼리 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [쿼리 및 Slicer 축 & #40;으로 쿼리 제한 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [쿼리 & #40; 큐브 컨텍스트 설정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
   

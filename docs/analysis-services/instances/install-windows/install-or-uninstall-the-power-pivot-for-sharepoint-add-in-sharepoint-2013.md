@@ -1,27 +1,19 @@
 ---
-title: "설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2013) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2013) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dc528f442d908d344ba1200d3681438dc183ddda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +31,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **응용 프로그램 서버:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에는 통합 문서를 데이터 원본으로 사용하는 기능, 예약된 데이터 새로 고침 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드가 포함됩니다.  
   
-     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치 파일을 컴퓨터에 복사하는**Windows Installer 패키지(**spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
+     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치 파일을 컴퓨터에 복사하는**Windows Installer 패키지(** spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
   
     -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013. 이 구성 요소에는 PowerShell 스크립트(.ps1 파일), SharePoint 솔루션 패키지(.wsp) 및 SharePoint 2013 팜에서 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]을 배포하기 위한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2013 구성 도구가 포함되어 있습니다.  
   
@@ -98,7 +90,7 @@ ms.lasthandoff: 02/15/2018
 6.  **설치** 를 클릭하여 설치하고 설치를 완료합니다.  
   
 ### <a name="command-line-installation"></a>명령줄 설치  
- 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 예를 들어  
+ 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 예를 들어:  
   
  `Msiexec.exe /i SpPowerPivot.msi`항목을 참조하세요.  
   

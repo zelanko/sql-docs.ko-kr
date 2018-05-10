@@ -1,48 +1,23 @@
 ---
-title: "사용자 계층 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- members [Analysis Services], hierarchies
-- dimensions [Analysis Services], hierarchies
-- user hierarchies [Analysis Services]
-- hierarchies [Analysis Services], multilevel
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], hierarchies
-- parent-child hierarchies [Analysis Services]
-- hierarchies [Analysis Services], user
-- ragged hierarchies [Analysis Services]
-- balanced hierarchies [Analysis Services]
-- hierarchies [Analysis Services]
-- OLAP objects [Analysis Services], hierarchies
-- multilevel hierarchies [Analysis Services]
-- unbalanced hierarchies [Analysis Services]
-ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 
-author: Minewiskan
+title: 사용자 계층 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1c334e52e9f750391ab0a90916e39a94d7b00be5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-hierarchies"></a>사용자 계층
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-사용자 정의 계층에 사용 되는 특성의 사용자 정의 계층은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 계층 구조로 차원의 멤버를 구성 하 고 큐브의 탐색 경로 제공 합니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
+  사용자 정의 계층에 사용 되는 특성의 사용자 정의 계층은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 계층 구조로 차원의 멤버를 구성 하 고 큐브의 탐색 경로 제공 합니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  

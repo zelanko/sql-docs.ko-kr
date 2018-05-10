@@ -1,41 +1,19 @@
 ---
-title: "명령 취소 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- connections [XML for Analysis]
-- associated connections [XML for Analysis]
-- XML for Analysis, canceling
-- associated sessions [XML for Analysis]
-- canceling connections
-- canceling commands
-- canceling sessions
-- SPID
-- XMLA, canceling
-- server process IDs [XML for Analysis]
-- sessions [XML for Analysis]
-ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
-caps.latest.revision: 
-author: Minewiskan
+title: 명령 취소 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0751c7216716f46e12e8b864386adc3e4806b0cb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d69c53f0f34ba19e822b45f618fe1f799ef69ad6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="canceling-commands-xmla"></a>명령 취소(XMLA)
   명령을 실행 하는 사용자의 관리 권한에 따라는 [취소](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) Analysis (XMLA) 세션, 세션, 연결, 서버 프로세스 또는 연관된 된 세션이 명령을 취소할 수에 대 한 xml에서 명령 또는 연결입니다.  
@@ -69,7 +47,7 @@ ms.lasthandoff: 02/15/2018
  설정할 수 있습니다는 [CancelAssociated](../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md) 속성을 true로 연결, 세션 및 연결 된 연결, 세션 또는 SPID에 지정 된 명령을 취소 하는 **취소** 명령입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [방법 &#40; 검색 XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [Discover 메서드 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

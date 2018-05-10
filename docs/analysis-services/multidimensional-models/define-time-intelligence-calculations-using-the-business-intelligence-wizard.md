@@ -1,44 +1,23 @@
 ---
-title: "비즈니스 인텔리전스 마법사를 사용 하 여 시간 인텔리전스 계산 정의 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 비즈니스 인텔리전스 마법사를 사용 하 여 시간 인텔리전스 계산 정의 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- period over period growth [Analysis Services]
-- parallel period comparisons [Analysis Services]
-- Business Intelligence enhancements [Analysis Services], time intelligence
-- time views [Analysis Services]
-- hierarchies [Analysis Services], time
-- time periods [Analysis Services]
-- moving averages
-- time [Analysis Services]
-- period to date [Analysis Services]
-- calculations [Analysis Services], time
-- time hierarchies [Analysis Services]
-- time intelligence [Analysis Services]
-ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 74fa3f0001979da21b22e056e03711bd6037f9a8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-시간 인텔리전스 기능은 선택한 계층에 시간 계산(또는 시간 보기)을 추가하는 큐브 기능입니다. 이 기능은 다음과 같은 계산 범주를 지원합니다.  
+  시간 인텔리전스 기능은 선택한 계층에 시간 계산(또는 시간 보기)을 추가하는 큐브 기능입니다. 이 기능은 다음과 같은 계산 범주를 지원합니다.  
   
 -   월간 누계  
   

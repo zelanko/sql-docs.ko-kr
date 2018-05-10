@@ -1,48 +1,23 @@
 ---
-title: "Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- MDX [Analysis Services], tuples
-- member keys [MDX]
-- MDX [Analysis Services], sets
-- calculated members [MDX]
-- members [MDX]
-- Multidimensional Expressions [Analysis Services], members
-- named sets [MDX]
-- Multidimensional Expressions [Analysis Services], tuples
-- member functions [MDX]
-- sets [MDX]
-- MDX [Analysis Services], members
-- member names [MDX]
-- Multidimensional Expressions [Analysis Services], sets
-- tuple functions
-- tuples
-- set functions [MDX]
-ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a38de43b77e4b028c7dae24095ac2b556b64a217
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
+  MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
   
 ## <a name="member-functions"></a>멤버 함수  
  MDX는 차원, 수준, 집합 또는 튜플 등의 다른 MDX 엔터티에서 멤버를 검색할 수 있는 여러 함수를 제공합니다. 예를 들어 [FirstChild](../../../mdx/firstchild-mdx.md) 함수는 멤버에 대해 실행되고 멤버를 반환하는 함수입니다.  
@@ -133,8 +108,8 @@ FROM [Adventure Works]
  문자열 함수는 MDX 식에 대해 실행되며 문자열을 반환합니다. 예를 들어 [UniqueName&#40;MDX&#41;](../../../mdx/uniquename-mdx.md) 함수는 차원, 계층, 수준 또는 멤버의 고유 이름이 들어 있는 문자열 값을 반환합니다. 문자열 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

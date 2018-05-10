@@ -1,39 +1,19 @@
 ---
-title: "오류 및 경고 처리 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- inline errors [XMLA]
-- SOAP faults [XML for Analysis]
-- XML for Analysis, errors
-- faults [XML for Analysis]
-- messages [XML for Analysis]
-- XMLA, errors
-- warnings [XML for Analysis]
-- inline warnings [XMLA]
-ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 
-author: Minewiskan
+title: 오류 및 경고 처리 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e5aa002079080e8c4e3fc4816539fda866e8293b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>오류 및 경고 처리(XMLA)
   오류 처리는 필요한 경우 XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드 호출이 실행 되지 않습니다, 성공적으로 실행 하지만 오류 또는 경고를 생성 또는 성공적으로 실행 되지만 결과 반환 오류가 있습니다.  
@@ -45,7 +25,7 @@ ms.lasthandoff: 02/15/2018
 |메서드 호출이 성공적으로 실행되었으나 결과에 오류가 있음|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인라인 **오류** 또는 **경고** 요소 오류 또는 경고에 대 한 적절 한 내에서 각각 [셀](../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) 또는 [행](../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md) 메서드 호출의 결과의 요소입니다.<br /><br /> 자세한 내용은 섹션을 참조 하십시오. [인라인 오류 및 경고](#handling_inline_errors_and_warnings)합니다.|  
   
 ##  <a name="handling_soap_faults"></a> SOAP 오류 해결  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다음과 같은 경우 발생 하는 경우 SOAP 오류를 반환 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 SOAP 오류가 반환되는 경우는 다음과 같습니다.  
   
 -   XMLA 메서드가 포함된 SOAP 메시지가 올바른 형식이 아니거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 해당 메시지의 유효성을 확인할 수 없는 경우  
   
@@ -99,7 +79,7 @@ HelpFile="" />
   
  **메시지** 속성 뒤에 포함 된 다른 모든 속성의 **루트** 요소를 하나 이상 포함 될 수 있습니다 및 **메시지** 요소. 각 **메시지** 요소는 단일을 포함할 수 있습니다 **오류** 또는 **경고** 동안 발생 한 오류 또는 경고를 각각 설명 하는 요소는 지정 된 명령입니다.  
   
- 오류 및에 포함 된 경고에 대 한 자세한 내용은 **메시지** 속성 참조 [메시지 요소 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md).  
+ 오류 및에 포함 된 경고에 대 한 자세한 내용은 **메시지** 속성 참조 [메시지 요소 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/messages-element-xmla.md)합니다.  
   
 ### <a name="handling-errors-during-serialization"></a>직렬화 중 오류 해결  
  한 후 오류가 발생 하는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 이미 성공적으로 실행된 된 명령의 출력을 직렬화 하는 작업 시작 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 반환는 [예외](../../analysis-services/xmla/xml-elements-properties/exception-element-xmla.md) 오류 지점에서 다른 네임 스페이스의 요소입니다. 그러면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 클라이언트에 보낸 XML 문서가 유효한 문서가 되도록 열려 있는 요소를 모두 닫습니다. 인스턴스도 반환 합니다.는 **메시지** 의 오류 설명을 포함 하는 요소입니다.  

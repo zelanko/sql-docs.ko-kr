@@ -1,31 +1,23 @@
 ---
-title: "튜플 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 튜플 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 00353a4a955b631fda3e0fb6521ecad764f1328c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 57bccce70e7e5b90061ebe0ab79730e001dcc2fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tuples"></a>튜플
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-튜플은 큐브의 데이터 조각을 고유하게 식별합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
+  튜플은 큐브의 데이터 조각을 고유하게 식별합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>튜플의 암시적 또는 기본 특성 멤버  
  MDX 쿼리 또는 식에서 튜플을 정의할 때 각 특성 계층의 특성 멤버를 명시적으로 포함할 필요는 없습니다. 쿼리나 식에 특성 계층의 멤버가 명시적으로 포함되어 있지 않으면 해당 특성 계층의 기본 멤버가 암시적으로 튜플에 포함됩니다. 큐브에 명시적으로 달리 정의되어 있지 않고 (All) 멤버가 있는 경우 모든 특성 계층의 기본 멤버는 (All) 멤버입니다. 특성 계층 내에 (All) 멤버가 없는 경우 기본 멤버는 해당 특성 계층의 최상위 수준 멤버입니다. 또한 기본 측정값이 명시적으로 정의되지 않은 경우 큐브에 지정된 첫 번째 측정값이 기본 측정값이 됩니다. 자세한 내용은 [기본 멤버 정의](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md) 및 [DefaultMember&#40;MDX&#41;](../../../mdx/defaultmember-mdx.md)를 참조하세요.  
@@ -73,9 +65,9 @@ FROM [Adventure Works]
 >  특성 멤버는 멤버 이름이나 멤버 키로 참조할 수 있습니다. 앞의 예에서 [CY 2004]에 대한 참조는 &[2004]로 바꿀 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [멤버, 튜플 및 집합 &#40; 사용 Mdx&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

@@ -1,32 +1,23 @@
 ---
 title: 리프트 차트, 수익 차트 또는 분류표 만들기 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
-ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16770ad1bf8ca0052f7b8b6af22df02d4e4392f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a136b9e3fe14b742a6c73c20ea0cd354bba3a106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]에 대 한 정확도 차트를 만들 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 5 단계에서 데이터 마이닝 모델:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  다음과 같은 기본적인 다섯 단계로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델에 대한 정확도 차트를 만들 수 있습니다.  
   
 -   비교할 마이닝 모델을 포함하는 마이닝 구조를 선택합니다.  
   
@@ -69,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="select-testing-data"></a>테스트 데이터 선택  
   
-1.  **마이닝 정확도 차트** 탭의 **입력 선택** 탭에서 **정확도 차트에 사용할 데이터 집합을 선택하십시오.**그룹의 옵션 중 하나를 선택하여 차트를 생성하는 데 사용할 데이터 원본을 지정합니다.  
+1.  **마이닝 정확도 차트** 탭의 **입력 선택** 탭에서 **정확도 차트에 사용할 데이터 집합을 선택하십시오.** 그룹의 옵션 중 하나를 선택하여 차트를 생성하는 데 사용할 데이터 원본을 지정합니다.  
   
     -   모델을 만드는 동안 적용되었을 수 있는 필터와 마이닝 구조 테스트 사례의 교차에 의해 정의되는 사례의 하위 집합을 사용하려면 **마이닝 모델 테스트 사례 사용**옵션을 선택합니다.  
   
@@ -117,7 +108,7 @@ ms.lasthandoff: 01/08/2018
      성공적인 각 판매와 관련된 수익입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [리프트 차트 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [분류표&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

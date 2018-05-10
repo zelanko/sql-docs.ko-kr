@@ -1,27 +1,19 @@
 ---
 title: 서버 모드의 Analysis Services 인스턴스의 확인 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4751b8534b3d4f8b8bb6d0e4ce55ad53f33a72d6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: f771aec5fa4bfdcb57a471e3f735e2eae9a9cc8a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,6 +54,6 @@ ms.lasthandoff: 04/03/2018
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [마이닝 모델 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

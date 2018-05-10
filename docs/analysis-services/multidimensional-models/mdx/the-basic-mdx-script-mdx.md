@@ -1,36 +1,23 @@
 ---
-title: "기본 MDX 스크립트 (MDX) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 기본 MDX 스크립트 (MDX) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- default MDX scripts
-- statements [MDX]
-- expressions [MDX], scripts
-- scripts [MDX], about scripts
-ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7b6971037be41c0aabcc310940b597dda2ed950
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 있는 큐브에 대한 계산 프로세스를 정의합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
+  MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 있는 큐브에 대한 계산 프로세스를 정의합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
   
  **기본 MDX 스크립트**  
  큐브를 만드는 시점에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 해당 큐브에 대해 기본 MDX 스크립트를 만듭니다. 이 스크립트는 전체 큐브에 대한 계산 패스를 정의합니다.  
@@ -43,7 +30,7 @@ MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../i
   
  또한 기본 MDX 스크립트에는 큐브 디자이너에서 만든 명명된 집합, 대입 식 및 계산 멤버를 만드는 스크립트 명령도 포함됩니다.  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
   
 -   큐브에 있는 각각의 명명된 집합의 경우 해당 CREATE SET 문이 기본 MDX 스크립트에 존재합니다.  
   
@@ -97,7 +84,7 @@ MDX(Multidimensional Expressions) 스크립트는 [!INCLUDE[msCoName](../../../i
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 &#40; Mdx&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

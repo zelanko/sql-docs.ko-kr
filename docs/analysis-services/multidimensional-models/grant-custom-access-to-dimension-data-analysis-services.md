@@ -1,43 +1,23 @@
 ---
 title: 차원 데이터 (Analysis Services)에 대 한 사용자 지정 액세스 부여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브에 대 한 읽기 액세스를 설정한 후 명시적으로 허용 하거나 차원 구성원 (큐브에 사용 되는 측정값의 모든 포함 된 측정값 차원에 포함 된 측정값 포함)에 대 한 액세스를 거부 하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  큐브에 대한 읽기 권한을 활성화한 후 차원 구성원(큐브에 사용된 모든 측정값을 포함하는 측정값 차원에 포함된 측정값 포함)에 대한 액세스를 명시적으로 허용하거나 거부하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
   
  ![피벗 테이블 및 차원 구성원이 없는](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "와 차원 구성원이 없는 피벗 테이블")  
   
@@ -50,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  다음 지침에서는 MDX에서 쿼리를 실행하는 클라이언트 연결을 가정합니다. 클라이언트에서 Power BI의 파워 뷰와 같은 DAX를 사용하는 경우 차원 보안이 쿼리 결과에 분명히 나타나지 않습니다. 자세한 내용은 [다차원 모델용 파워 뷰 이해](understanding-power-view-for-multidimensional-models.md) 를 참조하세요.
       
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>필수 구성 요소  
  일부 측정값 또는 차원 구성원은 사용자 지정 액세스 시나리오에 사용할 수 없습니다. 역할이 기본 측정값 또는 구성원에 대한 액세스를 제한하거나 측정값 식의 일부인 측정값에 대한 액세스를 제한하는 경우 연결에 실패합니다.  
   
  **차원 보안에 대한 장애물 확인: 기본 측정값, 기본 구성원 및 측정값 식에 사용된 측정값**  
@@ -97,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  MDX 작성기를 사용하여 MDX 문을 쓸 수 있습니다. 자세한 내용은 [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)를 참조하세요. **고급** 탭에는 다음 옵션이 있습니다.  
   
- **Attribute**  
+ **특성**  
  멤버 보안을 관리할 특성을 선택합니다.  
   
  **허용된 멤버 집합**  
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  AllowedSet을 생성하면 특성이 여러 수준 계층에 참여할 때 파급 효과가 있습니다. 예를 들어 역할이 워싱턴 주에 대한 액세스를 허용한다고 가정해 봅시다(역할이 회사의 워싱턴 주 영업 부서에 대한 권한을 부여하는 시나리오를 가정). 이 역할을 통해 연결된 사람은 상위 항목(미국) 또는 하위 항목(시애틀 및 레드먼드)이 포함된 쿼리를 통해 워싱턴 주를 포함한 체인의 구성원만 볼 수 있습니다. 다른 주를 명시적으로 허용하지 않았기 때문에 거부된 것과 같은 효과가 나타납니다.  
   
 > [!NOTE]  
->  특성 구성원의 빈 집합 ({})을 정의하면 데이터베이스 역할에 대해 어떤 특성 구성원도 표시되지 않습니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
+>  빈 집합을 정의 하는 경우 ({}) 특성 멤버의 특성의 멤버가 없는 데이터베이스 역할에 표시 됩니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
   
  **거부된 멤버 집합**  
  DeniedSet 속성은 멤버 없음, 모든 멤버(기본값) 또는 일부 특성 멤버로 분석할 수 있습니다. 거부 집합에 특정한 특성 구성원 집합만 포함되어 있으면 특성이 여러 수준 계층에 있는 경우 하위 항목뿐만 아니라 그러한 특정 구성원에 대해서만 데이터베이스 역할의 액세스가 거부됩니다. 워싱턴 주 영업 부서 예를 생각해 봅시다. 워싱턴이 DeniedSet에 있는 경우 이 역할을 통해 연결하는 사람들에게 워싱턴과 하위 특성을 제외한 다른 모든 주가 표시됩니다.  
@@ -136,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [셀 데이터 &#40;에 대 한 사용자 지정 액세스 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

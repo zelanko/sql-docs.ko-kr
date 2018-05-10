@@ -1,33 +1,25 @@
 ---
-title: "마이닝 모델에서 드릴스루 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 마이닝 모델에서 드릴스루 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a96c9b650169d49552cde217dbd9aa1d851a602c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>마이닝 모델에서의 드릴스루
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 사례 데이터로 드릴스루하는 두 가지 옵션을 제공합니다. 데이터를 작성하는 데 사용된 사례로 드릴스루하거나 마이닝 구조의 사례로 드릴스루할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]사례 데이터로 드릴스루에 대 한 두 가지 옵션을 제공 합니다. 데이터를 작성하는 데 사용된 사례로 드릴스루하거나 마이닝 구조의 사례로 드릴스루할 수 있습니다.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>모델 사례로 드릴스루 및 구조로 드릴스루  
  **모델 사례** 로 드릴스루하는 기능은 모델의 규칙, 패턴 또는 클러스터에 대한 추가 세부 정보를 찾으려는 경우에 유용합니다. 예를 들어 고객 연락처 정보를 사용할 수 있지만 클러스터링 모델에서 분석에 이 정보를 사용하지 않을 경우, 드릴스루를 사용하면 모델에서 해당 정보에 액세스할 수 있습니다.  

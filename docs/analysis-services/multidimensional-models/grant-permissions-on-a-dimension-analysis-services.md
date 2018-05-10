@@ -1,37 +1,23 @@
 ---
 title: 차원 (Analysis Services)에 대 한 권한을 부여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensions.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- read/write permissions
-- user access rights [Analysis Services], dimensions
-- permissions [Analysis Services], dimensions
-ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79894aabd721017897db2bbd9c5aab4b2410bd57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원 보안을 사용 하 여 데이터가 아닌 차원 개체에 사용 권한을 설정 합니다. 일반적으로, 차원에 대한 권한을 설정할 때 기본 목표는 처리 작업에 대한 액세스를 허용하거나 거부하는 것입니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  차원 보안은 데이터가 아닌 차원 개체에 대한 권한을 설정하는 데 사용됩니다. 일반적으로, 차원에 대한 권한을 설정할 때 기본 목표는 처리 작업에 대한 액세스를 허용하거나 거부하는 것입니다.  
   
  그러나 실제 목표가 처리 작업을 제어하는 것이 아니라, 차원이나 차원이 포함하는 특성 또는 계층에 대한 데이터 액세스를 제어하는 것일 수 있습니다. 예를 들어 지방의 영업부를 둔 회사에서 영업부 외부 사람에게는 영업 성과 정보를 공개하지 않을 수 있습니다. 여러 구성 요소의 데이터 차원 일부에 대한 액세스를 허용하거나 거부하기 위해 차원 특성 및 차원 구성원에 대한 권한을 설정할 수 있습니다. 여기서 개별 차원 자체에 대한 액세스는 거부할 수 없으며 데이터에 대한 액세스만 거부할 수 있습니다. 우선적인 목표가 개별 특성 계층에 대한 액세스 권한을 비롯하여 차원 구성원에 대한 액세스 허용 또는 거부하는 것이라면 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 에서 자세한 내용을 확인하세요.  
   
@@ -75,9 +61,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 &#40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터 & #40;에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

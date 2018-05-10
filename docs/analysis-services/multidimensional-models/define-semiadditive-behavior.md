@@ -1,35 +1,23 @@
 ---
-title: "반 가산적 동작 정의 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 반 가산적 동작 정의 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- semiadditive
-- Business Intelligence enhancements [Analysis Services], semiadditive behavior
-- measures [Analysis Services], semiadditive
-ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 39b3b95f825fba91064a29b051d875a6a2f71ba3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
+  다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 응용 프로그램에서 이러한 스냅숏을 찾을 수 있습니다.  
   
  큐브에 반가산적 동작을 추가하여 개별 측정값이나 해당 계정 유형 특성의 멤버에 대한 집계 방법을 정의합니다. 큐브에 계정 차원이 포함되는 경우 해당 계정 유형 기반의 반가산적 동작을 자동으로 설정할 수 있습니다.  
   

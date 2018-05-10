@@ -1,27 +1,19 @@
 ---
-title: "설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2016) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2016) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c2f754a253e2c33555712dd456002ed69b608188
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c05cd1f7c4526921154eb2bd379c1a2b3a242e3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,9 +27,9 @@ ms.lasthandoff: 02/15/2018
   
 -   **응용 프로그램 서버:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에는 통합 문서를 데이터 원본으로 사용, 예약된 데이터 새로 고침 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드가 포함됩니다.  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치 파일을 컴퓨터에 복사하는**Windows Installer 패키지(**spPowerpivot16.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치 파일을 컴퓨터에 복사하는**Windows Installer 패키지(** spPowerpivot16.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
   
-    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 이 구성 요소에는 PowerShell 스크립트(.ps1 파일), SharePoint 솔루션 패키지(.wsp) 및 SharePoint 2016 팜에서 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 을 배포하기 위한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구가 포함되어 있습니다.  
+    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]항목을 참조하세요. 이 구성 요소에는 PowerShell 스크립트(.ps1 파일), SharePoint 솔루션 패키지(.wsp) 및 SharePoint 2016 팜에서 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 을 배포하기 위한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구가 포함되어 있습니다.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Analysis Services용 OLE DB 공급자(MSOLAP)  
   
@@ -94,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 6.  **설치** 를 선택하여 설치하고 설치를 완료합니다.  
   
 ### <a name="command-line-installation"></a>명령줄 설치  
- 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot16.msi**를 실행합니다. 예를 들어  
+ 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot16.msi**를 실행합니다. 예를 들어:  
   
  `Msiexec.exe /i spPowerPivot16.msi`항목을 참조하세요.  
   
@@ -175,7 +167,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  다음 방법 중 하나를 사용하여 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 을 제거하거나 복구할 수 있습니다.  
   
-1.  **Windows 제어판:** [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]**을(를) 선택합니다. **제거** 또는 **복구**를 선택합니다.  
+1.  **Windows 제어판:** [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]** 을(를) 선택합니다. **제거** 또는 **복구**를 선택합니다.  
   
 2.  spPowerPivot16.msi를 실행하고 **제거** 옵션 또는 **복구** 옵션을 선택합니다.  
   

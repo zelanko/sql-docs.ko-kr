@@ -1,36 +1,23 @@
 ---
-title: "파티션 쓰기 설정 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 파티션 쓰기 설정 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- write-enabled partitions [Analysis Services]
-- partitions [Analysis Services], writeback
-- partitions [Analysis Services], write-enabled
-- writeback [Analysis Services], partitions
-ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 66b06d7c6dabeeb83707dabe1d454267f6c4bf3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-partition-writeback"></a>파티션 쓰기 저장 설정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
+  측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
   
  쓰기 저장 데이터를 찾아보거나 삭제할 수 있으며 쓰기 저장 데이터를 파티션으로 변환할 수도 있습니다. 쓰기 가능한 파티션의 경우 큐브 역할을 사용하여 사용자 및 사용자 그룹에 읽기/쓰기 권한을 부여하고 파티션의 특정 셀 또는 셀 그룹에 대한 액세스를 제한할 수 있습니다.  
   

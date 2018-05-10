@@ -1,31 +1,23 @@
 ---
-title: "데이터 정의 쿼리 (데이터 마이닝) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 정의 쿼리 (데이터 마이닝) | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 286d7cbe5d6dbb2fb0b05b937fbd1a304f89aa1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8db4090f4d8970cd06a8daee7382903a160898c0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-definition-queries-data-mining"></a>데이터 정의 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝의 *데이터 정의 쿼리* 범주는 다음을 수행하는 DMX 문이나 XMLA 명령을 의미합니다.  
+  데이터 마이닝의 *데이터 정의 쿼리* 범주는 다음을 수행하는 DMX 문이나 XMLA 명령을 의미합니다.  
   
 -   모델과 같은 데이터 마이닝 개체를 만들거나 변경하거나 조작합니다.  
   
@@ -66,14 +58,14 @@ ms.lasthandoff: 02/15/2018
   
 -   OPENROWSET와 같은 데이터 원본 쿼리와 함께 [INSERT INTO&#40;DMX&#41;](../../dmx/insert-into-dmx.md)를 사용하여 모델 학습에 사용되는 데이터 집합을 정의합니다.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터 정의 쿼리를 만드는 데 도움이 되는 쿼리 템플릿이 있습니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 데이터 정의 쿼리를 만드는 데 도움이 되는 쿼리 템플릿이 있습니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
   
  일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 대해 제공되는 템플릿에는 일반 구문 정의만 포함됩니다. 일반 구문 정의는 **쿼리** 창에 입력하거나 매개 변수를 입력하기 위해 제공되는 대화 상자를 사용하여 사용자 지정해야 합니다.  
   
  인터페이스를 사용하여 매개 변수를 입력하는 방법의 예는 [템플릿에서 단일 예측 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)을 참조하세요.  
   
 ###  <a name="bkmk_Scripts"></a> 데이터 정의 문 스크립팅  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 데이터 마이닝 개체를 만들거나 변경하거나 데이터 원본을 정의하는 데 사용할 수 있는 여러 스크립트 언어와 프로그래밍 언어를 제공합니다.  DMX가 데이터 마이닝 태스크를 촉진하도록 설계되었지만 XMLA 및 AMO를 사용하여 스크립트나 사용자 지정 코드에서 개체를 조작할 수도 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 데이터 마이닝 개체를 만들거나 변경하거나 데이터 원본을 정의하는 데 사용할 수 있는 여러 스크립트 언어와 프로그래밍 언어를 제공합니다.  DMX가 데이터 마이닝 태스크를 촉진하도록 설계되었지만 XMLA 및 AMO를 사용하여 스크립트나 사용자 지정 코드에서 개체를 조작할 수도 있습니다.  
   
  Excel용 데이터 마이닝 추가 기능도 많은 쿼리 템플릿을 포함하며 복잡한 DMX 문을 작성하는 데 도움이 되는 **고급 쿼리 편집기**를 제공합니다. 대화식으로 쿼리를 작성한 다음 SQL 보기로 전환하여 DMX 문을 캡처할 수 있습니다.  
   
@@ -91,11 +83,11 @@ ms.lasthandoff: 02/15/2018
 |DMX 쿼리에 대한 템플릿으로 작업합니다.|[SQL Server Management Studio에서 Analysis Services 템플릿 사용](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |예측 쿼리 작성기를 사용하여 모든 종류의 쿼리를 디자인합니다.|[예측 쿼리 작성기를 사용 하 여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |SQL Server Profiler를 사용하여 쿼리 정의를 캡처하고 추적을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 모니터링합니다.|[SQL Server Profiler를 사용 하 여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 제공되는 스크립트 언어와 프로그래밍 언어에 대해 자세히 알아봅니다.|[XML for Analysis &#40; XMLA &#41; 참조](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [내보내기 &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [가져오기 &#40; DMX &#41;](../../dmx/import-dmx.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 제공되는 스크립트 언어와 프로그래밍 언어에 대해 자세히 알아봅니다.|[XML for Analysis & #40; XMLA & #41; 참조](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [분석 관리 개체 & #40;를 사용 하 여 개발 AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [내보내기 & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [가져오기 & #40; DMX & #41;](../../dmx/import-dmx.md)|  
 |외부 데이터를 쿼리하기 위한 OPENROWSET 및 다른 방법에 대해 자세히 알아봅니다.|[&#60;원본 데이터 쿼리&#62;](../../dmx/source-data-query.md).|  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 마이닝 마법사 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [데이터 마이닝 마법사 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

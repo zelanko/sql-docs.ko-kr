@@ -1,31 +1,23 @@
 ---
 title: Remove-powerpivotserviceapplication cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ddd179e82dc7c0170e99ece2a8018c0a8454c11d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Remove-PowerPivotServiceApplication cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 삭제합니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 삭제합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -45,7 +37,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
  팜에 있는 단일 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 GUID를 지정합니다. 응용 프로그램을 하나만 제거하고 다른 서비스 응용 프로그램은 그대로 두려면 GUID를 지정해야 합니다.  
   
 |||  

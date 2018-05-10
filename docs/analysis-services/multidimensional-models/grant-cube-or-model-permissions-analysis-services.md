@@ -1,37 +1,23 @@
 ---
 title: 큐브 또는 모델 권한 부여 (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cubes
-- cubes [Analysis Services], security
-- read/write permissions
-- permissions [Analysis Services], cubes
-ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 75b810d559b167e3f6db6ff6bdd22b41e397f6a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
   
  기본적으로 서버 관리자 또는 데이터베이스 관리자에게 데이터베이스의 큐브를 쿼리할 수 있는 권한이 없다고 생각하는 사람은 없습니다. 관리자가 아닌 사용자가 큐브에 액세스하려면 큐브를 포함한 데이터베이스에 대해 만든 역할의 멤버 자격이 필요합니다. 멤버 자격은 Windows 사용자 또는 그룹 계정에서 지원하며, Active Directory 또는 로컬 컴퓨터에서 정의됩니다. 시작하기에 앞서 생성하려는 역할의 멤버 자격을 할당할 계정을 확인합니다.  
   
@@ -108,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services에서 지원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

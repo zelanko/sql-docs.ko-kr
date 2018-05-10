@@ -1,32 +1,23 @@
 ---
 title: 마이닝 모델에서 사례 데이터로 드릴스루 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- drillthrough [Analysis Services]
-ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: 21
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f287437903c54c4eb66da3343bc2c80f18ac5fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ef80f8e442bf5950af6b955324e7dcca8f9d84e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>마이닝 모델에서 사례 데이터로 드릴스루
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]마이닝 모델을 구성한 경우에 모델을 검색 하는 경우 모델 사례로 드릴스루할 수 있도록, 모델을 만드는 데 사용 된 사례에 대 한 자세한 정보를 검색할 수 있습니다. 또한 구조 사례로의 드릴스루를 허용하도록 기본 마이닝 구조를 구성했으며 적절한 권한이 있는 경우 마이닝 구조에서 정보를 반환할 수 있습니다. 여기에는 마이닝 모델에 포함되지 않은 열이 포함될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  모델 사례로 드릴스루할 수 있도록 마이닝 모델을 구성한 경우 모델을 찾을 때 모델을 만드는 데 사용된 사례에 대한 세부 정보를 검색할 수 있습니다. 또한 구조 사례로의 드릴스루를 허용하도록 기본 마이닝 구조를 구성했으며 적절한 권한이 있는 경우 마이닝 구조에서 정보를 반환할 수 있습니다. 여기에는 마이닝 모델에 포함되지 않은 열이 포함될 수 있습니다.  
   
  기본 데이터로의 드릴스루가 마이닝 구조에서는 허용되지 않지만 마이닝 모델에서는 허용되는 경우 마이닝 구조가 아닌 모델 사례에서 정보를 볼 수 있습니다.  
   
@@ -46,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 |**Microsoft 시퀀스 클러스터링 뷰어**|**항목 집합** 탭|항목 집합을 포함하는 행을 클릭합니다.|  
   
 > [!NOTE]  
->  일부 모델에서는 드릴스루를 사용할 수 없습니다. 드릴스루를 사용할 수 있는지 여부는 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 드릴스루를 지원하는 마이닝 모델 유형 목록은 [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)로 설정하여 기존 마이닝 모델에 드릴스루 기능을 추가할 수 있습니다.  
+>  일부 모델에서는 드릴스루를 사용할 수 없습니다. 드릴스루를 사용할 수 있는지 여부는 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 드릴스루를 지원하는 마이닝 모델 유형 목록은 [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)를 참조하세요.  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>마이닝 모델에서 드릴스루 데이터를 보려면  
   
@@ -63,6 +54,6 @@ ms.lasthandoff: 01/08/2018
 6.  데이터를 클립보드에 복사하려면 테이블에서 임의의 행을 마우스 오른쪽 단추로 클릭하고 **모두 복사**를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [드릴스루 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

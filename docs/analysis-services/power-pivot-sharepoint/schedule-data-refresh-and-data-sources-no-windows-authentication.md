@@ -1,31 +1,23 @@
 ---
-title: "데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 안 함 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 안 함 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 176195215c71de1f51fbf6665742e3b71689fc12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 없음
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 Windows 인증을 지원하지 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 않는 **데이터 원본을 사용할 수 있는 SharePoint용** 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
+  이 항목에서는 Windows 인증을 지원하지 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 않는 **데이터 원본을 사용할 수 있는 SharePoint용** 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
   
 ||  
 |-|  
@@ -121,7 +113,7 @@ ms.lasthandoff: 02/15/2018
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
- 자세한 내용은 [SQL Server 인증으로 보안 저장소 사용(SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)에서 “SQL Server 인증을 위한 대상 응용 프로그램을 만들려면” 섹션을 참조하세요.  
+ 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면 "을" 섹션의 참조 [(SharePoint Server 2013) SQL Server 인증으로 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>파워 피벗 서비스 응용 프로그램을 구성하려면  
   
@@ -143,7 +135,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  **사용**을 클릭합니다.  
   
-4.  **가능한 빨리 새로 고치십시오.**를 클릭합니다.  
+4.  **가능한 빨리 새로 고치십시오.** 를 클릭합니다.  
   
 5.  **자격 증명** 섹션에서 **관리자가 구성한 데이터 새로 고침 계정 사용**을 클릭합니다.  
   
@@ -168,7 +160,7 @@ ms.lasthandoff: 02/15/2018
     -   대상 응용 프로그램에 대한 자격 증명 설정을 확인하십시오.  
   
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>새 인증으로 데이터 새로 고침을 확인하려면  
- **확인**을 클릭하면 **새로 고침 기록** 페이지가 표시됩니다. 이전 단계에서 **가능한 빨리 새로 고치십시오.**를 선택했으므로 몇 분 이내에 새로 고침 기록에 새 항목이 표시됩니다. 타이머 작업 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 의 기본값은 1분입니다. 새로 고침 기록에 새 항목이 표시되지 않으면 몇 분 기다렸다가 브라우저를 새로 고치십시오. 여전히 새 항목이 표시되지 않으면 타이머 작업의 현재 값을 확인하십시오.  
+ **확인**을 클릭하면 **새로 고침 기록** 페이지가 표시됩니다. 이전 단계에서 **가능한 빨리 새로 고치십시오.** 를 선택했으므로 몇 분 이내에 새로 고침 기록에 새 항목이 표시됩니다. 타이머 작업 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 의 기본값은 1분입니다. 새로 고침 기록에 새 항목이 표시되지 않으면 몇 분 기다렸다가 브라우저를 새로 고치십시오. 여전히 새 항목이 표시되지 않으면 타이머 작업의 현재 값을 확인하십시오.  
   
 ## <a name="more-information"></a>자세한 정보  
   

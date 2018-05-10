@@ -1,35 +1,23 @@
 ---
-title: "Power Pivot 데이터 새로 고침 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 데이터 새로 고침 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-helpviewer_keywords:
-- unattended data refresh [Analysis Services with SharePoint]
-- scheduled data refresh [Analysis Services with SharePoint]
-- data refresh [Analysis Services with SharePoint]
-ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 22a4a92f63616664ff5018d8a440e437879c7225
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 36e545965aeb25babb1a96cbb55ee06a261daa71
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-data-refresh"></a>Power Pivot 데이터 새로 고침
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 만든 후 통합 문서를 만들기 위해 원래 사용했던 원본의 업데이트된 정보를 가져오기 위해 쿼리나 명령을 다시 실행하여 정기적으로 데이터를 새로 고칠 수 있습니다. 이 프로세스를 **데이터 새로 고침**이라고 하며, [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 요청 시 또는 SharePoint 팜의 응용 프로그램 서버에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로세스로 실행되는 예약된 작업으로 데이터를 새로 고칠 수 있습니다. 참조 항목:  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 만든 후 통합 문서를 만들기 위해 원래 사용했던 원본의 업데이트된 정보를 가져오기 위해 쿼리나 명령을 다시 실행하여 정기적으로 데이터를 새로 고칠 수 있습니다. 이 프로세스를 **데이터 새로 고침**이라고 하며, [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 요청 시 또는 SharePoint 팜의 응용 프로그램 서버에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로세스로 실행되는 예약된 작업으로 데이터를 새로 고칠 수 있습니다. 참조 항목:  
   
 -   [SharePoint 2010에서 Power Pivot 데이터 새로 고침](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)  
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 -   [데이터 새로 고침 기록 보기&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SharePoint Server 2013 Excel Services에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델의 데이터 새로 고침에 다른 아키텍처를 사용합니다. SharePoint 2013 지원 아키텍처는 Excel Services를 기본 구성 요소로 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 로드합니다. 이전에 사용한 데이터 새로 고침 아키텍처는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스와 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 데이터 모델을 로드했습니다. 자세한 내용은 다음 항목을 참조하세요.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SharePoint Server 2013 Excel Services의 데이터 새로 고침에 다른 아키텍처를 사용 하 고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델입니다. SharePoint 2013 지원 아키텍처는 Excel Services를 기본 구성 요소로 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 로드합니다. 이전에 사용한 데이터 새로 고침 아키텍처는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스와 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 데이터 모델을 로드했습니다. 자세한 내용은 다음 항목을 참조하세요.  
 >   
 >  -   [SharePoint 2013에서 파워 피벗 데이터 새로 고침](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)  
 > -   [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  

@@ -1,31 +1,23 @@
 ---
 title: Kerberos 제한 위임에 대해 Analysis Services 구성 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한된 위임에 대해 Analysis Services 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
+  Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
   
 > [!TIP]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](http://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
@@ -123,6 +115,6 @@ Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 
  [Kerberos를 사용한 상호 인증](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 인스턴스에 대 한 SPN 등록](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [연결 문자열 속성 &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [연결 문자열 속성 & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

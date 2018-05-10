@@ -1,32 +1,23 @@
 ---
 title: 마이닝 모델에 내용 쿼리 만들기 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77cca4b8462befde098dc522067b44131a009fc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e1a41f83a2fb2f4f12c781adbd04a00f706f3e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]AMO 또는 XML을 사용 하 여 마이닝 모델 콘텐츠를 프로그래밍 방식으로 쿼리할 수/A를 있지만 DMX를 사용 하 여 쿼리를 만드는 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  AMO 또는 XML/A를 사용하여 프로그래밍 방식으로 마이닝 모델 콘텐츠를 쿼리할 수 있지만 DMX를 사용하여 쿼리를 만드는 편이 더 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
   
  다음 절차에서는 DMX를 사용하여 마이닝 모델에 대한 쿼리를 만드는 방법과 데이터 마이닝 스키마 행 집합을 쿼리하는 방법을 보여 줍니다.  
   
@@ -50,9 +41,9 @@ ms.lasthandoff: 01/08/2018
   
      이름을 입력하기가 불편하면 **개체 탐색기** 에서 마이닝 모델을 선택하고 템플릿에 끌어다 놓으면 됩니다.  
   
-6.  줄에 `SELECT`  *\<select 목록, expr list \* >* , 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
+6.  줄에 `SELECT` *\<select 목록, expr list \* >*, 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
   
-     마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
+     마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 7.  필요에 따라 템플릿의 WHERE 절에 조건을 입력하여 특정 노드 또는 값으로 반환되는 행을 제한할 수 있습니다.  
   
@@ -84,7 +75,7 @@ ms.lasthandoff: 01/08/2018
     >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS 쿼리를 사용합니다. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

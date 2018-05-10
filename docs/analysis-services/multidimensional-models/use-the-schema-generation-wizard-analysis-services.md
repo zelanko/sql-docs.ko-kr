@@ -1,34 +1,23 @@
 ---
-title: "스키마 생성 마법사 (Analysis Services)를 사용 하 여 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 스키마 생성 마법사 (Analysis Services)를 사용 하 여 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, steps
-- relational schema [Analysis Services], Schema Generation Wizard
-ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4b80fef5f104590c6c4c4c71341979dfa451aa81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>스키마 생성 마법사 사용(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-스키마 생성 마법사는 스키마를 생성하는 동안 제한된 정보만 사용합니다. 스키마 생성 마법사가 관계형 스키마를 생성하기 위해 필요한 대부분의 정보는 프로젝트에서 이미 만들었던 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브와 차원으로부터 추출됩니다. 또한 주제 영역 데이터베이스 스키마가 생성되는 방법과 스키마의 개체 이름이 지정되는 방법을 사용자 지정할 수 있습니다.  
+  스키마 생성 마법사는 스키마를 생성하는 동안 제한된 정보만 사용합니다. 스키마 생성 마법사가 관계형 스키마를 생성하기 위해 필요한 대부분의 정보는 프로젝트에서 이미 만들었던 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브와 차원으로부터 추출됩니다. 또한 주제 영역 데이터베이스 스키마가 생성되는 방법과 스키마의 개체 이름이 지정되는 방법을 사용자 지정할 수 있습니다.  
   
 ## <a name="start-the-wizard"></a>마법사 시작  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 몇 가지 방법으로 스키마 생성 마법사를 열 수 있습니다.  

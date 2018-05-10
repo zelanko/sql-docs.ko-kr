@@ -1,37 +1,23 @@
 ---
-title: "연결 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 연결 모델 쿼리 예제 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- content queries [DMX]
-ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 965faf24b55fb206746076d5773c158fa20375de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  
+  데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 기반으로 하는 모델에 대해 이러한 종류의 쿼리를 만드는 방법에 대해 설명합니다.  
   
@@ -232,19 +218,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|예측 값의 분산을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|연관 데이터 집합에서의 멤버 자격을 예측합니다.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|예측 값의 확률을 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|예측 값의 분산을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 연결 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [연결 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

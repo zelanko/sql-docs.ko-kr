@@ -1,37 +1,23 @@
 ---
-title: "차원 특성에 대 한 사용자 지정 멤버 수식 설정 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 차원 특성에 대 한 사용자 지정 멤버 수식 설정 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence enhancements [Analysis Services], custom member formulas
-- member formulas [Analysis Services]
-- dimensions [Analysis Services], Business Intelligence enhancements
-- custom member formulas [Analysis Services]
-- CustomRollupColumn property
-ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 275d3db686926c779fca7b5b8ca7a291615ee1d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI 마법사-차원에서 특성에 대 한 사용자 지정 멤버 수식
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expressions) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
+  큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expressions) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 **CustomRollupColumn** 속성을 설정합니다.  
   
 > [!NOTE]  
 >  사용자 지정 멤버 수식은 기존 데이터 원본을 기반으로 하는 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우에는 사용자 지정 멤버 수식을 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  

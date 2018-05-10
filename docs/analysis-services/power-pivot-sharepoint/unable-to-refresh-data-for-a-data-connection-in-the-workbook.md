@@ -1,31 +1,23 @@
 ---
-title: "통합 문서에서 데이터 연결에 대 한 데이터를 새로 고칠 수 없습니다. | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: 통합 문서에서 데이터 연결에 대 한 데이터를 새로 고칠 수 없습니다. | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 연결 요청을 제출했는데 요청이 실패하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대해 이 오류를 반환합니다.  
+  Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 연결 요청을 제출했는데 요청이 실패하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서에 대해 이 오류를 반환합니다.  
   
 ## <a name="details"></a>세부 정보  
   
@@ -67,7 +59,7 @@ Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 
   
  이 문제를 해결하려면 컴퓨터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버와 같은 도메인에 가입시키거나 로컬 컴퓨터에 도메인 컨트롤러를 설치합니다. 두 번째 해결 방법인 도메인 컨트롤러 설치를 수행하려면 모든 서비스 및 사용자에 대해 로컬 도메인 계정을 만들어야 합니다. 정의한 계정에 대해 서비스 계정 및 SharePoint 권한을 구성해야 합니다.  
   
- 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 오프라인으로 사용하는 방법에 대한 자세한 지침은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) 에서 "Taking your PowerPivot server off the network"(서버를 네트워크에 연결하지 않고 오프라인으로 사용) 블로그 항목을 참조하세요.  
+ 오프라인 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하려는 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 오프 라인 상태에 대 한 블로그 항목을 참조 "라인으로 전환 하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버를 네트워크"에 [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)합니다.  
   
  **시나리오 4: 서버가 불안정한 경우**  
   

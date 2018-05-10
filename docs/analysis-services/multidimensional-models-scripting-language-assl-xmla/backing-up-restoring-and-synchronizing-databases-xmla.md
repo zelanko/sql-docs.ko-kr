@@ -1,35 +1,19 @@
 ---
-title: "백업, 복원, 데이터베이스 및 동기화 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+title: 백업, 복원, 데이터베이스 및 동기화 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6a7b9d3c850052cf1d6a4548764482a287bf671c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>데이터베이스 백업, 복원 및 동기화(XMLA)
   XML for Analysis에는 데이터베이스를 백업, 복원 및 동기화하는 세 개의 명령이 있습니다.  
@@ -154,9 +138,9 @@ ms.lasthandoff: 02/15/2018
  사용할 수는 **위치** ROLAP 개체를 동기화 하는 동기화 명령의 요소입니다. 각 **위치** 데이터 원본을 재배치 하는 데 사용 되는 요소는 **DataSourceType** 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 설정 해야 할 수도 있습니다는 **ConnectionString** 의 속성은 **위치** 새 위치의 연결 문자열로 요소입니다. 동기화 하는 동안는 **동기화** 명령으로 식별 되는 데이터 소스에 대 한 연결 문자열을 대체는 **DataSourceID** 의 속성은 **위치** 값을 가진 요소가 **ConnectionString** 의 속성은 **위치** 요소입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [요소 &#40; 백업 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [요소 &#40; 복원 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [요소 &#40; 동기화 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [요소 & #40; 백업 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [요소 & #40; 복원 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [요소 & #40; 동기화 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services 데이터베이스 백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

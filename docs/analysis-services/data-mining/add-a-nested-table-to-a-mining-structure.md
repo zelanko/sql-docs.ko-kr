@@ -1,36 +1,23 @@
 ---
-title: "마이닝 구조에 중첩된 테이블 추가 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 마이닝 구조에 중첩된 테이블 추가 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tables [Analysis Services], nested
-- nested tables
-- mining structures [Analysis Services], nested tables
-- adding nested tables
-ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 351b45ba30b58373101fdd3afd85964cb39889ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>마이닝 구조에 중첩 테이블 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 마법사에서 마이닝 구조를 만든 후 데이터 마이닝 디자이너를 사용하여 마이닝 구조에 중첩 테이블을 추가할 수 있습니다.  
+  데이터 마이닝 마법사에서 마이닝 구조를 만든 후 데이터 마이닝 디자이너를 사용하여 마이닝 구조에 중첩 테이블을 추가할 수 있습니다.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>마이닝 구조에 중첩 테이블을 추가하려면  
   

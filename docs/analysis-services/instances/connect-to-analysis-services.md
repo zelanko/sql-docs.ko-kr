@@ -1,32 +1,23 @@
 ---
 title: Analysis Services에 연결 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, connections
-ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
-caps.latest.revision: 46
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7dbadb28b56be49197f530e735f68238d13bc101
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
-ms.translationtype: MT
+ms.openlocfilehash: a7874a45b8cd11ed288448ff025b6c3918251539
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-analysis-services"></a>Analysis Services에 연결
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]연결 문자열 속성을 설정 또는 서버를 오프 라인 상태로 전환 하기 전에 연결을 해제 하는 방법과 Analysis Services에서는 인증 방법을 지 원하는 연결에 사용 되는 클라이언트 라이브러리에 대 한 자세한 내용은이 섹션의 정보를 사용 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  이 섹션의 정보를 참조하여 연결 문자열 속성, 연결에 사용되는 클라이언트 라이브러리, Analysis Services에서 지원하는 인증 방법, 서버가 오프라인 상태가 되기 전에 연결을 설정 또는 해제하는 방법 등을 알아봅니다.  
 
 Azure Analysis Services에 연결 하는 방법에 대 한 자세한 내용은 [서버에 연결](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect)합니다.
   
@@ -39,17 +30,17 @@ Azure Analysis Services에 연결 하는 방법에 대 한 자세한 내용은 [
   
 |링크|태스크 설명|  
 |----------|----------------------|  
-|[클라이언트 응용 프로그램 &#40;에서 연결 Analysis Services &#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Analysis Services를 처음 접하는 경우 Analysis Services에서 가장 흔히 사용되는 도구와 응용 프로그램에 대해 알아보려면 이 항목을 읽으세요.|  
-|[연결 문자열 속성 &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.|  
+|[클라이언트 응용 프로그램 & #40;에서 연결 Analysis Services & #41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Analysis Services를 처음 접하는 경우 Analysis Services에서 가장 흔히 사용되는 도구와 응용 프로그램에 대해 알아보려면 이 항목을 읽으세요.|  
+|[연결 문자열 속성 & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.|  
 |[Analysis Services에서 지 원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)|이 항목에서는 Analysis Services에서 사용하는 인증 방법을 간단하게 소개합니다.|  
 |[Kerberos 제한 위임에 대해 Analysis Services 구성](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)|많은 비즈니스 인텔리전스 솔루션은 인증된 데이터만 각 사용자에게 반환되도록 하기 위해 가장을 필요로 합니다. 이 항목에서는 가장을 사용하기 위한 요구 사항을 알아봅니다. 또한 Kerberos 제한 위임에 대해 Analysis Services를 구성하기 위한 단계에 대해서도 설명합니다.|  
 |[Analysis Services 인스턴스에 대 한 SPN 등록](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)|Kerberos 인증에는 다중 서버 솔루션에서 사용자 ID를 가장하거나 위임하는 서비스에 대한 유효한 SPN(서비스 사용자 이름)이 필요합니다. Analysis Services에 대한 SPN 등록의 생성 및 단계를 알아보려면 이 항목의 정보를 사용하세요.|  
-|[인터넷 정보 서비스 &#40; IIS &#41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|기본 인증 또는 도메인 경계 교차는 HTTP 액세스에 대해 Analysis Services를 구성하는 두 가지 중요한 이유입니다.|  
+|[인터넷 정보 서비스 & #40; IIS & #41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|기본 인증 또는 도메인 경계 교차는 HTTP 액세스에 대해 Analysis Services를 구성하는 두 가지 중요한 이유입니다.|  
 |[Analysis Services 연결에 사용 되는 데이터 공급자](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|Analysis Services는 서버 작업 또는 Analysis Services 데이터에 액세스하기 위한 세 가지 클라이언트 라이브러리를 제공합니다. 이 항목에서는 ADOMD.NET, AMO(Analysis Services Management Objects) 및 Analysis Services OLE DB 공급자(MSOLAP)에 대해 간략하게 소개합니다.|  
 |[Analysis Services 서버에서 사용자와 세션 연결 끊기](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|이 항목에서는 서버를 오프라인으로 전환하거나 기준 성능 테스트를 수행하기 전에 기존 연결 및 세션을 해제하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [설치 후 구성 &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
+ [설치 후 구성 & #40; Analysis Services & #41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Analysis Services에서 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   

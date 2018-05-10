@@ -1,35 +1,23 @@
 ---
-title: "데이터 원본 뷰 (Analysis Services)에서 스키마를 새로 고칠 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 데이터 원본 뷰 (Analysis Services)에서 스키마를 새로 고칠 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services], schema updates
-- refreshing data source views
-- data source views [Analysis Services], refreshing
-ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9d3cf2ef0c5368664d52ecc9ff0c21a8edfa6061
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 스키마 새로 고침(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.  
   
  외부 데이터 원본과 일치하도록 DSV를 업데이트하려면 BIDS(Business Intelligence Development Studio)에서 DSV를 새로 고치면 됩니다. DSV를 새로 고치면 DSV가 기반으로 하는 외부 데이터 원본에 대한 변경 내용이 검색되어 외부 데이터 원본의 추가 및 삭제를 열거하는 변경 목록이 작성됩니다. 이 변경 내용 집합을 기본 데이터 원본과 맞게 다시 조정할 DSV에 적용하면 됩니다. 추가 작업 시 프로젝트에서 해당 DSV를 사용하는 큐브와 차원을 추가로 업데이트해야 하는 경우가 많습니다.  
   

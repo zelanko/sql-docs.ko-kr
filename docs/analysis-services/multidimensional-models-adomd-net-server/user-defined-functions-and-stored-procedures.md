@@ -1,35 +1,19 @@
 ---
-title: "사용자 정의 함수 및 저장 프로시저 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- stored procedures [ADOMD.NET]
-- ADOMD.NET, user defined functions
-- user defined functions [ADOMD.NET]
-- ADOMD.NET, UDFs
-- ADOMD.NET, stored procedures
-ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
-caps.latest.revision: 
-author: Minewiskan
+title: 사용자 정의 함수 및 저장 프로시저 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f737165dbc65f112d8c6f0d8ea846abf9cee8344
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6c4231a1423348ea1c58dedf1b55ce28caeb614f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
   ADOMD.NET 서버 개체를 만들 수 있습니다 (UDF) 사용자 정의 함수 또는 저장된 프로시저에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 메타 데이터 및 서버에서 데이터 상호 작용 하는 합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  

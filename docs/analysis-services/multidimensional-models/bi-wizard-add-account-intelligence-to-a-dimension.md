@@ -1,35 +1,23 @@
 ---
-title: "차원에 계정 인텔리전스 추가 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 차원에 계정 인텔리전스 추가 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 마법사-차원에 계정 인텔리전스 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시간에 따른 계정 집계를 분류를 사용할 수 있습니다.  
+  계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시간에 따른 계정 집계를 분류를 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  계정 인텔리전스는 기존 데이터 원본 기반의 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우 계정 인텔리전스를 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  

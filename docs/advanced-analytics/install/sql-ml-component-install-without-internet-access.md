@@ -2,16 +2,16 @@
 title: 인터넷 연결 되지 않은 기계 학습 SQL Server 구성 요소 설치 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3ba344147b5d57a1c0168fbb5be93ae24b02b179
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 구성 요소를 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,6 +61,16 @@ Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
 Microsoft Python 서버    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**SQL Server 2017 CU5** |
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
+Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python 서버    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
+**SQL Server 2017 cu6 적용** |
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
+Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python 서버    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 

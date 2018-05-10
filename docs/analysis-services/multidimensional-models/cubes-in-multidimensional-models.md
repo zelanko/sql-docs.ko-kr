@@ -1,36 +1,23 @@
 ---
-title: "다차원 모델의 큐브 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델의 큐브 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- OLAP objects [Analysis Services], cubes
-- cubes [Analysis Services], about cubes
-- cubes [Analysis Services]
-- OLAP [Analysis Services], cubes
-ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a7a63cc3ce5a86701a20bb4083b7eb88ef1d4b66
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 71db68e9283e1dffd463928aac5437f21e668b2f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cubes-in-multidimensional-models"></a>다차원 모델의 큐브
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-큐브는 분석 목적의 정보를 포함하는 다차원 구조이며, 큐브의 주요 구성 요소는 차원과 측정값입니다. 차원은 조각화 및 분석에 사용할 큐브의 구조를 정의하고, 측정값은 최종 사용자에게 의미가 있는 집계된 숫자 값을 제공합니다. 논리적 구조인 큐브를 사용하면 클라이언트 응용 프로그램에서는 마치 값이 큐브의 셀에 포함되어 있고 가능한 모든 요약된 값에 대해 셀이 정의되어 있는 것처럼 측정값의 값을 검색할 수 있습니다. 큐브의 셀은 차원 멤버의 교차에 의해 정의되며 해당 특정 교차 지점에 있는 측정값의 집계된 값을 포함합니다.  
+  큐브는 분석 목적의 정보를 포함하는 다차원 구조이며, 큐브의 주요 구성 요소는 차원과 측정값입니다. 차원은 조각화 및 분석에 사용할 큐브의 구조를 정의하고, 측정값은 최종 사용자에게 의미가 있는 집계된 숫자 값을 제공합니다. 논리적 구조인 큐브를 사용하면 클라이언트 응용 프로그램에서는 마치 값이 큐브의 셀에 포함되어 있고 가능한 모든 요약된 값에 대해 셀이 정의되어 있는 것처럼 측정값의 값을 검색할 수 있습니다. 큐브의 셀은 차원 멤버의 교차에 의해 정의되며 해당 특정 교차 지점에 있는 측정값의 집계된 값을 포함합니다.  
   
 ## <a name="benefits-of-using-cubes"></a>큐브 사용의 이점  
  큐브를 사용하면 분석을 위한 모든 관련 데이터를 한 곳에 저장할 수 있습니다.  
@@ -46,7 +33,7 @@ ms.lasthandoff: 02/15/2018
 |큐브 뷰|[다차원 모델의 큐브 뷰](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
 |계층 구조|[사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
 |작업|[다차원 모델의 동작](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
-|KPI(핵심 성과 지표)|[핵심 성과 지표 &#40; Kpi &#41; 다차원 모델의](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|KPI(핵심 성과 지표)|[핵심 성과 지표 & #40; Kpi & #41; 다차원 모델의](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |계산|[다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
 |번역|[다차원 모델의 번역&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
   

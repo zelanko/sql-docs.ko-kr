@@ -1,45 +1,26 @@
 ---
-title: "요구 사항 및 고려 사항에 대 한 Analysis Services 배포 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 요구 사항 및 고려 사항에 대 한 Analysis Services 배포 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- memory [Analysis Services]
-- scalability [Analysis Services]
-- space [Analysis Services]
-- Analysis Services deployments, requirements
-- deploying [Analysis Services], requirements
-- disk space [Analysis Services]
-- requirements [Analysis Services]
-- processors [Analysis Services]
-- system requirements [Analysis Services]
-- availability [Analysis Services]
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 88b91944e1ffb99d684e53bda09465d995b416f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 저장소를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  
+  솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 저장소를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  
   
 ## <a name="memory-and-processor-requirements"></a>메모리 및 프로세서 요구 사항  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 더 많은 메모리와 프로세서 리소스가 필요합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]다음과 같은 경우에 더 많은 메모리와 프로세서 리소스가 필요합니다.  
   
 -   크거나 복잡한 큐브를 처리할 경우. 이러한 큐브에는 작거나 간단한 큐브보다 더 많은 메모리와 프로세서 리소스가 필요합니다.  
   

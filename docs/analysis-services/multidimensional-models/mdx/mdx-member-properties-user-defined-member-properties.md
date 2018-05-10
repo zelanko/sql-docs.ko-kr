@@ -1,32 +1,23 @@
 ---
 title: 사용자 정의 멤버 속성 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- custom member properties [MDX]
-ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 08576f10739533850f04a9e64fa052bf7c6bfeec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26139ee397c9dbaca27eb3ef8236c3e242b98890
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 멤버 속성-사용자 정의 멤버 속성
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]특정 한 특성 관계로 차원의 수준에에서 명명 된 사용자 정의 멤버 속성을 추가할 수 있습니다. 계층의 **(All)** 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 계층의 **(All)** 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  
   
 ## <a name="creating-user-defined-member-properties"></a>사용자 정의 멤버 속성 만들기  
  사용자 정의 멤버 속성을 서버 기반 차원 또는 큐브에 추가하는 데는 사용자 인터페이스 방식 또는 프로그래밍 방식을 사용할 수 있습니다.  
@@ -73,7 +64,7 @@ FROM [Adventure Works]
  계산 멤버 작성에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [멤버 속성 사용&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [속성 &#40; Mdx&#41;](../../../mdx/properties-mdx.md)  
+ [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [속성 & #40; Mdx& #41;](../../../mdx/properties-mdx.md)  
   
   

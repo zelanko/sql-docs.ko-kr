@@ -1,38 +1,19 @@
 ---
-title: "삽입, 업데이트 및 삭제 (XMLA) 멤버 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- inserting dimension members
-- XML for Analysis, members
-- removing dimension members
-- dropping dimension members
-- write-enabled dimensions [Analysis Services]
-- XMLA, members
-- deleting dimension members
-- dimensions [Analysis Services], XML for Analysis
-ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 
-author: Minewiskan
+title: 삽입, 업데이트 및 삭제 (XMLA) 멤버 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 55572d91ab28593f17cda8ce400fcf7301e52c17
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f80756cb147b33b7caede48093fb69e17eb4a263
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
   사용할 수는 [삽입](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [업데이트](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), 및 [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) 명령은 xml에서 for Analysis (XMLA)를 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 [쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
@@ -118,10 +99,10 @@ ms.lasthandoff: 02/15/2018
 >  부모 멤버와 해당 하위 항목을 모두 삭제하려면 부모 멤버에 대한 삭제 권한만 있으면 됩니다. 하위 항목에 대한 삭제 권한은 필요하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Drop 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [요소 &#40; 삽입 XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 요소 &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [정의 및 개체 &#40; 식별 XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
+ [Drop 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [요소 & #40; 삽입 XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Update 요소 & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [개체 정의 및 식별 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
  [Analysis Services에서 XMLA를 사용 하 여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

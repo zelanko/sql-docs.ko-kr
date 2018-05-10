@@ -1,34 +1,23 @@
 ---
-title: "처리 권한 부여 (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 처리 권한 부여 (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], process
-- process permissions [Analysis Services]
-ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2cde8f68861eb47766b13cf95fb51a4fd2a6969
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>처리 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-관리자는 Analysis Services 처리 작업의 전용 역할을 만들어, 다른 사용자 또는 자동 일정 처리를 위해 사용되는 응용 프로그램에 특정 작업을 위임할 수 있습니다. 처리 권한은 데이터베이스,  큐브,  차원 및 마이닝 구조 수준에서 부여할 수 있습니다. 대규모 큐브 또는 테이블 형식 데이터베이스에서 작업하지 않는다면 서로 종속된 개체를 비롯한 모든 개체를 포함하여 데이터베이스 수준에서 처리 권한을 부여하는 것이 좋습니다.  
+  관리자는 Analysis Services 처리 작업의 전용 역할을 만들어, 다른 사용자 또는 자동 일정 처리를 위해 사용되는 응용 프로그램에 특정 작업을 위임할 수 있습니다. 처리 권한은 데이터베이스,  큐브,  차원 및 마이닝 구조 수준에서 부여할 수 있습니다. 대규모 큐브 또는 테이블 형식 데이터베이스에서 작업하지 않는다면 서로 종속된 개체를 비롯한 모든 개체를 포함하여 데이터베이스 수준에서 처리 권한을 부여하는 것이 좋습니다.  
   
  권한은, 개체를 권한 및 Windows 사용자 또는 그룹 계정과 연결하는 역할을 통해 부여됩니다. 이러한 권한은 부가적입니다. 한 역할이 큐브를 처리하는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원을 처리하는 권한을 부여하는 경우 두 가지 역할의 권한이 결합되어 해당 데이터베이스 내에서 큐브를 처리하고 지정된 차원을 처리하는 권한을 모두 사용자에게 부여합니다.  
   
@@ -99,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>관련 항목:  
  [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Grant 데이터베이스 사용 권한 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [정의 읽기 권한 부여 개체 메타 데이터 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Grant 데이터베이스 사용 권한 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [정의 읽기 권한 부여 개체 메타 데이터 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

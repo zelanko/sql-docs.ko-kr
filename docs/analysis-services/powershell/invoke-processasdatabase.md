@@ -1,30 +1,23 @@
 ---
-title: "호출 ProcessASDatabase | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 호출 ProcessASDatabase | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08d7ab5ef918b64fb7570ce5a407c23718fc6f03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]수행 하는 **프로세스** 연산이 지정된 된 **데이터베이스** 특정 **ProcessType** 또는 **RefreshType** 에 따라는 내부 메타 데이터 형식입니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  기본 메타데이터 유형에 따라 특정 **ProcessType** 또는 **RefreshType** 으로 지정된 **Database** 에서 **Process** 연산을 수행합니다.  
   
  다차원 메타데이터를 데이터베이스의 **ProcessType** 에 사용합니다.(여기에는 호환성 수준이 1050, 1100 또는 1103인 테이블 형식 데이터베이스가 포함됩니다.)  
   
@@ -49,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-databasename-string"></a>-DatabaseName \<문자열 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  테이블 형식 또는 다차원 데이터베이스가 처리되도록 지정합니다.  
   
 |||  
@@ -60,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>-서버\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  컨텍스트에 **SQLAS** 공급자 디렉터리를 사용하지 않는 경우에는 연결한 서버 인스턴스를 선택적으로 지정합니다.  
   
 |||  
@@ -71,24 +64,24 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType>  
  테이블 형식 데이터베이스에 대 한 프로세스 유형을 지정합니다.  유효한 값은 Full, ClearValues, Calculate, DataOnly, Automatic, Add, 및 Defragment입니다. 설명 및 지침은 [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)를 참조하세요.  
   
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1|  
+|위치|1.|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  호환성 수준 1050-1103에서 다차원 데이터베이스 또는 테이블 형식 데이터베이스의 처리 유형을 지정합니다. 유효한 값에는 ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache, 또는 ProcessRecalc가 포함됩니다. 설명 및 지침은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
 |||  
 |-|-|  
 |필수 여부|true|  
-|위치|1|  
+|위치|1.|  
 |기본값||  
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  

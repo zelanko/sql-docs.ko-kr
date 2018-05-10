@@ -1,37 +1,23 @@
 ---
-title: "관계형 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 관계형 마이닝 구조 만들기 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7d5898485017bc2d1be59e1e5db7b147926ea5b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
+  대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
   
  관계형 마이닝 구조는 서로 다른 원본에서 데이터를 가져올 수 있습니다. 데이터를 데이터 원본 뷰의 일부로 정의할 수 있는 경우 원시 데이터를 테이블, 파일 또는 관계형 데이터베이스 시스템에 저장할 수 있습니다. 예를 들어 데이터가 Excel, SQL Server 데이터 웨어하우스 또는 SQL Server 보고 데이터베이스에 있거나 OLE DB 또는 ODBC 공급자를 통해 액세스하는 외부 원본에 있는 경우 관계형 마이닝 구조를 사용해야 합니다.  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)   
- [데이터 마이닝 마법사 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [데이터 마이닝 마법사 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   
  [마이닝 구조 및 구조 열에 대 한 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
