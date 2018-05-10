@@ -1,0 +1,11 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+    - name: SQL
+      href: /sql/
+      homepage: /sql/index
+      items:
+        - name: 관계형 데이터베이스
+          href: /sql/relational-databases/
+          homepage: /sql/relational-databases/sqltoolsvsnativehelpers-framewindowvisible
