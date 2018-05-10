@@ -1,46 +1,23 @@
 ---
-title: "파티션 (Analysis Services-다차원 데이터) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- incremental updates [Analysis Services]
-- data sources [Analysis Services], partitions
-- data storage [Analysis Services]
-- aggregations [Analysis Services], partitions
-- OLAP objects [Analysis Services], partitions
-- storing data [Analysis Services], partitions
-- partitions [Analysis Services], about partitions
-- cubes [Analysis Services], partitions
-- partitions [Analysis Services]
-- remote partitions [Analysis Services]
-- measure groups [Analysis Services], partitions
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 
-author: Minewiskan
+title: 파티션 (Analysis Services-다차원 데이터) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e88ef15309c52942c24f663f3242ec3aba1afb81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>파티션(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-파티션은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  
+  파티션은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Partition> 개체는 기본 정보, 조각화 정의, 집계 디자인 등으로 구성되어 있습니다. 기본 정보에는 파티션의 이름, 저장소 모드, 처리 모드 등이 포함됩니다. 조각화 정의는 튜플 또는 집합을 지정하는 MDX 식입니다. 조각화 정의에는 StrToSet MDX 함수와 동일한 제한 사항이 있습니다. 조각화 정의는 CONSTRAINED 매개 변수와 함께 큐브의 차원, 계층, 수준, 멤버 이름, 키, 고유 이름 또는 기타 명명된 개체는 사용할 수 있지만 MDX 함수는 사용할 수 없습니다. 집계 디자인은 여러 파티션에서 공유할 수 있는 집계 정의의 컬렉션입니다. 기본값은 부모 큐브의 집계 디자인에서 가져옵니다.  
   
@@ -50,7 +27,7 @@ ms.lasthandoff: 02/15/2018
   
  파티션은 큐브의 업무용 사용자에게 표시되지 않습니다. 그러나 관리자가 파티션을 구성, 추가 또는 삭제할 수 있습니다. 각 파티션은 별개의 파일 집합에 저장됩니다. 각 파티션의 집계 데이터를 파티션이 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스 또는 파티션의 원본 데이터를 제공하는 데 사용되는 데이터 원본에 저장할 수 있습니다. 파티션을 사용하면 큐브의 원본 데이터와 집계 데이터를 여러 하드 드라이브와 서버 컴퓨터에 분산할 수 있습니다. 중대형 큐브의 경우 파티션을 통해 쿼리 성능, 로드 성능 및 큐브 유지 관리의 편의성을 크게 향상시킬 수 있습니다.  
   
- 각 파티션의 저장소 모드를 측정값 그룹의 다른 파티션과 독립적으로 구성할 수 있습니다. 파티션은 원본 데이터 위치, 저장소 모드, 자동 관리 캐싱 및 집계 디자인 등의 옵션을 함께 사용하여 저장할 수 있습니다. 실시간 OLAP 및 자동 관리 캐싱에 대한 옵션을 사용하면 파티션을 디자인할 때 대기 시간에 맞춰 쿼리 속도를 균형있게 조정할 수 있습니다. 저장소 옵션은 관련된 차원과 차원값 그룹의 팩트에도 적용할 수 있습니다. 이러한 융통성을 통해 사용자의 개별적인 요구에 맞는 큐브 저장소 전략을 디자인할 수 있습니다. 자세한 내용은 참조 [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) 및 [자동 관리 캐싱 &#40; 파티션 &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ 각 파티션의 저장소 모드를 측정값 그룹의 다른 파티션과 독립적으로 구성할 수 있습니다. 파티션은 원본 데이터 위치, 저장소 모드, 자동 관리 캐싱 및 집계 디자인 등의 옵션을 함께 사용하여 저장할 수 있습니다. 실시간 OLAP 및 자동 관리 캐싱에 대한 옵션을 사용하면 파티션을 디자인할 때 대기 시간에 맞춰 쿼리 속도를 균형있게 조정할 수 있습니다. 저장소 옵션은 관련된 차원과 차원값 그룹의 팩트에도 적용할 수 있습니다. 이러한 융통성을 통해 사용자의 개별적인 요구에 맞는 큐브 저장소 전략을 디자인할 수 있습니다. 자세한 내용은 참조 [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) 및 [자동 관리 캐싱 &#40;파티션을&#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>파티션 구조  
  파티션 구조는 이 측정값 그룹의 구조와 일치해야 하므로 측정값 그룹을 정의하는 측정값을 관련된 모든 차원과 함께 파티션에 정의해야 합니다. 따라서 파티션 생성 시 측정값 그룹에 대해 정의된 것과 동일한 측정값 및 관련 차원 집합이 자동으로 상속됩니다.  
@@ -68,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 -   수직 분할된 측정값 그룹에서 측정값 그룹은 단일 테이블을 기반으로 하고 각 파티션은 파티션에 대한 데이터를 필터링하는 원본 시스템 쿼리를 기반으로 합니다. 예를 들어 단일 테이블에 여러 달의 데이터가 포함된 경우 파티션마다 서로 다른 달의 데이터를 반환하는 Transact-SQL WHERE 절을 적용하여 측정값 그룹을 월별로 다시 분할할 수 있습니다.  
   
- 각 파티션에는 파티션에 대한 데이터와 집계가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 로컬 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스를 사용하는 원격 파티션에 저장되는지 결정하는 저장 설정이 있습니다. 저장소 설정을 구성하여 저장소 모드 및 자동 관리 캐싱을 사용하여 파티션의 대기 시간을 제어할지 여부를 지정할 수도 있습니다. 자세한 내용은 참조 [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [자동 관리 캐싱 &#40; 파티션 &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), 및 [원격 파티션을](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)합니다.  
+ 각 파티션에는 파티션에 대한 데이터와 집계가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 로컬 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스를 사용하는 원격 파티션에 저장되는지 결정하는 저장 설정이 있습니다. 저장소 설정을 구성하여 저장소 모드 및 자동 관리 캐싱을 사용하여 파티션의 대기 시간을 제어할지 여부를 지정할 수도 있습니다. 자세한 내용은 참조 [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [자동 관리 캐싱 &#40;파티션을&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), 및 [원격 파티션을](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)합니다.  
   
 ## <a name="incremental-updates"></a>증분 업데이트  
  여러 개의 파티션으로 이루어진 측정값 그룹에서 파티션을 만들고 관리할 때는 큐브 데이터가 정확하게 유지되도록 특별히 주의해야 합니다. 단일 파티션 측정값 그룹에는 대체로 이러한 주의가 필요하지 않지만 파티션 증분 업데이트를 수행할 때는 주의가 필요합니다. 파티션에 대해 증분 업데이트를 수행하면 원본 파티션과 동일한 구조로 새로운 임시 파티션이 생성됩니다. 임시 파티션은 처리된 다음 원본 파티션과 병합됩니다. 그러므로 임시 파티션을 채우는 처리 쿼리에서 기존 파티션에 있는 데이터를 복제하지 않도록 해야 합니다.  

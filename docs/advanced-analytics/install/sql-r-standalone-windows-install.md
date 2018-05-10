@@ -7,16 +7,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7562a807fd53b2148b1b7787db5efb4c3cda7134
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e7e5b61cb8e41d818fc13d1cc97cd4d998256efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2016-r-server-standalone"></a>SQL Server 2016 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 독립 실행형 버전을 설치 하려면 SQL Server 2016 설치 프로그램을 사용 하는 방법을 설명 **SQL Server 2016 R 서버**합니다. Enterprise Edition 또는 Software Assurance, 있는 경우 프로덕션 서버에 설치 하는 독립 실행형 R Server는 무료입니다.
+이 문서에서는 독립 실행형 버전을 설치 하려면 SQL Server 2016 설치 프로그램을 사용 하는 방법을 설명 **SQL Server 2016 R 서버**합니다.
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 

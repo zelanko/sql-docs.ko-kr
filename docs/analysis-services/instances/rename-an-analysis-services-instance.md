@@ -1,36 +1,23 @@
 ---
-title: "Analysis Services 인스턴스 이름 바꾸기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 인스턴스 이름 바꾸기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, renaming
-- renaming instances of Analysis Services
-- names [Analysis Services], renaming instances
-- names [Analysis Services]
-ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 48729d35a5c5c5e0e0808862f1317877b1ee3be6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Management Studio(웹 설치)와 함께 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
+  Management Studio(웹 설치)와 함께 설치되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
   
 > [!IMPORTANT]  
 >  인스턴스의 이름을 바꾸는 동안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 승격된 권한으로 실행되어 해당 인스턴스와 연결된 레지스트리 항목, Windows 서비스 이름 및 보안 계정을 업데이트합니다. 이러한 동작이 수행되도록 하려면 이 도구를 로컬 시스템 관리자로 실행하십시오.  

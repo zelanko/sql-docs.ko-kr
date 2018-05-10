@@ -1,31 +1,23 @@
 ---
-title: "중앙 관리에서 파워 피벗 사이트에 대 한 신뢰할 수 있는 위치 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 중앙 관리에서 파워 피벗 사이트에 대 한 신뢰할 수 있는 위치 만들기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3dabb6a62434ce2956a0c11a62f3b383104df698
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Excel 서비스에서는 SharePoint 서버에서 연 통합 문서에 올바른 리포지토리인 위치를 지정할 수 있습니다. 이러한 위치를 '신뢰할 수 있는 위치'라고 하며 사용자가 만든 신뢰할 수 있는 위치 각각에 대해 다른 구성 설정을 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 배포하는 경우 팜의 나머지 부분에는 기본 설정을 계속 사용하면서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스에 가장 적합한 설정을 적용할 수 있도록 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 포함하는 사이트에 대한 신뢰할 수 있는 위치를 만드는 것이 좋습니다.  
+  Excel 서비스에서는 SharePoint 서버에서 연 통합 문서에 올바른 리포지토리인 위치를 지정할 수 있습니다. 이러한 위치를 '신뢰할 수 있는 위치'라고 하며 사용자가 만든 신뢰할 수 있는 위치 각각에 대해 다른 구성 설정을 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 배포하는 경우 팜의 나머지 부분에는 기본 설정을 계속 사용하면서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스에 가장 적합한 설정을 적용할 수 있도록 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 포함하는 사이트에 대한 신뢰할 수 있는 위치를 만드는 것이 좋습니다.  
   
   
 ## <a name="prerequisites"></a>필수 구성 요소  

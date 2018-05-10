@@ -1,32 +1,23 @@
 ---
 title: 비정형 계층 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
-ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8def84c48c3764d81b9510c1ccf6f244e8efeec8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>사용자 정의 계층-비정형된 계층 구조
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]비정형된 계층은 수준의 균일 하지 않을 수 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
   
  차원의 대부분의 계층에서는 각 수준 위에 동일한 수준의 다른 멤버와 같은 수의 멤버가 있습니다. 비정형 계층에서는 최소한 한 멤버의 논리적 부모 멤버가 해당 멤버 바로 위 수준에 있지 않다는 점이 다릅니다. 이러한 경우 계층이 여러 드릴다운 경로에 대한 서로 다른 수준으로 이어집니다. 클라이언트 응용 프로그램에서 이로 인해 드릴다운 경로가 불필요하게 복잡해질 수 있습니다.  
   
@@ -62,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
     |HideMemberIf 설정|Description|  
     |--------------------------|-----------------|  
-    |**안 함**|수준 멤버를 숨기지 않습니다. 이것은 기본값입니다.|  
+    |**안 함**|수준 멤버를 숨기지 않습니다. 이 값은 기본값입니다.|  
     |**OnlyChildWithNoName**|부모의 유일한 자식이고 이름이 Null 또는 빈 문자열인 수준 멤버를 숨깁니다.|  
     |**OnlyChildWithParentName**|부모의 유일한 자식이고 이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
     |**NoName**|이름이 비어 있는 수준 멤버를 숨깁니다.|  
@@ -80,6 +71,6 @@ ms.lasthandoff: 01/08/2018
  [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [사용자 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [부모-자식 차원](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [연결 문자열 속성&#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [연결 문자열 속성 & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

@@ -1,43 +1,23 @@
 ---
-title: "보안 역할 (Analysis Services-다차원 데이터) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+title: 보안 역할 (Analysis Services-다차원 데이터) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  역할에 사용 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 대 한 보안을 관리할 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터입니다. 기술적으로 역할의 특정 액세스 권한 및의 인스턴스에 의해 관리 되는 개체에 대해 정의 된 사용 권한이 있는 Microsoft Windows 사용자 및 그룹 보안 식별자 (Sid)를 연결 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다. 두 가지 유형의 역할에 제공 됩니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   서버 역할 - 관리자에게 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]인스턴스에 대한 액세스 권한을 제공하는 고정 역할  
   
@@ -93,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |관리<br /><br /> 참고:에 데이터베이스 사용 권한|{**true**, **false**}<br /><br /> 기본값은**false**입니다.|멤버가 데이터베이스를 관리할 수 있는지 여부를 지정합니다.<br /><br /> **true** 는 데이터베이스에 있는 모든 개체에 액세스할 수 있는 권한을 멤버에게 부여합니다.<br /><br /> 멤버는 특정 데이터베이스에 대해서만 관리 권한을 가질 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [사용 권한 및 사용 권한 &#40; Analysis Services-다차원 데이터 &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [개체 및 작업 &#40;에 대 한 권한 부여 액세스 Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [사용 권한 및 사용 권한 & #40; Analysis Services-다차원 데이터 & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [개체 및 작업 & #40;에 대 한 권한 부여 액세스 Analysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

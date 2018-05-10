@@ -1,37 +1,19 @@
 ---
-title: "집계 디자인 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+title: 집계 디자인 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
   집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 동일한 저장 구조를 사용 하 여 파티션에 대 한을 사용 하면 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수는 [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  예를 들어 문자열 "011"은 세 개의 특성이 있는 차원을 사용하는 쿼리를 참조하며 여기서 두 번째 및 세 번째 특성이 쿼리에 포함됩니다.  
   
 > [!NOTE]  
->  일부 특성은 데이터 집합에서 고려되지 않습니다. 제외 된 특성에 대 한 자세한 내용은 참조 [쿼리 요소 &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  일부 특성은 데이터 집합에서 고려되지 않습니다. 제외 된 특성에 대 한 자세한 내용은 참조 [쿼리 요소 &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)합니다.  
   
  집계 디자인을 포함하는 측정값 그룹의 각 차원은 *Query* 요소의 **Dataset** 값으로 나타납니다. *Dataset* 값의 순서는 측정값 그룹에 포함된 차원의 순서와 일치해야 합니다.  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  집계를 반복적으로 디자인 하려면 여러 보내는 **DesignAggregations** 명령이 디자인 프로세스를 세부적으로 제어할 수 있도록 합니다. 집계 디자인 마법사에서는 이와 동일한 방법을 사용하여 디자인 프로세스를 세부적으로 제어할 수 있습니다. 자세한 내용은 참조 [집계 디자인 마법사 F1 도움말](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d)합니다.  
   
 > [!NOTE]  
->  집계를 반복적으로 디자인하려면 명시적 세션이 필요합니다. 명시적 세션에 대 한 자세한 내용은 참조 [관리 연결 및 세션 &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  집계를 반복적으로 디자인하려면 명시적 세션이 필요합니다. 명시적 세션에 대 한 자세한 내용은 참조 [관리 연결 및 세션 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)합니다.  
   
  반복적인 프로세스를 시작 하려면 먼저 보낸는 **DesignAggregations** 다음과 같은 정보가 포함 된 명령:  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>일괄 처리를 사용하여 집계 디자인  
  단일 전송 하 여 일괄 처리에 대 한 집계를 디자인할 수도 있습니다 **DesignAggregations** 명령을 포함 하는 **단계**, **시간**, **저장소** , 및 **최적화** 디자인 프로세스 전체를 대상 되 고 제한 된 있는 속성 값입니다. 에 목표 쿼리를 디자인 프로세스를 대상으로 포함 될 사용 빈도 기반 최적화 하려는 경우는 **쿼리** 속성입니다. 되었는지도 확인는 **Materialize** 속성은 true로 설정 하 여 명령이 완료 되었을 때 디자인 프로세스 집계 디자인에 정의 된 집계를 저장 합니다.  
   
- 암시적 세션이나 명시적 세션에서 일괄 처리를 사용하여 집계를 디자인할 수 있습니다. 암시적 세션과 명시적 세션에 대 한 자세한 내용은 참조 하세요. [관리 연결 및 세션 &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ 암시적 세션이나 명시적 세션에서 일괄 처리를 사용하여 집계를 디자인할 수 있습니다. 암시적 세션과 명시적 세션에 대 한 자세한 내용은 참조 [관리 연결 및 세션 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)합니다.  
   
 ## <a name="returning-design-statistics"></a>디자인 통계 반환  
  경우는 **DesignAggregations** 클라이언트 응용 프로그램에 제어를 반환 하는 명령, 명령 명령에 대 한 디자인 통계를 나타내는 단일 행을 포함 하는 행 집합을 반환 합니다. 행 집합에는 다음 표에 나열된 열이 들어 있습니다.  

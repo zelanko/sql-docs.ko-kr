@@ -1,36 +1,23 @@
 ---
-title: "변수 및 매개 변수 (MDX)를 사용 하 여 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 변수 및 매개 변수 (MDX)를 사용 하 여 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- parameters [MDX]
-- queries [MDX], variables
-- queries [MDX], parameters
-- variables [MDX]
-ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa5c3ec91afb2fd8321aafa6146e9f9061c27c26
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 039668b719a2c6c715139682496117b8239425aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-variables-and-parameters-mdx"></a>변수 및 매개 변수 사용(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 MDX(Multidimensional Expressions) 문을 매개 변수화할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 MDX(Multidimensional Expressions) 문을 매개 변수화할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
   
  매개 변수가 있는 문을 만들 때 매개 변수 이름은 이름 앞에 @ 부호를 붙여 식별합니다. 예를 들어 @Year 유효한 매개 변수 이름 이어야 합니다  
   
@@ -66,6 +53,6 @@ from [Adventure Works]
  OLE DB와 함께 이 기능을 사용하려면 **ICommandWithParameters** 인터페이스를 사용하십시오. ADOMD.Net과 함께 이 기능을 사용하려면 **AdomdCommand.Parameters** 컬렉션을 사용하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

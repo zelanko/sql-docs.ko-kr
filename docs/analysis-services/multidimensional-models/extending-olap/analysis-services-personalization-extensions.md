@@ -1,34 +1,23 @@
 ---
 title: Analysis Services 개인 설정 확장 프로그램 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램에서 다음을 수행할 수 있도록 하는 기능을 제공 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램에서 다음을 수행할 수 있도록 하는 기능을 제공 합니다.  
   
 -   **동적 디자인 및 배포** 디자인 및 배포 후 즉시 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램 사용자 개체와 기능에 대 한 액세스는 다음 번 사용자 세션의 시작 부분에 있어야 합니다.  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 용도는 많습니다. 예를 들어 회사의 영업에 여러 통화가 관련된 경우가 있습니다. 큐브에 액세스하는 사람에 해당하는 지역 통화로 통합된 영업을 반환하는 계산 멤버를 만들 수 있습니다. 이 멤버를 개인 설정 확장 프로그램으로 만듭니다. 그런 다음 이 계산 멤버를 사용자 그룹과 공유합니다. 공유하면 이러한 사용자들은 서버에 연결한 즉시 계산 멤버에 액세스할 수 있게 됩니다. 사용자가 사용하는 인터페이스가 계산 멤버를 만들 때 사용된 인터페이스와 다른 경우에도 액세스할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램은 기존 관리 어셈블리 아키텍처를 간단 하 고 유용 수정 및 통해 노출 됩니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델, MDX (Multidimensional Expressions) 구문 및 스키마 행 집합입니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 기존 관리 어셈블리 아키텍처를 간단 하 고 유용 수정 및 통해 노출 됩니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델, MDX (Multidimensional Expressions) 구문 및 스키마 행 집합입니다.  
   
 ## <a name="logical-architecture"></a>논리 아키텍처  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 아키텍처는 관리 어셈블리 아키텍처와 다음 네 가지의 기본 요소를 기반으로 합니다.  
@@ -84,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="new-adomdconnection-class"></a>새 AdomdConnection 클래스  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 클래스는 새로운 클래스이며 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
   
- **Properties**  
+ **속성**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> - 현재 연결의 세션 ID를 나타내는 읽기 전용 문자열 값입니다.  
   
@@ -108,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="new-server-class"></a>새 서버 클래스  
  <xref:Microsoft.AnalysisServices.AdomdServer.Server> 클래스는 새로운 클래스이며 클래스 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
   
- **Properties**  
+ **속성**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> - 서버 이름을 나타내는 읽기 전용 문자열 값입니다.  
   
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>AdomdCommand 클래스  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 클래스는 이제 다음 MDX 명령을 지원합니다.  
   
--   [CREATE MEMBER 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+-   [MEMBER 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [UPDATE MEMBER 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER 문은 &#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER 문 &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [CREATE SET 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+-   [SET 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [DROP SET 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET 문 &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [KPI 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [CREATE KPI 문 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [DROP KPI 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI 문 &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX 확장 및 향상된 기능  
  CREATE MEMBER 명령은 향상 되었습니다는 **캡션** 속성에는 **display_folder** 속성 및 **associated_measure_group** 속성.  

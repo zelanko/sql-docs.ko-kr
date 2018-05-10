@@ -1,31 +1,23 @@
 ---
-title: "다차원 모델용 Power View 이해 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델용 Power View 이해 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 465eadfa66494c7c58b2698d73acea60ee6048f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 문서에서는 SQL Server의 다차원 모델용 파워 뷰 기능에 대해 설명하고, 조직에서 다차원 모델용 파워 뷰를 구현하려는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
+  이 문서에서는 SQL Server의 다차원 모델용 파워 뷰 기능에 대해 설명하고, 조직에서 다차원 모델용 파워 뷰를 구현하려는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
   
  다차원 모델은 업계 최고의 OLAP 데이터 모델링, 저장소 및 분석 솔루션을 제공합니다. SQL Server의 다차원 모델에서는 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 수행할 수 있습니다.  
   

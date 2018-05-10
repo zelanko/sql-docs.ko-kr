@@ -1,34 +1,23 @@
 ---
 title: 로컬 큐브 (Analysis Services-다차원 데이터) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], local
-ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5e7e55fb95d852714be54ccfb01547ddb6064694
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>로컬 큐브(Analysis Services - 다차원 데이터)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]만들기, 업데이트 또는 삭제 로컬 큐브를 작성 및 ASSL 스크립트나 AMO 프로그램을 실행 해야 합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  로컬 큐브를 만들거나 업데이트하거나 삭제하려면 ASSL 스크립트나 AMO 프로그램을 작성하여 실행해야 합니다.  
   
  로컬 큐브와 로컬 마이닝 모델을 사용하면 네트워크에 연결되어 있지 않은 클라이언트 워크스테이션을 분석할 수 있습니다. 예를 들어 클라이언트 응용 프로그램은 다음 그림과 같이 로컬 큐브 엔진을 로드하여 로컬 큐브를 만들고 쿼리하는 OLAP 9.0 공급자(MSOLAP.3)용 OLE DB를 호출할 수 있습니다.  
   
@@ -46,10 +35,10 @@ ms.lasthandoff: 01/08/2018
   
 |로컬 큐브 데이터의 원본|생성 방법|  
 |------------------------------------|---------------------|  
-|서버 기반 큐브|CREATE GLOBAL CUBE 문 중 하나를 사용할 수 있습니다 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ASSL (Scripting Language) 스크립트를 만들고 서버 기반 큐브에서 큐브를 채우는 합니다. 자세한 내용은 참조 [GLOBAL CUBE Statement 만들기 &#40; Mdx&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) 또는 [스크립트 언어 &#40; Analysis Services ASSL XMLA &#41; ](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|서버 기반 큐브|CREATE GLOBAL CUBE 문 중 하나를 사용할 수 있습니다 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ASSL (Scripting Language) 스크립트를 만들고 서버 기반 큐브에서 큐브를 채우는 합니다. 자세한 내용은 참조 [GLOBAL CUBE Statement 만들 &#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md) 또는 [Analysis Services Scripting Language &#40;xmla ASSL&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)합니다.|  
 |관계형 데이터 원본|ASSL 스크립트를 사용하여 OLE DB 관계형 데이터베이스에서 큐브를 만들고 채웁니다. ASSL을 사용하여 로컬 큐브를 만들려면 로컬 큐브 파일(*.cub)에 연결하고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대해 ASSL 스크립트를 실행하는 것과 같은 방식으로 ASSL 스크립트를 실행하여 서버 큐브를 만듭니다. 자세한 내용은 [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)를 참조하세요.|  
   
- REFRESH CUBE 문을 사용하여 로컬 큐브를 다시 생성하고 해당 데이터를 업데이트할 수 있습니다. 자세한 내용은 참조 [CUBE 문은 새로 고침 &#40; Mdx&#41; ](../../../mdx/mdx-data-definition-refresh-cube.md).  
+ REFRESH CUBE 문을 사용하여 로컬 큐브를 다시 생성하고 해당 데이터를 업데이트할 수 있습니다. 자세한 내용은 참조 [CUBE 문은 새로 고침 &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)합니다.  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>서버 기반 큐브에서 만든 로컬 큐브  
  서버 기반 큐브에서 로컬 큐브를 만들 때는 다음과 같은 사항을 고려해야 합니다.  
@@ -77,13 +66,13 @@ ms.lasthandoff: 01/08/2018
 -   로컬 큐브에 추가된 측정값과 차원을 사용하는 계산 멤버, 명명된 집합 및 할당만 로컬 큐브에 나타납니다. 잘못된 계산 멤버, 명명된 집합 및 할당은 자동으로 제외됩니다.  
   
 ### <a name="security"></a>보안  
- 서버 큐브에서 로컬 큐브를 만들려면 사용자에 대 한 순서로 사용자에 게 부여 해야 **드릴스루 및 로컬 큐브** 서버 큐브에 대 한 사용 권한입니다. 자세한 내용은 참조 [큐브 또는 모델 사용 권한 &#40; 부여 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ 서버 큐브에서 로컬 큐브를 만들려면 사용자에 대 한 순서로 사용자에 게 부여 해야 **드릴스루 및 로컬 큐브** 서버 큐브에 대 한 사용 권한입니다. 자세한 내용은 참조 [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)합니다.  
   
  로컬 큐브는 서버 큐브와 같이 역할을 사용하여 보안이 설정되지 않습니다. 로컬 큐브 파일에 대한 파일 수준 액세스 권한이 있는 사용자는 누구나 해당 파일에 있는 큐브를 쿼리할 수 있습니다. 사용할 수는 **암호화 암호** 로컬 큐브 파일에 암호를 설정 하는 로컬 큐브 파일에 대 한 연결 속성입니다. 로컬 큐브 파일에 암호를 설정하면 로컬 큐브 파일을 쿼리하기 위해 해당 파일에 연결할 때 항상 이 암호를 입력해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [GLOBAL CUBE 문 &#40; 만들기 Mdx&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
- [스크립팅 언어 &#40; Analysis Services를 사용 하 여 개발 ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [REFRESH CUBE 문 &#40; Mdx&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
+ [CREATE GLOBAL CUBE 문 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
+ [개발 analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [REFRESH CUBE 문은 &#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

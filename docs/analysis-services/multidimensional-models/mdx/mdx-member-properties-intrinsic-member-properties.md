@@ -1,32 +1,23 @@
 ---
 title: 기본 멤버 속성 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
-ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2fc65884048df6a4f5083edd4451e60dad039910
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 멤버 속성-기본 멤버 속성
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 쿼리는 사용자 지정 응용 프로그램에 추가 데이터 또는 메타 데이터 사용에 대 한 반환 하거나 모델 검토 또는 생성할 간편 하 게에 포함할 수 있는 차원 멤버에 대 한 기본 속성을 노출 합니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
   
  기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 **ID**, **KEY**, **KEYx**및 **NAME**이 있습니다. 특히 **LEVEL_NUMBER** 또는 **PARENT_UNIQUE_NAME**과 같은 위치 정보를 반환할 수도 있습니다.  
   
@@ -213,15 +204,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>관련 항목:  
  [PeriodsToDate&#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [자식 &#40; Mdx&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize &#40; Mdx&#41;](../../../mdx/hierarchize-mdx.md)   
- [개수&#40;Set&#41;&#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
- [필터 &#40; Mdx&#41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40; Mdx&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40; Mdx&#41;](../../../mdx/drilldownlevel-mdx.md)   
- [속성 &#40; Mdx&#41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40; Mdx&#41;](../../../mdx/prevmember-mdx.md)   
- [멤버 속성 사용&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [자식 &#40;MDX&#41;](../../../mdx/children-mdx.md)   
+ [Hierarchize & #40; Mdx& #41;](../../../mdx/hierarchize-mdx.md)   
+ [Count & #40; 설정 & #41; & #40; Mdx& #41;](../../../mdx/count-set-mdx.md)   
+ [필터 & #40; Mdx& #41;](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40; Mdx& #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40; Mdx& #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [속성 & #40; Mdx& #41;](../../../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
+ [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "파워 피벗 갤러리 삭제 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 파워 피벗 갤러리 삭제 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b7222318-7307-4afb-b585-9358426103a0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de9f32a826273ed1efaf9395c8a0e67030b1b573
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8d67dbc6148e7fa08662d6e7199e87c85c114588
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-power-pivot-gallery"></a>파워 피벗 갤러리 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.  
   
 > [!NOTE]  
 >  이 항목에서는 SharePoint 라이브러리를 삭제하는 방법에 대한 지침을 제공합니다. 라이브러리에서 개별 문서를 삭제하는 방법은 [파워 피벗 갤러리 사용](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)을 참조하세요.  
@@ -40,7 +32,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  사이트 관리에서 **사이트 라이브러리 및 목록**을 클릭합니다.  
   
-4.  클릭 **사용자 지정 "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리"**합니다.  
+4.  클릭 **사용자 지정 "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리"** 합니다.  
   
 5.  사용 권한 및 관리에서 **이 문서 라이브러리 삭제**를 클릭합니다.  
   
@@ -52,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  사이트 관리에서 **사이트 라이브러리 및 목록**을 클릭합니다.  
   
-4.  클릭 **사용자 지정 "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리"**합니다.  
+4.  클릭 **사용자 지정 "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리"** 합니다.  
   
 5.  사용 권한 및 관리에서 **이 라이브러리 삭제**를 클릭합니다.  
   

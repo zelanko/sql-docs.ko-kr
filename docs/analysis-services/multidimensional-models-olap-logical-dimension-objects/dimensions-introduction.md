@@ -1,39 +1,23 @@
 ---
-title: "차원 (Analysis Services-다차원 데이터) 소개 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- dimensions [Analysis Services], about dimensions
-- storage [Analysis Services], dimensions
-- dimensions [Analysis Services], examples
-- storing data [Analysis Services], dimensions
-- storage [Analysis Services]
-ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 
-author: Minewiskan
+title: 차원 (Analysis Services-다차원 데이터) 소개 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b3ac3975b486de2cfe57bf920cf0ecf2ac9f9caf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions---introduction"></a>차원-소개
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-모든 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원은 테이블 또는 뷰에서 데이터 원본 뷰에서 열 기반으로 하는 특성 그룹입니다. 차원은 큐브와 독립적으로 존재하며 여러 큐브에서 사용되거나 단일 큐브에서 여러 번 사용되고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 간에 연결될 수 있습니다. 큐브와 독립적으로 존재하는 차원을 데이터베이스 차원이라고 하며 큐브 내의 데이터베이스 차원 인스턴스를 큐브 차원이라고 합니다.  
+  모든 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원은 테이블 또는 뷰에서 데이터 원본 뷰에서 열 기반으로 하는 특성 그룹입니다. 차원은 큐브와 독립적으로 존재하며 여러 큐브에서 사용되거나 단일 큐브에서 여러 번 사용되고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 간에 연결될 수 있습니다. 큐브와 독립적으로 존재하는 차원을 데이터베이스 차원이라고 하며 큐브 내의 데이터베이스 차원 인스턴스를 큐브 차원이라고 합니다.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>별모양 스키마 디자인을 기반으로 하는 차원  
  차원의 구조는 기본 차원 테이블의 구조에 의해 크게 좌우됩니다. 가장 간단한 구조를 별모양 스키마라고 하는데 이러한 구조에서 각 차원은 기본 키 - 외래 키 관계에 따라 팩트 테이블에 직접 연결되어 있는 단일 차원 테이블을 기반으로 합니다.  
@@ -62,7 +46,7 @@ ms.lasthandoff: 02/15/2018
  차원을 만든 후에는 차원을 처리해야만 해당 차원의 특성 멤버 및 계층을 볼 수 있습니다. 차원의 구조가 변경되거나 해당 기본 테이블의 정보가 업데이트되면 차원을 다시 처리해야만 변경 내용을 볼 수 있습니다. 구조 변경 후에 차원을 처리할 때 차원을 포함하는 큐브도 처리해야 하며 그렇지 않으면 큐브를 볼 수 없습니다.  
   
 ## <a name="security"></a>보안  
- 계층, 수준 및 멤버를 포함한 차원의 모든 하위 개체는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 역할을 통해 보안이 설정됩니다. 차원 보안은 해당 차원을 사용하는 데이터베이스의 모든 큐브에 적용될 수도 있고 특정 큐브에만 적용될 수도 있습니다. 차원 보안에 대 한 자세한 내용은 참조 하세요. [차원 &#40;에 대 한 권한 부여 Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
+ 계층, 수준 및 멤버를 포함한 차원의 모든 하위 개체는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 역할을 통해 보안이 설정됩니다. 차원 보안은 해당 차원을 사용하는 데이터베이스의 모든 큐브에 적용될 수도 있고 특정 큐브에만 적용될 수도 있습니다. 차원 보안에 대 한 자세한 내용은 참조 [차원에 대 한 사용 권한을 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [차원 저장소](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   

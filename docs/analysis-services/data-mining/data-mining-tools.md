@@ -1,38 +1,25 @@
 ---
-title: "데이터 마이닝 도구 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 마이닝 도구 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tools [Analysis Services]
-- mining models [Analysis Services], tools
-- data mining [Analysis Services], tools
-- data mining [Analysis Services], development
-ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 26e3d36a68197607d788ca1170a2fd509698221d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
   
--   의 **데이터 마이닝** 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
+-   **** 의 데이터 마이닝 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
   
      이 마법사에서 사용할 데이터를 선택한 다음 클러스터링, 신경망 또는 시계열 모델링과 같은 특정 데이터 마이닝 기술을 적용할 수 있습니다.  
   
@@ -76,7 +63,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 데이터 마이닝 태스크 및 변환  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 마이닝을 지원하는 많은 구성 요소가 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어:  
   
 -   데이터 집합이 새 고객으로 업데이트될 때마다 모델을 자동으로 업데이트하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
@@ -84,7 +71,7 @@ ms.lasthandoff: 02/15/2018
   
 -   매개 변수에서 전달된 모델을 자동으로 생성합니다.  
   
- 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 예를 들어  
+ 그러나 다른 프로세스에 대한 입력으로 패키지 워크플로에서 데이터 마이닝을 사용할 수도 있습니다. 예를 들어:  
   
 -   모델에서 생성된 확률 값을 사용하여 텍스트 마이닝 또는 다른 분류 태스크에 대한 점수에 가중치를 부여합니다.  
   
@@ -95,7 +82,7 @@ ms.lasthandoff: 02/15/2018
  **자세한 내용:** [데이터 마이닝 솔루션 관련 프로젝트](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions &#40; DMX &#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)  

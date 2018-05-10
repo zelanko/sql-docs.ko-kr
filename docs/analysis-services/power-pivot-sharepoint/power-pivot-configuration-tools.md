@@ -1,31 +1,23 @@
 ---
-title: "파워 피벗 구성 도구 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 파워 피벗 구성 도구 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b23576ac5e02d491d051646f0bdd4469106e9709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 구성, 복구 또는 제거합니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 구성, 복구 또는 제거합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치하지 않습니다. 향후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]릴리스에서는 구성 도구가 다운로드로 제공될 예정입니다.  
   
@@ -72,7 +64,7 @@ ms.lasthandoff: 02/15/2018
 |--------------------------------------------------------------|-----------------------------------------------|  
 |주 페이지에 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버**의 새 옵션이 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대해 새로운 아키텍처를 지원하는 옵션입니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 하나 이상 사용하도록 Excel Services를 구성합니다.<br /><br /> ![PowerPivot 서버 새 구성 도구에서](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "새 구성 도구에서 PowerPivot 서버")||  
 ||2010 도구에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로컬 인스턴스를 구성하는 **로컬 서버에서 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 등록** 페이지가 있습니다. 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구에서 서비스 계정으로](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구에서 서비스 계정으로")|  
-||**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기** 페이지에 추가 옵션 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.**가 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서로 업그레이드")|  
+||**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기** 페이지에 추가 옵션 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.** 가 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서로 업그레이드")|  
 |2013 도구에는 새로운 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성** 페이지가 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 새로운 아키텍처를 지원하는 페이지입니다. 기본적으로 주 페이지의 **Excel Services용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버** 입력란에 입력한 서버 이름이 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성**에도 표시됩니다.<br /><br /> ![PowerPivot 서버 새 구성 도구 등록](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "등록 PowerPivot 서버 새 구성 도구")||  
 |2013 도구에는 새로운 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능을 Excel Services 사용 추적기로 등록** 페이지가 있습니다. SharePoint 2010 Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에 대한 사용 현황 데이터를 추적하지 않습니다.||  
 ||2010 도구에는 SharePoint 2010의 Excel Services가 **모델을 로드할 수 있도록 MSOLAP을 등록하는** MSOLAP.5를 신뢰할 수 있는 공급자로 추가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 페이지가 있습니다. 이 페이지는 2013 도구에 포함되지 않습니다. SharePoint 2013 Excel Services에서는 모델을 로드하는 데 MSOLAP 공급자를 사용하지 않습니다.|  

@@ -1,30 +1,19 @@
 ---
-title: "다차원 모델 솔루션 (SSAS) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델 솔루션 (SSAS) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- objects [Analysis Services], defining objects
-- multidimensional data [Analysis Services], designing objects
-ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24573a4c5e830bfb7258f74450e74c4c4ab5243a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e459ecf2ef6c01dd915e9bb8a957935bc4118ab5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>다차원 모델 솔루션(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +36,7 @@ ms.lasthandoff: 02/23/2018
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 개체를 디자인하는 방법에 대해 설명합니다.  
   
- [스키마 생성 마법사 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [스키마 생성 마법사 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
  기존 관계형 스키마 없이 다차원 데이터베이스 개체를 디자인하는 방법에 대해 설명합니다.  
   
  [Analysis Services 개인 설정 확장 프로그램](../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  

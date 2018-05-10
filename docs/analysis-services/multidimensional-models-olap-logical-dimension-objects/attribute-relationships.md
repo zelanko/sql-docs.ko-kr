@@ -1,47 +1,23 @@
 ---
-title: "특성 관계 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- member properties [Analysis Services], attribute relationships
-- security [Analysis Services], properties
-- PROPERTIES keyword
-- storage [Analysis Services], attribute relationships
-- natural hierarchies [Analysis Services]
-- dimensions [Analysis Services], member properties
-- queries [MDX], attribute relationships
-- user-defined hierarchies [Analysis Services]
-- attributes [Analysis Services], relationships
-- member properties [Analysis Services]
-- members [Analysis Services], attribute relationships
-- storing data [Analysis Services], attribute relationships
-- relationships [Analysis Services], attributes
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 
-author: Minewiskan
+title: 특성 관계 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e687d64d3ba36bee4cffab7e81d401081b57eaa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 903f66edbe7c296c4f4c02526e87944d5738e0ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships"></a>의 차원 디자이너에 있는 차원 구조 뷰의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 차원 내의 특성은 항상 직접 또는 간접적으로 특성과 관련 된 키입니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 차원 내의 특성은 항상 직접 또는 간접적으로 특성과 관련 된 키입니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.  
   
 -   키 특성과 주 차원 테이블의 열에 바인딩된 각각의 키가 아닌 특성 간  
   
@@ -99,7 +75,7 @@ ms.lasthandoff: 02/15/2018
  특성 관계를 만들 때 주요 제약 조건은 특성 관계에서 참조하는 특성에 특성 관계가 속하는 특성의 멤버에 대한 값이 하나만 있어야 한다는 것입니다. 예를 들어 City 특성과 State 특성 간에 관계를 정의하면 각 도시는 하나의 시와만 관련될 수 있습니다.  
   
 ## <a name="attribute-relationship-queries"></a>특성 관계 쿼리  
- MDX 쿼리를 사용 하 여와 멤버 속성의 형태로 특성 관계에서 데이터를 검색 하는 **속성** mdx 키워드 **선택** 문. MDX를 사용 하 여 멤버 속성을 검색 하는 방법에 대 한 자세한 내용은 참조 하세요. [멤버 속성 사용 &#40; Mdx&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ MDX 쿼리를 사용 하 여와 멤버 속성의 형태로 특성 관계에서 데이터를 검색 하는 **속성** mdx 키워드 **선택** 문. MDX를 사용 하 여 멤버 속성을 검색 하는 방법에 대 한 자세한 내용은 참조 [멤버 속성을 사용 하 여 &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

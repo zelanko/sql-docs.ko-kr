@@ -1,27 +1,19 @@
 ---
 title: 파워 피벗 모드에서 Analysis Services를 설치 합니다. | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: setup-install
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 24bf58f255e20188b17ec53f0b75762a5e89a0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -269,7 +261,7 @@ ms.lasthandoff: 04/06/2018
  이전 버전의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 검토하세요.  
   
 ##  <a name="bkmk_multiple_servers"></a> 단일 서버 설치 그 이상 – Microsoft SharePoint용 Power Pivot  
- **WFE(웹 프런트 엔드)** 또는 **중간 계층:**더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)** 를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
+ **WFE(웹 프런트 엔드)** 또는 **중간 계층:** 더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)** 를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
   
  중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

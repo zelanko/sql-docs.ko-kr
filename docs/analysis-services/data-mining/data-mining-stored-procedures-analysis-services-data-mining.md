@@ -1,32 +1,23 @@
 ---
 title: 데이터 마이닝 저장 프로시저 (Analysis Services-데이터 마이닝) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
-ms.assetid: a751856d-33bd-4788-9593-317b2826132d
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: data-mining
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf4b9b0fb2fe19d084c47d78d215f0001309af20
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d4a7589dc7df78821c27846c6d535c4ab4be06a2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>데이터 마이닝 저장 프로시저(Analysis Services - 데이터 마이닝)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모든 관리 언어에서 쓸 수 있는 저장된 프로시저를 지원 합니다. 지원되는 관리 언어에는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, C# 및 Managed C++가 포함됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 저장 프로시저를 **CALL** 문을 사용하여 직접 호출하거나 DMX(Data Mining Extensions) 쿼리의 일부로 호출할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 관리되는 모든 언어로 작성된 저장 프로시저가 지원됩니다. 지원되는 관리 언어에는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, C# 및 Managed C++가 포함됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 저장 프로시저를 **CALL** 문을 사용하여 직접 호출하거나 DMX(Data Mining Extensions) 쿼리의 일부로 호출할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저 호출에 대한 자세한 내용은 [저장 프로시저 호출](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md)을 참조하세요.  
   
@@ -41,15 +32,15 @@ ms.lasthandoff: 01/08/2018
   
 -   [SystemGetCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
 -   [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)   
- [교차 유효성 검사 탭 &#40; 마이닝 정확도 차트 뷰 &#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
+ [교차 유효성 검사 탭 &#40;마이닝 정확도 차트 뷰&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
  [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   

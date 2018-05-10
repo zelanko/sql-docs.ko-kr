@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ssas
-ms.date: 02/03/2018
-ms.openlocfilehash: 44fd26e0c450cf032f2a663b2cff7ea35dac012a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: analysis-services
+ms.date: 04/28/2018
+ms.openlocfilehash: 1d76f2a9f60e5bb69b2586a9b9fee10210c87c81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL server Analysis Services
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
+- *날짜 범위 업데이트:* &nbsp; **2018-02-03** &nbsp; 을 아래와 같이 &nbsp; **2018-04-28**
 - *주제 영역:* &nbsp; **for SQL Server Analysis Services**합니다.
 
 
@@ -41,7 +43,24 @@ ms.lasthandoff: 04/26/2018
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-***지금은 나열할 새 문서가 없습니다.***
+1. [테이블 형식 1400 모델 SQL Server Analysis Services에서 데이터 원본 지원](tabular-models/data-sources-supported-ssas-tabular-1400.md)
+2. [테이블 형식 모델링(1400 호환성 수준)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+3. [파티션 만들기](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+4. [역할 만들기](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+5. [Excel에서 분석](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+6. [배포](tutorial-tabular-1400/as-lesson-13-deploy.md)
+7. [테이블 형식 모델 프로젝트 만들기](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+8. [데이터 가져오기](tutorial-tabular-1400/as-lesson-2-Get-data.md)
+9. [날짜 테이블로 표시](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+10. [관계 만들기](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+11. [계산된 열 만들기](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+12. [측정값 만들기](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+13. [핵심 성과 지표 만들기](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+14. [큐브 뷰 만들기](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+15. [계층 만들기](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+16. [추가 단원 - 세부 정보 행](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+17. [추가 단원 - 동적 보안](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+18. [추가 단원-비정형 계층 구조](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
 
 
@@ -85,40 +104,36 @@ ms.lasthandoff: 04/26/2018
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새 + 업데이트 (11 + 6): &nbsp; &nbsp; **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새 + 업데이트 (18 + 0): &nbsp; &nbsp; **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (218 + 14): **SQL에 연결** docs](../connect/new-updated-connect.md)
+- [새 + 업데이트 (14 + 0): &nbsp; &nbsp; **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
+- [새 + 업데이트 (3 + 2): &nbsp; &nbsp; **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [새 + 업데이트 (3 + 3): &nbsp; &nbsp; **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
+- [새 + 업데이트 (7 + 10): &nbsp; &nbsp; **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
+- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [새 + 업데이트 (1 + 3): &nbsp; &nbsp; **SQL 작업 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새 + 업데이트 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [새 + 업데이트 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [새 + 업데이트 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [새 + 업데이트 (1 + 1): &nbsp; &nbsp; **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
-- [새 + 업데이트 (0 + 0): **ADO ActiveX Data Objects ()에 대 한 SQL** docs](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 분석 플랫폼 시스템** docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 데이터 품질 서비스** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [새 + 업데이트 (0 + 0): **확장 DMX (Data Mining) sql** docs](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새 + 업데이트 (0 + 0): **MDX (Multidimensional Expressions)에 대 한 SQL** docs](../mdx/new-updated-mdx.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 PowerShell** docs](../powershell/new-updated-powershell.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 샘플** docs](../samples/new-updated-samples.md)
 - [새 + 업데이트 (0 + 0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새 + 업데이트 (0 + 0): **SQL에 대 한 XQuery** docs](../xquery/new-updated-xquery.md)
-
 

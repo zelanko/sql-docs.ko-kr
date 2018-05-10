@@ -1,42 +1,23 @@
 ---
-title: "다차원 모델 (Analysis Services) 처리 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델 (Analysis Services) 처리 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- online mode [Analysis Services]
-- processing objects [Analysis Services]
-- partitions [Analysis Services], processing
-- jobs [Analysis Services]
-- objects [Analysis Services], processing
-- reprocessing objects
-- impact analysis [Analysis Services]
-- dimensions [Analysis Services], processing
-- project mode [Analysis Services]
-- cubes [Analysis Services], processing
-ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2782a29b4c37420d354da27c09e58ac8654025ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>다차원 모델 처리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
+  처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
   
  기본적으로 처리는 서버에 솔루션을 배포할 때 수행됩니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 같은 도구를 사용하여 솔루션의 전체 또는 일부를 임시로 처리하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 SQL Server 에이전트를 사용하여 예약을 통해 처리할 수 있습니다. 차원을 제거하거나 해당 호환성 수준을 변경하는 등 모델을 구조적으로 변경할 경우 모델의 물리적 및 논리적 특성을 동기화하도록 다시 처리해야 합니다.  
   
@@ -87,6 +68,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>관련 항목:  
  [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

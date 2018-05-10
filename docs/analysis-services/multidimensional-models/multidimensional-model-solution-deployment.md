@@ -1,35 +1,23 @@
 ---
-title: "다차원 모델 솔루션 배포 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델 솔루션 배포 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, planning
-- deploying [Analysis Services]
-- deploying [Analysis Services], planning
-ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4b8f66bcf6715040ab572f0884c12b343a3dc6b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>다차원 모델 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
   
@@ -43,7 +31,7 @@ ms.lasthandoff: 02/15/2018
   
 |메서드|Description|링크|  
 |------------|-----------------|----------|  
-|**AMO(Analysis Management Objects) 자동화**|AMO는 솔루션 배포에 사용할 수 있는 명령을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 전체 명령 집합을 프로그래밍 방식으로 사용할 수 있는 인터페이스를 개발자에게 제공합니다. 솔루션 배포를 위한 방법으로 AMO 자동화는 가장 유연한 방법이지만 프로그래밍이 필요합니다.  AMO를 사용하는 경우의 주요 이점은 SQL Server 에이전트와 AMO 응용 프로그램을 함께 사용하여 미리 설정된 일정에 따라 배포를 실행할 수 있다는 것입니다.|[분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**AMO(Analysis Management Objects) 자동화**|AMO는 솔루션 배포에 사용할 수 있는 명령을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 전체 명령 집합을 프로그래밍 방식으로 사용할 수 있는 인터페이스를 개발자에게 제공합니다. 솔루션 배포를 위한 방법으로 AMO 자동화는 가장 유연한 방법이지만 프로그래밍이 필요합니다.  AMO를 사용하는 경우의 주요 이점은 SQL Server 에이전트와 AMO 응용 프로그램을 함께 사용하여 미리 설정된 일정에 따라 배포를 실행할 수 있다는 것입니다.|[분석 관리 개체 & #40;를 사용 하 여 개발 AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 메타데이터의 XMLA 스크립트를 생성하고 다른 서버에서 이 스크립트를 실행하여 초기 데이터베이스를 다시 만듭니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포 프로세스를 정의하고 코드화한 다음 XMLA 스크립트로 저장하여 XMLA 스크립트를 쉽게 만들 수 있습니다. XMLA 스크립트를 파일로 저장한 후에는 쉽게 일정에 따라 스크립트를 실행하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 직접 연결하는 응용 프로그램에 스크립트를 포함할 수 있습니다.<br /><br /> SQL Server 에이전트를 사용하여 미리 설정된 기준에 따라 XMLA 스크립트를 실행할 수도 있지만 XMLA 스크립트에는 AMO만큼의 융통성은 없습니다. AMO는 전체적인 범위의 관리 명령을 호스팅하여 가장 폭넓은 기능을 제공합니다.|[XMLA를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**배포 마법사**|배포 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 생성된 XMLA 출력 파일로 프로젝트의 메타데이터를 대상 서버에 배포합니다. 배포 마법사를 사용하면 프로젝트 빌드의 출력 디렉터리에 생성되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파일을 사용하여 직접 배포할 수 있습니다.<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사의 주요 이점은 편리함입니다. XMLA 스크립트를 나중에 사용하기 위해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 저장하는 것처럼 배포 마법사 스크립트를 저장할 수 있습니다. 배포 마법사는 대화형으로 실행하거나 배포 유틸리티를 통해 명령 프롬프트에서 실행할 수 있습니다.|[배포 마법사를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**배포 유틸리티**|배포 유틸리티를 사용하여 명령 프롬프트에서 Analysis Services 배포 엔진을 시작할 수 있습니다.|[배포 유틸리티를 사용 하 여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
@@ -58,10 +46,10 @@ ms.lasthandoff: 02/15/2018
 |이 솔루션에 어떤 하드웨어 및 소프트웨어 리소스가 필요합니까?|[요구 사항 및 Analysis Services 배포에 대 한 고려 사항](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 패키지, 보고서 또는 관계형 데이터베이스 스키마와 같이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 범위 외부에 있는 관련 개체를 어떻게 배포합니까?||  
 |배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 데이터를 어떻게 로드하고 업데이트합니까?<br /><br /> 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 메타데이터(예: 계산)를 어떻게 업데이트하나요?|이 항목의[배포 방법](#bkmk_meth) .|  
-|인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 액세스를 사용자에게 제공하기를 원합니까?|[인터넷 정보 서비스 &#40; IIS &#41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 액세스를 사용자에게 제공하기를 원합니까?|[인터넷 정보 서비스 & #40; IIS & #41;에 Analysis Services에 대 한 HTTP 액세스 구성 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 지속적인 쿼리 액세스를 제공하기를 원합니까?|[요구 사항 및 Analysis Services 배포에 대 한 고려 사항](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |연결된 개체 또는 원격 파티션을 사용하여 분산 환경에 개체를 배포하기를 원합니까?|[로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) 및 [연결된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 어떻게 보호합니까?|[개체 및 작업 &#40;에 대 한 권한 부여 액세스 Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 어떻게 보호합니까?|[개체 및 작업 & #40;에 대 한 권한 부여 액세스 Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> 관련 작업  
  [요구 사항 및 Analysis Services 배포에 대 한 고려 사항](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)  

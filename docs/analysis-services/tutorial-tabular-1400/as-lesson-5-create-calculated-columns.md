@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 50a1094bc35a68a6c5b73d47cfc7f3b910a1afef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0efa20ef203cbcd31177e4ac194ca2bd4efedc69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-calculated-columns"></a>계산 열 만들기
 

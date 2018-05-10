@@ -1,31 +1,23 @@
 ---
-title: "호출 ProcessDimension cmdlet | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 호출 ProcessDimension cmdlet | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a24a4b19f20e28346456e3c0c53f39eaeb200b9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f5cd3ad9f902aea9234046991ae9651702c5ee31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processdimension-cmdlet"></a>Invoke-ProcessDimension cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-특정 처리 유형 변수를 사용하여 차원을 처리합니다.  
+  특정 처리 유형 변수를 사용하여 차원을 처리합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -51,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-database-string"></a>-Database \<string>  
+### <a name="-database-string"></a>-데이터베이스 \<문자열 >  
  차원이 속한 데이터베이스를 지정합니다.  
   
 |||  

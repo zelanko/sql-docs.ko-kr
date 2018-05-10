@@ -1,37 +1,23 @@
 ---
-title: "기본 MDX 쿼리 (MDX) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 기본 MDX 쿼리 (MDX) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], SELECT statement
-- queries [MDX], about queries
-- cellsets [MDX]
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 188c1069047c050df50d81d2208e978b39a05706
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX 쿼리-기본 쿼리
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
+  기본 MDX 쿼리는 SELECT 문이며 이 문은 MDX에서 가장 자주 사용되는 쿼리입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
   
 ## <a name="specifying-a-result-set"></a>결과 집합 지정  
  MDX에서 SELECT 문은 큐브로부터 반환된 다차원 데이터의 하위 집합이 포함되는 결과 집합을 지정합니다. 결과 집합을 지정하려면 MDX 쿼리에 다음과 같은 정보가 포함되어야 합니다.  
@@ -116,7 +102,7 @@ WHERE ( [Sales Territory].[Southwest] )
  자세한 예는 [쿼리 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 및 [Slicer 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX &#40;의 주요 개념 Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT 문 &#40; Mdx&#41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT 문 & #40; Mdx& #41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
