@@ -1,19 +1,19 @@
 ---
 title: SQL Server Analysis Services 테이블 형식 1400 모델에서 지원 되는 데이터 원본 | Microsoft Docs
-ms.date: 03/26/2018
-ms.prod: analysis-services
-ms.suite: pro-bi
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: article
-ms.assetid: ''
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b511ac6d9cf4d75faddf569fcc2391317f19629
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>테이블 형식 1400 모델 SQL Server Analysis Services에서 데이터 원본 지원
 

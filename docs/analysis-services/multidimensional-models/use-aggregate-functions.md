@@ -1,32 +1,23 @@
 ---
 title: 집계 함수를 사용 하 여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2f882fb21fddd829be4cdc13793c4ca8b7f3cd02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]차원을 사용 하 여 측정값을 분할 하, 하는 경우 측정값은 해당 차원에 포함 된 계층에서 요약 됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 **Sum**입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  차원을 사용하여 측정값을 분할하는 경우 측정값은 해당 차원에 포함된 계층에서 요약됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 **Sum**입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
   
  Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의된 집계 유형으로는 **합계**, **최소값**, **최대값**, **개수**, **고유 카운트**및 몇 가지 기타 추가 특수 함수가 있습니다. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)을 참조하세요.  
   
@@ -35,7 +26,7 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]또는 MDX를 통해 큐브 정의에서 집계 방법을 할당하거나 변경할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) 또는 [집계&#40;MDX&#41;](../../mdx/aggregate-mdx.md)를 참조하세요.  
   
 ##  <a name="AggFunction"></a> 집계 함수  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 측정값 그룹에 포함된 차원에 따라 측정값을 집계하는 함수를 제공합니다. 집계 함수의 *가산성* 은 큐브에 있는 모든 차원에서 측정값이 집계되는 방식을 결정합니다. 집계 함수의 가산성 수준은 다음과 같이 세 가지로 구분됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 측정값 그룹에 포함된 차원에 따라 측정값을 집계하는 함수를 제공합니다. 집계 함수의 *가산성* 은 큐브에 있는 모든 차원에서 측정값이 집계되는 방식을 결정합니다. 집계 함수의 가산성 수준은 다음과 같이 세 가지로 구분됩니다.  
   
  가산적  
  완전 가산적 측정값이라고도 하는 가산적 측정값은 아무런 제한 없이 측정값이 포함된 측정값 그룹 내의 모든 차원에 따라 집계할 수 있습니다.  
@@ -72,9 +63,9 @@ ms.lasthandoff: 01/08/2018
   
  멤버를 계산하는 고유 카운트 측정값은 팩트 테이블의 외래 키 열을 기반으로 합니다. 즉, 측정값의 **Source Column** 속성은 이 열을 식별합니다. 이 열은 고유 카운트 측정값으로 계산되는 멤버를 식별하는 차원 테이블 열을 조인합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [측정값 및 측정값 그룹](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 함수 참조 &#40; Mdx&#41;](../../mdx/mdx-function-reference-mdx.md)   
- [반가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../../mdx/mdx-function-reference-mdx.md)   
+ [반 가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

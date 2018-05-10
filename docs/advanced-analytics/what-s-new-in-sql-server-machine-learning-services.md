@@ -2,16 +2,16 @@
 title: 어떤&#39;s SQL Server 컴퓨터 학습 서비스의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ ms.lasthandoff: 04/16/2018
 도 도입 했는데이 릴리스에서 **SQL Server 컴퓨터 학습 서버 (독립 실행형)**, 전용된 시스템에서 실행 하려는 워크 로드를 R 및 Python에 대 한 SQL Server, 완전히 독립적입니다. 독립 실행형 서버를 배포할 수 있으며 SQL Server를 사용 하지 않고 Python 또는 R 솔루션을 확장할 수 있습니다.
 
 | 릴리스 | 기능 업데이트 |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | 버그 수정 및 패키지 새로 고침 있지만 공지 새로운 기능입니다. 미리 학습 된 모델은 누락 때 수정 날짜/시간 데이터 형식에 대 한 지원 SPEES 쿼리에서 Python 및 microsoftml의 향상 된 오류 메시지에 대 한 포함 합니다. |
+| CU 5 | 버그 수정 및 패키지 새로 고침 있지만 공지 새로운 기능입니다. 수정 프로그램 RxExec 및 rx_exec 함수 및 경고 메시지에 대 한 수정 내용에 대 한 루프백 연결 수정 rxInstallPackages에 긴 경로 관련 오류를 수정 revoscalepy에서 변수와 함수 변환의 향상 된 기능에 포함 합니다. |
 | CU 4 | 버그 수정 및 패키지 새로 고침 있지만 공지 새로운 기능입니다. |
 | CU 3 | Python 모델 revoscalepy의 serialization을 사용 하는 [rx_serialize_model 함수](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)합니다.<br/><br/>[기본 점수 매기기](sql-native-scoring.md) 의 향상 된 기능 및 [실시간 점수 매기기](real-time-scoring.md)합니다. 데이터베이스에서 상태 평가 된 처리량은 당는 백만 행 R 모델을 사용 하 여 두 번째입니다. 이 업데이트를 실시간 점수 매기기 및 기본 점수 매기기 단일 행 및 일괄 처리 점수 매기기에 더 나은 성능을 제공 합니다. 사용 하 여 점수 매기기 네이티브 빠른 평가에 T-SQL 함수 Linux에도 SQL Server의 모든 버전에서 실행할 수 있습니다. 함수 또는 추가 구성이 없습니다 설치 되어 있어야 합니다. 즉, 다른 곳에서 모델을 학습, SQL Server에서 저장 한 다음 현재까지 오른쪽을 호출 하지 않고 점수 매기기를 수행 있습니다. 방법론 점수 매기기에 대 한 자세한 내용은 참조 하십시오. [실시간 점수 매기기 또는 기본 점수 매기기를 수행 하는 방법을](r/how-to-do-realtime-scoring.md)합니다. |
 | CU 2 | 버그 수정 및 패키지 새로 고침 있지만 공지 새로운 기능입니다. |
@@ -45,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 
 | 릴리스 |기능 업데이트 |
 |---------|----------------|
-| CU | [**실시간 점수 매기기** ](real-time-scoring.md) 최적화 된 이진 형식으로 저장 된 모델을 읽고은 R 런타임을 호출 하지 않고 예측을 생성할 네이티브 c + + 라이브러리에 의존 합니다. 이렇게 하면 점수 매기기 작업 훨씬 빠릅니다. 실시간 점수 매기기와 저장된 프로시저를 실행할 수도 있고 실시간 R 코드에서 점수 매기기를 수행할 수 있습니다. 실시간 점수 매기기는 최신 버전에는 인스턴스를 업그레이드 하는 경우 SQL Server 2016 가능 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]합니다. |
+| CU 추가 | [**실시간 점수 매기기** ](real-time-scoring.md) 최적화 된 이진 형식으로 저장 된 모델을 읽고은 R 런타임을 호출 하지 않고 예측을 생성할 네이티브 c + + 라이브러리에 의존 합니다. 이렇게 하면 점수 매기기 작업 훨씬 빠릅니다. 실시간 점수 매기기와 저장된 프로시저를 실행할 수도 있고 실시간 R 코드에서 점수 매기기를 수행할 수 있습니다. 실시간 점수 매기기는 최신 버전에는 인스턴스를 업그레이드 하는 경우 SQL Server 2016 가능 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]합니다. |
 | 초기 릴리스 | [**데이터베이스에서 분석에 대 한 R 통합**](r/sql-server-r-services.md)합니다. <br/><br/> 호출 R에 대 한 R 패키지는 T-SQL, 그 반대로 작동 합니다. 조정 구성 요소 부분으로 구성 데이터를 청크 하 여 규모에 R 분석을 제공 하는 RevoScaleR 함수 및 분산 처리 및 결과 집계를 관리 합니다. SQL Server 2016 R Services (In-database)에서 RevoScaleR 엔진 brining 데이터 및 분석에서 동일한 처리 컨텍스트는 데이터베이스 엔진 인스턴스 통합 되어 있습니다. <br/><br/>T-SQL과 R 통합을 통해 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다. 이 저장된 프로시저를 사용 하 여 모든 R 코드를 호출할 수 있습니다. 이 보안 인프라 보냈습니다 모델 및 간단한 저장된 프로시저를 사용 하 여 응용 프로그램에서 호출할 수 있는 스크립트의 엔터프라이즈 수준의 배포를 사용 합니다. R 프로세스 및 MPI 링 병렬화 SQL는 스트리밍 데이터 추가 성능 향상. <br/><br/>T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-sql.md) 수행 하는 함수 [기본 점수 매기기](sql-native-scoring.md) 필요한 이진 형식으로 이전에 저장 된 미리 학습 된 모델에 있습니다.|
 
 ## <a name="linux-support-roadmap"></a>Linux 지원 로드맵
@@ -53,6 +55,12 @@ ms.lasthandoff: 04/16/2018
 기계 학습 Python 또는 R에서 데이터베이스를 사용 하 여 Linux에서 SQL Server에서 현재 지원 되지 않습니다. 이후 릴리스에서 공지를 찾습니다.
 
 그러나 Linux에서 수행할 수 있습니다 [기본 점수 매기기](sql-native-scoring.md) T-SQL 예측 함수를 사용 하 여 합니다. 기본 점수 매기기를 호출 하거나 R 런타임도 요구 하지 않고 매우 빠르게 미리 학습 된 모델에서 점수를 매길 수 있습니다. 즉, Linux에서 SQL Server를 사용 하 여 클라이언트 응용 프로그램 역할을 매우 빠르게 예측을 생성할 수 있습니다.
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Azure SQL 데이터베이스 로드맵
+
+Azure SQL 데이터베이스에 R에 대 한 지원은 제한 되어: 프리미엄 계층에서 만든 서비스에서 중앙 미국, 서 부에만 사용할 수 있습니다. 확장 된 검사, Python 지원을 포함 하는 이후 버전에서에 따라 수 있습니다. 그러나이 시간의 날짜 없음 출시 될 예정된입니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

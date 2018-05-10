@@ -1,27 +1,19 @@
 ---
-title: "Power Pivot 관리 대시보드 및 사용 현황 데이터 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 관리 대시보드 및 사용 현황 데이터 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 86abcef9066cbe153ef30441cb7034cb4b924650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 관리 대시보드 및 사용 데이터
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 위쪽에 표시된 현재 서비스 응용 프로그램의 이름(예: **기본 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**)을 기록해 둡니다.  
   
-2.  **동작** 대시보드에서 **서비스 응용 프로그램을 나열합니다.**를 클릭합니다.  
+2.  **동작** 대시보드에서 **서비스 응용 프로그램을 나열합니다.** 를 클릭합니다.  
   
 3.  관리 대시보드 보고서를 보려는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 이름을 클릭합니다.  
   

@@ -1,25 +1,19 @@
 ---
 title: 1103을 통해 수준을 1050에서 테이블 형식 개체 모델 이해 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: reference
-ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
-caps.latest.revision: 10
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e42cdbead6dbb77a9a0e0a50b34676eb76405b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77e602c40567fb36cbca8a9d441635711328c82b
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>수준 1050-1103에서 테이블 형식 개체 모델 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

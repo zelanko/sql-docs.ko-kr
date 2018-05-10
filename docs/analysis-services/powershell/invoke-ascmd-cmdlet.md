@@ -1,30 +1,23 @@
 ---
-title: "호출 ASCmd cmdlet | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 호출 ASCmd cmdlet | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
-caps.latest.revision: "15"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac32e81d735b9fe6ea3641b88481d69dd3bddc66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd cmdlet
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]데이터베이스 관리자를 XMLA 스크립트, MDX (Multidimensional Expressions), 데이터 마이닝 Extensions (DMX) 문 또는 TMSL Tabular Model Scripting Language () 스크립트를 실행할 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  데이터베이스 관리자는 이 cmdlet을 사용하여 XMLA 스크립트, MDX(Multidimensional Expression), DMX(Data Mining Extension) 문 또는 TMSL(Tabular Model Scripting Language) 스크립트를 실행할 수 있습니다.  
   
  TMSL은 SQL Server 2016 Analysis Services 인스턴스의 테이블 형식 서버 모드에만 사용할 수 있습니다.  
   
@@ -195,7 +188,7 @@ ms.lasthandoff: 01/08/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="commonparameters"></a>\<일반 매개 변수 >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  이 cmdlet은 공통 매개 변수 -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer 및 -OutVariable을 지원합니다. 자세한 내용은 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)를 참조하세요.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  
@@ -204,7 +197,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |입력|PSObject|  
-|출력|String|  
+|출력|문자열|  
   
 ## <a name="example-1-xmla-input-file"></a>예 1(XMLA 입력 파일)  
   

@@ -1,31 +1,23 @@
 ---
-title: "구성 설정 참조 (SharePoint 용 파워 피벗) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 구성 설정 참조 (SharePoint 용 파워 피벗) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4c3c7b19acab1757f8f691c6a32afdb96445b83a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>구성 설정 참조(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 SharePoint 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 의해 사용되는 구성 설정에 대한 참조 설명서를 제공합니다. PowerShell 스크립트를 사용하여 서버를 구성하거나 특정 설정에 대한 정보를 찾아보려는 경우 이 항목의 정보가 자세한 설명을 제공합니다.  
+  이 항목에서는 SharePoint 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 의해 사용되는 구성 설정에 대한 참조 설명서를 제공합니다. PowerShell 스크립트를 사용하여 서버를 구성하거나 특정 설정에 대한 정보를 찾아보려는 경우 이 항목의 정보가 자세한 설명을 제공합니다.  
   
  구성 설정은 각 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 설정됩니다. 팜 내에서 동일한 물리적 서비스 인스턴스의 독립적 논리 인스턴스를 구성하는 방식으로 여러 서비스 응용 프로그램을 만들 수 있습니다. 구성 설정은 사용자가 구성하는 각 서비스 응용 프로그램에 대해 만들어지는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 응용 프로그램 데이터베이스에 저장됩니다.  
   

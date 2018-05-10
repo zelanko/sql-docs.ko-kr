@@ -1,27 +1,19 @@
 ---
-title: "Powerpivot 상태 규칙 구성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Powerpivot 상태 규칙 구성 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 854eb1c57531b2aa620e668f78e2eb32f75d0192
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>PowerPivot 상태 규칙 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,27 +72,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      CPU 리소스 할당 부족(기본값: 80%)  
      이 상태 규칙은 Analysis Services 서버 프로세스(msmdsrv.exe)에서 사용하는 CPU 리소스가 데이터 컬렉션 간격 설정을 통해 지정된 대로 4시간 이상 80% 또는 80% 위로 유지되는 경우에 트리거됩니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services에는 요청한 작업을 수행할 수 있는 충분한 CPU 리소스가 없습니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services에는 요청한 작업을 수행할 수 있는 충분한 CPU 리소스가 없습니다.** 규칙 정의에 해당합니다.  
   
      시스템의 CPU 리소스 부족(기본값: 90%)  
      이 상태 규칙은 서버의 CPU 리소스가 데이터 컬렉션 간격 설정을 통해 지정된 대로 4시간 이상 90% 또는 90% 위로 유지되는 경우에 트리거됩니다. 전체 CPU 사용률은 CPU 사용량을 서버 상태의 측정값으로 모니터링하는 상태 기반 부하 분산 알고리즘의 일부로 측정됩니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 전체 CPU 사용량이 너무 높습니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 전체 CPU 사용량이 너무 높습니다.** 규칙 정의에 해당합니다.  
   
      메모리 임계값 부족(기본값: 5%)  
      SharePoint  응용 프로그램 서버에서 SQL  Server  Analysis  Services  인스턴스는 항상 소량의 사용되지 않는 메모리를 가지고 있어야 합니다. 서버 작업은 대부분 메모리 집중형이기 때문에 서버는 최대 한도까지 실행되지 않을 때 최상의 성능을 발휘합니다. 5%의 사용되지 않는 메모리는 Analysis  Services에 할당된 메모리의 백분율로 계산됩니다. 예를 들어 총 메모리가 200GB이고 Analysis  Services에 80%(160GB)가 할당된 경우 5%의 사용되지 않는 메모리는 160GB의 5%인 8GB입니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services에는 요청한 작업을 수행할 수 있는 충분한 메모리가 없습니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services에는 요청한 작업을 수행할 수 있는 충분한 메모리가 없습니다.** 규칙 정의에 해당합니다.  
   
      최대 연결 수(기본값: 100)  
      이 상태 규칙은 Analysis Services 인스턴스에 대한 연결 수가 데이터 컬렉션 간격 설정을 통해 지정된 대로 4시간 이상 100개 연결 또는 100개 연결 위로 유지되는 경우에 트리거됩니다. 이 기본값은 서버의 하드웨어 사양 또는 사용자 작업을 기반으로 하지 않고 임의로 지정되므로 사용자 환경의 서버 용량 및 사용자 작업에 따라 값을 높이거나 낮출 수 있습니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 연결 수가 많으므로 현재 로드를 처리하기 위해 서버를 더 많이 배포해야 합니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 연결 수가 많으므로 현재 로드를 처리하기 위해 서버를 더 많이 배포해야 합니다.** 규칙 정의에 해당합니다.  
   
      디스크 공간 부족(기본값: 5%)  
      디스크 공간은 데이터베이스가 요청될 때마다 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터를 캐시하는 데 사용됩니다. 이 규칙을 사용하여 디스크 공간이 부족한 때를 알 수 있습니다. 기본적으로 이 상태 규칙은 백업 폴더가 있는 디스크 드라이브의 디스크 공간이 5%  미만일 때 트리거됩니다. 디스크 사용에 대한 자세한 내용은 [디스크 공간 사용 구성&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)를 클릭합니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터가 캐시된 드라이브의 디스크 공간이 부족합니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터가 캐시된 드라이브의 디스크 공간이 부족합니다.** 규칙 정의에 해당합니다.  
   
      데이터 컬렉션 간격(시간)  
      상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용 데이터를 검색하여 사용자 연결 수, 디스크 공간 사용, CPU 및 메모리 사용률을 평가합니다.  
@@ -122,7 +114,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      로드 대 연결 비율(기본값: 20%)  
      이 상태 규칙은 로드 이벤트 수가 연결 이벤트 수보다 큰 경우 트리거됩니다. 이러한 경우는 서버가 데이터베이스를 너무 빠르게 언로드하거나 캐시 감소 설정이 너무 가파를 때 발생할 수 있습니다.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 연결에 대한 로드 이벤트의 비율이 너무 높습니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 연결에 대한 로드 이벤트의 비율이 너무 높습니다.** 규칙 정의에 해당합니다.  
   
      데이터 컬렉션 간격(기본값: 4시간)  
      상태 규칙을 트리거하는 데 사용되는 숫자를 계산하는 데이터 컬렉션 기간을 지정할 수 있습니다. 시스템이 일관성 있게 모니터링되는 경우에도 상태 규칙 경고를 트리거하는 데 사용되는 임계값은 미리 정의된 간격으로 생성된 데이터를 사용하여 계산됩니다. 기본 간격은 4시간입니다. 서버에서는 이전 4시간 동안 수집된 시스템 및 사용 데이터를 검색하여 로드 대 수집 비율을 평가합니다.  
@@ -132,7 +124,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      사용 현황 데이터 수집에 대한 자세한 내용은 [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조하세요.  
   
-     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 사용 데이터가 예상된 빈도로 업데이트되지 않습니다.**규칙 정의에 해당합니다.  
+     이 구성 설정은 **문제 및 솔루션 검토** 페이지의 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 사용 데이터가 예상된 빈도로 업데이트되지 않습니다.** 규칙 정의에 해당합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [디스크 공간 사용 구성&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   

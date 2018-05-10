@@ -1,42 +1,23 @@
 ---
-title: "ASSL 개체 및 개체 특징 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- reference exceptions [Analysis Services Scripting Language]
-- ASSL, objects
-- inheritance [Analysis Services Scripting Language]
-- localized names [Analysis Services Scripting Language]
-- objects [Analysis Services Scripting Language]
-- names [Analysis Services Scripting Language]
-- Analysis Services Scripting Language, objects
-- expansion [Analysis Services Scripting Language]
-ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 
-author: Minewiskan
+title: ASSL 개체 및 개체 특징 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 17b88ba72205f2364a65f2d6cc88fe19b820985e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 개체 및 개체 특징
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, 명명, 확장 및 처리에 관한 특정 지침을 따릅니다.  
+  ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, 명명, 확장 및 처리에 관한 특정 지침을 따릅니다.  
   
 ## <a name="object-groups"></a>개체 그룹  
  모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체는 XML 표현이 있습니다. 개체는 다음과 같은 두 그룹으로 나뉩니다.  
@@ -107,6 +88,6 @@ ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, �
 ## <a name="object-processing"></a>개체 처리  
  ASSL에는 읽기 전용 요소 또는 속성이 포함 됩니다 (예를 들어 **LastProcessed**)에서 읽을 수 있는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 있지만 명령 스크립트가 인스턴스에 제출 될 때는 생략 되는 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 경고나 오류 없이 읽기 전용 요소의 수정된 값을 무시합니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 유효성 검사 오류를 발생시키지 않고 적절하지 않거나 관련이 없는 속성을 무시합니다. 예를 들어, Y 요소의 값이 특정 값인 경우에만 X 요소가 존재해야 하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 Y 요소의 값에 대해 X 요소의 유효성을 검사하는 대신 X 요소를 무시합니다.  
+ 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 유효성 검사 오류를 발생시키지 않고 적절하지 않거나 관련이 없는 속성을 무시합니다. 예를 들어, Y 요소의 값이 특정 값인 경우에만 X 요소가 존재해야 하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 Y 요소의 값에 대해 X 요소의 유효성을 검사하는 대신 X 요소를 무시합니다.  
   
   

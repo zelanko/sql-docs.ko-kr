@@ -1,102 +1,98 @@
 ---
-title: 기본 SQL Server에 대 한 기계 학습에 대 한 패키지 라이브러리 | Microsoft Docs
+title: 기본 SQL Server R 및 SQL Server 기계 학습의 R 및 Python 패키지 라이브러리 | Microsoft Docs
+description: SQL Server R 서비스의 경우 R 서버 컴퓨터 학습 Services (In-database)에 대 한 학습 Server 컴퓨터 (독립 실행형)으로 설치 되는 R 및 Python 패키지
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 64b085c2314e4c97694e91924cb15d43315143e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>기본 SQL Server에 대 한 기계 학습에 대 한 패키지 라이브러리
+# <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server에 기본 R 및 Python 패키지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 R 및 SQL Server와 함께 설치 된 Python에 대 한 기본 라이브러리를 설명 합니다. 이 문서는 이러한 라이브러리에 대 한 기본 위치를 제공 하 고 패키지 및 R의 버전을 확인 하는 방법을 설명 또는 Python 각 인스턴스 라이브러리에 설치 됩니다.
+이 문서에서는 패키지 라이브러리, 위치 및 버전의 SQL Server와 함께 설치 된 R 및 Python 패키지에 설명 합니다. 
 
 ## <a name="using-the-default-instance-library"></a>기본 인스턴스 라이브러리를 사용 하 여
 
-기계 학습 SQL Server를 설치 하면 단일 패키지 라이브러리를 설치 하는 각 언어에 대 한 인스턴스 수준에서 만들어집니다. SQL Server는 다른 라이브러리에 설치 된 패키지를 액세스할 수 없습니다.
+기계 학습 SQL Server를 설치 하면 단일 패키지 라이브러리를 설치 하는 각 언어에 대 한 인스턴스 수준에서 만들어집니다. 
 
-원격 클라이언트에서 서버로 연결 server 계산 컨텍스트에서 실행 하려는 모든 Python 또는 R 코드 인스턴스 라이브러리에 설치 된 패키지에만 사용할 수 있습니다.
+모든 스크립트 또는 코드는 실행에서-SQL Server 데이터베이스 인스턴스 라이브러리에서 함수를 로드 해야 합니다. SQL Server는 다른 라이브러리에 설치 된 패키지를 액세스할 수 없습니다. 이 원격 클라이언트에도 적용 됩니다. 원격 클라이언트에서 서버를 연결할 때 서버 계산 컨텍스트에서 실행 하려는 모든 Python 또는 R 코드 인스턴스 라이브러리에 설치 된 패키지에만 사용할 수 있습니다.
 
 기본 인스턴스 라이브러리는 서버 자산을 보호 하려면 SQL Server와 함께 등록 되 고 컴퓨터 관리자만 수정할 수 있는 보안된 폴더에 설치 됩니다. 컴퓨터의 소유자가 아니거나,이 라이브러리에 패키지를 설치 하려면 관리자 로부터 권한을 부여 받아야 할 수 있습니다. 
 
 컴퓨터를 소유 하는 경우에 인스턴스 라이브러리에 패키지를 추가 하기 전에 모든 특정 Python 또는 R 패키지를 서버 환경에서의 유용성을 고려해 야 합니다. 여러 버전에 대 한 필요성 및 패키지 파일의 크기와 같은 요소를 뿐만 아니라 패키지 네트워크 또는 인터넷이 필요한 지 여부 고려 액세스 합니다.
 
-### <a name="sql-server"></a>SQL Server
+### <a name="in-database-engine-instance-file-paths"></a>데이터베이스 엔진 인스턴스 파일 경로
+
+다음 표에서 엔진 인스턴스 조합 버전 및 데이터베이스에 대 한 Python 및 R의 파일 위치를 보여줍니다. 
 
 |버전 | 인스턴스 이름|기본 경로|
-|------|------|------|
-| SQL Server 2016 |기본 인스턴스(default instance)|`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`|
-| SQL Server 2016 |명명된 인스턴스(named instance) |`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library`|
-| SQL Server 2017 R|기본 인스턴스(default instance) |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` |
-| SQL Server 2017 R|명명된 인스턴스(named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` |
-| SQL Server 2017 python |기본 인스턴스(default instance) |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
-| SQL Server 2017 python|명명된 인스턴스(named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
+|--------|--------------|------------|
+| SQL Server 2016 |기본 인스턴스(default instance)| C:\Program Files\Microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2016 |명명된 인스턴스(named instance) | C:\Program Files\Microsoft SQL Server\MSSQL13. < c e _ > \R_SERVICES\library|
+| SQL Server 2017 R|기본 인스턴스(default instance) | C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 R|명명된 인스턴스(named instance)| C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MyNamedInstance\R_SERVICES\library |
+| SQL Server 2017 python |기본 인스턴스(default instance) | C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\library |
+| SQL Server 2017 python|명명된 인스턴스(named instance)| C:\Program Files\Microsoft SQL Server\MSSQL14. < c e _ > \PYTHON_SERVICES\library |
 
-### <a name="r-server-standalone-or-machine-learning-server-standalone"></a>R 서버 (독립 실행형) 또는 컴퓨터 학습 서버 (독립 실행형)
+### <a name="standalone-server-file-paths"></a>독립 실행형 서버 파일 경로 
 
-이 표에서 SQL Server 설치 프로그램을 사용 하 여 독립 실행형 서버를 설치할 때 이진 파일의 기본 경로 보여 줍니다. 
+다음 표에서 SQL Server 2016 R 서버 (독립 실행형) 또는 SQL Server 2017 컴퓨터 학습 서버 (독립 실행형) 서버를 설치할 때 이진 파일의 기본 경로 나열 합니다. 
 
 |버전| 설치|기본 경로|
 |------|------|------|
-| SQL Server 2016|R Server (Standalone)| |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|기계 학습 R 통한 서버 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|기계 학습 python 서버 |`C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER`|
+| SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|기계 학습 R 통한 서버 |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|기계 학습 python 서버 |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
-기본 경로 다른 별도 Windows installer를 사용 하 여 기계 학습 서버 또는 Microsoft R Server를 설치 하는 경우: 일반적으로 같은 `C:\Program Files\Microsoft\R Server\R_SERVER`합니다. 참조 항목:
- 
-+ [Windows에 대 한 서버를 학습 하는 컴퓨터를 설치 합니다.](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-+ [Windows 용 R Server 9.1 설치](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+> [!NOTE]
+> Microsoft R Server의 독립 실행형 설치는 이름이 비슷한 하위 폴더 및 파일에 있는 다른 폴더를 찾은 경우 아마도 필요 또는 [기계 학습 서버](https://docs.microsoft.com/machine-learning-server/)합니다. 서버 제품에는 다른 설치 관리자 및 경로 (즉, C:\Program Files\Microsoft\R Server\R_SERVER 또는 C:\Program Files\Microsoft\ML SERVER\R_SERVER)이 있습니다. 자세한 내용은 참조 [Windows 용 컴퓨터 학습 서버 설치](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) 또는 [Windows 용 R 서버 9.1 설치](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)합니다.
 
 ## <a name="what-is-included-in-a-default-installation"></a>기본 설치에 포함 된 항목
 
-이 섹션에서는 기본적으로 설치 하는 R, Python 기능의 요약 합니다.
+이 섹션에서는 기본 설치에 포함 된 R 및 Python 기능을 요약 합니다.
 
-### <a name="default-r-installation-for-sql-server"></a>SQL Server에 대 한 기본 R 설치
+### <a name="r-components"></a>R 구성 요소
 
-기본적으로 R **기본** 패키지도 설치 합니다. 과 같은 패키지에서 제공 하는 핵심 기능을 포함 하는 기본 패키지 `stats` 및 `utils`합니다.
+구성 요소에는 Microsoft의 오픈 소스 R에 분포 포함 [Microsoft R Open](https://mran.microsoft.com/open)합니다. 기본 R 패키지와 같은 핵심 기능이 포함 되어 **stats** 및 **유틸리티**합니다. 실행할 수 있습니다 `installed.packages(priority = "base")` 패키지 목록을 반환 합니다. R의 기본 설치에는 다양 한 샘플 데이터 집합 및 관리자 권한 (경량 대화형 편집기) 및 (R 명령 프롬프트) rterm이 같은 표준 R 도구 포함 됩니다.
 
-R의 기본 설치에는 다양 한 샘플 데이터 집합 및 관리자 권한 (경량 대화형 편집기) 및 (R 명령 프롬프트) rterm이 같은 표준 R 도구 포함 됩니다.
+Microsoft 패키지에 포함 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 원격 계산 컨텍스트, 스트리밍, 병렬 데이터 가져오기 및 변환에 대 한 rx 함수의 실행에 대 한 모델링, 시각화 및 분석 합니다. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) 추가 R에서 모델링 하는 기계 학습 다른 패키지에 포함 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R에서 MDX 문을 작성 하는 것에 대 한 및 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) 저장된 프로시저에서 R 스크립트를 포함 하는 데 있습니다.
 
-SQL Server 2016 또는 SQL Server 2017에서 R의 설치도 포함 되어는 **RevoScaleR** 패키지 및 관련된 향상 된 패키지 및 공급자가 원격 계산 컨텍스트를 지 원하는 스트리밍, 병렬 rx 함수를 실행 하 고 다른 여러 기능이 있습니다.
 
-RevoScaleR 패키지를 업그레이드 하기 위해 사용 하 여 하거나 바인딩 방금 기계 학습 구성 요소를 업그레이드 또는 패치 또는 SQL Server의 최신 버전으로 인스턴스를 업그레이드 합니다.
+|릴리스             | R 버전       | Microsoft 패키지    |
+|--------------------|-----------------|-----------------------|
+| SQL Server 2016 R Services | 3.2.2   | RevoScaleR을 sqlrutil  |
+| SQL Server 2017 Machine Learning Services| 3.4.3 | RevoScaleR MicrosoftML, olapR, sqlrutil|
 
-+ 향상된 된 R 기능 개요를 참조 하세요. [컴퓨터 학습 서버에 대 한](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
+최신 수명 주기 지원 정책에 바인딩하여 SQL Server 2016 R 서비스에 패키지 및 사전 설치 된 모델을 추가할 수 있습니다. 바인딩 서비스 모델을 변경합니다. 기본적으로 초기 설치 후 R 패키지 새로 고쳐집니다 서비스 팩과 누적 업데이트를 통해. 추가 패키지 및 R 핵심 구성 요소 전체 버전 업그레이드 (SQL Server 2016 SQL Server 2017)에서 제품 업그레이드를 통해만 수행할 수 또는 R 바인딩하여 Microsoft 학습 서버 컴퓨터를 지원 합니다. 자세한 내용은 참조 [SQL Server의 구성 요소를 업그레이드 R 및 Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
-+ 설치 하는 클라이언트 컴퓨터로 RevoScaleR 라이브러리를 다운로드 하려면 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+### <a name="python-components"></a>Python 구성 요소
 
-### <a name="default-python-installation-for-sql-server"></a>SQL Server에 대 한 기본 Python 설치
+SQL Server 2017 Python 구성 요소를 추가합니다. Python 언어 옵션을 선택 하면 Anaconda 배포 설치 됩니다. Python 코드 라이브러리 외에도 표준 설치 예제 데이터, 단위 테스트 및 예제 스크립트를 포함합니다. 
 
-기계 학습 기능 및 Python 언어 옵션을 선택 하면 Anaconda 배포 설치 되어 있습니다. 정확한 버전을 설치한 상태는 SQL Server의 버전 및 컴퓨터 학습 서버 설치 관리자를 사용 하 여 인스턴스 업그레이드 여부에 따라 달라 집니다.
+Microsoft 패키지에 포함 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 동일 Python RevoScaleR, 스트리밍, 병렬 데이터 가져오기 및 변환, 모델링, 시각화 및 분석에 대 한 rx 함수의 실행 합니다. 다른 Python 패키지는 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생 하기 위한 기능 추출을 위해.
 
-|릴리스| Anaconda 버전| 기타 변경 내용|
-|------|------|------|
-| SQL Server 2017 RTM| 3.5.2| New: revoscalepy|
-| 2017 년 9 월 9.2.1 컴퓨터 학습 서버를 통해 업데이트| 4.2 anaconda| revoscalepy에 대 한 업데이트 |
-| SQL Server 2017 CU3| 4.2 anaconda| revoscalepy에 대 한 업데이트 |
+SQL Server 2017 기계 학습은 R 및 Python 지원 모두 첫 번째 릴리스입니다.
 
-Python 코드 라이브러리 외에도 표준 설치 예제 데이터, 단위 테스트 및 예제 스크립트를 포함합니다.
+|릴리스             | Anaconda 버전| Microsoft 패키지    |
+|--------------------|-----------------|-----------------------|
+| SQL Server 2017 Machine Learning Services  | 4.2를 통해 Python 3.5 | revoscalepy, microsoftml |
 
-## <a name="restrictions-and-known-issues"></a>제한 사항 및 알려진된 문제
+초기 설치 후 Python 패키지는 서비스 팩 및 누적 업데이트를 통해 새로 고쳐지지 않는 정식 버전 업그레이드만 가능한 Python 지원 Microsoft 학습 서버 컴퓨터에 바인딩하여. 자세한 내용은 참조 [SQL Server의 구성 요소를 업그레이드 R 및 Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
-SQL Server에서 실행 되는 모든 솔루션 צ ְ ײ **만** 인스턴스와 연결 된 기본 라이브러리에서 설치 된 패키지입니다.
-
-바인딩을 사용 하 여 인스턴스에 R 구성 요소를 업그레이드 하는 경우 경로 인스턴스 라이브러리를 변경할 수 있습니다. SQL Server에서 현재 사용 되는 라이브러리 경로 확인 해야 합니다.
-
-## <a name="administrative-permissions-required-for-package-installation"></a>패키지 설치에 필요한 관리 권한
+## <a name="administrative-permissions-for-package-installation"></a>패키지 설치에 대 한 관리 권한
 
 패키지 설치에 필요한 사용 권한에 SQL Server 2016 및 SQL Server 2017 사이 변경 되었습니다.
 
 + SQL Server 2016에서 관리 액세스 권한을 새 R 패키지의 설치에 필요한 경우
-
-+ SQL Server 2017 년 1에서 R와 Python에 대 한 관리자 권한으로 패키지를 설치 하 계속 수 있으며,이 가장 쉬운 방법은 아마도 합니다.
++ SQL Server 2017 년 1에서 R와 Python에 대 한 관리자 권한으로 패키지를 설치 하 계속 수 있으며,이 가장 쉬운 방법은 아마도 합니다. 
 
     DDL 문, 외부 라이브러리 만들기는 R 도구를 사용 하지 않고 패키지를 설치 하려면 데이터베이스 관리자를 있습니다. 
 
@@ -104,8 +100,14 @@ SQL Server에서 실행 되는 모든 솔루션 צ ְ ײ **만** 인스턴스와
 
 ### <a name="user-libraries-are-not-supported"></a>사용자 라이브러리는 지원 되지 않습니다.
 
-보안 된 위치에 패키지를 종종 설치할 수 없는 사용자가 사용자 라이브러리에는 패키지를 설치에 의존 합니다. 그러나 SQL Server 환경에서 가능한 아닙니다. 종종 파일 시스템 액세스는 서버에서 제한 됩니다.
+보안 된 위치에 패키지를 종종 설치할 수 없는 사용자가 사용자 라이브러리에는 패키지를 설치에 의존 합니다. 그러나 SQL Server 환경에서 가능한 아닙니다. 서버에서 파일 시스템 액세스를 제한 일반적으로 되 고 서버에서 사용자 문서 폴더에 대 한 관리자 권한 및 액세스 해야 하는 경우에 SQL Server에서 실행 되는 외부 스크립트 런타임 인스턴스 외부의 기본 설치 된 모든 패키지에 액세스할 수 없습니다. 라이브러리입니다. 그러나 해결 방법이 가능한 있습니다. 사용자 라이브러리와 관련 된 문제를 해결 하는 방법에 대 한 팁을 참조 하십시오. [R 사용자 라이브러리에 대 한 대안](packages-installed-in-user-libraries.md)합니다.
 
-서버에서 사용자 문서 폴더에 대 한 관리자 권한 및 액세스 해야 하는 경우에 SQL Server에서 실행 되는 외부 스크립트 런타임 기본 인스턴스 라이브러리 외부 설치 된 모든 패키지를 액세스할 수 없습니다.
+## <a name="next-steps"></a>다음 단계
 
-사용자 라이브러리와 관련 된 문제를 해결 하는 방법에 대 한 팁을 참조 하십시오. [사용자 라이브러리에 설치 된 패키지](packages-installed-in-user-libraries.md)합니다.
++ [패키지 정보 가져오기](determine-which-packages-are-installed-on-sql-server.md)
++ [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
++ [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
++ [원격 R 패키지 관리를 사용 하도록 설정](r-package-how-to-enable-or-disable.md)
++ [R 패키지 관리에 대 한 RevoScaleR 함수](use-revoscaler-to-manage-r-packages.md)
++ [R 패키지 동기화](package-install-uninstall-and-sync.md)
++ [로컬 R 패키지 저장소에 대 한 miniCRAN](create-a-local-package-repository-using-minicran.md)

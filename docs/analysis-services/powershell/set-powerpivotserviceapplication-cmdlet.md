@@ -1,31 +1,23 @@
 ---
 title: Set-powerpivotserviceapplication cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0b25a6f38a4de815ee3d8b39defcc95f0ad065b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Set-PowerPivotServiceApplication cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 속성을 설정합니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 속성을 설정합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -45,7 +37,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="-identity-spgeminiserviceapplicationpipebind"></a>-Identity \<SPGeminiServiceApplicationPipeBind>  
+### <a name="-identity-spgeminiserviceapplicationpipebind"></a>Id \<SPGeminiServiceApplicationPipeBind >  
  업데이트할 서비스 응용 프로그램을 지정합니다. 유형은 유효한 GUID 또는 유효한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 개체의 인스턴스여야 합니다. Get-PowerPivotServiceApplication을 사용하여 개체 인스턴스를 반환할 수 있습니다.  
   
 |||  
@@ -183,7 +175,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-datarefreshmaxhistory-int"></a>-DataRefreshMaxHistory \<int>  
+### <a name="-datarefreshmaxhistory-int"></a>-DataRefreshMaxHistory \<int >  
  데이터 새로 고침 기록을 보관할 기간을 지정합니다. 이 정보는 데이터 새로 고침을 사용하는 각 통합 문서에 대해 유지되는 데이터 새로 고침 기록 페이지에 표시되며 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에도 표시됩니다. 기본값은 365일입니다.  
   
 |||  

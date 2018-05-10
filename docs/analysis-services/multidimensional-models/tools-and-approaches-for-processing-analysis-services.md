@@ -1,34 +1,23 @@
 ---
-title: "도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- process [Analysis Services]
-- processing [Analysis Services]
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 57600dd49938217fa3bf65cff86f64e03bb16b52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
+  처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
   
  Analysis Services 시스템 관리자는 다음과 같은 방법을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 처리를 실행하고 모니터링할 수 있습니다.  
   
@@ -53,7 +42,7 @@ ms.lasthandoff: 02/23/2018
  처리는 다양하게 구성 가능한 작업으로, 개체 수준에서 전체 처리가 발생하는지 증분 처리가 발생하는지 결정하는 일련의 처리 옵션으로 제어됩니다. 처리 옵션 및 개체에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 및 [Analysis Services 개체 처리](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 처리, 테이블 또는 파티션 &#40; Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 및 [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)합니다.  
+>  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 [데이터베이스 처리, 테이블 또는 파티션 &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 및 [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)합니다.  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   

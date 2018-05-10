@@ -2,7 +2,7 @@
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 641bb062bc450f83a79ae3a5fa8d9f0d6dcfde94
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -654,7 +654,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
-- [Generate Tasks](작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
+- [Generate Tasks]\(작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
