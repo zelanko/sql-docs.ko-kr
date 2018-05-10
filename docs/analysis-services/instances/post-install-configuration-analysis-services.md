@@ -1,31 +1,23 @@
 ---
-title: "설치 후 구성 (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining - "setup-install"
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 
-author: Minewiskan
+title: 설치 후 구성 (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6993aa4cea9c21b41e71048497cf524335b72366
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
+  Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)참조).  
   
  이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리 하는 방법에 대 한 자세한 내용은 다음이 링크에서 찾을 수 있습니다: [다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 및 [테이블 형식 모델 데이터베이스](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)합니다.  
   

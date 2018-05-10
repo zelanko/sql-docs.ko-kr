@@ -1,34 +1,19 @@
 ---
-title: "AMO OLAP 기본 개체 프로그래밍 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 
-author: Minewiskan
+title: AMO OLAP 기본 개체 프로그래밍 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 기본 개체 프로그래밍
   복합 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 만드는 과정은 간단하지만 세부 사항에 주의를 기울여야 합니다. 이 항목에서는 OLAP 기본 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -168,7 +153,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>차원 처리  
  차원을 처리하는 과정은 <xref:Microsoft.AnalysisServices.Dimension> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다.  
   
- 차원 처리 작업은 해당 차원을 사용하는 모든 큐브에 영향을 줄 수 있습니다. 처리 옵션에 대 한 자세한 내용은 참조 하세요. [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 차원 처리 작업은 해당 차원을 사용하는 모든 큐브에 영향을 줄 수 있습니다. 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  다음 코드에서는 제공된 데이터베이스의 모든 차원에서 증분 업데이트를 수행합니다.  
   
@@ -255,7 +240,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>큐브 처리  
  큐브를 처리하는 과정은 <xref:Microsoft.AnalysisServices.Cube> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다. 큐브를 처리하면 큐브의 모든 측정값 그룹과 측정값 그룹의 모든 파티션도 처리됩니다. 큐브에서는 파티션이 유일하게 처리할 수 있는 개체이며, 처리 목적으로 제공되는 측정값 그룹은 유일한 파티션 컨테이너입니다. 큐브에 대해 지정된 처리 유형은 파티션에 전파됩니다. 큐브 및 측정값 그룹의 처리는 내부적으로 차원 및 파티션의 처리로 확인됩니다.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리 개체 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), 및 [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), 및 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  다음 코드에서는 지정된 데이터베이스의 모든 큐브에서 전체 처리를 수행합니다.  
   
@@ -265,7 +250,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">MeasureGroup 개체</a>  
+##  <a name="MG"></a> MeasureGroup 개체  
  측정값 그룹을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>MeasureGroup 만들기, 삭제 및 찾기  
@@ -422,7 +407,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>측정값 그룹 처리  
  측정값 그룹을 처리하는 과정은 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다. 측정값 그룹을 처리하면 측정값 그룹에 속한 모든 파티션도 처리됩니다. 측정값 그룹의 처리는 내부적으로 차원 및 파티션의 처리로 확인됩니다. 이 문서의 [파티션 처리](#ProcPart) 를 참조하십시오.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리 개체 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), 및 [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), 및 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  다음 코드에서는 제공된 큐브의 모든 측정값 그룹에서 전체 처리를 수행합니다.  
   
@@ -434,7 +419,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part">파티션 개체</a>  
+##  <a name="Part"></a> 파티션 개체  
  파티션을 관리하거나 처리하려면 <xref:Microsoft.AnalysisServices.Partition> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>파티션 만들기, 삭제 및 찾기  
@@ -488,7 +473,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 파티션 처리  
  파티션을 처리하는 과정은 <xref:Microsoft.AnalysisServices.Partition> 개체의 Process 메서드를 사용하는 것과 마찬가지로 간단합니다.  
   
- 처리 옵션에 대 한 자세한 내용은 참조 하세요. [처리 개체 &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) 및 [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 처리 옵션에 대 한 자세한 내용은 참조 [개체 처리 &#40;XMLA&#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) 및 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  다음 코드 예제에서는 지정된 측정값 그룹의 모든 파티션에서 전체 처리를 수행합니다.  
   
@@ -533,7 +518,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD">Aggregation 개체</a>  
+##  <a name="AD"></a> Aggregation 개체  
  집계를 디자인하여 하나 이상의 파티션에 적용하려면 <xref:Microsoft.AnalysisServices.Aggregation> 개체를 프로그래밍하십시오.  
   
 ### <a name="creating-and-dropping-aggregations"></a>집계 만들기 및 삭제  
@@ -573,9 +558,9 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  <xref:Microsoft.AnalysisServices>   
  [AMO 클래스 소개](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [다차원 모델 &#40; 처리 Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [논리적 아키텍처 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

@@ -1,38 +1,19 @@
 ---
-title: "다차원 모델 어셈블리 관리 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 다차원 모델 어셈블리 관리 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 89678cac9febb3adbed049e859876d646b3ddf82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +72,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  어셈블리의 경우 **PermissionSet** 개체에 **Assembly** 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 호스팅하지 않는 환경에는 엔터프라이즈, 컴퓨터 및 사용자라는 3가지 수준의 보안 정책이 이미 적용되어 있습니다. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 CLR을 호스트하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 응용 프로그램 도메인에 대해 설정됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 CLR을 호스팅하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 응용 프로그램 도메인에 대해 설정됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 수준 정책은 시스템 어셈블리에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 고정 정책과 사용자 어셈블리에 대한 사용자 지정 정책을 조합한 것입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 정책에서 사용자 지정 부분은 어셈블리 소유자가 각 어셈블리에 대한 3가지 권한 집합 중 어떤 것을 지정하는지에 따라 달라집니다.  
   

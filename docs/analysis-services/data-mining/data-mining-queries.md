@@ -1,37 +1,23 @@
 ---
-title: "데이터 마이닝 쿼리 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 마이닝 쿼리 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>데이터 마이닝 쿼리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음 작업을 수행할 수 있습니다.  
+  데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음 작업을 수행할 수 있습니다.  
   
 -   새 데이터에 모델을 적용하여 단일 또는 여러 예측을 수행합니다. 매개 변수나 일괄 처리로 입력 값을 제공할 수 있습니다.  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Understand"></a> 데이터 마이닝 쿼리 이해  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 다음과 같은 쿼리 유형을 지원합니다.  
   
--   [예측 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [예측 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      모델의 패턴을 기반으로 입력 데이터에서 추론하는 쿼리입니다.  
   
@@ -68,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
      모델 자체에 대한 메타데이터, 통계 및 기타 정보를 반환하는 쿼리입니다.  
   
--   [드릴스루 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [드릴스루 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      모델의 기본 사례 데이터나 모델에서 사용되지 않은 구조의 데이터까지 검색할 수 있는 쿼리입니다.  
   
@@ -149,13 +135,13 @@ ms.lasthandoff: 02/15/2018
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션의 항목에서는 데이터 마이닝 쿼리의 각 유형에 대해 자세히 소개하고 데이터 마이닝 모델에 대한 쿼리를 만드는 방법을 보여 주는 자세한 예의 링크를 제공합니다.  
   
- [예측 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [예측 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [데이터 정의 쿼리 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [데이터 정의 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)  
   

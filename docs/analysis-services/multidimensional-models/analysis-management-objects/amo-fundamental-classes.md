@@ -1,38 +1,19 @@
 ---
-title: "AMO 기본 클래스 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data sources [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-- AMO, data sources
-- Analysis Management Objects, data sources
-ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 기본 클래스 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-fundamental-classes"></a>AMO 기본 클래스
   AMO(Analysis Management Objects) 작업은 기본 클래스에서 시작합니다. 이러한 클래스를 통해 응용 프로그램에 사용할 나머지 개체의 환경을 설정합니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다.  
@@ -73,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  사용할 수 있는 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Database>의 <xref:Microsoft.AnalysisServices>를 참조하십시오.  
   
-##  <a name="DSandDSV">DataSource 및 DataSourceView 개체</a>  
+##  <a name="DSandDSV"></a> DataSource 및 DataSourceView 개체  
  DataSource는 Database 클래스에서 <xref:Microsoft.AnalysisServices.DataSourceCollection>을 사용하여 관리할 수 있습니다. <xref:Microsoft.AnalysisServices.DataSource> 개체에서 Add 메서드를 사용하여 <xref:Microsoft.AnalysisServices.DataSourceCollection>의 인스턴스를 만들 수 있습니다. 또한 <xref:Microsoft.AnalysisServices.DataSource> 개체에서 Remove 메서드를 사용하여 <xref:Microsoft.AnalysisServices.DataSourceCollection>의 인스턴스를 삭제할 수 있습니다.  
   
  <xref:Microsoft.AnalysisServices.DataSourceView> 개체는 Database 클래스의 <xref:Microsoft.AnalysisServices.DataSourceViewCollection> 개체에서 관리됩니다.  

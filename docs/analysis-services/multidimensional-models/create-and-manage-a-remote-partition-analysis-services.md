@@ -1,34 +1,23 @@
 ---
-title: "원격 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 원격 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
+  측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
   
  master 데이터베이스라는 큐브의 원격 파티션은 보조 데이터베이스라는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 원격 인스턴스에 있는 전용 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장됩니다.  
   
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
 5.  마스터 서버: 솔루션 탐색기에서 큐브 이름을 마우스 오른쪽 단추로 클릭하고 **처리** 를 선택하여 큐브를 전체 처리합니다.  
   
 ## <a name="administering-remote-partitions"></a>원격 파티션 관리  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원격 파티션의 병렬 및 순차적 처리를 지원합니다. 파티션이 정의된 master 데이터베이스는 큐브의 파티션 처리에 참여하는 모든 인스턴스 간의 트랜잭션을 조정합니다. 그런 다음 파티션을 처리한 모든 인스턴스에 처리 보고서가 전송됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]원격 파티션의 병렬 및 순차적 처리를 지원합니다. 파티션이 정의된 master 데이터베이스는 큐브의 파티션 처리에 참여하는 모든 인스턴스 간의 트랜잭션을 조정합니다. 그런 다음 파티션을 처리한 모든 인스턴스에 처리 보고서가 전송됩니다.  
   
  원격 파티션을 포함하는 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 단일 인스턴스에 있는 해당 파티션과 함께 관리할 수 있습니다. 하지만 원격 파티션에 대한 메타데이터는 파티션과 부모 큐브가 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스에서만 보고 업데이트할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 원격 인스턴스에서 원격 파티션을 보거나 업데이트할 수 없습니다.  
   
@@ -139,6 +128,6 @@ ms.lasthandoff: 02/15/2018
 >  원격 파티션 저장에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 응용 프로그램은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [파티션 &#40; Analysis Services-다차원 데이터 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

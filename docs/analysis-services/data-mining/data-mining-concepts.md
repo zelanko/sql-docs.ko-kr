@@ -1,45 +1,23 @@
 ---
-title: "데이터 마이닝 개념 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 데이터 마이닝 개념 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Analysis Services, data mining
-- cleaning data
-- predictive analytics
-- learning algorithms
-- data mining [Analysis Services], concepts
-- inductive learning
-- data mining [Analysis Services], about data mining
-- mining models [Analysis Services]
-- data access [Analysis Services]
-- machine learning algorithms [Analysis Services]
-- mining models [Analysis Services], about data mining
-- SSAS, data mining
-- Analysis Services, data mining
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7a625cb7ec0aa187a825dbc02b742d82afa83065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
+  데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
   
  이러한 패턴과 추세를 수집하여 *데이터 마이닝 모델*로 정의할 수 있습니다. 마이닝 모델은 다음과 같은 특정 시나리오에 적용할 수 있습니다.  
   
@@ -156,7 +134,7 @@ ms.lasthandoff: 02/15/2018
   
  모델을 프로덕션 환경에 배포하기 전에 모델의 효율성을 테스트해야 합니다. 또한 모델을 작성할 때는 일반적으로 각기 다른 구성으로 여러 모델을 만들고 모든 모델을 테스트하여 어떤 모델에서 문제 및 데이터에 대한 최상의 결과가 얻어지는지 확인합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 동일한 데이터에 대한 모든 모델의 성능을 정확하게 평가할 수 있도록 데이터를 학습 데이터 집합과 테스트 데이터 집합으로 분리하는 데 유용한 도구를 제공합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. 이 분할 방법은 마이닝 모델을 작성 하는 동안 자동으로 합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]학습 집합과 테스트 데이터 집합은 동일한 데이터에서 모든 모델의 성능을 정확 하 게 평가할 수 있도록으로 데이터를 분리 하는 데 도움이 되는 도구를 제공 합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. 이 분할 방법은 마이닝 모델을 작성 하는 동안 자동으로 합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에 있는 뷰어를 사용하여 알고리즘이 검색한 추세 및 패턴을 탐색할 수 있습니다. 자세한 내용은 [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)를 참조하세요. 또한 리프트 차트 및 분류 행렬과 같은 디자이너의 도구를 사용하여 모델의 예측 정확도를 테스트할 수 있습니다. 모델이 데이터와 관련되어 있는지 또는 일반적인 모집단에 대해 유추하는 데 사용할 수 있는지 확인하려면 *교차 유효성 검사*라는 통계 기법을 사용하여 데이터의 하위 집합을 자동으로 만들고 각 하위 집합에 대해 모델을 테스트합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
   

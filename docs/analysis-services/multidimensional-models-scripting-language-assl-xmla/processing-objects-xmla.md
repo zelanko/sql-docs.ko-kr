@@ -1,40 +1,19 @@
 ---
-title: "개체 처리 (XMLA) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- objects [XML for Analysis]
-- XML for Analysis, objects
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-- writeback [Analysis Services], XML for Analysis
-- out-of-line bindings
-- processing objects [XML for Analysis]
-- XMLA, objects
-ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 
-author: Minewiskan
+title: 개체 처리 (XMLA) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 58150b6b74fd3a58fb09f44818b724214a64b8b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-objects-xmla"></a>개체 처리(XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 처리 하는 단계는 또는 일련의 단계를 변환 하는 데이터를 비즈니스 분석용 정보로 합니다. 처리 방법은 개체 유형에 따라 달라지지만 처리는 항상 데이터를 정보로 변환하는 과정의 일부입니다.  
@@ -75,14 +54,14 @@ ms.lasthandoff: 02/15/2018
 |*ProcessClearStructureOnly*|마이닝 구조|  
 |*ProcessScriptCache*|Cube|  
   
- 처리에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 참조 [다차원 모델 &#40; 처리 Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 처리에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
 ## <a name="specifying-objects-to-be-processed"></a>처리할 개체 지정  
  [개체](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) 의 속성은 **프로세스** 명령을 처리할 개체의 개체 식별자를 포함 합니다. 에 지정할 수 하나의 개체만 **프로세스** 명령을 했으나 개체를 처리 하 고 모든 자식 개체도 처리 합니다. 예를 들어 큐브의 측정값 그룹을 처리하면 해당 측정 그룹의 모든 파티션이 처리되고, 데이터베이스를 처리하면 데이터베이스에 포함된 큐브, 차원 및 마이닝 구조 등의 모든 개체가 처리됩니다.  
   
  설정 하는 경우는 **ProcessAffectedObjects** 특성에는 **프로세스** 명령을 true로 지정된 된 개체를 처리 하 여 영향을 받는 개체도 처리 관련 합니다. 예를 들어, 사용 하 여 차원이 증분 업데이트 되는 *ProcessUpdate* 처리 옵션에는 **프로세스** 명령의 멤버로 인해 집계가 무효화 된 되 고 추가 또는 삭제 하 여 처리 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 경우 **ProcessAffectedObjects** 설정 되어 true로 합니다. 이 경우 단일에서 **프로세스** 명령에서 여러 개체를 처리할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 지정 된 단일 개체 이외에 추가로 결정는 **프로세스** 명령 처리 되어야 합니다.  
   
- 그러나 여러 개 사용 하 여 동시에 차원, 등 여러 개체를 처리할 수 **프로세스** 명령 내에서 **일괄 처리** 명령입니다. 일괄 처리 작업의 개체의 순차 및 병렬 처리에 대해 보다 세부적인 수준의 제어를 제공는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 사용 하 여 보다는 **ProcessAffectedObjects** 특성을 사용 하면에 대 한 처리 방법을 조정할 수 큰 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 일괄 처리 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 [일괄 처리 작업 수행 &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ 그러나 여러 개 사용 하 여 동시에 차원, 등 여러 개체를 처리할 수 **프로세스** 명령 내에서 **일괄 처리** 명령입니다. 일괄 처리 작업의 개체의 순차 및 병렬 처리에 대해 보다 세부적인 수준의 제어를 제공는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 사용 하 여 보다는 **ProcessAffectedObjects** 특성을 사용 하면에 대 한 처리 방법을 조정할 수 큰 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 일괄 처리 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 [일괄 처리 작업 수행 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)합니다.  
   
 ## <a name="specifying-out-of-line-bindings"></a>아웃오브 라인 바인딩 지정  
  경우는 **프로세스** 명령에 들어 있지 않은 한 **일괄 처리** 명령을 있습니다에서 아웃오브 라인 바인딩을 선택적으로 지정할 수는 [바인딩](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md), [데이터원본](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md), 및 [DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md) 의 속성은 **프로세스** 처리할 개체에 대 한 명령을 합니다. 아웃오브 라인 바인딩은 데이터 원본, 데이터 원본 뷰 및 실행 하는 동안에 바인딩이 존재 하는 다른 개체에 대 한 참조는 **프로세스** 명령 및 연결 된 기존 바인딩을 모두 재정의 하는 처리 중인 개체입니다. 아웃오브 라인 바인딩을 지정하지 않으면 처리할 개체에 현재 연결되어 있는 바인딩이 사용됩니다.  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
 -   데이터 흐름 태스크를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 차원, 마이닝 모델 또는 파티션을 처리 하는 동안 데이터를 제공 하도록 합니다.  
   
- 아웃오브 라인 바인딩은 ASSL(Analysis Services Scripting Language)의 일부로 설명됩니다. ASSL의 아웃오브 라인 바인딩에 대 한 자세한 내용은 참조 하십시오. [데이터 원본 및 바인딩 &#40; SSAS 다차원 &#41; ](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ 아웃오브 라인 바인딩은 ASSL(Analysis Services Scripting Language)의 일부로 설명됩니다. ASSL의 아웃오브 라인 바인딩에 대 한 자세한 내용은 참조 하십시오. [데이터 원본 및 바인딩 &#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)합니다.  
   
 ### <a name="incrementally-updating-partitions"></a>파티션 증분 업데이트  
  파티션에 대해 지정된 바인딩은 파티션 내에서 이미 집계된 팩트 테이블 데이터를 참조하기 때문에 이미 처리된 파티션을 증분 업데이트하려면 아웃오브 라인 바인딩이 필요합니다. 사용 하 여 이미 처리 된 파티션을 증분 업데이트 하는 경우는 **프로세스** 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다음 작업을 수행 합니다.  
@@ -104,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 -   임시 파티션을 선택된 기존 파티션과 병합합니다.  
   
- XML for Analysis (XMLA) 사용 하 여 파티션을 병합 하는 방법에 대 한 자세한 내용은 참조 [병합 파티션을 &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
+ XML for Analysis (XMLA) 사용 하 여 파티션을 병합 하는 방법에 대 한 자세한 내용은 참조 [병합 파티션을 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)합니다.  
   
 ## <a name="handling-processing-errors"></a>처리 오류 해결  
  [ErrorConfiguration](../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md) 의 속성은 **프로세스** 명령을 사용 하면 개체를 처리 하는 동안 발생 한 오류를 처리 하는 방법을 지정할 수 있습니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 차원을 처리하는 동안 키 특성의 키 열에 중복 값이 있는 경우 특성 키는 고유해야 하므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 중복 레코드를 삭제합니다. 에 따라는 [KeyDuplicate](../../analysis-services/scripting/properties/keyduplicate-element-assl.md) 속성 **ErrorConfiguration**, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 수 없습니다.  

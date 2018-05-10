@@ -1,34 +1,23 @@
 ---
-title: "Analysis Services 프로젝트 빌드 (SSDT) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 프로젝트 빌드 (SSDT) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- projects [Analysis Services], building
-- Business Intelligence Development Studio, project building [Analysis Services]
-ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a6895d06c363cd63833cb27450faef33af13d1bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 빌드(SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 Visual Studio에서 프로그래밍 개체를 빌드하는 것과 유사한 방식으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드할 수 있습니다. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 Visual Studio에서 프로그래밍 개체를 빌드하는 것과 유사한 방식으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드할 수 있습니다. 프로젝트를 빌드하면 출력 디렉터리에 XML 파일 집합이 생성됩니다. 이러한 XML 파일은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 비롯한 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들거나 수정하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 통신하는 데 사용하는 XML 언어인 ASSL(Analysis Services Scripting Language)을 사용합니다. XML 파일은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 정의를 지정한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하는 데 사용됩니다.  
   
 ## <a name="building-a-project"></a>프로젝트 빌드  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 빌드하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 프로젝트의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 개체를 작성하는 데 필요한 모든 ASSL 명령을 비롯한 전체 XML 파일 집합을 출력 폴더에 작성합니다. 프로젝트가 이전에 빌드되었으며 활성 구성에 증분 배포가 지정되어 있으면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 배포된 개체에 대한 증분 업데이트를 수행하는 ASSL 명령이 포함된 XML 파일도 작성합니다. 이 XML 파일은 프로젝트의 ..\obj\\<활성 구성\> 폴더에 기록됩니다. 증분 빌드를 사용하면 대규모 프로젝트나 데이터베이스를 배포 및 처리할 때 시간을 절약할 수 있습니다.  
@@ -54,11 +43,11 @@ ms.lasthandoff: 02/15/2018
 |*Projectname*.configsettings|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 구성 설정을 포함합니다(예: 데이터 원본에 대한 연결 문자열).|  
 |*Projectname*.deploymenttargets|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 대상 설정을 포함합니다(예: 서버 및 데이터베이스 이름).|  
 |*Projectname*.deploymentoptions|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 다양한 옵션 설정을 포함합니다(예: 저장소 위치).|  
-|*Assemblyname*/*dllname.*dll|참조된 각 어셈블리에 대한 개별 폴더입니다. 각 폴더에는 어셈블리에 대한 DLL, 참조된 모든 어셈블리 및 출력 디버그 정보를 위한 연결된 모든 .pdb 파일이 들어 있습니다.|  
+|*Assemblyname*/*dllname.* dll|참조된 각 어셈블리에 대한 개별 폴더입니다. 각 폴더에는 어셈블리에 대한 DLL, 참조된 모든 어셈블리 및 출력 디버그 정보를 위한 연결된 모든 .pdb 파일이 들어 있습니다.|  
   
 |파일(obj 폴더)|Description|  
 |-----------------------------|-----------------|  
-|\<Configuration Name>\LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 마지막으로 빌드된 시간을 식별하는 타임스탬프 및 해시 코드를 포함합니다.|  
+|\<구성 이름 > \LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 마지막으로 빌드된 시간을 식별하는 타임스탬프 및 해시 코드를 포함합니다.|  
   
  이러한 XML 파일에 포함 되어 있지 않습니다 \<만들기 > 및 \<Alter > 태그는 배포 중에 생성 됩니다.  
   

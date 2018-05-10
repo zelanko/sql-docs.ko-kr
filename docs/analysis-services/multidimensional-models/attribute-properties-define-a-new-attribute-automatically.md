@@ -1,34 +1,23 @@
 ---
-title: "자동으로 새 특성 정의 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 자동으로 새 특성 정의 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- automatic attribute creation
-- attributes [Analysis Services], creating
-ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f56c70ce3d75de8f7be924941df227d1213902c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d598ddb86e421309fe6aa7361595d64ddf1f0a24
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---define-a-new-attribute-automatically"></a>속성을 특성-자동으로 새 특성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  
+  차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  
   
 ### <a name="to-create-a-new-attribute-automatically"></a>자동으로 새 특성을 만들려면  
   
@@ -36,7 +25,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  **차원 구조** 탭의 **데이터 원본 뷰** 창에 있는 특성을 바인딩할 테이블에서 열을 선택한 다음 **특성** 창으로 끌어 놓습니다.  
   
-     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 바인딩되는 열과 동일한 이름의 새 특성을 만듭니다. 동일한 열을 사용하는 특성이 여러 개 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 특성 이름에 숫자를 추가합니다.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 바인딩되는 열과 동일한 이름의 새 특성을 만듭니다. 동일한 열을 사용하는 특성이 여러 개 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 특성 이름에 숫자를 추가합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 차원](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   

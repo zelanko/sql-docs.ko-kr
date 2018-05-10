@@ -1,35 +1,23 @@
 ---
-title: "드릴스루 쿼리 (데이터 마이닝) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 드릴스루 쿼리 (데이터 마이닝) | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- AllowDrillThrough property
-- drillthrough [Analysis Services]
-- drillthrough [DMX]
-ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 804497bfe94c6d6d93f63d9b8a2242246122c034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
+  *드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝은 다음과 같은 두 가지 드릴스루 옵션을 제공합니다.  
   
@@ -102,8 +90,8 @@ ms.lasthandoff: 02/15/2018
 |----------|----------|  
 |데이터 마이닝 디자이너의 드릴스루 사용을 설명하는 절차|[마이닝 모델에서 사례 데이터로 드릴스루](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |드릴스루를 허용하도록 기존 마이닝 모델 변경|[마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[만들기 마이닝 구조 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
-|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|DMX WITH DRILLTHROUGH 절을 사용하여 마이닝 구조에서 드릴스루를 사용하도록 설정|[만들기 마이닝 구조 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
+|마이닝 구조 및 마이닝 모델에 대한 드릴스루에 적용되는 권한 할당에 대한 정보|[데이터 마이닝 구조 및 모델 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   

@@ -1,31 +1,23 @@
 ---
-title: "OLAP 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: OLAP 마이닝 구조 만들기 | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b5ad8add984db3c83cfc6b3af99f430035f56d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP 마이닝 구조 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  
+  OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  
   
  이 항목에서는 기존 다차원 솔루션의 차원 및 관련 측정값을 기반으로 OLAP 마이닝 구조를 만드는 방법에 대해 설명합니다.  
   
@@ -44,7 +36,7 @@ OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이�
 ##  <a name="bkmk_Reqs"></a> OLAP 마이닝 구조 및 모델에 대한 요구 사항  
  OLAP 마이닝 모델을 디자인하는 경우 데이터 원본은 큐브를 생성하는 데 사용된 데이터베이스에 이미 있습니다. 원격 큐브에 연결하여 데이터 마이닝 개체를 생성할 수 없습니다. 큐브 개체는 생성할 마이닝 구조와 동일한 솔루션 내에서 데이터베이스로 사용할 수 있어야 합니다.  
   
- 원래 프로젝트 파일이 없거나 원래 프로젝트 파일을 변경하지 않을 경우 Visual Studio의 **서버에서 가져오기(다차원 및 데이터 마이닝)**옵션을 사용하여 메타데이터 및 솔루션 개체의 복사본을 가져올 수 있습니다. 그런 다음 기존 개체에 영향을 주지 않고 배포 대상을 수정하고, 데이터 원본을 편집하고, 큐브 개체를 사용할 수 있습니다.  
+ 원래 프로젝트 파일이 없거나 원래 프로젝트 파일을 변경하지 않을 경우 Visual Studio의 **서버에서 가져오기(다차원 및 데이터 마이닝)** 옵션을 사용하여 메타데이터 및 솔루션 개체의 복사본을 가져올 수 있습니다. 그런 다음 기존 개체에 영향을 주지 않고 배포 대상을 수정하고, 데이터 원본을 편집하고, 큐브 개체를 사용할 수 있습니다.  
   
  자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
   
@@ -117,7 +109,7 @@ OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이�
 |----------|---------------------|---------------|  
 |멤버를 클러스터로 그룹화|고객 멤버 속성, 고객이 구입한 제품, 고객이 지출한 금액을 기준으로 고객 차원을 세그먼트화합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘|  
 |주목할 만한 멤버 또는 비정상적인 멤버 찾기|판매, 수익, 매장 위치 및 매장 크기를 기준으로 Store 차원에서 주목할 만한 매장 또는 비정상적인 매장을 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘|  
-|주목할 만한 셀 또는 비정상적인 셀 찾기|일반적인 시간별 경향에 반하는 매장 판매량을 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘|  
+|주목할 만한 셀 또는 비정상적인 셀 찾기|일반적인 시간별 경향에 반하는 매장 판매량을 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]시계열 알고리즘|  
 |상관 관계 찾기|지역, 컴퓨터 유형, OS 또는 구매 날짜를 포함하여 서버 가동 중지 시간과 관련된 요소를 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes 알고리즘|  
   
 ##  <a name="bkmk_Filters"></a>큐브 조각화 합니다. 모델 필터링  

@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services에 대 한 일관성 검사 (DBCC) 데이터베이스 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services에 대 한 일관성 검사 (DBCC) 데이터베이스 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services에 대 한 데이터베이스 일관성 검사 (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-DBCC는 Analysis Services 인스턴스에서 다차원 및 테이블 형식의 데이터베이스에 대한 주문형 데이터베이스 유효성 검사를 제공합니다. SSMS(SQL Server Management Studio)의 MDX 또는 XMLA 쿼리 창에서 DBCC를 실행하고 SSMS의 SQL Server Profiler 또는 xEvent 세션에서 DBCC 출력을 추적할 수 있습니다.  
+  DBCC는 Analysis Services 인스턴스에서 다차원 및 테이블 형식의 데이터베이스에 대한 주문형 데이터베이스 유효성 검사를 제공합니다. SSMS(SQL Server Management Studio)의 MDX 또는 XMLA 쿼리 창에서 DBCC를 실행하고 SSMS의 SQL Server Profiler 또는 xEvent 세션에서 DBCC 출력을 추적할 수 있습니다.  
 이 명령은 개체 정의를 가져왔다가 빈 결과 집합을 반환하거나 개체가 손상된 경우 자세한 오류 정보를 반환합니다.   이 문서에서는 명령을 실행하고, 결과를 해석하고 발생한 문제를 해결하는 방법에 대해 알아봅니다.  
   
  테이블 형식 데이터베이스의 경우 DBCC에 의해 수행되는 일관성 검사는 데이터베이스를 다시 로드하거나, 동기화하거나, 복원할 때마다 자동으로 발생하는 기본 제공 유효성 검사와 동일합니다.  반면에 다차원 데이터베이스에 대한 일관성 검사는 DBCC를 주문형으로 실행할 경우에만 수행됩니다.  

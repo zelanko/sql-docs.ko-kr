@@ -1,32 +1,23 @@
 ---
 title: 일괄 처리 (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- batches [Analysis Services]
-ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1f958d685517e538dd87014729c0e28ad897e287
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-processing-analysis-services"></a>일괄 처리(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 일괄 처리 명령을 사용 하 여 여러 처리 명령을 단일 요청으로 서버에 보낼 수 있습니다. 일괄 처리를 사용하여 처리할 개체와 처리 순서를 제어할 수 있습니다. 또한 일괄 처리는 일련의 독립 실행형 작업으로 실행되거나 한 프로세스가 실패하면 완료된 일괄 처리가 롤백되는 트랜잭션으로 실행될 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 일괄 처리 명령을 사용하여 여러 처리 명령을 단일 요청으로 서버에 보낼 수 있습니다. 일괄 처리를 사용하여 처리할 개체와 처리 순서를 제어할 수 있습니다. 또한 일괄 처리는 일련의 독립 실행형 작업으로 실행되거나 한 프로세스가 실패하면 완료된 일괄 처리가 롤백되는 트랜잭션으로 실행될 수 있습니다.  
   
  일괄 처리는 변경 내용을 커밋하는 데 걸리는 시간을 줄이고 통합함으로써 데이터 가용성을 최대화합니다. 차원을 전체 처리할 경우 해당 차원을 사용하는 파티션은 처리되지 않은 것으로 표시됩니다. 따라서 처리되지 않은 파티션이 포함된 큐브는 검색할 수 없습니다. 영향을 받는 파티션과 함께 차원을 처리하는 일괄 처리 작업을 수행하여 이 문제를 해결할 수 있습니다. 일괄 처리 작업을 트랜잭션으로 실행하면 모든 처리가 완료될 때까지 트랜잭션에 포함된 모든 개체를 쿼리에 사용할 수 있습니다. 트랜잭션이 변경 내용을 커밋하면 개체를 일시적으로 사용할 수 없게 되지만 변경 내용을 커밋하는 데 걸리는 총 시간은 개체를 개별적으로 처리할 때보다 줄어듭니다.  
   

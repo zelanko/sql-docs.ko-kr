@@ -1,27 +1,19 @@
 ---
 title: SharePoint 2013으로 파워 피벗 마이그레이션 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 308b69e4da122bd409c4cbd12ec9196cb2da8317
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013으로 파워 피벗 마이그레이션
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -147,7 +139,7 @@ ms.lasthandoff: 04/16/2018
   
     3.  **새로 고침 일정** 섹션에서 **사용**을 클릭합니다.  
   
-    4.  **가능한 빨리 새로 고치세요.**를 선택할 수 있습니다. 이 옵션은 확인을 클릭하면 바로 새로 고침 인스턴스 한 개를 큐에 추가합니다. 정기적인 새로 고침 일정도 적절한 시간에 트리거됩니다.  
+    4.  **가능한 빨리 새로 고치세요.** 를 선택할 수 있습니다. 이 옵션은 확인을 클릭하면 바로 새로 고침 인스턴스 한 개를 큐에 추가합니다. 정기적인 새로 고침 일정도 적절한 시간에 트리거됩니다.  
   
     5.  **확인**을 클릭합니다. 새로 고침 기록은 이제 새로 고침 페이지에서 볼 수 있고 일정이 정상 시간에 실행됩니다.  
   

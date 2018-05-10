@@ -1,36 +1,24 @@
 ---
-title: "Management Studio에서 Analysis Services 스크립트 만들기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Management Studio에서 Analysis Services 스크립트 만들기 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services objects, scripts
-- objects [Analysis Services], scripts
-- scripts [Analysis Services], objects
-ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 62c23859b14e9c9fc3e4663a0ec813c8dca25ff1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 97a308c08d01f9fe4774acb6f82e01d7012cb50f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Management Studio에서 Analysis Services 태스크 스크립팅  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 태스크 지향 대화 상자에서 스크립트 옵션 중 하나를 클릭하여 태스크를 스크립팅합니다. 데이터베이스 백업 또는 복원, 개체 처리, 집계 디자인과 같은 태스크를 수행하는 데 사용하는 모든 대화 상자에는 맨 위에 스크립트 옵션이 포함되어 있습니다. 이러한 옵션 중 하나를 선택하면 대화 상자의 정보 및 설정을 기반으로 XMLA 스크립트가 생성됩니다.  
@@ -52,7 +40,7 @@ ms.lasthandoff: 02/15/2018
      이제 데이터베이스 백업 대화 상자를 닫고 XMLA 스크립트를 직접 편집하거나 실행할 수 있습니다.  
   
 ## <a name="script-analysis-services-objects-in-management-studio"></a>Management Studio에서 Analysis Services 개체 스크립팅  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE **,**ALTER **또는**DELETE **를 선택하여**의 개체를 스크립팅합니다. 이러한 각 옵션을 창이나 파일로 전송할 수 있지만 스크립트는 전송되는 위치에 관계없이 XMLA 래퍼의 DDL 스크립트 형태를 갖습니다. 이러한 스크립트의 가장 큰 장점은 모든 대상 서버에서 스크립트를 실행할 수 있다는 것입니다. 또한 스크립트에서 이름을 변경할 수 있고 반복적으로 실행하여 개체를 대량으로 생성, 변경 또는 삭제할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE **,** ALTER **또는**DELETE **를 선택하여**의 개체를 스크립팅합니다. 이러한 각 옵션을 창이나 파일로 전송할 수 있지만 스크립트는 전송되는 위치에 관계없이 XMLA 래퍼의 DDL 스크립트 형태를 갖습니다. 이러한 스크립트의 가장 큰 장점은 모든 대상 서버에서 스크립트를 실행할 수 있다는 것입니다. 또한 스크립트에서 이름을 변경할 수 있고 반복적으로 실행하여 개체를 대량으로 생성, 변경 또는 삭제할 수 있습니다.  
   
  스크립팅할 수 있는 개체에는 데이터 원본, 데이터 원본 뷰, 큐브, 차원, 마이닝 구조 및 역할 등의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 요소가 포함됩니다.  
   
@@ -73,6 +61,6 @@ ms.lasthandoff: 02/15/2018
     >  일반적으로 버전이 다른 파일을 여러 개 만들려면 **파일** 을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [XMLA 쿼리 편집기 &#40; Analysis Services-다차원 데이터 &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [XMLA 쿼리 편집기 & #40; Analysis Services-다차원 데이터 & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

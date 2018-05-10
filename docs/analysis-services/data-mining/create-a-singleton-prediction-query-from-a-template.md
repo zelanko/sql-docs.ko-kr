@@ -1,32 +1,23 @@
 ---
 title: 템플릿에서 단일 예측 쿼리 만들기 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- singleton query predictions [DMX]
-ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 021faf311132e7bd104c66f02340159a9a8b290c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d88b4abff562214ec971410835ec1978232302f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]단일 쿼리는 모델을 예측에 사용 하려고 하지만 외부 입력된 데이터 집합에 매핑하거나 대량 예측을 수행 하지 않으려는 경우에 유용 합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  단일 쿼리는 예측에 사용하려는 모델이 있지만 이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행하지는 않으려는 경우에 유용합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
   
  예를 들어 다음 DMX 쿼리는 타겟 메일링 모델인 TM_Decision_Tree에 대한 단일 쿼리를 나타냅니다.  
   
@@ -94,11 +85,11 @@ AS [t]
   
 10. 쿼리 텍스트 창에서 구문 오류를 나타내는 쉼표 및 줄임표 아래의 빨간색 물결 기호를 찾습니다. 줄임표를 삭제하고 원하는 쿼리 조건을 추가합니다. 다른 조건을 추가하지 않는 경우 쉼표를 삭제합니다.  
   
-     이 항목의 시작 부분에 표시된 샘플 코드의 경우 추가 쿼리 조건이 **'45' as [Age]**로 설정되었습니다.  
+     이 항목의 시작 부분에 표시된 샘플 코드의 경우 추가 쿼리 조건이 **'45' as [Age]** 로 설정되었습니다.  
   
 11. **실행**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [예측 & #40; 만들기 기본 데이터 마이닝 자습서 & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

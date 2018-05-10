@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 Services 란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server 컴퓨터 학습 서비스는 포함 된, 예측 분석 및 데이터
 SQL Server에서 컴퓨터 학습 기능을 사용 하기 위한 두 가지가 있습니다. 
 
 + [**SQL Server 컴퓨터 학습 Services (In-database)** ](r/sql-server-r-services.md) 는 데이터베이스 엔진와 완전히 통합 하는 계산 엔진 여기서는 데이터베이스 엔진 인스턴스 내에서 작동 합니다. 대부분 설치의 경우가이 옵션은 있습니다.
-+ [**SQL Server 컴퓨터 학습 서버 (독립 실행형)** ](r/r-server-standalone.md) 비 SQL 설치입니다. 서버를 설치 하려면 SQL Server 설치 프로그램을 사용 하지만 SQL Server에서 완전히 분리 됩니다. 기능적으로 같습니다 비 SQL [Windows 용 Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)합니다.
++ [**SQL Server 컴퓨터 학습 서버 (독립 실행형)** ](r/r-server-standalone.md) 컴퓨터 학습 Windows 용 서버는 데이터베이스 엔진 독립적으로 실행 됩니다. SQL Server 설치 프로그램을 사용 하 여 서버를 설치 않지만 기능 인스턴스 인식 하지 않습니다. 비 SQL 서버에 해당 하는 기능적으로 [Windows 용 Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)합니다.
 
 ## <a name="r-and-python-packages"></a>R 및 Python 패키지
 

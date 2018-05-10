@@ -1,33 +1,19 @@
 ---
-title: "AdomdDataReader를 사용 하 여 데이터를 검색 합니다. | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- retrieving data
-- AdomdDataReader object
-- data retrieval [ADOMD.NET], AdomdDataReader object
-ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 
-author: Minewiskan
+title: AdomdDataReader를 사용 하 여 데이터를 검색 합니다. | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d5661d2a35a7f2d13c342fd2daadbf1c1bbc4a4d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>AdomdDataReader를 사용하여 데이터 검색
   분석 데이터 검색 시 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 오버헤드와 상호 작용 간에 적절한 균형을 맞춥니다. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 개체는 분석 데이터 원본에서 정방향 및 읽기 전용의 평면화된 데이터 스트림을 검색합니다. 이 버퍼링되지 않은 데이터 스트림을 사용하면 절차적인 논리에서 분석 데이터 원본의 결과를 순차적으로 처리할 수 있습니다. 따라서 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>는 데이터가 메모리에 캐시되지 않기 때문에 표시를 목적으로 많은 양의 데이터를 검색할 때 유용하게 사용할 수 있습니다.  

@@ -1,31 +1,23 @@
 ---
-title: "파워 피벗 구성 및 솔루션 배포 (SharePoint 2016) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 파워 피벗 구성 및 솔루션 배포 (SharePoint 2016) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 384f1fdec5b77dcc980954e72fe5bfa07f617601
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 비롯한 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에 대한 중간 계층 고급 기능을 배포하고 구성하는 방법을 설명합니다. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 비롯한 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에 대한 중간 계층 고급 기능을 배포하고 구성하는 방법을 설명합니다. 구체적으로는 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성** 도구를 실행하여 다음 작업을 완료하는 방법을 설명합니다.  
   
 -   SharePoint 솔루션 파일 배포  
   
@@ -60,7 +52,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대한 자세한 내용은 이 항목의 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 에서 "서버를 구성하는 데 사용되는 입력 값" 섹션을 참조하세요.  
   
-6.  선택적으로 지금 처리하지 않으려는 동작을 제거합니다. 예를 들어 보안 저장소 서비스를 나중에 구성하려는 경우 **보안 저장소 서비스 구성**을 선택한 다음 **태스크 목록에 이 동작을 포함합니다.**확인란의 선택을 취소합니다.  
+6.  선택적으로 지금 처리하지 않으려는 동작을 제거합니다. 예를 들어 보안 저장소 서비스를 나중에 구성하려는 경우 **보안 저장소 서비스 구성**을 선택한 다음 **태스크 목록에 이 동작을 포함합니다.** 확인란의 선택을 취소합니다.  
   
 7.  **유효성 검사** 를 클릭하여 목록에서 동작을 처리할 수 있는 충분한 정보가 도구에 있는지 여부를 확인합니다. 유효성 검사 오류가 표시되면 왼쪽 창에서 경고를 클릭하여 유효성 검사 오류에 대한 자세한 내용을 보세요. 유효성 검사 오류를 수정한 다음 **유효성 검사** 를 다시 선택합니다.  
   
@@ -114,7 +106,7 @@ ms.lasthandoff: 02/15/2018
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 연결  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Load Data Usage  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 로드 사용  
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 사용  
   
@@ -124,7 +116,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  **확인**을 선택합니다.  
   
- 데이터 새로 고침 문제를 해결하는 방법은 [파워 피벗 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)을 참조하세요.  
+ 데이터 새로 고침에 대 한 자세한 내용은 참조 하십시오. [파워 피벗 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)합니다.  
   
  구성 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   

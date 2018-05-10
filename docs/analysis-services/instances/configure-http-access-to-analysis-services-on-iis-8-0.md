@@ -1,27 +1,19 @@
 ---
 title: IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce49893c7811bf3c829c0bbdf554a1cf7bdc4b36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **응용 프로그램 개발** | **ISAPI 확장**  
   
- 이러한 구성 요소를 확인하거나 추가하려면 **서버 관리자** | **관리** | **역할 및 기능 추가**를 사용합니다. **서버 역할**에 도달할 때까지 마법사를 진행합니다. 아래로 스크롤하여 **웹 서버(IIS)**를 찾습니다.  
+ 이러한 구성 요소를 확인하거나 추가하려면 **서버 관리자** | **관리** | **역할 및 기능 추가**를 사용합니다. **서버 역할**에 도달할 때까지 마법사를 진행합니다. 아래로 스크롤하여 **웹 서버(IIS)** 를 찾습니다.  
   
 1.  **웹 서버** | **보안** 을 열고 인증 방법을 선택합니다.  
   

@@ -1,40 +1,23 @@
 ---
-title: "핵심 성과 지표 (Kpi) 다차원 모델의 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 핵심 성과 지표 (Kpi) 다차원 모델의 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
+  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 또는 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 응용 프로그램의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="parent-kpis"></a>부모 KPI  
  조직의 여러 비즈니스 메트릭을 다양한 수준에서 추적할 수 있습니다. 예를 들어 2-3개의 KPI만으로 회사 전체의 비즈니스 성공 여부를 평가하되 이러한 회사 차원 KPI의 기반으로 회사 전체의 비즈니스 단위에서 추적하는 3-4개의 다른 KPI를 사용할 수 있습니다. 또한 회사의 비즈니스 단위에서 동일한 KPI를 계산하는 데 여러 다른 통계를 사용할 수 있습니다. 계산된 KPI의 결과는 회사 차원 KPI로 롤업됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI 간에 부모-자식 관계를 정의할 수 있습니다. 이러한 부모-자식 관계를 통해 자식 KPI의 결과를 사용하여 부모 KPI의 결과를 계산할 수 있습니다. 또한 클라이언트 응용 프로그램에서 이 관계를 사용하여 부모 및 자식 KPI를 적절히 표시할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Kpi 간에 부모-자식 관계를 정의할 수 있습니다. 이러한 부모-자식 관계를 통해 자식 KPI의 결과를 사용하여 부모 KPI의 결과를 계산할 수 있습니다. 또한 클라이언트 응용 프로그램에서 이 관계를 사용하여 부모 및 자식 KPI를 적절히 표시할 수 있습니다.  
   
 ## <a name="weights"></a>가중치  
  자식 KPI에 가중치를 할당할 수도 있습니다. 가중치를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 부모 KPI의 값을 계산할 때 자식 KPI의 결과가 그에 따라 조정됩니다.  

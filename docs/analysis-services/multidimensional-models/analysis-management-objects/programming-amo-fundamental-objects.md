@@ -1,37 +1,19 @@
 ---
-title: "AMO 기본 개체 프로그래밍 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- server objects [AMO]
-- programming [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 기본 개체 프로그래밍 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 기본 개체 프로그래밍
   기본 개체는 일반적으로 단순하고 간단한 개체입니다. 이러한 개체는 대개 만들어지고 인스턴스화된 후 더 이상 필요하지 않게 되면 사용자가 개체와의 연결을 끊습니다. 기본 클래스에는 <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> 및 <xref:Microsoft.AnalysisServices.DataSourceView> 개체가 포함됩니다. AMO 기본 개체 중 유일하게 복잡한 개체는 <xref:Microsoft.AnalysisServices.DataSourceView>로, 이 개체는 세부 정보가 있어야 데이터 원본 뷰를 나타내는 추상 모델을 빌드할 수 있습니다.  
@@ -196,7 +178,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">DataSource 개체</a>  
+##  <a name="DataSource"></a> DataSource 개체  
  <xref:Microsoft.AnalysisServices.DataSource> 개체는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 데이터가 있는 데이터베이스를 연결합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 기본 모델을 나타내는 스키마는 <xref:Microsoft.AnalysisServices.DataSourceView> 개체에 정의됩니다. <xref:Microsoft.AnalysisServices.DataSource> 개체는 데이터가 있는 데이터베이스에 대한 연결 문자열로 표시될 수 있습니다.  
   
  다음 예제 코드에서는 <xref:Microsoft.AnalysisServices.DataSource> 개체를 만드는 방법을 보여 줍니다. 이 예제에서는 서버가 아직 있고 <xref:Microsoft.AnalysisServices.Server> 개체가 연결되어 있으며 데이터베이스가 있는지 확인합니다. <xref:Microsoft.AnalysisServices.DataSource> 개체가 있으면 해당 개체는 삭제된 후 다시 만들어집니다. 이때 <xref:Microsoft.AnalysisServices.DataSource> 개체는 기존 개체와 동일한 이름 및 내부 ID로 만들어집니다. 이 예제에서는 연결 문자열에 대해 이를 확인하기 위한 검사를 수행하지 않습니다.  
@@ -219,7 +201,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV">DataSourceView 개체</a>  
+##  <a name="DSV"></a> DataSourceView 개체  
  <xref:Microsoft.AnalysisServices.DataSourceView> 개체에는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 스키마 모델이 포함됩니다. <xref:Microsoft.AnalysisServices.DataSourceView> 개체에 스키마를 포함하려면 먼저 스키마를 생성해야 합니다. 스키마는 System.Data 네임스페이스에서 DataSet 개체에 대해 생성됩니다.  
   
  다음 예제 코드에서는 AdventureWorks 기반의 Analysis Services 예제 프로젝트에 포함된 스키마의 일부를 만듭니다. 예제에서는 테이블, 계산 열, 관계 및 복합 관계에 대한 스키마 정의를 만듭니다. 스키마는 데이터 집합에 저장됩니다.  
@@ -563,7 +545,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  <xref:Microsoft.AnalysisServices>   
  [AMO 클래스 소개](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 기본 클래스](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [데이터베이스 개체 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [논리적 아키텍처 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

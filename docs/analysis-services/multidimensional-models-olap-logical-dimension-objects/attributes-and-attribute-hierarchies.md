@@ -1,48 +1,26 @@
 ---
-title: "특성 및 특성 계층 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+title: 특성 및 특성 계층 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>특성 및 특성 계층
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-차원은 데이터 원본 뷰의 테이블이나 뷰에 있는 하나 이상의 열에 바인딩되는 특성의 모음입니다.  
+  차원은 데이터 원본 뷰의 테이블이나 뷰에 있는 하나 이상의 열에 바인딩되는 특성의 모음입니다.  
   
 ## <a name="key-attribute"></a>키 특성  
- 각 차원에는 키 특성이 포함되어 있습니다. 각 특성은 차원 테이블의 하나 이상의 열에 바인딩됩니다. 키 특성은 차원에서 팩트 테이블과의 외래 키 관계에 사용되는 차원 주 테이블의 열을 나타내는 특성입니다. 일반적으로 키 특성은 차원 테이블의 기본 키 열을 나타냅니다. 기본 데이터 원본에 물리적 기본 키가 없는 데이터 원본 뷰의 테이블에 논리적 기본 키를 정의할 수 있습니다. **자세한 내용은**, 참조 [데이터 원본 뷰 &#40;에서 논리적 기본 키 정의 Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). 키 특성을 정의할 때 큐브 마법사와 차원 마법사는 데이터 원본 뷰에 있는 차원 테이블의 기본 키 열을 사용하려고 합니다. 차원 테이블에 논리적 또는 물리적 기본 키가 정의되어 있지 않으면 마법사는 차원에 대한 키 특성을 제대로 정의할 수 없습니다.  
+ 각 차원에는 키 특성이 포함되어 있습니다. 각 특성은 차원 테이블의 하나 이상의 열에 바인딩됩니다. 키 특성은 차원에서 팩트 테이블과의 외래 키 관계에 사용되는 차원 주 테이블의 열을 나타내는 특성입니다. 일반적으로 키 특성은 차원 테이블의 기본 키 열을 나타냅니다. 기본 데이터 원본에 물리적 기본 키가 없는 데이터 원본 뷰의 테이블에 논리적 기본 키를 정의할 수 있습니다. **자세한 내용은**, 참조 [데이터 원본 뷰에서 논리적 기본 키 정의 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)합니다. 키 특성을 정의할 때 큐브 마법사와 차원 마법사는 데이터 원본 뷰에 있는 차원 테이블의 기본 키 열을 사용하려고 합니다. 차원 테이블에 논리적 또는 물리적 기본 키가 정의되어 있지 않으면 마법사는 차원에 대한 키 특성을 제대로 정의할 수 없습니다.  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>데이터 원본 뷰 테이블 또는 뷰의 열에 특성 바인딩  
  특성은 하나 이상의 데이터 원본 뷰 테이블이나 뷰의 열에 바인딩됩니다. 특성은 항상 특성에 포함된 멤버를 결정하는 하나 이상의 키 열에 바인딩됩니다. 기본적으로 특성은 키 열에만 바인딩됩니다. 특성이 특정 목적으로 하나 이상의 추가 열에 바인딩될 수도 있습니다. 예를 들어 특성의 **l u m n** 속성 결정 각 특성 멤버에 대 한 사용자에 게 표시 되는 이름-이 속성은 특성의 데이터 원본 뷰를 통해 특정 차원 열에 바인딩될 수 또는 수 데이터 원본 뷰의 계산된 열에 연결 합니다. 자세한 내용은 참조 [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)합니다.  

@@ -1,27 +1,19 @@
 ---
 title: SQL Server Management Studio에서 Analysis Services 템플릿 사용 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2f4f817acd9c83264ea1cb472bf9d39d898b120
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b7781ece8d5bd9feb014ebbaf7d067654a56d23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -65,13 +57,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  **메타데이터 탐색기**에서 다음 필드 및 측정값을 쿼리 템플릿으로 끌어옵니다.  
   
-    1.  대체 \<row_axis, mdx_set >와 **[Product Category]. [ Product Category Name]**합니다.  
+    1.  대체 \<row_axis, mdx_set >와 **[Product Category]. [ Product Category Name]** 합니다.  
   
     2.  대체 \<column_axis, mdx_set >와 **[Date]. [ Calendar Year]입니다. [Calendar Year]** .  
   
-    3.  대체 \<from_clause, mdx_name >와 **[Internet Sales]**합니다.  
+    3.  대체 \<from_clause, mdx_name >와 **[Internet Sales]** 합니다.  
   
-    4.  대체 \<where_clause, mdx_set >와 **[Measures]. [ Internet Total Sales]**합니다.  
+    4.  대체 \<where_clause, mdx_set >와 **[Measures]. [ Internet Total Sales]** 합니다.  
   
 4.  쿼리를 있는 그대로 실행해도 되지만 특정 멤버를 반환하기 위해 함수를 추가하는 등 일부를 변경할 수도 있습니다. 예를 들어 **[Product Category].[Product Category Name]** 뒤에 **.members**를 입력할 수 있습니다. 자세한 내용은 [Using Member Expressions](../../mdx/using-member-expressions.md)을(를) 참조하세요.  
   
@@ -163,12 +155,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |범주|항목 템플릿|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Model Content|Content Query|DMX SELECT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >*합니다. 지정한 마이닝 모델에 대 한 마이닝 모델 스키마 행 집합 콘텐츠를 검색 하는 콘텐츠 문입니다.|  
+|DMX\Model Content|Content Query|DMX SELECT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* 합니다. 지정한 마이닝 모델에 대 한 마이닝 모델 스키마 행 집합 콘텐츠를 검색 하는 콘텐츠 문입니다.|  
 ||Continuous Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* DMX 사용 하 여 문을 **RangeMin** 및 **RangeMax** 집합을 검색 하는 함수 지정한 마이닝 모델의 연속 열에서 지정된 된 범위에 대 한 값입니다.|  
 ||Discrete Column Values|DMX SELECT DISTINCT FROM 사용 하는 방법을 보여 줍니다.  *\<모델 >* 문에 지정한 마이닝 모델의 불연속 열에서 값의 전체 집합을 검색 합니다.|  
 ||Drillthrough Query|DMX SELECT * FROM Model.CASES 문에 DMX IsInNode 함수를 사용하여 드릴스루 쿼리를 수행하는 방법을 보여 줍니다.|  
 ||Model Attributes|DMX System.GetModelAttributes 함수를 사용하여 모델에 사용되는 특성 목록을 반환하는 방법을 보여 줍니다.|  
-||PMML Content|DMX SELECT를 사용 하는 방법을 보여 줍니다. \* FROM  *\<모델 >*합니다. 이 기능을 지 원하는 알고리즘에 대 한 마이닝 모델의 PMML Predictive Model Markup Language () 표현을 검색 하 PMML 문입니다.|  
+||PMML Content|DMX SELECT를 사용 하는 방법을 보여 줍니다. \* FROM  *\<모델 >* 합니다. 이 기능을 지 원하는 알고리즘에 대 한 마이닝 모델의 PMML Predictive Model Markup Language () 표현을 검색 하 PMML 문입니다.|  
 |DMX\Model Management|Add Model|DMX ALTER MINING MODEL STRUCTURE 문을 사용하여 마이닝 모델을 추가하는 방법을 보여 줍니다.|  
 ||Clear Model|DMX DELETE * FROM MINING MODEL 문을 사용하여 지정한 마이닝 모델의 콘텐츠를 삭제하는 방법을 보여 줍니다.|  
 ||Clear Structure Cases|DMX DELETE FROM MINING STRUCTURE 문을 사용하여 마이닝 모델 구조 사례를 지우는 방법을 보여 줍니다.|  

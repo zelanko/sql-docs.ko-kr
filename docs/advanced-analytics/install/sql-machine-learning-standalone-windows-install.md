@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Windows Server (독립 실행형)를 학습 하는 SQL Server 2017 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실행 하는 서버를 설치 하는 옵션이 포함 되어 있습니다. 이 옵션은 계산 컨텍스트를 원격으로 사용할 수 있는 솔루션을 학습, 로컬 서버와 원격 컴퓨터 학습 서버 또는 다른 SQL Server Spark 클러스터에서 같은 의미로 전환 고성능 시스템을 개발 해야 하는 경우 유용할 수 있습니다. 인스턴스입니다.
   
-이 문서에서는 독립 실행형 버전을 설치 하려면 SQL Server 설치 프로그램을 사용 하는 방법을 설명 **SQL Server 2017 컴퓨터 학습 서버**합니다. Enterprise Edition 또는 Software Assurance 있으면 기계 학습 독립 실행형 서버를 설치 하는 무료입니다.
+이 문서에서는 독립 실행형 버전을 설치 하려면 SQL Server 설치 프로그램을 사용 하는 방법을 설명 **SQL Server 2017 컴퓨터 학습 서버**합니다. 
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 

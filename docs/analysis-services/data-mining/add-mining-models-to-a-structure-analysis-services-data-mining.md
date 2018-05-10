@@ -1,35 +1,23 @@
 ---
-title: "구조에 마이닝 모델 추가 (Analysis Services-데이터 마이닝) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 구조에 마이닝 모델 추가 (Analysis Services-데이터 마이닝) | Microsoft Docs
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], creating
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46207c91d6bfbbb122f42213b779841c91ac996a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-마이닝 구조는 여러 마이닝 모델을 지원하도록 설계되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  
+  마이닝 구조는 여러 마이닝 모델을 지원하도록 설계되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  
   
 ## <a name="adding-new-mining-models"></a>새 마이닝 모델 추가  
  데이터 마이닝 마법사를 사용하여 새 마이닝 모델을 만드는 경우 항상 기본적으로 먼저 마이닝 구조를 만들어야 합니다. 그러면 마법사에서 구조에 초기 모델을 추가할 수 있는 옵션을 제공합니다. 하지만 모델은 바로 만들 필요가 없습니다. 구조만 만들 경우 예측 가능한 특성으로 사용할 열이나 특정 모델에서 데이터를 사용하는 방법을 결정할 필요가 없습니다. 대신 나중에 사용할 일반 데이터 구조만 설정하고 나중에 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) 에서 해당 구조를 기반으로 하는 새 마이닝 모델을 추가할 수 있습니다.  
@@ -65,7 +53,7 @@ ms.lasthandoff: 02/15/2018
  *열 내용*을 지정해야 하는 열도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 각 데이터 열의 내용 유형 속성을 통해 알고리즘이 해당 열의 데이터를 처리하는 방식을 알 수 있습니다. 예를 들어 데이터에 Income 열이 있는 경우 내용 유형을 Continuous로 설정하여 열이 연속 숫자를 포함하도록 지정해야 합니다. 그러나 내용 유형을 Discretized로 설정하고 선택적으로 정확한 버킷 수를 지정하여 Income 열의 숫자를 버킷으로 그룹화하도록 지정할 수도 있습니다. 고객을 세 개의 연령 그룹으로 버킷팅하는 모델과 고객을 10개의 연령 그룹으로 버킷팅하는 또 다른 모델을 만들려는 경우와 같이 열을 다르게 처리하는 다른 모델을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 구조 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)  

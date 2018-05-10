@@ -1,35 +1,23 @@
 ---
-title: "Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- ports [Analysis Services]
-- Windows Firewall [Analysis Services]
-- firewall systems [Analysis Services]
-ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a65481f7f3bb911fd57e91b32c71860a0ceee0ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
+  네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
   
  방화벽 구성에 대한 요구 사항은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치한 방법에 따라 다릅니다.  
   
@@ -85,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_default"></a> Analysis Services의 기본 인스턴스에 대한 Windows 방화벽 구성  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기본 인스턴스는 TCP 포트 2383에서 수신 대기합니다. 설치한 기본 인스턴스에 이 포트를 사용하려는 경우 Windows 방화벽에서 TCP 포트 2383에 대한 인바운드 액세스의 차단을 해제해야만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대한 원격 액세스를 설정할 수 있습니다. 기본 인스턴스를 설치했지만 고정 포트를 수신하도록 서비스를 구성하려는 경우 이 항목의 [Analysis Services의 기본 인스턴스 및 명명된 인스턴스에 대해 고정 포트 사용](#bkmk_fixed) 을 참조하십시오.  
   
- 서비스가 기본 인스턴스(MSSQLServerOLAPService)로 실행되고 있는지 확인하려면 SQL Server 구성 관리자에서 서비스 이름을 확인하십시오. Analysis Services 기본 인스턴스는 언제나 **SQL Server Analysis Services(MSSQLSERVER)**로 표시됩니다.  
+ 서비스가 기본 인스턴스(MSSQLServerOLAPService)로 실행되고 있는지 확인하려면 SQL Server 구성 관리자에서 서비스 이름을 확인하십시오. Analysis Services 기본 인스턴스는 언제나 **SQL Server Analysis Services(MSSQLSERVER)** 로 표시됩니다.  
   
 > [!NOTE]  
 >  다른 Windows 운영 체제에서는 다른 도구를 사용하여 Windows 방화벽을 구성할 수 있습니다. 대부분의 도구에서는 특정 포트 또는 프로그램 실행 파일 중 하나를 선택할 수 있습니다. 프로그램 실행 파일을 지정해야 하는 특별한 이유가 없다면 포트를 지정하는 것이 좋습니다.  

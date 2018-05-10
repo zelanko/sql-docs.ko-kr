@@ -1,34 +1,23 @@
 ---
-title: "서로 다른 팩트 테이블을 사용 하도록 파티션 원본 변경 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 서로 다른 팩트 테이블을 사용 하도록 파티션 원본 변경 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- fact tables [Analysis Services]
-- partitions [Analysis Services], fact tables
-ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ded060a7f5451e7bf0907f40da78d9fb9e95b8dc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8e34d4e24e5df2171f4903c3e05bc11720fbb74d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>다른 팩트 테이블을 사용하도록 파티션 원본 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-큐브에 대한 파티션을 만들 때 다양한 팩트 테이블을 사용하도록 선택할 수 있습니다. 이러한 테이블은 단일 데이터 원본 뷰, 여러 개의 데이터 원본 뷰 또는 여러 개의 데이터 원본에서 가져온 테이블일 수 있습니다. 데이터 원본 뷰에는 둘 이상의 데이터 원본에서 가져온 여러 테이블이 포함될 수도 있습니다.  
+  큐브에 대한 파티션을 만들 때 다양한 팩트 테이블을 사용하도록 선택할 수 있습니다. 이러한 테이블은 단일 데이터 원본 뷰, 여러 개의 데이터 원본 뷰 또는 여러 개의 데이터 원본에서 가져온 테이블일 수 있습니다. 데이터 원본 뷰에는 둘 이상의 데이터 원본에서 가져온 여러 테이블이 포함될 수도 있습니다.  
   
  큐브의 파티션에 대한 모든 팩트 테이블 및 차원은 해당 큐브의 팩트 테이블 및 차원과 구조가 동일해야 합니다. 예를 들어 서로 다른 팩트 테이블이 구조는 같지만 서로 다른 연도나 제품 라인에 대한 데이터를 포함할 수 있습니다.  
   
@@ -39,6 +28,6 @@ ms.lasthandoff: 02/15/2018
  중복 데이터가 포함된 여러 개의 서로 다른 팩트 테이블을 사용할 수는 있지만 권장하지는 않습니다. 이러한 경우에는 파티션에서 필터를 사용하여 한 파티션에서 사용되는 데이터가 다른 어떤 파티션에서도 사용되지 않게 해야 합니다. 자세한 내용은 [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [만들기 및 관리 로컬 파티션에 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

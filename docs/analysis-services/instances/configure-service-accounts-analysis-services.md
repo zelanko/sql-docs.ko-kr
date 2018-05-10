@@ -1,36 +1,23 @@
 ---
-title: "서비스 계정 구성 (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 서비스 계정 구성 (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 비롯한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
+  제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 비롯한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
   
  이 항목에서는 테이블 형식 및 클러스터형 설치에 필요한 추가 사용 권한을 비롯하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 추가 정보를 제공합니다. 또한 서버 작업을 지원하는 데 필요한 사용 권한도 다룹니다. 예를 들어 처리 및 쿼리 작업이 서비스 계정에서 실행되도록 구성할 수 있습니다. 이렇게 하려면 추가 사용 권한을 부여해야 합니다.  
   
@@ -52,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
  내부 작업의 경우 Analysis Services의 권한 소유자가 로그인 계정이 아니고 서비스별 SID를 포함하는 설치 프로그램에서 생성된 로컬 Windows 보안 그룹입니다. 보안 그룹에 권한을 할당하는 방법은 이전 버전의 Analysis Services와 일치합니다. 또한 로그온 계정은 시간에 따라 변경될 수 있지만 서비스별 SID와 로컬 보안 그룹은 서버 설치 수명 기간 동안 지속됩니다. Analysis Services에서는 권한 보유를 위해 로그온 계정 대신 보안 그룹을 선택하는 것이 좋습니다. 파일 시스템 권한 또는 Windows 권한에 상관없이 서비스 인스턴스에 수동으로 권한을 부여할 경우 항상 서버 인스턴스에 대해 만들어진 로컬 보안 그룹에 권한을 부여해야 합니다.  
   
- 보안 그룹의 이름은 패턴을 따릅니다. 접두사는 항상 **SQLServerMSASUser$**이고 그 뒤에 컴퓨터 이름이 오고 마지막에 인스턴스 이름이 옵니다. 기본 인스턴스는 **MSSQLSERVER**입니다. 명명된 인스턴스는 설정 중에 지정된 이름입니다.  
+ 보안 그룹의 이름은 패턴을 따릅니다. 접두사는 항상 **SQLServerMSASUser$** 이고 그 뒤에 컴퓨터 이름이 오고 마지막에 인스턴스 이름이 옵니다. 기본 인스턴스는 **MSSQLSERVER**입니다. 명명된 인스턴스는 설정 중에 지정된 이름입니다.  
   
  로컬 보안 설정에서 이 보안 그룹을 확인할 수 있습니다.  
   
@@ -81,7 +68,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  GPEDIT.msc | 로컬 컴퓨터 정책 | 컴퓨터 구성 | Windows 설정 | 보안 설정 | 로컬 정책 | 사용자 권한 지정을 실행합니다.  
   
-2.  **SQLServerMSASUser$**가 포함된 기존 정책을 검토합니다. 이 계정은 Analysis Services가 설치된 컴퓨터에 있는 로컬 보안 그룹입니다. Windows 권한과 파일 폴더 사용 권한이 모두 이 보안 그룹에 부여됩니다. **서비스로 로그온** 정책을 두 번 클릭하여 시스템에서 보안 그룹이 어떻게 지정되어 있는지 확인합니다. 보안 그룹의 전체 이름은 Analysis Services를 명명된 인스턴스로 설치했는지 여부에 따라 다릅니다. 계정 권한을 추가할 경우 실제 서비스 계정을 사용하지 않고 이 보안 그룹을 사용합니다.  
+2.  **SQLServerMSASUser$** 가 포함된 기존 정책을 검토합니다. 이 계정은 Analysis Services가 설치된 컴퓨터에 있는 로컬 보안 그룹입니다. Windows 권한과 파일 폴더 사용 권한이 모두 이 보안 그룹에 부여됩니다. **서비스로 로그온** 정책을 두 번 클릭하여 시스템에서 보안 그룹이 어떻게 지정되어 있는지 확인합니다. 보안 그룹의 전체 이름은 Analysis Services를 명명된 인스턴스로 설치했는지 여부에 따라 다릅니다. 계정 권한을 추가할 경우 실제 서비스 계정을 사용하지 않고 이 보안 그룹을 사용합니다.  
   
 3.  GPEDIT에서 계정 권한을 추가하려면 **프로세스 작업 집합 향상** 을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -132,7 +119,7 @@ ms.lasthandoff: 02/15/2018
 3.  **Windows 탐색기** | **Program Files** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **bin** 을 사용하여 2단계의 보안 그룹에 보안 속성이 부여된 폴더를 확인합니다.  
   
 > [!NOTE]  
->  SID를 제거하거나 수정하지 마세요. 실수로 삭제한 서비스별 SID를 복원하려면 [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)을 참조하세요.  
+>  SID를 제거하거나 수정하지 마세요. 실수로 삭제 된 서비스별 SID를 복원 하려면 참조 [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)합니다.  
   
  **서비스별 SID에 대한 추가 정보**  
   
@@ -143,7 +130,7 @@ ms.lasthandoff: 02/15/2018
  SID는 변경이 불가능하므로 서비스 설치 중 생성된 파일 시스템 ACL을 서비스 계정의 변경 빈도와 상관없이 무제한으로 사용할 수 있습니다. 추가된 보안 조치로, SID를 통해 권한을 지정하는 ACL은 다른 서비스가 동일한 계정에서 실행되더라도 프로그램 실행 파일 및 데이터 폴더가 서비스의 단일 인스턴스에서만 액세스되도록 합니다.  
   
 ##  <a name="bkmk_tasks"></a> 특정 서버 작업에 대한 추가 Analysis Services 권한 부여  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 시작하는 데 사용되는 서비스 계정 또는 로그온 계정의 보안 컨텍스트에서 일부 태스크를 실행하고 태스크를 요청하는 사용자의 보안 컨텍스트에서 나머지 태스크를 실행합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]시작 하는 데 사용 되는 서비스 계정 (또는 로그온 계정)의 보안 컨텍스트에서 일부 태스크를 실행 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 작업을 요청 하는 사용자의 보안 컨텍스트에서 나머지 태스크를 실행 하 고 있습니다.  
   
  다음 표에서는 서비스 계정으로 실행되는 태스크를 지원하는 데 필요한 추가 권한에 대해 설명합니다.  
   

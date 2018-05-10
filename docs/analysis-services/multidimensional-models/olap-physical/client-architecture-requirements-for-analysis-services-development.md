@@ -1,36 +1,19 @@
 ---
-title: "분석을 위한 클라이언트 아키텍처 요구 사항 서비스 개발 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+title: 분석을 위한 클라이언트 아키텍처 요구 사항 서비스 개발 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63ba4a3a70f7fe763c33e05c30f186efa809d19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 배포의 클라이언트 아키텍처 요구 사항
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |.NET 언어|ADO MD.NET|  
 |모든 SOAP 지원 언어|XML for Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 배포에 대 한 사용할 수 있는 완전히 확장 가능한 중간 계층을 포함 하는 웹 아키텍처가 소규모 조직과 대규모 조직에 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 웹 서비스를 위해 중간 계층을 광범위하게 지원합니다. ASP 응용 프로그램은 OLE DB에서 OLAP 용 지원 되며 ADO MD, ASP.NET 응용 프로그램은 ADOMD.NET에서 지원 됩니다. 다음 그림에서 설명하는 중간 계층은 많은 동시 사용자로 확장 가능합니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에는 소규모 조직과 대규모 조직 모두에서 배포할 수 있는 완전히 확장 가능한 중간 계층을 포함하는 웹 아키텍처가 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 웹 서비스를 위해 중간 계층을 광범위하게 지원합니다. ASP 응용 프로그램은 OLE DB에서 OLAP 용 지원 되며 ADO MD, ASP.NET 응용 프로그램은 ADOMD.NET에서 지원 됩니다. 다음 그림에서 설명하는 중간 계층은 많은 동시 사용자로 확장 가능합니다.  
   
  ![중간 계층 아키텍처에 대 한 논리 다이어그램](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "중간 계층 아키텍처에 대 한 논리 다이어그램")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>테이블 형식 또는 SharePoint 모드의 Analysis Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]을 및 테이블 형식 데이터베이스에 대 한 xVelocity 메모리 내 분석 엔진 (VertiPaq) 모드에서 서버를 시작할 수 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 사이트에 게시 된 통합 문서.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 는 각각 SharePoint 또는 테이블 형식 모드를 사용 하는 메모리 내 데이터베이스 만들고 쿼리에 지원 되는 유일한 클라이언트 환경입니다. 포함 된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel을 사용 하 여 만든 데이터베이스 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 도구는 Excel 통합 문서 내에서 포함 되며 Excel.xlsx 파일의 일부로 저장 됩니다.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 SharePoint 또는 테이블 형식 모드 각각을 사용하는 메모리 내 데이터베이스 만들고 쿼리하기 위해 지원되는 유일한 클라이언트 환경입니다. 포함 된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel을 사용 하 여 만든 데이터베이스 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 도구는 Excel 통합 문서 내에서 포함 되며 Excel.xlsx 파일의 일부로 저장 됩니다.  
   
  그러나 큐브 데이터를 통합 문서에 가져올 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서는 기존 큐브에 저장된 데이터를 사용할 수 있습니다. SharePoint 사이트에 게시된 경우 다른 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 가져올 수도 있습니다.  
   

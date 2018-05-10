@@ -1,36 +1,19 @@
 ---
-title: "연결 및 세션 (XMLA) 관리 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statefulness [XML for Analysis]
-- statelessness [XML for Analysis]
-- XML for Analysis, sessions
-- states [XML for Analysis]
-- XMLA, sessions
-- sessions [XML for Analysis]
-ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 
-author: Minewiskan
+title: 연결 및 세션 (XMLA) 관리 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4c11bc2a626f619c42df8bd22226fd59cb900749
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* id와 컨텍스트 메서드 호출 간에 클라이언트의 서버에서 유지 하는 조건입니다. *상태 비저장* 는 서버 기억 하지 id와 클라이언트의 컨텍스트 메서드 호출이 완료 된 후 상태입니다.  

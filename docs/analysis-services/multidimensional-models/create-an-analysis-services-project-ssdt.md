@@ -1,38 +1,23 @@
 ---
-title: "Analysis Services 프로젝트 만들기 (SSDT) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services 프로젝트 만들기 (SSDT) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services]
-- templates [Analysis Services], projects
-- projects [Analysis Services], creating
-- projects [Analysis Services], Business Intelligence Development Studio
-- Business Intelligence Development Studio, defining projects [Analysis Services]
-- items [Analysis Services]
-ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6824b479cddc6dba7011e2343572c7fd7f64760f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 응용 프로그램 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 응용 프로그램에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 응용 프로그램 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 응용 프로그램에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
   
  Analysis Services 프로젝트는 단일 Analysis Services 데이터베이스에 사용되는 개체를 포함합니다. 프로젝트의 배포 속성은 프로젝트 메타데이터가 인스턴스화된 개체로 배포될 서버 및 데이터베이스 이름을 지정합니다.  
   
@@ -141,7 +126,7 @@ ms.lasthandoff: 02/15/2018
   
 |파일 유형|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 정의 파일(.dwproj)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 정의 및 포함된 항목, 구성 및 어셈블리 참조에 대한 메타데이터를 포함합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]프로젝트 정의 파일 (.dwproj)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 정의 및 포함된 항목, 구성 및 어셈블리 참조에 대한 메타데이터를 포함합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 사용자 설정(.dwproj.user)|특정 사용자의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 구성 정보를 포함합니다.|  
 |데이터 원본 파일(.ds)|데이터 원본에 대한 메타데이터를 정의하는 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 요소를 포함합니다.|  
 |데이터 원본 뷰 파일(.dsv)|데이터 원본 뷰에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다.|  
@@ -159,7 +144,7 @@ ms.lasthandoff: 02/15/2018
   
 |범주|항목 템플릿|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 항목|Cube|큐브 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 큐브를 추가합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]프로젝트 항목|Cube|큐브 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 큐브를 추가합니다.|  
 ||데이터 원본|데이터 원본 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터 원본을 추가합니다.|  
 ||데이터 원본 뷰|데이터 원본 뷰 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터 원본 뷰를 추가합니다.|  
 ||데이터베이스 역할|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터베이스 역할을 추가한 다음 새 데이터베이스 역할의 역할 디자이너를 표시합니다.|  

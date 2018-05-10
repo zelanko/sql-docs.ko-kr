@@ -1,32 +1,23 @@
 ---
 title: XMLA를 사용 하 여 데이터 마이닝 쿼리 만들기 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8732b3f366d5805f6321b4e07fe0de1dbc73fb42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]AMO, DMX 또는 XML을 사용 하 여 다양 한 데이터 마이닝 개체에 대 한 쿼리를 만들 수 있습니다 A. /  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  AMO, DMX 또는 XML/A를 사용하여 데이터 마이닝 개체에 대한 다양한 쿼리를 만들 수 있습니다.  
   
  XML은 Analysis Services 서버와 모든 클라이언트 간의 통신에 사용됩니다. 따라서 일반적으로 DMX를 사용하면 내용 쿼리를 보다 쉽게 만들 수 있지만 SOAP 프로토콜을 지원하는 클라이언트를 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 XML/A 쿼리를 만들어 XML/A의 DISCOVER 및 COMMAND 문을 통해 쿼리를 작성할 수도 있습니다.  
   
@@ -86,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  템플릿에서 `<Restriction List>` 뒤에 커서를 놓고 Enter 키를 눌러 새 줄을 추가합니다.  
   
-4.  빈 줄에 커서를 놓고 **<MODEL_NAME>내 모델 이름</MODEL_NAME>**을 입력합니다.  
+4.  빈 줄에 커서를 놓고 **<MODEL_NAME>내 모델 이름</MODEL_NAME>** 을 입력합니다.  
   
      제한에 대한 전체 섹션은 다음과 같아야 합니다.  
   
@@ -105,7 +96,7 @@ ms.lasthandoff: 01/08/2018
      결과 창에 지정한 모델의 값과 함께 스키마 정의가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 스키마 행 집합](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

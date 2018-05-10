@@ -1,34 +1,23 @@
 ---
 title: Analysis Services 프로젝트 속성 구성 (SSDT) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
-helpviewer_keywords:
-- projects [Analysis Services], properties
-ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aa56475a9b5ff1e71649e4d249afa7f9851d6bfc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services 프로젝트 속성 구성(SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 빌드 및 배포에 영향을 주는 특정 기본 속성으로 정의 된는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 작성 및 배포에 영향을 미치는 몇 가지 기본 속성과 함께 정의됩니다.  
   
  프로젝트 속성을 변경하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개체를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 또는 프로젝트 메뉴에서 **속성** 을 클릭해도 됩니다.  
   
@@ -43,7 +32,7 @@ ms.lasthandoff: 01/08/2018
 |빌드 / 암호 제거|True|빌드 프로세스 중에 출력 디렉터리에 기록되는 연결 문자열에서 알려진 암호를 제거할지 여부를 지정합니다. 암호는 보안을 향상시키기 위해 제거됩니다. 암호를 제거하면 배포된 프로젝트를 처리할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 원본 데이터에 액세스할 수 있도록 암호를 제공해야 합니다.|  
 |디버깅 / 시작 개체|\<현재 활성 개체 >|디버깅을 시작할 때 시작될 개체를 결정합니다.|  
 |배포 / 배포 모드|변경 내용만 배포|프로젝트 외부에서 직접 개체를 변경하지 않은 경우 기본적으로 프로젝트 개체의 변경 내용만 배포됩니다. 각 개체의 변경 내용 배포 중에 모든 프로젝트 개체를 배포하도록 선택할 수도 있습니다. 최상의 성능을 얻으려면 변경 내용만 배포를 사용합니다.|  
-|배포 / 처리 옵션|Default|기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 개체 변경 내용을 배포할 때 필요한 처리 유형을 결정합니다. 일반적으로 이 경우의 배포 시간이 가장 빠릅니다. 그러나 각 개체의 변경 내용 배포 시 전체 처리를 수행하거나 처리를 수행하지 않도록 선택할 수도 있습니다.|  
+|배포 / 처리 옵션|기본값|기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 개체 변경 내용을 배포할 때 필요한 처리 유형을 결정합니다. 일반적으로 이 경우의 배포 시간이 가장 빠릅니다. 그러나 각 개체의 변경 내용 배포 시 전체 처리를 수행하거나 처리를 수행하지 않도록 선택할 수도 있습니다.|  
 |배포 / 트랜잭션 배포|False|기본적으로 변경된 개체나 모든 개체의 배포는 배포된 개체의 처리를 포함하는 트랜잭션이 아닙니다. 처리가 실패해도 배포는 성공하고 유지될 수 있습니다. 이 기본값을 변경하여 배포 및 처리를 단일 트랜잭션에 통합할 수 있습니다.|  
 |배포/대상 서버|localhost|기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 내의 데이터베이스 개체는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 사용되는 로컬 컴퓨터에 있는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 기본 인스턴스에 배포됩니다. 이 기본값을 변경하여 로컬 컴퓨터의 명명된 인스턴스나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들 권한이 있는 원격 컴퓨터의 임의 인스턴스를 지정할 수 있습니다.|  
 |배포 / 데이터베이스|\<프로젝트 이름 >|기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개체가 배포 시 인스턴스화되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 이름은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 때 지정한 이름입니다. 이 속성을 변경하여 서버 속성에 지정된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 데이터베이스 이름을 변경할 수 있습니다.|  

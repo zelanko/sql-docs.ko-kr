@@ -1,39 +1,23 @@
 ---
 title: 셀 데이터 (Analysis Services)에 대 한 사용자 지정 액세스 부여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cell data
-- permissions [Analysis Services], cells
-- read contingent permissions
-- read permissions
-- cells [Analysis Services]
-- custom cell data access [Analysis Services]
-ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 10cb80b39117fcd5ec10bb773672e8b984846566
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>셀 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]셀 보안은 큐브 내 측정값 데이터에 액세스를 허용 하거나 거부할 사용 됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  셀 보안은 큐브 내 측정값 데이터에 대한 액세스를 허용하거나 거부하는 데 사용됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  
   
  ![허용 및 거부 된 셀을 보여 주는 피벗 테이블](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "허용 및 거부 된 셀을 보여 주는 피벗 테이블")  
   
@@ -67,7 +51,7 @@ ms.lasthandoff: 01/08/2018
      이 식은 사용자가 볼 수 있는 측정값을 명시적으로 식별합니다. 다른 측정값은 이 역할을 통해 연결된 사용자가 사용할 수 없습니다. [CurrentMember&#40;MDX&#41;](../../mdx/currentmember-mdx.md)에서 컨텍스트를 설정한 다음 허용된 측정값이 표시됩니다. 이 식의 결과로 현재 구성원에 **재판매인 판매액** 또는 **재판매인 총 제품 원가**가 포함된 경우 해당 값이 표시됩니다. 그렇지 않으면 액세스가 거부됩니다. 이 식에는 각각 괄호로 묶인 부분이 여러 개 있습니다. **OR** 연산자는 여러 측정값을 지정하는 데 사용됩니다.  
   
 ## <a name="deny-access-to-specific-measures"></a>특정 측정값에 대한 액세스 거부  
- **역할 만들기** | **셀 데이터** | **큐브 내용을 읽을 수 있습니다.**에도 지정된 다음 MDX 식은 특정 측정값을 사용할 수 없게 되는 반대의 결과가 발생합니다. 이 예제에서 **할인액** 및 **할인율** 은 **NOT** 및 **AND** 연산자를 사용하여 사용할 수 없게 됩니다. 다른 모든 측정값은 이 역할을 통해 연결된 사용자가 볼 수 있습니다.  
+ **역할 만들기** | **셀 데이터** | **큐브 내용을 읽을 수 있습니다.** 에도 지정된 다음 MDX 식은 특정 측정값을 사용할 수 없게 되는 반대의 결과가 발생합니다. 이 예제에서 **할인액** 및 **할인율** 은 **NOT** 및 **AND** 연산자를 사용하여 사용할 수 없게 됩니다. 다른 모든 측정값은 이 역할을 통해 연결된 사용자가 볼 수 있습니다.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -80,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="set-read-permissions-on-calculated-measures"></a>계산된 측정값에 대한 읽기 권한 설정  
  계산된 측정값에 대한 사용 권한은 해당 구성 요소와는 별도로 설정할 수 있습니다. 계산된 측정값과 종속 측정값 사이에 사용 권한을 조정하려는 경우에는 불확정 읽기에 대한 다음 섹션으로 건너뛰세요.  
   
- 읽기 권한이 계산된 측정값에 어떻게 작용하는지 이해하려면 AdventureWorks의 **Reseller Gross Profit** 을 살펴보세요. 이 측정값은 **Reseller Sales Amount** 및 **Reseller Total Product Cost** 측정값에서 파생됩니다. 역할에 **Reseller Gross Profit** 셀에 대한 읽기 권한이 있는 한 다른 측정값에서 사용 권한이 명시적으로 거부되는 경우에도 이 측정값은 볼 수 있습니다. 설명을 위해 다음 MDX 식을 **역할 만들기** | **셀 데이터** | **큐브 내용을 읽을 수 있습니다.**에 복사합니다.  
+ 읽기 권한이 계산된 측정값에 어떻게 작용하는지 이해하려면 AdventureWorks의 **Reseller Gross Profit** 을 살펴보세요. 이 측정값은 **Reseller Sales Amount** 및 **Reseller Total Product Cost** 측정값에서 파생됩니다. 역할에 **Reseller Gross Profit** 셀에 대한 읽기 권한이 있는 한 다른 측정값에서 사용 권한이 명시적으로 거부되는 경우에도 이 측정값은 볼 수 있습니다. 설명을 위해 다음 MDX 식을 **역할 만들기** | **셀 데이터** | **큐브 내용을 읽을 수 있습니다.** 에 복사합니다.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -92,7 +76,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![사용 가능 하 고 사용할 수 없는 cellls 있는 Excel 테이블](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "사용 가능 하 고 사용할 수 없는 cellls 있는 Excel 테이블")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>계산된 측정값에 대한 불확정 읽기 권한 설정  
- 셀 보안에서는 계산에 포함되는 관련 셀에 대한 사용 권한을 설정하는 데 대체 권한인 불확정 읽기를 제공합니다. **Reseller Gross Profit** 예제를 다시 생각해 보세요. 이전 섹션에서 입력한 것과 동일한 MDX 식을 입력하되 이번에는 **역할 만들기** | **셀 데이터** 대화 상자의 두 번째 텍스트 영역( **셀 보안 설정에 따라 셀 내용을 읽을 수 있습니다.**아래 텍스트 영역)에 식을 지정하면 Excel에서 볼 때 결과가 표시됩니다. **Reseller Gross Profit** 이 **Reseller Sales Amount** 및 **Reseller Total Product Cost**에 따라 달라지기 때문에 이제 해당 구성 요소에 액세스할 수 없으므로 매출 총 이익에도 액세스할 수 없습니다.  
+ 셀 보안에서는 계산에 포함되는 관련 셀에 대한 사용 권한을 설정하는 데 대체 권한인 불확정 읽기를 제공합니다. **Reseller Gross Profit** 예제를 다시 생각해 보세요. 이전 섹션에서 입력한 것과 동일한 MDX 식을 입력하되 이번에는 **역할 만들기** | **셀 데이터** 대화 상자의 두 번째 텍스트 영역( **셀 보안 설정에 따라 셀 내용을 읽을 수 있습니다.** 아래 텍스트 영역)에 식을 지정하면 Excel에서 볼 때 결과가 표시됩니다. **Reseller Gross Profit** 이 **Reseller Sales Amount** 및 **Reseller Total Product Cost**에 따라 달라지기 때문에 이제 해당 구성 요소에 액세스할 수 없으므로 매출 총 이익에도 액세스할 수 없습니다.  
   
 > [!NOTE]  
 >  동일한 역할 내 특정 셀에 대해 읽기와 불확정 읽기 권한을 둘 다 설정하는 경우 어떻게 됩니까? 역할에 셀에 대한 읽기 권한은 있지만, 불확정 읽기 권한은 없습니다.  
@@ -104,10 +88,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>관련 항목:  
  [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [기본 MDX 스크립트&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [처리 권한 부여 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [차원 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [데이터 &#40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [기본 MDX 스크립트 & #40; Mdx& #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [처리 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [차원에 대 한 사용 권한을 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   
