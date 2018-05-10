@@ -1,17 +1,18 @@
 ---
 title: SQL Server 기계 학습에서 Python 패키지를 새 설치 | Microsoft Docs
+description: SQL Server 2017 컴퓨터 학습 Services (In-database) 및 학습 Server (독립 실행형)를 컴퓨터에 새 Python 패키지 추가
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

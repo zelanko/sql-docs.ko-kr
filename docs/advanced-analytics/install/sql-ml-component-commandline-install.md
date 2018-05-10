@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>명령줄에서 SQL Server 컴퓨터에 대 한 학습 구성 요소를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 
 대화형 없이 진행 상황 정보 화면에 나타나는 표시 되는 메시지를 보려면 /qs 인수를 사용 합니다.
 
-> [!Important]
+> [!IMPORTANT]
 > 설치 후 두 개의 추가 구성 단계가 남아 있습니다. 이러한 작업은 수행 될 때까지 통합을 완전 하지 않습니다. 참조 [사후 설치 작업](#post-install) 지침에 대 한 합니다.
 
 ### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 2017: 데이터베이스 엔진, 고급 Python 및 R 분석
