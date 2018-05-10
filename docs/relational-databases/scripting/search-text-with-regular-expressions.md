@@ -1,16 +1,16 @@
 ---
-title: "정규식을 사용한 텍스트 검색 | Microsoft 문서"
-ms.custom: 
+title: 정규식을 사용한 텍스트 검색 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vsregularexpressionhelp
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
 #### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
   
@@ -61,8 +63,8 @@ ms.lasthandoff: 01/24/2018
 |또는|&#124;|OR 기호(&#124;) 앞이나 뒤에 있는 식과 대응합니다. 대개 그룹 내에서 사용됩니다. 예를 들어 (sponge&#124;mud) bath는 "sponge bath" 및 "mud bath"와 대응합니다.|  
 |이스케이프|\|백슬래시(\\) 뒤에 리터럴로 오는 문자와 대응합니다. 이렇게 하면 정규식 표기법에 사용된 문자(예: { 및 ^)를 찾을 수 있습니다. 예를 들어 \\^은 ^ 문자를 검색합니다.|  
 |태그가 지정된 식|{}|괄호로 묶은 식으로 태그가 지정된 식과 대응합니다.|  
-|C/C++ 식별자|:i|([a-zA-Z_$][a-zA-Z0-9_$]\*) 식과 대응합니다.|  
-|따옴표 붙은 문자열|:q|(("[^"]\*")&#124;('[^']\*')) 식과 대응합니다.|  
+|C/C++ 식별자|:i|([a-zA-Z_$][a-zA-Z0-9_$]*) 식과 대응합니다.|  
+|따옴표 붙은 문자열|:q|(("[^"]*")&#124;('[^']\*')) 식과 대응합니다.|  
 |공백 또는 탭|:b|공백 또는 탭 문자와 대응합니다.|  
 |정수|:z|([0-9]+) 식과 대응합니다.|  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 01/24/2018
 |영문자|:c|([a-zA-Z]) 식과 대응합니다.|  
 |십진수|:d|([0-9]) 식과 대응합니다.|  
 |16진수|:h|([0-9a-fA-F]+) 식과 대응합니다.|  
-|유리수|:n|(([0-9]+.[0-9]\*)&#124;([0-9]\*.[0-9]+)&#124;([0-9]+)) 식과 대응합니다.|  
+|유리수|:n|(([0-9]+.[0-9]*)&#124;([0-9]\*.[0-9]+)&#124;([0-9]+)) 식과 대응합니다.|  
 |영문자열|:w|([a-zA-Z]+) 식과 대응합니다.|  
 |이스케이프|\e|유니코드 U+001B입니다.|  
 |Bell|\g|유니코드 U+0007입니다.|  
@@ -108,7 +110,7 @@ ms.lasthandoff: 01/24/2018
 |닫는 따옴표|:Pf|작은따옴표 및 닫는 큰따옴표와 대응합니다.|  
 |대시|:Pd|대시 표시와 대응합니다.|  
 |연결선|:Pc|밑줄 표시와 대응합니다.|  
-|기타 문장 부호|:Po|(,), ?, ", !, @, #, %, &, \*, \\, (:), (;), ' 및 /와 대응합니다.|  
+|기타 문장 부호|:Po|(,), ?, ", !, @, #, %, &, *, \\, (:), (;), ' 및 /와 대응합니다.|  
 |공백 구분 기호|:Zs|공백과 대응합니다.|  
 |줄 구분선|:Zl|유니코드 문자 U+2028과 대응합니다.|  
 |단락 구분선|:Zp|유니코드 문자 U+2029와 대응합니다.|  

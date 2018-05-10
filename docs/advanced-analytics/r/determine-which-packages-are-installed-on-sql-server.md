@@ -1,25 +1,24 @@
 ---
-title: SQL Server에 설치 된 Python 패키지 또는 R 보기 | Microsoft Docs
+title: SQL Server 기계 학습에서 Python 및 R 패키지 정보를 가져올 | Microsoft Docs
+description: R 및 Python 패키지 버전을 확인 하 고 설치 결과 확인 컴퓨터 학습 서비스 또는 SQL Server R Services에 설치 된 패키지 목록을 가져올 수 있습니다.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>SQL Server에 설치 된 Python 패키지 또는 R 보기
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Get R 및 SQL Server 기계 학습에서 Python 패키지 정보
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-여러 Python 환경에 설치 하거나 여러 R 도구를 사용할 경우를 잘못 된 라이브러리 또는 환경에 패키지를 설치 하 여 다음 할 수 없습니다 나중에 찾을 쉽습니다. 
-
-이 문서에서는 몇 가지 쿼리를 현재 버전을 확인 하 고 현재 SQL Server 환경에 설치 된 패키지를 나열를 사용할 수 있습니다.
+여러 Python 환경에 설치 하거나 여러 R 도구를 사용할 경우를 잘못 된 라이브러리 또는 환경에 패키지를 설치 하 여 다음 할 수 없습니다 나중에 찾을 쉽습니다. 이 문서는 쿼리 및 determininga 패키지 버전에 대 한 현재 SQL Server 환경에 설치 된 패키지를 나열 하 고 유용한 지침을 제공 합니다.
 
 ## <a name="verify-the-current-default-library"></a>현재 기본 라이브러리를 확인 합니다.
 
