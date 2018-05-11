@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services 자습서 1 단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
-description: 새 Analysis Services tutorial 프로젝트를 만드는 방법에 설명 합니다.
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 07e52d4b6585b661d0df3904f06f22b3df136edf
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 
@@ -54,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
     작업 영역 모델 제작 중 프로젝트와 이름이 같은 테이블 형식 모델 데이터베이스를 호스팅합니다. 통합된 작업 영역 모델 제작에 대 한 별도 Analysis Services 서버 인스턴스를 설치 하지 않아도 Visual Studio에서는 기본 제공 된 인스턴스를 의미 합니다.
       
-6.  **호환성 수준이**선택, **SQL Server 2017 / Azure Analysis Services (1400)**합니다.   
+6.  **호환성 수준이**선택, **SQL Server 2017 / Azure Analysis Services (1400)** 합니다.   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

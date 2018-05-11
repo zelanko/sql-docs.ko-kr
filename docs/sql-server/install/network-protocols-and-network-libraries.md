@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
 - configuration options [SQL Server], protocols
@@ -28,12 +27,11 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8e75fc22a693358556015c2b492067a4ca6cb229
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6e1be13fdf4a14417ef47aa945227d9d66656d5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>네트워크 프로토콜 및 네트워크 라이브러리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="default-sql-server-network-configuration"></a>기본 SQL Server 네트워크 구성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스는 TCP/IP 포트 1433 및 명명된 파이프 \\\\.\pipe\sql\query에 대해 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스는 포트 번호가 운영 체제에서 할당되는 TCP 동적 포트로 구성됩니다.  
   
- 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 특정 포트 주소를 통과하도록 구성된 방화벽 서버를 통과해야 하는 경우와 같이 동적 포트 주소를 사용할 수 없는 경우에는 할당되지 않은 포트 번호를 선택합니다. 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 이 목록은 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에서 볼 수 있습니다.  
+ 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 특정 포트 주소를 통과하도록 구성된 방화벽 서버를 통과해야 하는 경우와 같이 동적 포트 주소를 사용할 수 없는 경우에는 할당되지 않은 포트 번호를 선택합니다. 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에 나열됩니다.  
   
  보안을 향상시키기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치될 때 네트워크 연결이 부분적으로만 설정됩니다. 설치가 완료된 후 네트워크 프로토콜을 설정, 해제 및 구성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성 영역을 사용합니다.  
   

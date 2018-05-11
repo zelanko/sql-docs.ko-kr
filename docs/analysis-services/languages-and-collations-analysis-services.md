@@ -1,37 +1,20 @@
 ---
 title: 언어 및 데이터 정렬 (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-keywords:
-- Analysis Services 테스트
-helpviewer_keywords:
-- Windows collations [Analysis Services]
-- default collations
-- languages [Analysis Services]
-- sort orders [Analysis Services]
-- language identifiers [Analysis Services]
-- default languages
-- collations [Analysis Services]
-ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b70a75981599b234c6a2e0b6cd66aea7f3a58024
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
+# <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services) 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. **Language** 및 **Collation** 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -13,20 +13,17 @@ helpviewer_keywords:
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
-ms.workload: On Demand
+ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0fbec00b860dd510cddd767d8c8b09720588528
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 732c0510f2744df1dd361fa5e32077c571d47c9c
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

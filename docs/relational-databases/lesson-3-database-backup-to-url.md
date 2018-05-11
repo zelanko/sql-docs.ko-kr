@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
@@ -19,12 +17,11 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c810804ab1f65f8d7ab1e784576f827ae92ea7a1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-database-backup-to-url"></a>3단원: URL에 데이터베이스 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
 1.  SQL Server Management Studio에 연결합니다.  
   
-2.  새 쿼리 창을 열고 Azure 가상 컴퓨터에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
+2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
   
 3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 1단원에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정한 다음 이 스크립트를 실행합니다.  
   
@@ -62,5 +59,6 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
 **다음 단원:**  
   
-[4단원: URL에서 가상 컴퓨터로 데이터베이스 복원](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+
+  [4단원: URL에서 가상 머신으로 데이터베이스 복원](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac932c68e218ecbaf4fdd19c1e77b491ab444feb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a601df470449c9bc21253c071bc4c7e560e98749
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO로 관리 태스크 프로그래밍
   AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 관리하는 데 사용되는 프로그래밍 라이브러리입니다. 이 섹션에서는 AMO 개체를 사용하여 프로그래밍하는 방법을 배웁니다.  

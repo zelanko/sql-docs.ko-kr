@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b92b5b1bfdec6e311b93743d22cc990623315a9a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f01fcfcd7eb335122354312cfdb4322772e910d7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET-보안 연결 설정
   연결에 사용 되는 보안 메서드는 값에 따라 ADOMD.NET에서 연결을 사용 하는 경우는 **ProtectionLevel** 호출할 때 사용 하는 연결 문자열의 속성은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 메서드는 의<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  

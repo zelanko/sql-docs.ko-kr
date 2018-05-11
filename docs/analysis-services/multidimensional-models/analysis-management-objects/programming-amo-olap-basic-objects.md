@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: b75256253cc9b40c73705fbbb6d74fd92374bd66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>AMO OLAP 기본 개체 프로그래밍
   복합 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 만드는 과정은 간단하지만 세부 사항에 주의를 기울여야 합니다. 이 항목에서는 OLAP 기본 개체를 프로그래밍하는 방법에 대해 자세히 설명합니다. 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  

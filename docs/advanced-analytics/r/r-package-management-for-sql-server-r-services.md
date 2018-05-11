@@ -1,22 +1,23 @@
 ---
-title: 설치 하 고 SQL Server에서 컴퓨터 학습 패키지를 관리 | Microsoft Docs
+title: R 및 Python 패키지 SQL Server 기계 학습에서 관리 | Microsoft Docs
+description: R 및 Python 패키지 정보를 가져오고 새 패키지를 추가 합니다. 기계 학습에 대해 구성 된 SQL Server 인스턴스에 대 한 클라이언트 액세스를 사용 하도록 설정 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>설치 하 고 SQL Server의 시스템 학습 패키지 관리
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>SQL Server 기계 학습의 R 및 Python 패키지 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server 2016 및 SQL Server 2017에 새 R, Python 패키지를 설치할 수 방법을 설명 합니다. 또한 제한 SQL Server에 설치할 수 있는 패키지에 설명 합니다.
+이 문서에서는 R을 소개 및 Python 패키지 SQL Server 2017 기계 학습 및 SQL Server 2016 R Services에서 관리 합니다. 또한 제한 SQL Server에 설치할 수 있는 패키지에 설명 합니다.
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>패키지 관리 방법 및 요구 사항 개요
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 그러나 이러한 제한 사항은 반드시 데이터 과학자와 분석가가 작동 하는 방법의 일부 변경을 의미 합니다.
 
-+ 일반적으로 서버에 대 한 관리 액세스는 필요 합니다. SQL Server 2017 년 1 데이터베이스 관리자가 사용자에 게 특정 개인 사용에 대 한 패키지를 설치 하는 기능 역할을 사용할 수 있지만 관리자는 여전히이 기능을 설정 하는 합니다.
++ 일반적으로 SQL Server에서 패키지 설치 관리자 액세스가 필요합니다. SQL Server 2017 년 1 데이터베이스 관리자가 사용자에 게 특정 개인 사용에 대 한 패키지를 설치 하는 기능 역할을 사용할 수 있지만 관리자는 여전히이 기능을 설정 하는 합니다.
 + 여러 서버에 인터넷 액세스를 않아도 됩니다. 이러한 컴퓨터에 패키지를 설치 하려면 몇 가지 추가 준비 합니다.
 + 패키지는 인스턴스 라이브러리에 설치 됩니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
 + 사용자가 사용자 라이브러리에 설치 된 모든 패키지를 실행할 수 없습니다.
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 새 Python 또는 R 패키지를 설치 하는 방법에 자세한 내용은 다음 문서를 참조 하십시오. 
 
-### <a name="install-new-r-packages"></a>새 R 패키지 설치
+### <a name="r-packages"></a>R 패키지
 
 + [SQL Server에 추가 R 패키지를 설치 합니다.](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
     DDL 문을 사용 하 여 SQL Server 2017에서 R 패키지를 설치할 수도 있습니다.
 
-### <a name="install-new-python-packages"></a>새 Python 패키지 설치
+### <a name="python-packages"></a>Python 패키지
 
 + [SQL Server에 새로운 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 
 다운로드 하거나 모든 새 패키지를 설치 하려고 하기 전에 요구 사항을 검토 합니다.
 
-+ 패키지의 Windows 버전 인지 확인: [올바른 패키지 버전 및 형식 가져오기](#packageVersion)
++ 패키지의 Windows 버전 인지 확인 합니다.
 
 + 모든 패키지 종속 파일을 식별 하 고 SQL Server 환경와의 호환성을 확인 합니다.
 
@@ -84,4 +85,4 @@ ms.lasthandoff: 04/16/2018
 
 모든 종속성을 식별 하기가 복잡할 수 있습니다. R을 사용 하는 권장 [miniCRAN](create-a-local-package-repository-using-minicran.md) 오프 라인 패키지 리포지토리를 준비 합니다.
 
-Python에 대 한 모든 종속성을 준비 하 고 로컬에 저장할 유사 해야 합니다. Windows 호환 이진 파일을 사용 하 고 WHL 형식을 사용 해야 합니다.
+Python에 대 한 모든 종속성을 준비 하 고 로컬에 저장할 유사 해야 합니다. Windows 호환 이진 파일 및 WHL 형식을 사용 해야 합니다.

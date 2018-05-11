@@ -1,31 +1,23 @@
 ---
-title: "만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 
-author: Minewiskan
+title: 만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성 | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 03580ce0d35c95ee5759a14f7a1866b67406fbd4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>만들기 및 CA에 파워 피벗 서비스 응용 프로그램 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 응용 프로그램은 고유한 응용 프로그램 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -144,9 +136,9 @@ ms.lasthandoff: 02/15/2018
   
 3.  **서비스 연결**을 클릭합니다.  
   
-4.  **다음 연결 그룹 편집**에서 **기본값** 또는 **[사용자 지정]**을 선택합니다.  
+4.  **다음 연결 그룹 편집**에서 **기본값** 또는 **[사용자 지정]** 을 선택합니다.  
   
-5.  **[사용자 지정]**에 대해 사용할 각 서비스 응용 프로그램 연결 옆에 있는 확인란을 선택합니다. 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 있는 경우( **파워 피벗 서비스 응용 프로그램 프록시**유형 설정으로 표시) 하나만 선택해야 합니다.  
+5.  **[사용자 지정]** 에 대해 사용할 각 서비스 응용 프로그램 연결 옆에 있는 확인란을 선택합니다. 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 있는 경우( **파워 피벗 서비스 응용 프로그램 프록시**유형 설정으로 표시) 하나만 선택해야 합니다.  
   
 6.  **확인**을 클릭합니다.  
   

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 897638f5c4f1a519d6e35f58aac506257f458750
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 870b81b0d6ae685341f72855f4b2ee9628987720
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-classes---introduction"></a>AMO 클래스-소개
   AMO(Analysis Management Objects)는 클라이언트 응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 인스턴스를 관리하기 위해 설계된 클래스 라이브러리입니다. AMO 클래스는 데이터베이스, 차원, 큐브, 마이닝 구조 및 모델, 역할 및 권한, 예외 등의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체를 관리하는 데 사용되는 클래스입니다.  

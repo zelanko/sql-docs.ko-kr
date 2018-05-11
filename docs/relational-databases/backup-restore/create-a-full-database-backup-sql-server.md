@@ -3,15 +3,12 @@ title: 전체 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -22,12 +19,11 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee32fb6e10c9bcfbfe60c739f2f5083f4bf90e6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +159,7 @@ ms.lasthandoff: 04/16/2018
 이 예제에서는 `Sales` 데이터베이스가 기본 백업 위치에서 디스크로 백업됩니다.  `Sales` 백업은 수행되지 않았습니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
+2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
 
 3.  **확인**을 클릭합니다.
 
@@ -171,7 +167,7 @@ ms.lasthandoff: 04/16/2018
 이 예제에서는 `Sales` 데이터베이스가 `E:\MSSQL\BAK`에서 디스크로 백업됩니다.  `Sales` 의 이전 백업은 수행되었습니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
+2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
 
 3.  **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **디스크** 를 선택합니다.
 
@@ -189,7 +185,7 @@ ms.lasthandoff: 04/16/2018
 이 예제에서는 `Sales` 데이터베이스가 기본 백업 위치로 암호화를 사용하여 백업됩니다.  [**데이터베이스 마스터 키**](../../relational-databases/security/encryption/create-a-database-master-key.md) 는 이미 만들었습니다.  [**인증서**](../../t-sql/statements/create-certificate-transact-sql.md) 도 `MyCertificate`로 이미 만들었습니다. **데이터베이스 마스터 키** 및 **인증서** 를 만드는 T-SQL 예제는 [암호화된 백업 만들기](../../relational-databases/backup-restore/create-an-encrypted-backup.md)를 참조하세요.  
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
+2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
 
 3.  **미디어 옵션** 페이지의 **미디어 덮어쓰기** 섹션에서 **새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기**를 선택합니다.
 
@@ -206,7 +202,7 @@ ms.lasthandoff: 04/16/2018
 아래 세 가지 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
+2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
 
 3.  **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **URL** 을 선택합니다.
 

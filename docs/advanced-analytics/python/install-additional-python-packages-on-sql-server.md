@@ -8,28 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 SQL Server 2017 컴퓨터 학습 서비스 인스턴스의 새 Python 패키지를 설치 하는 방법을 설명 합니다.
+이 문서에서는 SQL Server 2017 컴퓨터 학습 서비스 인스턴스의 새 Python 패키지를 설치 하는 방법을 설명 합니다. 일반적으로 새 패키지를 설치 하기 위한 프로세스는 표준 Python 환경에서와 유사 합니다. 그러나 서버에 인터넷 연결이 없는 경우 몇 가지 추가 단계는 필요 합니다.
 
-일반적으로 새 패키지를 설치 하기 위한 프로세스는 표준 Python 환경에서와 유사 합니다. 그러나 서버에 인터넷 연결이 없는 경우 몇 가지 추가 단계는 필요 합니다.
-
-패키지 설치 되는 위치 또는 설치 된 패키지를 파악 하는 도움말을 참조 하십시오. [설치 된 R, Python 패키지 보기](../r/determine-which-packages-are-installed-on-sql-server.md)합니다.
+패키지 설치 되는 위치 또는 설치 된 패키지를 파악 하는 도움말을 참조 하십시오. [R 가져오기 또는 Python 패키지 정보](../r/determine-which-packages-are-installed-on-sql-server.md)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ Python 언어 옵션으로 컴퓨터 학습 Services (In-database) 설치 해야 합니다. 자세한 내용은 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
++ Python 언어 옵션으로 SQL Server 2017 컴퓨터 학습 Services (In-database) 설치 해야 합니다. 자세한 내용은 [설치할 SQL Server 2017 컴퓨터 학습 Services (In-database)](../install/sql-machine-learning-services-windows-install.md)합니다.
 
 + 각 서버 인스턴스에 대해 별도 패키지의 복사본을 설치 해야 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
 
-+ Python 3.5와 함께 되며 Windows 환경에서 사용 하려는 패키지를 작동 하는지 여부를 결정 합니다. 
++ 패키지에는 Windows에서 Python 3.5 규정을 준수 하 고 실행할 이어야 합니다. 
 
 + 패키지는 SQL Server 환경에서 사용 하기 위해 가장 잘 맞는 있는지 여부를 평가 합니다. 여러 서비스 및 응용 프로그램, 데이터베이스 서버는 일반적으로 지원 하 고 파일 시스템의 리소스 제한 뿐만 아니라 서버에 연결할 수 있습니다. 대부분의 경우에서 인터넷 액세스가 완전히 차단 됩니다.
 
@@ -82,11 +80,11 @@ SQL Server에서 사용 하 여 기본 Python 라이브러리 위치를 찾습�
 
 + Python 명령줄을 사용 하는 데 익숙한, PIP.exe 사용 하 여 새 패키지를 설치 합니다. 찾을 수 있습니다는 **pip** 에 있는 설치 관리자는 `Scripts` 하위 폴더입니다. 
 
-    오류가 발생 하는 경우 `pip` 인식 되지 않는 내부 또는 외부 명령, 창에는 PATH 변수에 Python 실행 파일 및 Python 스크립트 폴더의 경로 추가할 수 있습니다.
+  SQL Server 설치 프로그램은 시스템 경로에 스크립트를 추가 하지 않습니다. 오류가 발생 하는 경우 `pip` 인식 되지 않는 내부 또는 외부 명령, 창에는 PATH 변수에 Scripts 폴더를 추가할 수 있습니다.
 
-    전체 경로 **스크립트** 기본 설치에서 폴더는 다음과 같습니다.
+  전체 경로 **스크립트** 기본 설치에서 폴더는 다음과 같습니다.
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Visual Studio 2017 또는 Visual Studio 2015는 Python 확장과 함께 사용할 경우 실행할 수 있습니다 `pip install` 에서 **Python 환경** 창. 클릭 **패키지**, 하 고 텍스트 상자에 이름 또는 설치 하는 패키지의 위치를 제공 합니다. 입력 하지 않아도 `pip install`; 채워진 후 사용자에 대 한 자동으로 합니다. 
 
@@ -131,7 +129,7 @@ cntk._version_
 
 Python 명령줄을 사용 하는 경우 사용할 수 있습니다는 **conda** SQL Server 설치 프로그램에서 추가할 Anaconda Python 환경을 포함 되어 있는 패키지 관리자.
 
-현재 환경에 설치 된 Python 패키지를 보려면 명령 프롬프트에서이 명령을 실행 합니다.
+PATH 환경 변수를 스크립트 폴더를 추가, 실행이 명령은 Python 환경에서 패키지를 나열 하려면 관리자의 명령 프롬프트에서 합니다.
 
 ```python
 conda list

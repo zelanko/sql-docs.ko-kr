@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -40,13 +39,12 @@ caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8f8d323562539f08ed75cb67f6b4e2aaa52a522
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3cda2359f1e6ae92e49331bbd2bd3471107d2fdf
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -307,7 +305,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |기본 Python 통합|예|예|예|예|아니오|
 |고급 Python 통합|예|아니오|아니오|아니오|아니오| 
 |Machine Learning Server(독립 실행형)|예|아니오|아니오|아니오|아니오|   
-|Polybase 계산 노드|예|예 <sup>1</sup>|예 <sup>1</sup>, <sup>2</sup>|예 <sup>1</sup>,|예 <sup>1</sup>, | 
+|Polybase 계산 노드|예|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup>|예 <sup>1</sup> | 
 |Polybase 헤드 노드|예|아니오|아니오|아니오|아니오| 
 |JSON|예|예|예|예|예|   
 |쿼리 저장소|예|예|예|예|예|   

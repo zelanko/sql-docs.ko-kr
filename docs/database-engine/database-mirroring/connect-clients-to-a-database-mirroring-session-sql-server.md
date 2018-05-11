@@ -3,15 +3,13 @@ title: 데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -22,12 +20,11 @@ caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3ad4a8ebfdf4d894f137a41eb72d32302edea194
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d660af472c085d7f4ae9fe6cb9fa8a569abfac0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,10 +180,10 @@ Server=123.34.45.56,4724;
   
 |반올림|*RetryTime* 계산|시도당 다시 시도 시간|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0.08 **\*** 15**)**|1.2초|  
-|2|1.2 **+(**0.08 **\*** 15**)**|2.4초|  
-|3|2.4 **+(**0.08 **\*** 15**)**|3.6초|  
-|4|3.6 **+(**0.08 **\*** 15**)**|4.8초|  
+|1|0 **+(** 0.08 **\*** 15 **)**|1.2초|  
+|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4초|  
+|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6초|  
+|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8초|  
   
  다음 그림에서는 각각 시간 초과되는 연속 연결 시도의 다시 시도 시간을 보여 줍니다.  
   

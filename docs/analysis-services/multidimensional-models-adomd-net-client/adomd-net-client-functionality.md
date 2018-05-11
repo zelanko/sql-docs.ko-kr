@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 792017600f15ebbfab4c0ee0e4af78c0404340d7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 클라이언트 기능
   ADOMD.NET은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 데이터 공급자와 마찬가지로 응용 프로그램과 데이터 원본을 연결하는 데 사용됩니다. 하지만 ADOMD.NET은 다른 .NET Framework 데이터 공급자와는 달리 분석 데이터에 사용됩니다. 분석 데이터에 대한 작업을 수행하기 위해 ADOMD.NET에서는 다른 .NET Framework 데이터 공급자와는 매우 다른 기능을 지원합니다. ADOMD.NET을 사용하면 데이터를 검색할 수 있을 뿐 아니라 메타데이터를 검색하고 분석 데이터 저장소의 구조를 변경할 수도 있습니다.  

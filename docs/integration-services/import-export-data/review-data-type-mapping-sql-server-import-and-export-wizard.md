@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
@@ -19,12 +18,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b7c05dcf7a4bd38a98637ecb4e9da576e74b8ab9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6552bb3f8b4294fed3a14eaaf71dab1575380dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
 **열 매핑** 대화 상자의 **매핑** 목록에서 성공하지 않을 수 있는 데이터 형식 매핑을 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **데이터 형식 매핑 검토** 페이지를 표시합니다. 이 페이지에서는 원본 데이터가 대상과 호환되도록 하기 위해 마법사에서 수행해야 하는 데이터 형식 변환에 대한 세부 정보를 검토합니다. 이 정보에는 오류 또는 잘림이 발생할 수 있는 변환에서 성공할 것으로 예상되는 데이터 형식 변환을 구별하는 시각적 표시가 포함됩니다. 각 변환에 대해 마법사에서 제안하는 변환을 적용할지 여부를 결정하고 발생할 수 있는 오류를 처리하는 방법을 지정합니다.   

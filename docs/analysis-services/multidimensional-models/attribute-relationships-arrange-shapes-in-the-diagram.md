@@ -1,32 +1,23 @@
 ---
 title: 특성 관계 다이어그램의 셰이프 정렬 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- attribute relationships [Analysis Services]
-ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 932726539120c0ecee0f57f879677811e3be9f0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 29d2652639f9da223660e4d64d194543fd252d95
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>특성 관계 다이어그램의 셰이프 정렬-
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]셰이프의 레이아웃을 변경할 수 있습니다는 **특성 관계** 탭의 차원 디자이너에서 차원 구조 뷰의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  **의 차원 디자이너에 있는 차원 구조 뷰의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 셰이프의 레이아웃을 변경할 수 있습니다.  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>특성 관계 다이어그램의 셰이프를 정렬하려면  
   
@@ -37,7 +28,7 @@ ms.lasthandoff: 01/08/2018
      또한 **셰이프 정렬** 을 클릭하여 차원 디자이너에서 사용하는 레이아웃 알고리즘에 따라 모든 셰이프를 자동으로 정렬할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [의 차원 디자이너에 있는 차원 구조 뷰의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [특성 관계](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

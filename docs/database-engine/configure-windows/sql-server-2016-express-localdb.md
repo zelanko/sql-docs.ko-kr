@@ -3,15 +3,12 @@ title: SQL Server 2016 Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user instances
 - LocalDB, described
@@ -23,12 +20,11 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 40ae45c73e45cc9ee040b4d6fadd4469f9f0c3be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
   
 -   SQL Server 2016 Express를 다운로드하고 설치하려면 **[SQL Server 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)** 로 이동하세요. LocalDB는 설치 중에 선택하는 기능이며, 미디어를 다운로드할 때 사용할 수 있습니다. 미디어를 다운로드하려면 **Express Advanced** 또는 **LocalDB** 패키지를 선택합니다. 
   
--   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
+-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
 ## <a name="install-localdb"></a>LocalDB 설치  
  설치 마법사를 통해 또는 SqlLocalDB.msi 프로그램을 사용하여 **LocalDB** 를 설치합니다. **LocalDB** 는 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]설치 시 옵션 항목입니다. 

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d4d5f06605f68e830aa945d0b502dcb657211f2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5e3a563c5c51e4852fd477f9acdbf76e31e80dc8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="redistributing-adomdnet"></a>ADOMD.NET 재배포
   ADOMD.NET을 사용하는 응용 프로그램을 작성할 때 응용 프로그램과 함께 적합한 ADOMD.NET 버전을 재배포해야 합니다. ADOMD.NET을 재배포하려면 ADOMD.NET 설치 프로그램을 응용 프로그램의 설치 프로그램에 포함합니다.  

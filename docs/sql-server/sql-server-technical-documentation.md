@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서 | Microsoft Docs
-ms.date: 04/26/2018
+ms.date: 05/03/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -8,7 +8,7 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
 helpviewer_keywords:
@@ -23,13 +23,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Active
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d375db4cbc060dbd5245446e2e3de4ee3f8fe146
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: fe7bb29dbea7d45687cc0a1395b93e8b54fbc142
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,6 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
 ::: moniker-end
 
-
-
-
-
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->
@@ -55,6 +50,12 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |---------|---------|
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 콘텐츠가 곧 .docs 사이트에 병합됩니다.  현재는 다음을 참조하세요.
+- [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
+- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
+- [이전 버전](https://docs.microsoft.com/en-us/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -68,16 +69,6 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |---------|---------|
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
-
-
-
-
-
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 콘텐츠가 곧 .docs 사이트에 병합됩니다.  현재는 다음을 참조하세요.
-- [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [이전 버전](https://docs.microsoft.com/en-us/previous-versions/sql/)
 
 ::: moniker range="= sql-server-2016"
 **SQL Server를 사용해 보세요.**
@@ -96,7 +87,6 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 - [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>SQL Server 기술
 
 |||
@@ -109,7 +99,6 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |![Replication Services](../sql-server/media/replication-services.png "Replication Services")|**[복제](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 복제는 한 데이터베이스에서 다른 데이터베이스로 데이터 및 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server DQS(Data Quality Services)는 기술 자료 기반 데이터 정리 솔루션을 제공합니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 컴퓨터 기반 및 대화형 방법을 통해 데이터에 대한 데이터 수정 및 중복 제거를 수행할 수 있습니다. 클라우드 기반 참조 데이터 서비스를 사용할 수 있으며, SQL Server Integration Services 및 Master Data Services와 DQS를 통합하는 데이터 관리 솔루션을 작성할 수 있습니다.|
 |![Master  Data  Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 마스터 데이터 관리를 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 작성된 솔루션을 사용하면 정확한 정보를 기반으로 보고와 분석을 수행할 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 사용하여 마스터 데이터에 대한 중앙 리포지토리를 만들고 시간 경과에 따라 변경되는 데이터의 감사 가능 및 보안 가능 레코드를 유지 관리합니다.|
-::: moniker-end
 
 ::: moniker range="= sql-server-2016"
 ## <a name="migrate-and-move-data"></a>데이터 마이그레이션 및 이동

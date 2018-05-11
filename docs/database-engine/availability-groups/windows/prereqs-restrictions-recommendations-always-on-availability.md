@@ -3,15 +3,12 @@ title: 필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그�
 ms.custom: ''
 ms.date: 05/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -26,12 +23,11 @@ caps.latest.revision: 151
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0a81bf1cc891f467819a115dcb253fe2507a8c57
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 018db964697d8aacf29422c901bda17fddecd1c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -272,7 +268,7 @@ ms.lasthandoff: 04/16/2018
 -   **한 WSFC의 다른 노드에서 가용성 복제본을 호스팅해야 함:** 지정된 가용성 그룹의 가용성 복제본은 동일한 WSFC의 다른 노드에서 실행되는 서버 인스턴스에서 호스팅해야 합니다. 유일한 예외는 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있는 경우입니다.  
   
     > [!NOTE]  
-    >  동일한 실제 컴퓨터에 가상 컴퓨터가 있는 경우에는 각 가상 컴퓨터가 개별 컴퓨터 역할을 하므로 가상 컴퓨터별로 동일한 가용성 그룹의 가용성 복제본을 하나씩 호스팅할 수 있습니다.  
+    >  동일한 실제 컴퓨터에 가상 머신이 있는 경우에는 각 가상 머신이 개별 컴퓨터 역할을 하므로 가상 머신별로 동일한 가용성 그룹의 가용성 복제본을 하나씩 호스팅할 수 있습니다.  
   
 -   **고유한 가용성 그룹 이름:** 각 가용성 그룹 이름은 WSFC에서 고유해야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
   

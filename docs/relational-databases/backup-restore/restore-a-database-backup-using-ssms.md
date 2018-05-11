@@ -3,15 +3,12 @@ title: SSMS를 사용하여 데이터베이스 백업 복원 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
 - sql13.swb.specifybackup.f1
@@ -26,12 +23,11 @@ caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a02973a198043163ce6ece5d3bc490f05048f7e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
     
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.    
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.    
     
 3.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.    
     
@@ -144,7 +140,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.  
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 
@@ -154,7 +150,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 
 6.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
 
-7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)**를 선택합니다.
+7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
 
     > **참고:** 이 옵션을 선택하면 다음과 같은 오류 메시지가 표시될 수 있습니다. "System.Data.SqlClient.SqlError: 백업 세트에 기존 '`Sales`' 데이터베이스가 아닌 데이터베이스의 백업이 있습니다. (Microsoft.SqlServer.SmoExtended)"
 
@@ -174,7 +170,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.  
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 
@@ -200,7 +196,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.  
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 
@@ -223,7 +219,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 아래의 두 예제에서는 Microsoft Azure Storage 서비스에 있는 백업에서 `Sales` 복원을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 6단계는 여기에 한 번 나열되며 모든 예제는 **7단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.
 
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 
@@ -245,7 +241,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
     12. **확인**을 클릭합니다.
     13. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
     14. **페이지 선택** 창에서 **옵션** 을 클릭합니다.
-    15. **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)**를 선택합니다.
+    15. **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
     16. **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
     17. **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
     18. **확인**을 클릭합니다.
@@ -265,7 +261,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 `Sales` 데이터베이스가 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 에 있는 백업에서 Microsoft Azure Storage 컨테이너 `E:\MSSQL\BAK`로 복원됩니다.  Azure 컨테이너에 대한 SQL Server 자격 증명이 이미 생성되었습니다.  **복원** 태스크를 통해 만들 수 없으므로 대상 컨테이너에 대한 SQL Server 자격 증명이 이미 있어야 합니다.  `Sales` 데이터베이스가 현재 서버에 없습니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 4.  찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
 5.  **백업 미디어 유형:** 드롭다운 목록에서 **파일** 을 선택합니다.

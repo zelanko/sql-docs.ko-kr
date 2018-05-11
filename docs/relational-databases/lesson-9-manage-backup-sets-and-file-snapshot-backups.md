@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
@@ -19,12 +18,11 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ae8b4c3290b15b55d792f47186cefd3cc972f4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32a5bad72add276eae015433f697cad01b8158c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>9단원: 백업 세트 및 파일-스냅숏 백업 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SQL Server Management Studio에 연결합니다.  
   
-2.  새 쿼리 창을 열고 Azure 가상 컴퓨터에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스(또는 이 컨테이너에 대한 읽기 및 쓰기 권한이 있는 모든 SQL Server 2016 인스턴스)에 연결합니다.  
+2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스(또는 이 컨테이너에 대한 읽기 및 쓰기 권한이 있는 모든 SQL Server 2016 인스턴스)에 연결합니다.  
   
 3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 연결된 파일 스냅숏과 함께 삭제할 로그 백업을 선택합니다. 1단원에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음 이 스크립트를 실행합니다.  
   

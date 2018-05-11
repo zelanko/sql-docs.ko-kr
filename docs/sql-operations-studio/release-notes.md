@@ -2,9 +2,9 @@
 title: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs
 description: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 
-**[년 4 월 공개 미리 보기 다운로드](download.md)**
+**[년 5 월 공개 미리 보기 다운로드](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>년 5 월 2018 (월 공개 미리 보기)
+
+릴리스 날짜: 2018 년 5 월 7  
+버전: 0.29.3
+
+*공개 미리 보기 수* 안정화 및 버그 수정에 포커스가 있습니다. 이 빌드는 다음과 같은 주요 기능과를 포함 되어 있습니다.  
+
+- 확장 관리자에서 사용 하 여 사용할 수 있는 Redgate SQL 검색 확장을 발표합니다.
+- 10 언어에 사용할 수 있는 커뮤니티 지역화: 독일어, 스페인어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어, 러시아어, 중국어 간체 및 중국어 (번체).
+- GDPR 규격 빌드 개인정보취급방침 원격 분석 수집, 개선 된 옵트아웃 및 제품 내 링크 감소 되었습니다.
+- 확장 관리자는 향상 된 마켓플레이스를 쉽게 커뮤니티 확장을 검색 합니다.
+- SQL 에이전트 확장 작업 및 작업 기록 보기 개선 합니다.
+- Whoisactive 및 보고서 서버에 대 한 확장을 업데이트합니다.
+- 관리 대시보드 속성 스크롤 향상 됩니다.
+- GitHub 문제를 수정 합니다.
+   - 해결 [703 발급](https://github.com/Microsoft/sqlopsstudio/issues/703): 편집 데이터에 HTML 형식의 텍스트를 입력 하면 값이 새로 고침 될 때까지 제대로 표시 되지 않아서
+   - 해결 [821 발급](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 패키지 종속성
+   - 해결 [1260 발급](https://github.com/Microsoft/sqlopsstudio/issues/1260): 'distinct' 강조 표시 되지 않은 키워드
+   - 해결 [1332 발급](https://github.com/Microsoft/sqlopsstudio/issues/1332): 편집 데이터 되돌릴 행 작동 하지 않습니다
+   - 해결 [1215 발급](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent 확장 및 상태 표시줄
+   - 해결 [1316 발급](https://github.com/Microsoft/sqlopsstudio/issues/1316): windows가 크기 변경 후 크기를 조정할 SQL 에이전트 하지 않음
+
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/sqlopsstudio/releases)합니다.
+
 
 
 ## <a name="april-2018-april-public-preview"></a>년 4 월 2018 (년 4 월 공개 미리 보기)

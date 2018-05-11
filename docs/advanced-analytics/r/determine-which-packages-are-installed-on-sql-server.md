@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Get R 및 SQL Server 기계 학습에서 Python 패키지 정보
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-여러 Python 환경에 설치 하거나 여러 R 도구를 사용할 경우를 잘못 된 라이브러리 또는 환경에 패키지를 설치 하 여 다음 할 수 없습니다 나중에 찾을 쉽습니다. 이 문서는 쿼리 및 determininga 패키지 버전에 대 한 현재 SQL Server 환경에 설치 된 패키지를 나열 하 고 유용한 지침을 제공 합니다.
+여러 Python 환경에 설치 하거나 여러 R 도구를 사용할 경우를 잘못 된 라이브러리 또는 환경에 패키지를 설치 하 여 다음 할 수 없습니다 나중에 찾을 쉽습니다. 이 문서는 쿼리 및 determinin ga 패키지 버전에 대 한 현재 SQL Server 환경에 설치 된 패키지를 나열 하 고 유용한 지침을 제공 합니다.
 
 ## <a name="verify-the-current-default-library"></a>현재 기본 라이브러리를 확인 합니다.
 

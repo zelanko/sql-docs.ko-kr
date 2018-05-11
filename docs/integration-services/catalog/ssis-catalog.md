@@ -1,17 +1,16 @@
 ---
 title: SSIS 카탈로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -619,9 +617,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 **새 가용성 그룹** 마법사의 **데이터베이스 선택** 페이지에서 SSIS 카탈로그를 만드는 동안 지정한 암호를 제공합니다.
 
-**데이터 동기화 기본 설정 선택** 메시지가 표시되면 **초기 데이터 동기화 건너뛰기**를 선택합니다.
-  
- ![데이터베이스 선택](../../integration-services/service/media/ssis-newavailabilitygroup.png "데이터베이스 선택")  
+![데이터베이스 선택](../../integration-services/service/media/ssis-newavailabilitygroup.png "데이터베이스 선택")  
   
 ####  <a name="Step3"></a> 3단계: Always On에 대한 SSIS 지원 활성화  
  통합 서비스 카탈로그를 만든 후 **통합 서비스 카탈로그** 노드를 마우스 오른쪽 단추로 클릭하고 **Always On 지원 활성화**를 클릭합니다. 다음 **Always On에 대한 지원 활성화** 대화 상자를 참조해야 합니다. 이 메뉴 항목이 비활성화된 경우 모든 필수 구성 요소를 설치했는지 확인하고 **새로 고침**을 클릭합니다.  
