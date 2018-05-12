@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ Microsoft, 학습 서버 컴퓨터는 온-프레미스 서버 제품 SQL Server�
 
 Microsoft Machine Learning 설치는 기존 기능과 SQL Server 버전을 검색 하 고 바인딩을 변경 하는 SqlBindR.exe 라는 유틸리티를 호출 합니다. 내부적으로 SqlBindR 속성 설정에 연결 되며 간접적으로 사용 됩니다. 이상에서는 SqlBindR 특정 옵션을 실행 하려면 명령줄에서 직접 호출할 수 있습니다.
 
-1. 서버는 최소 빌드가 요구 사항을 충족 하는지 확인 합니다. SQL Server 2016 R Services에 대 한 최소값은 [서비스 팩 1](https://www.microsoft.com/download/details.aspx?id=54276) 및 [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)합니다. SSMS에서 실행 `SELECT @@version` 서버 버전 정보를 반환 합니다. 
+1. SSMS에서 실행 `SELECT @@version` 서버는 최소 빌드가 요구 사항을 충족 하는지 확인 합니다. 
 
-1. 사용 하 여 대체 하려는 보다 낮은 기존 버전을 확인 하는 R과 RevoScaleR의 버전을 확인 합니다. SQL Server 2016 R Services에 대 한 R 기본 패키지 3.2.2 이며 RevoScaleR 8.0.3 합니다.
+   SQL Server 2016 R Services에 대 한 최소값은 [서비스 팩 1](https://www.microsoft.com/download/details.aspx?id=54276) 및 [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)합니다.
 
-    + Files\microsoft SQL Server\MSSQL13로 이동 합니다. MSSQLSERVER\R_SERVICES\bin
-    + 두 번 클릭 **R** 콘솔을 엽니다.
-    + 패키지 버전을 사용 `library(help="base")` 및 `library(help="RevoScaleR")`합니다. 
+1. R 기본 버전을 확인 하 고 기존 버전을 확인 하려면 RevoScaleR 패키지는를 사용 하 여 대체 하려는 보다 낮은 키를 누릅니다. SQL Server 2016 R Services에 대 한 R 기본 패키지 3.2.2 이며 RevoScaleR 8.0.3 합니다.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. 업그레이드 하려는 인스턴스가 있는 컴퓨터에 Microsoft 컴퓨터 학습 서버를 다운로드 합니다. 권장 된 [최신 버전](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)합니다.
 
@@ -138,15 +148,23 @@ Microsoft Machine Learning 설치는 기존 기능과 SQL Server 버전을 검�
 
 최신 버전을 확인 하는 R와 RevoScaleR의 버전을 다시 확인 합니다. 데이터베이스 엔진 인스턴스에서 R 패키지와 함께 배포 하는 R 콘솔을 사용 하 여 패키지 정보를 가져오려면:
 
-+ Files\microsoft SQL Server\MSSQL13로 이동 합니다. MSSQLSERVER\R_SERVICES\bin
-+ 두 번 클릭 **R** 콘솔을 엽니다.
-+ 패키지 버전을 사용 `library(help="base")` 및 `library(help="RevoScaleR")`합니다. 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 SQL Server 2016 R Services 컴퓨터 학습 서버 9.3에 바인딩된, R 기본 패키지 3.4.1 수, RevoScaleR 9.3, 해야 하며 MicrosoftML 9.3이 있어야 합니다. 
 
 미리 학습 된 모델을 추가한 경우에 모델에 MicrosoftML 라이브러리에 포함 되 고 MicrosoftML 함수를 통해 호출할 수 있습니다. 자세한 내용은 참조 [MicrosoftML에 대 한 R 샘플](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)합니다.
 
-## <a name="offline-no-internet-access"></a>오프 라인 (인터넷 액세스 없음)
+## <a name="offline-binding-no-internet-access"></a>오프 라인 바인딩 (인터넷 액세스 없음)
 
 인터넷에 연결 되지 않은 시스템의 경우 인터넷에 연결 된 컴퓨터에 설치 관리자 및 cab 파일을 다운로드 하 고 격리 된 서버에 파일을 전송 수 있습니다. 
 
@@ -168,7 +186,7 @@ SQL Server 2016 R Services 컴퓨터 학습 서버 9.3에 바인딩된, R 기본
 
 1. 서버에서 입력 `%temp%` 실행 명령의 임시 디렉터리의 실제 위치를 가져옵니다. 컴퓨터의 실제 경로 달라 지지만 일반적으로 `C:\Users\<your-user-name>\AppData\Local\Temp`합니다.
 
-1. % Temp % 폴더에 Place.cab 파일입니다.
+1. % Temp % 폴더의.cab 파일을 배치 합니다.
 
 1. 설치 관리자를 압축을 풉니다.
 
@@ -285,7 +303,7 @@ Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
 |*unbind*|지정된 SQL Database 인스턴스에서 최신 버전의 R 서버를 제거하고 향후 R 서버 업그레이드가 인스턴스에 영향을 주지 않도록 합니다.|
 
-< a name = "sqlbinder 오류 코드"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>오류
 
@@ -299,10 +317,10 @@ Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니
 |바인딩 오류 3 | 잘못 된 인스턴스 | 인스턴스는 존재 하지만 바인딩에 적합 하지 않습니다. |
 |바인딩 오류 4 | 바인딩할 수 없습니다 | |
 |오류 코드 5에 바인딩 | 이미 바인딩 | *bind* 명령을 실행했지만 지정한 인스턴스가 이미 바인딩되어 있습니다. |
-|바인딩 오류 6 | 바인드 실패 | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. |
+|바인딩 오류 6 | 바인드 실패 | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. 이 오류는 모든 기능을 선택 하지 않고 MLS 설치 관리자를 실행 하는 경우에 발생할 수 있습니다.|
 |바인딩 오류 7 | 바인딩되지 않습니다 | 데이터베이스 엔진 인스턴스에 R 서비스 또는 SQL Server 컴퓨터 학습 서비스에 있습니다. 인스턴스는 Microsoft 컴퓨터 학습 서버에 바인딩되지 않습니다. |
 |바인딩 오류 8 | 바인딩을 해제 하지 못했습니다. | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. |
-|바인딩 오류 9 | 인스턴스를 찾을 수 없습니다. | 이 컴퓨터에 인스턴스를 찾지 못했습니다. |
+|바인딩 오류 9 | 인스턴스를 찾을 수 없습니다. | 이 컴퓨터에 데이터베이스 엔진 인스턴스를 찾지 못했습니다. |
 
 
 ## <a name="see-also"></a>참고 항목
