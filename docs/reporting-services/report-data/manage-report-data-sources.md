@@ -1,32 +1,30 @@
 ---
-title: "보고서 데이터 원본 관리 | Microsoft Docs"
-ms.custom: 
+title: 보고서 데이터 원본 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 443b1f6a2249fd836555bb7cb6822d3dbbae199d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 80ae6fcf181e3fe48a4be6c9d29b3637e8e70bd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-report-data-sources"></a>보고서 데이터 원본 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서, 보고서 모델 및 데이터 기반 구독은 외부 데이터 원본에서 데이터를 검색합니다. 보고서 서버는 외부 데이터 원본에 연결하기 위해 보고서, 모델 또는 구독에 정의되어 있거나 참조된 데이터 원본 연결 정보를 사용합니다. 데이터 원본 연결 속성은 보고서 또는 모델을 만들 때 항상 함께 정의되지만 보고서 또는 모델이 보고서 서버에 게시된 후에 독립적으로 관리할 수 있습니다.  

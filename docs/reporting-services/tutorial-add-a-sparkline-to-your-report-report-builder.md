@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
 
@@ -193,7 +192,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  **홈** 탭 > **숫자** 그룹 > **날짜**를 선택합니다.  
   
-    셀에 예제 날짜 **[1/31/2000]**이 표시됩니다.
+    셀에 예제 날짜 **[1/31/2000]** 이 표시됩니다.
      
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -282,7 +281,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Sales by Date**를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   

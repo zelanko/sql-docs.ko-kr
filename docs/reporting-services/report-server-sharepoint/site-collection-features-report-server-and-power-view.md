@@ -1,25 +1,23 @@
 ---
-title: "SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화 | Microsoft Docs"
-ms.custom: 
+title: SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9e463bbaf3e74706d49e7815c7e02da7f0706f53
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c6c6c314ec55a01fb6f2884cd6a5baace396efaf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
- SharePoint 제품 설치 후에 SharePoint 2010 제품용 Reporting Services 추가 기능을 설치하면 보고서 서버 통합 기능 및 파워 뷰 통합 기능이 루트 사이트 모음에 대해서만 활성화됩니다. 기타 사이트 모음의 경우 기능을 수동으로 활성화해야 합니다. 예를 들어 **http://[내 서버 이름]/sites/[사이트 모음 이름]**의 사이트 모음이 있는 경우 Reporting Services 사이트 모음 기능을 수동으로 활성화해야 합니다.  
+ SharePoint 제품 설치 후에 SharePoint 2010 제품용 Reporting Services 추가 기능을 설치하면 보고서 서버 통합 기능 및 파워 뷰 통합 기능이 루트 사이트 모음에 대해서만 활성화됩니다. 기타 사이트 모음의 경우 기능을 수동으로 활성화해야 합니다. 예를 들어 **http://[내 서버 이름]/sites/[사이트 모음 이름]** 의 사이트 모음이 있는 경우 Reporting Services 사이트 모음 기능을 수동으로 활성화해야 합니다.  
   
  루트 사이트 모음이 없으면 Reporting Services 추가 기능이 다음과 유사한 메시지를 기록합니다.  
   

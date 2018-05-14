@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 2016 버전에서 지원하는 Reporting Services 기능 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 버전에서 지원하는 Reporting Services 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
 
@@ -35,7 +33,8 @@ ms.lasthandoff: 01/09/2018
     
  > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된SQL Server 2016으로 가상 컴퓨터를 스핀업](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> 
+  ![Azure 가상 머신 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2016으로 가상 머신을 스핀업](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition을 참조하세요.
 

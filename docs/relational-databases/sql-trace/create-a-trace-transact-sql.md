@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: sql-trace
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
@@ -20,12 +19,11 @@ caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 655bacebe7471bc6df99480850f1fc61c1a591d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a187fc923c2dc47a178d4a1cecc8bc851a072598
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>추적 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 04/16/2018
      **sp_trace_setevent** 및 **sp_trace_setfilter** 는 중지된 기존 추적에서만 실행할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  일반적인 저장 프로시저와 달리 모든 SQL Server Profiler 저장 프로시저의 매개 변수(**sp_trace_*xx***)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
+    >  일반적인 저장 프로시저와 달리 모든 SQL Server Profiler 저장 프로시저의 매개 변수(**sp_trace_* xx***)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 추적을 만드는 방법을 보여 줍니다. 이 코드는 추적 만들기, 추적 파일 채우기 및 추적 중지의 세 가지 섹션으로 구성되어 있습니다. 추적하려는 이벤트를 추가하여 추적을 사용자 지정합니다. 이벤트 및 열 목록에 대한 자세한 내용은 [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)을 사용하여 추적을 만드는 방법을 보여 줍니다.  

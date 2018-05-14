@@ -1,16 +1,15 @@
 ---
-title: "보고서 모델 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 보고서 모델 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10015"
 - sql13.rtp.rptdesigner.dataview.smqlquerydesigner.f1
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 19e623c9f36d9128c0143695b9d3d1aa427bf1e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>보고서 모델 쿼리 디자이너 사용자 인터페이스
   보고서 디자이너는 보고서에 사용할 보고서 서버 모델 데이터 원본의 데이터를 지정할 수 있는 두 가지 쿼리 디자이너를 제공합니다. 그래픽 쿼리 디자이너를 사용하여 모델 엔터티와 엔터티 필드를 탐색하고 선택할 수 있습니다. 또한 텍스트 기반 쿼리 디자이너를 사용하여 XML 형식으로 SMDL(Semantic Model Definition Language) 사양에서 직접 작업할 수 있습니다.  

@@ -1,27 +1,25 @@
 ---
-title: "데이터 영역 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 데이터 영역 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 142d8fe5fcf57b96355a71ff3aeb586a7ccf553e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 567bb447bec9e6ff59269aa23d7ab7fc88fc89e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>데이터 영역 렌더링(보고서 작성기 및 SSRS)
   모든 보고서 항목에 적용되는 일반적인 렌더링 동작 이외에도 데이터 영역에는 고유한 페이지 매김 및 렌더링 동작이 추가로 적용됩니다. 데이터 영역과 관련된 렌더링 규칙에는 데이터 영역을 늘리는 방법, 모퉁이 셀이나 머리글 셀 같은 특수 셀의 렌더링 방법, 오른쪽에서 왼쪽으로 읽어야 하는 자료에 대한 데이터 영역의 렌더링 방법 등이 포함됩니다. 이 항목에서는 데이터 영역의 여러 부분이 어떻게 렌더링되는지 설명합니다.  

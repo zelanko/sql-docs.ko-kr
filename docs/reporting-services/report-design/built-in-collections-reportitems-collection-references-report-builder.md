@@ -1,27 +1,25 @@
 ---
-title: "ReportItems 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: ReportItems 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0779913a4334a1142c8a5c8d7561aaa9ecd980cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>기본 제공 컬렉션 - ReportItems 컬렉션 참조(보고서 작성기)
   **ReportItems** 기본 제공 컬렉션은 데이터 영역의 행 또는 보고서 디자인 화면의 입력란과 같은 보고서 항목의 입력란 집합입니다. **ReportItems** 컬렉션에는 페이지 머리글, 페이지 바닥글 또는 보고서 본문의 현재 범위에 있는 입력란이 포함됩니다. 이 컬렉션은 보고서 처리기 및 보고서 렌더러에 의해 런타임에 결정됩니다. 현재 범위는 사용자가 보고서 페이지를 볼 때 보고서 처리기가 보고서 데이터 및 보고서 항목 레이아웃 요소를 연속적으로 조합함에 따라 변경됩니다. **ReportItems** 기본 제공 컬렉션을 사용하여 각 페이지의 첫 번째 및 마지막 항목을 표시하는 사전 스타일의 페이지 머리글을 만들 수 있습니다.  

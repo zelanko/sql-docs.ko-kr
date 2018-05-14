@@ -1,27 +1,25 @@
 ---
-title: "ReportViewer 2016 컨트롤 시작하기 | Microsoft Docs"
-ms.custom: 
+title: ReportViewer 2016 컨트롤 시작하기 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9b177bb647fd1c9daf5fb330f3bff15cf3e73ab3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1395b2351ebba9aa1d805b651640593942aaa9cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 시작하기
 
@@ -242,7 +240,7 @@ ms.lasthandoff: 01/09/2018
 
     ![ssRS-이전-rvcontrol-도구 상자-제거](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 도구 상자의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **항목 선택...**을 선택합니다.
+3. 도구 상자의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **항목 선택...** 을 선택합니다.
 
     ![ssRS-도구 상자-항목-선택](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 327e9c590d635c0910f5dd12f43db9dbb199871c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c6685cf99cb3a46b4b90d5e0126c4df05dcb9575
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 페이지를 매긴 보고서 항목으로, 다른 페이지를 매긴 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  

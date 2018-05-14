@@ -1,15 +1,14 @@
 ---
-title: "URL 액세스(SSRS) | Microsoft Docs"
-ms.custom: 
+title: URL 액세스(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 0c80a041cc0dadf7ab95005379424a65e216dda9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f0da33c47af1470c917808729ee2aee8a503fa80
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
   SQL Server Reporting Services(SSRS)에서 보고서 서버의 URL 액세스를 사용하면 URL 요청을 통해 보고서 서버에 명령을 보낼 수 있습니다. 예를 들어 기본 모드 보고서 서버 또는 SharePoint 라이브러리에서 보고서 렌더링을 사용자 지정할 수 있습니다. 특정 보고서 매개 변수 값 집합을 사용하여 보고서를 보거나 보고서의 관심 있는 특정 페이지를 본 경우 미리 정의된 URL 액세스 매개 변수를 사용하여 이 정보를 URL에 캡슐화할 수 있습니다. 또한 렌더링 형식 및 보고서 뷰어의 디자인에 대한 매개 변수를 포함하여 보고서 서버에서 보고서를 처리하는 방식을 사용자 지정할 수 있습니다. 그런 다음 이 URL을 전자 메일이나 웹 페이지에 직접 붙여넣어 다른 사용자가 브라우저에서 같은 방식으로 보고서에 액세스하도록 할 수 있습니다.  
@@ -83,7 +81,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  기본 모드 보고서 서버 데이터베이스 항목의 상대 경로 이름 또는 SharePoint 카탈로그 항목의 정규화된 URL입니다.  
   
- 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시(**/**로 시작)입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시(**/** 로 시작)입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  

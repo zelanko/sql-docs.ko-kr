@@ -1,30 +1,28 @@
 ---
-title: "URL 액세스 매개 변수 참조 | Microsoft Docs"
-ms.custom: 
+title: URL 액세스 매개 변수 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 -   [보고서 뷰어 웹 파트 명령(rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 뷰어 명령(rc:)  
- HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며(예를 들어 보고서 관리자에서) *rc:*접두사가 붙음:  
+ HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며(예를 들어 보고서 관리자에서) *rc:* 접두사가 붙음:  
   
 -   *Toolbar* :  
                   도구 모음을 표시하거나 숨깁니다. 이 매개 변수 값이 **false**이면 모든 나머지 옵션이 무시됩니다. 이 매개 변수를 생략하면 도구 모음이 지원하는 렌더링 형식에 맞게 자동으로 표시됩니다. 이 매개 변수의 기본값은 **true**입니다.  
@@ -284,7 +282,7 @@ ms.lasthandoff: 01/09/2018
                   보고서의 섹션의 표시/숨기기 상태를 토글합니다. 토글할 섹션을 나타내는 양의 정수를 지정합니다.  
   
 ##  <a name="bkmk_webpart"></a> 보고서 뷰어 웹 파트 명령(rv:)  
- 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예약된 보고서 매개 변수 이름은 SharePoint와 통합된 보고서 뷰어 웹 파트를 대상 지정하는 데 사용됩니다. 이러한 매개 변수 이름은 접두사 *rv:*로 시작합니다. 보고서 뷰어 웹 파트에는 *rs:ParameterLanguage* 매개 변수도 사용할 수 있습니다.  
+ 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예약된 보고서 매개 변수 이름은 SharePoint와 통합된 보고서 뷰어 웹 파트를 대상 지정하는 데 사용됩니다. 이러한 매개 변수 이름은 접두사 *rv:* 로 시작합니다. 보고서 뷰어 웹 파트에는 *rs:ParameterLanguage* 매개 변수도 사용할 수 있습니다.  
   
 -   *Toolbar*: 보고서 뷰어 웹 파트에 대한 도구 모음 표시를 제어합니다. 기본값은 **Full**입니다. 사용할 수 있는 값에는  
   

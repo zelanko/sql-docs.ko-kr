@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services SharePoint 모드용 PowerShell cmdlet | Microsoft Docs"
-ms.custom: 
+title: Reporting Services SharePoint 모드용 PowerShell cmdlet | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -40,7 +38,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 
 ## <a name="cmdlet-summary"></a>Cmdlet 요약
 
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)**를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)** 를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 Reporting Services 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   

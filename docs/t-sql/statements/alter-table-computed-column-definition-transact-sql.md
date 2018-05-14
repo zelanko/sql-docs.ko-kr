@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  계산 열과 관련된 테이블의 각 행은 서로 다른 값을 가질 수 있으므로 계산 열은 각 행에 대해 동일한 결과를 갖지 않을 수도 있습니다.  
   
 PERSISTED  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 계산된 값을 테이블에 물리적으로 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트하도록 지정합니다. 계산 열을 PERSISTED로 표시하면 결정적이지만 정확하지 않은 계산 열에 대해 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요. 분할된 테이블의 분할 열로 사용되는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. PERSISTED를 지정할 때 *computed_column_expression*은 결정적이어야 합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 계산된 값을 테이블에 물리적으로 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트하도록 지정합니다. 계산 열을 PERSISTED로 표시하면 결정적이지만 정확하지 않은 계산 열에 대해 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요. 분할된 테이블의 분할 열로 사용되는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. PERSISTED를 지정할 때 *computed_column_expression*은 결정적이어야 합니다. 
+
 NULL | NOT NULL  
  열의 Null 값 허용 여부를 지정합니다. NULL은 엄격하게 말해 제약 조건이 아니지만 NOT NULL과 같이 지정할 수 있습니다. 계산 열에서는 PERSISTED를 지정한 경우에만 NOT NULL을 지정할 수 있습니다.  
   
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  행에 참조 관계가 있고 참조되는 행이 부모 테이블에서 삭제될 경우 테이블의 행에 수행될 동작을 지정합니다. 기본값은 NO ACTION입니다.  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 오류가 발생하며 부모 테이블의 행에 대한 삭제 동작이 롤백됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 오류가 발생하며 부모 테이블의 행에 대한 삭제 동작이 롤백됩니다.
+
 CASCADE  
  부모 테이블에서 행을 삭제한 경우 참조 테이블에서 해당 행이 삭제됩니다.  
   
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

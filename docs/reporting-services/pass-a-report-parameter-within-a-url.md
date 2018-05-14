@@ -1,30 +1,28 @@
 ---
-title: "URL에 보고서 매개 변수 전달 | Microsoft Docs"
-ms.custom: 
+title: URL에 보고서 매개 변수 전달 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9ed073313d11f6764bc845ff1f993994add14f60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4f7efcc4ff59aa48e09ee1e053a9f9522fad49cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 > [!IMPORTANT]  
 >  URL에는 SharePoint를 통해 요청을 라우팅하는 `_vti_bin` 프록시 구문과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP 프록시를 포함하는 것이 중요합니다. 프록시는 몇 가지 컨텍스트를 HTTP 요청에 추가하며 이 컨텍스트는 SharePoint 모드 보고서 서버에 대한 보고서의 올바른 실행을 보장하는 데 필요합니다.  
 >   
->  프록시 구문을 포함하지 않으면 접두사 *rp:*로 매개 변수를 시작해야 합니다.  
+>  프록시 구문을 포함하지 않으면 접두사 *rp:* 로 매개 변수를 시작해야 합니다.  
   
  모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   

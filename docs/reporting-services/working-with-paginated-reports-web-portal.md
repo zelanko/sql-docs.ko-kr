@@ -1,27 +1,25 @@
 ---
-title: "페이지를 매긴 보고서 사용(웹 포털) | Microsoft Docs"
-ms.custom: 
+title: 페이지를 매긴 보고서 사용(웹 포털) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e7036050c715f1c53275cdad4cd2f3069d7b6f8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]
 > 페이지를 매긴 보고서가 폴더에 표시되지 않으면 페이지를 매긴 보고서를 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **페이지를 매긴 보고서** 가 선택되어 있는지 확인합니다.  
   
-1.  관리하려는 데이터 집합의 **줄임표(…)**를 선택합니다.  
+1.  관리하려는 데이터 집합의 **줄임표(…)** 를 선택합니다.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -132,7 +130,7 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>종속 항목  
-종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)**를 선택하여 이러한 항목을 나중에 관리할 수 있습니다.  
+종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)** 를 선택하여 이러한 항목을 나중에 관리할 수 있습니다.  
   
 ## <a name="caching"></a>캐싱  
 페이지를 매긴 보고서의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  

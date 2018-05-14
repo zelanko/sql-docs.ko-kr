@@ -1,27 +1,25 @@
 ---
-title: "식 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 식 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1882bcd9d22cf98e940264aa3b62569417f8a1a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3768b64aec87d54122291434b64573c4ffb43e62
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>식 참조(보고서 작성기 및 SSRS)
   보고서 식은 기본 제공 함수 및 기본 제공 컬렉션에 대한 다양한 참조를 지원합니다. 식에 올바른 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 구문이 있어야만 보고서를 게시하거나 처리할 수 있습니다.  

@@ -1,27 +1,25 @@
 ---
-title: "Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS) | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d5c9c11ddf274af9bf8f1851509dae5bff8e27a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bfc5d677da90cd5b88c496b2fb491f1b3b920411
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 **Value** 및 **IsMissing** 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 집합에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 **Fields** 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
 |------------------|--------------|---------------------------------------|  
 |**Value**|**개체**|필드의 데이터 값을 지정합니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
-|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*일 수 있습니다.|  
+|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* 일 수 있습니다.|  
 |**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.|  
 |**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.|  
 |**FontFamily**|**String**|항목에 대해 데이터베이스에 정의된 글꼴 이름을 반환합니다.|  

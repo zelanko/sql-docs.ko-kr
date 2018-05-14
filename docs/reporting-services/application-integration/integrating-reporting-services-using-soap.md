@@ -1,17 +1,17 @@
 ---
-title: "SOAP을 사용하여 Reporting Services 통합 | Microsoft Docs"
-ms.custom: 
+title: SOAP을 사용하여 Reporting Services 통합 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, application integration
 - SOAP [Reporting Services]
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 - Web service [Reporting Services], application integration
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9f03dea64471d7f88f39db8cd31d7eb47c4ab9ed
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 54a5a16ea0e24db1638654ffed9921bd30551b2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-soap"></a>SOAP을 사용하여 Reporting Services 통합
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API는 사용자 지정 보고 솔루션 개발을 위한 다수의 웹 서비스 끝점을 제공합니다. 끝점은 현재 관리와 실행의 두 범주로 나누어집니다. 관리 기능은 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010> 끝점을 통해 표시됩니다. <xref:ReportService2005> 끝점은 기본 모드로 구성된 보고서 서버를 관리하는 데 사용되고, <xref:ReportService2006> 끝점은 SharePoint 통합 모드에 대해 구성된 보고서 서버를 관리하는 데 사용됩니다. <xref:ReportService2010>은 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버를 관리할 수 있습니다.  

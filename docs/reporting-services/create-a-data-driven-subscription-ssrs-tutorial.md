@@ -1,32 +1,31 @@
 ---
-title: "데이터 기반 구독 만들기(SSRS 자습서) | Microsoft Docs"
-ms.custom: 
+title: 데이터 기반 구독 만들기(SSRS 자습서) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 731e14ba0da7b3d9b54b1ba24aa2fda41adda49b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 

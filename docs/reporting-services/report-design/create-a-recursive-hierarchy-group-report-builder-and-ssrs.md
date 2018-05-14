@@ -1,27 +1,25 @@
 ---
-title: "재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55996678941459c5f6797e02bfc30d82331a718f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00af8f5e46f2423714d396cb462dd81fde7f9dd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 집합의 데이터를 구성합니다.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 을 클릭합니다.  
   
-2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음 드롭다운 목록에서 **\<식…>**을 선택합니다.  
+2.  속성 창에서 **패딩** 노드를 확장하고 **왼쪽**을 클릭한 다음 드롭다운 목록에서 **\<식…>** 을 선택합니다.  
   
 3.  식 창에서 다음 식을 입력합니다.  
   

@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   다중 파일 연결 관리자를 사용하면 패키지에서 기존 파일 및 폴더를 참조하거나 런타임에 파일 및 폴더를 만들 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기본 제공 태스크 및 데이터 흐름 구성 요소는 다중 파일 연결 관리자를 사용하지 않습니다. 그러나 스크립트 태스크와 스크립트 구성 요소에서 이 연결 관리자를 사용할 수 있습니다. 스크립트 태스크에서 연결 관리자를 사용하는 방법은 [Connecting to Data Sources in the Script Task](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)을 참조하십시오. 스크립트 구성 요소에서 연결 관리자를 사용하는 방법은 [Connecting to Data Sources in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하십시오.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기본 제공 태스크 및 데이터 흐름 구성 요소는 다중 파일 연결 관리자를 사용하지 않습니다. 그러나 스크립트 태스크와 스크립트 구성 요소에서 이 연결 관리자를 사용할 수 있습니다. 스크립트 태스크에서 연결 관리자를 사용하는 방법은 [스크립트 태스크에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)을 참조하십시오. 스크립트 구성 요소에서 연결 관리자를 사용하는 방법은 [스크립트 구성 요소에서 데이터 원본에 연결](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)을 참조하십시오.  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>다중 파일 연결 관리자의 사용 유형  
  다중 파일 연결 관리자의 **FileUsageType** 속성은 연결 사용 방법을 지정합니다. 다중 파일 연결 관리자에서는 파일이나 폴더를 만들고 기존 파일 또는 기존 폴더를 사용할 수 있습니다.  

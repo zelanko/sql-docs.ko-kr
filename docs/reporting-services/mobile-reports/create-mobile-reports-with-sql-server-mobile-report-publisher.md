@@ -1,28 +1,26 @@
 ---
-title: "SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 | Microsoft Docs"
-description: "다양한 데이터 시각화와 함께 온-프레미스 데이터에 연결된 모바일 장치용 Reporting Services 모바일 보고서에 대해 알아봅니다."
-ms.custom: 
+title: SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 | Microsoft Docs
+description: 다양한 데이터 시각화와 함께 온-프레미스 데이터에 연결된 모바일 장치용 Reporting Services 모바일 보고서에 대해 알아봅니다.
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ef6d130944b67f35140652fcf81be27d1e4aae91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 

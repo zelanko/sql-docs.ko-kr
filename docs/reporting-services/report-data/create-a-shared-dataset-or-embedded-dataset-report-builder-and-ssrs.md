@@ -1,27 +1,25 @@
 ---
-title: "공유 데이터 집합 또는 포함된 데이터 집합 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 공유 데이터 집합 또는 포함된 데이터 집합 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6e3b33ffa6959181f4e599d9fce6007ad2095f9b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 집합 또는 포함된 데이터 집합 만들기(보고서 작성기 및 SSRS)
 포함된 데이터 집합은 단일 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 사용하기 위한 것입니다. 보고서 서버의 공유 데이터 집합은 여러 보고서(모바일 및 페이지 매김 둘 다)에서 사용될 수 있습니다. 데이터 집합을 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 필요합니다.  

@@ -1,16 +1,15 @@
 ---
-title: "로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS) | Microsoft Docs"
-ms.custom: 
+title: 로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - windows server 2008
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b6b522f7f7a0de5dbf979f51a3289a2ab820fdbc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 13c1ff4ab348cdf4f01b4dcbf29f603c85198cb1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 보고서 서버를 설치 또는 구성하지 않은 경우 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 및 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  
@@ -145,7 +143,7 @@ ms.lasthandoff: 01/09/2018
   
  **매번 승격된 권한으로 SSDT를 시작할 필요가 없도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 를 시작할 필요가 없도록 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 역할 속성 및 역할 할당을 구성하려면  
   
--   **시작** 메뉴에서 **모든 프로그램**, **SQL Server 2014**를 차례로 클릭하고 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**를 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
+-   **시작** 메뉴에서 **모든 프로그램**, **SQL Server 2014**를 차례로 클릭하고 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** 를 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.  
   
 -   로컬 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버에 연결합니다.  
   

@@ -1,32 +1,30 @@
 ---
-title: "Reporting Services 업그레이드 및 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 업그레이드 및 마이그레이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: "92"
+caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f67b915820ae2d458ff6e43c7c3b0bbe7fdf1f98
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 19c902b31503b91c11a2d976e695507c1e2d2e5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -90,7 +88,7 @@ ms.lasthandoff: 01/09/2018
   
 -   IIS의 기존 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리에 대한 모든 사용자 지정을 백업합니다.  
   
--   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못된 인증서가 있으면 업그레이드가 실패하고 Reporting Services 로그 파일에 **Microsoft.ReportingServices.WmiProvider.Exception: 웹 사이트에 SSL(Secure Sockets Layer) 인증서가 구성되어 있지 않습니다.**라는 오류 메시지가 기록됩니다.  
+-   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못된 인증서가 있으면 업그레이드가 실패하고 Reporting Services 로그 파일에 **Microsoft.ReportingServices.WmiProvider.Exception: 웹 사이트에 SSL(Secure Sockets Layer) 인증서가 구성되어 있지 않습니다.** 라는 오류 메시지가 기록됩니다.  
   
  프로덕션 환경을 업그레이드하기 전에 프로덕션 환경과 동일하게 구성된 사전 프로덕션 환경에서 항상 테스트 업그레이드를 실행하십시오.  
   

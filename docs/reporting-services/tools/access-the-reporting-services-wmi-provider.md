@@ -1,32 +1,32 @@
 ---
-title: "Reporting Services WMI 공급자 액세스 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services WMI 공급자 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: Reporting Services WMI Provider
-apilocation: reportingservices.mof
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- Reporting Services WMI Provider
+apilocation:
+- reportingservices.mof
 helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42180a54771653c9749f697de7fdc5876696b172
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e888a78694281f6290744eb04c040ba0c76ec106
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI 공급자 액세스
   Reporting Services WMI 공급자는 스크립팅을 통해 기본 모드 보고서 서버 인스턴스를 관리하기 위해 두 WMI 클래스를 제공합니다.  
@@ -36,8 +36,8 @@ ms.lasthandoff: 01/09/2018
   
 |클래스|Namespace|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13|클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>*\v13\Admin|보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.<br /><br /> **\*\* 중요 \*\*** 이 클래스는 관리 권한이 있어야만 액세스할 수 있습니다.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13|클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13\Admin|보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.<br /><br /> **\*\* 중요 \*\*** 이 클래스는 관리 권한이 있어야만 액세스할 수 있습니다.|  
   
  각 보고서 서버 인스턴스에 대해 위의 각 클래스 인스턴스가 만들어집니다. 모든 Microsoft 또는 타사 도구를 사용하여 .NET Framework 자체에서 제공하는 WMI 프로그래밍 인터페이스를 포함하여 보고서 서버에서 제공하는 WMI 개체에 액세스할 수 있습니다. 이 항목에서는 PowerShell 명령 [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx)를 사용하여 WMI 클래스 인스턴스에 액세스하고 사용하는 방법을 설명합니다.  
   

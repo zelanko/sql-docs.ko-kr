@@ -1,27 +1,25 @@
 ---
-title: "보고서 디자인 및 보고서 배포 계획 | Microsoft Docs"
-ms.custom: 
+title: 보고서 디자인 및 보고서 배포 계획 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 912d8f3035df4c5698deb9dc78321770f23fdaf2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.

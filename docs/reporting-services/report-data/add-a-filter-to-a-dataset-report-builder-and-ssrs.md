@@ -1,27 +1,25 @@
 ---
-title: "데이터 집합에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fe9dcb6eb8401348212fbaaae7c5f57aa4fccc99
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fa07a8ea7240f7cd06d302a2b39cca942f12d643
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 집합에 필터 추가(보고서 작성기 및 SSRS)
   데이터 집합에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 집합에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  

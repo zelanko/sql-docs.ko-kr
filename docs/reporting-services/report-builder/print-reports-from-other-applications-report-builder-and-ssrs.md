@@ -1,27 +1,25 @@
 ---
-title: "다른 응용 프로그램에서 보고서 인쇄(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 다른 응용 프로그램에서 보고서 인쇄(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 993291ac022a395f8700bace77982462554f157d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 67dc429871111c4e59f195b285c705622402c86b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>다른 응용 프로그램에서 보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 작성기는 다른 응용 프로그램에서 보고서를 쉽게 볼 수 있도록 내보내기 옵션을 제공합니다. 브라우저나 웹 기반의 응용 프로그램에서 보고서를 열면 보고서 위쪽에 나타나는 보고서 도구 모음에서 **내보내기** 명령을 사용할 수 있습니다. 보고서를 내보내면 다른 응용 프로그램에서 보고서가 표시됩니다. 예를 들어 보고서를 Excel로 내보내면 해당 보고서가 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]에서 열립니다. 응용 프로그램에 사용하려는 특정 인쇄 기능이 있는 경우에만 인쇄 목적으로 보고서를 내보내는 것이 좋습니다.  

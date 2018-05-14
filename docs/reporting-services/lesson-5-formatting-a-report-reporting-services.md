@@ -1,28 +1,27 @@
 ---
-title: "5단원: 보고서 서식 지정(Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: '5단원: 보고서 서식 지정(Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0319d1e52281bf389b13564d89b5e6543b7d41aa
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 22524a7fb35104934661f0dead998319cf9a99f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  **천 단위 구분 기호(,) 사용**을 선택합니다.  
   
-    샘플 텍스트가**$12,345.00**이면 설정이 올바른 것입니다.  
+    샘플 텍스트가 **$12,345.00**이면 설정이 올바른 것입니다.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

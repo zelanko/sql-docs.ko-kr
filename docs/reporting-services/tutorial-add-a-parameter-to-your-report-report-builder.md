@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: eb1fa8539eb0ba96edb5c48d29af160507e61998
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
 이 자습서에서는 보고서를 읽는 사람이 하나 이상의 값에 대해 보고서 데이터를 필터링할 수 있도록 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 매개 변수를 추가합니다. 
@@ -180,7 +179,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  보고서 데이터 창의 **매개 변수** 노드에서 *@StoreID*를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
-2.  **프롬프트**에 **Store identifier?**를 입력합니다. 보고서를 실행할 때 이 텍스트가 보고서 뷰어 도구 모음에 표시됩니다.  
+2.  **프롬프트**에 **Store identifier?** 를 입력합니다. 보고서를 실행할 때 이 텍스트가 보고서 뷰어 도구 모음에 표시됩니다.  
   
 3.  **데이터 형식**의 드롭다운 목록에서 **정수**를 선택합니다.  
   
@@ -241,7 +240,7 @@ ms.lasthandoff: 01/09/2018
   
 6.  **일반**을 클릭합니다.  
   
-7.  **프롬프트**에서 **S를re Identifer?** 를 **S를re name?**으로 변경합니다.  
+7.  **프롬프트**에서 **S를re Identifer?** 를 **S를re name?** 으로 변경합니다.  
   
     이제 보고서를 읽는 사람이 상점 식별자 대신 상점 이름 목록에서 선택하게 됩니다. 매개 변수가 상점 이름이 아닌 상점 식별자를 기반으로 하기 때문에 매개 변수 데이터 형식은 **Integer** 로 유지됩니다.  
   
@@ -369,7 +368,7 @@ For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조�
   
     행렬에 "Contoso Catalog Store"에 대한 데이터만 표시됩니다.  
   
-9. 보고서 뷰어 도구 모음에서 **Store name?**으로 **Contoso Asia Online Store**를 선택한 다음 **보고서 보기**를 클릭합니다.  
+9. 보고서 뷰어 도구 모음에서 **Store name?** 으로 **Contoso Asia Online Store**를 선택한 다음 **보고서 보기**를 클릭합니다.  
   
 행렬에 선택한 상점에 해당하는 데이터가 표시됩니다.  
   
@@ -483,7 +482,7 @@ For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조�
 
 1.  디자인 뷰로 전환합니다.  
    
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  Parameterized Product Sales를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   

@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services에서 KPI 사용 | Microsoft Docs"
+title: Reporting Services에서 KPI 사용 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -76,7 +74,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  데이터 상자에서 **줄임표 (...)**를 선택합니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
+2.  데이터 상자에서 **줄임표 (...)** 를 선택합니다. 그러면 **데이터 집합 선택** 화면이 나타납니다.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -98,7 +96,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
 KPI를 제거하기 위해 다음을 수행할 수 있습니다.  
   
-1.  제거하려는 KPI의 **줄임표(...)**를 선택합니다. **관리**를 선택합니다.  
+1.  제거하려는 KPI의 **줄임표(...)** 를 선택합니다. **관리**를 선택합니다.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   

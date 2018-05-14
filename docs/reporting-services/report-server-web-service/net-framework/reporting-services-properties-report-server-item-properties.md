@@ -1,33 +1,32 @@
 ---
-title: "보고서 서버 항목 속성 | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 항목 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - item-specific properties [Reporting Services]
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 속성 - 보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  

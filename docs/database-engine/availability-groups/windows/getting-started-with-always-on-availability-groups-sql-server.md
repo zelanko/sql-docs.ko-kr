@@ -3,13 +3,10 @@ title: Always On 가용성 그룹 시작(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -20,12 +17,11 @@ caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9e9397fea9273e292e66d83adf59bcbcadc56f9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0f6a479b079f2387e605e9ba6857f3365f66ea4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ ms.lasthandoff: 04/16/2018
 |태스크|링크|  
 |----------|----------|  
 |가용성 그룹의 [유연한 장애 조치(failover) 정책](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) 을 수정하여 자동 장애 조치를 수행해야 하는 상태를 제어합니다. 이 정책은 자동 장애 조치가 가능한 경우에만 유효합니다.|[가용성 그룹의 유연한 장애 조치(failover) 정책 구성](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
-|일반적으로 *강제 장애 조치(failover)*라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)나 계획된 수동 장애 조치(failover)를 수행합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.|[계획된 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [강제 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
+|일반적으로 *강제 장애 조치(failover)* 라고 하는 강제 수동 장애 조치(failover)(데이터가 손실될 수 있음)나 계획된 수동 장애 조치(failover)를 수행합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.|[계획된 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [강제 수동 장애 조치(failover) 수행](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |미리 정의된 일련의 정책을 사용하여 가용성 그룹과 해당 복제본 및 데이터베이스의 상태를 확인합니다.|[정책 기반 관리를 사용하여 가용성 그룹 상태 보기](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Always On 그룹 대시보드 사용](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |보조 복제본을 추가하거나 제거합니다.|[보조 복제본 추가](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [보조 복제본 제거](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |가용성 데이터베이스를 일시 중지하거나 다시 시작합니다. 보조 데이터베이스를 일시 중지하면 다시 시작할 때까지 현재 시점의 상태로 유지됩니다.|[데이터베이스 일시 중지](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)<br /><br /> [데이터베이스 다시 시작](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  

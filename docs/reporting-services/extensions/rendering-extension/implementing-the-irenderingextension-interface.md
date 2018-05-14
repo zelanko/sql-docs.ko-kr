@@ -1,31 +1,30 @@
 ---
-title: "IRenderingExtension 인터페이스 구현 | Microsoft Docs"
-ms.custom: 
+title: IRenderingExtension 인터페이스 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cfb664412f4879ba692aa9b4c1ddd24090e39eae
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cd9597fb4ac3c15877bf8ba37586d9574c31e31f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
   렌더링 확장 프로그램은 실제 데이터와 결합된 보고서 정의에서 결과를 가져오고 결과 데이터를 사용 가능한 형식으로 렌더링합니다. 결합된 데이터의 변환과 형식 지정은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>을 구현하는 CLR(공용 언어 런타임) 클래스를 사용하여 수행됩니다. 이것은 개체 모델을 뷰어, 프린터 또는 기타 출력 대상에서 사용할 수 있는 출력 형식으로 변환합니다.  
@@ -79,7 +78,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> 메서드는 보고서에서 특정 스트림을 렌더링합니다. 모든 스트림은 최초 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 호출 중에 만들어지지만, 이 스트림이 처음에 클라이언트에 반환되지는 않습니다. 이 메서드는 보조 스트림(예: HTML 렌더링의 이미지) 또는 다중 페이지 렌더링 확장 프로그램의 추가 페이지(예: 이미지/EMF)에 사용됩니다.  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource 메서드  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드는 보고서의 전체 렌더링을 실행하지 않고 정보를 검색합니다. 보고서에서 보고서 자체가 렌더링되지 않아도 되는 정보가 필요할 때가 있습니다. 예를 들어 렌더링 확장 프로그램과 연결된 아이콘이 필요한 경우 단일 태그 **\<Icon>**을 포함하는 *deviceInfo* 매개 변수를 사용합니다. 이러한 경우 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 사용할 수 있습니다.  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드는 보고서의 전체 렌더링을 실행하지 않고 정보를 검색합니다. 보고서에서 보고서 자체가 렌더링되지 않아도 되는 정보가 필요할 때가 있습니다. 예를 들어 렌더링 확장 프로그램과 연결된 아이콘이 필요한 경우 단일 태그 **\<Icon>** 을 포함하는 *deviceInfo* 매개 변수를 사용합니다. 이러한 경우 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [렌더링 확장 프로그램 구현](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

@@ -1,16 +1,15 @@
 ---
-title: "암호화 키 구성 및 관리(SSRS 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: 암호화 키 구성 및 관리(SSRS 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3005a99fcfe0d18e3b39394bbf9cb34b908201e8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 581abfca863baaa024d0c0b74eea1b6521357824
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 연결 정보 및 자격 증명을 보호합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화는 중요한 데이터를 보호하는 데 사용되는 공개 키, 개인 키 및 대칭 키의 조합을 통해 지원됩니다. 대칭 키는 보고서 서버의 설치 또는 구성 과정에서 보고서 서버를 초기화하는 동안 생성되며, 보고서 서버에서 이 서버에 저장된 중요한 데이터를 암호화하는 데 사용됩니다. 공개 키 및 개인 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 보고서 서버 데이터베이스의 중요한 데이터를 저장하는 각 보고서 서버 인스턴스당 하나의 공개 키 및 개인 키 쌍이 생성됩니다.  

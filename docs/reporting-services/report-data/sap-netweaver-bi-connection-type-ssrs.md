@@ -1,27 +1,25 @@
 ---
-title: "SAP NetWeaver BI 연결 형식(SSRS) | Microsoft Docs"
-ms.custom: 
+title: SAP NetWeaver BI 연결 형식(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b1c86769bb40afd652ea4c8c8b3bbd93c07559f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
   보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
@@ -97,7 +95,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |**Key**|**개체**|수준의 키를 반환합니다.|  
 |**LevelNumber**|**Integer**|부모-자식 계층에 대해 수준 또는 차원 번호를 반환합니다.|  
 |**ParentUniqueName**|**String**|부모-자식 계층에 대해 부모 수준의 정규화된 이름을 반환합니다.|  
-|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[0D_Company].[10D_Department].[11]*일 수 있습니다.|  
+|**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다. 예를 들어 직원의 **UniqueName** 값은 *[0D_Company].[10D_Department].[11]* 일 수 있습니다.|  
   
  식에서 필드 및 필드 속성을 사용하는 방법은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

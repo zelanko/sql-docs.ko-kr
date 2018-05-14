@@ -1,27 +1,25 @@
 ---
-title: "SharePoint용 Reporting Services 추가 기능 설치 또는 제거 | Microsoft Docs"
-ms.custom: 
+title: SharePoint용 Reporting Services 추가 기능 설치 또는 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6e8fd7999efdba906376abb35c0ae5d1db042b67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
 Rssharepoint.msi /?  
 ```  
   
-1.  **추가 기능을 위한 설치 프로그램(**rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )을 다운로드합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
+1.  **추가 기능을 위한 설치 프로그램(** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] )을 다운로드합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
 2.  관리자 권한으로 **rsSharepoint.msi** 를 실행하여 설치 마법사를 실행합니다. 그러면 시작 페이지, 소프트웨어 사용 조건 및 등록 정보 페이지가 표시됩니다. 설치 프로그램은 다음 경로 아래에 폴더를 만들고 이 폴더에 파일을 복사합니다.  
   

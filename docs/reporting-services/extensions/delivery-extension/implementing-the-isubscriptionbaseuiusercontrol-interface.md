@@ -1,32 +1,31 @@
 ---
-title: "ISubscriptionBaseUIUserControl 인터페이스 구현 | Microsoft Docs"
-ms.custom: 
+title: ISubscriptionBaseUIUserControl 인터페이스 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - user controls [Reporting Services]
 - ISubscriptionBaseUIUserControl interface
 - delivery extensions [Reporting Services], user controls
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de645a67fc9997fdc4d527035ec83108798d8941
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 538c4b578cd8ed323bd3e335bc395f9720664c75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface"></a>ISubscriptionBaseUIUserControl 인터페이스 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램에는 보고서 관리자에서 확장 프로그램 관련 정보를 수집하기 위한 구독 UI(사용자 인터페이스) 구현이 포함될 수 있습니다. 이 UI는 사용자가 새 구독을 만들거나 기존 구독을 수정할 때 호출됩니다. 새 구독을 만드는 경우 UI에 적절한 기본값이 표시되고 이를 통해 사용자가 배달 공급자와 상호 작용할 수 있습니다. 구독을 수정하는 경우에는 UI에 현재 구독 정보가 미리 채워집니다.  

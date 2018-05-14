@@ -1,27 +1,25 @@
 ---
-title: "보고서 작성기 설치 | Microsoft Docs"
-ms.custom: 
+title: 보고서 작성기 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3812692b30c5ff4436403d22de834e9fe8d6d73b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-4.  **열기** 상자에 **cmd.**를 입력합니다.  
+4.  **열기** 상자에 **cmd.** 를 입력합니다.  
   
 5.  명령 프롬프트 창에서 ReportBuilder3.msi를 저장한 폴더로 이동합니다.  
   

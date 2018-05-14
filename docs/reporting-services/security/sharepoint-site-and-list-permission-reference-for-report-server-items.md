@@ -1,32 +1,30 @@
 ---
-title: "보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조 | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  

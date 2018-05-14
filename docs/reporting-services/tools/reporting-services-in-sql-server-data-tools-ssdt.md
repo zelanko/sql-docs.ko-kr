@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
@@ -18,12 +17,11 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 0192525485f994534c7996f5cbd5b9a53a56d15c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
@@ -101,7 +99,7 @@ ms.lasthandoff: 01/09/2018
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
   
--   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)**으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>**을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
+-   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)** 으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>** 을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
   
 -   속성 창의 도구 모음 단추를 사용하여 종류별 보기에서 사전순 보기로 표 형태 창을 변경할 수 있습니다. 종류별 보기에서는 범주 내의 모든 속성을 보기 위해 해당 범주를 확장해야 할 수 있습니다. 항목의 속성 대화 상자를 열려면 도구 모음에서 **속성 페이지** 단추를 클릭하거나 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   

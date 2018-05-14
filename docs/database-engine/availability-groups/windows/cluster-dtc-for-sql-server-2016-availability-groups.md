@@ -3,29 +3,28 @@ title: SQL Server 2016 가용성 그룹에 대한 클러스터 DTC | Microsoft D
 ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aed26f710495ef7bac77cf1a1a732fd73a9d77f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 50ba8074a718beb3722daaff67f224bd0d5c5c66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 가용성 그룹에 대한 클러스터 DTC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 Microsoft DTC(Distributed Transaction Coordinator) 서비스를 클러스터링하는 데 필요한 요구 사항 및 단계에 대해 설명합니다. 분산 트랜잭션과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션(SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)을 참조하세요.
 
  ## <a name="checklist-preliminary-requirements"></a>검사 목록: 사전 요구 사항

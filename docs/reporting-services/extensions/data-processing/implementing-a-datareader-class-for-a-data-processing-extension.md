@@ -1,33 +1,32 @@
 ---
-title: "데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현 | Microsoft Docs"
-ms.custom: 
+title: 데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], data readers
 - data readers [Reporting Services]
 - DataReader class
 - read-only data
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 617f9d0a31ced8b38c79d3a3996c13a919b004f0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f77b45946ef0c2771757ecfd38911772f2bb2ccb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
   **DataReader** 개체가 있으면 클라이언트에서는 읽기 전용, 정방향 전용 데이터 스트림을 데이터 원본에서 검색할 수 있습니다. 결과는 쿼리 실행으로 반환되고 **DataReader** 클래스의 **Read** 메서드를 사용하여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장됩니다. **DataReader** 클래스를 만들려면 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader>를 구현하고 선택적으로 <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension>을 구현합니다. **DataReader** 개체를 사용하면 전체 쿼리 결과가 반환될 때까지 기다리지 않고 사용 가능할 때 즉시 데이터를 검색하고 (기본적으로) 한 번에 행 한 개씩만 메모리에 저장하여 시스템 오버헤드를 줄임으로써 응용 프로그램 성능이 높아집니다.  

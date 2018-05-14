@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 모바일 보고서: 종단 간 연습 | Microsoft Docs"
-ms.custom: 
+title: 'SQL Server 모바일 보고서: 종단 간 연습 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 이 문서에서는 다음 작업을 안내합니다.   
   
 - AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 집합 만들기  
-- Reporting Services 모바일 보고서 만들기 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 모바일 보고서 게시  
 - Power BI 모바일 앱에서 모바일 보고서 보기  
   
@@ -151,7 +149,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
-   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 마스터 레이아웃 눈금으로 열립니다.  
+   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 가 마스터 레이아웃 눈금으로 열립니다.  
   
 2. **레이아웃** 탭에서 차트 섹션까지 아래로 스크롤합니다.  
   

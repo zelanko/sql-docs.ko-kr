@@ -1,27 +1,25 @@
 ---
-title: "행렬 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 행렬 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d28d9071a245185e9801d1b1c482a058752e6da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>행렬 만들기(보고서 작성기 및 SSRS)
   행렬을 사용하여 그룹화된 데이터 및 요약 정보를 표시할 수 있습니다. 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 행렬은 크로스탭 및 피벗 테이블과 비슷한 기능을 제공합니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면서 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀의 값으로는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 행 및 열의 서식을 지정하여 강조하려는 데이터를 강조 표시할 수 있습니다. 또한 처음에 정보 데이터를 숨기는 드릴다운 토글을 포함할 수도 있습니다. 사용자는 필요한 경우 이 토글을 클릭하여 내용을 자세히 또는 간략히 볼 수 있습니다.  

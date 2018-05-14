@@ -1,16 +1,15 @@
 ---
-title: "rsconfig 유틸리티(SSRS) | Microsoft Docs"
-ms.custom: 
+title: rsconfig 유틸리티(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a7af70640cf19ddeb205a5cc345ce2c45d8a73fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  
@@ -54,7 +52,7 @@ rsconfig {-?}
 |용어|선택/필수|정의|  
 |----------|------------------------|----------------|  
 |**-?**|(선택 사항)|Rsconfig.exe 인수의 구문을 표시합니다.|  
-|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**및**-t**가 있습니다.|  
+|**-c**|**-e** 인수를 사용하지 않는 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> **-c** 를 사용하여 지정할 수 있는 인수에는 **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**및 **-t**가 있습니다.|  
 |**-e**|**-c** 인수를 사용하지 않는 경우 필요합니다.|무인 보고서 실행 계정을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 구성 파일에 암호화된 값을 지정하려면 명령줄에 추가 인수를 포함해야 합니다.<br /><br /> **-e** 를 사용하여 지정할 수 있는 인수에는 **-u** 및 **-p**가 있습니다. **-t**도 설정할 수 있습니다.|  
 |**-m**  *computername*|원격 보고서 서버 인스턴스를 구성하는 경우 필요합니다.|보고서 서버를 호스팅하는 컴퓨터의 이름입니다. 이 인수를 생략할 경우 기본값은 **localhost**입니다.|  
 |**-s**  *servername*|필수 사항입니다.|보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  

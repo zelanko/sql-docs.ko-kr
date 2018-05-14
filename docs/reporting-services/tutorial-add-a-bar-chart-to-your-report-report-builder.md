@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8ef72373f91b9104c8ff83f6d1d9b012b283df3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  **정렬**을 클릭합니다. **정렬 옵션을 변경하십시오.** 페이지에 정렬 식 목록이 표시됩니다. 기본적으로 이 목록에는 원래 범주 그룹 식과 동일한 정렬 식이 있습니다.  
   
-5.  **정렬 기준**에서 **[SalesYear2015]**를 클릭합니다.  
+5.  **정렬 기준**에서 **[SalesYear2015]** 를 클릭합니다.  
   
 6.  **순서** 목록에서 **내림차순** 을 선택하여 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 이름이 표시되도록 합니다.
   
@@ -254,7 +253,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  **추가**를 클릭합니다. 새로운 빈 필터가 나타납니다.  
   
-6.  **식**에서 **[Sum(SalesYear2015)]**를 입력합니다. 기본 식 `=Sum(Fields!SalesYear2015.Value)`이 만들어집니다. 이 식은 **fx** 단추를 클릭하면 볼 수 있습니다.  
+6.  **식**에서 **[Sum(SalesYear2015)]** 를 입력합니다. 기본 식 `=Sum(Fields!SalesYear2015.Value)`이 만들어집니다. 이 식은 **fx** 단추를 클릭하면 볼 수 있습니다.  
   
 7.  데이터 형식이 **Text**인지 확인합니다.  
   
@@ -272,7 +271,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="Title"></a>9. 보고서 제목 추가  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Sales Bar Chart**를 입력하고 Enter 키를 누른 다음 **Top Five Sellers for 2015**를 입력하면 다음과 같이 표시됩니다.  
   

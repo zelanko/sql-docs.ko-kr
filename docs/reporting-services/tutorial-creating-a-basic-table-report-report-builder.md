@@ -1,28 +1,27 @@
 ---
-title: "자습서: 기본 테이블 보고서 만들기(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 기본 테이블 보고서 만들기(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a94fabf2c89005a3125cc73c54b55d537dc2458b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e03e955d70e46dea954dcc4cce83faece6c2e2ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -223,7 +222,7 @@ Sales의 요약 값이 통화로 표시됩니다.
   
 3.  리본의 **홈** 탭에 있는 **숫자** 그룹에서 화살표를 클릭하고 **날짜**를 선택합니다.  
   
-    셀에 예제 날짜 **[1/31/2000]**이 표시됩니다. 예제 날짜가 표시되지 않는 경우 **홈** 탭의 **숫자** 그룹에서 **자리 표시자 스타일** 아이콘 옆의 화살표 > **샘플 값**을 클릭합니다.  
+    셀에 예제 날짜 **[1/31/2000]** 이 표시됩니다. 예제 날짜가 표시되지 않는 경우 **홈** 탭의 **숫자** 그룹에서 **자리 표시자 스타일** 아이콘 옆의 화살표 > **샘플 값**을 클릭합니다.  
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -245,7 +244,7 @@ SalesDate 값이 기본 날짜 형식으로 표시됩니다.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    셀에 예제 날짜 **[January 31, 2000]**이 표시됩니다.  
+    셀에 예제 날짜 **[January 31, 2000]** 이 표시됩니다.  
   
 7.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -275,7 +274,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Product Sales**를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   
@@ -349,7 +348,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 4.  **파일 이름** 상자에 **Product_Sales_Excel**을 입력합니다.  
   
-5.  파일 형식이 **Excel(\*.xls)**인지 확인합니다.  
+5.  파일 형식이 **Excel(\*.xls)** 인지 확인합니다.  
   
 6.  **저장**을 클릭합니다.  
   

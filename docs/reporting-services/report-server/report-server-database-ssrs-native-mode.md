@@ -1,16 +1,15 @@
 ---
-title: "보고서 서버 데이터베이스(SSRS 기본 모드) | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 데이터베이스(SSRS 기본 모드) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0b800d0677323aa53276640be971fddf73d36b62
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1f1eeeeaf960fbfe8659abd5a7299dd6b924212
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
   보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  

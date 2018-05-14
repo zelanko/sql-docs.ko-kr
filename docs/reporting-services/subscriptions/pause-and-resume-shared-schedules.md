@@ -1,16 +1,15 @@
 ---
-title: "공유 일정 일시 중지 및 다시 시작 | Microsoft Docs"
-ms.custom: 
+title: 공유 일정 일시 중지 및 다시 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - report-specific schedules [Reporting Services]
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aff3fe5efdee7db2dfb0ac17f8d797badec97da9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ecaa6780e3b3f10809f11d3aa329cb69e645123a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
   사용 중인 공유 일정을 일시 중지하고 다시 시작할 수 있습니다. 공유 일정을 일시 중지하여 보고서 처리 및 구독을 트리거하는 데 사용되는 일정을 일시적으로 중지할 수 있습니다. 공유 일정만 일시 중지하고 다시 시작할 수 있습니다. 보고서별 일정은 일시 중지할 수 없습니다.  

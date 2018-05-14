@@ -1,28 +1,27 @@
 ---
-title: "자습서: 맵 보고서(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 맵 보고서(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -249,7 +248,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  **SQL Server 공간 데이터가 있는 데이터 집합을 선택하십시오.** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 집합 추가** 를 클릭하고 **다음**을 클릭합니다.  
   
-5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.**에서 첫 번째 절차에서 사용한 데이터 원본을 선택합니다.  
+5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.** 에서 첫 번째 절차에서 사용한 데이터 원본을 선택합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -322,7 +321,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  PolygonLayer1 옆의 화살표 > **계층 데이터**를 클릭합니다. **지도 다각형 계층 속성** 대화 상자가 열립니다.  
   
-4.  **가시성** 탭의 **투명도(백분율)**에서 **30**을 입력합니다.  
+4.  **가시성** 탭의 **투명도(백분율)** 에서 **30**을 입력합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -422,7 +421,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  색 눈금을 선택한 상태로 속성 창에서 **MapColorScale**속성을 확인합니다. 
   
-2. 제목 섹션을 확장하고 Caption 속성에 **Sales (Thousands)**를 입력합니다.
+2. 제목 섹션을 확장하고 Caption 속성에 **Sales (Thousands)** 를 입력합니다.
 
 3. TextColor 속성을 **흰색**으로 변경합니다.  
 
@@ -525,7 +524,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  디자인 뷰로 전환합니다.
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Sales in New York Stores** 를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   

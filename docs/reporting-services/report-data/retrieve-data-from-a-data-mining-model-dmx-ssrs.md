@@ -1,32 +1,30 @@
 ---
-title: "데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS) | Microsoft Docs"
-ms.custom: 
+title: 데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 28317c69a8a015cef6fade6c9965664841c1c008
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 53fe62a48a40b768b730f1f16ab038703deda5ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델의 데이터를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 및 하나 이상의 보고서 데이터 집합을 정의해야 합니다. 데이터 원본 정의를 만들 때는 클라이언트 컴퓨터에서 데이터 원본에 액세스할 수 있도록 연결 문자열 및 자격 증명을 지정해야 합니다.  

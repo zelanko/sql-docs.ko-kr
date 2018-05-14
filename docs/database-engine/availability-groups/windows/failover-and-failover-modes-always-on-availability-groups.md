@@ -3,15 +3,12 @@ title: 장애 조치 및 장애 조치 모드(Always On 가용성 그룹) | Micr
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -22,17 +19,16 @@ caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1efc39104eb2b7f9840da16ffffeda16cabb4c53
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 195dd7358a432bccd94c1916176fa0a35b728cca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  가용성 그룹의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 *장애 조치(Failover)*라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)*라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치(Failover)는 모든 데이터를 보존합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 즉, 가용성 그룹은 해당 보조 복제본 중 하나(현재 *장애 조치(Failover) 대상*)로 장애 조치(Failover)됩니다.  
+  가용성 그룹의 컨텍스트 내에서는 일반적으로 가용성 복제본의 주 역할과 보조 역할을 *장애 조치(Failover)* 라는 프로세스에서 서로 바꿀 수 있습니다. 자동 장애 조치(데이터가 손실되지 않음), 계획된 수동 장애 조치(데이터가 손실되지 않음)와 *강제 장애 조치(failover)* 라고 불리는 강제 수동 장애 조치(데이터가 손실될 수 있음)의 세 가지 형태가 있습니다. 자동 및 계획된 수동 장애 조치(Failover)는 모든 데이터를 보존합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 즉, 가용성 그룹은 해당 보조 복제본 중 하나(현재 *장애 조치(Failover) 대상*)로 장애 조치(Failover)됩니다.  
   
 > [!NOTE]  
 >  따라서 데이터 파일 손실, 데이터베이스 삭제, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 수준의 문제로는 가용성 그룹의 장애 조치(Failover)가 수행되지 않습니다.  
@@ -69,7 +65,7 @@ ms.lasthandoff: 04/16/2018
  주 복제본이 손실되는 경우 자동으로 발생하는 장치 조치(failover)입니다. 자동 장애 조치(Failover)는 현재 주 복제본과 하나의 보조 복제본이 모두 AUTOMATIC으로 설정된 장애 조치(Failover) 모드로 구성되고 보조 복제본이 현재 동기화된 경우에만 지원됩니다.  주 복제본 또는 보조 복제본의 장애 조치(Failover) 모드가 MANUAL인 경우 장애 조치(Failover)를 수행할 수 없습니다.  
   
  계획된 수동 장애 조치(Failover)(데이터가 손실되지 않음)  
- 계획된 수동 장애 조치(Failover) 또는 *수동 장애 조치(Failover)*는 일반적으로 관리 목적을 위해 데이터베이스 관리자가 시작하는 장애 조치(Failover)입니다. 계획된 수동 장애 조치(Failover)는 주 복제본과 보조 복제본이 동기-커밋 모드에 대해 구성되고 보조 복제본이 현재 동기화된(SYNCHRONIZED 상태) 경우에만 지원됩니다. 대상 보조 복제본이 동기화되면 보조 데이터베이스에서 장애 조치(Failover)를 수행할 준비가 되었기 때문에 주 복제본이 충돌하더라도 수동 장애 조치(Failover)(데이터가 손실되지 않음)가 가능합니다. 데이터베이스 관리자가 수동 장애 조치(Failover)를 수동으로 시작합니다.  
+ 계획된 수동 장애 조치(Failover) 또는 *수동 장애 조치(Failover)* 는 일반적으로 관리 목적을 위해 데이터베이스 관리자가 시작하는 장애 조치(Failover)입니다. 계획된 수동 장애 조치(Failover)는 주 복제본과 보조 복제본이 동기-커밋 모드에 대해 구성되고 보조 복제본이 현재 동기화된(SYNCHRONIZED 상태) 경우에만 지원됩니다. 대상 보조 복제본이 동기화되면 보조 데이터베이스에서 장애 조치(Failover)를 수행할 준비가 되었기 때문에 주 복제본이 충돌하더라도 수동 장애 조치(Failover)(데이터가 손실되지 않음)가 가능합니다. 데이터베이스 관리자가 수동 장애 조치(Failover)를 수동으로 시작합니다.  
   
  강제 장애 조치(failover)(데이터가 손실될 수 있음)  
  보조 복제본이 주 복제본과 동기화되지 않거나 주 복제본이 실행되고 있지 않아서 보조 복제본의 장애 조치(failover)가 준비되지 않았을 때 데이터베이스 관리자가 시작할 수 있는 장애 조치(Failover)입니다. 강제 장애 조치(Failover)는 데이터가 손실될 수 있는 위험이 있으며 재해 복구용으로만 사용하는 것이 좋습니다. 강제 장애 조치(failover)는 수동으로만 시작될 수 있기 때문에 강제 수동 장애 조치(failover)라고도 합니다. 이 장애 조치(Failover)는 비동기-커밋 가용성 모드에서 지원되는 유일한 장애 조치(Failover) 형태입니다.  
@@ -92,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 |계획된 수동 장애 조치(Failover)|아니오|예|예|  
 |강제 장애 조치(failover)|예|예|예**\***|  
   
- **\***동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
+ **\*** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
   
  장애 조치(Failover) 중에 데이터베이스를 사용할 수 없는 시간은 장애 조치(Failover)의 유형과 원인에 따라 달라집니다.  
   

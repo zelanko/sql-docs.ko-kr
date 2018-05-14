@@ -1,27 +1,25 @@
 ---
-title: "데이터 집합 필드 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합 필드 컬렉션 참조(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1a266bf27c1d31d3cb662c19903da50fb7e2b8f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5c3c5f21887c6f2307f78df008340700eb5b722f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 집합 필드 컬렉션 참조(보고서 작성기)
   보고서의 각 데이터 집합에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 집합 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 집합을 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>런타임에 동적 쿼리에 대해 누락된 필드 검색  
- Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 집합에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>*일 수 있습니다.  
+ Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 집합에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>* 일 수 있습니다.  
   
 > [!NOTE]  
 >  IsMissing은 모든 유형의 데이터 원본에 대해 디자인 타임과 런타임 간의 데이터 집합 스키마 변경을 검색합니다. IsMissing은 다차원 큐브의 빈 멤버를 검색하는 데 사용할 수 없으며 **EMPTY** 및 **NON EMPTY**의 MDX 쿼리 언어 개념과 관련이 없습니다.  

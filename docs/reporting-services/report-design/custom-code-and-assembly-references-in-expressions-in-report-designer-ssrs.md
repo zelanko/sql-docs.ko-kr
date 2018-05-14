@@ -1,16 +1,15 @@
 ---
-title: "보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS) | Microsoft Docs"
-ms.custom: 
+title: 보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 03cc0727e6f545f37ebccb716877b89f29f02d09
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
   보고서에 포함된 사용자 지정 코드 또는 직접 작성한 사용자 지정 어셈블리에 대한 참조를 추가한 다음 컴퓨터에 저장하고 보고서 서버로 배포할 수 있습니다. 단일 보고서에서 여러 번 사용된 함수, 사용자 지정 상수 또는 복잡한 함수에는 포함 코드를 사용합니다. 코드를 한 위치에서 관리하면서 여러 보고서에서 사용할 수 있도록 공유하려면 사용자 지정 코드 어셈블리를 사용합니다. 사용자 지정 코드에는 새로운 사용자 지정 상수, 변수, 함수 또는 서브루틴이 포함될 수 있습니다. Parameters 컬렉션과 같은 기본 제공 컬렉션에 대한 읽기 전용 참조를 포함할 수 있습니다. 그러나 사용자 지정 함수에 보고서 데이터 값 집합을 전달할 수 없으며 특히 사용자 지정 집계는 지원되지 않습니다.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="Common"></a> 일반적으로 사용되는 함수에 대한 참조 포함  
  **식** 대화 상자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 기본 제공되는 일반적으로 사용되는 함수 목록을 범주별로 볼 수 있습니다. **일반 함수** 를 확장하고 범주를 클릭하면 식에 포함할 수 있는 함수 목록이 **항목** 창에 표시됩니다. 일반 함수에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 및 <xref:System.Convert> 네임스페이스의 클래스와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수가 포함됩니다. 편의상 **식** 대화 상자에서 범주별로 나열된 가장 일반적으로 사용되는 함수 목록을 볼 수 있습니다. 범주는 텍스트, 날짜 및 시간, 수치 연산, 검사, 프로그램 흐름, 집계, 재무, 변환 및 기타입니다. 자주 사용되지 않는 함수는 목록에 표시되지 않지만 식에 사용할 수 있습니다.  
   
- 기본 제공 함수를 사용하려면 항목 창에서 함수 이름을 두 번 클릭합니다. 함수 설명이 설명 창에 표시되고 함수 호출 예가 예제 창에 표시됩니다. 코드 창에서 함수 이름을 입력하고 왼쪽 괄호 **(**를 입력하면 IntelliSense 도움말을 통해 해당 함수 호출에 적합한 각 구문이 표시됩니다. 예를 들어 테이블의 `Quantity` 라는 필드에 대한 최대값을 계산하려면 코드 창에 `=Max(` 라는 간단한 식을 입력하고 스마트 태그를 사용하여 해당 함수 호출에 대해 유효한 모든 구문 목록을 확인합니다. 이 예를 완료하려면 `=Max(Fields!Quantity.Value)`를 입력합니다.  
+ 기본 제공 함수를 사용하려면 항목 창에서 함수 이름을 두 번 클릭합니다. 함수 설명이 설명 창에 표시되고 함수 호출 예가 예제 창에 표시됩니다. 코드 창에서 함수 이름을 입력하고 왼쪽 괄호 **(** 를 입력하면 IntelliSense 도움말을 통해 해당 함수 호출에 적합한 각 구문이 표시됩니다. 예를 들어 테이블의 `Quantity` 라는 필드에 대한 최대값을 계산하려면 코드 창에 `=Max(` 라는 간단한 식을 입력하고 스마트 태그를 사용하여 해당 함수 호출에 대해 유효한 모든 구문 목록을 확인합니다. 이 예를 완료하려면 `=Max(Fields!Quantity.Value)`를 입력합니다.  
   
  각 함수에 대한 자세한 내용은 <xref:System.Math>, <xref:System.Convert>및 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
@@ -127,7 +125,7 @@ End Function
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters` 를 참조하는 예가 들어 있습니다.  
   
- **전체 전역 매개 변수 컬렉션을 사용자 지정 코드에 전달.**이 함수는 특정 보고서 매개 변수 *MyParameter*의 값을 반환합니다.  
+ **전체 전역 매개 변수 컬렉션을 사용자 지정 코드에 전달.** 이 함수는 특정 보고서 매개 변수 *MyParameter*의 값을 반환합니다.  
   
  식에서의 참조 `=Code.DisplayAParameterValue(Parameters)`  
   

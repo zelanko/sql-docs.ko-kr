@@ -1,33 +1,32 @@
 ---
-title: "Reporting Services에서 외부 데이터 집합 사용 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services에서 외부 데이터 집합 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 26d020699157a54d9ee2cb85baef8c063ca92f50
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: afcf3dd2d15f38b3c7f54e6facbd4692cc1db899
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 집합 사용
   **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 응용 프로그램의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 집합을 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF 장치 정보 설정
   다음 표는 PDF 형식으로 보고서를 렌더링하기 위한 장치 정보 설정을 나열합니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 |**DpiX**|X 방향의 출력 장치 해상도입니다.|  
 |**DpiY**|Y 방향의 출력 장치 해상도입니다.|  
 |**EndPage**|렌더링할 보고서의 마지막 페이지입니다. 기본값은 **StartPage**에 대한 값입니다.|  
-|**HumanReadablePDF**|압축되지 않은 PDF 파일을 렌더링할지 여부를 나타냅니다. 그러면 크기는 크지만 일반 텍스트 편집기에서 보다 읽기 쉬워집니다. 기본값은 **false.**입니다.|  
+|**HumanReadablePDF**|압축되지 않은 PDF 파일을 렌더링할지 여부를 나타냅니다. 그러면 크기는 크지만 일반 텍스트 편집기에서 보다 읽기 쉬워집니다. 기본값은 **false.** 입니다.|  
 |**MarginBottom**|보고서에 대해 설정할 아래쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**MarginLeft**|보고서에 대해 설정할 왼쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**MarginRight**|보고서에 대해 설정할 오른쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: 1in). 이 값은 보고서의 원래 설정을 재정의합니다.|  

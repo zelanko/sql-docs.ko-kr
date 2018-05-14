@@ -1,28 +1,27 @@
 ---
-title: "자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a2a0eb1662a79095be0d0e3fd727d993b217a0bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
 이 자습서에서는 두 종류의 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 알아봅니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 
@@ -72,7 +71,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 4.  **연결 형식 선택**에서 **Microsoft SQL Server Analysis Services**를 선택한 다음 **빌드**를 클릭합니다.  
   
-5.  **데이터 원본**에서 데이터 원본이 **Microsoft SQL Server Analysis Services(AdomdClient)**인지 확인합니다.  
+5.  **데이터 원본**에서 데이터 원본이 **Microsoft SQL Server Analysis Services(AdomdClient)** 인지 확인합니다.  
   
 6.  **서버 이름**에 Analysis Services 인스턴스가 설치된 서버의 이름을 입력합니다.  
   
@@ -110,7 +109,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
-1.  **쿼리 디자인** 페이지의 메타데이터 창에서 **(…)**단추를 클릭합니다.  
+1.  **쿼리 디자인** 페이지의 메타데이터 창에서 **(…)** 단추를 클릭합니다.  
   
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
@@ -170,7 +169,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  Sales Amount 측정값을 데이터 창으로 끌어 Product Subcategory Name의 오른쪽에 놓습니다.  
   
-6.  쿼리 디자이너 도구 모음에서 **실행(!)**을 클릭합니다.  
+6.  쿼리 디자이너 도구 모음에서 **실행(!)** 을 클릭합니다.  
   
 7.  **다음**을 클릭합니다.  
   
@@ -215,7 +214,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
     디자인 화면에 테이블이 추가됩니다.  
   
-3.  보고서를 미리 보려면 **실행(!)**을 클릭합니다.  
+3.  보고서를 미리 보려면 **실행(!)** 을 클릭합니다.  
   
 ## <a name="DFormat"></a>2. 데이터 형식을 통화로 지정  
 드릴스루 보고서의 판매량 필드에 통화 서식을 적용합니다.  
@@ -268,9 +267,9 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 1.  디자인 뷰로 전환하려면 **디자인**을 클릭합니다.  
   
-2.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+2.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-3.  **Sales and Returns for Category:**를 입력합니다.  
+3.  **Sales and Returns for Category:** 를 입력합니다.  
   
 4.  마우스 오른쪽 단추를 클릭한 다음 **자리 표시자 만들기**를 클릭합니다.  
   
@@ -370,7 +369,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 4.  **연결 형식 선택**에서 **Microsoft SQL Server Analysis Services**를 선택한 다음 **빌드**를 클릭합니다.  
   
-5.  **데이터 원본**에서 데이터 원본이 **Microsoft SQL Server Analysis Services(AdomdClient)**인지 확인합니다.  
+5.  **데이터 원본**에서 데이터 원본이 **Microsoft SQL Server Analysis Services(AdomdClient)** 인지 확인합니다.  
   
 6.  **서버 이름**에 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 설치된 서버의 이름을 입력합니다.  
   
@@ -401,7 +400,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
   
-1.  **쿼리 디자인** 페이지의 메타데이터 창에 있는 큐브 섹션에서 줄임표 **(…)**를 클릭합니다.  
+1.  **쿼리 디자인** 페이지의 메타데이터 창에 있는 큐브 섹션에서 줄임표 **(…)** 를 클릭합니다.  
   
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
@@ -488,7 +487,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 4.  계산 멤버에서 Net Sales를 데이터 창으로 끌어 `Net QTY`의 오른쪽에 놓습니다.  
   
-5.  쿼리 디자이너 도구 모음에서 **실행(!)**을 클릭합니다.  
+5.  쿼리 디자이너 도구 모음에서 **실행(!)** 을 클릭합니다.  
   
     쿼리 결과 집합을 검토합니다.  
   
@@ -596,7 +595,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 4.  **3가지 모양** 유형을 클릭한 다음 **확인**을 클릭합니다.  
   
-5.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)**옆에 있는 아래쪽 화살표를 클릭합니다. `Net_QTY`을(를) 선택합니다.  
+5.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_QTY`을(를) 선택합니다.  
   
 6.  `[Sum(Net QTY)]` Total `[Product_Category_Name]` 내의 **행 그룹에 있는**셀에 대해 2 ~ 5단계를 반복합니다.  
   
@@ -608,7 +607,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  **3가지 모양** 유형을 클릭한 다음 **확인**을 클릭합니다.  
   
-4.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)**옆에 있는 아래쪽 화살표를 클릭합니다. `Net_Sales`을(를) 선택합니다.  
+4.  표시기를 마우스 오른쪽 단추로 클릭하고 계기 데이터 창에서 **(지정하지 않음)** 옆에 있는 아래쪽 화살표를 클릭합니다. `Net_Sales`을(를) 선택합니다.  
   
 5.  `[Sum(Net_Sales)]` Total `[Product_Category_Name]` 내의 **행 그룹에 있는**셀에 대해 1 ~ 4단계를 반복합니다.  
   
@@ -634,9 +633,9 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  **2009 Product Category Sales: Online and Reseller Category:**를 입력합니다.  
+2.  **2009 Product Category Sales: Online and Reseller Category:** 를 입력합니다.  
   
 3.  입력한 텍스트를 선택합니다.  
   

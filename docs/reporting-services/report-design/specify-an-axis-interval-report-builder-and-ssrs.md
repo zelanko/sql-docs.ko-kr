@@ -1,27 +1,25 @@
 ---
-title: "축 간격 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 축 간격 지정(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2db644cc97d36a8d081bee0503cd88de50d8195b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f3f228b9c0f6010c0db3654f81aa297d169a425d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 페이지를 매긴 보고서에서 축 간격을 설정하여 차트에서 범주(x) 축에 레이블 수와 눈금 수를 변경하는 방법을 알아 봅니다.

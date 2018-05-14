@@ -1,27 +1,25 @@
 ---
-title: "계기의 포인터 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 계기의 포인터 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eaee62d06fd3ab67d10b64cb44282377ace28914
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6b74271c98941233d712410a43b31959595119eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 계기 포인터는 계기의 현재 값을 나타냅니다.   
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="DisplayingMultiple"></a> 계기에서 여러 포인터 표시  
  계기에 여러 개의 포인터를 추가하여 같은 눈금에서 여러 값을 가리키도록 할 수 있습니다. 이 방법은 낮은 값과 높은 값을 동시에 보여줄 때 유용합니다. 계기에서 같은 눈금에 대해 하나 이상의 포인터를 지정하려면 계기 안에서 아무 위치나 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **포인터 추가** 를 클릭합니다. 또는 계기 안에서 아무 위치나 마우스 오른쪽 단추로 클릭하고 **눈금 추가**를 클릭하여 눈금을 추가할 수 있습니다. 그런 다음 새 포인터를 추가하면 포인터가 최근 추가된 눈금과 자동으로 연결됩니다.  
   
- 포인터가 겹쳐지는 경우 포인터의 그리기 순서는 포인터가 계기에 추가된 순서를 기준으로 결정됩니다. 데이터 창에서 필드 순서를 변경하여 포인터의 그리기 순서를 변경할 수 없습니다. 여러 포인터의 그리기 순서를 변경하려면 속성 창을 열고 **포인터(…)**를 클릭한 다음 Pointer 컬렉션에서 포인터의 순서를 변경합니다.  
+ 포인터가 겹쳐지는 경우 포인터의 그리기 순서는 포인터가 계기에 추가된 순서를 기준으로 결정됩니다. 데이터 창에서 필드 순서를 변경하여 포인터의 그리기 순서를 변경할 수 없습니다. 여러 포인터의 그리기 순서를 변경하려면 속성 창을 열고 **포인터(…)** 를 클릭한 다음 Pointer 컬렉션에서 포인터의 순서를 변경합니다.  
   
 ##  <a name="SettingGradients"></a> 니들 캡에서 그라데이션 설정  
  방사형 계기에서만 포인터 위쪽이나 아래쪽에 니들 캡을 그릴 수 있습니다. 모든 니들 캡 스타일은 수정할 수 없는 기본 제공 그라데이션을 사용하여 그려집니다. 단, **RoundedDark** 스타일의 경우 그라데이션 색과 그라데이션 스타일을 지정할 수 있습니다.  

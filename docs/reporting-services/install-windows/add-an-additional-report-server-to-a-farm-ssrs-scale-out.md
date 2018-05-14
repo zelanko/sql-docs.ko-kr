@@ -1,27 +1,25 @@
 ---
-title: "팜에 추가 보고서 서버 추가(SSRS 확장) | Microsoft Docs"
-ms.custom: 
+title: 팜에 추가 보고서 서버 추가(SSRS 확장) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6a0929e4e86c8fbb342115e9ae978e162f7b2de0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1099d9d0218231e42021f3b428fe0fc25b9faf7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
@@ -74,7 +72,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_additional"></a> 기타 고려 사항  
  확장된 배포에서 백그라운드 처리만 수행하도록 개별 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버를 최적화하여 대화형 보고서 실행과 리소스를 두고 경합하지 않도록 할 수 있습니다. 백그라운드 처리에는 일정, 구독 및 데이터 경고가 포함됩니다.  
   
- 개별 보고서 서버의 동작을 변경하려면 **RSreportServer.config** 구성 파일에서 **\<IsWebServiceEnable>**을 false로 설정합니다.  
+ 개별 보고서 서버의 동작을 변경하려면 **RSreportServer.config** 구성 파일에서 **\<IsWebServiceEnable>** 을 false로 설정합니다.  
   
  기본적으로 \<IsWebServiceEnable>을 TRUE로 설정하여 보고서 서버가 구성됩니다. 모든 서버가 TRUE로 구성된 경우 팜의 모든 노드에서 대화형 및 백그라운드의 로드 균형이 조정됩니다.  
   

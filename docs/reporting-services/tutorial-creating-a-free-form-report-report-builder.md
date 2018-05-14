@@ -1,29 +1,27 @@
 ---
-title: "자습서: 자유 형식 보고서 만들기(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 자유 형식 보고서 만들기(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7f1f50c211910400ec99b2dc309a5f42dd3d3081
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
@@ -62,7 +60,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>**을 입력합니다.  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
   
     **\<servername>**(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
   

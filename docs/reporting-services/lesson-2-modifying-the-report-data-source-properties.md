@@ -1,28 +1,27 @@
 ---
-title: "2단원: 보고서 데이터 원본 속성 수정 | Microsoft Docs"
-ms.custom: 
+title: '2단원: 보고서 데이터 원본 속성 수정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7ec0c1cc3ce7e2be9b058fc881d0971922f5994f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/09/2018
  다음 단계에서는 보고서에 매개 변수를 추가합니다.  보고서 매개 변수는 데이터 집합 매개 변수를 피드합니다. 
 ## <a name="bkmk_add_reportparameter"></a>보고서 매개 변수를 추가하고 보고서를 다시 게시하려면  
   
-1.  **보고서 데이터** 창에서 매개 변수 폴더를 확장하고 **Ordernumber** 매개 변수를 두 번 클릭합니다.  이 매개 변수는 이전 단계에서 데이터 집합에 매개 변수를 추가할 때 자동으로 생성되었습니다. **새로 만들기** and then  **매개 변수...**를 클릭합니다.  
+1.  **보고서 데이터** 창에서 매개 변수 폴더를 확장하고 **Ordernumber** 매개 변수를 두 번 클릭합니다.  이 매개 변수는 이전 단계에서 데이터 집합에 매개 변수를 추가할 때 자동으로 생성되었습니다. **새로 만들기** and then  **매개 변수...** 를 클릭합니다.  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  **이름** 이 `OrderNumber`인지 확인합니다.  
   

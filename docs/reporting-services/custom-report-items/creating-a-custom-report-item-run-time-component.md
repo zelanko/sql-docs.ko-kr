@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: custom-report-items
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f3a03a71e6fac9b0e7803d94075a89bd8abd32b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 49f121f8937eb3625f4290a69881d986264502df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기
   사용자 지정 보고서 항목 런타임 구성 요소는 CLS 호환 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  

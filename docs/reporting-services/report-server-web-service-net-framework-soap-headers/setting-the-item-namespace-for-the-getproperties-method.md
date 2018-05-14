@@ -1,32 +1,31 @@
 ---
-title: "GetProperties 메서드에 대한 항목 네임스페이스 설정 | Microsoft Docs"
-ms.custom: 
+title: GetProperties 메서드에 대한 항목 네임스페이스 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-soap-headers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6def236103e56da7022c2603f6f41ba972f1758
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 38858db1123d209b391f373ff88b1c48f84dac8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 서로 다른 항목 식별자인 항목의 전체 경로 또는 항목의 ID를 기준으로 항목 속성을 검색할 수 있습니다.  

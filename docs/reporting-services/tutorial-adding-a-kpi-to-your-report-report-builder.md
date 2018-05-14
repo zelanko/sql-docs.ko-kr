@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 KPI 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 KPI 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c6c7edf99179ba576fbb2a30668768eeca222e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 KPI(핵심 성과 지표)를 추가합니다.  
@@ -277,7 +276,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 5.  **삽입** 탭 > **데이터 시각화**에서 > **표시기**를 두 번 클릭합니다.  
   
-6.  **표시기 유형 선택** 대화 상자의 **셰이프**에서 첫 번째 셰이프 유형인 **3색 신호등(테두리 없음)**을 선택합니다.  
+6.  **표시기 유형 선택** 대화 상자의 **셰이프**에서 첫 번째 셰이프 유형인 **3색 신호등(테두리 없음)** 을 선택합니다.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +284,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 8.  표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
-9. **값 및 상태** 탭의 **값** 상자에서 **[Sum(Sales)]**를 선택합니다. 다른 옵션은 변경하지 마세요.  
+9. **값 및 상태** 탭의 **값** 상자에서 **[Sum(Sales)]** 를 선택합니다. 다른 옵션은 변경하지 마세요.  
   
     기본적으로 데이터 영역에서 데이터 동기화가 발생하며 보고서에 있는 테이블 데이터 영역의 이름인 **Tablix1**값이 **동기화 범위** 상자에 나타납니다.  
   
@@ -304,7 +303,7 @@ KPI는 비즈니스 측면에서 중요한 측정 가능한 값입니다. 이 �
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Product Sales KPIs**를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   

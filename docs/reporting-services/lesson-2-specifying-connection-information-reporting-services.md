@@ -1,28 +1,27 @@
 ---
-title: "2단원: 연결 정보 지정(Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: '2단원: 연결 정보 지정(Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 4e27b92cf3bd62059f1b54897d95d87cfd288dc5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e1c62880fd94706f9f034d86fecd587700019b6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: 연결 정보 지정(Reporting Services)
 1단원의 Tutorial 프로젝트에 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 추가한 뒤에는 보고서에서 관계형 데이터베이스, 다차원 데이터베이스 또는 다른 리소스의 데이터에 액세스하기 위해 사용하는 연결 정보인 *데이터 원본*을 정의해야 합니다.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 01/09/2018
     >연결 문자열에 대한 자세한 내용은 다음을 참조하세요. [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 클릭합니다.  
      
   
-6.  왼쪽 창에서 **자격 증명** 을 클릭하고 **Windows 인증 사용(통합 보안)**을 클릭합니다.  
+6.  왼쪽 창에서 **자격 증명** 을 클릭하고 **Windows 인증 사용(통합 보안)** 을 클릭합니다.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 데이터 원본 **AdventureWorks2014** 는 **보고서 데이터** 창에 추가되었습니다.  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  

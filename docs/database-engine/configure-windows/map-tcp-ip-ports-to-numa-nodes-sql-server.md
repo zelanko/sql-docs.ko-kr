@@ -3,15 +3,12 @@ title: NUMA 노드에 TCP IP 포트 매핑(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - memory [SQL Server], NUMA
@@ -27,12 +24,11 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2546e6fb835370d476405f6d51433de5a98b64a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6481a8eabffc9459aa742e28400db7fe1442c701
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   
-3.  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2, 5의 경우 **1500[37]**또는 **1500[0x25]**를 사용합니다.  
+3.  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2, 5의 경우 **1500[37]** 또는 **1500[0x25]** 를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Soft-NUMA&#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

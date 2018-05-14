@@ -1,27 +1,25 @@
 ---
-title: "모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9fee1d3dc4099d73c2ed0af13333cdaa10a97b9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 17f93e01d074b243e7b40c708ac65dd1609d8841
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]의 많은 차트 종류에서 열 또는 행을 기준으로 데이터를 구성할 수 있습니다. 이 단계별 지침을 따릅니다.

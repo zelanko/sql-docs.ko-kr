@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], Always Encrypted
 - Always Encrypted
@@ -23,13 +22,12 @@ caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9852b7f0bba5e1cb589403a1f0b43d74d1aa7aac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c888fca8204c90b5d2ecf24838da19c2acf5624e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +46,10 @@ ms.lasthandoff: 04/16/2018
  고객은 비즈니스 위치의 온-프레미스에서 클라이언트 응용 프로그램과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 모두 실행합니다. 고객은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 관리할 외부 공급업체를 고용하려고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 보호하기 위해 고객은 상시 암호화를 사용하여 데이터베이스 관리자와 응용 프로그램 관리자 간의 업무를 분리합니다. 고객은 상시 암호화 키의 일반 텍스트 값을 클라이언트 응용 프로그램에서 액세스할 수 있는 신뢰할 수 있는 키 저장소에 저장합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자는 키에 대한 액세스 권한이 없으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터의 암호를 해독할 수 없습니다.  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>온-프레미스 클라이언트와 Azure의 데이터  
- 고객은 비즈니스 위치에서 온-프레미스 클라이언트 응용 프로그램을 실행합니다. 응용 프로그램은 Azure에서 호스트되는 데이터베이스(Microsoft Azure의 가상 컴퓨터에서 실행되는[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )에 저장된 중요한 데이터를 작동합니다. 고객은 상시 암호화를 사용하고 상시 암호화 키를 온-프레미스에서 호스트되는 신뢰할 수 있는 키 저장소에 저장하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 클라우드 관리자가 중요한 데이터에 액세스하지 못하도록 합니다.  
+ 고객은 비즈니스 위치에서 온-프레미스 클라이언트 응용 프로그램을 실행합니다. 응용 프로그램은 Azure에서 호스트되는 데이터베이스(Microsoft Azure의 가상 머신에서 실행되는[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 저장된 중요한 데이터를 작동합니다. 고객은 상시 암호화를 사용하고 상시 암호화 키를 온-프레미스에서 호스트되는 신뢰할 수 있는 키 저장소에 저장하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 클라우드 관리자가 중요한 데이터에 액세스하지 못하도록 합니다.  
   
 ### <a name="client-and-data-in-azure"></a>Azure의 클라이언트와 데이터  
- 고객은 Microsoft Azure(예: 작업자 역할 또는 웹 역할)에서 호스트된 클라이언트 응용 프로그램을 실행합니다. 이 응용 프로그램은 Azure에서 호스트된 데이터베이스(Microsoft Azure의 가상 컴퓨터에서 실행되는 SQL 데이터베이스 또는 SQL Server)에 저장된 중요한 데이터에 대해 작동합니다. 상시 암호화는 클라이언트 계층을 호스트하는 플랫폼의 클라우드 관리자에게 데이터와 키가 둘 다 노출되기 때문에 클라우드 관리자로부터 데이터를 완전히 격리하지 않지만 고객이 보안 공격 노출 영역을 줄일 수 있습니다(데이터베이스의 데이터가 항상 암호화됨).  
+ 고객은 Microsoft Azure(예: 작업자 역할 또는 웹 역할)에서 호스트된 클라이언트 응용 프로그램을 실행합니다. 이 응용 프로그램은 Azure에서 호스트된 데이터베이스(Microsoft Azure의 가상 머신에서 실행되는 SQL 데이터베이스 또는 SQL Server)에 저장된 중요한 데이터에 대해 작동합니다. 상시 암호화는 클라이언트 계층을 호스트하는 플랫폼의 클라우드 관리자에게 데이터와 키가 둘 다 노출되기 때문에 클라우드 관리자로부터 데이터를 완전히 격리하지 않지만 고객이 보안 공격 노출 영역을 줄일 수 있습니다(데이터베이스의 데이터가 항상 암호화됨).  
  
 ## <a name="how-it-works"></a>작동 방식
 

@@ -1,27 +1,25 @@
 ---
-title: "보고서 작성기에서 보고서 미리 보기 | Microsoft Docs"
-ms.custom: 
+title: 보고서 작성기에서 보고서 미리 보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: eb6447d896a68a932e24223944fd6117f54638eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>보고서 작성기에서 보고서 미리 보기
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 만들 때 보고서에 원하는 항목이 표시되는지 확인하기 위해 자주 보고서를 미리 보는 것이 유용합니다. 보고서를 미리 보려면 **실행**을 클릭합니다. 보고서가 미리 보기 모드에서 렌더링됩니다.  

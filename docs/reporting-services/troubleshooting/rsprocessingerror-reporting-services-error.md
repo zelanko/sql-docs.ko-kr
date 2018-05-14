@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
@@ -18,12 +17,11 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ab52b302e3dddfd4ab42d2cd09019f0fa62f5a91
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d00747808949e7814ecd87c640d10ca3b8e54e97
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
     
@@ -104,11 +102,11 @@ ms.lasthandoff: 01/09/2018
 ### <a name="cannot-compare-data-types-for-a-filter"></a>필터에 대한 데이터 형식을 비교할 수 없음  
  필터 수식에서 필터링 대상을 정의하는 필터 식과 필터 값은 데이터 형식이 같아야 비교할 수 있습니다. 다음 오류가 발생할 경우 데이터 형식이 일치하도록 필드 식 또는 필터 값을 수정하세요.  
   
--   *\<report item name>*에 대한 *\<report item type>* 처리를 수행할 수 없습니다. 형식이 *\<type>*인 데이터와 *\<type>*인 데이터를 비교할 수 없습니다. *\<report item name>*에서 반환되는 데이터 형식을 확인하세요.  
+-   *\<report item name>* 에 대한 *\<report item type>* 처리를 수행할 수 없습니다. 형식이 *\<type>* 인 데이터와 *\<type>* 인 데이터를 비교할 수 없습니다. *\<report item name>* 에서 반환되는 데이터 형식을 확인하세요.  
   
--   *\<property name>*을 계산하지 못했습니다.  
+-   *\<property name>* 을 계산하지 못했습니다.  
   
--   *\<property name>*을 계산하지 못했습니다. *\<error string>* 오류가 있는 데이터 집합 필드를 참조합니다.  
+-   *\<property name>* 을 계산하지 못했습니다. *\<error string>* 오류가 있는 데이터 집합 필드를 참조합니다.  
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
  누계를 계산하는 집계 함수의 경우(**Previous**, **RunningValue**또는 **RowNumber**) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
--   *\<report item type>* '*\<report item name>*'의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>*의 열과 행 모두에 있는 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
+-   *\<report item type>* '*\<report item name>*'의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>* 의 열과 행 모두에 있는 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

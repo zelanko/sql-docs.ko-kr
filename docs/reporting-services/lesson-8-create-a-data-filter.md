@@ -1,28 +1,27 @@
 ---
-title: "8단원: 데이터 필터 만들기 | Microsoft Docs"
-ms.custom: 
+title: '8단원: 데이터 필터 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 906e435e8259a1d32c84f322795001f8ea38c8a7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5e6e2976cb21c2c6b1bd559282dcbfb1e403a9b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
 부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  **식** 필드의 드롭다운 목록에서 **ProductID** 를 선택합니다. 이는 필터를 적용할 열입니다.  
   
-5.  **=**연산자 **드롭다운 목록에서 같음 연산자(** )를 선택합니다.  
+5.  **=** 연산자 **드롭다운 목록에서 같음 연산자(** )를 선택합니다.  
   
 6.  **값** 필드 옆의 식 단추를 선택하고 **범주** 영역에서 **매개 변수** 를 선택한 다음 **값** 영역에서 **productid** 를 두 번 클릭합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
   

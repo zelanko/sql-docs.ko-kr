@@ -1,27 +1,25 @@
 ---
-title: "보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 668cf69ec377fa01b494aacde2a56f0579deed1e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0af8a88162eabd7058d81ef72586da8309cf36be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS)
   주 보고서에서 링크를 클릭할 때 열리는 보고서를 *드릴스루 보고서*라고 합니다. 이 드릴스루 링크를 통해 드릴스루 작업을 수행할 수 있습니다.  

@@ -1,25 +1,23 @@
 ---
-title: "SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 Reporting Services에 RDL 샌드박싱 설정 및 해제
 
@@ -40,7 +38,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
 
  RDL 샌드박싱 기능이 설정되면 다음 기능을 사용할 수 없습니다.  
   
--   보고서 정의 요소 **\<Code>**의 사용자 지정 코드  
+-   보고서 정의 요소 **\<Code>** 의 사용자 지정 코드  
   
 -   [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] 사용자 지정 보고서 항목을 위한 RDL 이전 버전 호환 모드  
   
@@ -165,7 +163,7 @@ RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 �
   
 ### <a name="working-with-operators-and-new"></a>연산자 및 new 사용
 
- 기본적으로 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] New **를 제외한**.NET Framework 언어 연산자는 항상 허용됩니다. **New** 연산자는 **\<Allow>** 요소의 **AllowNew** 특성에서 제어합니다. 기본 컬렉션 접근자 연산자 **!**와 같은 기타 언어 연산자 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt **와 같은**.NET Framework 캐스트 매크로는 항상 허용됩니다.  
+ 기본적으로 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] New **를 제외한**.NET Framework 언어 연산자는 항상 허용됩니다. **New** 연산자는 **\<Allow>** 요소의 **AllowNew** 특성에서 제어합니다. 기본 컬렉션 접근자 연산자 **!** 와 같은 기타 언어 연산자 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] CInt **와 같은**.NET Framework 캐스트 매크로는 항상 허용됩니다.  
   
  사용자 지정 연산자를 포함하여 연산자를 차단 목록에 추가하는 것은 지원되지 않습니다. 형식에 대해 연산자를 실행하려면 다음과 같이 해야 합니다.  
   

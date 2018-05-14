@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services의 서버 및 데이터베이스 연결 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services의 서버 및 데이터베이스 연결 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services의 서버 및 데이터베이스 연결 문제 해결
 이 항목을 사용하여 보고서 서버에 연결할 때 발생하는 문제를 해결할 수 있습니다. 이 항목에서는 "오류" 메시지에 대한 정보를 제공합니다. 데이터 원본 구성 및 보고서 서버 연결 정보 구성에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하십시오.  
@@ -58,7 +56,7 @@ ADOMD.NET 공급자에 의해 이 오류가 반환됩니다. 이 오류가 발�
 3. **MSSQLSERVER에 대한 프로토콜**을 선택합니다.  
 4. **TCP/IP**를 마우스 오른쪽 단추로 클릭한 다음 **사용**을 선택합니다.  
 5. **SQL Server 서비스**를 선택합니다.  
-6. **SQL Server (MSSQLSERVER)**를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 선택합니다.  
+6. **SQL Server (MSSQLSERVER)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 선택합니다.  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결할 때의 WMI 오류  
 기본적으로 Management Studio는 Reporting Services WMI(Windows Management Instrumentation) 공급자를 사용하여 보고서 서버에 대한 연결을 구성합니다. WMI 공급자가 올바르게 설치되지 않으면 보고서 서버에 연결할 때 다음 오류가 발생합니다.  

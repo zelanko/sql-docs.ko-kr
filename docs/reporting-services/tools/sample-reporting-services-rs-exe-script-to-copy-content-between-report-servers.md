@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f80aebe1158d3ac4d64bd49c683b43719ab1a6f3
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 9927a7cdf05e82f48fb43bd954534c04f9a32dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
 
@@ -266,7 +264,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reports
   
 -   기본 모드 보고서 서버 **SourceServer**에서  
   
--   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
+-   Microsoft Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
@@ -280,7 +278,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
   
 -   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  
   
--   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
+-   Microsoft Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="http://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

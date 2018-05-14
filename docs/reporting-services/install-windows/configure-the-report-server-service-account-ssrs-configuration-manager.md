@@ -1,27 +1,25 @@
 ---
-title: "보고서 서버 서비스 계정 구성(SSRS 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fc3bb7568ce6aeb2222ef73dba8d3e9fb42a5482
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b8bb7adbc79619f26e9de5d79dd8d460672d0e4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 예약된 보고서 처리와 구독 배달에 사용되는 백그라운드 처리 응용 프로그램, 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]를 포함하는 단일 서비스로 구현됩니다. 이 항목에서는 서비스 계정을 처음 구성하는 방법 Reporting Services 구성 도구를 사용하는 계정이나 암호를 수정하는 방법에 대해 설명합니다.  

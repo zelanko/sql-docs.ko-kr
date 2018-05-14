@@ -1,29 +1,27 @@
 ---
-title: "자습서: 식 소개 | Microsoft Docs"
-ms.custom: 
+title: '자습서: 식 소개 | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -179,15 +177,15 @@ ms.lasthandoff: 02/15/2018
     
     ![보고서-작성기-식-자습서-left-함수](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  **범주** 목록에서 **필드(식)**를 클릭합니다.  
+6.  **범주** 목록에서 **필드(식)** 를 클릭합니다.  
   
 7.  **값** 목록에서 **FirstName**을 두 번 클릭합니다.  
   
-8.  **, 1)**을 입력합니다.  
+8.  **, 1)** 을 입력합니다.  
   
     이 식은 **FirstName** 값에서 가장 왼쪽의 한 자를 추출합니다.  
   
-9. **&". "&**를 입력합니다.  
+9. **&". "&** 를 입력합니다.  
 
     그러면 식 뒤에 마침표와 공백이 하나씩 추가됩니다.
   
@@ -273,7 +271,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  **항목** 목록에서 **Switch**를 두 번 클릭합니다.  
   
-5.  **범주** 목록에서 **필드(식)**를 클릭합니다.  
+5.  **범주** 목록에서 **필드(식)** 를 클릭합니다.  
   
 6.  **값** 목록에서 **Gender**를 두 번 클릭합니다.  
   
@@ -285,7 +283,7 @@ ms.lasthandoff: 02/15/2018
 
 9. 그 뒤에 쉼표를 입력합니다. 
   
-5.  **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **Gender** 를 두 번 클릭합니다.  
+5.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **Gender** 를 두 번 클릭합니다.  
   
 7.  **="Female",** 를 입력합니다(쉼표 포함). 
 
@@ -377,9 +375,9 @@ ms.lasthandoff: 02/15/2018
   
 4.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **기타**를 클릭한 다음 **항목** 목록에서 **조회**를 두 번 클릭합니다.  
   
-6.  **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **CountryRegionID**를 두 번 클릭합니다.  
+6.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **CountryRegionID**를 두 번 클릭합니다.  
   
-8.  `CountryRegionID.Value`바로 뒤에 커서를 놓고 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**을 입력합니다.  
+8.  `CountryRegionID.Value`바로 뒤에 커서를 놓고 **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** 을 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -410,7 +408,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  `DateDiff(`바로 뒤에 **"d",** 를 입력합니다(따옴표 "" 및 쉼표 포함). 
   
-9. **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **LastPurchase**를 두 번 클릭합니다.  
+9. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **LastPurchase**를 두 번 클릭합니다.  
   
 11. `Fields!LastPurchase.Value`바로 뒤에 **,** (쉼표)를 입력합니다. 
   
@@ -419,7 +417,7 @@ ms.lasthandoff: 02/15/2018
     > [!WARNING]  
     > 프로덕션 보고서의 경우, 보고서의 정보 행에서와 같이 보고서가 렌더링되면서 여러 번 계산되는 식에서 **Now** 함수를 사용하면 안 됩니다. **Now** 의 값은 행마다 변경되고 서로 다른 값이 식의 계산 결과에 영향을 미치므로 조금씩 일치하지 않는 결과가 발생합니다. 대신 `ExecutionTime` 에서 제공하는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 전역 변수를 사용하세요.  
   
-15. `Now(`뒤에 있는 왼쪽 괄호를 삭제한 다음 오른쪽 괄호 **)**를 입력합니다.  
+15. `Now(`뒤에 있는 왼쪽 괄호를 삭제한 다음 오른쪽 괄호 **)** 를 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -464,15 +462,15 @@ ms.lasthandoff: 02/15/2018
   
 4.  **항목** 목록에서 **Round**를 두 번 클릭합니다.  
   
-5.  **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+5.  **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
   
 7.  `Fields!YTDPurchase.Value`바로 뒤에  **-** (빼기 기호)를 입력합니다. 
   
 9. **일반 함수** 를 다시 확장하고 **집계**를 클릭한 다음 **항목** 목록에서 **Avg**를 두 번 클릭합니다.  
   
-11. **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+11. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
   
-13. `Fields!YTDPurchase.Value`바로 뒤에 **, "Expressions"))**를 입력합니다.  
+13. `Fields!YTDPurchase.Value`바로 뒤에 **, "Expressions"))** 를 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -488,13 +486,13 @@ ms.lasthandoff: 02/15/2018
   
 19. **항목** 목록에서 **Round**를 두 번 클릭합니다.  
   
-20. **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+20. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
   
 22. `Fields!YTDPurchase.Value`바로 뒤에  **-** (빼기 기호)를 입력합니다. 
   
 24. **일반 함수** 를 다시 확장하고 **집계**를 클릭한 다음 **항목** 목록에서 **Avg**를 두 번 클릭합니다.  
   
-26. **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
+26. **범주** 목록에서 **필드(식)** 를 클릭하고 **값** 목록에서 **YTDPurchase**를 두 번 클릭합니다.  
   
 28. `Fields!YTDPurchase.Value` 바로 뒤에 **, "Expressions")) < 0**을 입력합니다.  
   
@@ -593,11 +591,11 @@ ms.lasthandoff: 02/15/2018
   
 8.  **일반 함수**에서 **기타**를 클릭하고 **항목** 목록에서 **RowNumber**를 두 번 클릭합니다.  
 
-9. **RowNumber(** 바로 뒤에 **Nothing) MOD 2,**를 입력합니다.
+9. **RowNumber(** 바로 뒤에 **Nothing) MOD 2,** 를 입력합니다.
   
 8. **매개 변수** 를 클릭하고 **값** 목록에서 **RowColor**를 두 번 클릭합니다.  
   
-22. `Parameters!RowColor.Value`바로 뒤에 **, "White")**를 입력합니다.  
+22. `Parameters!RowColor.Value`바로 뒤에 **, "White")** 를 입력합니다.  
   
     완성된 식은 다음과 같습니다. `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
     
@@ -626,7 +624,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
-1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **판매 비교 요약**을 입력한 다음 텍스트를 선택합니다.  
   

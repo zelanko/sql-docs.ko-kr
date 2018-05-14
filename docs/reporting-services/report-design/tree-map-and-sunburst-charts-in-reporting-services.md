@@ -1,30 +1,29 @@
 ---
-title: "SQL Server Reporting Services의 트리 맵 및 선버스트 차트 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Reporting Services의 트리 맵 및 선버스트 차트 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 맵 및 선버스트 시각화를 사용하면 계층 데이터를 시각적으로 잘 표현할 수 있습니다. 이 문서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 트리 맵 또는 선버스트 차트를 추가하는 방법에 대한 개요입니다. 문서에는 시작할 수 있도록 AdventureWorks 샘플 쿼리가 포함되어 있습니다.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 맵 및 선버스트 시각화를 사용하면 계층 데이터를 시각적으로 잘 표현할 수 있습니다. 이 문서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 트리 맵 또는 선버스트 차트를 추가하는 방법에 대한 개요입니다. 문서에는 시작할 수 있도록 AdventureWorks 샘플 쿼리가 포함되어 있습니다.  
   
 ##  <a name="bkmk_treemap_chart"></a> 트리 맵 차트  
 

@@ -1,30 +1,28 @@
 ---
-title: "캐시 사전 로드(보고서 관리자) | Microsoft Docs"
-ms.custom: 
+title: 캐시 사전 로드(보고서 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f1198cddebd82cbabaccd635dc10182236bcc33
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e1bd75c7973c603cdcd9093f07190b1f3fa70c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -119,9 +117,9 @@ ms.lasthandoff: 01/09/2018
   
 17. 다음 두 캐시 옵션 중에서 하나를 선택하고 만료 시간을 구성합니다.  
   
-    -   캐시된 복사본이 특정 시간 후에 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 분 후에 만료됩니다.**를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
+    -   캐시된 복사본이 특정 시간 후에 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 분 후에 만료됩니다.** 를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
   
-    -   일정에 따라 캐시된 복사본이 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 일정으로 만료됩니다.**를 클릭합니다. 를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료 일정을 설정합니다.  
+    -   일정에 따라 캐시된 복사본이 만료되도록 하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 일정으로 만료됩니다.** 를 클릭합니다. 를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료 일정을 설정합니다.  
   
 18. **적용**을 클릭합니다.  
   

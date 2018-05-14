@@ -3,15 +3,12 @@ title: 가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Se
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.preparedbs.f1
 - sql13.swb.availabilitygroup.configsecondarydbs.f1
@@ -25,11 +22,11 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 122d33f196943bf751b67ea8c45b442361261c29
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ebdabe4ea402188340e46cd6ee71aec49cc7a909
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  보조 복제본을 호스팅하는 서버 인스턴스에서 주 데이터베이스의 전체 데이터베이스 백업과 원하는 차등 백업을 복원한 다음 모든 후속 로그 백업을 복원합니다.  
   
-     **RESTORE DATABASE 옵션** 페이지에서 **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).**를 선택합니다.  
+     **RESTORE DATABASE 옵션** 페이지에서 **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).** 를 선택합니다.  
   
      주 데이터베이스와 보조 데이터베이스의 파일 경로가 다른 경우(예: 주 데이터베이스는 'F:' 드라이브에 있지만 보조 복제본을 호스트하는 서버 인스턴스에 F: 드라이브가 없는 경우) WITH 절에 MOVE 옵션을 포함합니다.  
   

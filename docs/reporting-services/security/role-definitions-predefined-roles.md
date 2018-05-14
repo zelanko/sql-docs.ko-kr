@@ -1,31 +1,29 @@
 ---
-title: "미리 정의된 역할 | Microsoft Docs"
-ms.custom: 
+title: 미리 정의된 역할 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  

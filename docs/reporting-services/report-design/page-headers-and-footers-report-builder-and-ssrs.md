@@ -1,16 +1,15 @@
 ---
-title: "페이지 헤더 및 바닥글(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 페이지 헤더 및 바닥글(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10125"
 - sql13.rtp.rptdesigner.pagefooter.border.f1
@@ -25,16 +24,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1835b4d7a6ede5de5d442f36fe2ea7c85e9e330d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 집합과 데이터 집합을 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 집합 필드 참조가 포함됩니다.  

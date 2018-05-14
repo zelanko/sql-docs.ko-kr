@@ -1,32 +1,31 @@
 ---
-title: "확장 프로그램에 대한 보안 고려 사항 | Microsoft Docs"
-ms.custom: 
+title: 확장 프로그램에 대한 보안 고려 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 03fcc6acbfb855a42a91ef139a2ccff0d7b62ac2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9e3e9d39586a8ba42376fa148a421ac5e60ac963
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항
   CLR(공용 언어 런타임) 기능이 있는 모든 응용 프로그램은 CLR 보안 시스템과 상호 작용해야 합니다. 이러한 응용 프로그램은 실행되면 CLR에 의해 자동으로 평가되어 권한 집합이 부여됩니다. 부여받은 권한에 따라 응용 프로그램이 계속 실행될 수도 있고 보안 예외가 생성될 수도 있습니다. 특정 보고서 서버에 대한 보안 정책 구성 파일의 로컬 보안 설정 및 정책은 어셈블리에서 수신하는 코드 권한을 정의합니다.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
 -   권한이 있는 사용자만 보안 정책 파일을 편집하고 확장 프로그램에 대한 코드 액세스 보안을 사용할 수 있는 권한을 가집니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발 &#40; Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 코드 액세스 보안에 대한 자세한 내용은 [보안 개발 & #40; Reporting Services& #41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)를 참조하세요.  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 보안에 대한 자세한 내용은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드의 ".NET Framework Security(.NET Framework 보안)"를 참조하십시오.  
   

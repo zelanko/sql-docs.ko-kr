@@ -1,27 +1,25 @@
 ---
-title: "세부 정보 그룹 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 세부 정보 그룹 추가(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a097a31b4197009df2d6df636caf2d5bb70b5814
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b8c504724523a3e331a54137766504b3599587c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>세부 정보 그룹 추가(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합의 정보 데이터는 그룹 식이 없는 그룹으로 지정됩니다. 행렬에 대한 세부 데이터를 표시하거나, 테이블이나 목록에서 삭제한 세부 데이터를 다시 추가하거나, 추가적인 세부 정보 그룹을 추가하려면 기존 테이블릭스 데이터 영역에 세부 정보 그룹을 추가합니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  

@@ -1,28 +1,27 @@
 ---
-title: "1단원: 샘플 구독자 데이터베이스 만들기 | Microsoft Docs"
-ms.custom: 
+title: '1단원: 샘플 구독자 데이터베이스 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 472bedc3291af96ecec8cafae7c4b4462b578284
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c9c6ecd024c8fe0b24227842c0db3a3569e649b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작한 다음 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]인스턴스에 대한 연결을 엽니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...**를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...** 를 선택합니다.  
   
 3.  새 데이터베이스 대화 상자의 **데이터베이스 이름**에 *Subscribers*를 입력합니다. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  

@@ -1,16 +1,15 @@
 ---
-title: "그래픽 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: 그래픽 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql13.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2f91705eae1c84861f0463acbd8fadd362f44a57
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  

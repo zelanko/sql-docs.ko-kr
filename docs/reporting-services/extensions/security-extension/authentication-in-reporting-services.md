@@ -1,33 +1,32 @@
 ---
-title: "Reporting Services의 인증 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services의 인증 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 641d257227cbb91421ddcc1929661c39f1fe5f94
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b84994cb993c061f006880e4a1f4f727be864ec9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  

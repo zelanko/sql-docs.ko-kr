@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services 보고서 렌더링 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 보고서 렌더링 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e95e444172974de41cfea15bc651ddfae9a5cabb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 보고서 렌더링 문제 해결
 보고서 데이터와 레이아웃 정보가 조합되면 컴파일된 보고서가 보고서 렌더러로 전송됩니다. 예를 들어 보고서를 로컬로 미리 볼 때는 HTML 렌더러를 사용하여 컴파일된 보고서를 표시합니다. 이 항목을 사용하여 보고서 렌더링 관련 문제를 해결할 수 있습니다.   

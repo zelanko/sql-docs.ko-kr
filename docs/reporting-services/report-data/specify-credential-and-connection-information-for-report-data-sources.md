@@ -1,16 +1,15 @@
 ---
-title: "보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 | Microsoft Docs"
-ms.custom: 
+title: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -30,16 +29,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9cea8af15340bcc5cbf744e59678e04d6ab6e8b6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 444cfe13b05a60b3b2a7017f98100f6ecf093140
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  

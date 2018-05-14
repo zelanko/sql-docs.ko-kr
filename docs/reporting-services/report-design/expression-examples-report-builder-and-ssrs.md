@@ -1,15 +1,14 @@
 ---
-title: "식 예(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 식 예(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
@@ -27,16 +26,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: "101"
+caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 4a5573c8b8b01b567aa5fff65d74bd7ece4632d7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a09dc43bec25c2cd98366b0c093702aaf91417ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -337,7 +335,7 @@ ms.lasthandoff: 01/09/2018
     ```  
   
 ##  <a name="ReportFunctions"></a> 보고서 함수  
- 식에서 보고서의 데이터를 조작하는 데 사용할 수 있는 추가 보고서 함수에 대한 참조를 추가할 수 있습니다. 이 섹션에서는 이러한 함수 중 두 가지 예를 제공합니다. 집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;보고서 함수 및 예제에 대한 자세한 내용은 [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
+ 식에서 보고서의 데이터를 조작하는 데 사용할 수 있는 추가 보고서 함수에 대한 참조를 추가할 수 있습니다. 이 섹션에서는 이러한 함수 중 두 가지 예를 제공합니다. 집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;보고서 함수 및 예제에 대한 자세한 내용은 [집계 함수 참조 & #40; 보고서 작성기 및 SSRS & #41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ###  <a name="Sum"></a> 합계  
   

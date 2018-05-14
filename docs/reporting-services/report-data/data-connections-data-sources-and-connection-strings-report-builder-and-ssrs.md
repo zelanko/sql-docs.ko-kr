@@ -1,25 +1,23 @@
 ---
-title: "데이터 연결, 데이터 원본, 연결 문자열-보고서 작성기-SSRS | Microsoft Docs"
-ms.custom: 
+title: 데이터 연결, 데이터 원본, 연결 문자열-보고서 작성기-SSRS | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 697a387240a9e2e0edafeac45b68264187c2a3f8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
 
@@ -125,7 +123,7 @@ ms.lasthandoff: 01/09/2018
 |SAP NetWeaver BI 데이터 원본|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|데이터 원본 유형을 **SAP NetWeaver BI**로 설정합니다. 자세한 내용은 [SAP NetWeaver BI 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)을 참조하세요.|  
 |Hyperion Essbase 데이터 원본|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|데이터 원본 유형을 **Hyperion Essbase**로 설정합니다. 자세한 내용은 [Hyperion Essbase 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)을 참조하세요.|  
 |Teradata 데이터 원본|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|데이터 원본 유형을 **Teradata**로 설정합니다. 연결 문자열은 1자리부터 3자리 숫자까지 허용되는 필드 네 개로 구성된 형식의 IP(인터넷 프로토콜) 주소입니다. 자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.|  
-|Teradata 데이터 원본|`Database=` *\<데이터베이스 이름>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|앞의 예와 마찬가지로 데이터 원본 유형을 **Teradata**로 설정합니다. Database 태그에 지정된 기본 데이터베이스만 사용하고 데이터 관계를 자동으로 검색하지 마십시오.|  
+|Teradata 데이터 원본|`Database=` *\<데이터베이스 이름>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|앞의 예와 마찬가지로 데이터 원본 유형을 **Teradata**로 설정합니다. Database 태그에 지정된 기본 데이터베이스만 사용하고 데이터 관계를 자동으로 검색하지 마십시오.|  
 |XML 데이터 원본, 웹 서비스|`data source=http://adventure-works.com/results.aspx`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 WSDL(Web Services Definition Language)을 지원하는 웹 서비스의 URL입니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요.|  
 |XML 데이터 원본, XML 문서|`http://localhost/XML/Customers.xml`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 XML 문서의 URL입니다.|  
 |XML 데이터 원본, 포함된 XML 문서|*비어 있음*|데이터 원본 유형을 **XML**로 설정합니다. XML 데이터는 보고서 정의에 포함됩니다.|  

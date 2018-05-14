@@ -1,28 +1,27 @@
 ---
-title: "자습서: 행렬 보고서 만들기(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 행렬 보고서 만들기(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 274a385ad25081cdd4db13b9a46e1557db15ac70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
 이 자습서에서는 중첩된 행 및 열 그룹의 샘플 판매 데이터 행렬을 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 설명합니다. 
@@ -173,7 +172,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  **숫자** 그룹 > **날짜**를 선택합니다.  
   
-    셀에 예제 날짜 **[1/31/2000]**이 표시됩니다. 예제 날짜가 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
+    셀에 예제 날짜 **[1/31/2000]** 이 표시됩니다. 예제 날짜가 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -284,7 +283,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  보고서 본문의 맨 위에서 **제목을 추가하려면 클릭하십시오.**가 들어 있는 입력란을 선택한 다음 Delete 키를 누릅니다.  
+2.  보고서 본문의 맨 위에서 **제목을 추가하려면 클릭하십시오.** 가 들어 있는 입력란을 선택한 다음 Delete 키를 누릅니다.  
   
 3.  **삽입** 탭 > **헤더** > **헤더 추가**를 선택합니다.  
   

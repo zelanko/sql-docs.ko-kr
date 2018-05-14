@@ -1,27 +1,25 @@
 ---
-title: "SQL Server Data Tools의 배포 및 버전 지원(SSDT) | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools의 배포 및 버전 지원(SSDT) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7c14da7b43746339b2dfde48be558c0b53a3d5fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 배포 및 버전 지원(SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로, [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
   
  다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서를 작성 및 게시할 때 지원되는 버전을 설명합니다.  
   

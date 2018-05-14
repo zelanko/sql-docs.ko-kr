@@ -1,27 +1,25 @@
 ---
-title: "페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6bf3a7865337f616cf2897919a76b3689c9fa5bd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2e7ac07834e56d5c713d886fa51398030d028ab5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 01/09/2018
   
      **다음에 대한 식 설정: 값** 입력란에 식 =Globals!PageNumber가 포함됩니다.  
   
-2.  = 기호 뒤에 커서를 두고 **"Page " &**를 입력합니다.  
+2.  = 기호 뒤에 커서를 두고 **"Page " &** 를 입력합니다.  
   
      식이 ="Page "&Globals!PageNumber로 바뀝니다.  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  식이 들어 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **식**을 클릭합니다.  
   
-2.  식 끝에 **&" of "&**를 입력합니다.  
+2.  식 끝에 **&" of "&** 를 입력합니다.  
   
 3.  범주 창에서 **기본 제공 필드** 를 확장한 다음 **TotalPages**를 두 번 클릭합니다.  
   

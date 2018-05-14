@@ -1,32 +1,31 @@
 ---
-title: "배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현 | Microsoft Docs"
-ms.custom: 
+title: 배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery extensions [Reporting Services], attributes
 - delivery extensions [Reporting Services], class creation
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8f260fd9191fc84a41d4626514fda1deb9f141a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3456d06bf5a2e93bba7133ec794e93950e26d18
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
   배달 확장 프로그램 클래스는 알림 내용을 기준으로 사용자에게 보고서 알림을 배달하는 데 사용됩니다. 배달 확장 프로그램 클래스는 배달 확장 프로그램에 전달되는 사용자 설정을 검사하기 위한 인프라도 제공합니다. 또한 배달 확장 프로그램 클래스에는 클라이언트가 확장 프로그램의 이름, 확장 프로그램에서 지원하는 설정, 배달 확장 프로그램에서 사용 가능한 렌더링 형식 등에 대한 정보를 얻는 데 사용할 수 있는 특정 속성이 포함되어야 합니다.  

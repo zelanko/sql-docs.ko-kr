@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7d115273f5072941acde9c0f2370e7f42b484678
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0ec18593b6e7f65116492829f90d8a531c73405d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할-작업 vs. SharePoint 그룹-사용 권한
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  

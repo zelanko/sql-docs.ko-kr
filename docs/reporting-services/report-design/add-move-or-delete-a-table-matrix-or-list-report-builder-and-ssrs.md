@@ -1,27 +1,25 @@
 ---
-title: "테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eed251030c22506725ceace9dacc5100f911e12d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 989e39e411129bef0af9b1af14548286927c2655
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 데이터 영역은 보고서 데이터 집합에 있는 데이터를 표시합니다. 데이터 영역에는 테이블, 행렬, 목록, 차트 및 계기가 있습니다. 한 데이터 영역을 다른 데이터 영역 안에 중첩시키려면 각 데이터 영역을 개별적으로 추가한 다음 자식 데이터 영역을 부모 데이터 영역 안으로 끕니다.  

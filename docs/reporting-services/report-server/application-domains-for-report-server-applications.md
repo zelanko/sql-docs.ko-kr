@@ -1,30 +1,28 @@
 ---
-title: "보고서 서버 응용 프로그램의 응용 프로그램 도메인 | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 응용 프로그램의 응용 프로그램 도메인 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fad2f5fd529550e7d5ed1f6101f271d15753364a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 응용 프로그램의 응용 프로그램 도메인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 응용 프로그램은 단일 보고 서버 프로세스 내 자체 응용 프로그램 도메인에서 실행됩니다. 대부분의 경우 응용 프로그램 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 응용 프로그램 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  

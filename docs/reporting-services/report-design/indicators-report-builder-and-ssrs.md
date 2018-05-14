@@ -1,16 +1,15 @@
 ---
-title: "표시기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 표시기(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -19,16 +18,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 314cee09dcbd20bef860ad8ca2e3c84809f878de
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f749eb41503046fcea5495af2267c5bb5046ff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>표시기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 표시기는 단일 데이터 값의 상태를 한눈에 볼 수 있는 작은 계기입니다. 표시기 및 해당 상태를 나타내는 아이콘은 단순하며 작은 크기로 설정해도 효율적으로 해당 내용을 표시합니다.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 테이블 및 행렬에서 표시기 사용  
  모양이 단순한 표시기는 테이블 및 행렬에 사용하기에 적합합니다. 표시기는 크기가 작아도 효율적이므로 보고서의 그룹 행이나 정보 행에서 유용합니다.  
   
- 다음 다이어그램에서는 방향 표시기 집합인 **4방향 화살표(컬러)**를 사용하여 판매량을 나타내는 테이블이 있는 보고서를 보여 줍니다. 보고서의 표시기 아이콘은 기본 색(빨강, 노랑, 녹색)이 아닌 파란색 음영을 사용하도록 구성되어 있습니다.  
+ 다음 다이어그램에서는 방향 표시기 집합인 **4방향 화살표(컬러)** 를 사용하여 판매량을 나타내는 테이블이 있는 보고서를 보여 줍니다. 보고서의 표시기 아이콘은 기본 색(빨강, 노랑, 녹색)이 아닌 파란색 음영을 사용하도록 구성되어 있습니다.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   

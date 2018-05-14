@@ -1,27 +1,25 @@
 ---
-title: "사용자 지정 보안 확장 프로그램 설치 방법 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 보안 확장 프로그램 설치 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 17bf04c92d22180511496b559ea93aafda8a6d00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7b344fb4320af3ca9c4778740c6a5055481d6fce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 

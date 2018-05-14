@@ -1,16 +1,15 @@
 ---
-title: "암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자) | Microsoft Docs"
-ms.custom: 
+title: 암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3feb813133578c1364be0642504e6b89b0653da4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS 암호화 키 - 암호화된 보고서 서버 데이터 저장
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  

@@ -3,29 +3,27 @@ title: Always On 가용성 그룹이 포함된 Analysis Services | Microsoft Doc
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Always On 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 저장소 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
   
@@ -191,7 +189,7 @@ ms.lasthandoff: 04/16/2018
   
      다음 단계는 보조 복제본이 동기 커밋으로 구성되어 있다고 가정합니다.  
   
-     동기화를 확인하려면 주 복제본과 보조 복제본을 호스팅하는 각 인스턴스에 대한 연결을 열고, 데이터베이스 폴더를 확장하고, 각 복제본에서 데이터베이스의 이름 뒤에 **(동기화됨)** 및 **(동기화 중)**이 추가되어 있는지 확인합니다.  
+     동기화를 확인하려면 주 복제본과 보조 복제본을 호스팅하는 각 인스턴스에 대한 연결을 열고, 데이터베이스 폴더를 확장하고, 각 복제본에서 데이터베이스의 이름 뒤에 **(동기화됨)** 및 **(동기화 중)** 이 추가되어 있는지 확인합니다.  
   
     > [!NOTE]  
     >  이러한 단계는 [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)에서 가져왔으며, 이 링크는 이 작업 수행에 대한 추가 정보 및 다른 지침도 제공합니다.  

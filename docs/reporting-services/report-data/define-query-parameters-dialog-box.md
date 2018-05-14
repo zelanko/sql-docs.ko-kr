@@ -1,30 +1,28 @@
 ---
-title: "쿼리 매개 변수 정의 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 쿼리 매개 변수 정의 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5827e2d7ebe9525e0c72a0ffb4a91c61cdf61b47
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9b06cbb646ad58446a4c2def9f24e148262c362a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-query-parameters-dialog-box"></a>쿼리 매개 변수 정의 대화 상자
   디자인 타임에 샘플 데이터를 보기 위해 쿼리 디자이너에서 쿼리를 실행할 때 **쿼리 매개 변수 정의** 대화 상자를 사용하여 매개 변수 값을 지정할 수 있습니다. 쿼리 매개 변수는 데이터 원본의 데이터를 필터링하고 보고서에서 처리하는 데이터 양을 제한하는 데 도움이 됩니다. 이러한 값은 보고서 정의에 저장되지 않습니다.  

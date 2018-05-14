@@ -3,15 +3,11 @@ title: 컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.collectionsetprop.uploads.f1
 - sql13.swb.dc.collectionsetprop.description.f1
@@ -23,15 +19,14 @@ helpviewer_keywords:
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9d018c701915708166c7bfe7bfb29121bec5fc7f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3e0633f95e2179cacb62c811365878485be61d3a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

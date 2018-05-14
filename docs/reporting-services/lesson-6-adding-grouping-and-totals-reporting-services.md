@@ -1,29 +1,27 @@
 ---
-title: "6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: '6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 
+caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -35,13 +33,13 @@ ms.lasthandoff: 02/15/2018
   
 2.  **행 그룹** 창이 표시되지 않는 경우 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **보기** 를 클릭한 후 **그룹화**를 클릭합니다.  
   
-3.  **보고서 데이터** 창에서 **Date** 필드를 **행 그룹** 창으로 끌어다 **(자세히)**라는 행 위에 놓습니다.
+3.  **보고서 데이터** 창에서 **Date** 필드를 **행 그룹** 창으로 끌어다 **(자세히)** 라는 행 위에 놓습니다.
   
     행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
     ![추가된 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "추가된 날짜 그룹")  
   
-4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)**위에 놓습니다.
+4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)** 위에 놓습니다.
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/15/2018
   
 8.  **형식** 상자에서 **January 31, 2000**을 선택합니다.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]를 클릭합니다.  
   
 10.  **미리 보기** 탭으로 전환하여 보고서를 미리 봅니다. 다음 그림과 비슷해야 합니다.  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
@@ -74,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
     그러면 각 주문의 수량 합계가 합계 행에 추가됩니다.  
   
-4.  `Sum[Qty]`왼쪽의 빈 셀에 "**Order Total"**이라는 레이블을 입력합니다.  
+4.  `Sum[Qty]`왼쪽의 빈 셀에 "**Order Total"** 이라는 레이블을 입력합니다.  
   
 5.  합계 행에 배경색을 추가할 수 있습니다. 두 합계 셀과 레이블 셀을 선택합니다.  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  선택 단계에서는 보고서 관리자에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
   
-2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...**을 클릭합니다.  
+2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
   
 3.  **TargetServerURL** 에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
 - `http:/<servername>/reportserver`  

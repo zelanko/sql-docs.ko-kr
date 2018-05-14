@@ -1,17 +1,17 @@
 ---
-title: "Reporting Services의 코드 액세스 보안 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services의 코드 액세스 보안 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0168906c3bc4b43f247f24abb7af5acb92d96be0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0a6b82f5b7aae4d92b50334f14d51b0b6d17ac79
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services의 코드 액세스 보안
   코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 다루는 항목에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 “보안 정책 모델”을 참조하십시오.  

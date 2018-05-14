@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 원형 차트 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 원형 차트 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 682aaa2705f3f2fb5281bccecd177117592cf51d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.
@@ -124,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  **레이블 데이터** 상자에서 **#PERCENT**를 선택합니다.  
     
-5.  (선택 사항) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT** 뒤의 **레이블 데이터** 상자에 **{Pn}**을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}**을 입력합니다.  
+5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT****레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
 
 6.  값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  차트에서 차트 제목 상자를 선택하고 Delete 키를 누릅니다.
 
-2. 디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+2. 디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 2.  **Camera and Camcorder Sales**를 입력하고 Enter 키를 누른 다음 **As a Percentage of Total Sales**를 입력합니다. 그러면 다음과 같이 표시됩니다.  
   

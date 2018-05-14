@@ -1,27 +1,25 @@
 ---
-title: "계기의 눈금 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 계기의 눈금 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b2487bf741c7be1a232aaefa4396b17a1ba897
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 74928d39b6a658cecff715bab0aab58922fe15c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>계기의 눈금 서식 지정(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 계기 눈금은 계기에 표시되는 최대값과 최소값에 바인딩된 숫자 범위입니다. 일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다. 계기 눈금은 일반적으로 하나 이상의 계기 포인터와 연결됩니다. 동일한 계기에 둘 이상의 눈금이 있을 수 있습니다.  

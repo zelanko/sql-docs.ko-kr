@@ -1,16 +1,15 @@
 ---
-title: "공유 데이터 원본 만들기, 수정 및 삭제(SSRS) | Microsoft Docs"
-ms.custom: 
+title: 공유 데이터 원본 만들기, 수정 및 삭제(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
 - shared data sources [Reporting Services]
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fc63cde6f20cda1b6d302c881ca6bf5b8a294ba8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f68f43c6b004219977aed509286c8d56fdca1afe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다.  공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  

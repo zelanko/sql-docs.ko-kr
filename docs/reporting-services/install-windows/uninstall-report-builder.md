@@ -1,27 +1,25 @@
 ---
-title: "보고서 작성기 제거 | Microsoft Docs"
-ms.custom: 
+title: 보고서 작성기 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ca635948940ec0a8921444d2b7928d53e16c70f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4f9f1383b05ab332fd9c713c8acf6f5c18cab7e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-report-builder"></a>보고서 작성기 제거
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  **열기** 입력란에 **cmd.**을(를) 입력합니다.  
+2.  **열기** 입력란에 **cmd.** 을(를) 입력합니다.  
   
 3.  명령 프롬프트 창에서 ReportBuilder3_x86.msi가 있는 폴더로 이동합니다.  
   

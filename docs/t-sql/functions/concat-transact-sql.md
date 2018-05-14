@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,13 +22,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c802ef123e146261f8404167dcf54e57d755e0ef
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9d312408089cefdcc947b8b85b28a0ece85edb2e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -60,8 +57,8 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 |입력 형식|출력 형식 및 길이|  
 |---|---|
-|1. 인수가<br><br />SQL-CLR 시스템 종류,<br><br />SQL-CLR UDT인 경우<br><br />또는<br><br />`nvarchar(max)`|**nvarchar(max)** 인 경우|  
-|2. 그렇지 않고 인수가<br><br />**varbinary(max)**<br><br />또는<br><br />**varchar(max)** 인 경우|**varchar(max)** - 매개 변수 중 하나가 임의 길이의 **nvarchar**가 아닌 경우. 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
+|1. 인수가<br><br />SQL-CLR 시스템 종류,<br><br />SQL-CLR UDT인 경우<br><br />로 구분하거나 여러<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. 그렇지 않고 인수가<br><br />**varbinary(max)**<br><br />로 구분하거나 여러<br><br />**varchar(max)**|**varchar(max)** - 매개 변수 중 하나가 임의 길이의 **nvarchar**가 아닌 경우. 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
 |3. 그렇지 않고 인수가 최대 4,000자의 **nvarchar** 형식인 경우<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4. 다른 모든 경우|매개 변수 중 하나가 임의 길이의 nvarcha가 아닌 경우 **varchar**(<= 8000)(최대 8,000자의 **varchar**) 이 경우 `CONCAT`는 **nvarchar(max)** 형식의 결과를 반환합니다.|  
   

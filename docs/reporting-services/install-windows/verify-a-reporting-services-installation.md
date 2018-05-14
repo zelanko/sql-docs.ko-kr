@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 설치 확인 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 설치 확인 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
 - verifying report server installations
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b7135112da1536af6b279b8f0de55bfcb646e4b4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 629c6da03fa04942a498fd2859748ac79c53fb64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -89,9 +87,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 실행하고 방금 설치한 보고서 서버 인스턴스에 연결합니다. 웹 서비스 URL 페이지에는 보고서 서버 웹 서비스에 대한 링크가 포함되어 있습니다. 이 링크를 클릭하면 서버에 액세스할 수 있는지 확인할 수 있습니다. 보고서 서버 데이터베이스가 구성되어 있지 않으면 링크를 클릭하기 전에 먼저 보고서 서버 데이터베이스를 구성합니다.  
   
-2.  서비스 콘솔 응용 프로그램을 열고 보고서 서버 서비스가 실행 중인지 확인합니다. 보고서 서버 서비스의 상태를 확인하려면 **시작**을 클릭하고 **제어판**을 가리킨 후 **관리 도구**를 두 번 클릭하고 **서비스**를 두 번 클릭합니다. 서비스 목록이 나타나면 **보고서 서버(MSSQLSERVER)**로 스크롤합니다. 상태가 **시작됨**으로 바뀝니다.  
+2.  서비스 콘솔 응용 프로그램을 열고 보고서 서버 서비스가 실행 중인지 확인합니다. 보고서 서버 서비스의 상태를 확인하려면 **시작**을 클릭하고 **제어판**을 가리킨 후 **관리 도구**를 두 번 클릭하고 **서비스**를 두 번 클릭합니다. 서비스 목록이 나타나면 **보고서 서버(MSSQLSERVER)** 로 스크롤합니다. 상태가 **시작됨**으로 바뀝니다.  
   
-3.  브라우저를 열고 주소 표시줄에 보고서 서버 URL을 입력합니다. 주소는 설치 중에 보고서 서버에 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 보고서 서버 가상 디렉터리 이름은 **ReportServer**입니다. URL http://*\<컴퓨터 이름>*/ReportServer*\<_instance name>*을 사용하여 보고서 서버 설치를 확인할 수 있습니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 URL이 달라질 수 있습니다. URL 형식에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요. Windows Vista 또는 Windows Server 2008의 로컬 관리자인 경우 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
+3.  브라우저를 열고 주소 표시줄에 보고서 서버 URL을 입력합니다. 주소는 설치 중에 보고서 서버에 지정한 서버 이름과 가상 디렉터리 이름으로 구성됩니다. 기본적으로 보고서 서버 가상 디렉터리 이름은 **ReportServer**입니다. URL http://*\<컴퓨터 이름>*/ReportServer*\<_instance name>* 을 사용하여 보고서 서버 설치를 확인할 수 있습니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 URL이 달라질 수 있습니다. URL 형식에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요. Windows Vista 또는 Windows Server 2008의 로컬 관리자인 경우 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
 4.  보고서를 실행하여 보고서 서버 작동을 테스트합니다. 이 단계에서는 자습서에서 샘플 보고서를 만들 수 있습니다. 자세한 내용은 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
   

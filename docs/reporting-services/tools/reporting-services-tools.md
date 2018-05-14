@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 도구 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
 - Reporting Services, tools
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 
+caps.latest.revision: 80
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ed20fdaf6d06ae31e903e5043f51a5f8ba5491fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  
   
  도구를 바로 찾으려면 [자습서: Reporting Services 도구 찾기 및 시작 방법&#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)를 참조하세요.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
 |----------|-----------------|-------------------|  
 |Reporting Services 구성 관리자|이 도구를 사용하면 Reporting Services 설치를 구성할 수 있습니다. 사용 가능한 태스크는 다음과 같습니다.<br /><br /> 로컬 및 원격 보고서 서버 인스턴스 구성<br /><br /> 보고서 서버 서비스 계정 구성<br /><br /> 하나 이상의 웹 서비스 URL 만들기 및 구성<br /><br /> 보고서 관리자 URL 구성<br /><br /> 보고서 서버 데이터베이스 만들기 및 구성<br /><br /> 스케일 아웃 배포 구성<br /><br /> 저장된 연결 문자열과 자격 증명을 암호화하는 데 사용되는 대칭 키 백업, 복원 또는 교체<br /><br /> 무인 실행 계정 구성<br /><br /> 전자 메일 배달을 위한 SMTP 서버 구성<br /><br /> <br /><br /> 참고: Reporting Services 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버 액세스 권한을 부여할 수는 없습니다.<br /><br /> 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.|시작 메뉴|  
 |SQL Server Management Studio|이 도구를 사용하면 단일 환경에서 하나 이상의 보고서 서버 인스턴스를 다음과 같이 관리합니다.<br /><br /> 로컬 및 원격 보고서 서버 인스턴스 관리<br /><br /> 보고서 서버 속성 설정<br /><br /> 역할 정의 수정<br /><br /> 사용하지 않을 보고서 서버 기능 해제<br /><br /> 작업 관리<br /><br /> 공유 일정 관리|시작 메뉴|  
-|SQL Server 구성 관리자|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> Reporting Services Windows 서비스 시작 및 중지<br /><br /> 고객 의견 보고, 덤프 디렉터리 위치 및 오류 보고 구성<br /><br /> <br /><br /> **\*\* 경고 \*\***서비스 계정을 구성할 때는 이 도구를 사용하지 마세요. 대신 Reporting Services 구성 도구를 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.|시작 메뉴|  
+|SQL Server 구성 관리자|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> Reporting Services Windows 서비스 시작 및 중지<br /><br /> 고객 의견 보고, 덤프 디렉터리 위치 및 오류 보고 구성<br /><br /> <br /><br /> **\*\* 경고 \*\*** 서비스 계정을 구성할 때는 이 도구를 사용하지 마세요. 대신 Reporting Services 구성 도구를 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.|시작 메뉴|  
 |Rsconfig 유틸리티|이 도구를 사용하면 보고서 서버 데이터베이스에 대한 보고서 서버 연결을 구성하고 관리할 수 있습니다. 또한 무인 보고서 처리에 사용할 사용자 계정을 지정할 때도 이 유틸리티를 사용할 수 있습니다.<br /><br /> 자세한 내용은 [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)를 참조하세요.|명령 프롬프트|  
 |Rskeymgmt 유틸리티|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> 보고서 서버 데이터를 암호화 하는 데 사용하는 대칭 키 추출, 복원, 만들기 및 삭제<br /><br /> 스케일 아웃 배포에서 보고서 서버 인스턴스 조인<br /><br /> <br /><br /> 자세한 내용은 [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)를 참조하세요.|명령 프롬프트|  
 |WMI(Windows Management Instrumentation) 클래스|이 클래스를 사용하면 그래픽 사용자 인터페이스를 사용하지 않고도 Reporting Services 구성 관리자의 구성 태스크를 자동화할 수 있습니다.<br /><br /> 자세한 내용은 [Accessing the WMI Provider Programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md)을 참조하세요.|Visual Basic 스크립트|  

@@ -1,28 +1,27 @@
 ---
-title: "자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d7c5c99922e82652ecbd4d7ad2f526f7f4c3d89c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c20091938d699da4dfc8e00b242509637e25e8bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는, 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -216,7 +215,7 @@ ms.lasthandoff: 01/09/2018
 
 10. 세로 축 제목 > **축 제목 속성**을 마우스 오른쪽 단추로 클릭합니다.  
   
-10. **제목 텍스트** 필드의 텍스트를 **Sales Total (in Thousands)**로 바꿉니다. 제목의 형식을 지정하는 방법과 관련된 다양한 옵션을 지정할 수도 있습니다.  
+10. **제목 텍스트** 필드의 텍스트를 **Sales Total (in Thousands)** 로 바꿉니다. 제목의 형식을 지정하는 방법과 관련된 다양한 옵션을 지정할 수도 있습니다.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -274,7 +273,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
+2.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
 3.  **Sales Chart**를 입력하고 Enter 키를 누른 다음 **January to December 2015**를 입력하면 다음과 같이 표시됩니다.  
   

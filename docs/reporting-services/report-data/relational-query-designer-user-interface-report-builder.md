@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      보고서 데이터 창을 사용하여 보고서 데이터 집합에 대한 필드 컬렉션을 볼 수 있습니다. 이러한 필드는 보고서를 볼 때 테이블,  차트 및 기타 보고서 항목에 표시할 수 있는 데이터를 나타냅니다.  
   
--   **그룹 및 집계** 쿼리의 그룹화 및 집계 사용을 설정/해제합니다. 그룹화 및 집계를 추가한 후 그룹화 및 집계 기능을 해제하면 그룹화 및 집계가 제거됩니다. **(없음)**텍스트는 그룹화 및 집계가 사용되지 않음을 나타냅니다. 그룹화 및 집계 기능을 다시 설정하면 이전의 그룹화 및 집계가 복원됩니다.  
+-   **그룹 및 집계** 쿼리의 그룹화 및 집계 사용을 설정/해제합니다. 그룹화 및 집계를 추가한 후 그룹화 및 집계 기능을 해제하면 그룹화 및 집계가 제거됩니다. **(없음)** 텍스트는 그룹화 및 집계가 사용되지 않음을 나타냅니다. 그룹화 및 집계 기능을 다시 설정하면 이전의 그룹화 및 집계가 복원됩니다.  
   
 -   **필드 삭제** 선택한 필드를 삭제합니다.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **필드 편집** 테이블 간 관계를 추가 및 수정할 수 있는 **관련 필드 편집** 대화 상자를 엽니다. 오른쪽 테이블과 왼쪽 테이블에서 조인할 필드를 선택했으므로 왼쪽 테이블과 오른쪽 테이블의 여러 필드를 조인하여 관계에 여러 조인 조건을 지정할 수 있습니다. 왼쪽 테이블과 오른쪽 테이블을 조인하는 두 필드의 이름이 같을 필요는 없습니다. 조인된 필드의 데이터 형식은 호환되어야 합니다.  
   
--   **관계 삭제**  선택한 관계를 삭제합니다**.**  
+-   **관계 삭제**  선택한 관계를 삭제합니다 **.**  
   
 -   **위로 이동** 및 **아래로 이동** **관계** 목록에서 관계를 위나 아래로 이동합니다. 관계가 쿼리에 배치되는 순서에 따라 쿼리 결과가 달라질 수 있습니다. 관계는 **관계** 목록에 나타나는 순서대로 쿼리에 추가됩니다.  
   

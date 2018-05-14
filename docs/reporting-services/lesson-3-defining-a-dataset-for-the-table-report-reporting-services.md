@@ -1,28 +1,27 @@
 ---
-title: "3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: '3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: cab4e640c22b7042fdc34e7756d7fff0dcd999e4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6bc8a0745cb75ae2d6856bd950a6020513798970
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
 데이터 원본을 정의한 후에는 데이터 집합을 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 집합에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -31,7 +30,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>보고서 데이터에 대한 Transact-SQL 쿼리를 정의하려면  
   
-1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭하고 **데이터 집합...**을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭하고 **데이터 집합...** 을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
   
 2.  **이름** 상자에 **AdventureWorksDataset**을 입력합니다.  
   

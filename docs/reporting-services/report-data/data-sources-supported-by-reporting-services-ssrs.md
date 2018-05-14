@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services에서 지원하는 데이터 원본(SSRS) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services에서 지원하는 데이터 원본(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
 - XML data processing extension [Reporting Services]
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: "96"
+caps.latest.revision: 96
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 29c605b8a41fefd8d4cdc1bebe3131823aa6ca20
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5b243958293408ce8ebf1f6e41124bb5f9034d05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -154,11 +152,11 @@ ms.lasthandoff: 01/09/2018
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="Azure"></a> Microsoft Azure SQL Database 처리 확장 프로그램  
- 데이터 원본 유형 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 래핑하고 확장합니다.  
+ 데이터 원본 유형 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 래핑하고 확장합니다.  
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 그래픽 쿼리 디자이너는 **Microsoft SQL Server**데이터 원본 유형과 함께 사용하는 Visual Database Tool 디자이너가 아닌 관계형 쿼리 디자이너입니다.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]는 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]는 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다.   
   

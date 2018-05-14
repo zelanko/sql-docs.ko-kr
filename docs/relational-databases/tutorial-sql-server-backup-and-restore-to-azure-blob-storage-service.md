@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 309fdeeafc0d8fbd6f1f0a2633a15929757607b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5aec79dad9d34b8cdd77938b312ca990665c29bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스와 AdventureWorks2012 데이터베이스가 설치되었습니다.  
   
-    SQL Server 인스턴스는 온-프레미스 또는 Azure 가상 컴퓨터에 있을 수 있습니다.  
+    SQL Server 인스턴스는 온-프레미스 또는 Azure 가상 머신에 있을 수 있습니다.  
   
     AdventureWorks2012 대신 사용자 데이터베이스를 사용하고 tsql 구문을 적절하게 수정할 수 있습니다.  
   

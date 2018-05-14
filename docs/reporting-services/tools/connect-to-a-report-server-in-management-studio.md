@@ -1,16 +1,15 @@
 ---
-title: "Management Studio에서 보고서 서버에 연결 | Microsoft Docs"
-ms.custom: 
+title: Management Studio에서 보고서 서버에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttors.connectionproperties.f1
 - sql13.swb.connecttors.login.f1
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], registering
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 96d62699a9745543973976c68bcf212f041deead
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품군의 모든 서버에 연결하고 해당 내용을 그래픽 방식으로 찾아볼 수 있는 개체 탐색기를 제공합니다. Reporting Services의 경우 개체 탐색기를 사용하여 다음을 수행할 수 있습니다.  

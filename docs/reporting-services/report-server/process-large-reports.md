@@ -1,16 +1,15 @@
 ---
-title: "큰 보고서 처리 | Microsoft Docs"
-ms.custom: 
+title: 큰 보고서 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
 - page breaks [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 048397a9df14002d360512b64d1384a20d608906
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c1f8df989b6b87b141870b4e5072354e8dceb3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  

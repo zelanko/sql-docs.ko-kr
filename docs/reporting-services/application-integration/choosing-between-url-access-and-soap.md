@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services에서 URL 액세스와 SOAP 중 선택 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services에서 URL 액세스와 SOAP 중 선택 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 593cbfc543087123ff8760ce47fb973f3d46e795
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dbb294c04f82661c2f7a1ebd736ec0ad2ceb143f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
 

@@ -1,17 +1,17 @@
 ---
-title: "웹 서비스의 URL 속성 설정 | Microsoft Docs"
-ms.custom: 
+title: 웹 서비스의 URL 속성 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Url property
 - Report Server Web service, proxies
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7d0e616729af0a6103dff69eaa0ceccfb5c20f33
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 89ef30fbb2b7645fd5cfcf7aa14f241cb34c6863
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>웹 서비스의 URL 속성 설정
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 언제든지 응용 프로그램이 현재 지정된 보고서 서버 웹 서비스의 기준 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  

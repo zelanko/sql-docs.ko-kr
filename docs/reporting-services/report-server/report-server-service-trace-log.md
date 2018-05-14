@@ -1,32 +1,30 @@
 ---
-title: "보고서 서버 서비스 추적 로그 | Microsoft Docs"
-ms.custom: 
+title: 보고서 서버 서비스 추적 로그 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3afbb9788926f78a732bb42fb01ea646d9b5147
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다.  파일 정보에는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리가 수행하는 작업이 포함됩니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우에 유용합니다. 예를 들어 구독 문제를 해결하는 경우 등입니다.  

@@ -1,28 +1,27 @@
 ---
-title: "4단원: 하위 보고서에 대한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs"
-ms.custom: 
+title: '4단원: 하위 보고서에 대한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5a9893a646617d3f3bca68c7c22de1a7a10d7455
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d7aa269db14390739e0d9a161819b78793fd8474
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 부모 보고서를 디자인 한 후에는 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -65,10 +64,10 @@ ms.lasthandoff: 01/09/2018
   
     **쿼리 작성기**를 선택하여 쿼리를 만든 다음 **쿼리 실행** 단추를 선택하여 쿼리를 확인할 수도 있습니다. 쿼리에서 예상된 데이터가 반환되지 않는 경우 이전 버전의 AdventureWorks를 사용하고 있을 수 있습니다. **AdventureWorks2014** 샘플 데이터베이스를 가져오는 방법에 대한 자세한 내용은 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  
   
-10. **생성할 메서드 선택** 페이지에서 **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)**의 선택을 취소한 다음 **마침**을 선택합니다.  
+10. **생성할 메서드 선택** 페이지에서 **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소한 다음 **마침**을 선택합니다.  
   
     > [!WARNING]  
-    > **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)**의 선택을 취소해야 합니다.  
+    > **업데이트를 데이터베이스로 직접 보내는 메서드 만들기(GenerateDBDirectMethods)** 의 선택을 취소해야 합니다.  
   
     이제 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 을 보고서의 데이터 원본으로 구성하는 작업을 완료했습니다. Visual Studio의 데이터 집합 디자이너 페이지에서 추가한 **DataTable** 이 표시되며 쿼리에 지정한 열이 나열됩니다. DataSet2에는 PurhcaseOrderDetail 테이블에서 쿼리를 기반으로 하는 데이터가 포함됩니다.  
   

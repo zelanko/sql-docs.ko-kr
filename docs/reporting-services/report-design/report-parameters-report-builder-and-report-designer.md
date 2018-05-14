@@ -1,16 +1,15 @@
 ---
-title: "보고서 매개 변수(보고서 작성기 및 보고서 디자이너) | Microsoft Docs"
-ms.custom: 
+title: 보고서 매개 변수(보고서 작성기 및 보고서 디자이너) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 매개 변수의 일반적인 용도와 설정할 수 있는 속성 등에 대해 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및 보고서 디자이너에서 만드는 페이지를 매긴 보고서와 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수 개념](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)을 참조하세요.  
