@@ -3,17 +3,17 @@ title: DISCOVER_DATASOURCES 행 집합 | Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: schema-rowsets
+ms.custom: schema-rowsets
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ebbc52708591c54f9236aabcd2404c01a65e81f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e316e1e8927acb5dcb99046a8d53034126052ce
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

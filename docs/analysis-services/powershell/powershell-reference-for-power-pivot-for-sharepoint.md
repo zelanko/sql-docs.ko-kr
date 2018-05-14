@@ -3,17 +3,17 @@ title: SharePoint 용 파워 피벗에 대 한 PowerShell 참조 | Microsoft Doc
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ''
+ms.custom: powershell
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a133d55644545e9af6331653a8ec153b53abea9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 231a7fdeac135743ab38af9fbe4a7c4373c34990
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot에 대한 PowerShell 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

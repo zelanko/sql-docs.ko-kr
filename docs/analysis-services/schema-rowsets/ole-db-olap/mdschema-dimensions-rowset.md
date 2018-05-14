@@ -3,17 +3,17 @@ title: MDSCHEMA_DIMENSIONS 행 집합 | Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: schema-rowsets
+ms.custom: schema-rowsets
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aab53e53edeee81f57914ac67cb88078d663c3ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1e509ad466a0d173fe67a8fd1f3ac5190647eb7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 행 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

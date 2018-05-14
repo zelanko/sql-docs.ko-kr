@@ -1,31 +1,23 @@
 ---
-title: "새 RestoreLocation cmdlet | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 새 RestoreLocation cmdlet | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8ce57664514cc11bb0ff7dd72f94e900279b7a13
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-데이터베이스를 복원하는 데 사용되는 정보를 지정합니다.  
+  데이터베이스를 복원하는 데 사용되는 정보를 지정합니다.  
 
 >[!NOTE] 
 >이 문서는 오래 된 내용 및 예제에 포함 될 수 있습니다. 최신에 대 한 Get-help cmdlet을 사용 합니다.
@@ -63,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
+### <a name="-connectionstring-string"></a>-ConnectionString \<문자열 >  
  원격 Analysis Services 인스턴스의 연결 문자열을 지정합니다.  
   
 |||  
@@ -107,7 +99,7 @@ ms.lasthandoff: 02/15/2018
 |파이프라인 입력 허용|false|  
 |와일드카드 문자 허용|false|  
   
-### <a name="-server-string"></a>-Server \<string>  
+### <a name="-server-string"></a>-서버 \<문자열 >  
  cmdlet이 연결하고 실행할 Analysis Services 인스턴스를 지정합니다. 서버 이름을 제공하지 않으면 localhost에 연결됩니다. 기본 인스턴스의 경우에는 서버 이름만 지정합니다. 명명된 인스턴스의 경우에는 servername\instancename 형식을 사용합니다. HTTP 연결의 경우 http[s]://server[:port]/virtualdirectory/msmdpump.dll 형식을 사용합니다.  
   
 |||  
@@ -119,7 +111,7 @@ ms.lasthandoff: 02/15/2018
 |와일드카드 문자 허용|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 이 매개 변수는 HTTP 액세스를 사용하도록 구성한 Analysis Service 인스턴스에 대해 HTTP 연결을 사용할 때 사용자 이름 및 암호를 전달하는 데 사용됩니다. 자세한 내용은 참조 [HTTP 액세스 구성 Analysis Services 인터넷 정보 서비스 &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) HTTP 연결에 대 한 합니다.  
+ 이 매개 변수는 HTTP 액세스를 사용하도록 구성한 Analysis Service 인스턴스에 대해 HTTP 연결을 사용할 때 사용자 이름 및 암호를 전달하는 데 사용됩니다. 자세한 내용은 참조 [인터넷 정보 서비스에서 Analysis services HTTP 액세스 구성 &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) HTTP 연결에 대 한 합니다.  
   
  이 매개 변수를 지정하면 사용자 이름 및 암호를 사용하여 지정된 Analysis Server 인스턴스에 연결합니다. 자격 증명을 지정하지 않으면 도구를 실행 중인 사용자의 기본 Windows 계정이 사용됩니다.  
   
