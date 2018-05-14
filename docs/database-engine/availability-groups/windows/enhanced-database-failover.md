@@ -3,15 +3,12 @@ title: 가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: mikeray
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
@@ -20,12 +17,11 @@ caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0052c8203f33728bdcc2d80316cbdd8dbf2e557a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7365bca2abea41143fb35cb374eb2b8c1a81fdd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

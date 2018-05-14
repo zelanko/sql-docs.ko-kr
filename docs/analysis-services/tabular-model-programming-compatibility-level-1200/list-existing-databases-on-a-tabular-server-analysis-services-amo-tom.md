@@ -3,17 +3,17 @@ title: 테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데�
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db8ab4fac3f86c40f78ede78b365707745e79fe7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 0e698e1e2335a2002c895afd097a886859747319
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>테이블 형식 서버 (Analysis Services AMO-TOM)에 있는 기존 데이터베이스 목록
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
@@ -49,8 +51,6 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 
     - **서버 형식**에서 **데이터베이스 엔진**(일반적으로 기본 옵션)을 선택합니다.
     - **서버 이름**에서 SQL Server 인스턴스의 이름을 입력합니다. (이 아티클에서는 호스트 이름 NODE5[NODE5\SQL2016ST]에서 인스턴스 이름 SQL2016ST를 사용합니다.) SQL Server 인스턴스 이름을 확인하는 방법을 잘 모르는 경우 [SSMS를 사용하는 추가 팁과 요령](ssms-tricks.md#determine-sql-server-name)을 참조하세요.  
-
-    ![예제 인스턴스 이름의 "서버 이름" 필드](media/connect-query-sql-server/connection.png)
 
     ![SQL Server 인스턴스를 사용하는 옵션을 포함한 "서버 이름" 필드](media/connect-query-sql-server/connection2.png)
 

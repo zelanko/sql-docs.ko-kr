@@ -3,17 +3,17 @@ title: DataSourcePermission 요소 (ASSL) | Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7110adcbcdf4d5c346de756c6df6beccebd18eb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c6dabefaa319bb847975da03b5593e5dc79e4268
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datasourcepermission-element-assl"></a>DataSourcePermission 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

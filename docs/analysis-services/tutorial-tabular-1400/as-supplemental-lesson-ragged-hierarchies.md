@@ -3,15 +3,15 @@ title: 'Analysis Services tutorial 추가 단원: 비정형 계층 | Microsoft D
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e38e1e2b888ce92fad826fda43624e19a75c2110
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ---

@@ -3,17 +3,17 @@ title: MeasureGroupAttributeBinding 데이터 형식 (아웃-아웃오브 라인
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 623de08bdac340eb3fadccb73c5e5f5c293afdd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 35b695ea029d78211a0042d330a961bfcb95a494
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding 데이터 형식(아웃오브 라인)(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

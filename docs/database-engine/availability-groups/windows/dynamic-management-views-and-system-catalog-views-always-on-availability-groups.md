@@ -2,23 +2,22 @@
 title: 동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹-SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4eae7c3933ccc815905d560a44ef739636c4fec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 819a7acb18b47227411d7ccf1683deb2fc63a3d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,15 +3,12 @@ title: 끝점 URL 지정 - 가용성 복제본 추가 또는 수정 | Microsoft 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], configuring
@@ -22,12 +19,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 80f1bd14cf24cb320f7f2cdce022fe4595b2ff1e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ddec5665ff4db63a22be99fae85f5fad67bd413
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>끝점 URL 지정 - 가용성 복제본 추가 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
  여기서  
   
--   *\<system-address>*는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
+-   *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
   
     -   WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드는 같은 도메인에 있으므로 컴퓨터 시스템의 이름(예: `SYSTEM46`)을 사용할 수 있습니다.  
   
@@ -67,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
--   *\<포트>*는 파트너 서버 인스턴스의 미러링 끝점에서 사용하는 포트 번호입니다.  
+-   *\<포트>* 는 파트너 서버 인스턴스의 미러링 끝점에서 사용하는 포트 번호입니다.  
   
      데이터베이스 미러링 끝점은 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 각 포트 번호는 하나의 끝점에만 연결되어야 하고 각 끝점은 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 끝점에서 수신합니다. 따라서 가용성 복제본을 지정할 때 끝점 URL에서 지정하는 포트는 항상 들어오는 메시지를 끝점이 해당 포트와 연결된 서버 인스턴스로 지정합니다.  
   
@@ -110,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
  **IPCONFIG /ALL**  
   
- 정규화된 도메인 이름을 구성하려면 *<host_name>* 및 *<Primary_Dns_Suffix>*의 값을 다음과 같이 연결해야 합니다.  
+ 정규화된 도메인 이름을 구성하려면 *<host_name>* 및 *<Primary_Dns_Suffix>* 의 값을 다음과 같이 연결해야 합니다.  
   
  *<host_name>* **.** *<Primary_Dns_Suffix>*  
   

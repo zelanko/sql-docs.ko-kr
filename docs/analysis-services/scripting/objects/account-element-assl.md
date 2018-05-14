@@ -3,17 +3,17 @@ title: 계정 요소 (ASSL) | Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: assl
+ms.custom: assl
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93611853f1558c54b8defa78b8b0c390d77537e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e9cda9f82df4f1b7a6d445d7cb85e69c635833f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="account-element-assl"></a>Account 요소(ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

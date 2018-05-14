@@ -3,17 +3,17 @@ title: 만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스 |
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a58f59c48a496fb3da12330c5fa5a89942752d5d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: afacae6ab8fc6f5a4f592e87758cca3142579c0a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

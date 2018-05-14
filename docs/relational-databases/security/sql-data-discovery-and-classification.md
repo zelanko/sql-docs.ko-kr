@@ -1,24 +1,23 @@
 ---
 title: SQL 데이터 검색 및 분류 | Microsoft Docs
 description: SQL 데이터 검색 및 분류
-services: sql-server
 documentationcenter: ''
 author: giladm
 manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
-ms.service: sql-server
+ms.service: sql-database
+ms.prod_service: sql-database,sql
 ms.custom: security
-ms.workload: data-management
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: eee9d5b920f422d000fa4e9cb8b78924cb55b466
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/08/2018
 
 1. SSMS(SQL Server Management Studio)에서 SQL Server에 연결합니다.
 
-2. SSMS 개체 탐색기에서 분류하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고, **작업** > **데이터 분류...**를 선택합니다.
+2. SSMS 개체 탐색기에서 분류하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고, **작업** > **데이터 분류...** 를 선택합니다.
 
     ![탐색 창][1]
 
