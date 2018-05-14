@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server에 기본 R 및 Python 패키지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,17 +61,17 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="r-components"></a>R 구성 요소
 
-구성 요소에는 Microsoft의 오픈 소스 R에 분포 포함 [Microsoft R Open](https://mran.microsoft.com/open)합니다. 기본 R 패키지와 같은 핵심 기능이 포함 되어 **stats** 및 **유틸리티**합니다. 실행할 수 있습니다 `installed.packages(priority = "base")` 패키지 목록을 반환 합니다. R의 기본 설치에는 다양 한 샘플 데이터 집합 및 관리자 권한 (경량 대화형 편집기) 및 (R 명령 프롬프트) rterm이 같은 표준 R 도구 포함 됩니다.
+오픈 소스 R은 Microsoft 웹 배포 [Microsoft R Open (MRO)](https://mran.microsoft.com/open)합니다. 기본 R 패키지와 같은 핵심 기능이 포함 되어 **stats** 및 **유틸리티**합니다. 실행할 수 있습니다 `installed.packages(priority = "base")` 패키지 목록을 반환 합니다. R의 기본 설치에는 다양 한 샘플 데이터 집합 및 관리자 권한 (경량 대화형 편집기) 및 (R 명령 프롬프트) rterm이 같은 표준 R 도구 포함 됩니다.
 
-Microsoft 패키지에 포함 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 원격 계산 컨텍스트, 스트리밍, 병렬 데이터 가져오기 및 변환에 대 한 rx 함수의 실행에 대 한 모델링, 시각화 및 분석 합니다. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) 추가 R에서 모델링 하는 기계 학습 다른 패키지에 포함 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R에서 MDX 문을 작성 하는 것에 대 한 및 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) 저장된 프로시저에서 R 스크립트를 포함 하는 데 있습니다.
+소유 R 패키지에 포함 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 원격 계산 컨텍스트, 스트리밍, 병렬 데이터 가져오기 및 변환에 대 한 rx 함수의 실행에 대 한 모델링, 시각화 및 분석 합니다. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) 추가 R에서 모델링 하는 기계 학습 다른 Microsoft 패키지 포함 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R에서 MDX 문을 작성 하는 것에 대 한 및 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) 저장된 프로시저에서 R 스크립트를 포함 하는 데 있습니다.
 
 
 |릴리스             | R 버전       | Microsoft 패키지    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2016 R Services | 3.2.2   | RevoScaleR을 sqlrutil  |
-| SQL Server 2017 Machine Learning Services| 3.4.3 | RevoScaleR MicrosoftML, olapR, sqlrutil|
+| SQL Server 2017 Machine Learning Services| 3.3.3 | RevoScaleR MicrosoftML, olapR, sqlrutil|
 
-최신 수명 주기 지원 정책에 바인딩하여 SQL Server 2016 R 서비스에 패키지 및 사전 설치 된 모델을 추가할 수 있습니다. 바인딩 서비스 모델을 변경합니다. 기본적으로 초기 설치 후 R 패키지 새로 고쳐집니다 서비스 팩과 누적 업데이트를 통해. 추가 패키지 및 R 핵심 구성 요소 전체 버전 업그레이드 (SQL Server 2016 SQL Server 2017)에서 제품 업그레이드를 통해만 수행할 수 또는 R 바인딩하여 Microsoft 학습 서버 컴퓨터를 지원 합니다. 자세한 내용은 참조 [SQL Server의 구성 요소를 업그레이드 R 및 Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+R 구성 요소 패키지를 업그레이드, 최신 수명 주기 지원 정책에 새 R 패키지 및 바인딩을 통해 사전 설치 된 모델을 추가할 수 있습니다. 바인딩 서비스 모델을 변경합니다. 기본적으로 초기 설치 후 R 패키지 새로 고쳐집니다 서비스 팩과 누적 업데이트를 통해. 추가 패키지 및 R 핵심 구성 요소 전체 버전 업그레이드 (SQL Server 2016 SQL Server 2017)에서 제품 업그레이드를 통해만 수행할 수 또는 R 바인딩하여 Microsoft 학습 서버 컴퓨터를 지원 합니다. 자세한 내용은 참조 [SQL Server의 구성 요소를 업그레이드 R 및 Python](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
 ### <a name="python-components"></a>Python 구성 요소
 
@@ -89,9 +89,9 @@ SQL Server 2017 기계 학습은 R 및 Python 지원 모두 첫 번째 릴리스
 
 ## <a name="administrative-permissions-for-package-installation"></a>패키지 설치에 대 한 관리 권한
 
-패키지 설치에 필요한 사용 권한에 SQL Server 2016 및 SQL Server 2017 사이 변경 되었습니다.
+데이터베이스의 인스턴스에서 사용 하는 패키지 라이브러리는 SQL Server 인스턴스는 Program Files 폴더에 물리적으로 배치 됩니다. 이 위치에 대 한 관리자 권한이 필요합니다. 그러나 SQL Server 2017는 관리자가 아닌 패키지를 추가 하는 기능을 제공 하는 패키지 설치에 대 한 몇 가지 추가 방법론을 제공 합니다.
 
-+ SQL Server 2016에서 관리 액세스 권한을 새 R 패키지의 설치에 필요한 경우
++ SQL Server 2016에서 관리 액세스가 새 패키지 설치에 필요 합니다.
 + SQL Server 2017 년 1에서 R와 Python에 대 한 관리자 권한으로 패키지를 설치 하 계속 수 있으며,이 가장 쉬운 방법은 아마도 합니다. 
 
     DDL 문, 외부 라이브러리 만들기는 R 도구를 사용 하지 않고 패키지를 설치 하려면 데이터베이스 관리자를 있습니다. 

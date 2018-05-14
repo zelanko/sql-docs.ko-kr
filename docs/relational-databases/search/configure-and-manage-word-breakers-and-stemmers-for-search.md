@@ -71,7 +71,7 @@ GO
 추가 옵션 및 추가 정보는 [sp_help_fulltext_system_components&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)를 참조하세요.
  
 ## <a name="if-you-add-or-remove-a-word-breaker"></a>단어 분리기를 추가 또는 제거하는 경우  
-단어 분리기를 추가, 제거 또는 변경한 경우에는 전체 텍스트 인덱싱 및 쿼리에서 지원되는 Microsoft Windows LCID(로캘 ID) 목록을 새로 고쳐야 합니다. 자세한 내용은 [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
+단어 분리기를 추가, 제거 또는 변경한 경우에는 전체 텍스트 인덱싱 및 쿼리에서 지원되는 Microsoft Windows LCID(로캘 ID) 목록을 새로 고쳐야 합니다. 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   
 ##  <a name="default"></a> 기본 전체 텍스트 언어 옵션 설정  
  지역화된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 일치하는 언어가 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 **default full-text language** 옵션을 서버 언어로 설정합니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 **default full-text language** 옵션이 영어입니다.  
