@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: sql-server-profiler
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -48,12 +45,11 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb680ddb08a19f347bfa88e5952e0dd26a62b8d1
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -257,7 +253,7 @@ Microsoft SQL Server Profiler 및 튜닝 관리자는 이 대화 상자를 사�
 - 그룹화하면 추적 창 화면에 이벤트 클래스가 형식별로 분류되어 표시됩니다. 그러나 각 이벤트 클래스 형식의 이벤트는 축소되어 표시되지 않습니다.  
 
 추적 창 화면에서 이벤트를 그룹화하거나 집계하면, 그룹화 또는 집계하도록 선택한 열은 창에서 고정되어 있지만 오른쪽 또는 왼쪽으로 스크롤하여 다른 데이터 열을 볼 수 있습니다.  
-이 대화 상자에 액세스하려면 기존 추적 파일 또는 테이블을 열고 **파일** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. **추적 속성** 대화 상자에서 **이벤트 선택** 탭을 클릭한 다음 **열 구성**을 클릭합니다. 또한 새 추적을 만들 때 **이벤트 선택** 탭에서 **열 구성** 을 클릭해도 됩니다.  
+이 대화 상자에 액세스하려면 기존 추적 파일 또는 테이블을 열고 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **속성**을 클릭합니다. **추적 속성** 대화 상자에서 **이벤트 선택** 탭을 클릭한 다음 **열 구성**을 클릭합니다. 또한 새 추적을 만들 때 **이벤트 선택** 탭에서 **열 구성** 을 클릭해도 됩니다.  
 추적 창에서 이벤트 클래스를 그룹화하거나 집계하려면 **그룹** 아래에 있는 데이터 열 이름을 이동합니다.
 - 이벤트를 집계하려면 데이터 열을 하나씩 **그룹**으로 이동합니다. 그러면 추적 창 화면의 이벤트 형식 이름 아래에 있는 특정 형식의 모든 이벤트가 축소됩니다. 이벤트 클래스 이름의 왼쪽에는 더하기 기호(**+**)가 나타납니다. 이벤트 클래스 형식을 확장하고 모든 이벤트를 표시하려면 더하기 기호를 클릭합니다. **보기** 메뉴에서 **집계 보기** 또는 **그룹화 보기** 를 클릭하여 집계 및 그룹화 옵션을 설정하거나 해제할 수 있습니다.
 - 이벤트를 그룹화하려면 둘 이상의 데이터 열을 **그룹**으로 이동합니다. 그러면 추적 창 화면에서 특정 형식의 모든 이벤트가 그룹화되지만 각 이벤트 클래스 형식 이름 아래에 있는 이벤트는 축소되지 않습니다. 보기 메뉴에서 **그룹화 보기** 를 클릭하여 그룹화된 보기와 그룹화되지 않은 보기 간에 전환할 수 있습니다. 데이터 열을 두 개 이상 **그룹**으로 이동한 경우에는 **집계 보기** 로 전환할 수 없습니다.

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
@@ -19,12 +18,11 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee2cdb54da4e68ba59789245a4e17e83ed98265e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dfef79d0fb54e078d9d263cc619a6993d53e4ca4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-properties-snapshot"></a>게시 속성, 스냅숏
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  **스냅숏 형식**  
  스냅숏 형식에 대해 네이티브 모드 또는 문자 모드를 선택합니다.  
   
--   **모든 구독자가** 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 네이티브 스냅숏 형식을 사용할 때 최상의 성능을 제공합니다.  
+-   모든 구독자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 인스턴스인 경우 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 를 선택합니다. 네이티브 스냅숏 형식을 사용할 때 최상의 성능을 제공합니다.  
   
 -   구독자가 **에서 실행되고 있거나** 이외 구독자인 경우 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
   

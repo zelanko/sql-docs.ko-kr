@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [R Services(In-Database)](install/sql-r-services-windows-install.md)
 ### [R 서버(독립 실행형)](install/sql-r-standalone-windows-install.md)
-### [Microsoft ML 서버에 바인딩](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [명령 프롬프트 설치](install/sql-ml-component-commandline-install.md)
 ## [오프라인 설치(인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
+## [R 및 Python 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [R 도구 설정](r/set-up-a-data-science-client.md)
 ## [Python 도구 설정](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [방법](r/sql-server-machine-learning-tasks.md)
 
 ## [패키지 관리](r/r-package-management-for-sql-server-r-services.md)
-### [SQL Server에 새로운 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
-### [SQL Server에 새로운 Python 패키지 설치](python/install-additional-python-packages-on-sql-server.md)
-### [SQL Server 인스턴스에 대해 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
-### [SQL Server에 설치된 패키지 확인](r/determine-which-packages-are-installed-on-sql-server.md)
-### [SQL Server에서 RevoScaleR 함수를 사용하여 R 패키지 찾기 또는 설치](r/use-revoscaler-to-manage-r-packages.md)
-### [SQL Server에 설치된 R 패키지 동기화](r/package-install-uninstall-and-sync.md)
-### [SQL Server에 설치된 R 패키지](r/installing-and-managing-r-packages.md)
-### [miniCRAN을 사용하여 로컬 패키지 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
-### [R에 대한 사용자 패키지 라이브러리의 오류 방지](r/packages-installed-in-user-libraries.md)
+### [기본 패키지](r/installing-and-managing-r-packages.md)
+### [패키지 정보 가져오기](r/determine-which-packages-are-installed-on-sql-server.md)
+### [새 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
+### [새 Python 패키지 설치](python/install-additional-python-packages-on-sql-server.md)
+### R 전용
+#### [원격 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
+#### [R 패키지 관리를 위한 RevoScaleR 기능](r/use-revoscaler-to-manage-r-packages.md)
+#### [R 패키지 동기화](r/package-install-uninstall-and-sync.md)
+#### [로컬 R 패키지 리포지토리용 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [R "사용자 라이브러리"에 대한 해결 방법](r/packages-installed-in-user-libraries.md)
 
 ## 데이터 탐색 및 모델링
 ### [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)
@@ -155,7 +156,6 @@
 ## [알려진 문제](known-issues-for-sql-server-machine-learning-services.md)
 ## [릴리스 정보](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 ## [새로운 또는 업데이트 된 문서](new-updated-advanced-analytics.md)
-## [Azure SQL Database에서 R 사용](r/using-r-in-azure-sql-database.md)
 
 ## [설치 및 문제 해결 팁](machine-learning-troubleshooting-faq.md)
 ### [가상 머신 설정](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)

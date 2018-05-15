@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)를 참조하세요.  
+-   현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 자세한 내용은 [데이터베이스의 데이터 및 로그 공간 정보 표시](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)를 참조하세요.  
   
 -   데이터베이스를 축소할 때는 다음을 고려하세요.  
   

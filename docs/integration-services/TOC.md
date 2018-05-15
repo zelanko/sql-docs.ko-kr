@@ -30,6 +30,7 @@
 ## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
 ## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
+## [SSMS를 사용하여 Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [설치 또는 업그레이드](../integration-services/install-windows/install-integration-services.md)
 

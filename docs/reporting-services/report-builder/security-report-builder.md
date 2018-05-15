@@ -1,27 +1,25 @@
 ---
-title: "보안(보고서 작성기) | Microsoft Docs"
-ms.custom: 
+title: 보안(보고서 작성기) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc8d7563067160dd011835cf201ff6e5eec8ec83
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ee5186a812aac4cec049c7624bbb514d6d42914
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  

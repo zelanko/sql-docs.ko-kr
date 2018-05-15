@@ -1,10 +1,10 @@
 # [호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍](tabular-model-programming-for-compatibility-level-1200.md)
 
+# [Analysis Services AMO의 TOM(테이블 형식 개체 모델) 이해](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [테이블 형식 모델에 데이터 원본 추가(Analysis Services AMO-TOM)](add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
 # [기존 Analysis Services 테이블 형식 서버 및 데이터베이스에 연결](connect-to-existing-analysis-services-tabular-server-and-database.md)
 # [빈 데이터베이스 만들기 및 배포(Analysis Services AMO-TOM)](create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 # [테이블 형식 모델로 테이블, 파티션 및 열 만들기](create-tables-partitions-and-columns-in-a-tabular-model.md)
 # [TOM API의 오류 처리(Analysis Services AMO-TOM)](handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
 # [테이블 형식 개체 모델 설치, 배포 및 참조](install-distribute-and-reference-the-tabular-object-model.md)
-# [Analysis Services AMO의 TOM(테이블 형식 개체 모델) 소개](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [테이블 형식 서버에 기존 데이터베이스 나열(Analysis Services AMO-TOM)](list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
