@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb. importdac.results.f1
 - sql13.swb.importdac.settings.f1
@@ -33,13 +32,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44f703190a26dd022d96ba1e94a156982bc01b72
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1fc8a3a20efb5ac5c9741e71342f005a3984888b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,9 +120,9 @@ ms.lasthandoff: 04/16/2018
   
 -   **새 데이터베이스 이름** – 가져올 데이터베이스의 이름을 지정합니다.  
   
--   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다. **찾아보기…**를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **데이터 파일 경로** - 데이터 파일을 보관할 로컬 디렉터리를 지정합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
   
--   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기…**를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
+-   **로그 파일 경로** – 로그 파일을 저장할 로컬 디렉터리를 입력합니다. **찾아보기…** 를 클릭합니다. 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   

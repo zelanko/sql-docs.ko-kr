@@ -58,12 +58,12 @@ ms.lasthandoff: 05/03/2018
   
 -   [PowerShell을 사용하여 기본 모드 보고서 서버로 Azure VM 만들기](http://msdn.microsoft.com/library/azure/dn449661.aspx)  
   
--   [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.  
+-   [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.  
   
 
 ## <a name="rsexe-scripting-samples"></a>RS.exe 스크립팅 샘플  
   
--   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   추가 스크립트, 응용 프로그램 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.  
   

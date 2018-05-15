@@ -3,15 +3,12 @@ title: 서버 속성(보안 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
@@ -19,12 +16,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 620776f8d4f968be1811da4637c123d03364cea6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 81432475b79c85e8554cee48c39b9fb1b522590b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties---security-page"></a>서버 속성 - 보안 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="options"></a>변수  
  **C2 감사 추적 설정**  
- 문과 개체에 대한 모든 액세스 시도를 감사하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용되는 \MSSQL\Data 디렉터리 또는 명명된*인스턴스에 사용되는 \MSSQL$*instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 디렉터리의 파일에 결과를 기록합니다. 자세한 내용은 [c2 audit mode 서버 구성 옵션](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)을 참조하세요.  
+ 문과 개체에 대한 모든 액세스 시도를 감사하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용되는 \MSSQL\Data 디렉터리 또는 명명된*인스턴스에 사용되는 \MSSQL$* instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 디렉터리의 파일에 결과를 기록합니다. 자세한 내용은 [c2 audit mode 서버 구성 옵션](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)을 참조하세요.  
   
  **데이터베이스 간 소유권 체인**  
  데이터베이스가 데이터베이스 간 소유권 체인의 원본이나 대상이 되도록 허용하려면 선택합니다. 자세한 내용은 [cross db ownership chaining 서버 구성 옵션](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요.  

@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 >  이전 버전의 설명서에는 동적 쿼리를 식으로 만드는 예가 포함되었습니다. 이러한 유형의 쿼리는 SQL 삽입 공격에 이용되기 쉬우므로 사용하지 않는 것이 좋습니다.  
   
 ## <a name="securing-confidential-reports"></a>기밀 보고서 보안  
- 기밀 정보가 들어 있는 보고서의 경우 사용자에게 주요 데이터에 대한 액세스 자격 증명을 요청함으로써 데이터 액세스 수준에서 보안을 유지해야 합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 권한이 없는 사용자가 액세스하지 못하도록 폴더에 보안을 지정할 수도 있습니다. 자세한 내용은 [폴더 보안](../../reporting-services/security/secure-folders.md)을 참조하세요.  
+ 기밀 정보가 들어 있는 보고서의 경우 사용자에게 주요 데이터에 대한 액세스 자격 증명을 요청함으로써 데이터 액세스 수준에서 보안을 유지해야 합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 권한이 없는 사용자가 액세스하지 못하도록 폴더에 보안을 지정할 수도 있습니다. 자세한 내용은 [폴더 보안](../../reporting-services/security/secure-folders.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   

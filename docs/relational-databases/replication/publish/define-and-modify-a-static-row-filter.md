@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   이러한 필터는 정적이므로 모든 구독자가 데이터의 동일한 하위 집합을 받습니다. 병합 게시에 속한 테이블 아티클에서 동적으로 행을 필터링하여 각 구독자가 서로 다른 데이터 파티션을 받게 하려면 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요. 병합 게시에서도 기존 행 필터에 따라 관련 행을 필터링할 수 있습니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+-   이러한 필터는 정적이므로 모든 구독자가 데이터의 동일한 하위 집합을 받습니다. 병합 게시에 속한 테이블 아티클에서 동적으로 행을 필터링하여 각 구독자가 서로 다른 데이터 파티션을 받게 하려면 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요. 병합 게시에서도 기존 행 필터에 따라 관련 행을 필터링할 수 있습니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 정적 행 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)를 실행합니다. 이때 **@article**에 아티클 이름, **@publication**에 게시 이름, **@filter_name**에 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다.  
   
-3.  계속 열 필터를 정의하려면 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **@publication**에 게시 이름, **@article**에 필터링된 아티클 이름, **@filter_clause**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
+3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. 이때 **@publication**에 게시 이름, **@article**에 필터링된 아티클 이름, **@filter_clause**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 정적 행 필터를 수정하려면  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. 이때 **@subset_filterclause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-2.  계속 열 필터를 정의하려면 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
+2.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>병합 게시에 대한 정적 행 필터를 수정하려면  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_1.sql)]  
   
- 다음 병합 복제 예에서는 지정된 영업 사원에 속한 행만 반환하도록 아티클을 행 필터링하고 조인 필터도 사용합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+ 다음 병합 복제 예에서는 지정된 영업 사원에 속한 행만 반환하도록 아티클을 행 필터링하고 조인 필터도 사용합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   

@@ -3,15 +3,12 @@ title: SQL Server 사용 피드백 모음에 대한 로컬 감사 | Microsoft Do
 ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
@@ -19,12 +16,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f69dfadfb4de412794beba72f69b22fdc8a39287
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2600f74d31b7daa6587575cdaf070417956f8817
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
 
@@ -74,14 +70,14 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>로컬 감사 파일에 대한 새 폴더를 구성합니다.    
 
-로컬 감사에서 로그를 작성할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 가 됩니다. 
+로컬 감사에서 로그를 작성할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*가 됩니다. 
  
 > 참고: 감사 기능과 패치를 허용하여 SQL Server의 잠재적인 문제를 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
 
   ||디자인 결정|권장|  
   |------|-----------------|----------|  
   |![확인란](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 하루 약 2MB의 디스크 공간을 계획합니다.|  
-|![확인란](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
+|![확인란](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
 |![확인란](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. SSAS 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 SSAS에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services를 모두 같은 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스 모두 동일한 로그 파일에 기록하게 됩니다.| 
 |![확인란](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|SQL Server CIEP 원격 분석 서비스 로그온 계정에 권한 부여|SQL Server CEIP 원격 분석 서비스 로그온 계정에 대한 **폴더 내용 보기**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정|
 

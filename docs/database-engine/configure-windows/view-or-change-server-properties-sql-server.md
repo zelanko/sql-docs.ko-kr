@@ -3,15 +3,12 @@ title: 서버 속성 보기 또는 변경(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connectionproperties.f1
 helpviewer_keywords:
@@ -25,12 +22,11 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4a0df8ff3a0758558e38607e4895b7552bb12d00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a51f5f94141add8faec033c99fa9a0d0f33c2b3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +157,7 @@ GO
   
 2.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server (\<***instancename***>)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server (\<***instancename***>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **SQL Server(\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
   

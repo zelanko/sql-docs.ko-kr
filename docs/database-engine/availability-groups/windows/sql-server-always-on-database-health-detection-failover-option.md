@@ -3,15 +3,12 @@ title: 데이터베이스 상태 검색 장애 조치 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -25,12 +22,11 @@ caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd6840926fb8a67d20a38e5f87bc95be4f37492a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 179c6d1e4014dc6090adffe795390ae866fbd1f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ SQL Server 2016부터는 Always On 가용성 그룹을 구성할 때 데이터�
 
 <a name="enabling-database-level-health-detection"></a>데이터베이스 수준 상태 검색 사용
 ----
-일반적으로 권장되지만 이전 버전의 기본 설정과 호환성을 유지하기 위해 데이터베이스 상태 옵션은 **기본적으로 off(해제)**로 설정되어 있습니다.
+일반적으로 권장되지만 이전 버전의 기본 설정과 호환성을 유지하기 위해 데이터베이스 상태 옵션은 **기본적으로 off(해제)** 로 설정되어 있습니다.
 
 데이터베이스 수준 상태 검색 설정을 사용하도록 설정하는 몇 가지 쉬운 방법이 있습니다.
 

@@ -3,15 +3,12 @@ title: SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시
 ms.custom: ''
 ms.date: 02/26/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -47,12 +44,11 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f2bbc2491cce3638712be0ceb152a6ccc5a63684
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2e0ca8a8db9121cb224f84ef38e4f03b0f8239f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +82,7 @@ ms.lasthandoff: 04/16/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 Windows 서비스로 실행되는 실행 가능한 프로그램입니다. Windows 서비스로 실행되는 프로그램은 컴퓨터 화면에 작업을 표시하지 않고도 작업을 계속할 수 있습니다.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인 실행 가능한 프로세스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴퓨터당 하나로 제한되는 기본 인스턴스이거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 여러 인스턴스 중 하나일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 확인할 수 있습니다. 기본 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)**로 나열됩니다. 명명된 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](<instance_name>)**로 나열됩니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**로 설치됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인 실행 가능한 프로세스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴퓨터당 하나로 제한되는 기본 인스턴스이거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 명명된 여러 인스턴스 중 하나일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 확인할 수 있습니다. 기본 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)** 로 나열됩니다. 명명된 인스턴스(설치한 경우)는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](<instance_name>)** 로 나열됩니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** 로 설치됩니다.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스**  
  작업 및 경고라고 하는 예약된 관리 태스크를 실행하는 Windows 서비스입니다. 자세한 내용은 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 일부 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -167,7 +163,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-4.  결과 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser**나 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(MSSQLServer)** 또는 명명된 인스턴스의 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(<instance_name>)**를 마우스 오른쪽 단추로 클릭하고 **시작**, **중지**, **일시 중지**, **재개** 또는 **다시 시작**을 클릭합니다.  
+4.  결과 창에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser**나 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(MSSQLServer)** 또는 명명된 인스턴스의 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(<instance_name>)** 를 마우스 오른쪽 단추로 클릭하고 **시작**, **중지**, **일시 중지**, **재개** 또는 **다시 시작**을 클릭합니다.  
   
 5.  **확인** 을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
   
@@ -209,7 +205,7 @@ ms.lasthandoff: 04/16/2018
   
 ###  <a name="dbNamed"></a> 다음 명명된 인스턴스 시작하기: [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>*을 관리할 인스턴스의 이름으로 바꿉니다.  
+-   명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>* 을 관리할 인스턴스의 이름으로 바꿉니다.  
   
      **net start "SQL Server (** *instancename* **)"**  
   

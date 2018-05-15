@@ -3,15 +3,12 @@ title: 확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Mi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,12 +21,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 네트워크 구성**을 펼치고 *\<*InstanceName*>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 네트워크 구성**을 펼치고 *\<* InstanceName*>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   

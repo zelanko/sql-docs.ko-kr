@@ -3,15 +3,12 @@ title: 다른 컴퓨터에 연결(SQL Server 구성 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
@@ -19,12 +16,11 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 992b1cb431091e2eda20bfb8951abd6199b06873
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32debd89a83202b887d70dec074a6a1be3ede7c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 서비스 - 다른 컴퓨터에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
   
-2.  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)**를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
+2.  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
   
 3.  **컴퓨터 선택** 대화 상자의 **다른 컴퓨터** 입력란에 관리할 컴퓨터의 이름을 입력하고 **확인**을 클릭합니다.  
   
@@ -67,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  **스냅인 추가/제거** 창에서 **확인**을 클릭합니다.  
   
-9. **컴퓨터 관리(***\<컴퓨터 이름>***)**와 **서비스 및 응용 프로그램**을 펼칩니다.  
+9. **컴퓨터 관리(***\<컴퓨터 이름>***)** 와 **서비스 및 응용 프로그램**을 펼칩니다.  
   
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.  
   

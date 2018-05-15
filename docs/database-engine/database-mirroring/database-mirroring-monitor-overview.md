@@ -3,15 +3,13 @@ title: 데이터베이스 미러링 모니터 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
@@ -21,12 +19,11 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ms.lasthandoff: 04/16/2018
   
  *<SYSTEM_NAME>*[**\\***<instance_name>*]  
   
- 여기서 *<SYSTEM_NAME>*은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 *<SYSTEM_NAME>***\\***<instance_name>*으로 표시됩니다.  
+ 여기서 *<SYSTEM_NAME>* 은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 *<SYSTEM_NAME>***\\***<instance_name>* 으로 표시됩니다.  
   
  *<MIRROR_SERVER>*  
  현재 미러 서버 인스턴스인 파트너의 이름입니다. 형식은 주 서버와 동일합니다.  

@@ -3,15 +3,12 @@ title: 장애 조치 클러스터링 및 Always On 가용성 그룹(SQL Server) 
 ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -24,15 +21,16 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4df759c9abc55c6f8c987fdf294bdb417b97524c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 도입된 고가용성 재해 복구 솔루션인 [!INCLUDE[sssql11](../../../includes/sssql11_md.md)]을 사용하려면 WSFC(Windows Server 장애 조치(Failover) 클러스터링)가 필요합니다. 또한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링이 필요하지 않더라도 FCI(장애 조치(Failover) 클러스터링 인스턴스)를 사용하여 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다. 각 클러스터링 기술의 역할과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 환경을 디자인하는 데 고려해야 할 사항을 알고 있어야 합니다.  
   
@@ -60,11 +58,6 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 레지스트리 키는 WSFC 클러스터의 하위 키입니다. WSFC 클러스터를 삭제한 다음 다시 만들려는 경우 원본 WSFC 클러스터에서 가용성 복제본을 호스팅한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하지 않도록 설정한 후 다시 사용하도록 설정해야 합니다.  
   
  WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 방법과 WSFC 쿼럼에 대한 자세한 내용은 [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)를 참조하세요.  
-  
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션  
- [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]부터 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서는 새 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 배포하기 위해 가용성 그룹의 클러스터 간 마이그레이션을 지원합니다. 클러스터 간 마이그레이션은 작동 중단 시간을 최소화하면서 하나의 가용성 그룹이나 일련의 가용성 그룹을 새 대상 WSFC 클러스터로 이동합니다. 클러스터 간 마이그레이션 프로세스를 사용하면 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 클러스터로 업그레이드할 때 SLA(서비스 수준 계약)를 유지 관리할 수 있습니다. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상 버전은 대상 WSFC 클러스터에 설치하고 Always On에 대해 사용하도록 설정해야 합니다. 클러스터 간 마이그레이션의 성공 여부는 대상 WSFC 클러스터의 철저한 계획 및 준비에 의해 결정됩니다.  
-  
- 자세한 내용은 [OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하세요.  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹  
  WSFC 클러스터와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링을 구현하여 서버 인스턴스 수준에서 장애 조치(Failover)의 두 번째 계층을 설정할 수 있습니다. 가용성 복제본은 독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 또는 FCI 인스턴스에서 호스팅할 수 있습니다. 지정된 가용성 그룹의 복제본은 하나의 FCI 파트너에서만 호스팅할 수 있습니다. 가용성 복제본이 FCI에서 실행 중인 경우 가용성 그룹에 대한 가능한 소유자 목록에는 활성 FCI 노드만 포함됩니다.  

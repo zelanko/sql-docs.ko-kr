@@ -3,25 +3,22 @@ title: SQL Server 2005에서 업그레이드하나요? | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef52c6055c976f39c5199be19c9847e3ea99259a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2c59f35fa8f97fc174713a7e99fd0df2a2377308
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |관계형 저장소 옵션|이점|고려할 기타 요소|  
 |-------------------------------|--------------|-------------------------------|  
 |**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 응용 프로그램의 경우 이 옵션을 고려합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server 2005에서 업그레이드하는 경우 이 환경이 가장 유사한 환경입니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.<br /><br /> 자세한 내용은 [SQL Server](https://www.microsoft.com/EN-US/server-cloud/products/sql-server-2017/)를 참조하세요.|  
-|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음 이점을 원하는 경우 이 옵션을 선택하는 것이 좋습니다.<br /><br /> 호스트된 환경으로 마이그레이션하는 경우의 이점<br /><br /> 운영 환경에 대한 제어<br /><br /> 익숙한 SQL Server 기능 집합|가상 컴퓨터 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.<br /><br /> <br /><br /> 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|  
+|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음 이점을 원하는 경우 이 옵션을 선택하는 것이 좋습니다.<br /><br /> 호스트된 환경으로 마이그레이션하는 경우의 이점<br /><br /> 운영 환경에 대한 제어<br /><br /> 익숙한 SQL Server 기능 집합|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.<br /><br /> <br /><br /> 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|  
 |**Azure SQL 데이터베이스에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 저장소뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL 데이터베이스의 최대 데이터베이스 크기는 500GB이고 SQL Server의 경우에는 524PB입니다.<br /><br /> 자세한 내용은 [SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)를 참조하세요.<br /><br /> 마이그레이션에 대한 자세한 내용은 [Azure SQL 데이터베이스로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)을 참조하세요.|  
   
  특정 데이터 및 응용 프로그램의 경우 비관계형 또는 NoSQL 솔루션을 고려할 수도 있습니다.  

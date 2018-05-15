@@ -3,15 +3,13 @@ title: 데이터베이스 미러링 세션 설정 - Windows 인증 | Microsoft D
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
@@ -19,12 +17,11 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0c8403912f2d64cfdaa9f911bc765789ea1e5ecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 676250b166ea109432e1c4328039b9ce31940b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>데이터베이스 미러링 세션 설정 - Windows 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **서버 네트워크 주소** 섹션에 주 서버 및 미러 서버 인스턴스의 정규화된 TCP 주소가 지정되어 있습니다.  
   
-    -   운영 모드가 **자동 장애 조치(failover)가 있는 보호 우선(동기)**으로 설정되어 있는 경우 미러링 모니터 서버 인스턴스의 정규화된 TCP 주소도 지정됩니다.  
+    -   운영 모드가 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 으로 설정되어 있는 경우 미러링 모니터 서버 인스턴스의 정규화된 TCP 주소도 지정됩니다.  
   
 8.  미러링이 시작된 후 운영 모드를 변경하고 **확인**을 클릭하여 변경 사항을 저장할 수 있습니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 자동 장애 조치(Failover)가 있는 보호 우선 모드로 전환할 수 있습니다.  
   

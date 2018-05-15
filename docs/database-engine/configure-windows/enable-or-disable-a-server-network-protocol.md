@@ -3,15 +3,12 @@ title: 서버 네트워크 프로토콜 설정 또는 해제 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
 - remote connections [SQL Server], enabling using Configuration Manager
@@ -27,12 +24,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8245d396dac75dc09fdc3ae6bab41d582ef1c790
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 97344d3661908192839a732a38487af4b93c86a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-5.  세부 정보 창에서 **SQL Server(***\<인스턴스 이름>***)**를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
+5.  세부 정보 창에서 **SQL Server(***\<인스턴스 이름>***)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell 사용  
   
@@ -74,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  작업 표시줄에서 Windows PowerShell을 시작하거나, 시작, 모든 프로그램, 보조프로그램, Windows PowerShell, Windows PowerShell을 차례로 클릭합니다.  
   
-3.  **sqlps** 를 입력하여 **Import-Module “sqlps”**모듈을 가져옵니다.  
+3.  **sqlps** 를 입력하여 **Import-Module “sqlps”** 모듈을 가져옵니다.  
   
 4.  다음 문을 실행하여 TCP 및 명명된 파이프 프로토콜을 모두 사용하도록 설정합니다. `<computer_name>` 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 컴퓨터의 이름으로 바꿉니다. 명명된 인스턴스를 구성할 경우 `MSSQLSERVER` 를 인스턴스의 이름으로 바꿉니다.  
   

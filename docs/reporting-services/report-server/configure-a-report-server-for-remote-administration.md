@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>태스크  
  원격 보고서 서버 구성을 활성화하는 태스크는 다음과 같습니다.  
   
--   Windows 방화벽에서 포트를 설정하여 보고서 서버와 SQL Server 데이터베이스 엔진 인스턴스에서 사용하는 포트에 대한 요청을 허용합니다.  [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 및 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하십시오.  
+-   Windows 방화벽에서 포트를 설정하여 보고서 서버와 SQL Server 데이터베이스 엔진 인스턴스에서 사용하는 포트에 대한 요청을 허용합니다.  [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 및 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하십시오.  
   
 -   보고서 서버 데이터베이스를 호스팅하는 데이터베이스 엔진 인스턴스에 대한 원격 연결을 설정합니다. 원격 연결은 보고서 서버 데이터베이스 연결을 구성하고 암호화 키를 관리하는 데 필요합니다.  
   

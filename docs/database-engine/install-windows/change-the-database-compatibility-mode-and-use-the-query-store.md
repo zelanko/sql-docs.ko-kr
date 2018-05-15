@@ -3,15 +3,12 @@ title: 데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용 | 
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
@@ -21,11 +18,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b7898f984d22ad6606bf84585aa6554c2290b29
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d3a297d2a6de7527fbd756d3bfc51e650875ad37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용
 

@@ -3,15 +3,12 @@ title: 설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
@@ -20,11 +17,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d440b57b66caecaff4381d00da36173dd0e6eb92
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7e546b724259b9027c1e05f0aad4291900dfde07
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 
@@ -103,7 +100,7 @@ ms.lasthandoff: 04/16/2018
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
     > [!NOTE]  
-    >  **인스턴스 선택** 페이지에서 **\<공유 기능만 업그레이드>**를 선택하여 공유 기능을 업그레이드하도록 선택한 경우 [기능 선택] 페이지에서 모든 공유 기능이 미리 선택되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
+    >  **인스턴스 선택** 페이지에서 **\<공유 기능만 업그레이드>** 를 선택하여 공유 기능을 업그레이드하도록 선택한 경우 [기능 선택] 페이지에서 모든 공유 기능이 미리 선택되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
   
 12. 인스턴스 구성 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 인스턴스 ID를 지정합니다.  
   

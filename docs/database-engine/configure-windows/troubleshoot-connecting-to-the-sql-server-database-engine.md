@@ -3,15 +3,12 @@ title: SQL Server 데이터베이스 엔진에 대한 연결 문제 해결 | Mic
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
@@ -20,12 +17,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: e2879b9962e7244afb47ec0270f70a7742b46bda
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +63,8 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 
 3.  SQL Server에서 사용하는 TCP 포트 번호를 가져옵니다. 대부분의 경우 TCP 프로토콜을 사용하여 다른 컴퓨터에서 데이터베이스 엔진에 연결합니다.
     1.  SQL Server를 실행하는 컴퓨터에서 SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결합니다. 개체 탐색기에서 **관리**, **SQL Server 로그**를 차례로 확장하고 현재 로그를 두 번 클릭합니다.
-    2.  로그 뷰어의 도구 모음에서 **필터** 단추를 클릭합니다. **메시지에 텍스트 포함** 상자에 **서버가 수신 대기 중입니다.**를 입력하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.
-    3.  **서버에서 [ 'any' \<ipv4> 1433]을 수신하고 있습니다.**와 비슷한 메시지가 표시되어야 합니다. 이 메시지는 이 SQL Server 인스턴스가 이 컴퓨터의 모든 IP 주소(IP 버전 4)에서 수신 대기 중이며 TCP 포트 1433을 수신 대기 중음을 나타냅니다. TCP 포트 1433은 일반적으로 데이터베이스 엔진에서 사용하는 포트입니다. SQL Server 인스턴스 하나만 포트를 사용할 수 있으므로 SQL Server 인스턴스가 둘 이상 설치되어 있을 경우 일부 인스턴스는 다른 포트 번호를 사용해야 합니다. 연결하려는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스에서 사용하는 포트 번호에 대해 적어둡니다. 
+    2.  로그 뷰어의 도구 모음에서 **필터** 단추를 클릭합니다. **메시지에 텍스트 포함** 상자에 **서버가 수신 대기 중입니다.** 를 입력하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.
+    3.  **서버에서 [ 'any' \<ipv4> 1433]을 수신하고 있습니다.** 와 비슷한 메시지가 표시되어야 합니다. 이 메시지는 이 SQL Server 인스턴스가 이 컴퓨터의 모든 IP 주소(IP 버전 4)에서 수신 대기 중이며 TCP 포트 1433을 수신 대기 중음을 나타냅니다. TCP 포트 1433은 일반적으로 데이터베이스 엔진에서 사용하는 포트입니다. SQL Server 인스턴스 하나만 포트를 사용할 수 있으므로 SQL Server 인스턴스가 둘 이상 설치되어 있을 경우 일부 인스턴스는 다른 포트 번호를 사용해야 합니다. 연결하려는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스에서 사용하는 포트 번호에 대해 적어둡니다. 
 
     >    [!NOTE] 
     >    IP 주소 127.0.0.1이 표시될 가능성이 큽니다. 이 주소는 루프백 어댑터 주소라고 하며 동일한 컴퓨터의 프로세스에서만 연결할 수 있습니다. 문제 해결에 유용할 수 있지만 다른 컴퓨터에서 연결하는 데 사용할 수 없습니다.
@@ -86,10 +82,10 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설정할 수 있어야 합니다. `ping` 도구를 사용하여 TCP를 테스트합니다.
 1.  시작 메뉴에서 **실행**을 클릭합니다. **실행** 창에서 **cmd**를 입력하고 **확인**을 클릭합니다. 
 2.  명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 IP 주소를 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping 192.168.1.101` , IPv6 주소를 사용하는 경우 `ping fe80::d51d:5ab5:6f09:8f48%11` 를 입력합니다. ping 뒤의 숫자를 앞에서 수집한 컴퓨터의 IP 주소로 바꾸어야 합니다. 
-3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
+3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
 4.  그런 다음 IP 주소를 사용하여 ping 테스트에 성공한 경우 컴퓨터 이름을 TCP/IP 주소를 확인할 수 있는지 테스트합니다. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 컴퓨터 이름을 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping newofficepc` 
-5.  ipaddress를 ping할 수 있지만 **대상 호스트에 연결할 수 없습니다.**와 같은 오류를 수신합니다. 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
-6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
+5.  ipaddress를 ping할 수 있지만 **대상 호스트에 연결할 수 없습니다.** 와 같은 오류를 수신합니다. 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
+6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
   
   
 ## <a name="testing-a-local-connection"></a>로컬 연결 테스트
@@ -110,7 +106,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
 >    [!NOTE] 
->    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.**오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
+>    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
 4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 

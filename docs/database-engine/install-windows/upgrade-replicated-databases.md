@@ -3,15 +3,12 @@ title: 복제된 데이터베이스 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -23,11 +20,11 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 670b4f90c0461de12718fcf5a8cf2dfc97817b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b5f722972c9d552c94a65985bd180d6d097972c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
 
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
     -   병합 게시에 대한 구독자는 게시자 버전 이하인 모든 버전일 수 있습니다.  
   
 > [!NOTE]  
->  이 문서는 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 문서 링크는 온라인 설명서에만 제공되는 문서를 나타냅니다. **이 [게시물](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**에서 설명하는 옵션을 사용하여 게시자, 구독자 및 배포자에 대한 업그레이드 전략을 설계할 수 있습니다. 
+>  이 문서는 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 문서 링크는 온라인 설명서에만 제공되는 문서를 나타냅니다. **이 [게시물](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** 에서 설명하는 옵션을 사용하여 게시자, 구독자 및 배포자에 대한 업그레이드 전략을 설계할 수 있습니다. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>업그레이드 전에 트랜잭션 복제용 로그 판독기 에이전트 실행  
  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]로 업그레이드하기 전에 로그 판독기 에이전트에서 게시된 테이블의 커밋된 모든 트랜잭션을 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  

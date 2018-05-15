@@ -3,15 +3,12 @@ title: SQL 기록기 서비스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VDI [SQL Server]
 - restoring [SQL Server], SQL Writer Service
@@ -28,12 +25,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 226826f25e33741eb35f521f5f1a9fd8383b2e0e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-writer-service"></a>SQL 기록기 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ ms.lasthandoff: 04/16/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 독립 소프트웨어 공급업체들이 백업 및 복원 작업을 지원하기 위해 해당 제품에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 통합할 수 있도록 하는 VDI(Virtual Backup Device Interface)라는 API를 제공합니다. 이러한 API는 최고의 안정성과 성능을 제공하도록 설계되었으며 모든 최신 기능과 스냅숏 백업 기능을 비롯하여 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 기능을 지원합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- SQL 기록기 서비스는 **로컬 시스템** 계정으로 실행해야 합니다. SQL 기록기 서비스는 **NT Service\SQLWriter** 로그인을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다. **NT Service\SQLWriter** 로그인을 사용하면 SQL 기록기 프로세스가 **로그인 없음**으로 지정된 계정에서 보다 낮은 권한 수준으로 실행될 수 있으므로 취약성이 제한됩니다. SQL 기록기 서비스를 사용하지 않도록 설정하면 System Center Data Protection Manager와 같이 VSS 스냅숏에 의존하는 모든 유틸리티와 일부 타사 제품이 손상되거나 저하되며 일관성이 없는 데이터베이스 백업을 수행할 위험이 있습니다. SQL 기록기 서비스가 실행되는 시스템인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호스트 시스템(가상 컴퓨터의 경우)에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 백업을 제외한 어떤 것도 사용할 필요가 없는 경우 SQL 기록기 서비스를 사용하지 않도록 설정해도 괜찮으며 로그인을 제거해도 됩니다.  SQL 기록기 서비스는 시스템 또는 볼륨 수준 백업에서 호출될 수 있습니다. 이때 백업이 직접 스냅숏을 기반으로 하는지 여부는 관계가 없습니다. 일부 시스템 백업 제품은 VSS를 사용하여 열려 있거나 잠긴 파일에 의해 차단되는 것을 방지합니다. SQL 기록기 서비스는 작업 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 I/O를 잠깐 중지시키기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 승격된 권한을 필요로 합니다.  
+ SQL 기록기 서비스는 **로컬 시스템** 계정으로 실행해야 합니다. SQL 기록기 서비스는 **NT Service\SQLWriter** 로그인을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다. **NT Service\SQLWriter** 로그인을 사용하면 SQL 기록기 프로세스가 **로그인 없음**으로 지정된 계정에서 보다 낮은 권한 수준으로 실행될 수 있으므로 취약성이 제한됩니다. SQL 기록기 서비스를 사용하지 않도록 설정하면 System Center Data Protection Manager와 같이 VSS 스냅숏에 의존하는 모든 유틸리티와 일부 타사 제품이 손상되거나 저하되며 일관성이 없는 데이터베이스 백업을 수행할 위험이 있습니다. SQL 기록기 서비스가 실행되는 시스템인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](과)와 호스트 시스템(가상 머신의 경우)에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 백업을 제외한 어떤 것도 사용할 필요가 없는 경우 SQL 기록기 서비스를 사용하지 않도록 설정해도 괜찮으며 로그인을 제거해도 됩니다.  SQL 기록기 서비스는 시스템 또는 볼륨 수준 백업에서 호출될 수 있습니다. 이때 백업이 직접 스냅숏을 기반으로 하는지 여부는 관계가 없습니다. 일부 시스템 백업 제품은 VSS를 사용하여 열려 있거나 잠긴 파일에 의해 차단되는 것을 방지합니다. SQL 기록기 서비스는 작업 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 I/O를 잠깐 중지시키기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 승격된 권한을 필요로 합니다.  
   
 ## <a name="features"></a>기능  
  SQL 기록기에서 지원하는 기능  

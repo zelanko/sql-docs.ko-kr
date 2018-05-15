@@ -3,15 +3,12 @@ title: 여러 TCP 포트에서 수신 대기하도록 데이터베이스 엔진 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
 - TDS
@@ -25,12 +22,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7181881b40e7a06d8f8ef11ec7670eeec961e4b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32e9798bc161821f3136581692933d8fe548d762
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +93,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 *SQL Server***<instance_name>*을 마우스 오른쪽 단추로 클릭한 다음, **다시 시작**을 클릭합니다.  
+7.  오른쪽 창에서 *SQL Server***<instance_name>* 을 마우스 오른쪽 단추로 클릭한 다음, **다시 시작**을 클릭합니다.  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다시 시작하면 오류 로그에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트 목록이 표시됩니다.  
   

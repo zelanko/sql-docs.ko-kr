@@ -3,15 +3,12 @@ title: 단일 사용자 모드로 SQL Server 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
@@ -20,12 +17,11 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aa6389e65f5c92d3a5c07c13909db4bb65a754f6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd8666add4989876f3662bcd8b38a231a98c0b0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +40,12 @@ ms.lasthandoff: 04/16/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작할 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 개체 탐색기의 일부 작업에는 둘 이상의 연결이 필요하므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 개체 탐색기가 실패할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 관리하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 쿼리 편집기를 통해서만 연결하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]문을 실행하거나 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 사용하세요.  
   
-**SQLCMD**와 함께**-m** 옵션을 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하는 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 
+**SQLCMD**와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하는 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 
 
 > [!NOTE]
 > Linux에서 **SQLCMD**는 표시된 대로 대문자로 표시되어야 합니다.
 
-예를 들어 **-m"SQLCMD"**는 연결 수를 단일 연결로 제한하며 해당 연결은 자신을 **SQLCMD** 클라이언트 프로그램으로 식별해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"**를 사용합니다.  
+예를 들어 **-m"SQLCMD"** 는 연결 수를 단일 연결로 제한하며 해당 연결은 자신을 **SQLCMD** 클라이언트 프로그램으로 식별해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 응용 프로그램에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
   
 > [!IMPORTANT]  
 >  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 응용 프로그램에서 클라이언트 응용 프로그램 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  

@@ -3,25 +3,23 @@ title: 데이터베이스 엔진 업그레이드 방법 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9049db61b062dc9211b47094886b831bc6667890
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f3ac9ae5a47adce9d5c46de99d00d7463becd590
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  계정이 있으면 **[여기](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition이 이미 설치되어 있는 가상 컴퓨터를 실행합니다.  
+-   Azure 계정이 있으세요?  계정이 있으면 **[여기](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
   
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.

@@ -3,15 +3,12 @@ title: Always On 가용성 그룹 활성화 및 비활성화(SQL Server) | Micro
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -22,12 +19,11 @@ caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: df71630d1e461b2d1757c558c3e1960135fd3aea
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d86ed7bb53c0d1382e94331d9e2e9909aa11e86f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 활성화 및 비활성화(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="PowerShell1Procedure"></a> PowerShell 사용  
  **Always On 가용성 그룹을 사용할 수 있는지 여부를 확인하려면**  
   
-1.  **을 사용할 수 있는지 여부를 확인하려는 서버 인스턴스에 대해 기본값(**cd [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] )을 설정합니다.  
+1.  **을 사용할 수 있는지 여부를 확인하려는 서버 인스턴스에 대해 기본값(** cd [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] )을 설정합니다.  
   
 2.  다음 PowerShell **Get-Item** 명령을 입력합니다.  
   
@@ -140,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>**은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성** 탭을 선택합니다.  
   
@@ -167,7 +163,7 @@ ms.lasthandoff: 04/16/2018
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ####  <a name="ExmplEnable-SqlHadrServic"></a>예: Enable-SqlAlwaysOn  
- 다음 PowerShell 명령을 사용하면 SQL Server 인스턴스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\*)에서*을 사용할 수 있습니다.  
+ 다음 PowerShell 명령을 사용하면 SQL Server 인스턴스( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\ *)에서*을 사용할 수 있습니다.  
   
 ```  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -204,7 +200,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>**은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성**탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   

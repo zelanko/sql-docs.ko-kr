@@ -3,15 +3,12 @@ title: 데이터베이스 관리자를 위한 진단 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2015
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
 - administrator connections [SQL Server]
@@ -27,12 +24,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7fc87fdb7516679ad50c237f81d9aec2c4e06515
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a26a318a0675c0c0fe54e31ac8ea33376c1b2e6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치(**-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:**을 **sqlcmd -S admin:<*instance_name*>** 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 **admin:\<*instance_name*>**에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
+ DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치(**-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:** 을 **sqlcmd -S admin:<*instance_name*>** 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 **admin:\<*instance_name*>** 에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
   
 ## <a name="restrictions"></a>Restrictions  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  

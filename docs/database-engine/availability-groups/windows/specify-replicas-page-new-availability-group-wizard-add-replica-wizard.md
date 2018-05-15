@@ -3,15 +3,12 @@ title: '복제본 지정 페이지(새 가용성 그룹 마법사: 복제본 추
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
@@ -21,16 +18,15 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15d4a3a83018c2cc40c335aea3e475df30d03add
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23035b6eb4d2089917777d5bb19bb4a432e67164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 의 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
+  이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 의 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** 에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
   
 |탭|간단한 설명|  
 |---------|-----------------------|  
@@ -74,7 +70,7 @@ ms.lasthandoff: 04/16/2018
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  
   
  **Azure 복제본 추가**  
- 가용성 그룹에서 보조 복제본을 실행하는 Windows Azure 가상 컴퓨터를 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Windows Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
+ 가용성 그룹에서 보조 복제본을 실행하는 Microsoft Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Windows Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
   
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  

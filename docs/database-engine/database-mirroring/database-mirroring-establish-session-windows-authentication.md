@@ -3,15 +3,13 @@ title: 데이터베이스 미러링 - 세션 설정 - Windows 인증 | Microsoft
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
@@ -20,12 +18,11 @@ caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a3f3693577ca93afe7379f3924a67b844afdc5e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 882dbea7185d4e2aa5f14e7e4abd61ffcfbc0521
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>데이터베이스 미러링 - 세션 설정 - Windows 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 끝점의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)을 참조하세요.  
   
-     각 파트너 서버에서 데이터베이스 미러링의 끝점이 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 끝점이 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 끝점에 파트너 역할을 할당합니다(ROLE**=**PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 끝점 역할을 ALL로 지정합니다.  
+     각 파트너 서버에서 데이터베이스 미러링의 끝점이 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 끝점이 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 끝점에 파트너 역할을 할당합니다(ROLE**=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 끝점 역할을 ALL로 지정합니다.  
   
      SET PARTNER 문을 실행하려면 두 파트너의 끝점에 대한 STATE가 STARTED로 설정되어 있어야 합니다.  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 04/16/2018
   
      ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
   
-     여기서 *<database_name>*은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>*는 주 서버의 서버 네트워크 주소입니다.  
+     여기서 *<database_name>* 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>* 는 주 서버의 서버 네트워크 주소입니다.  
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
-     여기서 \<*system-address>*는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트>*는 파트너 서버 인스턴스의 미러링 끝점에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
+     여기서 \<*system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트>* 는 파트너 서버 인스턴스의 미러링 끝점에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
      예를 들어 미러 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 주 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER1(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 끝점에 사용되는 포트는 7022입니다.  
   
