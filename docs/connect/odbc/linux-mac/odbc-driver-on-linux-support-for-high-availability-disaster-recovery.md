@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>MacOS 고가용성 및 재해 복구에 대 한 지원 및 Linux 기반 ODBC 드라이버
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Linux와 macOS에서 ODBC 드라이버는 가용성 그룹 수신기에 연결 �
 
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결
 
-항상 지정 **MultiSubnetFailover = Yes** (또는 **= True**)에 연결할 때는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 가용성 그룹 수신기 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 장애 조치 클러스터 인스턴스의 합니다. **MultiSubnetFailover** 모든 가용성 그룹 및 장애 조치 클러스터 인스턴스를 보다 빠르게 장애 조치할 수 있도록 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]합니다. **MultiSubnetFailover** 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대 한 장애 조치 시간을 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치 하는 동안 드라이버는 적극적으로 TCP 연결을 다시 시도합니다.
+항상 지정 **MultiSubnetFailover = Yes** 에 연결할 때는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 가용성 그룹 수신기 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 장애 조치 클러스터 인스턴스의 합니다. **MultiSubnetFailover** 모든 가용성 그룹 및 장애 조치 클러스터 인스턴스를 보다 빠르게 장애 조치할 수 있도록 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]합니다. **MultiSubnetFailover** 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대 한 장애 조치 시간을 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치 하는 동안 드라이버는 적극적으로 TCP 연결을 다시 시도합니다.
 
 **MultiSubnetFailover** 연결 속성은 응용 프로그램이 가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스에서 배포되는 중이라는 것을 나타냅니다. 드라이버는 주 데이터베이스에 연결 하려고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 모든 IP에 연결 하려고 시도 하 여 인스턴스 주소입니다. 에 연결할 때 **MultiSubnetFailover = Yes**, 클라이언트 운영 체제의 기본 TCP 재전송 간격 보다 빠르게 TCP 연결 시도 다시 시도 합니다. **MultiSubnetFailover=Yes** 는 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(failover) 클러스터 인스턴스의 장애 조치(failover) 후 더 빠르게 다시 연결할 수 있도록 합니다. **MultiSubnetFailover = Yes** 모두 단일 및 다중 서브넷 가용성 그룹과 장애 조치 클러스터 인스턴스에 적용 됩니다.  
 
@@ -58,7 +58,7 @@ Linux와 macOS에서 ODBC 드라이버는 가용성 그룹 수신기에 연결 �
   
 -   에 연결할 수 없습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 64 개 이상의 IP 주소로 구성 된 인스턴스.
 
--   둘 다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인증 또는 Kerberos 인증을 사용 하 여 **MultiSubnetFailover = Yes** 의 응용 프로그램의 동작에 영향을 주지 않고 합니다.
+-   둘 다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 인증 또는 Kerberos 인증을 사용 하 여 **MultiSubnetFailover = Yes** 응용 프로그램의 동작에 영향을 주지 않고 합니다.
 
 -   장애 조치(failover) 시간을 수용하고 응용 프로그램의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.
 

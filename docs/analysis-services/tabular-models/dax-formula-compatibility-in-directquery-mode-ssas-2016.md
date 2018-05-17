@@ -3,15 +3,15 @@ title: DirectQuery 모드에서의 DAX 수식 호환성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66e604afaf3aa775091225bf49dd6cee223921fc
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ---
@@ -106,7 +106,7 @@ DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및
 -   비교에 사용될 때와 EXACT, AND, OR, &amp;&amp;또는 ||와 함께 사용될 때 부울 값은 항상 논리적 값으로 처리됩니다.  
   
 **문자열에서 부울로 캐스팅**  
-메모리 내 모델과 DirectQuery 모델에서는 **“”** (빈 문자열), **“true”**및 **“false”**문자열만 부울 값으로 캐스팅할 수 있습니다. 빈 문자열은 false 값으로 캐스팅됩니다.  
+메모리 내 모델과 DirectQuery 모델에서는 **“”** (빈 문자열), **“true”** 및 **“false”** 문자열만 부울 값으로 캐스팅할 수 있습니다. 빈 문자열은 false 값으로 캐스팅됩니다.  
   
 다른 문자열을 부울 데이터 형식으로 캐스팅하면 오류가 발생합니다.  
   

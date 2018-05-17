@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
@@ -20,13 +19,12 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1a3f616c25da5e01234d6a8d4145783053e8bb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b22b47922534fc38d72c1d89104a9a301cb3637e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]

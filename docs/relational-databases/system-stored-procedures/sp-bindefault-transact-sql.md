@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67d46825f0da450707710c600cacb549d370082c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a5bf898e8868006ab536bbd83bce3bd428aa5934
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ sp_bindefault [ @defname = ] 'default' ,
  경우 *object_name* 은 한 부분, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열을 상속 *기본*열에 직접 바인딩된 기본값 하지 않는 한, 합니다. 에 기본값을 바인딩할 수 없습니다는 **텍스트**, **ntext**, **이미지**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **타임 스탬프**, 또는 CLR 사용자 정의 형식 열, IDENTITY 속성을 가진 열, 계산된 열 또는 열입니다 DEFAULT 제약 조건이 이미 있습니다.  
   
 > [!NOTE]  
->  *object_name* 괄호를 사용할 수 있습니다 **** 구분된 식별자로. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+>  *object_name* 괄호를 사용할 수 있습니다 **[]** 구분된 식별자로. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
  기본값을 별칭 데이터 형식에 바인딩하는 경우에만 사용합니다. *futureonly_flag* 은 **varchar(15)** 기본값은 NULL입니다. 이 매개 변수로 설정 되 면 **futureonly**, 해당 데이터 형식의 기존 열 새 기본값을 상속할 수 없습니다. 이 매개 변수는 열에 기본값을 바인딩할 때는 절대 사용되지 않습니다. 경우 *futureonly_flag* 가 NULL 인 새 기본값이 현재 기본값이 없거나 별칭 데이터 형식의 기존 기본값을 사용 하는 별칭 데이터 형식의 열에 바인딩됩니다.  

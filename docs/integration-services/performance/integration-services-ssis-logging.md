@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지 실행 중에 발생하는 로깅 범위를 구성할 수 있습니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](#server_logging)을 참조하세요.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지 실행 중에 발생하는 로깅 범위를 구성할 수 있습니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](#server_logging)을 참조하세요.  
   
  **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지 실행할 때도 로깅을 포함할 수 있습니다. 로깅을 지원하는 명령 프롬프트 인수에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.  
   
@@ -383,7 +383,7 @@ ms.lasthandoff: 05/03/2018
   
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a> SSIS 서버에서 패키지 실행에 대한 로깅 설정
   이 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 실행할 때 패키지의 로깅 수준을 설정하거나 변경하는 방법에 대해 설명합니다. 패키지를 실행할 때 설정하는 로깅 수준에 따라 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자인 타임 시 구성하는 패키지 로깅이 재정의됩니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](#ssdt) 을 참조하세요.  
   
  SQL Server **서버 속성**의 **서버 로깅 수준** 속성에서 기본 서버 차원의 로깅 수준을 선택할 수 있습니다. 이 항목에서 설명하는 기본 제공 로깅 수준 중 하나에서 선택하거나 기존 사용자 지정된 로깅 수준을 선택할 수 있습니다. 선택한 로깅 수준은 기본적으로 SSIS 카탈로그에 배포되는 모든 패키지에 적용됩니다. 또한 SSIS 패키지를 실행하는 SQL 에이전트 작업 단계에 기본적으로 적용됩니다.  

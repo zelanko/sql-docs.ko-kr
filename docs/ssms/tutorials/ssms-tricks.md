@@ -18,11 +18,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 4f41aaa169e87a246b91304d24142195e7a21988
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e358fb73ff4f248b7de368364b8bb758f70018ff
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SQL Server Management Studio를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 문서는 다음 방법을 설명합니다. 
@@ -37,9 +37,9 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio, SQL Server에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)을 설치합니다.
-- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
+- [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
 
 ## <a name="comment--uncomment-your-t-sql-code"></a>T-SQL 코드 주석 처리/주석 처리 제거
 도구 모음의 주석 단추를 사용하여 텍스트의 부분을 주석 처리 및 주석 처리 제거할 수 있습니다. 주석 처리한 텍스트를 실행할 수 없습니다. 

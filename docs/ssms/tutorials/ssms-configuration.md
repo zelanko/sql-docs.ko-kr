@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>자습서: SQL Server Management Studio 구성 요소 및 구성
 이 자습서에서는 SSMS(SQL Server Management Studio) 내의 다양한 창 구성 요소 및 작업 영역에 대한 몇 가지 기본 구성 옵션을 설명합니다. 이 문서에서는 다음을 알아봅니다. 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio가 필요합니다.  
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소
 이 섹션에서는 작업 영역에서 사용할 수 있는 다양한 창 구성 요소 및 해당 용도를 다룹니다. 

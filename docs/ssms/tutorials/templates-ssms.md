@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f981d8455f82db44979a04611e861bb4d13d20d4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>자습서: SQL Server Management Studio 내에서 템플릿 사용
 이 자습서에서는 SSMS(SQL Server Management Studio) 내에서 사용할 수 있는 미리 빌드된 T-SQL(Transact-SQL) 템플릿을 소개합니다. 이 문서에서는 다음 작업 방법을 배웁니다.
@@ -39,8 +39,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server에 대한 액세스가 필요합니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)을 설치합니다.
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 
  
 

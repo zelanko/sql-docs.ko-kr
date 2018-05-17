@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -881,6 +881,11 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 > 비클러스터형 인덱스 키 열에 중복 값이 여러 개 있는 경우 업데이트, 삽입 및 삭제 성능이 저하될 수 있습니다. 이 상황에서 성능을 향상시키는 한 가지 방법은 비클러스터형 인덱스에 다른 열을 추가하는 것입니다.
 
 ##  <a name="Additional_Reading"></a> 더 보기  
+[CREATE INDEX&#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX&#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[인덱스 다시 구성 및 다시 작성](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [기본 키를 만들기](../relational-databases/tables/create-primary-keys.md)    
@@ -890,8 +895,5 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [계산 열의 인덱스](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[인덱스 및 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX&#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX&#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX&#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[인덱스 및 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

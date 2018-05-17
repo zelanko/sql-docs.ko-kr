@@ -152,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **백업 만들기**  
   

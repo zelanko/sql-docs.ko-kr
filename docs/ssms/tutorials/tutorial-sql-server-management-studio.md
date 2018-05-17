@@ -26,11 +26,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bc9af7ef49cfcb86b286e8ce090cad1be57e49e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa41bd4f5cbae85af4ad7cf93fa0690b5cca9421
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
 
   -   최신 버전의 [SSMS(SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md) 설치  
 
-첫 번째 섹션에서는 데이터베이스를 만드는 과정을 설명하지만 다른 샘플 데이터베이스는 여기: [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)에서 찾을 수 있습니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
+첫 번째 섹션에서는 데이터베이스를 만드는 과정을 설명하지만 다른 샘플 데이터베이스는 여기: [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)에서 찾을 수 있습니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
 
 
   

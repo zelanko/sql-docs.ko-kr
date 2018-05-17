@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   외부 테이블을 만든 다음, [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 결과를 Hadoop 또는 Azure Storage Blob에 병렬로 내보냅니다.  
-  
- CREATE EXTERNAL TABLE AS SELECT(CETAS) 문을 사용하여 다음을 수행할 수 있습니다.  
-  
--   데이터베이스 테이블을 Hadoop 또는 Azure Blob Storage로 내보냅니다.  
-  
--   Hadoop 또는 Azure Blob Storage의 데이터를 가져와서 데이터베이스에 저장합니다.  
-  
--   Hadoop 또는 Azure blob Storage에서 데이터를 쿼리하고 해당 데이터를 데이터베이스 관계형 테이블과 조인하고 결과를 Hadoop 또는 Azure Blob Storage에 다시 기록합니다.  
-  
--   Hadoop 또는 Azure Blob Storage에서 데이터를 쿼리하고 데이터베이스의 빠른 처리 기능을 사용하여 해당 데이터를 변환하여 Hadoop 또는 Azure Blob Storage에 다시 기록합니다.  
-  
- 자세한 내용은 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

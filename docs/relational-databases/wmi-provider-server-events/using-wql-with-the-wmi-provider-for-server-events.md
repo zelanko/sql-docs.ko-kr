@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: wmi
 ms.reviewer: ''
 ms.suite: sql
@@ -23,9 +22,9 @@ caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 777d035c3b37f3e8f8eb5e329fe6d19152cced6b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: e417f360129f63477702dfbd95015886f0836ddc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
@@ -72,7 +71,7 @@ WHERE where_condition
  *event_property*  
  이벤트의 속성입니다. 예를 들면 **PostTime**, **SPID**, 및 **LoginName**합니다. 에 나열 된 각 이벤트를 조회 [서버 이벤트 클래스 및 속성에 대 한 WMI 공급자](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) 포함 된 속성을 확인 하려면. 예를 들어 DDL_DATABASE_LEVEL_EVENTS 이벤트 보유는 **DatabaseName** 및 **UserName** 속성입니다. 또한 상속 된 **SQLInstance**, **LoginName**, **PostTime**, **SPID**, 및 **ComputerName** 부모 이벤트에서 속성입니다.  
   
- **** *...n*  
+ **,** *...n*  
  나타냅니다 *event_property* 쿼리할 수를 여러 번 쉼표로 구분 합니다.  
   
  \*  

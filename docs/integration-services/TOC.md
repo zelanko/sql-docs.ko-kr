@@ -23,14 +23,14 @@
 ### [PowerShell을 사용하여 실행](ssis-quickstart-run-powershell.md)
 ### [C#을 사용하여 실행](./ssis-quickstart-run-dotnet.md) 
 
-# [SSIS 패키지를 Azure로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [자습서 - Azure에서 패키지를 배포, 실행 및 모니터링](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Windows 인증을 사용하여 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Azure에서 패키지 배포 및 실행](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [자습서 - Azure에서 패키지 배포 및 실행](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Windows 인증을 사용하여 데이터에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [파일 및 파일 공유에 연결](lift-shift/ssis-azure-files-file-shares.md)
+## [Azure에서 SSISDB에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
-## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
-## [SSMS를 사용하여 Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages-ssms.md)
+## [Azure에서 패키지 예약](lift-shift/ssis-azure-schedule-packages.md)
+## [SSMS를 사용하여 Azure에서 패키지 예약](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [설치 또는 업그레이드](../integration-services/install-windows/install-integration-services.md)
 

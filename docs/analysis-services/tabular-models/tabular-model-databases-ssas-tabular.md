@@ -3,15 +3,15 @@ title: 테이블 형식 모델 데이터베이스 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a677079534a9b21fbac4c46e957b157bb36823d9
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 6c6a806dc87afa7e1d26d2bf9070debcdaf53144
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ---

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c7d3f93304f08cbbf316e092b62ed7c4b62e199d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c275770e6bbf7579d3d9f02a21937d22a2a66dfa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`,
 
 SERVICE_OBJECTIVE를 지정하지 않으면 보조 데이터베이스가 주 데이터베이스와 동일한 서비스 수준에서 생성됩니다. SERVICE_OBJECTIVE를 지정하면 보조 데이터베이스가 지정된 수준에서 생성됩니다. 이 옵션은 보다 저렴한 서비스 수준에서 지역 복제된 보조 데이터베이스를 만들도록 지원합니다. 지정된 SERVICE_OBJECTIVE를 소스와 동일한 버전 내에 있어야 합니다. 예를 들어 버전이 프리미엄인 경우 S0를 지정할 수 없습니다.  
   
-ELASTIC_POOL (name = \<elastic_pool_name)  
+ELASTIC_POOL(name = \<elastic_pool_name>)  
 
 ELASTIC_POOL을 지정하지 않으면 보조 데이터베이스는 탄력적인 풀에서 생성되지 않습니다. ELASTIC_POOL을 지정하면 보조 데이터베이스는 탄력적인 풀에서 생성됩니다.  
   

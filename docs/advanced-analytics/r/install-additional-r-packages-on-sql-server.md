@@ -3,82 +3,48 @@ title: SQL Server 컴퓨터 학습 서비스에 새 R 패키지 설치 | Microso
 description: SQL Server 2016 R Services 또는 SQL Server 2017 컴퓨터 학습 Services (In-database)에 새 R 패키지 추가
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 기계 학습 사용 하도록 설정 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다.
+이 문서에서는 기계 학습 사용 하도록 설정 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 새 R 패키지를 설치 하기 위한 여러 메서드가 있습니다.
 
-SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 새 R 패키지를 설치 하기 위한 여러 메서드가 있습니다.
+## <a name="bkmk_rInstall"></a> 인터넷 연결을 통해 R 패키지 설치
 
-+ [R 도구를 사용 하 여 인터넷에 연결 된 새 패키지를 설치 합니다.](#bkmk_rInstall)
-
-    기본 R 명령을 사용 하 여 인터넷에서 패키지를 설치 합니다. 이 가장 간단한 방법은 아니지만 관리 액세스가 필요한 합니다.
-
-    **적용 대상:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]합니다. 또한에 필요한 인스턴스의 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 패키지 관리 Ddl 통해 설정 되지 않은 합니다.
-
-+ [사용 하 여 서버에 새 R 패키지 설치 **없는** 인터넷 액세스](#bkmk_offlineInstall)
-
-    서버에 인터넷 액세스 몇 가지 추가 단계는 패키지를 준비 해야 합니다. 이 섹션에서는 패키지 및 종속성의 설치에 필요한 파일을 준비 하는 방법을 설명 합니다.
-
-+ [외부 라이브러리 만들기 문을 사용 하 여 패키지 설치](#bkmk_createlibrary) 
-
-    [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Python 코드를 직접 또는 문은 R을 실행 하지 않고 패키지 라이브러리를 만들 수 있도록 SQL Server 2017에 제공 됩니다. 그러나이 메서드는 사전에 필요한 모든 패키지를 준비 하 고 추가 database 권한이 있어야 필요 합니다.
-
-    **적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 기타 제한이 적용
-
-## <a name="bkmk_rInstall"></a> 인터넷을 사용 하 여 새 R 패키지 설치
-
-SQL Server 2016 또는 SQL Server 2017의 인스턴스에서 새 패키지를 설치 하려면 표준 R 도구를 사용할 수 있습니다. 이 프로세스는 컴퓨터에서 관리자가 필요 합니다.
+표준 R 도구를 사용 하 여 SQL Server 2016 인스턴스에서 새 패키지를 설치 하려면 컴퓨터를 제공 하는 SQL Server 2017 년 열려 있는 포트 80 있으며 또는 관리자 권한이 있어야 합니다.
 
 > [!IMPORTANT] 
 > 현재 인스턴스와 연결 된 기본 라이브러리에 패키지를 설치 해야 합니다. 사용자 디렉터리에 패키지를 설치 하지 않습니다.
 
-이 절차에서는 관리자 권한;를 사용 하 여 패키지를 설치 하는 방법을 설명합니다 그러나 rterm이 또는 다른 R 명령줄 도구 상승 된 액세스를 지 원하는 사용할 수 있습니다.
+이 절차에서는 관리자 권한 하지만 rterm이 또는 다른 R 명령줄 도구 상승 된 액세스를 지 원하는 사용할 수 있습니다.
 
-### <a name="install-a-package-using-rgui-or-rterm"></a>관리자 권한 또는 rterm이 사용 하 여 패키지 설치
+### <a name="install-a-package-using-rgui"></a>관리자 권한 사용 하 여 패키지 설치
 
-1. 인스턴스에 대 한 R 라이브러리를 설치할 서버의 폴더로 이동 합니다.
+1. [인스턴스 라이브러리의 위치를 확인할](installing-and-managing-r-packages.md)합니다. R 도구가 설치 되어 있는 폴더로 이동 합니다. 예를 들어 SQL Server 2017 기본 인스턴스에 대 한 기본 경로 다음과 같습니다. `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-  **기본 인스턴스**
+1. RGui.exe를 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다. 필요한 사용 권한이 없는 경우 데이터베이스 관리자에 게 문의 하 고 필요한 패키지의 목록을 제공 합니다.
 
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+1. 명령줄에서 패키지 이름을 알고 있으면 입력할 수 있습니다: `install.packages("the_package-name")` 큰따옴표는 패키지 이름에 필요 합니다.
 
-  **명명된 인스턴스**
+1. 미러 사이트에 대 한 메시지가 표시 되 면 사용자의 위치에 편리한 모든 사이트를 선택 합니다.
 
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+대상 패키지가 추가 패키지에 의존 하는 경우 R 설치 관리자 자동으로 종속성을 다운로드 하 고 설치 합니다.
 
-  바인딩 기계 학습 구성 요소 업그레이드를 사용 하 여 경로 변경 수 있습니다. 항상 새 패키지를 설치 하기 전에 인스턴스 경로 확인 합니다. 
-
-2. RGui.exe를 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다.
-
-    필요한 사용 권한이 없는 경우 데이터베이스 관리자에 게 문의 하 고 필요한 패키지의 목록을 제공 합니다.
-
-3. 명령줄에서 패키지 이름을 알고 있으면 입력할 수 있습니다: `install.packages("the_package-name")` 큰따옴표는 패키지 이름에 필요 합니다.
-
-4. 미러 사이트에 대 한 메시지가 표시 되 면 사용자의 위치에 편리한 모든 사이트를 선택 합니다.
-
-5. 대상 패키지가 추가 패키지에 의존 하는 경우 R 설치 관리자 자동으로 종속성을 다운로드 하 고 설치 합니다.
-
-6. 패키지를 사용 해야 하는 각 인스턴스에 대해 개별적으로 설치를 실행 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
+SQL Server 2016 R Services와 SQL Server 2017 컴퓨터 학습 서비스의 인스턴스를 함께-같은 SQL Server의 여러 인스턴스가 있는 경우 두 컨텍스트에서 패키지를 사용 하려는 경우 각 인스턴스에 대해 개별적으로 설치를 실행 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
 
 ## <a name = "bkmk_offlineInstall"></a> R 도구를 사용 하 여 오프 라인 설치
 
-R 패키지를 인터넷에 연결 되지 않은 서버에 설치 하려면 다음을 수행 해야 합니다.
+서버에 인터넷에 액세스 하는 경우으로 패키지 준비 하려면 추가 단계가 필요 합니다. R 패키지를 인터넷에 연결 되지 않은 서버에 설치 하려면 다음을 수행 해야 합니다.
 
 + 사전에 종속성을 분석 합니다.
 + 인터넷에 연결 된 컴퓨터에는 대상 패키지를 다운로드 합니다.
@@ -96,21 +62,9 @@ R 패키지를 인터넷에 연결 되지 않은 서버에 설치 하려면 다�
 
 1. 복사 패키지 파일을 압축 또는 대 한 여러 패키지의 모든 패키지를 포함 하는 전체 저장소 압축 형식으로 서버에 액세스할 수 있는 위치에 있습니다.
 
-2. 인스턴스에 대 한 R 라이브러리를 설치할 서버에서 폴더를 엽니다. 예를 들어 Windows 명령 프롬프트를 사용 하는 경우 RGui.exe 또는 RTerm.Exe가 있는 디렉터리를 이동 합니다.
+2. 인스턴스에 대 한 R 도구를 설치할 서버에서 폴더를 엽니다. SQL Server 2016 R Services 사용 시스템에서 Windows 명령 프롬프트를 사용 하는 경우로 전환 하는 예를 들어 `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`합니다.
 
-  **기본 인스턴스**
-
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
-
-  **명명된 인스턴스**
-
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
-
-3. 관리자 권한 또는 명령 프롬프트를 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다.
+3. 관리자 권한 또는 rterm이 고 마우스 오른쪽 단추로 클릭 **관리자 권한으로 실행**합니다.
 
 4. R 명령 실행 `install.packages` 패키지 또는 저장소 이름 및 압축 된 파일의 위치를 지정 합니다.
 
@@ -122,17 +76,17 @@ R 패키지를 인터넷에 연결 되지 않은 서버에 설치 하려면 다�
 
     필요한 패키지 인스턴스 라이브러리에 표시 되지 않으며 압축 된 파일에서 찾을 수 없습니다, 대상 패키지의 설치가 실패 합니다.
 
-## <a name="bkmk_createlibrary"></a> DDL 문을 사용 하 여 패키지를 설치 하려면 
+## <a name="bkmk_createlibrary"></a> 외부 라이브러리 만들기를 사용 하 여
 
-SQL Server 2017 년 1에서 사용할 수 있습니다는 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 인스턴스 또는 특정 데이터베이스에 패키지 또는 패키지 집합을 추가 하는 문입니다. 이 DDL 문이 및 지원 데이터베이스 역할은 것 패키지의 설치 및 관리를 용이 하 게 하려면 데이터베이스 소유자가 Python 또는 R 도구를 사용 하지 않고도입니다.
+**적용 대상:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-이 프로세스는 일반적인 R, Python 메서드를 사용 하 여 패키지 설치에 비해 몇 가지 준비가 필요 합니다.
+[외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Python 코드를 직접 또는 문을 사용 하면 R을 실행 하지 않고 인스턴스 또는 특정 데이터베이스 또는 패키지의 패키지 집합을 추가할 수 있습니다. 그러나이 메서드는 패키지 준비 및 추가 데이터베이스 사용 권한이 필요 합니다.
 
-+ 인터넷에서 다운로드 하는 대신 로컬 파일을 압축으로 사용할 수 있는 모든 패키지를 여야 합니다.
++ 모든 패키지는 인터넷에서 필요에 따라 다운로드할 대신 로컬 압축 된 파일 사용 가능 해야 합니다.
 
     서버에서 파일 시스템에 액세스할 수 없는 경우 전달할 수도 있습니다는 완전 한 패키지 변수를 이진 형식을 사용 하 여 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)합니다.
 
-+ 문이 필요한 패키지를 사용할 수 없는 경우 실패 합니다. 설치 하 고 패키지 서버 및 데이터베이스에 업로드 되 고 있는지 확인 하려는 패키지의 종속성을 분석 해야 합니다. 사용 하는 것이 좋습니다 **miniCRAN** 또는 **igraph** 패키지 종속성을 분석에 대 한 합니다.
++ 모든 종속성 이름 및 버전을 식별 하 고 zip 파일에 포함 해야 합니다. 문이 필요한 패키지를 다운스트림 패키지 종속 파일을 포함 하 여를 사용할 수 없는 경우 실패 합니다. 사용 하는 것이 좋습니다 **miniCRAN** 또는 **igraph** 패키지 종속성을 분석에 대 한 합니다. 잘못 된 버전의 패키지 또는 패키지 종속성을 설치 하는 문이 실패 발생할 수 있습니다. 
 
 + 데이터베이스에 필요한 권한이 있어야 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)합니다.
 
@@ -167,19 +121,7 @@ SQL Server 2017 년 1에서 사용할 수 있습니다는 [외부 라이브러�
     library(randomForest)'
     ```
 
-### <a name="known-issues-with-create-external-library"></a>외부 라이브러리 만들기의 알려진된 문제
-
-외부 라이브러리 만들기 이러한 조건에서 사용할 수 있습니다.
-
-+ 단일 패키지를 설치 하는 종속성이 없는 합니다.
-+ 패키지 종속성을 설치 하는 한 모든 패키지를 미리 준비 된 있습니다. 
-
-누락 된 모든 패키지 종속성 DDL 문은 실패 합니다. 예를 들어 설치 프로세스는 이러한 경우 실패 하도록 알려져 있습니다.
-
-+ 두 번째 수준 종속성이 포함 된 패키지를 설치 하 고 분석 2-수준 패키지를 확장 하지 않았습니다. 예를 들어 설치 하려는 **gglot2**, 및 매니페스트에 나열 된 모든 패키지를 식별; 그러나 해당 패키지 설치 되지 않은 다른 종속성.
-+ 지원 패키지의 다른 버전을 필요로 하는 패키지를 설치 했으며 서버 버전이 잘못 되었습니다.
-
-## <a name="package-installation-tips"></a>패키지 설치 팁
+## <a name="tips-for-package-installation"></a>패키지 설치에 대 한 팁
 
 이 섹션에서는 다양 한 팁과 SQL Server에서 R 패키지 설치와 관련 된 일반적인 질문을 제공 합니다.
 
@@ -219,18 +161,14 @@ R 패키지는 자주 중 일부는 사용 하지 못할 인스턴스에서 사�
 올바른 패키지 유형 및 버전을 갖게 조직의 모든 사용자를 또는 여러 패키지를 설치 해야 할 경우 사용 하는 것이 좋습니다는 [miniCRAN](https://mran.microsoft.com/package/miniCRAN) 전체 종속성 체인을 분석 하는 패키지입니다. minicRAN 여러 사용자 또는 컴퓨터 간에 공유할 수 있는 한 로컬 저장소를 만듭니다. 자세한 내용은 참조 [miniCRAN를 사용 하 여 로컬 패키지 리포지토리를 만들](create-a-local-package-repository-using-minicran.md)합니다.
 
 
-### <a name="know-which-library-you-are-using-for-installation"></a>상위 라이브러리를 설치에 사용 하는 것을 알고 있습니다
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>설치 하 고 어떤 패키지가 이미 설치 되어 있는 라이브러리를 알고 있습니다.
 
 일시 중지는 잠시 아무것도 설치 하기 전에 이전에 컴퓨터의 R 환경을 수정 하는 경우 R 환경 변수를 확인 하 고 `.libPath` 하나의 경로 사용 합니다.
 
-이 경로 인스턴스에 대 한 R_SERVICES 폴더를 가리켜야 합니다. 자세한 내용은 참조 [SQL Server와 함께 설치 된 R 패키지](installing-and-managing-r-packages.md)합니다.
+이 경로 인스턴스에 대 한 R_SERVICES 폴더를 가리켜야 합니다. 이미 설치 되어 있는 패키지를 확인 하는 방법을 비롯 한 자세한 내용은 참조 하십시오. [SQL Server와 함께 설치 된 R 패키지](installing-and-managing-r-packages.md)합니다.
 
-### <a name="side-by-side-installation-with-r-server"></a>R server-side-by-side 설치
+### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>독립 실행형 R 또는 Python 서버-side-by-side 설치
 
-SQL Server 컴퓨터 학습 서비스 외에도 Microsoft 컴퓨터 학습 Server (독립 실행형)를 설치한 경우 컴퓨터에 R 도구 및 라이브러리의 중복 항목을 각각에 대 한 별도 설치 R의 있어야 합니다.
+컴퓨터에 설치한 경우 SQL Server 2017 Microsoft 컴퓨터 학습 Server (독립 실행형) 또는 SQL Server 2016 R 서버 (독립 실행형) (SQL Server 2017 컴퓨터 학습 서비스 및 SQL Server 2016 R Services) 데이터베이스에서 분석 뿐 아니라, R 도구 및 라이브러리의 중복 항목을 각각에 대 한 r 설치를 구분 합니다.
 
-R_SERVER 라이브러리에 설치 된 패키지 Microsoft R Server 에서만 사용 되 고 SQL Server에서 액세스할 수 없습니다. 사용 하 여 `R_SERVICES` SQL Server에서 사용 하려는 패키지를 설치할 때 라이브러리입니다.
-
-### <a name="how-to-determine-which-packages-are-already-installed"></a>어떤 패키지가 이미 설치 되어 있는지 확인 하는 방법
-
- 참조 [SQL Server와 함께 설치 된 R 패키지](installing-and-managing-r-packages.md)
+R_SERVER 라이브러리에 설치 된 패키지는 독립 실행형 서버 에서만 사용 되 고 (In-database) SQL Server 인스턴스를 통해 액세스할 수 없습니다. 항상 사용 하는 `R_SERVICES` 라이브러리 데이터베이스에서 SQL Server를 사용 하려는 패키지를 설치할 때.

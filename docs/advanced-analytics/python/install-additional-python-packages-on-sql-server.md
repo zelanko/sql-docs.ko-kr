@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>Conda를 사용 하 여 설치 된 패키지를 확인 하는 방법
+## <a name="list-installed-packages-using-conda"></a>Conda를 사용 하 여 설치 된 패키지를 나열 합니다.
 
 설치 된 패키지 목록을 얻을 수 있는 다른 방법도 있습니다. 예를 들어 설치 된 패키지에서 볼 수 있습니다는 **Python 환경** Visual Studio의 창이 있습니다.
 
-Python 명령줄을 사용 하는 경우 사용할 수 있습니다는 **conda** SQL Server 설치 프로그램에서 추가할 Anaconda Python 환경을 포함 되어 있는 패키지 관리자.
+Python 명령줄을 사용 하는 중 하나를 사용할 수 있습니다 **Pip** 또는 **conda** , SQL Server 설치 프로그램에서 추가할 Anaconda Python 환경에 포함 된 패키지 관리자.
 
-PATH 환경 변수를 스크립트 폴더를 추가, 실행이 명령은 Python 환경에서 패키지를 나열 하려면 관리자의 명령 프롬프트에서 합니다.
+PATH 환경 변수를 스크립트 폴더를 추가, 실행이 명령은 Python 환경에서 패키지를 나열 하려면 관리자의 명령 프롬프트에서 합니다. 그렇지 않으면 참조 [R 가져오기 및 Python 패키지 정보](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda) SQL Server에서 Python 도구를 실행 하는 방법에 대 한 포인터에 대 한 합니다.
 
 ```python
 conda list

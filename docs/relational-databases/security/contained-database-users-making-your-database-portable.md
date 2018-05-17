@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="firewalls"></a>방화벽  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Windows 방화벽 규칙은 모든 연결에 적용되며 로그인(기존 모델 연결) 및 포함된 데이터베이스 사용자에 동일한 효력을 갖습니다. Windows 방화벽에 대한 자세한 내용은 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을(를) 참조하세요.  
+ Windows 방화벽 규칙은 모든 연결에 적용되며 로그인(기존 모델 연결) 및 포함된 데이터베이스 사용자에 동일한 효력을 갖습니다. Windows 방화벽에 대한 자세한 내용은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을(를) 참조하세요.  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 방화벽  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 은 여러 수준 연결(로그인) 및 데이터베이스 수준 연결(포함된 데이터베이스 사용자)에 대해 별도의 방화벽 규칙을 허용합니다. 사용자 데이터베이스에 연결할 때 첫 번째 데이터베이스 방화벽 규칙이 확인됩니다. 데이터베이스에 액세스를 허용하는 규칙이 없는 경우, 서버 수준 방화벽 규칙이 확인되고 논리 서버 master 데이터베이스에 대한 액세스가 필요합니다. 포함된 데이터베이스 사용자와 결합된 데이터베이스 수준 방화벽 규칙은 연결 시 서버의 master 데이터베이스에 액세스할 필요가 없고 향상된 연결 확장성을 제공합니다.  

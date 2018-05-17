@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bb4fb973ed9311fd6b2ad6a89022b55208971ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44bb869e9954c0bd080f23bc6b09913ea011617
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -275,6 +275,10 @@ GO
  
 > [!TIP]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) 또는 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)의 PERSIST_SAMPLE_PERCENT 옵션을 사용하여 샘플링 백분율을 명시적으로 지정하지 않는 후속 통계 업데이트에 대해 특정 샘플링 백분율을 설정하고 유지합니다.
+
+### <a name="automatic-index-and-statistics-management"></a>자동 인덱스 및 통계 관리
+
+[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
   
 ##  <a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
@@ -389,4 +393,5 @@ GO
  [sys.dm_db_stats_properties&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
- [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
+ [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

@@ -3,15 +3,15 @@ title: 테이블 형식 모델 데이터 액세스 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7453bb7b72625327b92a1a4624ce19f5cccc86db
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 13ce3f601774d5ffee5b19f0d3dec2dca141c8d8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ---

@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 컴퓨터 (예: R 및 Python) 학습 구성 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>오류
+## <a name="binding-errors"></a>바인딩 오류
 
-이 도구는 다음과 같은 오류 메시지를 반환합니다.
+MLS 설치 관리자 및 SqlBindR 다음과 같은 오류 코드 및 메시지를 반환합니다.
 
 |오류 코드  | 메시지           | 세부 정보               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니
 |바인딩 오류 3 | 잘못 된 인스턴스 | 인스턴스는 존재 하지만 바인딩에 적합 하지 않습니다. |
 |바인딩 오류 4 | 바인딩할 수 없습니다 | |
 |오류 코드 5에 바인딩 | 이미 바인딩 | *bind* 명령을 실행했지만 지정한 인스턴스가 이미 바인딩되어 있습니다. |
-|바인딩 오류 6 | 바인드 실패 | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. 이 오류는 모든 기능을 선택 하지 않고 MLS 설치 관리자를 실행 하는 경우에 발생할 수 있습니다.|
+|바인딩 오류 6 | 바인드 실패 | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. 이 오류는 모든 기능을 선택 하지 않고 MLS 설치 관리자를 실행 하는 경우에 발생할 수 있습니다. 바인딩은 MSSQL 인스턴스 및 R 선택 및 Python, 인스턴스 가정은 SQL Server 2017 필요 합니다.|
 |바인딩 오류 7 | 바인딩되지 않습니다 | 데이터베이스 엔진 인스턴스에 R 서비스 또는 SQL Server 컴퓨터 학습 서비스에 있습니다. 인스턴스는 Microsoft 컴퓨터 학습 서버에 바인딩되지 않습니다. |
 |바인딩 오류 8 | 바인딩을 해제 하지 못했습니다. | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. |
 |바인딩 오류 9 | 인스턴스를 찾을 수 없습니다. | 이 컴퓨터에 데이터베이스 엔진 인스턴스를 찾지 못했습니다. |

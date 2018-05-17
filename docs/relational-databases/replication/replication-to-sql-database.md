@@ -68,8 +68,7 @@ ms.lasthandoff: 05/03/2018
    
  - 사용자는 기존 Azure 구독 및 기존 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12를 가져야 합니다.  
    
- - 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
+ - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 단일 게시는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (온프레미스 및 Azure 가상 머신에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 모두를 지원합니다.  
    
  - 복제 관리, 모니터링 및 문제 해결은 온프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행되어야 합니다.  
    
