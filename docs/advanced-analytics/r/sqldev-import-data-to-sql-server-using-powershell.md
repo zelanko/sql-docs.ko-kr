@@ -1,4 +1,4 @@
---
+---
 title: Lesson 2 PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
@@ -40,9 +40,9 @@ ms.lasthandoff: 04/16/2018
   
     다음 정보를 입력하라는 메시지가 표시됩니다.
   
-    - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 설치된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 인스턴스의 이름 또는 주소.
+    - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 설치된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 인스턴스의 이름 또는 주소
   
-    - 인스턴스의 계정에 대한 사용자 이름 및 암호. 계정에는 데이터베이스를 테이블과 저장 프로시저를 만들고 테이블에 데이터를 업로드할 수 있는 권한이 있어야합니다. 사용자 이름과 암호를 입력하지 않으면 Windows ID가 SQL Server에 로그인하는 데 사용됩니다.
+    - 인스턴스의 계정에 대한 사용자 이름 및 암호. 계정에는 데이터베이스, 테이블 및 저장 프로시저를 만들고 테이블에 데이터를 업로드할 수 있는 권한이 있어야 합니다. 사용자 이름과 암호를 입력하지 않으면 Windows ID가 SQL Server에 로그인하는 데 사용됩니다.
   
     - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어:
   
