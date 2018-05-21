@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1742e0d609372fcb2ad17859b503185ba04075ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2971701764238c0517558c1daf64296e4727d5ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-CAPI(Crypto API)로 생성된 암호화 난수를 반환합니다. 출력은 지정된 바이트 수의 16진수입니다.
+이 함수는 CAPI(Crypto API)에서 임의로 생성된 암호화 수를 반환합니다. `CRYPT_GEN_RANDOM`은 지정된 수의 바이트 길이로 16진수를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,10 +43,10 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>인수  
 *length*  
-만들려는 숫자의 길이입니다. 최대값은 8000입니다. *length*는 **int** 형식입니다.
+`CRYPT_GEN_RANDOM`에서 만들 숫자의 길이(바이트)입니다. *length* 인수에는 **int** 데이터 형식 및 1~8000 사이의 값 범위가 있습니다. `CRYPT_GEN_RANDOM`은 이 범위 이외의 **int** 값에 NULL을 반환합니다. 
   
 *seed*  
-임의 초기값으로 사용할 선택적 데이터입니다.  *length* 바이트 이상의 데이터가 있어야 합니다. *seed*는 **varbinary(8000)** 입니다.
+임의 초기값으로 사용할 선택적인 16진수입니다. *seed*의 길이는 *length* 인수의 값과 일치해야 합니다. *seed* 인수에는 **varbinary(8000)** 데이터 형식이 포함됩니다.
   
 ## <a name="returned-types"></a>반환 형식  
 **varbinary(8000)**
@@ -60,13 +57,13 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 ## <a name="examples"></a>예  
   
 ### <a name="a-generating-a-random-number"></a>1. 난수 생성  
-다음 예에서는 50바이트 길이의 난수를 생성합니다.
+이 함수는 길이 50바이트인 임의의 수를 생성합니다.
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(50) ;  
 ```  
   
-다음 예에서는 4바이트 초기값을 사용하여 4바이트 길이의 난수를 생성합니다.
+이 함수는 4바이트 초기값을 사용하여 길이 4바이트인 임의의 수를 생성합니다.
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  

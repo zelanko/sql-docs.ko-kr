@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드용 PowerShell cmdlet
 
@@ -73,7 +73,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 
  다음 표에는 Reporting Services SharePoint 공유 서비스에 대한 PowerShell cmdlet이 나와 있습니다.  
   
-|Cmdlet|Description|  
+|Cmdlet|설명|  
 |------------|-----------------|  
 |Install-SPRSService|Reporting Services 공유 서비스를 설치 및 등록하거나 제거합니다. 이 작업은 SharePoint 모드에서 SQL Server Reporting Services가 설치된 시스템에서만 수행할 수 있습니다. 설치 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -팜에 Reporting Services 서비스가 설치됩니다.<br /><br /> -현재 시스템에 Reporting Services 서비스 인스턴스가 설치됩니다.<br /><br /> 제거 시 다음 두 가지 작업이 수행됩니다.<br /><br /> -현재 시스템에서 Reporting Services 서비스가 제거됩니다.<br /><br /> -팜에서 Reporting Services 서비스가 제거됩니다.<br /><br /> <br /><br /> 팜 내 다른 시스템에 Reporting Services 서비스가 설치되어 있거나 팜에서 Reporting Services 서비스 응용 프로그램이 실행되고 있는 경우 경고 메시지가 표시됩니다.|  
 |Install-SPRSServiceProxy|SharePoint 팜에 Reporting Services 서비스 프록시를 설치 및 등록 또는 제거합니다.|  
@@ -84,7 +84,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 
  다음 표에는 Reporting Services 서비스 응용 프로그램과 관련 프록시에 대한 PowerShell cmdlet이 포함됩니다.  
   
-|cmdlet|Description|  
+|cmdlet|설명|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|하나 이상의 Reporting Services 서비스 응용 프로그램 개체를 가져옵니다.|  
 |New-SPRSServiceApplication|새 Reporting Services 서비스 응용 프로그램 및 연결된 데이터베이스를 만듭니다.<br /><br /> LogonType 매개 변수: 보고서 서버에서 보고서 서버 데이터베이스에 액세스하기 위해 SSRS 응용 프로그램 풀 계정 또는 SQL Server 로그인을 사용하는지를 지정합니다. 유효한 값은<br /><br /> 0 Windows 인증<br /><br /> 1 SQL Server<br /><br /> 2 응용 프로그램 풀 계정(기본값)|  
@@ -102,9 +102,9 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 |Get-SPRSDatabaseRightsScript|Reporting Services 서비스 응용 프로그램의 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
 |Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 Reporting Services 서비스 응용 프로그램 데이터베이스를 현재 설치하는 Reporting Services의 데이터베이스 버전으로 업그레이드합니다.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 사용자 지정 기능 Cmdlet
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services 사용자 지정 기능 Cmdlet
   
-|Cmdlet|Description|  
+|Cmdlet|설명|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|지정된 Reporting Services 서비스 응용 프로그램에 대한 암호화 키를 업데이트하고 데이터를 다시 암호화합니다.|  
 |Restore-SPRSEncryptionKey|Reporting Services 서비스 응용 프로그램에 대해 이전에 백업된 암호화 키를 복원합니다.|  

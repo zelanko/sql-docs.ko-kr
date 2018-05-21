@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 2c9e65193ad481d3e4d6f8256918616e08e4a709
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 53f1381285d8b42c59cde57eb47ce9628f0868ad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 bcp 사용 하 여 대량 복사 데이터
 
@@ -120,7 +120,7 @@ Id          Name                Location
 
 이 자습서를 사용 하 여 `bcp` 새 데이터 파일에 앞에서 만든 예제 테이블에 데이터를 가져올 수 있도록 합니다.
 
-복사한 followikng 명령을 터미널 창에 붙여 넣습니다. 이러한 명령을 사용 하 여는 `bcp` 테이블에서 데이터를 내보내려면 명령줄 유틸리티 **TestEmployees** 데이터베이스에 **BcpSampleDB** 라는 새 데이터 파일에 **~/test_export.txt** .  사용자 이름을 대체 하 고 `<your_password>` 명령을 실행 하기 전에 필요에 따라 합니다.
+복사한 터미널 창에 다음 명령을 붙여 넣습니다. 이러한 명령을 사용 하 여는 `bcp` 테이블에서 데이터를 내보내려면 명령줄 유틸리티 **TestEmployees** 데이터베이스에 **BcpSampleDB** 라는 새 데이터 파일에 **~/test_export.txt** .  사용자 이름을 대체 하 고 `<your_password>` 명령을 실행 하기 전에 필요에 따라 합니다.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 |Description|폴더 내용을 볼 때 보고서 관리자에 항목과 함께 표시되는 설명입니다.|  
 |연결 형식|데이터 원본과 함께 사용되는 데이터 처리 확장 프로그램입니다. 보고서 서버에 배포된 데이터 처리 확장 프로그램만 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.|  
 |연결 문자열|데이터베이스에 대한 연결 문자열입니다. 자세한 정보 및 자주 사용되는 데이터 원본에 대한 연결 문자열의 예를 보려면 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.|  
-|자격 증명 유형|연결에 대한 자격 증명을 가져오는 방법 및 연결된 이후 자격 증명이 사용되는지 여부를 지정합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.|  
+|자격 증명 유형|연결에 대한 자격 증명을 가져오는 방법 및 연결된 이후 자격 증명이 사용되는지 여부를 지정합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.|  
   
  공유 데이터 원본에는 데이터를 검색하는 데 사용되는 쿼리 정보가 포함되지 않습니다. 쿼리는 항상 보고서 정의 안에 보관됩니다.  
   

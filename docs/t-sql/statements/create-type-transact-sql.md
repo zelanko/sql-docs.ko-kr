@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다. *assembly_name*을 지정하면 사용자는 어셈블리나 그에 대한 REFERENCES 권한을 소유해야 합니다.  
+
+ CREATE TABLE 문의 열이 사용자 정의 형식으로 정의되면 해당 형식에 대한 REFERENCES 권한이 필요합니다.
+ 
+   >[!NOTE]
+  > 사용자 정의 형식을 사용하는 열을 사용하여 테이블을 만드는 사용자는 사용자 정의 형식에 대한 REFERENCES 권한이 필요합니다.
+  > 이 테이블을 TempDB에서 만들어야 할 경우 테이블을 만들기 **전**마다 REFERENCES 권한을 명시적으로 부여하거나 이 데이터 형식 및 REFERENCES 권한을 모델 데이터베이스에 추가해야 합니다. 작업을 실행하면 이 데이터 형식 및 사용 권한이 TempDB에서 영구적으로 지원됩니다. 그렇지 않으면 SQL Server를 다시 시작할 경우 사용자 정의 데이터 형식 및 사용 권한이 사라집니다. 자세한 내용은 [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)을 참조하세요.
   
 ## <a name="examples"></a>예  
   

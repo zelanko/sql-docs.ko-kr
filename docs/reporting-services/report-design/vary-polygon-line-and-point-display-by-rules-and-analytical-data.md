@@ -121,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
  범례가 나타나는 위치를 제어하려면 범례 속성 대화 상자를 사용하여 지도 뷰포트에 상대적인 위치를 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
- 범례는 범례 제목이나 범례 텍스트를 표시하도록 자동으로 확장됩니다. 범례 항목의 텍스트 형식을 지정하려면 지도 범례 키워드와 사용자 지정 형식을 사용합니다. 자세한 내용은 [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)을 참조하세요.  
+ 범례는 범례 제목이나 범례 텍스트를 표시하도록 자동으로 확장됩니다. 범례 항목의 텍스트 형식을 지정하려면 지도 범례 키워드와 사용자 지정 형식을 사용합니다. 자세한 내용은 [범례의 내용 형식을 변경하려면](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)을 참조하세요.  
   
  다음 표에는 사용할 수 있는 여러 형식의 예가 나와 있습니다.  
   

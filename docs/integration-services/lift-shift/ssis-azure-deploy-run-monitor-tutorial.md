@@ -1,5 +1,5 @@
 ---
-title: Azure에서 SSIS 패키지 배포, 실행 및 모니터링 | Microsoft Docs
+title: Azure에서 SSIS 패키지 배포 및 실행 | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지 배포, 실행 및 모니터링
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 배포 및 실행
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -45,7 +45,7 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 
 2. **서버에 연결합니다**. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안된 값 | Description | 
+   | 설정       | 제안된 값 | 설명 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
    | **서버 이름** | 정규화된 서버 이름 | **mysqldbserver.database.windows.net** 형식이어야 합니다. 서버 이름이 필요한 경우 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요. |

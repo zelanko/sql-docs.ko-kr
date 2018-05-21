@@ -1,5 +1,5 @@
 ---
-title: Azure에서 SSISDB 카탈로그 데이터베이스에 연결 | Microsoft Docs
+title: Azure에서 SSIS 카탈로그 데이터베이스(SSISDB)에 연결 | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure에서 SSISDB 카탈로그 데이터베이스에 연결
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그 데이터베이스(SSISDB)에 연결
 
 Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베이스에 연결하는 데 필요한 연결 정보를 가져옵니다. 연결하려면 다음 항목이 필요합니다.
 - 정규화된 서버 이름
@@ -45,7 +45,7 @@ Azure SQL Database 서버에서 호스트되는 SSISDB 카탈로그 데이터베
 
 2. **서버에 연결합니다**. **서버에 연결** 대화 상자에 다음 정보를 입력합니다.
 
-   | 설정       | 제안된 값 | Description | 
+   | 설정       | 제안된 값 | 설명 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
    | **서버 이름** | 정규화된 서버 이름 | **mysqldbserver.database.windows.net** 형식이어야 합니다. |

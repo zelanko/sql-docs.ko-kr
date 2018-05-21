@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 346b5aada1a16e84aa3e74019e83dd7a74d9914a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d3b1e73a1e353fb87dcb7cd5782f551e9508a2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-식을 표시하는 데 사용된 바이트 수를 반환합니다.
+이 함수에서는 식을 표시하는 데 사용된 바이트 수를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,18 +51,30 @@ DATALENGTH ( expression )
 임의 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
-*식*이 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 유형이면 **bigint**, 그렇지 않으면 **int**입니다.
+*expression*의 데이터 형식이 **nvarchar(max)**, **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
 ## <a name="remarks"></a>Remarks  
-DATALENGTH는 가변 길이 데이터를 저장할 수 있는 **varchar**, **varbinary**, **text**, **image**, **nvarchar** 및 **ntext** 데이터 형식에서 특히 유용합니다.
+`DATALENGTH`는 다음과 함께 사용할 경우 매우 유용해집니다.
+
+- **image**
+- **ntext**
+- **nvarchar**
+- **text**
+- **varbinary**
+
+및
+
+- **varchar**
+
+데이터 형식과 함께 사용할 경우 정말 유용합니다.
   
-NULL의 DATALENGTH는 NULL입니다.
+`DATALENGTH`는 NULL 값에 대해 NULL을 반환합니다.
   
 > [!NOTE]  
 >  반환되는 값은 호환성 수준에 따라 달라질 수 있습니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
-다음 예에서는 `Name` 테이블에서 `Product` 열의 길이를 찾아냅니다.
+이 예에서는 `Name` 테이블에서 `Product` 열의 길이를 찾아냅니다.
   
 ```sql
 -- Uses AdventureWorks  

@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 05/03/2018
 SQL Server 2016 SP2를 설치하면 설치 후 다시 부팅이 필요할 수 있습니다. SQL Server 2016 SP2 설치 후 다시 부팅을 계획하고 설치를 수행하는 것이 가장 좋습니다.
 
 SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
-|기능|Description|자세한 정보|
+|기능|설명|자세한 정보|
 |   --- |   --- |   --- |
 |향상된 배포 DB 정리 프로시저 |   대형 배포 데이터베이스 테이블로 인해 차단 및 교착 상태가 발생했었습니다. 향상된 정리 프로시저는 이러한 일부 차단 또는 교착 상태 시나리오를 제거하려고 합니다. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |변경 내용 추적 정리    |   변경 내용 추적 정리 성능 및 변경 내용 추적 측면 테이블에 대한 효율성이 개선되었습니다.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |CPU 시간 초과를 사용하여 Resource Governor 요청 취소   |   요청에 대한 CPU 임계값에 도달하면 요청을 실제로 취소하여 쿼리 요청 처리가 향상되었습니다. 이 동작은 추적 플래그 2422에서 활성화됩니다. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |파일 그룹에 대상 테이블을 만드는 SELECT INTO    |   SQL Server 2016 SP2부터, SELECT INTO T-SQL 구문은 T-SQL 구문에서 ON <Filegroup name> 키워드를 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다. |       |
 |TempDB에 대한 간접 검사점 향상    |   DPLists에 대한 Spinlock 경합을 최소화하도록 TempDB에 대한 간접 검사점이 향상되었습니다. 향상된 기능으로 인해 TempDB에 대한 간접 검사점이 ON이면 SQL Server 2016의 TempDB 워크로드 규모를 즉시 확장할 수 있습니다.    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|대형 메모리 시스템의 데이터베이스 백업 성능 향상  |   SQL Server 2016 SP2는 백업 중에 진행되는 I/O 드레이닝 방식을 최적화하여 중소 규모 데이터베이스의 백업 성능이 크게 향상되었습니다. 2TB 시스템에서 시스템 데이터베이스 백업을 수행할 때 성능이 100배 이상 향상되었습니다. 다양한 크기의 데이터베이스에 대한 광범위한 성능 테스트 결과가 아래에 제공되어 있습니다. 백업 및 백업 I/O에 대한 페이지가 버퍼 풀 반복에 비해 더 많은 시간이 소모되므로 데이터베이스 크기가 증가할수록 성능이 저하됩니다. 이러한 개선 사항은 대용량 메모리의 고급 서버에서 여러 개의 작은 데이터베이스를 호스팅하는 고객을 위해 백업 성능을 향상시키는 데 도움이 됩니다. |       |
+|대형 메모리 시스템의 데이터베이스 백업 성능 향상  |   SQL Server 2016 SP2는 백업 중에 진행되는 I/O 드레이닝 방식을 최적화하여 중소 규모 데이터베이스의 백업 성능이 크게 향상되었습니다. 2TB 시스템에서 시스템 데이터베이스 백업을 수행할 때 성능이 100배 이상 향상되었습니다. 백업 및 백업 I/O에 대한 페이지가 버퍼 풀 반복에 비해 더 많은 시간이 소모되므로 데이터베이스 크기가 증가할수록 성능이 저하됩니다. 이러한 변경 사항은 대용량 메모리의 고급 서버에서 여러 개의 작은 데이터베이스를 호스팅하는 고객을 위해 백업 성능을 향상시키는 데 도움이 됩니다.    |       |
 |TDE 가능 데이터베이스에 대한 VDI 백업 압축 지원   |   SQL Server 2016 SP2에 VDI 지원이 추가되어 VDI 백업 솔루션으로 TDE 지원 데이터베이스에 압축을 활용할 수 있습니다. 더불어, TDE 지원 데이터베이스의 백업 압축을 지원하기 위해 새로운 백업 형식이 도입되었습니다. SQL Server 엔진은 신규 및 기존 백업 형식을 투명하게 처리하여 백업을 복원합니다.   |       |
 |복제 에이전트 프로필 매개 변수를 동적으로 로드    |   새롭게 향상된 기능으로 인해 에이전트를 다시 시작하지 않고도 복제 에이전트 매개 변수를 동적으로 로드할 수 있습니다. 이러한 변화는 가장 일반적으로 사용되는 에이전트 프로필 매개 변수에만 적용됩니다. |       |
 |통계 생성/업데이트를 위한 MAXDOP 옵션 지원 |    CREATE/UPDATE statistics 문에 대해 MAXDOP 옵션을 지정할 수 있을 뿐만 아니라, 모든 유형의 인덱스에 대한 작성 또는 재작성 과정에서 통계가 업데이트될 때 올바른 MAXDOP 설정이 사용되도록(MAXDOP 옵션이 있는 경우) 할 수 있습니다.   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
 |증분 통계를 위한 자동 통계 업데이트 향상 |    특정 시나리오 즉, 테이블의 여러 파티션에서 증분된 통계에 대한 총 수정 카운터가 자동 업데이트 임계값을 초과할 만큼 데이터 변경이 많이 발생했지만 자동 업데이트 임계값을 초과하는 개별 파티션이 없는 경우, 테이블에서 훨씬 더 많은 수정이 발생할 때까지 통계 업데이트가 지연될 수 있습니다. 이 동작은 추적 플래그 11024에서 수정되었습니다.   |       |
 
 SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 포함되어 있습니다.
-|기능 |Description   |자세한 정보   |
+|기능 |설명   |자세한 정보   |
 |   --- |   --- |   --- |
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
 |TempDB의 암호화 상태를 정확하게 반영하도록 sys.databases is_encrypted 열 업데이트 |   sys.databases의 is_encryptedcolumn 열 값은 모든 사용자 데이터베이스의 암호화를 해제하고 SQL Server를 다시 시작한 후에도 TempDB의 경우 1입니다. 예상되는 동작은 TempDB가 이 상황에서 더 이상 암호화되지 않으므로 이 값은 0입니다. SQL Server 2016 SP2부터 sys.databases.is_encrypted는 TempDB의 암호화 상태를 정확하게 반영합니다.  |       |
@@ -64,6 +64,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |TempDB 버전 저장소 공간 사용량을 모니터링하는 새로운 DMV    |   SQL Server 2016 SP2에 sys.dm_tran_version_store_space_usage DMV가 새롭게 도입되어 TempDB에서 버전 저장소 사용량을 모니터링 할 수 있습니다. 이제 DBA를 프로덕션 서버에서 실행할 때 성능 오버 헤드가 발생하지 않으면서, 데이터베이스당 버전 저장소 사용 요구 사항을 기반으로 TempDB 크기를 사전에 계획할 수 있습니다. |       |
 |복제 에이전트에 대한 완벽한 덤프 지원 | 현재 복제 에이전트에서 처리되지 않은 예외가 발생하는 경우 기본적으로 예외 증상의 미니 덤프가 만들어집니다. 이렇게 하면 처리되지 않은 예외 문제를 해결하는 것이 매우 어렵습니다. 이번 변경을 통해 복제 에이전트에 대한 전체 덤프를 생성할 수 있는 새로운 레지스트리 키가 도입되었습니다.  |       |
 |가용성 그룹의 라우팅 실패 읽기에 대한 확장 이벤트 향상 |   전에는 라우팅 목록이 있으면 read_only_rout_fail xEvent가 발생했지만 라우팅 목록에 있는 모든 서버에 연결할 수 없었습니다. SQL Server 2016 SP2에는 문제 해결에 도움이 되는 추가 정보가 포함되며 xEvent가 실행되는 코드 포인트가 확장됩니다.  |       |
+|트랜잭션 로그를 모니터링하는 새로운 DMV |   요약 수준 특성 및 데이터베이스의 트랜잭션 로그 파일에 대한 정보를 반환하는 새로운 DMV sys.dm_db_log_stats를 추가했습니다. |       |
 |VLF 정보를 모니터링하는 새로운 DMV |   SQL Server 2016 SP2에 DMV sys.dm_db_log_info가 새로 도입되어 DBCC LOGINFO와 유사한 VLF 정보를 노출하여 고객이 겪을 수 있는 잠재적인 T-Log 문제를 모니터링, 경고 및 방지할 수 있습니다.    |       |
 |sys.dm_os_sys_info의 프로세서 정보|   sys.dm_os_sys_info DMV에 socket_count 및 cores_per_numa와 같은 프로세서 관련 정보를 노출하도록 새 열이 추가되었습니다.  |       |
 |sys.dm_db_file_space_usage의 익스텐트 수정 정보| 마지막 전체 백업 이후에 수정된 익스텐트의 수를 추적하는 새 열이 sys.dm_db_file_space_usage에 추가되었습니다.  |       |
@@ -105,7 +106,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 
 다음 표에는 SQL Server 2016 SP1에서 제공하는 주요 향상 기능이 요약되어 있습니다.
 
-|기능|Description|참조 항목|
+|기능|설명|참조 항목|
 |---|---|---|
 |TF 715에서 자동 TABLOCK을 사용하여 힙으로 대량 삽입| 추적 플래그 715는 대량 로드 작업에 대한 테이블 잠금을 비클러스터형 인덱스가 없는 힙에 사용하도록 설정합니다.|[2.5x배 더 빠르게 SQL Server로 SAP 워크로드 마이그레이션](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|저장 프로시저, 트리거, 사용자 정의 함수 및 뷰와 같은 개체를 배포합니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -221,12 +222,13 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
     
 * 메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다.
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>추가 정보
++ [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

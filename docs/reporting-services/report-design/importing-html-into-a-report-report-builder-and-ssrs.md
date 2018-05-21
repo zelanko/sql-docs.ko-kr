@@ -1,27 +1,25 @@
 ---
-title: "보고서로 HTML 가져오기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 보고서로 HTML 가져오기(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a2ec424333d0b7bc277c3ecc884f58a853c0397b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1635b53a1a5deffc2289820682d608cedded4bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
-     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
+     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
   
 -   color  
   
@@ -84,9 +82,9 @@ ms.lasthandoff: 01/09/2018
   
 -   형식이 잘못된 CSS 값은 형식이 잘못된 HTML과 마찬가지로 무시됩니다.  
   
--   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어 텍스트가 **\<p style="text-align: right" align="left">**인 경우에는 text-align 특성만 적용되고 텍스트가 오른쪽에 맞춰집니다.  
+-   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어 텍스트가 **\<p style="text-align: right" align="left">** 인 경우에는 text-align 특성만 적용되고 텍스트가 오른쪽에 맞춰집니다.  
   
--   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">**인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
+-   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">** 인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  

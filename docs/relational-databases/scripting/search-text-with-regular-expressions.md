@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 2.  그러면 **찾을 내용** 필드 옆에 있는 삼각형 **참조 목록** 단추를 사용할 수 있습니다. 이 단추를 클릭하면 가장 일반적으로 사용되는 정규식 목록이 표시됩니다. 식 작성기에서 임의의 항목을 선택하면 해당 항목이 **찾을 내용** 문자열에 삽입됩니다.  
   
 > [!NOTE]  
->  **찾을 내용** 문자열에서 사용할 수 있는 정규식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍에서 유효한 정규식은 구문상의 차이가 있습니다. 예를 들어 **찾기 및 바꾸기**에서 중괄호({}) 표기법은 태그가 지정된 식에 사용됩니다. 따라서 "zo\{1\}" 식은 "zo" 다음에 태그 1이 오는 모든 경우(예: "Alonzo1" 및 "Gonzo1")와 일치합니다. 그러나 .NET Framework 내에서 {} 표기법은 수량자에 사용됩니다. 따라서 "zo\{1\}" 식은 "z" 다음에 정확하게 하나의 "o"가 오는 모든 경우와 일치합니다(예: "zone"과 일치하지만 "zoo"와는 일치하지 않음).  
+>  **찾을 내용** 문자열에서 사용할 수 있는 정규식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍에서 유효한 정규식은 구문상의 차이가 있습니다. 예를 들어 **찾기 및 바꾸기**에서 중괄호 표기법 {}은 태그가 지정된 식에 사용됩니다. 따라서 "zo{1}" 식은 "zo" 다음에 태그 1이 오는 모든 경우(예: "Alonzo1" 및 "Gonzo1")와 대응합니다. 그러나 .NET Framework 내에서 {} 표기법은 수량자에 사용됩니다. 따라서 "zo{1}" 식은 "z" 다음에 정확하게 하나의 "o"가 오는 모든 경우와 대응합니다(예:  "zone"과 대응하지만 "zoo"와는 대응하지 않음).  
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 정규식을 설명합니다.  
   

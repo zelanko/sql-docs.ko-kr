@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **@property**에 **allow_push**, **@value**에 **true**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@destination_db**을 지정합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독 업데이트 방법은 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@destination_db**을 지정합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독 업데이트 방법은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   

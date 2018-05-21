@@ -1,27 +1,24 @@
 ---
 title: SSDT(SQL Server Data Tools)의 Azure Active Directory 지원 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
-ms.prod: sql
+ms.date: 04/09/2018
+ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 62ed13f6bb3eb5859976b5a5d970f3297c42304e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -39,13 +36,13 @@ Active Directory 암호 인증은 Azure AD(Azure Active Directory)의 ID를 사�
 
 Active Directory 통합 인증은 Azure AD(Azure Active Directory)의 ID를 사용하여 Azure SQL Database에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 이 방법으로 연결합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
 
-## <a name="active-directory-interactive-authentication-preview"></a>Active Directory 대화형 인증(미리 보기)
+## <a name="active-directory-interactive-authentication"></a>Active Directory 대화형 인증
 
 SSDT는 Azure SQL 데이터베이스에 연결하기 위한 새로운 인증 방법인 **Active Directory 대화형 인증**을 제공합니다.
 
 
 > [!NOTE]
-> Active Directory 대화형 인증은 [Visual Studio 2017 미리 보기](https://www.visualstudio.com/vs/preview/)에서 SSDT와 연결할 때 사용할 수 있으며 [.NET 4.7.2 미리 보기(KB4038188)](https://go.microsoft.com/fwlink/?linkid=867317)가 SSDT를 실행하는 컴퓨터에 설치되어 있어야 합니다. .NET 4.7.2 미리 보기(KB4038188)가 설치되어 있지 않으면 Active Directory 대화형 인증 옵션을 사용할 수 없습니다.
+> Active Directory 대화형 인증은 [Visual Studio 2017 버전 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)에서 SSDT와 연결할 때 사용할 수 있으며 [.NET Framework 4.7.2 다운로드 및 설치](https://www.microsoft.com/net/download/all)가 SSDT를 실행하는 컴퓨터에 설치되어 있어야 합니다. [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2)가 설치되어 있지 않으면 Active Directory 대화형 인증 옵션을 사용할 수 없습니다.
 
 
 Active Directory 대화형 인증은 AD(Azure Active Directory) MFA(Multi-Factor Authentication)를 사용하여 Azure SQL Database에 인증할 수 있도록 대화형 인증을 지원합니다. 이 방법은 네이티브 및 페더레이션 Azure AD 사용자와 다른 계정의 게스트 사용자를 지원합니다(B2B 사용자, @outlook.com, @hotmail.com, @live.com 및 @gmail.com과 같은 Microsoft 및 타사 계정 포함). 이 방법을 지정하면 **사용자 이름**을 지정해야 하며 [암호] 필드는 사용하지 않도록 설정됩니다. 

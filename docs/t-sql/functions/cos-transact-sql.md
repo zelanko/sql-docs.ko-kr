@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a54e9376a84e42baf400e08750c72c4e14eea382
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5ad420e56dd205772cf8d7b2a9ec8013c3ddfccc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cos-transact-sql"></a>COS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-지정한 식에서 지정한 각도의 삼각법 코사인을 라디안 단위로 반환하는 수치 연산 함수입니다.
+지정한 식에서 지정한 각도로 측정된 지정된 각도의 삼각법 코사인을 라디안 단위로 반환하는 수학 함수입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +45,13 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-**float** 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
+**float** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**
   
 ## <a name="examples"></a>예  
-다음 예에서는 특정 각도의 COS를 반환합니다.
+이 예제에서는 지정된 각도의 `COS` 값을 반환합니다.
   
 ```sql
 DECLARE @angle float;  
@@ -70,13 +67,11 @@ The COS of the angle is: -0.599465
   
 (1 row(s) affected)  
 ```  
-
-## <a name="examples"></a>예
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
-다음 예에서는 특정 각도의 COS를 반환합니다.
+이 예제에서는 지정된 각도의 COS 값을 반환합니다.
   
 ```sql
 SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;   

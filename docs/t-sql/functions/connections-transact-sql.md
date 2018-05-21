@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,17 +26,16 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1cc0d866a576d0236b2a429b6266eeda155b5114
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 39767751186028fd5cd8b93621d7465094d99264
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-마지막으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작한 후 시도한 연결 수를 반환합니다.
+이 함수에서는 마지막으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작한 이후 성공하거나 성공하지 못한 시도된 모든 연결 수를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,14 +49,14 @@ ms.lasthandoff: 04/16/2018
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-연결은 사용자와 다릅니다. 예를 들어 응용 프로그램은 연결을 관찰하는 사용자 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 연결 여러 개를 열 수 있습니다.
+연결은 사용자와 다릅니다. 예를 들어 응용 프로그램은 해당 연결을 관찰하는 사용자 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 여러 연결을 열 수 있습니다.
   
-연결 시도 횟수를 포함한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서를 표시하려면 **sp_monitor**를 실행합니다.
+연결 시도 횟수를 포함한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서의 경우 **sp_monitor**를 실행합니다.
   
-@@MAX_CONNECTIONS는 서버에서 동시에 허용되는 최대 연결 수입니다. @@CONNECTIONS는 로그인을 시도할 때마다 증가하므로 @@CONNECTIONS는 @@MAX_CONNECTIONS보다 클 수 있습니다.
+@@MAX_CONNECTIONS는 서버에 대해 허용되는 최대 동시 연결 수입니다. @@CONNECTIONS는 로그인을 시도할 때마다 증가하므로 @@CONNECTIONS는 @@MAX_CONNECTIONS을 초과할 수 있습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 현재 날짜 및 시간의 로그인 시도 수를 반환합니다.
+이 예제에서는 로그인 시도 횟수를 현재 날짜 및 시간으로 반환합니다.
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -32,12 +30,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d310e0dc6aa21758f63d8d7dbe755a0cea950d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3270e3e74eb11c2caace27137c8492ecea3e6e93
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 ```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      ( { column_name | expression } [ , …n] ) ON table_schema_name. table_name    
       [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
     [ NOT FOR REPLICATION ] 
@@ -75,8 +72,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *tvf_schema_name.security_predicate_function_name*  
  조건자로 사용되고 대상 테이블에 대한 쿼리 시 적용될 인라인 테이블 값 함수입니다. 특정 테이블에 대한 특정 DML 작업을 위해 최대 하나의 보안 조건자를 정의할 수 있습니다. 인라인 테이블 값 함수는 SCHEMABINDING 옵션을 사용하여 생성했어야 합니다.  
   
- { *column_name* | *인수* }  
- 보안 조건자 함수를 위한 매개 변수로 사용되는 열 이름 또는 식입니다. 대상 테이블에 있는 모든 열은 조건자 함수를 위한 인수로 사용할 수 있습니다. 리터럴과 builtin, 산술 연산자를 사용하는 식을 포함하는 식을 사용할 수 있습니다.  
+ { *column_name* | *expression* }  
+ 보안 조건자 함수를 위한 매개 변수로 사용되는 열 이름 또는 식입니다. 대상 테이블에서 열을 사용할 수 있습니다. [식](../../t-sql/language-elements/expressions-transact-sql.md)에는 상수, 기본 제공 스칼라 함수, 연산자 및 대상 테이블의 열만이 포함될 수 있습니다. 열 이름 또는 식은 함수의 각 매개 변수에 대해 지정되어야 합니다.  
   
  *table_schema_name.table_name*  
  보안 조건자를 적용할 대상 테이블입니다. 사용되지 않도록 설정된 여러 보안 정책이 특정 DML 작업용 단일 테이블을 대상으로 할 수 있지만 지정된 시간에 하나만 사용할 수 있습니다.  

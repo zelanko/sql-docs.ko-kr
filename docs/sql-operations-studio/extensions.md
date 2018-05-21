@@ -3,7 +3,7 @@ title: SQL 작업 Studio (미리 보기)의 기능을 확장 | Microsoft Docs
 description: SQL 작업 Studio (미리 보기)에 확장을 추가 합니다.
 ms.custom: tools|sos
 ms.date: 03/28/2018
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40b29dfb7512c0f38f009b635ab610cebce7a07a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 2df3a0c5b060e9a4e89f5ce425e522cdd3b37e24
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>기능을 확장 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

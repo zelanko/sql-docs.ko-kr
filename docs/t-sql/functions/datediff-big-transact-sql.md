@@ -68,7 +68,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 *startdate*  
 **time**, **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다. *date*는 식, 열 식, 사용자 정의 변수 또는 문자열 리터럴일 수 있습니다. *startdate*은 *enddate*에서 뺍니다.  
-모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
+모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 *enddate*  
 *startdate*를 참조하세요.

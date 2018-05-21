@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 -   보고서 서버 인스턴스를 설치하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
--   NLB(네트워크 로드 균형 조정) 클러스터에 스케일 아웃 배포를 호스트하려는 경우 스케일 아웃 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
+-   NLB(네트워크 로드 균형 조정) 클러스터에 스케일 아웃 배포를 호스트하려는 경우 스케일 아웃 배포를 구성하기 전에 MLB 클러스터를 구성해야 합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
   
 -   보고서 서버 데이터베이스를 공유하고 보고서 서버를 확장 배포에 조인하는 방법은 이 항목의 절차를 참조하십시오.  
   
@@ -145,7 +145,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 4.  이제 두 보고서 서버 인스턴스가 작동하는지 확인할 수 있습니다. 두 번째 인스턴스를 확인하려면 Reporting Services 구성 도구를 사용하여 보고서 서버에 연결한 다음 **웹 서비스 URL** 또는 **웹 포털 URL**을 클릭합니다.  
   
- 로드 균형이 조정된 서버 클러스터에서 보고서 서버를 실행하려는 경우 추가 구성이 필요합니다. 자세한 내용은 [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
+ 로드 균형이 조정된 서버 클러스터에서 보고서 서버를 실행하려는 경우 추가 구성이 필요합니다. 자세한 내용은 [네트워크 부하 분산 클러스터에서 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **업데이트 모드를 전환하려면**  
   
  업데이트 모드를 전환하려면 이 두 업데이트 모드에 대한 게시와 구독을 설정한 다음 필요에 따라 모드를 전환합니다. 자세한 내용은 다음을 참조하세요.  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)을 참조하세요.  
+[업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>업데이트할 수 있는 구독 사용 시 고려 사항  
   

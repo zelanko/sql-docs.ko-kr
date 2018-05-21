@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ AND instance_name = '_Total'
 - 오류 및 사용 보고 응용 프로그램 사용
 - 서버에서 레지스트리 하위 키 설정
 
-Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)을 참조하세요.
+Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)을 참조하세요.
 
 > [!NOTE]
 > 유료 버전의 SQL Server에서만 Microsoft로 정보를 보내지 못하게 설정할 수 있습니다.
@@ -107,15 +106,15 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
 
-또한 Visual Studio 수준에서 사용 및 오류 보고를 해제하려면 다음 레지스트리 하위 키 및 설정을 지정합니다.
+    또한 SSMS 17.x는 Visual Studio 2015 셸에 기반을 두고 있으며, Visual Studio를 설치하면 기본적으로 고객 피드백이 활성화됩니다.  
 
--    하위 키 = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    개별 컴퓨터에서 고객 피드백을 비활성화하도록 Visual Studio를 구성하려면 다음 레지스트리 하위 키 값을 문자열 "0"으로 변경합니다.  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    레지스트리 항목 이름 = TurnOffSwitch
+    예를 들어 하위 키를 다음으로 변경합니다.  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
- 
-이러한 레지스트리 하위 키에 대한 레지스트리 기반 그룹 정책은 SQL Server 2017 사용 데이터 수집에 따라 적용됩니다.
+    이러한 레지스트리 하위 키에 대한 레지스트리 기반 그룹 정책은 SQL Server 2017 사용 데이터 수집에 따라 적용됩니다.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>크래시 덤프 수집에 대한 레지스트리 하위 키 설정
 

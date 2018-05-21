@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  개체 탐색기에서 **보안** 폴더를 확장합니다.  
   
-2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...** 를 선택합니다. 자세한 내용은 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
+2.  **감사** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 감사...** 를 선택합니다. 자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)을 참조하세요.  
   
 3.  옵션 선택을 마쳤으면 **확인**을 클릭합니다.  
   

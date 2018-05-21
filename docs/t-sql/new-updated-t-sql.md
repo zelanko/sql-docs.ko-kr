@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: t-sql
-ms.date: 02/03/2018
-ms.openlocfilehash: a3a64bb1daf2dc38aabaf723bdf6794801c6218d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>새로 추가되었거나 최근에 업데이트됨: Transact-SQL 문서
 
@@ -28,7 +30,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
+- 업데이트 날짜 범위: &nbsp; **2018-02-03**&nbsp; - &nbsp;**2018-04-28**
 - *주제 영역:* &nbsp; **T-SQL**
 
 
@@ -67,8 +69,8 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [CREATE STATISTICS(Transact-SQL)](#TitleNum_1)
-2. [UPDATE STATISTICS(Transact-SQL)](#TitleNum_2)
+1. [ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)](#TitleNum_1)
+2. [RESTORE 문(Transact-SQL)](#TitleNum_2)
 
 
 
@@ -79,34 +81,36 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1. &nbsp; [CREATE STATISTICS(Transact-SQL)](statements/create-statistics-transact-sql.md)
+### <a name="1-nbsp-alter-database-scoped-configuration-transact-sqlstatementsalter-database-scoped-configuration-transact-sqlmd"></a>1. &nbsp; [ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)](statements/alter-database-scoped-configuration-transact-sql.md)
 
-*업데이트됨: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([다음](#TitleNum_2))
+*업데이트됨: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
-<!-- Source markdown line 200.  ms.author= "edmaca".  -->
+<!-- Source markdown line 150.  ms.author= "carlrab".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 f6833910b664d0059a9073589807b195052325b3 bf969f123b22e6ebc650380a6905156f26ed6ca6  (PR=0  ,  Filename=alter-database-scoped-configuration-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
-**적용 대상**: SQL Server(SQL Server 2017 CU3 이상).
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
- 통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
+**적용 대상**: *{Included-Content-Goes-Here}*
 
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.
+현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 모듈 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_procedure_stats]에 반영됩니다.
 
- 1 병렬 계획이 생성되지 않습니다.
+고유하게 컴파일된 T-SQL 모듈에 대한 모듈 수준 실행 통계는 이 옵션이 켜져 있거나 통계 수집이 [sp_xtp_control_proc_exec_stats]를 통해 활성화된 경우 수집됩니다.
 
- \>1 병렬 통계 작업에 사용되는 최대 프로세서 수를 현재 시스템 워크로드에 따라 지정된 수 또는 더 적은 수로 제한합니다.
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
- 0(기본값) 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.
+**적용 대상**: *{Included-Content-Goes-Here}*
 
- \<update_stats_stream_option> 정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.
+현재 데이터베이스에 있는 고유하게 컴파일된 T-SQL 모듈에 대한 명령문 수준 실행 통계 수집을 활성화하거나 비활성화합니다. 기본값은 OFF입니다. 실행 통계는 [sys.dm_exec_query_stats] 및 [쿼리 저장소]에 반영됩니다.
 
+고유하게 컴파일된 T-SQL 모듈에 대한 명령문 수준 실행 통계는 이 옵션이 켜져 있거나 통계 수집이 [sp_xtp_control_query_exec_stats]를 통해 활성화된 경우 수집됩니다.
+
+고유하게 컴파일된 T-SQL 모듈의 성능 모니터링에 대한 자세한 내용은 [고유하게 컴파일된 저장 프로시저의 성능 모니터링]을 참조하세요.
 
 
 
@@ -118,33 +122,45 @@ MAXDOP = *max_degree_of_parallelism*
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2. &nbsp; [UPDATE STATISTICS(Transact-SQL)](statements/update-statistics-transact-sql.md)
+### <a name="2-nbsp-restore-statements-transact-sqlstatementsrestore-statements-transact-sqlmd"></a>2. &nbsp; [RESTORE 문(Transact-SQL)](statements/restore-statements-transact-sql.md)
 
-*업데이트됨: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([이전](#TitleNum_1))
+*업데이트됨: 2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_1))
 
-<!-- Source markdown line 167.  ms.author= "edmaca".  -->
+<!-- Source markdown line 339.  ms.author= "barbkess".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 2902efb58bb964d3e9a0660956690d37f0397c00 36186a7cffd26ffa54a83e383ffd752dbc568a4d  (PR=0  ,  Filename=restore-statements-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
+**일반적인 주의 사항 - SQL Database 관리되는 인스턴스**
 
-**적용 대상**: SQL Server(SQL Server 2017 CU3 이상).
 
- 통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
+비동기 복원의 경우 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status] 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함).
 
- *max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.
+다음 데이터베이스 옵션은 설정/재정의되며 나중에 변경할 수 없습니다.
 
- 1 병렬 계획이 생성되지 않습니다.
+- NEW_BROKER(broker가 .bak 파일에서 활성화되지 않은 경우)
+- ENABLE_BROKER(broker가 .bak 파일에서 활성화되지 않은 경우)
+- AUTO_CLOSE=OFF(.bak 파일의 데이터베이스에 AUTO_CLOSE=ON이 있는 경우)
+- RECOVERY FULL(.bak 파일의 데이터베이스에 SIMPLE 또는 BULK_LOGGED 복구 모드가 있는 경우)
+- 메모리에 최적화된 파일 그룹이 추가되고 원본 .bak 파일에 없는 경우 XTP를 호출합니다. 모든 기존 메모리에 최적화된 파일 그룹은 XTP로 이름이 변경됩니다.
+- SINGLE_USER 및 RESTRICTED_USER 옵션은 MULTI_USER로 변환됩니다.
 
- \>1 병렬 통계 작업에 사용되는 최대 프로세서 수를 현재 시스템 워크로드에 따라 지정된 수 또는 더 적은 수로 제한합니다.
+**제한 사항 - SQL Database 관리되는 인스턴스**
 
- 0(기본값) 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.
+다음과 같은 제한이 적용됩니다.
 
+- 여러 백업 세트를 포함하는 .BAK 파일은 복원할 수 없습니다.
+- 여러 로그 파일을 포함하는 .BAK 파일은 복원할 수 없습니다.
+- .bak에 FILESTREAM 데이터가 포함된 경우 복원이 실패합니다.
+- 활성 메모리 내 개체가 있는 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다.
+- 어느 지점에 메모리 내 개체가 있는 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다.
+- 읽기 전용 모드인 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다. 이 제한 사항은 곧 삭제될 예정입니다.
+
+자세한 내용은 [관리되는 인스턴스] 참조
 
 
 
@@ -157,41 +173,36 @@ MAXDOP = *max_degree_of_parallelism*
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations
- Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(11+6):&nbsp; &nbsp;**SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(18+0): &nbsp; &nbsp;**SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(218+14):  **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(14+0): &nbsp; &nbsp;**SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(3+2): &nbsp; &nbsp; **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(3+3): &nbsp; &nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(7+10): &nbsp; &nbsp;**SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(1+3): &nbsp; &nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(2+3): &nbsp; &nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(5+2): &nbsp; &nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../samples/new-updated-samples.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 

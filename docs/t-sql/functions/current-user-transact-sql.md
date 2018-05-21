@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-현재 사용자의 이름을 반환합니다. 이 함수는 USER_NAME()과 동등합니다.
+이 함수는 현재 사용자의 이름을 반환합니다. 이 함수는 `USER_NAME()`과 동일합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-CURRENT_USER는 현재 보안 컨텍스트의 이름을 반환합니다. EXECUTE AS 호출로 컨텍스트를 전환한 후 CURRENT_USER를 실행하면 가장된 컨텍스트 이름이 반환됩니다. Windows 보안 주체가 그룹의 멤버 자격을 통해 데이터베이스에 액세스한 경우에는 그룹 이름 대신 Windows 보안 주체 이름이 반환됩니다.
+`CURRENT_USER`는 현재 보안 컨텍스트의 이름을 반환합니다. `EXECUTE AS`에 대한 호출로 컨텍스트가 전환된 후 `CURRENT_USER`가 실행되면 `CURRENT_USER`가 가장된 컨텍스트의 이름을 반환합니다. Windows 보안 주체가 그룹 멤버 자격으로 데이터베이스에 액세스한 경우 `CURRENT_USER`는 그룹 이름 대신 Windows 보안 주체의 이름을 반환합니다.
   
-현재 사용자의 로그인을 반환하려면 [SUSER_NAME & #40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER &#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)을 참조하세요.
+현재 사용자의 로그인을 반환하는 방법에 대해 알아보려면 [SUSER_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 및 [SYSTEM_USER&#40;Transact- SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>1. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
-다음 예에서는 현재 사용자의 이름을 반환합니다.
+이 예에서는 현재 사용자의 이름을 반환합니다.
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>2. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
-다음 예에서는 판매 행의 `CURRENT_USER` 열에 대한 `DEFAULT` 제약 조건으로 `order_person`를 사용하는 테이블을 만듭니다.
+이 예에서는 판매 행의 `order_person` 열에 대한 `DEFAULT` 제약 조건으로 `CURRENT_USER`를 사용하는 테이블을 만듭니다.
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-다음 코드에서는 테이블에 레코드 하나를 삽입합니다. 이러한 문을 실행하고 있는 사용자의 이름은 `Wanida`입니다.
+이 예에서는 테이블에 레코드 하나를 삽입합니다. `Wanida`라는 사용자가 명령문을 실행합니다.
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-다음 쿼리는 `orders22` 테이블에서 모든 정보를 선택합니다.
+이 쿼리는 `orders22` 테이블에서 모든 정보를 선택합니다.
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>3. 가장된 컨텍스트에서 CURRENT_USER 사용  
-다음 예에서 `Wanida` 사용자는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행합니다.
+이 예에서 `Wanida` 사용자는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행합니다.
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

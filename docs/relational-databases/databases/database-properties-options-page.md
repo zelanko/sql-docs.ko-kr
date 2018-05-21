@@ -86,7 +86,7 @@ ms.lasthandoff: 05/03/2018
  **두 자리 연도 구분**  
  두 자릿수 연도로 입력될 수 있는 최고 연도 수를 나타냅니다. 나열된 연도와 99 이하인 연도는 두 자릿수 연도로 입력될 수 있습니다. 모든 다른 연도는 네 자릿수 연도로 입력되어야 합니다.  
   
- 예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
+ 예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [두 자리 연도 구분 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="cursor"></a>커서  
  **커밋 시 커서 닫기 설정**  

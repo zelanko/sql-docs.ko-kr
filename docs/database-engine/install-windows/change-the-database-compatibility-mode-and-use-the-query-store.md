@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용 | Microsoft Docs
+title: 데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3a297d2a6de7527fbd756d3bfc51e650875ad37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1859f4ad95717c087ecfe68b36f3866c63d60d54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용
+# <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -35,10 +35,11 @@ ms.lasthandoff: 05/03/2018
 - 쿼리 프로세서에 대한 변경 내용에는 복잡한 영향이 있을 수 있습니다. 시스템에 대한 "적절한" 변경이 대부분의 작업에 유용할 수도 있지만 다른 사용자에 대한 중요한 쿼리에서 허용되지 않는 회귀가 발생할 수 있습니다. 업그레이드 프로세스에서 이 논리를 분리하는 작업은 쿼리 저장소와 같은 기능이 계획 선택 회귀를 신속하게 완화하거나 프로덕션 서버에서 완전히 방지할 수 있도록 합니다.  
   
 > [!IMPORTANT]  
-> 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다.    
-> 업그레이드 이전에 사용자데 이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.    
-> 업그레이드 후에는 tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 현재 호환성 수준으로 설정됩니다.   
-> master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.    
+> 데이터베이스가 연결 또는 복원된 경우, 그리고 현재 위치 업그레이드 이후에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 아래 동작이 예상됩니다.
+> - 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다.    
+> - 업그레이드 이전에 사용자데 이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.    
+> - 업그레이드 후에는 tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 현재 호환성 수준으로 설정됩니다.   
+> - master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.    
   
 새 쿼리 프로세서 기능을 활성화하는 업그레이드 프로세스는 제품의 릴리스 이후 서비스 모델과 관련이 있습니다.  이러한 수정의 일부는 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)에서 릴리스됩니다.  수정이 필요한 고객은 다른 고객에 대한 예기치 않은 회귀를 일으키지 않고 이러한 수정을 선택할 수 있습니다. 쿼리 프로세서 핫픽스에 대한 릴리스 이후 서비스 모델은 [여기](http://support.microsoft.com/kb/974006)에 설명되어 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 호환성 수준으로 전환하면 이러한 수정이 이제 최신 호환성 수준에서 기본적으로 사용될 수 있으므로 추적 플래그 4199가 더 이상 필요하지 않습니다. 따라서 업그레이드 프로세스의 일부로 업그레이드 프로세스가 완료되면 4199가 활성화되지 않는 것을 확인하는 것이 중요합니다.  
 
@@ -50,6 +51,8 @@ ms.lasthandoff: 05/03/2018
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
  
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
- [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md) 
+[데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
+[쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)     
+[ALTER DATABASE &#40;Transact-SQL&#41; 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+    
   

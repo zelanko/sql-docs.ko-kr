@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 790c3bdce51c2359a9cc34aad4a51b4b2f199fd1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f478c5f06ff846d313625dc0792b33708a9ca358
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -128,7 +125,7 @@ WITH (
    -   DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다. 
   
  FIELD_TERMINATOR = *field_terminator*  
-구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 |입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
+구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 ꞌ|ꞌ입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
   
   
  예:  
@@ -137,7 +134,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = \t  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -153,7 +150,7 @@ WITH (
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ,  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- 물결표 두 개(예: ~~)
  

@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: sql-server
-ms.date: 02/03/2018
-ms.openlocfilehash: 9d16ef6e59a911b8963bfda46cad9ed6d8e8109c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server 문서
 
@@ -28,7 +30,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:*  &nbsp; **2017-12-03** &nbsp;부터 &nbsp; **2018-02-03**까지
+- 업데이트 날짜 범위: &nbsp; **2018-02-03**&nbsp; - &nbsp;**2018-04-28**
 - *주제 영역:* &nbsp; **SQL Server**
 
 
@@ -41,7 +43,8 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
+1. [SQL Server 설명서에 기여하는 방법](sql-server-docs-contribute.md)
+2. [SQL Server 개인 정보 제공](sql-server-privacy.md)
 
 
 
@@ -67,7 +70,9 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [SQL Server 오프라인 도움말 및 도움말 뷰어](#TitleNum_1)
+1. [SQL Server 2012 서비스 팩 릴리스 정보](#TitleNum_1)
+2. [SQL Server 2016 릴리스 정보](#TitleNum_2)
+3. [SQL Server 설명서](#TitleNum_3)
 
 
 
@@ -78,51 +83,110 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-offline-help-and-help-viewersql-server-help-installationmd"></a>1. &nbsp; [SQL Server 오프라인 도움말 및 도움말 뷰어](sql-server-help-installation.md)
+### <a name="1-nbsp-sql-server-2012-service-pack-release-notessql-server-2012-sp4-release-notesmd"></a>1. &nbsp; [SQL Server 2012 서비스 팩 릴리스 정보](sql-server-2012-sp4-release-notes.md)
 
-*업데이트됨: 2017-12-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*업데이트됨: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
-<!-- Source markdown line 67.  ms.author= "craigg".  -->
+<!-- Source markdown line 57.  ms.author= craigg.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
+<!-- git diff --ignore-all-space --unified=0 ce108992ea942b4a11f30d67a1a52d7f26868caa a6269ba2cb2d3b3b54aebf5087dc4d513e476a96  (PR=5676  ,  Filename=sql-server-2012-sp4-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-   도움말 뷰어에서 콘텐츠 관리 탭이 열립니다.
+- **자동 Soft-NUMA 분할** – SQL 2014 SP2에서 추적 플래그 8079를 서버 수준에서 사용할 때 자동 [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) 분할이 도입됩니다. 시작하는 동안 추적 플래그 8079를 사용하면 SQL Server 2014 SP2는 하드웨어 레이아웃에 대해 검사하고 시스템 보고에서 NUMA 노드당 8개 이상의 CPU를 가진 소프트 NUMA를 자동으로 구성합니다. 자동 소프트 NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 생성하면 수신기 수, 크기 조정 및 네트워크와 암호화 기능을 늘려서 후순위 처리를 조정합니다. 프로덕션 환경에서 설정하기 전에 자동 소프트 NUMA를 사용하여 워크로드의 성능을 첫 번째로 테스트하는 것이 좋습니다.
 
-2. 최신 도움말 콘텐츠 패키지를 설치하려면 설치 소스 아래에서 **온라인**을 선택합니다.
-
-   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
-
-   >[!NOTE]
-   > 디스크(SQL Server 2014 도움말)에서 설치하려면 설치 소스 아래에서 **디스크**를 선택하고 디스크 위치를 지정합니다.
-
-   콘텐츠 관리 탭의 로컬 저장소 경로에 콘텐츠가 설치될 로컬 컴퓨터의 위치가 표시됩니다. 위치를 변경하려면 **이동**을 클릭하고 **대상** 필드에 다른 폴더 경로를 입력한 다음 **확인**을 클릭합니다.
-   로컬 저장소 경로를 변경한 후 도움말 설치에 실패할 경우 도움말 뷰어를 닫았다가 다시 열고, 로컬 저장소 경로에 새 위치가 표시되는지 확인한 후, 설치를 다시 시도해 보세요.
-
-3. 설치하려는 각 콘텐츠 패키지(책) 옆에 있는 **추가**를 클릭합니다.
-   모든 SQL Server 도움말 콘텐츠를 설치하려면 SQL Server 아래에 있는 13권의 책을 모두 추가합니다.
-
-4. 오른쪽 아래에 있는 **업데이트**를 클릭합니다.
-   왼쪽의 도움말 목차에 추가된 책이 자동으로 업데이트됩니다.
-
-   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
-
-> [!NOTE]
-> SQL Server 목차의 모든 상위 노드 제목이 해당하는 다운로드식 도움말 책의 이름과 정확히 일치하는 것은 아닙니다. 목차 제목은 다음과 같이 책 이름에 매핑됩니다.
-
-| 내용 창 | SQL Server 책 |
-|-----|-----|
-|Analysis Services 언어 참조 | Analysis Services(MDX) 언어 참조|
-|DAX(Data Analysis Expressions) 참조 | DAX(Data Analysis Expressions) 참조|
-|DMX(Data Mining Extensions) 참조 | DMX(Data Mining Extensions) 참조|
-|SQL Server용 개발자 가이드 | SQL Server 개발자 참조|
-|SQL Server Management Studio 다운로드 | SQL Server Management Studio|
+**서비스 팩 3 릴리스 정보**
 
 
+**다운로드 페이지**
+
+- [SQL Server 2012 SP3 기능 팩](http://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+
+현재 설치된 버전에 따라 다운로드할 파일의 이름과 위치를 확인하기 위한 자세한 내용은 [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)(SQL Server 2012 서비스 팩 3 릴리스 정보)에서 “Select the correct file to download”(다운로드할 올바른 파일 선택) 섹션을 참조하세요.
+
+**서비스 팩 2 릴리스 정보**
+
+
+**다운로드 페이지**
+
+- [SQL Server 2012 SP2 기능 팩](http://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+
+아래 표에서 현재 설치된 버전에 따라 다운로드할 파일의 위치와 이름을 확인하세요. 다운로드 페이지에 시스템 요구 사항 및 기본 설치 지침이 나와 있습니다.
+
+|현재 설치된 버전...|및...하려는 경우|다운로드 및 설치...|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-sql-server-2016-release-notessql-server-2016-release-notesmd"></a>2. &nbsp; [SQL Server 2016 릴리스 정보](sql-server-2016-release-notes.md)
+
+*업데이트됨: 2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_1) | [다음](#TitleNum_3))
+
+<!-- Source markdown line 25.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 a15210866acf524dae49f3a7fd7957c9ffa6a78a 7257cb2017779242cbb8fa2b562f4b102502e942  (PR=5695  ,  Filename=sql-server-2016-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+  이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
+
+- **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016을 다운로드하세요.
+- Azure 가상 머신 소형: Azure 계정이 있나요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
+- SSMS 다운로드: SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드]** 를 참조하세요.
+
+**<a name="bkmk_2016sp2"></a>SQL Server 2016 서비스 팩 2(SP2)**
+
+
+SQL Server 2016 SP2에는 2016 SP1 이후부터 CU8까지 모든 누적 업데이트가 포함되어 있습니다.
+
+- [Microsoft 다운로드 SQL Server 2016 서비스 팩 2(SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- 업데이트의 전체 목록은 [SQL Server 2016 서비스 팩 2 릴리스 정보](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)를 참조하세요.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-sql-server-documentationsql-server-technical-documentationmd"></a>3. &nbsp; [SQL Server 설명서](sql-server-technical-documentation.md)
+
+*업데이트됨: 2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_2))
+
+<!-- Source markdown line 77.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0262010ba39785a6d46b42f8469fb17701f13008 c69a83236391d039381a93c65ebbb2efa53e11b8  (PR=5695  ,  Filename=sql-server-technical-documentation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+
+<!-- : : : m-r -->
+**SQL Server를 사용해 보세요.**
+- 평가 센터에서 다운로드: [Windows용 SQL Server 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+- 평가 센터에서 다운로드: SSMS(SQL Server Management Studio) 다운로드
+- 평가 센터에서 다운로드: SSDT(SQL Server Data Tools) 다운로드
+- 가상 머신 만들기: [SQL Server가 있는 가상 머신 가져오기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 
 
@@ -133,41 +197,36 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *있는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(1+3):&nbsp; **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(6+2):&nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(15+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(2+9):&nbsp; **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(1+0):&nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **SQL Operations
- Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [새로 추가되었거나 업데이트됨(1+1):&nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1):&nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(1+2):&nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(0+2):&nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(11+6):&nbsp; &nbsp;**SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(18+0): &nbsp; &nbsp;**SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(218+14):  **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(14+0): &nbsp; &nbsp;**SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(3+2): &nbsp; &nbsp; **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(3+3): &nbsp; &nbsp; **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(7+10): &nbsp; &nbsp;**SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(1+3): &nbsp; &nbsp; **SQL Operations Studio** 문서](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [새로 추가되었거나 업데이트됨(2+3): &nbsp; &nbsp; **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(5+2): &nbsp; &nbsp; **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+2): &nbsp; &nbsp; **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(1+1): &nbsp; &nbsp; **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 *없는* 주제 영역
 
-
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMA(Data Migration Assistant)** 문서](../dma/new-updated-dma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 분석 플랫폼 시스템** 문서](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../samples/new-updated-samples.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
-
 

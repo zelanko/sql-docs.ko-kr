@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>데이터베이스 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
      **상태**  
      다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
-    |아이콘|상태 텍스트|Description|  
+    |아이콘|상태 텍스트|설명|  
     |----------|-----------------|-----------------|  
     |(아이콘 없음)|(텍스트 없음)|연결 작업이 시작되지 않았거나 이 개체에 대해 보류 중입니다. 대화 상자가 열려 있는 경우에 표시되는 기본 설정입니다.|  
     |녹색, 오른쪽 방향 삼각형|진행 중|연결 작업이 시작되었지만 아직 완료되지 않았습니다.|  
@@ -163,7 +163,8 @@ ms.lasthandoff: 05/03/2018
   ``` 
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)  
   
   

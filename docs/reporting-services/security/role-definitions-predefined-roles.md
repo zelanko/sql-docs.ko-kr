@@ -211,7 +211,7 @@ ms.lasthandoff: 05/03/2018
 |보고서 서버 속성 보기|응용 프로그램 이름, 내 보고서 설정 여부 및 보고서 기록 기본값 등 보고서 서버에 적용되는 속성을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사이트 설정 페이지를 사용할 수 없습니다. 각 페이지의 맨 위에 응용 프로그램 제목도 표시되지 않습니다. 기본적으로 보고서 관리자의 제목은 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"입니다.|  
 |공유 일정 보기|보고서를 실행하거나 새로 고치는 데 사용되는 공유 일정을 봅니다.<br /><br /> **시스템 사용자** 역할에서 이 태스크를 제거하면 사용자가 구독 및 다른 예약된 작업에 사용하는 공유 일정을 선택할 수 없습니다.|  
   
- **시스템 사용자** 역할은 기본 보안을 보완하기 위해 사용할 수 있습니다. 보고서 서버 액세스를 보고서 사용자에게 확대하는 새 역할 할당에 이 역할을 포함할 수 있습니다. 자세한 내용은 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
+ **시스템 사용자** 역할은 기본 보안을 보완하기 위해 사용할 수 있습니다. 보고서 서버 액세스를 보고서 사용자에게 확대하는 새 역할 할당에 이 역할을 포함할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

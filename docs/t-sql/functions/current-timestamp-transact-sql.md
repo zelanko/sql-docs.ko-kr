@@ -36,23 +36,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.
+이 함수는 현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. `CURRENT_TIMESTAMP`는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 운영 체제에서 이 값을 끌어냅니다.
   
 > [!NOTE]  
->  SYSDATETIME 및 SYSUTCDATE에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATE 및 SYSDATETIMEOFFSET은 모든 날짜 및 시간 유형의 변수에 할당할 수 있습니다.  
+>  `SYSDATETIME` 및 `SYSUTCDATE`는 소수 자릿수 초 단위이므로 `GETDATE` 및 `GETUTCDATE`보다 정확합니다. `SYSDATETIMEOFFSET` 함수에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. `SYSDATETIME`, `SYSUTCDATE`, 및 `SYSDATETIMEOFFSET`을 모든 날짜 및 시간 형식의 변수에 할당할 수 있습니다.  
   
 이 함수는 ANSI SQL의 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)와 동등합니다.
   
-모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>인수  
-인수가 필요하지 않습니다.
+이 함수에는 인수가 필요하지 않습니다.
   
 ## <a name="return-type"></a>반환 형식  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 CURRENT_TIMESTAMP를 참조할 수 있습니다.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 `CURRENT_TIMESTAMP`를 참조할 수 있습니다.
   
-CURRENT_TIMESTAMP는 비결정적 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
+`CURRENT_TIMESTAMP`는 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 현재 날짜 및 시간을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.
+이 예에서는 현재 날짜 및 시간 값을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 이 예에서는 값을 순차적으로 반환하므로 소수 자릿수 초가 서로 다를 수 있습니다. 반환되는 실제 값은 실제 실행 날짜/시간을 나타냅니다.
   
 ### <a name="a-get-the-current-system-date-and-time"></a>1. 현재 시스템의 날짜 및 시간 가져오기  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>2. 현재 시스템의 날짜 가져오기  

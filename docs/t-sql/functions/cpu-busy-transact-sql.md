@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,20 +28,19 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da3fd1c4b0e66be485dcf25fdd0b3bdcb0079c6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 27eb30bf1a8b176024610affa368a8db1c6607e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후의 사용 시간을 반환합니다. 결과는 CPU 시간 증가값 또는 "틱"으로 표시되며 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. @@TIMETICKS를 곱하여 마이크로초로 변환합니다.
+이 함수는 최신 시작 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 활성 작업에서 소비한 시간을 반환합니다. `@@CPU_BUSY`는 CPU 시간 증가값 또는 "틱"에서 측정된 결과를 반환합니다. 이 값은 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. 마이크로초로 변환하려면 [@@TIMETICKS](./timeticks-transact-sql.md)를 곱합니다.
   
 > [!NOTE]  
->  @@CPU_BUSY 또는 @@IO_BUSY로 반환된 시간이 누적 CPU 시간의 약 49일을 초과할 경우 산술 오버플로 경고를 받게 됩니다. 이 경우 @@CPU_BUSY, @@IO_BUSY 및 @@IDLE 변수 값은 정확하지 않습니다.  
+>  @@CPU_BUSY 또는 @@IO_BUSY에서 반환된 시간이 누적 CPU 시간의 약 49일을 초과할 경우 산술 오버플로 경고를 수신할 수 있습니다. 이 경우에 `@@CPU_BUSY`, `@@IO_BUSY` 및 `@@IDLE` 변수 값은 정확하지 않습니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,10 +54,10 @@ ms.lasthandoff: 04/16/2018
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-CPU 활동을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서를 표시하려면 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)를 실행합니다.
+CPU 활동을 포함하여 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 포함하는 보고서를 확인하려면 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)를 실행합니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 현재 날짜 및 시간의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 작업을 반환합니다. 값을 마이크로초로 변환할 때 산술 오버플로가 발생하지 않도록 값 중 하나를 `float` 데이터 형식으로 변환합니다.
+이 예제에서는 현재 날짜 및 시간으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 작업을 반환합니다. 이 예제에서는 값 중 하나를 `float` 데이터 형식으로 변환합니다. 그러면 마이크로초 단위로 값을 계산할 때 산술 오버플로 문제를 방지합니다.
   
 ```sql
 SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   

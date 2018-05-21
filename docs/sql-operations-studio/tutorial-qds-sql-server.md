@@ -4,20 +4,20 @@ description: 이 자습서에서는 5 개의 가장 느린 쿼리 샘플 위젯 
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
 ms.topic: tutorial
-author: erickangMSFT
-ms.author: erickang
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d06bd752b0cdd07d87d8e5816a74d6e2d43d31ef
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cef672411019a0c4402663597382eba426c2562b
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *가장 느린 쿼리 5* 데이터베이스 대시보드에 위젯을 샘플
 

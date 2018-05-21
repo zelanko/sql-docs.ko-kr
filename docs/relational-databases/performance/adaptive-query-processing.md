@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: performance
@@ -17,11 +17,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,31 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>메모리 부여 피드백, 리소스 관리자 및 쿼리 힌트
 부여되는 실제 메모리는 리소스 관리자 또는 쿼리 힌트에 따른 쿼리 메모리 제한을 준수합니다.
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 메모리 부여 피드백 비활성화
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 메모리 부여 피드백을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+또한 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK을 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
+
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
 일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
 작동 방식은 다음과 같습니다.
@@ -139,7 +164,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>적응 조인 작업 추적
 적응 조인 연산자에는 다음과 같은 계획 연산자 특성이 있습니다.
 
-| 계획 특성 | Description |
+| 계획 특성 | 설명 |
 |--- |--- |
 | AdaptiveThresholdRows | 해시 조인에서 중첩된 루프 조인으로 전환하는 데 사용되는 임계값을 보여 줍니다. |
 | EstimatedJoinType | 가능한 조인 형식입니다. |
@@ -165,6 +190,36 @@ WHERE [fo].[Quantity] = 361;
 다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다.  이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
 
 ![조인 임계값](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 적응형 조인 비활성화
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 비활성화할 수 있습니다.  
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+또한 DISABLE_BATCH_MODE_ADAPTIVE_JOINS를 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>다중 문 테이블 반환 함수에 대한 인터리브 실행
 인터리브 실행을 사용하면 단일 쿼리 실행에 대한 최적화 및 실행 단계 사이의 단방향 경계가 변경되며 수정된 카디널리티 예상치에 따라 계획을 조정할 수 있습니다. 최적화 중에 현재 **MSTVF(다중 문 테이블 반환 함수)** 인 인터리브 실행 후보를 발견할 경우 최적화를 일시 중지하고, 해당 하위 트리를 실행하고, 정확한 카디널리티 예상치를 캡처한 다음 다운스트림 작업에 대해 최적화를 다시 시작합니다.
@@ -205,14 +260,14 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-interleaved-execution-activity"></a>인터리브 실행 작업 추적
 실제 쿼리 실행 계획에서 다음 사용 특성을 확인할 수 있습니다.
 
-| 실행 계획 특성 | Description |
+| 실행 계획 특성 | 설명 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | *QueryPlan* 노드에 적용됩니다. *true*이면 계획에 인터리브 실행 후보가 포함됩니다. |
 | IsInterleavedExecuted | TVF 노드에 대한 RelOp 아래의 *RuntimeInformation* 요소의 특성입니다. *true*이면 작업이 인터리브 실행 작업의 일부로 구체화된 것입니다. |
 
 다음과 같은 xEvent를 통해 인터리브 실행 발생을 추적할 수도 있습니다.
 
-| xEvent | Description |
+| xEvent | 설명 |
 | ---- | --- |
 | interleaved_exec_status | 이 이벤트는 인터리브 실행 시 발생합니다. |
 | interleaved_exec_stats_update | 이 이벤트는 카디널리티 예상치가 인터리브 실행에 의해 업데이트되었음을 설명합니다. |
@@ -226,6 +281,41 @@ WHERE [fo].[Quantity] = 361;
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>인터리브 실행 및 쿼리 저장소 상호 운용성
 인터리브 실행을 사용하는 계획을 강제로 적용할 수 있습니다. 계획은 초기 실행에 따라 카디널리티 예상치를 수정한 버전입니다.    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 인터리브된 실행 비활성화
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 인터리브된 실행을 비활성화할 수 있습니다.  데이터베이스에서 발생하는 모든 쿼리 실행에 대한 인터리브된 실행을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+활성화될 경우 sys.database_scoped_configurations에서 이 설정이 enabled로 표시됩니다.
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 인터리브된 실행을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+또한 DISABLE_INTERLEAVED_EXECUTION_TVF를 USE HINT 쿼리 힌트로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

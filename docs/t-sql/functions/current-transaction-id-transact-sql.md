@@ -22,16 +22,16 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5170c6a3b96710ea42d1acdb88256c33be0eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a9583e40d73a48b7e8ddfdf8eddf8d38b743c7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID(Transact_SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-현재 세션에서 현재 트랜잭션의 트랜잭션 ID를 반환합니다.
+이 함수는 현재 세션에서 현재 트랜잭션의 트랜잭션 ID를 반환합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ CURRENT_TRANSACTION_ID( )
 모든 사용자는 현재 세션의 트랜잭션 ID를 반환할 수 있습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 현재 세션의 트랜잭션 ID를 반환합니다.
+이 예에서는 현재 세션의 트랜잭션 ID를 반환합니다.
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  

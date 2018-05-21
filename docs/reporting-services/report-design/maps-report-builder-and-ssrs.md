@@ -1,16 +1,15 @@
 ---
-title: "지도(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 지도(보고서 작성기 및 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10508"
 - MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
@@ -19,16 +18,15 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1ac5c7b4af5efb160b311e7c13cd6dda0cb327f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
   지리적 배경에 대해 비즈니스 데이터를 시각화하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도를 추가할 수 있습니다. 선택하는 지도 유형은 보고서에 나타낼 정보에 따라 다릅니다. 위치만 표시하는 지도, 지역의 세대 수에 따라 거품 크기가 달라지는 거품형 지도, 각 상점에서 이윤이 가장 높은 제품에 따라 표식 스타일이 달라지는 표식 지도 또는 상점 간 경로를 표시하는 선 지도 등을 추가할 수 있습니다.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 -   **지도 갤러리 보고서.** 지도 갤러리에 있는 보고서에 공간 데이터가 포함되어 있습니다. 기본적으로 지도 갤러리는 *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery에 설치됩니다.  
   
     > [!NOTE]  
-    >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/))의 허가에 의해 TIGER/Line Shapefile에서 데이터를 사용합니다. TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
+    >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하십시오. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
 -   **ESRI 셰이프 파일.** ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터를 포함합니다. ESRI 셰이프 파일은 파일 집합입니다. .shp 파일의 데이터는 지리적 또는 기하학적 모양을 지정합니다. .dbf 파일의 데이터는 모양의 특성을 제공합니다. 디자인 뷰에서 지도를 보거나 보고서 서버에서 지도를 실행하려면 두 파일이 모두 같은 폴더에 있어야 합니다. 로컬 파일 시스템에서 .shp 파일의 공간 데이터를 추가하면 이 공간 데이터가 보고서에 포함됩니다. 런타임에 동적으로 공간 데이터를 검색하려면 셰이프 파일을 보고서 서버로 업로드한 다음 공간 데이터 원본으로 지정합니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 01/09/2018
   
 -   **포함된 데이터.** 샘플 데이터가 보고서의 지도 계층에 포함된 지도 요소에서 검색됩니다.  
   
--   **ESRI 셰이프 파일에 연결.** ESRI 셰이프 파일(.shp) 및 지원 파일(.dbf)을 사용할 수 있으면 예제 데이터가 셰이프 파일에서 로드되고, 그렇지 않으면 보고서 처리기가 예제 데이터를 생성하고 **사용 가능한 공간 데이터가 없습니다.**라는 메시지를 표시합니다.  
+-   **ESRI 셰이프 파일에 연결.** ESRI 셰이프 파일(.shp) 및 지원 파일(.dbf)을 사용할 수 있으면 예제 데이터가 셰이프 파일에서 로드되고, 그렇지 않으면 보고서 처리기가 예제 데이터를 생성하고 **사용 가능한 공간 데이터가 없습니다.** 라는 메시지를 표시합니다.  
   
--   **SQL Server 공간 데이터.** 데이터 원본을 사용할 수 있고 자격 증명이 유효하면 예제 데이터가 데이터베이스의 공간 데이터에서 로드되고, 그렇지 않으면 보고서 처리기가 예제 데이터를 생성하고 **사용 가능한 공간 데이터가 없습니다.**라는 메시지를 표시합니다.  
+-   **SQL Server 공간 데이터.** 데이터 원본을 사용할 수 있고 자격 증명이 유효하면 예제 데이터가 데이터베이스의 공간 데이터에서 로드되고, 그렇지 않으면 보고서 처리기가 예제 데이터를 생성하고 **사용 가능한 공간 데이터가 없습니다.** 라는 메시지를 표시합니다.  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>보고서 정의에 공간 데이터 포함  
  분석 데이터와 달리 보고서 정의에 지도 계층의 공간 데이터를 포함하는 옵션이 있습니다. 공간 데이터를 포함하는 경우 지도 계층에서 사용되는 지도 요소를 포함합니다.  

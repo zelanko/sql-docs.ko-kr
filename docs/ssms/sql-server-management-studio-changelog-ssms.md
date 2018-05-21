@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-릴리스 번호: 17.6<br>
+릴리스 번호: 17.7<br>
+빌드 번호: 14.0.17254.0<br>
+릴리스 날짜: 2018년 5월 9일
+
+### <a name="whats-new"></a>새로운 기능
+
+**일반 SSMS**
+
+복제 모니터:   
+- 복제 모니터는 이제 게시자 데이터베이스 및/또는 배포자 데이터베이스가 가용성 그룹의 일부인 시나리오에서 수신기 등록을 지원합니다. 이제 게시자 데이터베이스 및/또는 배포자 데이터베이스가 Always On의 일부인 복제 환경을 모니터링할 수 있습니다. 
+ 
+Azure SQL Data Warehouse: 
+- Azure SQL Data Warehouse에서 외부 테이블에 대한 거부된 행 위치 지원을 추가합니다. 
+
+**IS(Integration Services)**
+
+- Azure SQL Database에 배포할 SSIS 패키지에 대한 예약 기능을 추가했습니다. 고급 작업 스케줄러인 SQL Server 에이전트가 있는 SQL Server 온-프레미스 및 SQL Database 관리되는 인스턴스(미리 보기)와 달리 SQL Database에는 기본 제공 스케줄러가 없습니다. 이 새로운 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다. SQL Database를 사용하여 SSIS 카탈로그 데이터베이스인 SSISDB를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 데이터 팩터리 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 그런 다음, 데이터 팩터리에서 이러한 개체를 편집하고 확장할 수 있습니다. 자세한 내용은 [SSMS를 지원하는 Azure SQL Database에서 SSIS 패키지 실행 예약](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)을 참조하세요. Azure Data Factory 파이프라인, 활동 및 트리거에 대한 자세한 내용은 [Azure Data Factory의 파이프라인 및 활동](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) 및 [Azure Data Factory에서 파이프라인 실행 및 트리거](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)를 참조하세요.
+- SQL 관리되는 인스턴스의 SQL 에이전트에서 SSIS 패키지 예약 지원. 이제 관리되는 인스턴스에서 SSIS 패키지를 실행하는 SQL 에이전트 작업을 만들 수 있습니다. 
+
+### <a name="bug-fixes"></a>버그 수정
+
+**일반 SSMS** 
+
+유지 관리 계획:   
+- 기존 유지 관리 계획의 일정을 변경하려고 하면 예외가 throw되는 문제가 해결되었습니다. 자세한 내용은 [유지 관리 계획에서 일정을 클릭하면 SSMS 17.6이 충돌함](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924)을 참조하세요.
+
+Always On: 
+- SQL Server 2012에서 Always On 대기 시간 대시보드가 작동하지 않는 문제가 해결되었습니다.
+ 
+스크립팅: 
+- 관리자가 아닌 사용자의 경우 Azure SQL Data Warehouse에 대한 저장 프로시저 스크립팅이 작동하지 않는 문제가 해결되었습니다.
+- Azure SQL Database에 대한 데이터베이스 스크립팅이 *SCOPED CONFIGURATION* 속성을 스크립팅하지 않는 문제가 해결되었습니다.
+ 
+원격 분석: 
+- 원격 분석 전송을 옵트아웃한 후 서버에 연결하려고 하면 SSMS가 충돌하는 문제가 해결되었습니다.
+ 
+Azure SQL Database: 
+- 사용자가 호환성 수준을 설정하거나 변경할 수 없는 문제가 해결되었습니다(비어 있는 드롭다운). 참고: 호환성 수준을 150으로 설정하려는 사용자는 여전히 *스크립트* 단추를 사용하여 스크립트를 수동으로 편집해야 합니다. 
+ 
+SMO: 
+- SMO의 오류 로그 크기 설정이 공개되었습니다. 자세한 내용은 [SQL Server 오류 로그의 최대 크기 설정](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115)을 참조하세요.  
+- Linux의 SMO에서 라인피드 스크립팅이 수정되었습니다.
+- 거의 사용되지 않는 속성을 검색할 때의 기타 성능 개선.  
+
+IntelliSense: 
+- 성능 개선: IntelliSense의 열 데이터 쿼리 양이 축소되었습니다. 이는 상당히 많은 열이 있는 테이블에 대해 작업할 때 특히 유용합니다. 
+
+SSMS 사용자 설정:
+- 옵션 페이지의 크기가 제대로 조정되지 않는 문제가 해결되었습니다.
+
+기타:  
+- *통계 세부 정보* 페이지에 텍스트가 표시되는 방식이 개선되었습니다. 
+
+**IS(Integration Services)**
+
+- Azure SQL Database 관리되는 인스턴스에 대한 지원이 향상되었습니다.
+- 사용자가 SQL Server 2014 이하에 대한 카탈로그를 만들지 못하는 문제가 해결되었습니다.
+- 보고서와 관련된 두 가지 문제가 해결되었습니다.
+   - Azure 서버의 컴퓨터 이름이 제거되었습니다.
+   - 지역화된 개체 이름의 처리가 개선되었습니다.
+
+
+### <a name="known-issues"></a>알려진 문제
+
+새로운 *범용* 또는 *중요 비즈니스용* Azure SQL Database 버전으로 작업할 때 일부 대화 상자에서 잘못된 버전이라는 오류가 표시됩니다.
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![다운로드](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 빌드 번호: 14.0.17230.0<br>
 릴리스 날짜: 2018년 3월 20일
+
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -651,7 +720,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
-- [Generate Tasks]\(작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
+- [Generate Tasks] (작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)

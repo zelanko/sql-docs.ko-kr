@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> 데이터베이스 연결 시 메타데이터 변경  
  읽기 전용 데이터베이스를 분리한 다음 다시 연결하는 경우 현재 차등 기반에 대한 백업 정보는 손실됩니다. *차등 기반* 은 데이터베이스나 데이터베이스에 있는 파일 또는 파일 그룹의 하위 집합에 있는 모든 데이터에 대한 최신 전체 백업입니다. 기반 백업 정보가 없는 경우 **master** 데이터베이스는 읽기 전용 데이터베이스와 동기화되지 않으므로 이후에 수행되는 차등 백업에서 예기치 않은 결과가 발생할 수 있습니다. 그러므로 읽기 전용 데이터베이스를 차등 백업하는 경우에는 데이터베이스를 다시 연결한 다음 전체 백업을 수행하여 새로운 차등 기반을 만들어야 합니다. 차등 백업에 대한 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
- 연결 시 데이터베이스가 시작됩니다. 일반적으로 데이터베이스를 연결하면 데이터베이스를 분리 또는 복사한 시점과 동일한 상태가 됩니다. 그러나 연결 및 분리 작업을 수행하면 해당 데이터베이스의 데이터베이스 간 소유권 체인을 사용할 수 없게 됩니다. 체인을 사용하도록 설정하는 방법은 [cross db ownership chaining 서버 구성 옵션](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요. 또한 데이터베이스를 연결할 때마다 TRUSTWORTHY는 OFF로 설정됩니다. TRUSTWORTHY를 ON으로 설정하는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+ 연결 시 데이터베이스가 시작됩니다. 일반적으로 데이터베이스를 연결하면 데이터베이스를 분리 또는 복사한 시점과 동일한 상태가 됩니다. 그러나 연결 및 분리 작업을 수행하면 해당 데이터베이스의 데이터베이스 간 소유권 체인을 사용할 수 없게 됩니다. 체인을 사용하도록 설정하는 방법은 [cross db ownership chaining 서버 구성 옵션](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요. 
+
+ >[!IMPORTANT]
+ > 데이터베이스가 연결된 경우 기본적으로 보안을 위해 *is_broker_enabled*, *is_honor_broker_priority_on* 및 *is_trustworthy_on* 옵션이 OFF로 설정됩니다. 이러한 옵션을 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  메타데이터에 대한 자세한 내용은 [다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.
   
 ### <a name="backup-and-restore-and-attach"></a>백업, 복원 및 연결  
  완전히 또는 부분적으로 오프라인 상태인 데이터베이스와 마찬가지로 파일을 복원 중인 데이터베이스에는 연결될 수 없습니다. 이때 복원 시퀀스를 중지하면 데이터베이스를 연결할 수 있습니다. 그런 다음 복원 시퀀스를 다시 시작할 수 있습니다.  

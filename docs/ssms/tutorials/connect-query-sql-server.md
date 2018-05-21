@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
@@ -33,17 +33,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>사전 요구 사항
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다. 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
-- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server 인스턴스에 연결
 
-1. SQL Server Management Studio를 시작합니다.  
-    처음으로 SSMS를 실행하면 **서버에 연결** 창이 열립니다. 열리지 않으면 **개체 탐색기** > **연결** > **데이터베이스 엔진**을 수동으로 선택하여 열 수 있습니다.
+1. SQL Server Management Studio를 시작합니다. 처음으로 SSMS를 실행하면 **서버에 연결** 창이 열립니다. 열리지 않으면 **개체 탐색기** > **연결** > **데이터베이스 엔진**을 수동으로 선택하여 열 수 있습니다.
 
     ![개체 탐색기의 연결 링크](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 
     ![SQL Server 인스턴스를 사용하는 옵션을 포함한 "서버 이름" 필드](media/connect-query-sql-server/connection2.png)
 
-    - **인증**에서 **Windows 인증**을 선택합니다. 이 아티클에서는 Windows 인증을 사용하지만 SQL Server 로그인도 지원합니다. **SQL 로그인**을 선택하는 경우 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 인증 형식에 대한 자세한 내용은 [서버에 연결(데이터베이스 엔진)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine)을 참조하세요.
+    - **인증**에서 **Windows 인증**을 선택합니다. 이 아티클에서는 Windows 인증을 사용하지만 SQL Server 로그인도 지원합니다. **SQL 로그인**을 선택하는 경우 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 인증 형식에 대한 자세한 내용은 [서버에 연결(데이터베이스 엔진)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)을 참조하세요.
 
     **옵션**을 선택하여 추가 연결 옵션을 수정할 수도 있습니다. 연결 옵션의 예제는 연결하려는 데이터베이스, 연결 제한 시간 값 및 네트워크 프로토콜입니다. 이 아티클에서는 모든 옵션에 기본값을 사용합니다. 
 
 3. 모든 필드를 완료한 후에 **연결**을 선택합니다. 
 
-4. 다음과 같이 개체 탐색기에서 개체를 조사하여 SQL Server 인스턴스에 대한 연결이 성공했는지 확인합니다. 
+### <a name="examples-of-successful-connections"></a>성공적인 연결의 예
+SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에서 개체를 확장하고 탐색합니다. 이러한 개체에 연결된 서버 유형에 따라 달라집니다. 
 
-   ![연결 성공](media/connect-query-sql-server/successfulconnection.png)
+- 온-프레미스 SQL Server에 연결 - 이 경우 NODE5\SQL2016ST: ![온-프레미스 서버에 연결](media/connect-query-sql-server/connect-on-prem.png)
+
+- SQL Azure DB에 연결 - 이 경우 msftestserver.database.windows.net: ![SQL Azure DB에 연결](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > 이 자습서의 앞 부분에서 *Windows 인증*을 사용하여 온-프레미스 SQL Server에 연결했지만 SQL Azure DB에는 이러한 방법이 지원되지 않습니다. 따라서 이 이미지는 SQL 인증을 사용하여 SQL Azure DB에 연결하는 방법을 보여 줍니다. 자세한 내용은 [SQL 온-프레미스 인증](../../relational-databases/security/choose-an-authentication-mode.md) 및 [SQL Azure 인증](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)을 참조하세요. 
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 다음을 수행하여 TutorialDB라는 데이터베이스를 만듭니다. 
@@ -170,8 +175,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>쿼리 창이 연결된 서버 변경
 다음과 같은 단계를 수행하여 현재 쿼리 창이 연결된 서버를 변경할 수 있습니다.
 
-1. 쿼리 창을 마우스 오른쪽 단추로 클릭한 다음, **연결** > **연결 변경**을 선택합니다.  
-    **서버에 연결** 창이 다시 열립니다.
+1. 쿼리 창을 마우스 오른쪽 단추로 클릭한 다음, **연결** > **연결 변경**을 선택합니다. **서버에 연결** 창이 다시 열립니다.
 2. 쿼리가 연결된 서버를 변경합니다. 
  
    ![연결 변경 명령](media/connect-query-sql-server/changeconnection.png)

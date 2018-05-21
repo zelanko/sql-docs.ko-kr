@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
          새 Oracle CDC Service 대화 상자가 열립니다.  
   
-         이 대화 상자를 사용하는 방법은 [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)를 참조하십시오. CDC Service를 만들거나 편집하는 방법은 [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)를 참조하십시오.  
+         이 대화 상자를 사용하는 방법은 [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)를 참조하십시오. CDC Service를 만들거나 편집하는 방법은 [CDC Service를 만들고 편집하는 방법](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)를 참조하십시오.  
   
          Oracle CDC Service에서 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 `public` 고정 서버 역할의 구성원이면 가능하며 다른 권한은 필요 없습니다. 하지만 Oracle CDC Service를 만들려면 로그인은 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있어야 합니다. 예를 들어 **db_owner** 데이터베이스 역할을 로그인에 할당해야 합니다. MSXDBCDC 데이터베이스에 대해 쓰기 권한이 없는 로그인이 새 Oracle CDC 인스턴스를 만들려고 시도하면 오류 메시지가 표시됩니다. 해당 대화 상자에서 **확인** 을 클릭하여 SQL Server에 연결 대화 상자를 표시합니다.  
   

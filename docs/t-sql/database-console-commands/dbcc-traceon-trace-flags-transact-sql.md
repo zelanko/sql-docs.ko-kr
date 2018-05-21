@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -27,12 +24,11 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 52ad63dc661cce6950b5d0939d4a6d508fb6a137
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,6 +95,7 @@ ms.lasthandoff: 04/26/2018
 |**3226**|기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그 백업을 매우 자주 만드는 경우 이러한 성공 메시지가 바로 누적되어 엄청난 오류 로그가 쌓여 다른 메시지를 찾는 데 문제가 될 수 있습니다.<br /><br />이 추적 플래그를 사용하면 이러한 로그 항목을 표시하지 않을 수 있습니다. 로그 백업을 자주 실행하거나 이러한 항목에 종속되는 스크립트가 없는 경우 이 추적 플래그를 사용하면 유용합니다.<br /><br />**범위**: 전역만|   
 |**3427**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 또는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 임시 테이블에 데이터를 삽입하는 많은 연속 트랜잭션이 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우보다 더 많은 CPU를 사용하는 경우 문제를 해결할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/3216543)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 이상의 빌드에 적용됩니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4부터 이 추적 플래그는 영향을 주지 않습니다.<br /><br />**범위**: 전역만|  
 |**3459**|병렬 다시 실행을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/help/3200975) 및 [Microsoft 지원 문서](http://support.microsoft.com/help/4101554)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 적용됩니다.<br /><br />**범위**: 전역만| 
+|**3468**|TempDB에 [간접 검사점](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)을 사용하지 않도록 설정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 이상 빌드에 적용됩니다.<br /><br />**범위**: 전역만|  
 |**3608**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **master** 데이터베이스를 제외한 모든 데이터베이스를 자동으로 시작 및 복구하지 못하도록 방지합니다. **tempdb**가 필요한 작업이 시작되면 **모델**이 복구되고 **tempdb**가 만들어집니다. 다른 데이터베이스에 액세스할 때 이 데이터베이스가 시작 및 복구됩니다. 스냅숏 격리 및 커밋된 읽기 스냅숏과 같은 일부 기능은 작동하지 않을 수 있습니다. [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md) 및 [사용자 데이터베이스 이동](../../relational-databases/databases/move-user-databases.md)에 사용합니다.<br /><br />**참고:** 정상 작업 중에는 사용하지 마세요.<br /><br />**범위**: 전역만|   
 |**3625**|'\*\*\*\*\*\*'를 사용하여 일부 오류 메시지의 매개 변수를 마스킹하여 sysadmin 고정 서버 역할의 멤버가 아닌 사용자에게 반환되는 정보의 양을 제한합니다. 이렇게 하면 중요한 정보의 노출을 막을 수 있습니다.<br /><br />**범위**: 전역만|  
 |**4136**|OPTION(RECOMPILE), WITH RECOMPILE 또는 OPTIMIZE FOR \<value>가 사용되지 않으면 매개 변수 검색(sniffing)을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](http://support.microsoft.com/kb/980653)를 참조하세요. 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 PARAMETER_SNIFFING 옵션을 참조하세요. 쿼리 수준에서 이를 수행하기 위해 OPTIMIZE FOR UNKNOWN [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가하세요. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하는 두 번째 옵션은 이 추적 플래그를 사용하는 대신 USE HINT 'PARAMETER_SNIFFING' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가하는 것입니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역 또는 세션|  

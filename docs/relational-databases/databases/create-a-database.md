@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  **부터 모든 사용자 데이터베이스에서 전체 텍스트를 사용할 수 있기 때문에** 전체 텍스트 인덱싱 사용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]옵션이 항상 선택되어 있고 흐리게 표시됩니다.  
   
-6.  주 데이터 및 트랜잭션 로그 파일의 기본값을 변경하려면 **데이터베이스 파일** 표에서 해당 셀을 클릭하고 새 값을 입력합니다. 자세한 내용은 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)을 참조하세요.  
+6.  주 데이터 및 트랜잭션 로그 파일의 기본값을 변경하려면 **데이터베이스 파일** 표에서 해당 셀을 클릭하고 새 값을 입력합니다. 자세한 내용은 [데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)을 참조하세요.  
   
 7.  데이터베이스의 데이터 정렬을 변경하려면 **옵션** 페이지를 선택한 다음 목록에서 데이터 정렬을 선택합니다.  
   

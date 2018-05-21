@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하는 경우에만 사용할 수 있으므로 경고를 만들려는 보고서가 SharePoint 문서 라이브러리에 저장, 배포 또는 업로드되어 있어야 합니다.  
 >   
->  Windows 통합 인증 또는 자격 증명 프롬프트를 사용하는 보고서에 대해서는 데이터 경고를 만들 수 없습니다. 보고서는 저장된 자격 증명을 사용해야 합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
+>  Windows 통합 인증 또는 자격 증명 프롬프트를 사용하는 보고서에 대해서는 데이터 경고를 만들 수 없습니다. 보고서는 저장된 자격 증명을 사용해야 합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
  데이터 경고 디자이너를 열려면 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭합니다. **새 데이터 경고** 옵션이 표시되지 않을 경우 보고서가 저장된 자격 증명을 사용하도록 구성되지 않은 것입니다. SharePoint 라이브러리에서 보고서 데이터 원본을 업데이트하여 자격 증명 유형을 업데이트할 수 있습니다.  
   

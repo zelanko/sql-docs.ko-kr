@@ -1,25 +1,23 @@
 ---
-title: "SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
 
@@ -63,7 +61,7 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
     ![웹 파트 드롭다운 목록에서 웹 페이지를 편집합니다.](media/sharepoint-edit-web-part.png)
 
-2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. 이는 *http://myrsserver/reportserver*와 유사해야 합니다.
+2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. 이는 *http://myrsserver/reportserver*과 같이 표시됩니다.
 
 3. 웹 파트 내에서 표시하려는 보고서의 경로 및 이름을 입력합니다. 이는 */AdventureWorks Sample Reports/Company Sales*와 유사합니다. 이 예제에서는 보고서 *Company Sales*는 *AdventureWorks Sample Reports*라는 폴더에 있습니다.
 

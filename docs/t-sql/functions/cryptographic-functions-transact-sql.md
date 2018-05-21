@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -26,17 +24,16 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823f6fd583be606672905acf3908e1854a873e75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd25f4a498c11bc3eec36f21877f5a0204b7617f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptographic-functions-transact-sql"></a>암호화 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-다음 함수들은 암호화, 암호 해독, 디지털 서명 및 디지털 서명에 대한 유효성 검사를 지원합니다.
+이러한 함수는 디지털 서명, 디지털 서명 유효성 검사, 암호화 및 암호 해독을 지원합니다.
   
 ## <a name="symmetric-encryption-and-decryption"></a>대칭적 암호화 및 해독
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>자동 키 처리를 이용한 대칭적 암호 해독
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>자동 키 처리를 사용하는 대칭적 암호 해독
   
 |||  
 |-|-|  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>인증서 복사
+## <a name="certificate-copying"></a>인증서 복사
   
 |||  
 |-|-|  

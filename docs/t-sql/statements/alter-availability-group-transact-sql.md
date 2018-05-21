@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
  FAILOVER  
- 데이터 손실 없이 연결된 보조 복제본으로 가용성 그룹의 수동 장애 조치(failover)를 시작합니다. 사용자가 장애 조치(failover) 명령을 입력하는 복제본을 이라고 합니다.  장애 조치(failover) 대상이 주 역할을 맡고 각 데이터베이스의 복사본을 복구하여 이를 온라인 상태의 새 주 데이터베이스로 만듭니다. 이전 주 복제본은 동시에 보조 역할로 전환되고 해당 데이터베이스는 보조 데이터베이스가 되고 즉시 일시 정지됩니다. 잠재적으로 이러한 역할은 일련의 오류로 인해 상태가 앞뒤로 전환될 수 있습니다.  
+데이터 손실 없이 연결된 보조 복제본으로 가용성 그룹의 수동 장애 조치(failover)를 시작합니다. 주 복제본을 호스팅하는 복제본은 *장애 조치(failover) 대상*입니다.  장애 조치(failover) 대상이 주 역할을 맡고 각 데이터베이스의 복사본을 복구하여 이를 온라인 상태의 새 주 데이터베이스로 만듭니다. 이전 주 복제본은 동시에 보조 역할로 전환되고 해당 데이터베이스는 보조 데이터베이스가 되고 즉시 일시 정지됩니다. 잠재적으로 이러한 역할은 일련의 오류로 인해 상태가 앞뒤로 전환될 수 있습니다.  
   
  현재 주 복제본과 동기화된 동기-커밋 보조 복제본에서만 지원됩니다. 보조 복제본을 동기화하기 위해서는 주 복제본도 동기-커밋 모드로 실행되어야 합니다.  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER는 다음 옵션 중 하나를 사용합니다.  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  *dns_name*으로 지정된 가용성 그룹 수신기에 지정된 IP 주소를 추가합니다.  
   
  PORT **=** *listener_port*  

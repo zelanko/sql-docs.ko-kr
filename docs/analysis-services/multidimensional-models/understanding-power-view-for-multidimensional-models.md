@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![파워 뷰의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
 ### <a name="implicit-measures"></a>암시적 측정값  
- 테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델의 경우에는 차원 특성 데이터가 다른 방식으로 저장되므로 암시적 측정값을 쿼리하는 데 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
+ 테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델에 대 한 암시적 측정값을 쿼리 차원 특성 데이터가 다르게 저장 되기 때문에 오래를 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>차원, 특성 및 계층  
  큐브 차원은 테이블 형식 메타데이터에서 테이블로 표시됩니다. 파워 뷰 필드 목록에서 차원 특성은 표시 폴더 내에 열로 표시됩니다.  Customer 차원의 Birth Date 특성과 같이 AttributeHierarchyEnabled 속성이 false로 설정된 차원 특성이나 AttributeHierarchyVisible 속성이 false로 설정된 차원 특성은 파워 뷰 필드 목록에 표시되지 않습니다. 여러 수준 계층 또는 사용자 계층(예: Customer 차원의 Customer Geography)은 파워 뷰 필드 목록에서 계층으로 표시됩니다. 차원 특성의 숨겨진 UnknownMember는 DAX 쿼리와 파워 뷰에서는 표시됩니다.  

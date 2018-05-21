@@ -1,43 +1,42 @@
 ---
-title: "SQL Server 가용성 그룹에 대 한 장애 조치를 강제로"
-description: "강제 장애 조치 클러스터 유형 none 가용성 그룹에 대 한"
-services: 
+title: 가용성 그룹에 대한 SQL Server 강제 장애 조치(failover)
+description: 클러스터 형식이 NONE인 가용성 그룹의 강제 장애 조치(failover)
+services: ''
 author: MikeRayMSFT
-ms.service: 
 ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: f5655e73481d830c848aea34c4a4f49613be0913
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
-각 AG에 주 복제본이 하나만 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 복제본은 주를 변경 하려면 조치할 수 있습니다. 고가용성을 위한 AG, 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 유형 NONE AG의 장애 조치 프로세스는 수동입니다. 
+각 AG에는 하나의 주 복제본이 있습니다. 주 복제본은 읽기 및 쓰기를 허용합니다. 주 복제본을 변경하기 위해 장애 조치(failover)를 수행할 수 있습니다. 고가용성을 위한 AG에서 클러스터 관리자는 장애 조치 프로세스를 자동화합니다. 클러스터 형식이 NONE인 AG에서 장애 조치 프로세스는 수동입니다. 
 
-두 가지 방법으로 클러스터 유형 NONE AG의 주 복제본 장애 조치할 수 있습니다.
+클러스터 형식이 NONE인 AG에서 두 가지 방법으로 주 복제본을 장애 조치할 수 있습니다.
 
-- 데이터 손실 강제 수동 장애 조치
-- 데이터 손실 없이 수동 장애 조치
+- 데이터 손실이 있는 강제 수동 장애 조치(Failover)
+- 데이터가 손실되지 않는 수동 장애 조치(Failover)
 
-### <a name="forced-manual-failover-with-data-loss"></a>데이터 손실 강제 수동 장애 조치
+### <a name="forced-manual-failover-with-data-loss"></a>데이터 손실이 있는 강제 수동 장애 조치(Failover)
 
-주 복제본 사용할 수 없고 복구할 수 없는 경우이 메서드를 사용 합니다. 
+주 복제본을 사용할 수 없고 복구할 수 없는 경우 이 방법을 사용합니다. 
 
-데이터 손실 될 수 있는 장애 조치를 강제로 표시 하려면 대상 보조 복제본과 실행을 호스팅하는 SQL Server 인스턴스에 연결:
+데이터 손실이 있는 강제 장애 조치를 수행하려면 대상 보조 복제본을 호스팅하는 SQL Server 인스턴스에 연결하고 실행합니다.
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
-### <a name="manual-failover-without-data-loss"></a>데이터 손실 없이 수동 장애 조치
+### <a name="manual-failover-without-data-loss"></a>데이터가 손실되지 않는 수동 장애 조치(Failover)
 
-주 복제본을 사용할 수 있지만 이 구성을 일시적 또는 영구적으로 변경하고 주 복제본을 호스팅하는 SQL Server 인스턴스를 변경해야 하는 경우 이 방법을 사용합니다. 수동 장애 조치를 실행 하기 전에 대상 보조 복제본 잠재적 데이터 손실을 방지 하기 위해 최신 상태 인지 확인 합니다. 
+주 복제본을 사용할 수 있지만 이 구성을 일시적 또는 영구적으로 변경하고 주 복제본을 호스팅하는 SQL Server 인스턴스를 변경해야 하는 경우 이 방법을 사용합니다. 수동 장애 조치를 실행하기 전에 대상 보조 복제본이 최신 상태인지 확인하여 잠재적인 데이터 손실을 방지합니다. 
 
-수동으로 장애 조치 데이터 손실 없이:
+데이터 손실이 없는 수동 장애 조치(Failover)를 수행하려면:
 
-1. 대상 보조 복제본을 확인 `SYNCHRONOUS_COMMIT`합니다.
+1. 대상 보조 복제본 `SYNCHRONOUS_COMMIT`를 만듭니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -45,7 +44,7 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. 활성 트랜잭션이 주 복제본과 동기 보조 복제본이 하나 이상에 커밋됩니다 식별 하려면 다음 쿼리를 실행 합니다. 
+2. 다음 쿼리를 실행하여 활성 트랜잭션이 주 복제본과 적어도 하나의 동기 보조 복제본에 커밋되었는지 확인합니다. 
 
    ```SQL
    SELECT ag.name, 
@@ -60,18 +59,18 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
    보조 복제본이 `synchronization_state_desc`가 `SYNCHRONIZED`일 때 동기화됩니다.
 
-3. 업데이트 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1입니다.
+3. `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 업데이트합니다.
 
-   다음 스크립트 집합 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 1 이라는 AG에 `ag1`합니다. 다음 스크립트를 실행 하기 전에 대체 `ag1` 프로그램 AG의 이름으로:
+   다음 스크립트에서는 `ag1`라는 AG에서 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 1로 설정합니다. 다음 스크립트를 실행하기 전에 `ag1`을 AG의 이름으로 바꿉니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
         SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
    ```
 
-   이 설정은 모든 활성 트랜잭션이 커밋 주 복제본과 동기 보조 복제본이 하나 이상에 되는지 확인 합니다. 
+   이 설정은 모든 활성 트랜잭션이 주 복제본과 적어도 하나의 동기 보조 복제본에 커밋되었는지 확인합니다. 
 
-4. 주 복제본을 보조 복제본의 수준을 내립니다. 주 복제본 강등 된 읽기 전용입니다. 이 명령을 실행 하는 역할을 업데이트 하려면 주 복제본을 호스팅하는 SQL Server 인스턴스에서 `SECONDARY`:
+4. 주 복제본을 보조 복제본으로 강등합니다. 주 복제본이 강등되면 읽기 전용입니다. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 이 명령을 실행하여 역할을 `SECONDARY`로 업데이트합니다.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -85,4 +84,4 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```  
 
    > [!NOTE] 
-   > AG를 삭제 하려면 사용 하 여 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)합니다. 클러스터를 사용 하 여 만든 AG에 대 한 유형 NONE 또는 외부, 명령을 해야 AG의 일부인 모든 복제본에서 실행할 수 있습니다.
+   > AG를 삭제하려면 [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)을 사용합니다. NONE 또는 EXTERNAL 클러스터 형식을 사용하여 만든 AG의 경우 AG의 일부인 모든 복제본에서 명령을 실행해야 합니다.

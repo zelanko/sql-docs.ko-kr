@@ -1,27 +1,25 @@
 ---
-title: "SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS) | Microsoft Docs"
-ms.custom: 
+title: SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1072350a30a5f28ac16cda48f72720a383012d02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
 
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     PowerShell 사용에 대한 자세한 내용은 [Install-SPWebPartPack(http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)를 참조하세요.  
+     PowerShell 사용에 대한 자세한 내용은 [Install-SPWebPartPack(http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)을 참조합니다.  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>STSADM.exe를 사용하여 웹 파트 설치  
   

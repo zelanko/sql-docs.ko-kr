@@ -38,16 +38,16 @@ ms.lasthandoff: 05/03/2018
   
 -   해결하려는 행 변경의 유형(예: 업데이트, 삽입 및 삭제) 및 해결 프로그램을 병합 변경 내용을 업로드하는 동안 호출할지 병합 변경 내용을 다운로드하는 동안 호출할지 또는 두 작업 모두를 수행하는 동안 호출할지 여부. 사용자는 하나의 변경 내용, 모든 변경 내용 또는 변경 내용이 조합된 것의 유형을 지정할 수 있습니다. 기본 병합 충돌 해결 프로그램은 사용자 지정 해결 프로그램이 해결하지 못하는 충돌을 처리합니다.  
   
--   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+-   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
   
- COM 기반 사용자 지정 충돌 해결 프로그램을 구현하려면 [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하십시오.  
+ COM 기반 사용자 지정 충돌 해결 프로그램을 구현하려면 [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하십시오.  
   
  사용자 지정 해결 프로그램은 전체 게시에 대해서가 아니라 아티클에 대해 지정됩니다. 하나 이상의 아티클에 대해서 동일한 해결 프로그램을 사용할 수 있지만 사용자 지정 해결 프로그램의 논리는 특정 테이블에만 적용되는 경우가 많습니다. 해결 프로그램을 만든 후 아티클에 사용되는 테이블을 수정하면(예: 충돌 해결에 사용되는 열 이름 변경) 사용자 지정 해결 프로그램을 수정하고 다시 컴파일해야 할 수 있습니다.  
   
- 사용자 지정 해결 프로그램을 지정하려면 [Specify a Merge Article Resolver](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)을 참조하십시오.  
+ 사용자 지정 해결 프로그램을 지정하려면 [병합 아티클 해결 프로그램 지정](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [고급 병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
  MSMQ 연결 관리자에 대한 자세한 내용은 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)를 참조하십시오.  
   
 > [!NOTE]  
->  MSMQ 연결 관리자는 로컬 공개 큐, 로컬 개인 큐 및 원격 공개 큐를 지원합니다. 원격 개인 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)를 참조하십시오.  
+>  MSMQ 연결 관리자는 로컬 공개 큐, 로컬 개인 큐 및 원격 공개 큐를 지원합니다. 원격 개인 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)를 참조하십시오.  
   
 ### <a name="options"></a>변수  
  **이름**  

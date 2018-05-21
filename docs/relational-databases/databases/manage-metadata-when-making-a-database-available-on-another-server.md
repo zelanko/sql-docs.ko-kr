@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에는 다음과 관련된 내용이 포함되어 있습니다.  
+  이 아티클에는 다음과 같은 상황과 관련된 내용이 포함되어 있습니다.  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 그룹의 가용성 복제본을 구성하는 경우  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  응용 프로그램에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb** 에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 응용 프로그램이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
   
 ##  <a name="information_entities_and_objects"></a> 사용자 데이터베이스의 외부에 저장된 정보, 엔터티 및 개체  
- 이 항목의 나머지에서는 다른 서버 인스턴스에서 사용되는 데이터베이스에 영향을 줄 수 있는 발생 가능한 문제에 대해 요약합니다. 다음 목록에 나열된 하나 또는 그 이상의 정보, 엔터티 또는 개체 유형을 다시 만들어야 할 수 있습니다. 요약을 보려면 항목의 링크를 클릭합니다.  
+ 이 아티클의 나머지에서는 다른 서버 인스턴스에서 사용되는 데이터베이스에 영향을 줄 수 있는 발생 가능한 문제에 대해 요약합니다. 다음 목록에 나열된 하나 또는 그 이상의 정보, 엔터티 또는 개체 유형을 다시 만들어야 할 수 있습니다. 요약을 보려면 항목의 링크를 클릭합니다.  
   
 -   [서버 구성 설정](#server_configuration_settings)  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 주소 공간에서 직접 실행되며 메모리 손실 및 서버의 성능과 안정성을 저하시키는 다른 문제를 유발할 수 있습니다. 참조되는 데이터가 들어 있는 인스턴스와는 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 확장 저장 프로시저를 저장해야 합니다. 또한 분산 쿼리를 사용하여 데이터베이스에 액세스해야 합니다.  
   
-> **중요!!** 시스템 관리자는 확장 저장 프로시저를 서버에 추가하고 다른 사용자에게 EXECUTE 권한을 부여하기 전에 각 확장 저장 프로시저를 철저히 검토하여 유해한 악성 코드가 포함되지는 않았는지를 확인해야 합니다.  
+  > [!IMPORTANT]
+  > 시스템 관리자는 확장 저장 프로시저를 서버에 추가하고 다른 사용자에게 EXECUTE 권한을 부여하기 전에 각 확장 저장 프로시저를 철저히 검토하여 유해한 악성 코드가 포함되지는 않았는지를 확인해야 합니다.  
   
  자세한 내용은 [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) 및 [REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)을 참조하세요.  
   
@@ -281,7 +282,8 @@ ms.lasthandoff: 05/03/2018
   
  데이터베이스의 원래 복사본에 있는 일부 또는 모든 개체에 대해 스크립트를 생성하려면 스크립트 생성 마법사를 사용하고 **스크립트 옵션 선택** 대화 상자에서 **개체 수준 사용 권한 스크립팅** 옵션을 **True**로 설정합니다.  
   
-> **중요!!** 로그인을 스크립팅하는 경우 암호는 스크립팅되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이 있으면 대상에서 스크립트를 수정해야 합니다.  
+   > [!IMPORTANT]
+   > 로그인을 스크립팅하는 경우 암호는 스크립팅되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이 있으면 대상에서 스크립트를 수정해야 합니다.  
   
  시스템 개체는 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 카탈로그 뷰에 표시됩니다. 시스템 개체에 대한 사용 권한은 **master** 데이터베이스의 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 카탈로그 뷰에 표시됩니다. 이러한 카탈로그 뷰를 쿼리하고 시스템 개체 사용 권한을 부여하는 방법은 [GRANT 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)을 참조하세요. 자세한 내용은 [REVOKE 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 및 [DENY 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)을 참조하세요.  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  인증서 및 비대칭 키에 대한 자세한 내용은 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하십시오.  
   
-  
+## <a name="trustworthy-property"></a>Trustworthy 속성
+TRUSTWORHTY 데이터베이스 속성은 SQL Server 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 데이터베이스가 연결된 경우 원래 서버에 이 옵션이 ON으로 설정된 경우에도 기본적으로 보안을 위해 이 옵션이 OFF로 설정됩니다. 이 속성에 대한 자세한 내용은 [TRUSTWORTHY 데이터베이스 속성](../security/trustworthy-database-property.md)을 참조하세요. 이 옵션을 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  복제된 데이터베이스의 백업을 다른 서버 또는 데이터베이스로 복원할 경우 복제 설정은 유지되지 않습니다. 이 경우 백업 복원 후 모든 게시 및 구독을 다시 만들어야 합니다. 이 프로세스를 간단하게 하려면 현재 복제 설정과 복제 설정 및 해제에 대한 스크립트를 만듭니다. 편리하게 복제 설정을 다시 만들려면 이러한 스크립트를 복사하고 대상 서버 인스턴스에서 작동하도록 서버 이름 참조를 변경합니다.  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker 응용 프로그램  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 많은 부분이 데이터베이스와 함께 이동됩니다. 그러나 응용 프로그램의 일부분은 새 위치에서 다시 만들거나 다시 구성해야 합니다.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 많은 부분이 데이터베이스와 함께 이동됩니다. 그러나 응용 프로그램의 일부분은 새 위치에서 다시 만들거나 다시 구성해야 합니다.  다른 서버에서 데이터베이스가 연결된 경우 기본적으로 보안을 위해 *is_broker_enabled* 및 *is_honoor_broker_priority_on* 옵션이 OFF로 설정됩니다. 이러한 옵션을 ON으로 설정하는 방법에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

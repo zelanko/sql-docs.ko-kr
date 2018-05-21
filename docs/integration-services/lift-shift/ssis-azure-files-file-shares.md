@@ -1,5 +1,5 @@
 ---
-title: 온-프레미스 및 Azure에서 파일 공유의 파일 저장 및 검색 | Microsoft Docs
+title: 온-프레미스 및 Azure에서 파일 및 파일 공유에 연결 | Microsoft Docs
 description: 이 문서에서는 SSIS로 온-프레미스와 Azure에서 파일 시스템 및 파일 공유를 사용하는 방법을 설명합니다
 ms.date: 11/27/2017
 ms.topic: conceptual
@@ -9,13 +9,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7fcc0c0f61ce62a2e891d269eea16902ff691080
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6472263658ed831aade7d0951b10a712dfee312d
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>SSIS로 온-프레미스 및 Azure에서 파일 공유의 파일 저장 및 검색
+# <a name="connect-to-files-and-file-shares-on-premises-and-in-azure-with-ssis"></a>온-프레미스 및 Azure에서 SSIS를 사용하여 파일 및 파일 공유에 연결
 이 문서에서는 Azure에서 로컬 파일 시스템을 SSIS로 사용하는 패키지를 리프트 앤 시프트할 때 SSIS(SQL Server Integration Services) 패키지를 업데이트하는 방법을 설명합니다.
 
 > [!IMPORTANT]

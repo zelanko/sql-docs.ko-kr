@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  구독을 만들 때는 출력 파일 형식을 선택할 수 있습니다. 보고서가 모든 형식에서 다 잘 작동하는 것은 아닙니다. 구독 형식을 선택하기 전에 보고서를 열고 다른 형식으로 내보내 해당 보고서가 예상대로 표시되는지 확인하세요.  
   
- **구독을 만들 수 있으려면 사용자에게 SharePoint의** 항목 편집 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 목록 권한이 필요합니다. 자세한 내용은 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
+ **구독을 만들 수 있으려면 사용자에게 SharePoint의** 항목 편집 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 목록 권한이 필요합니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  보고서를 라이브러리나 공유 폴더로 배달하는 구독은 원래 보고서를 기반으로 하는 새 정적 파일을 만들지만 이는 보고서 뷰어 웹 파트에서 실행되는 진정한 보고서 정의가 아닙니다. 원래 보고서에 드릴스루 링크와 같은 대화형 기능이나 동적 콘텐츠가 있는 경우 이러한 기능은 대상 위치로 배달되는 정적 파일에서 사용할 수 없게 됩니다. "웹 페이지"를 선택하는 경우 일부 대화형 작업을 유지할 수 있지만 문서가 보고서 뷰어에서 실행하는 .rdl 파일이 아니므로 보고서를 클릭 광고하면 사이트로 돌아가기 위해 스크롤해야 할 브라우저 세션에 새 페이지가 생성됩니다.  

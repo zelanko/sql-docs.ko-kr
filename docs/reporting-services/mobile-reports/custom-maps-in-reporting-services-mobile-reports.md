@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services 모바일 보고서의 사용자 지정 맵 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 모바일 보고서의 사용자 지정 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b4143913d2bab5425fede35cea6758f86820236f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 사용자 지정 맵
 SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 파일*이라는 형식으로 정의됩니다.  
@@ -49,7 +47,7 @@ SQL Server 모바일 보고서 게시자의 지리적 지도는 *ESRI 셰이프 
 - ArcGIS: [http://www.arcgis.com/](http://www.arcgis.com/)  
 - Adobe Illustrator용 MAPublisher 플러그 인: [http://www.avenza.com/mapublisher](http://www.avenza.com/mapublisher)  
 - QuantumGIS(무료): [http://www.qgis.org/](http://www.qgis.org/)  
-- Manco 셰이프 파일 편집기: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
+- Manco ShapeFile Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
   
 ## <a name="existing-shapefiles"></a>기존 셰이프 파일  
   

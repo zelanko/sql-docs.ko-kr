@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,19 +190,22 @@ SQLDUMPEREDUMPFLAGS
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- 서버 인스턴스의 HADR  클러스터 컨텍스트를 지정된 WSFC(Windows  Server  장애 조치(Failover)  클러스터링)  클러스터로 전환합니다. *HADR 클러스터 컨텍스트*는 서버 인스턴스에서 호스팅하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터를 결정합니다. 새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 상위 버전 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 SET HADR CLUSTER CONTEXT 옵션을 사용합니다.  
+ 서버 인스턴스의 HADR 클러스터 컨텍스트를 지정된 WSFC(Windows Server 장애 조치(Failover) 클러스터)로 전환합니다. *HADR 클러스터 컨텍스트*는 서버 인스턴스에서 호스팅하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC를 결정합니다. 새 WSFC에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 상위 버전 인스턴스로 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션을 수행하는 동안에만 SET HADR CLUSTER CONTEXT 옵션을 사용합니다.  
   
- HADR 클러스터 컨텍스트는 로컬 WSFC 클러스터에서 원격 클러스터로 전환한 다음 다시 원격 클러스터에서 로컬 클러스터로만 전환할 수 있습니다. HADR  클러스터 컨텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 복제본을 호스팅하지 않을 때만 원격 클러스터로 전환할 수 있습니다.  
+ HADR 클러스터 컨텍스트는 로컬 WSFC에서 원격 WSFC로 전환한 다음, 다시 원격 WSFC에서 로컬 WSFC로만 전환할 수 있습니다. HADR  클러스터 컨텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 복제본을 호스팅하지 않을 때만 원격 클러스터로 전환할 수 있습니다.  
   
  원격 HADR 클러스터 컨텍스트는 언제든지 로컬 클러스터로 다시 전환할 수 있습니다. 그러나 서버 인스턴스에서 가용성 복제본을 호스팅하는 동안에는 컨텍스트를 다시 전환할 수 없습니다.  
   
  대상 클러스터를 식별하려면 다음 값 중 하나를 지정합니다.  
   
  *windows_cluster*  
- WSFC 클러스터의 CON(클러스터 개체 이름) 짧은 이름 또는 전체 도메인 이름을 지정할 수 있습니다. 짧은 이름의 대상 IP  주소를 찾기 위해 ALTER  SERVER  CONFIGURATION은 DNS  확인을 사용합니다. 경우에 따라 짧은 이름을 사용하면 혼동이 생길 수 있고 DNS에서 잘못된 IP  주소를 반환할 수 있습니다. 따라서 전체 도메인 이름을 지정하는 것이 좋습니다.  
+ WSFC의 netwirj 이름입니다. 짧은 이름 또는 전체 도메인 이름을 지정할 수 있습니다. 짧은 이름의 대상 IP  주소를 찾기 위해 ALTER  SERVER  CONFIGURATION은 DNS  확인을 사용합니다. 경우에 따라 짧은 이름을 사용하면 혼동이 생길 수 있고 DNS에서 잘못된 IP  주소를 반환할 수 있습니다. 따라서 전체 도메인 이름을 지정하는 것이 좋습니다.  
+  
+  > [!NOTE] 
+  > 이 설정을 사용하는 클러스터 간 마이그레이션을 더 이상 지원하지 않습니다. 클러스터 간 마이그레이션을 수행하려면 분산 가용성 그룹 또는 로그 전달 등 일부 다른 메서드를 사용합니다. 
   
  LOCAL  
- 로컬 WSFC 클러스터입니다.  
+ 로컬 WSFC입니다.  
   
  자세한 내용은 [서버 인스턴스의 HADR 클러스터 컨텍스트 변경&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)을 참조하세요.  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>데이터베이스 유지 관리  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>게시된 테이블에서 TRUNCATE TABLE이 실행되지 않는 이유는 무엇입니까?  
- TRUNCATE TABLE은 트리거를 발생시키지 않는 로그되지 않은 작업입니다. 복제가 해당 작업으로 인한 변경 내용을 추적할 수 없으므로 TRUNCATE TABLE은 허용되지 않습니다. 트랜잭션 복제는 트랜잭션 로그를 통해 변경 내용을 추적하고 병합 복제는 게시된 테이블의 트리거를 통해 변경 내용을 추적합니다.  
+ TRUNCATE TABLE은 개별 행 삭제를 로깅하지 않으며 DML 트리거를 실행하지 않는 DDL 문입니다. 복제가 해당 작업으로 인한 변경 내용을 추적할 수 없으므로 TRUNCATE TABLE은 허용되지 않습니다. 트랜잭션 복제는 트랜잭션 로그를 통해 변경 내용을 추적하고 병합 복제는 게시된 테이블의 DML 트리거를 통해 변경 내용을 추적합니다.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>복제된 데이터베이스에서 BULK INSERT 명령을 실행하면 어떻게 됩니까?  
  트랜잭션 복제의 경우 다른 삽입처럼 대량 삽입도 추적되어 복제됩니다. 병합 복제의 경우 변경 내용 추적 메타데이터를 적절하게 업데이트해야 합니다.  

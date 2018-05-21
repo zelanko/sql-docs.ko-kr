@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   시스템 테이블인 **MSmerge_contents**에 삽입하는 동안 오류가 발생합니다.  
   
-     이 오류는 **join_unique_key**조인 필터 속성에 대한 값이 잘못되었기 때문에 발생할 수 있습니다. 부모 테이블의 조인된 열이 고유한 경우에만 이 속성을 TRUE로 설정해야 합니다. 속성이 TRUE로 설정되어 있지만 열이 고유하지 않은 경우에는 이 오류가 발생합니다. 이 속성을 설정하는 방법은 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하십시오.  
+     이 오류는 **join_unique_key**조인 필터 속성에 대한 값이 잘못되었기 때문에 발생할 수 있습니다. 부모 테이블의 조인된 열이 고유한 경우에만 이 속성을 TRUE로 설정해야 합니다. 속성이 TRUE로 설정되어 있지만 열이 고유하지 않은 경우에는 이 오류가 발생합니다. 이 속성을 설정하는 방법은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |정리 작업|Description|기본 일정|  
 |------------------|-----------------|----------------------|  
 |에이전트 기록 정리: 배포|배포 데이터베이스에서 복제 에이전트 기록을 제거합니다.|10분마다 실행|  
-|배포 정리: 배포|배포 데이터베이스에서 복제된 트랜잭션을 제거합니다. 최대 배포 보존 기간 내에 동기화되지 않은 구독을 비활성화합니다.|10분마다 실행|  
-|만료된 구독 정리|게시 데이터베이스에서 만료된 구독을 검색하여 제거합니다.|매일 오전 1시에 실행|  
+|배포 정리: 배포|배포 데이터베이스에서 복제된 트랜잭션을 제거합니다. |10분마다 실행|  
+|만료된 구독 정리|게시 데이터베이스에서 만료된 구독을 검색하여 제거합니다. 배포자에서 최대 배포 보존 기간 내에 동기화되지 않은 구독을 비활성화합니다.|매일 오전 1시에 실행| 
 |데이터 유효성 검사에 실패한 구독 다시 초기화|데이터 유효성 검사에 실패한 모든 구독을 검색한 다음 다시 초기화하도록 표시합니다. 다음에 병합 에이전트 또는 배포 에이전트가 실행될 때 새 스냅숏이 구독자에 적용됩니다.|기본 일정 없음(기본적으로 사용되지 않음)|  
 |복제 에이전트 점검|기록을 로깅하지 않는 복제 에이전트를 검색합니다. 작업 단계가 실패하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다.|10분마다 실행|  
 |배포에 대한 복제 모니터링 리프레셔|복제 모니터에서 사용한 캐시된 쿼리를 새로 고칩니다.|계속 실행|  

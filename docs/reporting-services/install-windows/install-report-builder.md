@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      그러면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 마법사가 실행됩니다.  
   
-3.  [To install Report Builder from the download site](#download)의 나머지 단계를 완료합니다.  
+3.  [다운로드 사이트에서 보고서 작성기를 설치하려면](#download)의 나머지 단계를 완료합니다.  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>명령줄에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 설치 
 

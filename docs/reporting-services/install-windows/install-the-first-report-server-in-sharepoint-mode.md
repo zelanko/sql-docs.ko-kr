@@ -287,7 +287,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  **활성화**를 선택합니다. 기능 상태가 **활성**으로 변경됩니다.  
   
- 이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)를 참조하세요.  
+ 이 절차는 사이트 모음별로 완료됩니다. 자세한 내용은 [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)를 참조하세요.  
   
 ##  <a name="bkmk_full_script"></a> 1~4단계를 위한 Windows PowerShell 스크립트  
  이 섹션의 PowerShells 스크립트는 이전 섹션의 1~4단계를 완료하는 것과 동일합니다. 이 스크립트는 다음 작업을 완료합니다.  

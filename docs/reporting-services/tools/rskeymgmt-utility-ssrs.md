@@ -1,16 +1,15 @@
 ---
-title: "rskeymgmt 유틸리티(SSRS) | Microsoft Docs"
-ms.custom: 
+title: rskeymgmt 유틸리티(SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. 
@@ -66,12 +64,12 @@ rskeymgmt {-?}
  **-e**  
  파일로 복사할 수 있도록 보고서 서버 인스턴스의 데이터를 암호화 및 해독하는 데 사용할 대칭 키를 추출합니다.  
   
- 이 인수는 값을 가지지 않습니다. 그러나 압축 풀기를 완료하려면 명령줄에 추가 인수를 포함해야 합니다. 지정해야 할 인수에는 **-f** 및**-p**인수가 있습니다.  
+ 이 인수는 값을 가지지 않습니다. 그러나 압축 풀기를 완료하려면 명령줄에 추가 인수를 포함해야 합니다. 지정해야 할 인수에는 **-f** 및 **-p**인수가 있습니다.  
   
  **-a**  
  기존 대칭 키를 암호로 보호된 백업 파일에 제공한 복사본으로 바꿉니다. 대칭 키의 모든 인스턴스가 업데이트됩니다.  
   
- 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 **-f** 및**-p**인수가 있습니다.  
+ 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 **-f** 및 **-p**인수가 있습니다.  
   
  **-d**  
  모든 대칭 키 인스턴스를 삭제하고 보고서 서버 데이터베이스에서 암호화된 모든 데이터를 삭제합니다. 이 인수는 값을 가지지 않습니다.  
@@ -102,7 +100,7 @@ rskeymgmt {-?}
  보고서 서버 수평적 스케일 아웃 배포에 결합하는 보고서 서버 인스턴스를 호스팅하는 원격 컴퓨터의 이름을 지정합니다. 네트워크에서 식별할 수 있는 컴퓨터 이름을 사용합니다.  
   
  **-n**  
- 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-n** 의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-n** 가 필요합니다.  
+ 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-n** 의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-n** 이 필요합니다.  
   
  **-u**  *useraccount*  
  수평적 스케일 아웃 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  

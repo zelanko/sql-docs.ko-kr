@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services 설치 마이그레이션(SharePoint 모드) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 설치 마이그레이션(SharePoint 모드) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94cb6edf73b942b7cf3d41aee922fa25ca25c755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
 
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 이 스크립트는 기본 모드와 SharePoint 모드의 보고서 서버 사이에 콘텐츠 및 리소스를 마이그레이션할 수 있습니다. 자세한 내용은 [보고서 서버 간 콘텐츠 복사를 위한 샘플 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 및 [한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션하는 Reporting Services RS.exe 스크립트](http://azuresql.codeplex.com/releases/view/115207)를 참조하세요.  
   
--   **Reporting Services 마이그레이션 도구:** 대부분의 시나리오에서 마이그레이션 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
+-   **Reporting Services 마이그레이션 도구:** 대부분의 시나리오에서 마이그레이션 도구는 기본 모드 서버에서 SharePoint 모드 서버로 보고서 항목을 복사할 수 있습니다. 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560)(http://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
   
 ###  <a name="bkmk_full_migration"></a> 전체 마이그레이션  
  **전체 마이그레이션:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스와 함께 SharePoint 콘텐츠 데이터베이스를 새 팜으로 마이그레이션하는 경우 이 항목에 요약되어 있는 일련의 백업 및 복원 옵션을 따르면 됩니다. 백업 단계에서 사용한 도구와 다른 도구를 복원 단계에 사용해야 하는 경우도 있습니다. 예를 들어, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 암호화 키를 백업할 수 있지만 암호화 키를 SQL Server 2016 Reporting Services SharePoint 모드 설치로 복원할 때는 SharePoint 중앙 관리 또는 PowerShell을 사용해야 합니다.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 02/15/2018
   
 ||개체|메서드|참고|  
 |-|-------------|------------|-----------|  
-|**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 응용 프로그램에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 응용 프로그램과 URL을 나열합니다.<br /><br /> <br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)의 "데이터베이스 연결 업그레이드"와 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)를 참조하세요.|  
+|**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 응용 프로그램에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 응용 프로그램과 URL을 나열합니다.<br /><br /> <br /><br /> [업그레이드 방법 결정(SharePoint Server 2010)(http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) 및 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
 |**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스인 SQL Server 데이터베이스(ReportServer) 복원.|SQL 데이터베이스 백업 및 복원<br /><br /> **또는**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 처음 사용하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 SQL Server 2016 환경에서 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트합니다.|  
 |**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램 만들기|새 서비스 응용 프로그램을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리 사용에 대한 자세한 정보는 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)의 "3단계: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요.<br /><br /> PowerShell 사용 예제가 필요한 경우 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)(영문)의 "PowerShell을 사용하여 Reporting Services 서비스 응용 프로그램을 만드는 방법" 섹션을 참조하세요.|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 복원|단순한 파일 복사|파일 기본 위치의 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
@@ -128,9 +126,9 @@ ms.lasthandoff: 02/15/2018
   
 ##  <a name="bkmk_additional_resources"></a> 추가 리소스  
   
--   [SharePoint 2013으로의 업그레이드 시작(http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx)  
+-   [SharePoint 2013으로 업그레이드 시작(http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
   
--   [SharePoint 2013으로의 업그레이드 프로세스 개요(http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx)  
+-   [SharePoint 2013으로 업그레이드 프로세스의 개요(http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
 
 ## <a name="next-steps"></a>다음 단계
 

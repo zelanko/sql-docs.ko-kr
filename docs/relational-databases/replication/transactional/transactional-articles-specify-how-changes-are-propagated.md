@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자의 테이블에서 삽입, 업데이트 또는 삭제 작업이 발생하면 이러한 작업은 구독자에서 저장 프로시저에 대한 호출로 변환됩니다. 저장 프로시저에서는 테이블의 열로 매핑하는 매개 변수를 적용하여 이러한 열이 구독자에서 변경되도록 합니다.  
   
- 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하려면 [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)을 참조하십시오.  
+ 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하려면 [트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)을 참조하십시오.  
   
 ## <a name="default-and-custom-stored-procedures"></a>기본 저장 프로시저 및 사용자 지정 저장 프로시저  
  복제 시 각 테이블 아티클에 대해 기본적으로 생성되는 3가지 프로시저는 다음과 같습니다.  

@@ -20,23 +20,23 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 99743762bc21d307b0269ec43bab9c597d24cd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3919edabc5d0a642571f833680747a4b8bb3cc
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cursor-functions-transact-sql"></a>커서 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-다음 스칼라 함수는 커서에 대한 정보를 반환합니다.
+이러한 스칼라 함수는 커서에 대한 정보를 반환합니다.
   
 |||  
 |-|-|  
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-모든 커서 함수는 비결정적입니다. 이는 이러한 함수를 호출할 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않는다는 것을 의미합니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+모든 커서 함수는 비결정적입니다. 즉, 이러한 함수가 실행될 때마다 동일한 입력 값 집합을 사용하더라도 항상 동일한 결과가 반환되지는 않습니다. 함수 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
 ## <a name="see-also"></a>관련 항목:
 [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

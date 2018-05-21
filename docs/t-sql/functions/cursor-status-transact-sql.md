@@ -24,16 +24,16 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 4d04041eee085a4fc29d899ad1245ee5ae43743c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bc5eff629bc16e655094c08c71b3cef195420bc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-프로시저가 지정된 매개 변수에 대한 커서 및 결과 집합을 반환하는지 여부를 저장 프로시저 호출자가 확인할 수 있도록 하는 스칼라 함수입니다.
+`CURSOR_STATUS`는 특정 매개 변수에 대해 커서 선언이 커서 및 결과 집합을 반환했는지 여부를 보여줍니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,16 +50,16 @@ CURSOR_STATUS
   
 ## <a name="arguments"></a>인수  
 'local'  
-커서의 원본이 로컬 커서 이름임을 나타내는 상수입니다.
+커서 원본이 로컬 커서 이름임을 나타내는 상수를 지정합니다.
   
 '*cursor_name*'  
-커서의 이름입니다. 커서 이름은 식별자에 대한 규칙을 따라야 합니다.
+커서의 이름입니다. 커서 이름은 [데이터베이스 식별자 규칙](../../relational-databases/databases/database-identifiers.md)을 따라야 합니다.
   
 'global'  
-커서의 원본이 전역 커서 이름임을 나타내는 상수입니다.
+커서의 원본이 전역 커서 이름임을 나타내는 상수를 지정합니다.
   
 'variable'  
-커서의 원본이 지역 변수임을 나타내는 상수입니다.
+커서의 원본이 로컬 변수임을 나타내는 상수를 지정합니다.
   
 '*cursor_variable*'  
 커서 변수의 이름입니다. 커서 변수는 **cursor** 데이터 형식을 사용하여 정의해야 합니다.
@@ -69,16 +69,16 @@ CURSOR_STATUS
   
 |반환 값|커서 이름|커서 변수|  
 |---|---|---|
-|1|커서의 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|이 변수에 할당된 커서가 열려 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|  
-|0|커서의 결과 집합이 비어 있습니다.*|이 변수에 할당된 커서는 열려 있지만 결과 집합은 확실히 비어 있습니다.*|  
+|1|커서 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|이 변수에 할당된 커서가 열려 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|  
+|0|커서 결과 집합이 비어 있습니다.*|이 변수에 할당된 커서는 열려 있지만 결과 집합은 확실히 비어 있습니다.*|  
 |-1|커서가 닫혀 있습니다.|이 변수에 할당된 커서가 닫혀 있습니다.|  
-|-2|이 오류에는 이 작업을 적용할 수 없습니다.|다음 값 중 하나일 수 있습니다.<br /><br /> 이전에 호출된 프로시저에서 이 OUTPUT 변수에 할당한 커서가 없습니다.<br /><br /> 이전에 호출된 프로시저에서 이 OUTPUT 변수로 커서가 할당되었지만 프로시저가 완료되면서 닫혔습니다. 따라서 커서는 할당 취소되고 호출하는 프로시저로 반환되지 않습니다.<br /><br /> 선언된 커서 변수에 할당된 커서가 없습니다.|  
+|-2|이 오류에는 이 작업을 적용할 수 없습니다.|다음 중 하나일 가능성이 있습니다.<br /><br /> 이전에 호출된 프로시저에서 이 OUTPUT 변수에 커서를 할당하지 않았습니다.<br /><br /> 이전에 할당된 프로시저에서 이 OUTPUT 변수로 커서를 할당했지만 프로시저가 완료되었을 때 커서가 닫힌 상태였습니다. 따라서 커서의 할당이 취소되고 호출 프로시저로 반환되지 않습니다.<br /><br /> 선언된 커서 변수에 할당된 커서가 없습니다.|  
 |-3|지정된 이름의 커서가 없습니다.|지정된 이름의 커서 변수가 없거나 있는 경우에는 아직 커서가 할당되지 않았습니다.|  
   
 *동적 커서는 절대 이 결과를 반환하지 않습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 `CURSOR_STATUS` 함수를 사용하여 커서를 열고 닫기 전후의 커서 상태를 표시합니다.
+이 예에서는 `CURSOR_STATUS` 함수를 사용하여 커서의 상태(선언 후, 열린 후, 닫힌 후)를 보여줍니다.
   
 ```sql
 CREATE TABLE #TMP  

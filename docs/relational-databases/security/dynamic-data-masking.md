@@ -1,29 +1,23 @@
 ---
 title: 동적 데이터 마스킹 | Microsoft 문서
-ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 
 예를 들어, 콜 센터 지원 담당자는 사회 보장 번호 또는 신용 카드 번호의 여러 숫자로 발신자를 식별할 수 있지만, 이러한 데이터 항목이 지원 담당자에게 완전히 노출되어서는 안 됩니다. 모든 마스킹 규칙은 어떠한 쿼리의 결과 집합에서 사회 보장 번호 또는 신용 카드 번호의 마지막 네 자리 숫자를 제외하고 모두 마스킹하도록 정의할 수 있습니다. 또 다른 예로, 개인 식별이 가능한 정보(PII) 데이터를 보호하기 위해 적합한 데이터 마스크를 사용하여 개발자는 적합성 규정 준수 규칙을 위반하지 않고 문제 해결 목적으로 프로덕션 환경을 쿼리할 수 있습니다.
 
- 동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
+동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
   
- 동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure 포털을 사용하여 동적 데이터 마스킹을 구성하는 방법은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure 포털)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
+동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure 포털을 사용하여 동적 데이터 마스킹을 구성하는 방법은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure 포털)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
   
 ## <a name="defining-a-dynamic-data-mask"></a>동적 데이터 마스크 정의  
  해당 열에서 데이터 난독 처리를 위해 테이블의 열에 마스킹 규칙을 정의할 수 있습니다. 네 가지 유형의 마스크를 사용할 수 있습니다.  
@@ -75,7 +69,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
 ## <a name="querying-for-masked-columns"></a>마스크된 열에 대한 쿼리  
  **sys.masked_columns** 뷰를 사용하여 마스킹 함수가 적용되어 있는 테이블-열에 대해 쿼리합니다. 이 보기는 **sys.columns** 보기에서 상속됩니다. **sys.columns** 뷰의 모든 열과 열이 마스킹되었는지, 그렇다면 정의된 마스킹 함수가 무엇인지 나타내는 **is_masked** 및 **masking_function** 열을 반환합니다. 이 보기는 마스킹 함수가 적용된 열만 보여줍니다.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ WHERE is_masked = 1;
 예를 들어 데이터베이스에서 임시 쿼리를 실행할 수 있는 충분한 권한이 부여된 데이터베이스 보안 주체가 있고 기본 데이터를 '추측'하여 궁극적으로 실제 값을 유추 하려 한다고 생각하고 `[Employee].[Salary]` 열에 마스크를 정의하고 이 사용자가 직접 데이터베이스에 연결하여 값 추측을 시작하면서 결국 직원의 `[Salary]` 값을 유추한다고 가정해보겠습니다.
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ WHERE Salary > 99999 and Salary < 100001;
 ### <a name="creating-a-dynamic-data-mask"></a>동적 데이터 마스크 만들기  
  다음 예에서는 세 가지 유형의 동적 데이터 마스크가 있는 테이블을 만듭니다. 이 예제는 테이블을 채우며 결과를 표시하도록 선택합니다.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  새 사용자를 만들고 테이블에 대한 **SELECT** 권한이 부여됩니다. `TestUser` 보기가 데이터를 마스크할 때 쿼리가 실행됩니다.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  **ALTER TABLE** 문을 사용하여 테이블의 기존 열에 마스크를 추가하거나 해당 열의 마스크를 편집합니다.  
 다음 예제는 `LastName` 열에서 마스킹 함수를 추가합니다.  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  다음 예제는 `LastName` 열에서 마스킹 함수를 변경합니다.  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>마스크 해제된 데이터를 볼 수 있는 권한 부여  
  **UNMASK** 권한을 부여하면 `TestUser` 에서 마스크 해제된 데이터를 볼 수 있습니다.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>동적 데이터 마스크 삭제  
  다음 문은 이전 예제에서 만들 `LastName` 열에서 마스크를 삭제합니다.  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [SQL 데이터베이스 동적 데이터 마스킹시작(Azure 미리 보기 포털)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

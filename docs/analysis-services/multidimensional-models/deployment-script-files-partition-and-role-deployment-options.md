@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9efff5dc4a12638b1a894352511d747690da58f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>배포 스크립트 파일에서 파티션 및 역할 배포 옵션
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
      —또는—  
   
--   열기는 \< *프로젝트 이름을*>.deploymentoptions 임의의 텍스트 편집기에서 이동 하 고 수동으로 옵션을 변경 합니다.  
+-   열기는 \< *프로젝트 이름을*>.deploymentoptions 임의의 텍스트 편집기에서 이동 하 고 수동으로 옵션을 변경 합니다. PartitionDeployment 옵션은 DeployPartitions, RetainPartitions 합니다. RoleDeployment에 대 한 옵션은 DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles입니다.
   
 ## <a name="see-also"></a>관련 항목:  
  [설치 대상 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

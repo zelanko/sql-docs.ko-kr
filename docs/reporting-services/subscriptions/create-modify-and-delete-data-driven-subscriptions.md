@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
  데이터 기반 구독을 만들려면 먼저 다음 요구 사항을 충족해야 합니다.  
   
--   **보고서 요구 사항**. 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 가장 또는 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하는 보고서는 구독할 수 없습니다. 구독을 만들거나 소유하는 사용자의 자격 증명은 구독이 처리될 때 사용할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
+-   **보고서 요구 사항**. 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 가장 또는 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하는 보고서는 구독할 수 없습니다. 구독을 만들거나 소유하는 사용자의 자격 증명은 구독이 처리될 때 사용할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
      모델을 데이터 원본으로 사용하고 모델에 모델 항목 보안 설정이 포함된 경우 보고서 작성기 보고서를 구독할 수 없습니다. 모델 항목 보안을 사용하는 보고서만 이러한 제한을 받습니다.  
   

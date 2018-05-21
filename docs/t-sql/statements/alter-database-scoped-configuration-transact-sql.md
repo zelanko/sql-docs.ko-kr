@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 05/142018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d9f156deb3fa8b59de0703da2b7f1f309862c16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,6 +45,8 @@ ms.lasthandoff: 05/03/2018
 - 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다.
 - 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다.  
 - 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
+- ONLINE= 구문을 지원하지 않는 DDL 문에 기본적으로 online 옵션을 활성화 또는 비활성화합니다.
+- RESUMABLE= 구문을 지원하지 않는 DDL 문에 기본적으로 resumable 옵션을 활성화 또는 비활성화합니다. 
   
  ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
-    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
 }  
 ```  
   
@@ -164,6 +168,40 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
 고유하게 컴파일된 T-SQL 모듈의 성능 모니터링에 대한 자세한 내용은 [고유하게 컴파일된 저장 프로시저의 성능 모니터링](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)을 참조하세요.
 
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+엔진이 지원되는 작업의 권한을 online으로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 online으로 상승하지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ONLINE의 현재 값을 나타냅니다. 이러한 옵션은 일반적으로 online에 지원되는 작업에만 적용됩니다.  
+
+FAIL_UNSUPPORTED
+
+이 값은 지원되는 모든 DDL 작업의 권한을 ONLINE으로 상승시킵니다. 온라인 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
+
+WHEN_SUPPORTED  
+
+이 값은 ONLINE을 지원하는 작업의 권한을 상승시킵니다. 온라인을 지원하지 않는 작업은 오프라인으로 실행됩니다.
+
+> [!NOTE]
+> ONLINE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다. 
+ 
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 일반적으로 resumable에 지원되는 작업에만 적용됩니다. 
+
+FAIL_UNSUPPORTED
+
+이 값은 지원되는 모든 DDL 작업의 권한을 RESUMABLE로 상승시킵니다. 다시 시작 가능한 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
+
+WHEN_SUPPORTED  
+
+이 값은 RESUMABLE을 지원하는 작업의 권한을 상승시킵니다. resumable을 지원하지 않는 작업은 다시 시작 가능하지 않은 방식으로 실행됩니다.  
+
+> [!NOTE]
+> RESUMABLE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다. 
+
 ##  <a name="Permissions"></a> Permissions  
  데이터베이스에 ALTER ANY DATABASE SCOPE CONFIGURATION이   
 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.  
@@ -205,6 +243,15 @@ XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 **DacFx**  
   
  ALTER DATABASE SCOPED CONFIGURATION은 SQL Server 2016부터 시작하는 Azure SQL Database 및 SQL Server의 새로운 기능입니다. 이는 데이터베이스 스키마에 영향을 주고, 스키마의 내보내기(데이터와 함께 또는 데이터 없이)를 이전 버전의 SQL Server(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])로 가져올 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.  
+
+**ELEVATE_ONLINE** 
+
+이 옵션은 WITH(ONLINE= 구문을 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
+
+**ELEVATE_RESUMABLE**
+
+이 옵션은 WITH(ONLINE= 구문을 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
+
   
 ## <a name="metadata"></a>메타데이터  
 
@@ -307,6 +354,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
+### <a name="i--set-elevateonline"></a>9.  ELEVATE_ONLINE 설정 
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+ 
+이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+```  
+
+### <a name="j-set-elevateresumable"></a>10. ELEVATE_RESUMABLE 설정 
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+이 예에서는 ELEVEATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
+``` 
+
+### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>11. 여러 명령문을 기반으로 ALTER DATABASE SCOPED CONFIGURATION의 상태 쿼리
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|OFF|NULL|1|
+|12|ELEVATE_RESUMABLE|OFF|NULL|1|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
+
+```
+
 ## <a name="additional-resources"></a>추가 리소스
 
 ### <a name="maxdop-resources"></a>MAXDOP 리소스 
@@ -325,6 +429,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 쿼리 최적화 프로그램 핫픽스 추적 플래그 4199 서비스 모델](https://support.microsoft.com/en-us/kb/974006)
 
+### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 리소스 
+
+- [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+
+### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE 리소스 
+
+- [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+ 
 ## <a name="more-information"></a>자세한 정보  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   

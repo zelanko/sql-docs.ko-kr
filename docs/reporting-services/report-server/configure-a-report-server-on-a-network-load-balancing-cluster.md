@@ -1,29 +1,27 @@
 ---
-title: "네트워크 부하 분산 클러스터에서 보고서 서버 구성 | Microsoft Docs"
-ms.custom: 
+title: 네트워크 부하 분산 클러스터에서 보고서 서버 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  
@@ -32,7 +30,8 @@ ms.lasthandoff: 03/02/2018
   
 -   대화형 보고서 보기를 지원하도록 뷰 상태 유효성 검사를 구성합니다. 대화형 보고서는 일반적으로 단일 사용자 세션 동안 사용자 동작에 대한 응답으로 새 데이터나 다른 데이터를 시각화하기 위해 여러 번 렌더링됩니다. 뷰 상태 유효성 검사를 구성하면 실제 요청을 제공하는 보고서 서버에 관계없이 사용자 세션 내에서 근접성이 유지됩니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 스케일 아웃 배포의 부하 분산을 위한 기능 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
+ 
+            [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 스케일 아웃 배포의 부하 분산을 위한 기능, 또는 공유 URL을 통해 단일 액세스 지점을 정의하는 기능을 제공하지 않습니다. 따라서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포를 지원하기 위한 별도의 소프트웨어 또는 하드웨어 NLB 클러스터 솔루션을 구현해야 합니다.  
   
  
             [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 이미 NLB 클러스터에 속하는 노드에 설치하거나 먼저 스케일 아웃 배포를 구성한 후 클러스터 소프트웨어를 설치할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 03/02/2018
 |----------|-----------------|----------------------|  
 |1|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[스케일 아웃 배포 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 Reporting Services 기본 모드 &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
-|3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. **KB 896861** (http://support.microsoft.com/kb/896861)에 있는 [메서드 2: 호스트 이름 지정](http://support.microsoft.com/kb/896861) 의 단계를 사용하여 다음과 같이 적절하게 조정합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 호스트 헤더 이름 \<MyServer>가 Windows 컴퓨터 이름인 "contoso"의 가상 이름인 경우 FQDN 형식 "contoso.domain.com"을 참조할 수 있습니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
+|3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. [KB 896861](http://support.microsoft.com/kb/896861)(http://support.microsoft.com/kb/896861)에 있는 **메서드 2: 호스트 이름 지정**의 단계를 사용하여 다음과 같이 적절하게 조정합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 호스트 헤더 이름 \<MyServer>가 Windows 컴퓨터 이름인 "contoso"의 가상 이름인 경우 FQDN 형식 "contoso.domain.com"을 참조할 수 있습니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
 |4|NLB 클러스터에 이미 속해 있는 노드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 파일만 모드로 설치하고 스케일 아웃 배포를 위한 보고서 서버 인스턴스를 구성합니다.<br /><br /> 구성한 확장은 가상 서버 IP에 전송되는 요청에 응답하지 않을 수 있습니다. 가상 서버 IP를 사용하도록 확장을 구성하는 작업은 뷰 상태 유효성 검사를 구성한 후 그 다음 단계에서 수행됩니다.|[기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|뷰 상태 유효성 검사를 구성합니다.<br /><br /> 최상의 결과를 얻으려면 스케일 아웃 배포를 구성한 후에 가상 서버 IP를 사용하도록 보고서 서버 인스턴스를 구성하기 전에 이 단계를 수행하세요. 뷰 상태 유효성 검사를 먼저 구성하면 사용자가 대화형 보고서에 액세스할 때 상태 유효성 검사 실패에 대한 예외가 발생하는 것을 방지할 수 있습니다.|이 항목의[뷰 상태 유효성 검사 구성 방법](#ViewState) 을 참조하십시오.|  
 |6|NLB 클러스터의 가상 서버 IP를 사용하도록 **Hostname** 및 **UrlRoot** 를 구성합니다.|이 항목의[Hostname 및 UrlRoot 구성 방법](#SpecifyingVirtualServerName) 을 참조하십시오.|  
