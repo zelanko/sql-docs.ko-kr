@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 
 !["시작" 단추 및 스냅숏 에이전트가 실행되지 못했음을 표시하는 상태 메시지의 변경](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-여기서 오류가 표시되면 [스냅숏 에이전트 오류 해결](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent)을 참조하세요. 
+여기서 오류가 표시되면 [스냅숏 에이전트 오류 해결](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent)을 참조하세요. 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>PAL에 배포 에이전트 로그인 추가  

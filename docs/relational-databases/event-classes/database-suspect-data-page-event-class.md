@@ -3,12 +3,9 @@ title: Database Suspect Data Page 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6412da89e784468ec4a02798cce90b822c7e3f56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02fc3d275021a2c83bfe4573a0a462d0490e2a97
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,11 +36,11 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Database Suspect Data Page 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|주의 대상 페이지 이벤트가 발생한 데이터베이스의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **database_id** 열과 같습니다.|3|예|  
-|**EventClass**|**int**|이벤트 유형이 213입니다.|27|아니오|  
-|**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|아니오|  
+|**EventClass**|**int**|이벤트 유형이 213입니다.|27|아니요|  
+|**EventSequence**|**int**|일괄 처리 내의 이벤트 클래스 순서입니다.|51|아니요|  
 |**SPID**|**int**|주의 대상 페이지가 발생한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 발생한 시간입니다.|14|예|  
 |**Exchange Spill**|**int**|주의 대상 페이지가 포함된 데이터베이스 파일의 ID입니다. 이 ID는 **suspect_pages** 테이블의 **file_id** 열과 같습니다.|22|예|  

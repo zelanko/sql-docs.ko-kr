@@ -3,12 +3,9 @@ title: CPU Threshold Exceeded 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a5522e2283e4e7856050cacc4db8cb8dd359967
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f8bfbc8445aeba0ce0e280a4a2587ee3eb46c08
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,10 +31,10 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>CPU Threshold Exceeded 데이터 열  
   
-|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|CPU 사용량(밀리초)입니다.|18|예|  
-|EventClass|**int**|214|27|아니오|  
+|EventClass|**int**|214|27|아니요|  
 |EventSubClass|**int**|CPU 제한 위반입니다.|21|예|  
 |GroupID|**int**|위반이 발생한 그룹 ID입니다.|66|예|  
 |OwnerID|**int**|위반을 발생시킨 프로세스의 SPID입니다.|58|예|  

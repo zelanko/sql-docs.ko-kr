@@ -3,12 +3,9 @@ title: ObjectType 추적 이벤트 열 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8e01c31d5d2f9676c33ffe479c0f19980cd01eaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59ba91b400f655a260b65aecb9f7ea0bcc3f289a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.lasthandoff: 05/03/2018
 |19283|ObfusKey|  
 |19521|비대칭 키 로그인|  
 |19523|인증서 로그인|  
-|19538|Role|  
+|19538|역할|  
 |19539|SQL 로그인|  
 |19543|Windows 로그인|  
 |20034|원격 서비스 바인딩|  

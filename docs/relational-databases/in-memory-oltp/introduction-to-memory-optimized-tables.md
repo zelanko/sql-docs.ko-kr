@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9f652b23295e47842981035348771125b627bd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |메모리 액세스에 최적화된 테이블|예|예|아니요*|  
-|메모리 액세스에 최적화된 테이블 형식|예|예|아니오|  
+|메모리 액세스에 최적화된 테이블 형식|예|예|아니요|  
 |고유하게 컴파일된 저장 프로시저|고유하게 컴파일된 저장 프로시저 중첩은 지원되지 않습니다. 참조되는 프로시저도 고유하게 컴파일된 경우 저장 프로시저 내에서 EXECUTE 구문을 사용할 수 있습니다.|예|아니요*|  
   
  *컨텍스트 연결(CLR 모듈을 실행하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 연결)에서는 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다.  

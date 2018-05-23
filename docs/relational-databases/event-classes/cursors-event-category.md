@@ -3,12 +3,9 @@ title: Cursors 이벤트 범주 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 25209e2309858f5d19423e868482d4a6c3f4866a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5060041eef9f55f319fd528965f4872c4dfa7ad5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cursors-event-category"></a>Cursors 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[CursorClose 이벤트 클래스](../../relational-databases/event-classes/cursorclose-event-class.md)|API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 닫기 이벤트에 대해 설명합니다.|  
 |[CursorExecute 이벤트 클래스](../../relational-databases/event-classes/cursorexecute-event-class.md)|API 커서에서 발생하는 커서 실행 이벤트에 대해 설명합니다.|  

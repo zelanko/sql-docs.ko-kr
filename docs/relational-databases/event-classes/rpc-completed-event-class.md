@@ -3,12 +3,9 @@ title: RPC:Completed 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 89add05030fb2ef26194609bf2665043aaf91bc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0faf036f55d554dc42d9be9d0d44a0a51087f86
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="rpccompleted-event-class-data-columns"></a>RPC:Completed 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |BinaryData|**image**|추적에서 캡처된 이벤트 클래스에 의존하는 이진 값입니다.|2|예|  
@@ -42,8 +39,8 @@ ms.lasthandoff: 05/03/2018
 |Duration|**bigint**|이벤트에서 사용한 시간입니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 마이크로초 단위입니다. 이전 버전에서는 밀리초 단위입니다.|13|예|  
 |EndTime|**datetime**|원격 프로시저 호출이 종료된 시간입니다.|15|예|  
 |Error|**int**|지정된 이벤트의 오류 번호입니다.<br /><br /> 0=확인<br /><br /> 1=오류<br /><br /> 2=중단<br /><br /> 3=건너뜀|31|예|  
-|EventClass|**int**|이벤트 유형 = 10|27|아니오|  
-|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
+|EventClass|**int**|이벤트 유형 = 10|27|아니요|  
+|EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  

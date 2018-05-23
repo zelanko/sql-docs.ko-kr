@@ -3,12 +3,9 @@ title: Background Job Error 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3369788e01ec5ec983cf639591f0a2d741a5c099
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1733eb2b4c47cd1297b9839ce9714b3340ba943b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +28,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="background-job-error-event-class-data-columns"></a>Background Job Error 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|작업에서 지정한 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |**오류**|**int**|마지막 시도의 오류 번호입니다(**EventSubClass** 1에만 해당).|31|예|  
-|**EventClass**|**int**|이벤트 유형 = 193|27|아니오|  
-|**EventSequence**|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니오|  
+|**EventClass**|**int**|이벤트 유형 = 193|27|아니요|  
+|**EventSequence**|**int**|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
 |**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 실패 후 백그라운드 작업 포기 중<br /><br /> 2 = 백그라운드 작업 삭제됨 - 큐가 꽉 참<br /><br /> 3 = 백그라운드 작업이 오류를 반환했음|21|예|  
 |**IndexID**|**int**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|24|예|  
 |**IntegerData**|**int**|작업이 시도한 횟수입니다(**EventSubClass** 1에만 해당).|25|예|  

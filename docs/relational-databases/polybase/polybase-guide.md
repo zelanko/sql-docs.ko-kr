@@ -7,7 +7,7 @@ ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
 caps.latest.revision: 26
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24ddcaa7ea682b0afb5f76f6d45ca89b9bbd1896
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f671dbae59d7187366a337a93336cbf3aae944cb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 가이드
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

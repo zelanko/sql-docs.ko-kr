@@ -5,7 +5,7 @@ ms.author: alazad
 manager: craigg
 ms.assetid: ''
 ms.component: polybase
-ms.technology: database
+ms.technology: polybase
 ms.suite: sql
 ms.custom: ''
 ms.tgt_pltfrm: na
@@ -13,12 +13,12 @@ ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.prod_service: polybase, sql-data-warehouse, pdw
+ms.openlocfilehash: fc09df1265c81f1fe1a127e17c4ebd4edcc66a1a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ PolyBase 구성 파일 중 하나인 **core-site.xml**에서 아래 세 속성�
 ```
 
 ## <a name="arguments"></a>인수
-| 인수 | Description|
+| 인수 | 설명|
 | --- | --- |
 | Name Node Address | 이름 노드의 IP 또는 FQDN입니다. 이 인수는 CREATE EXTERNAL DATA SOURCE T-SQL의 “LOCATION” 인수를 참조합니다.|
 | Name Node Port | 이름 노드의 포트입니다. 이 인수는 CREATE EXTERNAL DATA SOURCE T-SQL의 “LOCATION” 인수를 참조합니다. 일반적으로 8020입니다. |

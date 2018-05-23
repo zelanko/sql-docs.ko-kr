@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c607ff40930af63838522eb6e4212aa5a079b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1903907268847f2d8e84a338f8bc3cf2135aba17
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>마이그레이션 평가용 PowerShell cmdlet
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 #### <a name="parameters"></a>매개 변수  
  아래 표에서는 이 cmdlet의 매개 변수에 대해 설명합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |----------------|-----------------|  
 |MigrationType|cmdlet의 대상인 마이그레이션 시나리오의 유형입니다. 현재 이 매개 변수에 사용 가능한 값은 기본 OLTP뿐입니다. (선택 사항)|  
 |서버|대상 SQL Server 인스턴스의 이름입니다. -InputObject 매개 변수를 제공하지 않는 경우 Windows PowerShell에서 필수 항목입니다. SQLPS에서는 선택 사항입니다.|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f258adcc432f932dcc88a816eff17d9f89124199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 647bf6e7d60b30fb3a698232552f0b3760c6a8e3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER DATABASE CURRENT
   
 다음 표에는 가능한 트랜잭션 격리 수준이 오름차순으로 나열되어 있습니다. 발생할 수 있는 충돌 및 이러한 충돌을 처리하는 재시도 논리에 대한 자세한 내용은 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)를 참조하세요. 
   
-| 격리 수준 | Description |   
+| 격리 수준 | 설명 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 사용할 수 없음: 커밋되지 않은 격리에서는 메모리 최적화 테이블에 액세스할 수 없습니다. 세션 수준 TRANSACTION ISOLATION LEVEL이 READ UNCOMMITTED로 설정된 경우 WITH (SNAPSHOT) 테이블 힌트를 사용하거나 데이터베이스 설정 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하여 SNAPSHOT 격리의 메모리 최적화 테이블에 액세스할 수 있습니다. | 
 | READ COMMITTED | 자동 커밋 모드가 적용되는 경우에만 메모리 최적화 테이블에 지원됩니다. 세션 수준 TRANSACTION ISOLATION LEVEL이 READ COMMITTED로 설정된 경우 WITH (SNAPSHOT) 테이블 힌트를 사용하거나 데이터베이스 설정 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하여 SNAPSHOT 격리의 메모리 최적화 테이블에 액세스할 수 있습니다.<br/><br/>데이터베이스 옵션 READ_COMMITTED_SNAPSHOT이 켜기로 설정된 경우 동일한 문에서 READ COMMITTED 격리 하의 메모리 최적화 테이블 및 디스크 기반 테이블에 액세스할 수 없습니다. |  
@@ -164,7 +163,7 @@ ALTER DATABASE CURRENT
 
 메모리 최적화 테이블에 액세스할 때 트랜잭션이 실패할 수 있는 오류 조건은 다음과 같습니다.
 
-| 오류 코드 | Description | 원인 |
+| 오류 코드 | 설명 | 원인 |
 | :-- | :-- | :-- |
 | **41302** | 현재 트랜잭션이 시작된 이후 다른 트랜잭션에서 업데이트된 행을 업데이트하려고 했습니다. | 이 오류 조건은 두 개의 동시 트랜잭션에서 같은 행을 동시에 업데이트 또는 삭제하려고 할 때 발생합니다. 두 개의 트랜잭션 중 하나에 이 오류 메시지가 전달되며 다시 시도해야 합니다. <br/><br/>  | 
 | **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 을 참조하세요. |  

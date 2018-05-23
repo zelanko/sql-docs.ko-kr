@@ -7,19 +7,19 @@ ms.prod_service: database-engine
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebb1794c1fcefcab24c5c60f4fcceff42dacc6e0
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,17 +87,17 @@ PolyBase를 독립 실행형으로 또는 확장 그룹에 설치한 후에는 �
 ##  <a name="installing"></a> 명령 프롬프트를 사용하여 설치  
  이 테이블의 값을 사용하여 설치 스크립트를 만듭니다. 두 개의 서비스, 즉 **SQL Server PolyBase 엔진** 및 **SQL Server PolyBase 데이터 이동 서비스** 를 동일한 계정 하에서 실행해야 합니다. PolyBase 스케일 아웃 그룹에서 모든 노드의 양쪽 PolyBase 서비스는 동일한 도메인 계정 하에서 실행해야 합니다.  
   
-|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|Description|  
+|SQL Server 구성 요소(SQL Server component)|매개 변수 및 값|설명|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBase|PolyBase 기능을 선택합니다.|  
-|SQL Server PolyBase 엔진|**선택**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|SQL Server PolyBase 엔진|**선택**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 엔진|**선택**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본) , 사용 안 함, 수동 중에서 PolyBase 엔진 서비스의 시작 모드를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 서비스|**선택**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
-|SQL Server PolyBase 데이터 이동 서비스|**선택**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 서비스|**선택**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본) , 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
-|PolyBase|**선택**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. <br />지원되는 값: **True**, **False**|  
-|PolyBase|**선택**<br /><br /> /PBPORTRANGE|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본) , 사용 안 함, 수동 중에서 PolyBase 엔진 서비스의 시작 모드를 지정합니다.|  
+|SQL Server PolyBase 데이터 이동 서비스|**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
+|SQL Server PolyBase 데이터 이동 서비스|**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
+|SQL Server PolyBase 데이터 이동 서비스|**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본) , 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
+|PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. <br />지원되는 값: **True**, **False**|  
+|PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
   
  **예제**  
   

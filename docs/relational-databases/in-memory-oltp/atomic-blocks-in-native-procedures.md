@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7c5a6fa406e4ac16da7641053ab1804887a6a96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>기본 프로시저의 Atomic 블록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,14 +137,14 @@ GO
   
  **BEGIN ATOMIC**에는 다음 옵션이 필요합니다.  
   
-|필요한 설정|Description|  
+|필요한 설정|설명|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|지원되는 값은 **SNAPSHOT**, **REPEATABLEREAD**및 **SERIALIZABLE**입니다.|  
 |**LANGUAGE**|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
-|선택적 설정|Description|  
+|선택적 설정|설명|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 **DATEFORMAT** 에서 **LANGUAGE**와 관련된 기본 날짜 형식을 재정의합니다.|  
 |**DATEFIRST**|지정되면 **DATEFIRST** 에서 **LANGUAGE**와 관련된 기본값을 재정의합니다.|  
