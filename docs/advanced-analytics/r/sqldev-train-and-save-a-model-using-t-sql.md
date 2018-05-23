@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>5 단원: T-SQL을 사용한 모델 학습 및 저장
+# <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>5단원: T-SQL을 사용한 모델 학습 및 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용하는 방법에 대한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -22,7 +22,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="create-the-stored-procedure"></a>저장 프로시저 만들기
 
-T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용합니다. 그러나 모델 재학습과 같이 자주 반복되는 프로세스의 경우 다른 저장 프로시저에서 `sp_execute_exernal_script`에 대한 호출을 캡슐화 는 것이 보다 쉽습니다.
+T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용합니다. 그러나 모델 재학습과 같이 자주 반복되는 프로세스의 경우 다른 저장 프로시저에서 `sp_execute_exernal_script`에 대한 호출을 캡슐화하는 것이 보다 쉽습니다.
 
 1. 먼저 팁 예측 모델을 작성하는 R 코드를 포함하는 저장 프로시저를 만듭니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 **쿼리** 창을 열고 다음 문을 실행하여 _TrainTipPredictionModel_ 저장 프로시저를 만듭니다. 이 저장 프로시저는 입력 데이터를 정의하고 R 패키지를 사용하여 로지스틱 회귀 모델을 만듭니다.
 
@@ -58,13 +58,13 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
     GO
     ```
 
-    - 모델을 테스트하기 위해 일부 데이터를 남겨야 하므로, 택시 데이터 테이블에서 70 %를 무작위로 선택합니다.
+    - 모델을 테스트하기 위해 일부 데이터를 남겨야 하므로, 택시 데이터 테이블에서 70%를 무작위로 선택합니다.
     
-    - SELECT 쿼리는 사용자 정의 스칼라 함수 _fnCalculateDistance_ 를 사용하여 승하차 위치 사이의 직접 거리를 계산합니다.  쿼리 결과는 기본 R 입력 변수인 `InputDataset`에 저장됩니다.
+    - SELECT 쿼리는 사용자 정의 스칼라 함수 _fnCalculateDistance_를 사용하여 승하차 위치 사이의 직접 거리를 계산합니다. 쿼리 결과는 기본 R 입력 변수인 `InputDataset`에 저장됩니다.
   
     - R 스크립트는 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 포함된  향상된 R 기능 중 하나인 `rxLogit` 함수를 호출하여 로지스틱 회귀 모델을 만듭니다.
   
-        이진 변수 _tipped_ 는 *label* 또는 결과 열로 사용되며 모델은 _passenger_count_, _trip_distance_, _trip_time_in_secs_ 및 _direct_distance_ 와 같은 특성 열을 사용하여 적합(fitting)합니다.
+        이진 변수 _tipped_는 *label* 또는 결과 열로 사용되며 모델은 _passenger_count_, _trip_distance_, _trip_time_in_secs_ 및 _direct_distance_와 같은 특성 열을 사용해 적합해집니다.
   
     -   R 변수 `logitObj`에 저장된 학습 모델을 직렬화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 출력하기 위해 데이터 프레임에 넣습니다. 해당 출력은 미래 예측에 사용할 수 있도록 데이터베이스 테이블 _nyc_taxi_models_에 삽입됩니다.
   
@@ -80,13 +80,13 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
     EXEC TrainTipPredictionModel
     ```
 
-2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **메시지** 창에서 아래  메시자와 같이 R의 **stdout** 스트림으로 파이프될 메시지를 봅니다: 
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **메시지** 창에서 아래 메시자와 같이 R의 **stdout** 스트림으로 파이프될 메시지를 봅니다.
 
     "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
     모델 생성의 일부로 생성된 변수 및 테스트 메트릭을 표시하는 개별 함수 `rxLogit`에 대한 메시지를 볼 수도 있습니다.
 
-3.  문이 완료되면 *nyc_taxi_models* 테이블을 엽니다. 데이터를 처리 및 모델 적합에는 다소 시간이 걸릴 수 있습니다.
+3. 문이 완료되면 *nyc_taxi_models* 테이블을 엽니다. 데이터를 처리하고 모델에 맞추는 데 다소 시간이 걸릴 수 있습니다.
 
     _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
@@ -100,9 +100,9 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
 
 ## <a name="next-lesson"></a>다음 단원
 
-[6 단원: 모델 운용](../tutorials/sqldev-operationalize-the-model.md)
+[6단원: 모델 운용](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[4 단원: T-SQL을 사용한 데이터 특성 만들기](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[4단원: T-SQL을 사용한 데이터 특성 만들기](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 
