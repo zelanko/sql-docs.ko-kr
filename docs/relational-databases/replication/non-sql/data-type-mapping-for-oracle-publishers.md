@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+# <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   저장 프로시저를 사용하여 이후의 모든 아티클에 대한 기본값을 전역으로 변경합니다. 기존 아티클에 대한 기본값은 변경되지 않습니다.  
   
- 대체 데이터 형식 매핑을 지정하려면 [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)을 참조하십시오.  
+ 대체 데이터 형식 매핑을 지정하려면 [Oracle 게시자에 대한 데이터 형식 매핑 지정](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

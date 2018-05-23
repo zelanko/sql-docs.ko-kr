@@ -34,7 +34,7 @@ Reporting Services SharePoint 모드에는 SharePoint 사이트 설정 페이지
 |------------------|-----------------|  
 |Reporting Services 사이트 설정|이 항목에 설명된 사이트 전체 설정입니다.|  
 |데이터 경고 관리|데이터 경고 기능의 관리입니다.|  
-|보고서 서버 파일 동기화|기본적으로 비활성화되어 있는 사이트 수준 기능입니다.<br /><br /> 문서 라이브러리 안에서 직접 파일이 추가되거나 업데이트되면 보고서 서버 파일(.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx)을 SharePoint 문서 라이브러리에서 보고서 서버로 동기화합니다.<br /><br /> 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.|  
+|보고서 서버 파일 동기화|기본적으로 비활성화되어 있는 사이트 수준 기능입니다.<br /><br /> 문서 라이브러리 안에서 직접 파일이 추가되거나 업데이트되면 보고서 서버 파일(.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx)을 SharePoint 문서 라이브러리에서 보고서 서버로 동기화합니다.<br /><br /> 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.|  
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>Reporting Services 사이트 설정 페이지 열기
   

@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
     -   기본 해결 프로그램. 기본 해결 프로그램의 동작은 구독이 클라이언트 구독인지 서버 구독인지에 따라 달라집니다. 구독 유형을 지정하는 방법은 [병합 구독 유형 및 충돌 해결 우선 순위 지정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)을 참조하세요.  
   
-    -   사용자 지정 해결 프로그램 - 관리 코드로 작성된 비즈니스 논리 처리기 또는 사용자 지정 COM 기반 해결 프로그램일 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다. 충돌하는 행뿐만 아니라 각 복제된 행에 대해서도 실행되는 사용자 지정 논리를 구현해야 하는 경우 [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
+    -   사용자 지정 해결 프로그램 - 관리 코드로 작성된 비즈니스 논리 처리기 또는 사용자 지정 COM 기반 해결 프로그램일 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다. 충돌하는 행뿐만 아니라 각 복제된 행에 대해서도 실행되는 사용자 지정 논리를 구현해야 하는 경우 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
   
     -   표준 COM 기반 해결 프로그램 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함되어 있습니다.  
   
@@ -87,9 +87,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  사용자 지정 충돌 해결 프로그램을 등록하려면 다음 유형 중 하나를 만듭니다.  
   
-    -   관리 코드 기반 해결 프로그램(비즈니스 논리 처리기). 자세한 내용은 [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
+    -   관리 코드 기반 해결 프로그램(비즈니스 논리 처리기). 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   
-    -   저장 프로시저 기반 해결 프로그램 및 COM 기반 해결 프로그램 자세한 내용은 [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하세요.  
+    -   저장 프로시저 기반 해결 프로그램 및 COM 기반 해결 프로그램 자세한 내용은 [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하세요.  
   
 2.  원하는 해결 프로그램이 이미 등록되어 있는지 확인하려면 모든 데이터베이스의 게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행합니다. 그러면 사용자 지정 해결 프로그램에 대한 설명, 배포자에 등록된 각 COM 기반 해결 프로그램의 CLSID(클래스 식별자) 또는 배포자에 등록된 각 비즈니스 논리 처리기의 관리 어셈블리에 대한 정보가 표시됩니다.  
   
@@ -151,6 +151,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

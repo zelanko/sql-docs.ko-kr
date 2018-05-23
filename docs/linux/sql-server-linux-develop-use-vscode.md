@@ -1,8 +1,8 @@
 ---
 title: SQL Server에 대 한 Visual Studio Code mssql 확장을 사용 하 여 | Microsoft Docs
 description: 이 자습서에서는 VS Code에 mssql 확장명을 사용 하는 방법을 보여 줍니다. 이 확장을 사용 하면 편집 하 고 VS Code에서 Transact SQL 스크립트를 실행할 수 있습니다.
-author: erickangMSFT
-ms.author: erickang
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: fa5e383d5d2a20487295e4b76076cf6c9cee113e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 

@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  스크립트 예제는 다음을 참조하십시오.  
   
- [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

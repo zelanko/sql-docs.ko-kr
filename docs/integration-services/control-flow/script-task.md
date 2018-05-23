@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-task-editor-general-page"></a>스크립트 태스크 편집기(일반 페이지)
   **스크립트 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 스크립트 태스크의 이름을 지정하고 설명할 수 있습니다.  
   
- 스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
+ 스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
 ### <a name="options"></a>변수  
  **이름**  
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 와 그 이후 버전에서는 모든 스크립트가 미리 컴파일됩니다. 그러나 이전 버전에서는 **PrecompileScriptIntoBinaryCode** 속성을 설정하여 스크립트가 미리 컴파일되었음을 지정해야 합니다.  
   
- 스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
+ 스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
 ### <a name="options"></a>변수  
  **ScriptLanguage**  

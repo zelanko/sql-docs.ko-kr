@@ -94,25 +94,25 @@ ms.lasthandoff: 05/03/2018
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 연결, 복원 또는 복사하면 데이터베이스를 바로 사용할 수 있으며 해당 데이터베이스가 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
  **최대 텍스트 복제 크기**  
- 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 복제된 열 또는 캡처된 열에 추가할 수 있는 **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**및 **image** 데이터의 최대 크기(바이트)를 지정합니다. 설정을 변경하면 즉시 적용됩니다. 자세한 내용은 [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
+ 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 복제된 열 또는 캡처된 열에 추가할 수 있는 **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**및 **image** 데이터의 최대 크기(바이트)를 지정합니다. 설정을 변경하면 즉시 적용됩니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
   
  **시작 프로시저 검색**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 저장 프로시저의 자동 실행을 검색하도록 지정합니다. 이 옵션을 **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 정의된 자동 실행 저장 프로시저를 모두 검색하여 실행합니다. **False** (기본값)로 설정하면 검색을 수행하지 않습니다. 자세한 내용은 [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 저장 프로시저의 자동 실행을 검색하도록 지정합니다. 이 옵션을 **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 정의된 자동 실행 저장 프로시저를 모두 검색하여 실행합니다. **False** (기본값)로 설정하면 검색을 수행하지 않습니다. 자세한 내용은 [scan for startup procs 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)을 참조하세요.  
   
  **두 자리 연도 구분**  
  두 자릿수 연도로 입력될 수 있는 최고 연도 수를 나타냅니다. 나열된 연도와 99 이하인 연도는 두 자릿수 연도로 입력될 수 있습니다. 모든 다른 연도는 네 자릿수 연도로 입력되어야 합니다.  
   
- 예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
+ 예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [두 자리 연도 구분 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="network"></a>네트워크  
  **네트워크 패킷 크기**  
- 전체 네트워크에서 사용되는 패킷 크기(바이트)를 설정합니다. 기본 패킷 크기는 4096바이트입니다. 응용 프로그램에서 대량 복사 작업을 수행하거나 많은 양의 **text** 또는 **image** 데이터를 주고받을 때 패킷 크기를 기본값보다 크게 설정하면 네트워크에서 읽기 및 쓰기의 양이 줄어들므로 효율성이 향상될 수 있습니다. 응용 프로그램이 적은 정보를 주거나 받을 때는 대부분의 데이터를 전송할 수 있도록 패킷 크기를 512바이트로 설정합니다. 자세한 내용은 [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)을 참조하세요.  
+ 전체 네트워크에서 사용되는 패킷 크기(바이트)를 설정합니다. 기본 패킷 크기는 4096바이트입니다. 응용 프로그램에서 대량 복사 작업을 수행하거나 많은 양의 **text** 또는 **image** 데이터를 주고받을 때 패킷 크기를 기본값보다 크게 설정하면 네트워크에서 읽기 및 쓰기의 양이 줄어들므로 효율성이 향상될 수 있습니다. 응용 프로그램이 적은 정보를 주거나 받을 때는 대부분의 데이터를 전송할 수 있도록 패킷 크기를 512바이트로 설정합니다. 자세한 내용은 [network packet size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md)을 참조하세요.  
   
 > [!NOTE]  
 >  성능이 향상될 것이라는 확신이 없으면 패킷 크기를 변경하지 마세요. 대부분의 응용 프로그램에는 기본 패킷 크기가 제일 좋습니다.  
   
  **원격 로그인 제한 시간**  
- 실패한 원격 로그인 시도에서 원래 상태로 되돌아오기까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기다리는 시간(초)을 지정합니다. 이 설정은 유형이 다른 쿼리를 위한 OLE DB Provider로의 연결에 영향을 줍니다. 기본값은 20초입니다. 값을 0으로 설정하면 무한정 기다릴 수 있습니다. 자세한 내용은 [Configure the remote login timeout Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)을 참조하세요.  
+ 실패한 원격 로그인 시도에서 원래 상태로 되돌아오기까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기다리는 시간(초)을 지정합니다. 이 설정은 유형이 다른 쿼리를 위한 OLE DB Provider로의 연결에 영향을 줍니다. 기본값은 20초입니다. 값을 0으로 설정하면 무한정 기다릴 수 있습니다. 자세한 내용은 [remote login timeout 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)을 참조하세요.  
   
  설정을 변경하면 즉시 적용됩니다.  
   

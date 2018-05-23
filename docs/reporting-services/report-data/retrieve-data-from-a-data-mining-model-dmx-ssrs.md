@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
  데이터 집합을 만들면 데이터 집합의 이름이 보고서 데이터 창의 해당 데이터 원본 아래에 노드로 나타납니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  **자격 증명**을 클릭합니다.  
   
-     데이터 원본 연결에 사용할 자격 증명을 설정합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
+     데이터 원본 연결에 사용할 자격 증명을 설정합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
     > [!NOTE]  
     >  데이터 원본 연결을 테스트하려면 **편집**을 클릭하십시오. 그런 다음 **연결 속성** 대화 상자에서 **연결 테스트**를 클릭하십시오. 테스트에 성공한 경우 "연결 테스트에 성공했습니다"라는 정보 메시지가 표시됩니다. 테스트에 실패할 경우에는 테스트에 성공하지 못한 이유에 대한 자세한 정보가 포함된 경고 메시지가 표시됩니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  **데이터 원본**상자에서 이름이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름인지 확인합니다.  
   
-4.  **쿼리 디자이너** 를 클릭하여 열리는 그래픽 쿼리 디자이너에서 쿼리를 대화형으로 작성합니다. 쿼리 디자이너가 MDX 모드로 열리는 경우 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경"))을 클릭하여 데이터 마이닝 쿼리 디자이너로 전환합니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+4.  **쿼리 디자이너** 를 클릭하여 열리는 그래픽 쿼리 디자이너에서 쿼리를 대화형으로 작성합니다. 쿼리 디자이너가 MDX 모드로 열리는 경우 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경"))을 클릭하여 데이터 마이닝 쿼리 디자이너로 전환합니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
      또는 다른 보고서에서 기존 DMX 쿼리를 가져오려면 **가져오기**를 클릭한 다음 DMX 쿼리를 사용하여 .rdl 파일로 이동합니다. .dmx 파일에서 쿼리를 가져올 수는 없습니다.  
   

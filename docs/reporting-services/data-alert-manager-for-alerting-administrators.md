@@ -51,7 +51,7 @@ SQL Server Reporting Services는 데이터 경고를 관리할 수 있도록 Sha
   
  ![사이트 설정 페이지의 Reporting Services 섹션](../reporting-services/media/rs-sitesettings.gif "사이트 설정 페이지의 Reporting Services 섹션")  
   
- 데이터 경고 관리자에는 경고 이름, 보고서 이름, 경고 소유자 이름, 경고 메시지를 보낸 횟수, 경고가 마지막으로 실행된 시간, 경고 정의가 마지막으로 수정된 시간 및 경고 메시지 상태를 나열하는 테이블이 포함되어 있습니다. 경고를 생성하거나 보낼 수 없으면 상태 열에 오류에 대한 정보가 포함되어 경고 문제를 해결하도록 돕습니다. 자세한 내용은 [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)을(를) 참조하세요.  
+ 데이터 경고 관리자에는 경고 이름, 보고서 이름, 경고 소유자 이름, 경고 메시지를 보낸 횟수, 경고가 마지막으로 실행된 시간, 경고 정의가 마지막으로 수정된 시간 및 경고 메시지 상태를 나열하는 테이블이 포함되어 있습니다. 경고를 생성하거나 보낼 수 없으면 상태 열에 오류에 대한 정보가 포함되어 경고 문제를 해결하도록 돕습니다. 자세한 내용은 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)을(를) 참조하세요.  
   
  다음 표에서는 데이터 경고 관리자에 있는 테이블의 예제 데이터를 보여 줍니다. 오류가 발생한 경우 오류 메시지와 로그의 항목 식별자(GUID)가 테이블의 **상태** 필드에 포함되어 있습니다.  
   
@@ -78,7 +78,7 @@ SQL Server Reporting Services는 데이터 경고를 관리할 수 있도록 Sha
 ##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 관리하는 방법을 보여 주는 절차가 들어 있습니다.  
   
--   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
 ## <a name="see-also"></a>참고 항목
 

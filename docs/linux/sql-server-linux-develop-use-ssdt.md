@@ -1,23 +1,23 @@
 ---
 title: 개발 및 Linux 용 SQL Server 배포 데이터베이스 | Microsoft Docs
 description: ''
-author: erickangMSFT
-ms.author: erickang
-manager: jroth
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: aa024a467207b884b111b9b356465ec0e1df2089
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 41eabe46f654f2cb0464d2f7589cb0ce50a7c214
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
 

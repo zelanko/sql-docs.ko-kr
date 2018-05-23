@@ -39,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 구독을 만듭니다. 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md) 및 [게시 및 아티클 만들기, 수정 및 삭제&#40;복제&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)를 참조하세요.  
   
-2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
+2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   
-3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 프로그래밍 방식으로 병합 에이전트를 동기적으로 시작하는 RMO(복제 관리 개체) 프로젝트를 만듭니다. 자세한 내용은 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
+3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 프로그래밍 방식으로 병합 에이전트를 동기적으로 시작하는 RMO(복제 관리 개체) 프로젝트를 만듭니다. 자세한 내용은 [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)을 참조하세요.  
   
 4.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하십시오.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 끌어오기 구독을 만듭니다. 게시는 웹 동기화 또는 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원해야 합니다.  
   
-2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
+2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   
 3.  비즈니스 논리 처리기 코드에서 디버깅 대상 메서드 또는 클래스 생성자 내에 중단점을 설정합니다. 비즈니스 논리 처리기에 구현할 수 있는 메서드에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 메서드 항목을 참조하십시오.  
   
@@ -88,6 +88,6 @@ ms.lasthandoff: 05/03/2018
 11. 설정된 다른 중단점이 없고 올바른 명령이 복제된 경우 비즈니스 논리 처리기에 설정한 중단점에 도달하면 실행이 중지됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

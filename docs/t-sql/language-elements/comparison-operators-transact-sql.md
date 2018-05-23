@@ -44,9 +44,9 @@ ms.lasthandoff: 05/03/2018
 |[>=(크거나 같음)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|크거나 같음|  
 |[<=(작거나 같음)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|작거나 같음|  
 |[<>(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|같지 않음|  
-|[!=(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|같지 않음(ISO 표준이 아님)|  
-|[!<(보다 작지 않음)](../../t-sql/language-elements/not-less-than-transact-sql.md)|보다 작지 않음(ISO 표준이 아님)|  
-|[!>(보다 크지 않음)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|보다 크지 않음(ISO 표준이 아님)|  
+|[\!=(같지 않음)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|같지 않음(ISO 표준이 아님)|  
+|[\!<(보다 작지 않음)](../../t-sql/language-elements/not-less-than-transact-sql.md)|보다 작지 않음(ISO 표준이 아님)|  
+|[\!>(보다 크지 않음)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|보다 크지 않음(ISO 표준이 아님)|  
   
 ## <a name="boolean-data-type"></a>부울 데이터 형식  
  비교 연산자의 결과는 **Boolean** 데이터 형식입니다. TRUE, FALSE 및 UNKNOWN의 세 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  

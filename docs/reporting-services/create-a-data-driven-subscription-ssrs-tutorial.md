@@ -74,14 +74,14 @@ ms.lasthandoff: 05/03/2018
   
 -   샘플 보고서에 데이터를 제공하는 **AdventureWorks2014** 샘플 데이터베이스가 필요합니다.  
   
--   샘플 보고서에 대한 모든 구독 관리 태스크를 포함하는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 역할 할당이 필요합니다. 이 태스크는 데이터 기반 구독 정의에 필요합니다. 컴퓨터 관리자인 경우 로컬 관리자에 대한 기본 역할 할당을 통해 데이터 기반 구독을 만드는 데 필요한 권한을 얻을 수 있습니다. 자세한 내용은 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
+-   샘플 보고서에 대한 모든 구독 관리 태스크를 포함하는 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 역할 할당이 필요합니다. 이 태스크는 데이터 기반 구독 정의에 필요합니다. 컴퓨터 관리자인 경우 로컬 관리자에 대한 기본 역할 할당을 통해 데이터 기반 구독을 만드는 데 필요한 권한을 얻을 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에 대한 사용 권한 부여](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
   
 -   쓰기 권한이 있는 공유 폴더가 필요합니다. 이 공유 폴더는 네트워크 연결을 통해 액세스할 수 있어야 합니다.  
   
 **자습서에 소요되는 예상 시간:** 30분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[데이터 기반 구독](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

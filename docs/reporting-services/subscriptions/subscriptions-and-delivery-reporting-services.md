@@ -61,9 +61,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [Reporting Services의 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) 보고서 서버 메일 배달 작업 및 구성에 대해 설명합니다.  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 기본 모드 보고서 서버로 구독을 만드는 자세한 단계입니다.  
+-   [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) 기본 모드 보고서 서버로 구독을 만드는 자세한 단계입니다.  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint 모드 보고서 서버로 구독을 만드는 자세한 단계입니다.  
+-   [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) SharePoint 모드 보고서 서버로 구독을 만드는 자세한 단계입니다.  
   
 -   [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md) 보고서 서버 파일 공유 배달 작업 및 구성에 대해 설명합니다.  
   
