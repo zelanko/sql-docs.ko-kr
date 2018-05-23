@@ -13,24 +13,24 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 탐색 하 고 데이터를 시각화 합니다.
+# <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 데이터를 탐색하고 시각화하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단원에서는 샘플 데이터를 검토 하 고 R 함수를 사용 하 여 일부 플롯을 생성 합니다. 이러한 R 함수에 이미 포함 되어 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다. R 함수를 호출할 수 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.
+이 단원에서는 예제 데이터를 검토하고 R 함수를 사용하여 일부 플롯을 생성합니다.  이러한 R 함수 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 이미 포함됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 R 함수를 호출할 수 있습니다.
 
-## <a name="review-the-data"></a>데이터를 검토 합니다.
+## <a name="review-the-data"></a>데이터 검토
 
-일반적으로 데이터 과학 솔루션 개발에는 데이터 탐색 및 데이터 시각화가 많이 포함됩니다. 아직 없는 경우 샘플 데이터를 검토 하려면 잠시를 먼저 살펴보겠습니다.
+일반적으로 데이터 과학 솔루션 개발에는 데이터 탐색 및 데이터 시각화가 많이 포함됩니다. 먼저 잠시 시간을 내서 샘플 데이터를 검토해 보겠습니다.
 
-원래 데이터 집합에서는 택시 식별자 및 여정 레코드가 별도 파일로 제공되었습니다. 그러나 샘플 데이터를 쉽게 사용할 수 있도록 하려면 두 개의 원래 데이터 집합 결합 열에 _메달_, _해킹\_라이선스_, 및 _픽업\_ 날짜/시간_합니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 집합에는 1,703,957개의 행과 23개 열이 있습니다.
+원본 데이터 집합에서는 택시 식별자 및 여정 기록이 별도의 파일로 제공되었습니다. 그러나 샘플 데이터를 쉽게 사용하기 위해 두 개의 원래 데이터 집합이 medallion, hack_license 및 pickup_datetime 열에 조인되었습니다.  레코드도 원래 레코드 수의 1%만 가져오도록 샘플링되었습니다. 다운 샘플링된 결과 데이터 집합에는 1,703,957개의 행과 23개 열이 있습니다
 
 **택시 식별자**
   
 -   _medallion_ 열은 택시의 고유 ID 번호를 나타냅니다.
   
--   _해킹\_라이선스_ 열 (익명으로 처리) 하는 택시 운전 면허 번호를 포함 합니다.
+-   heck_license 열은 택시 운전면허 번호를 포함합니다(익명으로 처리).
   
 **여정 및 요금 레코드**
   
@@ -38,18 +38,18 @@ ms.lasthandoff: 04/16/2018
   
 -   각 요금 레코드에는 지불 유형, 총 지불 금액, 팁 금액 등의 지불 정보가 포함됩니다.
   
--   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다.  _팁\_양_ 열 연속 숫자 값을 포함 하며으로 사용할 수는 **레이블** 회귀 분석에 대 한 열입니다. _tipped_ 열에는 예/아니요 값만 포함되며 이진 분류에 사용됩니다. _팁\_클래스_ 열에 여러 개의 **클래스 레이블을** 따라서 사용할 수는 레이블로 다중 클래스 분류 작업에 대 한 합니다.
+-   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다.  _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
   
     이 연습에서는 이진 분류 작업만 보여 주지만, 다른 두 가지 Machine Learning 작업인 회귀 및 다중 클래스 분류 모델도 구축해 보세요.
   
--   레이블 열에 사용 되는 값은 모두 기반는 _팁\_양_ 이러한 비즈니스 규칙을 사용 하 여 열:
+-   레이블 열에 사용되는 값은 모두 아래 비즈니스 규칙을 사용한 _tip\_amount_ 열에 기반합니다:
   
     |파생 열 이름|규칙|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
-## <a name="create-plots-using-r-in-t-sql"></a>T-SQL에서 R을 사용 하 여 점도 만들기
+## <a name="create-plots-using-r-in-t-sql"></a>T-SQL에서 R을 사용하여 플롯 만들기
 
 시각화는 데이터와 이상값의 분포를 파악하는 데 강력한 도구이므로 R에서는 데이터 시각화를 위한 여러 패키지를 제공합니다. R의 표준 오픈 소스 배포에는 히스토그램, 산점도, 상자 그림 및 기타 데이터 탐색 그래프를 만들기 위한 많은 함수도 포함되어 있습니다.
 
@@ -57,17 +57,17 @@ ms.lasthandoff: 04/16/2018
 
 이 섹션에서는 저장 프로시저를 사용하여 각 형식의 출력으로 작업하는 방법을 알아봅니다. 전체 프로세스는 다음과 같습니다.
 
-- Varbinary 데이터는 R 플롯을 생성 하는 저장된 프로시저 만들기
+- varbinary 데이터로 R 플롯을 생성하는 저장 프로시저 만들기
 
 - 플롯을 생성 하 고 이미지 파일에 저장
 
-- 저장된 프로시저를 사용 하 여 이진 데이터 JPG 또는 PDF 파일로 변환 하려면
+- 저장 프로시저를 사용하여 이진 플롯 데이터를 JPG 또는 PDF 파일로 변환
 
-### <a name="create-the-stored-procedure-plothistogram"></a>PlotHistogram 저장된 프로시저 만들기
+### <a name="create-the-stored-procedure-plothistogram"></a>PlotHistogram 저장 프로시저 만들기
 
-1. 플롯을 만들려면 사용 `rxHistogram`에 제공 된 고급 R 기능 중 하나 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], 데이터를 기반으로 하는 히스토그램을 그리는 데는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. R 함수를 쉽게 호출할 수 있게 하려면 저장 프로시저 _PlotHistogram_에 래핑합니다.
+1. 플롯을 만들려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 제공하는 향상된 R 함수 중의 하나인 rxHistogram을 사용하여 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 쿼리의 데이터를 기반으로 히스토그램을 그립니다. R 함수를 쉽게 호출할 수 있도록 저장 프로시저 PlotHistogram 내에 래핑합니다
 
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 새 **쿼리** 창.
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서, 새 **쿼리** 창을 엽니다.
 
 2. 자습서 데이터가 포함 된 데이터베이스에이 문을 사용 하 여 프로시저를 만듭니다.
 
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/16/2018
 
     필요한 경우 올바른 테이블 이름을 사용하도록 코드를 수정해야 합니다.
   
-    -   `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트( `@input_data_1`)를 정의합니다.
+    -   `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다.
   
     -   R 스크립트는 간단합니다. 이미지를 저장할 R 변수(`image_file`)를 정의한 다음 `rxHistogram` 함수를 호출하여 그림을 생성합니다.
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 04/16/2018
      ```
 
     > [!NOTE]
-    > Bcp에 대 한 명령 스위치 대/소문자를 구분 하지 않습니다.
+    > Bcp의 명령 스위치는 대/소문자를 구분하지 않습니다.
   
 3.  연결에 성공하면 그래픽 파일 형식에 대한 자세한 정보를 입력하라는 메시지가 표시됩니다. 다음과 같은 변경을 제외하고 각 프롬프트에서 Enter 키를 눌러 기본값을 적용합니다.
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 04/16/2018
     ```
 
     > [!TIP]
-    > 형식 정보를 파일(bcp.fmt)에 저장하는 경우 **bcp** 유틸리티는 그래픽 파일 형식 옵션을 묻는 메시지 없이 나중에 유사한 명령에 적용할 수 있는 형식 정의를 생성합니다. 서식 파일을 사용하려면 명령줄의 끝, password 인수 뒤에 `-f bcp.fmt` 를 추가합니다.
+    > 서식 정보를 파일(bcp.fmt)에 저장하는 경우 **bcp** 유틸리티는 그래픽 파일 형식 옵션을 묻는 메시지 없이 나중에 유사한 명령에 적용할 수 있는 서식 정의를 생성합니다. 서식 파일을 사용하려면 명령줄의 끝, password 인수 뒤에 `-f bcp.fmt` 를 추가합니다.
   
 4.  PowerShell 명령을 실행한 곳과 동일한 디렉터리에 출력 파일이 만들어집니다. 그림을 보려면 plot.jpg 파일을 열기만 하면 됩니다.
   
@@ -164,13 +164,13 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="export-the-plot-data-to-a-viewable-file"></a>그리기 데이터를 볼 수 있는 파일로 내보내기
 
-이진 데이터에는 R 플롯을 출력 형식에 대 한 응용 프로그램에 의해 소비 편리할 수 있습니다 하지만 데이터 탐색 단계에서 렌더링 된 그림을 필요로 하는 데이터 과학자에 매우 유용 하지 않습니다. 일반적으로 데이터 과학자는 여러 관점에서 데이터에 대한 이해를 넓히기 위해 여러 데이터 시각화를 생성합니다.
+R 플롯을 이진 데이터 유형으로 출력하는 것은 응용 프로그램에서 사용하기에 편리할 수 있지만, 데이터 탐색 단계에서 렌더링 된 플롯을 필요로 하는 데이터 과학자에게는 그다지 유용하지 않습니다. 일반적으로 데이터 과학자는 여러 관점에서 데이터에 대한 통찰력을 얻기 위해 여러 데이터 시각화를 생성합니다.
 
-사용자에 대 한 그래프를 생성 하려면와 같은 인기 있는 형식에서 R의 출력을 작성 하는 저장된 프로시저를 사용할 수 있습니다. JPG, 합니다. PDF, 및입니다. PNG 합니다. 저장 프로시저가 그래픽을 만든 후 파일을 열어 그림을 시각화하면 됩니다.
+사용자에 대한 그래프를 생성하려면 .JPG, .PDF 및 .PNG와 같은 일반적인 형식으로 R 출력을 만드는 저장 프로시저를 사용할 수 있습니다. 저장 프로시저가 그래픽을 만든 후에는 파일을 열어 플롯을 시각화하면 됩니다.
 
-1. 새 저장된 프로시저를 만드는 _PlotInOutputFiles_, 히스토그램, scatterplots, 및 기타 R 그래픽을 작성 하는 방법을 보여 주는 합니다. JPG 및 합니다. PDF 형식입니다.
+1. 히스토그램, 산점도 및 기타 R 그래픽을 JPG 및 PDF 형식으로 작성하는 방법을 보여주는 새로운 저장 프로시저 _PlotInOutputFiles_ 를 만듭니다.
 
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 새 **쿼리** 창 및 다음에 붙여넣은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.
+    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 **쿼리** 창을 열고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 붙여 놓습니다.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
