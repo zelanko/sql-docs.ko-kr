@@ -13,22 +13,22 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>6 단원: R 모델을 운용
+# <a name="lesson-6-operationalize-the-r-model"></a>6단원: R 모델 운용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
+이 문서는 SQL Server에서 R을 사용하는 방법에 대한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단계에서는 방법을 배웁니다 *운영 화* 저장된 프로시저를 사용 하 여 모델입니다. 이 저장 프로시저를 다른 응용 프로그램에서 직접 호출하여 새 관찰을 예측할 수 있습니다. 이 연습에서는 저장된 프로시저에서 R 모델을 사용 하 여 점수 매기기를 수행 하는 두 가지를 보여 줍니다.
+이 단계에서는 저장 프로시저를 사용하여 모델을 *운용*하는 방법을 학습합니다. 이 저장 프로시저는 다른 응용 프로그램에서 직접 호출하여 새 관측에 대해 예측할 수 있습니다. 이 연습에서는 저장 프로시저에서 R 모델을 사용하여 채점하는 두 가지 방법을 보여줍니다.
 
-- **일괄 처리 점수 매기기 모드**: SELECT 쿼리 저장된 프로시저에 대 한 입력으로 사용 합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
+- **일괄 처리 점수 매기기 모드**: 저장 프로시저에 대한 입력으로 SELECT 조회를 사용하십시오. 저장 프로시저는 입력된 사례(case)에 해당하는 관측 표를 반환합니다.
 
-- **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
+- **개별 점수 매기기 모드**: 개별 매개변수 값 집합을 입력으로 전달합니다. 저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
 먼저 점수 매기기의 일반적인 작동 방식을 살펴보겠습니다.
 
 ## <a name="basic-scoring"></a>기본 점수 매기기
 
-저장 프로시저 _PredictTip_ 은 예측 호출을 저장 프로시저에 래핑하는 기본 구문을 보여 줍니다.
+_PredictTip_ 저장 프로시저는 예측 호출을 저장 프로시저에 래핑하는 기본 구문을 보여 줍니다.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -52,21 +52,20 @@ END
 GO
 ```
 
-+ SELECT 문은 serialize 된 모델 데이터베이스에서 가져오고 R 변수에 저장 하는 모델 `mod` 오른쪽을 사용 하 여 추가 처리를 위해
-
-+ 점수 매기기에 대 한 새 사례에서 가져온는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 지정 된 쿼리 `@inquery`, 저장된 프로시저에 대 한 첫 번째 매개 변수입니다. 쿼리 데이터를 읽으면 행이 기본 데이터 프레임 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 R의 `rxPredict` 함수에 전달됩니다.
++ SELECT 문은 데이터베이스에서 직렬화된 모델을 가져와서, R을 사용한 추가 처리를 위해 R 변수 `mod`에 그 모델을 저장합니다.
++ 새로운 점수매기기 사례는 저장 프로시저의 첫 번째 매개변수인 `@inquery`에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에서 가져옵니다. 쿼리에서 읽은 데이터는 기본 데이터 프레임인 `InputDataSet`에 저장됩니다. 이 데이터 프레임은 점수를 생성하는 R의 `rxPredict` 함수에 전달됩니다.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     data.frame에 단일 행이 포함될 수 있으므로 일괄 처리 또는 단일 점수 매기기에 동일한 코드를 사용할 수 있습니다.
   
-+ 반환한 값은 `rxPredict` 함수는는 **float** 드라이버 시간 관계의 끝을 가져옴을 확률을 나타내는입니다.
++ `rxPredict` 함수에 의해 번환되는 값은 운전자가 임의의 팁을 얻을 확률을 나타내는 **float**입니다.
 
 ## <a name="batch-scoring"></a>일괄 처리 채점
 
 이제 일괄 처리 점수 매기기의 작동 방식을 살펴보겠습니다.
 
-1.  먼저 사용할 작은 입력 데이터 집합을 가져오겠습니다. 이 쿼리는 승객 수 및 예측을 수행하는 데 필요한 다른 기능과 함께 "상위 10개"의 여정 목록을 만듭니다.
+1. 먼저 사용할 작은 입력 데이터 집합을 가져오겠습니다. 이 쿼리는 승객 수 및 예측을 수행하는 데 필요한 다른 특성과 함께 "상위 10개"의 여정 목록을 만듭니다.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -91,9 +90,9 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    이 쿼리는 저장된 프로시저에 대 한 입력으로 사용할 수 _PredictTipBatchMode_다운로드의 일부로 제공 합니다.
+    이 쿼리는 다운로드의 일부로 제공되는 _PredictTipBatchMode_ 저장 프로시저에 대한 입력으로 사용할 수 있습니다.
 
-2. 저장된 프로시저의 코드를 검토 하는 데 1 분 소요 _PredictTipBatchMode_ 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 _PredictTipBatchMode_ 저장 프로시저의 코드를 검토합니다.
 
     ```SQL
     /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
@@ -117,7 +116,7 @@ GO
     END
     ```
 
-3.  변수에 쿼리 텍스트를 입력 하 고 저장된 프로시저에 매개 변수로 전달 합니다.
+3. 변수에 쿼리 텍스트를 입력하고 저장 프로시저에 매개변수로 전달합니다.
 
     ```SQL
     -- Define the input data
@@ -128,20 +127,20 @@ GO
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. 저장된 프로시저는 일련의 상위 10 개의 각각에 대 한 예측을 나타내는 값을 반환 합니다. 그러나 상위 trips 드라이버가 팁은 발생할 가능성이 있지 않으면는 비교적 짧은 여행 거리 하 여 단일 승객 trips 됩니다.
+4. 저장 프로시저는 상위 10개 여정 각각에 대한 예측을 나타내는 일련의 값을 반환합니다. 그러나, 상위 여정은 운전자가 팁을 얻지 못할 수도 있는 비교적 여행 거리가 짧은 단일 승객 여행이기도 합니다.
   
 
 > [!TIP]
 > 
-> "예-정보" 및 "설명" 결과 반환 하는 대신 하는 예측에 대 한 확률 점수를 반환할 수도 다음에 WHERE 절을 사용할 수 있습니다는 _점수_ "팁 가능성이 높은"으로 점수를 분류 하는 열 값 또는 " 낮지만 팁 을"예: 0.5 또는 0.7 임계값 값을 사용 하 합니다. 이 단계는 저장 프로시저에 포함되어 있지 않지만 쉽게 구현할 수 있습니다.
+> "yes-tip" 및 "no-tip" 결과만 반환하는 대신 예측에 대한 확률 점수를 반환하고 _Score_ 열 값에 WHERE 절을 적용하여 점수를 0.5 또는 0.7과 같은 임계 값을 사용한 "팁을 줄 가능성이 높음" 또는 "주지 않을 가능성이 있음"으로 분류 할 수 있습니다. 이 단계는 저장 프로시저에 포함되지 않지만 쉽게 구현할 수 있습니다.
 
 ## <a name="single-row-scoring"></a>단일 행의 점수 매기기
 
-응용 프로그램의 개별 값을 전달하고 해당 값을 기반으로 하여 단일 결과를 가져오려는 경우도 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력 또는 선택한 입력을 제공하도록 Excel 워크시트, 웹 응용 프로그램 또는 Reporting Services 보고서를 설정할 수 있습니다.
+때로는 응용 프로그램에서 개별 값을 전달하고 해당 값을 기반으로 단일 결과를 얻고 싶을 수도 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력하거나 선택한 입력을 제공하도록 Excel 워크 시트, 웹 응용 프로그램 또는 Reporting Services 보고서를 설정할 수 있습니다.
 
-이 섹션에서는 저장된 프로시저를 사용 하 여 단일 예측을 만드는 방법을 설명 합니다.
+이 섹션에서는 저장 프로시저를 사용하여 단일 예측을 만드는 방법을 설명합니다.
 
-1. 다운로드의 일부로 포함된 저장 프로시저 _PredictTipSingleMode_의 코드를 검토합니다.
+1. 다운로드의 일부로 포함된 _PredictTipSingleMode_ 저장 프로시저의 코드를 검토합니다.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -166,13 +165,13 @@ GO
   
     - 이 저장 프로시저는 승객 수, 여정 거리 등의 여러 단일 값을 입력으로 사용합니다.
   
-        외부 응용 프로그램에서 저장된 프로시저를 호출 하는 경우 데이터 R 모델의 요구 사항 일치 하는지 확인 합니다. 여기에는 입력 데이터를 R 데이터 형식으로 캐스팅 또는 변환할 수 있는지 확인, 데이터 형식 및 데이터 길이의 유효성 검사 등이 포함될 수 있습니다. 
+        외부 응용 프로그램에서 저장 프로시저를 호출하는 경우 데이터가 R 모델의 요구 사항과 일치하는지 확인합니다. 여기에는 입력 데이터를 R 데이터 형식으로 변환 또는 변환 데이터 유형 및 데이터 길이의 유효성을 검증할 수 있는지 여부가 포함됩니다. 
   
     -   저장 프로시저는 저장된 R 모델을 기반으로 하여 점수를 만듭니다.
   
-2. 수동으로 값을 제공하여 실험해 보세요.
+2. 수동으로 값을 제공하여 시험해 보세요.
   
-    새 **쿼리** 창과 각 매개 변수에 값을 제공 하는 저장된 프로시저를 호출 합니다. 매개 변수는 모델에 사용 되는 기능 열을 나타내고 필요.
+    새 **쿼리** 창을 열고 저장 프로시저를 호출하여 각 매개변수의 값을 제공합니다. 매개변수는 모델에서 사용하는 특성 열을 나타내며 필수 항목입니다.
 
     ```
     EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
@@ -184,18 +183,18 @@ GO
     @dropoff_longitude = 73.977303
     ```
 
-    에 대 한 지원 짧은이 양식을 사용 하 여 또는 [매개 변수는 저장된 프로시저를](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    또는 [저장 프로시저 매개변수](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)에서 지원되는 짧은 형식을 사용하십시오.
   
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. 결과 모두에 단일 승객 trips 비교적 짧은 거리에 따라 이후 팁 가져오기의 확률이 이러한 상위 10 개의 trips 부족을 나타냅니다.
+3. 결과는 상위 10번의 여정에서 팁을 얻을 확률이 낮다는 것을 의미합니다. 왜냐하면 모두가 비교적 거리가 짧은 단일 승객의 여정이기 때문입니다.
 
 ## <a name="conclusions"></a>결론
 
-이것으로 자습서를 마칩니다. 저장된 프로시저에 R 코드를 포함 하는 방법을 배웠습니다, 했으므로 자신만의 모델을 작성 하는 이러한 사례를 확장할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 과 통합되어 보다 쉽게 예측에 대한 R 모델을 배포하고 모델 다시 학습을 엔터프라이즈 데이터 워크플로의 일부로 통합할 수 있습니다.
+이것으로 자습서를 마칩니다. 저장 프로시저에 R 코드를 포함하는 방법을 배웠으므로 이러한 연습을 확장하여 자신의 모델을 빌드할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]과의 통합으로 예측을 위해 R 모델을 배포하고 엔터프라이즈 데이터 워크플로의 일부로 모델 재교육을 통합하는 것이 훨씬 쉬워졌습니다.
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[5 단원: 학습 및 T-SQL을 사용 하 여 R 모델을 저장 합니다.](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[5단원: T-SQL을 사용한 R 모델 학습 및 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
