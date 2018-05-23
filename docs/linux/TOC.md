@@ -47,7 +47,6 @@
 ## [개발](sql-server-linux-develop-overview.md)
 ### [연결 라이브러리](sql-server-linux-develop-connectivity-libraries.md)
 ### [Visual Studio Code 사용](sql-server-linux-develop-use-vscode.md)
-### [SSMS 사용](sql-server-linux-develop-use-ssms.md)
 ### [SSDT 사용](sql-server-linux-develop-use-ssdt.md)
 
 ## [관리](sql-server-linux-management-overview.md)
