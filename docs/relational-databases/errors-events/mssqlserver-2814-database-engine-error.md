@@ -3,8 +3,6 @@ title: MSSQLSERVER_2814 | Microsoft 문서
 ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f874dd7d90b12899c59842aa8780ccf1847416e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758b87cc12cf7c8232f486cf55da0b114a962264
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 다음 표에서는 재컴파일의 이유를 나열합니다.  
   
-|이유 코드|Description|  
+|이유 코드|설명|  
 |---------------|---------------|  
 |1|스키마가 변경됨|  
 |2|통계가 변경됨|  

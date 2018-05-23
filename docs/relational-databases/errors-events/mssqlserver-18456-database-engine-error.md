@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="additional-error-information"></a>추가 오류 정보  
 보안 향상을 위해 클라이언트로 반환되는 오류 메시지는 의도적으로 인증 오류의 특성을 숨깁니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그의 해당 오류에는 인증 실패 조건에 매핑되는 오류 상태가 포함되어 있습니다. 로그인 실패 이유를 확인하려면 오류 상태를 다음 목록과 비교합니다.  
   
-|State|Description|  
+|State|설명|  
 |---------|---------------|  
 |1|오류 정보를 사용할 수 없습니다. 일반적으로 이 상태는 오류 정보를 수신할 수 있는 권한이 없음을 의미합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 문의하십시오.|  
 |2|사용자 ID가 잘못되었습니다.|  

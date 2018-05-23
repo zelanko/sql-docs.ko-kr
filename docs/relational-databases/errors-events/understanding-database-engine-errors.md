@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5deba5923535da8a349b5bc45b2c988f1190bc3e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ed21ec6de1f739eec94d3b47bc31eb9de2b9ebb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |오류 번호|모든 오류 메시지에는 고유한 오류 번호가 있습니다.|  
 |오류 메시지 문자열|오류 메시지에는 오류 발생 원인에 대한 진단 정보가 포함됩니다. 많은 오류 메시지에는 오류를 발생시킨 개체 이름과 같은 정보가 포함된 대체 변수가 있습니다.|  

@@ -3,8 +3,6 @@ title: 오류 및 이벤트 참조(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -19,11 +17,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b28a5ca483dded374cb7c5bdc31a205fd18c23ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  다음 표에서는 링크와 해당 리소스에 대한 설명을 제공합니다.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[SQL Server 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42455)|이 사이트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커뮤니티에서 모니터링하는 뉴스 그룹과 포럼에 대한 링크가 있습니다. 또한 블로그와 웹 사이트와 같은 커뮤니티 정보 출처가 나열됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커뮤니티를 통해 답변을 받지 못하는 경우도 있지만 이 커뮤니티는 질문에 대한 답변을 얻는 데 매우 유용합니다.|  
 |[SQL Server Developer Center 커뮤니티](http://go.microsoft.com/fwlink/?LinkId=42456)|이 사이트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자에게 유용한 뉴스 그룹, 포럼 및 기타 커뮤니티 리소스에 대한 정보를 제공합니다.|  

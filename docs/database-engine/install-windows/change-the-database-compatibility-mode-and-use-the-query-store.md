@@ -3,7 +3,6 @@ title: 데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용 | 
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -18,11 +17,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1859f4ad95717c087ecfe68b36f3866c63d60d54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f1a7ba5b39513cd39226e8b671a6634c547d95c9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 

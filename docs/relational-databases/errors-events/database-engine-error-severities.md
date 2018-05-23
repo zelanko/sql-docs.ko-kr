@@ -3,8 +3,6 @@ title: 데이터베이스 엔진 오류 심각도 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,11 +19,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48c7c90062c05084bf004a592d192563d7aa7f80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d5c5a6ddee7f8d5e9b734651fa7722df56349db
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="levels-of-severity"></a>심각도  
  다음 표에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 발생하는 오류의 심각도를 나열하고 그 내용을 설명합니다.  
   
-|심각도|Description|  
+|심각도|설명|  
 |--------------------|-----------------|  
 |0-9|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 심각도가 0 ~ 9인 경우 시스템 오류를 발생시키지 않습니다.|  
 |10|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 호환성을 위해 오류 정보를 호출 응용 프로그램으로 반환하기 전에 심각도 10을 심각도 0으로 변환합니다.|  

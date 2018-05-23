@@ -3,8 +3,6 @@ title: MSSQLSERVER_33128 | Microsoft 문서
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b33e7edfd392da913d6887ae8bbbbef6630093
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 > 링 버퍼는 문서화가 완전하게 완료되지 않은 내부 구성 요소이며 고객은 사용할 수 없습니다. 링 버퍼의 메시지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 문의할 때 유용합니다. 링 버퍼를 보려면 sys.dm_os_ring_buffers 동적 관리 뷰를 쿼리하세요.  
   
-|State|Description|  
+|State|설명|  
 |---------|---------------|  
 |1|RC4 키는 기본 제공 encryptbykey() 함수에서 사용됩니다. 기본 제공 함수는 NULL을 반환합니다. 이 메시지는 링 버퍼에만 나타납니다.|  
 |2|RC4 키는 기본 제공 decryptbykey() 함수에서 사용됩니다. 이 메시지는 링 버퍼에만 나타납니다.|  

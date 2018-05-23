@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a89e48bc3158322f2870fddc18d93995a9cba473
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cee775854f66ed7a1e4f2c8c7896be6705896c6e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  SQL Server Management Studio(SSMS.exe)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하세요. 또는 SSMS.exe와 유사한 도구를 사용해도 됩니다.  
   
-2.  이름이 **C:\data\\\** 인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
+2.  이름이 **C:\data\\\**인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
   
 3.  짧은 T-SQL을 실행하여 데이터베이스 및 메모리 최적화 파일 그룹을 생성하세요.  
   

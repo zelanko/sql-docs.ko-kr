@@ -3,7 +3,6 @@ title: 다국어 및 글로벌 배포(Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: mds
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -14,11 +13,11 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d4cc04faa4bde038b9b8c811ed587ad19ba443fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12e796619f7ab5674f5f94b34ea15d4e2aefe595
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>다국어 및 글로벌 배포(Master Data Services)
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-languages-are-used"></a>언어 사용 방식  
  다음 표에서는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 구성 요소 및 도구의 언어 지원에 대해 설명합니다.  
   
-|구성 요소 또는 도구|Description|  
+|구성 요소 또는 도구|설명|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 프로그램|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 설치 언어와 다른 언어로 사용 및 지원되도록 하려면 영어 설치 프로그램을 선택합니다. 자세한 내용은 아래의 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 설명을 참조하십시오.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 언어는 설치 언어에 따라 결정됩니다. 예를 들어 설치 언어로 독일어를 선택한 경우 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 해당 컴퓨터에서 독일어로 사용할 수 있습니다.|  

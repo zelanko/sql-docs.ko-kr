@@ -3,12 +3,9 @@ title: Deprecation 이벤트 범주 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 40c445e8baeec173cacb461daa6bb6a5ecb41952
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78b7aede849976be4f29993b794440e337b31c57
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="deprecation-event-category"></a>Deprecation 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 해당 기능이 제거된다는 것을 나타냅니다.|  
 |[Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 번 주요 릴리스에서 해당 기능이 제거된다는 것을 나타냅니다.|  

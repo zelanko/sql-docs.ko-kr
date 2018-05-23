@@ -3,12 +3,9 @@ title: Performance 이벤트 범주 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9d35ebc91f08436fba31137960f99263f0d47a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5ed62e4bea21f7028e0ea7ad49ac3d682d3bfbe
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-event-category"></a>Performance 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Auto Stats 이벤트 클래스](../../relational-databases/event-classes/auto-stats-event-class.md)|인덱스 및 열 통계가 자동으로 업데이트되었음을 나타냅니다.|  
 |[Degree of Parallelism&#40;7.0 Insert&#41; 이벤트 클래스](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 직렬 또는 병렬 계획을 사용하여 SELECT, INSERT, UPDATE 또는 DELETE 문을 실행했음을 나타냅니다. 또한 작업에 사용된 CPU 수도 보고합니다.|  
