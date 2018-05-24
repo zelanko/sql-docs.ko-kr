@@ -20,7 +20,7 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="HowToDSRM"></a>관리자 암호 재설정  
   
-1.  어플라이언스 AD 노드에서 명령 프롬프트 창을 열고 ***appliance_domain*– AD*xx***가상 컴퓨터.  
+1.  어플라이언스 AD 노드에서 명령 프롬프트 창을 열고 ***appliance_domain *– AD*xx***가상 컴퓨터.  
   
 2.  명령 프롬프트에 입력 `ntdsutil`합니다.  
   

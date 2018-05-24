@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame =** ]  **' * * * 로그인* **'** Windows 그룹, Windows 로그인의 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 데이터베이스에 매핑할 로그인 사용자입니다. Windows 그룹과 Windows 로그인의 이름은 Windows 도메인 이름 형식에서으로 정규화 해야 *도메인*\\* 로그인 *; 예를 들어, **LONDON\Joeb**합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *로그인* 는 **sysname**, 기본값은 없습니다.  
+ [  **@loginame =** ]  **' * * * 로그인* **'** Windows 그룹, Windows 로그인의 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 데이터베이스에 매핑할 로그인 사용자입니다. Windows 그룹과 Windows 로그인의 이름은 Windows 도메인 이름 형식에서으로 정규화 해야 *도메인*\\*로그인 *; 예를 들어, **LONDON\Joeb**합니다. 로그인은 데이터베이스의 사용자에 미리 매핑될 수 없습니다. *로그인* 는 **sysname**, 기본값은 없습니다.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **출력**]  
  새 데이터베이스 사용자의 이름입니다. *name_in_db* 데이터 형식의 OUTPUT 변수는 **sysname**, 및 기본값은 NULL입니다. 지정 하지 않으면 *로그인* 사용 됩니다. 값이 NULL 인 OUTPUT 변수로 지정 된 경우 **@name_in_db** 로 설정 된 *로그인*합니다. *name_in_db* 현재 데이터베이스에 아직 없는 해야 합니다.  

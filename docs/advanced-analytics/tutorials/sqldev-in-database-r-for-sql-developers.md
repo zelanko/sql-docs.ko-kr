@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 내 R 분석 (자습서) SQL 개발자를 위해 | Microsoft Docs
+title: SQL 개발자를 위한 데이터베이스 내 R 분석(자습서) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -13,14 +13,14 @@ ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자 (자습서)에 대 한 데이터베이스에서 R 분석
+# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자를 위한 데이터베이스 내 R 분석(자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 자습서의 목표는 기계 학습에서 SQL Server 솔루션을 구축 하는 실습 환경과 SQL 프로그래머를 제공 하는 것입니다. 이 자습서에서는 저장된 프로시저에 R 코드를 래핑하여 R 응용 프로그램 또는 BI 솔루션에 통합 하는 방법을 설명 합니다.
+이 자습서의 목표는 SQL 프로그래머에게 SQL Server에서 머신 러닝 솔루션을 직접 구축하는 경험을 제공하는 것입니다. 이 자습서에서는 저장 프로시저 내에 R 코드를 포함해서 응용 프로그램 또는 BI 솔루션에 R을 통합하는 방법을 학습합니다.
 
 > [!NOTE]
 > 
-> Python에서 동일한 솔루션 입니다. SQL Server 2017가 필요 합니다. 참조 [in-database 분석 Python 개발자에 대 한](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+> Python에서도 동일한 솔루션을 사용할 수 있습니다. SQL Server 2017이 필요합니다. [Python 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)을 참조하십시오.
 
 ## <a name="overview"></a>개요
 

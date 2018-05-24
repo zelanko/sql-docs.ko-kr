@@ -97,13 +97,14 @@
 ## [패키지 관리](r/r-package-management-for-sql-server-r-services.md)
 ### [기본 패키지](r/installing-and-managing-r-packages.md)
 ### [패키지 정보 가져오기](r/determine-which-packages-are-installed-on-sql-server.md)
-### [새 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
 ### [새 Python 패키지 설치](python/install-additional-python-packages-on-sql-server.md)
-### R 전용
+### [새 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
+#### [R 패키지 관리자 사용](r/install-additional-r-packages-on-sql-server.md)
+#### [RevoScaleR 사용](r/use-revoscaler-to-manage-r-packages.md)
+#### [T-SQL 사용](r/install-r-packages-tsql.md)
+#### [miniCRAN 리포지토리 사용](r/create-a-local-package-repository-using-minicran.md)
 #### [원격 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
-#### [R 패키지 관리를 위한 RevoScaleR 기능](r/use-revoscaler-to-manage-r-packages.md)
 #### [R 패키지 동기화](r/package-install-uninstall-and-sync.md)
-#### [로컬 R 패키지 리포지토리용 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [R "사용자 라이브러리"에 대한 해결 방법](r/packages-installed-in-user-libraries.md)
 
 ## 데이터 탐색 및 모델링
