@@ -4,20 +4,19 @@ description: 이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/17/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 9b7be087286d02d2aafa66846e4f1a4c66537f64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -45,7 +44,7 @@ SQL Server 2017이 이제 Linux에서 실행됩니다 동일한 SQL Server 데�
 | 도구 | 자습서 |
 |-----|-----|
 | Visual Studio Code (VS Code) | [SQL Server on Linux에서 VS Code 사용](sql-server-linux-develop-use-vscode.md) |
-| SSMS(SQL Server Management Studio) | [Windows에서 SSMS를 사용하여 SQL Server on Linux에 연결](sql-server-linux-develop-use-ssms.md) |
+| SSMS(SQL Server Management Studio) | [Windows에서 SSMS를 사용하여 SQL Server on Linux에 연결](sql-server-linux-manage-ssms.md) |
 | SQL  Server  Data  Tools(SSDT) | [SQL Server on Linux에서 SSDT 사용](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>탐색

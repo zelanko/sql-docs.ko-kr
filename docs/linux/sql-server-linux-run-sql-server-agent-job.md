@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 3ec6c974cd461eceb8cc4adaaa0ab53655074a7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 
@@ -157,7 +156,7 @@ Linux에서 SQL Server 에이전트를 사용 하려면 먼저 설치 된 SQL Se
 
 만들고 및 원격으로 SQL Server Management Studio (SSMS)를 사용 하 여 Windows에서 작업을 관리할 수도 있습니다.
 
-1. Windows에서 SSMS를 시작 하 고 Linux SQL Server 인스턴스에 연결 합니다. 자세한 내용은 참조 [linux SSMS로 SQL Server 관리](sql-server-linux-develop-use-ssms.md)합니다.
+1. Windows에서 SSMS를 시작 하 고 Linux SQL Server 인스턴스에 연결 합니다. 자세한 내용은 참조 [linux SSMS로 SQL Server 관리](sql-server-linux-manage-ssms.md)합니다.
 
 1. 라는 예제 데이터베이스를 만들지 않았는지 확인 **SampleDB**합니다.
 

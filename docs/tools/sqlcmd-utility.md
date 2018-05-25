@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6454e750ae8ed30c3e06a91e374ffae47037d566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MTE
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -679,7 +679,7 @@ sqlcmd
   
  1부터 -99까지의 반환 값은 SQL Server에 예약되어 있으므로 **sqlcmd**는 다음과 같은 추가 반환 값을 정의합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |-------------------|-----------------|  
 |-100|반환 값을 선택하기 전에 오류가 발생했습니다.|  
 |-101|반환 값을 선택할 때 행을 찾을 수 없습니다.|  

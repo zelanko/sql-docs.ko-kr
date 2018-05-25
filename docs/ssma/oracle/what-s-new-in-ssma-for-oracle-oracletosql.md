@@ -15,11 +15,11 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ca29dddb3ce5a6c933cd118c703b0ee3d09e388b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL)의 새로운 기능
 이 항목에서는 각 릴리스의 Oracle 변경에 대 한 SSMA를 나열 합니다.  
@@ -80,7 +80,7 @@ Oracle 용 SSMA의 v7.3 릴리스는 다음과 같은 변경을 포함 되어 �
   - SSMA 사용자 지정 변환을 수행 하는 데 사용할 수 있는 라이브러리입니다.
     - 이제 사용자 지정 구문 변환 및 SSMA 이전에 처리 되지 않은 변환 처리할 수 있는 코드를 생성할 수 있습니다.
       - 이 블로그 게시물에서 사용할 수 있는 사용자 지정 변환기를 생성 하는 방법에 대 한 지침 [확장 SQL Server Migration Assistant의 변환 기능](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)합니다.
-      - 이 변환에 대 한 샘플 프로젝트를 다운로드할 수 수 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)합니다.
+      - 이 변환에 대 한 샘플 프로젝트를 다운로드 [블로그 게시물](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)합니다.
 
 
 ## <a name="ssma-v72"></a>SSMA v7.2
@@ -103,18 +103,28 @@ Oracle 용 SSMA의 v7.1 릴리스는 다음과 같은 변경을 포함 되어 �
 ## <a name="may-2016"></a>2016 년 5 월  
 Oracle 용 SSMA의 2016 년 5 월 릴리스는 다음과 같은 변경 내용이 포함 되어 있습니다.  
 
--   SQL Server 2016에 대 한 지원이 추가 되었습니다.
--   추가 된 SQL Server 임시 테이블에 Oracle 플래시 백 보관 테이블로 변환 합니다.
--   SQL Server 정책 개체가 (Oracle에 대 한 행 수준 보안)를 변환 하는 Oracle VPD 정책으로 추가 된 변환 됩니다.
--   Oracle에 대 한 초기 로드의 저하 시간입니다.
--   향상 된 파서 및 확인자입니다.
--   .NET 2.0에 대 한 설치 관리자 검사를 제거 합니다.
--   업데이트 된 확장 팩 종속성.Net 3.5에서에서.Net 4.0 합니다.
--   프로젝트"저장" 고정 및 SSMA 콘솔에 대 한 프로젝트 열기 명령입니다.
--   SSMA 콘솔에 대 한 고정된 "securepassword" 명령입니다.
--   고정 되는 초기 로드에 대 한 개체의 수를 계산 합니다.
--   Oracle에 대 한 문자 데이터 형식 변환 문제를 수정 했습니다.
--   전역 설정에서 수정 된 버그입니다.
+- SQL Server 2016에 대 한 지원이 추가 되었습니다.
+- 추가 된 SQL Server 임시 테이블에 Oracle 플래시 백 보관 테이블로 변환 합니다.
+
+    **참고** -SSMA는 Oracle 플래시 백 데이터 보관 테이블에서 기록 데이터를 복사 하지 않습니다. 결과적으로, 기록 데이터 마이그레이션 프로세스 중에 수동으로 복사 해야 합니다. 또한 SSMA 시스템 테이블로 처리 되므로 기록 테이블의 SQL Server 메타 데이터 탐색기에 표시 하지 않습니다, 하는 동안 SQL Server Management Studio에서 기록 테이블을 볼 수 있습니다.
+    SQL Server 2016에서 다음과 같은 여러 Oracle 플래시 백 기능을 지원 하지 않습니다.
+    - Oracle 플래시 백 트랜잭션 쿼리
+    - DBMS_FLASHBACK 패키지
+    - 플래시 백 트랜잭션
+    - 플래시 백 데이터 보관
+    - 플래시 백 테이블
+    - 플래시 백 놓기
+    - 데이터베이스 플래시 백
+- SQL Server 정책 개체 (Oracle에 대 한 행 수준 보안)에 Oracle VPD 정책으로 추가 된 변환 됩니다.
+- Oracle에 대 한 초기 로드의 저하 시간입니다.
+- 향상 된 파서 및 확인자입니다.
+- .NET 2.0에 대 한 설치 관리자 검사를 제거 합니다.
+- 업데이트 된 확장 팩 종속성.Net 3.5에서에서.Net 4.0 합니다.
+- 프로젝트"저장" 고정 및 SSMA 콘솔에 대 한 프로젝트 열기 명령입니다.
+- SSMA 콘솔에 대 한 고정된 "securepassword" 명령입니다.
+- 고정 되는 초기 로드에 대 한 개체의 수를 계산 합니다.
+- Oracle에 대 한 문자 데이터 형식 변환 문제를 수정 했습니다.
+- 전역 설정에서 수정 된 버그입니다.
   
 ## <a name="march-2016"></a>2016 년 3 월  
 Oracle 용 SSMA의 2016 년 3 월 미리 보기 릴리스는 다음과 같은 변경을 포함 되어 있습니다.  

@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/10/2018
 
 - 확장 관리자에서 사용 하 여 사용할 수 있는 Redgate SQL 검색 확장을 발표합니다.
 - 10 언어에 사용할 수 있는 커뮤니티 지역화: 독일어, 스페인어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어, 러시아어, 중국어 간체 및 중국어 (번체).
-- GDPR 규격 빌드 개인정보취급방침 원격 분석 수집, 개선 된 옵트아웃 및 제품 내 링크 감소 되었습니다.
+- 축소 된 원격 분석 수집, 개선 된 옵트아웃 및 개인정보취급방침 대 한 제품에 링크 합니다.
 - 확장 관리자는 향상 된 마켓플레이스를 쉽게 커뮤니티 확장을 검색 합니다.
 - SQL 에이전트 확장 작업 및 작업 기록 보기 개선 합니다.
 - Whoisactive 및 보고서 서버에 대 한 확장을 업데이트합니다.

@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
-ms.technology: database-engine
-ms.openlocfilehash: 2a2ea574d50d227b74f1143e202caa4f2381c0da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: 4aaaee69ab9c81df2161f465c2c725d5b2be3c17
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>고가용성을 위해 Kubernetes에서 SQL Server 컨테이너 구성
 
@@ -277,7 +276,7 @@ Kubernetes 클러스터에서 SA 암호를 생성 합니다. Kubernetes 암호 �
 
 SQL Server 인스턴스에 연결 하려면 다음 응용 프로그램을 사용할 수 있습니다. 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssms)
+* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
 * [SSDT](http://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-use-ssdt)
 

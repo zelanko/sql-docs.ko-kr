@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 기계 학습 사용 하도록 설정 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 새 R 패키지를 설치 하기 위한 여러 메서드가 있습니다.
+이 문서에서는 기계 학습 사용 하도록 설정 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. SQL Server 버전에 있는 및 인터넷에 연결 되어 있는지에 따라 새 R 패키지를 설치 하기 위한 여러 메서드가 있습니다. 새 패키지를 설치 하기 위한 다음 방법이 될 수 있습니다.
+
+| 방법                           | Permissions  | 원격/로컬 |
+|------------------------------------|---------------------------|-------|
+| [기본 R 패키지 관리자를 사용 하 여](#bkmk_rInstall)  | Admin | 로컬 |
+| [RevoScaleR 사용](use-revoscaler-to-manage-r-packages.md) | Admin | 로컬 |
+| [T-SQL (외부 라이브러리 만들기)를 사용 하 여](install-r-packages-tsql.md) | 나중에 관리자 설치에 데이터베이스 역할 | both 
+| [로컬 저장소를 만드는 한 miniCRAN 사용](create-a-local-package-repository-using-minicran.md) | 나중에 관리자 설치에 데이터베이스 역할 | both |
 
 ## <a name="bkmk_rInstall"></a> 인터넷 연결을 통해 R 패키지 설치
 
@@ -75,51 +82,6 @@ SQL Server 2016 R Services와 SQL Server 2017 컴퓨터 학습 서비스의 인�
     이 명령은 R 패키지를 추출 `mynewpackage` 복사 디렉터리에 저장 했다고 가정할 때 해당 로컬 압축 된 파일에서 `C:\Temp\Downloaded packages`, 로컬 컴퓨터에 패키지를 설치 합니다. 패키지에 경우 모든 종속 파일을 라이브러리에서 기존 패키지에 대 한 설치 관리자를 확인 합니다. 종속성을 포함 하는 리포지토리를 만든 경우 설치 관리자는 데 필요한 패키지를 설치 합니다.
 
     필요한 패키지 인스턴스 라이브러리에 표시 되지 않으며 압축 된 파일에서 찾을 수 없습니다, 대상 패키지의 설치가 실패 합니다.
-
-## <a name="bkmk_createlibrary"></a> 외부 라이브러리 만들기를 사용 하 여
-
-**적용 대상:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-[외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) Python 코드를 직접 또는 문을 사용 하면 R을 실행 하지 않고 인스턴스 또는 특정 데이터베이스 또는 패키지의 패키지 집합을 추가할 수 있습니다. 그러나이 메서드는 패키지 준비 및 추가 데이터베이스 사용 권한이 필요 합니다.
-
-+ 모든 패키지는 인터넷에서 필요에 따라 다운로드할 대신 로컬 압축 된 파일 사용 가능 해야 합니다.
-
-    서버에서 파일 시스템에 액세스할 수 없는 경우 전달할 수도 있습니다는 완전 한 패키지 변수를 이진 형식을 사용 하 여 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)합니다.
-
-+ 모든 종속성 이름 및 버전을 식별 하 고 zip 파일에 포함 해야 합니다. 문이 필요한 패키지를 다운스트림 패키지 종속 파일을 포함 하 여를 사용할 수 없는 경우 실패 합니다. 사용 하는 것이 좋습니다 **miniCRAN** 또는 **igraph** 패키지 종속성을 분석에 대 한 합니다. 잘못 된 버전의 패키지 또는 패키지 종속성을 설치 하는 문이 실패 발생할 수 있습니다. 
-
-+ 데이터베이스에 필요한 권한이 있어야 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)합니다.
-
-### <a name="prepare-the-packages-in-archive-format"></a>보관 파일 형식으로 패키지 준비
-
-1. 단일 패키지를 설치 하는 경우 압축 된 형식의 패키지를에서 다운로드 합니다. 
-
-2. 패키지는 다른 패키지에 필요한 경우 필요한 패키지를 사용할 수 있는지 확인 해야 합니다. 대상 패키지를 분석 하 고 모든 해당 종속성을 확인할 miniCRAN를 사용할 수 있습니다. 
-
-3. 압축 된 파일 또는 서버에서 로컬 폴더에 모든 패키지가 포함 된 miniCRAN 리포지토리 복사 합니다.
-
-4. 열기는 **쿼리** 창에서 관리자 권한을 가진 계정을 사용 합니다.
-
-5. T-SQL 문 실행 `CREATE EXTERNAL LIBRARY` 압축 된 패키지 컬렉션 데이터베이스에 업로드 합니다.
-
-    예를 들어, 다음 문은 이름이 패키지 원본으로 포함 하는 miniCRAN 리포지토리는 **randomForest** 종속 항목과 함께 패키지 됩니다. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    임의의 이름을; 사용할 수 없습니다. 외부 라이브러리 이름에는 로드 하거나 패키지를 호출할 때 사용 되는 동일한 이름을 가져야 합니다.
-
-6. 라이브러리 정상적으로 작성 하는 경우에 저장 프로시저 호출 하 여 SQL Server에서 패키지를 실행할 수 있습니다.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>패키지 설치에 대 한 팁
 

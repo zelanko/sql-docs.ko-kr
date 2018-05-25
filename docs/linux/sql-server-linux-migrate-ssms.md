@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 0087d33c0eabcff4ebc81de80fc69999e3017828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
@@ -25,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 이 문서에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 SQL Server 2017 linux에서 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
 
-항상 설치 하 고에 설명 된 대로 SQL Server Management Studio (SSMS)의 가장 최신 버전을 사용 해야 [Linux에서 SQL Server에 연결 하는 Windows에서 SSMS를 사용 하 여](sql-server-linux-develop-use-ssms.md)
+항상 설치 하 고에 설명 된 대로 SQL Server Management Studio (SSMS)의 가장 최신 버전을 사용 해야 [Linux에서 SQL Server에 연결 하는 Windows에서 SSMS를 사용 하 여](sql-server-linux-manage-ssms.md)
 
 > [!NOTE]
 > 다른 한 SQL Server 인스턴스에서 데이터베이스를 마이그레이션하는, 경우 않는 것이 좋습니다 사용 [백업 및 복원](sql-server-linux-migrate-restore-database.md)합니다.
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
 1. SSMS를 입력 하 여 시작 **Microsoft SQL Server Management Studio** Windows에서 검색 상자 및 데스크톱 응용 프로그램을 클릭 합니다.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 개체 탐색기에서 원본 데이터베이스에 연결 합니다. 원본 데이터베이스에는 온-프레미스를 실행 중인 Microsoft SQL Server 또는 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 또는 Azure SQL 데이터 웨어하우스 클라우드에 수 있습니다.
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 1. SSMS를 입력 하 여 시작 **Microsoft SQL Server Management Studio** Windows에서 검색 상자 및 데스크톱 응용 프로그램을 클릭 합니다.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 개체 탐색기에서 대상 서버에 연결 합니다. 대상 서버에는 Microsoft SQL Server 온-프레미스로 실행 될 수 있습니다 또는 Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 또는 Azure SQL 데이터 웨어하우스 클라우드에서 합니다.
 

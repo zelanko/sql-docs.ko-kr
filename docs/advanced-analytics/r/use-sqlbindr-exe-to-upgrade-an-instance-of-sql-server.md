@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 컴퓨터 (예: R 및 Python) 학습 구성 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ R 및 Python 기능 데이터베이스 엔진 인스턴스를 복구할 SQL Serv
 
 패키지 라이브러리에 다른 타사 또는 오픈 소스 패키지 추가 수도 있습니다. 기본 패키지 라이브러리의 위치를 스위치 바인딩 순서를 반대로, 이후 R 및 Python을 사용 하 고 라이브러리에 패키지를 다시 설치 해야 합니다. 자세한 내용은 참조 [패키지 기본](installing-and-managing-r-packages.md), [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md), 및 [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)합니다.
 
-## <a name="known-issues"></a>알려진 문제
-
-이 섹션의 SqlBindR.exe 유틸리티 또는 업그레이드에 영향을 미치는 SQL Server 인스턴스 학습 서버 컴퓨터의 경우에 사용 하 여 관련 알려진된 문제를 나열 합니다.
-
-### <a name="restoring-packages-that-were-previously-installed"></a>이전에 설치 된 패키지를 복원
-
-Microsoft R Server 9.0.1로 업그레이드 한 경우 원래 패키지를 복원 하지 못했습니다 해당 버전에 대 한 SqlBindR.exe의 버전 또는 R 구성 요소 완전히 사용자 SQL Server 복구 인스턴스의 실행 되도록 모든 서비스 릴리스를 적용 하 고 다시 인스턴스입니다.
-
-자동으로 R 구성 요소를 다시 설치 하지 않아도 원래 R 기능을 복원 되거나 다시 서버에 패치를 SqlBindR의 이후 버전입니다. 그러나 초기 설치 후 추가 된 R 패키지 업데이트를 설치 해야 합니다.
-
-이 작업은 훨씬 더 쉽게 패키지 관리 역할 설치 및 패키지 공유를 사용한 경우: R 명령을 사용 하 여 데이터베이스의 레코드를 사용 하 여 파일 시스템에 설치 된 패키지를 동기화 하 하며 그 반대 과정도 수행 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)합니다.
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>SQL Server에서 여러 업그레이드 문제
-
-Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Server 2016 R Services의 인스턴스를 9.0.1, 업그레이드 이전에 한 경우 모든 유효한 인스턴스 목록을 표시 하 고 기본적으로 이전에 바인딩된 인스턴스를 선택 합니다. 계속 하면 이전에 바인딩된 인스턴스 바인딩 해제 됩니다. 결과적으로 이전 9.0.1 설치한이 제거, 관련 된 패키지를 비롯 하 여 되지만 새 버전의 Microsoft R Server (9.1.0) 설치 되지 않습니다.
-
-이 문제를 해결 기존 R 서버 설치를 다음과 같이 수정할 수 있습니다.
-1. 제어판을 열고 **프로그램 추가 / 제거**합니다.
-2. Microsoft R Server를 찾아서 클릭 하 여 **변경/수정**합니다.
-3. 설치 관리자를 시작할 때 9.1.0 바인딩할 인스턴스를 선택 합니다.
-
-Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니다.
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>바인딩 또는 바인딩 해제 여러 임시 폴더에 둡니다.
-
-경우에 따라 바인딩 및 바인딩 해제 작업이 임시 폴더를 정리 하려면 실패 합니다.
-다음과 같은 이름의 폴더를 찾을 경우 제거할 수 있습니다 설치가 완료 된 후: R_SERVICES_<guid>
-
-> [!NOTE]
-> 설치가 완료 될 때까지 대기 해야 합니다. 하나의 버전과 관련 된 R 라이브러리를 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.
-
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 명령 구문
 
 ### <a name="usage"></a>사용법
@@ -322,6 +291,36 @@ MLS 설치 관리자 및 SqlBindR 다음과 같은 오류 코드 및 메시지�
 |바인딩 오류 8 | 바인딩을 해제 하지 못했습니다. | 인스턴스를 바인딩 해제 하는 동안 오류가 발생 했습니다. |
 |바인딩 오류 9 | 인스턴스를 찾을 수 없습니다. | 이 컴퓨터에 데이터베이스 엔진 인스턴스를 찾지 못했습니다. |
 
+## <a name="known-issues"></a>알려진 문제
+
+이 섹션의 SqlBindR.exe 유틸리티 또는 업그레이드에 영향을 미치는 SQL Server 인스턴스 학습 서버 컴퓨터의 경우에 사용 하 여 관련 알려진된 문제를 나열 합니다.
+
+### <a name="restoring-packages-that-were-previously-installed"></a>이전에 설치 된 패키지를 복원
+
+Microsoft R Server 9.0.1로 업그레이드 한 경우 원래 패키지를 복원 하지 못했습니다 해당 버전에 대 한 SqlBindR.exe의 버전 또는 R 구성 요소 완전히 사용자 SQL Server 복구 인스턴스의 실행 되도록 모든 서비스 릴리스를 적용 하 고 다시 인스턴스입니다.
+
+자동으로 R 구성 요소를 다시 설치 하지 않아도 원래 R 기능을 복원 되거나 다시 서버에 패치를 SqlBindR의 이후 버전입니다. 그러나 초기 설치 후 추가 된 R 패키지 업데이트를 설치 해야 합니다.
+
+이 작업은 훨씬 더 쉽게 패키지 관리 역할 설치 및 패키지 공유를 사용한 경우: R 명령을 사용 하 여 데이터베이스의 레코드를 사용 하 여 파일 시스템에 설치 된 패키지를 동기화 하 하며 그 반대 과정도 수행 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)합니다.
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>SQL Server에서 여러 업그레이드 문제
+
+Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Server 2016 R Services의 인스턴스를 9.0.1, 업그레이드 이전에 한 경우 모든 유효한 인스턴스 목록을 표시 하 고 기본적으로 이전에 바인딩된 인스턴스를 선택 합니다. 계속 하면 이전에 바인딩된 인스턴스 바인딩 해제 됩니다. 결과적으로 이전 9.0.1 설치한이 제거, 관련 된 패키지를 비롯 하 여 되지만 새 버전의 Microsoft R Server (9.1.0) 설치 되지 않습니다.
+
+이 문제를 해결 기존 R 서버 설치를 다음과 같이 수정할 수 있습니다.
+1. 제어판을 열고 **프로그램 추가 / 제거**합니다.
+2. Microsoft R Server를 찾아서 클릭 하 여 **변경/수정**합니다.
+3. 설치 관리자를 시작할 때 9.1.0 바인딩할 인스턴스를 선택 합니다.
+
+Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니다.
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>바인딩 또는 바인딩 해제 여러 임시 폴더에 둡니다.
+
+경우에 따라 바인딩 및 바인딩 해제 작업이 임시 폴더를 정리 하려면 실패 합니다.
+다음과 같은 이름의 폴더를 찾을 경우 제거할 수 있습니다 설치가 완료 된 후: R_SERVICES_<guid>
+
+> [!NOTE]
+> 설치가 완료 될 때까지 대기 해야 합니다. 하나의 버전과 관련 된 R 라이브러리를 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

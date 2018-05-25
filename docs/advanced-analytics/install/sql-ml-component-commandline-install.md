@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>명령줄에서 SQL Server 컴퓨터에 대 한 학습 구성 요소를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 명령줄에서 구성 요소를 학습 intalling SQL Server 컴퓨터에 대 한 지침을 제공 합니다.
 
-+ [데이터베이스에서 인스턴스](#indb)
++ [데이터베이스의 새 인스턴스](#indb)
 + [기존 데이터베이스 엔진 인스턴스 추가](#add-existing)
 + [자동 설치](#silent)
-+ [독립 실행형 서버](#shared-feature)
++ [새 독립 실행형 서버](#shared-feature)
 
 설치 사용자 인터페이스와의 상호 작용 자동, 기본, 또는 전체를 지정할 수 있습니다. 이 문서를 보완 [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), R 및 Python 컴퓨터 학습 구성 요소에 고유한 매개 변수를 포함 합니다.
 

@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 백업 파일은 이제 컨테이너 내 위치입니다. 백업, 복원 하기 전에 논리적 파일 이름 및 백업 내의 파일 형식을 확인 해야 합니다. 다음 TRANSACT-SQL 명령을 백업을 검사 하 고 사용 하 여 복원을 수행할 **sqlcmd** 컨테이너에 있습니다.
 
 > [!TIP]
-> 이 자습서에서는 **sqlcmd** 컨테이너 안에 컨테이너 미리 설치 된이 도구를 제공 하므로 합니다. 그러나 실행할 수도 있습니다 TRANSACT-SQL 문을 다른 클라이언트와 컨테이너의 외부 도구와 같은 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)합니다. 에 연결 하려면 컨테이너의 포트 1433에 매핑된 호스트 포트를 사용 합니다. 이 예제에서 **localhost, 1401** 호스트 컴퓨터에서 및 **Host_IP_Address, 1401** 원격으로 합니다.
+> 이 자습서에서는 **sqlcmd** 컨테이너 안에 컨테이너 미리 설치 된이 도구를 제공 하므로 합니다. 그러나 실행할 수도 있습니다 TRANSACT-SQL 문을 다른 클라이언트와 컨테이너의 외부 도구와 같은 [Visual Studio Code](sql-server-linux-develop-use-vscode.md) 또는 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)합니다. 에 연결 하려면 컨테이너의 포트 1433에 매핑된 호스트 포트를 사용 합니다. 이 예제에서 **localhost, 1401** 호스트 컴퓨터에서 및 **Host_IP_Address, 1401** 원격으로 합니다.
 
 1. 실행 **sqlcmd** 컨테이너 내에서 논리적 파일 이름 및 백업 내 경로 목록에 있습니다. 이러한 용도로 **RESTORE FILELISTONLY** Transact SQL 문입니다.
 
