@@ -26,11 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5c9c09866f34736adec722c8988c18dab16fc2dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|캡처 인스턴스의 이름입니다.|  
 |column_name|**sysname**|캡처된 원본 열의 이름입니다.|  
 |column_id|**int**|원본 테이블에 있는 열의 ID입니다.|  
-|ordinal_position|**int**|원본 테이블 내의 열 위치입니다.|  
+|column_ordinal|**int**|원본 테이블 내의 열 위치입니다.|  
 |data_type|**sysname**|열의 데이터 형식입니다.|  
 |character_maximum_length|**int**|문자 기반 열일 경우 최대 문자 길이이고, 그렇지 않으면 NULL입니다.|  
 |numeric_precision|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 NULL입니다.|  
