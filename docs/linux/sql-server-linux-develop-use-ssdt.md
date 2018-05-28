@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 41eabe46f654f2cb0464d2f7589cb0ce50a7c214
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
 
@@ -109,12 +108,12 @@ Linux에서 SQL Server 인스턴스에 새 데이터베이스를 생성 하 고 
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기] 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
+T-SQL을 처음 접하는 경우 참조 [자습서: Transact-SQL 문 작성] 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
 
 SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 대 한 자세한 내용은 참조 [SSDT MSDN 문서]
 
 [다운로드 하 고 Visual Studio 설치]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 문서]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[자습서: TRANSACT-SQL 문 쓰기]:https://msdn.microsoft.com/library/ms365303.aspx
+[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx

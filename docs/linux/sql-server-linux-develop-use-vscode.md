@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 
@@ -50,7 +49,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > MacOS 등 OpenSSL을 설치 해야 합니다. 이.Net에 대 한 필수 코어 mssql 확장 프로그램에서 사용 합니다. 에 따라는 **필수 소프트웨어를 설치** 의 단계는 [.NET 지침 핵심]합니다. 또는 터미널 프로그램 macOS에서 다음 명령을 실행할 수 있습니다.
+   > MacOS 등 OpenSSL을 설치 해야 합니다. 이.Net에 대 한 필수 코어 mssql 확장 프로그램에서 사용 합니다. 에 따라는 **필수 소프트웨어를 설치** 의 단계는 [.NET core 지침]합니다. 또는 터미널 프로그램 macOS에서 다음 명령을 실행할 수 있습니다.
    >
    >   ```bash
    >   brew update
@@ -252,7 +251,7 @@ Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그
 
 실제 시나리오에서 저장 하 고 실행 해야 하는 스크립트를 만들 수 있습니다 (관리용 또는 더 큰 개발 프로젝트의 일부로) 이상. 이 예에서 사용 하 여 스크립트를 저장할 수 있습니다는 **.sql** 확장 합니다.
 
-T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기] 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
+T-SQL을 처음 접하는 경우 참조 [자습서: Transact-SQL 문 작성] 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
 
 사용 하 여 또는 mssql 확장에 기여에 대 한 자세한 내용은 참조 하십시오. [mssql 확장 프로젝트 wiki]합니다.
 
@@ -260,11 +259,11 @@ VS Code 사용에 대 한 자세한 내용은 참조는 [Visual Studio Code 설�
 
 [**mssql** VS Code에 대 한 확장]:https://aka.ms/mssql-marketplace
 [다운로드 하 고 VS Code 설치]:https://code.visualstudio.com/Download
-[.NET 지침 핵심]:https://www.microsoft.com/net/core
+[.NET core 지침]:https://www.microsoft.com/net/core
 [연결 프로필을 관리]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [connection troubleshooting recommendations]:./sql-server-linux-troubleshooting-guide.md#connection
 [바로 가기를 사용자 지정]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[자습서: TRANSACT-SQL 문 쓰기]:https://msdn.microsoft.com/library/ms365303.aspx
+[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 유니버설 C 런타임]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
