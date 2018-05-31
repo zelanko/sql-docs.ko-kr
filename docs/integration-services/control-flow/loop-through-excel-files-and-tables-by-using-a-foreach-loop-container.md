@@ -1,7 +1,7 @@
 ---
 title: Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235667"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  루프 반복마다 현재 Excel 경로와 파일 이름을 받을 문자열 변수를 만듭니다. 유효성 검사 문제를 방지하려면 변수의 초기 값으로 유효한 Excel 경로 및 파일 이름을 할당하십시오. 이 절차의 뒷부분에 나오는 예제 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
-2.  필요에 따라 Excel 연결 문자열의 확장 속성 인수에 대한 값을 보유하는 다른 문자열 변수를 만듭니다. 이 인수는 Excel 버전을 지정하고 첫 번째 행에 열 이름을 포함할지 여부와 가져오기 모드 사용 여부를 결정하는 일련의 값을 포함합니다. 이 절차의 뒷부분에 나오는 예제 식에서는 초기 값 " `ExtProperties`"와 함께 변수 이름`Excel 8.0;HDR=Yes`를 사용합니다.  
+2.  필요에 따라 Excel 연결 문자열의 확장 속성 인수에 대한 값을 보유하는 다른 문자열 변수를 만듭니다. 이 인수는 Excel 버전을 지정하고 첫 번째 행에 열 이름을 포함할지 여부와 가져오기 모드 사용 여부를 결정하는 일련의 값을 포함합니다. 이 절차의 뒷부분에 나오는 예제 식에서는 초기 값 " `ExtProperties`"와 함께 변수 이름`Excel 12.0;HDR=Yes`를 사용합니다.  
   
      확장 속성 인수에 대한 변수를 사용하지 않으면 연결 문자열을 포함하는 식에 해당 변수를 수동으로 추가해야 합니다.  
   
 3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach File 열거자를 선택하고 Excel 통합 문서가 있는 폴더를 지정한 다음 파일 필터(일반적으로 *.xls)를 지정합니다.  
+4.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 Foreach 파일 열거자를 선택하고, Excel 통합 문서가 있는 폴더를 지정한 다음, 파일 필터(일반적으로 *.xlsx)를 지정합니다.  
   
 5.  **변수 매핑** 페이지에서 루프 반복마다 현재 Excel 경로 및 파일 이름을 받는 사용자 정의 문자열 변수에 인덱스 0을 매핑합니다. 이 절차의 뒷부분에 나오는 샘플 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. 식 작성기에서 다음 식을 입력합니다.  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      확장 속성 인수의 값을 묶는 내부 따옴표를 닫는 데 이스케이프 문자 "\\"가 사용되었다는 것에 유의하세요.  
   
-     확장 속성 인수는 필수입니다. 해당 값을 포함하는 변수를 사용하지 않으면 다음 Excel 2003 파일의 예처럼 식에 해당 변수를 수동으로 추가해야 합니다.  
+     확장 속성 인수는 필수입니다. 해당 값을 포함하는 변수를 사용하지 않으면 다음 예제처럼 식에 해당 변수를 수동으로 추가해야 합니다.  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 파일 위치 및 패턴과 일치하는 각 Excel 통합 문서에 같은 작업을 수행합니다.  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+1.  Microsoft ACE OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Excel 버전을 확장 속성의 값으로 입력합니다(이 경우에 Excel 12.0). 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   

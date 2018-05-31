@@ -26,11 +26,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236494"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/15/2018
 - 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다.
 - 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다.  
 - 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
-- ONLINE= 구문을 지원하지 않는 DDL 문에 기본적으로 online 옵션을 활성화 또는 비활성화합니다.
-- RESUMABLE= 구문을 지원하지 않는 DDL 문에 기본적으로 resumable 옵션을 활성화 또는 비활성화합니다. 
-  
+- ONLINE= 구문을 지원하지 않는 DDL 문에 기본적으로 온라인 옵션을 활성화 또는 비활성화합니다.
+- RESUMABLE= 구문을 지원하지 않는 DDL 문에 기본적으로 다시 시작 가능 옵션을 활성화 또는 비활성화합니다. 
+
  ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -246,11 +247,11 @@ WHEN_SUPPORTED
 
 **ELEVATE_ONLINE** 
 
-이 옵션은 WITH(ONLINE= 구문을 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
+이 옵션은 WITH(ONLINE= 구문)를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
 
 **ELEVATE_RESUMABLE**
 
-이 옵션은 WITH(ONLINE= 구문을 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
+이 옵션은 WITH(ONLINE= 구문)를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다. 
 
   
 ## <a name="metadata"></a>메타데이터  
@@ -373,43 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
 ``` 
-
-### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>11. 여러 명령문을 기반으로 ALTER DATABASE SCOPED CONFIGURATION의 상태 쿼리
-
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
-
-```sql 
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|OFF|NULL|1|
-|12|ELEVATE_RESUMABLE|OFF|NULL|1|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
-
-```
 
 ## <a name="additional-resources"></a>추가 리소스
 

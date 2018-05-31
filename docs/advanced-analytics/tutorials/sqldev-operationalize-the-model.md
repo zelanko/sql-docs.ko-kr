@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202585"
 ---
 # <a name="lesson-6-operationalize-the-r-model"></a>6단원: R 모델 운용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.lasthandoff: 04/16/2018
 
 이 단계에서는 저장 프로시저를 사용하여 모델을 *운용*하는 방법을 학습합니다. 이 저장 프로시저는 다른 응용 프로그램에서 직접 호출하여 새 관측에 대해 예측할 수 있습니다. 이 연습에서는 저장 프로시저에서 R 모델을 사용하여 채점하는 두 가지 방법을 보여줍니다.
 
-- **일괄 처리 점수 매기기 모드**: SELECT 쿼리 저장된 프로시저에 대 한 입력으로 사용 합니다. 저장 프로시저에서 입력 사례에 해당하는 관찰 테이블을 반환합니다.
+- **일괄 처리 점수 매기기 모드**: 저장 프로시저에 대한 입력으로 SELECT 조회를 사용하십시오.  저장 프로시저는 입력된 사례(case)에 해당하는 관측 표를 반환합니다.
 
 - **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="basic-scoring"></a>기본 점수 매기기
 
-저장 프로시저 _PredictTip_ 은 예측 호출을 저장 프로시저에 래핑하는 기본 구문을 보여 줍니다.
+_PredictTip_ 저장 프로시저는 예측 호출을 저장 프로시저에 래핑하는 기본 구문을 보여 줍니다.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -66,7 +67,7 @@ GO
 
 이제 일괄 처리 점수 매기기의 작동 방식을 살펴보겠습니다.
 
-1.  먼저 사용할 작은 입력 데이터 집합을 가져오겠습니다. 이 쿼리는 승객 수 및 예측을 수행하는 데 필요한 다른 기능과 함께 "상위 10개"의 여정 목록을 만듭니다.
+1.  먼저 사용할 작은 입력 데이터 집합을 가져오겠습니다. 이 쿼리는 승객 수 및 예측을 수행하는 데 필요한 다른 특성과 함께 "상위 10개"의 여정 목록을 만듭니다.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -91,9 +92,9 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    이 쿼리는 저장된 프로시저에 대 한 입력으로 사용할 수 _PredictTipBatchMode_다운로드의 일부로 제공 합니다.
+    이 쿼리는 다운로드의 일부로 제공되는 _PredictTipBatchMode_ 저장 프로시저에 대한 입력으로 사용할 수 있습니다.
 
-2. 저장된 프로시저의 코드를 검토 하는 데 1 분 소요 _PredictTipBatchMode_ 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.
+2. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 _PredictTipBatchMode_ 저장 프로시저의 코드를 검토합니다.
 
     ```SQL
     /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
@@ -137,11 +138,11 @@ GO
 
 ## <a name="single-row-scoring"></a>단일 행의 점수 매기기
 
-응용 프로그램의 개별 값을 전달하고 해당 값을 기반으로 하여 단일 결과를 가져오려는 경우도 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력 또는 선택한 입력을 제공하도록 Excel 워크시트, 웹 응용 프로그램 또는 Reporting Services 보고서를 설정할 수 있습니다.
+때로는 응용 프로그램에서 개별 값을 전달하고 해당 값을 기반으로 단일 결과를 얻고 싶을 수도 있습니다. 예를 들어 저장 프로시저를 호출하고 사용자가 입력하거나 선택한 입력을 제공하도록 Excel 워크 시트, 웹 응용 프로그램 또는 Reporting Services 보고서를 설정할 수 있습니다.
 
-이 섹션에서는 저장된 프로시저를 사용 하 여 단일 예측을 만드는 방법을 설명 합니다.
+이 섹션에서는 저장 프로시저를 사용하여 단일 예측을 만드는 방법을 설명합니다.
 
-1. 다운로드의 일부로 포함된 저장 프로시저 _PredictTipSingleMode_의 코드를 검토합니다.
+1. 다운로드의 일부로 포함된 _PredictTipSingleMode_ 저장 프로시저의 코드를 검토합니다.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -170,9 +171,9 @@ GO
   
     -   저장 프로시저는 저장된 R 모델을 기반으로 하여 점수를 만듭니다.
   
-2. 수동으로 값을 제공하여 실험해 보세요.
+2. 수동으로 값을 제공하여 시험해 보세요.
   
-    새 **쿼리** 창과 각 매개 변수에 값을 제공 하는 저장된 프로시저를 호출 합니다. 매개 변수는 모델에 사용 되는 기능 열을 나타내고 필요.
+    새 **쿼리** 창을 열고 저장 프로시저를 호출하여 각 매개변수의 값을 제공합니다.  매개변수는 모델에서 사용하는 특성 열을 나타내며 필수 항목입니다.
 
     ```
     EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,

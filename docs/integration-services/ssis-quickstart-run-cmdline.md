@@ -1,6 +1,6 @@
 ---
 title: 명령 프롬프트에서 SSIS 패키지 실행 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,19 +12,30 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dec4f11b797cc138f11f20a521e1c304efa0463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454866"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
-이 빠른 시작 자습서에서는 명령 프롬프트에서 적절한 매개 변수로 `DTExec.exe`를 실행하여 SSIS 패키지를 실행하는 방법을 보여 줍니다.
+이 빠른 시작에서는 명령 프롬프트에서 적절한 매개 변수로 `DTExec.exe`를 실행하여 SSIS 패키지를 실행하는 방법을 보여줍니다.
 
 > [!NOTE]
 > 이 문서에 설명된 메서드는 Azure SQL Database 서버에 배포되는 패키지에서 테스트를 거치지 않았습니다.
 
 `DTExec.exe`에 대한 자세한 내용은 [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)를 참조하세요.
+
+## <a name="supported-platforms"></a>지원 플랫폼
+
+이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에서 SSIS 패키지를 실행할 수 있습니다.
+
+-   Windows의 SQL Server
+
+이 문서에 설명된 메서드는 Azure SQL Database 서버에 배포되는 패키지에서 테스트를 거치지 않았습니다. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+
+이 빠른 시작의 정보를 사용하여 Linux에서 SSIS 패키지를 실행할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
 ## <a name="run-a-package-with-dtexec"></a>dtexec를 사용하여 패키지 실행
 

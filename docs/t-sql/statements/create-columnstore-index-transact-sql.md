@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236144"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ ON
 -   uniqueidentifier([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용)  
 
 **비클러스터형 columnstore 인덱스:**
--   최대 1,024개의 열만 사용할 수 있습니다.  
--   비클러스터형 columnstore 인덱스가 있는 테이블은 UNIQUE 제약 조건, PRIMARY KEY 제약 조건 또는 FOREIGN KEY 제약 조건을 가질 수 있지만 비클러스터형 columnstore 인덱스에 제약 조건을 포함할 수 없습니다.  
+-   최대 1,024개의 열만 사용할 수 있습니다.
+-   제약 조건 기반 인덱스로 만들 수 없습니다. columnstore 인덱스가 있는 테이블에 고유한 제약 조건, 기본 키 제약 조건 또는 외래 키 제약 조건을 가질 수 없습니다. 제약 조건은 항상 행 저장소 인덱스에서 적용됩니다. 제약 조건은 columnstore(클러스터형 또는 비클러스터형) 인덱스에서 적용될 수 없습니다.
 -   뷰 또는 인덱싱된 뷰에서는 만들 수 없습니다.  
 -   스파스 열을 포함할 수 없습니다.  
 -   **ALTER INDEX** 문을 사용하여 변경할 수 없습니다. 비클러스터형 인덱스를 변경하려면 인덱스를 삭제하고 해당 columnstore 인덱스를 대신 다시 만들어야 합니다. **ALTER INDEX**를 사용하여 columnstore 인덱스를 해제하고 다시 만들 수 있습니다.  

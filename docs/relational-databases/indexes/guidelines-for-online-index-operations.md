@@ -22,11 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235797"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +115,11 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="online-default-options"></a>온라인 기본 옵션 
 
-ELEVATE_ONLINE 또는 ELEVATE_RESUMABLE 데이터베이스 범위 구성 옵션을 설정하여 데이터베이스 수준에서 online 또는 resumable에 대한 기본 옵션을 설정할 수 있습니다. 이러한 기본 옵션을 통해 실수로 데이터베이스를 오프라인으로 전환하는 작업을 수행하는 것을 방지할 수 있습니다. 두 옵션 모두 엔진이 특정 작업의 권한을 자동으로 online 또는 resumable 실행으로 상승시키도록 합니다.  
-옵션을 FAIL_UNSUPPORTED, WHEN_SUPPORTED 또는 NEVER로 설정할 수 있습니다. online 및 resumable에 대해 다른 값을 설정할 수 있습니다. 
+> [!IMPORTANT]
+> 이러한 옵션은 공개 미리 보기 상태입니다.
+
+ELEVATE_ONLINE 또는 ELEVATE_RESUMABLE 데이터베이스 범위 구성 옵션을 설정하여 데이터베이스 수준에서 online 또는 resumable에 대한 기본 옵션을 설정할 수 있습니다. 이러한 기본 옵션을 통해 실수로 데이터베이스 테이블을 오프라인으로 전환하는 작업을 수행하는 것을 방지할 수 있습니다. 두 옵션 모두 엔진이 특정 작업의 권한을 자동으로 online 또는 resumable 실행으로 상승시키도록 합니다.  
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 명령을 사용하여 옵션을 FAIL_UNSUPPORTED, WHEN_SUPPORTED 또는 OFF 중 하나로 설정할 수 있습니다. online 및 resumable에 대해 다른 값을 설정할 수 있습니다. 
 
 ELEVATE_ONLINE 및 ELEVATE_RESUMABLE은 online 및 resumable 구문을 각각 지원하는 DDL 문에만 적용됩니다. 예를 들어 ELEVATE_ONLINE=FAIL_UNSUPORTED를 사용하여 XML 인덱스를 만들려고 하면 XML 인덱스가 ONLINE= 구문을 지원하지 않으므로 작업이 오프라인으로 실행됩니다. 이 옵션은 ONLINE 또는 RESUMABLE 옵션을 지정하지 않고 제출된 DDL 문에만 적용됩니다. 예를 들어 ONLINE=OFF 또는 RESUMABLE=OFF를 사용하여 문을 제출하면 사용자가 FAIL_UNSUPPORTED 설정을 재정의하고, 오프라인으로 또는 다시 시작 가능하지 않은 방식으로 명령문을 실행합니다. 
  

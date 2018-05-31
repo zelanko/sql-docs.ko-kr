@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL(SSMS)을 사용하여 SSIS 프로젝트 배포 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,18 +12,16 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 975bf68b5d3255ff965e9092e84b2dabf982b90b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455166"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여 줍니다. 
-
-> [!NOTE]
-> SSMS를 사용하여 Azure SQL Database 서버에 연결하는 경우에는 이 문서에서 설명하는 방법을 사용할 수 없습니다. `catalog.deploy_project` 저장 프로시저에는 로컬(온-프레미스) 파일 시스템의 `.ispac` 파일에 대한 경로가 필요합니다.
 
 SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS에 대한 자세한 내용은 [SSMS(SQL Server Management Studio)](../ssms/sql-server-management-studio-ssms.md)를 참조하세요.
 
@@ -31,12 +29,19 @@ SQL Server Management Studio는 SQL Server에서 SQL Database까지 모든 SQL �
 
 시작하기 전에 최신 버전의 SQL Server Management Studio가 설치되어 있는지 확인합니다. SSMS를 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
+## <a name="supported-platforms"></a>지원 플랫폼
+
+이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에 SSIS 프로젝트를 배포할 수 있습니다.
+
+-   Windows의 SQL Server
+
+이 빠른 시작의 정보를 사용하여 Azure SQL Database에 SSIS 패키지를 배포할 수 없습니다. `catalog.deploy_project` 저장 프로시저에는 로컬(온-프레미스) 파일 시스템의 `.ispac` 파일에 대한 경로가 필요합니다. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+
+이 빠른 시작의 정보를 사용하여 SQL Server on Linux에 SSIS 패키지를 배포할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>SSIS 카탈로그 데이터베이스에 연결
 
 SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결을 설정합니다. 
-
-> [!NOTE]
-> Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 방화벽 내에서 Azure SQL Database 서버에 성공적으로 연결하려면 이 포트가 회사 방화벽에서 열려 있어야 합니다.
 
 1. SQL Server Management Studio를 엽니다.
 
@@ -46,9 +51,9 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
    | **서버 이름** | 정규화된 서버 이름 |  |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 빠른 시작에서는 SQL 인증을 사용합니다. |
-   | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
-   | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
+   | **인증** | SQL Server 인증(SQL Server Authentication) | |
+   | **로그인** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
+   | **암호** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
 
 3. **연결**을 클릭합니다. SSMS에서 개체 탐색기 창이 열립니다. 
 
@@ -61,7 +66,7 @@ SQL Server Management Studio를 사용하여 SSIS 카탈로그에 대한 연결�
 
 2.  시스템에 대한 `catalog.deploy_project` 저장 프로시저의 매개 변수 값을 업데이트합니다.
 
-3.  SSISDB가 현재 데이터베이스인지 확인합니다.
+3.  **SSISDB**가 현재 데이터베이스인지 확인합니다.
 
 4.  스크립트를 실행합니다.
 

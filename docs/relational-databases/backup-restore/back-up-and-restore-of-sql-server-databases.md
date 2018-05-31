@@ -26,23 +26,20 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22b55997d2631001afe9e220f87056026c49b4aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455676"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다. 
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  이 아티클에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다. 
 
 > **단계별 지침을 찾고 있나요?** 이 항목에서는 **백업하는 방법에 대한 특정 단계를 제공하지 않습니다.** 실제로 백업하는 방법을 확인하려면 이 페이지 아래로 스크롤하여 링크 섹션을 확인하세요. 백업 작업별로, SSMS를 사용할지 T-SQL을 사용할지에 따라 구성되어 있습니다.  
   
- SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하기 위해서는 데이터베이스를 정기적으로 백업하여 수정된 데이터를 유지해야 합니다. 백업 및 복원 전략을 적절하게 계획하면 다양한 오류로 인해 데이터베이스의 데이터가 손실되는 것을 방지할 수 있습니다. 일련의 백업 복원과 데이터베이스 복구를 통해 전략을 테스트하여 재해에 효과적으로 대처할 수 있습니다.  
+ SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하기 위해서는 데이터베이스를 정기적으로 백업하여 수정된 데이터를 유지해야 합니다. 백업 및 복원 전략을 적절하게 계획하면 다양한 오류로 인해 데이터베이스의 데이터가 손실되는 것을 방지할 수 있습니다. 일련의 백업 복원과 데이터베이스 복구를 통해 전략을 테스트하여 재해에 효과적으로 대처할 수 있습니다.
   
  백업을 저장하기 위한 로컬 저장소 외에도 SQL Server는 Microsoft Azure Blob Storage Service에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob 저장소 서비스를 사용하여 저장된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
@@ -51,12 +48,9 @@ ms.lasthandoff: 05/03/2018
 
      유효한 데이터베이스 백업을 사용하여 다음의 여러 오류로부터 데이터를 복구할 수 있습니다.  
   
-    -   미디어 오류  
-  
-    -   사용자 오류(예: 실수로 테이블 삭제)  
-  
-    -   하드웨어 오류(예: 손상된 디스크 드라이브 또는 서버의 영구적 손실)  
-  
+    -   미디어 오류    
+    -   사용자 오류(예: 실수로 테이블 삭제)    
+    -   하드웨어 오류(예: 손상된 디스크 드라이브 또는 서버의 영구적 손실)    
     -   자연 재해 Windows Azure Blob 저장소 서비스로 SQL Server 백업을 사용하면 온-프레미스 위치에 영향을 미치는 자연 재해가 발생할 경우에 사용할 오프사이트 백업을 온-프레미스 위치와 다른 영역에 만들 수 있습니다.  
   
 -   또한 데이터베이스 백업은 서버 간 데이터베이스 복사, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 설정, 보관 등의 일상적인 관리 용도로 유용하게 사용할 수 있습니다.  
@@ -75,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  
   
 **데이터 백업(data backup)**  
- 전체 데이터베이스(데이터베이스 백업), 부분 데이터베이스(부분 백업) 또는 파일 집합이나 파일 그룹(파일 백업)의 데이터 백업입니다.  
+ 전체 데이터베이스(데이터베이스 백업), 부분 데이터베이스(부분 백업) 또는 데이터 파일 집합이나 파일 그룹(파일 백업)의 데이터 백업입니다.  
   
 **데이터베이스 백업(database backup)**  
  데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 가장 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
@@ -104,8 +98,8 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="backup-and-restore-strategies"></a>백업 및 복원 전략  
  데이터 백업 및 복원은 특정 환경에 맞게 사용자 지정되어야 하며 적절한 리소스도 마련되어야 합니다. 따라서 복구를 위해 백업 및 복원을 안정적으로 사용하려면 백업 및 복원 전략이 필요합니다. 잘 디자인된 백업 및 복원 전략은 사용자의 특정 비즈니스 요구 사항을 감안해 데이터 가용성을 극대화하고 데이터 손실을 최소화합니다.  
   
-#### <a name="important"></a>중요! 
-**데이터베이스와 백업을 서로 다른 장치에 배치하세요. 그렇지 않으면 데이터베이스가 들어 있는 장치가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 장치에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
+  > [!IMPORTANT] 
+  > 데이터베이스와 백업을 서로 다른 장치에 배치하십시오. 그렇지 않으면 데이터베이스가 들어 있는 장치가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 장치에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
   
  백업 및 복원 전략은 백업에 관련된 부분과 복원에 관련된 부분으로 이루어집니다. 전략의 백업 관련 부분에서는 백업 유형 및 빈도, 백업에 필요한 하드웨어의 특성 및 속도, 백업 테스트 방법 및 백업 미디어 보관 위치 및 보관 방법(보안 고려 사항 포함)을 정의합니다. 전략의 복원 관련 부분에서는 누가 복원을 담당할 것이며 어떻게 데이터베이스 가용성 목표를 충족시키고 데이터 손실을 최소화할 것인가를 정의합니다. 백업 및 복원 절차를 문서화하고 실행 문서에 사본을 보관하는 것이 좋습니다.  
   
@@ -151,12 +145,46 @@ ms.lasthandoff: 05/03/2018
    
 >  백업 중 동시성 제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   
- 각 경우에 필요한 백업 유형과 수행 빈도를 결정한 후 데이터베이스 유지 관리 계획의 일부로 데이터베이스에 대한 정기 백업을 예약하는 것이 좋습니다. 유지 관리 계획에 대한 정보와 데이터베이스 백업 및 로그 백업에 대한 유지 관리 계획을 만드는 방법은 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 참조하십시오.  
+ 각 경우에 필요한 백업 유형과 수행 빈도를 결정한 후 데이터베이스 유지 관리 계획의 일부로 데이터베이스에 대한 정기 백업을 예약하는 것이 좋습니다. 유지 관리 계획에 대한 정보와 데이터베이스 백업 및 로그 백업에 대한 유지 관리 계획을 만드는 방법은 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 참조하십시오.
   
 ### <a name="test-your-backups"></a>백업 테스트  
- 백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다.  
+ 백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다.
   
- 각 데이터베이스에 대한 작업 매뉴얼을 작성하여 관리하는 것이 좋습니다. 이 작업 매뉴얼에는 백업 위치, 백업 장치 이름(있는 경우) 및 테스트 백업을 복원하는 데 필요한 시간 등이 수록되어야 합니다.  
+ 각 데이터베이스에 대한 작업 매뉴얼을 작성하여 관리하는 것이 좋습니다. 이 작업 매뉴얼에는 백업 위치, 백업 장치 이름(있는 경우) 및 테스트 백업을 복원하는 데 필요한 시간 등이 수록되어야 합니다.
+
+## <a name="monitor-progress-with-xevent"></a>xEvent를 사용하여 진행률 모니터
+백업 및 복원 작업은 데이터베이스의 크기 및 작업의 복잡성으로 인해 시간이 많이 걸릴 수 있습니다. 작업에 문제가 발생하는 경우 **backup_restore_progress_trace** 확장된 이벤트를 사용하여 진행 상황을 실시간으로 모니터링할 수 있습니다. 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](../extended-events/extended-events.md)를 참조하세요.
+
+  >[!WARNING]
+  > backup_restore_progress_trace 확장된 이벤트를 사용하면 성능 문제를 일으키고 많은 양의 디스크 공간을 사용할 수 있습니다. 짧은 기간 동안 사용하고, 주의하고 프로덕션에서 구현하기 전에 철저히 테스트합니다.
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>확장된 이벤트의 샘플 출력 
+
+![백업 xEvent 출력의 예제](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![복원 xEvent 출력의 예제](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>백업 태스크에 대한 자세한 정보  
 -   [유지 관리 계획 만들기](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

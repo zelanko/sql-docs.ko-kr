@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236414"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합의 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 데이터베이스 ID입니다.|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 파일 ID 번호|  
@@ -93,6 +94,10 @@ DBCC SHRINKDATABASE
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 축소되지 않은 파일의 행은 표시하지 않습니다.  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> 현재 Azure SQL Data Warehouse는 DBCC SHRINKDATABASE를 지원하지 않습니다. i/o 집약적인 작업이고 데이터 웨어하우스를 오프라인으로 사용할 수 있으므로 이 명령을 실행하지 않는 것이 좋습니다. 또한 이 명령을 실행한 후에 데이터 웨어하우스 스냅숏에 대한 비용 관련 사항이 발생합니다. 
+
 특정 데이터베이스의 모든 데이터와 로그 파일을 축소하려면 DBCC SHRINKDATABASE 명령을 실행합니다. 특정 데이터베이스의 한 데이터나 로그 파일을 동시에 축소하려면 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 명령을 실행합니다.
   
 현재 데이터베이스에 있는 여유(할당되지 않은) 공간의 양을 보려면 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)를 실행합니다.
@@ -106,9 +111,6 @@ NOTRUNCATE 옵션이나 TRUNCATEONLY 옵션을 지정하지 않고 DBCC SHRINKDA
 축소할 데이터베이스는 단일 사용자 모드가 아니어도 됩니다. 즉, 다른 사용자가 데이터베이스에서 작업 중이라도 데이터베이스를 축소할 수 있습니다. 시스템 데이터베이스의 경우에도 그렇습니다.
   
 데이터베이스가 백업되는 동안에는 데이터베이스를 축소할 수 없습니다. 반대로 데이터베이스에 대한 축소 작업이 처리되는 동안에는 데이터베이스를 백업할 수 없습니다.
-
->[!NOTE]
-> 현재 Azure SQL Data Warehouse는 DBCC SHRINKDATABASE가 TDE를 사용하도록 지원하지 않습니다.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 작동 방법  
 DBCC SHRINKDATABASE는 파일 단위로 데이터 파일을 축소하지만 로그 파일이 모두 한 연속 로그 풀에 있는 것처럼 로그 파일을 축소합니다. 항상 파일은 끝부터 축소됩니다.

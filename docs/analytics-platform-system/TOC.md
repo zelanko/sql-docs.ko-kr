@@ -17,7 +17,8 @@
 ## [백업 서버 용량 계획 워크시트](backup-capacity-planning-worksheet.md)
 ## [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)
 
-# Query
+# 쿼리
+## [자동 통계 구성](configure-auto-statistics.md)
 ## [활성 쿼리 모니터링](monitoring-active-queries.md)
 
 # 로드
@@ -69,6 +70,7 @@
 ### [어플라이언스 네트워크 구성](appliance-network-configuration.md)
 ### [PDW 토폴로지](pdw-topology.md)
 ### [PDW 인증서 프로비전](pdw-certificate-provisioning.md)
+### [PDW 기능 스위치](appliance-feature-switch.md)
 ### [PDW 방화벽 구성](pdw-firewall-configuration.md)
 ### [PDW 서비스 상태](pdw-services-status.md)
 ### [즉시 파일 초기화 구성](instant-file-initialization-configuration.md)

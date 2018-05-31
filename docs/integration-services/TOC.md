@@ -105,7 +105,7 @@
 
 # [데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Excel에서 또는 Excel로 데이터 로드](load-data-to-from-excel-with-ssis.md)
+# [Excel에서 가져오기 또는 Excel로 내보내기](load-data-to-from-excel-with-ssis.md)
 # [SQL Data Warehouse로 데이터 로드](load-data-to-sql-data-warehouse.md)
 
 # [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)

@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455556"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ ALTER TABLE InsurancePolicy
   
 -   기간을 추가하면 기간 열에 대한 기본값이 유효한지 확인하기 위해 현재 테이블에 대해 데이터 일관성 검사를 수행합니다.  
   
--   **SYSTEM_VERSIONING**을 사용하도록 설정할 때 기존 기록 테이블을 지정하는 경우 현재 테이블과 기록 테이블 둘 다에 대해 데이터 일관성 검사가 수행됩니다. **DATA_CONISTENCY_CHECK = OFF** 를 추가 매개 변수로 지정하는 경우 이 과정을 건너뛸 수 있습니다.  
+-   **SYSTEM_VERSIONING**을 사용하도록 설정할 때 기존 기록 테이블을 지정하는 경우 현재 테이블과 기록 테이블 둘 다에 대해 데이터 일관성 검사가 수행됩니다. **DATA_CONSISTENCY_CHECK = OFF**를 추가 매개 변수로 지정하는 경우 이 과정을 건너뛸 수 있습니다.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>기본 제공 지원으로 기존 테이블 마이그레이션  
  이 예제에서는 기본 제공 임시 지원에 대한 트리거를 기반으로 기존 솔루션을 마이그레이션하는 방법을 보여 줍니다. 이 예제에서는 현재 사용자 지정 솔루션이 두 개의 분리된 사용자 테이블(**ProjectTaskCurrent** 및 **ProjectTaskHistory**)에서 현재 및 기록 데이터를 분할한다고 가정합니다. 기존 솔루션이 단일 테이블을 사용하여 실제 및 기록 행을 저장하는 경우 이 예제와 같은 마이그레이션 단계 전에 데이터를 두 테이블로 분할해야 합니다.  

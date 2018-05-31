@@ -1,7 +1,7 @@
 ---
 title: 분산 트랜잭션에 대한 가용성 그룹 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,12 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455536"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 분산 트랜잭션을 보장하려면 데이터베이스를 분산 트랜잭션 리소스 관리자로 등록하도록 가용성 그룹을 구성해야 합니다.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]은 분산 트랜잭션도 지원하지만 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]의 지원은 제한적입니다. [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]에서 동일한 서버에 둘 이상의 데이터베이스가 포함되어 있으면 가용성 그룹의 데이터베이스가 있는 분산 트랜잭션이 지원되지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이상은 가용성 그룹에서 분산 트랜잭션에 대한 완전한 지원을 제공합니다. [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 서비스 팩 2 이전 버전은 가용성 그룹의 데이터베이스가 포함된 데이터베이스 간 분산 트랜잭션(예: 동일한 SQL Server 인스턴스에서 데이터베이스를 사용하는 트랜잭션)을 지원하지 않습니다. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]에는 이러한 제한이 없습니다. 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]에서 구성하는 단계는 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]과 동일합니다.
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 이상에서 분산 트랜잭션에 대한 가용성 그룹을 만들 수 있습니다. 분산 트랜잭션에 대한 가용성 그룹을 만들려면 가용성 그룹 정의에 `DTC_SUPPORT = PER_DB`를 포함시킵니다. 다음 스크립트에서는 분산 트랜잭션에 대한 가용성 그룹을 만듭니다. 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +83,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 이상에서 분산 트랜잭션의 가용성 그룹을 변경할 수 있습니다. 분산 트랜잭션의 가용성 그룹을 변경하려면 `ALTER AVAILABILITY GROUP` 스크립트에 `DTC_SUPPORT = PER_DB`를 포함시킵니다. 다음 예제 스크립트에서는 분산 트랜잭션을 지원하도록 가용성 그룹을 변경합니다. 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +168,19 @@ following the guideline for Troubleshooting DTC Transactions.
 
    * 트랜잭션을 커밋하려면 다음 스크립트를 업데이트하고 실행합니다. `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`를 이전 오류 메시지의 미결 트랜잭션 UOW로 바꾸고 다음을 실행합니다.
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * 트랜잭션을 롤백하려면 다음 스크립트를 갱신하고 실행합니다. `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`를 이전 오류 메시지의 미결 트랜잭션 UOW로 바꾸고 다음을 실행합니다.
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 트랜잭션을 커밋하거나 롤백한 후에는 `ALTER DATABASE`를 사용하여 데이터베이스를 온라인으로 설정할 수 있습니다. 다음 스크립트를 업데이트하고 실행합니다. - 주의 상태 데이터베이스의 이름에 대한 데이터베이스 이름을 설정합니다.
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

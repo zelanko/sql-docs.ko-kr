@@ -16,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c0f95bb10af0e466d139a8da8d499b9caea7ea2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 902b6783930b5e939e3f522964a19ceeaebc2055
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455146"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW 구성 요소
   이 섹션은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW의 세 가지 구성 요소에 대해 설명하는 항목으로 구성되어 있습니다.  
@@ -29,8 +30,11 @@ ms.lasthandoff: 05/03/2018
   
 -   SAP BW 원본  
   
--   SAP BW 대상  
-  
+-   SAP BW 대상
+
+> [!IMPORTANT]
+> Microsoft는 업데이트된 버전의 SAP BW용 커넥터를 제공하지 않습니다. Microsoft는 타사에서 개발된 SAP BW용 소스 코드 구성 요소를 소유하지 않으며 결과적으로 업데이트할 수 없습니다. [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html) 등 Microsoft ISV 파트너로부터 최신 SAP 연결 구성 요소를 구매하는 것이 좋습니다. Microsoft의 ISV 파트너는 Azure에서 설치하기 위한 SSIS용 SAP 연결 구성 요소를 적용했습니다.
+
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
   

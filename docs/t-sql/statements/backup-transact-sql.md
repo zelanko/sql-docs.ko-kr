@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225353"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +701,11 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 TDE 암호화 데이터베이스에 최적화된 압축 알고리즘 즉, 먼저 페이지 암호를 해독하고 압축한 다음, 다시 암호화하는 알고리즘이 사용됩니다. `MAXTRANSFERSIZE = 65536`(64KB)을 사용하는 경우 TDE로 암호화된 데이터베이스를 통해 백업 압축을 수행하면 암호화된 페이지가 바로 압축되어 압축률이 좋지 않을 수 있습니다. 자세한 내용은 [TDE 가능 데이터베이스의 백업 압축](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/)을 참조하세요.
 
 > [!NOTE]  
-> TDE로 암호화된 데이터베이스에 최적화된 압축 알고리즘은 다음과 같은 경우에 자동으로 사용됩니다.
-> * 
->  기본 `MAXTRANSFERSIZE`가 1048576(1MB)으로 변경되고 더 낮은 값으로 강제 적용되지 않는 경우에 사용됩니다.
-> * 데이터베이스에 여러 데이터 파일이 있을 때, 기본 `MAXTRANSFERSIZE`가 65536(64KB)의 배수로 변경되고 더 낮은 값(예: `MAXTRANSFERSIZE = 65536`)으로 변경되지 않는 경우 
+> 기본값 `MAXTRANSFERSIZE`이 64K를 초과하는 경우가 있습니다.
+> * 데이터베이스에서 여러 데이터 파일을 만든 경우 `MAXTRANSFERSIZE` > 64K를 사용합니다.
+> * URL로 백업을 수행할 때 기본 `MAXTRANSFERSIZE = 1048576`(1MB)입니다.
+>   
+> 이러한 조건 중 하나가 적용되는 경우에도 새 백업 압축 알고리즘을 가져오기 위해 백업 명령에서 `MAXTRANSFERSIZE` 64K를 초과하도록 명시적으로 설정해야 합니다.
   
 기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
