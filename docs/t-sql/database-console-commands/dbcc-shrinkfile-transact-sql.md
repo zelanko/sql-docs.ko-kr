@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300341"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ DBCC SHRINKFILE
 *target_size*가 지정되면 DBCC SHRINKFILE은 지정한 크기로 파일을 축소하려고 합니다. 파일의 해제될 부분에서 사용된 페이지는 보유된 부분의 사용 가능한 공간에 재배치됩니다. 예를 들어 10MB의 데이터 파일이 있는 경우 *target_size*가 8인 DBCC SHRINKFILE 작업은 파일의 마지막 2MB에서 사용된 모든 페이지를 파일의 처음 8MB에서 할당되지 않은 페이지에 다시 할당합니다. DBCC SHRINKFILE은 파일에 데이터를 저장하는 데 필요한 크기 이하로 파일을 축소하지 않습니다. 예를 들어 10MB 데이터 파일에서 7MB가 사용되는 경우 *target_size*가 6인 DBCC SHRINKFILE 문은 파일을 6MB가 아니라 7MB로만 축소합니다.
   
 EMPTYFILE  
-지정한 파일의 모든 데이터를 **동일한 파일 그룹**의 다른 파일로 마이그레이션합니다. 즉, EmptyFile은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. EmptyFile은 새 데이터가 파일에 추가되지 않도록 합니다. 이 파일은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 제거할 수 있습니다.
+지정한 파일의 모든 데이터를 **동일한 파일 그룹**의 다른 파일로 마이그레이션합니다. 즉, EmptyFile은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. EmptyFile은 파일에 읽기 전용이라는 표시가 없더라도 새 데이터가 해당 파일에 추가되지 않도록 합니다. 이 파일은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 제거할 수 있습니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 크기가 변경되면 읽기 전용 플래그를 다시 설정하고 데이터를 추가할 수 있습니다.
+
 FILESTREAM 파일 그룹 컨테이너의 경우 ALTER DATABASE를 사용하여 파일을 제거하려면 FILESTREAM 가비지 수집기가 실행되어 EMPTYFILE이 다른 컨테이너에 복사한 필요 없는 파일 그룹 컨테이너 파일을 모두 삭제해야 합니다. 자세한 내용은 [sp_filestream_force_garbage_collection&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)을 참조하세요.
   
 > [!NOTE]  
@@ -98,7 +100,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 결과 집합의 열을 설명합니다.
   
-|열 이름|Description|  
+|열 이름|설명|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 데이터베이스 ID입니다.|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 축소하려고 시도한 파일의 파일 ID입니다.|  
