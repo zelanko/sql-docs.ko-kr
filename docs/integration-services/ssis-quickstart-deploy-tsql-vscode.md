@@ -1,6 +1,6 @@
 ---
 title: Transact-SQL(VS Code)을 사용하여 SSIS 프로젝트 배포 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455446"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 프로젝트 배포
-이 빠른 시작에서는 Visual Studio Code를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여 줍니다.
-
-> [!NOTE]
-> VS Code를 사용하여 Azure SQL Database 서버에 연결하는 경우에는 이 문서에서 설명하는 방법을 사용할 수 없습니다. `catalog.deploy_project` 저장 프로시저에는 로컬(온-프레미스) 파일 시스템의 `.ispac` 파일에 대한 경로가 필요합니다.
+이 빠른 시작에서는 Visual Studio Code를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다.
 
 Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL Data Warehouse에 연결하기 위한 `mssql` 확장을 포함하여 확장을 지원하는 Windows, macOS 및 Linux용 코드 편집기입니다. VS Code에 대한 자세한 내용은 [Visual Studio Code](https://code.visualstudio.com/)를 참조하세요.
 
@@ -31,6 +29,16 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 시작하기 전에 최신 버전의 Visual Studio Code를 설치하고 `mssql` 확장을 로드했는지 확인합니다. 이러한 도구를 다운로드하려면 다음 페이지를 참조하세요.
 -   [Visual Studio 코드 다운로드](https://code.visualstudio.com/Download)
 -   [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>지원 플랫폼
+
+이 빠른 시작의 정보를 사용하여 다음과 같은 플랫폼에 SSIS 프로젝트를 배포할 수 있습니다.
+
+-   Windows의 SQL Server
+
+이 빠른 시작의 정보를 사용하여 Azure SQL Database에 SSIS 패키지를 배포할 수 없습니다. `catalog.deploy_project` 저장 프로시저에는 로컬(온-프레미스) 파일 시스템의 `.ispac` 파일에 대한 경로가 필요합니다. Azure에서 패키지를 배포하고 실행하는 방법에 대한 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+
+이 빠른 시작의 정보를 사용하여 SQL Server on Linux에 SSIS 패키지를 배포할 수 없습니다. Linux에서 패키지를 실행하는 방법에 대한 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code에서 언어 모드를 SQL로 설정
 
@@ -46,9 +54,6 @@ Visual Studio Code는 Microsoft SQL Server, Azure SQL Database 또는 Azure SQL 
 
 Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정합니다.
 
-> [!IMPORTANT]
-> 계속하기 전에 서버, 데이터베이스 및 로그인 정보가 준비되어 있는지 확인합니다. 연결 프로필 정보를 입력하기 시작한 후에 Visual Studio Code에서 포커스를 변경하면 연결 프로필 만들기를 다시 시작해야 합니다.
-
 1. VS Code에서 **Ctrl+Shift+P**(또는 **F1** 키)를 눌러 명령 팔레트를 엽니다.
 
 2. **sqlcon**을 입력하고 **Enter** 키를 누릅니다.
@@ -61,9 +66,9 @@ Visual Studio Code를 사용하여 SSIS 카탈로그에 대한 연결을 설정�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 |  |
    | **데이터베이스 이름** | **SSISDB** | 연결할 데이터베이스의 이름입니다. |
-   | **인증** | SQL 로그인| 이 빠른 시작에서는 SQL 인증을 사용합니다. |
-   | **User name** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
-   | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
+   | **인증** | SQL 로그인 | |
+   | **User name** | 서버 관리자 계정 | 이 계정은 서버를 만들 때 지정한 계정입니다. |
+   | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 이 암호는 서버를 만들 때 지정한 암호입니다. |
    | **암호를 저장하시겠습니까?** | Yes 또는 No | 암호를 매번 입력하지 않으려면 'Yes'를 선택합니다. |
    | **이 프로필의 이름을 입력합니다.** | 프로필 이름(예: **mySSISServer**) | 저장된 프로필 이름은 후속 로그인에서 연결 속도를 높입니다. | 
 

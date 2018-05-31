@@ -89,11 +89,12 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5842e2885aff9fa774ab98d4ededb1c18f7e9ac2
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455716"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -196,7 +197,8 @@ ms.lasthandoff: 05/03/2018
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ACTION<br /><br /> **필수**|설치 워크플로를 지정하는 데 필요합니다.<br /><br /> 지원되는 값: **설치**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치 컨트롤|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 설치 컨트롤|/IACCEPTROPENLICENSETERMS <br /><br /> **R Services(In-Database) 또는 Microsoft R Server를 포함하는 무인 설치에 대해 /Q 또는 /QS 매개 변수가 지정된 경우에만 필요합니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 설치 컨트롤|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Anaconda Python 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 설치 컨트롤|/IACCEPTROPENLICENSETERMS <br /><br /> **Microsoft R Open 패키지가 포함된 무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.**|사용 조건에 대한 동의를 확인하는 데 필요합니다.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/ENU<br /><br /> **선택 사항**|설치 미디어에 영어와 해당 운영 체제 언어에 대한 언어 팩이 둘 다 있는 경우 이 매개 변수를 사용하여 지역화된 운영 체제에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 영어 버전을 설치할 수 있습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/UpdateEnabled<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/UpdateSource<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 가져올 위치를 지정합니다. 유효한 값은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 검색하는 경우 “MU”, 유효한 폴더 경로, 상대 경로(예: `.\MyUpdates`) 또는 UNC 공유입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 Windows Server Update Services를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 또는 Windows Update 서비스를 검색합니다.|  
@@ -275,7 +277,8 @@ ms.lasthandoff: 05/03/2018
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
-|R Services(In-database)|MRCACHEDIRECTORY|[이 문서](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에 설명된 대로 이 매개 변수를 사용하여 Microsoft R Open 및 Microsoft R Server 또는 Machine Learning Server 구성 요소에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 인터넷에 액세스할 수 없는 컴퓨터의 명령줄에서 SQL Server 기계 학습을 설치하는 경우에 사용됩니다.|  
+|Python/Machine Learning Services(데이터베이스 내)|MPYCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning 서버(독립 실행형)에서 Python 지원 기능에 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 Python 구성 요소를 설치하는 경우에 사용됩니다.|  
+|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning 서버(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 
@@ -850,7 +853,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||FullText|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 함께 전체 텍스트 구성 요소를 설치합니다.|  
 ||DQ|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하는 데 필요한 파일을 복사합니다. SQL Server 설치를 완료한 후에는 DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료해야 합니다. 자세한 내용은 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)를 참조하세요. 또한 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]도 설치합니다.|  
 ||PolyBase|PolyBase 구성 요소를 설치합니다.|  
-||AdvancedAnalytics|R Services(In-Database)를 설치합니다.|  
+||AdvancedAnalytics|[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install) 또는 [SQL Server 2016 R Services(데이터베이스 내)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-services-windows-install)를 설치합니다.|  
+||SQL_INST_MR |[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 R Open 및 전용 R 패키지를 설치합니다.|  
+||SQL_INST_MPY|[SQL Server 2017 Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install)에 적용됩니다. **AdvancedAnalytics**와 쌍으로 Anaconda 및 전용 Python 패키지를 설치합니다.|  
 |AS||모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 요소를 설치합니다.|  
 |RS||모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 설치합니다.|  
 |RS_SHP||SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 설치합니다.|  
@@ -858,7 +863,8 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |DQC||[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]를 설치합니다.|  
 |IS||모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소를 설치합니다.|  
 |MDS||[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 설치합니다.|  
-|SQL_SHARED_MR||Microsoft R Server를 설치합니다.|  
+|SQL_SHARED_MPY||[SQL Server 2017 Machine Learning 서버(독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install)용 Python 패키지 설치 |  
+|SQL_SHARED_MR||[SQL Server 2016 R Server(독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/install/sql-r-standalone-windows-install) 또는 SQL Server 2017 Machine Learning 서버(독립 실행형)용 R 패키지 설치 |  
 |Tools*||클라이언트 도구와 SQL Server 온라인 설명서 구성 요소를 설치합니다.|  
 ||BC|이전 버전과의 호환성 구성 요소를 설치합니다.|  
 ||Conn|연결 구성 요소를 설치합니다.|

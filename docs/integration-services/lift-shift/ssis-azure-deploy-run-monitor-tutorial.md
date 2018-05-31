@@ -1,6 +1,6 @@
 ---
 title: Azure에서 SSIS 패키지 배포 및 실행 | Microsoft Docs
-ms.date: 02/05/2018
+ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,11 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455477"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 배포 및 실행
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -25,10 +26,16 @@ ms.lasthandoff: 05/15/2018
 
 시작하기 전에 SQL Server Management Studio 버전 17.2 이상이 설치되어 있는지 확인합니다. SSMS의 최신 버전을 다운로드하려면 [SSMS(SQL Server Management Studio) 다운로드](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 참조하세요.
 
-또한 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 정보는 [Azure에 SSIS 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)를 참조하세요.
+또한 Azure에서 SSISDB 데이터베이스를 설정하고 Azure-SSIS Integration Runtime을 프로비전했는지 확인합니다. Azure에서 SSIS를 프로비전하는 방법에 대한 자세한 내용은 [Azure에 SQL Server Integration Services 패키지 배포](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)를 참조하세요.
 
-> [!NOTE]
-> 프로젝트 배포 모델만 Azure에 배포할 수 있습니다.
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database에서 연결 정보 가져오기
+
+Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
+
+1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
+3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
+4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 
@@ -49,7 +56,7 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
    | **서버 이름** | 정규화된 서버 이름 | **mysqldbserver.database.windows.net** 형식이어야 합니다. 서버 이름이 필요한 경우 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요. |
-   | **인증** | SQL Server 인증(SQL Server Authentication) | 이 빠른 시작에서는 SQL 인증을 사용합니다. |
+   | **인증** | SQL Server 인증(SQL Server Authentication) | Windows 인증을 사용하여 Azure SQL Database에 연결할 수 없습니다. |
    | **로그인** | 서버 관리자 계정 | 서버를 만들 때 지정한 계정입니다. |
    | **암호** | 서버 관리자 계정의 암호 | 서버를 만들 때 지정한 암호입니다. |
 
@@ -62,6 +69,9 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>배포 마법사를 사용하여 프로젝트 배포
 
 패키지 배포 및 배포 마법사에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../packages/deploy-integration-services-ssis-projects-and-packages.md) 및 [Integration Services 배포 마법사](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)를 참조하세요.
+
+> [!NOTE]
+> 프로젝트 배포 모델만 Azure에 배포할 수 있습니다.
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사 시작
 1. **Integration Services 카탈로그** 노드와 **SSISDB** 노드가 펼쳐진 SSMS의 [개체 탐색기]에서 프로젝트 폴더를 펼칩니다.
@@ -84,8 +94,9 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
   
 3.  **대상 선택** 페이지에서 프로젝트의 대상을 선택합니다.
     -   `<server_name>.database.windows.net` 형식으로 정규화된 서버 이름을 입력합니다.
+    -   인증 정보를 입력한 다음, **연결**을 선택합니다.
     -   그런 다음 **찾아보기**를 선택하여 SSISDB에서 대상 폴더를 선택합니다.
-    -   **다음**을 선택하여 **검토** 페이지를 엽니다.  
+    -   그런 다음, **다음**을 선택하여 **검토** 페이지를 엽니다. (**연결**을 선택하면 **다음** 단추가 활성화됩니다.)
   
 4.  **검토** 페이지에서 선택한 설정을 검토합니다.
     -   **이전**을 선택하거나 왼쪽 창에서 단계 중 하나를 선택하여 선택 항목을 변경할 수 있습니다.
@@ -182,7 +193,7 @@ SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime 모니터링
 
-패키지가 실행 중인 Azure-SSIS Integration Runtime에 대한 상태 정보를 가져오려면 다음 PowerShell 명령을 사용합니다. 각 명령에 대해 Data Factory, Azure-SSIS IR 및 리소스 그룹의 이름을 제공합니다.
+패키지가 실행 중인 Azure-SSIS Integration Runtime에 대한 상태 정보를 가져오려면 다음 PowerShell 명령을 사용합니다. 각 명령에서 Data Factory, Azure SSIS IR 및 리소스 그룹의 이름을 제공합니다. 자세한 내용은 [Azure-SSIS Integration Runtime 모니터](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)를 참조하세요.
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에 대한 메타데이터 가져오기
 
