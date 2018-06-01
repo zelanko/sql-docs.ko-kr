@@ -25,10 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221294"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**< 상속 된 열 >**||열을 상속 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
-|**port**|int|끝점이 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
+|**port**|ssNoversion|끝점이 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**is_dynamic_port**|bit|1 = 포트 번호가 동적으로 할당되었는지 여부를 나타냅니다.<br /><br /> Null을 허용하지 않습니다.|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 절에서 지정한 수신기 IP 주소입니다. Null을 허용합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 쿼리를 실행하여 끝점 및 연결에 대한 정보를 수집합니다. 현재 연결이 없거나 TCP 연결이 없는 끝점은 NULL 값으로 표시됩니다. 추가 **여기서** 절 `WHERE des.session_id = @@SPID` 현재 연결에 대 한 정보를 반환 합니다.  
   
 ```  
@@ -59,10 +60,10 @@ LEFT JOIN sys.dm_exec_connections AS dec
    ON des.session_id = dec.session_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [끝점 카탈로그 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

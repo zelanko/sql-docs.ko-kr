@@ -30,10 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221134"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|데이터베이스 내에서 고유한 보안 정책의 이름입니다.|  
+|NAME|**sysname**|데이터베이스 내에서 고유한 보안 정책의 이름입니다.|  
 |object_id|**int**|보안 정책의 ID입니다.|  
 |principal_id|**int**|데이터베이스에 등록된 보안 정책 소유자의 ID입니다. 소유자가 스키마를 통해 결정되는 경우 NULL입니다.|  
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
@@ -57,10 +58,10 @@ ms.lasthandoff: 05/04/2018
 |uses_database_collation|**bit**|동일한 데이터 정렬을 데이터베이스로 사용합니다.|  
 |is_schemabinding_enabled|**bit**|보안 정책에 대 한 Schemabinding 상태:<br /><br /> 0 또는 NULL = 사용<br /><br /> 1 = 사용 안 함|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  보안 주체는 **ALTER ANY SECURITY POLICY** 이 카탈로그 뷰에으로 있는 사용자의 모든 개체에 대 한 액세스 권한이 **VIEW DEFINITION** 개체에 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   
  [sys.security_predicates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   

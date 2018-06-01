@@ -28,10 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179189"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ ms.lasthandoff: 05/04/2018
 |**group_database_id**|**uniqueidentifier**|데이터베이스가 참여하는 가용성 그룹(있는 경우) 내의 데이터베이스에 대한 고유 식별자입니다. **group_database_id** 데이터베이스가 주 복제본 및에 조인 된 가용성 그룹에 모든 보조 복제본이이 데이터베이스에 대해 동일 합니다.<br /><br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.|  
 |**database_name**|**sysname**|가용성 그룹에 추가된 데이터베이스의 이름입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  하는 경우의 호출자 **sys.availability_databases_cluster** 데이터베이스, ALTER ANY DATABASE 해당 행을 보는 데 필요한 최소 사용 권한 또는 VIEW ANY DATABASE 서버 수준 사용 권한 또는 CREATE의 소유자가 아닙니다 데이터베이스 사용 권한에서의 **마스터** 데이터베이스입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.availability_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.dm_hadr_database_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   

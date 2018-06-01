@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33263564"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **첫 번째** 및 **마지막** 트리거는 서로 다른 트리거 여야 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**첫째**|트리거가 첫 번째로 실행됩니다.|  
 |**마지막**|트리거가 마지막으로 실행됩니다.|  
@@ -77,7 +78,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 및 1(실패)  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>DML 트리거  
  하나만 있을 수 있습니다 **첫 번째** 하나의 **마지막** 단일 테이블에서 각 문에 대 한 트리거.  
@@ -106,7 +107,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  동일한 트리거는 둘 이상의 문 유형에 대 한 첫 번째 또는 마지막 순서로 지정 해야 하는 경우 **sp_settriggerorder** 각 문 유형에 대해 실행 해야 합니다. 또한 트리거가 먼저 먼저 정의 해야 문 유형에 대해로 지정할 수는 **첫 번째** 또는 **마지막** 트리거를 해당 문 유형에 대해 발생 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 범위(ON ALL SERVER)의 DDL 트리거 또는 로그온 트리거의 순서를 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
  데이터베이스 범위(ON DATABASE)의 DDL 트리거 순서를 설정하려면 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
@@ -133,7 +134,7 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터베이스 엔진 저장 프로시저 &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  

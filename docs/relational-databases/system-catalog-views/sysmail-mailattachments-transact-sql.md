@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33220694"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/04/2018
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터베이스 메일 문제를 해결할 때 이 뷰를 사용하여 첨부 파일을 속성을 확인할 수 있습니다.  
   
  첨부 파일 시스템 테이블에 저장 될 수 있습니다는 **msdb** 증가 하는 데이터베이스입니다. 사용 하 여 **sysmail_delete_mailitems_sp** 메일 항목 및 관련된 첨부 파일을 삭제 하려면. 자세한 내용은 참조 [보관 데이터베이스 메일 메시지 및 이벤트 로그와 SQL Server 에이전트 작업 만들기](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  에 부여 된 **sysadmin** 고정된 서버 역할 및 **DatabaseMailUserRole** 데이터베이스 역할입니다. 멤버에 의해 실행 된 **sysadmin** 이 뷰는 모든 첨부 파일이 표시 고정 서버 역할입니다. 다른 모든 사용자는 자신이 제출한 메시지의 첨부 파일만 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
