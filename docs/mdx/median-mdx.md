@@ -1,31 +1,20 @@
 ---
 title: Median (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- MEDIAN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Median function
-ms.assetid: 7a326a3f-0123-45c4-9b18-31f83b90d986
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c8af454330b54af632786cbc97116a47c8e5e1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8ba13f8803e0baa10a11f8766fb6a02e2ed3ad3c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580715"
 ---
 # <a name="median-mdx"></a>Median(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  숫자 식이 지정된 경우 지정된 숫자 식이 집합에 대해 계산된 다음 해당 계산에서 얻은 중앙값이 반환됩니다. 숫자 식이 지정되지 않은 경우 지정된 집합은 해당 집합에 포함된 멤버의 현재 컨텍스트에서 계산된 다음 해당 계산에서 얻은 중앙값이 반환됩니다.  
   
  중앙값은 정렬된 번호 집합의 가운데 값입니다. 중앙 값은 집합의 번호 개수로 나눈 번호 집합의 합계인 Mean 값과는 다릅니다. 중앙값은 집합에서 적어도 절반 이상의 값이 선택된 값보다 크지 않은 최소 값을 선택하여 결정됩니다. 집합 내 값의 개수가 홀수인 경우 중앙값은 단일 값을 따릅니다. 집합 내 값의 개수가 짝수인 경우 중앙값은 두 개의 중간 값의 합계를 2로 나눈 값을 따릅니다.  
@@ -71,7 +60,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

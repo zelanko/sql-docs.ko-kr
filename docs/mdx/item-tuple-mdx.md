@@ -1,31 +1,20 @@
 ---
 title: Item (튜플) (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ITEM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Item function
-ms.assetid: 9ee7af55-d5b5-47c8-a480-ef23878306af
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c42373ee274f331e4d12e658fa4403d8486ec0d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 18217c0798155c912baa6afa30b33f5533a0e198
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579465"
 ---
 # <a name="item-tuple-mdx"></a>Item(튜플)(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +45,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  반환할 집합 내의 위치로 특정 튜플을 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **항목** 함수는 지정된 된 집합에서 튜플을 반환 합니다. 세 가지 가능한 방법으로 호출 하 여 **항목** 함수:  
   
 -   단일 문자열 식이 지정 된 경우는 **항목** 함수는 지정된 된 튜플을 반환 합니다. 예를 들면 "([2005].Q3, [Store05])"와 같습니다.  
@@ -89,7 +78,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

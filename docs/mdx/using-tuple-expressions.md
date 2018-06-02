@@ -1,33 +1,20 @@
 ---
 title: 튜플 식을 사용 하 여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- single-member tuples [MDX]
-- expressions [MDX], tuples
-- one-member tuples
-- tuples
-- implicit tuples
-ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: fba6675213e513806f27c85fe881fc3efdeb0166
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c53a3a80355fd33dc887b6a07991370838e97cf2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581625"
 ---
 # <a name="using-tuple-expressions"></a>튜플 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,8 +44,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="one-member-tuples"></a>단일 멤버 튜플  
  튜플 식에 단 하나의 멤버가 있는 경우 MDX는 식을 평가할 목적으로 이 멤버를 단일 멤버 튜플로 변환합니다. 즉, 튜플 식 대신 `[Measures].[TestMeasure]`라는 멤버 식을 쓰면 `( [Measures].[TestMeasure] ).`라는 튜플 식을 쓰는 것과 기능적으로 동일합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

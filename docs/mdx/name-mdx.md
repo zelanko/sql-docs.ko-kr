@@ -1,31 +1,20 @@
 ---
 title: Name (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Name
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Name function
-ms.assetid: adb94151-2022-4167-92b2-d3125573144a
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bcecce4228aabd249b5a622e7d2096899bab8bb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3950beba2fbf9d725e63ef324826eea8dca0f570
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580185"
 ---
 # <a name="name-mdx"></a>Name(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +51,7 @@ Member_Expression.Name
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **이름** 함수가 고유 이름이 아니라 개체의 이름을 반환 합니다.  
   
 ## <a name="examples"></a>예  
@@ -92,7 +81,7 @@ SELECT {Measures.MemberName, Measures.ValueColumn, Measures.KeyColumn, Measures.
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

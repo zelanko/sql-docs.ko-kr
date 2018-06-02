@@ -1,31 +1,20 @@
 ---
 title: SetToStr (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SETTOSTR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SetToStr function
-ms.assetid: b761e002-26cd-460e-b424-fb8e306746fa
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3c1cfc97d793e6614b9b2bfb8e24616581be66b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1a6cd7d87e0eb582c06a402a98a2294996ac12c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581585"
 ---
 # <a name="settostr-mdx"></a>SetToStr(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ SetToStr(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수를 사용하여 집합의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 묶여 {}, 쉼표로 구분 하 여 집합의 각 항목입니다.  
   
 ## <a name="example"></a>예제  
@@ -55,7 +44,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

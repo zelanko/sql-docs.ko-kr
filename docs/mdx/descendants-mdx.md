@@ -1,31 +1,20 @@
 ---
 title: Descendants (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580415"
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +55,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  가능한 각 하위 항목 집합을 구별할 수 있는 설명 플래그를 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  수준이 지정 된 경우는 **하위 항목** 함수에 지정 된 플래그에 의해 수정 필요에 따라 지정 된 수준에서 지정된 된 집합의 멤버나 지정된 된 멤버의 하위 항목을 포함 하는 집합을 반환 *Desc_Flag*합니다.  
   
  경우 *거리* 지정는 **하위 항목** 함수 수준에서 지정 된 플래그로 수정 필요에 따라, 지정된 된 멤버의 계층 구조에서 지정 된 수 만큼 위에 있는 지정된 된 집합의 멤버 또는 지정된 된 멤버의 하위 항목을 포함 하는 집합을 반환 *Desc_Flag*합니다. 일반적으로 이 함수와 Distance 인수를 사용하면 비정형 계층을 처리할 수 있습니다. 지정된 거리가 0인 경우 이 함수는 지정된 멤버나 지정된 집합으로만 구성된 집합을 반환합니다.  
@@ -173,7 +162,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

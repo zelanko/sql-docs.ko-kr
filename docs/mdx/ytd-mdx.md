@@ -1,31 +1,20 @@
 ---
 title: Ytd (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- YTD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ytd function
-ms.assetid: b77fdba2-d4a9-4271-8c21-c1f12eba526d
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: faa73bc865ef1a4228232783854e136dfa8c2bae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 33deba1261ad6c2afcf44854b0590c978683f08b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581895"
 ---
 # <a name="ytd-mdx"></a>Ytd(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  기본값은 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 멤버 식이 지정 되지 않은 경우 *년* 유형의 첫 번째 차원에 *시간* 측정값 그룹에 있습니다.  
   
  **Ytd** 함수에 대 한 바로 가기 함수는는 [PeriodsToDate](../mdx/periodstodate-mdx.md) 함수에는 수준 기반이 되는 특성 계층의 Type 속성이 설정 되어 있는 *년*합니다. 즉, `Ytd(Member_Expression)`은 `PeriodsToDate(Year_Level_Expression,Member_Expression)`과 동일합니다. Type 속성 설정 된 경우에이 기능이 작동 하지 것입니다는 *FiscalYears*합니다.  
@@ -77,7 +66,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

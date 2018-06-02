@@ -1,31 +1,20 @@
 ---
 title: Subset (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- subset
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Subset function
-ms.assetid: 49a7cd28-cd6f-4ae7-8c91-94a8652a97a5
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1ccc015bad99081de8798f5991ac737282b50343
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e063d295480cff8e5db44f5ea30668a7a06ff74b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581395"
 ---
 # <a name="subset-mdx"></a>Subset(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정된 된 집합에서의 **하위 집합** 함수는 지정 된 수 만큼의 튜플이 지정 된 시작 위치에서 시작을 포함 하는 하위 집합을 반환 합니다. 시작 위치는 인덱스(0부터 시작)를 기반으로 합니다. 즉, 0은 지정된 집합의 첫 번째 튜플에 해당하고 1은 두 번째 튜플에 해당합니다.  
   
  경우 *Count* 를 지정 하지 않으면 함수까지 모든 튜플을 반환 *시작* 집합의 끝에 있습니다.  
@@ -70,7 +59,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: Levels (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Levels
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Levels function
-ms.assetid: 1a989cc9-8aa8-4ec3-b5e9-795d6fa84983
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3e50783a6d59315441f76549f32607d17a2100c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2fba58261bb0ba8f91e8127b1d33b847accf0dc7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579515"
 ---
 # <a name="levels-mdx"></a>Levels(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +42,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  수준 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  수준 번호를 지정 하는 경우는 **수준** 함수는 지정 된 0부터 시작 위치와 관련 된 수준을 반환 합니다.  
   
  수준 이름이 지정 되는 **수준** 함수는 지정 된 수준을 반환 합니다.  
@@ -72,7 +61,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>문자열  
+### <a name="string"></a>String  
  다음 예에서는 Country 수준을 반환합니다.  
   
 ```  
@@ -80,7 +69,7 @@ SELECT [Geography].[Geography].Levels('Country') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
