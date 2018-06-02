@@ -1,31 +1,20 @@
 ---
 title: DrilldownLevel (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevel function
-ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 11346a0157824dc97f7f64acc447a44de2fc581c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 99e8c47164d920ec531bf6ab51e35979b060c35d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578005"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +42,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  선택 사항입니다. 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **DrilldownLevel** 함수 반환 일련의 자식 멤버는 지정 된 집합에 포함 된 멤버에 기반을 계층적 순서로 합니다. 이때 함수의 결과 집합에 포함되는 모든 자식 구성원이 해당 부모 구성원 바로 아래에 포함된다는 점만 제외하고 지정된 집합의 원래 구성원 순서가 유지됩니다.  
   
  여러 수준 계층적 데이터 구조의 경우, 드릴다운할 수준을 명시적으로 선택할 수 있습니다. 수준을 지정하는 두 가지 상호 배타적인 방법이 있습니다. 첫 번째 방법은 설정 하는 **level_expression** 지정 하는 다른 방법은 수준을 반환 하는 MDX 식을 사용 하 여 인수는 **인덱스** 번호로 수준을 지정 하는 숫자 식을 사용 하 여 인수입니다.  
@@ -128,7 +117,7 @@ FROM [Adventure Works]
   
  플래그를 제거하고 쿼리를 다시 실행하는 경우, 계산된 구성원 [West Coast]를 제외하고 같은 결과를 얻습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

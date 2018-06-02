@@ -14,28 +14,21 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c73453f855dda07d082eac48328ec29e2631746
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563951"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  데이터에 액세스할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 를 사용 하 여는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 다음 구성 요소가 컴퓨터에 설치 되어 있어야 합니다.  
-  
--   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
-  
-     Microsoft JDBC Driver 아래 Microsoft 다운로드 센터 링크에서 다운로드할 수 있습니다. 
-     * [SQL Server 용 Microsoft JDBC Driver 6.4](http://go.microsoft.com/fwlink/?linkid=868290)
-     * [SQL Server 용 Microsoft JDBC Driver 6.2](http://go.microsoft.com/fwlink/?linkid=852460)
-     * [SQL Server 용 Microsoft JDBC Driver 6.0](http://go.microsoft.com/fwlink/?linkid=841535)
-     * [SQL Server 용 Microsoft JDBC Driver 4.2](http://go.microsoft.com/fwlink/?linkid=841534) 
-     * [SQL Server 용 Microsoft JDBC Driver 4.1](http://go.microsoft.com/fwlink/?linkid=841533) 
-  
--   Java Runtime Environment  
-  
+  데이터에 액세스할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 를 사용 하 여는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 다음 구성 요소가 컴퓨터에 설치 되어 있어야 합니다.
+
+- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([다운로드](download-microsoft-jdbc-driver-for-sql-server.md))
+- Java Runtime Environment
+
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment 요구 사항  
  SQL Server 용 Microsoft JDBC 드라이버 6.4 이상에서는 Sun Java SE Development Kit (JDK) 9.0 및 Java Runtime Environment (JRE) 9.0 지원 됩니다.
 
@@ -45,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  부터는 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], JDBC 4.0 API를 포함 하도록 JDBC Java Database Connectivity () 사양 API에 대 한 지원이 확장 되었습니다. JDBC 4.0 API는 Sun Java SE Development Kit(API) JDK 6.0 및 Java Runtime Environment(JRE) 6.0에 새로 추가되었습니다. JDBC 4.0은 JDBC 3.0 API를 포함합니다.  
   
- 배포 하는 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Windows 및 UNIX 운영 체제 설치 패키지를 사용 해야 *sqljdbc_\<버전 > _enu.exe* 및 *sqljdbc_\<버전 > _ enu.tar.gz*각각. JDBC 드라이버를 배포 하는 방법에 대 한 자세한 내용은 참조 [JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md) 항목입니다.  
+ 배포 하는 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Windows 및 UNIX 운영 체제 설치 패키지를 사용 해야 *sqljdbc_\<버전 > _enu.exe*, 및 *sqljdbc_\<버전 > _ enu.tar.gz*각각. JDBC 드라이버를 배포 하는 방법에 대 한 자세한 내용은 참조 [JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md) 항목입니다.  
   
 **SQL Server 용 Microsoft JDBC Driver 6.4:**  
 
@@ -57,12 +50,12 @@ ms.lasthandoff: 05/03/2018
   
   |JAR|JDBC 버전 규격|권장 Java 버전|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용할 수 있도록 합니다. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용할 수 있도록 합니다. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 필요합니다. JRE 8.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용할 수 있도록 합니다. |    
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Java Runtime Environment (JRE) 9.0 필요합니다. JRE 8.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.4의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |    
 
 
-  JDBC 드라이버 6.4 Maven 중앙 저장소 및는 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다 사용할 수도 있습니다. XML 
+  JDBC 드라이버 6.4는 Maven 중앙 저장소에서 사용 됩니다 하 고는 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML 
   
  ```xml
 <dependency>
@@ -84,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |mssql-jdbc-6.2.1.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용 합니다. |  
 |mssql-jdbc-6.2.1.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 또는 더 낮은 throw 예외를 사용합니다.<br /><br /> 6.2의 새로운 기능 포함: Linux, Kerberos, 도메인 간 인증에 Kerberos 제한 위임, 쿼리 제한 시간, 소켓 제한 시간은 자동 검색의 SPN에 대 한 영역에 대 한 사용자/암호 방법에 대 한 Azure AD 인증 및 준비 문 핸들 다시 사용|    
 
-  JDBC 드라이버 6.2 Maven 중앙 저장소 및는 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다 사용할 수도 있습니다. XML 
+  JDBC 드라이버 6.2는 Maven 중앙 저장소에서 사용 됩니다 하 고는 POM에 다음 코드를 추가 하 여 Maven 프로젝트에 추가할 수 있습니다. XML 
   
  ```xml
 <dependency>
@@ -115,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 |---------|-----------------|  
 |sqljdbc41.jar|**sqljdbc41.jar** 클래스 라이브러리는 JDBC 4.0 API에 대 한 지원을 제공 합니다. 모든 기능으로는 JDBC 4.0 드라이버는 JDBC 4.0 API 메서드가 포함 됩니다. JDBC 4.1은 지원 되지 않습니다 ("SQLFeatureNotSupportedException" 예외를 throw).<br /><br /> **sqljdbc41.jar** 클래스 라이브러리에는 환경 JRE (Java Runtime) 7.0이 필요 합니다. 사용 하 여 **sqljdbc41.jar** JRE 6.0 또는 5.0에서 예외를 throw 합니다.<br /><br /> 
   
- JDBC 드라이버는 모든 주요 Sun 호환 Java 가상 컴퓨터에서 작동하고 지원되도록 설계되어 있지만 테스트는 Sun JRE 5.0, 6.0 및 7.0 이상에서 수행됩니다.  
+ JDBC 드라이버는 작동 하며 모든 주요 Sun 호환 Java 가상 컴퓨터에서 지원 하도록 만들어졌지만 테스트는 Sun JRE 5.0, 6.0 및 7.0입니다.  
   
  다음은 SQL Server 용 Microsoft JDBC Driver 4.1에 포함 된 JAR 파일에서 제공 된 지원에 대 한 요약입니다.  
   
@@ -134,7 +127,7 @@ ms.lasthandoff: 05/03/2018
   
  데이터 정렬에 대 한 자세한 내용은 "데이터 정렬 사용"을 참조 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 온라인 설명서.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

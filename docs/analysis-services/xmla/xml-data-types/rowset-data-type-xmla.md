@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574795"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 데이터 형식(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[결과 집합](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
 |자식 요소|[행](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
-|파생 요소|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|파생 요소|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  XML은 요소 및 특성 이름에 특정 문자를 허용하지 않습니다. 이 명명 제약 조건을 해결 하기 위해 XML for Analysis (XMLA)에서 정의한 인코딩을 지원 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. XML 1.0 사양에 따라 유효 하지 않은 XML 이름 문자가 포함 된 열 이름에 대 한 XMLA 유효 하지 않은 유니코드 문자를 인코딩하는 데 해당 16 진수 값을 사용 합니다. 16 진수 값은 _x로 이스케이프 됩니다*HHHH*\_여기서 *HHHH* 는 최상위 비트 우선 순서에 있는 문자에 대 한 4 자리 16 진수 ucs-2 코드를 나타냅니다. 예를 들어 XMLA은 "Order Details" 이름에서 공백을 해당 16진수 코드로 바꾸어 Order_x0020_Details로 인코딩합니다.  
   
  인코딩을 하면 XSL(Extensible Stylesheet Language) 변환이 어려워질 수 있습니다. 인코딩되지 않은 열 이름, 실제 빠른 조회를 지원 하기 위해, 추가 된 **sql: field**다음 예제와 같이 각 열에 대 한 XML 행 집합 스키마로 특성:  
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [XML 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

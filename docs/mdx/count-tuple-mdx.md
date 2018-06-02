@@ -1,31 +1,20 @@
 ---
 title: Count (튜플) (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Count function [MDX]
-ms.assetid: c8f4a570-54a8-4c00-ac4b-eef0ebdb353c
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2df1e6b6c68f584b2dc2a28cda03caf766ad456b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 15523d50b928bda0ae32eaa784dad046a4b66d7c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577565"
 ---
 # <a name="count-tuple-mdx"></a>Count(튜플)(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  튜플의 차원 수를 반환합니다.  
   
 ## <a name="example"></a>예제  
@@ -56,10 +45,10 @@ SELECT MEASURES.COUNTTUPLE ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Count &#40;차원&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [Count &#40;계층 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count & #40; 설정 & #41; & #40; Mdx& #41;](../mdx/count-set-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;설정&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

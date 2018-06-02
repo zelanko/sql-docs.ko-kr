@@ -1,31 +1,20 @@
 ---
 title: CoalesceEmpty (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COALESCEEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CoalesceEmpty function
-ms.assetid: c00dd739-44bc-4af6-9871-c7e1e3f3e5ba
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 14a972a7f79039e46ded92f62c748c6cd9577a6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cbd5928e859436b90b986e9e0ea0d09e91ccd664
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577315"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +45,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  첫 번째 문자열 식에서 반환되는 NULL을 대체하는 유효한 문자열 식으로서, 일반적으로 지정된 문자열 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  하나 이상의 숫자 식이 지정 된 된 **CoalesceEmpty** 함수는 비어 있지 않은 값으로 확인 될 수 있는 (왼쪽에서 오른쪽) 첫 번째 숫자 식의 숫자 값을 반환 합니다. 모든 지정된 숫자 식이 비어 있지 않은 값으로 확인될 수 없으면 함수가 빈 셀 값을 반환합니다. 일반적으로 두 번째 숫자 식의 값은 첫 번째 숫자 식에서 반환되는 NULL을 대체하는 숫자 값입니다.  
   
  문자열 식이 하나 이상 지정된 경우 이 함수는 비어 있지 않은 값으로 확인될 수 있는 첫 번째 문자열 식(왼쪽에서 오른쪽의 순서로)의 문자열 값을 반환합니다. 모든 지정된 문자열 식이 비어 있지 않은 값으로 확인될 수 없으면 함수가 빈 셀 값을 반환합니다. 일반적으로 두 번째 문자열 식의 값은 첫 번째 문자열 식에서 반환되는 NULL을 대체하는 문자열 값입니다.  
@@ -89,7 +78,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

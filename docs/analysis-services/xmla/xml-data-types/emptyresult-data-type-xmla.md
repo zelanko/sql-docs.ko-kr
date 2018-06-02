@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9dd3cf815ee616c3519883a59ddcbb8fbd61eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573905"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 데이터 형식(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |기본 데이터 형식|[결과 집합](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|파생 데이터 형식|없음|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
-|파생 요소|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
+|파생 요소|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  일부 XMLA(XML for Analysis) 명령은 결과를 반환하지 않거나 오류로 인해 결과를 반환하지 못할 수 있습니다. 결과를 반환하지 않는 XMLA 명령은 **EmptyResult** 요소의 네임스페이스인 **root** 데이터 형식을 반환합니다.  
   
 ## <a name="example"></a>예제  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [XML 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

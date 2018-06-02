@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403074f1189bafc098f3fb9d76a19552407f0024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574255"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |부모 요소|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |자식 요소|하나 이상의 셀 속성 정의|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **CellInfo** 요소에서 반환 된 다차원 데이터 집합에 포함 된 셀에 대 한 셀 속성의 컬렉션을 포함 한 **루트** 사용 하 여 요소는 **MDDataSet**데이터 형식입니다. 각 셀 속성은 **CellInfo** 요소가 각각 별도 XML 요소에 의해 정의 된는 **이름** 특성 및 **형식** 특성입니다. **이름** XML 요소로 표현 되는 OLAP 셀 속성에 대 한 OLE db 이름에 해당 하는 셀 속성의 특성 및 **형식** 나타내는 셀의 XML 데이터 형식 특성 속성입니다. 에 포함 된 셀에 대 한 셀 속성의 값을 식별 하는 XML 요소의 이름이 사용 됩니다는 **CellData** 의 요소는 **루트** 요소입니다.  
   
  다음은 셀 속성 정의의 구문입니다.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>참고자료
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

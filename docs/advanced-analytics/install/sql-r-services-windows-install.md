@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 86263158581b92af42a7ad1ce9b538b2c1cdbfa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585595"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services(In-Database) 설치 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 설치 및 구성 하는 방법을 설명 **SQL Server 2016 R Services (In-database)**합니다. SQL Server 2016를 설정한 경우 SQL Server에서 R 코드의 실행을 활성화 하려면이 기능을 설치 합니다.
+이 문서에서는 설치 및 구성 하는 방법을 설명 **SQL Server 2016 R Services (In-database)** 합니다. SQL Server 2016를 설정한 경우 SQL Server에서 R 코드의 실행을 활성화 하려면이 기능을 설치 합니다.
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
@@ -50,7 +51,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 ## <a name="bkmk2016top"></a>설치 프로그램 실행
 
-로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
+로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
 
 1. SQL Server 2016에 대 한 설치 마법사를 시작 합니다.
 
@@ -61,7 +62,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 3. 에 **기능 선택** 페이지에서 다음 옵션을 선택 합니다.
 
    - 선택 **데이터베이스 엔진 서비스**합니다. 데이터베이스 엔진은 기계 학습을 사용 하는 각 인스턴스에 필요 합니다.
-   - 선택 **R Services (In-database)**합니다. R입니다. 데이터베이스의 사용에 대 한 지원을 설치
+   - 선택 **R Services (In-database)** 합니다. R입니다. 데이터베이스의 사용에 대 한 지원을 설치
     
      ![R Services 기능 선택](media/2016setup-rsvcs-features.png "이러한 기능에 대 한 R 서비스에 데이터베이스 선택")
 
@@ -77,7 +78,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 6. 에 **설치 준비 완료** 페이지에서 다음 항목은 포함 되어 있으며 다음 선택 **설치**합니다.
 
    + 데이터베이스 엔진 서비스
-   + R Services(In-Database)
+   + R Services(In-database)
 
     경로 아래에 있는 폴더의 위치를 기록 `..\Setup Bootstrap\Log` 구성 파일이 저장 됩니다. 설치가 완료 되 면 요약 파일에서 설치 된 구성 요소를 검토할 수 있습니다.
 
@@ -146,7 +147,7 @@ ervice도 자동으로 다시 시작 하면 관련 [!INCLUDE[rsql_launchpad](../
 
     | hello |
     |----|
-    | 1.|
+    | 1|
 
 ## <a name="bkmk_FollowUp"></a> 기타 고려 사항
 
@@ -257,7 +258,7 @@ SQL Server에 대 한 만드는 R 솔루션 기본 R 함수, SQL Server 및 SQL 
 
 SQL Server에서 사용할 패키지는 인스턴스에서 사용되는 기본 라이브러리에 설치되어야 합니다. 컴퓨터에서 R의 별도 설치 하는 경우 또는 사용자 라이브러리에 패키지를 설치한 경우에 T-SQL에서 이러한 패키지를 사용할 수 없습니다.
 
-설치 및 R 패키지를 관리 하기 위한 프로세스는 SQL Server 2016 및 SQL Server 2017에서 다릅니다. SQL Server 2016에서 데이터베이스 관리자는 사용자가 필요로 하는 R 패키지를 설치 해야 합니다. SQL Server 2017 년 데이터베이스 수준에서 패키지 공유 사용자 그룹을 설정할 수도 있고 사용자가 자신의 패키지를 설치할 수 있도록 데이터베이스 역할을 구성할 수 있습니다. 자세한 내용은 참조 [관리 패키지](../r/r-package-management-for-sql-server-r-services.md)합니다.
+설치 및 R 패키지를 관리 하기 위한 프로세스는 SQL Server 2016 및 SQL Server 2017에서 다릅니다. SQL Server 2016에서 데이터베이스 관리자는 사용자가 필요로 하는 R 패키지를 설치 해야 합니다. SQL Server 2017 년 데이터베이스 수준에서 패키지 공유 사용자 그룹을 설정할 수도 있고 사용자가 자신의 패키지를 설치할 수 있도록 데이터베이스 역할을 구성할 수 있습니다. 자세한 내용은 참조 [새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)합니다.
 
 
 ## <a name="get-help"></a>도움말 보기

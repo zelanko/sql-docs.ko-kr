@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcbd6e0315fc8a418ccff20fe5c2a69eebe4490b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576265"
 ---
 # <a name="servermode-element"></a>ServerMode 요소
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|(없음)|  
@@ -43,18 +44,18 @@ ms.lasthandoff: 05/10/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서버는 다음 모드 중 하나에서 작동합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |*다차원*|다차원 및 데이터 마이닝 모드|  
 |*테이블 형식*|테이블 형식 모드|  
 |*SharePoint*|SharePoint 모드|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

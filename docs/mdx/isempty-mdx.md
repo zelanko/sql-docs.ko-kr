@@ -1,31 +1,20 @@
 ---
 title: IsEmpty (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ISEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsEmpty function
-ms.assetid: b4a50996-61d1-4e23-8003-7d530195ea72
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6cc77efe9a3c7c3c1b9801f0545c785f6934e290
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578715"
 ---
 # <a name="isempty-mdx"></a>IsEmpty(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  일반적으로 멤버나 튜플의 셀 좌표를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **IsEmpty** 함수에서 반환 **true** 평가 식이 빈 셀 값이 있습니다. 그렇지 않으면이 함수가 반환 **false**합니다.  
   
 > [!NOTE]  
@@ -69,8 +58,8 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [빈 값 작업](../mdx/working-with-empty-values.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

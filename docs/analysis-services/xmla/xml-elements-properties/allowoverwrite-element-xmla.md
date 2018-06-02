@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1350d7fba1800f2ec0ea38a6ed57b776e163919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577525"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|Boolean|  
 |기본값|False|  
@@ -43,16 +44,16 @@ ms.lasthandoff: 05/10/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Backup** 명령의 경우 **AllowOverwrite** 요소는 명령으로 **File** 요소에 지정된 백업 파일을 덮어쓸 수 있는지 여부를 결정합니다.  
   
- 에 대 한 **복원** 요소는 **AllowOverwrite** 요소 명령을 덮어쓸 수 있는지 여부를 결정은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 에지정된데이터베이스**DatabaseName** 요소입니다.  
+ 에 대 한 **복원** 요소는 **AllowOverwrite** 요소는 명령에 지정 된 Analysis Services 데이터베이스를 덮어쓸 수 있는지 여부를 결정은 **DatabaseName** 요소입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [DatabaseName 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   
  [파일 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)   
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

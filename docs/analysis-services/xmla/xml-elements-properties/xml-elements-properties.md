@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53ed40e206e25b2e8f2c770cd68a9c4662ac0268
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577965"
 ---
 # <a name="xml-elements---properties"></a>XML 요소-속성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/10/2018
 |[PartitionID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)||  
 |[Password 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)||  
 |[Properties 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)||  
-|[PropertyList 요소 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
+|[PropertyList 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)||  
 |[요소를 쿼리 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)||  
 |[쿼리 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)||  
 |[RequestType 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)||  
@@ -149,8 +150,8 @@ ms.lasthandoff: 05/10/2018
 |[여기서 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)||  
 |[WritebackTableCreation 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/writebacktablecreation-element-xmla.md)||  
   
-## <a name="see-also"></a>관련 항목:  
- [XML 데이터 형식 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [XML 요소 & #40; XMLA & #41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
+## <a name="see-also"></a>참고자료
+ [XML 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [XML 요소 &#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   

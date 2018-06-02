@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6e0fe3fa36a5a330e1b4fee926c0d2e4b10d809f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585229"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server에 대 한 R 패키지 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +58,7 @@ Microsoft R입니다. 최신 버전을 사용 하는 인스턴스를 업그레�
 
 패키지 관리 기능을 사용 하 여 새 패키지를 추가할 때마다 SQL Server 및 파일 시스템의 레코드 업데이트 됩니다. 전체 데이터베이스에 대 한 패키지 정보를 복원 하려면이 정보를 사용할 수 있습니다.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 
 + 패키지 동기화 함수를 실행 하는 사람은 보안은 SQL Server 인스턴스 및 패키지가 있는 데이터베이스에 사용자 여야 합니다.
 
@@ -123,4 +124,4 @@ rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", 
 
 ## <a name="related-resources"></a>관련 리소스
 
-[SQL Server에 대한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)
+[SQL Server에 대한 R 패키지 관리](install-additional-r-packages-on-sql-server.md)

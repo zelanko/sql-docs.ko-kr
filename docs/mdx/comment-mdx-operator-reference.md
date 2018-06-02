@@ -1,32 +1,20 @@
 ---
 title: -(주석) (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- --
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- commenting characters
-- -- (comment character)
-ms.assetid: 02aec133-6809-4829-b9a2-102c376e21da
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d988fe442b0bc7c00e56aa08e8a9a421f214c6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 564327619cabc00684b064585aa323c9426597c2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577375"
 ---
 # <a name="comment---mdx-operator-reference"></a>메모-MDX 연산자 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  *Comment_Text*  
  주석 텍스트를 포함하는 문자열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  설명은 별도의 줄에 삽입하거나 MDX 스크립트 줄 끝에 중첩하거나 MDX 문 내에 중첩할 수 있습니다. 서버는 주석을 평가하지 않습니다.  
   
  이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다.  --으로 입력된 주석은 새 줄 문자로 구분됩니다.  
@@ -67,8 +55,8 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [설명 & #40; Mdx& #41;](../mdx/comment-mdx.md)   
+## <a name="see-also"></a>관련 항목  
+ [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
  [&#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

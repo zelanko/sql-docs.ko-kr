@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226712010118a54ac1c5350e128bf50cc261a128
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585745"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 함수를 SQL Server 데이터와 함께 사용하기(SQL에서 R 빠른 시작)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,12 +72,6 @@ AS
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>관련 리소스
-
-+ 더 많은 고급 통계 함수를 사용하기 위해 추가 R 패키지를 설치하시겠습니까? [R 패키지를 관리 및 설치](../r/installing-and-managing-r-packages.md)를 참조합니다.
-
-+ Microsoft R 팀에서 새로운 R 패키지인 **sqlrutils**를 제공합니다. 이는 R 코드를 SQL Server 저장 프로시저에서 쉽게 사용할 수 있는 매개변수 형태로 변환해줍니다. 자세한 내용은 [sqlrutils를 사용하여 저장된 프로시저를 만드는 방법](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)을 참조합니다.
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>문제 해결에 R 유틸리티 함수 사용
 

@@ -1,31 +1,20 @@
 ---
 title: IsGeneration (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ISGENERATION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsGeneration function
-ms.assetid: fd11d2e0-d81d-45af-ac45-c98634d05550
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b40d895af5298cf3538280a3875363401819930d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 938ed8cbfab24643ceb1294a3831290c43e1bb5c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578645"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ IsGeneration(Member_Expression, Generation_Number)
  *Generation_Number*  
  지정된 멤버가 평가되는 기준 세대를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **IsGeneration** 함수에서 반환 **true** 지정된 된 멤버의 지정 된 세대 번호에 있으면 합니다. 그렇지 않으면 함수가 반환 **false**합니다. 또한 지정 된 멤버가 빈 멤버 이면로 평가 되 면는 **IsGeneration** 함수에서 반환 **false**합니다.  
   
  세대 인덱싱을 위해 리프 멤버는 세대 인덱스 0입니다. 리프가 아닌 멤버의 세대 인덱스는 지정된 멤버에 대한 모든 자식 멤버의 합집합에서 가장 높은 세대 인덱스를 가져와서 1을 더하는 방식으로 결정됩니다. 리프가 아닌 멤버의 세대 인덱스의 결정 방법으로 인해 리프가 아닌 특정 멤버는 둘 이상의 세대에 속할 수 있습니다.  
@@ -64,7 +53,7 @@ IsGeneration(Member_Expression, Generation_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

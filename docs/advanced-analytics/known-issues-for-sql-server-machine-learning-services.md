@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563861"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +23,7 @@ ms.lasthandoff: 04/16/2018
 
 SQL Server 2016
 
-- R Services(In-Database)
+- R Services(In-database)
 - Microsoft R Server(독립 실행형)
 
 SQL Server 2017
@@ -96,7 +97,7 @@ R 코드를 실행 하면 SQL Server 2016 계산 컨텍스트, 다음과 같은 
 + 설치 마법사를 사용 하 여 클라이언트 컴퓨터에 R Server (독립 실행형) 설치 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]합니다.
 + Microsoft R Server를 사용 하 여 설치한는 [Windows installer 구분](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)합니다.
 
-서버와 클라이언트에 사용 해야 할 수는 동일한 버전 사용 하는지 확인 하려면 _바인딩_(SQL Server 2016의 경우 R 구성 요소를 업그레이드 하려면 Microsoft R Server 9.0 및 이상 버전에 대 한 지원). 여부를 확인 하려면 R 서비스 버전 참조에 대 한 업그레이드를 사용할 수에 대 한 지원이 [SqlBindR.exe를 사용 하 여 R 서비스의 인스턴스를 업그레이드](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+서버와 클라이언트에 사용 해야 할 수는 동일한 버전 사용 하는지 확인 하려면 _바인딩_(SQL Server 2016의 경우 R 구성 요소를 업그레이드 하려면 Microsoft R Server 9.0 및 이상 버전에 대 한 지원). 여부를 확인 하려면 R 서비스 버전 참조에 대 한 업그레이드를 사용할 수에 대 한 지원이 [SqlBindR.exe를 사용 하 여 R 서비스의 인스턴스를 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
 **적용 대상:** R server 9.0.0 버전 SQL Server 2016 R Services 또는 이전 버전
 
@@ -452,7 +453,7 @@ Revolution R Enterprise에 대 한 기존 라이선스를 설정한 경우 둘 �
 
 SQLite ODBC 드라이버의 수정 버전 0.92는 RevoScaleR과 호환 되지 않습니다. 수정 버전 0.88 ~ 0.91 및 0.93 이상은 및 나중에 호환 가능한 것으로 알려져 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
 

@@ -9,21 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e65ba594cee3bf24679326a9d0cd75451034b9ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0edfa63feef9af48290e5fe845d9c0cf02f53e29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574595"
 ---
 # <a name="xml-elements---commands"></a>XML 요소-명령
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   이 참조 섹션 내에서 사용할 수 있는 Analysis (XMLA) 요소에 대 한 XML이 포함 되어는 **명령** 중 요소는 **Execute** 메서드를 호출 합니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[Alter 요소 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|사용 하는 Analysis Services Scripting Language (ASSL) 요소를 포함 된 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 개체의 인스턴스를 변경 하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.|  
-|[Backup 요소](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스를 백업 파일에 백업합니다.|  
-|[일괄 처리 요소](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]인스턴스에서 하나 이상의 XMLA(XML for Analysis) 명령을 일괄 처리 작업(순차 또는 병렬)으로 수행합니다.|  
+|[Alter 요소(XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|사용 하는 Analysis Services Scripting Language (ASSL) 요소가 포함 되어는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 Analysis Services 인스턴스에서 개체를 변경 합니다.|  
+|[Backup 요소](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|백업 파일에는 Analysis Services 데이터베이스를 백업 합니다.|  
+|[일괄 처리 요소](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|순차적으로 또는 Analysis Services의 인스턴스에서 동시에 하나 이상의 XML Analysis (XMLA) 명령에 대 한 일괄 처리 작업으로 수행합니다.|  
 |[BeginTransaction 요소](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Analysis Services 인스턴스로 현재 세션에서 트랜잭션을 시작합니다.|  
 |[Cancel 요소](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Analysis Services 인스턴스에서 현재 실행 중인 명령을 취소합니다.|  
 |[ClearCache 요소](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Analysis Services 인스턴스에서 지정된 개체의 메모리 캐시를 지웁니다.|  

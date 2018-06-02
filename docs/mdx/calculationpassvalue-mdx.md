@@ -1,31 +1,20 @@
 ---
 title: CalculationPassValue (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CALCULATIONPASSVALUE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CalculationPassValue function
-ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f15c5cec26e55a403bea58883cf5de978b6a2b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577235"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +50,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  이 플래그가 설정되면 저장소 엔진에서 로드되는 값을 제외하고 모든 값이 Null입니다. 이 플래그가 설정되지 않으면 계산이 적용되지 않고 값이 집계됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  숫자 식이 지정된 경우 이 함수는 지정된 계산 패스에서 특정 MDX 숫자 식을 계산하여 숫자 값을 반환합니다. 선택적으로 액세스 플래그 및 액세스 플래그 한정자에 의해 계산 패스가 한정될 수도 있습니다.  
   
  문자열 식이 제공 되는 함수 지정한 계산 패스에서 특정된 MDX 문자열 식을 계산 하 여 문자열 값을 반환 하 고 선택적으로 액세스 플래그 및 액세스 플래그 한정자에 의해 수정*합니다.*  
@@ -71,9 +60,9 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 > [!NOTE]  
 >  관리자만 사용할 수는 **CalculationPassValue** MDX 스크립트 내의 함수입니다. 이 함수가 포함된 MDX 스크립트가 관리자 권한이 없는 작업의 컨텍스트로 실행되면 오류가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [CalculationCurrentPass & #40; Mdx& #41;](../mdx/calculationcurrentpass-mdx.md)   
+## <a name="see-also"></a>관련 항목  
+ [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

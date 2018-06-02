@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14cbfaf2e50a2eb77b3918317113823a342857cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576246"
 ---
 # <a name="security-element-xmla"></a>Security 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*SkipMembership*|  
@@ -43,10 +44,10 @@ ms.lasthandoff: 05/10/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[백업](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [복원](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
- **보안** 요소에 역할 및 권한과 같은 보안 정의 정의 하는지 여부를 결정 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스 백업 또는 각각시복원되는지**백업** 또는 **복원** 명령입니다. 또한 이 요소는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 **Backup** 또는 **Restore** 명령의 일부로 포함할지 여부를 결정합니다.  
+## <a name="remarks"></a>Remarks  
+ **보안** 요소에는 Analysis Services 데이터베이스 백업 또는 각각 시, 복원 되는지 여부에 정의 된 역할 및 권한과 같은 보안 정의 결정 한 **백업** 또는 **복원** 명령입니다. 또한 이 요소는 보안 정의의 멤버로 정의된 Windows 사용자 계정 및 그룹을 **Backup** 또는 **Restore** 명령의 일부로 포함할지 여부를 결정합니다.  
   
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
@@ -56,8 +57,8 @@ ms.lasthandoff: 05/10/2018
 |*CopyAll*|**Backup** 또는 **Restore** 명령 중에 보안 정의 및 멤버 정보가 포함됩니다.|  
 |*IgnoreSecurity*|**Backup** 또는 **Restore** 명령 중에 보안 정의가 제외됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [SynchronizeSecurity 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
