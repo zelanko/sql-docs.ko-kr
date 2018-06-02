@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586075"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스의 새로운 기능 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 | 초기 릴리스 |[**데이터베이스에서 분석에 대 한 Python 통합**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>[revoscalepy](python/what-is-revoscalepy.md) 패키지는 RevoScaleR Python 동일 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트 모든 병렬화 하 고 원격 연산 컨텍스트로에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지의 여러 데이터 소스 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 합니다. 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. <br/><br/>[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 패키지는 MicrosoftML R 패키지 Python 동일 합니다.<br/><br/>T-SQL 및 Python 통합을 통해 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다. 이 저장된 프로시저를 사용 하 여 모든 Python 코드를 호출할 수 있습니다. 이 보안 인프라 Python 모델 및 간단한 저장된 프로시저를 사용 하 여 응용 프로그램에서 호출할 수 있는 스크립트의 엔터프라이즈 수준의 배포를 사용 합니다. Python 및 MPI 링 병렬화 SQL는 스트리밍 데이터 추가 성능 향상. <br/><br/>T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-sql.md) 수행 하는 함수 [기본 점수 매기기](sql-native-scoring.md) 필요한 이진 형식으로 이전에 저장 된 미리 학습 된 모델에 있습니다.|
 | 초기 릴리스 | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) 학습 알고리즘 및 데이터 변환 크기 조정 된 또는 실행 원격 계산 컨텍스트를 될 수 있는 최신 상태 컴퓨터를 포함 합니다. 알고리즘은 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀, 로지스틱 회귀를 포함 됩니다. |
 | 초기 릴리스 | [**미리 학습 된 모델** ](r/install-pretrained-models-sql-server.md) 이미지 인식 및 긍정 음수가 감성 분석에 대 한 합니다. 자신만 데이터에 대 한 예측을 생성 하려면 이러한 모델을 사용 합니다. |
-| 초기 릴리스 | [**관리 패키지**](r/r-package-management-for-sql-server-r-services.md), 다음과 같은 주요 기능과 포함 하 여: 데이터베이스 dba가 패키지 관리 패키지를 설치할 권한을 할당할 수 있도록 역할 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 에 t-sql 문 도움말 Dba R, 알 필요 없이 패키지를 관리 및 다양 한 R 함수가 [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) 설치, 제거 또는 패키지 나열 하려면 사용자가 소유 합니다. |
+| 초기 릴리스 | [**R 패키지 관리**](r/install-additional-r-packages-on-sql-server.md), 다음과 같은 주요 기능과 포함 하 여: 데이터베이스 dba가 패키지 관리 패키지를 설치할 권한을 할당할 수 있도록 역할 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 에 t-sql 문 도움말 Dba R, 알 필요 없이 패키지를 관리 및 다양 한 R 함수가 [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) 설치, 제거 또는 패키지 나열 하려면 사용자가 소유 합니다. |
 | 초기 릴리스 | [**Mrsdeploy 통해 해결해줍니다** ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) 배포 하 고 R 스크립트를 웹 서비스로 호스팅에 대 한 합니다. R 스크립트에만 사용 (Python 해당 키 없음)에 적용 됩니다. 독립 실행형 서버 옵션 다른 SQL Server 작업과 리소스 경합을 방지 하기 위한 것입니다. |
 
 

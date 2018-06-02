@@ -1,41 +1,20 @@
 ---
 title: MDX 함수 참조 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- member functions [MDX]
-- level functions [MDX]
-- MDX [Analysis Services], functions
-- array functions
-- string functions
-- Multidimensional Expressions [Analysis Services], functions
-- hierarchy functions [MDX]
-- numeric functions [MDX]
-- tuple functions
-- subcube functions [MDX]
-- functions [MDX]
-- logical functions [MDX]
-- set functions [MDX]
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8f0be993df9a930e175de9d33aaff92271cda329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580035"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 함수 참조(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +25,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="array-functions"></a>배열 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|사용자 정의 함수에서 사용하기 위해 하나 이상의 집합을 배열로 변환합니다.|  
   
 ## <a name="hierarchy-functions"></a>계층 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[계층 구조 &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|지정한 멤버 또는 수준을 포함하고 있는 계층을 반환합니다.|  
 |[차원 &#40;MDX&#41;](../mdx/dimension-mdx.md)|지정한 멤버, 수준, 계층을 포함하고 있는 차원을 반환합니다.|  
@@ -60,14 +39,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="level-functions"></a>수준 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[수준 &#40;MDX&#41;](../mdx/level-mdx.md)|멤버의 수준을 반환합니다.|  
 |[수준 &#40;MDX&#41;](../mdx/levels-mdx.md)|차원 또는 계층에서의 위치가 숫자 식에 의해 지정되거나 이름이 문자열 식에 의해 지정되는 수준을 반환합니다.|  
   
 ## <a name="logical-functions"></a>논리 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|지정한 멤버가 지정한 다른 멤버의 상위 항목인지 여부를 반환합니다.|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|평가 식이 빈 셀 값인지 여부를 반환합니다.|  
@@ -77,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="member-functions"></a>멤버 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[상위 &#40;MDX&#41;](../mdx/ancestor-mdx.md)|지정한 수준 또는 거리에서 멤버의 상위 항목을 반환합니다.|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|지정한 수준에서 멤버의 하위 항목 중 마지막 형제 항목을 반환합니다.|  
@@ -105,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="numeric-functions"></a>숫자 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[집계 &#40;MDX&#41;](../mdx/aggregate-mdx.md)|측정값 또는 지정한 집합의 튜플에 대해 선택적으로 지정한 숫자 식을 집계하여 계산한 스칼라 값을 반환합니다.|  
 |[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|지정한 집합에 대해 계산된 측정값의 평균값 또는 숫자 식(옵션)의 평균값을 반환합니다.|  
@@ -148,7 +127,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="set-functions"></a>집합 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|계산 멤버를 지정한 집합에 추가하여 생성된 집합을 반환합니다.|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|계산 멤버를 비롯하여 지정한 차원, 계층 또는 수준의 모든 멤버가 포함된 집합을 반환합니다.|  
@@ -204,7 +183,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="string-functions"></a>문자열 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[CalculationPassValue&#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|빈 셀 값을 숫자 또는 문자열에 결합하고 결합된 값을 반환합니다.|  
@@ -213,7 +192,7 @@ ms.lasthandoff: 05/03/2018
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|같은 데이터베이스에서 지정된 또 다른 큐브에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|지정된 멤버에 해당하는 MDX 형식 문자열을 반환합니다.|  
 |[이름 &#40;MDX&#41;](../mdx/name-mdx.md)|차원, 계층, 수준 또는 멤버의 이름을 반환합니다.|  
-|[속성 & #40; Mdx& #41;](../mdx/properties-mdx.md)|멤버 속성 값을 포함하는 문자열 또는 강력한 형식의 값을 반환합니다.|  
+|[속성 &#40;MDX&#41;](../mdx/properties-mdx.md)|멤버 속성 값을 포함하는 문자열 또는 강력한 형식의 값을 반환합니다.|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|지정된 집합에 해당하는 MDX 형식 문자열을 반환합니다.|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|지정된 튜플에 해당하는 MDX 형식 문자열을 반환합니다.|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|지정한 차원, 계층, 수준 또는 멤버의 고유 이름을 반환합니다.|  
@@ -221,14 +200,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="subcube-functions"></a>하위 큐브 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
-|[이 & #40; Mdx& #41;](../mdx/this-mdx.md)|현재 하위 큐브를 반환합니다.|  
+|[이 &#40;MDX&#41;](../mdx/this-mdx.md)|현재 하위 큐브를 반환합니다.|  
 |[둡니다 &#40;MDX&#41;](../mdx/leaves-mdx.md)|지정한 차원, 멤버 또는 튜플의 리프 멤버 집합을 반환합니다.|  
   
 ## <a name="tuple-functions"></a>튜플 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[현재 &#40;MDX&#41;](../mdx/current-mdx.md)|반복하는 동안 집합에서 현재 튜플을 반환합니다.|  
 |[항목 &#40;튜플&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|집합에서 튜플을 반환합니다.|  
@@ -237,11 +216,11 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="other-functions"></a>기타 함수  
   
-|함수|Description|  
+|기능|Description|  
 |--------------|-----------------|  
 |[오류 &#40;MDX&#41;](../mdx/error-mdx.md)|오류를 발생시킵니다. 지정된 오류 메시지를 제공할 수도 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

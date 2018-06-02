@@ -1,32 +1,20 @@
 ---
 title: ': (범위) (MDX) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ':'
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ': (range operator)'
-- range operator (:)
-ms.assetid: f9b36aca-4efd-49b4-9e4f-12914c1b24a6
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5dd15009a01d51ef50d7dadf8ff9b5d6290d20d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 152158128a58cc2df12c0975b9c00976800fe64d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581195"
 ---
 # <a name="-range-mdx"></a>: (범위) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +35,7 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>반환 값  
  지정된 멤버를 포함하는 집합과 지정된 멤버 사이의 모든 멤버입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  두 매개 변수는 모두 특정 차원과 동일한 수준 및 계층 내에서 멤버를 지정해야 합니다. 매개 변수가 모두 동일한 멤버를 지정 하는 경우는 **: (범위)** 연산자는 지정 된 멤버만 포함 하는 집합을 반환 합니다. 첫 번째 매개 변수가 Null인 경우 집합에는 두 번째 매개 변수에 지정된 멤버 수준의 처음부터 해당 멤버까지 포함하여 모든 멤버가 들어 있습니다. 두 번째 매개 변수가 Null인 경우 집합에는 첫 번째 매개 변수에 지정된 멤버에서 동일한 수준의 마지막 멤버까지 포함하여 모든 멤버가 들어 있습니다.  
   
  MDX에는 이 집합 연산자에 해당하는 기능이 없습니다.  
@@ -74,7 +62,7 @@ WHERE
     ([Measures].[Freight Per Customer])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

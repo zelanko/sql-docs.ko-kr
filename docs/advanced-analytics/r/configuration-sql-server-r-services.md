@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585505"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>구성 및 SQL Server의 시스템 학습 구성 요소 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
 이러한 문서, SQL Server 인스턴스에서 새 R 패키지를 설치 하 고, R 패키지 라이브러리를 관리 하 고, 데이터베이스 복원 후 패키지 라이브러리를 복원 하는 방법을 설명 합니다.
 
-+ [R 패키지 설치 및 관리](installing-and-managing-r-packages.md)
++ [SQL Server에 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)
 + [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 + [데이터베이스 역할을 사용 하 여 인스턴스에 대 한 패키지 관리를 사용 하도록 설정](r-package-how-to-enable-or-disable.md)
 + [MiniCRAN를 사용 하 여 로컬 패키지 리포지토리 만들기](create-a-local-package-repository-using-minicran.md)

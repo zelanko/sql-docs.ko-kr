@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585965"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 컴퓨터 학습 및 R Services (In-database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,8 +125,8 @@ T-SQL 스크립트 내에서 Python 또는 R 함수를 호출 합니다.
 **리소스**
 
 + [R에 대 한 리소스 관리](resource-governance-for-r-services.md)
-+ [SQL Server에 대 한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)
++ [SQL Server에 대 한 R 패키지 관리](install-additional-r-packages-on-sql-server.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
  [SQL Server 컴퓨터 학습 및 R Server (독립 실행형)](sql-server-r-services.md)

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586045"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 관리자 
 
 Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참조 [R 서버-새로운](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)합니다.
 
-참고 SQL Server에서 패키지 관리 시스템 평균이 동일한 패키지를 공유 하거나 같은 패키지의 다른 버전을 사용 하 여 여러 사용자가 여러 버전의 R 패키지는 동일한 컴퓨터에 설치할 수 있습니다. 자세한 내용은 참조 [SQL Server에서 R 패키지 관리](../r/r-package-management-for-sql-server-r-services.md)합니다.
+참고 SQL Server에서 패키지 관리 시스템 평균이 동일한 패키지를 공유 하거나 같은 패키지의 다른 버전을 사용 하 여 여러 사용자가 여러 버전의 R 패키지는 동일한 컴퓨터에 설치할 수 있습니다. 자세한 내용은 참조 [SQL Server에서 R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md)합니다.
 
 ## <a name="r-and-sql-data-types"></a>R 및 SQL 데이터 형식
 
@@ -46,7 +47,7 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 
 다음 표는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터를 R 스크립트에 사용한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 반환할 때 데이터 형식 및 값의 변화를 보여줍니다.
 
-|SQL 유형|R 클래스|RESULT SET 형식|설명|
+|SQL 유형|R 클래스|RESULT SET 형식|주석|
 |-|-|-|-|
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|입력 매개 변수 및 출력으로만 허용됨|
@@ -147,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1.|1.|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1.|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져옵니다. 이 함수는 다음 정보를 반환합니다.
 
@@ -166,7 +167,7 @@ R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져
   
 -   **열 C2**: 이 열은 **ssNoversion** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], R에서 `factor` , 출력 결과 집합에서 **varchar(max)** 로 표시됩니다.  
   
-     출력이 어떻게 달라지는지 확인하십시오. R의 문자열(인수 또는 일반 문자열)은 문자열의 길이와 상관없이 **varchar(max)**로 표시됩니다.  
+     출력이 어떻게 달라지는지 확인하십시오. R의 문자열(인수 또는 일반 문자열)은 문자열의 길이와 상관없이 **varchar(max)** 로 표시됩니다.  
   
 -   **열 C3**:  이 열은 **ssNoversion** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], R에서 `character` , 출력 결과 집합에서 **varchar(max)** 로 표시됩니다.
   
@@ -187,6 +188,6 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [Python 라이브러리 및 데이터 형식](../python/python-libraries-and-data-types.md)

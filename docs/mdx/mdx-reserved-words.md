@@ -1,31 +1,20 @@
 ---
 title: MDX 예약어 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- reserved words [MDX]
-- Multidimensional Expressions [Analysis Services], reserved words
-- MDX [Analysis Services], reserved words
-ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6146638812b42553aceee2819d9ceb6d86cd898f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 18ca96f8788d8ecb9b8567af30ec67570e2b4dae
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579805"
 ---
 # <a name="mdx-reserved-words"></a>MDX 예약어
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 |ALLMEMBERS|DISTINCTCOUNT|LINREGR2|STDDEV|  
 |ANCESTOR|DRILLDOWNLEVEL|LINREGSLOPE|STDDEVP|  
 |ANCESTORS|DRILLDOWNLEVELBOTTOM|LINREGVARIANCE|STDEV|  
-|및|DRILLDOWNLEVELTOP|LOOKUPCUBE|STDEVP|  
+|AND|DRILLDOWNLEVELTOP|LOOKUPCUBE|STDEVP|  
 |AS|DRILLDOWNMEMBER|MAX|STORAGE|  
 |ASC|DRILLDOWNMEMBERBOTTOM|MEASURE|STRIPCALCULATEDMEMBERS|  
 |ASCENDANTS|DRILLDOWNMEMBERTOP|MEDIAN|STRTOMEMBER|  
@@ -52,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
+|BEFORE_AND_AFTER|error|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -64,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|OR|UNION|  
+|CELL|GLOBAL|또는|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -74,9 +63,9 @@ ms.lasthandoff: 05/03/2018
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|VALUE|  
+|COUNT|INDEX|PROPERTY|Value|  
 |COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|VARIANCE|  
+|COVARIANCE|IS|RANK|분산|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARP|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -89,8 +78,8 @@ ms.lasthandoff: 05/03/2018
 |DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [예약 된 키워드 &#40;MDX 구문&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

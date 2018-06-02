@@ -3,8 +3,6 @@ title: '방법: SQLSRV 드라이버를 사용 하 여 I/O 매개 변수를 검�
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563931"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 > 초기화되거나 **null**, **날짜/시간**또는 스트림 형식으로 업데이트되는 변수는 출력 매개 변수로 사용할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example-1"></a>예 1
 다음 예제에서는 지정된 직원이 사용할 수 있는 휴가 시간에서 사용한 휴가 시간을 빼는 저장 프로시저를 호출합니다. 사용한 휴가 시간을 나타내는 변수 *$vacationHrs*가 저장 프로시저에 입력 매개 변수로 전달됩니다. 사용할 수 있는 휴가 시간을 업데이트한 다음 저장 프로시저는 동일한 매개 변수를 사용하여 나머지 휴가 시간 수를 반환합니다.  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > 값의 범위 밖에 있는 될 수 있습니다 하는 경우는 입/출력 매개 변수는 bigint 형식에 바인딩할 때는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), SQL 필드 유형을 해당 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "값 범위를 벗어났습니다" 예외가 발생할 수 있습니다.
 
-## <a name="example"></a>예제  
+## <a name="example-2"></a>예제 2
 이 코드 예제를 입/출력 매개 변수로 큰 bigint 값을 바인딩하는 방법을 보여 줍니다.  
 
 ```
@@ -156,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

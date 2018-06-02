@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563761"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ SQL Server 2016 및 2017에서 사용할 수 있습니다는 **로컬** 또는 *
 
 ## <a name="factors"></a>요소
 
-R 언어에는 범주 데이터에 대 한 특별 한 변수는 "요소" 개념이 있습니다. 데이터 과학자 often의 수식에 인수 변수를 사용, 데이터 확인 요소로 범주 변수를 처리 하기 때문에 컴퓨터 학습 함수로 올바르게 처리 됩니다. 자세한 내용은 참조 하십시오. [for Dummies R: 비율 변수] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)합니다.
+R 언어에는 범주 데이터에 대 한 특별 한 변수는 "요소" 개념이 있습니다. 데이터 과학자 often의 수식에 인수 변수를 사용, 데이터 확인 요소로 범주 변수를 처리 하기 때문에 컴퓨터 학습 함수로 올바르게 처리 됩니다. 자세한 내용은 참조 [for Dummies R: 비율 변수](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)합니다.
 
 기본적으로 정수 및 저장소 또는 처리를 위해 다시 백 비율 변수 문자열에서 변환할 수 있습니다. R `data.frame` 하지 않는 한 함수 인수 변수로 모든 문자열을 처리 인수 *stringsAsFactors* 로 설정 된 **False**합니다. 따라서 처리를 위해 정수로 변환 되 고 원래 문자열에 다시 매핑될 다음 문자열은 자동으로.
 

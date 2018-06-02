@@ -1,31 +1,20 @@
 ---
 title: SetToArray (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SETTOARRAY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SetToArray function
-ms.assetid: e408c626-3a2a-4ce9-aeb4-247301334893
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8d444aa9a01867cc6ba91d340ddaf7a6c7005764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2239249c7372c7132861fbcb74dbe5079a4ae4eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581005"
 ---
 # <a name="settoarray-mdx"></a>SetToArray(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **SetToArray** 함수 하나 이상의 집합을 사용자 정의 함수에서 사용할 배열로 변환 합니다. 결과 배열의 차원 수는 지정된 집합의 수와 같습니다.  
   
  숫자 식(옵션)은 배열 셀에 값을 제공할 수 있습니다. 숫자 식이 지정되지 않은 경우 현재 컨텍스트에서 집합의 크로스 조인이 계산됩니다.  
@@ -71,7 +60,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

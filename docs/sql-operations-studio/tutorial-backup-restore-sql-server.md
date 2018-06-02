@@ -13,11 +13,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df4eca076f18ce5b75a36d05c8ee26965d6a3bae
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 22a453caa9d29432381da6861a0f0c4e3e61d77e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582455"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>백업 및 복원을 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/18/2018
 
 4. 클릭 **복원**
 
-5. 복원 작업의 상태를 보려면 클릭 **CTRL + T** 열려는 **작업 기록** 사이드바 합니다.
+5. 복원 작업의 상태를 확인 하려면 다음을 눌러 **CTRL + T** 열려는 **작업 기록** 사이드바 합니다.
 
    ![복원(restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

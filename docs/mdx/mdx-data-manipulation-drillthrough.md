@@ -1,33 +1,20 @@
 ---
 title: DRILLTHROUGH 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLTHROUGH
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DRILLTHROUGH statement
-- retrieving data
-- data retrieval [MDX]
-ms.assetid: dfa22755-0ed4-4bba-9c31-7ade26d9ebdb
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ed158039ec7d6a4f969ef155542599821daa5fb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580065"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 드릴스루
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +42,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  쉼표로 구분된 차원 특성 및 측정값 목록입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  드릴스루는 최종 사용자가 세부 정보를 가져오기 위해 큐브에서 단일 셀을 선택하고 해당 셀의 원본 데이터에서 결과 집합을 검색하는 작업입니다. 기본적으로 드릴스루 결과 집합은 선택한 큐브 셀 값을 계산하기 위해 평가된 테이블 행에서 파생됩니다. 최종 사용자가 드릴스루하려면 해당 클라이언트 응용 프로그램에서 이 기능을 지원해야 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 결과 ROLAP 파티션 또는 차원을 쿼리하지 않는 한 MOLAP 저장소에서 직접 검색 됩니다.  
   
 > [!IMPORTANT]  
@@ -110,7 +97,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

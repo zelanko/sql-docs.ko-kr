@@ -1,33 +1,20 @@
 ---
 title: 식 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- identifiers [MDX]
-- expressions [MDX]
-- expressions [MDX], about expressions
-- MDX [Analysis Services], expressions
-- Multidimensional Expressions [Analysis Services], expressions
-ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e199f69578b2e4407d93788fdab966531425103a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579485"
 ---
 # <a name="expressions-mdx"></a>식(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,8 +84,8 @@ WHERE [Product].[Category].[Bikes]
 |[스칼라 식 사용](../mdx/using-scalar-expressions.md)|스칼라 식을 정의합니다.|  
 |[빈 값 작업](../mdx/working-with-empty-values.md)|비어 있는 값의 의미와 처리 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

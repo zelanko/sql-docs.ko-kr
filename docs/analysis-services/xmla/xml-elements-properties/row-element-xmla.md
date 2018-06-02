@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576215"
 ---
 # <a name="row-element-xmla"></a>row 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  [Discover](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 또는 [Execute](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드 호출에서 반환하는 테이블 형식의 데이터가 들어 있는 [root](../../../analysis-services/xmla/xml-elements-methods-execute.md) 요소의 단일 데이터 행을 포함합니다.  
+  에 대 한 데이터의 단일 행을 포함 한 [루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) 요소에서 반환 된 테이블 형식 데이터를 포함 하는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 또는 [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) ( [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) 데이터 형식 사용)|  
+|부모 요소|[루트](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (사용 하 여 [행 집합](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) 데이터 형식)|  
 |자식 요소|하나 이상의 열 요소|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  테이블 형식 데이터를 포함하는 **root** 요소에서 반환한 각 행에는 이에 해당하는 **row** 요소가 있습니다. **root** 요소의 각 열은 개별 XML 요소로 표시됩니다. **row** 요소의 열 값은 XML 요소에 포함된 데이터이고 열 이름은 XML 요소 이름과 일치합니다.  
   
  행에서 열에 Null 값을 표현하는 방법은 두 가지가 있습니다.  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- 자세한 열 이름을 지정 하는 방법에 대 한 정보 및 테이블 형식 데이터에 대 한 스키마 정보를 참조 하십시오. [Rowset 데이터 형식 & #40; XMLA & #41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ 자세한 열 이름을 지정 하는 방법에 대 한 정보 및 테이블 형식 데이터에 대 한 스키마 정보를 참조 하세요. [Rowset 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>참고자료
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

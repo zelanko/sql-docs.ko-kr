@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 184ae189e07a76eaf4fa3d68914c209927f48ff7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 47919671460d83e4b7c470c110da8d002c6ba53f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575155"
 ---
 # <a name="folder-element-xmla"></a>Folder 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -48,13 +49,13 @@ ms.lasthandoff: 05/10/2018
 |부모 요소|[폴더](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
 |자식 요소|[새](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md), [원래](../../../analysis-services/xmla/xml-elements-properties/original-element-xmla.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정된 경우 **Folder** 요소는 **Restore** 요소의 값과 일치하는 원본 인스턴스의 데이터베이스( **Synchronize** 명령의 경우)나 백업 파일( **Original** 명령의 경우)에 포함된 개체의 저장소 위치를 **New** 요소의 값으로 변경합니다.  
   
- 백업 및 개체를 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, 및 데이터베이스 동기화 & #40; XMLA & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ 백업 및 개체를 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [StorageLocation 요소 & #40; ASSL & #41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)   
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>참고자료
+ [StorageLocation 요소 &#40;ASSL&#41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)   
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
