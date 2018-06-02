@@ -15,11 +15,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32a848344e0f3b4aa32c0ac4722adad02b6f9469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f8d8ee2ecca5db774ed31f25f85a150f0fc6b20
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563911"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -45,7 +46,7 @@ ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. Sys
 ## <a name="more-samples"></a>추가 예제  
 * [ADO.NET 코드 예제](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Windows에서.NET Framework 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [MacOS에서.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [MacOS에서.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Ubuntu.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Red Hat Enterprise Linux (RHEL)에서.NET Core 시작 하기](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

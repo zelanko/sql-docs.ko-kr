@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c4f015d5a606d67cb4c6b5f0519875db58b416
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574875"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  현재 실행 중인 명령을 취소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.  
+  Analysis Services 인스턴스는 현재 실행 중인 명령을 취소합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |부모 요소|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |자식 요소|[CancelAssociated](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md), [ConnectionID](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md), [SessionID](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md), [SPID](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Cancel** 명령은 세션 컨텍스트 내에서 현재 실행 중인 명령을 취소합니다. 클라이언트 응용 프로그램에서 세션을 요청하지 않은 경우 명령을 취소할 수 없습니다.  
   
  **Cancel** 명령을 실행하는 중에 **Batch** 명령을 실행하면 전체 **Batch** 명령이 취소됩니다. **Batch** 명령이 트랜잭션인 경우 **Batch** 명령에 포함된 모든 명령이 롤백됩니다. **Batch** 명령이 트랜잭션이 아닌 경우 **Batch** 명령 실행 당시 실행 중이던 **Cancel** 명령에 포함된 명령만 롤백됩니다. 비트랜잭션 **Batch** 명령에서 이미 실행된 명령은 롤백되지 않습니다.  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/10/2018
   
  현재 연결 및 세션에 대 한 정보를 검색 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 **Discover** DISCOVER_CONNECTIONS 및 DISCOVER_SESSIONS 스키마 행 집합 각각 요청 하는 메서드를 실행할 수 있습니다. 특정 데이터베이스에 대한 관리자 권한이 있는 역할 멤버는 DISCOVER_SESSIONS 스키마 행 집합의 SESSION_CURRENT_DATABASE 제한 열에 해당 데이터베이스를 지정하여 해당 데이터베이스에 대한 세션만 반환할 수 있습니다. 에 대 한 자세한 내용은 **Discover** 메서드를 참조 [메서드 검색 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [일괄 처리 요소 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [명령 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>참고자료
+ [요소를 일괄 처리 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [명령 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

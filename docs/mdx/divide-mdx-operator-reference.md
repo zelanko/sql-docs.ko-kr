@@ -1,32 +1,20 @@
 ---
 title: (나누기) (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- /
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- / (divide)
-- divide operator (/)
-ms.assetid: 42b7d3ea-234d-41b3-a849-f457be6d7972
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cb7a96ef190f1b0af20a9816b1f245e50dbaec74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fbf7e28d9e33d2eccbc3d51b8ff61c0cabd75270
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577975"
 ---
 # <a name="divide---mdx-operator-reference"></a>나누기-MDX 연산자 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +38,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  반환 되는 실제 값은 **/ (나누기)** 연산자의은 첫째 식 둘째 식으로 나누어 나온 몫을 나타냅니다.  
   
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 경우 *Divisor* 는 오류가 발생 된 null 값을 계산 합니다. 두 *Divisor* 및 *피제수* 평가 연산자를 null 값으로 null 값을 반환 합니다.  
@@ -111,7 +99,7 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
  [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553805"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  데이터베이스에 있는 테이블 또는 인덱스의 파티션별로 현재 하위 수준 I/O, 잠금, 래치 및 액세스 방법 작업을 반환합니다.    
+  데이터베이스의 현재 하위 수준 I/O, 잠금, 래치 및 테이블 또는 인덱스의 각 파티션에 대 한 액세스 방법 작업을 반환 합니다.    
     
  메모리 액세스에 최적화된 인덱스는 이 DMV에 나타나지 않습니다.    
     
@@ -131,7 +132,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|테이블, 인덱스 또는 인덱싱된 뷰의 특정 파티션에 대한 PAGE 수준 압축을 계산한 페이지 수입니다. 공간 절약 효과가 크지 않기 때문에 압축되지 않은 페이지도 포함됩니다. columnstore 인덱스의 경우 항상 0입니다.|    
 |**page_compression_success_count**|**bigint**|테이블, 인덱스 또는 인덱싱된 뷰의 특정 파티션의 PAGE 압축을 사용하여 압축된 데이터 페이지 수입니다. columnstore 인덱스의 경우 항상 0입니다.|    
     
-## <a name="remarks"></a>주의    
+## <a name="remarks"></a>Remarks    
  이 동적 관리 개체는 CROSS APPLY 및 OUTER APPLY의 상호 관련된 매개 변수를 받지 않습니다.    
     
  사용할 수 있습니다 **sys.dm_db_index_operational_stats** 사용자 읽기 또는 테이블, 인덱스 또는 파티션을 작성 한 테이블이 나 인덱스 상당한 I/O 작업을 발생 하는 또는 핫를 식별할 때까지 대기 해야 하는 시간의 길이 추적 하려면 한정 합니다.    
@@ -185,7 +186,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>시스템 함수를 사용하여 매개 변수 값 지정    
  사용할 수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 및 [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 에 대 한 값을 지정 하는 *database_id* 및 *object_id* 매개 변수입니다. 그러나 이러한 함수에 유효하지 않은 값을 전달하면 의도하지 않은 결과가 발생할 수 있습니다. DB_ID 또는 OBJECT_ID를 사용할 때는 항상 유효한 ID가 반환되는지 확인합니다. 자세한 내용은 주의 섹션을 참조 하십시오. [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)합니다.    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>사용 권한    
  다음 사용 권한이 필요합니다.    
     
 -   데이터베이스 내의 지정된 개체에 대한 CONTROL 권한    
@@ -238,7 +239,7 @@ GO
     
 ```    
     
-## <a name="see-also"></a>관련 항목:    
+## <a name="see-also"></a>관련 항목    
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

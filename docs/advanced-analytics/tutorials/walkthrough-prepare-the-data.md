@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585935"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>PowerShell를 사용한 데이터 준비(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="install-required-packages-on-the-server"></a>서버에 필요한 패키지 설치
 
-SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니다. 예를 들어 SQL Server는 데이터베이스 관리자가 패키지 리포지토리를 만들고 사용자가 자신의 패키지를 설치할 수 있도록 권한을 할당할 수 있는 [패키지 관리](../r/installing-and-managing-r-packages.md) 기능을 제공합니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
+SQL Server에 패키지를 설치할 수 있는 여러가지 방법이 있습니다. 예를 들어 SQL Server에서 제공 [R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md) 데이터베이스 관리자가 패키지 리포지토리를 만들고 사용자가 자신의 패키지를 설치할 권한을 할당할 수 있는 기능입니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
 
 > [!NOTE]
 > 서버에서 메시지가 표시되더라도 사용자 라이브러리에 설치 **하지 마** 십시오. 사용자 라이브러리에 설치하면 SQL Server 인스턴스가 해당 패키지를 찾거나 실행할 수 없습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md) 를 참조하세요.
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-다음 단원으로 이동하려면 이 링크 클릭합니다. [SQL을 사용 하여 데이터를 보고 탐색하기](/walkthrough-view-and-explore-the-data.md)
+다음 단원으로 이동하려면 이 링크 클릭합니다. [SQL을 사용 하여 데이터를 보고 탐색하기](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>문제 해결
 
@@ -296,10 +297,10 @@ PowerShell 스크립트는 SQL Server 인스턴스에서 여러 [!INCLUDE[tsql](
 
 ## <a name="next-lesson"></a>다음 단원
 
-[SQL를 사용한 데이터 관찰 및 탐색](/walkthrough-view-and-explore-the-data.md)
+[SQL를 사용한 데이터 관찰 및 탐색](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R 및 SQL Server용 데이터 과학 전체 과정 연습](/walkthrough-data-science-end-to-end-walkthrough.md)
+[R 및 SQL Server용 데이터 과학 전체 과정 연습](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [데이터 과학 연습을 위한 필수 구성 요소](walkthrough-prerequisites-for-data-science-walkthroughs.md)

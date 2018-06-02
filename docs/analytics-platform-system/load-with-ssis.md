@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586065"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 Integration Services를 사용 하 여 데이터를 로드 합니다.
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스에 로드 하기 위한 참조 및 배포 정보를 제공 합니다.  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -55,12 +56,12 @@ SQL Server 데이터 도구 내에서 패키지를 실행 하려면 패키지를
 ### <a name="run-from-powershell"></a>PowerShell에서 실행  
 Windows PowerShell에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
   
-예를 들면 다음과 같습니다. `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예를 들어 IPv4 주소를 사용하는 경우 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows에서 실행 명령 프롬프트 
 Windows 명령 프롬프트에서 패키지를 실행 하려면를 사용 하 여 **dtexec** 유틸리티: `dtexec /FILE <packagePath>`  
   
-예를 들어 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+예: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>데이터 형식  
 Integration Services를 사용 하 여 SQL Server PDW 데이터베이스에 데이터 원본에서 데이터 로드를 데이터에 먼저 매핑됩니다 원본 데이터에서 Integration Services 데이터 형식입니다. 이를 통해 여러 데이터 원본의 데이터가 데이터 형식의 공통 집합에 매핑될 수 있습니다.  
@@ -83,7 +84,7 @@ Integration Services를 사용 하 여 SQL Server PDW 데이터베이스에 데�
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -114,7 +115,7 @@ SQL Server PDW 다음 Integration Services 데이터 형식 지원 하지 않습
   
 SQL Server PDW에 이러한 형식의 데이터를 포함 하는 열을 로드 하려면 호환 되는 데이터 형식으로 데이터를 변환 하는 데이터 흐름에는 데이터 변환 업스트림을 추가 해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 Integration Services 부하 패키지를 실행 하려면 다음을 수행 해야 합니다.  
   
 -   데이터베이스에 대 한 권한을 로드 합니다.  
@@ -245,18 +246,18 @@ Integration Services 컴퓨터에 패키지를 실행 합니다.
   
 2.  패키지 실행 되 고 진행 상황 및 오류에 표시 됩니다는 **진행률** 창. SQL 클라이언트를 사용 하 여 부하를 확인 하거나 SQL Server PDW 관리 콘솔을 통해 로드를 모니터링 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSIS PDW 대상 어댑터를 사용 하는 스크립트 태스크 만들기](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[(Integration Services) 패키지 디자인 및 구현](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[자습서: 마법사를 사용 하 여 기본 패키지 만들기](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[(Integration Services) 패키지 디자인 및 구현](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[자습서: 마법사를 사용 하 여 기본 패키지 만들기](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [시작 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [동적 패키지 생성 예제 추가 정보](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [병렬 처리 (SQL Server 비디오)에 대 한 SSIS 패키지 디자인](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server 커뮤니티 예제: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[증분 로드 개선 변경 데이터 캡처](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[느린 변경 차원 변환](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[대량 삽입 태스크](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[증분 로드 개선 변경 데이터 캡처](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[느린 변경 차원 변환](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[대량 삽입 태스크](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

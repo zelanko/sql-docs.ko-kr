@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576275"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 요소(MDDataSet)(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|데이터 형식 및 길이|없음|  
-|기본값|없음|  
+|데이터 형식 및 길이|InclusionThresholdSetting|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|0-n: 두 번 이상 나타날 수 있는 선택적 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -49,11 +50,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>특성  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|필요한 **unsignedInt** 특성입니다. 다차원 데이터 집합에 있는 셀의 서수 위치입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  부모에 **루트** 요소는 **축** 요소 뒤는 **CellData** 요소, **셀** 포함 하는 요소 다차원 데이터 집합에 반환 된 각 셀에 대 한 속성 값입니다. **셀** 요소에 포함 된 **CellOrdinal** 각 셀 속성 값에 대 한 요소와 다차원 데이터 집합에 있는 셀의 서 수 위치 0부터 시작을 나타내는 특성 셀과 연결 합니다. 각 셀 속성 값은 **셀** 요소는 별도 XML 요소로 정의 됩니다. 에 정의 된 셀 속성의 값은 XML 요소 및 셀 속성의 이름에 포함 된 데이터는 **CellInfo** 부모 root 요소에서의 요소는 XML 요소의 이름에 해당 합니다.  
   
  다음은 셀 속성 값의 구문입니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  셀 속성 값의 데이터 형식은 VALUE 셀 속성에만 지정됩니다. 다른 셀 속성의 데이터 형식에 포함 된 셀 속성 정의 의해 결정 됩니다는 **CellInfo** 요소입니다. 기본값이 지정 된 셀 속성 값 요소가 제외 될 수 있습니다 (포함 하 여 한 **기본** 에 포함 된 셀 속성 정의 대 한 요소는 **CellInfo** 요소) 셀 속성에 대 한 기본 값이 지정 하 고 셀 속성의 값은 null입니다.  
   
 ## <a name="cell-property-errors"></a>셀 속성 오류  
- 인스턴스에서 발생 하는 오류로 인해 셀 속성을 반환할 수 없는 경우 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 예: 값 지정된 된 셀에 대 한 반환 되지 않도록 하는 계산 오류는 **오류** 요소에는 셀 속성의 내용을 대체 합니다. 다음 XML 예는 셀 속성 오류를 보여 줍니다.  
+ 셀 속성 값 지정된 된 셀에 대 한 반환 되지 않도록 하는 계산 오류 등의 Analysis Services 인스턴스에서 발생 하는 오류로 인해 반환할 수 없는 경우는 **오류** 요소 내용을 대체는 셀 속성에 있습니다. 다음 XML 예는 셀 속성 오류를 보여 줍니다.  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDDataSet 데이터 형식 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>참고자료
+ [MDDataSet 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

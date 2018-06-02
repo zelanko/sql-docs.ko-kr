@@ -1,31 +1,20 @@
 ---
 title: Dimension (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Dimension
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Dimension function
-ms.assetid: 0e3ce539-1d34-45ca-8342-67796e11b730
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cfdcc90f96b818a2b3592e4c914a5f34df33775f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: af73d6f08432a63a207c06d361354d6e45b6a07d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577935"
 ---
 # <a name="dimension-mdx"></a>Dimension(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -82,11 +71,11 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Count &#40;계층 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count & #40; 설정 & #41; & #40; Mdx& #41;](../mdx/count-set-mdx.md)   
+ [Count &#40;설정&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [수준 &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [멤버 &#40;설정&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

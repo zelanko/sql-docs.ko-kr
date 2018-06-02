@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573805"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 데이터 형식(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,23 +29,23 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>데이터 형식 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
-|기본 데이터 형식|**문자열**|  
-|파생 데이터 형식|없음|  
+|기본 데이터 형식|**string**|  
+|파생 데이터 형식|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>데이터 형식 관계  
   
 |관계|요소|  
 |------------------|-------------|  
-|부모 요소|없음|  
-|자식 요소|없음|  
-|파생 요소|없음|  
+|부모 요소|InclusionThresholdSetting|  
+|자식 요소|InclusionThresholdSetting|  
+|파생 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  XMLA(XML for Analysis)는 열거형을 사용하여 문자열 값을 확인 가능한 설정 집합으로 제한합니다. **EnumString** 은 표준 XML **string** 데이터 형식을 사용합니다. 명명된 상수 각각에 대한 특정 값은 열거자 정의로 지정됩니다. 열거자에 추가 하 여 정의 됩니다는 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) 스키마 행 집합을 사용 하 여 검색할 수 있습니다는 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) 메서드에 DISCOVER_ENUMERATORS 요청 유형.  
   
- 인스턴스에서 지원 되는 열거자를 설명 하는 다음 표에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]합니다.  
+ 다음 표에서 Analysis Services의 인스턴스에서 지원 되는 열거자를 설명 합니다.  
   
 |Enumerator|Description|  
 |----------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|**Content**요소에서 메타데이터가 반환되는지, 아니면 데이터가 반환되는지를 결정하는 XMLA 속성인 **root** 를 지원합니다.<br /><br /> 에 대 한 자세한 내용은 **콘텐츠**, 참조 [XMLA 속성 지원 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.|  
 |MDXSupportLevel|XMLA 속성을 원하는 **MDXSupport**에서 사용할 수 있는 MDX (Multidimensional Expressions) 지원의 수준을 나타내는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스.<br /><br /> 에 대 한 자세한 내용은 **MDXSupport**, 참조 [XMLA 속성 지원 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [XML 데이터 형식 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

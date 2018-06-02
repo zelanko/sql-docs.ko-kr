@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 21b95e057951058cc8b28e9be5020703da95b8db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 015a4cfbb70ddb29216a079dffdfd928029033d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575675"
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
 |기본값|*원격*|  
@@ -43,10 +44,10 @@ ms.lasthandoff: 05/10/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[위치](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
- **DataSourceType** 요소는 **Location** 요소에 정의된 데이터 원본이 로컬 데이터 원본 또는 원격 데이터 원본을 포함하는지를 결정합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, 및 데이터베이스 동기화 & #40; XMLA & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+## <a name="remarks"></a>Remarks  
+ **DataSourceType** 요소는 **Location** 요소에 정의된 데이터 원본이 로컬 데이터 원본 또는 원격 데이터 원본을 포함하는지를 결정합니다. 백업 및 원격 파티션을 복원 하는 방법에 대 한 자세한 내용은 참조 [Backing Up, Restoring, and Synchronizing &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)합니다.  
   
  이 요소의 값은 다음 표에 나열된 문자열 중 하나로 제한됩니다.  
   
@@ -55,9 +56,9 @@ ms.lasthandoff: 05/10/2018
 |*로컬*|**Location** 요소는 로컬 데이터 원본을 정의합니다. 이 값을 사용하면 **Restore** 및 **Synchronize** 명령이 **Location** 요소에 정의된 정보를 사용하여 **File** 명령의 **Backup** 요소에 지정된 백업 파일 또는 **Source** 명령의 **Synchronize** 요소에 지정된 데이터베이스에서 검색되고 **DataSourceID** 요소의 **Location** 요소에서 식별되는 데이터 원본을 업데이트합니다.<br /><br /> 이 값을 사용하면 ROLAP(관계형 OLAP) 저장소를 사용하는 개체가 복원 또는 동기화된 후 해당 데이터 및 메타데이터에 대해 다른 데이터베이스를 사용할 수 있습니다.<br /><br /> 참고: 차원 테이블 또는 쓰기 저장 테이블의 데이터 같은 ROLAP 데이터는 복원 말거나 동기화 합니다. ROLAP 개체의 메타데이터만 복원 또는 동기화됩니다.|  
 |*원격*|**Location** 요소는 원격 데이터 원본을 정의합니다. 이 값을 사용하면 **Restore** 및 **Synchronize** 명령이 **Location** 요소에 정의된 정보를 사용하여 **File** 명령의 **Backup** 요소에 지정된 백업 파일 또는 **Source** 명령의 **Synchronize** 요소에 지정된 데이터베이스에서 검색되고 **DataSourceID** 요소의 **Location** 요소에서 식별되는 데이터 원본을 업데이트합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고자료
  [ConnectionString 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
  [DataSourceID 요소 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)   
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

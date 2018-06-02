@@ -1,31 +1,20 @@
 ---
 title: Intersect (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INTERSECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Intersect function
-ms.assetid: 0de8fbb4-e2db-480c-86f1-2abbbcfdb1d8
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 9e308a9b4a01b7f70562c9c69b4d353a4e4d9198
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7acc509891dd1c975ad819bd904e840e369f0d4b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578525"
 ---
 # <a name="intersect-mdx"></a>Intersect(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Intersect** 함수 두 집합의 교집합을 반환 합니다. 기본적으로 이 함수는 교집합을 구하기 전에 두 집합에서 중복 요소를 제거합니다. 지정된 두 집합에는 동일한 차원이 있어야 합니다.  
   
  선택적 **모든** 플래그에는 중복 요소가 유지 됩니다. 경우 **모든** 지정는 **Intersect** 함수 평소와 같이 중복 요소를 교차 하 고 두 번째 집합에 일치 하는 중복 된 첫 번째 집합의 각 중복입니다. 지정된 두 집합에는 동일한 차원이 있어야 합니다.  
@@ -84,7 +73,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
