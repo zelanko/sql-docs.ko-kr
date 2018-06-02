@@ -25,20 +25,21 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2c6d8057f9a85491a2936a78140e0da69299969f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708141"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대 한 데이터 원본 이라는 용어를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만들지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 소비자입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대 한 데이터 원본 이라는 용어를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만들지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 소비자입니다.  
   
  각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. 에 대 한 CLSID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 C/c + + GUID CLSID_SQLNCLI10 (SQLNCLI_CLSID 올바른로 확인 되는 기호 참조 하는 sqlncli.h 파일에 progid). CLSID를 소비자에서 사용 하 여 OLE **CoCreateInstance** 함수를 데이터 원본 개체의 인스턴스를 제조 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client는 in-process 서버입니다. 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 개체를 위해 CLSCTX_INPROC_SERVER 매크로 사용 하 여 실행 컨텍스트를 나타내기 위해 만들어집니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 in-process 서버입니다. 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 개체를 위해 CLSCTX_INPROC_SERVER 매크로 사용 하 여 실행 컨텍스트를 나타내기 위해 만들어집니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 데이터 원본 개체를 변경할 수 있도록 기존 클러스터에 연결 하는 OLE DB 초기화 인터페이스 노출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스.  
   
@@ -83,7 +84,7 @@ else
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [데이터 원본 속성 & #40; OLE db& #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [데이터 원본 속성 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [데이터 원본 정보 속성](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -95,7 +96,7 @@ else
   
 -   [지속형 데이터 원본 개체](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -1,30 +1,53 @@
 ---
-title: 사용자 라이브러리에 설치 된 R 패키지를 사용 하는 경우 오류가 발생 하지 않도록 | Microsoft Docs
+title: SQL Server의 사용자 라이브러리에 설치 된 R 패키지를 사용 하기 위한 팁 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4609504044e5ef014c4a73e2c4a64a21040db717
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e52a6f4a9a3830aab01e54819804785a7069c9d2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708471"
 ---
-# <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>사용자 라이브러리에 설치 된 R 패키지에서 오류를 방지 합니다.
+# <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server에서 R 패키지를 사용 하기 위한 팁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-숙련 된 R 사용자가 차단 되거나 사용할 수 없는 기본 라이브러리는 때마다 사용자 라이브러리에서 R 패키지를 설치 하는 데 익숙한 합니다. 그러나이 방법은 SQL Server에서 지원 되지 않습니다 및 "패키지를 찾을 수 없음" 오류 일반적으로 끝나는 사용자 라이브러리를 설치 합니다.
+이 문서는 R 및 SQL Server 인스턴스의 생소 한 패키지 액세스는 숙련 된 R 개발자에 게 Dba에 대 한 별도 섹션에 있습니다.
 
-이 문서에서는이 오류를 방지할 수 있도록 해결 방법을 설명 합니다. R 코드를 수정 하는 방법에 대해 설명 하 고 SQL Server 인스턴스에서 R 패키지를 사용 하기 위한 올바른 R 패키지 설치 프로세스를 제안 합니다.
+## <a name="new-to-r"></a>R를 처음 사용
 
-## <a name="why-r-user-libraries-cannot-be-accessed-from-sql-server"></a>SQL Server에서 R 사용자 라이브러리 액세스할 수 없는 이유
+R 설치 관리자 권한으로 R 패키지 관리에 대 한 몇 가지 기본 사항 수를 알고 있으면 처음으로 패키지를 시작 하세요.
 
-새 R 패키지를 설치 해야 하는 R 개발자에 익숙한가 패키지를 설치 하는 기본 라이브러리를 사용할 수 없을 때마다 또는 개발자 컴퓨터에서 관리자가 아닌 경우 개인, 사용자 라이브러리를 사용 하 여 합니다.
+### <a name="package-dependencies"></a>패키지 종속 파일
 
-예를 들어 일반적인 R 개발 환경에서 사용자가 패키지의 위치에 추가 R 환경 변수 `libPath`, 또는 다음과 같이 전체 패키지 경로 참조 합니다.
+R 패키지는 자주 중 일부는 사용 하지 못할 인스턴스에서 사용 하는 기본 R 라이브러리에서 다른 여러 패키지에 따라 다릅니다. 경우에 따라 패키지에 이미 설치 되어 있는 종속 패키지의 다른 버전이 필요 합니다. 패키지 종속 파일 패키지에 포함 된 설명 파일에서 확인할 수 있지만 때로는 완전 하지 않습니다. 호출 하는 패키지를 사용할 수 있습니다 [iGraph](http://igraph.org/r/) 완전히 종속성 그래프를 구체화할 수 있습니다.
+
+올바른 패키지 유형 및 버전을 갖게 조직의 모든 사용자를 또는 여러 패키지를 설치 해야 할 경우 사용 하는 것이 좋습니다는 [miniCRAN](https://mran.microsoft.com/package/miniCRAN) 전체 종속성 체인을 분석 하는 패키지입니다. minicRAN 여러 사용자 또는 컴퓨터 간에 공유할 수 있는 한 로컬 저장소를 만듭니다. 자세한 내용은 참조 [miniCRAN를 사용 하 여 로컬 패키지 리포지토리를 만들](create-a-local-package-repository-using-minicran.md)합니다.
+
+### <a name="package-sources-versions-and-formats"></a>패키지 소스, 버전 및 형식
+
+여러 R 패키지 소스와 같은 [CRAN](https://cran.r-project.org/) 및 [Bioconductor](https://www.bioconductor.org/)합니다. R 언어에 대 한 공식 사이트 (<https://www.r-project.org/>) 많은이 리소스를 나열 합니다. Microsoft는 [MRAN](https://mran.microsoft.com/) 오픈 소스 R의 해당 배포에 대 한 ([MRO](https://mran.microsoft.com/open)) 및 기타 패키지 합니다. 많은 패키지 개발자가 소스 코드를 가져올 수 있는 GitHub에 게시 됩니다.
+
+R 패키지는 여러 컴퓨팅 플랫폼에서 실행 합니다. 설치한 버전 Windows 이진 지 수 있습니다.
+
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>설치 하 고 어떤 패키지가 이미 설치 되어 있는 라이브러리를 알고 있습니다.
+
+모든 항목을 설치 하기 전에 이전에 컴퓨터의 R 환경을 수정 하는 경우 확인 R 환경 변수 `.libPath` 하나의 경로 사용 합니다.
+
+이 경로 인스턴스에 대 한 R_SERVICES 폴더를 가리켜야 합니다. 이미 설치 되어 있는 패키지를 확인 하는 방법을 비롯 한 자세한 내용은 참조 하십시오. [SQL Server에 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)합니다.
+
+## <a name="new-to-sql-server"></a>SQL Server를 처음 사용
+
+R 개발자, SQL Server에서 실행 되는 코드에서 작업 하는 서버를 보호 하는 보안 정책은 R 환경을 제어 하는 기능을 제한 합니다.
+
+### <a name="r-user-libraries-not-supported-on-sql-server"></a>R 사용자 라이브러리: SQL Server에서 지원 되지 않습니다
+
+새 R 패키지를 설치 해야 하는 R 개발자에 익숙한가 패키지를 설치 하는 기본 라이브러리를 사용할 수 없을 때마다 또는 개발자 컴퓨터에서 관리자가 아닌 경우 개인, 사용자 라이브러리를 사용 하 여 합니다. 예를 들어 일반적인 R 개발 환경에서 사용자가 패키지의 위치에 추가 R 환경 변수 `libPath`, 또는 다음과 같이 전체 패키지 경로 참조 합니다.
 
 ```R
 library("c:/Users/<username>/R/win-library/packagename")
@@ -34,7 +57,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 *Library(xxx)의 오류: ' 패키지 name ' 없는 패키지는*
 
-## <a name="how-to-avoid-package-not-found-errors"></a>"패키지를 찾을 수 없음" 오류를 방지 하는 방법
+### <a name="avoid-package-not-found-errors"></a>"패키지를 찾을 수 없음" 오류 방지
 
 + 사용자 라이브러리에 대 한 종속성을 제거 합니다. 
 
@@ -50,4 +73,10 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + R 패키지 또는 R 라이브러리에 대 한 경로에 대 한 직접 참조 하도록 코드를 업데이트 합니다. 
 
-+ 상위 패키지 라이브러리는 인스턴스와 연결 된 알아야 합니다. 자세한 내용은 참조 [SQL Server와 함께 설치 된 R 패키지](installing-and-managing-r-packages.md)
++ 상위 패키지 라이브러리는 인스턴스와 연결 된 알아야 합니다. 자세한 내용은 참조 [SQL Server에 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)합니다.
+
+## <a name="see-also"></a>참고자료
+
++ [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
++ [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
++ [자습서, 샘플, 솔루션](../tutorials/machine-learning-services-tutorials.md)

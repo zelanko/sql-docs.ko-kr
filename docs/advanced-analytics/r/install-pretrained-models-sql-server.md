@@ -2,23 +2,24 @@
 title: 미리 학습 된 기계 학습 모델을 SQL Server에 설치 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3abc1b1581216bb0207fbba2d857993b947afae
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707581"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 방법을 (In-database) 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R Services 또는 SQL Server 컴퓨터 학습 서비스 설치를 설명 합니다. 
+이 문서에서는 방법을 미리 학습 된 기계 학습 감성 분석 및 이미지 기능 생성의 SQL Server (In-database) 인스턴스에 대 한 모델을 추가 하려면 이미 R Services 또는 SQL Server 컴퓨터 학습 Services 설치를 설명 합니다. 
 
-미리 학습 된 모델을 감성 분석 이나 이미지 기능 생성 등의 작업을 수행 해야 하는 하지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스 없는 고객에 게 유용한 존재 합니다. 컴퓨터 학습 서버 팀 생성 하 고 텍스트와 이미지 프로세스를 효율적으로 시작할 수 있도록 이러한 모델을 학습 합니다. 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션.
+미리 학습 된 모델 기능 생성, 이미지 또는 감성 분석을 수행 해야 하지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스가 고객이 존재 합니다. 컴퓨터 학습 서버 팀 생성 하 고 텍스트와 이미지 프로세스를 효율적으로 시작할 수 있도록 이러한 모델을 학습 합니다. 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션.
 
 SQL Server 데이터를 미리 학습 된 모델을 사용 하는 방법의 예는 SQL Server 기계 학습 팀이 블로그를 참조: [SQL Server 컴퓨터 학습 서비스에서 python 감정 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -30,8 +31,8 @@ SQL Server 데이터를 미리 학습 된 모델을 사용 하는 방법의 예�
 
 + SQL Server 2016 R Services (In-database)-R만,와 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R 서버 (독립 실행형)-R만,와 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 컴퓨터 학습 Services (In-database)-R [MicrosoftML 라이브러리]와 (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 컴퓨터 학습 Server (독립 실행형)-R [MicrosoftML 라이브러리]와 (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 컴퓨터 학습 Services (In-database)-있는 R에서 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 컴퓨터 학습 서버 (독립 실행형)-있는 R에서 [MicrosoftML 라이브러리](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python는 [microsoftml 라이브러리](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 설치 프로세스는 SQL Server의 버전에 따라 약간 다릅니다. 각 버전에 대 한 지침은 다음 섹션을 참조 합니다.
 
@@ -106,12 +107,30 @@ SQL Server 2016에서는 SQL Server 2016 인스턴스 라이브러리와 모델�
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database)에 미리 학습 된 모델을 설치 합니다.
+## <a name="install-pre-trained-models-on-sql-server-2017-machine-learning-services-in-database"></a>SQL Server 2017 컴퓨터 학습 Services (In-database)에 미리 학습 된 모델을 설치 합니다.
 
 SQL Server 2017 이미 설치한 경우에 두 가지 방법으로 미리 학습 된 모델을 얻을 수 있습니다.
 
-+ 바인딩을 사용 하 여 Python 및 R 구성 요소를 업그레이드 하 고 동시에 미리 학습 된 모델을 설치
 + 미리 학습 된 모델에만 설치 합니다.
++ 바인딩을 사용 하 여 Python 및 R 구성 요소를 업그레이드 하 고 동시에 미리 학습 된 모델을 설치
+
+### <a name="add-pre-trained-models-only"></a>미리 학습 된 모델의 경우에 추가
+
+미리 학습 된 모델을 추가 하려면 RSetup.exe 명령줄에서 실행할 수 있습니다.
+
+R 버전은 모델의 R_SERVICES를 MLM 구성 요소를 설치 합니다.
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+Python 버전은 모델의 PYTHON_SERVICES를 MLM 구성 요소를 설치 합니다.
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### <a name="bind-and-install-pre-trained-models"></a>바인딩 및 미리 학습 된 모델을 설치 합니다.
 
 다음 지침에서는 컴퓨터 학습 구성 요소를 업그레이드 하 고 동시에 미리 학습 된 모델을 가져오기는 프로세스에 설명 합니다.
 
@@ -146,7 +165,7 @@ SQL Server 2016 설치를 사용 하는 이전 버전의 R Server (독립 실행
 2. 업데이트 하 고, 선택 하려는 언어 선택에서 **Pre-trained 모델** 옵션입니다.
 
     > [!TIP]
-    > 이전에 R Server (독립 실행형)를 업데이트 하 고 미리 학습 된 모델을 추가 하 려 하는 설치 관리자를 실행 하는 경우 이전에 선택한 항목에 둡니다 **그대로**는 이전 버전을 선택 하 고**-모델을 학습** 옵션 . **없는** 이전에 선택한 옵션 선택을 취소 한; 이렇게 하면 설치 관리자 구성 요소를 제거 합니다.
+    > 이전에 R Server (독립 실행형)를 업데이트 하 고 미리 학습 된 모델을 추가 하 려 하는 설치 관리자를 실행 하는 경우 이전에 선택한 항목에 둡니다 **그대로**는 이전 버전을 선택 하 고 **-모델을 학습** 옵션 . **없는** 이전에 선택한 옵션 선택을 취소 한; 이렇게 하면 설치 관리자 구성 요소를 제거 합니다.
 
     모델 위치에 대 한 기본 설정을 적용 하는 것이 좋습니다.
 

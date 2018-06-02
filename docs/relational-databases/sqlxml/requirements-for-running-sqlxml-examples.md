@@ -22,10 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708721"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML 예 실행을 위한 요구 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +40,6 @@ ms.lasthandoff: 05/03/2018
   
 -   MDAC 2.6 이상  
   
- 대부분의 예에서는 템플릿을 사용하여 매핑 XSD 스키마에 대해 XPath 쿼리를 지정합니다. 자세한 내용은 참조 [쿼리 & #40;에 주석이 추가 된 XSD 스키마를 사용 하 여 SQLXML 4.0 & #41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ 대부분의 예에서는 템플릿을 사용하여 매핑 XSD 스키마에 대해 XPath 쿼리를 지정합니다. 자세한 내용은 참조 [쿼리에 주석이 추가 된 XSD 스키마를 사용 하 여 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)합니다.  
   
   

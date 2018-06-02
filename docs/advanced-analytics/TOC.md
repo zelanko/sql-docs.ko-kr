@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# Install 
+# 설치 
 
 ## [데이터베이스 내 분석](install/sql-machine-learning-services-windows-install.md)
 ## [독립 실행형 서버](install/sql-machine-learning-standalone-windows-install.md)
@@ -94,18 +94,18 @@
 
 # [방법](r/sql-server-machine-learning-tasks.md)
 
-## [패키지 관리](r/r-package-management-for-sql-server-r-services.md)
+## 패키지 관리
 ### [기본 패키지](r/installing-and-managing-r-packages.md)
 ### [패키지 정보 가져오기](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [새 Python 패키지 설치](python/install-additional-python-packages-on-sql-server.md)
 ### [새 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
-#### [R 패키지 관리자 사용](r/install-additional-r-packages-on-sql-server.md)
-#### [RevoScaleR 사용](r/use-revoscaler-to-manage-r-packages.md)
+#### [R 패키지 관리자 사용](r/use-r-package-managers-on-sql-server.md)
 #### [T-SQL 사용](r/install-r-packages-tsql.md)
-#### [miniCRAN 리포지토리 사용](r/create-a-local-package-repository-using-minicran.md)
-#### [원격 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
-#### [R 패키지 동기화](r/package-install-uninstall-and-sync.md)
-#### [R "사용자 라이브러리"에 대한 해결 방법](r/packages-installed-in-user-libraries.md)
+#### [RevoScaleR 사용](r/use-revoscaler-to-manage-r-packages.md)
+##### [원격 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
+##### [R 패키지 동기화](r/package-install-uninstall-and-sync.md)
+#### [MiniCRAN 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
+#### [R 패키지를 사용 하기 위한 팁](r/packages-installed-in-user-libraries.md)
 
 ## 데이터 탐색 및 모델링
 ### [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [알려진 문제](known-issues-for-sql-server-machine-learning-services.md)
 ## [릴리스 정보](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [새로운 또는 업데이트 된 문서](new-updated-advanced-analytics.md)
-
-## [설치 및 문제 해결 팁](machine-learning-troubleshooting-faq.md)
-### [가상 머신 설정](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [문제 해결을 위한 데이터 컬렉션](data-collection-ml-troubleshooting-process.md)
-### [업그레이드 및 설치 FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [외부 스크립트 실행에 대한 일반적인 문제](common-issues-external-script-execution.md)
+## [가상 머신 설정](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [문제 해결](machine-learning-troubleshooting-faq.md)
+### [데이터 컬렉션](data-collection-ml-troubleshooting-process.md)
+### [설치 및 업그레이드 오류](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [실행 패드 및 외부 스크립트 실행 오류](common-issues-external-script-execution.md)
+### [R 스크립트 오류](r-script-execution-errors.md)
 
 ## 블로그
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
 
-## 피드백 포럼
+## 포럼
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [기계 학습 서버](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

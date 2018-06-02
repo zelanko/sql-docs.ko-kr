@@ -4,27 +4,28 @@ description: R 및 Python 패키지 버전을 확인 하 고 설치 결과 확�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707891"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>SQL Server에서 R 및 Python 패키지 정보 가져오기
+#  <a name="get-r-and-python-package-information"></a>R 및 Python 패키지 정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-실행 중인 코드에 사용 하는 예상 되는 환경, Python 또는 올바른 작업 영역에서 r을 확인 하는 경우가 때 사용 하는 여러 환경 또는 설치 된 R, Python, 있습니다. 예를 들어 기계 학습 바인딩을 사용 하 여 구성 요소를 업그레이드 한 경우 R 라이브러리 경로 기본값과 다른 폴더에 수 있습니다. 또한, R 클라이언트나의 독립 실행형 서버 인스턴스를 설치한 경우 컴퓨터에 여러 개의 R 라이브러리 될 수 있습니다.
+실행 중인 코드에 사용 하는 예상된 환경 Python 또는 올바른 작업 영역에서 r을 확인 하는 경우가 때 사용 하는 여러 환경 또는 설치 된 R, Python, 있습니다. 예를 들어, 기계 학습을 통해 구성 요소를 업그레이드 한 경우 [바인딩](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), R 라이브러리 경로 기본값과 다른 폴더에 있을 수 있습니다. 또한, R 클라이언트나의 독립 실행형 서버 인스턴스를 설치한 경우 컴퓨터에 여러 개의 R 라이브러리 될 수 있습니다.
 
-이 문서의 예제에서는 경로 및 버전의 SQL Server에서 사용 되 고 라이브러리를 가져오는 방법을 보여 줍니다.
+이 문서에서 R 및 Python 스크립트 예제는 경로 및 버전의 SQL Server에서 사용 되는 패키지를 가져오는 방법을 보여 줍니다.
 
-## <a name="get-the-current-r-library"></a>현재 R 라이브러리 가져오기
+## <a name="get-the-r-library-location"></a>R 라이브러리 위치를 가져옵니다.
 
-에 대 한 **R** 모든 버전의 SQL Server에서 현재 인스턴스에 대 한 기본 라이브러리를 확인 하려면 다음 문을 실행 합니다.
+모든 버전의 SQL Server에 대 한 확인 하려면 다음 문을 실행 하는 [R 기본 패키지 라이브러리](installing-and-managing-r-packages.md) 현재 인스턴스에 대 한 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-필요에 따라 최신 버전의 SQL Server 2017 컴퓨터 학습 서비스에서 RevoScaleR rxSqlLibPaths를 사용할 수 있습니다 또는 [R Services 업그레이드 R에서 최소 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다. 이 저장된 프로시저 인스턴스 라이브러리의 경로 및 SQL Server에서 사용 하는 RevoScaleR의 버전을 반환 합니다.
+사용할 수 있습니다 [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) 최신 버전의 SQL Server 2017 컴퓨터 학습 서비스에서 RevoScaleR 또는 [R Services 업그레이드 R에서 최소 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다. 이 저장된 프로시저 인스턴스 라이브러리의 경로 및 SQL Server에서 사용 하는 RevoScaleR의 버전을 반환 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>현재 Python 라이브러리 가져오기
+## <a name="get-the-python-library-location"></a>Python 라이브러리 위치를 가져옵니다.
 
 에 대 한 **Python** SQL Server 2017 년 1에서 현재 인스턴스에 대 한 기본 라이브러리를 확인 하려면 다음 문을 실행 합니다. 이 예제는 Python에 포함 된 폴더의 목록을 반환 `sys.path` 변수입니다. 현재 디렉터리 및 표준 라이브러리 경로 목록에 포함 됩니다.
 

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707961"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>명령줄에서 SQL Server 컴퓨터에 대 한 학습 구성 요소를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 설치가 완료 되는 서버, Microsoft 패키지, R 및 Python, 도구, 샘플 및 스크립트는 배포의 일부인의 오픈 소스 배포 하는 것이 해야 합니다. 
 
-Files\microsoft SQL Server\140 (또는 130)으로 서 \R_SERVER\bin\x64는 R 콘솔 창을 열고 다음을 두 번 클릭을 **RGui.exe**합니다. R을 처음 사용하세요? 다음 자습서: [기본 R 명령과 RevoScaleR 함수: 25는 일반적인 예제](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler)합니다.
+Files\microsoft SQL Server\140 (또는 130)으로 서 \R_SERVER\bin\x64는 R 콘솔 창을 열고 다음을 두 번 클릭을 **RGui.exe**합니다. R을 처음 사용하세요? 다음 자습서: [기본 R 명령과 RevoScaleR 함수: 25는 일반적인 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)합니다.
 
 Python 명령, a m files\microsoft SQL Server\140\PYTHON_SERVER\bin\x64 이동을 열려면 두 번 클릭 **python.exe**합니다.
 

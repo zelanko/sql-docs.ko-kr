@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707971"
 ---
 # <a name="overview-of-data-migration-assistant"></a>데이터 마이그레이션 길잡이 개요
 
 데이터 마이그레이션 길잡이 (DMA)를 사용 하면 새 버전 SQL Server 및 Azure SQL 데이터베이스에서에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드할 수 있습니다. DMA 성능 및 안정성 개선 대상 환경에 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
 
 > [!NOTE] 
-> 에 대 한 (측면에서 데이터베이스의 크기 및 번호가) 큰 마이그레이션 것이 좋습니다 사용 하는 [Azure 데이터베이스 마이그레이션 서비스](https://docs.microsoft.com/en-us/azure/dms/dms-overview), 규모에 데이터베이스를 마이그레이션할 수 있는 합니다.
+> 에 대 한 (측면에서 데이터베이스의 크기 및 번호가) 큰 마이그레이션 것이 좋습니다 사용 하는 [Azure 데이터베이스 마이그레이션 서비스](https://docs.microsoft.com/azure/dms/dms-overview), 규모에 데이터베이스를 마이그레이션할 수 있는 합니다.
   
 ## <a name="capabilities"></a>Capabilities
 
@@ -77,7 +78,7 @@ DMA 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하�
 - SQL Server 2014
 - SQL Server 2016
 - Windows 및 Linux에서 SQL Server 2017
-- Azure SQL Database
+- Azure SQL 데이터베이스
 
 > [!NOTE] 
 > DMA 현재 없으므로 Azure SQL 데이터베이스 관리 되는 인스턴스를 대상으로 합니다.
@@ -86,7 +87,7 @@ DMA 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하�
 
 DMA를 설치 하려면 최신 버전의 도구를 다운로드는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53595), 다음 실행 하 고는 **DataMigrationAssistant.msi** 파일입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SQL Server 마이그레이션 평가](../dma/dma-assesssqlonprem.md)
 

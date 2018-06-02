@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708741"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>위치 단계  
  위치 경로(절대 또는 상대)는 다음의 세 부분을 포함하는 위치 단계로 구성됩니다.  
   
--   **축**  
+-   **Axis**  
   
      축은 위치 단계에서 선택되는 노드와 컨텍스트 노드 간의 트리 관계를 지정합니다. **부모**, **자식**, **특성**, 및 **자체** 축이 지원 됩니다. 경우는 **자식** 축 위치 경로에 지정 된 쿼리에서 선택한 모든 노드는 컨텍스트 노드의 자식입니다. 경우는 **부모** 축을 지정 하면 선택 되는 노드가 컨텍스트 노드의 부모 노드입니다. 경우는 **특성** 축을 지정 하면 선택 되는 노드가 컨텍스트 노드의 특성입니다.  
   

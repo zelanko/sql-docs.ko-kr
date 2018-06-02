@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707101"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 작업 관리
 
@@ -36,7 +37,7 @@ SQL Server PDW 작업 관리 기능에는 사용자와 관리자가 미리 메�
 리소스 클래스입니다.  
 SQL Server PDW에서는 *리소스 클래스* 는 메모리와 동시성에 대 한 미리 할당 된 제한에 있는 기본 제공 서버 역할입니다. SQL Server PDW는 요청을 제출 하는 로그인의 리소스 클래스 서버 역할 멤버 자격에 따라 요청 하는 리소스를 할당 합니다.  
   
-계산 노드에서 리소스 클래스의 구현 SQL Server의 리소스 관리자 기능을 사용합니다. 리소스 관리자에 대 한 자세한 내용은 참조 하십시오. [리소스 관리자](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) msdn 합니다.  
+계산 노드에서 리소스 클래스의 구현 SQL Server의 리소스 관리자 기능을 사용합니다. 리소스 관리자에 대 한 자세한 내용은 참조 하십시오. [리소스 관리자](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) msdn 합니다.  
   
 ### <a name="understand-current-resource-utilization"></a>현재 리소스 사용률을 이해  
 현재 실행 중인 요청에 대 한 시스템 리소스 사용률을 이해 하려면 SQL Server PDW 동적 관리 뷰를 사용 합니다. 예를 들어 더 많은 메모리를 포함 하면 실행 속도가 느린 큰 해시 조인이 유리한 경우를 이해 하려면 Dmv를 사용할 수 있습니다.  
@@ -59,7 +60,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |리소스 클래스입니다.|요청 중요도|최대 메모리 사용 *|동시성 슬롯 (최대 32 =)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|기본|보통|400MB|1.|기본적으로 각 로그인에는 약간의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인 리소스 클래스에 추가 되 면 새 클래스 우선적으로 적용 합니다. 로그인은 모든 리소스 클래스에서 삭제 되 면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
+|기본|보통|400MB|1|기본적으로 각 로그인에는 약간의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인 리소스 클래스에 추가 되 면 새 클래스 우선적으로 적용 합니다. 로그인은 모든 리소스 클래스에서 삭제 되 면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
 |MediumRC|보통|1200MB|3|중간 리소스 클래스를 할 수 있는 요청의 예:<br /><br />큰이 있는 CTAS에는 작업 해시 조인 합니다.<br /><br />디스크에 대 한 캐싱을 방지 하기 위해 더 많은 메모리를 필요로 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10-15 열이 있는 작은 테이블에 대 한 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |largerc|높음|2.8 G B|7|큰 리소스 클래스를 할 수 있는 요청의 예:<br /><br />큰 해시 조인 또는 큰 ORDER BY 또는 GROUP BY 절 등의 많은 집계를 포함 하는 매우 큰 CTAS에는 작업입니다.<br /><br />해시 조인 등의 작업 또는 ORDER BY 또는 GROUP BY 절 같은 집계에 대 한 매우 많은 양의 메모리를 필요로 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10-15 열이 있는 작은 테이블에 대 한 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
 |xlargerc|높음|8.4 GB|22|런타임 시 초대형 리소스 소비 해야 하는 요청에 대 한 초대형 리소스 클래스가입니다.|  
@@ -130,7 +131,7 @@ SQL 문 및 리소스 클래스에 의해 제어 되는 작업의 경우:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   RESTORE DATABASE 어플라이언스에 더 많은 계산 노드를 복원 하는 경우.  
   

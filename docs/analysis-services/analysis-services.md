@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 704c2f1638676bd838c7aac367a1b610143fd85d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707041"
 ---
 # <a name="about-sql-server-analysis-services"></a>SQL Server Analysis Services에 대 한
 
@@ -42,7 +43,7 @@ Analysis Services는 두 개의 서로 다른 플랫폼에서 제공 됩니다.
 *  [개발자 설명서](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [기술 참조](../analysis-services/powershell/technical-reference-ssas.md)
 
-참고 항목
+참고자료
 
 [Azure Analysis Services 문서](https://docs.microsoft.com/azure/analysis-services/)   
 [SQL Server 설명서](../sql-server/sql-server-technical-documentation.md)

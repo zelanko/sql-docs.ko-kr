@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cb906a8a05221204ec10310d652f6891861d35e2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708271"
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Windows Server (독립 실행형)를 학습 하는 SQL Server 2017 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +23,7 @@ SQL Server 설치 프로그램에는 기계 학습 SQL Server 외부에서 실�
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-SQL Server 2017가 필요 합니다. SQL Server 2016를 설정한 경우 설치 하십시오 [SQL Server 2016 R 서버 (독립 실행형)](sql-r-standalone-windows-install.md) 대신 합니다.
+SQL Server 2017이 필요합니다. SQL Server 2016를 설정한 경우 설치 하십시오 [SQL Server 2016 R 서버 (독립 실행형)](sql-r-standalone-windows-install.md) 대신 합니다.
 
 SQL Server 2016 R 서버 (독립 실행형) 또는 Microsoft R Server 등의 이전 버전을 설치한 경우 계속 하기 전에 기존 설치를 제거 합니다.
 
@@ -32,7 +33,7 @@ SQL Server 2016 R 서버 (독립 실행형) 또는 Microsoft R Server 등의 이
 
 ## <a name="run-setup"></a>설치 프로그램 실행
 
-로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
+로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
 
 1. SQL Server 2017에 대 한 설치 마법사를 시작 합니다.
 
@@ -89,7 +90,7 @@ R 서버를 설치할 때 또는 SQL Server 설치 프로그램을 사용 하 �
 
 개발 IDE 설정의 일부분으로 설치 되지 않았습니다. 추가 도구 필요 하지 않은, 포함 된 모든 표준 도구와는 제공 되는 R, Python의 배포와 함께 합니다.
 
-새 릴리스를 시도 하는 것이 좋습니다 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 또는 [Visual Studio 용 Python](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio)합니다. Visual Studio 모두 R 및 Python으로 데이터베이스 개발 도구, SQL Server와의 연결 및 BI 도구를 지원합니다. 그러나 RStudio를 포함 하 여 모든 기본 설정된 개발 환경에 사용할 수 있습니다.
+새 릴리스를 시도 하는 것이 좋습니다 [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] 또는 [Visual Studio 용 Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio)합니다. Visual Studio 모두 R 및 Python으로 데이터베이스 개발 도구, SQL Server와의 연결 및 BI 도구를 지원합니다. 그러나 RStudio를 포함 하 여 모든 기본 설정된 개발 환경에 사용할 수 있습니다.
 
 ## <a name="get-help"></a>도움말 보기
 

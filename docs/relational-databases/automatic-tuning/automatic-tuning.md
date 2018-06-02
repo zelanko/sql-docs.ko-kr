@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707771"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 쿼리 저장소가 시스템 뷰를 사용 하는 계획 선택 재발을 찾을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 검색 하 고 잠재적인 계획 선택 재발 및 적용 해야 하는 권장 되는 작업 표시는 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 보기의 중요 문제를 성과 식별 된 쿼리를 이전 상태로 되돌아간된 계획의 ID를 기준으로 비교를 위해 사용 된 계획의 ID와 같은 세부 정보, 문제에 대 한 정보를 표시 및 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 문제를 해결 하려면 실행 될 수 있는 문에 문제가 발생 했습니다.
 
-| 유형 | description | datetime | score | 자세히 | … |
+| 유형 | description | DATETIME | score | 자세히 | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 4 ms에서 14 ms로 변경 하는 CPU 시간 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 37 ms에서 84 ms로 변경 하는 CPU 시간 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -165,7 +166,7 @@ FROM sys.dm_db_tuning_recommendations
 
 검색 기능 외에도 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 자동 식별 된 권장 사항을 적용할 수 있습니다. 기본 제공 규칙은 데이터베이스의 성능을 향상 하를 찾을 경우 하도록 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 인덱스를 자동으로 관리 합니다.
 
-Azure SQL 데이터베이스에서 자동으로 튜닝을 사용 하도록 설정 하 고 자동 튜닝 기능을 완벽 하 게 작업을 관리할 수 있도록 참조 [Azure 포털을 사용 하 여 Azure SQL 데이터베이스에서 자동으로 조정 기능 사용](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable)합니다.
+Azure SQL 데이터베이스에서 자동으로 튜닝을 사용 하도록 설정 하 고 자동 튜닝 기능을 완벽 하 게 작업을 관리할 수 있도록 참조 [Azure 포털을 사용 하 여 Azure SQL 데이터베이스에서 자동으로 조정 기능 사용](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable)합니다.
 
 경우는 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] CREATE INDEX 문이나 DROP INDEX 권장 구성이 적용 됩니다. 자동으로 인덱스에 의해 영향을 받는 쿼리 성능을 모니터링 합니다. 새 인덱스의 영향을 받는 쿼리 성능이 향상 되는 경우에 유지 됩니다. 인덱스의 없기 때문에 느리게 실행 하는 일부 쿼리에 있는 경우 삭제 된 인덱스가 자동으로 다시 생성 됩니다.
 
@@ -177,9 +178,9 @@ Azure SQL 데이터베이스에서 자동으로 튜닝을 사용 하도록 설�
 
 자동 인덱스 관리 하지 않고 사용자를 수동으로 쿼리하려면 해야 [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 성능 향상, 세부 정보를 사용 하 여 인덱스를 만들 수 있는 인덱스를 찾을 수 보기 이 뷰와 수동으로 쿼리 성능 모니터링에 제공 합니다. 사용자는 삭제 해야 하는 인덱스를 찾기 위해 찾기 거의 사용 되지 않는 인덱스에 있는 인덱스의 통계 운영 사용 현황을 모니터링 해야 합니다.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 해당 작업을 분석, 새 인덱스를 사용 하면 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고 사용 되지 않거나 중복 된 인덱스를 식별 합니다. 변경 해야 하는 인덱스의 id에 대 한 자세한 정보를 찾을 [인덱스 권장 사항을 Azure 포털에서 찾을](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)합니다.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 해당 작업을 분석, 새 인덱스를 사용 하면 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고 사용 되지 않거나 중복 된 인덱스를 식별 합니다. 변경 해야 하는 인덱스의 id에 대 한 자세한 정보를 찾을 [인덱스 권장 사항을 Azure 포털에서 찾을](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)합니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ALTER 데이터베이스 집합 AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   

@@ -25,10 +25,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 53c5f5d2841dc80a6b779fec7c2adc99548d03ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707451"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,31 +43,31 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](../../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [데이터 원본 개체 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [데이터 원본 개체 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [도구](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
 -   [행 집합](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [저장된 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
--   [Blob 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [BLOB 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [테이블 및 인덱스](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [데이터 형식 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+-   [데이터 형식 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
 -   [스키마 행 집합 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [테이블 반환 매개 변수 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [큰 CLR 사용자 정의 형식 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [트랜잭션](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [의](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [오류](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [OLE DB 방법 도움말 항목](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

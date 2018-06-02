@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707661"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server에 대 한 원격 패키지 관리를 사용할지 설정 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 관리 서버를 학습 하는 컴퓨터의 원격 인스턴스에서 R 패키지를 설정 하는 방법을 설명 합니다. 패키지 관리 기능에 설정한 후 원격 클라이언트에서 데이터베이스에 패키지를 설치 하려면 RevoScaleR 명령을 사용할 수 있습니다.
+이 문서에서는 다른 컴퓨터 학습 서버 또는 클라이언트 워크스테이션에서 R 패키지의 원격 관리를 사용 하도록 설정 하는 방법을 설명 합니다. 패키지 관리 기능에 SQL Server에서 설정한 후에 SQL Server에서 패키지를 설치 하는 클라이언트에서 RevoScaleR 명령을 사용할 수 있습니다.
 
 > [!NOTE]
 > 현재에 R 라이브러리의 관리가 지원 됩니다. Python은 로드맵을 지원 합니다.
 
-기본적으로 SQL Server에 대 한 외부 패키지 관리 기능 불가능, 컴퓨터 학습 기능이 설치 된 경우에 합니다. 다음 섹션에 설명 된 대로 기능을 사용 하려면 별도 스크립트를 실행 해야 합니다.
+기본적으로 SQL Server에 대 한 외부 패키지 관리 기능을 사용 하는 사용할 수 없습니다. 다음 섹션에 설명 된 대로 기능을 사용 하려면 별도 스크립트를 실행 해야 합니다.
 
 ## <a name="overview-of-process-and-tools"></a>프로세스 및 도구 개요
 
-를 사용 하거나 패키지 관리를 사용 하지 않도록 설정 하려면 명령줄 유틸리티를 사용 하 여 **RegisterRExt.exe**에 포함 되어 있는 **RevoScaleR** 패키지 합니다.
+를 사용 하거나 SQL Server에서 패키지 관리를 사용 하지 않도록 설정 하려면 명령줄 유틸리티를 사용 하 여 **RegisterRExt.exe**에 포함 되어 있는 **RevoScaleR** 패키지 합니다.
 
 [사용 하도록 설정](#bkmk_enable) 이 기능은 데이터베이스 관리자는 한 단계로: SQL Server 인스턴스 (SQL Server 인스턴스) 당 한 번에 패키지 관리를 사용 하도록 설정 하 고 다음 SQL 데이터베이스 (SQL Server 당 한 번에 패키지 관리를 사용 하도록 설정 데이터베이스)입니다.
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="bkmk_enable"></a> 패키지 관리를 사용 하도록 설정
 
-1. 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe 유틸리티 포함 된 폴더로 이동 합니다. 기본 위치는 `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`합니다.
+1. SQL Server에서 관리자 권한 명령 프롬프트를 열고 RegisterRExt.exe 유틸리티가 들어 있는 폴더로 이동 합니다. 기본 위치는 `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`합니다.
 
 2. 사용자 환경에 적절 한 인수를 제공 하 고 다음 명령을 실행 합니다.
 
@@ -93,3 +94,8 @@ ms.lasthandoff: 05/08/2018
 
     이 명령은 인스턴스에서 패키지 관리 기능을 제거 합니다. 변경 내용을 확인할 수는 한 번 더 실행 패드 서비스를 수동으로 다시 시작 해야 합니다.
 
+## <a name="next-steps"></a>다음 단계
+
++ [RevoScaleR을 사용 하 여 새 R 패키지를 설치 합니다.](use-revoscaler-to-manage-r-packages.md)
++ [R 패키지를 설치 하기 위한 팁](packages-installed-in-user-libraries.md)
++ [기본 패키지](installing-and-managing-r-packages.md)

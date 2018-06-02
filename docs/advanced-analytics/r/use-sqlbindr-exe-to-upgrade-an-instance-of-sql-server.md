@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707691"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 컴퓨터 (예: R 및 Python) 학습 구성 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ SQL Server의 R 및 Python 통합 Microsoft 소유 하 고 오픈 소스 패키�
 > [!NOTE]
 > 바인딩 (In-database) 인스턴스에만 적용 됩니다. 바인딩에 (독립 실행형) 설치와 관련이 없습니다.
 
-**SQL Server 2017**
+**SQL Server 2017 바인딩 고려 사항**
 
 SQL Server 2017 컴퓨터 학습 서비스에 대 한 Microsoft 컴퓨터 학습 서버를 추가 패키지를 제공 하기 시작 되거나 어떤 조치 최신 버전이 이미 있는 경우에 바인딩 라고 생각할.
 
-**SQL Server 2016**
+**SQL Server 2016 바인딩 고려 사항**
 
-SQL Server 2016 R 서비스 고객에 대 한 방법은 두 가지 새로운 기능과 업데이트를 가져오기 위한 R 패키지 합니다. 하나는 SQL Server 2017;로 업그레이드 두 번째, Microsoft Learning 서버 컴퓨터에 바인딩.
+바인딩 고객을 제공 하는 SQL Server 2016 R Services R 패키지, 원래 설치과는 모두 더 이상 새로 고칠 수 Microsoft 학습 서버 컴퓨터의 각 새로운 주 및 부 버전에서 미리 학습 된 모델의 일부가 아닌 새 패키지를 업데이트 합니다. 바인딩 얻지 SQL Server 2017 기능인 Python 지원 합니다. 
 
-SQL Server 2017로 업그레이드 하면 R 패키지를에 가져옵니다 해당 릴리스 및 Python 기능에 포함 된 버전. 또는 바인딩 가져옵니다 Microsoft 학습 서버 컴퓨터의 각 새로운 주 및 부 버전에서 더 이상 새로 고칠 수 있는 R 패키지를 업데이트 합니다. 
+## <a name="version-map"></a>버전 맵
 
-바인딩 얻지 SQL Server 2017 기능인 Python 지원 합니다. 
+다음 표는 버전 맵을 (이전 명칭은 R Server Python 지원 추가 하기 전에 Microsoft 컴퓨터 학습 서버에 바인딩하는 경우에 potentional는 업그레이드 경로 확인할 수 있도록 릴리스 차량에서 패키지 버전을 보여 주는 부터는 9.2.1 MLS). 
 
-**Microsoft 컴퓨터 학습 서버를 통해 사용할 수 있는 구성 요소 업그레이드**
-
-다음 표에서 Microsoft 컴퓨터 학습 서버 (이전에 R Server MLS 9.2.1부터 Python 지원 추가 하기 전에)에 바인딩하는 경우 업그레이드 된 SQL Server와 함께 설치 된 버전을 보여 주는 버전 맵입니다. 
-
-바인딩 최신 버전의 R 또는 Anaconda 보장 하지 않습니다 확인 합니다. Microsoft 학습 서버 컴퓨터에 바인딩하는 경우 웹에서 사용 가능한 최신 버전이 아닐 수 있습니다는 설치 프로그램을 통해 설치 된 Python 또는 R 버전을 가져올 수 있습니다.
+바인딩 최신 버전의 R 또는 Anaconda 보장 하지 않습니다 확인 합니다. Microsoft 컴퓨터 학습 서버 (MLS)에 바인딩하는 경우 설치 프로그램을 통해 설치 된 최신 버전은 웹에서 확인할 수 없습니다 R, Python 버전을 가져올 수 있습니다.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-구성 요소 |초기 릴리스 | R 서버 9.0.1 | R 서버 9.1 | MLS 9.2.1 | MLS 9.3 |
+구성 요소 |초기 릴리스 | [R 서버 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R 서버 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 R 통해 Microsoft R Open (MRO) | R 3.2.2     | 3.3.2 R   |3.3.3 R   | 3.4.1 R  | 3.4.3 R |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [미리 학습 된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ R 및 Python 기능 데이터베이스 엔진 인스턴스를 복구할 SQL Serv
 
 ### <a name="parameters"></a>매개 변수
 
-|이름|Description|
+|속성|Description|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
@@ -301,7 +298,7 @@ Microsoft R Server 9.0.1로 업그레이드 한 경우 원래 패키지를 복�
 
 자동으로 R 구성 요소를 다시 설치 하지 않아도 원래 R 기능을 복원 되거나 다시 서버에 패치를 SqlBindR의 이후 버전입니다. 그러나 초기 설치 후 추가 된 R 패키지 업데이트를 설치 해야 합니다.
 
-이 작업은 훨씬 더 쉽게 패키지 관리 역할 설치 및 패키지 공유를 사용한 경우: R 명령을 사용 하 여 데이터베이스의 레코드를 사용 하 여 파일 시스템에 설치 된 패키지를 동기화 하 하며 그 반대 과정도 수행 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](r-package-management-for-sql-server-r-services.md)합니다.
+이 작업은 훨씬 더 쉽게 패키지 관리 역할 설치 및 패키지 공유를 사용한 경우: R 명령을 사용 하 여 데이터베이스의 레코드를 사용 하 여 파일 시스템에 설치 된 패키지를 동기화 하 하며 그 반대 과정도 수행 합니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](install-additional-r-packages-on-sql-server.md)합니다.
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>SQL Server에서 여러 업그레이드 문제
 
@@ -322,7 +319,7 @@ Microsoft 컴퓨터 학습 서버 9.2.1 및 9.3이이 문제를 갖지 않습니
 > [!NOTE]
 > 설치가 완료 될 때까지 대기 해야 합니다. 하나의 버전과 관련 된 R 라이브러리를 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 + [학습 서버에 대 한 Windows 컴퓨터 (인터넷에 연결 된)를 설치 합니다.](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [시스템 학습 Windows 용 서버 설치 (오프 라인)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

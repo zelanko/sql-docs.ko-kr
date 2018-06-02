@@ -22,10 +22,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: aa19218cfcb20bf4b696edfcdbffd4925d46aff8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708401"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client 11.0의 UTF-16 지원](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공 하는 경우는 **wchar** 문자 버퍼에 기록 하는 경우 및 종결 문자에 서로게이트 쌍의 상위 서로게이트 코드 포인트 크기를 다음 **wchar** 문자 하위 서로게이트 코드 포인트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 상위 서로게이트 코드 포인트 버퍼에 추가 되지 않습니다.  
   
- [고가용성, 재해 복구에 대 한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  고가용성, 재해 복구에 추가 된 기능을 활용 하도록 응용 프로그램을 구성할 수 있는 방법을 설명 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/03/2018
  [LocalDB에 대한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지원하는 LocalDB 기능을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC 방법 도움말 항목](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   

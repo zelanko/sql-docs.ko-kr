@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f2c1e0e17e2cbfb5816632a25ecdebe5d92ee024
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706751"
 ---
 # <a name="instant-file-initialization-configuration"></a>즉시 파일 초기화 구성
 즉시 파일 초기화는 보다 빠르게 실행 하는 데이터 파일 작업을 허용 하는 SQL Server 기능입니다. 즉시 파일 초기화를 설정 하려면 확인란을 선택 하면 SQL Server PDW의 성능이 향상 됩니다. 그러나이 작업은 보안상 위험 하기에 대 한 비즈니스, 하는 경우 다음 상자를 둡니다 선택 취소 되어 있음.  
@@ -53,5 +54,5 @@ TDE를 사용하도록 설정되어 있으면 즉시 파일 초기화를 사용�
   
 ![DWConfig 어플라이언스 PDW 인스턴트 파일 초기화](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-즉시 파일 초기화에 대 한 자세한 내용은 참조 [즉시 파일 초기화](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx)합니다.  
+즉시 파일 초기화에 대 한 자세한 내용은 참조 [즉시 파일 초기화](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx)합니다.  
   

@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707511"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>부록 a: 데이터 및 서비스 공급자
 이 섹션에서는 다음과 같은 세 가지 종류의 공급자: 데이터 공급자, 서비스 공급자 및 서비스 구성 요소입니다. 공급자 두 범주로 나누어집니다: 데이터 및 서비스를 제공 하는 것을 제공 하는 것입니다. A *데이터 공급자* 자체 데이터를 소유 하 고 응용 프로그램에 테이블 형식으로 제공 합니다. A *서비스 공급자* 생성 하 고 데이터를 확대 ADO 응용 프로그램의 기능을 사용 하 여 서비스를 캡슐화 합니다. 서비스 공급자 수 정의할 수도로 *서비스 구성 요소*는 다른 서비스 공급자 또는 구성 요소와 함께 작업 해야 합니다.
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-specific-dynamic-properties"></a>공급자 관련 동적 속성
  [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션의는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 관련 동적 속성을 포함 하는 개체는 공급자입니다. 이러한 속성에 ADO에서 지 원하는 기본 제공 속성 외에도 공급자 특정 기능에 대 한 정보를 제공 합니다.
 
- 연결을 설정 하 고 이러한 개체를 만든를 사용 하 여는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 에서 메서드는 **속성** 공급자별 속성을 가져올 개체의 컬렉션입니다. 공급자 설명서를 참조 및 [OLE DB Programmer's Guide](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 이러한 동적 속성에 대 한 자세한 내용은 합니다.
+ 연결을 설정 하 고 이러한 개체를 만든를 사용 하 여는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 에서 메서드는 **속성** 공급자별 속성을 가져올 개체의 컬렉션입니다. 공급자 설명서를 참조 및 [OLE DB Programmer's Guide](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 이러한 동적 속성에 대 한 자세한 내용은 합니다.
 
 ## <a name="service-providers"></a>서비스 공급자
  서비스 공급자를 사용 하려면 키워드를 제공 해야 합니다. 또한 각 서비스 공급자와 연결 된 공급자 특정 동적 속성에 주의 합니다. 공급자 관련 세부 정보는 Microsoft에서 현재 사용할 수 있는 각 서비스 공급자에 대해 나열 됩니다.
@@ -76,5 +77,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-commands"></a>공급자 명령
  각 공급자에 대해 여기에 나열 된 응용 프로그램 공급자 명령으로 SQL 문을 입력할 수 있도록 하는 경우, 항상 사용자 입력의 유효성을 검사 하며 해커의 공격와 같은 잠재적으로 위험한 SQL 문을 사용 하 여 경계 해야 `DROP TABLE t1`, 사용자 입력의 일부로 합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [개체 (ADO) 명령](../../../ado/reference/ado-api/command-object-ado.md) [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [인터넷 게시에 대 한 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Microsoft OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ 레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh (RDS) 메서드](../../../ado/reference/rds-api/refresh-method-rds.md)

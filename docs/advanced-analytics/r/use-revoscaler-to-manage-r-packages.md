@@ -2,57 +2,45 @@
 title: SQL Server에서 패키지를 찾거나 R 설치 RevoScaleR 함수를 사용 하는 방법 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c872a945388696a75a07116c0a84a64d64d668d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92b3e993968ce48d7489b0c17d6bdba005809a3
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707531"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에서 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Microsoft R Server 릴리스 9.0.1 작업에 사용할 SQL Server 계산 컨텍스트에서의 패키지를 설치 하는 새로운 RevoScaleR 함수를 도입 합니다. 이러한 새 함수 R 코드를 실행 하는 서버에 직접 액세스 하지 않고 SQL Server에 패키지를 설치 하는 데이터 과학자 쉽게 있습니다.
+RevoScaleR 9.0.1 나중에 SQL Server 계산 컨텍스트에서 R 패키지 관리에 대 한 함수를 포함 합니다. 서버에 직접 액세스 하지 않고 SQL Server에서 패키지를 설치 하는 원격, 비관리자 이러한 함수를 사용할 수 있습니다.
 
-## <a name="how-does-it-work"></a>어떻게 작동 합니까
+SQL Server 2017 컴퓨터 학습 서비스 RevoScaleR의 최신 버전을 이미 포함 되어 있습니다. SQL Server 2016 R 서비스 고객을 수행 해야 합니다는 [구성 요소 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) RevoScaleR 패키지 관리 기능을 얻으려고 합니다. 버전 및 내용을 검색 하는 방법에 대 한 지침 패키지 참조 [패키지 정보를 가져올](determine-which-packages-are-installed-on-sql-server.md)합니다.
 
-이상 버전에서는 사용할 수 있습니다 또는 R Server 9.0.1 있는 경우는 [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) 패키지를 설치할 SQL Server 계산 컨텍스트에서 R 원격 클라이언트에서 함수입니다. 이 옵션을 사용 하려면 패키지 관리 서버 및 데이터베이스에 설정 해야 합니다. 이 기능에서 해당 버전의 R 서비스 또는 컴퓨터 학습 서비스 서버에 설치할 수 있도록 해야 합니다.
+## <a name="revoscaler-functions-for-package-management"></a>패키지 관리에 대 한 RevoScaleR 함수
 
-RevoScaleR의 새 버전에는 이러한 함수가 포함 됩니다. 
+다음 표에서 R 패키지를 설치 및 관리에 사용 되는 함수를 설명 합니다.
 
-+ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) 함수는 지정 된 계산 컨텍스트에서 하나 이상의 패키지에 대 한 경로 가져옵니다.
+| 기능 | Description |
+|----------|-------------|
+| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 원격 SQL Server의 인스턴스 라이브러리의 경로 확인 합니다. |
+| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 원격 SQL Server에 하나 이상의 패키지에 대 한 경로 가져옵니다. |
+| [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | 패키지를 설치할 SQL Server 계산 컨텍스트에서 R 원격 클라이언트에서이 함수를 호출, 지정 된 저장소에서 또는 참조 하 여 압축 된 패키지를 로컬로 저장 합니다. 이 함수 종속성에 대 한 확인 하 고 로컬 계산 컨텍스트에서 R 패키지 설치와 마찬가지로 SQL server에 모든 관련된 패키지를 설치할 수 있도록 합니다. 이 옵션을 사용 하려면 패키지 관리 서버 및 데이터베이스에 설정 해야 합니다. 클라이언트와 서버 환경에 동일한 버전의 RevoScaleR 있어야 합니다. |
+| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | 지정 된 계산 컨텍스트에서 설치 된 패키지 목록을 가져옵니다. |
+| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | 파일 시스템 및 지정 된 계산 컨텍스트에 대 한 데이터베이스 간에 패키지 라이브러리에 대 한 정보를 복사 합니다. |
+| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | 지정 된 계산 컨텍스트에서 패키지를 제거합니다. 또한 종속성을 계산 하 고 리소스를 더 이상 SQL Server에서 다른 패키지에서 사용 되는 패키지 제거를 보장 합니다. |
 
-    특정 데이터베이스에 패키지를 추가 하거나 패키지를 찾을 수는 사용자와 범위를 사용할 수 있습니다.
+## <a name="prerequisites"></a>사전 요구 사항
 
-+ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) 함수는 지정 된 계산 컨텍스트에서 설치 된 패키지 목록을 가져옵니다.
++ [SQL Server에서 원격 R 패키지 관리](r-package-how-to-enable-or-disable.md)
 
-+ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) 계산 컨텍스트로 패키지를 설치 하는 함수, 지정 된 저장소에서 또는 로컬로 저장 된 참조 하 여 패키지를 압축 합니다.
++ RevoScaleR 버전 클라이언트와 서버 환경에서 동일 해야 합니다. 자세한 내용은 참조 [패키지 정보를 가져올](determine-which-packages-are-installed-on-sql-server.md)합니다.
 
-    이 함수 종속성에 대 한 확인 하 고 로컬 계산 컨텍스트에서 R 패키지 설치와 마찬가지로 SQL server에 모든 관련된 패키지를 설치할 수 있도록 합니다.
-
-+ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) 함수는 지정 된 계산 컨텍스트에서에서 패키지를 제거 합니다.
-
-    또한 종속성을 계산 하 고 리소스를 더 이상 SQL Server에서 다른 패키지에서 사용 되는 패키지 제거를 보장 합니다.
-
-+ 사용 하 여는 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) 함수 사이 파일 시스템 및 데이터베이스를 지정 된 계산 컨텍스트에 대 한 패키지 라이브러리에 대 한 정보를 복사 합니다.
-
-+ 사용 하 여는 [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) 계산 컨텍스트는 SQL Server에 인스턴스 라이브러리 경로 확인 하는 함수입니다.
-
-**적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]합니다. 에서도 지원 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 이상 R 서버 9.0으로 업그레이드 합니다. 다른 제한이 적용 됩니다.
-
-## <a name="requirements"></a>요구 사항
-
-+ 이러한 함수를 실행 하려면 서버와 데이터베이스에 연결 하 고 R 명령을 실행 하는 권한이 있어야 합니다.
-
-+ R 원격 클라이언트에서 이러한 함수를 사용할 때는 계산 컨텍스트 개체를 먼저 만들어야를 사용 하 여는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수입니다. 그 후 사용 하는 각 패키지 관리 기능에 대 한 계산 컨텍스트를 인수로 전달 합니다.
-
-+ 지정 하지 않으면 사용자 이름 및 암호 계산 컨텍스트를 만들 때, 하는 경우에 R 코드를 실행 하는 사용자의 id가 사용 됩니다.
-
-+ 내 패키지 관리 기능을 실행할 수 이기도 `sp_execute_external_script`합니다. 이렇게 하면 함수는 저장된 프로시저 호출자의 보안 컨텍스트를 사용 하 여 실행 합니다.
++ 서버와 데이터베이스에 연결 하 고 R 명령을 실행할 수 있는 권한입니다. 지정 된 인스턴스 및 데이터베이스에 패키지를 설치할 수 있도록 하는 데이터베이스 역할의 구성원 이어야 합니다.
 
 + 패키지를 **공유 범위** 에 속한 사용자가 설치할 수는 `rpkgs-shared` 지정된 된 데이터베이스의 역할입니다. 이 역할의 모든 사용자가 공유 하는 패키지를 제거할 수 있습니다.
 
@@ -60,14 +48,13 @@ RevoScaleR의 새 버전에는 이러한 함수가 포함 됩니다.
 
 + 데이터베이스 소유자 공유 또는 전용으로 패키지를 사용할 수 있습니다.
 
-## <a name="package-installation-from-machine-learning-server-or-remote-r-client"></a>학습 서버나 원격 R 클라이언트 컴퓨터에서 패키지 설치
+## <a name="client-connections"></a>클라이언트 연결
 
-시작 하기 전에 이러한 조건이 충족 되어 있는지 확인 합니다.
+클라이언트 워크스테이션 수 [Microsoft R 클라이언트](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) 또는 [Microsoft 컴퓨터 학습 서버](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (데이터 과학자 자주 사용 하 여 무료 개발자 버전) 동일한 네트워크에 있습니다.
 
-+ 클라이언트에 RevoScale 9.0.1 이상.
-+ SQL Server 인스턴스에서 RevoScaleR의 해당 버전을 설치한 합니다.
-+ [패키지 관리 기능](..\r\r-package-how-to-enable-or-disable.md) 인스턴스에서 사용 되었습니다.
-+ 지정 된 인스턴스 및 데이터베이스에 패키지를 설치할 수 있도록 하는 데이터베이스 역할의 멤버인 사용자가 있습니다. 나중에 역할 설치 패키지를 공유 또는 전용 위치를 지원 합니다. 지금은 데이터베이스 소유자 인 경우 패키지를 설치할 수 있습니다.
+R 원격 클라이언트에서 패키지 관리 함수를 호출할 때 계산 컨텍스트 개체를 먼저 만들어야를 사용 하 여는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수입니다. 그 후 사용 하는 각 패키지 관리 기능에 대 한 계산 컨텍스트를 인수로 전달 합니다.
+
+사용자 id는 계산 컨텍스트를 설정 하는 경우에 일반적으로 지정 됩니다. 지정 하지 않으면 사용자 이름 및 암호 계산 컨텍스트를 만들 때, 하는 경우에 R 코드를 실행 하는 사용자의 id가 사용 됩니다.
 
 1. R 명령줄에서 인스턴스 및 데이터베이스에 대 한 연결 문자열을 정의 합니다.
 2. 사용 하 여는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 연결 문자열을 사용 하 여 SQL Server 계산 컨텍스트를 정의 하는 생성자입니다.
@@ -91,6 +78,10 @@ RevoScaleR의 새 버전에는 이러한 함수가 포함 됩니다.
     
     패키지는 해당 사용자의 기본 범위에 연결 하는 사용자의 자격 증명을 사용 하 여 설치 됩니다.
 
+## <a name="call-package-management-functions-in-stored-procedures"></a>저장된 프로시저에서 패키지 관리 함수를 호출 합니다.
+
+캠 내부 패키지 관리 기능을 실행할 `sp_execute_external_script`합니다. 이렇게 하면 함수는 저장된 프로시저 호출자의 보안 컨텍스트를 사용 하 여 실행 합니다.
+
 ## <a name="examples"></a>예
 
 이 섹션에서는 SQL Server 인스턴스 또는 계산 컨텍스트로 써 데이터베이스에 연결할 때 원격 클라이언트에서 이러한 기능을 사용 하는 방법의 예제를 제공 합니다.
@@ -98,7 +89,7 @@ RevoScaleR의 새 버전에는 이러한 함수가 포함 됩니다.
 모든 예에 대 한 연결 문자열 또는 연결 문자열을 필요로 하는 계산 컨텍스트를 제공 해야 합니다. 이 예에서는 SQL Server에 대 한 계산 컨텍스트를 만드는 한 가지 방법은 제공 합니다.
 
 ```R
-instance_name <- "Machine name/Instance name";
+instance_name <- "computer-name/instance-name";
 database_name <- "TestDB";
 sqlWait= TRUE;
 sqlConsoleOutput <- TRUE;
@@ -110,11 +101,11 @@ sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOut
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
+```
 
+### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>원격 SQL Server 계산 컨텍스트에서에서 패키지 경로를 가져옵니다
 
-### Get package path on a remote SQL Server compute context
-
-This example gets the path for the **RevoScaleR** package on the compute context, `sqlcc`.
+이 예제에 대 한 경로 가져옵니다는 **RevoScaleR** 계산 컨텍스트에서 패키지 `sqlcc`합니다.
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -216,3 +207,9 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
+## <a name="see-also"></a>참고자료
+
++ [원격 R 패키지 관리 사용](r-package-how-to-enable-or-disable.md)
++ [R 패키지 동기화](package-install-uninstall-and-sync.md)
++ [R 패키지를 설치 하기 위한 팁](packages-installed-in-user-libraries.md)
++ [기본 패키지](installing-and-managing-r-packages.md)

@@ -25,10 +25,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e7574f58ead9dc10afaf2cf6a9dc65c48a8c24f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706881"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 프로그래밍
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 지원하는 기능을 설명합니다.  
   
- [SQL Server Native Client 사용한 응용 프로그램 작성](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 Windows DAC와 다른 점, 사용되는 구성 요소, ADO와 연동하는 방법 등 개발에 대한 개요를 제공합니다.  
   
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 설치 및 배포에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 라이브러리를 재배포하는 방법을 포함하여 설명합니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 사용에 대한 정보를 제공합니다.  
   
- [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 사용에 대한 정보를 제공합니다.  
   
  [SQL Server Native Client 추가 정보 찾기](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client 오류](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 연결된 런타임 오류에 대한 항목을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

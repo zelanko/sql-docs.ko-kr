@@ -17,10 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708011"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 많은 기능과 구성 요소를 새 개체 또는 속성으로 나타냅니다. 이러한 새 기능과 구성 요소는 다음과 같습니다.  
   
--   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
+-   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
 -   SOAP 요청을 관리하기 위한 HTTP 끝점. 자세한 내용은 참조 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
  향상된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스 기능은 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체의 새 속성으로 나타납니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 관리 개체 개념](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   
