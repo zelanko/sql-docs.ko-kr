@@ -1,31 +1,20 @@
 ---
 title: VisualTotals (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- VisualTotals
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- VisualTotals function
-ms.assetid: 8ec529c2-729a-4a5b-892e-750849ab4013
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e36ac4403d8a3977969f71c8dc4c73a817eb11f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2690807cc3438773c3c2de613dedf7c1419ba0f1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581815"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,10 +32,10 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Pattern*  
+ *패턴*  
  부모 이름의 대체 문자로 별표(*)가 들어 있는 집합의 부모 멤버에 대한 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정된 집합 식은 단일 차원 내에 있는 모든 수준의 멤버(일반적으로 상위-하위 관계가 있는 멤버)가 들어 있는 집합을 지정할 수 있습니다. **VisualTotals** 함수 지정된 된 집합에 있는 자식 멤버의 값 합계를 계산 하 고 계산 결과 합계를 계산할 때 해당 집합에 없는 자식 멤버를 무시 합니다. 합계는 계층 순서로 정렬된 집합에 대해 보이는 값 합계로 계산됩니다. 집합의 멤버 순서가 계층과 맞지 않는 경우 결과는 보이는 값 합계가 아닙니다. 예를 들어 VisualTotals (USA, WA, CA, Seattle)는 WA를 Seattle로 반환하는 것이 아니라 WA, CA 및 Seattle에 대한 값을 반환한 다음 이러한 값의 합계를 USA의 보이는 값 합계로 계산하므로 Seattle의 판매량은 두 번 계산됩니다.  
   
 > [!NOTE]  
@@ -78,7 +67,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,32 +1,20 @@
 ---
 title: (MDX syntax) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- precedence [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 00f1b46fbb0087f41b4472f08c9861631fef7c1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580665"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  MDX는 다음 테이블에 나열된 연산자를 지원합니다.  
   
-|원하는 연산|찾기 옵션|  
+|원하는 연산|이후|  
 |---------------------------------------|---------|  
 |변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[대입 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
@@ -70,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 -   DISTINCT  
   
--   :  
+-   으로 디코딩된 문자입니다.  
   
 -   ^  
   
@@ -84,11 +72,11 @@ ms.lasthandoff: 05/03/2018
   
 -   NOT  
   
--   및  
+-   AND  
   
 -   XOR  
   
--   OR  
+-   또는  
   
  MDX의 연산자에에서 대 한 자세한 내용은 참조 하십시오. [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)합니다.  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 |Tuple|멤버|\<튜플 >.item(0)|  
 |Tuple|스칼라|\<튜플 >.value|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   

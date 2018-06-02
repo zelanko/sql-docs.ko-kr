@@ -1,31 +1,20 @@
 ---
 title: 속성 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Properties
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Properties function
-ms.assetid: 2d8442c5-30c4-4fd1-99ea-9845b6533e41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 17d866d9a98c4ca7cc3fb3ce4586e54ab0439d72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b564d11696999ec2dbd778d15a3e881cab415259
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581135"
 ---
 # <a name="properties-mdx"></a>Properties(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Property_Name*  
  멤버 속성 이름의 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **속성** 함수는 지정 된 멤버 속성에 대 한 지정된 된 멤버의 값을 반환 합니다. 멤버 속성와 같은 기본 멤버 속성 중 하나일 수 있습니다 **이름**, **ID**, **키**, 또는 **캡션**, 사용자 정의 멤버 속성이 될 수도 있습니다. 자세한 내용은 참조 [내장 멤버 속성 &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 및 [사용자 정의 멤버 속성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)합니다.  
   
  기본적으로 값은 문자열로 변환됩니다. 경우 **형식화** 반환 값은 강력한 형식이 지정 된 합니다.  
@@ -116,8 +105,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [멤버 속성을 사용 하 여 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

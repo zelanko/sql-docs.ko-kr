@@ -1,25 +1,20 @@
 ---
 title: CREATE MEASURE 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: f264ba96-cbbe-488b-8ac9-b3056a6e997b
-caps.latest.revision: 5
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8868863d2bba43ba8f9a0fff9f9f2aa5f5331bc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 98ca479c266d9e8c25b2e75d8b15da1cd76a46aa
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579355"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 데이터 정의-측정값 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,14 +40,14 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  단일 스칼라 값을 반환하는 유효한 DAX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *Measure_Name* 대괄호로 묶어야 합니다.  
   
  CREATE MEASURE 문은 MDX 스크립트 정의;만 사용할 수 있습니다. 참조 [MdxScript 요소 &#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md)합니다.  
   
  또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 참조 [MDX로 측정값 만들기](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

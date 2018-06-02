@@ -1,30 +1,20 @@
 ---
 title: 멤버 식을 사용 하 여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- members [MDX], expressions
-- expressions [MDX], members
-ms.assetid: 63c7af49-8bea-47c5-9566-a961f77d2a3d
-caps.latest.revision: 28
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 79e977a3c25b95d4789d6b7c56ce5e188788a4fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bdf16151dac1e55e6fe41d76078b5fc409fd36d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581535"
 ---
 # <a name="using-member-expressions"></a>멤버 식 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +62,7 @@ Dimension_Name
 > [!NOTE]  
 >  멤버 이름과 멤버 키에 대 한 자세한 내용은 참조 [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

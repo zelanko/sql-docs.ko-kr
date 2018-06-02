@@ -1,31 +1,20 @@
 ---
 title: ParallelPeriod (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PARALLELPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ParallelPeriod function
-ms.assetid: 9c87f5a6-5694-46f1-9890-bd9705190ea7
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 646095493ba9777b2a07b09bf3b02f3f360cf64b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8cde031af19fff309520cd72e145b6c04dc19d9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580825"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  유사 하지만 [사촌](../mdx/cousin-mdx.md) 함수는 **ParallelPeriod** 함수는 시계열 더욱 긴밀 하 게 관련이 있습니다. **ParallelPeriod** 함수는 지정된 된 수준에서 지정된 된 멤버의 상위 항목, 지정 된 시간 간격의 상위 항목의 형제나 찾아서 마지막 형제의 하위 항목 중 지정된 된 멤버의 병렬 기간을 반환 합니다.  
   
  **ParallelPeriod** 함수는 다음 기본값을 가집니다.  
@@ -87,7 +76,7 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

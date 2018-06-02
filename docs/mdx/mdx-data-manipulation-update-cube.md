@@ -1,37 +1,20 @@
 ---
 title: UPDATE CUBE 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- UPDATE CUBE
-- UPDATE_CUBE
-- UPDATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- updating cubes
-- cubes [Analysis Services], modifying
-- modifying cubes
-- UPDATE CUBE statement
-ms.assetid: 6c8f23bb-401b-49de-843a-5324ac977239
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 805b6f1bf5966cefd3879ff53f8908f20944c441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1569d8024e23bab1841bf7757ffd828a3bc7dd4f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579755"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작-UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  0에서 1 사이의 10진수 값을 반환하는 유효한 MDX 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  큐브의 지정된 리프 또는 리프가 아닌 셀의 값을 업데이트할 수 있습니다. 지정된 리프가 아닌 셀 값을 종속되는 여러 리프 셀에 할당할 수도 있습니다. 튜플 식으로 지정되는 셀은 다차원 공간의 유효한 셀일 수 있으며, 리프 셀일 필요가 없습니다. 하지만 셀을 집계 해야는 [Sum](../mdx/sum-mdx.md) 집계 함수 및 셀을 식별 하는 데 사용 되는 튜플의 계산된 멤버를 포함 하지 않아야 합니다.  
   
  개념으로 생각 될 수 있습니다는 **UPDATE CUBE** 문은 일련의 개별 셀 쓰기 저장 작업은 지정 된 합계로 롤업되는 리프 멤버 및 리프가 아닌 셀에 자동으로 생성 하는 서브루틴으로 합니다.  
@@ -124,7 +107,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  업데이트된 셀이 겹치지 않을 경우 **Update Isolation Level** 연결 문자열 속성을 사용하여 UPDATE CUBE의 성능을 향상시킬 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

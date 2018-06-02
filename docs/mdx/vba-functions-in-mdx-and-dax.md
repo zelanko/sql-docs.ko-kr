@@ -1,25 +1,20 @@
 ---
 title: MDX 및 DAX의 VBA 함수 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582525"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |CurDir|지원되지 않음||  
 |CVar|MDX만||  
 |CVErr|지원되지 않음||  
-|날짜|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름; 지정된 된 인수에서 날짜 형식 값을 생성 하는 데 사용 하는 DATE (Year, Month, Day) 함수|  
+|date|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름; 지정된 된 인수에서 날짜 형식 값을 생성 하는 데 사용 하는 DATE (Year, Month, Day) 함수|  
 |DateAdd|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름;는 DATEADD (\<날짜 >, < number_of_intervals >\<간격 >)의 수로 지정 된 날짜를 이동할 사용 되는 함수, 간격 지정|  
 |DateDiff]|MDX만||  
 |DatePart|MDX만||  
@@ -68,12 +63,12 @@ ms.lasthandoff: 05/03/2018
 |DoEvents|지원되지 않음||  
 |Environ|지원되지 않음||  
 |EOF|지원되지 않음||  
-|오류|지원되지 않음||  
+|Error|지원되지 않음||  
 |Exp|DAX, MDX||  
 |FileAttr|지원되지 않음||  
 |FileDateTime|지원되지 않음||  
 |FileLen|지원되지 않음||  
-|필터|지원되지 않음|**경고** 이름이 같은 다른 함수를 구현 하는 MDX; 지정된 된 인수에서 검색 조건에 따라 지정 된 집합을 필터링 결과 집합을 반환 하는 FILTER (Set_Expression, Logical_Expression) 함수<br /><br /> **경고** 같은 다른 함수를 구현 하는 DAX 이름; FILTER (\<테이블 >,\<필터 >) 함수를 다른 테이블이 나 지정된 된 인수에서 식의 하위 집합을 표시 하는 테이블 반환|  
+|Assert|지원되지 않음|**경고** 이름이 같은 다른 함수를 구현 하는 MDX; 지정된 된 인수에서 검색 조건에 따라 지정 된 집합을 필터링 결과 집합을 반환 하는 FILTER (Set_Expression, Logical_Expression) 함수<br /><br /> **경고** 같은 다른 함수를 구현 하는 DAX 이름; FILTER (\<테이블 >,\<필터 >) 함수를 다른 테이블이 나 지정된 된 인수에서 식의 하위 집합을 표시 하는 테이블 반환|  
 |Fix|MDX만||  
 |Format(Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|지원되지 않음||  
@@ -94,7 +89,7 @@ ms.lasthandoff: 05/03/2018
 |InputBox|지원되지 않음||  
 |InStr|MDX만||  
 |InStrRev|지원되지 않음||  
-|int|DAX, MDX||  
+|정수|DAX, MDX||  
 |IPmt|MDX만||  
 |IRR|MDX만||  
 |IsArray|MDX만||  

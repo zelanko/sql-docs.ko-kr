@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585615"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 구성 요소를 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 > [!NOTE]  
-> 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
+> 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
  
  ###  <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항 
 
@@ -71,6 +72,12 @@ Microsoft R Open     |변경 없음 이전에 사용 하 여|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
 Microsoft Python 서버    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |변경 없음 이전에 사용 하 여|
+Microsoft R Server      |o 변경; 이전에 사용 하 여|
+Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
+Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
+
 
 ### <a name="bkmk_2016Installers"></a>SQL Server 2016에 대 한 다운로드
 

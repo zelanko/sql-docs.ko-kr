@@ -1,31 +1,20 @@
 ---
 title: TopPercent (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopPercent function
-ms.assetid: a40cfbb8-5bf4-4ae2-8686-df9a07206d56
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6e8ca7e44a8138ab097a9f7a486f4e76aca30415
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2957b94109e3b611e407185a35bbe8937631f43e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581455"
 ---
 # <a name="toppercent-mdx"></a>TopPercent(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **TopPercent** 함수 집합을 내림차순 정렬 지정된 된 집합에 대해 계산 된 지정된 된 숫자 식의 합계를 계산 합니다. 그런 다음 총 합계 값에 대한 누적 백분율이 지정된 백분율 이상이 되는 상위 값 요소를 반환합니다. 이 함수는 누적 합계가 지정된 백분율 이상이 되는 집합의 가장 작은 하위 집합을 반환합니다. 반환되는 요소는 가장 큰 값에서 가장 작은 값 순서로 정렬됩니다.  
   
 > [!WARNING]  
@@ -138,7 +127,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

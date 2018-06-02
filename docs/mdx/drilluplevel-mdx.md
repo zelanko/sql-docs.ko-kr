@@ -1,31 +1,20 @@
 ---
 title: DrillupLevel (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLUPLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrillupLevel function
-ms.assetid: 63431f79-f3a1-40c4-bf57-2b6bd8991cc3
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8fb99e8e1984f0bbfddf4e7e8bd48e7fa05c0e45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 19d6443857d53d835db4c395ddd43dc4a305ad8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579455"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **DrillupLevel** 지정된 된 집합에 포함 된 멤버에 따라 멤버 집합을 계층적으로 구성 하는 함수 반환 합니다. 지정된 집합의 멤버 간 순서는 유지됩니다.  
   
  수준 식이 지정 되는 **DrillupLevel** 함수는 지정 된 수준의 위쪽에 있는 멤버만 검색 하 여 집합을 구성 합니다. 수준 식이 지정되어 있고 지정된 집합에 지정된 수준의 멤버가 표시되지 않는 경우에는 지정된 집합이 반환됩니다.  
@@ -68,7 +57,7 @@ SELECT DrillUpLevel
   WHERE [Measures].[Internet Order Quantity]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

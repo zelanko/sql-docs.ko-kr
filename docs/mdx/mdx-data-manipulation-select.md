@@ -1,32 +1,20 @@
 ---
 title: SELECT 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 93a58d6453300d79f07fa19874cc2db8c21cfb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 787bd07976f7472ae5f86c347c5ba06493414d7a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579985"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 선택
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +110,7 @@ FROM
  *MemberProperty_Name*  
  멤버 속성을 나타내는 유효한 문자열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  `<SELECT slicer axis clause>` 식에는 지정된 `<SELECT query axis clause>` 식에서 참조되는 것 이외의 멤버가 차원 및 계층에 포함되어 있어야 합니다.  
   
  지정된 `<SELECT query axis clause>` 식과 `<SELECT slicer axis clause>` 값에 큐브의 특성이 생략되어 있으면 특성의 기본 멤버가 slicer 축에 암시적으로 추가됩니다.  
@@ -131,7 +119,7 @@ FROM
   
  계산된 멤버에 포함 될 수 \<t query axis > 때마다 연결 문자열 매개 변수를 사용 하 여 해당 연결을 연 *하위 쿼리 = 1*; 참조 [XMLA 속성 지원 &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다. 하위 SELECT의 계산 멤버에 대한 예는 다음을 참조하십시오.  
   
-## <a name="autoexists"></a>Autoexists  
+## <a name="autoexists"></a>AUTOEXIST  
  SELECT 문에 두 개 이상의 차원 특성이 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 기준에 맞도록 적절히 제한되도록 특성의 식을 계산합니다. 예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이러한 Analysis Services 특징을 Autoexists라고 하며 이는 동일한 차원의 특성에만 적용됩니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 레코드에서 서로 다른 특성 식이 교차하는 것으로 Autoexists를 이해할 수도 있습니다. 아래의 예를 참조하십시오.  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -475,10 +463,10 @@ WHERE
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;의 주요 개념 Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [주요 개념 mdx에서 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [쿼리 및 Slicer 축 & #40;으로 쿼리 제한 Mdx& #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [쿼리 및 Slicer 축으로 쿼리 제한 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

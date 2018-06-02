@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -22,11 +22,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18389f44470879eeda5f1dcc7a9891de7c3a9806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563921"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -80,7 +81,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>반환 값  
 문 리소스입니다. 문 리소스를 만들 수 없는 경우 **false** 가 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 변수를 매개 변수로 사용하는 문을 준비할 때 변수가 문에 바인딩됩니다. 이는 변수 값을 업데이트하는 경우 다음에 문을 실행할 때 업데이트된 매개 변수 값으로 실행한다는 것입니다.  
   
 조합의 **sqlsrv_prepare** 및 **sqlsrv_execute** 함수 호출 및 매개 변수가 있는 쿼리를 실행 하는 데 사용 될 구분 문 준비와 문 두 개를 실행 합니다. 이 함수는 각 실행에 다른 매개 변수 값을 사용하여 문을 여러 번 실행하는 데 이상적입니다.  
@@ -222,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다.
+> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [10 진수 또는 숫자 열](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP 정밀도 대 한 제한 된 대로 정밀도 정확도 진행 하려면 [부동 소수점 숫자](http://php.net/manual/en/language.types.float.php)합니다. 마찬가지 bigint 열에 값의 범위 밖에 있는 경우 특히는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
 
 ## <a name="example"></a>예제  
 이 코드 예제에는 10 진수 값을 입력된 매개 변수로 바인딩하는 방법을 보여 줍니다.  
@@ -249,7 +250,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)

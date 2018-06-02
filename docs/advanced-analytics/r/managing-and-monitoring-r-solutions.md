@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1f390f6f8b33e9dbf316fa98eb35574a5daebeed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585705"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>시스템 학습 솔루션 관리 및 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 + [Python 보안 개요](../python/security-overview-sql-server-python-services.md)
 
-+ [R 패키지 설치 및 관리](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [SQL Server에 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>구성 및 관리
 

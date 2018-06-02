@@ -1,35 +1,20 @@
 ---
 title: CREATE SET 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SET
-- CREATE SET
-- CREATE_SET
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- named sets [MDX]
-- CREATE SET statement
-ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4155067b6415ea8d2113bcf9f75cbb026dd117d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579345"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의-설정 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +47,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  집합 속성의 값을 정의하는 유효한 스칼라 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  명명된 집합은 다시 사용할 수 있도록 만드는 일련의 차원 멤버(또는 집합을 정의하는 식)입니다. 예를 들어 명명된 집합을 사용하면 판매량 기준으로 상위 10개의 판매점 집합으로 구성되는 차원 멤버 집합을 정의할 수 있습니다. 정적으로 또는 같은 함수를 사용 하 여이 집합을 정의할 수 있습니다 [TopCount](../mdx/topcount-mdx.md)합니다. 그런 다음에는 상위 10개의 판매점이 필요할 때마다 이 명명된 집합을 사용할 수 있습니다.  
   
  CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 참조 [Creating Session-Scoped 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
@@ -115,7 +100,7 @@ SELECT [Core Products] ON 0
 |CAPTION|클라이언트 응용 프로그램이 집합에 대한 캡션으로 사용하는 문자열입니다.|  
 |DISPLAY_FOLDER|클라이언트 응용 프로그램이 집합을 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및에서 제공 하는 클라이언트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 집합에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DROP SET 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

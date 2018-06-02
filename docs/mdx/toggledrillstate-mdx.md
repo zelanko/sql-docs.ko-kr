@@ -1,31 +1,20 @@
 ---
 title: ToggleDrillState (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOGGLEDRILLSTATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ToggleDrillState function
-ms.assetid: 26fa1a0d-3ed1-45dc-955d-0591d49e4db9
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 718b2039b8f2451e145ab9109f4fb9d0743c2693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bcd09f9c7ea8be177112e2a70ef04380ebc00146
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582385"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  선택 사항입니다. 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ToggleDrillState** 함수는 첫 번째 집합에 있는 두 번째 집합의 각 멤버의 드릴 상태를 토글합니다. 첫 번째 집합에는 모든 차원의 튜플이 포함될 수 있지만 두 번째 집합에는 단일 차원의 멤버만 포함되어야 합니다. **ToggleDrillState** 함수는의 조합 된 **DrillupMember** 및 **DrilldownMember** 함수입니다. 경우 멤버를 *m*, 두 번째 집합은 첫 번째 집합에 나타나는 및 해당 멤버는 드릴 다운 됩니다 (즉,에 바로 뒤에 하위 항목이) 다음 `DrillupMember(Set_Expression1, {m})` 첫 번째 집합의 튜플 또는 멤버에 적용 됩니다. 경우 해당 *m* 멤버가 드릴업 (즉,의 하위 항목이 없는 *m* 바로 다음에 오는 *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` 첫 번째 집합에 적용 됩니다.  
   
  경우 선택적 **재귀** 플래그를 사용, 드릴업과 드릴 다운이 재귀적으로 적용된 됩니다. 재귀 플래그에 대 한 자세한 내용은 참조는 [DrillupMember](../mdx/drillupmember-mdx.md) 및 [DrilldownMember](../mdx/drilldownmember-mdx.md) 함수입니다.  
@@ -75,7 +64,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

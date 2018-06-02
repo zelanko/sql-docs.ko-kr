@@ -1,31 +1,20 @@
 ---
 title: StrToSet (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOSET
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToSet function
-ms.assetid: 1700a563-6527-450a-8d3b-975c65bb6e51
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 34008751a017e97d353cca7c90db1de5e6710d98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 30a69fa1c80c453aabea282d4e6293e28e244069
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582185"
 ---
 # <a name="strtoset-mdx"></a>StrToSet(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  직접 또는 간접적으로 집합을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **StrToSet** 함수는 문자열 식에 지정 된 집합을 반환 합니다. **StrToSet** 함수는 대개 다시 MDX 문으로 경우, 또는 MDX 쿼리에 매개 변수가 외부 함수의 집합 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
   
 -   CONSTRAINED 플래그를 사용 하는 경우 해당 집합 사양 정규화 되거나 정규화 되지 않은 멤버 이름이 나 괄호로 묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 들어 있는 튜플 집합이 포함 되어야 합니다 {}합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 다음 오류가 표시 됩니다는 문자열이 직접 확인할 수 없는 정규화 되거나 정규화 되지 않은 멤버 이름이 아닌 경우 이면: "CONSTRAINED 설정한 제한을 STRTOSET 함수에서 플래그 위반 했습니다."  
@@ -79,7 +68,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

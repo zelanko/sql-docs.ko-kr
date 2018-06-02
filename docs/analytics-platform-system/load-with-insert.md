@@ -9,15 +9,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585785"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 INSERT 사용 하 여 데이터 로드
 
-SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테이블에 데이터를 로드 tsql INSERT 문을 사용할 수 있습니다. 삽입에 대 한 자세한 내용은 참조 [삽입](../t-sql/statements/insert-transact-sql.md)합니다. 분산된 테이블의 모든 비 배포 열을 복제 된 테이블에 대 한 PDW 대상 열의 데이터 형식으로 문에 지정 된 데이터 값으로 암시적으로 변환할 SQL Server를 사용 합니다. SQL Server 데이터 변환 규칙에 대 한 자세한 내용은 참조 [데이터 형식 변환에 대 한 SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx)합니다. 그러나 배포 열에는 PDW SQL Server를 지원 하는 암시적 변환의 하위 집합만을 지원 합니다. 따라서 INSERT 문을 사용 하 여 배포 열에 데이터를 로드 하는 경우 원본 데이터는 다음 표에 정의 된 형식 중 하나로 지정 되어야 합니다.  
+SQL Server 병렬 데이터 웨어하우스 (PDW) 분산 또는 복제 된 테이블에 데이터를 로드 tsql INSERT 문을 사용할 수 있습니다. 삽입에 대 한 자세한 내용은 참조 [삽입](../t-sql/statements/insert-transact-sql.md)합니다. 분산된 테이블의 모든 비 배포 열을 복제 된 테이블에 대 한 PDW 대상 열의 데이터 형식으로 문에 지정 된 데이터 값으로 암시적으로 변환할 SQL Server를 사용 합니다. SQL Server 데이터 변환 규칙에 대 한 자세한 내용은 참조 [데이터 형식 변환에 대 한 SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx)합니다. 그러나 배포 열에는 PDW SQL Server를 지원 하는 암시적 변환의 하위 집합만을 지원 합니다. 따라서 INSERT 문을 사용 하 여 배포 열에 데이터를 로드 하는 경우 원본 데이터는 다음 표에 정의 된 형식 중 하나로 지정 되어야 합니다.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>이진 형식으로 리터럴 삽입  
@@ -154,7 +155,7 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호 접두사를 가진
 |Money 리터럴|형식: $nnnnnn.nnnnn<br /><br />예제: $ 123456.99|통화 기호 값으로 삽입 되지 않습니다. 통화 기호를 삽입 하려면 값을 문자열 리터럴로 삽입 합니다. 형식에 맞게이 **dwloader** 모든 리터럴 문자열 리터럴로 처리 되는 도구입니다.<br /><br />쉼표는 허용 되지 않습니다.<br /><br />소수점 뒤의 자릿수 2를 초과 하는 경우 값이 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123.946789 123.95로 삽입 됩니다.<br /><br />Money 리터럴을 삽입할 CONVERT 함수를 사용 하는 경우 기본 스타일 0 (쉼표가 없는 및 소수점 뒤 두 자리)만 허용 됩니다.|  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  
 [분산된 된 데이터](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  

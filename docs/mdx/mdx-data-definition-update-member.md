@@ -1,33 +1,20 @@
 ---
 title: UPDATE MEMBER 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- UPDATE_MEMBER
-- UPDATE MEMBER
-- MEMBER
-- UPDATE
-helpviewer_keywords:
-- calculated members [MDX]
-- UPDATE MEMBER statement
-ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: 12
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ce4205db398dd7a61d7d9def31dccdaf93d78672
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579845"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 데이터 정의-UPDATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +47,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  계산 멤버의 속성 값을 지정하는 유효한 스칼라 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  UPDATE MEMBER 문은 다른 계산에 따라 이 멤버의 상대적 우선 순위는 보존하면서 기존 계산 멤버를 업데이트합니다. 따라서 UPDATE MEMBER 문을 사용하여 SOLVEORDER를 변경할 수 없습니다.  
   
  UPDATE MEMBER 문은 큐브의 MDX 스크립트에 지정할 수 없습니다.  
@@ -81,9 +68,9 @@ UPDATE MEMBER Cube_Name.Member_Name
 |DISPLAY_FOLDER|클라이언트 응용 프로그램이 멤버를 표시하는 표시 폴더의 경로를 지정하는 문자열 값입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및에서 제공 하는 클라이언트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DROP MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [MEMBER 문 & #40; 만들기 Mdx& #41;](../mdx/mdx-data-definition-create-member.md)   
+ [CREATE MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

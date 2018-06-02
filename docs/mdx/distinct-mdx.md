@@ -1,31 +1,20 @@
 ---
 title: Distinct (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DISTINCT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Distinct function
-ms.assetid: d648f320-73dd-4a23-96e9-d72e93a64c0d
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3a563236f2834e0c9047862a24b384cb40674f89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 628a175ea1c7b89b2352c34449ba40eb1d0ea1e2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579305"
 ---
 # <a name="distinct-mdx"></a>Distinct(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Distinct(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우는 **Distinct** 함수는 지정된 된 집합에서 중복 튜플의 찾을, 함수는 집합의 순서를 그대로 유지 하면서 중복 튜플의 첫 번째 인스턴스만 유지 합니다.  
   
 ## <a name="examples"></a>예  
@@ -71,7 +60,7 @@ Distinct(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,29 +1,20 @@
 ---
 title: Union (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- functions [MDX], Union
-ms.assetid: cc083455-8b3b-46af-bb55-1e238376f162
-caps.latest.revision: 19
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03daa8edf505d816435a3e10a71f687895574823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7712e1f925aa514ec059a88d46db05d337f0c140
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582235"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +42,7 @@ Alternate syntax 2
  *집합 식 2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 2의 합집합을 반환 하거나 이상 지정 된 집합*합니다.* 표준 구문을 사용 하 여 및 대체 구문 1 기본적으로 중복 항목이 제거 됩니다. 표준 구문을 사용 하 여 사용 하는 **모든** 플래그는 조인 된 집합에서 중복 요소를 유지 합니다. 중복 항목은 집합의 뒷부분부터 삭제됩니다. 대체 구문 2를 사용하면 중복 항목이 항상 유지됩니다.  
   
 ## <a name="examples"></a>예  
@@ -104,8 +95,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

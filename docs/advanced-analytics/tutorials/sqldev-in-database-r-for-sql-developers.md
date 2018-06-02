@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201985"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585275"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자를 위한 데이터베이스 내 R 분석(자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,19 +39,19 @@ ms.locfileid: "31201985"
 
     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 데이터베이스와 테이블을 만들고 샘플 데이터를 테이블에 로드하는 PowerShell 스크립트를 실행합니다.
 
-- [3 단원: 탐색 하 고 데이터를 시각화 합니다.](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [3 단원: 데이터 탐색 및 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
     [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 R 패키지 및 함수를 호출하여 기본 데이터 탐색 및 시각화를 수행합니다.
 
-- [4 단원: T-SQL을 사용 하 여 데이터 기능 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [4 단원: T-SQL을 사용하여 데이터 특성 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
     사용자 정의 SQL 함수를 사용하여 새 데이터 특성을 만듭니다.
   
--   [5 단원: 학습 및 T-SQL을 사용 하 여 R 모델을 저장 합니다.](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+-   [5단원: T-SQL을 사용한 R 모델 학습 및 저장](../r/sqldev-train-and-save-a-model-using-t-sql.md)
 
     저장된 프로시저에서 R을 사용하여 머신 러닝 모델을 작성합니다.  SQL Server 테이블에는 모델을 저장합니다.
   
--   [6 단원: 모델을 운용](../tutorials/sqldev-operationalize-the-model.md)
+-   [6단원: 모델 운용](../tutorials/sqldev-operationalize-the-model.md)
 
     모델을 데이터베이스에 저장한 후 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 예측을 위해 모델을 호출합니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "31201985"
 
 ### <a name="requirements"></a>요구 사항
 
-이 자습서는 데이터베이스 및 테이블 만들기, 테이블로 데이터 가져오기, SQL 쿼리 작성 등 기본적인 데이터베이스 작업에 잘 알고 있는 사용자를 위한 것입니다. 모든 R 코드가 제공되므로 R 개발 환경은 필요하지 않습니다. 숙련 된 SQL 프로그래머는이 예제를 사용 하 여 완료할 수 있어야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 하 고 제공 된 PowerShell 스크립트를 실행 합니다.
+이 자습서는 데이터베이스 및 테이블 생성, 테이블로 데이터 가져오기 및 SQL 쿼리 작성 등의 기본적인 데이터베이스 작업에 잘 알고 있는 사용자에 게입니다. 모든 R 코드가 제공되므로 R 개발 환경은 필요하지 않습니다. 숙련 된 SQL 프로그래머 צ ְ ײ [! INCLUDE [tsql] (... /.. 포함 / / tsql md.md)]에서 [! INCLUDE [ssManStudioFull] (... /.. 포함 / / ssmanstudiofull md.md) 하 고이 예를 완료 하려면 제공된 된 PowerShell 스크립트를 실행 합니다. 그러나이 자습서를 시작 하기 전에 다음과 같이 준비를 완료 해야 합니다.
 
 그러나이 자습서를 시작 하기 전에 이러한 준비 작업을 완료 해야 합니다.
 

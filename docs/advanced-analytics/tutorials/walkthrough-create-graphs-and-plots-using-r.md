@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23ff23c009a002f13a58340af8fc7f85ec1720b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585475"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,8 +98,8 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="next-lesson"></a>다음 단원
 
-[R과 SQL을 사용하여 데이터 특성 만들기](/walkthrough-create-data-features.md)
+[R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R을 사용한 데이터 요약](/walkthrough-view-and-summarize-data-using-r.md)
+[R을 사용한 데이터 요약](walkthrough-view-and-summarize-data-using-r.md)

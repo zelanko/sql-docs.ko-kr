@@ -1,29 +1,20 @@
 ---
 title: 멤버 함수를 사용 하 여 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- member functions [MDX]
-ms.assetid: 094c443f-0daa-4af7-801c-d2e1d686d755
-caps.latest.revision: 24
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 28fd9795c86295f53a8d1b0315b6401450677582
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 59be2bef7e2a3fb57b720672c3c89d0500feef8b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581555"
 ---
 # <a name="using-member-functions"></a>멤버 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   
  [튜플 함수 사용](../mdx/using-tuple-functions.md)   
  [집합 함수 사용](../mdx/using-set-functions.md)  

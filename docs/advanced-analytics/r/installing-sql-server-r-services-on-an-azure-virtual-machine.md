@@ -7,16 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a0780d4f974761af563ff2ed6e20e444b2d85ef9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563681"
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Azure 가상 컴퓨터에서 기능을 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-사용 하는 것이 좋습니다는 [데이터 과학 가상 컴퓨터](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), SQL Server 2017 컴퓨터 학습 서비스 또는 SQL Server 2016 R Services만 있는 VM을 하려는 경우이 문서의 단계를 안내 합니다는 하지만 합니다.
+사용 하는 것이 좋습니다는 [데이터 과학 가상 컴퓨터](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), SQL Server 2017 컴퓨터 학습 서비스 또는 SQL Server 2016 R Services만 있는 VM을 하려는 경우이 문서의 단계를 안내 합니다는 하지만 합니다.
 
 ## <a name="create-a-virtual-machine-on-azure"></a>Azure에서 가상 컴퓨터 만들기
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/16/2018
 3. 서버 이름 및 계정 권한을 구성하고 요금제를 선택합니다.
 4. **SQL Server 설정** (VM 설치 마법사의 단계 4)를 찾을 **컴퓨터 학습 서비스 (고급 분석)** (또는 **R Services** SQL Server 2016 용) 클릭 **사용 하도록 설정**합니다.
 5. 유효성 검사를 위해 제공된 요약을 검토하고 **확인**을 클릭합니다.
-6. 가상 컴퓨터가 준비되면 가상 컴퓨터에 연결하고 미리 설치된 SQL Server Management Studio를 엽니다. 기계 학습을 실행 하도록 준비 합니다.
+6. 가상 머신이 준비되면 가상 머신에 연결하고 미리 설치된 SQL Server Management Studio를 엽니다. 기계 학습을 실행 하도록 준비 합니다.
 7. 이를 확인하려면 새 쿼리 창을 열고 R을 사용하여 1~10의 숫자 시퀀스를 생성하는 다음과 같은 간단한 문을 실행합니다.
 
     ```
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 다시 실행하고 마법사의 **서버 구성** 페이지에서 기능을 추가합니다.
 2. 외부 스크립트 실행을 사용하도록 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작합니다. 자세한 내용은 참조 [SQL Server 2016 R Services 설치](../install/sql-r-services-windows-install.md)합니다.
 3. (선택 사항) 원격 스크립트 실행에 필요한 경우 R 작업자 계정에 대한 데이터베이스 액세스를 구성합니다.
-4. (선택 사항) 원격 데이터 과학 클라이언트에서 R 스크립트 실행을 허용하려면 Azure 가상 컴퓨터에서 방화벽 규칙을 수정합니다. 자세한 내용은 [방화벽 차단 해제](#firewall)를 참조하세요.
+4. (선택 사항) 원격 데이터 과학 클라이언트에서 R 스크립트 실행을 허용하려면 Azure 가상 머신에서 방화벽 규칙을 수정합니다. 자세한 내용은 [방화벽 차단 해제](#firewall)를 참조하세요.
 5. 필요한 네트워크 라이브러리를 설치하거나 사용하도록 설정합니다. 자세한 내용은 [네트워크 프로토콜 추가](#network)를 참조하세요.
 
 ## <a name="additional-steps"></a>추가 단계
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/16/2018
 
 원격 데이터 과학 클라이언트에서 액세스할 수 있도록 합니다.
 
-1. 가상 컴퓨터에서 고급 보안이 포함된 Windows 방화벽을 엽니다.
+1. 가상 머신에서 고급 보안이 포함된 Windows 방화벽을 엽니다.
 2. **아웃바운드 규칙**을 선택합니다.
 3. 다음 규칙을 사용하지 않도록 설정합니다.
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/16/2018
 
 + 명명된 파이프 사용
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 클라이언트와 서버 컴퓨터 간의 연결 및 일부 인터넷 연결을 위해 명명된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 컴퓨터 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 클라이언트와 서버 컴퓨터 간의 연결 및 일부 인터넷 연결을 위해 명명된 파이프 프로토콜을 사용합니다. 명명된 파이프를 사용하지 않는 경우 Azure 가상 머신 및 서버에 연결된 데이터 과학 클라이언트에서 둘 다 명명된 파이프를 설치하고 사용하도록 설정해야 합니다.
   
 + TCP/IP 사용
 

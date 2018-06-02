@@ -1,31 +1,20 @@
 ---
 title: UnknownMember (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- UnknownMember
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- UnknownMember function
-ms.assetid: 5ae39cbe-65c8-4a59-9548-71b28ecf6eb5
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7c423b452f7ec49a7f544984fab6b0891391ac8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582215"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +39,7 @@ Hierarchy_Expression.UnknownMember
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 계층 구조를 알 수 없는 경우 팩트 테이블 데이터는 계층 구조와 연결 하려면 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
   
 -   집계되지 않는 특성 계층의 최상위 수준  
@@ -91,7 +80,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

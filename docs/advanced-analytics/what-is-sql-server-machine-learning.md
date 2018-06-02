@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585455"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 Services 란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,4 +103,4 @@ SQL Server 설명서의 최신 릴리스에 버전에 적용할 수 있습니다
 
 **3 단계:** 즐겨 찾는 R 및 Python 패키지를 추가 하 고 Microsoft에서 제공 하는 패키지와 함께 사용 하 여
 
-+ [SQL Server에 대 한 R 패키지 관리](r/r-package-management-for-sql-server-r-services.md)
++ [SQL Server에 대 한 R 패키지 관리](r/install-additional-r-packages-on-sql-server.md)

@@ -1,25 +1,20 @@
 ---
 title: Instr (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
-caps.latest.revision: 6
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1e98798452a475c6ee8d71d3e68a44ad9118aef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: eadd3d7b5d5e99b7d34da6a9f67345b1ef88300e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579825"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +54,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2를 찾을 수 없는 경우|영(0)|  
 |start가 Len(String2)보다 큰 경우|영(0)|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]  
 >  **Instr** 항상 대/소문자 구분 비교를 수행 합니다.  
@@ -108,7 +103,7 @@ from [Adventure Works]
 |소문자 문자열에 대문자가 있습니다.|16|  
 |검색된 문자열이 비어 있습니다.|0|  
 |검색된 문자열이 null입니다.|정의되지 않음|  
-|검색 문자열이 비어 있습니다.|1.|  
+|검색 문자열이 비어 있습니다.|1|  
 |검색 문자열이 비어 있습니다(start 10).|10|  
 |검색 문자열이 null입니다.|정의되지 않음|  
 |start 10에서 찾았습니다.|16|  
