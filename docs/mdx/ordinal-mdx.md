@@ -1,31 +1,20 @@
 ---
 title: Ordinal (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Ordinal
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ordinal function
-ms.assetid: 9d416c39-da4a-4f0d-8d85-a76af5df0a87
-caps.latest.revision: 28
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3e1a3e550dd694972ce137d44f620bf87b1169de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 61c5c3c4bbb2f04f1ebb9743e18eb8088632eab0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581265"
 ---
 # <a name="ordinal-mdx"></a>Ordinal(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Level_Expression.Ordinal
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **서 수** 함수와 함께에서 자주 사용 되는 **IIF** 및 **CurrentMember** 쿼리 결과 있는 각 특정 셀의 서 수 위치에 따라 조건부로 각 계층 수준 서로 다른 값을 표시 하는 함수입니다. 예를 들어, 사용할 수는 **서** 특정 수준에서 계산을 수행 하 고 다른 수준의 기본값은 "n/A"를 표시 하는 함수입니다.  
   
 ## <a name="example"></a>예제  
@@ -55,7 +44,7 @@ SELECT Measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

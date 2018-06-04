@@ -1,31 +1,20 @@
 ---
 title: OpeningPeriod (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- OPENINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- OpeningPeriod function
-ms.assetid: bebf55cf-e5c6-42b1-98f2-1d6e54093d4c
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3a9585c64d23a2c6547f9ed703c1038d2485fedf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f9384a2993423c68db1d65a92cb0b532502c110b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581365"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 함수는 주로 Time 차원에 대해 사용되지만 모든 차원에 대해 사용할 수도 있습니다.  
   
 -   수준 식이 지정 되는 **OpeningPeriod** 함수는 지정된 된 수준을 포함 하 고 지정된 된 수준에서 기본 멤버의 하위 항목 중 첫 번째 형제를 반환 하 고 있는 계층을 사용 합니다.  
@@ -91,9 +80,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   
