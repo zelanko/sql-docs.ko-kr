@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869718"
 ---
 # <a name="server-properties---advanced-page"></a>서버 속성 - 고급 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  **커서 임계값**  
  커서 키 집합이 비동기적으로 생성되는 커서 집합의 행 수를 지정합니다. 커서에서 결과 집합에 대해 키 집합을 생성할 때 쿼리 최적화 프로그램은 해당 결과 집합으로 반환될 행 개수를 계산합니다. 쿼리 최적화 프로그램의 계산 결과, 반환된 행 개수가 이 임계값보다 크면 커서가 계속 채워지는 동안 사용자가 커서에서 행을 인출할 수 있도록 커서가 비동기적으로 생성됩니다. 그렇지 않으면 커서가 동기적으로 생성되어 모든 행이 반환될 때까지 쿼리가 기다립니다.  
   
- 커서 임계값을 -1로 설정하면 모든 키 집합이 동기적으로 생성되므로 작은 커서 집합에 유리합니다. 0으로 설정하면 모든 커서 키 집합이 비동기적으로 생성됩니다. 다른 값을 사용하면 쿼리 최적화 프로그램이 커서 집합에 있는 예상 행 개수를 비교하여 이 값이 설정된 개수보다 많으면 비동기적으로 키 집합을 생성합니다. 자세한 내용은 [Configure the cursor threshold Server Configuration Option](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md)을 참조하세요.  
+ 커서 임계값을 -1로 설정하면 모든 키 집합이 동기적으로 생성되므로 작은 커서 집합에 유리합니다. 0으로 설정하면 모든 커서 키 집합이 비동기적으로 생성됩니다. 다른 값을 사용하면 쿼리 최적화 프로그램이 커서 집합에 있는 예상 행 개수를 비교하여 이 값이 설정된 개수보다 많으면 비동기적으로 키 집합을 생성합니다. 자세한 내용은 [커서 임계값 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md)을 참조하세요.  
   
  **기본 전체 텍스트 언어**  
  전체 텍스트 인덱싱된 열에 대한 기본 언어를 지정합니다. 전체 텍스트 인덱싱된 데이터의 언어 분석은 데이터의 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 표시되는 설정에 해당하는 언어에 대한 자세한 내용은 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)를 참조하세요.  
@@ -118,18 +119,18 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="parallelism"></a>병렬 처리  
  **병렬 처리에 대한 비용 임계값**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 쿼리에 대한 병렬 계획을 만들고 실행하는 데 사용되는 최소 비용 임계값을 지정합니다. 이 비용은 특정 하드웨어 구성에서 직렬 계획을 실행하는 데 필요한 예상 경과 시간(초)을 참조합니다. 이 옵션은 대칭 다중 프로세서에 대해서만 설정해야 합니다. 자세한 내용은 [Configure the cost threshold for parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 쿼리에 대한 병렬 계획을 만들고 실행하는 데 사용되는 최소 비용 임계값을 지정합니다. 이 비용은 특정 하드웨어 구성에서 직렬 계획을 실행하는 데 필요한 예상 경과 시간(초)을 참조합니다. 이 옵션은 대칭 다중 프로세서에 대해서만 설정해야 합니다. 자세한 내용은 [병렬 처리에 대한 비용 임계값 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)을 참조하세요.  
   
  **잠금**  
  사용 가능한 최대 잠금 수를 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 잠금에 사용하는 메모리 용량을 제한합니다. 기본 설정은 0이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시스템 요구 사항의 변화를 기준으로 동적으로 잠금을 할당하거나 할당을 취소할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 잠금을 동적으로 사용하는 것이 권장 구성입니다. 자세한 내용은 [Configure the locks Server Configuration Option](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 잠금을 동적으로 사용하는 것이 권장 구성입니다. 자세한 내용은 [locks 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)을 참조하세요.  
   
  **최대 병렬 처리 수준**  
- 병렬 계획 실행에 사용할 프로세서의 수를 최대 64개로 제한합니다. 기본값 0으로 설정하면 사용 가능한 모든 프로세서를 사용합니다. 1로 설정하면 병렬 계획을 생성하지 않습니다. 1보다 큰 값으로 설정하면 단일 쿼리 실행에 사용되는 최대 프로세서 수가 제한됩니다. 사용 가능한 프로세서 수보다 더 큰 수를 지정하면 사용 가능한 실제 프로세서 수가 사용됩니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 병렬 계획 실행에 사용할 프로세서의 수를 최대 64개로 제한합니다. 기본값 0으로 설정하면 사용 가능한 모든 프로세서를 사용합니다. 1로 설정하면 병렬 계획을 생성하지 않습니다. 1보다 큰 값으로 설정하면 단일 쿼리 실행에 사용되는 최대 프로세서 수가 제한됩니다. 사용 가능한 프로세서 수보다 더 큰 수를 지정하면 사용 가능한 실제 프로세서 수가 사용됩니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
  **쿼리 대기**  
- 쿼리의 리소스 대기 시간을 초 단위(0 - 2147483647)로 지정합니다. 기본값 -1로 설정하면 제한 시간이 예상 쿼리 비용의 25배로 계산됩니다. 자세한 내용은 [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)을 참조하세요.  
+ 쿼리의 리소스 대기 시간을 초 단위(0 - 2147483647)로 지정합니다. 기본값 -1로 설정하면 제한 시간이 예상 쿼리 비용의 25배로 계산됩니다. 자세한 내용은 [query wait 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
