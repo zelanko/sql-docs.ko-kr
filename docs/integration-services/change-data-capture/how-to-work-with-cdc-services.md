@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32873148"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service에서 작업하는 방법
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 Oracle CDC Service에서 작업하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 새 CDC Service를 만드는 방법에 대해 설명합니다.  
