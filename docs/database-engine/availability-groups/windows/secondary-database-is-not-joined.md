@@ -3,7 +3,6 @@ title: 보조 데이터베이스가 조인되지 않음 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85e9e45d4c8d398ebf157ddeb660225db69f261f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3a8fc17f8d7d33cba324dba3802dd376224a750
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768549"
 ---
 # <a name="secondary-database-is-not-joined"></a>보조 데이터베이스에 조인되어 있지 않음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**범주**|**경고**|  
 |**패싯**|가용성 데이터베이스|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 보조 데이터베이스("보조 데이터베이스 복제본"이라고도 함)의 조인 상태를 확인합니다. 데이터베이스 복제본이 조인되지 않은 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

@@ -3,7 +3,6 @@ title: Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server) |
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 80
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00f2d409dee8dc9327c8d2ca94b6d679567ea5c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9c4524affc64c53444883c5bc25a3accebd83b0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772009"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  > 
  >장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)도 지원합니다. 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](http://technet.microsoft.com/library/dd759255.aspx)을 참조하세요. 
    
- **항목 내용**  
+ **항목 내용:**  
   
 -   [이점](#Benefits)  
   

@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924fa0d289c7225587962c9551d445d348f73939
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563811"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 > **참고:**  Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
   
- [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
+ [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdn.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
   
  Stretch Database 접근 방식을 사용하면 기록 데이터 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 임시 쿼리 측면에서 temporal 테이블을 조작하는 방식이 변경되는 것은 아닙니다.  
   

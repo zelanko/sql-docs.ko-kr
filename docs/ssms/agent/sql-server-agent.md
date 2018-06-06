@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708941"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.  
   
-전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 데이터베이스 메일을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [데이터베이스 메일](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)을 참조하세요.  
+전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 데이터베이스 메일을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [데이터베이스 메일](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)을 참조하세요.  
   
 개인으로 구성된 그룹의 별칭으로 운영자를 정의할 수 있습니다. 이런 방법으로 해당 별칭에 속하는 모든 멤버는 동시에 알림을 받습니다. 자세한 내용은 [운영자](../../ssms/agent/operators.md)를 참조하세요.  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 정의되어 있는 하위 시스템을 나열합니다.  
   
-|하위 시스템 이름|Description|  
+|하위 시스템 이름|설명|  
 |--------------|-----------|  
 |Microsoft ActiveX 스크립트|ActiveX 스크립팅 작업 단계를 실행합니다.<br /><br />**경고** 이후 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 버전에서 ActiveX 스크립팅 하위 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요.|  
 |운영 체제(**CmdExec**)|실행 프로그램을 실행합니다.|  
@@ -174,16 +175,16 @@ ms.lasthandoff: 05/03/2018
   
 다음 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 시작합니다.  
   
-|Description|항목|  
+|설명|항목|  
 |-----------|-----|  
 |SQL Server 에이전트를 구성하는 방법을 설명합니다.|[SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md)|  
 |SQL Server 에이전트 서비스를 시작, 중지 및 일시 중지하는 방법을 설명합니다.|[SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |SQL Server 에이전트 서비스의 계정을 지정하기 위한 고려 사항을 설명합니다.|[SQL Server 에이전트 서비스의 계정 선택](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |SQL Server 에이전트 오류 로그를 사용하는 방법을 설명합니다.|[SQL Server 에이전트 오류 로그](../../ssms/agent/sql-server-agent-error-log.md)|  
 |성능 개체를 사용하는 방법을 설명합니다.|[성능 개체 사용](../../ssms/agent/use-performance-objects.md)|  
-|SQL Server 인스턴스의 관리를 자동화할 수 있도록 작업, 경고 및 운영자를 만드는 데 사용할 수 있는 유틸리티인 유지 관리 계획 마법사에 대해 설명합니다.|[유지 관리 계획 마법사 사용](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|SQL Server 인스턴스의 관리를 자동화할 수 있도록 작업, 경고 및 운영자를 만드는 데 사용할 수 있는 유틸리티인 유지 관리 계획 마법사에 대해 설명합니다.|[유지 관리 계획 마법사 사용](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |SQL Server 에이전트를 사용하여 관리 태스크를 자동화하는 방법을 설명합니다.|[관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>참고 항목  
-[노출 영역 구성](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[노출 영역 구성](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

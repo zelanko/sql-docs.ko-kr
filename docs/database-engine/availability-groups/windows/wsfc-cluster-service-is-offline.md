@@ -3,7 +3,6 @@ title: WSFC 클러스터 서비스가 오프라인 상태임 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,15 +14,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7b39bf1359c58e79998285bfe9d9e9d71d803cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e410fbf3a2206aae8d378156123e3286ab216f51
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771319"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 클러스터 서비스가 오프라인 상태임
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 |**범주**|**심각**|  
 |**패싯**|SQL Server 인스턴스|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 WSFC(Windows Server Failover Cluster)의 상태를 확인합니다. WSFC 클러스터가 오프라인 상태이거나 강제 쿼럼 상태에 있는 경우 정책은 비정상 상태에 있으며 경고가 발생합니다. 이 클러스터 내에서 호스팅되는 모든 가용성 그룹이 오프라인이거나 재해 복구 동작이 필요합니다.  
   
  정책 상태는 클러스터 상태가 정상 쿼럼 상태에 있을 때 정상입니다.  

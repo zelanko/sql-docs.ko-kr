@@ -3,7 +3,6 @@ title: 가용성 모드(Always On 가용성 그룹) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 41
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 497ab24a45e3d0c65e9583df175fb68aa72a4d44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f032e856363bca6d84b420260eed53b734d88d82
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769349"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   
@@ -71,8 +71,8 @@ ms.lasthandoff: 05/03/2018
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 및 03|04|예|  
 |02|01|01 및 03|04|예|  
-|03||01 및 02|04|아니오|  
-|04|||01, 02 및 03|아니오|  
+|03||01 및 02|04|아니요|  
+|04|||01, 02 및 03|아니요|  
   
  일반적으로 노드 04는 비동기 커밋 복제본으로서 재해 복구 사이트에 배포됩니다. 노드 04에 대한 장애 조치(Failover)를 수행한 후 노드 01, 02, 03은 비동기 커밋 모드로 유지된다는 점에서 두 사이트 간의 긴 네트워크 지연 시간으로 인해 가용성 그룹의 잠재적 성능이 저하되는 것을 방지할 수 있습니다.  
   

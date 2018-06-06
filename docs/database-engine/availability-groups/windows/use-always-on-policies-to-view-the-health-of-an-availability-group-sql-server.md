@@ -3,7 +3,6 @@ title: Always On 정책을 사용하여 가용성 그룹 상태 보기 | Microso
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,14 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 17
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7c91fe30fe34bcc60d7a70bcf4dab046713d1d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d6b7d17286077ca860021984f1d5e806782d332
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770509"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Always On 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
   
-    |옵션|Description|  
+    |옵션|설명|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Always On 정책 범주에 있는 사용자 정책을 실행합니다.|  
     |**InputObject**|사용 중인 cmdlet에 따라 가용성 그룹, 가용성 복제본 또는 가용성 데이터베이스 상태를 나타내는 개체 모음입니다. cmdlet은 지정된 개체의 상태를 계산합니다.|  

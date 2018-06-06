@@ -15,11 +15,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550864"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -65,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 > [!NOTE]  
 >  이 항목에서 "최대 정수"는 INT_MAX 값, 2147483647을 의미합니다.  자세한 내용은 [정수 제한](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)(http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)을 참조하세요.  
   
-|설정|Description|모드|  
+|설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**Dsn**|보고서 서버 데이터베이스를 호스팅하는 데이터베이스 서버에 대한 연결 문자열을 지정합니다. 이 값은 보고서 서버 데이터베이스를 만들 때 암호화되어 구성 파일에 추가됩니다. Sharepoint에 대한 데이터베이스 연결 정보는 SharePoint 구성 데이터베이스에서 가져옵니다.|N,S|  
 |**ConnectionType**|보고서 서버에서 보고서 서버 데이터베이스 연결에 사용하는 자격 증명 유형을 지정합니다. 유효한 값은 **Default** 및 **Impersonate**입니다. 보고서 서버가**로그인 또는 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하도록 구성된 경우** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지정됩니다. 보고서 서버가 Windows 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우에는**Impersonate** 가 지정됩니다.|N|  
@@ -104,7 +105,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|모드|  
+|설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**응용 프로그램**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 대한 설정을 포함합니다.|N|  
 |**이름**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램을 지정합니다. 유효한 값은 ReportServerWebService나 ReportManager입니다.|N|  
@@ -133,7 +134,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|모드|  
+|설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|하나 이상의 인증 유형을 지정합니다. 유효한 값은 **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**및 **Custom**입니다.<br /><br /> **RSWindows** 유형 및 **Custom** 은 함께 사용할 수 없습니다.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**및 **RSWindowsBasic** 은 누적되며 이 섹션의 앞부분에 나오는 기본값 예에서처럼 함께 사용할 수 있습니다.<br /><br /> 다양한 유형의 인증을 사용하는 여러 클라이언트 응용 프로그램 또는 브라우저에서 요청을 받는 경우 여러 인증 유형을 지정해야 합니다.<br /><br /> 지원되는 브라우저 종류 중 일부로 브라우저 지원이 제한되므로 **RSWindowsNTLM**을 제거하지 마십시오. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|N|  
 |**RSWindowsNegotiate**|보고서 서버가 Kerberos 또는 NTLM 보안 토큰을 수락합니다. 이 설정은 보고서 서버를 기본 모드에서 실행할 경우의 기본값이며 서비스 계정은 네트워크 서비스입니다. 보고서 서버를 기본 모드에서 실행하고 서비스 계정이 도메인 사용자 계정으로 구성된 경우에는 이 설정이 무시됩니다.<br /><br /> 보고서 서버 서비스 계정에 대해 도메인 계정이 구성되고 보고서 서버에 대해 SPN(서비스 사용자 이름)이 구성되지 않은 경우 이 설정을 사용하면 사용자가 서버에 로그온하지 못할 수 있습니다.|N|  
@@ -153,7 +154,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|모드|  
+|설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자가 만든 일정 및 구독에 해당하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에이전트 작업 집합을 보고서 서버가 유지 관리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S|  
 |**IsNotificationService**|보고서 서버가 알림 및 배달을 처리하는지 여부를 지정합니다. 유효한 값은 **True** (기본값) 및 **False**입니다. 값이 **False**이면 구독이 배달되지 않습니다.<br /><br /> 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 설정하거나 해제하면 이 설정이 영향을 받습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.|N,S|  
@@ -179,10 +180,10 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
-|설정|Description|모드|  
+|설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|웹 포털이 연결하는 보고서 서버의 URL을 지정합니다. 다른 인스턴스 또는 원격 컴퓨터의 보고서 서버에 연결하도록 웹 포털을 구성하는 경우에만 이 값을 수정합니다.|N,S|  
-|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 자세한 내용은 [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md) 을 참조하세요. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
+|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
 |**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual**입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual**로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
@@ -227,7 +228,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  모든 배달 확장 프로그램에는 **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**및 **Configuration**이 있습니다. 이러한 공유 설정은 먼저 설명됩니다. 확장 프로그램별 설정에 대한 설명은 두 번째 표에 나와 있습니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**Extension Name**|배달 확장 프로그램의 이름 및 어셈블리를 지정합니다. 이 값은 수정하지 마세요.|  
 |**MaxRetries**|첫 번째 시도가 성공하지 않을 경우 보고서 서버가 배달을 다시 시도하는 횟수를 지정합니다. 기본값은 3입니다.|  
@@ -237,14 +238,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_fileshare_extension"></a> 파일 공유 배달 확장 프로그램 구성 설정  
  파일 공유 배달은 네트워크의 공유 폴더에 응용 프로그램 파일 형식으로 내보내진 보고서를 보냅니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|이러한 설정은 파일 공유 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 응용 프로그램에서 쉽게 볼 수 있는 응용 프로그램 파일을 생성하지 않습니다.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> 보고서 서버 전자 메일 확장 프로그램 구성 설정  
  보고서 서버 전자 메일은 SMTP 네트워크 장치를 사용하여 보고서를 전자 메일 주소로 보냅니다. 이 배달 확장 프로그램을 사용하려면 먼저 구성해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) 및 [Reporting Services의 전자 메일 배달](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)을 참조하세요.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**SMTPServer**|원격 SMTP 서버 또는 전달자의 주소를 나타내는 문자열 값을 지정합니다. 이 값은 원격 SMTP 서비스에 필요하며 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.|  
 |**SMTPServerPort**|SMTP 서비스가 보내는 메일 전송에 사용하는 포트를 나타내는 정수 값을 지정합니다. 포트 25는 일반적으로 전자 메일을 보내는 데 사용됩니다.|  
@@ -265,7 +266,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ####  <a name="bkmk_documentlibrary_extension"></a> 보고서 서버 SharePoint 문서 라이브러리의 확장 구성  
  보고서 서버 문서 라이브러리는 문서 라이브러리에 응용 프로그램 파일 형식으로 내보내진 보고서를 보냅니다. 이 배달 확장 프로그램은 SharePoint 통합 모드에서 실행되도록 구성된 보고서 서버에서만 사용할 수 있습니다. 자세한 내용은 [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)을 참조하세요.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|이러한 설정은 문서 라이브러리 배달과 제대로 작동하지 않는 내보내기 형식을 의도적으로 제외하는 데 사용됩니다. HTMLOWC, RGDI 및 Null 배달 확장 프로그램이 제외됩니다. 이러한 형식은 일반적으로 대화형 보고/미리 보기에 사용되거나 보고서 캐시를 미리 로드하는 데 사용됩니다. 이러한 형식은 데스크톱 응용 프로그램에서 쉽게 볼 수 있는 응용 프로그램 파일을 생성하지 않습니다.|  
   
@@ -275,7 +276,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ###  <a name="bkmk_ui"></a> 배달 UI 확장 프로그램 일반 구성  
  웹 포털에서 개별 구독을 정의할 때 사용되는 구독 정의 페이지에 나타나는 사용자 인터페이스 구성 요소가 포함된 배달 확장 프로그램을 지정합니다. 사용자 정의 옵션이 있는 사용자 지정 배달 확장 프로그램을 만들고 배포하는 경우 웹 포털을 사용하려면 이 섹션의 배달 확장 프로그램을 등록해야 합니다. 기본적으로 보고서 서버 전자 메일 및 보고서 서버 파일 공유에 대한 구성 설정이 있습니다. 데이터 기반 구독 또는 SharePoint 응용 프로그램 페이지에서만 사용되는 배달 확장 프로그램에는 이 섹션의 설정이 없습니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|이 설정은 구독 정의 페이지의 배달 유형 목록에서 맨 위에 표시되는 배달 확장 프로그램을 결정합니다. 이 설정은 배달 확장 프로그램 하나에만 포함될 수 있습니다. 유효한 값은 **True** 나 **False**입니다. 이 값이 **True**로 설정된 확장 프로그램이 기본으로 선택됩니다.|  
 |**Configuration**|배달 확장 프로그램에 대한 구성 옵션을 지정합니다. 각 배달 확장 프로그램에 대한 기본 렌더링 형식을 설정할 수 있습니다. 유효한 값은 rsreportserver.config 파일의 render 섹션에 지정된 렌더링 확장 프로그램 이름입니다.|  
@@ -383,7 +384,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration(RSReportServer.config 파일)  
  **MapTileServerConfiguration** 은 보고서 서버에 게시된 보고서에서 지도 보고서 항목에 대한 타일 배경을 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 웹 서비스의 구성 설정을 정의합니다. 모든 자식 요소가 필요합니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**MaxConnections**|Bing Maps 웹 서비스에 대한 최대 연결 수를 지정합니다.|  
 |**Timeout**|Bing Maps 웹 서비스의 응답을 기다리는 제한 시간(초 단위)을 지정합니다.|  

@@ -1,7 +1,7 @@
 ---
 title: ALTER VIEW(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -25,14 +25,15 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5a255a92c2bc201218fd9310b70af1e37fb7bdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65421efaad1c1f0471637b3b65575dc4758cfebc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582505"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   인덱싱된 뷰를 포함하여 이전에 만든 뷰를 수정합니다. ALTER VIEW는 종속된 저장 프로시저 또는 트리거에 영향을 주지 않으며 사용 권한을 변경하지 않습니다.  
   
@@ -130,7 +131,7 @@ GO
 ALTER VIEW HumanResources.EmployeeHireDate  
 AS  
 SELECT p.FirstName, p.LastName, e.HireDate  
-FROM HumanResources.Employee AS e JOIN Person.Person AS  p  
+FROM HumanResources.Employee AS e JOIN Person.Person AS p  
 ON e.BusinessEntityID = p.BusinessEntityID  
 WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;  
 GO  

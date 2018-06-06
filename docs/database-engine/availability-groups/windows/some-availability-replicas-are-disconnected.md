@@ -3,7 +3,6 @@ title: 일부 가용성 복제본의 연결이 해제됨 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b82af00f7368ba6cddca75f23fbf72d086c3e221
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f43abe6033336648c15cf418e417cd439e3a033
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768409"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>일부 가용성 복제본의 연결이 해제됨
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**범주**|**경고**|  
 |**패싯**|가용성 그룹|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 모든 가용성 복제본의 연결 상태를 롤업하며 연결이 해제된 가용성 복제본이 있는지 확인합니다. 가용성 복제본의 연결이 해제된 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

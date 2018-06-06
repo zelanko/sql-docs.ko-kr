@@ -3,7 +3,6 @@ title: 진행률 페이지(Always On 가용성 그룹 마법사) | Microsoft Doc
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ f1_keywords:
 - sql13.swb.newagwizard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce00100c03dd841b55a168aefce42be3aabae603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fe9313834f9e6cc4f3af9364c9e1aecebe6cbdc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768569"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>진행률 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
  **상태**  
  완료된 단계의 결과와 현재 단계의 완료 비율을 다음과 같이 나타냅니다.  
   
-|결과|Description|  
+|결과|설명|  
 |------------|-----------------|  
 |**오류**|이 단계의 작업에서 오류가 발생했음을 나타냅니다. 오류를 설명하는 메시지 대화 상자를 표시하려면 링크를 클릭합니다.|  
 |**진행 중(** *완료율* **)**|작업이 지금 수행되고 있음을 나타내고 이 단계의 완료율을 추정합니다.|  

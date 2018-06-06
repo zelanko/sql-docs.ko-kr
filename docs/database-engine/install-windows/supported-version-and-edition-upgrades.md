@@ -3,7 +3,6 @@ title: 지원되는 버전 및 에디션 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 148
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b83f288a50272a41d2d75264415c588b3e8f1ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 163b52c2add9d6ea09d84d9d8b6b2f1e5171c1be
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770899"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>지원되는 버전 및 에디션 업그레이드
 

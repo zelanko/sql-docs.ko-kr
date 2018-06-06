@@ -3,7 +3,6 @@ title: 분산 가용성 그룹(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769339"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)를 보완합니다.
+분산 가용성 그룹은 기존의 Always On 가용성 그룹 기능의 변형으로서 SQL Server 2016에서 도입된 새로운 기능입니다. 이 문서에서는 분산 가용성 그룹의 몇 가지 측면을 명확히 하고 기존 [SQL Server 설명서](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)를 보완합니다.
 
 > [!NOTE]
 > "DAG"는 Exchange 데이터베이스 가용성 그룹 기능에 대한 약어로 이미 사용되고 있으므로 *분산 가용성 그룹*에 대한 공식적인 약어가 아닙니다. 이 Exchange 기능은 SQL Server 가용성 그룹 또는 분산 가용성 그룹과는 관련이 없습니다.
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 
 ![분산 가용성 그룹 및 데이터 이동][2]
 
-AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하는 유일한 방법은 AG 1에서 분산 가용성 그룹을 수동으로 장애 조치하는 것입니다. 앞의 그림에서 AG 1에는 쓰기 가능한 데이터베이스 복사본이 있으므로, 장애 조치를 실행하면 AG 2는 삽입, 업데이트 및 삭제를 처리할 수 있는 가용성 그룹이 됩니다. 하나의 분산 가용성 그룹을 다른 그룹으로 장애 조치하는 방법에 대한 자세한 내용은 [보조 가용성 그룹으로 장애 조치]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)를 참조하세요.
+AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하는 유일한 방법은 AG 1에서 분산 가용성 그룹을 수동으로 장애 조치하는 것입니다. 앞의 그림에서 AG 1에는 쓰기 가능한 데이터베이스 복사본이 있으므로, 장애 조치를 실행하면 AG 2는 삽입, 업데이트 및 삭제를 처리할 수 있는 가용성 그룹이 됩니다. 하나의 분산 가용성 그룹을 다른 그룹으로 장애 조치하는 방법에 대한 자세한 내용은 [보조 가용성 그룹으로 장애 조치]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)를 참조하세요.
 
 > [!NOTE]
 > SQL Server 2016의 분산 가용성 그룹은 FORCE_FAILOVER_ALLOW_DATA_LOSS 옵션을 사용하여 하나의 가용성 그룹에서 다른 그룹으로의 장애 조치만 지원합니다.
@@ -90,7 +90,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 두 WSFC 클러스터가 모두 동일한 도메인(트러스트된 도메인이 아님)에 가입된 경우 분산 가용성 그룹을 만들 때 별도의 작업을 수행할 필요가 없습니다. 동일한 도메인에 가입되지 않은 가용성 그룹 및 WSFC 클러스터의 경우, 도메인 독립 가용성 그룹에 대한 가용성 그룹을 만드는 방식과 같이 인증서를 사용하여 분산 가용성 그룹을 작동하도록 합니다. 분산 가용성 그룹에 대한 인증서를 구성하는 방법을 알아보려면 [도메인 독립 가용성 그룹 만들기](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)의 3-13 단계를 수행합니다.
 
-분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 끝점이 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 끝점을 재구성합니다.
+분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 끝점이 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 끝점을 재구성합니다.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>분산 가용성 그룹 사용 시나리오
 
@@ -106,7 +106,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ![기존 다중 사이트 가용성 그룹][4]
 
-분산 가용성 그룹은 여러 데이터 센터에 걸쳐 있는 가용성 그룹에 대해 더 유연한 배포 시나리오를 제공합니다. 이전에 [로그 전달]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server)과 같은 기능을 사용한 분산 가용성 그룹도 사용할 수 있습니다. 그러나 기존 가용성 그룹과 달리 분산 가용성 그룹은 트랜잭션 적용을 지연할 수 없습니다. 즉, 데이터를 잘못 업데이트하거나 삭제하는 사용자의 실수가 발생하는 경우 가용성 그룹 또는 분산 가용성 그룹에서 도움을 줄 수 없습니다.
+분산 가용성 그룹은 여러 데이터 센터에 걸쳐 있는 가용성 그룹에 대해 더 유연한 배포 시나리오를 제공합니다. 이전에 [로그 전달]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)과 같은 기능을 사용한 분산 가용성 그룹도 사용할 수 있습니다. 그러나 기존 가용성 그룹과 달리 분산 가용성 그룹은 트랜잭션 적용을 지연할 수 없습니다. 즉, 데이터를 잘못 업데이트하거나 삭제하는 사용자의 실수가 발생하는 경우 가용성 그룹 또는 분산 가용성 그룹에서 도움을 줄 수 없습니다.
 
 분산 가용성 그룹은 느슨하게 결합되어 있으며, 이 경우 단일 WSFC 클러스터가 필요하지 않으며 SQL Server에서 유지 관리됩니다. WSFC 클러스터는 개별적으로 유지 관리되며 동기화는 주로 두 개의 가용성 그룹 간에 비동기이므로 다른 사이트에서 재해 복구를 구성하는 것이 더 쉽습니다. 각 가용성 그룹의 주 복제본은 자체의 보조 복제본을 동기화합니다.
 
@@ -149,7 +149,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 앞의 두 예제 모두에서는 세 개의 가용성 그룹에 최대 27개의 복제본이 있을 수 있습니다. 이러한 복제본은 모두 읽기 전용 쿼리에 사용할 수 있습니다. 
 
-[읽기 전용 라우팅]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 완벽하게 작동하지 않습니다. 더 구체적으로 설명하면,
+[읽기 전용 라우팅]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 완벽하게 작동하지 않습니다. 더 구체적으로 설명하면,
 
 1. 읽기 전용 라우팅은 분산 가용성 그룹의 주 가용성 그룹에 구성할 수 있고 이 그룹에서 작동합니다. 
 2. 읽기 전용 라우팅은 분산 가용성 그룹의 보조 가용성 그룹에 구성할 수 있지만 이 그룹에서 작동하지 않습니다. 수신기를 사용하여 보조 가용성 그룹에 연결하는 모든 쿼리는 보조 가용성 그룹의 주 복제본으로 이동합니다. 그렇지 않으면 모든 복제본을 보조 복제본으로 연결하고 직접 액세스할 수 있도록 각 복제본을 구성해야 합니다. 그러나 읽기 전용 라우팅은 보조 가용성 그룹이 장애 조치(failover) 후 주 가용성 그룹이 된 후에 작동합니다. 이 동작은 SQL Server 2016 또는 이후 버전의 SQL Server에 대한 업데이트에서 변경될 수 있습니다.
@@ -157,7 +157,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>분산 가용성 그룹의 보조 가용성 그룹 초기화
 
-분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
+분산 가용성 그룹은 두 번째 가용성 그룹의 주 복제본을 초기화하는 데 사용되는 중요한 방법인 [자동 시드]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)로 설계되었습니다. 다음을 수행하면 두 번째 가용성 그룹의 주 복제본에 대한 전체 데이터베이스 복원이 가능합니다.
 
 1. WITH NORECOVERY를 사용하여 데이터베이스 백업을 복원합니다.
 2. 필요한 경우 WITH NORECOVERY를 사용하여 적절한 트랜잭션 로그 백업을 복원합니다.
@@ -168,7 +168,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 * 두 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 "Seeding Check Message Timeout(시드 중 확인 메시지 시간 초과)"라는 이유로 `current_state`가 FAILED(실패)로 표시됩니다.
 
-* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)이 동기화되었다고 표시됩니다.
+* 두 번째 가용성 그룹의 주 복제본에 있는 현재 SQL Server 로그에는 시드가 작동하고 [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)이 동기화되었다고 표시됩니다.
 
 * 첫 번째 가용성 그룹의 주 복제본에 있는 `sys.dm_hadr_automatic_seeding`에 표시된 출력에는 current_state가 COMPLETED(완료)로 표시됩니다. 
 

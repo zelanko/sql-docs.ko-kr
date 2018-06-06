@@ -3,7 +3,6 @@ title: Always On 가용성 그룹 구성 문제 해결(SQL Server) | Microsoft D
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 caps.latest.revision: 39
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51993c7798822b6ce73c0ba905bba67868bc35ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: decd62a6c869191a28922efb6622b646d97108fc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770076"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 가용성 그룹 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  **항목 내용:**  
   
-|섹션|Description|  
+|섹션|설명|  
 |-------------|-----------------|  
 |[Always On 가용성 그룹을 사용할 수 없음](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[끝점 액세스(SQL Server 오류 1418)](#Msg1418)|이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 메시지에 대한 정보를 포함합니다.|  
 |[데이터베이스 조인 실패(SQL Server 오류 35250)](#JoinDbFails)|주 복제본 연결이 활성화되지 않아서 가용성 그룹에 대한 보조 데이터베이스 조인에 실패하는 원인과 해결 방법에 대해 설명합니다.|  
 |[읽기 전용 라우팅이 올바르게 작동하지 않음](#ROR)||  
-|[관련 태스크](#RelatedTasks)|가용성 그룹 구성 문제를 해결하는 방법에 대해 설명하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 온라인 설명서에 있는 태스크 지향 항목 목록을 포함합니다.|  
+|[관련 작업](#RelatedTasks)|가용성 그룹 구성 문제를 해결하는 방법에 대해 설명하는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 온라인 설명서에 있는 태스크 지향 항목 목록을 포함합니다.|  
 |[관련 내용](#RelatedContent)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서에 포함되어 있지 않은 관련 리소스 목록을 포함합니다.|  
   
 ##  <a name="IsHadrEnabled"></a> Always On 가용성 그룹을 사용할 수 없음  

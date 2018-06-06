@@ -3,7 +3,6 @@ title: 결과 페이지(Always On 가용성 그룹 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33de5f659afe7e81cdc5b04c7bcf792caa5deea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e9eafbd63a68d6b996494f51f0c757e1eae1ee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768679"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>결과 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
  **결과**  
  완료된 각 단계에 대해 다음 하이퍼링크 텍스트 중 하나를 표시합니다.  
   
-|결과|Description|  
+|결과|설명|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
 |**성공**|유효성 검사 단계가 성공적으로 완료되었음을 나타냅니다.|  

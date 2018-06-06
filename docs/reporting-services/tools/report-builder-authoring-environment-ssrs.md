@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a8daf190f0fbd77bc36e2be7d079a2c7176db6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550074"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>보고서 작성기 제작 환경(SSRS)
   보고서 작성기 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 은(는) Visual Studio 외부에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들기 위한 독립 실행형 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 Microsoft 다운로드 센터에서 모바일 보고서 게시자를 다운로드할 수 있습니다.  
@@ -51,7 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>참고 항목  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: 가용성 그룹에서 SQL Server 배포 데이터베이스 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473887"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -76,7 +77,6 @@ SQL Server 2017 CU 6에서는 다음 메커니즘을 통해 AG에서 복제 배�
 - 배포 데이터베이스 AG에 참여하는 모든 복제본에서 배포자 또는 배포 데이터베이스 속성을 변경합니다.
 - 배포 데이터베이스 AG에 참여하는 모든 복제본에서 msdb 저장 프로시저 또는 SQL Server Management Studi를 통해 복제 작업을 변경합니다.
 - 게시자에 대한 배포자 구성은 스크립트를 통해 수행해야 합니다. 복제 마법사는 사용할 수 없습니다. 다른 용도에는 복제 마법사 및 속성 시트를 사용할 수 있습니다.
-- AG 수신기 이름을 사용하여 연결하는 복제 모니터 및 복제 UI는 SQL Server 2017 CU 6을 기준으로 지원되지 않습니다. AG의 배포 데이터베이스와 연결된 복제 에이전트를 관리하려면 작업 속성 및 작업 기록을 사용합니다.
 - 배포 데이터베이스에 대한 AG 구성은 스크립트를 통해서만 가능합니다.
 - AG에서 배포 데이터베이스를 설정하려면 새 복제 구성이어야 합니다. 기존 배포 데이터베이스를 AG 전환하는 것은 지원되지 않습니다. 또한 배포 데이터베이스가 AG로 가면 더 이상 유효한 배포 데이터베이스로 작동하지 않으며 삭제해야 합니다. 
 

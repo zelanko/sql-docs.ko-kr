@@ -35,10 +35,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25b36b25efbb7c99d3595da26587007f784bfc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708041"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
     
  데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 데이터 정렬은 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분합니다.  다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
     
-|옵션|Description|    
+|옵션|설명|    
 |------------|-----------------|    
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    

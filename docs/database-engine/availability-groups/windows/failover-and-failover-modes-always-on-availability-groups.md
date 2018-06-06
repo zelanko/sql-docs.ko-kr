@@ -3,7 +3,6 @@ title: 장애 조치 및 장애 조치 모드(Always On 가용성 그룹) | Micr
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 75
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 195dd7358a432bccd94c1916176fa0a35b728cca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f36ed49c90f9d5e4a3753a7cc72b144e510bac3b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769659"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [강제 장애 조치(failover)(데이터가 손실될 수 있음)](#ForcedFailover)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   
@@ -84,8 +84,8 @@ ms.lasthandoff: 05/03/2018
   
 ||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(automatic failover)|아니오|아니오|예|  
-|계획된 수동 장애 조치(Failover)|아니오|예|예|  
+|자동 장애 조치(automatic failover)|아니요|아니요|예|  
+|계획된 수동 장애 조치(Failover)|아니요|예|예|  
 |강제 장애 조치(failover)|예|예|예**\***|  
   
  **\*** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
@@ -261,9 +261,9 @@ ms.lasthandoff: 05/03/2018
   
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|예|아니오|  
-|Synchronous-commit|아니오|예|  
-|Asynchronous-commit|아니오|예|  
+|Synchronous-commit|예|아니요|  
+|Synchronous-commit|아니요|예|  
+|Asynchronous-commit|아니요|예|  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  
   

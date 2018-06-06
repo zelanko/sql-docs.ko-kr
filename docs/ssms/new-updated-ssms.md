@@ -12,11 +12,12 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: ssms
 ms.date: 04/28/2018
-ms.openlocfilehash: 1ce446219f71baca0f4cdedc835fca929b572a0f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 75c3dafdfea93a1cb16b9101d187c208e6de2796
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585915"
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server용 SSMS(SQL Server Management Studio)
 
@@ -132,7 +133,7 @@ SQL Database 관리되는 인스턴스:
 
 **IS(Integration Services)**
 
-- [SQL Database 관리되는 인스턴스](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)로 패키지 배포에 대한 추가된 지원
+- [SQL Database 관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)로 패키지 배포에 대한 추가된 지원
 
 
 

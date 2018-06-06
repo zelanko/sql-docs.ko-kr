@@ -3,7 +3,6 @@ title: Always On 가용성 그룹이 포함된 FILESTREAM 및 FileTable(SQL Serv
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,15 +14,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 95a7004aa2c621a181e654af2151274cb21265cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb32e9d9a008b05ed8812815db0a42304f58b470
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769139"
 ---
 # <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server)
 
@@ -35,13 +35,13 @@ ms.lasthandoff: 05/03/2018
   
  FileTable 기능은 부분적으로 지원됩니다. 장애 조치(Failover) 이후 FileTable 데이터는 주 복제본에서 액세스할 수 있지만 FileTable 데이터를 읽기 가능한 보조 복제본에서는 액세스할 수 없습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [필수 구성 요소](#Prerequisites)  
   
 -   [FILESTREAM 및 FileTable 액세스를 위한 VNN(가상 네트워크 이름) 사용](#vnn)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   

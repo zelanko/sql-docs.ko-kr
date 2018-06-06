@@ -3,7 +3,6 @@ title: 활성 보조 - 읽기 가능한 보조 복제본 - Always On 가용성 �
 ms.custom: ''
 ms.date: 06/06/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3035046e6f474995ddb0584cf251dc03411072e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5197fb00840296dc4ef05b478d0dd3f0cd37c46
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770059"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 읽기 전용 연결 요청을 읽기 가능한 보조 복제본으로 다시 라우팅하는 기능(*읽기 전용 라우팅*)도 지원합니다. 읽기 전용 라우팅에 대한 자세한 내용은 [수신기를 사용하여 읽기 전용 보조 복제본(읽기 전용 라우팅)에 연결](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [이점](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
   
@@ -236,9 +236,9 @@ GO
   
     |읽기 가능한 보조 복제본인지 여부|스냅숏 격리 또는 RCSI 수준이 설정되었는지 여부|주 데이터베이스|보조 데이터베이스|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |아니오|아니오|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
-    |아니오|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
-    |예|아니오|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |아니요|아니요|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
+    |아니요|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
+    |예|아니요|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
     |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 관련 태스크  

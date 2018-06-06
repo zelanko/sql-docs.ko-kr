@@ -20,11 +20,12 @@ caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35cbe4b19fc8cab0f28f879e6a65d6149bf6822a
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34722323"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |원격 서버|\@\@remserver|연결된 서버를 사용하여 원격 서버를 대체합니다.|InclusionThresholdSetting|InclusionThresholdSetting|  
 |원격 서버|SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다.|SET REMOTE_PROC_TRANSACTIONS|110|  
-|Set 옵션|**SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE**|TOP 키워드|SET ROWCOUNT|109|  
 |테이블 힌트|괄호가 없는 HOLDLOCK 테이블 힌트|HOLDLOCK에 괄호를 사용합니다.|괄호가 없는 HOLDLOCK 테이블 힌트|167|  
   
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>향후 버전의 SQL Server에서 사용되지 않는 기능  
@@ -170,7 +170,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.|SQL Server 프로파일러|InclusionThresholdSetting|  
 |Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server 프로파일러|InclusionThresholdSetting|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace 네임 스페이스(SQL Server 추적 및 재생 개체용 API 포함)|추적 구성: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 추적 읽기: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 추적 재생: 없음|||  
-|SQL 추적 저장 프로시저, 함수 및 카탈로그 뷰|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
+|SQL 추적 저장 프로시저, 함수 및 카탈로그 뷰|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
+|Set 옵션|**SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE**|TOP 키워드|SET ROWCOUNT|109|  
+
   
 > [!NOTE]  
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 개발자가 **varbinary(50)** 를 할당할 경우 이후 릴리스에서 쿠키 반환 크기가 증가하면 응용 프로그램을 변경해야 할 수 있습니다. 이 문제는 사용 중지에 관한 문제는 아니지만 응용 프로그램 조정이 유사하기 때문에 이 항목에서 다룹니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)을 참조하세요.  

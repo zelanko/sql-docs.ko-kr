@@ -3,24 +3,21 @@ title: Master Data Services 제거 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 10
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dd16cf3ac03192ae5c0e65f831ea237e07c45f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772559"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  데이터 손실을 방지하고 시스템의 다른 컴퓨터에 영향을 주지 않기 위해 일부 항목은 제거 프로세스에서 제거 또는 변경되지 않습니다. 다음 표를 검토하여 항목을 남겨둘지, 아니면 제거할지 여부를 결정합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |폴더 및 파일|제거 프로세스는 대부분의 폴더와 파일을 제거 경로에서 제거합니다.<br /><br /> 제거 프로세스는 설치 위치에서 Master Data Services 및 MDSTempDir 폴더를 제거하지 않습니다. 제거 프로세스가 완료된 후 이러한 폴더를 파일 시스템에서 수동으로 삭제할 수 있습니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 어셈블리|제거 프로세스는 GAC(전역 어셈블리 캐시)에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 어셈블리를 제거합니다.|  

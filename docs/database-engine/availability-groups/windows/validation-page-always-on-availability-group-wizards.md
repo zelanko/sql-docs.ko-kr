@@ -3,7 +3,6 @@ title: 유효성 검사 페이지(Always On 가용성 그룹 마법사) | Micros
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfce0aacbd7349263ca699ea532998546df92fe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fa76ae69b35257d1419a6ce664677287e333180
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771285"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>유효성 검사 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
  **결과**  
  다음 하이퍼링크 텍스트 중 하나를 표시합니다. 지정된 유효성 검사 단계의 결과에 대한 자세한 내용을 보려면 하이퍼링크를 클릭하십시오.  
   
-|결과|Description|  
+|결과|설명|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
 |**건너뜀**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  

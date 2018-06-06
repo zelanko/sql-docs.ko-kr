@@ -3,7 +3,6 @@ title: Always On 가용성 그룹 자동 초기화 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: 18
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 5cb1573bc000783cd0f6ab9e1f928cfc34564c51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4856ae5b4feede296b0c51ccfe5abf58e9947eee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768669"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Always On 가용성 그룹 자동 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -219,7 +219,7 @@ GO
 
 다음 표에는 자동 시드와 관련된 확장 이벤트가 나열되어 있습니다. 
 
-| 속성 | Description|
+| 속성 | 설명|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  시드 요청 메시지입니다.
 |hadr_physical_seeding_backup_state_change |    물리적 시드 백업 관련 상태 변경입니다.

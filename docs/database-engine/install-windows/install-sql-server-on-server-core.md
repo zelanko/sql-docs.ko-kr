@@ -3,7 +3,6 @@ title: Server Core에 SQL Server 2016 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af0c145508b13907716bd95d9b54a1063f325e9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770919"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
@@ -49,21 +49,21 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |전체 텍스트 검색|예||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|예||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|예||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|아니오||  
-|SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|아니오||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|아니요||  
+|SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|아니요||  
 |클라이언트 도구 연결|예||  
 |Integration Services 서버|예||  
-|클라이언트 도구 이전 버전과의 호환성|아니오||  
-|클라이언트 도구 SDK|아니오||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니오||  
+|클라이언트 도구 이전 버전과의 호환성|아니요||  
+|클라이언트 도구 SDK|아니요||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니요||  
 |관리 도구 -  기본|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
 |관리 도구 -  전체|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
-|Distributed  Replay  Controller|아니오||  
+|Distributed  Replay  Controller|아니요||  
 |Distributed  Replay  Client|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
 |SQL  클라이언트 연결 SDK|예||  
 |Microsoft  Sync  Framework|예|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=221788)(http://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니오||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니오||  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니요||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|아니요||  
   
 ## <a name="supported-scenarios"></a>지원되는 시나리오  
  다음 표에서는 Server Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치하는 데 지원되는 시나리오 매트릭스를 보여 줍니다.  
@@ -92,7 +92,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 ### <a name="feature-parameters"></a>기능 매개 변수  
   
-|기능 매개 변수|Description|  
+|기능 매개 변수|설명|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |복제|[!INCLUDE[ssDE](../../includes/ssde-md.md)]과 함께 복제 구성 요소를 설치합니다.|  
@@ -105,7 +105,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
  기능 매개 변수에 대한 다음과 같은 사용 예를 참조하십시오.  
   
-|매개 변수 및 값|Description|  
+|매개 변수 및 값|설명|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]만 설치합니다.|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 전체 텍스트를 설치합니다.|  

@@ -3,7 +3,6 @@ title: 가용성 그룹 장애 조치 마법사 사용(SQL Server Management Stu
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 26
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756f260b8e2b3459f2ac2bf4368a3e4bdafa74e7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771139"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **쿼럼 상태**  
  'WSFC' 클러스터 유형의 경우 다음 중 하나의 가용성 복제본 쿼럼 상태를 표시합니다.  
   
-   |값|Description|  
+   |값|설명|  
    |-----------|-----------------|  
    |**일반 쿼럼**|클러스터가 일반 쿼럼으로 시작했습니다.|  
    |**강제 쿼럼**|클러스터가 강제 쿼럼으로 시작했습니다.|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
  **가용성 모드**  
  서버 인스턴스의 가용성 모드를 표시하며 다음 중 하나입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**동기 커밋**|동기-커밋 모드에서는 동기-커밋 주 복제본이 트랜잭션을 커밋하기 전에 동기-커밋 보조 복제본이 로그 확정을 완료했음을 확인할 때까지 기다립니다. 동기-커밋 모드에서는 지정된 보조 데이터베이스가 주 데이터베이스와 동기화되고 나면 커밋된 트랜잭션이 완전히 보호됩니다.|  
 |**비동기 커밋**|비동기-커밋 모드에서는 주 복제본이 비동기-커밋 보조 복제본이 로그를 확정할 때까지 기다리지 않고 트랜잭션을 커밋합니다. 비동기-커밋 모드에서는 보조 데이터베이스의 트랜잭션 대기 시간이 최소화되지만 보조 데이터베이스가 주 데이터베이스보다 뒤쳐질 수 있어 일부 데이터가 손실될 수 있습니다.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
  **장애 조치(Failover) 모드**  
  서버 인스턴스의 장애 조치(failover) 모드를 표시하며 다음 중 하나입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**자동**|자동 장애 조치(Failover)를 사용하도록 구성된 보조 복제본은 주 복제본과 동기활 때마다 계획된 수동 장애 조치도 지원합니다.|  
 |**수동**|수동 장애 조치에는 계획된 장애 조치(데이터가 손실되지 않음)와 강제 장애 조치(데이터가 손실될 수 있음)의 두 가지 유형이 있습니다. 가용성 모드 및 동기-커밋 모드의 경우 보조 복제본의 동기화 상태에 따라 지정된 보조 복제본에 대해 이 두 가지 중 하나만 지원됩니다. 지정된 보조 복제본에 현재 지원되는 수동 장애 조치 형태를 확인하려면 이 표에서 **장애 조치(Failover) 준비** 열을 참조하세요.|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
  **장애 조치(Failover) 준비**  
  보조 복제본의 장애 조치 준비를 표시하며 다음 중 하나입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**데이터 손실 없음**|이 보조 복제본이 현재 계획된 장애 조치를 지원합니다. 이 값은 동기-커밋 모드 보조 복제본이 현재 주 복제본과 동기화된 경우에만 표시됩니다.|  
 |**데이터 손실, 경고(** *#* **)**|이 보조 복제본이 현재 강제 장애 조치(데이터가 손실될 수 있음)를 지원합니다. 이 값은 보조 복제본이 주 복제본과 동기화되지 않은 상태일 때마다 표시됩니다. 가능한 데이터 손실에 대한 자세한 내용을 보려면 데이터 손실 경고 링크를 클릭하세요.|  

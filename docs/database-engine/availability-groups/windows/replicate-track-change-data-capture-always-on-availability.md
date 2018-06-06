@@ -3,7 +3,6 @@ title: 복제, 변경 내용 추적 및 변경 데이터 캡처 - 가용성 그�
 ms.custom: ''
 ms.date: 04/25/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 37
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60f20c48befbd5dcb24db4e1c7e247cf9b8346c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769379"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,10 +211,10 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 |||||  
 |-|-|-|-|  
 ||**게시자**|**Distributor***\*|**구독자**|  
-|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|아니오|예|  
-|**P2P**|아니오|아니오|아니오|  
-|**병합**|예|아니오|예*|  
-|**스냅숏**|예|아니오|예*|  
+|**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|아니요|예|  
+|**P2P**|아니요|아니요|아니요|  
+|**병합**|예|아니요|예*|  
+|**스냅숏**|예|아니요|예*|  
   
  *복제본 데이터베이스에 대한 장애 조치(Failover)는 수동 절차입니다. 자동 장애 조치(Failover)는 제공되지 않습니다.  
   

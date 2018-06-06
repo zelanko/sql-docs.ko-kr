@@ -3,8 +3,6 @@ title: 로그 전달 테이블 및 저장 프로시저 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +16,15 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e306bcc54708e0548baa4052a2b657b3fd47228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc9e2c3aadf5bb153d40536a5145b259e2163a17
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771839"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-tables"></a>주 서버 테이블  
   
-|Table|Description|  
+|Table|설명|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 주 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|이 주 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="primary-server-stored-procedures"></a>주 서버 저장 프로시저  
   
-|저장 프로시저|Description|  
+|저장 프로시저|설명|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|백업 작업, 로컬 모니터 레코드 및 원격 모니터 레코드를 포함하여 로그 전달 구성에 대한 주 데이터베이스를 설정합니다.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|기존 주 데이터베이스에 보조 데이터베이스 이름을 추가합니다.|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-tables"></a>보조 서버 테이블  
   
-|Table|Description|  
+|Table|설명|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 보조 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|이 보조 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="secondary-server-stored-procedures"></a>보조 서버 저장 프로시저  
   
-|저장 프로시저|Description|  
+|저장 프로시저|설명|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|로그 전달에 대한 보조 데이터베이스를 설정합니다.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|지정된 주 데이터베이스에 대한 보조 서버에서 주 정보를 설정하고, 로컬 및 원격 모니터 링크를 추가하며, 복사본을 만들고 작업을 복원합니다.|  
@@ -87,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-tables"></a>모니터 서버 테이블  
   
-|Table|Description|  
+|Table|설명|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|경고 작업 ID를 저장합니다.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="monitor-server-stored-procedures"></a>모니터 서버 저장 프로시저  
   
-|저장 프로시저|Description|  
+|저장 프로시저|설명|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|로그 전달 경고 작업이 아직 생성되지 않았으면 하나를 생성합니다.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|관련된 주 데이터베이스가 없으면 로그 전달 경고 작업을 제거합니다.|  

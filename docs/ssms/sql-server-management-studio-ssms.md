@@ -10,16 +10,21 @@ ms.custom: ''
 ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
+f1_keywords:
+- sql13.ssms.viewhelp.f1
+helpviewer_keywords:
+- SQL Server Management Studio
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09b2dab33e8c2c2b1f7fae579f5d6577402ebe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fa17a9e29159e4e4a16fdc23421b9b546c09177
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708982"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
-|Description|구성 요소|  
+|설명|구성 요소|  
 |---------------|---------|  
 |**개체 탐색기** 를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]인스턴스에서 모든 개체를 보고 관리합니다.|[개체 탐색기](../ssms/object/object-explorer.md)|  
 |**템플릿 탐색기** 를 사용하여 쿼리 및 스크립트 개발 속도를 단축하기 위해 사용할 수 있는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  

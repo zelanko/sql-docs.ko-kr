@@ -33,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a20affed4c50345d5b7d2d61a2f2666e456a5971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3339a53c2569f6561caa4cefdb5e697610c71fdd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582115"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |대문자|[!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드입니다.|  
 |*기울임꼴*|사용자가 제공하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 매개 변수입니다.|  
 |**굵게**|표시된 그대로 입력해야 하는 데이터베이스 이름, 테이블 이름, 열 이름, 인덱스 이름, 저장 프로시저, 유틸리티, 데이터 형식 이름 및 텍스트입니다.|  
-|**underline**|밑줄 친 값이 포함된 절이 문에 지정되지 않을 때 적용되는 기본값을 나타냅니다.|  
+|_underline_|밑줄 친 값이 포함된 절이 문에 지정되지 않을 때 적용되는 기본값을 나타냅니다.|  
 |&#124;(세로 막대)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 사용할 수 있습니다.|  
 |`[ ]`(대괄호)|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |{}(중괄호)|필수 구문 항목입니다. 중괄호는 입력하지 않습니다.|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 중간 노드를 생략하려면 마침표를 사용해 이 위치를 표시하십시오. 다음 표에서는 개체 이름의 유효한 형식을 보여 줍니다.  
   
-|개체 참조 형식|Description|  
+|개체 참조 형식|설명|  
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *object*|네 부분으로 이루어진 이름입니다.|  
 |*server* **.** *database* **..** *object*|스키마 이름이 생략됩니다.|  

@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 설치 마이그레이션(기본 모드) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -23,11 +23,12 @@ caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 005021b6de95f2238c6108833a9fa15f7326a2a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6502c85bdf016f325058c69fc5ae01f8d2553e87
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550654"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 

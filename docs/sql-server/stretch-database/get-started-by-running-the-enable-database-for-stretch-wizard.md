@@ -3,12 +3,8 @@ title: Stretch에 데이터베이스 사용 마법사를 실행하여 시작 | M
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
@@ -25,15 +21,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: 39
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 934be2b3fc47d8c1b055f965237f02be16591039
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13e5366037f3f399325d1a453601314f46ae6a67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772969"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -69,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  ![Stretch Database 마법사의 테이블 선택 페이지](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 마법사의 테이블 선택 페이지")  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |(제목 없음)|선택한 테이블을 스트레치에 사용하려면 이 열에서 확인란을 선택합니다.|  
 |**이름**|데이터베이스에서 테이블 이름을 지정합니다.|  

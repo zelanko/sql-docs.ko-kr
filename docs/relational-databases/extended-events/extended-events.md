@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34706861"
 ---
 # <a name="extended-events"></a>확장 이벤트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표는 확장 이벤트의 개념에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 확장 이벤트 패키지](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|확장 이벤트 세션이 실행 중일 때 데이터를 얻거나 처리하는 데 사용되는 개체가 포함된 확장 이벤트 패키지에 대해 설명합니다.|  
 |[SQL Server 확장 이벤트 대상](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|이벤트 세션이 지속되는 동안 데이터를 수신할 수 있는 이벤트 소비자에 대해 설명합니다.|  

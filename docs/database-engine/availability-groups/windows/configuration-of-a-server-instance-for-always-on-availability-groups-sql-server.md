@@ -3,7 +3,6 @@ title: Always On 가용성 그룹에 대한 SQL Server 인스턴스 구성(SQL S
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ee5b18ae26fc03be2ae9331cd54a15aa764c8b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b348d73669905489b6fdb1e3c68f87e23fb7ab40
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769089"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 서버 인스턴스 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]필수 구성 사항 및 제한 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [용어 및 정의](#TermsAndDefinitions)  
   
 -   [Always On 가용성 그룹을 지원하도록 서버 인스턴스를 구성하려면](#ConfigSI)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   

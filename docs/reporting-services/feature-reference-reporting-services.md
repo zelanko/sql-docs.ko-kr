@@ -1,7 +1,7 @@
 ---
 title: 기능 참조(Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550084"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 응용 프로그램의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>섹션 내용  
  [보고서 디자이너 F1 도움말](../reporting-services/tools/report-designer-f1-help.md)  
  보고서 디자이너와 관련 대화 상자, 보고서 마법사 및 이미지 마법사에 대한 도움말을 제공합니다.  
-  
- [보고서 관리자 F1 도움말](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 응용 프로그램인 보고서 관리자에 대한 도움말을 제공합니다.  
   
  [Reporting Services 구성 관리자 도움말 항목](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  보고서 서버 인스턴스의 관리 및 배포에 사용되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 도구에 대한 도움말을 제공합니다.  

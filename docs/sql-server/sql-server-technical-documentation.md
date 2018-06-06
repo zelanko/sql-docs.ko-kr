@@ -24,12 +24,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: 2d71913e69d5b4a7f10239f8afe24e65ef15fe27
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225441"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709071"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 콘텐츠가 곧 .docs 사이트에 병합됩니다.  현재는 다음을 참조하세요.
-- [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2014용 온라인 설명서](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014의 새로운 기능](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [이전 버전](https://docs.microsoft.com/en-us/previous-versions/sql/)
+- [이전 버전](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -107,7 +107,7 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 - [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure 마이그레이션 경험 - 평가, 마이그레이션, 최적화](https://azure.microsoft.com/en-us/migration/)]
+- [Azure 마이그레이션 경험 - 평가, 마이그레이션, 최적화](https://azure.microsoft.com/migration/)]
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -126,8 +126,8 @@ SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Serve
 
 ## <a name="samples"></a>샘플
 
-- [Wide World Importers 예제 데이터베이스](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
-- [SQL Server 2016에 대한 AdventureWorks 예제 데이터베이스 및 스크립트](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
+- [Wide World Importers 예제 데이터베이스](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
+- [SQL Server 2016에 대한 AdventureWorks 예제 데이터베이스 및 스크립트](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub의 SQL Server 예제](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

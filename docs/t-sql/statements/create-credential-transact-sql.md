@@ -29,11 +29,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b02629d9e51740907fdb1698e50bc9e8c241d26c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1dbc4b6f4cf3dcb464f8e402bfd9d2579e63078
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582025"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>4. SAS 토큰을 사용하여 자격 증명 만들기  
  **적용 대상**: [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.  
   
- 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용하기](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)를 참조합니다.  
+ 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용하기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)를 참조합니다.  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 인수는 이름이 컨테이너 경로와 일치하고 https로 시작하고 후행 슬래시를 포함하지 않을 것을 요구합니다. **IDENTITY** 인수는 이름, *공유 액세스 서명*을 요구합니다. **SECRET** 인수는 공유 액세스 서명 토큰을 요구합니다.  

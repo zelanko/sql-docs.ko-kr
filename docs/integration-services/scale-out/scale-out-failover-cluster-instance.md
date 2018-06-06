@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470245"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(failover) 클러스터 인스턴스를 통한 고가용성을 위한 Scale Out 지원
 
@@ -62,7 +63,7 @@ Scale Out 마스터 서비스를 온라인 상태로 전환합니다.
 ![온라인 상태로 전환](media/bring-online.PNG)
 
 > [!NOTE]
-> SSISDB 및 Scale Out 마스터 서비스를 개별적으로 장애 조치(failover)하려면 [7. Windows 장애 조치(failover) 클러스터의 Scale Out 마스터 서비스 역할 구성](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)을 수행합니다.
+> SSISDB 및 Scale Out 마스터 서비스를 개별적으로 장애 조치(failover)하려면 [7. Windows 장애 조치(failover) 클러스터의 Scale Out 마스터 서비스 역할 구성](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)을 수행합니다.
 
 ## <a name="7-install-scale-out-workers"></a>7. Scale Out 작업자 설치
 작업자 노드에 Scale Out 작업자를 설치합니다. 설치하는 동안 마스터 엔드포인트에 대한 https://[Sql Server 네트워크 이름]:[마스터 포트]를 지정합니다. 

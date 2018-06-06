@@ -3,24 +3,20 @@ title: Stretch Database와 호환 가능한 SQL Server 기능 구성 | Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5da59d07b752da091390eae671aa324e275a00ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03d94268884854c21f5aa6d00eff78a908798a58
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772739"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database와 호환 가능한 SQL Server 기능 구성
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

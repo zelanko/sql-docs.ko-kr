@@ -3,8 +3,6 @@ title: 로그 전달 보고서 보기(SQL Server Management Studio) | Microsoft 
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +15,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48d35294501c51e888da121a50165763e1fe66ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fded7ef9ced9146eca2664a260657a0e9aa9dd79
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772049"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  현재 서버 인스턴스에서 수행하는 각 역할에 대해 다음 정보를 볼 수 있습니다.  
   
-|Role|표시되는 정보|  
+|역할|표시되는 정보|  
 |----------|---------------------------|  
 |모니터|이 서버 인스턴스를 모니터 서버로 사용하는 모든 주 서버 및 보조 서버의 이름과 상태|  
 |주|주 데이터베이스 각각에 대한 주 데이터베이스 이름 및 주 서버로서 현재 서버 인스턴스의 상태와 이름. 보고서에는 주 서버에 로컬로 저장되어 있는 백업 작업의 상태가 표시됩니다.<br /><br /> 보고서에는 해당되는 각 보조 서버에 대한 행도 포함됩니다. 구성에서 모니터 서버를 사용하고 저장 프로시저가 모니터에 연결할 수 있으면 이러한 행에 최신 로그 백업의 복사 상태 및 복원 상태가 표시됩니다.|  

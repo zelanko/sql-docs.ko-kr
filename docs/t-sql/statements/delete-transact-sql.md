@@ -31,11 +31,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c428542e575bd32db57aadff478a73e5e6bcdf1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79fcdecafcbb2d0318a5a04d3aebbe78fb991bfb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34586005"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +119,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  테이블이나 뷰가 속한 스키마의 이름입니다.  
   
- *table_or view_name*  
+ *table_or_view_name*  
  행을 제거할 테이블 또는 뷰의 이름입니다.  
   
  테이블 변수는 해당 범위 내에서 DELETE 문의 테이블 원본으로도 사용될 수 있습니다.  

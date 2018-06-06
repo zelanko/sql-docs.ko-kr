@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550774"
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>참고 항목  
  [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [공유 데이터 원본 항목 보안](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

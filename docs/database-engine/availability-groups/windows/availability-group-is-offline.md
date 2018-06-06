@@ -3,7 +3,6 @@ title: 가용성 그룹이 오프라인 상태임 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50b4993866aecea060c756176e9f160522ed19ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7dc3b221631d07291a4965f5bb37dca54f406703
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768599"
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**범주**|**심각**|  
 |**패싯**|가용성 그룹|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 정책은 가용성 그룹의 온라인 또는 오프라인 상태를 확인합니다. 가용성 그룹의 클러스터 리소스가 오프라인이거나 가용성 그룹에 주 복제본이 없으면 정책이 비정상 상태이며 경고가 발생합니다.  
   
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  

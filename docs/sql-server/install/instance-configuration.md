@@ -3,12 +3,9 @@ title: 설치 마법사 도움말 | Microsoft Docs
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772769"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>UIElement 목록  
   
-|Description|기본 디렉터리|권장 사항|  
+|설명|기본 디렉터리|권장 사항|  
 |-----------------|-----------------------|---------------------|  
 |데이터 루트 디렉터리|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |\Program files\Microsoft SQL Server\ 폴더가 제한된 권한으로 보호되어 있는지 확인하십시오. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 성능은 대부분의 구성에서 데이터 디렉터리가 있는 저장소의 성능에 따라 달라집니다. 이 디렉터리는 시스템에 연결된 성능이 가장 높은 저장소에 두십시오. 장애 조치(Failover) 클러스터 설치의 경우 공유 디스크에 데이터 디렉터리를 만들어야 합니다.|  
 |로그 파일 디렉터리|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |이 디렉터리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그 파일 디렉터리이며 FlightRecorder 로그를 포함합니다. 비행 레코더 기간을 늘려야 하는 경우 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
@@ -173,7 +171,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="uielement-list"></a>UIElement 목록  
   
-|Description|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
+|설명|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |데이터 루트 디렉터리|로컬 디스크, SMB 파일 서버, 공유 저장소* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
 |사용자 데이터베이스 디렉터리|로컬 디스크, SMB 파일 서버, 공유 저장소*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
@@ -185,7 +183,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스에 대한 지원되는 저장소 유형 및 기본 디렉터리를 보여 줍니다.  
   
-|Description|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
+|설명|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |데이터 루트 디렉터리|공유 저장소, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
 |사용자 데이터베이스 디렉터리|공유 저장소, SMB 파일 서버|\<드라이브:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
@@ -225,7 +223,7 @@ ms.lasthandoff: 05/03/2018
   
 #### <a name="uielement-list"></a>UIElement 목록  
   
-|Description|기본 디렉터리|권장 사항|  
+|설명|기본 디렉터리|권장 사항|  
 |-----------------|-----------------------|---------------------|  
 |데이터 루트 디렉터리 |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |\Program files\Microsoft SQL Server\ 폴더가 제한된 권한으로 보호되어 있는지 확인하십시오. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 성능은 대부분의 구성에서 데이터 디렉터리가 있는 저장소의 성능에 따라 달라집니다. 이 디렉터리는 시스템에 연결된 성능이 가장 높은 저장소에 두십시오. 장애 조치(Failover) 클러스터 설치의 경우 공유 디스크에 데이터 디렉터리를 만들어야 합니다.|  
 |로그 파일 디렉터리|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |이 디렉터리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그 파일 디렉터리이며 FlightRecorder 로그를 포함합니다. 비행 레코더 기간을 늘려야 하는 경우 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
@@ -369,7 +367,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스의 데이터 및 로그 디렉터리  
  다음 표에는 설치 중 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스에 지원되는 저장소 유형 및 기본 디렉터리가 나열되어 있습니다.  
   
-|Description|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
+|설명|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**데이터 디렉터리**|로컬 디스크, SMB 파일 서버, 공유 저장소* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.<br /><br /> **temdb** 디렉터리의 모범 사례는 작업 및 성능 요구 사항에 따라 달라집니다. 여러 볼륨에 데이터 파일을 나눌 여러 폴더/드라이버를 지정합니다.|  
 |**로그 디렉터리**|로컬 디스크, SMB 파일 서버, 공유 저장소*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
@@ -379,7 +377,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스의 데이터 및 로그 디렉터리  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스에 대한 지원되는 저장소 유형 및 기본 디렉터리를 보여 줍니다.  
   
-|Description|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
+|설명|지원되는 저장소 유형|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**tempdb** 데이터 디렉터리|로컬 디스크, 공유 저장소, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.<br /><br /> 지정된 디렉터리(여러 파일이 지정된 경우 여러 디렉터리)가 모든 클러스터 노드에 대해 유효한지 확인합니다. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.|  
 |**tempdb** 로그 디렉터리|로컬 디스크, 공유 저장소, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.<br /><br /> 지정한 디렉터리가 모든 클러스터 노드에 유효한지 확인하십시오. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.<br /><br /> 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  

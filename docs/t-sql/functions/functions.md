@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 707cb1e75bff3d28136e53ddeaf17a63396f8078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708971"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
 
 ### <a name="categories-of-scalar-functions"></a>스칼라 함수의 범주
   
-|함수 범주|Description|  
+|함수 범주|설명|  
 |-----------------------|-----------------|  
 |[구성 함수](configuration-functions-transact-sql.md)|현재 구성에 대한 정보를 반환합니다.|  
 |[변환 함수](conversion-functions-transact-sql.md)|데이터 형식 캐스팅 및 변환을 지원합니다.|  

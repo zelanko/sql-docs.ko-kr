@@ -3,7 +3,6 @@ title: 가용성 그룹에 대한 압축 튜닝 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 9576b598e4bbdbab86708691540c1bae2b238b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ab713b7089f4c76214fe5e290196757cce43317
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770939"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 다음 표는 SQL Server에 대한 기본 압축 동작을 변경하는 추적 플래그를 보여 줍니다. 
 
-추적 플래그 | Description
+추적 플래그 | 설명
 ------------- | -------------
 1462          | 비동기 복제본에서 가용성 그룹에 대한 로그 스트림 압축을 사용하지 않도록 설정합니다. 이 기능은 네트워크 대역폭을 최적화하기 위해 비동기 복제본에서 기본적으로 설정되어 있습니다.
 9567          | 자동 시드 중 가용성 그룹에 대한 데이터 스트림 압축을 사용하도록 설정합니다. 자동 시드 중 압축은 전송 시간을 크게 줄일 수 있으며 프로세서 부하가 증가됩니다.

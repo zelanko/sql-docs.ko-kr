@@ -3,7 +3,6 @@ title: SQL Server 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a66992f974048b0fb24cfae124896c3f0ebc419e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ea964d0048b410dd5f555759c4a73f547837be9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771097"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치 방법
  
-|Title|Description|  
+|Title|설명|  
 |-----------|-----------------|  
 |[Server Core에 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Windows Server Core에 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]를 설치하려면 이 문서를 검토합니다.|  
 |[시스템 구성 검사기의 검사 매개 변수](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|SCC(시스템 구성 검사기)의 기능에 대해 설명합니다.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="how-to-install-individual-components"></a>개별 구성 요소 설치 방법  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 데이터베이스 엔진 설치](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치 및 구성하는 방법에 대해 설명합니다.|  
 |[SQL Server 복제 설치](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 설치 및 구성하는 방법에 대해 설명합니다.|  
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="how-to-configure-sql-server"></a>SQL Server 구성 방법  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|이 문서에서는 방화벽 구성 및 Windows 방화벽 구성 방법에 대한 개요를 제공합니다.|  
 |[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|이 문서에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|  

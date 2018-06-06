@@ -3,7 +3,6 @@ title: 운영 문제에 대한 Always On 정책 - Always On 가용성 그룹 | M
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,21 +13,22 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc2a4f92bad4d12a8fd1b54601a53e3d801d23e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fe881c82173877dba98e99c1af5b197ce5fba20
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768989"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>운영 문제에 대한 Always On 정책 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹 및 가용성 복제본과 데이터베이스의 상태를 볼 수 있습니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [용어 및 정의](#TermsAndDefinitions)  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Always On 상태 모델 확장](#ExtendHealthModel)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  사용자 정의된 정책은 Always On 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#Always OnPBM)참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해**IsHadrEnabled** 및 **HadrManagerStatus**속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 **ClusterQuorumType**및 **ClusterQuorumState**정책의 속성을 제공합니다.  
   
- 자세한 내용은 [Always On 상태 모델 파트 2 -- 상태 모델 확장](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx) (SQL Server Always On 팀 블로그)을 참조하세요.  
+ 자세한 내용은 [Always On 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (SQL Server Always On 팀 블로그)을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Always On 상태 모델 파트 1 -- 상태 모델 아키텍처](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [Always On 상태 모델 파트 1 -- 상태 모델 아키텍처](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [Always On 상태 모델 파트 2 -- 상태 모델 확장](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [Always On 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

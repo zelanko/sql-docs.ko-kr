@@ -3,7 +3,6 @@ title: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failov
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -12,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772569"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  이 시스템 저장 프로시저는 오류 상태 수준에서 중요한 역할을 하므로 [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)를 검토하세요.  
   
-|Level|조건|Description|  
+|Level|조건|설명|  
 |-----------|---------------|-----------------|  
 |0|자동 장애 조치(Failover) 또는 다시 시작 안 함|어떤 실패 조건에서도 장애 조치(Failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다. 이 수준은 시스템 유지 관리 목적으로만 제공됩니다.|  
 |1|서버 다운 시 장애 조치(Failover) 또는 다시 시작|다음 조건이 발생한 경우 서버가 다시 시작되거나 장애 조치(Failover)됨을 나타냅니다.<br /><br /> SQL Server 서비스가 다운된 경우|  

@@ -3,7 +3,6 @@ title: 명령 프롬프트에서 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -86,15 +85,15 @@ helpviewer_keywords:
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 caps.latest.revision: 255
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5842e2885aff9fa774ab98d4ededb1c18f7e9ac2
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455716"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771509"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 

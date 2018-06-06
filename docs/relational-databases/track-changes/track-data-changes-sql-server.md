@@ -27,10 +27,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708881"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 |**추적된 변경 내용**|||  
 |DML 변경|예|예|  
 |**추적된 정보**|||  
-|기록 데이터|예|아니오|  
+|기록 데이터|예|아니요|  
 |열 변경 여부|예|예|  
 |DML 유형|예|예|  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
 |열 유형|변경 테이블에 변경 내용이 캡처되는지 여부|제한 사항|  
 |--------------------|---------------------------------------|-----------------|  
 |스파스 열|예|열 집합을 사용할 때는 변경 내용 캡처를 지원하지 않습니다.|  
-|계산 열|아니오|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
+|계산 열|아니요|계산 열의 변경 내용은 추적할 수 없습니다. 열이 적합한 유형의 변경 테이블에 나타나지만 NULL 값을 갖습니다.|  
 |XML|예|개별 XML 요소에 대한 변경 사항은 추적할 수 없습니다.|  
 |timestamp|예|변경 테이블의 데이터 형식은 이진으로 변환됩니다.|  
 |BLOB 데이터 형식|예|BLOB 열의 이전 이미지는 열 자체가 변경된 경우에만 저장됩니다.|  

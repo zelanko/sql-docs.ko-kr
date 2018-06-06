@@ -3,8 +3,6 @@ title: 로그 전달 정보(SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -27,15 +25,16 @@ helpviewer_keywords:
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d507c250cdf26f2bcbafebcb14b31df83623e2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b40759c6edba86a2714936f92f175e9037d7e25
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771659"
 ---
 # <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
 
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 *주 서버* 인스턴스의 *주 데이터베이스* 에서 별도의 *보조 서버* 인스턴스에 있는 하나 이상의 *보조 데이터베이스* 로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 트랜잭션 로그 백업은 각 보조 데이터베이스에 개별적으로 적용됩니다. *모니터 서버*라는 선택적인 세 번째 서버 인스턴스는 백업 및 복원 작업의 기록과 상태를 기록하고 예약된 대로 작업이 실행되지 않으면 선택적으로 경고를 발생시킵니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [이점](#Benefits)  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [상호 운용성](#Interoperability)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="Benefits"></a> 이점  
   

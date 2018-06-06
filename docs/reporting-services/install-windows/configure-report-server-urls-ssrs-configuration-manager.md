@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
-- Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550564"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용됩니다. 응용 프로그램을 사용하려면 먼저 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 응용 프로그램 URL에 대한 기본값을 제공합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="defining-a-report-server-url"></a>보고서 서버 URL 정의  
  URL을 통해 네트워크에 있는 보고서 서버 응용 프로그램 인스턴스의 위치를 정확하게 식별할 수 있습니다. 보고서 서버 URL을 만들 때 다음 부분을 지정해야 합니다.  
   
-|부분|Description|  
+|부분|설명|  
 |----------|-----------------|  
 |호스트 이름|TCP/IP 네트워크는 IP 주소를 사용하여 네트워크에 있는 장치를 고유하게 식별합니다. 물리적 IP 주소는 컴퓨터에 설치된 네트워크 어댑터 카드당 한 개가 있습니다. IP 주소가 호스트 헤더로 확인되면 호스트 헤더를 지정할 수 있습니다. 보고서 서버를 회사 네트워크에 배포하는 경우 컴퓨터의 네트워크 이름을 사용할 수 있습니다.|  
 |포트|TCP 포트는 장치의 끝점입니다. 보고서 서버는 지정된 포트에서 요청을 수신합니다.|  

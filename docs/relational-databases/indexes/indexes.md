@@ -18,10 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708381"
 ---
 # <a name="indexes"></a>인덱스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="available-index-types"></a>사용 가능한 인덱스 유형
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 인덱스 유형을 나열하고 추가 정보에 대한 링크를 제공합니다.  
   
-|인덱스 유형|Description|추가 정보|  
+|인덱스 유형|설명|추가 정보|  
 |----------------|-----------------|----------------------------|  
 |Hash|해시 인덱스를 사용하면 메모리의 해시 테이블을 통해 데이터에 액세스할 수 있습니다. 해시 인덱스는 고정된 크기의 메모리를 소모하며, 버킷 수의 함수입니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [해시 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |메모리 최적화 비클러스터형|메모리 최적화 비클러스터형 인덱스의 경우 메모리 사용은 행 개수 및 인덱스 키 열의 크기를 반영합니다.|[메모리 액세스에 최적화된 테이블의 인덱스 사용 지침](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [메모리 최적화 비클러스터형 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
  [인덱스 및 제약 조건 활성화](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
  [인덱스 이름 바꾸기](../../relational-databases/indexes/rename-indexes.md)  
  [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
  [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
  [페이지 및 익스텐트 아키텍처 지침](../../relational-databases/pages-and-extents-architecture-guide.md) [클러스터형 및 비클러스터형 인덱스 설명](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  

@@ -3,7 +3,6 @@ title: 데이터베이스 상태 검색 장애 조치 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,14 +18,15 @@ helpviewer_keywords:
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: 4
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 179c6d1e4014dc6090adffe795390ae866fbd1f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 85fcf4c5f16093b51da9ec8cab3cf3da7b16bdc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769969"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ SQL Server Management Studio를 사용하여 주 SQL Server에 연결하고, 관
 
 필드에 대한 설명:
 
-|열 데이터    | Description
+|열 데이터    | 설명
 |---------|---------
 |availability_group_id  |가용성 그룹의 ID입니다.
 |availability_group_name    |가용성 그룹의 이름입니다.

@@ -23,10 +23,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708251"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -158,7 +159,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="dynamic-views-and-functions"></a>동적 뷰 및 함수  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 동적 뷰 및 함수를 나열합니다.  
   
-|동적 뷰 및 함수|Description|  
+|동적 뷰 및 함수|설명|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|감사의 현재 상태에 대한 정보를 제공합니다.|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="catalog-views"></a>카탈로그 뷰  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 카탈로그 뷰를 나열합니다.  
   
-|카탈로그 뷰|Description|  
+|카탈로그 뷰|설명|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|서버 인스턴스에 있는 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다.|  

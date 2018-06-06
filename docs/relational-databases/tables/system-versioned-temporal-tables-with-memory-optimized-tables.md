@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563721"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   메모리 최적화 시스템 버전 관리 테이블에 대한 기록 테이블은 만든 주체가 최종 사용자이든 또는 시스템이든 상관없이 디스크 기반이어야 합니다.  
   
--   현재 테이블(메모리 내)에만 영향을 주는 쿼리를 [고유하게 컴파일된 T-SQL 모듈](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx)에서 사용할 수 있습니다. FOR SYSTEM TIME 절을 사용하는 임시 쿼리는 고유하게 컴파일된 모듈에서 지원되지 않습니다. 임시 쿼리 및 비네이티브 모듈에서 메모리 최적화 테이블이 포함된 FOR SYSTEM TIME 절을 사용할 수 있습니다.  
+-   현재 테이블(메모리 내)에만 영향을 주는 쿼리를 [고유하게 컴파일된 T-SQL 모듈](https://msdn.microsoft.com/en-us/library/dn133184.aspx)에서 사용할 수 있습니다. FOR SYSTEM TIME 절을 사용하는 임시 쿼리는 고유하게 컴파일된 모듈에서 지원되지 않습니다. 임시 쿼리 및 비네이티브 모듈에서 메모리 최적화 테이블이 포함된 FOR SYSTEM TIME 절을 사용할 수 있습니다.  
   
 -   
             **SYSTEM_VERSIONING = ON**의 경우, 메모리 최적화 현재 테이블에 대한 업데이트 및 삭제 연산의 결과인 최근 시스템 버전 관리 변경 내용을 수용하기 위해 메모리 최적화 준비 테이블이 자동으로 생성됩니다.  
