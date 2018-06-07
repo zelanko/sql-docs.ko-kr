@@ -3,8 +3,7 @@
 # [변환](data-type-conversion-database-engine.md)  
 # [우선 순위](data-type-precedence-transact-sql.md)  
 # [동의어](data-type-synonyms-transact-sql.md)  
-# [전체 자릿수, 소수 자릿수 및 길이](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [전체 자릿수, 소수 자릿수 및 길이](precision-scale-and-length-transact-sql.md)    
 # [cursor](cursor-transact-sql.md)  
 # [날짜 및 시간](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write(데이터베이스 엔진)](write-database-engine.md)  
 
 # [숫자](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal 및 numeric](decimal-and-numeric-transact-sql.md)  
 ## [float 및 real](float-and-real-transact-sql.md)  
 ## [int, bigint, smallint 및 tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  

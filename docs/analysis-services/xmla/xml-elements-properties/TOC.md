@@ -1,4 +1,4 @@
-# [XML 요소 - 속성](xml-elements-properties.md)
+# [XMLA 요소-속성](xml-elements-properties.md)
 
 # [AllowOverwrite 요소(XMLA)](allowoverwrite-element-xmla.md)
 # [ApplyCompression 요소(XMLA)](applycompression-element-xmla.md)
