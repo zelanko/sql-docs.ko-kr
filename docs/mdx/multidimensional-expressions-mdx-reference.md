@@ -1,6 +1,6 @@
 ---
 title: MDX (multidimensional Expressions) 참조 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf65a3a743655e71dc2cb13d7dbc7038a7c596ad
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cae2aba7475a987561bb089edc36410a4f08ab97
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580095"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742682"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>MDX(Multidimensional Expressions) 참조
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
     
 ## <a name="in-this-section"></a>섹션 내용  

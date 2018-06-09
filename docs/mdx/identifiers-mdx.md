@@ -1,40 +1,25 @@
 ---
 title: 식별자 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740812"
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  식별자의 이름인는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체입니다. 모든 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체는 식별자를 가질 수 있어야만 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
+
+  식별자에는 Analysis Services 개체의 이름입니다. 모든 개체 수와 식별자가 있어야 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
   
  개체의 이름을 어떻게 지정하느냐에 따라 개체 식별자는 일반 식별자 또는 구분 식별자가 됩니다.  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   개체 이름 또는 이름 중 일부에 예약어를 사용하는 경우  
   
-     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전에서 업그레이드 된 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 예약어에 대 한 이전 버전의 예약어를 포함 하는 식별자를 포함할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
+     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전에서 업그레이드 된 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전의 예약어를 포함 하는 식별자를 포함할 수 있지만 이제 예약 됩니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
   
 -   개체 이름에 정규화된 식별자로 나열되지 않은 문자를 사용하는 경우  
   
@@ -138,9 +123,9 @@ ms.lasthandoff: 05/03/2018
   
  또한 둘 이상의 식별자를 구분하는 것을 보여 주기 위해 이전 예에서는 Measures 식별자를 구분했습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [MDX 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

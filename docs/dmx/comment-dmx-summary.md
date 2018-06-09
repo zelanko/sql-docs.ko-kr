@@ -1,31 +1,20 @@
 ---
 title: -(주석) (DMX) 요약 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- commenting characters
-- double hyphens
-- -- (comment character)
-ms.assetid: 487b580b-5b81-4e52-8868-4fa809e4ef58
-caps.latest.revision: 14
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 77100332ecdd3e0ef0421a33400e676e99412206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841186"
 ---
 # <a name="---comment-dmx-summary"></a>-(주석) (DMX) 요약
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,14 +32,14 @@ ms.lasthandoff: 05/03/2018
  *Comment_Text*  
  주석 텍스트를 포함하는 문자열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다.  --를 사용하여 입력한 주석은 줄 바꿈 문자로 구분됩니다.  
   
  주석의 길이에는 제한이 없습니다.  
   
  DMX에서 다른 종류의 주석 사용 하는 방법에 대 한 자세한 내용은 참조 [주석 &#40;DMX&#41;](../dmx/comments-dmx.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [별 슬래시 &#40;주석&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [이중 슬래시 &#40;주석&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   

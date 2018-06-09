@@ -1,8 +1,6 @@
 ---
 title: MySQL 데이터베이스를 SQL Server 스키마 (MySQLToSQL)로 매핑 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6fc24887570cd1cf4422705282514530308706d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ad7ad2647e0f1c9c6145d3277c1bee911fdcde9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776719"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL 데이터베이스를 SQL Server 스키마 (MySQLToSQL)로 매핑
 기본적으로 MySQL 용 SSMA는 MySQL 스키마의 모든 개체를 마이그레이션합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스의 스키마 이름으로 지정 합니다. 그러나 MySQL 스키마 간의 매핑을 사용자 지정할 수는 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스입니다.  
@@ -76,7 +75,7 @@ MySQL 스키마와 SQL Server 스키마 간의 매핑을 사용자 지정 하는
 ## <a name="next-steps"></a>다음 단계  
 SQL Server 또는 SQL Azure 개체 MySQL 개체의 변환 분석 하려는 경우 다음을 할 수 있습니다 [변환 보고서를 만들](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) 수 그렇지 않으면 [MySQL 데이터베이스 개체 정의 변환](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) 스키마를 SQL Server 또는 SQL Azure로  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [프로젝트 설정 &#40;변환&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Azure SQL DB에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

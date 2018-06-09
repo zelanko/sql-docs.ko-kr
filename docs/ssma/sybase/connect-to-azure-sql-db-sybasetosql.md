@@ -3,8 +3,6 @@ title: Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,23 +16,24 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f73b6e88e457ef74a82512876715a333d0a52d71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778839"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB (SybaseToSQL)에 연결
 Azure SQL DB 대화 상자에 연결을 사용 하 여 마이그레이션할 Azure SQL DB 데이터베이스에 연결 합니다.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **Azure SQL DB에 연결**합니다. 이 명령은 이전에 연결한 경우 **Azure SQL DB에 다시 연결 합니다.**  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **서버 이름**  
   
 선택 하거나 Azure SQL DB에 연결 하기 위한 서버 이름을 입력 합니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
   
 선택, 입력 또는 **찾아보기** 데이터베이스 이름입니다.  
   

@@ -1,8 +1,6 @@
 ---
 title: 데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773519"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 마법사 (Select 파일)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 파일 선택 페이지는 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 선택 확인 페이지를 볼 수 있습니다.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 SSMA에 추가할 파일을 선택 하려면 파일 이름 옆에 있는 확인란을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 완료 페이지를 볼 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **모두 선택**  
 목록에서 모든 데이터베이스를 선택 하려면이 확인란을 선택 합니다.  
   
@@ -58,6 +57,6 @@ Access 데이터베이스 파일의 경로 표시 합니다.
 **수정한 날짜**  
 날짜 및 데이터베이스를 마지막으로 수정한 시간입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

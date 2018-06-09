@@ -1,39 +1,23 @@
 ---
 title: ALTER CUBE 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- ALTER_CUBE
-- ALTER CUBE
-- ALTER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ALTER CUBE statement
-- cubes [Analysis Services], modifying
-- modifying cubes
-ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a91092f5a62f1c21312ca585834795d678216ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741572"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 데이터 정의-ALTER 큐브
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   일반적으로 차원 쓰기 저장을 지원하는 데 사용되는 지정한 큐브의 구조를 변경합니다. 응용 프로그램에서 쓰기 저장을 사용 하는 방법에 대 한 자세한 내용은이 블로그 게시물을 참조 하십시오.: [Analysis Services (블로그)로 쓰기 저장 응용 프로그램 빌드](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -130,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  멤버 이름이나 멤버 키를 지정하는 유효한 문자열 식입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
  WITH DESCENDANTS 절을 사용하지 않을 경우 삭제된 멤버의 자식은 삭제된 멤버의 부모의 자식이 됩니다. WITH DESCENDANTS 절을 사용하면 모든 하위 항목과 차원 테이블의 해당 행도 삭제됩니다.  
   
 > [!NOTE]  
@@ -146,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  단일 멤버를 반환하는 유효한 MDX 식입니다.  
   
-### <a name="remarks"></a>주의  
+### <a name="remarks"></a>Remarks  
  지정된 MDX 식은 정적이거나 동적일 수 있습니다.  
   
 ## <a name="moving-a-dimension-member"></a>차원 멤버 이동  
@@ -180,7 +164,7 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>셀 계산 만들기  
  ALTER CUBE 문을 사용 하 여 셀 계산을 만드는 방법에 대 한 자세한 내용은 참조 [DROP CELL CALCULATION Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

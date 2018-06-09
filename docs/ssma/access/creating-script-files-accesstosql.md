@@ -1,8 +1,6 @@
 ---
 title: 스크립트 파일 (AccessToSQL) 만들기 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5d1b0fda2c6c822d6d080bb2cf48958964e230ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd6227abb8cc311d16a0eadf6e491f7b82d9f48b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773459"
 ---
 # <a name="creating-script-files-accesstosql"></a>스크립트 파일 (AccessToSQL) 만들기
 첫 번째 스크립트 파일을 만드는 것 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일을 필요한 경우 단계입니다.  
   
-스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다 하십시오..,:  
+스크립트 파일 세 가지 섹션으로 viz 나눌 수 있습니다.. 하십시오:  
   
 1.  **config:** 콘솔 응용 프로그램에 대 한 구성 매개 변수를 설정할 수 있습니다.  
   
@@ -400,6 +399,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>다음 단계
 운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [변수 값 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

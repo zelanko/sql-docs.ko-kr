@@ -3,8 +3,6 @@ title: 프로젝트 설정 (변환) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4903ec6923239b76784d1aef94303860582b8b85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c90a4ebb4f1c8f9225713ff6608be7f1a2c14e8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779329"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정 (변환) (SybaseToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA Sybase 적응형 Server Enterprise (ASE) 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 구문이 있습니다.  
@@ -452,6 +451,6 @@ ASE를 함수에 `SUBSTRING(expression, start, length)` 길이 0과 같을 경�
 > [!NOTE]  
 > SQL Azure에 연결 되어 있을 때 True 기본적입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

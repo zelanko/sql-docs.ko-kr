@@ -1,8 +1,6 @@
 ---
 title: 데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,18 +18,19 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 22ebef73d62b315ebdbdc2a7fd4bb5755454d12e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773659"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 마법사 (선택 위치)를 찾을 (AccessToSQL)
 데이터베이스 검색 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  
   
 검색 데이터베이스 마법사를 열려면는 **파일** 메뉴를 클릭 하 여 **찾을 데이터베이스**합니다. 이 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [추가 및 제거 Access 데이터베이스 파일](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **찾아보기**  
 컴퓨터 또는 네트워크를 찾으려면 여기를 클릭 합니다. 폴더 또는 위치를 클릭 하 고 검색할 선택 **확인**합니다. 클릭 **추가** 목록에이 위치를 추가 합니다.  
   
@@ -65,7 +64,7 @@ SSMA를 검색 하는 위치를 나열 합니다. 클릭는 **추가** 단추를
 **소유자**  
 소유자의 전체 Windows 사용자 이름을 입력 합니다. 으로 서식을 지정할 수 있습니다이 *도메인*\\*사용자*합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Access 데이터베이스 파일 추가 및 제거](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

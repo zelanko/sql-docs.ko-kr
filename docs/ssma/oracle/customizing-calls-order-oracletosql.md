@@ -1,8 +1,6 @@
 ---
 title: 호출 순서 (OracleToSQL) 사용자 지정 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fb42d6b62b9148148c88a0bd6f3d47b34731caa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499f245f265591da2d2775f33341fb19d88136d4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777019"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>호출 순서 (OracleToSQL) 사용자 지정
 이 단계에서 개체를 테스트를 호출할 수 있는 순서를 선택 합니다.  
@@ -32,6 +31,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>다음 단계  
 [테스트 사례 준비를 마친 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

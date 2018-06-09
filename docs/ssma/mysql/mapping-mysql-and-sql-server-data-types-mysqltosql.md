@@ -1,8 +1,6 @@
 ---
 title: 매핑 MySQL 및 SQL Server 데이터 형식 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d35530153b4e26f865b6fd8fefa102718752dafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248e908567dfa40f0a8f64596e3f9e9754e03e44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776509"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL 및 SQL Server 데이터 형식 (MySQLToSQL) 매핑
 MySQL 데이터베이스 형식이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 유형입니다. MySQL 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 MySQL의 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 기본 데이터 형식 매핑을 그대로 사용 하거나 다음 절차에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  
@@ -89,6 +88,6 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 중 하나로 [평가 보고서를 만들](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) 또는 [SQL Server 또는 SQL Azure 구문으로 변환 하는 MySQL 데이터베이스 개체](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)합니다. 보고서를 만들면 MySQL 개체는 자동으로 평가 하는 동안 변환 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

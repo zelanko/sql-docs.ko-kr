@@ -1,8 +1,6 @@
 ---
 title: 매핑 DB2 및 SQL Server 데이터 형식 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9f470aca25b8f42473ccb8a453edc0d3da911a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d354f1b9fb44e77dc840f74d5692c1149e70ab0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775029"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 및 SQL Server 데이터 형식 (DB2ToSQL) 매핑
 DB2 데이터베이스 형식에서 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 유형입니다. DB2 데이터베이스 개체를 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체를 d b 2에서 데이터 형식을 매핑하는 방법을 지정 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 기본 데이터 형식 매핑을 사용할 수도 있고 다음 섹션에 나와 있는 것 처럼 매핑을 사용자 지정할 수 있습니다.  
@@ -95,6 +94,6 @@ SSMA에 기본 데이터 형식 매핑 집합이 있습니다. 기본 매핑 목
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 중 하나로 [평가 보고서 &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) 또는 [DB2 스키마 변환 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)합니다. 평가 보고서를 만드는 경우 DB2 개체는 자동으로 평가 하는 동안 변환 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

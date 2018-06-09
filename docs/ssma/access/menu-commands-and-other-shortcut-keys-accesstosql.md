@@ -1,8 +1,6 @@
 ---
 title: 메뉴 명령 및 기타 바로 가기 키 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9119662915a4c2b83d8e50b33ab041f1fd248bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2735835c3eb0ca0a3e6a1f25e81182107a863e57
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774739"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>메뉴 명령 및 기타 바로 가기 키 (AccessToSQL)
 다음 섹션에서는 메뉴 명령 및 Access 응용 프로그램의 SSMA 다양 한 대화 상자에서 사용 되는 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  
@@ -196,6 +195,6 @@ ms.lasthandoff: 05/03/2018
 |요약 정보를 시작 합니다.|CTRL + SHIFT + 공간|  
 |선언으로 이동 합니다.|F12|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [바로 가기 키 &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

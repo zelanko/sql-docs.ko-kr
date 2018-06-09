@@ -1,6 +1,6 @@
 ---
 title: KPIWeight (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 303159683705c9b80ad4c5b09662586de359ebbb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 325942d8bd0b4aa674266b2f3e40941fc401b277
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578795"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740772"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정된 KPI(핵심 성과 지표)의 가중치를 반환합니다.  
   

@@ -3,8 +3,6 @@ title: SSMA 콘솔 (SybaseToSQL) 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778569"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 (SybaseToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -238,7 +237,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <generate-assessment-report  
@@ -303,7 +302,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <convert-schema  
@@ -359,7 +358,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 </migrate-data>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <migrate-data  
@@ -438,7 +437,7 @@ fail-script>" (optional)
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target  
@@ -447,7 +446,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target>  
@@ -499,7 +498,7 @@ fail-script>" (optional)
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database  
@@ -508,7 +507,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database>  
@@ -553,7 +552,7 @@ fail-script>" (optional)
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <save-as-script  
@@ -627,7 +626,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  
@@ -652,7 +651,7 @@ fail-script>" (optional)
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  

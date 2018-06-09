@@ -1,8 +1,6 @@
 ---
 title: SSMA 콘솔 (AccessToSQL) 실행 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630e58111b82485b0e7567b972f05227fc26921e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773999"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)를 실행합니다.
 Microsoft는 강력한 집합 스크립트 파일 명령 및 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -165,7 +164,7 @@ connect-source-database
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <load-access-database>  
@@ -199,7 +198,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <force-load>  
@@ -312,7 +311,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <generate-assessment-report  
@@ -384,7 +383,7 @@ convert-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <convert-schema  
@@ -444,7 +443,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <migrate-data  
@@ -474,7 +473,7 @@ convert-schema
   
 </link-tables>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <link-tables>  
@@ -500,7 +499,7 @@ convert-schema
   
 </unlink-tables>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <unlink-tables>  
@@ -579,7 +578,7 @@ convert-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target  
@@ -588,7 +587,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target>  
@@ -644,7 +643,7 @@ convert-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database  
@@ -653,7 +652,7 @@ convert-schema
   
   object-type="category"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database>  
@@ -703,7 +702,7 @@ save-as-script
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <save-as-script  

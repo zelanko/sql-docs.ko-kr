@@ -1,6 +1,6 @@
 ---
 title: MDX 연산자 참조 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580605"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742482"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 연산자 참조(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX 언어는 산술, 논리, 비교, 집합, 문자열 및 단항 연산자를 지원합니다. 다음 표에서는 지원되는 연산자와 해당 설명을 나열합니다.  
   

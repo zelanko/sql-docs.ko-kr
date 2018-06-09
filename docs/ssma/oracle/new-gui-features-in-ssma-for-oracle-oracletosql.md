@@ -1,8 +1,6 @@
 ---
 title: SSMA for Oracle (OracleToSQL)의 새로운 GUI 기능 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4fdbb359f9c8ebd9d1ecd4133b115c7700a6cda5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24bdabbdc3dfd436c745ceec086af71f5cb1d663
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777569"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL)의 새로운 GUI 기능
 SSMA 사용자 인터페이스의 새로운 기능을 설명합니다이.  

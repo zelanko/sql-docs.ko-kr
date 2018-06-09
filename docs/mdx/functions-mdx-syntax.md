@@ -1,34 +1,23 @@
 ---
 title: 함수 (MDX 구문) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], functions
-- Multidimensional Expressions [Analysis Services], functions
-- functions [MDX]
-ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740732"
 ---
 # <a name="functions-mdx-syntax"></a>함수(MDX 구문)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX에는 특정 작업을 수행하는 여러 범주의 내장 함수가 있습니다. 다음 표에서는 MDX에서 사용 가능한 함수 범주를 나열합니다.  
   
@@ -51,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="uses-of-functions"></a>함수 사용  
  임의의 MDX 식에서 함수를 사용하거나 포함시킬 수 있습니다. 함수를 중첩(어떤 함수를 다른 함수 내에서 사용하는 것)할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

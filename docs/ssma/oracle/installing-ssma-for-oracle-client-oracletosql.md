@@ -1,8 +1,6 @@
 ---
 title: Oracle 클라이언트 (OracleToSQL) 용 SSMA를 설치 합니다. | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5b778ea75d6594b8b7ee880a00d4641f6efe5d5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bacc738ab794c3ce215c000ee2c6980c09722b46
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777529"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Oracle 클라이언트 (OracleToSQL) 용 SSMA를 설치합니다.
 다음 작업을 수행 하는 프로그램 파일의 SSMA 클라이언트 구성 됩니다.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 이 항목에서는 설치 필수 구성 요소 및 SSMA를 설치 하기 위한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 SSMA는 Oracle 9 또는 이후 버전의 모든 버전와 작동 하도록 설계 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -83,7 +82,7 @@ SSMA를 설치 하기 전에 최신 버전을 다운로드 한 후의 설치 파
   
 SSMA 프로그램 파일 외에 설치 해야 Oracle 확장 팩 용 SSMA에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 자세한 내용은 참조 [SQL Server에서 SSMA 구성 요소 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 SSMA 구성 요소 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

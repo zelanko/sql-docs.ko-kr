@@ -1,8 +1,6 @@
 ---
 title: 변환, 로드 및 마이그레이션 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fef63f5a51baf9f35b1729119901cc8da2b322b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 292a8dc91c5ebe19e2b835698c1310061d6377e3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773299"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>변환, 로드 및 (AccessToSQL) 마이그레이션
 **변환, 로드 및 마이그레이션** 변환, 로드 및 마이그레이션 단추 또는 마이그레이션 마법사를 사용 하는 경우 대화 상자 마이그레이션 상태를 보고 합니다.  
@@ -35,11 +34,11 @@ ms.lasthandoff: 05/03/2018
   
 **선택한 개체에 대 한 데이터를 마이그레이션할** 페이지의 섹션도 포함 되어는 **보고서** 단추입니다. 데이터 마이그레이션 보고서를 보려면이 단추를 클릭 합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **보고서**  
 관련된 된 변환 및 마이그레이션 보고서를 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
 [마이그레이션 마법사](http://msdn.microsoft.com/en-us/5bab5914-b2ae-4795-8cf5-83e42d64bef2)  
   

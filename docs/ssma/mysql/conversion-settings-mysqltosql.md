@@ -1,8 +1,6 @@
 ---
 title: 변환 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13a3bfc9f8fe001d31b1d231438cece9752e08df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776019"
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정 (MySQLToSQL)
 **'설정'** 탭 노드 수준 설정을 지정 하려면 사용자 수 있습니다. 탭에서 메타 베이스에 있는 다음 노드에서 사용할 수 있습니다.  
@@ -82,6 +81,6 @@ ms.lasthandoff: 05/03/2018
   
     3.  사용자가 지정한 설정을 클릭 종속 연결 된 기본 설정 파일에 저장 됩니다 **적용** 단추입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [프로젝트 설정 (변환) (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

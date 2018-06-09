@@ -15,11 +15,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 226bc8435480477a3d217e4e0a0008c496a6055d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2a5bbd2370839cf1483d251f87588743994b081
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239343"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +42,9 @@ bool PDO::setAttribute ( $attribute, $value );
 ## <a name="return-value"></a>반환 값  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
-|Attribute|처리기|지원되는 값|Description|  
+|attribute|처리기|지원되는 값|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|열 이름의 대/소문자를 지정합니다.<br /><br />PDO::CASE_LOWER를 사용하면 열 이름이 소문자가 됩니다.<br /><br />PDO::CASE_NATURAL(기본값)은 데이터베이스에서 반환된 열 이름을 표시합니다.<br /><br />PDO::CASE_UPPER를 사용하면 열 이름이 대문자가 됩니다.<br /><br />PDO::setAttribute를 사용하면 이 특성을 설정할 수 있습니다.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
@@ -56,7 +57,7 @@ bool PDO::setAttribute ( $attribute, $value );
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|드라이버에서 서버와 통신하는 데 사용되는 문자 집합 인코딩을 설정합니다.<br /><br />PDO::SQLSRV_ENCODING_BINARY는 지원되지 않습니다.<br /><br />기본값은 PDO::SQLSRV_ENCODING_UTF8입니다.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|(비트, 정수, smallint, tinyint, float 또는 real) 숫자 SQL 유형이 있는 열에서 숫자 인출을 처리합니다.<br /><br />ATTR_STRINGIFY_FETCHES 연결 옵션 플래그를 설정 하면 반환 값은 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE에 있을 경우에 문자열입니다.<br /><br />바인딩할 열에 반환 되는 PDO 형식은 PDO_PARAM_INT 이면 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 꺼져 있는 경우에 정수 열에서 반환 값에는 int입니다.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|쿼리 시간 제한(초)을 설정합니다.<br /><br />기본값은 0이며, 드라이버가 결과를 무한정 기다린다는 것을 의미합니다.<br /><br />음수 값은 허용되지 않습니다.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|쿼리 버퍼의 크기를 설정합니다.<br /><br />기본값은 0이며, 무제한 버퍼 크기를 나타냅니다.<br /><br />음수 값은 허용되지 않습니다.<br /><br />클라이언트 쪽 커서를 만드는 쿼리에 대 한 자세한 내용은 참조 하십시오. [커서 유형 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)합니다.|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|쿼리 버퍼의 크기를 설정합니다.<br /><br />기본값은 10240KB, php.ini 파일에서 지정 하지 않으면.<br /><br />0이 고 음수는 사용할 수 없습니다.<br /><br />클라이언트 쪽 커서를 만드는 쿼리에 대 한 자세한 내용은 참조 하십시오. [커서 유형 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)합니다.|  
   
 PDO는 미리 정의된 몇 가지 특성을 처리하지만 다른 특성을 처리하려면 드라이버가 필요합니다. 모든 사용자 지정 특성 및 연결 옵션이 드라이버에 의해 처리됩니다. 지원 되지 않는 특성, 연결 옵션 또는 지원 되지 않는 값은 pdo:: ATTR_ERRMODE의 설정에 따라 보고 됩니다.  
   
@@ -86,7 +87,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

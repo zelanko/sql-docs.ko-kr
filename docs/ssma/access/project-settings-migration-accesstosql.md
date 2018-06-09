@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (마이그레이션) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3fe26ecc9d250982206121d33b35ee5c975e376f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774479"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
 마이그레이션 프로젝트 설정으로 데이터가 마이그레이션되는 방식을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 -   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 마이그레이션 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 라는 프로젝트 형식을 선택 **마이그레이션 대상 버전** 콤보 상자 설정에 액세스를 클릭 합니다. 원하는는 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **마이그레이션**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **CHECK 제약 조건**  
 테이블에 데이터를 추가할 때 SSMA 제약 조건을 확인 해야 하는지 여부를 지정 합니다.  
   
@@ -94,6 +93,6 @@ SSMA 이전 가장 빠른 버전의 액세스 날짜를 수정 해야 하는지 
 **일괄 처리 크기**  
 데이터 마이그레이션 중에 사용 되는 일괄 처리 크기입니다. 각 일괄 처리 후 트랜잭션이 기록 됩니다. 기본적으로 모든 스키마에 대 한 일괄 처리 크기는 10000입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

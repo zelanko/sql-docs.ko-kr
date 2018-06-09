@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant for Access (AccessToSQL) 설치 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -31,12 +29,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 39c6aef71584fbc3a50ec8611ead82ff5ad9f351
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 44df200b0b3f24ddcac48e42bfcc33df1b4a2a70
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34709091"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773669"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) 설치
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스를 위해 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목의 SSMA 최신 버전에 대 한 링크 설치 필수 구성 요소에 대 한 정보 및 설치, 라이선스, 제거 및 SSMA 업그레이드에 대 한 지침을 제공 합니다.  

@@ -1,8 +1,6 @@
 ---
 title: SQL Server (DB2ToSQL)로 데이터베이스 마이그레이션 DB2 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fbc4823fc61b3678b29ac5e0fee482384605abc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1d9a07ae6a33b2b9b8f2d81a2de66ea8ce111
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775299"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 데이터베이스 (DB2ToSQL) SQL Server로 마이그레이션
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for d b 2는 DB2 데이터베이스를 신속 하 게 마이그레이션할 수 있는 포괄적인 환경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. SSMA for d b 2를 사용 하 여 있습니다 수 데이터베이스 개체와 데이터를 검토, 평가 마이그레이션할 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB, 다음 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 Azure SQL DB입니다. 참고 SYS 및 시스템 DB2 스키마를 마이그레이션할 수 없습니다.  
@@ -56,7 +55,7 @@ DB2 데이터베이스에서 개체 및 데이터를 성공적으로 마이그�
   
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [D b 2 용 SSMA를 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
 [D b 2 용 SSMA 시작 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
   

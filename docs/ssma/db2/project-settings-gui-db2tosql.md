@@ -1,9 +1,6 @@
 ---
 title: 프로젝트 설정 (GUI) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95c0f89bc67c93fee752d01615d6011a90f29f28
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 7ae2bb7c816dbabb827ab9813792849bca25725e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775099"
 ---
 # <a name="project-settings-gui-db2tosql"></a>프로젝트 설정 (GUI) (DB2ToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수 있습니다는 **데이터** 탭과 여부 변환 된 후 평가 보고서를 표시할지 여부입니다.  
@@ -34,7 +32,7 @@ GUI 창도에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝
   
 -   사용 하 여는 **기본 프로젝트 설정** 대화 상자는 모든 프로젝트에 대 한 사용자 인터페이스 옵션을 설정 합니다. GUI 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정을 보거나에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운을 클릭 한 **GUI** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **원본에 대 한 최대 행 수**  
 에 표시 되는 데이터의 행 수를 구성 하며는 **데이터** 선택된 된 원본 테이블에 대 한 탭 합니다.  
   

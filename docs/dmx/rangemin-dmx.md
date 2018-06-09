@@ -1,31 +1,20 @@
 ---
 title: RangeMin (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- RangeMin
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMin function
-ms.assetid: 64159bbe-7016-4f67-91d9-5c5f6ceb6c25
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b333039c47add2810f67ecb449f2bea73cb2947f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fe9ee0a5fc9c354d24668b828403e937f6d935f0
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841826"
 ---
 # <a name="rangemin-dmx"></a>RangeMin(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ RangeMin(<scalar column reference>)
 ## <a name="return-type"></a>반환 형식  
  스칼라 값  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **RangeMin** 함수에서 사용할 수 있습니다 [SELECT DISTINCT FROM &#60;모델 &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) 쿼리 합니다. 이 쿼리 유형에 스칼라 열 참조를 사용하면 해당 참조에 예측 가능 또는 입력 형식에 해당하는 연속 열이나 불연속 열이 포함될 수 있습니다.  
   
  와 함께 사용할 경우 [SELECT FROM &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, 및 **RangeMax**  함수 지정 된 버킷의 실제 경계 값을 반환 합니다. 예를 들어 불연속화된 열에 대해 예측을 수행하면 해당 쿼리는 불연속화된 열의 예측 버킷 번호를 반환합니다. **RangeMin**, **RangeMid**, 및 **RangeMax** 함수는 예측이 지정 하는 버킷을 설명 합니다. 경우는 **RangeMin** 함수는 PREDICTION JOIN 문을 함께 사용, 스칼라 열 참조에는 예측 가능한 불연속 열만 포함할 수 있습니다.  
@@ -61,7 +50,7 @@ SELECT DISTINCT
 FROM [TM Decision Tree]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

@@ -3,8 +3,6 @@ title: SSMA Sybase 구성 요소 (SybaseToSQL)에 대 한 제거 | Microsoft Doc
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d59d3d18b4eb5b5ec81cb12422cc16cf64592731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779315"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA Sybase 구성 요소 (SybaseToSQL)에 대 한 제거
 완료 했을 때에서 Sybase 적응형 Server Enterprise (ASE)에 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 구성 요소를 제거 해야 할 경우가 있습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있지만 데이터베이스 엔진이 제거해 서는 안 확장 팩에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하는 경우가 아니면는 **ssma_syb** 의 스키마는 **sysdb** 데이터베이스입니다.  
@@ -61,7 +60,7 @@ SSMA를 사용 하 여 제거할 수 있습니다 **프로그램 추가 / 제거
   
 를 제거한 후 되는지 확인할 수 있습니다는 **sysdb.ssma_syb** 스키마 및 전체 **sysdb** , 데이터베이스를 사용 하 여 제거 된 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]합니다. 그러나 다른 SSMA 제품을 사용 하는 경우 사용 된 **sysdb** 데이터베이스입니다. 데이터베이스가 존재 하는 경우 다른 데이터베이스가이 데이터베이스에서 개체를 참조 하는지 확인 했으면 데이터베이스를 분리할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA Sybase 클라이언트에 대 한 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
 [SQL Server에 SSMA 구성 요소 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

@@ -3,8 +3,6 @@ title: 테스트 사례 만들기 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 36155da5abac07730c93096e506553f2cd4b8bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54eda3b9434d52e221c7223e87c1305adc3d125c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778419"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>테스트 사례 (SybaseToSQL) 만들기
 테스트 사례 마법사를 사용 하 여 테스트를 만들려고 합니다. 이 마법사를 사용 하면 테스트 매개 변수를 지정 하 고 테스트 하 고 확인할 개체를 선택 하 여 테스트 사례를 만들 수 있습니다.  
@@ -49,6 +48,6 @@ ms.lasthandoff: 05/03/2018
   
 5.  [테스트 사례 준비를 마친 &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

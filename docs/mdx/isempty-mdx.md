@@ -1,6 +1,6 @@
 ---
 title: IsEmpty (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578715"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740172"
 ---
 # <a name="isempty-mdx"></a>IsEmpty(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   평가 식이 빈 셀 값인지 여부를 반환합니다.  
   
@@ -38,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  멤버의 기본 속성은 멤버의 값입니다.  
   
- **IsEmpty** 함수는 빈 셀 값에서 특별 한 의미를 갖기 때문에 빈 셀에 대 한 안정적으로 테스트할 수 있는 유일한 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
+ **IsEmpty** 함수는 빈 셀 값에서 특별 한 의미를 갖기 때문에 빈 셀에 대 한 안정적으로 테스트할 수 있는 유일한 방법은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
   
 > [!IMPORTANT]  
 >  경우 값 식의 평가 결과 오류가 반환 되는 함수는 반환 **false**합니다. 예를 들어 속성 참조가 잘못된 속성이나 존재하지 않는 속성을 참조하는 경우 값 식에서 오류가 반환될 수 있습니다.  

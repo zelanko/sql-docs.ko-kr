@@ -1,31 +1,20 @@
 ---
 title: IsTestCase (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- IsTestCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTestCase function
-ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: 10
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1534dd83efab97d7f3e450bbe955453013e4c2e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841796"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +31,7 @@ IsTestCase()
 ## <a name="result-type"></a>결과 유형  
  반환 **true** 사례가 테스트 데이터 집합;의 일부 이면 그렇지 않으면 **false**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터 마이닝 마법사를 사용하여 마이닝 구조 및 관련된 마이닝 모델을 만들면 테스트 데이터 집합으로 사용할 수 있도록 기본적으로 사례의 30%가 따로 설정됩니다. 나머지 사례는 데이터 마이닝 모델을 학습하는 데 사용됩니다. 해당 구조를 기반으로 하는 모든 모델에 동일한 테스트 데이터 집합을 사용할 수 있습니다. 그러나 DMX를 사용하여 마이닝 모델을 만들면 기본적으로 모든 데이터가 모델을 학습하는 데 사용되며 테스트 집합이 만들어지지 않습니다. 테스트 데이터 집합이 만들어지도록 하려면 WITH HOLDOUT 절의 매개 변수를 설정해야 합니다.  
   
  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 및 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 속성의 값을 통해 테스트 집합이 특정 마이닝 구조에 대해 만들어졌는지 여부를 확인할 수 있습니다.  
@@ -63,9 +52,9 @@ WHERE IsTestCase()
   
  데이터 마이닝에 사용 된 사례를 쿼리 하는 방법에 대 한 자세한 내용은 참조 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) 및 [SELECT FROM &#60;구조&#62;합니다. 경우](../dmx/select-from-structure-cases.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [데이터 마이닝 쿼리](../analysis-services/data-mining/data-mining-queries.md)   
- [학습 및 테스트 데이터 집합](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [데이터 집합 학습 및 테스트](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

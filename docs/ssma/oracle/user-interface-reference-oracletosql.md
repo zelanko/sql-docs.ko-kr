@@ -1,8 +1,6 @@
 ---
 title: 사용자 인터페이스 참조 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778129"
 ---
 # <a name="user-interface-reference-oracletosql"></a>사용자 인터페이스 참조 (OracleToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle입니다.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |[데이터베이스에서 새로 고침 &#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|사용 하 여는 **데이터베이스에서 새로 고침** 대화 상자를 Oracle 데이터베이스에서 새로 고칠 개체를 선택 합니다.|  
 |[메타 데이터 저장 &#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Oracle 용 SSMA 시작 &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,8 +1,6 @@
 ---
 title: SQL Server (OracleToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 11a24da859c53107498111c6dc4d511cccd1b800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 525560d66e5de50743bba0c1203c6617b482bef8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777159"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>SQL Server (OracleToSQL)에 연결
 Oracle 데이터베이스를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 R2 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 이러한 항목 중 하나에 연결 해야 하는 2014의 인스턴스를 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. SSMA는 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오며 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. SSMA는의 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 연결 되어 있지만 암호를 저장 하지 않습니다.  
@@ -88,9 +87,9 @@ Oracle 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**프로젝트 형식 및 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005<br /> (버전: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008<br /> (버전: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|사용자 계정 컨트롤|사용자 계정 컨트롤|예||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|사용자 계정 컨트롤|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||예||
 |Azure SQL DB||||||예|
@@ -122,6 +121,6 @@ Oracle 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
   
 -   이러한 작업을 수행 해야 하는 경우에 Oracle 데이터베이스 개체 정의 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체 정의 합니다. 자세한 내용은 참조 [Oracle 스키마 변환 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

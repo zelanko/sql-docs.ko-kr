@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 옵션 (MySQLToSQL) 설정 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbaeadbc97a178f3c90f43e26fc13cde416ecc5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776649"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정 (MySQLToSQL)
 각 SSMA 프로젝트에 대해 프로젝트 수준의 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식이 대상 데이터 형식으로 매핑되는 방법을 지정 합니다.  SQL Server 또는 SQL Azure에 개체를 변환 하거나 SQL Server 또는 SQL Azure로 데이터를 마이그레이션하려면 하기 전에 구성 옵션은 프로젝트에 적절 한지 확인 합니다.  
@@ -46,7 +45,7 @@ SSMA는 프로젝트 설정의 5 개 세트:
   
 프로젝트 설정 네 가지 방법으로 구성할 수 있습니다.  
   
--   기본값  
+-   Default  
   
 -   Optimistic  
   
@@ -108,6 +107,6 @@ SSMA를 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
 -   그렇지 않으면 SQL Server 또는 SQL Azure 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [MySQL 및 SQL Server 데이터 형식 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

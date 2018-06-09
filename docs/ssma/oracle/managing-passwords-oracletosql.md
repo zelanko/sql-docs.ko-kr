@@ -1,8 +1,6 @@
 ---
 title: 암호 (OracleToSQL) 관리 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76661fe91782b57fa0deb2ec6c936d898ceab547
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b99f456fe02dbebcbaecf1a59a3fcc9f0d536e2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777389"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 (OracleToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보안에 대 한이 섹션은:  
@@ -130,6 +129,6 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 (Oracle)를 실행합니다.](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

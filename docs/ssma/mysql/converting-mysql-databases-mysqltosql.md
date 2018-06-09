@@ -1,8 +1,6 @@
 ---
 title: MySQL 데이터베이스 (MySQLToSQL) 변환 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a1925166a672523f6e4cf5eef7cdc0bc5235c3fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b1f69f577a26ff0858599e9f597eac95972fcb5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775969"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 (MySQLToSQL) 변환
 에 MySQL에 연결한 후 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] MySQL 데이터베이스 개체를 SQL Azure 및 집합 프로젝트 및 데이터 매핑 옵션을 변환할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  
@@ -116,6 +115,6 @@ MySQL 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를 
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [를 SQL Server로 변환 된 데이터베이스 개체를 로드 &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

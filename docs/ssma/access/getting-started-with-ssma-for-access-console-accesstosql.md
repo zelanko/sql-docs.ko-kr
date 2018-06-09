@@ -1,8 +1,6 @@
 ---
 title: 액세스 콘솔 (AccessToSQL) 용 SSMA 시작 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c37a486c560a5dc0cb6298f93b4486accc18354b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773919"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>액세스 콘솔 (AccessToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 액세스 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  
@@ -69,6 +68,6 @@ SSMA 스크립트 명령 및 옵션을 실행 결과 및 메시지 (정보, 오�
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작, 완료 및 작업의 결과|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server Migration Assistant for Access 설치](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
   

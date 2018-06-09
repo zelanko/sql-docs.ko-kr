@@ -1,8 +1,6 @@
 ---
 title: MySQL (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2290b67ac66a1fa06d62b88390a538a3e06621ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775699"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 연결
 사용 하 여 **MySQL에 연결** 마이그레이션할 MySQL 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **MySQL에 연결**합니다. 이 명령은 이전에 연결한 경우 **MySQL에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
   
 사용 가능한 MySQL 공급자는 MySQL ODBC 5.1 드라이버 (신뢰할 수 있음).  

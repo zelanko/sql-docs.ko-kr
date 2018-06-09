@@ -1,41 +1,20 @@
 ---
 title: INSERT INTO (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INSERT INTO
-- INSERT
-- INSERT_INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SKIP (DMX)
-- mapped model columns element
-- source data query element
-- <mapped model columns> element
-- <source data query> element
-- INSERT INTO statement
-- mining models [Analysis Services], processing
-- training mining models
-- mining structures [DMX], processing
-ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f76a649664d5240d31b1fa5b69a5d3045a59de26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842656"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +44,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *원본 데이터 쿼리*  
  공급자가 정의한 형식의 원본 쿼리입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정 하지 않으면 **마이닝 모델** 또는 **마이닝 구조**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 이름 뒤에 개체 유형을 검색 하 고 올바른 개체를 처리 합니다. 서버에 이름이 서로 동일한 마이닝 구조 및 마이닝 모델이 있는 경우에는 오류가 반환됩니다.  
   
  두 번째 구문 형식 INSERT INTO를 사용 하 여*\<개체 >* 합니다. COLUMN_VALUES, 데이터 모델을 학습 하지 않고 모델 열에 직접 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 집합으로 작업할 때 유용합니다.  
@@ -80,13 +59,13 @@ INSERT INTO [MINING MODEL] <model>
   
  다음 표에서는 개체의 상태에 따라 여러 가지 형식의 문을 실행한 결과를 설명합니다.  
   
-|문|개체의 상태|결과|  
+|인수를 제거합니다.|개체의 상태|결과|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL*\<모델 >*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
 ||마이닝 구조에 추가 마이닝 모델이 포함되어 있습니다.|프로세스가 실패합니다. 마이닝 구조 및 연결된 마이닝 모델을 다시 처리해야 합니다.|  
 |INSERT INTO MINING STRUCTURE*\<구조 >*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
-|INSERT INTO MINING MODEL*\<모델 >* 원본 쿼리 포함<br /><br /> 또는<br /><br /> INSERT INTO MINING STRUCTURE*\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)합니다.|  
+|INSERT INTO MINING MODEL*\<모델 >* 원본 쿼리 포함<br /><br /> 로 구분하거나 여러<br /><br /> INSERT INTO MINING STRUCTURE*\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)합니다.|  
   
 ## <a name="mapped-model-columns"></a>매핑된 모델 열  
  사용 하 여는 \<매핑된 모델 열 > 요소를 마이닝 모델의 열에 데이터 원본의 열을 매핑할 수 있습니다. \<매핑된 모델 열 > 요소 형식은 다음과 같습니다.  
@@ -141,9 +120,9 @@ SHAPE {
 AS [Models]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

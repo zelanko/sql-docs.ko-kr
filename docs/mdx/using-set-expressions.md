@@ -1,6 +1,6 @@
 ---
 title: 집합 식을 사용 하 여 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b384bffc84140b966ea510834054c65986ba292
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581725"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744112"
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합은 0개 이상의 튜플이 순서대로 나열된 목록으로 구성되며 튜플을 전혀 포함하지 않은 집합을 빈 집합이라고 합니다.  
   

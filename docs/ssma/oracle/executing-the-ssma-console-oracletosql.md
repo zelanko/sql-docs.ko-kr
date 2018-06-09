@@ -1,8 +1,6 @@
 ---
 title: SSMA 콘솔 (OracleToSQL) 실행 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 43
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1bef78b8310cde7ad5053798ef589bb3deffe886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 739c4454b93fd4f1a57c6301902d9484f5890ece
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777129"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA 콘솔 (OracleToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다. 콘솔 응용 프로그램은이 섹션의 열거형으로 특정 표준 스크립트 파일 명령을 사용합니다.  
@@ -166,7 +165,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <force-load>  
@@ -279,7 +278,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +352,7 @@ convert-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <convert-schema  
@@ -421,7 +420,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <migrate-data  
@@ -510,7 +509,7 @@ map-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target  
@@ -519,7 +518,7 @@ map-schema
   
    object-type="<object-category>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target>  
@@ -575,7 +574,7 @@ map-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database  
@@ -584,7 +583,7 @@ map-schema
   
    object-type="<object-category>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database>  
@@ -634,7 +633,7 @@ save-as-script
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <save-as-script  
@@ -710,7 +709,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  
@@ -733,7 +732,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  

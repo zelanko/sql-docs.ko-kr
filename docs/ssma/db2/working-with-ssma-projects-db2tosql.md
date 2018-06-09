@@ -1,8 +1,6 @@
 ---
 title: SSMA 프로젝트 (DB2ToSQL) 사용 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e4526d78daa021731c09a04a6704c9a66411e178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f9cf55498ec5637b18f542ea079517571640b0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775559"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 (DB2ToSQL) 작업
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
@@ -103,7 +102,7 @@ DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
   
         메타 데이터를 저장 하면 몇 분 정도 걸릴 수 있습니다. 메타 데이터를 아직 저장 하지 않을 경우 모든 확인란을 선택 하지 마십시오.  
   
-    2.  클릭 하 고 **저장** 단추입니다.  
+    2.  클릭는 **저장** 단추입니다.  
   
         SSMA는 DB2 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   
@@ -125,7 +124,7 @@ D b 2에서 및에서 끊어진 프로젝트를 열 때 [!INCLUDE[ssNoVersion](.
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 [DB2 데이터베이스에 연결](http://msdn.microsoft.com/en-us/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [SQL Server에 연결 &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

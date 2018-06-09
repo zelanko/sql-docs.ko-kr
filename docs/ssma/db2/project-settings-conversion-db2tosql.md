@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (변환) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 64f014daf9dc81362b55931729bf33ac97fa105e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31f00a9fbc779ae0054a04a9890fcca9a0be33a9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775609"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA를 DB2 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다.  
@@ -486,6 +485,6 @@ SSMA는 또한 DB2 시퀀스 SSMA 시퀀스 에뮬레이터를 변환 하는 옵
   
 -   선택 하는 경우 **아니요**, SSMA로의 변환 된 트리거 외부 CURRVAL 오류가 발생 하 여 시퀀스에 모든 참조 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

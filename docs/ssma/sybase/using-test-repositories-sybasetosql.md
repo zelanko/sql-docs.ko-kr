@@ -3,8 +3,6 @@ title: 테스트 리포지토리 (SybaseToSQL)를 사용 하 여 | Microsoft Doc
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b367c2e29949b0dcf6960eeacc501d308b131ff1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 880262cf0342c66a91a1f88e50477e0685e1d1e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779539"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 (SybaseToSQL) 사용 하 고
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례 및 테스트 결과 나중에 사용할 수 있습니다. 리포지토리 데이터는 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 및 **RunTestCaseResultRepository** 스키마에 **ssma_sybase_utilities** 의 **ssmatesterdb_syb** 데이터베이스입니다.  
@@ -81,7 +80,7 @@ SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례 및 
   
 -   클릭는 **삭제** 선택한 테스트 결과 삭제 하려면 단추  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [테스트 사례 실행 &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

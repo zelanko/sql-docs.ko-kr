@@ -3,8 +3,6 @@ title: SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86a54f8dce44607b91437a89043ff98fdd670ad5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6b7cf1783ec677ba60033e29f132ac892b3844
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779439"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스의 SAP ASE (이전의 SSMA for Sybase) 변경에 대 한 SSMA를 나열 합니다. 
@@ -213,5 +212,5 @@ Sybase 용 SSMA의 2006 년 11 월 릴리스에서 다음과 같은 변경을 �
 ## <a name="july-2006"></a>2006 년 7 월  
 SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA for Sybase 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

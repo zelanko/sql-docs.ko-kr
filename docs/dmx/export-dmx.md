@@ -1,34 +1,20 @@
 ---
 title: EXPORT (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- EXPORT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- exporting mining models
-- exporting mining structures
-- mining structures [DMX], exporting
-- EXPORT statement
-ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d3aa62213e15dbc7ca826a55e8b901fc5b9d038
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841966"
 ---
 # <a name="export-dmx"></a>EXPORT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +38,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *filename*  
  문자열로 내보낼 파일의 이름과 위치입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  문에서 마이닝 모델을 지정하는 경우 결과 파일에는 연결된 마이닝 구조도 포함됩니다. 문을 지정 하는 경우 **WITH DEPENDENCIES**, 개체 (예를 들어 데이터 원본 및 데이터 원본 뷰)를 처리 하는 데 필요한 모든 개체가.abf 파일에 포함 됩니다.  
   
  데이터베이스 여야 합니다 또는에서 개체를 가져오거나 내보내는 데 서버 관리자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
@@ -71,10 +57,10 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [가져오기 &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
  [데이터 마이닝 개체 내보내기 및 가져오기](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   

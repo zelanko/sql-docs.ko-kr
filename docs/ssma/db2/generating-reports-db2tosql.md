@@ -1,8 +1,6 @@
 ---
 title: (DB2ToSQL) 보고서를 생성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fb20d4d18555d015b16226624b03190d51ae2486
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c4a567293e2bd18dd37e83cef1cfbc8d9c4b982
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775009"
 ---
 # <a name="generating-reports-db2tosql"></a>보고서 생성 (DB2ToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
+    |1|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
     |2|verbose=”true”|각 작업에 대 한 요약 및 세부 상태 보고서를 생성합니다.|  
   
     > [!NOTE]  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|report-errors=”false”|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
+    |1|report-errors=”false”|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
     |2|report-errors=”true”|자세한 오류 / 경고 / 정보 메시지입니다.|  
   
     > [!NOTE]  
@@ -144,6 +143,6 @@ ms.lasthandoff: 05/03/2018
   
 -   스크립트 실패  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 실행](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

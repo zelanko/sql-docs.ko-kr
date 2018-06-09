@@ -1,8 +1,6 @@
 ---
 title: SQL Server (AccessToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -30,11 +28,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5dcda82bcfbdd8c0120158025e9ba476df704c2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773369"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL)에 연결
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]의 대상 인스턴스에 연결 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. SSMA 인스턴스의 데이터베이스에 대 한 메타 데이터를 가져오며 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. SSMA는의 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 연결 하지만 암호를 저장 하지 않는 있습니다.  
@@ -105,9 +104,9 @@ Access 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
 ||||||||
 |-|-|-|-|-|-|-|
 |**프로젝트 형식 및 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (버전: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (버전: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|사용자 계정 컨트롤|사용자 계정 컨트롤|예||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|사용자 계정 컨트롤|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||예|예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||예|예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||||예|예||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016|||||예||
 |SQL Azure||||||예|
@@ -130,6 +129,6 @@ Access 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
 ## <a name="next-steps"></a>다음 단계  
 원본 및 대상 데이터베이스 간의 매핑을 사용자 지정 하는 경우 참조 [매핑 소스와 대상 데이터베이스](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) 데이터베이스 개체를 변환 하려면 다음 단계는 그렇지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문을 사용 하 여 [변환 데이터베이스 개체](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

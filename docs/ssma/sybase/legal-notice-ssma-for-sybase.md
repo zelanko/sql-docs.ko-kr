@@ -3,8 +3,6 @@ title: 법적 고 지 사항 (SSMA for Sybase) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 903a7dcbf65e5aa7a3678352f5336343b8775aca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1d0c2f47d975dce1350efc94aefb1595ec91b1b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779049"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>법적 고 지 사항 (SSMA for Sybase)
 포함된 예제 응용 프로그램을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  

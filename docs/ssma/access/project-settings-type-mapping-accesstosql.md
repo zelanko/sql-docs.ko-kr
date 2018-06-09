@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (형식 매핑) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774469"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
 프로젝트 유형 매핑 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 참조 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 -   사용 하 여 **기본 프로젝트 설정** 모든 프로젝트에 대 한 구성 옵션을 설정 하려면 대화 상자. 형식 매핑 설정에 액세스 하려면는 **도구** 메뉴 선택 **기본 프로젝트 설정**, 설정을 볼 /에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운 하 고 클릭 **형식 매핑** 왼쪽된 창에서.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **원본 형식**  
 매핑할 Access 데이터 형식입니다.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 05/03/2018
 **기본값으로 다시 설정**  
 모든 데이터 형식 매핑을 SSMA 기본값으로 다시 설정 하려면 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [원본 및 대상 데이터 형식 매핑](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [사용자 인터페이스 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

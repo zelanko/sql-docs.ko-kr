@@ -1,6 +1,6 @@
 ---
 title: CLEAR CALCULATIONS 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f210f2ad8af7b0d4e71482946a496d326fe63f24
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579785"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742392"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>CLEAR CALCULATIONS-MDX 데이터 조작
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   큐브에서 모든 계산을 제거하고 큐브를 계산 패스 0으로 되돌립니다.  
   

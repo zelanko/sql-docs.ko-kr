@@ -1,8 +1,6 @@
 ---
 title: 사용자 인터페이스 참조 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7b2f512f062909cbb92611bac1e34ad13d508d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf70c785021f352d000acd0c6237b1aa70e69756
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775939"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for d b 2입니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[데이터베이스에서 새로 고침 &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|사용 하 여는 **데이터베이스에서 새로 고침** 대화 상자를 DB2 데이터베이스에서 새로 고칠 개체를 선택 합니다.|  
 |[메타 데이터 저장 &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [D b 2 용 SSMA 시작 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

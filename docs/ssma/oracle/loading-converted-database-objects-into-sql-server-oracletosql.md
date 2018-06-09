@@ -1,8 +1,6 @@
 ---
 title: 데이터베이스 개체를 SQL Server (OracleToSQL)로 변환 된 로드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a6e65bb6c795cb5216bf32889b6dfe7eb75c2a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ac7029947dcf826c19851b5988b5e898783f7c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777619"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>데이터베이스 개체를 SQL Server (OracleToSQL)로 변환 된 로드
 SQL Server로 Oracle 스키마를 변환한 후 결과 데이터베이스 개체를 SQL Server로 로드할 수 있습니다. 개체를 만들 SSMA를 포함할 수 있고 개체를 스크립팅 합니다 스크립트를 실행할 수 있습니다. 또한 SSMA SQL Server 데이터베이스의 실제 내용과 대상 메타 데이터를 업데이트할 수 있습니다.  
@@ -113,6 +112,6 @@ SQL Server로 변환 된 데이터베이스 개체를 로드 하면 부여 하�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 [데이터를 SQL Server로 마이그레이션](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

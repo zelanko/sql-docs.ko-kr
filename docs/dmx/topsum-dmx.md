@@ -1,31 +1,20 @@
 ---
 title: TopSum (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopSum function
-ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 83382c6fba828d1dc438f380dad72c670feb6c6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fd8d762f3bdb9ac1dd74ddb72d456ea69eb52917
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842686"
 ---
 # <a name="topsum-dmx"></a>TopSum(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **TopSum** 의 계산된 값에 따라 차수의 내림차순으로 정렬의 최상위 행을 반환 하는 함수는 \<식의 순위 > 각 행에 대 한 인수 되도록의 합계는 \<식의 순위 > 값으로 지정 된 지정 된 합계 이상이 되는 \<합계 > 인수입니다. **TopSum** 지정된 된 합계 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  
@@ -110,7 +99,7 @@ NATURAL PREDICTION JOIN
   
  **참고** 이 예제는 사용법을 설명 하기 위해 제공 됩니다 **TopSum**합니다. 데이터 집합의 크기에 따라 이 쿼리를 실행하는 데 시간이 오래 걸릴 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  

@@ -1,8 +1,6 @@
 ---
 title: SQL Server (MySQLToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8baef39a5687fc7c1231252139aba2a41d45267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 064d0485d5e621a0ac4d29268b6828b0209f908d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775619"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server (MySQLToSQL)에 연결
 사용 하 여 **SQL Server에 연결** 의 인스턴스에 연결 하는 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 마이그레이션하려는 합니다. 에 액세스 하려면는 **SQL Server에 연결** 대화 상자의 **파일** 메뉴를 클릭 하 여 **SQL Server에 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **서버 이름**  
 입력 하거나 연결할 SQL Server의 인스턴스를 선택 합니다. 기본적으로 가장 최근에에 연결 하는 인스턴스로 표시 됩니다.  
   
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 **서버 포트**  
 경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 기본 연결 포트 (1433), 포트 번호를 입력을 허용 하도록 구성 되지 않았습니다. 그렇지 않은 경우이 값 비워 둡니다.  
   
-**데이터베이스**  
+**데이터베이스 백업**  
 개체와 데이터를 마이그레이션할 데이터베이스를 지정 합니다. 다시 연결할 때이 옵션을 사용할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
 **인증**  

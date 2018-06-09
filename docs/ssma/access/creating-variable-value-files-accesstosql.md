@@ -1,8 +1,6 @@
 ---
 title: 변수 값 파일 (AccessToSQL) 만들기 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44c317d773df9027f5c485f417941544ff17c6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773809"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 (AccessToSQL) 만들기
 변수는 값 파일은 서버 마이그레이션을 통해 자주 변경 하는 명령 (예: 소스 또는 대상 서버 이름)의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션 다 수 발생 하는 경우 원본 서버의 각 값을 저장 하기 위한 여러 변수 파일 만들고 포함 하는 마스터 스크립트 파일에서 참조 되는 **– v** 명령줄에서 전환 합니다. 이 동작은 여러 변수 파일에서 변수 값이 포함 된 몇 가지 스크립트 파일에 정적 값을 유지 관리에 보호할 수 있습니다.  
@@ -101,6 +100,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>다음 단계  
 운영 콘솔에 다음 단계는 [서버 연결 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [서버 연결 파일 (Access) 만들기](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

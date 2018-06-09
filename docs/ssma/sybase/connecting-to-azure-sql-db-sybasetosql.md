@@ -3,8 +3,6 @@ title: Azure SQL DB (SybaseToSQL)에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc13a12e706faf8151c3bdea586533a97a9e71fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb395aeb1a408701a9677b879f139d3538ae7fee
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778499"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB (SybaseToSQL)에 연결
 Azure SQL DB에 Sybase 데이터베이스를 마이그레이션하려면 Azure SQL DB의 대상 인스턴스에 연결 해야 합니다. 에 연결할 때 SSMA는 Azure SQL DB 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Azure SQL DB 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 Azure SQL DB에 연결 되어 있지만 암호를 저장 하지 않는 인스턴스 정보를 저장 합니다.  
@@ -91,6 +90,6 @@ Azure SQL DB 데이터베이스에 대 한 메타 데이터를 자동으로 업�
   
 -   이러한 작업을 수행 해야 하는 경우 Azure SQL DB 개체 정의를 Sybase 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [Sybase ASE 데이터베이스 개체 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

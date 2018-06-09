@@ -1,8 +1,6 @@
 ---
 title: 새 프로젝트 (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 37c620e110ea2d096c5085f0d040dd13e35f65f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92c0d05c34027b17f43cf0d9c8ba98f70d3ff017
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776709"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>새 프로젝트 (SSMA) (MySQLToSQL)
 사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
   
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  

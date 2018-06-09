@@ -3,8 +3,6 @@ title: SAP ASE 데이터베이스 개체 (SybaseToSQL) 변환에 대 한 평가 
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f28d8f35adacfa4443ed804e1233386f3794606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e2115578b95ab5ca682d7d8c4f1c4a84907179e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778340"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>변환 (SybaseToSQL)에 SAP ASE 데이터베이스 개체를 평가합니다.
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결정 해야 Azure SQL 또는 어떻게 마이그레이션 복잡성 및 걸리는 시간입니다. SSMA 개체 및를 성공적으로 변환 되는 프로시저의 비율을 표시 하는 평가 보고서를 만들 수 [!INCLUDE[tsql](../../includes/tsql_md.md)]합니다. 또한 SSMA 변환 실패를 일으킬 수 있는 특정 문제를 볼 수 있습니다.  
@@ -84,6 +83,6 @@ SSMA 변환 선택한 SAP 적응형 Server Enterprise (ASE) 데이터베이스 �
 ## <a name="next-steps"></a>다음 단계  
 [SAP ASE 데이터베이스 개체를 변환 &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-Azure SQL DB에 SAP ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

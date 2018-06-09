@@ -1,8 +1,6 @@
 ---
 title: 사용자 인터페이스 참조 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd67eb89a9efb22c38d7b9318e8ac562fa6d7264
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774219"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) 액세스 합니다.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 |[프로젝트 설정 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|SQL Azure 페이지를 사용 하 여 **프로젝트 설정** 데이터베이스 접미사 및 하트 비트 제한 시간 간격을 지정 하려면 대화 상자.|  
 |[메타 데이터 저장 &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
 [Getting Started with SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access 데이터베이스 마이그레이션을 준비](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  

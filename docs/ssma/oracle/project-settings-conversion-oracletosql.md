@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (변환) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a8397d5a1c4123dba7b8fe7b56b511affe1da7b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf3dcaf0868fe21bc7d909bd3e840f3ce1e88247
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777859"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>프로젝트 설정 (변환) (OracleToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA를 Oracle 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문입니다.  
@@ -89,6 +88,6 @@ ms.lasthandoff: 05/03/2018
 |**시퀀스 생성기를 변환 합니다.**|Oracle에서는 고유 식별자를 생성 하는 순서를 사용할 수 있습니다.<br /><br />SSMA는 다음에 시퀀스를 변환할 수 있습니다.<br /><br />(이 옵션은만 사용할 수 있는 SQL Server 2012 및 SQL Server 2014를 변환 하는 경우)는 SQL Server 시퀀스 생성기를 사용 합니다.<br /><br />SSMA 시퀀스 생성기를 사용합니다.<br /><br />열 id를 사용 합니다.<br /><br />SQL Server 2012 또는 SQL Server 2014를 변환할 때 기본 옵션 SQL Server 시퀀스 생성기를 사용 하는 것입니다. 그러나 SQL Server 2012 및 SQL Server 2014 지원 하지 않습니다 (예: Oracle 시퀀스 currval 메서드의) 현재 시퀀스 값 가져오기. Oracle 시퀀스 currval 메서드 마이그레이션에 대 한 지침은 SSMA 팀 블로그 사이트를 참조 하십시오.<br /><br />SSMA는 또한 Oracle 시퀀스 SSMA 시퀀스 에뮬레이터를 변환 하는 옵션을 제공 합니다. SQL server 2012 이전의 변환 하는 경우 기본 옵션입니다.<br /><br />마지막으로, SQL Server id 값을 테이블의 열에 할당 된 시퀀스를 변환할 수 있습니다. Oracle에서 identity 열에 시퀀스 간의 매핑을 지정 해야 **테이블** 탭|  
 |**트리거 밖에 CURRVAL 변환**|변환할 시퀀스 생성기로 설정 된 경우에 표시 **열 id를 사용 하**합니다. Oracle 시퀀스는 테이블에서 별도 개체를 생성 하 고 새 시퀀스 값을 삽입 트리거를 사용 하는 시퀀스를 사용 하는 여러 테이블. SSMA는 이러한 문을 주석으로 처리 하거나 주석 달기 아웃 오류를 생성 하는 경우 오류로 표시 합니다.<br /><br />선택 하는 경우 **예**, SSMA 모든 참조의 변환 된 트리거 외부 CURRVAL 경고와 함께 시퀀스를 표시 합니다.<br /><br />선택 하는 경우 **아니요**, SSMA로의 변환 된 트리거 외부 CURRVAL 오류가 발생 하 여 시퀀스에 모든 참조 표시 됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

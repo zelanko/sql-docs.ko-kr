@@ -1,8 +1,6 @@
 ---
 title: Oracle (OracleToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f682fd589ed585c84c7cb3a4f9efed5f2d185999
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776999"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle (OracleToSQL)에 연결
 사용 하 여는 **Connect to Oracle** 마이그레이션할 Oracle 데이터베이스에 연결 하는 대화 상자.  
   
 이 대화 상자에 액세스 하는 **파일** 메뉴 선택 **Connect to Oracle**합니다. 이 명령은 이전에 연결한 경우 **Oracle에 다시 연결**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **공급자**  
 Oracle 데이터베이스에 연결에 대 한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 Oracle 클라이언트 공급자 및 OLE DB Provider입니다. 기본값은 Oracle 클라이언트 공급자입니다.  
   

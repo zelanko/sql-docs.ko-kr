@@ -1,6 +1,6 @@
 ---
 title: (MDX syntax) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580665"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742752"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX에서 연산자를 이용해 다음 동작을 수행할 수 있습니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580665"
  여러 연산자를 사용할 때는 MDX가 연산자를 계산하는 순서가 중요합니다. 마찬가지로 연산자 사용자가 해당 연산자로 계산하려면 먼저 데이터 형식을 다른 데이터 형식으로 변환해야 하도록 요구할 수도 있습니다.  
   
 ## <a name="evaluating-complex-expressions"></a>복잡한 식 계산  
- 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에 MDX 계산에서 사용 하는 연산자 우선 순위의 정의 기반으로 순서 대로 연산자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
+ 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에 MDX 계산에서 사용 하는 연산자 우선 순위의 정의 기반으로 순서 대로 연산자 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
   
 ### <a name="understanding-operator-precedence"></a>연산자 우선 순위의 이해  
  다음 목록은 내림차순으로 연산자 우선 순위를 표시한 것입니다. 같은 줄에 있는 연산자의 우선 순위는 같고 괄호로 묶인 경우가 아니라면 왼쪽에서 오른쪽으로 계산됩니다.  

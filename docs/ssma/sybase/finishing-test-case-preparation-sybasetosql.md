@@ -3,8 +3,6 @@ title: 완료 하는 테스트 사례 준비 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cfb86c05dd96a6184bcbacf4cc7e6ac2b107b293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1df39866e511664027f5a4991360ef2eabf085a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778589"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 (SybaseToSQL)를 완료합니다.
 마법사의 마지막 페이지에는 테스트 사례 설명 및 테스트에 관련 된 개체에 대 한 정보가 표시 됩니다. 또한이 페이지에서 설정할 수 있습니다는 테스트 실행 옵션.  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 클릭는 **마침** 에 준비 된 테스트 사례를 저장 하려면 단추 [테스트 리포지토리를 사용 하 여 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [테스트 리포지토리를 사용 하 여 &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
 [테스트 사례 실행 &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

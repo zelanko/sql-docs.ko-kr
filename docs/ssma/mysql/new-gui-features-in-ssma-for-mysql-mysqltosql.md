@@ -1,8 +1,6 @@
 ---
 title: MySQL (MySQLToSQL) 용 SSMA의 새로운 GUI 기능 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c24f067cfdc29a31eed7de5a0f4c9572bcadf3fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9eb20c4a6a6eb789d7c37f02865fd4f2a7bd24c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776289"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL) 용 SSMA의 새로운 GUI 기능
 이 장에서 설명 SSMA 사용자 인터페이스의 새로운 기능  

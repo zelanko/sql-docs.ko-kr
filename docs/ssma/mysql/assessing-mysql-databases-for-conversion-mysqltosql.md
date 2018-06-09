@@ -1,8 +1,6 @@
 ---
 title: 변환 (MySQLToSQL)에 대 한 MySQL 데이터베이스를 평가 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5f87a1260e038cb1421f969983a698989dc66a61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2d97789d739e257e89d31d0e0e90105fc5ad878
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775679"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>변환 (MySQLToSQL)에 대 한 MySQL 데이터베이스를 평가합니다.
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 복잡 한 정도 마이그레이션 되 고 시간 결정 해야 SQL Azure 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 보여주는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
@@ -89,6 +88,6 @@ SSMA 변환 선택한 MySQL 데이터베이스 개체를이 평가 보고서를 
 ## <a name="next-step"></a>다음 단계  
 [MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

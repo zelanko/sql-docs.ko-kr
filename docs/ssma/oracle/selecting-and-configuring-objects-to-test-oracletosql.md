@@ -1,8 +1,6 @@
 ---
 title: 선택 하 고 테스트 (OracleToSQL)에 개체를 구성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8f4e53df32355dbe26efee5f680eb19e529d9670
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9069ec981e944118b649f1dd0d0dd326e2c217db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777869"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>선택 하 고 테스트 (OracleToSQL)에 개체를 구성 합니다.
 이 단계를 테스트 하 고 프로시저의 및 함수 출력 매개 변수 뿐만 아니라 함수의 반환 값을 비교 하기 위한 설정을 구성 하는 개체를 선택 합니다.  
@@ -86,6 +85,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-step"></a>다음 단계  
 [영향을 받는 개체 선택 및 구성 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

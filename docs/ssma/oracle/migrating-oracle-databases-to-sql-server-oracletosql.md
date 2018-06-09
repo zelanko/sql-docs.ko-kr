@@ -1,8 +1,6 @@
 ---
 title: SQL Server (OracleToSQL)로 데이터베이스 마이그레이션 Oracle | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 04/22/2018
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 6fbfce1479ba86feeda8178481eb75c64b960a5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de2cde85713747acb80ad0316fc8dd40a926e408
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777559"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server (OracleToSQL) Oracle 데이터베이스 마이그레이션
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle은 Oracle 데이터베이스를 신속 하 게 마이그레이션할 수 있는 포괄적인 환경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL 데이터 웨어하우스 또는 Azure SQL DB 합니다. SSMA for Oracle을 사용 하 여 있습니다 수 데이터베이스 개체와 데이터를 검토, 평가 마이그레이션할 데이터베이스, 데이터베이스 개체를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB 또는 Azure SQL 데이터 웨어하우스 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Azure SQL DB 또는 Azure SQL 데이터 웨어하우스입니다. 참고 SYS 및 시스템 Oracle 스키마를 마이그레이션할 수 없습니다.
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Oracle 용 SSMA를 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
 [Oracle 용 SSMA 시작 &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

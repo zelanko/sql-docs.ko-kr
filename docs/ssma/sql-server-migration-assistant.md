@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778109"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
 Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화할 수 있는 도구입니다.  
@@ -49,7 +48,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Azure SQL 데이터베이스
 - Windows 및 Linux (미리 보기)에서 SQL Server 2017
 - * * Azure SQL 데이터 웨어하우스
 
@@ -104,4 +103,3 @@ SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게
 고객은 저장 프로시저, 확장 저장 프로시저, 기능, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원 서비스에 데이터베이스 또는 문서화 되지 않은 진입점을 사용 하는 응용 프로그램 지원 하지 않습니다.  
   
 문서화되지 않은 진입점을 사용하는 응용 프로그램 및 데이터베이스의 경우 SQL Server의 나중 버전으로 서버 및 데이터베이스를 업그레이드하지 못할 수 있습니다. SQL Server 기능의 사용은 Microsoft SQL Server 설명서에 포함된 기능으로 제한되어야 합니다. 기능이 Microsoft SQL Server 설명서에 문서화되어 있지 않은 경우는 SQL Server의 지원되는 부분이 아닙니다.  
-  

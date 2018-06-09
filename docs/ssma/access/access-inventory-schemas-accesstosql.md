@@ -1,8 +1,6 @@
 ---
 title: 인벤토리 스키마 (AccessToSQL) 액세스 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773309"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>액세스 인벤토리 스키마 (AccessToSQL)
 다음 섹션에서는 액세스 스키마를 내보낼 때 SSMA가 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -187,6 +185,6 @@ ms.lasthandoff: 05/03/2018
 |**ModuleId**|**int**|모듈을 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키입니다.|  
 |**ModuleName**|**nvarchar(4000)**|모듈의 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Access 인벤토리 내보내기](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   

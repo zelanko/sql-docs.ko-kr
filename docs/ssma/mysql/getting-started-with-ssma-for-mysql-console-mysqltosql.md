@@ -1,8 +1,6 @@
 ---
 title: MySQL 콘솔 (MySQLToSQL) 용 SSMA 시작 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 30fe5fba0bd0b9321c16c72642f29a515320cb63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75e189d89c9a1bbc7207521b8156d0f4b56ca759
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776239"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>MySQL 콘솔 (MySQLToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 MySQL 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 또한 나열 된 여기에 규칙이 사용 일반적인 SSMA 콘솔 출력 창에.  
@@ -72,6 +71,6 @@ SSMA 스크립트 명령 및 옵션을 실행 결과 및 메시지 (정보, 오�
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작, 완료 및 작업의 결과|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [MySQL 용 SSMA를 설치합니다.](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   

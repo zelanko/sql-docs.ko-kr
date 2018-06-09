@@ -1,6 +1,6 @@
 ---
 title: UPDATE CUBE 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1569d8024e23bab1841bf7757ffd828a3bc7dd4f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579755"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741882"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작-UPDATE CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예에 대 한이 블로그 게시물의 "할당 이해"를 참조: [Analysis Services (블로그)로 쓰기 저장 응용 프로그램 빌드](http://go.microsoft.com/fwlink/?LinkId=394977)합니다.  
   

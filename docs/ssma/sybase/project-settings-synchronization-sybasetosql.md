@@ -3,8 +3,6 @@ title: 프로젝트 설정 (동기화) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2dd0db2f5767c6d9a41f7a2c920139e3e324e3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 624d546309a34ad4370ab8c3eadce4324832c19f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779149"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정 (동기화) (SybaseToSQL)
 동기화 페이지는 **프로젝트 설정** 대화 상자 SSMA에 테이블 및 저장된 프로시저 같은 데이터베이스 개체를 로드 하는 방식을 사용자 지정 하는 설정이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 선택 **프로젝트 설정**를 선택한 후 **동기화** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **시도 횟수**  
 개체를 로드할 때 SSMA를 채우는 시도할 횟수가 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 에 로드 되지 않는 개체 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 현재 시도의 다시 시도 됩니다 SSMA 현재 동기화 프로세스에서 시도의 최대 수에 도달할 때까지 합니다.  
   

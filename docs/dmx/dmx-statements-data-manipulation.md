@@ -1,31 +1,20 @@
 ---
 title: Data Mining Extensions (DMX) 데이터 조작 문 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- statements [DMX], data manipulation statements
-- DML [DMX]
-- data manipulation statements [DMX]
-ms.assetid: 68fe9efd-487f-4aa5-952c-bd7d80a3dac0
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6683906b0d9f48e4ffcc05531b828ec0e5266a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842016"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX 문을-데이터 조작
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,8 +29,8 @@ ms.lasthandoff: 05/03/2018
 |[&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)|데이터 원본을 모두 쿼리하여 **INSERT INTO** 및 **선택** 문.|  
 |[업데이트 &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|마이닝 모델의 내용을 변경합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

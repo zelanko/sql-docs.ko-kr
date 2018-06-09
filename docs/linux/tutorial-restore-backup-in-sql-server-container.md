@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842816"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/23/2018
 > * 보고 데이터베이스를 수정 하는 TRANSACT-SQL 문을 실행 합니다.
 > * 수정 된 데이터베이스를 백업 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * 지원되는 모든 Linux 배포판 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+. 자세한 내용은 [사용자 Docker 설치](https://docs.docker.com/engine/installation/)를 참조하세요.
 * 최소 2GB의 디스크 공간
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/23/2018
 
 이 자습서에서는 [Wide World Importers 샘플 데이터베이스](../sample/world-wide-importers/wide-world-importers-documentation.md)합니다. 다음 단계를 사용 하 여를 다운로드 하 여 SQL Server 컨테이너로 Wide World Importers 데이터베이스 백업 파일을 복사 합니다.
 
-1. 먼저, 사용 하 여 **docker exec** 백업 폴더를 만들 수 있습니다. 다음 명령은 만듭니다는 **/var/옵트인/mssql/** 컨테이너 내에서 SQL Server 디렉터리입니다.
+1. 먼저, 사용 하 여 **docker exec** 백업 폴더를 만들 수 있습니다. 다음 명령은 만듭니다는 **/var/opt/mssql/backup** 컨테이너 내에서 SQL Server 디렉터리입니다.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

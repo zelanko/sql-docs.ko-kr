@@ -1,8 +1,6 @@
 ---
 title: SSMA 콘솔 (MySQLToSQL) 실행 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3af52acedfa86cc969e8c2ced508e30a5ddd1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8381ce25e64ef417483791b4e8f68c2e4a8f1845
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776039"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA 콘솔 (MySQLToSQL)를 실행합니다.
 Microsoft 파일 명령을 실행 및 제어 SSMA 활동을 스크립트의 강력한 집합 제공 합니다.  
@@ -293,7 +292,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <generate-assessment-report  
@@ -367,7 +366,7 @@ convert-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <convert-schema  
@@ -427,7 +426,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <migrate-data  
@@ -515,7 +514,7 @@ map-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target  
@@ -524,7 +523,7 @@ map-schema
   
   object-type="<object-category>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <synchronize-target>  
@@ -580,7 +579,7 @@ map-schema
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database  
@@ -589,7 +588,7 @@ map-schema
   
    object-type="<object-category>"/>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <refresh-from-database>  
@@ -639,7 +638,7 @@ save-as-script
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```xml  
 <save-as-script  
@@ -715,7 +714,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  
@@ -740,7 +739,7 @@ convert-sql-statement
   
 />  
 ```  
-또는  
+로 구분하거나 여러  
   
 ```  
 <convert-sql-statement  

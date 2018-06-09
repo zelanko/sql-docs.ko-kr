@@ -1,34 +1,23 @@
 ---
 title: LinkMember (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LINKMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinkMember function
-ms.assetid: b9106f07-8ea2-4933-aed3-ee9c63acf7ac
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 54fa1459b4ff16aa290f6ff5f4006ebb548dd7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 71235953f592572bd7ac0dcb2493d97dd509f8b7
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741502"
 ---
 # <a name="linkmember-mdx"></a>LinkMember(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정한 계층에서 지정한 멤버와 동일한 멤버를 반환합니다.  
   
@@ -46,7 +35,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **LinkMember** 함수 관련된 계층에 지정된 된 멤버의 각 수준에서 키 값과 일치 하는 지정 된 계층에서 멤버를 반환 합니다. 각 수준의 특성은 키 카디널리티와 데이터 형식이 동일해야 합니다. 비자연 계층에서 특성의 키 값에 대해 일치하는 항목이 둘 이상 있을 경우 오류가 발생하거나 결과를 알 수 없게 됩니다.  
   
 ## <a name="examples"></a>예  
@@ -63,9 +52,9 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Hierarchize & #40; Mdx& #41;](../mdx/hierarchize-mdx.md)   
+## <a name="see-also"></a>관련 항목  
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
  [Ascendants &#40;MDX&#41;](../mdx/ascendants-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

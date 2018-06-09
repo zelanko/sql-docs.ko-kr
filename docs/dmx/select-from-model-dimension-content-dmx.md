@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- DIMENSION_CONTENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining models [Analysis Services], dimension content
-- SELECT FROM <model>.DIMENSION_CONTENT statement
-ms.assetid: 907fb3fb-2131-4a10-8635-2a39b9a805aa
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e733881415d997a7a8d9e120963f625a042f3294
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842526"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  알고리즘 공급자는 반환되는 내용과 이 내용의 구성 방법을 정의합니다. 예를 들어 공급자는 차원 내용에 설명된 노드 수를 제한할 수 있습니다.  
   
  다음 표에서는 차원 내용에 대해 쿼리할 수 있는 열 및 각 열이 데이터 마이닝 차원으로서 수행하는 함수를 나열합니다.  
@@ -93,10 +79,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

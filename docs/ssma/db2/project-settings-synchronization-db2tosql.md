@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 Settings(Synchronization) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ede393d2edf9c0fa9b2b31e0c6de28c6a2bdf97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0553060378119284ceadc9bb91ec0283f0115723
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775419"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>프로젝트 Settings(Synchronization) (DB2ToSQL)
 동기화 페이지는 **프로젝트 설정** 대화 상자 SSMA를 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저에 방법을 사용자 지정 하는 설정이 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

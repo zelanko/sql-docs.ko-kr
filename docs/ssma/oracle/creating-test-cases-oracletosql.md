@@ -1,8 +1,6 @@
 ---
 title: 테스트 사례 만들기 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84ad444124d5b451b56fd1816a250465e7f2e5b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2bf49da49e6b7e79ee62b18925aa60401e4e2a4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777229"
 ---
 # <a name="creating-test-cases-oracletosql"></a>테스트 사례 (OracleToSQL) 만들기
 테스트 사례 마법사를 사용 하 여 테스트를 만들려고 합니다. 이 마법사를 사용 하면 테스트 매개 변수를 지정 하 고 테스트 하 고 확인할 개체를 선택 하 여 테스트 사례를 만들 수 있습니다.  
@@ -46,6 +45,6 @@ ms.lasthandoff: 05/03/2018
   
 5.  [테스트 사례 준비를 마친 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

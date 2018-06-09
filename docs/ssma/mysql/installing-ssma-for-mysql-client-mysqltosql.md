@@ -1,8 +1,6 @@
 ---
 title: SSMA MySQL 클라이언트 (MySQLToSQL)에 대 한 설치 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a0df85f3b44d7956ed9382213bc380681d47e48b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d349ccf848d62363733a02bf296edaa88bea9e8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776229"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL 클라이언트 (MySQLToSQL) 용 SSMA를 설치합니다.
 다음 작업을 수행 하는 프로그램 파일의 MySQL 클라이언트 용 SSMA 구성 됩니다.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 이 항목에서는 설치 필수 구성 요소 및 MySQL 클라이언트에 대 한 SSMA를 설치 하기 위한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 MySQL 용 SSMA는 MySQL 4.1 또는 그 이후 버전 및 SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017 및 Azure SQL DB의 모든 버전에서 실행 되도록 설계 되었습니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -86,6 +85,6 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참�
   
 64 비트 Windows 컴퓨터에서 MySQL C:\Microsoft SQL Server Migration Assistant에 제품이 설치 되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

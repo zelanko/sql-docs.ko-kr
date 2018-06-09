@@ -1,8 +1,6 @@
 ---
 title: 새 프로젝트 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 14228d43d5e0841a081fac70c9bbb105a46ff49b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4505c11d20c826b9c2b879d7b9c17bd690efaed9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777589"
 ---
 # <a name="new-project-oracletosql"></a>새 프로젝트 (OracleToSQL)
 사용 하 여는 **새 프로젝트** 대화 상자를 새 SSMA 프로젝트를 만듭니다. 에 액세스 하려면는 **새 프로젝트** 대화 상자의 **파일** 메뉴를 클릭 하 여 **새 프로젝트**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **이름**  
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명을 추가 합니다.  
   

@@ -1,40 +1,23 @@
 ---
 title: CREATE GLOBAL CUBE 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GLOBAL CUBE
-- CUBE
-- GLOBAL
-- CREATE
-- CREATE GLOBAL
-- CREATE GLOBAL CUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CREATE GLOBAL CUBE
-- CREATE GLOBAL CUBE
-ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dc74fe731c98609a0840c12f0cd216b89d53e0a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741344"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의-글로벌 큐브 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   논리적 지속형 큐브를 서버에 있는 큐브의 하위 큐브에 따라 만들고 채웁니다. 논리적 지속형 큐브에 대한 연결 시에는 서버 연결이 필요하지 않습니다. 로컬 큐브에 대 한 자세한 내용은 참조 [로컬 큐브 &#40;Analysis Services-다차원 데이터&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)합니다.  
   
@@ -131,7 +114,7 @@ FROM source_cube_name (<param list>)
  \<수준 유형 >  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  로컬 큐브 definedin 약관 정의 하는 정의와 측정값입니다. 다음과 같은 두 가지 유형의 차원이 있습니다.  
   
 -   원본 차원 - 하나 이상 원본 큐브의 일부인 차원입니다.  
@@ -214,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   

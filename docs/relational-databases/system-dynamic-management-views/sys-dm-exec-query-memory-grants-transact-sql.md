@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812057"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다. 또한 열에 값 **scheduler_id**, **wait_order**, **pool_id**, **group_id** 필터링 되 고 열 값은 설정 에 NULL입니다.  
   
 > [!NOTE]  
->  이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_query_memory_grants**합니다.  
+> 이 메서드를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_query_memory_grants**합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,59 +69,58 @@ ms.lasthandoff: 05/23/2018
 |**ideal_memory_kb**|**bigint**|실제 메모리에 적합하도록 부여된 메모리 크기(KB)입니다. 이 크기는 카디널리티 예측에 기반합니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
    
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  쿼리 제한 시간에 대한 일반적인 디버깅 시나리오는 다음과 같습니다.  
   
 -   전체 시스템 메모리 상태를 사용 하 여 확인 [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), 및 다양 한 성능 카운터입니다.  
   
 -   쿼리 실행 메모리 예약에 대 한 확인 **sys.dm_os_memory_clerks** 여기서 `type = 'MEMORYCLERK_SQLQERESERVATIONS'`합니다.  
   
--   사용 하 여 권한 부여 대기 중인 쿼리를 확인 **sys.dm_exec_query_memory_grants**합니다.  
+-   대기 중인 쿼리 확인<sup>1</sup> 권한 부여를 사용 하 여 **sys.dm_exec_query_memory_grants**합니다.  
   
-    ```  
+    ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
+    
+    <sup>1</sup> 이 시나리오에서는 대기 유형은 일반적으로 RESOURCE_SEMAPHORE 합니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. 
   
--   쿼리에 대 한 캐시를 사용 하 여 메모리 부여를 사용 하 여 검색[sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 및 [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   쿼리에 대 한 캐시를 사용 하 여 메모리 부여를 사용 하 여 검색 [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 및 [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
-    ```  
+    ```sql  
     -- retrieve every query plan from the plan cache  
     USE master;  
     GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
-  
     ```  
   
 -   사용 하 여 메모리 집중형 쿼리를 자세히 검사 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)합니다.  
   
-    ```  
+    ```sql  
     --Find top 5 queries by average CPU time  
     SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-    Plan_handle, query_plan   
+      plan_handle, query_plan   
     FROM sys.dm_exec_query_stats AS qs  
     CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
     ORDER BY total_worker_time/execution_count DESC;  
     GO  
-  
     ```  
   
 -   런어웨이 쿼리가 의심 되는 경우의 실행 검사 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 일괄 처리 텍스트를 및 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)합니다.  
   
- 쿼리에서 ORDER BY 또는 집계가 포함된 동적 관리 뷰를 사용하는 경우 메모리 사용이 증가하여 해결하려는 문제가 악화될 수 있습니다.  
+ 포함 된 동적 관리 뷰를 사용 하는 쿼리 `ORDER BY` 집계 메모리 사용이 증가 하 고 따라서 해결 하려는 문제가에 영향을 줄 수 있습니다.  
   
  데이터베이스 관리자는 리소스 관리자 기능을 사용하여 서버 리소스를 최대 20개의 리소스 풀에 배치할 수 있습니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 각 풀은 독립 작은 서버 인스턴스와 같이 작동 하며 2 개의 세마포가 필요 합니다. 반환 되는 행 수가 **sys.dm_exec_query_resource_semaphores** 수 최대 20 배가 될에 반환 되는 행 보다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.dm_exec_query_resource_semaphores &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [sys.dm_exec_query_resource_semaphores &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [실행 관련 동적 관리 뷰 및 함수 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
-
