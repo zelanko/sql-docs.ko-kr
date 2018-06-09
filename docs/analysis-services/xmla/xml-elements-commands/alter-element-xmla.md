@@ -13,7 +13,7 @@ ms.openlocfilehash: 5ff62bcde0aa40e9bb052691d4d3dee1317c1217
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574605"
 ---
 # <a name="alter-element-xmla"></a>Alter 요소(XMLA)

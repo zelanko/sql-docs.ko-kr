@@ -11,7 +11,7 @@ ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563861"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제

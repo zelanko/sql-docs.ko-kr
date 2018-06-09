@@ -13,7 +13,7 @@ ms.openlocfilehash: 412c82e22cf71068d73effe3cacc0e92982a524a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575445"
 ---
 # <a name="lastdataupdate-element-xmla"></a>LastDataUpdate 요소(XMLA)

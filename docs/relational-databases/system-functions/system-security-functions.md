@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d4651dcea60ef0dcc20b6ef9f0779eb82c8d1dc9
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33227807"
 ---
 # <a name="system-security-functions"></a>시스템 보안 함수

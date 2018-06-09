@@ -11,7 +11,7 @@ ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585229"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server에 대 한 R 패키지 동기화

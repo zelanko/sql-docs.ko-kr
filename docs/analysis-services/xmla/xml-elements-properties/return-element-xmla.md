@@ -13,7 +13,7 @@ ms.openlocfilehash: e8746fb9f8b397ef50b1a5c66a2132e5f0cf5c87
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576195"
 ---
 # <a name="return-element-xmla"></a>return 요소(XMLA)

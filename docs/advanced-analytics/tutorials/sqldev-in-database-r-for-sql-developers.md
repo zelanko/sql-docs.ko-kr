@@ -1,20 +1,21 @@
 ---
-title: SQL 개발자를 위한 데이터베이스 내 R 분석(자습서) | Microsoft Docs
+title: SQL Server 기계 학습 개발자에 대 한 포함 된 R 분석 자습서 | Microsoft Docs
+description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585275"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250026"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>SQL 개발자를 위한 데이터베이스 내 R 분석(자습서)
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>자습서: T-SQL 함수와 저장된 프로시저에 R을 포함
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 자습서의 목표는 SQL 프로그래머에게 SQL Server에서 머신 러닝 솔루션을 직접 구축하는 경험을 제공하는 것입니다. 이 자습서에서는 저장 프로시저 내에 R 코드를 포함해서 응용 프로그램 또는 BI 솔루션에 R을 통합하는 방법을 학습합니다.
@@ -31,41 +32,30 @@ ms.locfileid: "34585275"
 
 이 자습서에서는 솔루션에 필요한 모든 R 코드를 받았다고 가정하고, SQL Server를 사용하여 솔루션을 작성하고 배포하는 데 중점을 둡니다.
 
-- [1 단원: 예제 데이터 다운로드](../tutorials/sqldev-download-the-sample-data.md)
+- [1 단원: 샘플 데이터와 스크립트를 다운로드 합니다.](../tutorials/sqldev-download-the-sample-data.md)
 
-    샘플 데이터 집합 및 샘플 SQL 스크립트 파일을 로컬 컴퓨터로 다운로드합니다.
+- [2 단원: 자습서 환경 설정](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화 하는 3 단원:](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 데이터베이스와 테이블을 만들고 샘플 데이터를 테이블에 로드하는 PowerShell 스크립트를 실행합니다.
-
-- [3단원: 데이터를 탐색하고 시각화하기](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 R 패키지 및 함수를 호출하여 기본 데이터 탐색 및 시각화를 수행합니다.
-
-- [4단원: T-SQL을 사용하여 데이터 특성 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    사용자 정의 SQL 함수를 사용하여 새 데이터 특성을 만듭니다.
+- [4 단원: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [5단원: T-SQL을 사용하여 R 모델 학습 및 저장하기](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    저장된 프로시저에서 R을 사용하여 머신 러닝 모델을 작성합니다.  SQL Server 테이블에는 모델을 저장합니다.
+- [5 단원: 학습과 함수 및 저장된 프로시저를 사용 하 여 R 모델을 저장 합니다.](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [6단원: 모델 운용](../tutorials/sqldev-operationalize-the-model.md)
+- [6 단원: 래핑 R 코드를 해결해줍니다에 대 한 저장된 프로시저에서](../tutorials/sqldev-operationalize-the-model.md)합니다. 
+  모델을 데이터베이스에 저장한 후 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 예측을 위해 모델을 호출합니다.
 
-    모델을 데이터베이스에 저장한 후 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 예측을 위해 모델을 호출합니다.
-
-### <a name="scenario"></a>시나리오
+## <a name="scenario"></a>시나리오
 
 이 자습서는 뉴욕 시 택시 여행을 기반으로 하는 잘 알려진 공용 데이터 집합을 사용합니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 이 데이터를 사용하여 시간, 거리 및 승차 위치와 같은 열을 기반으로 특정 여행이 팁을 얻는지 여부를 예측하는 이진 분류 모델을 작성합니다.
 
-### <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
-이 자습서는 데이터베이스 및 테이블 만들기, 테이블로 데이터 가져오기, SQL 쿼리 작성 등 기본적인 데이터베이스 작업에 대해 잘 알고 있는 사용자를 위한 것입니다.  모든 R 코드가 제공되므로 R 개발 환경은 필요하지 않습니다.  숙련된 SQL 프로그래머는 [! INCLUDE[tsql](../../includes/ssmanstudiofull-md.md)]에서 [! INCLUDE[ssManStudioFull](../../includes/tsql-md.md)을 사용하고 제공된 PowerShell 스크립트를 실행하여 이 예제를 완성할 수 있어야 합니다. 그러나 이 자습서를 시작하기 전에 다음 준비 작업을 완료해야 합니다.
+이 자습서에서는 데이터베이스 및 테이블 만들기, 데이터를 가져오는 경우, SQL 쿼리 작성 등 기본적인 데이터베이스 작업에 익숙하다고를 가정 합니다. 오른쪽을 알고 있는 상속 되지 않습니다. 따라서 모든 R 코드가 제공 됩니다. 숙련 된 SQL 프로그래머는 제공 된 PowerShell 스크립트, GitHub에 샘플 데이터를 사용할 수 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이 예제를 완료 합니다. 
 
-그러나이 자습서를 시작 하기 전에 이러한 준비 작업을 완료 해야 합니다.
+자습서 시작 하기 전에:
 
-- R 서비스를 사용하여 SQL Server 2016의 인스턴스에 연결하거나 Machine Learning Services 및 R을 사용하여 SQL Server 2017에 연결합니다.
+- 인스턴스를 구성된 해야 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) 또는 [사용 하도록 설정 하는 R 통한 SQL Server 2017 컴퓨터 학습 서비스](../install/sql-machine-learning-services-windows-install.md#verify-installation)합니다. 또한 [R 라이브러리 확인](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)합니다.
 - 이 자습서에서 사용하는 로그인에는 데이터베이스 및 기타 오브젝트를 작성하고, 데이터를 업로드하고, 데이터를 선택하고, 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다.
 
 > [!NOTE]

@@ -1,26 +1,28 @@
 ---
-title: 샘플 데이터를 다운로드 하는 1 단원 | Microsoft Docs
+title: 샘플 데이터를 다운로드 하는 1 단원 및 스크립트에 대 한 포함 된 R (SQL Server 기계 학습) | Microsoft Docs
+description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249836"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>1 단원: 예제 데이터 다운로드
+# <a name="lesson-1-download-data-and-scripts"></a>1 단원: 데이터와 스크립트를 다운로드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
 이 단계에서는 샘플 데이터 집합을 다운로드 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트이 자습서에 사용 되는 파일입니다. GitHub에서 공유 데이터와 스크립트 파일을 모두 있지만 PowerShell 스크립트를 로컬 디렉터리를 선택 해 데이터 및 스크립트 파일을 다운로드 합니다.
 
-## <a name="download-the-data-and-scripts"></a>데이터와 스크립트를 다운로드 합니다.
+## <a name="download-tutorial-files-from-github"></a>Github에서 자습서 파일을 다운로드 합니다.
 
 1.  Windows PowerShell 명령 콘솔을 엽니다.
   
@@ -64,4 +66,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[SQL 개발자를 위해 데이터베이스에서 R 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[SQL 개발자를 위해 포함 된 R 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)

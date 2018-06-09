@@ -13,7 +13,7 @@ ms.openlocfilehash: 07fa34b2e65f607b847d16ee1f2d828122902cf1
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574005"
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset 데이터 형식(XMLA)

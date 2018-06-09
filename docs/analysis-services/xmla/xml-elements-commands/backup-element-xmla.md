@@ -13,7 +13,7 @@ ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574215"
 ---
 # <a name="backup-element-xmla"></a>Backup 요소(XMLA)

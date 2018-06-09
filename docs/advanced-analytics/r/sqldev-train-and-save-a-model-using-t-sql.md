@@ -1,25 +1,26 @@
 ---
-title: Lesson 5 기차 및 T-SQL을 사용 하 여 모델을 저장할 | Microsoft Docs
+title: Lesson 5 기차 및 R 및 T-SQL (SQL Server 기계 학습)를 사용 하 여 모델을 저장할 | Microsoft Docs
+description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201495"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250066"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>5단원: T-SQL을 사용한 모델 학습 및 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단원에서는 R을 사용하여 머신 러닝 모델을 학습시키는 방법을 배웁니다. 방금 만든 데이터 특성을 사용하여 모델을 학습시킨 다음 학습된 모델을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장합니다.  이 경우 R 패키지는 이미 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]와 함께 설치되어 있으므로 SQL로 모든 것을 수행할 수 있습니다.
+이 단원에서는 오른쪽을 사용 하 여 기계 학습 모델을 학습 하는 방법을 알아봅니다. 이전 단원에서 만든 데이터 기능을 사용 하 여 모델을 학습 하 고 다음에 학습 된 모델을 저장 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. 이 경우 R 패키지는 이미 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]와 함께 설치되어 있으므로 SQL로 모든 것을 수행할 수 있습니다.
 
 ## <a name="create-the-stored-procedure"></a>저장 프로시저 만들기
 
@@ -81,7 +82,7 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
     EXEC TrainTipPredictionModel
     ```
 
-2. 조사식은 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] r의 파이프는 메시지에 대 한 **stdout** 이 나타내며와 같은 스트림: 
+2. 조사식은 **메시지** 의 창 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] r의 파이프는 메시지에 대 한 **stdout** 이 메시지와 같은 스트림: 
 
     "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
@@ -105,5 +106,5 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[4단원: T-SQL을 사용한 데이터 특성 만들기](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[4 단원: R 및 T-SQL 함수를 사용 하 여 데이터 기능 만들기](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

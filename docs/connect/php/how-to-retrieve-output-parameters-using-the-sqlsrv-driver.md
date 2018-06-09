@@ -19,7 +19,7 @@ ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563891"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색

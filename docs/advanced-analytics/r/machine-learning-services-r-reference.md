@@ -11,7 +11,7 @@ ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563652"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스에 대 한 API 참조

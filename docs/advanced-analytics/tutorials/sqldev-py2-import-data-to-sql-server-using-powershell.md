@@ -2,16 +2,17 @@
 title: 2 단계 PowerShell을 사용 하 여 SQL Server로 데이터 가져오기 | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249996"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>2 단계: PowerShell을 사용 하 여 SQL Server로 데이터 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,6 +35,16 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
 
 문제를 실행 하는 경우 단계를 수동으로 수행 하는 스크립트 참조로 사용할 수 있습니다.
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>신뢰할 수 있는 Windows id를 사용 하는 스크립트를 수정 합니다.
+
+기본적으로 스크립트는 SQL Server 데이터베이스 사용자 로그인 및 암호를 가정합니다. 인 경우 db_owner Windows 사용자 계정에 개체를 만들 Windows id를 사용할 수 있습니다. 이렇게 하려면 열고 `RunSQL_SQL_Walkthrough.ps1` 추가할 코드 편집기에서 **`-T`** bcp에 bulk insert 명령:
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>스크립트 실행
+
 1. 관리자 권한으로 PowerShell 명령 프롬프트를 엽니다. 가 아닌 이미 이전 단계에서 만든 폴더에 폴더를 탐색 하 고 다음 명령을 실행 합니다.
   
     ```ps
@@ -44,8 +55,8 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
 
     - 이름 또는 주소는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] python 컴퓨터 학습 서비스 설치 되어 있는 인스턴스.
     - 인스턴스의 계정에 대한 사용자 이름 및 암호. 사용 하는 계정에는 데이터베이스를 만들 테이블 및 저장된 프로시저를 만들고 로드 테이블에 데이터를 대량으로 수가 있어야 합니다. 
-    - 사용자 이름 및 암호를 제공 하지 않으면 경우에 Windows id는 SQL Server에 로그인 하는 데 사용 되 고 암호를 입력 하 승격 됩니다.
-    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들면 다음과 같습니다. `C:\temp\pysql\nyctaxi1pct.csv`
+    - 사용자 이름과 암호를 입력하지 않으면 Windows ID가 SQL Server에 로그인하는 데 사용됩니다.
+    - 방금 다운로드한 샘플 데이터 파일의 경로 및 파일 이름. 예를 들어 IPv4 주소를 사용하는 경우 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 데이터를 성공적으로 로드 하려면 라이브러리 xmlrw.dll bcp.exe와 같은 폴더에 있어야 합니다.
@@ -69,7 +80,7 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
 |------|------|
 |create-db-tb-upload-data.sql|데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />nyctaxi_sample: 주 NYC Taxi 데이터 집합을 포함합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이 이 테이블에 삽입됩니다.<br /><br />nyc_taxi_models: 학습된 고급 분석 모델을 저장하는 데 사용됩니다.|
 |fnCalculateDistance.sql|승하차 위치 사이의 직접 거리를 계산하는 스칼라 반환 함수를 만듭니다.|
-|fnEngineerFeatures.sql|모델 학습을 위한 새로운 데이터 기능을 만드는 테이블 반환 함수를 만듭니다.|
+|fnEngineerFeatures.sql|모델 학습을 위한 새로운 데이터 특성을 만드는 테이블 반환 함수를 만듭니다.|
 |TrainingTestingSplit.sql|Nyctaxi_sample 테이블의에서 데이터를 두 부분으로 분할: nyctaxi_sample_training 및 nyctaxi_sample_testing 합니다.|
 |PredictTipSciKitPy.sql|학습 된 모델을 호출 하는 저장된 프로시저를 만듭니다 (scikit-자세한) 모델을 사용 하 여 예측을 만듭니다. 저장 프로시저는 쿼리를 입력 매개 변수로 사용하고 입력된 행에 대한 점수를 포함하는 숫자 값 열을 반환합니다.|
 |PredictTipRxPy.sql|모델을 사용 하 여 예측을 만들 수는 학습 된 모델 (revoscalepy)를 호출 하는 저장된 프로시저를 만듭니다. 저장 프로시저는 쿼리를 입력 매개 변수로 사용하고 입력된 행에 대한 점수를 포함하는 숫자 값 열을 반환합니다.|
@@ -80,7 +91,7 @@ PowerShell 스크립트를 다운로드 한 파일 중에서 나타나야 `RunSQ
     
 |**SQL 스크립트 파일 이름**|**함수**|
 |------|------|
-|SerializePlots.sql|데이터 탐색을 위한 저장 프로시저를 만듭니다. 이 저장된 프로시저 Python을 사용 하는 그래픽을 만들고 그래프 개체를 serialize 합니다.|
+|SerializePlots.sql||데이터 탐색을 위한 저장 프로시저를 만듭니다. 이 저장된 프로시저 Python을 사용 하는 그래픽을 만들고 그래프 개체를 serialize 합니다.|
 |TrainTipPredictionModelSciKitPy.sql|로지스틱 회귀 모델을 학습 하는 저장된 프로시저를 만듭니다 (scikit-자세한). 기울어진 열의 값을 예측 모델과 데이터의 임의로 선택 된 60%를 사용 하 여 학습 됩니다. 저장 프로시저의 출력은 nyc_taxi_models 테이블에 저장된 학습된 모델입니다.|
 |TrainTipPredictionModelRxPy.sql|(Revoscalepy) 로지스틱 회귀 모델을 학습 하는 저장된 프로시저를 만듭니다. 기울어진 열의 값을 예측 모델과 데이터의 임의로 선택 된 60%를 사용 하 여 학습 됩니다. 저장 프로시저의 출력은 nyc_taxi_models 테이블에 저장된 학습된 모델입니다.|
 

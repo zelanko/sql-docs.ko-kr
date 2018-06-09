@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541066ac00efc1b15f8cae838097cfd8ee49df3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249736"
 ---
 # <a name="step-1-download-the-sample-data"></a>1 단계: 예제 데이터 다운로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 
 3. 인터넷 연결을 따라 다운로드에 시간이 걸릴 수 있습니다. 
 
-## <a name="view-the-results"></a>결과 보기
+## <a name="view-results"></a>결과 보기
 
 모든 파일이 다운로드되면 PowerShell 스크립트가  *DestDir*에 지정된 폴더에서 열립니다. 
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
 
 [In-database Python 분석 SQL 개발자를 위한](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [기계 학습 Python 사용 하 여 서비스](../python/sql-server-python-services.md)
 
