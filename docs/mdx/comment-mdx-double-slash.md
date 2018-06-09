@@ -1,6 +1,6 @@
 ---
 title: / / (주석) (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6e981e279d8ab9fc9239ed7be56528d2f2018b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577415"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739522"
 ---
 # <a name="comment-mdx-double-slash"></a>주석 MDX 이중 슬래시
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   사용자가 제공하는 텍스트를 나타냅니다.  
   

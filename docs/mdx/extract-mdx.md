@@ -1,34 +1,23 @@
 ---
 title: Extract (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- EXTRACT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Extract function
-ms.assetid: c0d27d31-e36e-4b7f-bb86-1e4707351392
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1a4eaea7755c8fd65433737a1b528ad5ef13874a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740312"
 ---
 # <a name="extract-mdx"></a>Extract(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   추출된 계층 요소에서 튜플 집합을 반환합니다.  
   
@@ -49,7 +38,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **추출** 함수 추출 된 계층 요소의 튜플로 구성 된 집합을 반환 합니다. 지정된 집합에 있는 각 튜플에 대해 지정된 계층의 멤버가 결과 집합의 새 튜플로 추출됩니다. 항상 중복된 튜플을 제거합니다.  
   
  **추출** 의 반대 작업을 수행 하는 함수는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
@@ -89,7 +78,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

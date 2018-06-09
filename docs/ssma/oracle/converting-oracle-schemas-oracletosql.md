@@ -1,8 +1,6 @@
 ---
 title: Oracle 스키마 (OracleToSQL) 변환 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0b94e194c7d1db8dc4de0c56d3d9c37b5586d6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf41da767d5e11b439a919668fb6d16d8cb6aec7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777209"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 (OracleToSQL) 변환
 Oracle에 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트 설정 및 데이터 매핑 옵션에는 Oracle 데이터베이스 개체를 변환할 수 있습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  
@@ -120,6 +119,6 @@ Oracle 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 [SQL Server로 변환된 된 개체를 로드](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

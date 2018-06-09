@@ -1,8 +1,6 @@
 ---
 title: (MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776419"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) 설정 MySQL 및 SQL Server 문자 매핑
 MySQL 문자 데이터 형식, 식 및 리터럴을 대 한 문자 집합 (문자 집합)을 지정할 수 있습니다.  

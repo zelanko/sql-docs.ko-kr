@@ -1,6 +1,6 @@
 ---
 title: StrToValue (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1cf21e5b5dac57ce2d0c59e0ab82263727260792
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5a46b68ac8e93a00c7730b32593331a28655c1c5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582295"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743072"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX 형식 문자열에 의해 지정된 숫자 값을 반환합니다.  
   

@@ -11,7 +11,7 @@ ms.openlocfilehash: 1f7ba3b4acde90d9e416eb092ac80cb0dfcbba8a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585645"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN를 사용 하 여 로컬 R 패키지 리포지토리 만들기

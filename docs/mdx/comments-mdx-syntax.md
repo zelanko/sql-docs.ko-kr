@@ -1,6 +1,6 @@
 ---
 title: 주석 (MDX 구문) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578455"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740764"
 ---
 # <a name="comments-mdx-syntax"></a>주석(MDX 구문)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   주석은 프로그램 코드 내의 실행되지 않는 텍스트 문자열이며 설명이라고도 합니다. 코드에 대한 설명을 기록하거나 진단 중인 MDX 문 및 스크립트의 일부를 일시적으로 비활성화하는 데 주석을 사용할 수 있습니다. 주석을 사용하여 코드에 대한 설명을 기록하면 나중에 프로그램 코드를 유지 보수할 때 용이합니다. 주석은 주로 프로그램 이름, 저자 이름, 주요 코드 변경 날짜 등을 기록하는 데 사용됩니다. 또한 주석을 사용하여 복잡한 계산이나 프로그래밍 방식을 설명할 수도 있습니다.  
   
  MDX의 주석은 다음 지침을 따릅니다.  
   
--   주석에는 모든 영숫자 문자나 기호를 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 주석 내의 모든 문자를 무시합니다.  
+-   주석에는 모든 영숫자 문자나 기호를 사용할 수 있습니다.  주석 내의 모든 문자는 무시 됩니다.  
   
 -   문 또는 스크립트 내에서 주석의 길이는 제한이 없습니다. 주석은 한 개 이상의 줄을 포함할 수 있습니다.  
   

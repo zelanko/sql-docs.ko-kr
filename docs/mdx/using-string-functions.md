@@ -1,6 +1,6 @@
 ---
 title: 문자열 함수를 사용 하 여 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 464bbe4ad20085571103a64f48716773c8352dea
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581755"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743832"
 ---
 # <a name="using-string-functions"></a>문자열 함수 사용
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   문자열 함수는 MDX의 거의 모든 개체에서 사용할 수 있습니다. 문자열 함수는 저장 프로시저에서 개체를 문자열 표현으로 변환하는 데 사용되며 값을 반환하기 위해 개체에 대한 문자열 식을 계산할 때도 사용됩니다.  
   

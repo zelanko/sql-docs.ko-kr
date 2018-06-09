@@ -1,34 +1,23 @@
 ---
 title: StrToTuple (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOTUPLE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToTuple function
-ms.assetid: e162cc01-cddd-4654-baab-d73abdc33b80
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2d047b0745c152fe880216854a1af146dcd87f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743232"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX(Multidimensional Expressions) 형식 문자열에 의해 지정된 튜플을 반환합니다.  
   
@@ -43,7 +32,7 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  직접 또는 간접적으로 튜플을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **StrToTuple** 함수는 지정 된 집합을 반환 합니다. **StrToTuple** 함수는 대개에 MDX 문에 다시 외부 함수의 튜플 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
   
 -   CONSTRAINED 플래그를 사용할 경우 튜플 사양에는 정규화되거나 정규화되지 않은 멤버 이름을 포함해야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 다음 오류가 표시 됩니다는 문자열이 직접 확인할 수 없는 정규화 되거나 정규화 되지 않은 멤버 이름이 아닌 경우 이면: "CONSTRAINED 설정한 제한을 STRTOTUPLE 함수에서 플래그 위반 했습니다."  
@@ -86,7 +75,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

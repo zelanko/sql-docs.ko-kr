@@ -1,6 +1,6 @@
 ---
 title: CREATE SET 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579345"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741692"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의-설정 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   현재 큐브의 세션 범위를 사용하여 명명된 집합을 만듭니다.  
   
@@ -93,7 +93,7 @@ SELECT [Core Products] ON 0
  큐브를 쿼리하는 사용자에게 집합을 표시하지 않도록 지정합니다.  
   
 ## <a name="standard-properties"></a>표준 속성  
- 각 집합에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램에 연결 되어 있을 때 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본 속성은 지원 되거나 지원 가능 하 게 관리자의 선택에 따라 합니다.  
+ 각 집합에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램에 연결 되어 있을 때 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본 속성은 지원 되거나 지원 가능 하 게 관리자의 선택에 따라 합니다.  
   
 |속성 식별자|의미|  
 |-------------------------|-------------|  

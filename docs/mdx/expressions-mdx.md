@@ -1,6 +1,6 @@
 ---
 title: 식 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579485"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740842"
 ---
 # <a name="expressions-mdx"></a>식(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  식에는 식별자, 값 및 연산자의 조합 하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 결과 얻기 위해 평가할 수 있습니다. 식은 데이터를 액세스하거나 변경하는 여러 위치에서 사용됩니다. 예를 들어 쿼리를 사용해 검색할 데이터 또는 특정 조건을 만족하는 데이터를 찾는 검색 조건으로 식을 사용할 수 있습니다.  
+
+  식에는 식별자, 값 및 결과 얻기 위해 평가할 수 있는 연산자의 조합입니다. 식은 데이터를 액세스하거나 변경하는 여러 위치에서 사용됩니다. 예를 들어 쿼리를 사용해 검색할 데이터 또는 특정 조건을 만족하는 데이터를 찾는 검색 조건으로 식을 사용할 수 있습니다.  
   
 ## <a name="simple-and-complex-expressions"></a>단순 식 및 복합 식  
  MDX 식에는 단순 식과 복합 식이 있습니다.  

@@ -1,8 +1,6 @@
 ---
 title: Access 데이터베이스 개체 (AccessToSQL) 변환 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -38,11 +36,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d88b62efad5e0aa3d67cc5788a8430f09024d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36d73e04296346bd0c44a8459ec157d437df8583
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773479"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
 Access 데이터베이스를 추가 하 고 연결 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음으로 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 스키마입니다.  
@@ -63,7 +62,7 @@ SSMA를 변환 하는 동안 상태를 출력 창 및 오류, 경고 및 오류 
   
 |Access 개체|결과 SQL Server 개체|  
 |-----------------|-------------------------------|  
-|table|table|  
+|테이블|테이블|  
 |column|column|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
@@ -125,6 +124,6 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환한 다음 SSM
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [를 SQL Server로 변환 된 데이터베이스 개체를 로드 합니다.](http://msdn.microsoft.com/en-us/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

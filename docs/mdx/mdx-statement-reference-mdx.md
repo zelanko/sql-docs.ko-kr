@@ -1,6 +1,6 @@
 ---
 title: MDX 문 참조 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 44979fdaa5673573587a2e05f837b808d6cb06ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580225"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742082"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 문 참조(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX 문은 다음 표의 설명에서와 같이 3가지 그룹으로 구분됩니다.  
   

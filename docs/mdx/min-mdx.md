@@ -1,6 +1,6 @@
 ---
 title: Min (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2af77108922baa3767f9f8d478ec38509f1dac06
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 85d48badaa1b50edec6a563decbead1a38f5fcb0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581525"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741992"
 ---
 # <a name="min-mdx"></a>Min(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합에 대해 계산된 숫자 식의 최소값을 반환합니다.  
   

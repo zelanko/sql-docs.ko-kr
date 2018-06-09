@@ -9,10 +9,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707691"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 컴퓨터 (예: R 및 Python) 학습 구성 업그레이드
@@ -275,7 +275,7 @@ R 및 Python 기능 데이터베이스 엔진 인스턴스를 복구할 SQL Serv
 
 MLS 설치 관리자 및 SqlBindR 다음과 같은 오류 코드 및 메시지를 반환합니다.
 
-|오류 코드  | 메시지           | 세부 정보               |
+|오류 코드  | 메시지           | 설명               |
 |------------|-------------------|-----------------------|
 |바인딩 오류 0 | (성공)를 확인 합니다. | 바인딩 오류 없이 전달 합니다. |
 |바인딩 오류 1 | 잘못 된 인수 | 구문 오류가 있습니다. |

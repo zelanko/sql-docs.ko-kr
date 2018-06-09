@@ -1,6 +1,6 @@
 ---
 title: CurrentOrdinal (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 281edfa10d371c94b831319bdca528b99310a10a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578735"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739342"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   반복하는 동안 집합 내의 현재 반복 번호를 반환합니다.  
   

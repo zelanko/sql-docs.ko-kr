@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (변환) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9f35b745693caf0270638a7590f74de7e1ff875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000f00113afcfd6cd2cf2797d0b8dd958fcf9d4c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776159"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정 (변환) (MySQLToSQL)
 변환 페이지는 **프로젝트 설정** 대화 상자 SSMA MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   에 현재 프로젝트에 대 한 설정을 지정 하려면는 **도구** 메뉴 클릭 **프로젝트 설정**, 클릭 **일반** 클릭 한 다음 확인 하 고 왼쪽된 창 맨 아래에 **변환**합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="collate-clause"></a>Collate 절  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 |**경계 상자 기본 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 공간 인덱스에 대 한**|에 대 한 기본값을 정의 합니다. {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}의 경계 상자가 공간 인덱스에 사용 된 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**최적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**공간 인덱스에 대 한 기본 표 밀도**|LEVEL_1, LEVEL_2, LEVEL_3, 및 공간 인덱스에 사용 되는 표 밀도의 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**최적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
-### <a name="transactions"></a>트랜잭션  
+### <a name="transactions"></a>의  
   
 |||  
 |-|-|  
@@ -118,6 +117,6 @@ ms.lasthandoff: 05/03/2018
 |**숫자 리터럴은 전체 자릿수가 38를 초과 합니다.**|숫자 리터럴은 전체 자릿수가 38 초과 변환 하는 방법을 지정 합니다.<br /><br />**기본 모드**: 가능 하면 반올림<br /><br />**최적 모드**: 가능 하면 반올림<br /><br />**전체 모드**: 가능 하면 반올림|  
 |**NOT NULL 열에 0-날짜**|지정 NOT NULL 열 0-날짜의 날짜에 0 또는 잘못 된 날짜/시간 값에 대 한 할당을 처리 하는 방법입니다.<br /><br />**기본 모드**: getdate)<br /><br />**최적 모드**: getdate)<br /><br />**전체 모드**: getdate)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

@@ -13,7 +13,7 @@ ms.openlocfilehash: bca744567d0feabafbcd489f619d76be9f2ade06
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577965"
 ---
 # <a name="xml-elements---properties"></a>XML 요소-속성

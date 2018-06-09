@@ -1,6 +1,6 @@
 ---
 title: UnknownMember (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582215"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743362"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   수준 또는 멤버와 연결된 알 수 없는 멤버를 반환합니다.  
   
@@ -40,7 +40,7 @@ Hierarchy_Expression.UnknownMember
  계층을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 계층 구조를 알 수 없는 경우 팩트 테이블 데이터는 계층 구조와 연결 하려면 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
+ Analysis Services는 계층 구조를 알 수 없는 경우 팩트 테이블 데이터는 계층 구조와 연결할 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
   
 -   집계되지 않는 특성 계층의 최상위 수준  
   

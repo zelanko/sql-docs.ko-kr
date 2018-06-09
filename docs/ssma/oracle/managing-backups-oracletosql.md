@@ -1,8 +1,6 @@
 ---
 title: 백업 (OracleToSQL) 관리 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76fe6ed52f7d321db361d5d13b718ac61a07cdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a17cbc5aef7874555520db18464c79698ee41c30
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777329"
 ---
 # <a name="managing-backups-oracletosql"></a>백업 (OracleToSQL) 관리
 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 oracle 백업 관리는 수 있습니다. 백업 내용 관리 대화 상자와 백업 콘텐츠를 관리할 수 있습니다.  
@@ -98,6 +97,6 @@ SQL Server 백업 관리는 테스터 선택 된 위치에 백업 대화 상자�
   
 -   클릭는 **닫습니다** 단추는 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터베이스 개체를 마이그레이션할 테스트 &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

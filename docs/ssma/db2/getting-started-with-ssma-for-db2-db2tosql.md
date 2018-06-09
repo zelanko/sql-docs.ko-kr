@@ -1,8 +1,6 @@
 ---
 title: D b 2 용 SSMA 시작 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 10e2df8ac76797a8781716c75bc8cd83d0686ce7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 199380adb63e330a04aa0d8f7ee1d3e94aaa4fd9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775139"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA 시작 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) DB2 사용 하면 신속 하 게에 대 한 변환 DB2 데이터베이스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 결과 스키마를 업로드 하는 스키마, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 d b 2에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
@@ -86,7 +85,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 #### <a name="migration-toolbar"></a>마이그레이션 도구 모음  
 다음 표에서 마이그레이션 도구 모음 명령을 보여 줍니다.  
   
-|단추|함수|  
+|단추|기능|  
 |------|--------|  
 |**보고서 만들기**|선택한 DB2 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구문 다음 얼마나 성공적인 변환 작업이 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 DB2 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
 |**스키마 변환**|선택한 DB2 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 개체입니다.<br /><br />이 명령은 DB2 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
@@ -98,7 +97,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 |메뉴|Description|  
 |----|-----------|  
-|**파일**|프로젝트 작업, DB2에 연결에 연결 하기 위한 명령이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.|  
+|**최근에 사용한 파일**|프로젝트 작업, DB2에 연결에 연결 하기 위한 명령이 포함 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.|  
 |**편집**|검색 및 텍스트를 복사 하는 등의 세부 정보 페이지에서 작업 하기 위한 명령이 포함 되어 [!INCLUDE[tsql](../../includes/tsql_md.md)] SQL 세부 정보 창에서. 도 포함 되어는 **관리 책갈피** 여기서 기존 책갈피의 목록을 볼 수는 옵션입니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **동기화 메타 데이터 탐색기** 명령입니다. DB2 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 메타 데이터 탐색기입니다. 표시 하거나 숨기는 명령이 포함 되어는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 관리 하 합니다.|  
 |**Tools**|보고서를 만들고 개체 및 데이터 마이그레이션에 명령이 포함 됩니다. 또한에 대 한 액세스를 제공 된 **전역 설정** 및 **프로젝트 설정** 대화 상자.|  
@@ -111,7 +110,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 -   오류 목록 창 정렬 가능한 목록에서 오류, 경고 및 정보 메시지를 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [DB2 데이터를 SQL Server로 마이그레이션 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
 [사용자 인터페이스 참조 &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

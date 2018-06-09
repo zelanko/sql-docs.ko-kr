@@ -21,10 +21,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707051"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL 데이터베이스를 사용 하 여 처리 하는 그래프

@@ -3,8 +3,6 @@ title: Sybase ASE (SybaseToSQL)에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac144d636536bac66f7330825f536f01200738b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fb1bb6047dca0965d71e80b1042d9fe1d8bca97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778459"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Sybase ASE (SybaseToSQL)에 연결
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure는 마이그레이션할 데이터베이스를 포함 하는 적응형 서버에 연결 해야 합니다. 에 연결할 때 SSMA 적응 서버의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Sybase 메타 데이터 탐색기 창에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -126,6 +125,6 @@ ASE 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐
   
 -   마이그레이션 프로세스의 다음 단계에서는 [SQL Server의 인스턴스에 연결](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [SQL Azure의 인스턴스에 연결](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-Azure SQL DB Sybase ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

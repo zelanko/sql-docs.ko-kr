@@ -1,6 +1,6 @@
 ---
 title: MDX 및 DAX의 VBA 함수 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582525"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743892"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   이 문서에서 사용할 수 있는 모든 VBA 함수의 상호 참조가 포함 [응용 프로그램 기능에 대 한 Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) 는 기능이 있을 DAX 언어에 해당 하는 경우 목록에서 메모를 포함 하는 또한; MDX에서 지원 되는 .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34582525"
 |CurDir|지원되지 않음||  
 |CVar|MDX만||  
 |CVErr|지원되지 않음||  
-|date|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름; 지정된 된 인수에서 날짜 형식 값을 생성 하는 데 사용 하는 DATE (Year, Month, Day) 함수|  
+|Date|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름; 지정된 된 인수에서 날짜 형식 값을 생성 하는 데 사용 하는 DATE (Year, Month, Day) 함수|  
 |DateAdd|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름;는 DATEADD (\<날짜 >, < number_of_intervals >\<간격 >)의 수로 지정 된 날짜를 이동할 사용 되는 함수, 간격 지정|  
 |DateDiff]|MDX만||  
 |DatePart|MDX만||  

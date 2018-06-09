@@ -1,42 +1,23 @@
 ---
 title: CREATE ACTION 문 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741292"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 데이터 정의-작업 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   큐브, 차원, 계층 또는 종속 개체와 연관될 수 있는 동작을 만듭니다.  
   
@@ -91,14 +72,14 @@ FOR
  *String_Expression*  
  유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  클라이언트 응용 프로그램에서 안전하지 않은 동작을 만들고 실행하거나 안전하지 않은 기능을 사용할 수도 있습니다. 이러한 경우를 방지 하려면 사용 된 **Safety Options** 속성입니다. 자세한 내용은 보안 옵션 속성을 참조하십시오.  
   
 > [!NOTE]  
->  이 문은 이전 버전과의 호환성을 위해 포함되었습니다. 새로운 동작은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 드릴스루 또는 보고서 동작과 같은 지원 되지 않습니다.  
+>  이 문은 이전 버전과의 호환성을 위해 포함되었습니다. 새로운 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 드릴스루 또는 보고서 동작과 같은 지원 되지 않습니다.  
   
 ## <a name="action-types"></a>동작 유형  
- 다음 표에서 작업에서 사용할 수 있는 다양 한 유형의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
+ 다음 표에서 다양 한 유형의 작업에서 사용할 수 있는 설명 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
   
 |동작 유형|Description|  
 |-----------------|-----------------|  
@@ -140,7 +121,7 @@ FOR
  집합 범위  
  집합에만 적용되는 동작을 위한 범위입니다. 이름, **이름은**, 동작의 식 내에서 응용 프로그램 사용 되도록 예약 되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

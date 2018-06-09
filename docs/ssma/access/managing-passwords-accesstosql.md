@@ -1,8 +1,6 @@
 ---
 title: 암호 (AccessToSQL) 관리 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b147ba97ef56ad9fa944ec18a4d9859f02ef3105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aee540eecc4635dc699de9db217f417485a5a0ac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773859"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 (AccessToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보안에 대 한이 섹션은:  
@@ -128,6 +127,6 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 (Access)를 실행합니다.](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

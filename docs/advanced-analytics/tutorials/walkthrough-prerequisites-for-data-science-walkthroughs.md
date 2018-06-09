@@ -11,7 +11,7 @@ ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585495"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server 및 R용 데이터 과학 연습을 위한 필수 구성 요소

@@ -13,7 +13,7 @@ ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577625"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 요소(XMLA)

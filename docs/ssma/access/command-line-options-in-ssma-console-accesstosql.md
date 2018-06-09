@@ -1,8 +1,6 @@
 ---
 title: SSMA 콘솔 (AccessToSQL)의 명령줄 옵션 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 361ef1f9fcac31f864350098a2c3d223c59e2afe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb77ed80d95b55abc99cb624ed3b7c4dd915c3f3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773549"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)의 명령줄 옵션
 Microsoft는 강력한 집합 실행 및 제어 SSMA 활동 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서는 추가 세부 정보를 제공 합니다.  

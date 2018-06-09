@@ -1,8 +1,6 @@
 ---
 title: SSMA 콘솔 (DB2ToSQL)의 명령줄 옵션 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3c09bc2341a5dd5933badc711c1d34137477df6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b526920e1a4ce7156f2dbbf53d88256c80225514
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775109"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL)의 명령줄 옵션
 Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 옵션을 제공 합니다. 마샬링과 이후 섹션에서 자세히 설명 동일 합니다.  
@@ -90,7 +89,7 @@ Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   

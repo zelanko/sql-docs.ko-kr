@@ -1,6 +1,6 @@
 ---
 title: 집합 연산자 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1388c5ef1f263f4ef326485c662a82ee11c569d0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580955"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742972"
 ---
 # <a name="set-operators"></a>집합 연산자
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX에서 집합 연산자는 멤버나 집합에 대한 연산을 수행하고 집합을 반환합니다. MDX 식의 여러 집합 함수에 대한 대체 방안으로 집합 연산자를 사용하는 경우도 있습니다.  
   

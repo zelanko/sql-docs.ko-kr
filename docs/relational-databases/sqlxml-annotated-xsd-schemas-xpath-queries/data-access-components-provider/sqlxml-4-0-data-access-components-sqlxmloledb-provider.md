@@ -24,10 +24,10 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34708191"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXMLOLEDB 공급자-SQLXML 4.0 데이터 액세스 구성

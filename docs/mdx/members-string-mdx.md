@@ -1,6 +1,6 @@
 ---
 title: (String) (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36d5d3a8573346d164c77881ff80b17feacf8191
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 302445cadc829de35eca28db2888aaa01673ca75
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580515"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741902"
 ---
 # <a name="members-string-mdx"></a>Members(문자열)(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   문자열 식으로 지정된 멤버를 반환합니다.  
   

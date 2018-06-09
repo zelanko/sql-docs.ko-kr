@@ -13,7 +13,7 @@ ms.openlocfilehash: 6f46c53f082b89bb54fe82c7ccaa74e8b31c9b26
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574835"
 ---
 # <a name="datasource-element-xmla"></a>DataSource 요소(XMLA)

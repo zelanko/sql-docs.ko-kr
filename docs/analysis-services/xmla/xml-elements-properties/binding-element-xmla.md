@@ -13,7 +13,7 @@ ms.openlocfilehash: c51e99c4dcfde8de6060bf57e248d32322da8ac9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574075"
 ---
 # <a name="binding-element-xmla"></a>Binding 요소(XMLA)

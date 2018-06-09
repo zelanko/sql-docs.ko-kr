@@ -1,34 +1,23 @@
 ---
 title: BottomCount (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMCOUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- BottomCount function
-ms.assetid: 1441dab3-7885-4e92-9d48-21d832286677
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 38028508e955779419d8728094edee47bf8c0821
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739782"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합을 오름차순으로 정렬하고 지정된 집합에서 가장 낮은 값을 갖는 튜플을 지정된 수만큼 반환합니다.  
   
@@ -49,7 +38,7 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  숫자 식이 지정된 경우 이 함수는 지정된 집합에 대해 지정된 숫자 식을 계산한 값에 따라 해당 집합의 튜플을 오름차순으로 정렬합니다. **BottomCount** 함수는 가장 낮은 값을 갖는 튜플에의 지정 된 수를 반환 합니다.  
   
 > [!IMPORTANT]  
@@ -72,7 +61,7 @@ WHERE
     [Measures].[Reseller Order Quantity]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

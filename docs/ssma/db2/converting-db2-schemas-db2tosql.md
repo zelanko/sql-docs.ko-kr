@@ -1,8 +1,6 @@
 ---
 title: DB2 스키마 (DB2ToSQL) 변환 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3553064a4af95e29a3ed0f7f58e1e2b03215cad1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7d16e10ec2dfb3474679f63aff9941bd2ef84a8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774499"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 (DB2ToSQL) 변환
 에 연결 하는 d b 2에 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트 설정 및 데이터 매핑 옵션을 DB2 데이터베이스 개체를 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터베이스 개체입니다.  
@@ -81,7 +80,7 @@ SSMA는 변환 중 출력 창에 출력 메시지 및 오류 목록 창에 오�
 |애칭|부분 매핑입니다. 기본 개체에 대 한 필요한 수동 처리|  
 |동의어|매핑됩니다.|  
 |D b 2에 표준 함수|SSMA는 해당 함수는 SQL Server에서 제공 하는 경우 표준 함수를 d b 2를 매핑합니다.|  
-|권한 부여|매핑되지 않습니다.|  
+|Authorization|매핑되지 않습니다.|  
 |조건자|매핑됩니다.|  
 |SELECT INTO 문|매핑되지 않습니다.|  
 |값 INTO 문|매핑되지 않습니다.|  
@@ -156,6 +155,6 @@ DB2 데이터베이스 개체를 변환 하려면 먼저, 변환할 개체를 �
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 [SQL Server로 변환된 된 개체를 로드](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [DB2 데이터를 SQL Server로 마이그레이션 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

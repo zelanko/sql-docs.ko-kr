@@ -11,7 +11,7 @@ ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585595"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>SQL Server 2016 R Services(In-Database) 설치 

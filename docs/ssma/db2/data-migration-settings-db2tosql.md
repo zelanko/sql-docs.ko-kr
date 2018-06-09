@@ -1,8 +1,6 @@
 ---
 title: 데이터 마이그레이션 설정 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 54f7f3b8c7c5158a51ac54cc7c7bf53568268d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b5d6ad21b98229d79ebcedddfe16c98cbc2d706
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774979"
 ---
 # <a name="data-migration-settings-db2tosql"></a>데이터 마이그레이션 설정 (DB2ToSQL)
   
@@ -59,6 +58,6 @@ ms.lasthandoff: 05/03/2018
   
 -   **취소:** 클릭 **취소** 변경 되 고 되기 전의 있는 설정을 복원할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 DB2 데이터 마이그레이션](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

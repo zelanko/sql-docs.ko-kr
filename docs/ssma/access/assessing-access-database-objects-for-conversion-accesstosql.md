@@ -1,8 +1,6 @@
 ---
 title: 데이터베이스 개체에 액세스 (AccessToSQL) 변환에 대 한 평가 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fb353f5906c1ed5cb45d6075f92cf183ba5e276b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf85577996a6dc1e4d3e4f3f1f353b0952aece54
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773259"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>데이터베이스 개체에 액세스 (AccessToSQL) 변환에 대 한 평가
 개체를 로드 하 고 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQL Azure 결정 해야 얼마나 또는 마이그레이션 성공적으로 수행 됩니다, 하며 변환 시간 걸릴 수 있습니다. SSMA를 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 마이그레이션을 수행 하기 위한 예상 하는 SQL Azure 구문 및 시간입니다. 또한 SSMA 변환 실패를 발생 시킨 특정 문제를 볼 수 있습니다.  
@@ -67,6 +66,6 @@ SSMA를 선택한 액세스 데이터베이스 개체를 변환 평가 보고서
 ## <a name="next-step"></a>다음 단계  
 [Access 데이터베이스 개체 변환](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

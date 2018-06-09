@@ -1,6 +1,6 @@
 ---
 title: Aggregate (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578425"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740572"
 ---
 # <a name="aggregate-mdx"></a>Aggregate(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합 식에 의해 반환된 셀을 집계하여 계산된 숫자를 반환합니다. 숫자 식이 지정되지 않은 경우 이 함수는 각 측정값에 대해 지정된 기본 집계 연산자를 사용하여 현재 쿼리 컨텍스트 내에서 각 측정값을 집계합니다. 숫자 식이 지정된 경우 이 함수는 먼저 지정된 집합의 각 셀에 대해 숫자 식을 계산한 다음 합계를 구합니다.  
   

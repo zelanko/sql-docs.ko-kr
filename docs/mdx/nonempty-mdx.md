@@ -1,6 +1,6 @@
 ---
 title: NonEmpty (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a718a7e75a9b31b7d35cdc33883c97739aee68c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580285"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742302"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정된 집합과 두 번째 집합의 교차곱을 기준으로, 지정된 집합에서 비어 있지 않은 튜플의 집합을 반환합니다.  
   

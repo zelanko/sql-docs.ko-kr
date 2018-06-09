@@ -1,6 +1,6 @@
 ---
 title: 튜플 식을 사용 하 여 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c53a3a80355fd33dc887b6a07991370838e97cf2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581625"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743692"
 ---
 # <a name="using-tuple-expressions"></a>튜플 식 사용
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   튜플은 큐브 내에 포함된 모든 차원에서 하나씩 선택한 멤버로 구성됩니다. 따라서 튜플은 해당 큐브 내의 단일 셀을 고유하게 식별합니다.  
   

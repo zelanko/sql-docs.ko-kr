@@ -11,7 +11,7 @@ ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34586075"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server 컴퓨터 학습 서비스의 새로운 기능 

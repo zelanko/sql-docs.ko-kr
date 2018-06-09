@@ -13,7 +13,7 @@ ms.openlocfilehash: 8980259b69dfa74c2bb27c9406553a5b5810348a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585675"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 로드 모니터

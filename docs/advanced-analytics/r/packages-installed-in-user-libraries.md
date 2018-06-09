@@ -8,10 +8,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: e52a6f4a9a3830aab01e54819804785a7069c9d2
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34708471"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server에서 R 패키지를 사용 하기 위한 팁

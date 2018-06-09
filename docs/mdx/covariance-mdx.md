@@ -1,6 +1,6 @@
 ---
 title: Covariance (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 06b86c47b5da75c44d528f77a60e8168fd8b2260
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 1bb24e4dcb536af144214f96dd5b904cc8530cd4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577885"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739882"
 ---
 # <a name="covariance-mdx"></a>Covariance(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   x-y 값 쌍의 개수로 나누는 편향 모집단 수식을 사용하여 집합에 대해 계산된 x-y 값 쌍의 모집단 공변성(covariance)을 반환합니다.  
   

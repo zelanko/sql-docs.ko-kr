@@ -1,8 +1,6 @@
 ---
 title: 형식 매핑 (OracleToSQL) 편집 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0a1a987c31d4b481cda2ee55adc9ba24806ec1b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1372af9e205bc3f9d9bc06978eb7227b4682cdb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777119"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>형식 매핑 (OracleToSQL) 편집
 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 테이블 관련 형식 매핑을는 프로젝트 형식 매핑 및 데이터베이스를 재정의 합니다. 데이터베이스 관련 매핑을 프로젝트 매핑을 재정의합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **원본 유형**  
 원본 데이터 형식에 매핑할 선택는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식입니다.  
   

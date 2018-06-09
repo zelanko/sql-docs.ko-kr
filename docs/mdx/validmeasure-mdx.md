@@ -1,6 +1,6 @@
 ---
 title: ValidMeasure (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 254f52064b04f8d56d3218dae32949445d2e50c3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581805"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743703"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정된 튜플에 대한 결과를 반환할 때 적용할 수 없는 차원을 All 수준 또는 기본 멤버(집계할 수 없는 경우)에 강제로 적용하여 큐브의 측정값을 반환합니다.  
   

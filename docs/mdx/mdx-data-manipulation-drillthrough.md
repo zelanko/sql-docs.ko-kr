@@ -1,6 +1,6 @@
 ---
 title: DRILLTHROUGH 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580065"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742282"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 드릴스루
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   큐브에서 지정된 셀을 만드는 데 사용된 기본 테이블 행을 검색합니다.  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  쉼표로 구분된 차원 특성 및 측정값 목록입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 드릴스루는 최종 사용자가 세부 정보를 가져오기 위해 큐브에서 단일 셀을 선택하고 해당 셀의 원본 데이터에서 결과 집합을 검색하는 작업입니다. 기본적으로 드릴스루 결과 집합은 선택한 큐브 셀 값을 계산하기 위해 평가된 테이블 행에서 파생됩니다. 최종 사용자가 드릴스루하려면 해당 클라이언트 응용 프로그램에서 이 기능을 지원해야 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 결과 ROLAP 파티션 또는 차원을 쿼리하지 않는 한 MOLAP 저장소에서 직접 검색 됩니다.  
+ 드릴스루는 최종 사용자가 세부 정보를 가져오기 위해 큐브에서 단일 셀을 선택하고 해당 셀의 원본 데이터에서 결과 집합을 검색하는 작업입니다. 기본적으로 드릴스루 결과 집합은 선택한 큐브 셀 값을 계산하기 위해 평가된 테이블 행에서 파생됩니다. 최종 사용자가 드릴스루하려면 해당 클라이언트 응용 프로그램에서 이 기능을 지원해야 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 결과 ROLAP 파티션 또는 차원을 쿼리하지 않는 한 MOLAP 저장소에서 직접 검색 됩니다.  
   
 > [!IMPORTANT]  
 >  드릴스루 보안은 큐브에 정의된 일반 보안 옵션을 기반으로 합니다. 사용자가 MDX를 사용하여 일부 데이터를 가져올 수 없는 경우 드릴스루도 동일한 방식으로 사용자를 제한합니다.  

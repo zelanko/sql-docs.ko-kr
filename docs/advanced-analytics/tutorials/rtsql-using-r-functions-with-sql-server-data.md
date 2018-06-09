@@ -11,7 +11,7 @@ ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585745"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 함수를 SQL Server 데이터와 함께 사용하기(SQL에서 R 빠른 시작)

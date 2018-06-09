@@ -1,6 +1,6 @@
 ---
 title: 빈 값 작업 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1018c741ff545a88a90a6e27196cfc18d6f8177a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581955"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743982"
 ---
 # <a name="working-with-empty-values"></a>빈 값 작업
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   빈 값은 특정 멤버, 튜플 또는 셀이 비어 있음을 나타냅니다. 빈 셀 값은 기본 팩트 테이블에서 지정한 셀에 대한 데이터를 찾을 수 없다는 것을 나타내거나 지정한 셀에 대한 튜플이 해당 큐브에 적합하지 않은 멤버 조합을 표시함을 나타냅니다.  
   

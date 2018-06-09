@@ -1,6 +1,6 @@
 ---
 title: CREATE MEASURE 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98ca479c266d9e8c25b2e75d8b15da1cd76a46aa
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aa895099420b022cf15d7cd3a91472511c1100e3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579355"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741440"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 데이터 정의-측정값 만들기
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   테이블 형식 모델에 측정값을 만듭니다.  
   

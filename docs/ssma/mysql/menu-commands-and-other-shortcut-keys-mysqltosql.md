@@ -1,8 +1,6 @@
 ---
 title: 메뉴 명령 및 기타 바로 가기 키 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 37d58f6bc754999eb90fc0d50736b0481583df56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31e5ee3a1b9a5fc08515d6755e87e1d70ad10f3f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776609"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>메뉴 명령 및 기타 바로 가기 키 (MySQLToSQL)
 다음 섹션에서는 메뉴 명령 및 MySQL 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에 사용 된 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  
@@ -187,6 +186,6 @@ ms.lasthandoff: 05/03/2018
 |요약 정보를 시작 합니다.|CTRL + SHIFT + 공간|  
 |선언으로 이동 합니다.|F12|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [바로 가기 키 &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

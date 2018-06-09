@@ -1,8 +1,6 @@
 ---
 title: 액세스 인벤토리 (AccessToSQL) 내보내기 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7d0877666e13f490463e77ec30bf7792367747d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb5d6e4bcd3699d99dd512ea766087a33f2adf45
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773539"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고로 마이그레이션할 수 있는 대상을 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], 프로젝트에서 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 그런 다음 검토 및 쿼리할 수 있습니다 인벤토리 메타 데이터를 마이그레이션하려면 해당 데이터베이스 내의 개체 및 데이터베이스를 결정 합니다. 이 인벤토리 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  
@@ -234,6 +233,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 열 이름을 모르는 경우에 모든 열을 반환 하는 쿼리를 작성할 수 있습니다. 이 수행 하려면 이전 쿼리에서 WHERE 절을 제거 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Access 데이터베이스 마이그레이션을 준비](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   

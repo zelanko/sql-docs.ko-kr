@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER 문 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579365"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742254"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의-멤버를 만들려면
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   계산 멤버를 만듭니다.  
   
@@ -106,14 +106,14 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>표준 속성  
- 각 계산 멤버에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램에 연결 되어 있을 때 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본 속성은 지원 되거나 지원 가능 하 게 관리자의 선택에 따라 합니다.  
+ 각 계산 멤버에는 기본 속성 집합이 있습니다. 클라이언트 응용 프로그램에 연결 되어 있을 때 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 기본 속성은 지원 되거나 지원 가능 하 게 관리자의 선택에 따라 합니다.  
   
  큐브 정의에 따라 멤버 속성을 추가로 사용할 수도 있습니다. 다음 속성은 큐브의 차원 수준에 관한 정보를 나타냅니다.  
   
 |속성 식별자|의미|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|계산 멤버가 다른 계산 멤버를 참조하는 경우(즉, 계산 멤버가 서로 교차하는 경우) 계산 멤버를 확인하는 순서입니다.|  
-|FORMAT_STRING|셀 값을 표시할 때 클라이언트 응용 프로그램이 사용할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 스타일 서식 문자열입니다.|  
+|FORMAT_STRING|셀 값을 표시할 때 클라이언트 응용 프로그램이 사용할 수 있는 한 Office 스타일 서식 문자열입니다.|  
 |VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다.  계산 된 집합에 멤버를 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성에 대 한 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
 |NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> **\*\* 경고 \* \***  이 속성은 사용 되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)을 참조하세요.|  
 |CAPTION|클라이언트 응용 프로그램이 멤버에 대한 캡션으로 사용하는 문자열입니다.|  

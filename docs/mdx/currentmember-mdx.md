@@ -1,6 +1,6 @@
 ---
 title: CurrentMember (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 21fc1e7a210e8e2b2eac6e3b886ac7f3622ad15a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577685"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739952"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   반복하는 동안 지정된 계층을 따라 현재 멤버를 반환합니다.  
   

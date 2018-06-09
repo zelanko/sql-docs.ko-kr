@@ -7,18 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d549b06b9fe371dc2b1966c62776ec4e88c45726
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740832"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy로 Python을 사용 하 여 모델을 만들려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 단원에서는 SQL Server의 선형 회귀 모델을 만드는 개발 원격 클라이언트에서 Python 코드를 실행 하는 방법에 설명 합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 + 이 단원에서는 이전 단원 보다 다양 한 데이터를 사용 합니다. 먼저 이전 단원을 완료 하려면 필요가 없습니다. 그러나 이전 단원을 완료 Python을 실행 하도록 구성 하는 서버가 있어야 하는 경우 해당 서버 및 데이터베이스도 사용할 한 계산 컨텍스트.
 + 계산으로 SQL Server를 사용 하 여 Python 코드를 실행 하려면 상황에 맞는 SQL Server 2017 이상이 필요 합니다. 명시적으로 설치 하 고 다음 기능을 활성화 해야 또한 **컴퓨터 학습 서비스**, Python 언어 옵션을 선택 합니다.
@@ -82,7 +83,6 @@ from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
 from revoscalepy import rx_lin_mod, rx_predict, rx_summary
 from revoscalepy import RxOptions, rx_import
 
-from pandas import Categorical
 import os
 
 def test_linmod_sql():

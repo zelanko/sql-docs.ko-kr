@@ -22,10 +22,10 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34708461"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)

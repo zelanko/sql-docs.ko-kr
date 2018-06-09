@@ -1,6 +1,6 @@
 ---
 title: Intersect (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7acc509891dd1c975ad819bd904e840e369f0d4b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b24049cb81982075fa9234c6fa792db273d404db
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578525"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740562"
 ---
 # <a name="intersect-mdx"></a>Intersect(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   두 입력 집합의 교집합을 반환합니다. 중복 요소를 포함시킬 수도 있습니다.  
   

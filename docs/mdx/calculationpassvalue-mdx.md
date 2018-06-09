@@ -1,6 +1,6 @@
 ---
 title: CalculationPassValue (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577235"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739992"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 숫자 또는 문자열 값을 반환합니다.  
   
@@ -55,7 +55,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  문자열 식이 제공 되는 함수 지정한 계산 패스에서 특정된 MDX 문자열 식을 계산 하 여 문자열 값을 반환 하 고 선택적으로 액세스 플래그 및 액세스 플래그 한정자에 의해 수정*합니다.*  
   
- 자동 재귀 해결 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)],이 함수는 실제로 거의 사용 하지 않습니다.  
+ 자동 재귀 해결 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)],이 함수는 실제로 거의 사용 하지 않습니다.  
   
 > [!NOTE]  
 >  관리자만 사용할 수는 **CalculationPassValue** MDX 스크립트 내의 함수입니다. 이 함수가 포함된 MDX 스크립트가 관리자 권한이 없는 작업의 컨텍스트로 실행되면 오류가 발생합니다.  

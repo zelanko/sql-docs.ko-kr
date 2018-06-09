@@ -1,8 +1,6 @@
 ---
 title: 샘플 콘솔 스크립트 파일 (OracleToSQL) 작업 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +17,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1f95cff5d19282f32017786851d04a3d3322dc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f18acd6f1bac8c418c4d3e67845cce52faf0412e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778049"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>샘플 콘솔 스크립트 파일 (OracleToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
     원본 데이터베이스와 대상 스키마의 스키마 매핑.  
   
-    **특성**  
+    **Attribute**  
   
     -   `source-schema:` 변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 명령의 예제 4입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name`: 원본 데이터베이스를 지정 합니다. / 개체 변환 하는 데 필요한 이름. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`  
   
@@ -110,7 +109,7 @@ ms.lasthandoff: 05/03/2018
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `synchronize-target` 샘플 콘솔 스크립트 파일의 명령의 예제 3입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name:` 개체를 만들 수 필요로 하는 이름/sql server 데이터베이스를 지정 합니다. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`  
   
@@ -122,11 +121,11 @@ ms.lasthandoff: 05/03/2018
   
     -   사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `migrate-data` 예제 콘솔 스크립트 파일의 예 2 명령입니다.  
   
-    **특성**  
+    **Attribute**  
   
     `object-name:` 원본 데이터베이스 지정/마이그레이션에 필요한 이름이 테이블. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [변수 값 파일을 만드는 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
 [서버 연결 파일 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
 [보고서 생성 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  

@@ -1,34 +1,23 @@
 ---
 title: Avg (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AVG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Avg function [MDX]
-ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dd508fcef5ecd378dea8ec4afe86dfd35e45d1a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740542"
 ---
 # <a name="avg-mdx"></a>Avg(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합을 계산하고 집합의 측정값이나 지정된 측정값에 대해 집합에서 비어 있지 않은 셀 값의 평균을 계산하여 반환합니다.  
   
@@ -46,7 +35,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  일련의 빈 튜플 또는 빈 집합이 지정 하는 경우는 **Avg** 함수가 빈 값을 반환 합니다.  
   
  **Avg** 함수에서 먼저 지정된 된 집합에는 여러 값의 합계를 계산 하 고 계산 된 합계의 지정된 된 집합에서 비어 있지 않은 셀 개수로 나눠서 지정된 된 집합에 있는 셀의 비어 있지 않은 값의 평균을 계산 합니다.  
@@ -156,7 +145,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,34 +1,23 @@
 ---
 title: Head (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- HEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Head function
-ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b0e25718c55dbe433bd34438b459aed31b2097f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740482"
 ---
 # <a name="head-mdx"></a>Head(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합에서 중복된 항목을 포함하여 처음 나오는 지정한 수만큼의 요소를 반환합니다.  
   
@@ -46,7 +35,7 @@ Head(Set_Expression [ ,Count ] )
  *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **h e a d** 함수는 지정 된 튜플 수가 지정된 된 집합의 시작 부분에서 반환 합니다. 요소의 순서는 유지됩니다. Count의 기본값은 1입니다. 지정 된 튜플 수가 1 보다 작은 경우는 **h e a d** 함수는 빈 집합을 반환 합니다. 지정된 튜플 수가 집합의 튜플 수를 초과할 경우에는 원래 집합을 반환합니다.  
   
 ## <a name="example"></a>예제  
@@ -66,11 +55,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [비상 &#40;MDX&#41;](../mdx/tail-mdx.md)   
  [항목 &#40;튜플&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [항목 &#40;멤버&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [순위 &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

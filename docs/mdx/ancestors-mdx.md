@@ -1,6 +1,6 @@
 ---
 title: Ancestors (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb15caffbe8461da0ce04385bc58d7f1815483b5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577005"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740052"
 ---
 # <a name="ancestors-mdx"></a>Ancestors(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  지정된 수준이나 지정된 멤버로부터 지정된 거리만큼 떨어진 수준에서 지정된 멤버의 모든 상위 항목 집합을 반환하는 함수입니다. 와 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 반환 되는 집합은 항상 단일 멤버로 구성 되며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 단일 멤버에 대 한 여러 부모를 지원 하지 않습니다.  
+
+  지정된 수준이나 지정된 멤버로부터 지정된 거리만큼 떨어진 수준에서 지정된 멤버의 모든 상위 항목 집합을 반환하는 함수입니다. 와 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 반환 되는 집합은 항상 단일 멤버로 구성 되며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 단일 멤버에 대 한 여러 부모를 지원 하지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   

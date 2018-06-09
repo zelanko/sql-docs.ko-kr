@@ -1,6 +1,6 @@
 ---
 title: '* (Crossjoin) (MDX) | Microsoft Docs'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03a229dd7ab766a858967eb8c4891edadaaa6b92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577635"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740602"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 연산자 참조
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   두 집합의 교차곱을 반환하는 집합 연산을 수행합니다.  
   

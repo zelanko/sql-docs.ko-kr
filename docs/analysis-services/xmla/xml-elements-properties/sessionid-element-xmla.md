@@ -13,7 +13,7 @@ ms.openlocfilehash: 76e30e2e14cc0e98c1a275831dabefde7d8db948
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577335"
 ---
 # <a name="sessionid-element-xmla"></a>SessionID 요소(XMLA)

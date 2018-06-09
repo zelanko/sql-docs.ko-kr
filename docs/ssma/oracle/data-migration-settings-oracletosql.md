@@ -1,8 +1,6 @@
 ---
 title: 데이터 마이그레이션 설정 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0b86e2f40bd4cfb4734b4cc7167e16cf2fb350ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8632b8a9c7101ae6773a4e149eaa9453c4b639fe
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777089"
 ---
 # <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정 (OracleToSQL)
   
@@ -56,6 +55,6 @@ ms.lasthandoff: 05/03/2018
   
 -   **취소:** 클릭 **취소** 변경 되 고 되기 전의 있는 설정을 복원할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server Oracle 데이터 마이그레이션](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
   

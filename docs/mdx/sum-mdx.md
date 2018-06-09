@@ -1,34 +1,23 @@
 ---
 title: Sum (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Sum function [MDX]
-ms.assetid: 6c3db1e3-2c02-49f2-a0bf-cab0fb78c622
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 21b9c43749abc81180edc009f908a8b4b4f2febd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743272"
 ---
 # <a name="sum-mdx"></a>Sum(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   지정된 집합에 대해 계산된 숫자 식의 합을 반환합니다.  
   
@@ -46,7 +35,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  숫자 식이 지정된 경우 지정된 숫자 식이 집합에 대해 계산된 다음 합계가 계산됩니다. 숫자 식이 지정되지 않은 경우 지정된 집합은 해당 집합에 포함된 멤버의 현재 컨텍스트에서 계산된 다음 합계가 계산됩니다. SUM 함수를 숫자가 아닌 식에 적용하는 경우 결과가 정의되지 않습니다.  
   
 > [!NOTE]  
@@ -104,7 +93,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

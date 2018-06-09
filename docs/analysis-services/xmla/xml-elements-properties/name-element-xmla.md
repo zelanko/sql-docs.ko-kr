@@ -13,7 +13,7 @@ ms.openlocfilehash: c0686dfbb5949c9b2fe3a20e34824e731369b266
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575815"
 ---
 # <a name="name-element-xmla"></a>Name 요소(XMLA)

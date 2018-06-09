@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca05cb4bc5ea8951db028ed4da53ee3bfd7131dc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576715"
 ---
 # <a name="type-element-xmla"></a>Type 요소(XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|설명|  
+|특징|Description|  
 |--------------------|-----------------|  
 |데이터 형식 및 길이|String(열거형)|  
-|기본값|없음|  
+|기본값|InclusionThresholdSetting|  
 |카디널리티|1-1: 한 번만 나타나는 필수 요소입니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |관계|요소|  
 |------------------|-------------|  
 |부모 요소|[처리](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md)|  
-|자식 요소|없음|  
+|자식 요소|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>주의  
- 인스턴스의 개체에 사용할 수 있는 옵션을 처리 하는 방법에 대 한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
+## <a name="remarks"></a>Remarks  
+ Analysis Services 인스턴스의 개체에 사용할 수 있는 처리 옵션에 대 한 자세한 내용은 참조 [다차원 모델 처리 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)합니다.  
   
  값은 **형식** 요소는 다음 표에 나열 된 문자열 중 하나로 제한 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |*ProcessFull*|영향을 받는 개체에서 모든 데이터를 삭제한 다음 영향을 받는 개체를 처리합니다.|  
 |*ProcessAdd*|영향을 받는 개체에 새 데이터를 추가합니다.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/10/2018
 |*ProcessStructure*|영향을 받는 개체의 구조만 처리합니다.|  
 |*ProcessClearStructureOnly*|영향을 받는 개체에서만 데이터를 지웁니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [속성 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>참고자료
+ [속성 &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

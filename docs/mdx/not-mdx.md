@@ -1,6 +1,6 @@
 ---
 title: 없습니다 (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5020f461d2576bbac7d0292ca0bf75bd8033e173
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580505"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742502"
 ---
 # <a name="not-mdx"></a>NOT(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   숫자 식에 논리 부정을 수행합니다.  
   

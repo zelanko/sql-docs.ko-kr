@@ -1,8 +1,6 @@
 ---
 title: 사용자 인터페이스 참조 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 881a94b3ced6f208d65bd168c469ee1a60b460f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd6d2126b4023231d2d1594816c93a94555a9e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776629"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>사용자 인터페이스 참조 (MySQLToSQL)
 이 섹션 MySQL에 대 한 도움말 항목에 대 한 SQL Server Migration Assistant (SSMA) 포함 되어 있습니다.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 |[데이터베이스에서 새로 고침 &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|사용 하 여는 **데이터베이스에서 새로 고침** 대화 상자는 MySQL 데이터베이스에서 새로 고칠 개체를 선택 합니다.|  
 |[메타 데이터 저장 &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**메타 데이터 저장** 메타 데이터가 없습니다. 프로젝트를 저장할 때 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [MySQL 용 SSMA 시작 &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [SQL Server-SQL Azure DB로 데이터베이스 마이그레이션 MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

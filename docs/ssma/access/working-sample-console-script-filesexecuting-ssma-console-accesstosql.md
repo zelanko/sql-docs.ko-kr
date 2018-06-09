@@ -1,8 +1,6 @@
 ---
 title: 샘플 콘솔 스크립트 FilesExecuting SSMA 콘솔 작업 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a581236e29da44646eee8fa55f432ad92e9d586c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b6ebe456c8dc7f678740ab479c317eff041e132
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774269"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>샘플 콘솔 스크립트 FilesExecuting SSMA 콘솔 (AccessToSQL) 사용
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품 함께 제공 되었습니다. 이 여기서 쉽게 이러한 스크립트는 최종 사용자의 요구에 맞게 사용자 지정 하는 방법을 설명 합니다.  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
   
 -   **ConversionAndDataMigrationSample.xml:** 이 샘플에는 사용자가 마이그레이션을 수행 하기 위해 종단 간 데이터 마이그레이션으로 변환할에서 수 있습니다. 그러면 변경 해야 하는 필수 속성 값 목록은 다음과 같습니다.  
   
-    |명령 이름|Description|Attribute|  
+    |명령 이름|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|원본 데이터베이스와 대상 스키마의 스키마 매핑.|`source-schema:` 변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.<br /><br />`sql-server-schema`: 마이그레이션해야 하는 대상 데이터베이스를 지정 합니다.|  
     |`convert-schema`|소스에서 대상 스키마로 스키마 변환을 수행합니다.<br /><br />사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 명령의 예제 4입니다.|`object-name`: 원본 데이터베이스를 지정 합니다. / 개체 변환 하는 데 필요한 이름. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`|  
     |`synchronize-target`|대상 데이터베이스와 대상 개체를 동기화합니다.<br /><br />사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `synchronize-target` 샘플 콘솔 스크립트 파일의 명령의 예제 3입니다.|`object-name:` 개체를 만들 수 필요로 하는 이름/sql server 데이터베이스를 지정 합니다. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`|  
     |`migrate-data`|대상에는 원본 데이터를 마이그레이션합니다.<br /><br />사용자가 여러 개체를 평가 하기 위해 / 그 데이터베이스 여러 개 지정할 수 `metabase-object` 에 설명 된 대로 노드는 `migrate-data` 예제 콘솔 스크립트 파일의 예 2 명령입니다.|`object-name:` 원본 데이터베이스 지정/마이그레이션에 필요한 이름이 테이블. 해당 확인 `object-type` 에 지정 된 개체의 유형에 따라 변경 되는 `object-name`|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [변수 값 파일을 만드는 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
 [서버 연결 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
 [보고서 생성 &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)  

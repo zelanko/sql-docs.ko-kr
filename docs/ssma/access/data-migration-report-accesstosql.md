@@ -1,8 +1,6 @@
 ---
 title: 데이터 마이그레이션 보고서 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 65c7dc7ea2a28a8960fe498a1a03bb338a1e41f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774989"
 ---
 # <a name="data-migration-report-accesstosql"></a>데이터 마이그레이션 보고서 (AccessToSQL)
 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **상태**  
 원본에서 데이터베이스에서 대상 데이터베이스로 데이터 마이그레이션 상태가 표시 됩니다.  
   

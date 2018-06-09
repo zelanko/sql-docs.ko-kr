@@ -1,8 +1,6 @@
 ---
 title: Azure SQL DB (AccessToSQL)에 연결 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 152a5cee9dbb7308772d0a2e21f263c873570171
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ac762974e9e08d7e225534a4628b873efe28c4b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773619"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
 Access 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 에 연결할 때 SSMA는 SQL Azure의 인스턴스에서 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 SQL Azure의 어떤 인스턴스에 대 한 연결 되어, 않지만 암호를 저장 하지 않는 정보를 저장 합니다.  
@@ -114,6 +113,6 @@ SQL Azure에 다시 연결 하는 절차에 대 한 연결을 설정 하는 절�
   
 -   이러한 작업을 수행 해야 하는 경우 SQL Azure 개체 정의를 Access 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 참조 [Access 데이터베이스 변환](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -1,34 +1,23 @@
 ---
 title: 필터 (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- filter
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Filter function
-ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 66f71d8fe604eb2002b6c1ed47afaf5ef09b1eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740532"
 ---
 # <a name="filter-mdx"></a>Filter(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   검색 조건을 기준으로 지정한 집합을 필터링한 결과 집합을 반환합니다.  
   
@@ -46,7 +35,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  true나 false가 되는 유효한 MDX 논리 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **필터** 함수는 지정 된 집합의 각 튜플에 대해 지정된 된 논리 식을 계산 합니다. 함수는 논리 식이 지정된 된 집합의 각 튜플로 구성 된 집합을 반환 **true**합니다. 튜플이 경우 **true**, 빈 집합이 반환 됩니다.  
   
  **필터** 와 비슷한 방식으로 작동 하는 함수는 [IIf](../mdx/iif-mdx.md) 함수입니다. **IIf** 함수는 두 가지 옵션 중 하나만 반환 하는 동안 MDX 논리 식의 평가에 따라는 **필터** 함수는 지정 된 검색 조건에 맞는 튜플 집합을 반환 합니다. 실제로 **필터** 함수 실행 `IIf(Logical_Expression, Set_Expression.Current, NULL)` 집합과 반환의 각 튜플에 해당 결과 집합입니다.  
@@ -95,7 +84,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

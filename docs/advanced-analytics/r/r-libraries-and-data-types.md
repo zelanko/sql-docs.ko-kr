@@ -11,7 +11,7 @@ ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34586045"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식

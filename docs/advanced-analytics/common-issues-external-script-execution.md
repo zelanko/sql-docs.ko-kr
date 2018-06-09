@@ -8,10 +8,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 08ab6e2db6d6cde5e41f7ddb88c8afd1da241df7
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34706841"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행 일반적인 문제

@@ -1,6 +1,6 @@
 ---
 title: 예약 된 키워드 (MDX 구문) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b82117f17ecc1d7b98648a6641dc697b2fd40b9c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582265"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742632"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>예약어(MDX 구문)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 배타적으로 사용할 특정 키워드를 예약합니다. 예약 된 키워드 목록은 참조 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
+
+  Analysis Services를 배타적으로 사용할 특정 키워드를 예약 합니다. 예약 된 키워드 목록은 참조 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
   
  예약어는 다음 지침을 따릅니다.  
   

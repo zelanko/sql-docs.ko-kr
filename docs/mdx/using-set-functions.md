@@ -1,6 +1,6 @@
 ---
 title: 집합 함수를 사용 하 여 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a042092cfcddb985b29e7b0c98612f07c68ac2d0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582285"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743672"
 ---
 # <a name="using-set-functions"></a>집합 함수 사용
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   집합 함수는 차원, 계층 및 수준에서 집합을 검색하거나 이들 개체에서 멤버의 절대 위치 및 상대 위치를 탐색하는 등의 다양한 방법으로 집합을 생성합니다.  
   

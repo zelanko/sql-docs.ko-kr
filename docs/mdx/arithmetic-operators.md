@@ -1,6 +1,6 @@
 ---
 title: 산술 연산자 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bf4a182c73acb18d649de3888f735f8842964dc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576955"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739462"
 ---
 # <a name="arithmetic-operators"></a>산술 연산자
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   MDX에서 산술 연산자를 사용하여 더하기, 빼기, 곱하기 및 나누기 등의 산술 계산을 수행할 수 있습니다.  
   
