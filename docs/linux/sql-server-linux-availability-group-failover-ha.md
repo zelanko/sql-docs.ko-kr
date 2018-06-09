@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799813"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/19/2018
 - **RHEL/Ubuntu 예제**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES 예제**
@@ -80,35 +81,17 @@ ms.lasthandoff: 05/19/2018
    crm config show
    ```
 
-자동 장애 조치를 비롯 한-이후 장애 조치가 성공 위치 제약 조건을 제거 합니다. 
-
-제약 조건을 제거 하려면 다음 명령을 실행 합니다. 
-
-- **RHEL/Ubuntu 예제**
-
-   이 예에서 `ag_cluster-master` 장애 조치 하는 리소스의 이름입니다. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES 예제**
-
-   이 예에서 `ag_cluster` 장애 조치 하는 리소스의 이름입니다. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-또는 다음 명령을 실행하여 위치 제약 조건을 제거할 수 있습니다.  
+수동 장애 조치 때문에 생성 하는 제약 조건의 예입니다. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu 예제**
 
-   다음 명령에서 `cli-prefer-ag_cluster-master`는 제거해야 하는 제약 조건의 ID입니다. `sudo pcs constraint --full`은 이 ID를 반환합니다. 
-
+   다음 명령에서 `cli-prefer-ag_cluster-master`는 제거해야 하는 제약 조건의 ID입니다. `sudo pcs constraint list --full`은 이 ID를 반환합니다. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES 예제**
 
    다음 명령에서 `cli-prefer-ms-ag_cluster` 제약 조건의 ID입니다. `crm config show`은 이 ID를 반환합니다. 

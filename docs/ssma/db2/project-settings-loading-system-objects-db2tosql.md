@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (개체에 시스템을 로드 하는 방법) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dff1d86aa3aebf59791433ec2631b5b46bb831ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a36764c5799b78c1de460e5c462d6c28c3d84806
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775499"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>프로젝트 설정 (개체에 시스템을 로드 하는 방법) (DB2ToSQL)
 시스템 개체를 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 DB2 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

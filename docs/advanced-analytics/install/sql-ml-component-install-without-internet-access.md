@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3a340acfbbcf19a6015e3b2745b1f6089e12d3fd
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585615"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822196"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>인터넷 연결 되지 않은 구성 요소를 학습 하는 SQL Server 컴퓨터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
 Microsoft Python 서버    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
 **SQL Server 2017 CU7** |
 Microsoft R Open     |변경 없음 이전에 사용 하 여|
-Microsoft R Server      |o 변경; 이전에 사용 하 여|
+Microsoft R Server      |변경 없음 이전에 사용 하 여|
 Microsoft Python 열기     |변경 없음 이전에 사용 하 여|
 Microsoft Python 서버    |변경 없음 이전에 사용 하 여|
 

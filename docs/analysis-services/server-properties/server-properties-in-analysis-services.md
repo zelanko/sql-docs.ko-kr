@@ -1,6 +1,6 @@
 ---
 title: Analysis Services에서 서버 속성 | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238823"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정되는 자체 구성 속성이 있습니다.  
   
- 서버를 구성하려면 SQL Server Management Studio를 사용하거나 특정 인스턴스의 msmdsrv.ini 파일을 편집합니다.  
+ 서버를 구성 하려면 SQL Server Management Studio를 사용 하거나 특정 SQL Server Analysis Services 인스턴스의 msmdsrv.ini 파일을 편집 합니다.  
  
 SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 높은 속성 하위 집합이 표시됩니다. 전체 속성 목록은 msmdsrv.ini 파일에 있습니다.   
   
 > [!NOTE]  
->  기본 설치에서는 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 폴더에서 msmdsrv.ini를 찾을 수 있습니다.
+>  기본 SQL Server Analysis Services 설치의 경우 \program files\microsoft SQL Server\MSAS13 msmdsrv.ini는 찾을 수 있습니다. MSSQLSERVER\OLAP\Config 폴더입니다.
 > 
 > 서버 구성에 영향을 주는 기타 속성에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성이 포함됩니다. 이러한 속성에 대한 자세한 내용은 [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)을 참조하세요.
  
@@ -68,7 +70,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[DAX 속성](../../analysis-services/server-properties/dax-properties.md)|DAX 쿼리와 관련된 속성을 정의합니다.|
 |DSO|DSO는 더 이상 지원되지 않습니다. DSO 속성은 무시됩니다.|  
 |[기능 속성](../../analysis-services/server-properties/feature-properties.md)|기능 속성은 서버 인스턴스 간 연결을 제어하는 속성을 비롯한 제품 기능(대부분 고급 기능)에 해당합니다.|  
-|[Filestore 속성](../../analysis-services/server-properties/filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
+|[파일 저장소 속성](../../analysis-services/server-properties/filestore-properties.md)|파일 저장 속성은 고급 사용을 위한 것입니다. 여기에는 고급 메모리 관리 설정이 포함됩니다.|  
 |[잠금 관리자 속성](../../analysis-services/server-properties/lock-manager-properties.md)|잠금 관리자 속성은 잠금 및 제한 시간에 해당하는 서버 동작을 정의합니다. 이러한 속성은 대부분 고급 사용을 위한 것입니다.|  
 |[로그 속성](../../analysis-services/server-properties/log-properties.md)|로그 속성은 서버에서 이벤트를 기록하는 경우, 장소 및 방법을 제어합니다. 여기에는 오류 로깅, 예외 로깅, 비행 레코더, 쿼리 로깅 및 추적이 포함됩니다.|  
 |[메모리 속성](../../analysis-services/server-properties/memory-properties.md)|메모리 속성은 서버의 메모리 사용 방법을 제어합니다. 이 속성은 주로 고급 사용을 위한 것입니다.|  
@@ -77,8 +79,8 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[보안 속성](../../analysis-services/server-properties/security-properties.md)|보안 섹션에는 액세스 권한을 정의하는 기본 및 고급 속성이 모두 포함됩니다. 여기에는 관리자 및 사용자와 관련된 설정이 포함됩니다.|  
 |[스레드 풀 속성](../../analysis-services/server-properties/thread-pool-properties.md)|스레드 풀 속성은 서버에서 만드는 스레드 개수를 제어합니다. 이 속성은 주로 고급 속성입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스 관리](../../analysis-services/instances/analysis-services-instance-management.md)   
- [솔루션 배포에 대 한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: 예약 된 키워드 (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], reserved keywords
-- reserved words [DMX]
-- DMX [Analysis Services], reserved keywords
-ms.assetid: d74871b0-d33f-4ee0-b1c7-384817c45e66
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4ecb52157dd3368a0ca29ce21f5c5f79c61872fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7af060203d044435e364803ace67d35711eb63ea
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841816"
 ---
 # <a name="reserved-keywords-dmx"></a>예약어(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
  데이터베이스에 예약어와 이름이 동일한 개체가 있는 경우 이 개체를 참조할 때는 구분 식별자를 사용해야 합니다. 자세한 내용은 참조 [식별자 &#40;DMX&#41;](../dmx/identifiers-dmx.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+## <a name="see-also"></a>관련 항목  
+ [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  

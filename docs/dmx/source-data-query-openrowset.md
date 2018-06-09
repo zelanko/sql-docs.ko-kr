@@ -1,31 +1,20 @@
 ---
 title: OPENROWSET (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- OPENROWSET
-dev_langs:
-- DMX
-helpviewer_keywords:
-- OPENROWSET statement
-ms.assetid: 8c8b61b4-2bf6-46c7-8976-51484004dc22
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f7ed5b65bf1f8ecf01d6b01939311de562eb85b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 43431be3f68bc7146d9e5a6cc137100ec384c960
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842116"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;원본 데이터 쿼리와&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  행 집합을 반환하는 쿼리 구문입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  데이터 마이닝 공급자를 사용 하 여 데이터 원본 개체에 연결을 설정할 *provider_name* 및 *provider_string* 에 지정 된 쿼리를 실행 하 고 *query_syntax* 를 원본 데이터에서 행 집합을 검색 합니다.  
   
 ## <a name="examples"></a>예  
@@ -64,9 +53,9 @@ OPENROWSET
 )  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

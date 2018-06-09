@@ -1,36 +1,20 @@
 ---
 title: SELECT INTO (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- SELECT_INTO
-- SELECT INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining models [Analysis Services], copying
-- SELECT INTO statement
-- mining models [Analysis Services], creating
-- copying mining models
-ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ab2052950624fa7c322336e3855bda72e74726f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842236"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +46,7 @@ FROM <existing model>
  *기존 모델*  
  복사할 기존 모델의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  기존 모델이 학습되는 경우 새 모델은 이 문이 실행될 때 자동으로 처리됩니다. 그렇지 않은 경우 새 모델은 처리되지 않습니다.  
   
  **SELECT INTO** 문은 기존 모델의 구조는 새 모델의 알고리즘과 호환 하는 경우에 작동 합니다. 따라서 이 문은 같은 알고리즘에 기초한 모델을 빠르게 만들고 테스트할 때 가장 유용합니다. 알고리즘 유형을 변경하는 경우 새 알고리즘은 기존 모델에 있는 각 열의 데이터 형식을 지원해야 합니다. 그렇지 않으면 모델이 처리될 때 오류가 발생합니다.  
@@ -90,9 +74,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  이 예와 같이 SELECT INTO 문을 사용하면 사례 테이블에 적용된 필터를 변경할 수 있지만, 원래 모델에 중첩 테이블에 대한 필터가 들어 있는 경우 중첩 테이블 필터는 이 구문을 사용하여 변경하거나 제거할 수 없습니다. 이러한 필터는 원래 모델에서 그대로 복사됩니다. 중첩 테이블에 대해 다른 필터를 사용하여 모델을 만들려면 ALTER STRTUCTURE...ADD MODEL 구문을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,8 +1,6 @@
 ---
 title: 데이터 마이그레이션 보고서 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 67131d3dd05c48f9e7dfa4600e6172d3354db9ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9001e61cb409be635f99780085a47656ab53b8d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777039"
 ---
 # <a name="data-migration-report--oracletosql"></a>데이터 마이그레이션 보고서 (OracleToSQL)
 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **상태**  
 원본에서 데이터베이스에서 대상 데이터베이스로 데이터 마이그레이션 상태가 표시 됩니다.  
   

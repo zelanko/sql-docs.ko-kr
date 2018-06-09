@@ -1,8 +1,6 @@
 ---
 title: 프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: c97def6abd52a3825ac9b9b0fb05551f6861b5fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2417a74ff590c0eacae367bc1f048ed912b82988
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777799"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정 (개체에 시스템을 로드 하는 방법) (OracleToSQL)
 시스템 개체를 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 Oracle 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  

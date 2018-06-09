@@ -3,8 +3,6 @@ title: 메뉴 명령 및 기타 바로 가기 키 (Sybase To SQL) | Microsoft Do
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b02ec727dabf9db7ce614ee804ca6df619bd01b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab3cf6f49004144b325d051ce308fd53215c1760
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779349"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>메뉴 명령 및 기타 바로 가기 키 (Sybase To SQL)
 다음 섹션에서는 메뉴 명령 및 Sybase 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에 사용 된 다른 바로 가기 키에 액세스 하는 바로 가기 키에 설명 합니다.  
@@ -204,6 +203,6 @@ ms.lasthandoff: 05/03/2018
 |요약 정보를 시작 합니다.|CTRL + SHIFT + 공간|  
 |선언으로 이동 합니다.|F12|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [바로 가기 키&#40;Sybase To SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

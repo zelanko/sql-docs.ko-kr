@@ -1,8 +1,6 @@
 ---
 title: 전역 설정 (테스터) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 541be9baa654371e6e5aaca18c91e860d058c7fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05abc5ee6dac21880645bff60f867b67493e7361
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777519"
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정 (테스터) (OracleToSQL)
 테스터 페이지를 사용 하 여 **전역 설정** SSMA 테스터에 대 한 설정을 지정 하려면 대화 상자.  
   
 테스터 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 하 고 **테스터** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **테스트 가능한 개체 분석**  
 이 설정은 테스트 가능한 개체의 분석을 수행할 것인지를 지정 합니다. 선택 **예** SSMA 테스터를 분석 하 고 자동으로 종속 개체를 확인 하려는 경우. 기본 옵션 집합이 **예**합니다.  
   
@@ -67,6 +66,6 @@ ms.lasthandoff: 05/03/2018
   
 2.  아니요  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [테스트 사례 준비를 마친 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

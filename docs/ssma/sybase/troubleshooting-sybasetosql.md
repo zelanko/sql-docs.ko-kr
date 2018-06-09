@@ -3,8 +3,6 @@ title: (SybaseToSQL) 문제 해결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,20 +18,21 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0a7870ca60e9ddd0ff8870745f85f82af0f8a996
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38f374290f7580a25e0be38ba4921476fd821e7e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779429"
 ---
 # <a name="troubleshooting-sybasetosql"></a>문제 해결 (SybaseToSQL)
 마이그레이션 문제의 중간에 있는 콘솔 스크립트 또는 명령을 실행 하는 일반적이 지 않습니다.  
   
 수정 가능한 오류와 관련 될 수 있습니다.  
   
-1.  함수  
+1.  기능  
   
-2.  절차  
+2.  프로시저  
   
 3.  보기  
   

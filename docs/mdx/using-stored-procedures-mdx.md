@@ -1,6 +1,6 @@
 ---
 title: 저장된 프로시저 (MDX)를 사용 하 여 | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed9232137bcfed47852086ab1b6b76bc2bc2cb69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2a0ba1b350e59406f04796924385059c323facd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582245"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743802"
 ---
 # <a name="using-stored-procedures-mdx"></a>저장 프로시저 사용(MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   .NET 저장 프로시저 또는 사용자 정의 함수를 작성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 MDX(Multidimensional Expressions)의 기능을 확장할 수 있습니다. 자세한 내용은 참조 [ADOMD.NET 서버 프로그래밍](../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
@@ -33,7 +33,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *저장 프로시저* 에 사용 되는 용어는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이런이 유형의 함수에 대 한 합니다. 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이러한 유형의 함수를 호출 *사용자 정의 함수*합니다.  
+>  *저장 프로시저* 에 사용 되는 용어는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이런이 유형의 함수에 대 한 합니다. 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이러한 유형의 함수를 호출 *사용자 정의 함수*합니다.  
   
 ## <a name="types-of-stored-procedures"></a>저장 프로시저 유형  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 COM 및 CLR 어셈블리를 모두 지원합니다. CLR 어셈블리에 적용되는 향상된 보안 기능 때문에 CLR 어셈블리를 권장합니다. 서버에 Microsoft Office Excel이 설치되어 있으면 Excel 기능도 사용할 수 있습니다.  

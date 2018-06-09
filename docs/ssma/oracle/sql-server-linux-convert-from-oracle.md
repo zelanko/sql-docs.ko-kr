@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.suite: sql
 ms.custom: ''
 ms.technology: database-engine
-ms.openlocfilehash: b044f54f172bc354c9c0a14e6628678911dbb82c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c92ab25e4401c4a4e6d1591c03d5702cca77944
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778119"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server 2017 linux와 SQL Server Migration Assistant로 Oracle 스키마 마이그레이션
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 > * 샘플 HR 스키마 변환
 > * 데이터 마이그레이션
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 인스턴스가 Oracle 12c (12.2.0.1.0)는 **HR** 스키마 설치
 - Linux에서 SQL Server의 작업 인스턴스

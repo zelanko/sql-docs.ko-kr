@@ -1,8 +1,6 @@
 ---
 title: SSMA Oracle 콘솔 (OracleToSQL)에 대 한 작업 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04701daad7fd077a0ab29c8d1a9ade3629dc2f8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80ae0d5124b5845292ceca2ff8de7659925e77f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778259"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA Oracle 콘솔 (OracleToSQL)에 대 한 작업
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle에 대 한 마이그레이션 길잡이 (SSMA) 릴리스는 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 이제입니다. 스크립트 파일의 명령을 실행 하기 위한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램 SSMA 스크립트 수준 상호 작용, 마이그레이션 주기를 줄일 수 있으며 특정 마이그레이션 작업의 크기를 조정 합니다.  
@@ -42,6 +41,6 @@ SSMA 콘솔 응용 프로그램을 사용 하 여 Oracle 데이터베이스 마�
 |[보고서 생성 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|보고서를 생성 하는 명령을 나열 합니다.|  
 |[문제 해결 &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|마이그레이션 문제를 해결 하는 방법에 대 한 간략 한 정보를 제공 합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA Oracle 콘솔에 대 한 시작](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   

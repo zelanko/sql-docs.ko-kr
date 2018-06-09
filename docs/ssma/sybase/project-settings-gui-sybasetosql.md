@@ -3,8 +3,6 @@ title: 프로젝트 설정 (GUI) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b5e657af12ee7bbb27c3b67994d7f2a199f4d67d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 295ed3cc30cce20ed04427ca7149c7f4e1374f8a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779099"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>프로젝트 설정 (GUI) (SybaseToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수 있습니다는 **데이터** 탭과 여부 변환 된 후 평가 보고서를 표시할지 여부입니다.  
@@ -33,7 +32,7 @@ GUI 창도에서 사용할 수는 **프로젝트 설정** 및 **기본 프로젝
   
 -   사용 하 여는 **기본 프로젝트 설정** 대화 상자는 모든 프로젝트에 대 한 사용자 인터페이스 옵션을 설정 합니다. GUI 설정에 액세스 하려면는 **도구** 메뉴를 선택 **기본 프로젝트 설정**, 설정을 보거나에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운 하 고 클릭 **GUI** 왼쪽 창의 맨 아래에 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
 **원본에 대 한 최대 행 수**  
 에 표시 되는 데이터의 행 수를 구성 하며는 **데이터** 선택된 된 원본 테이블에 대 한 탭 합니다.  
   

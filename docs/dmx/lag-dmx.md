@@ -1,31 +1,20 @@
 ---
 title: Lag (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LAG
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Lag function
-ms.assetid: 2da6df1a-5506-4871-a0f0-83292f1df41e
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 929924bc7ef571a64bc4d7f6c26d20dece081821
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842496"
 ---
 # <a name="lag-dmx"></a>Lag(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +31,7 @@ Lag()
 ## <a name="return-type"></a>반환 형식  
  정수 형식의 스칼라 값  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우는 **지연** 함수 사용 되는 KEY TIME 열이 중첩된 테이블 내에 모델에 대해 함수는 문의 sub-select 내에 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -53,7 +42,7 @@ SELECT * FROM [Forecasting].CASES
 WHERE Lag() < 12  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
