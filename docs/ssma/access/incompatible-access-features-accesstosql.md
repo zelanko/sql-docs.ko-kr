@@ -1,8 +1,6 @@
 ---
 title: 호환 되지 않는 액세스 기능 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -36,11 +34,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbfcb395194371bf761f340cc74943791a649aaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6056a2d58d83f1b43cd3d9f92c9abc702eb6f61c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774209"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 액세스 기능 (AccessToSQL)
 모든 액세스 데이터베이스 기능을 호환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 액세스 예약 된 키워드 집합은 및입니다. 발급 하 여 성공적인 마이그레이션을 방해할 수 있습니다 이러한 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 가능한 마이그레이션 문제 및 //office.microsoft.com/ 수행할 수 있는 작업에 대 한 자세한 내용은 다음 표를 사용 합니다.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 |Access 테이블에는 하이퍼링크 열.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 지원 하지 않습니다 **하이퍼링크** 열입니다. 대신 열 액세스 메모 열 처럼 취급 됩니다. 기본적으로 이러한 열으로 변환 됩니다 **nvarchar (max)** 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 매핑을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [매핑 소스 및 대상 데이터 형식](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)합니다.|  
 |변환할 수 없는 액세스 함수를 포함 하는 기본 또는 유효성 검사 규칙 식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.|액세스 시스템 함수 또는 사용자 정의 함수에 매핑되지 않는 기본 액세스 식 또는 유효성 검사 규칙이 포함 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다. 에 매핑되지 않는 함수를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure은 기본 식 또는 유효성 검사 규칙을 로드 하지 못하도록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Access 데이터베이스 마이그레이션을 준비](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
