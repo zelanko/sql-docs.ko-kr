@@ -1,8 +1,6 @@
 ---
 title: (MySQLToSQL) 보고서를 생성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aaa0b1d90463f1e6b85a3423c13e4f785621c817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12be453eebf7e5ac3539b235d5b35d2f9a0b52c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776189"
 ---
 # <a name="generating-reports-mysqltosql"></a>보고서 생성 (MySQLToSQL)
 명령을 사용 하 여 수행 된 특정 작업 보고서는 개체 트리 수준 SSMA 콘솔에 생성 됩니다.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**Command**|**보고서 제목**|  
-    |1.|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
+    |1|-평가-보고서 생성|AssessmentReport&lt;n&gt;합니다. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
+    |1|자세한 정보 = "false"|활동의 요약 된 보고서를 생성합니다.|  
     |2|verbose=”true”|각 작업에 대 한 요약 및 세부 상태 보고서를 생성합니다.|  
   
     > [!NOTE]  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl 합니다. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1.|report-errors=”false”|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
+    |1|report-errors=”false”|오류에 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
     |2|report-errors=”true”|자세한 오류 / 경고 / 정보 메시지입니다.|  
   
     > [!NOTE]  
@@ -150,6 +149,6 @@ ms.lasthandoff: 05/03/2018
   
 -   스크립트 실패  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 (MySQL)를 실행합니다.](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   
