@@ -1,25 +1,34 @@
 ---
-title: Lesson 3 탐색 하 고 데이터를 시각화 | Microsoft Docs
+title: Lesson 3 탐색 및 R 및 T-SQL (SQL Server 기계 학습)를 사용 하 여 데이터 시각화 | Microsoft Docs
+description: SQL Server에서 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4be76ebbb8f082e84a00bfe93b36c9bd8c2c0a81
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203485"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250086"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>3 단원: 데이터를 탐색하고 시각화하기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단원에서는 예제 데이터를 검토하고 R 함수를 사용하여 일부 플롯을 생성합니다.  이러한 R 함수 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에 이미 포함됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 R 함수를 호출할 수 있습니다.
+이 단원에서는 샘플 데이터를 검토 한 다음 사용 하 여 일부 플롯을 생성 합니다 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 이며 일반 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 기본 R에서 함수 이러한 R 함수에 이미 포함 되어 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다.
+
+주요 목적은에서 R 함수를 호출 하는 방법을 보여 주는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저에서 하 고 응용 프로그램 파일 형식으로 결과 저장:
+
++ 사용 하 여 저장된 프로시저 만들기 **RxHistogram** 를 varbinary 데이터로 R 플롯을 생성 합니다. 사용 하 여 **bcp** 이진 스트림을 이미지 파일로 내보낼 합니다.
++ 사용 하 여 저장된 프로시저 만들기 **Hist** 를 JPG 및 PDF 출력으로 결과 저장 하는 점도 생성 합니다.
+
+> [!NOTE]
+> 시각화 데이터 셰이프 및 배포를 이해 하는 데 사용 하는 강력한 도구 이므로 R 히스토그램, 산 점도, 상자 점도 및 다른 데이터 탐색 그래프 생성을 위한 함수 및 패키지의 범위를 제공 합니다. R 일반적으로 캡처하고으로 저장할 수 있는 그래픽 출력에 대 한 R 장치를 사용 하 여 이미지를 만드는 한 **varbinary** 응용 프로그램으로 렌더링 하기 위한 데이터 형식입니다. 지원 파일 형식 중 하나에 이미지를 저장할 수도 있습니다 (합니다. JPG, 합니다. PDF 등)입니다.
 
 ## <a name="review-the-data"></a>데이터 검토
 
@@ -39,7 +48,7 @@ ms.locfileid: "31203485"
   
 -   각 요금 레코드에는 지불 유형, 총 지불 금액, 팁 금액 등의 지불 정보가 포함됩니다.
   
--   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다.  _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
+-   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다. _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
   
     이 연습에서는 이진 분류 작업만 보여 주지만, 다른 두 가지 Machine Learning 작업인 회귀 및 다중 클래스 분류 모델도 구축해 보세요.
   
@@ -50,30 +59,18 @@ ms.locfileid: "31203485"
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
 
-## <a name="create-plots-using-r-in-t-sql"></a>T-SQL에서 R을 사용하여 플롯 만들기
+## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>데이터를 그리는 rxHistogram를 사용 하 여 저장된 프로시저 만들기
 
-시각화는 데이터와 이상값의 분포를 파악하는 데 강력한 도구이므로 R에서는 데이터 시각화를 위한 여러 패키지를 제공합니다. R의 표준 오픈 소스 배포에는 히스토그램, 산점도, 상자 그림 및 기타 데이터 탐색 그래프를 만들기 위한 많은 함수도 포함되어 있습니다.
+플롯을 만들려면 사용 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)에 제공 된 고급 R 기능 중 하나 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)합니다. 이 단계에서 데이터를 기반으로 하는 히스토그램을 그리는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 합니다. 이 함수는 저장된 프로시저를 래핑할 수 **PlotHistogram**합니다.
 
-일반적으로 R은 그래픽 출력에 R 장치를 사용하여 이미지를 만듭니다. 이 장치의 출력을 캡처한 다음 응용 프로그램에서 렌더링하기 위해 이미지를 **varbinary** 데이터 형식으로 저장하거나, 이미지를 지원 파일 형식(.JPG, .PDF 등) 중 하나로 저장할 수 있습니다.
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체 탐색기에서 마우스 오른쪽 단추로 클릭는 **TaxiNYC_Sample** 확장 하 고, 데이터베이스 **프로그래밍 기능**, 펼친 다음 **Stored Procedures** 볼 수는 2 단원에서 만든 프로시저입니다.
 
-이 섹션에서는 저장 프로시저를 사용하여 각 형식의 출력으로 작업하는 방법을 알아봅니다. 전체 프로세스는 다음과 같습니다.
+2. 마우스 오른쪽 단추로 클릭 **PlotHistogram** 선택 **수정** 소스를 볼 수 있습니다. 호출 하려면이 절차를 실행할 수 있습니다 **rxHistogram** 기울어진된 nyctaxi_sample 테이블의 열에 포함 된 데이터에 있습니다.
 
-- varbinary 데이터로 R 플롯을 생성하는 저장 프로시저 만들기
-
-- 플롯을 생성 하 고 이미지 파일에 저장
-
-- 저장 프로시저를 사용하여 이진 플롯 데이터를 JPG 또는 PDF 파일로 변환
-
-### <a name="create-the-stored-procedure-plothistogram"></a>PlotHistogram 저장 프로시저 만들기
-
-1. 플롯을 만들려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 제공하는 향상된 R 함수 중의 하나인 rxHistogram을 사용하여 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 쿼리의 데이터를 기반으로 히스토그램을 그립니다. R 함수를 쉽게 호출할 수 있도록 저장 프로시저 PlotHistogram 내에 래핑합니다
-
-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서, 새 **쿼리** 창을 엽니다.
-
-2. 자습서 데이터가 포함 된 데이터베이스에이 문을 사용 하 여 프로시저를 만듭니다.
+3. 필요한 경우 학습 연습에서는 다음 예제를 사용 하 여이 저장된 프로시저의 고유 사본을 만듭니다. 새 쿼리 창을 열고 막대 그래프를 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예에서는 라는 **PlotHistogram2** 이름이 기존 프로시저와 충돌 되지 않도록 합니다.
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram]
+    CREATE PROCEDURE [dbo].[PlotHistogram2]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -95,19 +92,17 @@ ms.locfileid: "31203485"
     GO
     ```
 
-    필요한 경우 올바른 테이블 이름을 사용하도록 코드를 수정해야 합니다.
+저장된 프로시저 **PlotHistogram2** 기존 저장된 프로시저와 동일 **PlotHistogram** 작성자는 `RunSQL_SQL_Walkthrough.ps1` 스크립트입니다. 
   
-    -   `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다.
++ `@query` 변수는 스크립트 입력 변수`'SELECT tipped FROM nyctaxi_sample'`에 대한 인수로 R 스크립트에 전달되는 쿼리 텍스트(`@input_data_1`)를 정의합니다.
   
-    -   R 스크립트는 간단합니다. 이미지를 저장할 R 변수(`image_file`)를 정의한 다음 `rxHistogram` 함수를 호출하여 그림을 생성합니다.
++ R 스크립트는 아주 단순: R 변수 (`image_file`) 이미지를 저장 하도록 정의 된 다음의 **rxHistogram** 함수 플롯을 생성 하기 위해 호출 됩니다.
   
-    -   R 장치는 **off**로 설정되어 있습니다.
++ R 장치로 설정 되어 **오프** 이 명령을 실행 하는 SQL Server에서 외부 스크립트로 때문에 있습니다. 일반적으로 R을 상위 수준 그리기 명령을 실행 하면 R 열립니다 라는 그래픽 창은 *장치*합니다. 창의 크기 및 색과 기타 측면을 변경하거나, 파일에 쓰거나 다른 방법으로 출력을 처리하는 경우 장치를 끌 수 있습니다.
   
-        R에서 높은 수준의 그리기 명령을 실행하면 R에서 *장치*라는 그래픽 창이 열립니다. 창의 크기 및 색과 기타 측면을 변경하거나, 파일에 쓰거나 다른 방법으로 출력을 처리하는 경우 장치를 끌 수 있습니다.
-  
-    -   R 그래픽 개체는 출력을 위해 R data.frame으로 직렬화됩니다.
++ R 그래픽 개체는 출력을 위해 R data.frame으로 직렬화됩니다.
 
-### <a name="generate-the-graphics-data-and-save-to-file"></a>그래픽 데이터를 생성 하 고 파일에 저장
+### <a name="execute-the-stored-procedure-and-use-bcp-to-export-binary-data-to-an-image-file"></a>저장된 프로시저를 실행 하 고 bcp를 사용 하 여 이진 데이터를 이미지 파일로 내보내려면
 
 저장 프로시저는 명확하게 직접 볼 수 없는 varbinary 데이터 스트림으로 이미지를 반환합니다. 그러나 **bcp** 유틸리티를 사용하여 varbinary 데이터를 가져오고 클라이언트 컴퓨터에 이미지 파일로 저장할 수 있습니다.
   
@@ -122,23 +117,23 @@ ms.locfileid: "31203485"
     *plot*
     *0xFFD8FFE000104A4649...*
   
-2.  PowerShell 명령 프롬프트를 열고 적절한 인스턴스 이름, 데이터베이스 이름, 사용자 이름 및 자격 증명을 인수로 제공하여 다음 명령을 실행합니다.
+2.  PowerShell 명령 프롬프트를 열고 적절 한 인스턴스 이름, 데이터베이스 이름, 사용자 이름 및 인수에 따라 자격 증명을 제공 하 고 다음 명령을 실행 합니다. Windows id를 사용 하 여 바꿀 수 있습니다 **-U** 및 **-P** 와 **-T**합니다.
   
-     ```
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>
+     ```text
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]
     > Bcp의 명령 스위치는 대/소문자를 구분하지 않습니다.
   
 3.  연결에 성공하면 그래픽 파일 형식에 대한 자세한 정보를 입력하라는 메시지가 표시됩니다. 다음과 같은 변경을 제외하고 각 프롬프트에서 Enter 키를 눌러 기본값을 적용합니다.
-  
+    
     -   **prefix-length of field plot**에 대해 0을 입력합니다.
   
     -   나중에 다시 사용하기 위해 출력 매개 변수를 저장하려는 경우 **Y** 를 입력합니다.
   
     ```
-    Enter the file storage type of field plot [varbinary(max)]:
+    Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
     Enter field terminator [none]:
@@ -163,18 +158,18 @@ ms.locfileid: "31203485"
   
     ![팁이 있는 택시 여정 및 팁이 없는 택시 여정](media/rsql-devtut-tippedornot.jpg "팁이 있는 택시 여정 및 팁이 없는 택시 여정")  
   
-### <a name="export-the-plot-data-to-a-viewable-file"></a>그리기 데이터를 볼 수 있는 파일로 내보내기
+## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Hist 및 여러 출력 형식을 사용 하 여 저장된 프로시저 만들기
 
-R 플롯을 이진 데이터 유형으로 출력하는 것은 응용 프로그램에서 사용하기에 편리할 수 있지만, 데이터 탐색 단계에서 렌더링 된 플롯을 필요로 하는 데이터 과학자에게는 그다지 유용하지 않습니다. 일반적으로 데이터 과학자는 여러 관점에서 데이터에 대한 통찰력을 얻기 위해 여러 데이터 시각화를 생성합니다.
+일반적으로 데이터 과학자를 여러 관점에서 데이터에 대 한 정보를 가져올 수 있는 여러 데이터 시각화를 생성 합니다. 이 예제에서는 저장된 프로시저와 같은 인기 있는 형식으로 이진 데이터를 내보낼 히스토그램을 만드는 Hist 함수를 사용 합니다. JPG, 합니다. PDF, 및입니다. PNG 합니다. 
 
-사용자에 대한 그래프를 생성하려면 .JPG, .PDF 및 .PNG와 같은 일반적인 형식으로 R 출력을 만드는 저장 프로시저를 사용할 수 있습니다. 저장 프로시저가 그래픽을 만든 후에는 파일을 열어 플롯을 시각화하면 됩니다.
+1. 기존 저장된 프로시저를 사용 하 여 **PlotInOutputFiles**히스토그램, scatterplots, 및 기타 R 그래픽을 기록할 수 있습니다. JPG 및 합니다. PDF 형식입니다. `RunSQL_SQL_Walkthrough.ps1` 만듭니다 **PlotInOutputFiles** 데이터베이스를 추가 합니다. 마우스를 사용 하 여 **수정** 소스를 볼 수 있습니다.
 
-1. 히스토그램, 산점도 및 기타 R 그래픽을 JPG 및 PDF 형식으로 작성하는 방법을 보여주는 새로운 저장 프로시저 _PlotInOutputFiles_ 를 만듭니다.
+2. 필요한 경우 학습 연습에 따라이 절차의 고유 사본을 만들 **PlotInOutputFiles2**, 이름 충돌을 방지 하기 위해 고유한 이름을 사용 합니다.
 
     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 **쿼리** 창을 열고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 붙여 놓습니다.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles]  
+    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -237,45 +232,48 @@ R 플롯을 이진 데이터 유형으로 출력하는 것은 응용 프로그�
      END
     ```
   
-    -   저장 프로시저 내의 SELECT 쿼리 출력은 기본 R 데이터 프레임인 `InputDataSet`에 저장됩니다. 그런 다음 다양한 R 그리기 함수를 호출하여 실제 그래픽 파일을 생성할 수 있습니다.
++ 저장 프로시저 내의 SELECT 쿼리 출력은 기본 R 데이터 프레임인 `InputDataSet`에 저장됩니다. 그런 다음 다양한 R 그리기 함수를 호출하여 실제 그래픽 파일을 생성할 수 있습니다. 포함된 R 스크립트의 대부분은 `plot` 또는 `hist`와 같은 그래픽 함수의 옵션을 나타냅니다.
   
-        포함된 R 스크립트의 대부분은 `plot` 또는 `hist`와 같은 그래픽 함수의 옵션을 나타냅니다.
-  
-    -   모든 파일은 로컬 폴더 _C:\temp\Plots\\_에 저장됩니다. 대상 폴더는 R 스크립트에 저장 프로시저의 일부로 제공되는 인수에 의해 정의됩니다.  `mainDir`변수 값을 변경하여 대상 폴더를 변경할 수 있습니다.
-  
-2.  저장 프로시저를 만드는 문을 실행합니다.
++ 모든 파일은 로컬 폴더 _C:\temp\Plots\\_에 저장됩니다. 대상 폴더는 R 스크립트에 저장 프로시저의 일부로 제공되는 인수에 의해 정의됩니다.  `mainDir`변수 값을 변경하여 대상 폴더를 변경할 수 있습니다.
 
-    ```SQL
-    EXEC PlotInOutputFiles
-    ```
++ 파일을 다른 폴더에 출력하려면 저장 프로시저에 포함된 R 스크립트의 `mainDir` 변수 값을 변경합니다. 다른 형식, 더 많은 파일 등을 출력하도록 스크립트를 수정할 수도 있습니다.
 
-    **결과**
+### <a name="execute-the-stored-procedure"></a>저장 프로시저 실행
+
+JPEG 및 PDF 파일 형식으로 이진 그리려는 데이터를 내보내려면 다음 문을 실행 합니다.
+
+```SQL
+EXEC PlotInOutputFiles
+```
+
+**결과**
     
-    ```
-    STDOUT message(s) from external script:
-    [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+```
+STDOUT message(s) from external script:
+[1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+
+C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
+
+C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
+```
+
+파일 이름에 숫자를 기존 파일에 쓸 때 오류가 가져오지 않음 되도록 임의로 생성 됩니다.
+
+### <a name="view-output"></a>출력 보기 
+
+플롯을 보려면 대상 폴더를 열고 저장 프로시저 내 R 코드에 의해서 생성된 파일을 검토합니다.
+
+1. STDOUT 메시지에 표시 된 폴더 이동 (예제에서는 이것이 C:\temp\plots\)
+
+2. 열기 `rHistogram_Tipped.jpg` 입니다. 팁이 나타나지 trips 및 팁을 (를) 가져왔습니다와의 수를 표시 합니다. (이 히스토그램은 이전 단계에서 생성된 것과 매우 유사합니다.)
+
+3. 열기 `rHistograms_Tip_and_Fare_Amount.pdf` 요금 총액에 대해 그릴 팁 금액의 분포를 볼 수 있습니다.
     
-    C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
-    
-    C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
-    ```
+  ![tip_amount 및 fare_amount 보여 주는 히스토그램](media/rsql-devtut-tipamtfareamt.PNG "tip_amount 및 fare_amount 보여 주는 히스토그램")
 
-    파일 이름에 숫자를 기존 파일에 쓸 때 오류가 가져오지 않음 되도록 임의로 생성 됩니다.
+4. 열기 `rXYPlots_Tip_vs_Fare_Amount.pdf` 요금 많은 scatterplot x 축 및 y 축에 팁 금액에 볼 수 있습니다.
 
-3. 플롯을 보려면 대상 폴더를 열고 저장 프로시저 내 R 코드에 의해서 생성된 파일을 검토합니다.
-
-    + `rHistogram_Tipped.jpg`파일은 팁이 있는 승차 수(Counts)와 팁이 없는 승차 수를 보여줍니다.
- (이 히스토그램은 이전 단계에서 생성된 것과 매우 유사합니다.)
-
-    + `rHistograms_Tip_and_Fare_Amount.pdf` 파일은 운임에 대해 그리려는 팁 금액의 분포를 보여줍니다.
-    
-    ![tip_amount 및 fare_amount 보여 주는 히스토그램](media/rsql-devtut-tipamtfareamt.PNG "tip_amount 및 fare_amount 보여 주는 히스토그램")
-
-    + `rXYPlots_Tip_vs_Fare_Amount.pdf` 파일은 x 축에 운임과 y 축에 팁 금액을 가지는 산점도를 포함합니다.
-
-    ![팁 양 요금 비용을 초과 표시](media/rsql-devtut-tipamtbyfareamt.PNG "팁 양 요금 비용을 초과 표시 됩니다.")
-
-2.  파일을 다른 폴더에 출력하려면 저장 프로시저에 포함된 R 스크립트의 `mainDir` 변수 값을 변경합니다. 다른 형식, 더 많은 파일 등을 출력하도록 스크립트를 수정할 수도 있습니다.
+   ![팁 양 요금 비용을 초과 표시](media/rsql-devtut-tipamtbyfareamt.PNG "팁 양 요금 비용을 초과 표시 됩니다.")
 
 ## <a name="next-lesson"></a>다음 단원
 
@@ -283,4 +281,4 @@ R 플롯을 이진 데이터 유형으로 출력하는 것은 응용 프로그�
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[2 단원: SQL server PowerShell을 사용 하 여 데이터 가져오기](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[2 단원: PowerShell을 사용 하 여 자습서 환경 준비](../r/sqldev-import-data-to-sql-server-using-powershell.md)
