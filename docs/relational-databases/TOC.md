@@ -106,8 +106,7 @@
 ### [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
 ### [2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
 ### [3단원: URL에 데이터베이스 백업](lesson-3-database-backup-to-url.md)  
-### 
-  [4단원: URL에서 가상 머신으로 데이터베이스 복원](lesson-4-restore-database-to-virtual-machine-from-url.md)  
+### [4단원: URL에서 가상 머신으로 데이터베이스 복원](lesson-4-restore-database-to-virtual-machine-from-url.md)  
 ### [5단원: 파일-스냅숏 백업을 사용하여 데이터베이스 백업](lesson-5-backup-database-using-file-snapshot-backup.md)  
 ### [6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성](lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
 ### [7단원: 데이터베이스를 특정 시점으로 복원](lesson-7-restore-a-database-to-a-point-in-time.md)  
