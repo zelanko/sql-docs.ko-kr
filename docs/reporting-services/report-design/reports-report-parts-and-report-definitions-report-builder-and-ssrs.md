@@ -1,7 +1,7 @@
 ---
 title: 보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -18,11 +18,12 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550474"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다양한 용어를 사용하여 사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 페이지가 매겨진 보고서를 설명합니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  게시된 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델을 사용하여 역할 할당을 통해 보안이 유지됩니다. 게시된 보고서는 URL, SharePoint 웹 파트 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 통해 액세스하거나 보고서 작성기에서 해당 보고서를 찾아서 열 수 있습니다.  
   
 ### <a name="report-snapshots"></a>보고서 스냅숏  
- 보고서는 보고서를 처음 실행했을 때의 레이아웃 정보와 데이터가 모두 포함된 스냅숏으로 게시할 수도 있습니다. 보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 응용 프로그램이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 자세한 내용은 [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서는 보고서를 처음 실행했을 때의 레이아웃 정보와 데이터가 모두 포함된 스냅숏으로 게시할 수도 있습니다. 보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 응용 프로그램이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 자세한 내용은 [웹 포털에서 보고서 찾기 및 보기](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)를 참조합니다.  
   
 ## <a name="rendered-reports"></a>렌더링된 보고서  
  렌더링된 보고서는 데이터와 레이아웃 정보가 HTML과 같은 적합한 표시 형식으로 포함되어 있는 완전히 처리된 보고서입니다. 출력 형식으로 렌더링되지 않은 보고서는 볼 수 없습니다. 다음 중 하나를 수행하여 보고서를 렌더링할 수 있습니다.  

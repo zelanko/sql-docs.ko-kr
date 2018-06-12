@@ -2,7 +2,7 @@
 title: 고가용성에 대한 SSIS(SQL Server Integration Services) Scale Out 지원 | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476045"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -47,7 +48,7 @@ Scale Out 마스터의 주 노드에 SQL Server 데이터베이스 엔진 서비
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out 마스터 서비스 DNS 호스트 이름을 Scale Out 마스터 인증서의 CN에 포함
 
-이 호스트 이름은 Scale Out 마스터 끝점에서 사용됩니다. 
+이 호스트 이름은 Scale Out 마스터 끝점에서 사용됩니다. (서버 이름이 아닌 DNS 호스트 이름을 제공하는지 확인합니다.)
 
 ![HA 마스터 구성](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ Scale Out 마스터의 보조 노드에 SQL Server 데이터베이스 엔진 서
 > [!NOTE]
 > 다른 보조 노드에서 Scale Out 마스터에 이러한 작업을 반복하여 여러 개의 백업 Scale Out 마스터를 설정할 수 있습니다.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. SSISDB Always On 설정
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Always On에 대한 SSISDB 지원 설정 및 구성
 
-지침을 따라 [SSIS 카탈로그(SSISDB)용 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)에서 SSISDB용 Always On을 설정합니다.
+[SSIS 카탈로그(SSISDB)용 Always On](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)에서 Always On에 대한 SSISDB 지원을 설정하고 구성하기 위한 지침을 따릅니다.
 
 또한 SSISDB를 추가한 가용성 그룹의 가용성 그룹 수신기를 만들어야 합니다. [가용성 그룹 수신기 만들기 또는 구성](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 참조하세요.
 
@@ -85,7 +86,7 @@ SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수�
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Windows 장애 조치 클러스터의 Scale Out 마스터 서비스 역할 구성
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Windows Server 장애 조치(failover) 클러스터의 Scale Out 마스터 서비스 역할 구성
 
 1.  장애 조치(Failover) 클러스터 관리자에서 Scale Out용 클러스터에 연결합니다. 클러스터를 선택합니다. 메뉴에서 **동작**을 선택한 후 **역할 구성**을 선택합니다.
 
@@ -96,6 +97,12 @@ SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수�
     ![HA 마법사 1](media/ha-wizard1.PNG)
 
 4.  마법사를 마칩니다.
+
+Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다. 이러한 개념 및 이러한 단계에 대한 자세한 설명은 이 문서의 범위를 벗어납니다.
+
+1.  Azure 도메인을 설정해야 합니다. Windows Server 장애 조치(failover) 클러스터링은 클러스터의 모든 구성 요소가 동일한 도메인의 구성원이 될 것을 요구합니다. 자세한 내용은 [Azure Portal을 사용하여 Azure Active Directory Domain Services 활성화](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)를 참조합니다.
+
+2. Azure 부하 분산 장치를 설정해야 합니다. 가용성 그룹 수신기에 대한 요구 사항입니다. 자세한 내용은 [자습서: Azure Portal을 사용하여 VM에 Basic Load Balancer와 함께 내부 트래픽 부하 분산](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)을 참조합니다.
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. SSISDB에서 Scale Out 마스터 주소 업데이트
 

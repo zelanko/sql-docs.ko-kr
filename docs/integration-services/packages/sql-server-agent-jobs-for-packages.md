@@ -1,7 +1,7 @@
 ---
 title: 패키지에 대한 SQL Server 에이전트 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772499"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
-  
+ 
+> [!NOTE]
+> 이 문서에서는 SSIS 패키지를 일반적으로 예약하는 방법 및 온-프레미스에서 패키지를 예약하는 방법을 설명합니다. 또한 다음 플랫폼에서 SSIS 패키지를 실행 및 예약할 수도 있습니다.
+> - **Microsoft Azure 클라우드** 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) 및 [Azure에서 SSIS 패키지 실행 예약](../lift-shift/ssis-azure-schedule-packages.md)을 참조하세요.
+> - **Linux** 자세한 내용은 [SSIS를 사용하여 Linux에서 데이터 추출, 변환 및 로드](../../linux/sql-server-linux-migrate-ssis.md) 및 [cron을 사용하여 Linux에서 SQL Server Integration Services 패키지 실행 예약](../../linux/sql-server-linux-schedule-ssis-packages.md)을 참조하세요.
+
 ## <a name="sections-in-this-topic"></a>이 항목의 섹션  
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -129,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
      **다음 표에서는 패키지 원본에 대해 설명합니다.**  
   
-    |패키지 원본|Description|  
+    |패키지 원본|설명|  
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  

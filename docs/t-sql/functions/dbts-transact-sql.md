@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d221859035c02156005bdbf36d0a39ff79297f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bd6f1e2c6b0e6163325e6e3c83a4cbc7d2ac2f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779369"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-현재 데이터베이스의 현재 **timestamp** 데이터 형식 값을 반환합니다. 이 타임스탬프는 데이터베이스에서 고유합니다.
+이 함수는 현재 데이터베이스의 현재 **timestamp** 데이터 형식 값을 반환합니다. 현재 데이터베이스는 보장된 고유한 타임스탬프 값을 갖습니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +47,12 @@ ms.lasthandoff: 05/03/2018
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-@@DBTS는 현재 데이터베이스에서 최근에 사용된 타임스탬프 값을 반환합니다. 새 타임스탬프 값은 **timestamp** 열의 행이 삽입되거나 업데이트될 때 생성됩니다.
+@@DBTS는 현재 데이터베이스에서 최근에 사용된 타임스탬프 값을 반환합니다. **timestamp** 열이 있는 행의 삽입 또는 업데이트는 새 타임스탬프 값을 생성합니다.
   
-@@DBTS 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.
+트랜잭션 격리 수준에 대한 변경 내용은 @@DBTS 함수에 영향을 주지 않습니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 현재 **timestamp**를 반환합니다.
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 현재 **timestamp**를 반환합니다.
   
 ```sql
 USE AdventureWorks2012;  

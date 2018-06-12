@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563801"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 사용자 환경 개선 프로그램
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  관련 레지스트리 키와 설정은 다음과 같습니다.  
   
- 키 = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- RegEntry name = OptIn  
-  
- 항목 종류 DWORD:  
-  
--   0은 참여하지 않음  
-  
--   1은 참여함  
+- 64비트 OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32비트 OS, Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+그룹 정책을 사용할 수 있는 경우, Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+항목 = OptIn
+
+값 = (DWORD)
+- 0은 옵트아웃(VSCEIP 끄기)
+- 1은 옵트인(VSCEIP 켜기)
+
   
 > [!CAUTION]  
 >  레지스트리를 잘못 편집하면 시스템이 심각하게 손상될 수 있습니다. 따라서 레지스트리를 변경하기 전에 컴퓨터의 중요한 데이터를 백업해 두어야 합니다. 변경 내용을 수동으로 적용한 후 문제가 발생할 경우 마지막으로 성공한 구성 시작 옵션을 사용할 수도 있습니다.  
   
  CEIP에서 수집, 처리 또는 전송되는 정보에 대한 자세한 내용은 [Microsoft 사용자 환경 개선 프로그램에 대한 개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=52143)을 참조하세요.  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015용 SQL Server Data Tools와 CEIP에 대한 선택과 제어  
- Visual Studio 2015용 SSDT는 SQL Server 2016와 함께 제공되는 데이터 모델링 도구로서, Visual Studio 2015에 내장되어 있는 CEIP 옵션을 사용합니다. 이 [Visual Studio 도움말 문서](http://go.microsoft.com/fwlink/?LinkId=517102)에서 Visual Studio 2015의 CEIP를 통해 사용자 의견을 제출하는 방법에 대해 알 수 있습니다.  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015용 SQL Server Data Tools와 CEIP에 대한 선택과 제어  
+ Visual Studio 2015용 SSDT는 SQL Server 2016와 함께 제공되는 데이터 모델링 도구로서, Visual Studio 2015에 내장되어 있는 CEIP 옵션을 사용합니다. 이 [Visual Studio 도움말 문서](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)에서 Visual Studio 2015의 CEIP를 통해 사용자 의견을 제출하는 방법에 대해 알 수 있습니다.  
   
  SQL Server 2016 미리 보기 버전의 경우 CEIP가 기본적으로 사용 설정되어 있습니다. 아래 지침에 따라 사용 해제하거나 다시 설정할 수 있습니다.  
   

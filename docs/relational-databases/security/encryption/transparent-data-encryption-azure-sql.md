@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462371"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ Azure 내에서의 작업을 위해 데이터베이스 암호를 해독할 필�
 
 예를 들어 BACPAC 파일을 온-프레미스 SQL Server 인스턴스에서 내보낼 경우 새 데이터베이스의 가져온 콘텐츠는 자동으로 암호화되지 않습니다. 마찬가지로 온-프레미스 SQL Server 인스턴스로 BACPAC 파일을 내보낸 경우 새 데이터베이스도 자동으로 암호화되지 않습니다.
 
-한 가지 예외는 SQL 데이터베이스 간에 내보내는 경우입니다. 새 데이터베이스에서 투명한 데이터 암호화가 사용되지만 PACPAC 파일 자체는 암호화되지 않습니다.
+한 가지 예외는 SQL 데이터베이스 간에 내보내는 경우입니다. 새 데이터베이스에서 투명한 데이터 암호화가 사용되지만 BACPAC 파일 자체는 암호화되지 않습니다.
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Azure Portal에서 투명한 데이터 암호화 관리
 

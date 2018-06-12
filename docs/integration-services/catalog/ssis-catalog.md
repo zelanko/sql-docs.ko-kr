@@ -1,7 +1,7 @@
 ---
 title: SSIS 카탈로그 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772669"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS([!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]) 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
-  
+ 
+> [!NOTE]
+> 이 문서에서는 일반적인 SSIS 카탈로그 및 온-프레미스에서 실행되는 SSIS 카탈로그를 설명합니다. Azure SQL Database에서 SSIS 카탈로그를 만들고 Azure에서 SSIS 패키지를 배포 및 실행할 수도 있습니다. 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+>
+> Linux에서 SSIS 패키지를 실행할 수 있더라도 SSIS 카탈로그는 Linux에서 지원되지 않습니다. 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
+ 
  **SSISDB** 카탈로그에 저장되는 개체에는 프로젝트, 패키지, 매개 변수, 환경 및 작업 기록이 있습니다.  
   
  **SSISDB** 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. **SSISDB** 데이터베이스에서 저장 프로시저를 호출하거나 **SSISDB** 카탈로그의 UI를 사용하여 개체를 관리할 수 있습니다. 대부분의 경우 UI를 사용하거나 저장 프로시저를 호출하여 동일한 태스크를 수행할 수 있습니다.  
@@ -381,7 +387,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="options"></a>변수  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
-|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|Description|  
+|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|설명|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |암호화 알고리즘 이름|ENCRYPTION_CLEANUP_ENABLED|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256(기본값)|  
 |유효성 검사 제한 시간(초)|VALIDATION_TIMEOUT|프로젝트 유효성 검사 또는 패키지 유효성 검사가 중지되기 전에 실행될 수 있는 최대 기간(초)을 지정합니다. 기본값은 300초입니다.<br /><br /> 유효성 검사 수행은 비동기 작업입니다. 프로젝트나 패키지가 클수록 유효성 검사에 걸리는 시간이 길어집니다.<br /><br /> 프로젝트와 패키지의 유효성을 검사하는 방법은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)를 참조하십시오.|  

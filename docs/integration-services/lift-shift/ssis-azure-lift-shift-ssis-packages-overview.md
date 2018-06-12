@@ -12,12 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3c8b39ac59f3ac6bddd985de12602f498e1ed97
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: f62987a7edc2d04f88c3cfe98f04f0bd6043b44a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455467"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585575"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 이제 SSIS(SQL Server Integration Services) 패키지 및 워크로드를 Azure 클라우드로 이동할 수 있습니다.
@@ -84,7 +84,7 @@ SSDT가 설치된 Visual Studio 또는 SSDT에서 온-프레미스 **패키지�
 
 SQL Database 인스턴스를 프로비전하여 SSISDB를 호스팅하면 SSIS용 Azure Feature Pack 및 Access 재배포 가능 패키지도 설치됩니다. 이러한 구성 요소는 기본 제공 구성 요소에서 지원하는 데이터 원본 외에도 다양한 **Azure** 데이터 원본 및 **Excel 및 Access** 파일에 대한 연결을 제공합니다.
 
-추가 구성 요소를 설치할 수도 있습니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)를 참조하세요.
+추가 구성 요소를 설치할 수도 있습니다. 예를 들어 기본적으로 설치되지 않은 드라이버를 설치할 수 있습니다. 자세한 내용은 [Azure SSIS 통합 런타임에 대한 사용자 지정 설치](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)를 참조하세요.
 
 ISV인 경우 사용이 허가된 구성 요소의 설치를 업데이트하여 Azure에서 사용할 수 있습니다. 자세한 내용은 [Azure-SSIS Integration Runtime에 대한 유료 또는 사용이 허가된 사용자 지정 구성 요소 개발](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components)을 참조하세요.
 
@@ -96,18 +96,33 @@ Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 
-**배포 모델** Azure에서 SSISDB에 프로젝트를 배포하는 경우 패키지 배포 모델이 아닌 **프로젝트 배포 모델**을 사용해야 합니다.
+시작하려면 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
 
-**배포 및 실행 옵션** Azure에서 프로젝트를 배포하고 패키지를 실행하려면 다음과 같은 몇 가지 친숙한 도구 및 스크립팅 옵션 중 하나를 사용할 수 있습니다.
+### <a name="connect-to-ssisdb"></a>SSISDB에 연결
+
+SSISDB를 호스팅하는 **SQL Database의 이름**은 SSDT 및 SSMS에서 패키지를 배포하고 실행할 때 사용할 네 부분으로 된 다음과 같은 형식(`<sql_database_name>.database.windows.net`)인 이름의 첫 부분입니다. Azure의 SSIS 카탈로그 데이터베이스에 연결하는 방법에 대한 정보는 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+
+### <a name="deploy-projects-and-packages"></a>프로젝트 및 패키지 배포
+
+Azure에서 SSISDB에 프로젝트를 배포하는 경우 패키지 배포 모델이 아닌 **프로젝트 배포 모델**을 사용해야 합니다.
+
+Azure에서 프로젝트를 배포하려면 다음과 같은 몇 가지 친숙한 도구 및 스크립팅 옵션 중 하나를 사용할 수 있습니다.
 -   SSMS(SQL Server Management Studio)
 -   Transact-SQL(SSMS, Visual Studio Code 또는 다른 도구에서 제공)
 -   명령줄 도구
--   PowerShell
--   C# 및 SSIS 관리 개체 모델
+-   PowerShell 또는 C# 및 SSIS 관리 개체 모델
 
-**SSISDB에 연결** SSISDB를 호스팅하는 **SQL Database의 이름**은 SSDT 및 SSMS에서 패키지를 배포하고 실행할 때 사용할 네 부분으로 된 다음과 같은 형식(`<sql_database_name>.database.windows.net`)인 이름의 첫 부분입니다. Azure의 SSIS 카탈로그 데이터베이스에 연결하는 방법에 대한 정보는 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)을 참조하세요.
+SSMS 및 Integration Services Deployment Wizard를 사용하는 배포 예제는 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조합니다.
 
-시작하려면 [Azure에서 SSIS 패키지 배포, 실행 및 모니터링](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
+### <a name="run-packages"></a>패키지 실행
+
+Azure에 배포된 SSIS 패키지를 실행하는 데 사용할 수 있는 메서드의 개요는 [Azure에서 SSIS 패키지 실행](ssis-azure-run-packages.md)을 참조합니다.
+
+## <a name="pass-runtime-values-with-environments"></a>환경을 사용하여 런타임 값 전달
+
+Azure Data Factory 파이프라인의 일부로 실행되는 패키지에 하나 이상의 런타임 값을 전달하려면 SSMS(SQL Server Management Studio)를 사용하여 SSISDB에서 SSIS 실행 환경을 만듭니다. 각 환경에서 변수를 만들고 프로젝트 또는 패키지에 대한 매개 변수에 해당하는 값을 할당합니다. 프로젝트 또는 패키지 매개 변수와 해당 환경 변수를 연결하려면 SSMS에서 SSIS 패키지를 구성합니다. Data Factory 파이프라인에서 패키지를 실행하는 경우 SSIS 패키지 작업 실행 UI의 설정 탭에서 다른 환경 경로를 지정하여 환경 간에 전환합니다.
+
+SSIS 환경에 대한 자세한 내용은 [서버 환경 만들기 및 매핑](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment)을 참조하세요. Azure Data Factory 파이프라인의 일부로 패키지 실행에 대한 정보는 [Azure Data Factory에서 SSIS 패키지 작업 실행을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 참조하세요.
 
 ## <a name="monitor-packages"></a>패키지 모니터링
 SSMS에서 실행 중인 패키지를 모니터링하려면 SSMS에서 다음 보고 도구를 사용할 수 있습니다.

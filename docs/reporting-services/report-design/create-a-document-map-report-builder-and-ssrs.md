@@ -1,7 +1,7 @@
 ---
 title: 문서 구조 만들기(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550414"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>보고서를 볼 때 문서 구조를 숨기려면  
   
-1.  보고서 관리자에서 문서 구조를 포함하는 보고서를 찾습니다.  
+1.  웹 포털에서 문서 구조를 포함하는 보고서를 찾습니다.  
   
      예를 들어 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 예제 보고서의 경우 다음 URL에서 Product Catalog라는 보고서를 지정합니다.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      이 URL을 사용하려면 해당 URL을 복사하고 모든 줄 바꿈을 제거합니다.  
   
-4.  보고서 관리자에 URL을 붙여넣은 다음 Enter 키를 누릅니다. 보고서가 실행되고 문서 구조가 숨겨집니다.  
+4.  웹 포털에 URL을 붙여넣은 다음, Enter 키를 누릅니다. 보고서가 실행되고 문서 구조가 숨겨집니다.  
   
 > [!NOTE]  
 >  샘플 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  

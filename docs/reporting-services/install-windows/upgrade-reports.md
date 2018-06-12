@@ -1,7 +1,7 @@
 ---
-title: 보고서 업그레이드 | Microsoft Docs
+title: 보고서 업그레이드(SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771829"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  보고서 정의 파일(.rdl)은 다음과 같은 방법으로 자동 업그레이드됩니다.  
+보고서 정의 파일(.rdl)은 다음과 같은 방법으로 자동 업그레이드됩니다.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 보고서를 열면 보고서 정의가 현재 지원되는 RDL 스키마로 업그레이드됩니다. 프로젝트 속성에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 보고서 서버를 지정하면 보고서 정의는 대상 서버와 호환되는 스키마에 저장됩니다.  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 페이지를 매긴 보고서를 열면 보고서 정의가 현재 지원되는 RDL 스키마로 업그레이드됩니다. 프로젝트 속성에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 보고서 서버를 지정하면 보고서 정의는 대상 서버와 호환되는 스키마에 저장됩니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 설치로 업그레이드한 경우 보고서 서버에 게시된 기존 보고서 및 스냅숏은 처음 처리되는 시점에서 새 스키마로 컴파일되고 자동으로 업그레이드됩니다. 자동으로 업그레이드할 수 없는 보고서는 이전 버전 호환 모드를 사용하여 처리됩니다. 보고서 정의는 원래 스키마에 유지됩니다.  
   
- 보고서 정의 파일을 보고서 서버 또는 SharePoint 사이트에 직접 업로드하는 경우에는 보고서가 업그레이드되지 않습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 보고서 정의를 업그레이드해야만 .rdl 파일을 업그레이드할 수 있습니다.  
-  
  로컬 또는 보고서 서버에서 보고서를 업그레이드한 후 추가적인 오류, 경고 및 메시지가 나타날 수 있습니다. 이것은 내부 보고서 개체 모델 및 처리 구성 요소가 변경됨에 따라 보고서에서 근본적인 문제를 감지하고 메시지를 표시하기 때문입니다. 자세한 내용은 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)을 참조하세요.  
   
- [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)의 새 기능에 대한 자세한 내용은  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]의 새 기능에 대한 자세한 내용은 [SSRS(SQL Server Reporting Services)의 새로운 기능](../what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
 
 ##  <a name="bkmk_versionsupported"></a> 업그레이드 가능한 버전  
  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 만든 보고서는 업그레이드할 수 있습니다. 여기에는 다음과 같은 버전이 포함됩니다.  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  보고서 서버, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 보고서의 현재 RDL 네임스페이스를 확인하는 방법은 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>보고서 서버에서 보고서 업그레이드  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보고서 서버로 업그레이드된 보고서 서버에서 처음으로 실행하는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서는 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 자동 업그레이드됩니다. 보고서는 업그레이드 전에 보고서 서버에 있었을 수도 있고, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되었거나 보고서 관리자를 통해 업로드되었을 수도 있습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보고서 서버로 업그레이드된 보고서 서버에서 처음으로 실행하는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서는 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 자동 업그레이드됩니다. 보고서는 업그레이드 전에 보고서 서버에 있었을 수도 있고, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되었거나 웹 포털을 통해 업로드되었을 수도 있습니다.  
   
  다음 표에서는 보고서 서버에서 보고서에 있는 특정 유형의 CRI에 대해 수행하는 업그레이드 동작을 보여 줍니다.  
   

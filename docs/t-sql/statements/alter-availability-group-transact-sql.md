@@ -27,11 +27,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 981391e55cc73844ee8c6f7c4975b38305e350fc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585925"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS는 dns_name에서 처음 15자만 인식합니다. 두 WSFC 클러스터가 동일한 Active Directory에 의해 제어될 때 15자 이상의 이름과 동일한 15자 접두사를 사용하여 두 클러스터 모두에서 가용성 그룹 수신기를 만들려고 하면Virtual Network 이름 리소스를 온라인으로 전환할 수 없다는 오류 메시지가 표시됩니다. DNS 이름의 접두사 명명 규칙에 대한 자세한 내용은 [도메인 이름 할당](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)을 참조하세요.  
   
  JOIN AVAILABILITY GROUP ON  
- *분산 가용성 그룹*에 조인합니다. 분산 가용성 그룹을 만들 때 만들어지는 클러스터의 가용성 그룹은 주 가용성 그룹입니다. 분산 가용성 그룹에 조인하는 가용성 그룹은 보조 가용성 그룹입니다.  
+ *분산 가용성 그룹*에 조인합니다. 분산 가용성 그룹을 만들 때 만들어지는 클러스터의 가용성 그룹은 주 가용성 그룹입니다. 조인을 실행하면 로컬 서버 인스턴스의 가용성 그룹은 보조 가용성 그룹이 됩니다.  
   
  \<ag_name>  
  분산 가용성 그룹의 절반을 구성하는 가용성 그룹의 이름을 지정합니다.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER_URL **='** TCP **://***system-address***:***port***'**  
  가용성 그룹과 연결된 수신기에 대한 URL 경로를 지정합니다.  
   
- LISTENER 절은 필수입니다.  
+ LISTENER_URL 절은 필수입니다.  
   
  **'** TCP **://***system-address***:***port***'**  
  가용성 그룹과 연결된 수신기에 대한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
@@ -490,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  수신기를 명확하게 식별하는 시스템 이름, 정규화된 도메인 이름 또는 IP 주소 등의 문자열입니다.  
   
  *port*  
- 가용성 그룹의 미러링 엔드포인트와 연결된 포트 번호입니다. 수신기의 포트가 아닙니다.  
+ 가용성 그룹의 미러링 엔드포인트와 연결된 포트 번호입니다. 수신기에서 구성된 클라이언트 연결에 대한 포트가 아닙니다.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  주 복제본이 지정된 주 데이터베이스의 트랜잭션을 커밋하기 전에 보조 가용성 그룹이 디스크에 로그 레코드 확정(쓰기)을 확인할 때까지 주 복제본이 기다려야 하는지 여부를 지정합니다.  

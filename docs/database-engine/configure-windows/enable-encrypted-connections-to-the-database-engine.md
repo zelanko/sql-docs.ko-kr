@@ -24,11 +24,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 761913c563b27ea0447b6b104d2d05b441aa70b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fea89d75e74db8f14eeedf692bf50c37469239f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585565"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  클라이언트가 서버에 사용되는 인증서의 소유권을 확인할 수 있어야 합니다. 클라이언트에 서버 인증서를 서명한 인증 기관의 공개 키 인증서가 있으면 추가 구성은 필요 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에는 많은 인증 기관의 공개 키 인증서가 포함되어 있습니다. 클라이언트에 공개 키 인증서가 없는 공개 또는 개인 인증 기관에서 서버 인증서를 서명한 경우 서버 인증서를 서명한 인증 기관의 공개 키 인증서를 설치해야 합니다.  
   
 > [!NOTE]  
->  장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 test1.*\<회사>*.com 및 test2.*\<회사>*.com인 두 노드 클러스터와 virtsql이라는 가상 서버가 있는 경우 virtsql.*\<회사>*.com에 대한 인증서를 두 노드에 모두 설치해야 합니다. **ForceEncryption**옵션 값을 **예**로 설정할 수 있습니다.  
+>  장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 test1.*\<회사>*.com 및 test2.*\<회사>*.com인 두 노드 클러스터와 virtsql이라는 가상 서버가 있는 경우 virtsql.*\<회사>*.com에 대한 인증서를 두 노드에 모두 설치해야 합니다. **ForceEncryption** 옵션 값을 **예**로 설정할 수 있습니다.  
 
 > [!NOTE]
 > Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 암호화된 연결을 만드는 경우 [Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 연결 구성](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)을 참조하세요. 

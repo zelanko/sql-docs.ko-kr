@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 데이터 원본에 자격 증명 저장 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2015
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -20,26 +20,19 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa7bc5471455e428fb680dbe0369bc1fd4888dbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8511d948e0e942451e4c304e6a381686c0023a08
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550684"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
   보고서에 대한 외부 데이터에 액세스하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 사용하는 저장된 자격 증명을 구성할 수 있습니다. 보고서가 무인 모드로 실행되는 경우 저장된 자격 증명이 사용됩니다(예: 보고서를 전자 메일로 게시하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독). 보고서 처리가 예약되거나 트리거되면 보고서 서버는 자격 증명을 검색하고 사용합니다. 이 항목에서는 기본 모드 및 SharePoint 모드 보고서 서버에 대해 저장된 자격 증명을 구성하는 방법에 대해 설명합니다.  
   
-||  
-|-|  
+|| |
+|-|-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
-  
--   [보고서별 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)](#bkmk_stored_credentials_data_source_native)  
-  
--   [보고서별 데이터 원본에 대해 저장된 자격 증명 구성(SharePoint 모드)](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [공유 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [공유 데이터 원본에 대해 저장된 자격 증명 구성(SharePoint 모드)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> 저장된 자격 증명에 대한 보안 정책 요구 사항  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 보고서 서버의 다음 보안 정책 중 하나의 경우, 저장된 자격 증명에 대해 사용하는 계정을 구성해야 합니다. 환경에서 필요한 최저 수준의 권한을 지닌 정책을 선택하는 것이 좋습니다.  
@@ -52,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 보고서별 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)  
   
-1.  기본 모드 보고서 관리자에서 보고서가 들어 있는 폴더를 찾습니다. 항목 상황에 맞는 메뉴 ![SSRS용 보고서 관리자의 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "SSRS용 보고서 관리자의 상황에 맞는 메뉴 항목")을 클릭합니다.  
+1.  웹 포털에서 보고서가 포함된 폴더로 이동합니다. 보고서 타일의 오른쪽 위 모서리에서 줄임표(...)를 클릭합니다.  
   
 2.  **관리** 를 클릭한 다음 **데이터 원본**을 클릭합니다.  
   
@@ -108,11 +101,11 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 공유 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)  
   
-1.  기본 모드 보고서 관리자에서 공유 데이터 원본 항목을 찾습니다. ![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")  
+1.  웹 포털에서 공유 데이터 원본 항목을 찾습니다. 
   
-2.  상황에 맞는 메뉴 ![SSRS용 보고서 관리자의 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "SSRS용 보고서 관리자의 상황에 맞는 메뉴 항목")을 클릭한 다음 **관리**를 클릭합니다.  
+2.  보고서 타일의 오른쪽 위 모서리 > **관리**에서 줄임표(...)를 클릭합니다. 
   
-3.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
+3.  **유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
 4.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 연결 문자열에서 자격 증명을 지정하지 않는 것을 권장합니다.  
   
@@ -162,9 +155,4 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [새 데이터 원본 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
-  
   

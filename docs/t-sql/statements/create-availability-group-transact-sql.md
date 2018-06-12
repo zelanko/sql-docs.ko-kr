@@ -29,11 +29,12 @@ caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a1a0f9120b777bde70a698a25602403690aab83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1642275d5d5429160d05c958cea1f8f65dd56846
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585825"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,70 +51,76 @@ ms.lasthandoff: 05/03/2018
 ```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
-   WITH (<with_option_spec> [ ,...n ] )  
-   FOR [ DATABASE database_name [ ,...n ] ]  
-   REPLICA ON <add_replica_spec> [ ,...n ]  
-   AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+  { <availability_group_spec> | <distributed_availability_group_spec> }  
 [ ; ]  
-  
-<with_option_spec>::=   
-    AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
-  | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
-  | HEALTH_CHECK_TIMEOUT = milliseconds  
-  | DB_FAILOVER  = { ON | OFF }   
-  | DTC_SUPPORT  = { PER_DB | NONE }  
-  | BASIC  
-  | DISTRIBUTED
-  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
-  
-<add_replica_spec>::=  
-  <server_instance> WITH  
+
+<availability_group_spec>::=  
+  [ WITH (<with_option_spec> [ ,...n ] ) ]  
+  FOR [ DATABASE database_name [ ,...n ] ]  
+  REPLICA ON <add_replica_spec> [ ,...n ]  
+  [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+
+  <with_option_spec>::=   
+      AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+    | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
+    | HEALTH_CHECK_TIMEOUT = milliseconds  
+    | DB_FAILOVER  = { ON | OFF }   
+    | DTC_SUPPORT  = { PER_DB | NONE }  
+    | BASIC  
+    | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+    | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+    
+  <add_replica_spec>::=  
+    <server_instance> WITH  
+      (  
+        ENDPOINT_URL = 'TCP://system-address:port',  
+        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+        FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
+        [ , <add_replica_option> [ ,...n ] ]  
+      )   
+    
+    <add_replica_option>::=  
+        SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      | BACKUP_PRIORITY = n  
+      | SECONDARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+      } )  
+      | PRIMARY_ROLE ( {   
+              [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+          [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+      } )  
+      | SESSION_TIMEOUT = integer  
+
+  <listener_option> ::=  
+    {  
+        WITH DHCP [ ON ( <network_subnet_option> ) ]  
+      | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
+    }  
+    
+    <network_subnet_option> ::=  
+      ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+    
+    <ip_address_option> ::=  
+      {   
+          ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
+        | ‘ipv6_address’  
+      }  
+
+<distributed_availability_group_spec>::=  
+  WITH (DISTRIBUTED)  
+  AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
+
+  <add_availability_group_spec>::=  
+  <ag_name> WITH  
     (  
-       ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
-       [ , <add_replica_option> [ ,...n ] ]  
-    )   
-  
-  <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
-     | BACKUP_PRIORITY = n  
-     | SECONDARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-     } )  
-     | PRIMARY_ROLE ( {   
-            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-     } )  
-     | SESSION_TIMEOUT = integer  
-  
-<add_availability_group_spec>::=  
- <ag_name> WITH  
-    (  
-       LISTENER_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = MANUAL,  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }  
+      LISTENER_URL = 'TCP://system-address:port',  
+      AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+      FAILOVER_MODE = MANUAL,  
+      SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
   
-<listener_option> ::=  
-   {  
-      WITH DHCP [ ON ( <network_subnet_option> ) ]  
-    | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
-   }  
-  
-  <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
-  
-  <ip_address_option> ::=  
-     {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
-     }  
-  
+
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -184,7 +191,7 @@ CREATE AVAILABILITY GROUP group_name
  기본 가용성 그룹을 만드는 데 사용됩니다. 기본 가용성 그룹은 하나의 데이터베이스와 두 개의 복제본(주 복제본과 보조 복제본)으로 제한됩니다. 이 옵션은 SQL Server Standard Edition에서 더 이상 사용되지 않는 데이터베이스 미러링 기능을 대체합니다. 자세한 내용은 [기본 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요. 기본 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다.  
 
  DISTRIBUTED  
- 분산형 가용성 그룹을 만드는 데 사용됩니다. 이 옵션은 AVAILABILITY GROUP ON 매개 변수와 함께 사용되어 별도의 Windows Server 장애 조치(failover) 클러스터에 있는 두 개의 가용성 그룹을 연결합니다.  자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)을 참조하세요. 분산형 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다. 
+ 분산형 가용성 그룹을 만드는 데 사용됩니다. DISTRIBUTED 옵션은 다른 옵션 또는 절과 결합할 수 없습니다. 이 옵션은 AVAILABILITY GROUP ON 매개 변수와 함께 사용되어 별도의 Windows Server 장애 조치(failover) 클러스터에 있는 두 개의 가용성 그룹을 연결합니다.  자세한 내용은 [분산된 가용성 그룹&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)을 참조하세요. 분산형 가용성 그룹은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 지원됩니다. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017에서 도입되었습니다. 주 복제본이 트랜잭션을 커밋하기 전에 커밋하는 데 필요한 최소 동기 보조 복제본 수를 설정하는 데 사용됩니다. 트랜잭션 로그가 보조 복제본의 최소 수에서 업데이트될 때까지 SQL Server 트랜잭션이 대기하도록 보장합니다. 기본값은 0으로 SQL Server 2016과 동일한 동작을 제공합니다. 최솟값은 0입니다. 최댓값은 복제본 수에서 1을 뺀 수입니다. 이 옵션은 동기 커밋 모드의 복제본과 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본의 쓰기는 보조 동기 복제본의 쓰기가 복제본 데이터베이스 트랜잭션 로그에 커밋될 때까지 기다립니다. 보조 동기 복제본을 호스팅하는 SQL Server가 응답을 중지하는 경우 주 복제본을 호스팅하는 SQL Server는 보조 복제본을 NOT SYNCHRONIZED로 표시하고 진행합니다. 응답하지 않는 데이터베이스가 다시 온라인 상태가 되면 "동기화 되지 않음" 상태가 되고 복제본은 주 복제본이 다시 동기화할 수 있을 때까지 비정상으로 표시됩니다. 이 설정은 최소 복제본 수가 각 트랜잭션을 커밋할 때까지 기본 복제본이 대기하도록 보장합니다. 최소 복제본 수를 사용할 수 없는 경우 주 복제본에 커밋은 실패합니다. 클러스터 형식 `EXTERNAL`의 경우 가용성 그룹이 클러스터 리소스에 추가될 때 설정이 변경됩니다. [가용성 그룹 구성을 위한 고가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)를 참조하세요.
@@ -368,7 +375,7 @@ CREATE AVAILABILITY GROUP group_name
  세션 제한 시간에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
  AVAILABILITY GROUP ON  
- 분산형 가용성 그룹을 구성하는 두 개의 가용성 그룹을 지정합니다. 각 가용성 그룹은 자체 WSFC(Windows Server 장애 조치(Failover) 클러스터)의 일부입니다. 분산형 가용성 그룹을 만들면 현재 SQL Server 인스턴스의 가용성 그룹이 주 가용성 그룹이 됩니다. 두 번째 가용성 그룹이 보조 가용성 그룹이 됩니다.  
+ 분산형 가용성 그룹을 구성하는 두 개의 가용성 그룹을 지정합니다. 각 가용성 그룹은 자체 WSFC(Windows Server 장애 조치(Failover) 클러스터)의 일부입니다. 분산형 가용성 그룹을 만들면 현재 SQL Server 인스턴스의 가용성 그룹이 주 가용성 그룹이 되고 원격 가용성 그룹은 보조 가용성 그룹이 됩니다.  
   
  보조 가용성 그룹을 분산형 가용성 그룹에 조인해야 합니다. 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
@@ -486,7 +493,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>1. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
  다음 예에서는 두 개의 사용자 데이터베이스 `MyAg` 및 `ThisDatabase`에 대해 `ThatDatabase`라는 가용성 그룹을 만듭니다. 다음 표에는 가용성 그룹 전체에 대해 설정되는 옵션에 지정되는 값이 요약되어 있습니다.  
   
-|그룹 옵션|설정|Description|  
+|그룹 옵션|설정|설명|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|이 자동화된 백업 기본 설정은 주 복제본이 유일한 온라인 복제본일 경우(기본 동작)를 제외하고 백업이 보조 복제본에서 수행되도록 지정합니다. 자동화된 백업 기본 설정을 고려하도록 가용성 데이터베이스에서 백업 작업을 스크립팅해야 AUTOMATED_BACKUP_PREFERENCE 설정이 적용됩니다.|  
 |FAILURE_CONDITION_LEVEL|3|이 오류 상태 수준 설정은 분리된 spinlock, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 SQL Server 내부 오류가 발생할 경우 자동 장애 조치(failover)를 시작하도록 지정합니다.|  
@@ -494,7 +501,7 @@ CREATE AVAILABILITY GROUP group_name
   
  세 가지 가용성 복제본은 `COMPUTER01`, `COMPUTER02` 및 `COMPUTER03`이라는 컴퓨터의 기본 서버 인스턴스가 호스팅합니다. 다음 표에는 각 복제본의 복제본 옵션에 지정되는 값이 요약되어 있습니다.  
   
-|복제본 옵션|`COMPUTER01`의 설정|`COMPUTER02`의 설정|`COMPUTER03`의 설정|Description|  
+|복제본 옵션|`COMPUTER01`의 설정|`COMPUTER02`의 설정|`COMPUTER03`의 설정|설명|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|이 예에서는 시스템이 같은 도메인에 있으므로 끝점 URL에서 컴퓨터 시스템의 이름을 시스템 주소로 사용할 수 있습니다.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|두 복제본이 동기-커밋 모드를 사용합니다. 동기화된 복제본은 데이터 손실 없는 장애 조치(failover)를 지원합니다. 비동기-커밋을 가용성 모드를 사용하는 세 번째 복제본입니다.|  

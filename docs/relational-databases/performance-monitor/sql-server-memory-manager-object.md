@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473907"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Memory Manager 카운터  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 카운터에 대해 설명합니다.  
   
-|SQL Server Memory Manager 카운터|Description|  
+|SQL Server Memory Manager 카운터|설명|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|연결 유지 관리를 위해 서버에서 사용 중인 총 동적 메모리 양을 지정합니다.|  
 |**Database Cache Memory(KB)**|서버가 현재 데이터베이스 페이지 캐시에 사용 중인 메모리 양을 지정합니다.|  
-|**메모리의 외부 혜택**|메모리의 외부 값(ms/페이지/ms)입니다(100억으로 곱하고 정수로 잘림).| 
+|**메모리의 외부 혜택**| 특정 캐시에 메모리 추가에서 오는 성능 혜택에 대한 내부 추정입니다. 이는 캐시 간 메모리 사용량 균등화 엔진에서 사용하며 예기치 않은 캐시 성장으로 사례의 문제를 해결할 때 지원하는 데 유용합니다. 값은 내부 계산에 따라 정수로 표시됩니다. | 
 |**Free Memory(KB)**|서버에서 현재 사용하지 않는 커밋된 메모리 양을 지정합니다.|  
 |**Granted Workspace Memory (KB)**|해시, 정렬, 대량 복사 및 인덱스 만들기 작업과 같은 실행 중인 프로세스에 현재 부여된 총 메모리 양을 지정합니다.|  
 |**Lock Blocks**|서버에서 현재 사용 중인 잠금 블록 수를 지정합니다. 이 값은 주기적으로 새로 고쳐집니다. 잠금 블록은 테이블, 페이지, 행과 같은 개별적인 잠금 리소스를 나타냅니다.|  

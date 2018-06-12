@@ -39,11 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc629623e8de28a0aaf18d384ba2e9db3a63269
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585955"
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +368,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  출력 테이블의 별칭 이름입니다. *pivot_table_alias*는 지정해야 합니다.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  입력 테이블이 *column_list*의 여러 열에서 *pivot_column*이라는 단일 열로 좁혀지도록 지정합니다. PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
   
  AS OF \<date_time>  

@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563751"
 ---
 # <a name="-equals-transact-sql"></a>=(같음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Boolean  
   
 ## <a name="remarks"></a>Remarks  
- 두 개의 NULL 식을 비교하는 경우 결과는 `ANSI_NULLS` 설정에 따라 다음과 같이 달라집니다.  
+ NULL 식을 사용하여 비교하는 경우 결과는 `ANSI_NULLS` 설정에 따라 다음과 같이 달라집니다.  
   
--   `ANSI_NULLS`가 ON으로 설정되어 있는 경우, NULL(또는 알 수 없는 값) 값은 다른 NULL 또는 알 수 없는 값과 같지 않다는 ANSI 규칙에 따라 결과는 NULL이 됩니다.  
+-   `ANSI_NULLS`이 ON으로 설정된 경우 NULL은 알 수 없는 값이며 다른 Null을 포함한 다른 모든 값과 비교할 수 없다는 ANSI 규칙에 따라 NULL과 비교 결과는 UNKNOWN입니다.  
   
--   `ANSI_NULLS`가 OFF로 설정되어 있는 경우 NULL과 NULL의 비교 결과는 TRUE가 됩니다.  
+-   `ANSI_NULLS`이 OFF로 설정된 경우 NULL과 NULL을 비교한 결과는 TRUE이고 다른 값과 NULL을 비교한 결과는 FALSE입니다.  
 
 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.
   
- 모든 NULL 값(알 수 없는) 대 NULL이 아닌 값의 비교 결과는 항상 FALSE입니다.  
+ 결과적으로 UNKNOWN이 되는 부울 식은 모두는 아니지만 대부분의 경우 비슷하게 FALSE로 동작합니다. 자세한 내용은 [NULL 및 UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) 및 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)을 참조하세요.  
   
   
 ## <a name="examples"></a>예  

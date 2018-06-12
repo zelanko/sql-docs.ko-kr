@@ -25,24 +25,25 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: a92f42a693c99c213815fdb1a14395becb3e9054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15a41989e5e846a8d4ca2c43b71c0d19210d8a21
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550884"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-이 항목의 다음 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜/시간 데이터 형식 및 함수에 대한 개요를 제공합니다.
+이 항목의 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜/시간 데이터 형식 및 함수를 다룹니다.
 -   [날짜 및 시간 데이터 형식](#DateandTimeDataTypes)  
 -   [날짜 및 시간 함수](#DateandTimeFunctions)  
-    -   [시스템 날짜 및 시간 값 가져오기 함수](#GetSystemDateandTimeValues)  
-    -   [날짜 및 시간 부분 가져오기 함수](#GetDateandTimeParts)  
-    -   [해당 부분에서 날짜 및 시간 값 가져오기 함수](#fromParts)  
-    -   [날짜 및 시간 차 가져오기 함수](#GetDateandTimeDifference)  
+    -   [시스템 날짜 및 시간 값을 반환하는 함수](#GetSystemDateandTimeValues)  
+    -   [날짜 및 시간 부분을 반환하는 함수](#GetDateandTimeParts)  
+    -   [해당 부분에서 날짜 및 시간 값을 반환하는 함수](#fromParts)  
+    -   [날짜 및 시간 차이 값을 반환하는 함수](#GetDateandTimeDifference)  
     -   [날짜 및 시간 값 수정 함수](#ModifyDateandTimeValues)  
-    -   [세션 형식 설정 또는 가져오기 함수](#SetorGetSessionFormatFunctions)  
+    -   [세션 형식 함수를 설정 또는 반환하는 함수](#SetorGetSessionFormatFunctions)  
     -   [날짜 및 시간 값 유효성 검사 함수](#ValidateDateandTimeValues)  
 -   [날짜 및 시간 관련 항목](#DateandTimeRelatedTopics)  
   
@@ -51,50 +52,50 @@ ms.lasthandoff: 05/03/2018
   
 |데이터 형식|형식|범위|정확도|저장소 크기(바이트)|사용자 정의 초 소수 부분 자릿수|표준 시간대 오프셋|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000부터 23:59:59.9999999까지|100나노초|3 ~ 5|예|아니오|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01부터 31.12.99까지|1일|3|아니오|아니오|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01부터 2079-06-06까지|1분|4|아니오|아니오|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01부터 9999-12-31까지|0.00333초|8|아니오|아니오|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지|100나노초|6 ~ 8|예|아니오|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000부터 23:59:59.9999999까지|100나노초|3 ~ 5|예|아니요|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01부터 31.12.99까지|1일|3|아니요|아니요|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01부터 2079-06-06까지|1분|4|아니요|아니요|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01부터 9999-12-31까지|0.00333초|8|아니요|아니요|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지|100나노초|6 ~ 8|예|아니요|  
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000부터 9999-12-31 23:59:59.9999999까지(UTC)|100나노초|8 ~ 10|예|예|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) 데이터 형식은 날짜 또는 시간 데이터 형식이 아닙니다. **timestamp**는 **rowversion**에 사용되지 않는 동의어입니다.  
   
 ##  <a name="DateandTimeFunctions"></a> 날짜 및 시간 함수  
-다음 표에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 날짜 및 시간 함수가 나와 있습니다. 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+다음 표에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 날짜 및 시간 함수를 나열합니다. 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
-###  <a name="GetSystemDateandTimeValues"></a> 시스템 날짜 및 시간 값 가져오기 함수 
-모든 시스템 날짜 및 시간 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터 운영 체제에서 가져옵니다.
+###  <a name="GetSystemDateandTimeValues"></a> 시스템 날짜 및 시간 값을 반환하는 함수 
+[!INCLUDE[tsql](../../includes/tsql-md.md)]은 모든 시스템 날짜 및 시간 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터 운영 체제에서 가져옵니다.
   
 #### <a name="higher-precision-system-date-and-time-functions"></a>정밀도가 높은 시스템 날짜 및 시간 함수  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 GetSystemTimeAsFileTime() Windows API를 사용하여 날짜 및 시간 값을 가져옵니다. 정확도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 하드웨어와 Windows 버전에 따라 달라집니다. 이 API의 정밀도는 100나노초로 고정됩니다. 정확도는 GetSystemTimeAdjustment() Windows API를 사용하여 확인할 수 있습니다.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 GetSystemTimeAsFileTime() Windows API를 사용하여 날짜 및 시간 값을 가져옵니다. 정확도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 하드웨어와 Windows 버전에 따라 달라집니다. 이 API의 정밀도는 100나노초에 고정되어 있습니다. 정확도를 확인하려면 GetSystemTimeAdjustment() Windows API를 사용합니다.
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime2(7)**|비결정적|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.|**datetimeoffset(7)**|비결정적|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다.|**datetime2(7)**|비결정적|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime2(7)**|비결정적|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함됩니다.|**datetimeoffset(7)**|비결정적|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2(7)** 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime2(7)**|비결정적|  
   
-#### <a name="lower-precision--system-date-and-time-functions"></a>정밀도가 낮은 시스템 날짜 및 시간 함수
+#### <a name="lower-precision-system-date-and-time-functions"></a>정밀도가 낮은 시스템 날짜 및 시간 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다.|**datetime**|비결정적|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 반환 값에는 표준 시간대 오프셋이 포함되지 않습니다.|**datetime**|비결정적|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime** 값을 반환합니다. 함수는 날짜와 시간 값을 UTC 시간(Coordinated Universal Time)으로 반환합니다.|**datetime**|비결정적|  
   
-###  <a name="GetDateandTimeParts"></a> 날짜 및 시간 부분 가져오기 함수
+###  <a name="GetDateandTimeParts"></a> 날짜 및 시간 부분을 반환하는 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정된 날짜의 지정된 *datepart*를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|  
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정한 날짜에서 특정 *datepart*를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|   
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**int**|비결정적|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정된 *date*의 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정된 *date*의 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정된 *date*의 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
   
-###  <a name="fromParts"></a> 해당 부분에서 날짜 및 시간 값 가져오기 함수
+###  <a name="fromParts"></a> 해당 부분에서 날짜 및 시간 값을 반환하는 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
@@ -105,23 +106,23 @@ ms.lasthandoff: 05/03/2018
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|지정된 날짜 및 시간에 대한 **smalldatetime** 값을 반환합니다.|**smalldatetime**|결정적|  
 |[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|지정한 전체 자릿수를 사용하여 지정한 시간에 대한 **time** 값을 반환합니다.|**time(** *precision* **)**|결정적|  
   
-###  <a name="GetDateandTimeDifference"></a> 날짜 및 시간 차 가져오기 함수
+###  <a name="GetDateandTimeDifference"></a> 날짜 및 시간 차이 값을 반환하는 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 사이에 있는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**int**|결정적|  
-|[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 사이에 있는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**bigint**|결정적|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**int**|결정적|  
+|[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**bigint**|결정적|  
   
-###  <a name="ModifyDateandTimeValues"></a> 날짜 및 시간 값 수정 함수
+###  <a name="ModifyDateandTimeValues"></a> 날짜 및 시간 값을 수정하는 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
 |[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|지정된 *date*의 지정된 *datepart*에 간격을 더하여 새 **datetime** 값을 반환합니다.|*date* 인수의 데이터 형식|결정적|  
-|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|선택 사항인 오프셋 옵션을 사용하여 지정한 날짜가 포함된 달의 마지막 날을 반환합니다.|반환 형식은 *start_date* 또는 **date**의 형식입니다.|결정적|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCH*OFFSET* (*DATETIMEOFFSET* , *time_zone*)|SWITCH*OFFSET*은 DATETIMEOFFSET 값의 표준 시간대 오프셋을 변경하고 UTC 값을 유지합니다.|**datetimeoffset**을 *DATETIMEOFFSET*의 소수 자릿수로 표시|결정적|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET은 datetime2 값을 datetimeoffset 값으로 변환합니다. datetime2 값은 지정된 time_zone의 현지 시간으로 해석됩니다.|**datetimeoffset**을 *datetime* 인수의 소수 자릿수로 표시|결정적|  
+|[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|선택 사항인 오프셋 옵션을 사용하여 지정한 날짜가 포함된 달의 마지막 날을 반환합니다.|반환 유형은 *start_date* 인수 형식이거나 **date** 데이터 형식입니다.|결정적|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET은 DATETIMEOFFSET 값의 표준 시간대 오프셋을 변경하고 UTC 값을 유지합니다.|**datetimeoffset**을 *DATETIMEOFFSET*의 소수 자릿수로 표시|결정적|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET은 datetime2 값을 datetimeoffset 값으로 변환합니다. *TODATETIMEOFFSET*은 datetime2 값을 지정된 time_zone의 현지 시간으로 해석합니다.|**datetimeoffset**을 *datetime* 인수의 소수 자릿수로 표시|결정적|  
   
-###  <a name="SetorGetSessionFormatFunctions"></a> 세션 형식 가져오기 또는 설정 함수
+###  <a name="SetorGetSessionFormatFunctions"></a> 세션 형식 함수를 설정 또는 반환하는 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="DateandTimeRelatedTopics"></a> 날짜 및 시간 관련 토픽 
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|문자열 리터럴과 다른 날짜 및 시간 형식 간의 날짜/시간 값 변환에 대한 정보를 제공합니다.|  
 |[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 여러 언어를 지원하는 데이터베이스 및 데이터베이스 응용 프로그램의 언어 간 이식성에 대한 지침을 제공합니다.|  

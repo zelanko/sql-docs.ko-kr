@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550704"
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  열 암호화 키(CEK)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하기 위해 사용되는 키)입니다.  
   
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 RFC 3447 섹션 2.1항에 의해 지정된 기본 매개 변수가 있는 최적 비대칭 암호화 패딩(RSA-OAEP)와 RSA를 사용하여 CEK를 암호화합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다.  
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 섹션 A.2.1의 RFC 8017에 의해 지정된 기본 매개 변수가 있는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다.  
   
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  

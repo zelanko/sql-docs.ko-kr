@@ -3,7 +3,6 @@ title: Always On 가용성 그룹이 포함된 Service Broker(SQL Server) | Micr
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1febefd8e60b0ff054f1e556f23665da14b29320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770739"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,11 @@ ms.lasthandoff: 05/03/2018
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
-  
+     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+
+    > [!NOTE]  
+    SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.
+
 3.  **끝점에 대한 CONNECT 권한을 부여합니다.**  
   
      Service Broker 끝점에 대한 CONNECT 권한을 PUBLIC 또는 로그인으로 부여합니다.  

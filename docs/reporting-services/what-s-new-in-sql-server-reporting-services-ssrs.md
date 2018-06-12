@@ -1,6 +1,6 @@
 ---
 title: Reporting Services(SSRS)의 새로운 기능 | Microsoft Docs
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -13,11 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a279a399575f6272b3cefc22a2a319637de6c7b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550824"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -33,7 +34,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로�
 
 현재 릴리스 정보는 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)를 참조하세요. 
 
-Power BI Report Server에 대한 정보는 [Power BI Report Server 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)을 참조하세요.
+Power BI Report Server에 대한 정보는 [Power BI Report Server란?](https://docs.microsoft.com/power-bi/report-server/get-started)을 참조하세요.
 
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 

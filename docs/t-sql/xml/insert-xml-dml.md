@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744072"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>3. 문서에 특성 삽입  
- 다음 예에서는 문서에 특성을 삽입하는 방법을 보여 줍니다. 먼저 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, 일련의 **insert** XML DML 문을 사용하여 특성을 문서에 삽입합니다. 각 특성 삽입 이후 SELECT 문으로 결과를 표시합니다.  
+ 다음 예에서는 문서에 특성을 삽입하는 방법을 보여 줍니다. 먼저 문서가 **xml** 형식 변수에 할당됩니다. 그런 다음, 일련의 **insert** XML DML 문을 사용하여 특성을 문서에 삽입합니다. 각 특성 삽입 이후 SELECT 문으로 결과를 표시합니다.  
   
 ```  
 USE AdventureWorks;  

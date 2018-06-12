@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28633c4c373d37c4ba1d8cf18e4e1e9d0a385fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20567e713ac7a53cd506fb2447be51cd525877f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582075"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,15 +56,15 @@ ISNUMERIC ( expression )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- ISNUMERIC은 입력 식이 올바른 숫자 데이터 형식으로 평가되면 1을 반환하고 그렇지 않으면 0을 반환합니다. 올바른 숫자 데이터 형식은 다음과 같습니다.  
-  
-|||  
-|-|-|  
-|**int**|**numeric**|  
-|**bigint**|**money**|  
-|**smallint**|**smallmoney**|  
-|**tinyint**|**float**|  
-|**decimal**|**real**|  
+ ISNUMERIC은 입력 식이 올바른 숫자 데이터 형식으로 평가되면 1을 반환하고 그렇지 않으면 0을 반환합니다. 올바른 [숫자 데이터 형식](../../t-sql/data-types/numeric-types.md)은 다음과 같습니다.  
+
+|||
+|-|-|
+| [정확한 수치](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
+| [고정 전체 자릿수](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
+| [근사치](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
+| [통화 값](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
+
   
 > [!NOTE]  
 >  ISNUMERIC은 더하기(+), 빼기(-)와 같은 숫자가 아닌 일부 문자 및 달러 기호($)와 같은 올바른 통화 기호에 대해 1을 반환합니다. 통화 기호의 전체 목록은 [money 및 smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)을 참조하세요.  

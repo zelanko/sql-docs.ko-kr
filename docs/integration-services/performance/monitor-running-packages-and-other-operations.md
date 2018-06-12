@@ -1,7 +1,7 @@
 ---
 title: 실행 중인 패키지 및 기타 작업 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: performance
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772151"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  
@@ -45,7 +46,12 @@ ms.lasthandoff: 05/03/2018
      자세한 내용은 [성능 카운터](../../integration-services/performance/performance-counters.md)를 참조하세요.  
   
 -   데이터 탭  
-  
+
+> [!NOTE]
+> 이 문서에서는 SSIS 패키지 실행을 일반적으로 모니터링하는 방법 및 온-프레미스에서 패키지 실행을 모니터링하는 방법을 설명합니다. 또한 Azure SQL Database에서 SSIS 패키지를 실행 및 모니터링할 수도 있습니다. 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+>
+> Linux에서 SSIS 패키지를 실행할 수 있더라도 Linux에서 모니터링 도구가 제공되지 않습니다. 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
+
 ## <a name="operation-types"></a>작업 유형  
  여러 유형의 작업이 **서버의** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 모니터링됩니다. 각 작업과 연관된 메시지가 여러 개 있을 수 있습니다. 각 메시지는 여러 가지 유형 중 하나로 분류될 수 있습니다. 예를 들어 정보, 경고 또는 오류 메시지일 수 있습니다. 메시지 유형에 대한 전체 목록은 Transact-SQL [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 뷰를 참조하세요. 작업 유형에 대한 전체 목록은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)를 참조하세요.  
   
@@ -135,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|Description|  
+|섹션|설명|  
 |-------------|-----------------|  
 |**실행 정보**|지난 24시간 동안 서로 다른 상태의 여러 실행 개수를 보여 줍니다(실패, 실행 중, 성공 등).|  
 |**패키지 정보**|지난 24시간 동안 실행된 총 패키지 수를 보여 줍니다.|  
@@ -149,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|Description|  
+|섹션|설명|  
 |-------------|-----------------|  
 |필터|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
 |실행 정보|각 패키지 실행의 시작 시간, 종료 시간 및 기간을 보여 줍니다. 패키지 실행 태스크를 사용하여 자식 패키지에 전달된 값과 같이 패키지 실행과 함께 사용된 매개 변수 값의 목록을 볼 수도 있습니다. 매개 변수 목록을 보려면 개요를 클릭합니다.|  
@@ -163,7 +169,7 @@ ms.lasthandoff: 05/03/2018
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|Description|  
+|섹션|설명|  
 |-------------|-----------------|  
 |Assert|보고서에 적용된 현재 필터(예: 지정된 문자열이 있는 연결 및 **마지막으로 실패한 시간** 범위)를 보여 줍니다.<br /><br /> **마지막으로 실패한 시간** 범위를 설정하면 특정 날짜 범위 동안 발생한 연결 실패만 표시됩니다. 날짜 범위는 수 일, 수 개월 또는 수 년으로 지정할 수 있습니다.|  
 |세부 정보|연결 문자열, 연결 실패 기간 동안의 실행 수 및 연결이 마지막으로 실패한 날짜를 보여 줍니다.|  

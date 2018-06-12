@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 백업 및 복원 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,15 +24,16 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1882b8d07d7288082ad4963cd0a735d072f19404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e6c08911263e73e308392573dc90128351e275d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550064"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
 
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 및 모델 원본 파일 등의 백업이 포함됩니다.  
+  이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 원본 파일 등의 백업이 포함됩니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   보고서 서버 데이터베이스만 이동하는 경우에는 백업 후 복원이나 분리 후 연결 방법으로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스를 재배치할 수 있습니다. 자세한 내용은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)를 참조하세요.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 새 컴퓨터로 이동하는 것을 마이그레이션이라고 합니다. 설치를 마이그레이션할 때는 설치 프로그램을 실행하여 새 보고서 서버 인스턴스를 설치한 후 인스턴스 데이터를 새 컴퓨터로 복사합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하는 방법은 다음 항목을 참조하십시오.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 새 컴퓨터로 이동하는 것을 마이그레이션이라고 합니다. 설치를 마이그레이션할 때는 설치 프로그램을 실행하여 새 보고서 서버 인스턴스를 설치한 후 인스턴스 데이터를 새 컴퓨터로 복사합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하는 방법에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
     -   [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
     -   [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>보고서 서버 데이터베이스 백업  
- 보고서 서버는 상태 비저장 서버이므로 응용 프로그램 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 **데이터베이스 백업 방법 중 하나를 사용하여** reportserver **및** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 권장 사항은 다음과 같습니다.  
+ 보고서 서버는 상태 비저장 서버이므로 응용 프로그램 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 방법 중 하나를 사용하여 **reportserver** 및 **reportservertempdb** 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
   
 -   **reportserver** 데이터베이스를 백업하려면 전체 복구 모델을 사용합니다.  
   
@@ -76,12 +77,12 @@ ms.lasthandoff: 05/03/2018
   
 -   Reportingservicesservice.exe.config  
   
--   보고서 서버 및 보고서 관리자 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.config  
+-   보고서 서버 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.cofig
   
 -   Machine.config: [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>데이터 파일 백업  
- 보고서 디자이너와 모델 디자이너에서 만들어 유지 관리하는 파일을 백업합니다. 여기에는 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl), 공유 데이터 원본 파일(.rds), 데이터 뷰 파일(.dv), 데이터 원본 파일(.ds), 보고서 서버 프로젝트 파일(.rptproj) 및 보고서 솔루션 파일(.sln)이 포함됩니다.  
+ 보고서 디자이너에서 만들어 유지 관리하는 파일을 백업합니다. 여기에는 보고서 정의 파일(.rdl), 공유 데이터 원본 파일(.rds), 데이터 뷰 파일(.dv), 데이터 원본 파일(.ds), 보고서 서버 프로젝트 파일(.rptproj) 및 보고서 솔루션 파일(.sln)이 포함됩니다.  
   
  관리 또는 배포 태스크를 위해 만든 스크립트 파일(.rss)은 반드시 백업합니다.  
   

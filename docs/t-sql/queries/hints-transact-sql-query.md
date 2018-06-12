@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470294"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +198,7 @@ ms.lasthandoff: 05/14/2018
  MAXDOP *숫자*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 이 옵션을 지정하는 쿼리에 대해 **sp_configure** 및 Resource Governor의 **최대 병렬 처리 수준** 구성 옵션을 무시합니다. MAXDOP 쿼리 힌트는 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. **최대 병렬 처리 수준** 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 이 옵션을 지정하는 쿼리에 대해 **sp_configure** 및 Resource Governor의 **최대 병렬 처리 수준** 구성 옵션을 무시합니다. MAXDOP 쿼리 힌트는 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. **최대 병렬 처리 수준** 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
 > [!WARNING]     
 > MAXDOP가 0으로 설정되면 서버는 최대 병렬 처리 수준을 선택합니다.  
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  카디널리티 추정이 필요한 모든 선행 인덱스 열에 대해 자동으로 생성된 빠른 통계(히스토그램 수정)를 사용합니다. 카디널리티 추정에 사용되는 히스토그램은 이 열의 실제 최댓값 또는 최솟값을 반영하기 위해 쿼리 컴파일 시점에 조정됩니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139와 동일합니다. 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- SQL Server가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리를 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리를 생성하게 합니다. 이 설정은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 LEGACY_CARDINALITY_ESTIMATION=ON 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
-* 'DISABLE_INTERLEAVED_EXECUTION_TVF'는 다중 문 테이블 반환 함수에 대한 인터리브 실행을 비활성화합니다.
-* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'은 일괄 처리 모드 메모리 부여 피드백을 비활성화합니다.
-* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'는 일괄 처리 모드 적응형 조인을 비활성화합니다.
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ 다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조합니다.
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ 일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ 일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조합니다.
  
 > [!TIP]
 > 힌트 이름은 대/소문자를 구분하지 않습니다.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   동적 관리 뷰  
 -   명명된 하위 쿼리  
   
- 기존 테이블 힌트가 없는 쿼리에 대해 INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 쿼리 힌트로 지정할 수 있습니다. 또는 INDEX 및 FORCESEEK 힌트를 사용하여 쿼리에 있는 기존 INDEX, FORCESCAN 또는 FORCESEEK 힌트를 각각 대체할 수 있습니다. 쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 이 경우 OPTION 절에 TABLE HINT를 사용하여 일치하는 힌트를 쿼리 힌트로 지정함으로써 쿼리의 의미 체계를 유지해야 합니다. 예를 들어 쿼리에 테이블 힌트 NOLOCK이 있는 경우 계획 지침의 **@hints** 매개 변수에 있는 OPTION 절에도 NOLOCK 힌트가 있어야 합니다. 예 K를 참조하세요. 일치하는 쿼리 힌트 없이 OPTION 절에 TABLE HINT를 사용하여 INDEX, FORCESCAN 또는 FORCESEEK 이외의 테이블 힌트를 지정하거나 그 반대의 경우 OPTION 절로 인해 쿼리의 의미 체계가 변경되고 쿼리가 실패할 수 있음을 나타내는 오류 8702가 발생합니다.  
+기존 테이블 힌트가 없는 쿼리에 대해 INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 쿼리 힌트로 지정할 수 있습니다. 또는 INDEX 및 FORCESEEK 힌트를 사용하여 쿼리에 있는 기존 INDEX, FORCESCAN 또는 FORCESEEK 힌트를 각각 대체할 수 있습니다. 쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 이 경우 OPTION 절에 TABLE HINT를 사용하여 일치하는 힌트를 쿼리 힌트로 지정함으로써 쿼리의 의미 체계를 유지해야 합니다. 예를 들어 쿼리에 테이블 힌트 NOLOCK이 있는 경우 계획 지침의 **@hints** 매개 변수에 있는 OPTION 절에도 NOLOCK 힌트가 있어야 합니다. 예 K를 참조하세요. 일치하는 쿼리 힌트 없이 OPTION 절에 TABLE HINT를 사용하여 INDEX, FORCESCAN 또는 FORCESEEK 이외의 테이블 힌트를 지정하거나 그 반대의 경우 OPTION 절로 인해 쿼리의 의미 체계가 변경되고 쿼리가 실패할 수 있음을 나타내는 오류 8702가 발생합니다.  
   
 ## <a name="examples"></a>예  
   

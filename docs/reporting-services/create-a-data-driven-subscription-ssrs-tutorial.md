@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689221"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 
  다음 다이어그램은 자습서의 기본 워크플로를 보여 줍니다.
 
-단계  |Description 
+단계  |설명 
 ---------|---------
 (1)     |  구독 구성에는 원본 보고서, 일정 및 구독자 데이터베이스에 대한 필드 매핑이 표시됩니다.        
 (2)     | OrderInfo 테이블에는 필터링에 사용할 4개의 주문 번호(파일당 1개씩)가 포함되어 있습니다. 또한 테이블에는 생성된 보고서의 파일 형식이 있습니다.

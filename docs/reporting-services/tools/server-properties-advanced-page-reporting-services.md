@@ -1,7 +1,7 @@
 ---
 title: 서버 속성(고급 페이지) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550404"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -49,13 +50,13 @@ ms.lasthandoff: 05/03/2018
 실행 로그에 보고서 실행 정보를 보관하는 일 수입니다. 이 속성에 유효한 값은 **-1** 부터 **2**,**147**,**483**,**647**입니다. 값이 **-1** 이면 실행 로그 테이블에서 항목이 삭제되지 않습니다. 기본값은 **60**입니다.  
 
 > [!NOTE] 
-> 값을 **0**으로 설정하면 모든 항목이 실행 로그에서 *삭제*됩니다. 값이 **-1**이면 실행 로그 항목이 유지되며 삭제되지 않습니다.
+> 값을 **0**으로 설정하면 모든 항목이 실행 로그에서 *삭제*됩니다. 값이 **-1**이면 실행 로그의 항목을 유지하고 삭제하지는 않습니다.
 
 **SessionTimeout**  
 세션이 활성 상태로 유지되는 시간(초)입니다. 기본값은 **600**입니다.  
 
 **SharePointIntegratedMode**  
-서버 모드를 나타내는 읽기 전용 속성입니다. 이 값이 False이면 보고서 서버는 기본 모드로 실행됩니다.  
+이 읽기 전용 속성은 서버 모드를 나타냅니다. 이 값이 False이면 보고서 서버는 기본 모드로 실행됩니다.  
 
 **SiteName**  
 웹 포털의 페이지 제목에 표시되는 보고서 서버 사이트의 이름입니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 이 속성은 빈 문자열일 수 있습니다. 최대 길이는 8,000자입니다.  
@@ -75,9 +76,9 @@ ms.lasthandoff: 05/03/2018
 **SnapshotCompression**  
 스냅숏의 압축 방식을 정의합니다. 기본값은 **SQL**입니다. 유효한 값은 다음과 같습니다.
 
-|값|Description|
+|값|설명|
 |---------|---------|
-|**SQL**|보고서 서버 데이터베이스에 저장될 때 스냅숏이 압축됩니다. 이것은 현재 동작입니다.|
+|**SQL**|보고서 서버 데이터베이스에 저장될 때 스냅숏이 압축됩니다. 이 압축은 현재 동작입니다.|
 |**없음**|스냅숏이 압축되지 않습니다.|
 |**모두**|보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 저장소 옵션에 대해 스냅숏이 압축됩니다.|
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 **EnableIntegratedSecurity**  
 보고서 데이터 원본 연결에 Windows 통합 보안이 지원되는지 여부를 지정합니다. 기본값은 **True**입니다. 유효한 값은 다음과 같습니다.
 
-|값|Description|
+|값|설명|
 |---------|---------|
 |**True**|Windows 통합 보안이 사용됩니다.|
 |**False**|Windows 통합 보안이 사용되지 않습니다. Windows 통합 보안을 사용하도록 구성된 보고서 데이터 원본은 실행되지 않습니다.|
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 **EnableLoadReportDefinition**  
 이 옵션을 선택하면 사용자가 보고서 작성기 보고서에서 임시 보고서 실행을 수행할 수 있는지 여부를 지정할 수 있습니다. 이 옵션 설정에 따라 보고서 서버의 **EnableLoadReportDefinition** 속성 값이 결정됩니다.  
 
-이 옵션의 선택을 취소하면 속성은 False로 설정되며 보고서 모델을 데이터 원본으로 사용하는 보고서에 대해 보고서 서버가 클릭 광고 보고서를 생성하지 않습니다. LoadReportDefinition 메서드에 대한 모든 호출은 차단됩니다.  
+이 옵션의 선택을 취소하면 속성이 False로 설정됩니다. 보고서 서버는 보고서 모델을 데이터 원본으로 사용하는 보고서에 대해 클릭 방문 보고서를 생성하지 않습니다. LoadReportDefinition 메서드에 대한 모든 호출은 차단됩니다.  
 
 이 옵션을 끄면 악의적인 사용자가 LoadReportDefinition 요청으로 보고서 서버에 오버로드를 가하여 서비스 거부 공격을 실행할 수 있는 위협이 완화됩니다.  
 
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
 원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본 값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
 
 **EnableReportDesignClientDownload**  
-보고서 서버에서 보고서 작성기 설치 패키지를 다운로드할 수 있는지 여부를 지정합니다. 이 설정을 해제하면 보고서 작성기에 대한 URL이 작동하지 않습니다. 자세한 내용은 [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)을 참조하세요.  
+보고서 서버에서 보고서 작성기 설치 패키지를 다운로드할 수 있는지 여부를 지정합니다. 이 설정을 해제하면 보고서 작성기에 대한 URL이 작동하지 않습니다. 
 
 **EditSessionCacheLimit**  
 보고서 편집 세션에서 활성화될 수 있는 데이터 캐시 항목 수를 지정합니다. 기본값은 5입니다.  

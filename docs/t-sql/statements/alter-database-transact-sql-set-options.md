@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744142"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 옵션 설정과 관련된 ALTER DATABASE 구문을 제공합니다. 다른 ALTER DATABASE 구문은 다음 항목을 참조하세요.  
+  이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 옵션 설정과 관련된 ALTER DATABASE 구문을 제공합니다. 다른 ALTER DATABASE 구문은 다음 항목을 참조하세요.  
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT`는 현재 데이터베이스에서 작업을 수행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  자동 옵션을 제어합니다.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -1122,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 |\<db_user_access_option>|예|예|  
 |\<db_update_option>|예|예|  
 |\<delayed_durability_option>|예|예|  
-|\<external_access_option>|예|아니오|  
-|\<cursor_option>|예|아니오|  
-|\<auto_option>|예|아니오|  
-|\<sql_option>|예|아니오|  
-|\<recovery_option>|예|아니오|  
-|\<target_recovery_time_option>|아니오|예|  
-|\<database_mirroring_option>|아니오|아니오|  
-|ALLOW_SNAPSHOT_ISOLATION|아니오|아니오|  
-|READ_COMMITTED_SNAPSHOT|아니오|예|  
+|\<external_access_option>|예|아니요|  
+|\<cursor_option>|예|아니요|  
+|\<auto_option>|예|아니요|  
+|\<sql_option>|예|아니요|  
+|\<recovery_option>|예|아니요|  
+|\<target_recovery_time_option>|아니요|예|  
+|\<database_mirroring_option>|아니요|아니요|  
+|ALLOW_SNAPSHOT_ISOLATION|아니요|아니요|  
+|READ_COMMITTED_SNAPSHOT|아니요|예|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|예|예|  
-|\<service_broker_option>|예|아니오|  
+|\<service_broker_option>|예|아니요|  
 |DATE_CORRELATION_OPTIMIZATION|예|예|  
 |\<parameterization_option>|예|예|  
 |\<change_tracking_option>|예|예|  
-|\<db_encryption>|예|아니오|  
+|\<db_encryption>|예|아니요|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시는 다음 옵션 중 하나를 설정하여 삭제됩니다.  
   

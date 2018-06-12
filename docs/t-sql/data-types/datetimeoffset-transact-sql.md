@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550844"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 |달력|일반 달력|  
 |사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|예|  
-|일광 절약 시간제 인식|아니오|  
+|일광 절약 시간제 인식|아니요|  
   
 |지정한 소수 자릿수|결과(전체 자릿수, 소수 자릿수)|열 길이(바이트)|소수 자릿수 초의 전체 자릿수|  
 |---|---|---|---|
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset에 대해 지원되는 문자열 리터럴 형식
 다음 표에는 **datetimeoffset**에 대해 지원되는 ISO 8601 문자열 리터럴 형식이 나와 있습니다. **datetimeoffset**의 날짜 및 시간 부분에 대한 영문자, 숫자, 시간 및 구분되지 않은 시간 형식에 대한 내용은 [date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 및 [time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)을 참조하세요.
   
-|ISO 8601|Description|  
+|ISO 8601|설명|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|이 두 가지 형식은 SET LANGUAGE 및 SET DATEFORMAT 세션 로캘 설정의 영향을 받지 않습니다. **datetimeoffset**과 **datetime** 부분 사이에는 공백이 허용되지 않습니다.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|ISO 정의에 따른 이 형식은 **datetime** 부분이 UTC(Coordinated Universal Time)로 표현되어야 함을 나타냅니다. 예를 들어 1999-12-12 12:30:30.12345 -07:00는 1999-12-12 19:30:30.12345Z로 표시되어야 합니다.|  

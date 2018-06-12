@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582565"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +67,22 @@ SET ANSI_NULLS ON
  SET ANSI_NULLS 옵션이 OFF면 Equals(=)와 Not Equal(<>) 비교 연산자가 ISO 표준을 따르지 않습니다. WHERE *column_name* = **NULL**을 사용하는 SELECT 문은 *column_name*에 Null 값이 있는 행을 반환합니다. WHERE *column_name* <> **NULL**을 사용하는 SELECT 문은 열에 Null 이외의 값이 있는 행을 반환합니다. 또한 WHERE *column_name* <> *XYZ_value*를 사용하는 SELECT 문은 *XYZ_value*가 아니고 NULL이 아닌 모든 행을 반환합니다.  
   
  SET ANSI_NULLS 옵션이 ON이면, NULL 값에 대한 모든 비교가 UNKNOWN이 됩니다. ANSI_NULLS 옵션이 OFF면 데이터 값이 NULL일 때 null 값에 대한 모든 데이터의 비교가 TRUE가 됩니다. SET ANSI_NULLS를 지정하지 않으면 현재 데이터베이스의 ANSI_NULLS 옵션 설정이 적용됩니다. ANSI_NULLS 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+
+ 다음 표에서는 ANSI_NULLS 설정이 null과 null이 아닌 값을 사용하여 많은 부울 식의 결과에 어떤 영향을 미치는지를 보여 줍니다.  
   
+|부울 식(Boolean Expression)|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  SET ANSI_NULLS ON 옵션은 비교의 피연산자 중 하나가 NULL 변수 또는 리터럴 NULL 변수인 경우에만 해당 비교에 영향을 줍니다. 비교의 양쪽이 열 또는 복합 식인 경우에는 설정이 비교에 영향을 주지 않습니다.  
   
  ANSI_NULLS 데이터베이스 옵션이나 SET ANSI_NULLS 설정에 관계없이 스크립트가 의도했던 대로 실행되도록 하려면 Null 값을 포함할 수 있는 비교에 IS NULL과 IS NOT NULL을 사용하십시오.  

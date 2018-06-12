@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779489"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  비대칭 키를 사용하여 데이터의 암호를 해독합니다.  
+이 함수는 대칭 키를 사용하여 암호화된 데이터의 암호를 해독합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>인수  
  *Asym_Key_ID*  
- 데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID*는 **int**입니다.  
+데이터베이스에 있는 비대칭 키의 ID입니다. *Asym_Key_ID*는 **int** 데이터 형식을 갖습니다.  
   
  *ciphertext*  
- 비대칭 키로 암호화된 데이터 문자열입니다.  
+비대칭 키로 암호화되는 데이터 문자열입니다.  
   
  @ciphertext  
- 비대칭 키로 암호화된 데이터를 포함하는 **varbinary** 형식 변수입니다.  
+비대칭 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *Asym_Key_Password*  
- 데이터베이스에서 비대칭 키를 암호화하는 데 사용된 암호입니다.  
+데이터베이스에서 비대칭 키를 암호화하는 데 사용되는 암호입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.  
+최대 크기가 8,000바이트인 **varbinary**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 비대칭 키로 암호화/암호 해독을 수행하면 대칭 키로 암호화/암호 해독을 수행하는 것보다 비용이 훨씬 많이 듭니다. 테이블의 사용자 데이터와 같이 큰 데이터 집합으로 작업할 경우에는 비대칭 키를 사용하지 않는 것이 좋습니다.  
+대칭 암호화/암호 해독, 비대칭 키 암호화/암호 해독과 비교하여 비용이 많습니다. 큰 데이터 집합을 작업할 때(예: 테이블에 저장된 사용자 데이터) 개발자는 비대칭 키 암호화/암호 해독을 피하는 것이 좋습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
+`DECRYPTBYASYMKEY`는 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `JanainaAsymKey02`에 저장되어 있는 `AdventureWorks2012.ProtectedData04` 비대칭 키로 암호화된 텍스트를 해독합니다. 반환되는 데이터는 `JanainaAsymKey02` 암호로 해독된 `pGFD4bb925DGvbd2439587y` 비대칭 키를 사용하여 해독됩니다. 일반 텍스트는 **nvarchar** 형식으로 변환됩니다.  
+이 예제에서는 비대칭 키 `JanainaAsymKey02`로 원래 암호화된 암호 텍스트를 해독합니다. `AdventureWorks2012.ProtectedData04`는 이 비대칭 키를 저장했습니다. 이 예제에서는 비대칭 키 `JanainaAsymKey02`로 반환된 데이터를 암호 해독합니다. 예제에서는 암호 `pGFD4bb925DGvbd2439587y`를 사용하여 이 비대칭 키를 암호 해독했습니다. 예제에서는 반환된 일반 텍스트를 **nvarchar** 형식으로 변환했습니다.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

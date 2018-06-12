@@ -1,7 +1,7 @@
 ---
 title: 표준 .NET Framework 데이터 공급자 등록(SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550434"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
   타사 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합에 대한 데이터를 검색하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리를 보고서 제작 클라이언트와 보고서 서버에 배포하고 등록해야 합니다. 보고서 제작 클라이언트에서 데이터 공급자를 데이터 원본 유형으로 등록하고 쿼리 디자이너와 연결해야 합니다. 그러면 보고서 데이터 집합을 만들 때 이 데이터 공급자를 데이터 원본 유형으로 선택할 수 있습니다. 연결된 쿼리 디자이너가 열려 이 데이터 원본 유형에 대한 쿼리 생성을 도와줍니다. 또한 보고서 서버에서 데이터 공급자를 데이터 원본 유형으로 등록해야 합니다. 그러면 이 데이터 공급자를 사용하여 데이터 원본에서 데이터를 검색하는 게시된 보고서를 처리할 수 있습니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|Description|  
+    |attribute|설명|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  URL 멤버 자격은 데이터 공급자에 대해 선택할 수 있는 많은 멤버 자격 조건 중 하나일 뿐입니다.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>배포 및 등록 확인  
- 보고서 관리자를 열고 데이터 공급자가 사용 가능한 데이터 원본 목록에 포함되어 있는지 확인하여 데이터 공급자가 보고서 서버에 배포되었는지 확인할 수 있습니다. 보고서 관리자 및 데이터 원본에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
+ 웹 포털을 열고 데이터 공급자가 사용 가능한 데이터 원본 목록에 포함되어 있는지 확인하여 데이터 공급자가 보고서 서버에 배포되었는지 확인할 수 있습니다. 웹 포털 및 데이터 원본에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>보고서 디자이너 클라이언트에 .NET Framework 데이터 공급자 등록  
  데이터 원본에 대해 이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하는 보고서를 작성하려면 보고서 디자이너를 실행하는 클라이언트 컴퓨터에 어셈블리를 설치해야 합니다. 두 개의 구성 파일을 수정해야 합니다. RSReportDesigner.config를 수정하여 데이터 공급자를 데이터 원본으로 등록하고 일반 쿼리 디자이너를 사용합니다. 또한 RSPreviewPolicy.config를 수정하여 데이터 공급자 어셈블리에 대한 코드 액세스 보안 사용 권한을 부여합니다.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  데이터 공급자에 대한 항목을 추가합니다.  
   
-    |attribute|Description|  
+    |attribute|설명|  
     |---------------|-----------------|  
     |**이름**|데이터 공급자의 고유 이름(예: **MyNETDataProvider**)을 제공합니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 여기에 포함하는 값은 새 데이터 원본을 만들 때 데이터 원본 유형 드롭다운 목록에 표시됩니다.|  
     |**형식**|<xref:System.Data.IDbConnection> 인터페이스를 구현하는 클래스의 정규화된 네임스페이스 뒤에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리 이름(.dll 파일 확장명 포함 안 함)이 쉼표로 구분되어 결합된 목록을 입력합니다.|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  배포를 확인하려면 먼저 로컬 컴퓨터에서 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 인스턴스를 모두 닫아야 합니다. 현재 세션을 모두 종료한 후 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 새 보고서 프로젝트를 만들어 데이터 공급자가 보고서 디자이너에 배포되었는지 확인할 수 있습니다. 이때 데이터 공급자는 보고서에 대한 새 데이터 집합을 만들 때 사용 가능한 데이터 원본 유형 목록에 포함되어 있어야 합니다.  
   
 ## <a name="platform-considerations"></a>플랫폼 고려 사항  
- 64비트(x64) 플랫폼에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 32비트 WOW 모드로 실행됩니다. x64 플랫폼에서 보고서를 작성하는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 32비트 데이터 공급자가 설치되어 있어야 합니다. 동일한 시스템에 보고서를 게시하는 경우 보고서 관리자를 사용하여 보고서를 보려면 x64 데이터 공급자가 필요합니다.  
+ 64비트(x64) 플랫폼에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 32비트 WOW 모드로 실행됩니다. x64 플랫폼에서 보고서를 작성하는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 32비트 데이터 공급자가 설치되어 있어야 합니다. 동일한 시스템에 보고서를 게시하는 경우 웹 포털에서 보고서를 보려면 x64 데이터 공급자가 필요합니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 플랫폼에서 지원되지 않습니다.  
   

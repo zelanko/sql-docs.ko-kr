@@ -29,6 +29,7 @@
 ## [파일 및 파일 공유에 연결](lift-shift/ssis-azure-files-file-shares.md)
 ## [Azure에서 SSISDB에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure에 배포된 패키지 유효성 검사](lift-shift/ssis-azure-validate-packages.md)
+## [Azure에서 패키지 실행](lift-shift/ssis-azure-run-packages.md)
 ## [Azure에서 패키지 예약](lift-shift/ssis-azure-schedule-packages.md)
 ## [SSMS를 사용하여 Azure에서 패키지 예약](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [쿼리](integration-services-ssis-queries.md)
 # [의](integration-services-transactions.md)
 # [패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [패키지 실행](packages/run-integration-services-ssis-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [카탈로그 및 서버](catalog/integration-services-ssis-server-and-catalog.md)

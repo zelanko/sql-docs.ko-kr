@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467979"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
  미리 쓰기 로그 작동 방식을 이해하려면 수정된 데이터가 디스크에 기록되는 방법을 알아야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터를 검색해야 할 때 데이터 페이지를 읽어오는 버퍼 캐시를 유지 관리합니다. 페이지가 버퍼 캐시에서 수정될 때 페이지는 디스크에 바로 다시 기록되지 않고 대신 *더티*로 표시됩니다. 데이터 페이지는 물리적으로 디스크에 기록되기 전에 두 개 이상의 논리적 쓰기를 수행할 수 있습니다. 각 논리적 쓰기의 경우 트랜잭션 로그 레코드는 수정 사항을 기록하는 로그 캐시에 삽입됩니다. 로그 레코드는 관련된 더티 페이지가 버퍼 캐시에서 디스크로 제거되기 전에 디스크에 기록되어야 합니다. 검사점 프로세스는 주기적으로 버퍼 캐시에서 지정된 특정 데이터베이스의 페이지를 포함하는 버퍼를 검색한 다음 모든 더티 페이지를 디스크에 기록합니다. 검사점은 모든 더티 페이지가 디스크에 기록되었음을 확인하는 지점을 만들어 나중에 복구하는 동안 시간을 절약할 수 있습니다.  
   
- 버퍼 캐시에 있는 수정된 데이터 페이지를 디스크에 쓰는 작업을 페이지 플러시라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 연결된 로그 레코드가 기록되기 전에 더티 페이지가 플러시되지 않도록 하는 논리가 있습니다. 로그 레코드는 트랜잭션이 커밋되면 디스크에 기록됩니다.  
+ 버퍼 캐시에 있는 수정된 데이터 페이지를 디스크에 쓰는 작업을 페이지 플러시라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에는 연결된 로그 레코드가 기록되기 전에 더티 페이지가 플러시되지 않도록 하는 논리가 있습니다. 로그 레코드는 로그 버퍼가 플러시되면 디스크에 기록됩니다.  이는 트랜잭션이 커밋되거나 로그 버퍼가 가득 찰 때마다 발생합니다.  
   
 ##  <a name="Backups"></a> 트랜잭션 로그 백업  
  이 섹션에서는 트랜잭션 로그를 백업 및 복원하거나 적용하는 방법에 대한 개념을 설명합니다. 전체 및 대량 로그 복원 모델에서 데이터를 복구하려면 트랜잭션 로그를 정기적으로 백업(*로그 백업*)해야 합니다. 전체 백업이 실행되는 동안 로그를 백업할 수 있습니다. 복구 모델에 대한 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  

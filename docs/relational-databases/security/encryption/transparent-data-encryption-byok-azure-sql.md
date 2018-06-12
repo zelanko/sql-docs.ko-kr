@@ -18,11 +18,12 @@ ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bffd6ec43cb298c652e8154ec28064bd9c891799
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476085"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +141,7 @@ Azure Key Vault로 고가용성을 구성하는 방법은 데이터베이스 및
 - 논리 서버 TDE 창을 선택하고 각 논리 SQL Server에 대해 다음을 수행합니다.  
    - 동일한 지역에서 AKV를 선택합니다. 
    - TDE 보호기로 사용할 키를 선택합니다. 각 서버는 TDE 보호기의 로컬 복사본을 사용합니다. 
-   - 포털에서 이 작업을 수행하면 논리 SQL Server에 대한 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)가 만들어집니다. 이는 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용되므로 이 ID는 삭제하지 마세요.  대신 Azure Key Vault에서 사용 권한을 제거하면 액세스가 해지될 수 있습니다. 논리 SQL Server의 경우 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용됩니다.
+   - 포털에서 이 작업을 수행하면 논리 SQL Server에 대한 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)가 만들어집니다. 이는 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용되므로 이 ID는 삭제하지 마세요. 논리 SQL Server 대신 Azure Key Vault에서 사용 권한을 제거하여 액세스를 철회할 수 있습니다. 이는 키 자격 증명 모음에 액세스하도록 논리 SQL Server 권한을 할당하는 데 사용됩니다.
 - 기본 데이터베이스를 만듭니다. 
 - [활성 지역 복제 지침](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)에 따라 시나리오를 완료합니다. 이 단계에서는 보조 데이터베이스를 만듭니다.
 

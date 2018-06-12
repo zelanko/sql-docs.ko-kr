@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS)에 대한 Azure 기능 팩 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/24/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: non-specific
@@ -19,11 +19,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ce10711bd2ce6872928b320e86d65369bbbd011
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 798d65d65b9e51c10b41a036cf51f60fa15072b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550554"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
@@ -34,6 +35,8 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 - SQL Server 2016의 경우 - [Azure용 Microsoft SQL Server 2016 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014의 경우 - [Azure용 Microsoft SQL Server 2014 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=47366)
 - SQL Server 2012의 경우 - [Azure용 Microsoft SQL Server 2012 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=47367)
+
+다운로드 페이지도 필수 구성 요소에 대한 정보를 포함합니다. 서버에 Azure 기능 팩을 설치하기 전에 SQL Server가 설치되었는지 또는 서버에서 SSIS 카탈로그 데이터베이스인 SSISDB에 패키지를 배포할 때 기능 팩의 구성 요소를 사용할 수 없는지 확인합니다.
 
 ## <a name="components-in-the-feature-pack"></a>기능 팩의 구성 요소
 -   연결 관리자
@@ -77,18 +80,6 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     -   [Azure Data Lake Store 대상](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
 -   Azure Blob 및 ADLS File 열거자 [Foreach 루프 컨테이너](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)를 참조하세요.
-
-## <a name="download-the-feature-pack"></a>기능 팩 다운로드
- Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니다.
- 
-- SQL Server 2016에 대한 [Azure용 SSIS 기능 팩](http://go.microsoft.com/fwlink/?LinkID=626967)
-- [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]에 대한 [Azure용 SSIS 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)
-
-## <a name="prerequisites"></a>사전 요구 사항
- 이 기능 팩을 설치하기 전에 다음과 같은 필수 조건을 설치해야 합니다.
-
--   SQL Server Integration Services
--   .Net Framework 4.5
 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
  Azure 커넥터를 사용하여 다음과 같은 빅 데이터 처리 작업을 완료합니다.

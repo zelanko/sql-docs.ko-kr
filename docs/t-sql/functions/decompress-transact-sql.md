@@ -20,16 +20,17 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b6412856e373c3b1ad5ac838f9b15486d451a2b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779199"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  GZIP 알고리즘을 사용하여 입력된 식의 압축을 풉니다. 압축 결과는 바이트 배열(VARBINARY(MAX) 형식)입니다.  
+이 함수는 GZIP 알고리즘을 사용하여 입력 식 값의 압축을 풉니다. `DECOMPRESS`는 바이트 배열(VARBINARY(MAX) 유형)을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +42,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>인수  
  *expression*  
- **varbinary(***n***)**, **varbinary(max)** 또는 **binary(***n***)** 입니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
+**varbinary(***n***)**, **varbinary(max)** 또는 **binary(***n***)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- **varbinary (max)** 형식의 데이터 형식을 반환합니다. 입력된 인수는 ZIP 알고리즘을 사용하여 압축을 풉니다. 필요한 경우 사용자가 명시적으로 결과를 대상 유형으로 캐스팅해야 합니다.  
+데이터 형식 **varbinary(max)** 의 값입니다. `DECOMPRESS`는 ZIP 알고리즘을 사용하여 입력 인수의 압축을 풉니다. 필요한 경우 사용자가 명시적으로 결과를 대상 유형으로 캐스팅해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-decompress-data-at-query-time"></a>1. 쿼리 시간에 데이터 압축 해제  
- 다음 예에서는 테이블에서 압축 데이터를 표시하는 방법을 보여줍니다.  
+이 예제에서는 압축된 테이블 데이터를 반환하는 방법을 보여줍니다.  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +61,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>2. 계산 열을 사용하여 압축된 데이터 표시   
- 다음 예에서는 압축 해제된 데이터를 저장하기 위한 테이블을 만드는 방법을 보여줍니다.  
+이 예에서는 압축 해제된 데이터 저장소에 대한 테이블을 만드는 방법을 보여줍니다.  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

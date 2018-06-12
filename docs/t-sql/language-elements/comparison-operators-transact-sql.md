@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563701"
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  **Boolean** 데이터 형식은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
   
- SET ANSI_NULLS가 ON이면 한두 개의 NULL 식이 있는 연산자가 UNKNOWN을 반환합니다. SET ANSI_NULLS가 OFF인 경우에도 같은 규칙이 적용됩니다. 단, 등호(=) 연산자는 두 식이 모두 NULL인 경우에 TRUE를 반환합니다. 예를 들어 NULL = NULL은 SET ANSI_NULLS가 OFF인 경우에 TRUE를 반환합니다.  
+ SET ANSI_NULLS가 ON이면 한두 개의 NULL 식이 있는 연산자가 UNKNOWN을 반환합니다. SET ANSI_NULLS가 OFF이면 같음(=) 및 같지 않음(<>) 연산자를 제외하고 동일한 규칙이 적용됩니다. SET ANSI_NULLS가 OFF이면 이러한 연산자는 다른 모든 NULL과 동등한 알려진 값으로 NULL을 처리하고 TRUE 또는 FALSE(UNKNOWN은 절대 아님)만 반환합니다.  
   
  **Boolean** 데이터 형식의 식은 WHERE 절에서 검색 조건에 적합한 행을 필터링하는 데 사용되며 IF와 WHILE 등의 흐름 제어 언어 문에서 사용됩니다. 예를 들면 다음과 같습니다.  
   

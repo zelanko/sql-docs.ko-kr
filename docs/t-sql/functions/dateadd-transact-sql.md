@@ -31,16 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8dcbc7ccfc8c94c28f3c8ba0df32b915440d76e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acd7f51a02b8e2d228d93badc2efc2d0fc2d685d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582345"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-*date*의 지정된 *datepart*에 특정 *number* 간격(부호 있는 정수)이 추가된 *date*를 반환합니다.
+이 함수는 지정된 *number* 값(부호 있는 정수로)를 입력 *date* 값의 지정된 *datepart*에 추가한 다음, 해당 수정 값을 반환합니다.
   
 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
@@ -54,7 +55,10 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-**integer***number*가 추가되는 *date*의 일부입니다. 다음 표에는 올바른 *datepart* 인수가 모두 나열되어 있습니다. 해당하는 사용자 정의 변수는 사용할 수 없습니다.
+`DATEADD`은 **integer** *number*를 추가하는 *date*의 일부입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다. 
+
+> [!NOTE]
+> `DATEADD`은 *datepart* 인수에 해당하는 사용자 정의 변수 항목을 허용하지 않습니다. 
   
 |*datepart*|약어|  
 |---|---|
@@ -73,15 +77,22 @@ DATEADD (datepart , number , date )
 |**nanosecond**|**ns**|  
   
 *number*  
-*date*의 *datepart*에 추가된 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)로 확인될 수 있는 식입니다. 사용자 정의 변수는 유효합니다.  
-소수점 이하가 포함된 값을 지정할 경우 소수점 이하는 반올림되지 않고 잘립니다.
+`DATEADD`은 *date*의 *datepart*에 추가하는 [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)를 확인할 수 있는 식입니다. `DATEADD`은 *number*에 대한 사용자 정의 변수 값을 허용합니다. `DATEADD`은 소수 자릿수를 갖는 지정된 *number* 값을 잘라냅니다. 이 경우에는 *number* 값을 반올림하지 않습니다.
   
 *date*  
-**time**, **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다. *date*는 식, 열 식, 사용자 정의 변수 또는 문자열 리터럴일 수 있습니다. 식이 문자열 리터럴인 경우 **datetime**으로 확인되어야 합니다. 모호성을 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
+다음 값 중 하나를 확인할 수 있는 식입니다. 
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+*date*의 경우 `DATEADD`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 문자열 리터럴 값은 **datetime**을 확인해야 합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-문자열 리터럴을 제외하고 반환 데이터 형식은 *date* 인수의 데이터 형식입니다.
-문자열 리터럴의 반환 데이터 형식은 **datetime**입니다. 문자열 리터럴 초의 소수 자릿수가 세 자리(.nnn)를 초과하거나 표준 시간대 오프셋 부분을 포함할 경우 오류가 발생합니다.
+*date* 인수 데이터 형식은 문자열 리터럴 *date* 값을 제외하면 `DATEADD` 반환 값 데이터 형식이 됩니다. 문자열 리터럴의 경우 `DATEADD`은 **datetime** 값을 반환합니다. 문자열 리터럴 초 소수 자릿수가 세 자릿수(.nnn)를 초과하거나 문자열 리터럴이 표준 시간대 오프셋 부분을 포함하는 경우 `DATEADD`은 오류를 발생합니다.
   
 ## <a name="return-value"></a>반환 값  
   
@@ -90,7 +101,13 @@ DATEADD (datepart , number , date )
   
 각 *datepart*와 해당 약어는 동일한 값을 반환합니다.
   
-*datepart*가 **month**이고 *date*월의 일 수가 반환 월보다 많고 반환 월에 *date*일이 없을 경우 반환 월의 마지막 일이 반환됩니다. 예를 들어 9월에는 30일이 있으므로 다음 두 가지 문은 2006-09-30 00:00:00.000을 반환합니다.
+다음이 사실인 경우:
+
++ *datepart*는 **month**
++ *date* 월에는 반환 월보다 더 많은 날이 있음
++ *date* 날은 반환 월에 없음
+
+그런 다음, `DATEADD`은 반환 월의 마지막 날을 반환합니다. 예를 들어 9월에는 30일이 있으므로 이러한 명령문은 2006-09-30 00:00:00.000을 반환합니다.
   
 ```sql
 SELECT DATEADD(month, 1, '20060830');
@@ -98,7 +115,7 @@ SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>number 인수  
-*number* 인수는 **int** 범위를 초과할 수 없습니다. 다음 명령문에서 *number*에 대한 인수는 **int** 범위를 1만큼 초과합니다. 이 경우 오류 메시지가 반환됩니다: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
+*number* 인수는 **int** 범위를 초과할 수 없습니다. 다음 명령문에서 *number*에 대한 인수는 **int** 범위를 1만큼 초과합니다. 이러한 명령문 모두 다음과 같은 오류 메시지, "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`를 반환합니다.
   
 ```sql
 SELECT DATEADD(year,2147483648, '20060731');  
@@ -106,7 +123,7 @@ SELECT DATEADD(year,-2147483649, '20060731');
 ```  
   
 ## <a name="date-argument"></a>date 인수  
-*date* 인수는 해당 데이터 형식 범위를 벗어나는 값으로 증가할 수 없습니다. 다음 명령문에서는 *date* 값에 추가된 *number* 값이 *date* 데이터 형식의 범위를 초과합니다. 이 경우 오류 메시지가 반환됩니다: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`."
+`DATEADD`은 해당 데이터 형식 범위를 벗어나는 값으로 증가된 *date* 인수를 허용하지 않습니다. 다음 명령문에서는 *date* 값에 추가된 *number* 값이 *date* 데이터 형식의 범위를 초과합니다. `DATEADD`는 다음과 같은 오류 메시지, "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`"를 반환합니다.
   
 ```sql
 SELECT DATEADD(year,2147483647, '20060731');  
@@ -114,21 +131,28 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime 날짜, 초 또는 소수 자릿수 초 datepart에 대한 반환 값  
-[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 값의 초 부분은 항상 00입니다. *date*가 **smalldatetime**인 경우 다음이 적용됩니다.
--   *datepart*가 **second**이고 *number*가 -30 ~ +29 사이인 경우 추가가 수행되지 않습니다.  
--   *datepart*가 **second**이고 *number*가 -30보다 작거나 +29보다 클 경우 1분부터 추가가 수행됩니다.  
--   *datepart*가 **millisecond**이고 *number*가 -30001 ~ +29998 사이인 경우 추가가 수행되지 않습니다.  
--   *datepart*가 **millisecond**이고 *number*가 -30001보다 작거나 +29998보다 클 경우 1분부터 추가가 수행됩니다.  
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 값의 초 부분은 항상 00입니다. **smalldatetime** *date* 값의 경우 다음이 적용됩니다. 
+
+-   **second**의 *datepart* 및 -30 및 +29 사이의 *number* 값의 경우 `DATEADD`은 변경되지 않습니다.  
+-   **second**의 *datepart* 및 -30 미만 또는 +29 초과인 *number* 값의 경우 `DATEADD`는 1분에서 시작하는 더하기를 수행합니다.  
+-   **millisecond**의 *datepart* 및 -30001 및 +29998 사이의 *number* 값의 경우 `DATEADD`은 변경되지 않습니다.  
+-   **millisecond**의 *datepart* 및 -30001 미만 또는 +29998 초과인 *number* 값의 경우 `DATEADD`는 1분에서 시작하는 더하기를 수행합니다.  
   
 ## <a name="remarks"></a>Remarks  
-DATEADD는 SELECT \<목록>, WHERE, HAVING, GROUP BY 및 ORDER BY 절에서 사용할 수 있습니다.
+다음 절에서 `DATEADD`를 사용합니다.
+
++ GROUP BY
++ HAVING
++ ORDER BY
++ SELECT \<list>
++ WHERE
   
 ## <a name="fractional-seconds-precision"></a>소수 자릿수 초의 전체 자릿수
-*date* 데이터 형식인 **smalldatetime**, **date**, **datetime**에는 **microsecond** 또는 **nanosecond**의 *datepart* 추가가 허용되지 않습니다.
+`DATEADD`은 *date* 데이터 형식인 **smalldatetime**, **date** 및 **datetime**에는 **microsecond** 또는 **nanosecond**의 *datepart* 추가를 허용하지 않습니다.
   
-밀리초의 소수 자릿수는 세 자리이며(.123) 마이크로초는 6자리(.123456), 나노초는 9자리(.123456789)입니다. **time**, **datetime2**, **datetimeoffset** 데이터 형식의 소수 자릿수는 7입니다(.1234567). *datepart*는 **nanosecond**이며 *date*의 소수 자릿수는 *number*가 100이 된 이후 증가합니다. *number*가 1에서 49 사이일 경우 0으로 버려지며 50에서 99 사이일 경우 100으로 반올림됩니다.
+밀리초의 소수 자릿수는 3자리이며(.123) 마이크로초는 6자리(.123456), 나노초는 9자리(.123456789)입니다. **time**, **datetime2**, **datetimeoffset** 데이터 형식의 소수 자릿수는 7입니다(.1234567). **nanosecond**의 *datepart*의 경우 *date*의 소수 자릿수가 증가하기 전에 *number*가 100이 되어야 합니다. 1에서 49 사이의 *number*는 0으로 반내림하고 50에서 99 사이의 수는 100으로 반올림합니다.
   
-다음 명령문은 **millisecond**, **microsecond** 또는 **nanosecond**의 *datepart*를 추가합니다.
+이러한 명령문은 **millisecond**, **microsecond** 또는 **nanosecond**의 *datepart*를 추가합니다.
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -160,12 +184,12 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ```  
   
 ## <a name="time-zone-offset"></a>표준 시간대 오프셋
-표준 시간대 오프셋에 대한 추가는 허용되지 않습니다.
+`DATEADD`은 표준 시간대 오프셋에 대한 추가를 허용하지 않습니다.
   
 ## <a name="examples"></a>예  
 
 ### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>1. 1씩 datepart 증가  
-다음 각 명령문은 *datepart*를 1씩 증가시킵니다.
+이러한 각 명령문은 *datepart*를 1씩 증가시킵니다.
   
 ```sql
 DECLARE @datetime2 datetime2 = '2007-01-01 13:10:10.1111111';  
@@ -215,30 +239,30 @@ nanosecond   2007-01-01 13:10:10.1111111
 ```  
   
 ### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>2. 하나의 문에서 datepart를 두 수준 이상 증가  
-다음 각 명령문은 *date*에서 다음으로 높은 *datepart*도 증가시킬 수 있는 크기의 *number*만큼 *datepart*를 증가시킵니다.
+이러한 각 명령문은 *date*에서 다음으로 높은 *datepart*를 추가적으로 증가시킬 수 있는 크기의 *number*만큼 *datepart*를 증가시킵니다.
   
 ```sql
 DECLARE @datetime2 datetime2;  
 SET @datetime2 = '2007-01-01 01:01:01.1111111';  
 --Statement                                 Result     
 -------------------------------------------------------------------   
-SELECT DATEADD(quarter,4,@datetime2);     --2008-01-01 01:01:01.110  
-SELECT DATEADD(month,13,@datetime2);      --2008-02-01 01:01:01.110  
-SELECT DATEADD(dayofyear,365,@datetime2); --2008-01-01 01:01:01.110  
-SELECT DATEADD(day,365,@datetime2);       --2008-01-01 01:01:01.110  
-SELECT DATEADD(week,5,@datetime2);        --2007-02-05 01:01:01.110  
-SELECT DATEADD(weekday,31,@datetime2);    --2007-02-01 01:01:01.110  
-SELECT DATEADD(hour,23,@datetime2);       --2007-01-02 00:01:01.110  
-SELECT DATEADD(minute,59,@datetime2);     --2007-01-01 02:00:01.110  
-SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.110  
-SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.110  
+SELECT DATEADD(quarter,4,@datetime2);     --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(month,13,@datetime2);      --2008-02-01 01:01:01.1111111  
+SELECT DATEADD(dayofyear,365,@datetime2); --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(day,365,@datetime2);       --2008-01-01 01:01:01.1111111  
+SELECT DATEADD(week,5,@datetime2);        --2007-02-05 01:01:01.1111111  
+SELECT DATEADD(weekday,31,@datetime2);    --2007-02-01 01:01:01.1111111  
+SELECT DATEADD(hour,23,@datetime2);       --2007-01-02 00:01:01.1111111  
+SELECT DATEADD(minute,59,@datetime2);     --2007-01-01 02:00:01.1111111  
+SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.1111111  
+SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.1121111  
 ```  
   
 ### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>3. 식을 숫자 및 날짜 매개 변수에 대한 인수로 사용  
-다음 예에서는 여러 유형의 식을 *number* 및 *date* 매개 변수에 대한 인수로 사용합니다. 예제는 AdventureWorks 데이터베이스를 사용합니다.
+이러한 예제에서는 여러 유형의 식을 *number* 및 *date* 매개 변수에 대한 인수로 사용합니다. 예제는 AdventureWorks 데이터베이스를 사용합니다.
   
 #### <a name="specifying-a-column-as-date"></a>열을 날짜로 지정  
-다음 예제에서는 `2` 일수를 `OrderDate` 열의 각 값에 추가하여 이름이 `PromisedShipDate`인 새 열을 파생시킵니다.
+이 예제에서는 `2`(2) 일수를 `OrderDate` 열의 각 값에 추가하여 `PromisedShipDate`라는 새 열을 파생시킵니다.
   
 ```sql
 SELECT SalesOrderID  
@@ -247,7 +271,7 @@ SELECT SalesOrderID
 FROM Sales.SalesOrderHeader;  
 ```  
   
-다음은 결과 집합의 일부입니다.
+결과 집합의 일부입니다.
   
 ```sql
 SalesOrderID OrderDate               PromisedShipDate  
@@ -271,7 +295,7 @@ SalesOrderID OrderDate               PromisedShipDate
 ```  
   
 #### <a name="specifying-user-defined-variables-as-number-and-date"></a>사용자 정의 변수를 숫자 및 날짜로 지정  
-다음 예에서는 사용자 정의 변수를 *number* 및 *date*에 대한 인수로 지정합니다.
+이 예제에서는 사용자 정의 변수를 *number* 및 *date*에 대한 인수로 지정합니다.
   
 ```sql
 DECLARE @days int = 365,   
@@ -289,7 +313,7 @@ SELECT DATEADD(day, @days, @datetime);
 ```  
   
 #### <a name="specifying-scalar-system-function-as-date"></a>스칼라 시스템 함수를 날짜로 지정  
-다음 예에서는 *date*에 대한 `SYSDATETIME`을 지정합니다.
+이 예제에서는 *date*에 대해 `SYSDATETIME`을 지정합니다. 반환되는 정확한 값은 명령문 실행의 날짜와 시간에 따라 달라집니다.
   
 ```sql
 SELECT DATEADD(month, 1, SYSDATETIME());  
@@ -305,7 +329,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 ```  
   
 #### <a name="specifying-scalar-subqueries-and-scalar-functions-as-number-and-date"></a>스칼라 하위 쿼리 및 스칼라 함수를 숫자 및 날짜로 지정  
-다음 예에서는 스칼라 하위 쿼리인 `MAX(ModifiedDate)`를 *number* 및 *date*에 대한 인수로 사용합니다. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)`은 값 목록에서 *number* 인수를 선택하는 방법을 보여 주기 위하여 만든 숫자 매개 변수에 대한 인수입니다.
+이 예제에서는 스칼라 하위 쿼리인 `MAX(ModifiedDate)`를 *number* 및 *date*에 대한 인수로 사용합니다. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)`은 값 목록에서 *number* 인수를 선택하는 방법을 보여 주기 위하여 만든 숫자 매개 변수에 대한 인수로 작용합니다.
   
 ```sql
 SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),  
@@ -313,14 +337,14 @@ SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),
 ```  
   
 #### <a name="specifying-numeric-expressions-and-scalar-system-functions-as-number-and-date"></a>숫자 식 및 스칼라 시스템 함수를 숫자 및 날짜로 지정  
-다음 예에서는 숫자 식(-`(10/2))`, [단항 연산자](../../mdx/unary-operators.md)(`-`), [산술 연산자](../../mdx/arithmetic-operators.md)(`/`), 스칼라 시스템 함수(`SYSDATETIME`)를 *number* 및 *date*에 대한 인수로 사용합니다.
+이 예제에서는 숫자 식(-`(10/2))`, [단항 연산자](../../mdx/unary-operators.md)(`-`), [산술 연산자](../../mdx/arithmetic-operators.md)(`/`), 스칼라 시스템 함수(`SYSDATETIME`)를 *number* 및 *date*에 대한 인수로 사용합니다.
   
 ```sql
 SELECT DATEADD(month,-(10/2), SYSDATETIME());  
 ```  
   
 #### <a name="specifying-ranking-functions-as-number"></a>순위 함수를 숫자로 지정  
-다음 예에서는 순위 함수를 *number*에 대한 인수로 사용합니다.
+이 예제에서는 순위 함수를 *number* 인수로 사용합니다.
   
 ```sql
 SELECT p.FirstName, p.LastName  
@@ -336,7 +360,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 #### <a name="specifying-an-aggregate-window-function-as-number"></a>집계 창 함수를 숫자로 지정  
-다음 예에서는 집계 창 함수를 *number* 인수로 사용합니다.
+이 예제에서는 집계 창 함수를 *number* 인수로 사용합니다.
   
 ```sql
 SELECT SalesOrderID, ProductID, OrderQty  

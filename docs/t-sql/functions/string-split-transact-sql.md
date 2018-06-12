@@ -22,11 +22,12 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 4588bb74692939d25607c587b2e6ed1d7648f154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5416e4c42e0aee104bc3fe23857a996b8b4b5981
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689161"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,10 +35,8 @@ ms.lasthandoff: 05/03/2018
   지정된 구분 기호를 사용하여 문자 식을 분할합니다.  
   
 > [!NOTE]  
->  **STRING_SPLIT** 함수는 호환성 수준 130에서만 사용할 수 있습니다. 데이터베이스 호환성 수준이 130보다 낮으면 SQL Server에서 **STRING_SPLIT** 함수를 찾아 실행할 수 없습니다. 다음 명령을 사용하여 데이터베이스의 호환성 수준을 변경할 수 있습니다.  
-> ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  
->   
->  새 Azure SQL Database에서도 호환성 수준 120이 기본값일 수 있습니다.  
+> **STRING_SPLIT** 함수는 호환성 수준 130 이상에서만 사용할 수 있습니다. 데이터베이스 호환성 수준이 130보다 낮으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **STRING_SPLIT** 함수를 찾아 실행할 수 없습니다. 데이터베이스의 호환성 수준을 변경하려면 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 참조합니다.
+> 새 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서도 호환성 수준 120이 기본값일 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ STRING_SPLIT ( string , separator )
   
 ## <a name="arguments"></a>인수  
  *string*  
- 모든 문자 형식(즉, **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *separator*  
  연결된 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)**, **varchar(1)**, **nchar(1)** 또는 **char(1)**)의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
@@ -58,7 +57,7 @@ STRING_SPLIT ( string , separator )
  조각이 포함된 단일 열 테이블을 반환합니다. 열의 이름은 **value**입니다. 입력 조각이 **nvarchar** 또는 **nchar**인 경우 **nvarchar**를 반환합니다. 그렇지 않으면 **varchar**를 반환합니다. 반환 형식의 길이는 문자열 인수의 길이와 동일합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **STRING_SPLIT**은 나누어야 할 문자열과 문자열을 나누는 데 사용할 구분 기호를 사용합니다. 이 함수는 부분 문자열이 포함된 단일 열 테이블을 반환합니다. 예를 들어 공백 문자를 구분 기호로 사용하는 다음의 `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` 문은 다음과 같은 결과 테이블을 반환합니다.  
+**STRING_SPLIT**은 나누어야 할 문자열과 문자열을 나누는 데 사용할 구분 기호를 사용합니다. 이 함수는 부분 문자열이 포함된 단일 열 테이블을 반환합니다. 예를 들어 공백 문자를 구분 기호로 사용하는 다음의 `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` 문은 다음과 같은 결과 테이블을 반환합니다.  
   
 |value|  
 |-----------|  
@@ -68,29 +67,27 @@ STRING_SPLIT ( string , separator )
 |sit|  
 |amet.|  
   
- 입력 문자열이 **NULL**인 경우 **STRING_SPLIT** 테이블 반환 함수는 빈 테이블을 반환합니다.  
+입력 문자열이 **NULL**인 경우 **STRING_SPLIT** 테이블 반환 함수는 빈 테이블을 반환합니다.  
   
- **STRING_SPLIT**은 130보다 높은 호환성 모드가 필요합니다.  
+**STRING_SPLIT**은 130보다 높은 호환성 모드가 필요합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-split-comma-separated-value-string"></a>1. CSV(쉼표로 구분된 값) 문자열 분할  
- 쉼표로 구분된 값 목록을 구문 분석하고 비어 있지 않은 토큰을 모두 반환합니다.  
+쉼표로 구분된 값 목록을 구문 분석하고 비어 있지 않은 토큰을 모두 반환합니다.  
   
-```  
-  
+```sql  
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  
 WHERE RTRIM(value) <> '';  
-  
 ```  
   
- 구분 기호 사이에 아무 것도 없을 경우 STRING_SPLIT은 빈 문자열을 반환합니다. RTRIM(value) <> ''조건은 빈 토큰을 제거합니다.  
+구분 기호 사이에 아무 것도 없을 경우 STRING_SPLIT은 빈 문자열을 반환합니다. RTRIM(value) <> ''조건은 빈 토큰을 제거합니다.  
   
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>2. 열에서 CSV(쉼표로 구분된 값) 문자열 분할  
- 제품 테이블에는 다음 예제와 같이 쉼표로 구분된 태그 목록이 포함된 열이 있습니다.  
+제품 테이블에는 다음 예제와 같이 쉼표로 구분된 태그 목록이 포함된 열이 있습니다.  
   
 |ProductId|속성|Tags|  
 |---------------|----------|----------|  
@@ -98,9 +95,9 @@ WHERE RTRIM(value) <> '';
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike,mountain|  
   
- 다음 쿼리는 각 태그 목록을 변환하고 원래 행과 결합합니다.  
+다음 쿼리는 각 태그 목록을 변환하고 원래 행과 결합합니다.  
   
-```  
+```sql  
 SELECT ProductId, Name, value  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',');  
@@ -119,9 +116,9 @@ FROM Product
 |3|HL Mountain Frame|mountain|  
   
 ### <a name="c-aggregation-by-values"></a>3. 값 기준 정렬  
- 사용자는 각 태그별 제품의 수를 표시하고 제품 수 기준으로 정렬한 보고서를 생성하여 제품 수가 2개보다 많은 태그만 필터링해야 합니다.  
+사용자는 각 태그별 제품의 수를 표시하고 제품 수 기준으로 정렬한 보고서를 생성하여 제품 수가 2 초과인 태그만 필터링해야 합니다.  
   
-```  
+```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',')  
@@ -131,19 +128,19 @@ ORDER BY COUNT(*) DESC;
 ```  
   
 ### <a name="d-search-by-tag-value"></a>4. 태그 값으로 검색  
- 개발자는 키워드를 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
+개발자는 키워드를 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
   
- 단일 태그(의복)가 포함된 제품 찾기:  
+단일 태그(의복)가 포함된 제품 찾기:  
   
-```  
+```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
 ```  
   
- 지정된 태그 2개(의복 및 도로)가 포함된 제품 찾기:  
+지정된 태그 2개(의복 및 도로)가 포함된 제품 찾기:  
   
-```  
+```sql  
   
 SELECT ProductId, Name, Tags  
 FROM Product  
@@ -153,30 +150,30 @@ WHERE EXISTS (SELECT *
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>5. 값 목록 기준으로 행 찾기  
- 개발자는 ID 목록을 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
+개발자는 ID 목록을 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
   
-```  
+```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
   
- 이 함수는 응용 프로그램 계층 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동적 SQL 문자열을 만들거나 LIKE 연산자를 사용하는 등의 일반적 안티 패턴을 대체합니다.  
+이 함수는 응용 프로그램 계층 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동적 SQL 문자열을 만들거나 LIKE 연산자를 사용하는 등의 일반적 안티 패턴을 대체합니다.  
   
-```  
+```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
- [LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
- [RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
- [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
- [SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [TRIM&#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+[LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)     
+[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)     
+[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)    
+[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)     
+[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)     
+[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)     
+[문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)      
   
   

@@ -1,6 +1,6 @@
 ---
 title: Azure에서 SSIS 패키지 예약 | Microsoft Docs
-ms.date: 05/09/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,35 +12,32 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585845"
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 실행 예약
-다음 예약 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 저장된 패키지의 실행을 예약할 수 있습니다.
--   [SSMS(SQL Server Management Studio)의 일정 옵션](#ssms)
--   [Azure Data Factory SSIS 패키지 실행 작업](#execute)
--   [Azure Data Factory SQL Server 저장 프로시저 작업](#storedproc)
--   [SQL Database 탄력적 작업](#elastic)
--   [SQL Server 에이전트](#agent)
+이 문서에 설명된 옵션 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그 데이터베이스에 배포된 SSIS 패키지의 실행을 예약할 수 있습니다. 패키지를 직접 예약하거나 Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약할 수 있습니다. Azure의 SSIS에 대한 개요는 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+
+- 패키지 직접 예약
+
+  - [SSMS(SQL Server Management Studio)의 일정 옵션을 사용하여 예약](#ssms)
+
+  - [SQL Database 탄력적 작업](#elastic)
+
+  - [SQL Server 에이전트](#agent)
+
+- [Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약](#activity)
+
 
 ## <a name="ssms"></a> SSMS를 사용하여 패키지 예약
 
 SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인 SSISDB에 배포된 패키지를 마우스 오른쪽 단추로 클릭하고, **일정**을 선택하여 **새 일정** 대화 상자를 열 수 있습니다. 자세한 내용은 [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md)(SSMS를 지원하는 Azure에서 SSIS 패키지 실행 예약)를 참조하세요.
 
 이 기능을 사용하려면 SQL Server Management Studio 버전 17.7 이상이 필요합니다. SSMS의 최신 버전을 다운로드하려면 [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)(SSMS(SQL Server Management Studio) 다운로드)를 참조하세요.
-
-## <a name="execute"></a> SSIS 패키지 실행 작업을 사용하여 패키지 예약
-
-Azure Data Factory에서 SSIS 패키지 실행 작업을 사용하여 SSIS 패키지를 예약하는 방법에 대한 정보는 [Azure Data Factory에서 SSIS 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 참조하세요.
-
-## <a name="storedproc"></a> 저장 프로시저 작업을 사용하여 패키지 예약
-
-Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지를 예약하는 방법에 대한 정보는 [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)을 참조하세요.
-
-Data Factory 버전 1은 [Azure Data Factory에서 저장 프로시저 작업을 사용하여 SSIS 패키지 실행](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)을 참조하세요.
 
 ## <a name="elastic"></a> SQL Database 탄력적 작업을 사용하여 패키지 예약
 
@@ -88,7 +85,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> SQL Server 에이전트를 사용하여 패키지 예약
+## <a name="agent"></a> 프레미스에서 SQL Server 에이전트를 사용하여 패키지 예약
+
+SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.
 
 ### <a name="prerequisite---create-a-linked-server"></a>필수 구성 요소 - 연결된 서버 만들기
 
@@ -158,7 +157,24 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 6.  작업 구성 및 예약을 완료합니다.
 
-## <a name="next-steps"></a>다음 단계
-SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)을 참조하세요.
+## <a name="activity"></a> Azure Data Factory 파이프라인의 일부로 패키지 예약
 
-SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장된 클라우드 데이터베이스 관리](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)를 참조하세요.
+SSIS 패키지를 실행하는 Azure Data Factory 파이프라인을 실행하려면 트리거를 사용하여 패키지를 간접적으로 예약할 수 있습니다.
+
+Data Factory 파이프라인을 예약하려면 다음 트리거 중 하나를 사용합니다.
+
+- [일정 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [연속 창(tumbling window) 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [이벤트 기반 트리거](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+Data Factory 파이프라인의 일부로 SSIS 패키지를 실행하려면 다음 작업 중 하나를 사용합니다.
+
+- [SSIS 패키지 작업 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+- [저장 프로시저 작업](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="next-steps"></a>다음 단계
+
+Azure에 배포된 SSIS 패키지를 실행하기 위한 옵션을 검토합니다. 자세한 내용은 [Azure에서 SSIS 패키지 실행](ssis-azure-run-packages.md)을 참조합니다.

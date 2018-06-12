@@ -1,7 +1,7 @@
 ---
-title: 보고서 인쇄(보고서 작성기 및 SSRS) | Microsoft Docs
+title: 보고서 인쇄(SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709051"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
-  보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 응용 프로그램, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
+# <a name="print-reports---reporting-services-ssrs"></a>보고서 인쇄 - Reporting Services(SSRS)
+  보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 응용 프로그램 또는 웹 포털에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
   
  모든 인쇄 작업은 요청 시 클라이언트 컴퓨터에서 처리됩니다. 보고서 서버에서 웹 서버에 연결되어 있는 프린터로 직접 인쇄 작업을 라우팅할 수 있는 서버 쪽 인쇄 기능은 없습니다. 프린터와 인쇄 옵션은 개별 보고서 사용자가 표준 **인쇄** 대화 상자를 사용하여 선택합니다.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
  [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- 클라이언트 쪽 인쇄 기능을 사용하여 웹 브라우저나 보고서 관리자에서 보고서를 인쇄하는 방법을 설명합니다.  
+ 클라이언트 쪽 인쇄 기능을 사용하여 웹 포털에서 보고서를 인쇄하는 방법을 설명합니다.  
   
  [다른 응용 프로그램에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  다른 응용 프로그램으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  

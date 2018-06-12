@@ -1,7 +1,7 @@
 ---
-title: 파일 또는 보고서 업로드(보고서 관리자) | Microsoft Docs
+title: 보고서 서버에서 파일 또는 보고서 업로드 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reports
@@ -21,30 +21,25 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d5485f3c29c394655371ff42b690ccbacdcdd53d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550104"
 ---
-# <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
-  보고서 관리자에서는 업로드 기능을 제공하므로 클라이언트 응용 프로그램에서 보고서, 모델 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  
+# <a name="upload-a-file-or-report-in-the-report-server"></a>보고서 서버에서 파일 또는 보고서 업로드
+보고서 서버의 웹 포털에서는 업로드 기능을 제공하므로 클라이언트 응용 프로그램에서 보고서 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  
   
--   .rdl 파일은 보고서로 저장됩니다.  
+-   .rdl 파일은 페이지를 매긴 보고서로 저장됩니다.  
   
--   .smdl 파일은 보고서 모델로 저장됩니다.  
-  
--   공유 데이터 원본 파일(.rds)을 비롯한 다른 모든 파일은 리소스로 업로드됩니다. 리소스는 보고서 서버에서 처리되지 않지만 보고서 서버가 MIME 형식의 파일을 지원하는 경우 보고서 관리자에서 볼 수 있습니다.  
+-   공유 데이터 원본 파일(.rds)을 비롯한 다른 모든 파일은 리소스로 업로드됩니다. 리소스는 보고서 서버에서 처리되지 않지만 보고서 서버가 MIME 형식의 파일을 지원하는 경우 웹 포털에서 볼 수 있습니다.  
   
 ### <a name="to-upload-a-file-or-report"></a>파일 또는 보고서를 업로드하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
+1.  웹 포털에서 **업로드**를 클릭합니다.  
   
-2.  보고서 관리자에서 **내용** 페이지로 이동합니다. 항목을 추가할 폴더로 이동합니다.  
-  
-3.  **파일 업로드**를 클릭합니다.  
-  
-4.  **찾아보기** 를 클릭하여 업로드할 파일을 선택합니다. 보고서 정의 파일, 이미지, 문서 등 보고서 서버에서 사용할 수 있는 모든 파일을 업로드할 수 있습니다.  
+4.  업로드할 파일을 찾습니다. 보고서 정의 파일, 이미지, 문서 등 보고서 서버에서 사용할 수 있는 모든 파일을 업로드할 수 있습니다.  
   
 5.  새 항목의 이름을 입력합니다. 항목 이름에 공백을 사용할 수 있지만 다음과 같은 예약 문자는 사용할 수 없습니다. ; ? : @ & = + , $ / * < > |.  
   
@@ -52,10 +47,8 @@ ms.lasthandoff: 05/03/2018
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [파일 업로드 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
+## <a name="see-also"></a>참고 항목   
+[공유 데이터 원본 만들기, 수정 및 삭제](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+[폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

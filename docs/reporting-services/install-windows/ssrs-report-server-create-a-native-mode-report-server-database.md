@@ -1,7 +1,7 @@
 ---
 title: 기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550514"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스 만들기
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  요약 페이지에서 설정이 올바른지 확인한 후 **다음**을 클릭합니다.  
   
-8.  보고서 서버 URL 페이지 또는 보고서 관리자 URL 페이지의 URL을 선택하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이나 보고서 관리자가 브라우저 창에 표시됩니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
+8.  보고서 서버 URL 페이지의 URL을 선택하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이 표시됩니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
 
 ## <a name="change-database-credentials"></a>데이터베이스 자격 증명 변경
 

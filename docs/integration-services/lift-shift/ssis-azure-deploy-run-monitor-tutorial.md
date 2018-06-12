@@ -12,12 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455477"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585635"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure에서 SSIS 패키지 배포 및 실행
 이 자습서에서는 SQL Server Integration Services 프로젝트를 Azure SQL Database의 SSISDB 카탈로그 데이터베이스에 배포하고, Azure-SSIS Integration Runtime에서 패키지를 실행하고, 실행 중인 패키지를 모니터링하는 방법을 보여 줍니다.
@@ -102,7 +102,8 @@ SQL Server Management Studio를 사용하여 Azure SQL Database 서버의 SSIS �
     -   **이전**을 선택하거나 왼쪽 창에서 단계 중 하나를 선택하여 선택 항목을 변경할 수 있습니다.
     -   **배포**를 선택하여 배포 프로세스를 시작합니다.
 
-    > ![참고] **활성 작업자 에이전트가 없습니다. (.NET SqlClient Data Provider)** 오류 메시지가 나타나면 Azure-SSIS Integration Runtime이 실행 중인지 확인합니다. Azure-SSIS IR이 중지된 상태에서 배포하려고 시도하면 이 오류가 발생합니다.
+    > [!NOTE]
+    > **활성 작업자 에이전트가 없습니다.(.NET SqlClient Data Provider)** 오류 메시지가 나타나면 Azure-SSIS Integration Runtime이 실행 중인지 확인합니다. Azure-SSIS IR이 중지된 상태에서 배포하려고 시도하면 이 오류가 발생합니다.
 
 5.  배포 프로세스가 완료되면 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업이 실패하면 **결과** 열에서 **실패**를 선택하여 해당 오류에 대한 설명을 표시합니다.
@@ -191,9 +192,17 @@ Integration Services 서버에서 현재 실행 중인 Integration Services 작�
 
 SSMS에서 실행 중인 패키지를 모니터링하는 방법에 대한 자세한 내용은 [실행 중인 패키지 및 기타 작업 모니터링](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)을 참조하세요.
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>SSIS 패키지 작업 실행 모니터링
+
+SSIS 패키지 작업 실행을 사용하여 Azure Data Factory 파이프라인의 일부로 패키지를 실행 중인 경우 Data Factory UI에서 파이프라인 실행을 모니터링할 수 있습니다. 그런 다음, 작업 실행의 출력에서 SSISDB 실행 ID를 가져오고 해당 ID를 사용하여 SSMS에서 보다 포괄적인 실행 로그 및 오류 메시지를 확인할 수 있습니다.
+
+![Data Factory에 패키지 실행 ID 가져오기](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime 모니터링
 
-패키지가 실행 중인 Azure-SSIS Integration Runtime에 대한 상태 정보를 가져오려면 다음 PowerShell 명령을 사용합니다. 각 명령에서 Data Factory, Azure SSIS IR 및 리소스 그룹의 이름을 제공합니다. 자세한 내용은 [Azure-SSIS Integration Runtime 모니터](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)를 참조하세요.
+패키지가 실행 중인 Azure-SSIS Integration Runtime에 대한 상태 정보를 가져오려면 다음 PowerShell 명령을 사용합니다. 각 명령에서 Data Factory, Azure SSIS IR 및 리소스 그룹의 이름을 제공합니다.
+
+자세한 내용은 [Azure-SSIS Integration Runtime 모니터](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)를 참조하세요.
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에 대한 메타데이터 가져오기
 

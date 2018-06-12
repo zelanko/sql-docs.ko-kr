@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743972"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 데이터 검색 및 분류는 데이터베이스에서 중요한 데이터를 **검색**, **분류**, **레이블 지정** & **보고**하는 SSMS(SQL Server Management Studio)에 기본 제공된 새로운 도구를 소개합니다.
-가장 중요한 데이터(비즈니스, 재무, 보건, PII 등)를 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.
-* GDPR 등 데이터 프라이버시 표준 및 규정 준수 요구 사항을 충족할 수 있습니다.
+가장 중요한 데이터(비즈니스, 재무, 보건 등)를 검색하고 분류하면 조직 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.
+* 데이터 개인 정보 보호 표준을 충족하도록 지원합니다.
 * 매우 중요한 데이터가 포함된 데이터베이스/열에 대한 액세스를 제어하고 보안을 강화합니다.
-
 
 > [!NOTE]
 > 데이터 검색 및 분류는 **SQL Server 2008 이상에 지원**됩니다. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
@@ -94,7 +94,57 @@ ms.lasthandoff: 05/03/2018
     ![탐색 창][10]
 
 
-## <a id="subheading-3"></a>다음 단계
+## <a id="subheading-3"></a>분류 메타데이터에 액세스
+
+*정보 유형* 및 *민감도 레이블*에 대한 분류 메타데이터는 다음 확장 속성에 저장됩니다. 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+확장 속성 카탈로그 뷰[sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)를 사용하여 메타데이터에 액세스할 수 있습니다.
+
+다음 코드 예제는 해당 분류를 사용하여 모든 분류된 열을 반환합니다.
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>다음 단계
 
 Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
 
@@ -106,7 +156,8 @@ Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://g
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

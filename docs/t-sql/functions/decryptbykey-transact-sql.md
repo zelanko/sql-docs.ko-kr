@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779479"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  대칭 키를 사용하여 데이터를 해독합니다.  
+이 함수는 대칭 키를 사용하여 데이터의 암호를 해독합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>인수  
- *ciphertext*  
- 키로 암호화된 데이터입니다. *ciphertext*는 **varbinary**입니다.  
+*ciphertext*  
+키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
- **@ciphertext**  
- 키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
+**@ciphertext**  
+키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *add_authenticator*  
- 인증자가 일반 텍스트와 함께 암호화되었는지 여부를 나타냅니다. 데이터 암호화 시 EncryptByKey로 전달된 값과 같아야 합니다. *add_authenticator*는 **int**입니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
   
  *authenticator*  
- 인증자가 생성될 데이터입니다. EncryptByKey에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname**입니다.  
-  
- **@authenticator**  
- 인증자가 생성될 데이터를 포함하는 변수입니다. EncryptByKey에 제공된 값과 일치해야 합니다.  
-  
+인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+
+**@authenticator**  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+
 ## <a name="return-types"></a>반환 형식  
- 최대 크기가 8,000바이트인 **varbinary**입니다.
- 
-데이터를 암호화하는 데 사용되는 대칭 키가 열려 있지 않거나 *ciphertext*가 NULL이면 NULL을 반환합니다.
+최대 크기가 8,000바이트인 **varbinary**입니다. `DECRYPTBYKEY`는 데이터 암호화에 사용되는 대칭 키가 열려 있지 않거나 *ciphertext*가 NULL이면 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey는 대칭 키를 사용합니다. 이 대칭 키는 데이터베이스에서 이미 열려 있어야 합니다. 동시에 여러 개의 키를 열어 둘 수 있습니다. ciphertext를 해독하기 직전에 키를 열 필요는 없습니다.  
+`DECRYPTBYKEY`는 대칭 키를 사용합니다. 데이터베이스는 이 대칭 키를 이미 열어 두어야 합니다. `DECRYPTBYKEY`는 동시에 여러 개의 키를 열어 둘 수 있습니다. 암호 텍스트를 해독하기 직전에 키를 열 필요는 없습니다.  
   
- 대칭 암호화 및 암호 해독은 비교적 속도가 빠르며 대량의 데이터 작업 시 적합합니다.  
+대칭 암호화 및 암호 해독은 일반적으로 상대적으로 신속하게 작동하고 큰 데이터 볼륨과 관련된 작업에 적합합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 현재 세션에서 대칭 키가 열려 있어야 합니다. 자세한 내용은 [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)를 참조하세요.  
+대칭 키는 현재 세션에서 이미 열려 있어야 합니다. 자세한 내용은 [대칭 키 열기&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>1. 대칭 키를 사용한 해독  
- 다음 예에서는 대칭 키를 사용하여 ciphertext를 해독합니다.  
+이 예에서는 대칭 키로 암호 텍스트를 해독합니다.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>2. 대칭 키 및 인증 해시를 사용한 해독  
- 다음 예에서는 인증자를 사용하여 암호화된 데이터를 해독합니다.  
+이 예에서는 인증자를 사용하여 암호화된 데이터를 해독합니다.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

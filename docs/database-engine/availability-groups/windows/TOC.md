@@ -61,6 +61,7 @@
 ### [복제본에 백업 구성](configure-backup-on-availability-replicas-sql-server.md)  
 ### [분산된 가용성 그룹 구성](configure-distributed-availability-groups.md)
 ### [분산 트랜잭션 구성](configure-availability-group-for-distributed-transactions.md)
+### [읽기-배율 가용성 그룹 구성](configure-read-scale-availability-groups.md)
 ### [읽기 전용 액세스 복제본 구성](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [읽기 전용 라우팅 구성](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [수신기 제거](remove-an-availability-group-listener-sql-server.md)  

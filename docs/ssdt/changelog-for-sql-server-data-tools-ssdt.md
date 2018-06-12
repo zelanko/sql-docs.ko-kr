@@ -1,7 +1,7 @@
 ---
 title: SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773579"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ ms.lasthandoff: 05/03/2018
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>Visual Studio 2017용 SSDT(15.7.0)
+빌드 번호: 14.0.16165.0  
+릴리스 날짜: 2018년 6월 4일  
+  
+### <a name="whats-new"></a>새로운 기능
+
+**SSIS:**
+
+- 옵션 대화 상자에서 *Integration Services 디자이너* 페이지를 올바르게 표시할 수 없는 문제를 해결합니다.  
+- *정렬 변환 편집기* 편집기에서 표시되는 텍스트에 대한 명도 비율 문제를 해결합니다.  
+- 콤보 상자를 편집하려고 할 때 *참조 확인* 대화 상자가 사라지는 문제를 해결합니다.  
+- *Hadoop 연결 관리자*의 F1 도움말 링크가 작동하지 않는 문제를 해결합니다.  
+- 스크립트 작업 코드가 SQL Server 2016을 대상으로 할 때 컨테이너에 있는 경우 손실되는 문제를 해결합니다.  
+
+
+**설치 관리자:**
+
+- SSRS 및 SSIS가 VS 15.7.2에 설치되기 전에 SSAS를 설치할 수 없는 문제를 해결합니다.
+
+### <a name="known-issues"></a>알려진 문제:
+
+- SSIS 패키지 실행 태스크는 *ExecuteOutOfProcess*가 *True*로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>Visual Studio 2017용 SSDT(15.6.0)
@@ -38,24 +61,24 @@ ms.lasthandoff: 05/03/2018
 
 **SSIS:**
 
-1.  SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제를 해결합니다.
-2.  SSDT에서 매우 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
-3.  작업 UI에서 간혹 ScriptTask 변수 목록이 사라지는 문제를 해결합니다.
-4.  패키지 위치가 SQL Server일 때 기존 패키지 사본 추가가 실패하는 문제 해결
-5.  일부 편집기 대화 상자에서 콤보 상자에 액세스할 때 포커스가 멈추는 문제를 해결합니다.
-6.  VS 테마를 전환하는 동안 배경이 변경되지 않는 문제를 해결합니다.
-7.  어두운 테마에서 주석 및 로드 레이블이 보이지 않는 문제 해결
-8.  SSIS 도구 상자 항목에 대해 상태 속성이 올바르게 정의되지 않는 문제를 해결합니다.
-9.  WebServiceTask 실행에 항상 실패하는 문제를 해결합니다.
-10. 연결 문자열이 프로젝트 매개 변수에 종속적인 변수로 설정된 경우 패키지 배포가 실패하는 문제를 해결합니다.
+- SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제를 해결합니다.
+- SSDT에서 매우 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
+- 작업 UI에서 간혹 ScriptTask 변수 목록이 사라지는 문제를 해결합니다.
+- 패키지 위치가 SQL Server일 때 기존 패키지 사본 추가가 실패하는 문제 해결
+- 일부 편집기 대화 상자에서 콤보 상자에 액세스할 때 포커스가 멈추는 문제를 해결합니다.
+- VS 테마를 전환하는 동안 배경이 변경되지 않는 문제를 해결합니다.
+- 어두운 테마에서 주석 및 로드 레이블이 보이지 않는 문제 해결
+- SSIS 도구 상자 항목에 대해 상태 속성이 올바르게 정의되지 않는 문제를 해결합니다.
+- WebServiceTask 실행에 항상 실패하는 문제를 해결합니다.
+- 연결 문자열이 프로젝트 매개 변수에 종속적인 변수로 설정된 경우 패키지 배포가 실패하는 문제를 해결합니다.
 
 **설치 관리자:**
 
-1.  개인정보 보호 고지 사항에 "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램" 링크를 추가합니다.
-2.  "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제를 해결합니다.
+- 개인정보 보호 고지 사항에 "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램" 링크를 추가합니다.
+- "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제를 해결합니다.
 
 ### <a name="known-issues"></a>알려진 문제:
-1.  SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
 
 
 
@@ -65,14 +88,14 @@ ms.lasthandoff: 05/03/2018
 ### <a name="whats-new"></a>새로운 기능
 
 **SSIS**
-1.  SSAS와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 SSIS 2008 프로젝트 마이그레이션이 실패하는 문제를 수정합니다.
-2.  Rdlc 보고서 디자이너와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 Rdlc 프로젝트를 작성할 수 없는 문제를 수정합니다.
-3.  주석 색을 업데이트할 수 없는 문제를 수정합니다.
-4.  Hadoop 연결 관리자 편집기의 일부 문자열이 다른 언어에서 잘리는 문제를 수정합니다.
-5.  OData 연결 관리자 편집기에서 일부 문자열이 잘리는 문제를 수정합니다.
-6.  Integration Services 가져오기 프로젝트 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다.
-7.  SSIS 도구 상자 정보 창의 제목 문제를 수정합니다.
-8.  Integration Services 배포 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다. 
+- SSAS와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 SSIS 2008 프로젝트 마이그레이션이 실패하는 문제를 수정합니다.
+- Rdlc 보고서 디자이너와 SSIS가 동일한 VS 2017 인스턴스에 설치된 경우 Rdlc 프로젝트를 작성할 수 없는 문제를 수정합니다.
+- 주석 색을 업데이트할 수 없는 문제를 수정합니다.
+- Hadoop 연결 관리자 편집기의 일부 문자열이 다른 언어에서 잘리는 문제를 수정합니다.
+- OData 연결 관리자 편집기에서 일부 문자열이 잘리는 문제를 수정합니다.
+- Integration Services 가져오기 프로젝트 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다.
+- SSIS 도구 상자 정보 창의 제목 문제를 수정합니다.
+- Integration Services 배포 마법사 창에서 일부 문자열이 잘리는 문제를 수정합니다. 
 
 **설치 관리자**
 - 가끔씩 "지정한 파일을 찾을 수 없습니다(0x80070002)" 오류와 함께 페이로드 다운로드가 실패하는 문제를 해결합니다.  
@@ -274,9 +297,9 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
    - 개체 참조는 구조화된 데이터 원본에서 업데이트된 자격 증명을 가져올 수 있는 예외를 설정하지 않습니다.
    - M 식을 사용하여 파티션 관리자를 여는 작업은 매우 느렸습니다.
    - PQ 편집기의 테이블에서 속성을 선택하면 속성을 표시하지 않았습니다.
-- 최상위 예외를 catch하고 출력 창에 표시하도록 파워 쿼리 UI 통합의 강력합을 향상시켰습니다.
+- 최상위 예외를 catch하고 출력 창에 표시하도록 파워 쿼리 UI 통합의 강력함을 향상시켰습니다.
 - 컨텍스트 식의 경우 구조 데이터 원본에서 ChangeSource가 변경 재용을 유지하지 않는 문제를 해결했습니다.
-- M 식 오류로 인해 오류 메시지를 표시하지 않고 모델을 업데이터하는 데 실패할 수 있는 문제를 해결했습니다.
+- M 식 오류로 인해 오류 메시지를 표시하지 않고 모델을 업데이트하는 데 실패할 수 있는 문제를 해결했습니다.
 - "빌드는 솔루션을 닫기 전에 중지되어야 합니다."라는 오류와 함께 SSDT를 닫는 문제를 해결했습니다.
 - 1400 호환성 수준 모델에서 잘못된 가장 모드를 설정할 때 VS가 중단될 수 있는 문제를 해결했습니다. 
 - 이제 세부 정보 행 속성이 비어 있지 않으면 JSON으로만 직렬화됩니다(기본값에서 변경됨).

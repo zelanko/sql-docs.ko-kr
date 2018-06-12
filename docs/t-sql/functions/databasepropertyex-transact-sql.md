@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550814"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 정전이나 기타 시스템 중단으로 인해 완료되지 않은 I/O 작업을 검색합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsVerifiedClone|데이터베이스는 DBCC CLONEDATABASE의 WITH VERIFY_CLONEDB 옵션을 사용하여 만든 사용자 데이터베이스의 스키마 및 통계 전용 복사본입니다. 자세한 내용은 이 [Microsoft 지원 아티클](http://support.microsoft.com/help/3177838)을 참조하세요.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**| 
 |IsXTPSupported|데이터베이스가 In-Memory OLTP, 즉, 메모리 최적화 테이블과 고유하게 컴파일된 모듈을 만들고 사용하는 것을 지원하는지 여부를 나타냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당 :<br /><br /> IsXTPSupported는 In-Memory OLTP 개체를 만드는 데 필요한 MEMORY_OPTIMIZED_DATA 파일 그룹의 존재 여부와 관계가 없습니다.|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 입력이 유효하지 않거나, 오류이거나, 적용 가능하지 않음<br /><br /> 기본 데이터 형식: **int**|  
-|LastGoodCheckDbTime|지정된 데이터베이스에서 실행된 DBCC CHECKDB가 마지막으로 성공한 날짜와 시간입니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
+|LastGoodCheckDbTime|지정된 데이터베이스에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간 및 날짜입니다.<sup>1</sup> DBCC CHECKDB가 데이터베이스에서 실행되지 않은 경우 1900-01-01 00:00:00.000이 반환됩니다.|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2부터<br /><br /> datetime 값<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **datetime**| 
 |LCID|데이터 정렬의 Windows LCID(로캘 ID)입니다.|LCID 값(10진수 형식)입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |MaxSizeInBytes|최대 데이터베이스 크기(바이트)입니다.|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: 데이터베이스가 시작되지 않음<br /><br /> 기본 데이터 형식: **bigint**|  
 |복구|데이터베이스 복구 모델|FULL: 전체 복구 모델<br /><br /> BULK_LOGGED: 대량 로그 모델<br /><br /> SIMPLE: 단순 복구 모델<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
@@ -99,8 +100,12 @@ DATABASEPROPERTYEX ( database , property )
 |상태|데이터베이스 상태입니다.|ONLINE: 데이터베이스에서 쿼리를 실행할 수 있습니다.<br /><br /> **참고:** 데이터베이스가 열려 있고 아직 복구되지 않았을 때는 ONLINE 상태가 반환될 수 있습니다. 데이터베이스가 연결을 허용하는지 확인하려면 **DATABASEPROPERTYEX** 속성을 쿼리합니다. 데이터베이스 데이터 정렬이 null이 아닌 값을 반환하면 데이터베이스는 연결을 허용할 수 있습니다. Always On 데이터베이스의 경우 `sys.dm_hadr_database_replica_states`의 database_state 또는 database_state_desc 열을 쿼리합니다.<br /><br /> OFFLINE: 데이터베이스가 명시적으로 오프라인 상태입니다.<br /><br /> RESTORING: 데이터베이스 복원이 시작되었습니다.<br /><br /> RECOVERING: 데이터베이스 복구가 시작되었고 데이터베이스가 아직 쿼리에 대한 준비가 되지 않았습니다.<br /><br /> SUSPECT: 데이터베이스가 복구되지 않았습니다.<br /><br /> EMERGENCY: 데이터베이스가 응급 모드이며 읽기 전용 상태입니다. sysadmin 멤버만 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |Updateability|데이터 수정 가능 여부를 나타냅니다.|READ_ONLY: 데이터베이스가 데이터 읽기를 지원하지만 데이터 수정은 지원하지 않습니다.<br /><br /> READ_WRITE: 데이터베이스가 데이터 읽기와 수정을 지원합니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
 |UserAccess|데이터베이스에 액세스할 수 있는 사용자를 나타냅니다.|SINGLE_USER: 한 번에 한 명의 db_owner, dbcreator 또는 sysadmin 사용자만 액세스할 수 있습니다.<br /><br /> RESTRICTED_USER: db_owner, dbcreator 또는 sysadmin 역할의 멤버만 액세스할 수 있습니다.<br /><br /> MULTI_USER: 모든 사용자가 액세스할 수 있습니다.<br /><br /> 기본 데이터 형식: **nvarchar(128)**|  
-|버전 옵션|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|버전 번호: 데이터베이스가 열려 있습니다.<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**|  
-  
+|버전 옵션|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|버전 번호: 데이터베이스가 열려 있습니다.<br /><br /> NULL: 데이터베이스가 시작되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> 가용성 그룹의 일부인 데이터베이스의 경우 `LastGoodCheckDbTime`은 명령을 실행하는 복제본에 관계 없이 주 복제본에서 성공적으로 실행된 마지막 DBCC CHECKDB의 시간과 날짜를 반환합니다. 
+
 ## <a name="return-types"></a>반환 형식
 **sql_variant**
   

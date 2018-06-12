@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -64,11 +64,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744132"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -260,7 +261,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -318,7 +319,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   DEFAULT 정의와 연결되는 열. 그러나 데이터 형식이 변경되지 않은 경우 열의 길이, 전체 자릿수 또는 소수 자릿수를 변경할 수 있습니다.  
   
-**text**, **ntext** 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.  
+**text**, **ntextntext 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.  
   
 -   **text**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로  
   
@@ -326,7 +327,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **image**에서 **varbinary(max)** 로  
   
-데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 **nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.  
+데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.  
   
 > [!NOTE]
 > 분할된 테이블의 열 데이터 형식은 변경할 수 없습니다.  
@@ -533,7 +534,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
- 작업 중에만 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 작업 중에만 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
  MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한합니다. 최대값은 64개입니다.  
   
@@ -864,7 +865,7 @@ IF EXISTS
  **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** 형식 또는 CLR UDTS의 열은 온라인 작업에 추가할 수 없습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.  
   
 ## <a name="parallel-plan-execution"></a>병렬 계획 실행  
- [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 이상에서 하나의 ALTER TABLE ADD(인덱스 기반) CONSTRAINT 또는 DROP(클러스터형 인덱스) CONSTRAINT 문을 실행하는 데 사용되는 프로세서 수는 **max degree of parallelism** 구성 옵션 및 현재 작업에 따라 결정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시스템에서 진행 중인 작업이 많음을 감지하면 작업의 병렬 처리 수준은 문 실행 시작 전에 자동으로 감소됩니다. MAXDOP 옵션을 지정하여 문을 실행하는 데 사용되는 프로세서 수를 수동으로 구성할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 이상에서 하나의 ALTER TABLE ADD(인덱스 기반) CONSTRAINT 또는 DROP(클러스터형 인덱스) CONSTRAINT 문을 실행하는 데 사용되는 프로세서 수는 **max degree of parallelism** 구성 옵션 및 현재 작업에 따라 결정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시스템에서 진행 중인 작업이 많음을 감지하면 작업의 병렬 처리 수준은 문 실행 시작 전에 자동으로 감소됩니다. MAXDOP 옵션을 지정하여 문을 실행하는 데 사용되는 프로세서 수를 수동으로 구성할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
 ## <a name="partitioned-tables"></a>분할된 테이블  
  ALTER TABLE을 사용하면 분할된 테이블과 관련된 SWITCH 작업을 수행할 수 있을 뿐만 아니라 분할된 테이블의 열, 제약 조건 및 트리거의 상태를 분할되지 않은 테이블에 사용되는 것처럼 변경할 수 있습니다. 그러나 이 문을 사용하여 테이블 자체가 분할되는 방식을 변경할 수는 없습니다. 분할된 테이블을 재분할하려면 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 및 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)을 사용합니다. 또한 분할된 테이블의 열 데이터 형식을 변경할 수 없습니다.  

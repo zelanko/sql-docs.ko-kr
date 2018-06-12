@@ -23,11 +23,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f01d67583604948c32968c90975bcfd184a11c38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582325"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,29 +80,29 @@ ms.lasthandoff: 05/03/2018
 |ANSI_PADDING|OFF|예|  
 |ANSI_WARNINGS|OFF|예|  
 |ARITHABORT|OFF|예|  
-|AUTO_CLOSE|OFF|아니오|  
+|AUTO_CLOSE|OFF|아니요|  
 |AUTO_CREATE_STATISTICS|ON|예|  
-|AUTO_SHRINK|OFF|아니오|  
+|AUTO_SHRINK|OFF|아니요|  
 |AUTO_UPDATE_STATISTICS|ON|예|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|예|  
-|CHANGE_TRACKING|OFF|아니오|  
+|CHANGE_TRACKING|OFF|아니요|  
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니오<br /><br /> 아니오<br /><br /> 아니오|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
-|DB_CHAINING|ON|아니오|  
-|ENCRYPTION|OFF|아니오|  
-|MIXED_PAGE_ALLOCATION|OFF|아니오|  
+|DB_CHAINING|ON|아니요|  
+|ENCRYPTION|OFF|아니요|  
+|MIXED_PAGE_ALLOCATION|OFF|아니요|  
 |NUMERIC_ROUNDABORT|OFF|예|  
 |PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
 |PARAMETERIZATION|SIMPLE|예|  
 |QUOTED_IDENTIFIER|OFF|예|  
-|READ_COMMITTED_SNAPSHOT|OFF|아니오|  
-|RECOVERY|SIMPLE|아니오|  
+|READ_COMMITTED_SNAPSHOT|OFF|아니요|  
+|RECOVERY|SIMPLE|아니요|  
 |RECURSIVE_TRIGGERS|OFF|예|  
 |Service Broker 옵션|ENABLE_BROKER|예|  
-|TRUSTWORTHY|OFF|아니오|  
+|TRUSTWORTHY|OFF|아니요|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore 기반 서비스 계층에 대한 tempdb 크기
 
-vCore 기반 리소스 제한 참조](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
+[vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits) 참조
 
 ## <a name="restrictions"></a>Restrictions  
  다음 작업은 **tempdb** 데이터베이스에서 수행할 수 없습니다.  

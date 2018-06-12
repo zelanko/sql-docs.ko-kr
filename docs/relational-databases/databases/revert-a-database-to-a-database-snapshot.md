@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799833"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> 제한 사항  
  다음과 같은 경우에는 되돌리기가 지원되지 않습니다.  
   
--   데이터베이스는 현재 되돌릴 계획인 데이터베이스 스냅숏을 하나만 가지고 있어야 합니다.  
+-   데이터베이스에 대한 여러 스냅숏이 있습니다. 되돌리기의 경우 되돌리려는 데이터베이스에 대한 하나의 스냅숏만 있어야 합니다.  
   
 -   데이터베이스에 읽기 전용 또는 압축 파일 그룹이 있습니다.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  데이터베이스를 되돌리기 전에 다음 제한 사항을 고려합니다.  
   
--   되돌리기는 미디어 복구용으로 사용할 수 없습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
+-   되돌리기는 미디어 복구용으로 사용할 수 없습니다. 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본이므로 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 가능하다고 해도 손상된 경우에는 되돌리기를 수행해도 문제가 해결되지 않습니다. 따라서 데이터베이스를 보호하려면 정기적으로 백업하고 복원 계획을 테스트해야 합니다. 자세한 내용은 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
   
     > [!NOTE]  
     >  데이터베이스 스냅숏을 만든 시점까지 원본 데이터베이스를 복원해야 하는 경우 전체 복구 모델을 사용하고 이 작업을 수행할 수 있는 백업 정책을 구현합니다.  

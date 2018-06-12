@@ -3,7 +3,6 @@ title: 가용성 그룹 마법사 사용(SQL Server Management Studio) | Microso
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ea8ef37daa8d723fab8fdf60f8b980e23c5cd63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bd200483a8d778fd0f6f35d3ff12aea9f90fca7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770749"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
          **전체**를 선택한 후 가용성 그룹을 만들면 마법사에서 모든 주 데이터베이스와 해당 트랜잭션 로그를 네트워크 공유에 백업하고 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 백업을 복원합니다. 그런 다음 모든 보조 데이터베이스를 가용성 그룹에 조인합니다.  
   
-         **모든 복제본에서 액세스할 수 있는 공유 네트워크 위치 지정:** 필드에서 복제본을 호스팅하는 모든 서버 인스턴스에 읽기/쓰기 액세스 권한이 있는 백업 공유를 지정합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
+         **모든 복제본에서 액세스할 수 있는 공유 네트워크 위치 지정:** 필드에서 복제본을 호스팅하는 모든 서버 인스턴스에 읽기/쓰기 액세스 권한이 있는 백업 공유를 지정합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  유효성 검사 단계에서 마법사는 제공된 네트워크 위치가 유효한지 확인하는 테스트를 수행하고, 테스트는 Guid가 뒤에 오는 "BackupLocDb_"라는 주 복제본에 데이터베이스를 만들고 제공된 네트워크 위치로 백업을 수행한 다음, 보조 복제본에서 복원합니다. 마법사가 삭제하지 못하는 경우에 백업 기록 및 백업 파일과 함께 이 데이터베이스를 삭제하는 것이 안전합니다.
   
     -   **조인만**  
   

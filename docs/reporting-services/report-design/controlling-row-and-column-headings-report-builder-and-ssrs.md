@@ -1,7 +1,7 @@
 ---
 title: 행 및 열 머리글 제어(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd1680801406071d501a299ed687453deb115935
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 696cb735a8ec9c596cc67f6b4c130f77e832e694
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550444"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
-  테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 보고서 관리자나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
+  테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 웹 포털이나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
   
  머리글을 반복 표시하거나 고정하는 방법은 다음에 따라 달라집니다.  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 05/03/2018
   
 -   테이블릭스 데이터 영역이 세로로 여러 페이지에 걸쳐 있으면 열 머리글을 반복합니다.  
   
- 또한 소프트 페이지 나누기를 사용하는 렌더러(보고서 관리자, 보고서 미리 보기 또는 보고서 뷰어 컨트롤)는 다음 기능을 지원합니다.  
+ 또한 소프트 페이지 나누기를 사용하는 렌더러(웹 포털, 보고서 미리 보기 또는 보고서 뷰어 컨트롤)는 다음 기능을 지원합니다.  
   
 -   보고서를 가로로 스크롤할 때 행 머리글을 계속 표시합니다.  
   

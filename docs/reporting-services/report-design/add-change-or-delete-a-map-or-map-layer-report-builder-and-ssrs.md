@@ -1,7 +1,7 @@
 ---
 title: 지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550674"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **지도** 창의 도구 모음 아이콘을 보여 줍니다.  
   
-|기호|Description|사용 시기|  
+|기호|설명|사용 시기|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|지도 계층 마법사|마법사를 사용하여 계층을 추가하려면 **새 계층 마법사**를 클릭합니다.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|계층 추가|계층을 수동으로 추가하려면 **계층 추가**를 클릭한 다음 추가할 지도 계층의 유형을 클릭합니다.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  **파일 이름**에 ESRI 셰이프 파일의 위치를 입력하거나 **찾아보기** 를 클릭하여 ESRI 셰이프 파일을 선택합니다.  
   
     > [!NOTE]  
-    >  셰이프 파일이 로컬 컴퓨터에 있는 경우 공간 데이터가 보고서 정의에 포함됩니다. 보고서가 처리될 때 데이터를 동적으로 검색하려면 ESRI .shp 파일 및 해당 .dbf 지원 파일을 보고서 서버로 업로드해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에서 "방법: 파일 또는 보고서 업로드(보고서 관리자)"를 참조하세요.  
+    >  셰이프 파일이 로컬 컴퓨터에 있는 경우 공간 데이터가 보고서 정의에 포함됩니다. 보고서가 처리될 때 데이터를 동적으로 검색하려면 ESRI .shp 파일 및 해당 .dbf 지원 파일을 보고서 서버로 업로드해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드](../reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

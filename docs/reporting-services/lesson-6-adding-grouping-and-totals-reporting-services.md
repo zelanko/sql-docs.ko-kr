@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550804"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="bkmk_publishreport"></a>보고서 서버에 보고서를 게시하려면(선택 사항)  
   
-1.  선택 단계에서는 보고서 관리자에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
+1.  선택 단계에서는 웹 포털에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
   
 2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS) 프로젝트 및 패키지 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772147"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 레거시 패키지 배포 모델에 대한 자세한 내용은 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 > [!NOTE]  
->  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 모델을 사용하는 경우 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 은 전체 프로젝트를 배포하지 않고 기존 프로젝트나 새 프로젝트에 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 소개했습니다.  
-  
+>  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 배포 모델을 사용하여 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)]은 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 있는 패키지 배포 모델을 소개했습니다.  
+
+> [!NOTE]
+> 이 문서에서는 SSIS 패키지를 일반적으로 배포하는 방법 및 온-프레미스에서 패키지를 배포하는 방법을 설명합니다. 또한 다음 플랫폼으로 SSIS 패키지를 배포할 수도 있습니다.
+> - **Microsoft Azure 클라우드** 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
+> - **Linux** 자세한 내용은 [Linux에서 SSIS를 사용하여 데이터 추출, 변환 및 로드](../../linux/sql-server-linux-migrate-ssis.md)를 참조하세요.
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>프로젝트 배포 모델과 레거시 패키지 배포 모델 비교  
  프로젝트에 대해 선택한 배포 모델 유형에 따라 해당 프로젝트에 사용할 수 있는 배포 및 관리 옵션이 달라집니다. 다음 표에서는 프로젝트 배포 모델을 사용하는 경우와 패키지 배포 모델을 사용하는 경우의 차이점과 유사점을 보여 줍니다.  
   
@@ -60,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="features-of-project-deployment-model"></a>프로젝트 배포 모델의 기능  
  다음 표에서는 프로젝트 배포 모델에만 배포되는 프로젝트에 사용할 수 있는 기능을 나열합니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |매개 변수|매개 변수는 패키지에서 사용할 데이터를 지정합니다. 패키지 매개 변수 및 프로젝트 매개 변수를 사용하여 각각 패키지 수준 또는 프로젝트 수준으로 매개 변수 범위를 지정할 수 있습니다. 매개 변수를 식 또는 태스크에서 사용할 수 있습니다. 프로젝트가 카탈로그에 배포되면 각 매개 변수의 리터럴 값을 할당하거나 디자인 타임에 할당된 기본값을 사용할 수 있습니다. 리터럴 값 대신 환경 변수를 참조할 수도 있습니다. 환경 변수 값은 패키지 실행 시 확인됩니다.|  
 |환경|환경은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 참조할 수 있는 변수의 컨테이너입니다. 각 프로젝트는 환경 참조를 여러 개 가질 수 있지만 단일 패키지 실행 인스턴스는 단일 환경의 변수만 참조할 수 있습니다. 환경을 사용하여 패키지에 할당할 값을 구성할 수 있습니다. 예를 들어 "Dev", "test" 및 "Production"이라는 환경이 있을 수 있습니다.|  

@@ -28,11 +28,12 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689141"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -172,7 +173,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |조인 연산자를 포함하는 일괄 처리 모드 쿼리는 중첩된 루프, 해시 조인 및 병합 조인을 포함하는 세 개의 물리적 조인 알고리즘에 적합합니다. 카디널리티 예측치가 조인 입력에 대해 잘못된 경우 부적절한 조인 알고리즘이 선택될 수 있습니다. 이 문제가 발생하는 경우 성능이 저하되고 부적절한 조인 알고리즘이 캐시 계획이 다시 컴파일될 때까지 사용 중으로 남아 있습니다.|**적응형 조인**이라는 추가 조인 연산자가 있습니다. 카디널리티 예측치가 외부 빌드 조인 입력에 대해 잘못된 경우 부적절한 조인 알고리즘이 선택될 수 있습니다. 이 문제가 발생하고 명령문이 적응형 조인에 대해 적합한 경우 더 작은 조인 입력에 중첩된 루프가 사용되고 다시 컴파일할 필요 없이 더 큰 조인 입력에 해시 조인이 동적으로 사용됩니다. |
 |Columnstore 인덱스를 참조하는 간단한 계획은 일괄 처리 모드 실행에 적합하지 않습니다. |Columnstore 인덱스를 참조하는 간단한 계획은 일괄 처리 모드 실행에 적합한 계획을 위해 무시됩니다.|
 |`sp_execute_external_script` UDX 연산자는 행 모드에서만 실행할 수 있습니다.|`sp_execute_external_script` UDX 연산자는 일괄 처리 모드 실행에 적합합니다.|  
-|다중 문 TVF(테이블 반환 함수)는 인터리브 실행이 없습니다. |계획 품질을 개선하기 위한 다중 문 TVF에 대한 인터리브 실행 |
+|다중 문 TVF(테이블 반환 함수)는 인터리브 실행이 없습니다. |계획 품질을 개선하기 위한 다중 명령문 TVF에 대한 인터리브 실행입니다.|
 
 SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199의 수정 사항이 이제 기본적으로 활성화됩니다. 호환성 모드 140 사용 추적 플래그 4199는 SQL Server 2017 이후에 릴리스되는 새로운 쿼리 최적화 프로그램 수정에 적용됩니다. 추적 플래그 4199에 대한 자세한 내용은 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)를 참조하세요.  
   
@@ -181,16 +182,17 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 |호환성 수준 설정 120 이하|호환성 수준 설정 130|  
 |--------------------------------------------------|-----------------------------------------|  
-|Insert select 문의 Insert는 단일 스레드입니다.|Insert select 문에서 Insert는 다중 스레드 형식이거나, 병렬 계획일 수 있습니다.|  
+|INSERT-SELECT 문의 INSERT는 단일 스레드입니다.|INSERT-SELECT 문의 INSERT는 다중 스레드 형식이거나, 병렬 계획일 수 있습니다.|  
 |메모리 최적화 테이블에 대한 쿼리는 단일 스레드를 실행합니다.|메모리 최적화 테이블에 대한 쿼리는 이제 병렬 계획을 가질 수 있습니다.|  
-|SQL 2014 카디널리티 평가기 **CardinalityEstimationModelVersion="120"** 을 도입했습니다.|카디널리티 추정 모델 130을 통한 자세한 CE(카디널리티 추정) 개선 사항은 쿼리 계획에서 볼 수 있습니다. **CardinalityEstimationModelVersion="130"**|  
-|Columnstore 인덱스가 있는 일괄 처리 모드와 행 모드 비교 변경 내용<br /><br /> Columnstore 인덱스가 있는 테이블에 대한 정렬은 행 모드에 있습니다.<br /><br /> Windowing 함수 집계는 `LAG` 또는 `LEAD`와 같은 행 모드에서 작동합니다.<br /><br /> 여러 고유 절이 있는 Columnstore 테이블에 대한 쿼리는 행 모드에서 작동했습니다.<br /><br /> MAXDOP 1에서 실행되거나 직렬 계획을 사용하는 쿼리는 행 모드에서 실행되었습니다. | Columnstore 인덱스가 있는 일괄 처리 모드와 행 모드 비교 변경 내용<br /><br /> Columnstore 인덱스가 있는 테이블에 대한 정렬은 이제 일괄 처리 모드에 있습니다.<br /><br /> Windowing 집계는 이제 `LAG` 또는 `LEAD`와 같은 일괄 처리 모드에서 작동합니다.<br /><br /> 여러 고유 절이 있는 Columnstore 테이블에 대한 쿼리는 일괄 처리 모드에서 작동합니다.<br /><br /> Maxdop1에서 실행되거나 직렬 계획을 사용하는 쿼리는 일괄 처리 모드에서 실행됩니다.|  
-| 통계는 자동으로 업데이트될 수 있습니다. | 자동으로 통계를 업데이트하는 논리는 대형 테이블에 더 적극적입니다.  실제로 고객이 새로 삽입된 행이 빈번하게 쿼리되지만 통계가 해당 값을 포함하도록 업데이트되지 않는 쿼리에 대한 성능 문제를 발견하는 사례를 줄여야 합니다. |  
-| 추적 2371은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 기본적으로 OFF입니다. | [추적 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 기본적으로 ON입니다. 추적 플래그 2371은 자동 통계 업데이트 도구에 매우 많은 행이 있는 테이블에서 더 작지만 현명한 행의 하위 집합을 샘플링하도록 알려 줍니다. <br/> <br/> 하나의 개선 사항은 최근에 삽입된 더 많은 행을 샘플에 포함하는 것입니다. <br/> <br/> 또 다른 개선 사항은 업데이트 통계 프로세스가 실행되는 동안 쿼리를 차단하기 보다는 쿼리가 실행되도록 두는 것입니다. |  
-| 수준 120의 경우 통계는 *단일* 스레드 프로세스를 통해 샘플링됩니다. | 수준 130의 경우 통계는 *다중* 스레드 프로세스를 통해 샘플링됩니다. |  
-| 253 들어오는 외래 키는 제한입니다. | 최대 10,000개의 들어오는 외래 키 또는 유사한 참조로 지정된 테이블을 참조할 수 있습니다. 제한 사항에 대해서는 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요. |  
+|SQL 2014 카디널리티 평가기 **CardinalityEstimationModelVersion="120"** 을 도입했습니다.|카디널리티 추정 모델 130을 통한 자세한 CE(카디널리티 추정) 개선 사항은 쿼리 계획에서 볼 수 있습니다. **CardinalityEstimationModelVersion="130"**| 
+|Columnstore 인덱스를 사용한 일괄 처리 모드와 행 모드 비교 변경 내용입니다.<br /><ul><li>Columnstore 인덱스가 있는 테이블에 대한 정렬은 행 모드에 있습니다. <li>Windowing 함수 집계는 `LAG` 또는 `LEAD`와 같은 행 모드에서 작동합니다. <li>여러 고유 절이 있는 Columnstore 테이블에 대한 쿼리는 행 모드에서 작동했습니다. <li>MAXDOP 1에서 실행되거나 직렬 계획을 사용하는 쿼리는 행 모드에서 실행되었습니다.</li></ul>| Columnstore 인덱스를 사용한 일괄 처리 모드와 행 모드 비교 변경 내용입니다.<br /><ul><li>Columnstore 인덱스가 있는 테이블에 대한 정렬은 이제 일괄 처리 모드에 있습니다. <li>Windowing 집계는 이제 `LAG` 또는 `LEAD`와 같은 일괄 처리 모드에서 작동합니다. <li>여러 고유 절이 있는 Columnstore 테이블에 대한 쿼리는 일괄 처리 모드에서 작동합니다. <li>MAXDOP 1에서 실행되거나 직렬 계획을 사용하는 쿼리는 일괄 처리 모드에서 실행</li></ul>|  
+|통계는 자동으로 업데이트될 수 있습니다. | 자동으로 통계를 업데이트하는 논리는 대형 테이블에 더 적극적입니다.  실제로 고객이 새로 삽입된 행이 빈번하게 쿼리되지만 통계가 해당 값을 포함하도록 업데이트되지 않는 쿼리에 대한 성능 문제를 발견하는 사례를 줄여야 합니다. |  
+|추적 2371은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 기본적으로 OFF입니다. | [추적 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/)은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 기본적으로 ON입니다. 추적 플래그 2371은 자동 통계 업데이트 도구에 매우 많은 행이 있는 테이블에서 더 작지만 현명한 행의 하위 집합을 샘플링하도록 알려 줍니다. <br/> <br/> 하나의 개선 사항은 최근에 삽입된 더 많은 행을 샘플에 포함하는 것입니다. <br/> <br/> 또 다른 개선 사항은 업데이트 통계 프로세스가 실행되는 동안 쿼리를 차단하기 보다는 쿼리가 실행되도록 두는 것입니다. |  
+|수준 120의 경우 통계는 *단일* 스레드 프로세스를 통해 샘플링됩니다.|수준 130의 경우 통계는 *다중* 스레드 프로세스를 통해 샘플링됩니다. |  
+|253 들어오는 외래 키는 제한입니다.| 최대 10,000개의 들어오는 외래 키 또는 유사한 참조로 지정된 테이블을 참조할 수 있습니다. 제한 사항에 대해서는 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요. |  
 |사용되지 않는 MD2, MD4, MD5, SHA 및 SHA1 해시 알고리즘이 허용됩니다.|SHA2_256 및 SHA2_512 해시 알고리즘만 허용됩니다.|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 일부 데이터 형식 변환 및 일부(주로 드문) 작업에서 향상된 기능을 포함합니다. 자세한 내용은 [일부 데이터 형식 및 일반적이지 않은 작업 처리 시 SQL Server 2016의 향상된 기능](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)을 참조하세요.|
+|STRING_SPLIT 함수를 사용할 수 없습니다.|STRING_SPLIT 함수는 호환성 수준 130 이상에서 사용할 수 있습니다. 데이터베이스 호환성 수준이 130보다 낮으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 STRING_SPLIT 함수를 찾아 실행할 수 없습니다.|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서 추적 플래그 4199의 수정 사항이 이제 기본적으로 활성화됩니다. 호환성 모드 130 사용 추적 플래그 4199는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이후에 릴리스되는 새로운 쿼리 최적화 프로그램 수정에 적용됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 이전 쿼리 최적화 프로그램을 사용하려면 호환성 수준 110을 선택해야 합니다. 추적 플래그 4199에 대한 자세한 내용은 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)를 참조하세요.  
   

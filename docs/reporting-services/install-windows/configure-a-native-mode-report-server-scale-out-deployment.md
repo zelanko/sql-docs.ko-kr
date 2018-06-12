@@ -1,7 +1,7 @@
 ---
 title: 기본 모드 보고서 서버 확장 배포 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -19,17 +19,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a03b53bdb5a53574524a3cabce0adedbe23bac2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550574"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
 
-  Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Reporting Services 기본 모드에서는 단일 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스 실행을 허용하는 스케일 아웃 배포 모델을 사용할 수 있습니다. 확장 배포는 더 많은 동시 사용자와 보고서 실행 부하를 처리할 수 있도록 보고서 서버의 확장성을 개선하는 데 사용됩니다. 또한 특정 서버가 대화형 보고서나 예약된 보고서를 처리하도록 지정하는 데도 사용할 수 있습니다.
+
+Power BI Report Server의 경우 적절한 성능을 보장하려면 모든 확장 환경에 대한 부하 분산 장치에서 클라이언트 선호도(고정 세션이라고도 함)를 구성해야 합니다.  
   
- SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
+SQL Server 2016 Reporting Services의 경우 SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
  
   
             *스케일 아웃 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
