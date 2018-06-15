@@ -2,7 +2,6 @@
 title: '부록 d: ADO 샘플 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 279e19f7f07144c376946c3155a2767f822c779c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c2e8ae98494d5208d05a61836c1bf9e586abf52
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270222"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Windows SDK의에서 부록 d: ADO 예제
 Windows SDK ADO 및 RDS 코드의 사용을 보여 주는 몇 가지 예제 응용 프로그램을 포함 합니다. 이 샘플은 ADO 및 RDS를 사용 하는 방법을 배울 수 있도록 만들어졌으나 프로덕션 서버에 배포할 수는 없습니다.
@@ -36,5 +36,5 @@ Windows SDK ADO 및 RDS 코드의 사용을 보여 주는 몇 가지 예제 응�
 
  ADO 설명서에는이 온라인 도움말의 항목으로 포함 되어 있는 여러 언어의 코드 예제도 포함 되어 있습니다. 이러한 예제에 대 한 자세한 내용은 참조 [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic의 코드 예제 ADO](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual c + +에서 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [RDS 구성](../../../ado/guide/remote-data-service/configuring-rds.md) [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 기록](../../../ado/guide/ado-history.md)

@@ -2,7 +2,6 @@
 title: DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c92544630110443b3db9092738978a3608e57db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be8421c2d1b09887d50a49c0fdb71d2a5d92886
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274222"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM을 사용 하기 위해 클라이언트에서 비즈니스 개체에 등록
 사용자 지정 비즈니스 개체는 클라이언트 쪽 DCOM을 통해 사용할 수 있는 식별자 (CLSID)를 해당 프로그램 이름 progid (프로그램)를 매핑할 수 있는지 확인 해야 합니다. 이러한 이유로 DCOM 개체의 ProgID 클라이언트 레지스트리에 여야 하며 서버 쪽 비즈니스 개체의 클래스 ID에 매핑됩니다. 다른 지원 되는 프로토콜 (HTTP, HTTPS 및 프로세스)이 필요는 없습니다.  

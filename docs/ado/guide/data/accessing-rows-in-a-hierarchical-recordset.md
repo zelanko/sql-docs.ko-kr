@@ -2,7 +2,6 @@
 title: 계층적 레코드 집합의 행에 액세스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b1b387eaa01a3a3d71c51172becf196ec6474ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f45ec72f864c719091adc04a88e181a41124b76
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270172"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합 (예:)의 행에 액세스
 다음 예제에서는 단계 행 하는 데 필요한을 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -71,5 +71,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [데이터 개요 셰이핑](../../../ado/guide/data/data-shaping-overview.md) [개체 필드](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [정식 문법을](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 데이터를 셰이핑 OLE DB에 대 한 서비스 (ADO 서비스 공급자) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md) [APPEND 절 셰이프](../../../ado/guide/data/shape-append-clause.md) [명령에서 셰이프 일반](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md) [응용 프로그램 기능에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)

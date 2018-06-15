@@ -2,7 +2,6 @@
 title: HelloData:는 간단한 ADO 응용 프로그램 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271702"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData:는 간단한 ADO 응용 프로그램
 이 간단한 응용 프로그램을 4 개의 주요 ADO 작업의 각 단계별로: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 이러한 작업은 Microsoft® SQL Server에 포함 된 Northwind 샘플 데이터베이스에 대해 수행 됩니다. ADO의 기본 사항에 집중 하 고 코드 혼란을 방지 하기 위해이 예제에서 오류 처리는 최소화 됩니다.  
@@ -46,19 +46,19 @@ ms.lasthandoff: 05/03/2018
   
  ![Form1 HelloData VB 응용 프로그램에 대 한 표시](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|컨트롤 형식|속성|Value|  
+|컨트롤 형식|속성|값|  
 |------------------|--------------|-----------|  
-|Form|이름|Form1|  
+|Form|속성|Form1|  
 ||높이|6500|  
 ||너비|6500|  
-|MS DataGrid|이름|grdDisplay1|  
-|TextBox|이름|txtDisplay1|  
+|MS DataGrid|속성|grdDisplay1|  
+|TextBox|속성|txtDisplay1|  
 ||여러 줄|true|  
-|명령 단추|이름|cmdGetData|  
+|명령 단추|속성|cmdGetData|  
 ||캡션|Get Data|  
-|명령 단추|이름|cmdExamineData|  
+|명령 단추|속성|cmdExamineData|  
 ||캡션|데이터를 검사 합니다.|  
-|명령 단추|이름|cmdEditData|  
+|명령 단추|속성|cmdEditData|  
 ||캡션|데이터 편집|  
-|명령 단추|이름|cmdUpdateData|  
+|명령 단추|속성|cmdUpdateData|  
 ||캡션|업데이트 데이터|

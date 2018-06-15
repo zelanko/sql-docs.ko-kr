@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6b8cf26515276ce4dd9338d64746a2b7a017d99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ff74ef654200dda43a951d768a505b1300bb8f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271152"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 보안 디자인 기능에서 개체 ADO (ActiveX Data) 2.8 이상에 대해 설명 합니다. 보안을 개선 하기 위해 ADO 2.8에서에서 이러한 변경은 수행 했습니다. Windows Vista에서 Windows DAC 6.0에 포함 된 6.0, ADO는 ADO 2.8, Windows XP 및 Windows Server 2003에서 MDAC 2.8에 포함 된 것 같습니다. 이 항목에서는 가장 2.8 이상을 ado 응용 프로그램을 보호 하는 방법에 대 한 정보를 제공 합니다.

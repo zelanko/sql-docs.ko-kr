@@ -2,7 +2,6 @@
 title: 스트림 명령 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98dc21338ef492aa126e70cc28bc636acb2b91b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35269972"
 ---
 # <a name="command-streams"></a>명령 스트림
 ADO에서 지정 된 문자열 형식에 대 한 명령 입력 지원 왔지만 **CommandText** 속성입니다. 대신 ado 2.7 이상을 사용할 수도 있습니다 정보의 스트림입니다 명령 입력에 대 한 스트림을 지정 하 여는 **CommandStream** 속성입니다. ADO를 할당할 수 **스트림** 개체나 지 원하는 COM 개체 **IStream** 인터페이스입니다.  

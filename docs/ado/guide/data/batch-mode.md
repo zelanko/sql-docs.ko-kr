@@ -2,7 +2,6 @@
 title: 모드를 일괄 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 941c331c28cf5d1469b063b882bad23610a5605d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78fd9c4c7a27bad0daddb02f3275ecebfc171cbd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270582"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 일괄 처리 모드가 설정 되어 때는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 있습니다. 예를 들어, 비관적 잠금 유형에 사용할 수 없는 경우는 **앞** 로 설정 된 **adUseClient**합니다. 반대로, 공급자는 커서 위치는 서버에 있으면 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  

@@ -2,7 +2,6 @@
 title: 정식 문법을 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3658526e3b63069f3fce0dc1431804b5304070b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bb375b0b580bec75b1994a549a1a5815f4e34ec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270372"
 ---
 # <a name="formal-shape-grammar"></a>형식 모양 문법
 다음은 shape 명령을 만드는 정식 문법입니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 |\<string>|유니코드 char [유니코드 char...]|  
 |\<expression>|응용 프로그램 식 인 피연산자가 같은 행에 있는 다른 아닌 계산 열에 대 한 Visual Basic입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
  [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   

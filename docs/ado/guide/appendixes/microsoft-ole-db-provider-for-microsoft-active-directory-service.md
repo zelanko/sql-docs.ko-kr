@@ -2,7 +2,6 @@
 title: Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270652"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider
 서비스 인터페이스 ADSI (Active Directory) 공급자 ADO를 ADSI 통해 유형이 다른 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램에서는 읽기 전용 액세스할 모든 LDAP 호환 디렉터리 서비스 및 Novell 디렉터리 서비스 외에 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스에 있습니다. ADO 응용 프로그램 원활 하 게 액세스할 수 없는 경우 다른 디렉터리에 새 공급자 주어진 액세스, 있도록 ADSI 자체 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드 및 유니코드를 사용할 수 있습니다.  
@@ -63,10 +63,10 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |*Root*|나타냅니다는 **ADsPath** 개체 (즉, 검색의 루트) 검색을 시작할입니다.|  
-|*필터*|RFC 1960 형식에서 검색 필터를 나타냅니다.|  
+|*Assert*|RFC 1960 형식에서 검색 필터를 나타냅니다.|  
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
 |*범위*|(선택 사항) A **문자열** 검색 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> 밑수가-기준 개체 (검색의 루트)를 검색 합니다.<br />-기준 개체를 검색 한 수준입니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
@@ -83,7 +83,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  저장된 프로시저 호출 또는 간단한 테이블 이름을 공급자 허용 하지 않습니다 (예를 들어는 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 속성은 항상 **adCmdText**). 명령 텍스트 요소에 대 한 보다 철저 한 설명 Active Directory 서비스 인터페이스 설명서를 참조 하십시오.  
   
 ## <a name="recordset-behavior"></a>레코드 집합 동작  
@@ -105,7 +105,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|  
-|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|  
+|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|  
@@ -138,12 +138,12 @@ objectClass='user' AND objectCategory='Person'"
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
   
  ADSI 및 공급자의 세부 사항에 대 한 자세한 내용은 Active Directory 서비스 인터페이스 설명서를 참조 하거나 ADSI 웹 페이지를 방문 하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CommandType 속성 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

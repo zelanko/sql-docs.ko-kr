@@ -2,7 +2,6 @@
 title: 사용자 고유의 사용자 지정된 처리기 작성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b780e2027e64f7832fd622e66e1d908696d24b0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b9cb903d276357e46489dbdcd316d4f3974087a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274702"
 ---
 # <a name="writing-your-own-customized-handler"></a>사용자 고유의 사용자 지정된 처리기 작성
 RDS 지원, 기본 IIS 서버 관리자 모르는 경우 자신만 처리기를 작성 하려는 수 있지만 사용자 요청 더 자세하게 제어 및 액세스 권한을 합니다.  
@@ -103,7 +103,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

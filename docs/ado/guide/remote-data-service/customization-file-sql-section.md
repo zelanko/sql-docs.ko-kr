@@ -2,7 +2,6 @@
 title: 사용자 지정 파일 SQL 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792168588c13af5007ff35b7af9004f3cc78d385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f6cc8d75883f06acf449aba74341f86a8ae017b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274172"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새로운 SQL 문자열 포함 될 수 있습니다. 섹션에서 SQL 문자열이 없는 섹션 무시 됩니다.  
@@ -54,7 +54,7 @@ SQL = " "
 |**SQL**|이 설정에 리터럴 문자열은 SQL 섹션 항목입니다.|  
 |***sqlString***|클라이언트 문자열을 대체 하는 SQL 문자열입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

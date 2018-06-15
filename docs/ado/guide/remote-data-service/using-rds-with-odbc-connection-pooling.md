@@ -2,7 +2,6 @@
 title: RDS를 사용 하 여 ODBC 연결 풀링 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 416cbadf4d77ab9c7325c5f874f9818c4e05d8e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274652"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS를 사용 하 여 ODBC 연결 풀링
 ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 성능을 향상 시킬 하의 연결 풀링 인터넷 정보 서비스 (IIS)에서 옵션을 사용할 수 있습니다. 연결 풀링은 자주 사용 되는 연결에서 열려 있는 상태를 유지 관리 연결에 대 한 리소스에 대 한 관리자입니다.  
@@ -127,7 +127,7 @@ ODBC 데이터 소스를 사용 하는 경우 클라이언트 부하의 처리 �
   
 5.  확인을 클릭 한 다음 다시 한 번 확인 하 고 유틸리티를 종료 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

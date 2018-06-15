@@ -2,7 +2,6 @@
 title: DataControl 오류 코드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34d749e90ed9e2d3c7819e23a9d7c552e0b4e8c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f42d65ef0ff274ecf1e671315fc019347586e903
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271133"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 개체가 오류 코드
 다음 표에 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 오류 코드입니다. 낮은 2 바이트의 양의 10 진수로 변환한 음의 10 진수로 변환한 전체 오류 코드 및 16 진수 값의 표시 됩니다.
@@ -50,5 +50,5 @@ ms.lasthandoff: 05/03/2018
 |**IDS_UpdatesFailed**|4098 -2146824190 0x800A1002|데이터베이스를 업데이트할 수 없습니다.|
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|DataControl **URL** 속성 Urlmon.dll을 찾을 수 없는 시스템 파일에 필요 합니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

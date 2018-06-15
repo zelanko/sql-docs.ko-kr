@@ -2,7 +2,6 @@
 title: ADO 이벤트 처리기 요약 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271262"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
 두 개의 ADO 개체 이벤트를 발생 시킬 수 있습니다:는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. **ConnectionEvent** 에 작업에 관련 된 제품군의 **연결** 개체 및 **RecordsetEvent** 제품군 관련 작업에는  **레코드 집합** 개체입니다.
@@ -48,5 +48,5 @@ ms.lasthandoff: 05/03/2018
 |[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**변경 관리 행** -의 현재 행에서 알림은 **레코드 집합** , 변경 되거나 변경 되었습니다.|
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**레코드 집합 변경 관리** -현재에서 알림 **레코드 집합** , 변경 되거나 변경 되었습니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [언어에 따라 ADO 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md) [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md) [이벤트 처리기를 함께 작동](../../../ado/guide/data/how-event-handlers-work-together.md) [유형의 이벤트](../../../ado/guide/data/types-of-events.md)

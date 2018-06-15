@@ -2,7 +2,6 @@
 title: '부록 c: ADO와 프로그래밍 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ab784d3fd9231cb9306a2150c0bbcf314051226
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc648bb210f7f8d526886043b2b096de95c456ab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270252"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 c: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 포함 하 여 많은 프로그래밍 언어를 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. ADO의 버전은 각 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램에 함께 설치 됩니다.
@@ -36,5 +36,5 @@ ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual c + +를 포함 하 
 
 -   [Microsoft Visual C++으로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [RDS 구성](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [부록 a: 공급자 ](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO 기록](../../../ado/guide/ado-history.md)

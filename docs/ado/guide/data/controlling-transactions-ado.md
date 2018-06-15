@@ -2,7 +2,6 @@
 title: 트랜잭션 (ADO) 제어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69fc2fb748f1c67f8253b2ae7f350da430e7f937
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270982"
 ---
 # <a name="controlling-transactions-ado"></a>트랜잭션 (ADO) 제어
 ADO 지원 되며, 트랜잭션 처리를 사용 하 여 연결 내에서 **BeginTrans**, **CommitTrans**, 및 **RollbackTrans** 에 대 한 메서드는  **연결** 개체입니다. 다음과 같은 간단한 코드 조각을 ADO에서 트랜잭션 처리를 구현 하는의 일반적인 개념을 보여 줍니다.  

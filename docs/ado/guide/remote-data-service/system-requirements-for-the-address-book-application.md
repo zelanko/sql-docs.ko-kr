@@ -2,7 +2,6 @@
 title: 응용 프로그램을 예약 하는 주소에 대 한 시스템 요구 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 170ffd05b3dd40be067d4793f9c8f79600f96776
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 063a8d6dd6001c612bb52efa2773deafa546fd86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274542"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 응용 프로그램에 대 한 시스템 요구 사항
 주소록 예제 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항에 맞게 필요:  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  권한이 없는 경우 데이터베이스 관리자는 시스템 및 데이터베이스에 권한이 액세스 하거나 데이터베이스를 설정 제공을 설정 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주소 주소록 SQL 스크립트를 실행합니다.](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [주소록 예제 응용 프로그램 실행](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

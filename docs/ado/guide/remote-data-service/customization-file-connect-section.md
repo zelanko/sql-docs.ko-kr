@@ -2,7 +2,6 @@
 title: 사용자 지정 파일 연결 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273852"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **연결** 섹션 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든는 **연결** 섹션 된 absent 이거나 비어 있는 경우 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  
@@ -55,18 +55,18 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 |부분|Description|  
 |----------|-----------------|  
-|**Connect**|이 설정에 리터럴 문자열은 연결 문자열 항목입니다.|  
+|**연결**|이 설정에 리터럴 문자열은 연결 문자열 항목입니다.|  
 |***connectionString***|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
 |**액세스 권한**|이 나타내는 리터럴 문자열에 대 한 액세스 항목입니다.|  
 |***accessRight***|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
   
  (효과 기본 처리기 동작을 사용 하지 않도록 설정)의 모든 연결을 허용 하려는 경우 액세스 항목에 설정 된 **기본 연결** 섹션을 `Access=ReadWrite`, 삭제 하거나 다른 주석 및 **연결** *식별자* 섹션.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

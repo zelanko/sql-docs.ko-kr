@@ -2,7 +2,6 @@
 title: RDS 기본 사항 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1998a581e973abd83c493070b5d304acea66d7a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8bfd6902a23970fd8dc9cb930cde9adbcf8d62a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274032"
 ---
 # <a name="rds-fundamentals"></a>RDS 기본 사항
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [RDS 개체 모델 요약](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [원격 데이터 액세스를 위한 솔루션](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   

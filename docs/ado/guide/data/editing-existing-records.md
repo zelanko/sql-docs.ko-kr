@@ -2,7 +2,6 @@
 title: 기존 레코드 편집 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64c3514b47a6fed7435967b48e9c2141eb9b61a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08c6fbd16d40f0fa78cbb94f7f33094e839733d8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270482"
 ---
 # <a name="editing-existing-records"></a>기존 레코드 편집
 기존 레코드를 편집, 편집 하 고 변경 하려는 행으로 이동 된 **값** 변경할 필드의 속성입니다. 에 대 한 자세한 내용은 **필드** 개체의 **값** 속성 참조 [데이터 검사](../../../ado/guide/data/examining-data.md)합니다. 커서 유형에 따라 사용할 **업데이트** 또는 **UpdateBatch** 변경 내용을 데이터 소스에 다시 보내고 있습니다. 자세한 내용은 참조 [업데이트 및 데이터 유지](../../../ado/guide/data/updating-and-persisting-data.md)합니다.  

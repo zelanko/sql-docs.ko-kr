@@ -2,7 +2,6 @@
 title: '부록 b: ADO 오류 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de73e36a55f03f88ceba824d89a2514a8733bb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f27575e48ddc9b8e1f5e6b3add5700a981ceefe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270132"
 ---
 # <a name="appendix-b-ado-error-codes"></a>부록 b: ADO 오류 코드
 특정 오류 메시지에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
@@ -34,5 +34,5 @@ ms.lasthandoff: 05/03/2018
 
 -   [인터넷 정보 서비스 오류 코드](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md) [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ADO 열거형 상수의](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md) [ ADO 메서드](../../../ado/reference/ado-api/ado-methods.md) [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md) [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO 속성](../../../ado/reference/ado-api/ado-properties.md)

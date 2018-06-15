@@ -2,7 +2,6 @@
 title: Java 용 Microsoft SDK를 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40b718fbd2b54c55d9ef35a4d4cedbc87a24f3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76fb8068cfc1640642292932923db084818dbb9c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270022"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Java 용 Microsoft SDK를 사용 하 여
 
@@ -53,5 +53,5 @@ Microsoft SDK for Java은 Microsoft Internet Explorer 환경에 대 한 개발�
   
 3.  이러한 파일을 사용 하려면 프로젝트를 열고 Visual J++에서. **프로젝트** 메뉴 선택 **프로젝트에 추가**합니다. 선택 **파일**를 모두 추가 하 고는 있습니다. JAVA 파일을 프로젝트에 trustlib\msado15 디렉터리에 생성 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO Java 클래스 래퍼](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

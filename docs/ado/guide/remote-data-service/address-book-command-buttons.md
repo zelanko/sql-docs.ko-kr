@@ -2,7 +2,6 @@
 title: 주소록 명령 단추 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5db9a77104bab65e12b54d860ddcb49ced321f95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eaaa41038b741b71be069fb5db2bb921a2a576f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273632"
 ---
 # <a name="address-book-command-buttons"></a>주소록 명령 단추
 주소록 응용 프로그램에 다음과 같은 명령 단추가 포함 됩니다.  
@@ -88,7 +88,7 @@ End Sub
   
  때 `DC1.CancelUpdate` 를 실행 하면 마지막 쿼리 또는 업데이트 이후 데이터 표에 직원 레코드에 사용자가 변경한 모든 편집 합니다. 원래 값을 복원 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주소록 탐색 단추](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

@@ -2,7 +2,6 @@
 title: '부록 a: 공급자 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7cd4f36537158452eee32a92bd5544acc0956a91
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707511"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271282"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>부록 a: 데이터 및 서비스 공급자
 이 섹션에서는 다음과 같은 세 가지 종류의 공급자: 데이터 공급자, 서비스 공급자 및 서비스 구성 요소입니다. 공급자 두 범주로 나누어집니다: 데이터 및 서비스를 제공 하는 것을 제공 하는 것입니다. A *데이터 공급자* 자체 데이터를 소유 하 고 응용 프로그램에 테이블 형식으로 제공 합니다. A *서비스 공급자* 생성 하 고 데이터를 확대 ADO 응용 프로그램의 기능을 사용 하 여 서비스를 캡슐화 합니다. 서비스 공급자 수 정의할 수도로 *서비스 구성 요소*는 다른 서비스 공급자 또는 구성 요소와 함께 작업 해야 합니다.

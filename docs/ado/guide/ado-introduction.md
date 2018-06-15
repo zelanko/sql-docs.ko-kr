@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e278ead8b81bc0afef38e3dba87a25d8764076
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271412"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
 ADO ActiveX Data Objects ()는 OLE DB에는 상위 수준, 사용 하기 쉬운 인터페이스입니다. OLE DB는 다양 한 데이터 저장소에는 하위 수준, 고성능 인터페이스입니다. OLE DB 및 ADO 작업할 수 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터입니다.

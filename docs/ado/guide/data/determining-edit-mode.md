@@ -2,7 +2,6 @@
 title: 편집 모드 결정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4532f65823d4aed88c4db05e03571497f8eac6b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5971234a7e758318acaac80b830d312327e14e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270352"
 ---
 # <a name="determining-edit-mode"></a>편집 모드 확인
 ADO 현재 레코드와 연결 된 편집 버퍼를 유지 관리 합니다. **EditMode** 속성은이 버퍼에 변경 사항이 있는지 여부 또는 새 레코드를 만들어졌는지를 나타냅니다. 사용 하 여 **EditMode** 현재 레코드의 편집 상태를 확인할 수 있습니다. 편집 프로세스가 중단 된 보류 중인 변경 내용에 대 한 테스트 하 고 사용 해야 하는지 여부를 확인할 수는 **업데이트** 또는 **CancelUpdate** 메서드.  

@@ -2,7 +2,6 @@
 title: OLE DB (ADO 서비스 구성 요소)에 대 한 Microsoft 커서 서비스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271332"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 기능을 모든 데이터 공급자 비교적 안정적입니다.
@@ -90,7 +90,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형을 보완는 **레코드 집합**합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|에 사용할 수 있는 잠금의 종류 보완는 **레코드 집합**합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|
-|[정렬](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드에 있는 이름 지정는 **레코드 집합** 정렬 되어 각 필드가 오름차순 또는 내림차순 정렬 되 고 있는지 여부.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드에 있는 이름 지정는 **레코드 집합** 정렬 되어 각 필드가 오름차순 또는 내림차순 정렬 되 고 있는지 여부.|
 
 ## <a name="method-behavior"></a>동작 메서드
  OLE DB에 대 한 커서 서비스 사용 하거나의 동작에 영향을 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드가 및 **레코드 집합** 개체의 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [저장](../../../ado/reference/ado-api/save-method.md) 메서드.

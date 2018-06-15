@@ -2,7 +2,6 @@
 title: ADO를 사용 하 여 스크립트 언어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271212"
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어와 함께 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립트를 통해 데이터를 노출할 수 있습니다. 이 시나리오에서는 ADO, OLE DB 공급자를 사용 하 고 다른 모든 구성 요소는 지정 된 데이터 저장소를 참조 하는 데 필요한 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 되어 있는 원본으로 사용 합니다. ASP Active Server Pages ()를 사용 하 여 ADO는 예를 들어 HTML을 생성할 수 있는 스크립트에서 참조 하는 구성 요소입니다. 이 HTML 콘텐츠를 클라이언트 웹 브라우저에 HTTP를 통해 전달할 수 있습니다. 스크립트를 사용 하 여 웹 페이지 업데이트 트래버스하거나 특정 데이터를 볼 수 있도록 서버 쪽 스크립트에 다시 작업을 보낼 수 있습니다.  
   
  웹 페이지에는 ActiveX 개체를 사용 하기 전에는 개체가 스크립트에 대 한 안전 하 게 보호 되는지 확인 해야 합니다. 개체는 스크립팅에 안전한 것으로 간주 됩니다, 컨트롤 사용자의 컴퓨터에서 모든 유해한 작업을 수행할 수 없습니다 및 사용자의 승인 요청 하지 않고 실행할 수 있습니다 의미 합니다. 다음 표에서 ADO 개체를 나열 하 고 안전한 지 여부를 나타냅니다.  
   
-|개체|스크립트 사용에 대 한 안전?|  
+|Object|스크립트 사용에 대 한 안전?|  
 |------------|-------------------------|  
 |ADO 연결|예|  
 |ADO 명령|아니요|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [JScript ADO 프로그래밍](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Microsoft Visual Basic ADO를 사용 하 여](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual C++으로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

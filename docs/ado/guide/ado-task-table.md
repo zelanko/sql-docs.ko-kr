@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa4791a78f2ec2aa8accb0f85897d24ffe5e5c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270892"
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서에 포함 된 프로그래밍 작업의 *ADO Programmer's Guide* 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조는 텍스트 설명 또는 코드 예제에서는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있습니다 수 있습니다.
 
-|ADO 작업|참조|
+|ADO 작업|References|
 |--------------|----------------|
 |데이터 공급자에 연결|[데이터 원본에 연결](../../ado/guide/data/connecting-to-data-sources.md)|
 |명령 실행 및 저장된 프로시저 호출|[준비 및 실행 명령을](../../ado/guide/data/preparing-and-executing-commands.md)|

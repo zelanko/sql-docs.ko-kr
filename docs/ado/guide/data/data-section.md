@@ -2,7 +2,6 @@
 title: 데이터 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270102"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션 업데이트, 삽입 또는 삭제 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션에는 0 개 이상의 행 포함 될 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합에서 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 모든 데이터가 없는 열을 생략할 수 있습니다. 특성 또는 하위 요소 데이터 섹션에 사용 하는 경우 해당 구문이 스키마 섹션에 정의 되지 않은 자동으로 무시 됩니다.  
   
-## <a name="string"></a>문자열  
+## <a name="string"></a>String  
  적절 한 문자 엔터티가 포함 된 텍스트 데이터에서 예약 된 XML 문자를 바꾸어야 합니다. 예를 들어 "조의 차고" 회사 이름에는 작은따옴표 엔터티에 의해 교체 해야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="binary"></a>이진  
  이진 데이터 (즉, 두 개의 문자를 1 바이트 맵, 한 문자를 니블) 인코딩된 bin.hex입니다.  
   
-## <a name="datetime"></a>과 같이 지원되는  
+## <a name="datetime"></a>DateTime  
  Variant VT_DATE 형식 XML 데이터 데이터 형식으로 직접 지원 되지 않습니다. 올바른 데이터와 시간 구성 요소를 포함 하는 날짜 형식은 yyyy-m m-ddThh:mm:ss 합니다.  
   
  XML에 지정 된 날짜 형식에 대 한 자세한 내용은 참조는 [W3C XML 데이터 사양](https://go.microsoft.com/fwlink/?LinkId=5692)합니다.  
@@ -88,5 +88,5 @@ ms.lasthandoff: 05/03/2018
   
  업데이트가 변경 된 행이 데이터 전체 원래 행 데이터를 항상 포함 됩니다. 변경된 된 행은 모든 열 이나 실제로 변경 된 열만 포함할 수 있습니다. 이전 예제에서는 운송 업체 2에 대 한 행이 변경 되지 않는 및 Phone 열만 운송 업체 3에 대 한 값 변경 되었으며 변경된 된 행에 포함 하는 유일한 열 되므로 합니다. Shippers 12, 13, 및 14에 대 한 삽입 된 행이 함께 일괄 처리 된 한 rs: 삽입 태그 됩니다. 이 앞의 예제에 표시 되지 않지만 삭제 된 행도 일괄 처리할 수, note 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

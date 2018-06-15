@@ -2,7 +2,6 @@
 title: DataFactory 안전 또는 무제한 모드에 대 한 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3af0bf538b8d2fb774b06644e8089cf201b5fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b1356c61602d1383788263e4031f8059fe81bb2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273762"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>DataFactory 안전 또는 무제한 모드에 대 한 구성
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  Handsafe.reg를 실행 한 후 중지 및 명령 프롬프트 창에서 다음 명령을 입력 하 여 웹 서버에서 World Wide Web Publishing 서비스를 다시 시작 해야 합니다: "NET 중지 W3SVC" 및 "NET START W3SVC"입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

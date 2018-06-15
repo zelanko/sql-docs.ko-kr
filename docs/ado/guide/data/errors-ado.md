@@ -2,7 +2,6 @@
 title: 오류 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d34a1e8a51c3843c3df73aefa620bec1d7f43f95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf945b2e206abd2a07b2fd4af2c67170f7742910
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270242"
 ---
 # <a name="errors-ado"></a>오류 (ADO)
 ADO 개체를 관련 된 모든 작업 공급자 오류가 하나 이상 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치 되는 **오류** 의 컬렉션은 **연결** 개체입니다. ADO 응용 프로그램에서 경고 및 오류 처리에 대 한 세부 정보를 참조 하십시오. [의 오류 처리](../../../ado/guide/data/error-handling.md)합니다.  

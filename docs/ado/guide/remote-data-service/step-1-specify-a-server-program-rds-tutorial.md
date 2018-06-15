@@ -2,7 +2,6 @@
 title: '1 단계: 서버 프로그램 (RDS 자습서) 지정 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dca4476288c3fb6a65f245f6fcd3380aec47666f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68468c97d870f103260c8a5ee1b7914c2ecc378a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274562"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>1 단계: 서버 프로그램 (RDS 자습서) 지정
 가장 일반적인 경우에 사용 된 [.rds입니다 DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 기본 서버 프로그램 지정할 메서드가 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 또는 사용자 고유의 사용자 지정 서버 프로그램 (비즈니스 개체). 서버 프로그램은에서 서버에 서버 프로그램에 대 한 참조 인스턴스화되며 또는 *프록시*, 반환 됩니다.  
@@ -39,6 +39,6 @@ Sub RDSTutorial1()
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소가 더 이상에 포함 Windows 운영 체제 (Windows 8 참조 및 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/en-us/download/details.aspx?id=27416) 자세한 세부 정보에 대 한). RDS 클라이언트 구성 요소는 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 합니다. [WCF 데이터 서비스](http://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [2 단계: 서버 프로그램 (RDS 자습서) 호출](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

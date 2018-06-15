@@ -2,7 +2,6 @@
 title: AddNew를 사용 하 여 레코드를 추가 합니다. | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba15d68b5fbaa749e00987b1fbfef73887dc377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270092"
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew 메서드를 사용 하 여 레코드를 추가 합니다.
 기본 구문은 **AddNew** 메서드:
@@ -51,5 +51,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
  이 코드를 사용 하 여 연결이 끊긴 때문에 **레코드 집합** 다시 연결 해야 일괄 처리 모드에서 클라이언트 쪽 커서를 **레코드 집합** 를 새 데이터 원본에 **연결** 호출 하기 전에 개체는 **UpdateBatch** 메서드 변경 내용을 데이터베이스에 게시할 수 있습니다. 새 함수를 사용 하 여 쉽게 이렇게 **GetNewConnection**합니다.

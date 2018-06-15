@@ -2,7 +2,6 @@
 title: 데이터 예제를 셰이핑 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ead77ee3f08e2a4ffe9e385b32d289a77a55a92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32001c7f0a9ceff2fdccdf6d0bd0902b345f2a68
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271392"
 ---
 # <a name="data-shaping-example"></a>데이터 예제를 셰이핑
 다음 데이터 셰이핑 명령을 계층적 구조를 작성 하는 방법을 보여 줍니다 **레코드 집합** 에서 **고객** 및 **Orders** Northwind 데이터베이스의 테이블입니다.  

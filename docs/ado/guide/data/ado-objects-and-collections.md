@@ -2,7 +2,6 @@
 title: ADO 개체 및 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03671824ef02a7316398f1d9b8d51d57845be736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d8b1967071b5dc420577ecbee3f1b124d917057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271382"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 이루어져 있습니다.  
@@ -42,5 +42,5 @@ ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 이루어져 있습니
 |**매개 변수** 컬렉션|모든 포함 된 **매개 변수** 의 개체는 **명령** 개체입니다.|  
 |**오류** 컬렉션|모든 포함 된 **오류** 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)

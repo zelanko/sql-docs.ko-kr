@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271102"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -74,5 +74,5 @@ MSDAORA
 |**프롬프트**|연결이 설정 되는 동안 사용자에 게 확인 여부를 나타냅니다.|
 |**확장된 속성**|공급자별 확장된 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자 특정 연결 정보에 대해서만이 속성을 사용 합니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md)

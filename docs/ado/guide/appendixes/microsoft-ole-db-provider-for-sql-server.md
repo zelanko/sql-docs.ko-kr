@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271642"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server, SQLOLEDB Microsoft SQL Server에 액세스 하는 ADO 수 있습니다.
@@ -66,7 +66,7 @@ User ID=MyUserID;Password=MyPassword;"
 
 |매개 변수|Description|
 |---------------|-----------------|
-|Trusted_Connection|사용자 인증 모드를 나타냅니다. 로 설정할 수 있습니다 **예** 또는 **아니요**합니다. 기본값은 **No**합니다. 이 속성은로 설정 하는 경우 **예**, SQLOLEDB Microsoft Windows NT 인증 모드를 사용 하 여 지정한 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 하는 **위치** 및 [데이터 원본 ](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값입니다. 이 속성을 설정 하는 경우 **아니요**, SQLOLEDB 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여할 수 있습니다. 에 지정 된 SQL Server 로그인 및 암호는 **사용자 Id** 및 **암호** 속성입니다.|
+|Trusted_Connection|사용자 인증 모드를 나타냅니다. 로 설정할 수 있습니다 **예** 또는 **아니요**합니다. 기본값은 **아니요**합니다. 이 속성은로 설정 하는 경우 **예**, SQLOLEDB Microsoft Windows NT 인증 모드를 사용 하 여 지정한 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 하는 **위치** 및 [데이터 원본 ](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값입니다. 이 속성을 설정 하는 경우 **아니요**, SQLOLEDB 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여할 수 있습니다. 에 지정 된 SQL Server 로그인 및 암호는 **사용자 Id** 및 **암호** 속성입니다.|
 |현재 언어|SQL Server 언어 이름을 나타냅니다. 시스템 메시지 선택 및 서식 지정에 사용되는 언어를 식별합니다. SQL Server에는 언어를 설치 해야 여는 그렇지 않으면 연결이 실패 합니다.|
 |네트워크 주소|지정 된 SQL Server의 네트워크 주소 나타냅니다는 **위치** 속성입니다.|
 |네트워크 라이브러리|SQL Server와 통신 하는 데 사용 하는 네트워크 라이브러리 (DLL)의 이름을 나타냅니다. 이름에는 경로 또는 .dll 파일 확장명이 포함되면 안 됩니다. 기본값은 SQL Server 클라이언트 구성에서 제공 됩니다.|
@@ -360,5 +360,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  특정 구현 세부 정보 및 Microsoft SQL Server OLE DB 공급자에 대 한 기능 정보에 대 한 참조는 [SQL Server 공급자](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md)

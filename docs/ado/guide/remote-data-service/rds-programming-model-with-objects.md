@@ -2,7 +2,6 @@
 title: RDS 프로그래밍 모델 개체와 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32cd0b412e06f591eee69581e1e7ea8f871cab7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9501b819e664e4b0841140f6b3d835773d2e2ed
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274082"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 프로그래밍 모델 개체와 사용
 RDS의 목표 액세스 하 고 IIS와 같은 매개 자를 통해 데이터 소스를 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 작업 순서를 지정 합니다. 개체 모델 메서드와 속성이 프로그래밍 모델에 영향을 줄 개체를 지정 합니다.  
@@ -44,7 +44,7 @@ RDS의 목표 액세스 하 고 IIS와 같은 매개 자를 통해 데이터 소
   
 -   변경 된 **레코드 집합** 개체는 서버에 다시 전송 되 고 데이터 소스를 업데이트 하는 데 사용 됩니다 (**.rds입니다 DataControl** 또는 **업데이트할**).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 개체 모델 요약](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

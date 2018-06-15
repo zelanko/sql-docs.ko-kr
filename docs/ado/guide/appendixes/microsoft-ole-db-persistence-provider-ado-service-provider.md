@@ -2,7 +2,6 @@
 title: Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c47487547153426b2826792c5af0ad3bbeb7371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270392"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에 개체를 나중에 복원 하는 **레코드 집합** 파일에서 개체입니다. 스키마 정보, 데이터를 하 고 보류 중인 변경 내용이 보존 됩니다.
@@ -45,7 +45,7 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 
 |E_BADSTREAM|열려 있는 파일에는 올바른 형식 (즉, 형식이 ADTG 또는 XML).|
 |E_CANTPERSISTROWSET|**레코드 집합** 저장 하는 개체에 저장 하지 못하게 하는 특성입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
  Microsoft OLE DB 지 속성 공급자는 동적 속성이 노출합니다.
 
  현재만 매개 변수화 계층적 **레코드 집합** 개체를 저장할 수 없습니다.
@@ -54,5 +54,5 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 
 
  열려는 스트림을 사용 되는 경우는 **레코드 집합** 이외의 지정 하는 매개 변수 없이 있어야는 *소스* 의 매개 변수는 **열고** 메서드.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 [Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

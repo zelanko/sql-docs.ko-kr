@@ -2,7 +2,6 @@
 title: Visual c + + 확장 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420e9a26ff92f515b7b638d859172084a2b5855f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270292"
 ---
 # <a name="visual-c-extensions-example"></a>Visual c + + 확장 예제
 이 프로그램에는 값 필드에서 검색 되 고 C/c + + 변수로 변환 되는 방법을 보여 줍니다.  
@@ -113,6 +113,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Visual c + + 확장을 사용 하 여](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

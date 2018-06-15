@@ -2,7 +2,6 @@
 title: 절대 곡선과 상대 Url | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1ab2c9bdc1adbc063cd05e88cf9d0001efb15c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1af20bd6012b37ee798ad16cd0bf0456458c6083
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270542"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 곡선과 상대 Url
 URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등의 대상이 될 수 있습니다*합니다.*  
@@ -91,7 +91,7 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO는 자신의 URL 스키마를 인식 하는 OLE DB 공급자를 지원 합니다. 예를 들어는 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* "게시" Windows 2000 파일에 액세스 하는 기존 HTTP 체계를 인식 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -2,7 +2,6 @@
 title: ADO에 대 한 visual c + + 확장 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27cc7776c59364ebc0b69c4872dc8b78ee51116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c9200939a34f3d1a2af936388acaa6740387416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270552"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 확장
 Visual c + +를 사용 하 여 ADO를 프로그래밍 하는 기본 방법은 사용 하는 **#import** 지시문에 설명 된 대로 [Visual c + + ADO 프로그래밍 Microsoft](../../../ado/guide/appendixes/visual-c-ado-programming.md)합니다. ADO의 이전 버전의 Visual c + +를 사용 하는 프로그래밍 방법도와 함께 제공 되는 반면: Visual c + + 확장 합니다. 이 섹션에서는 Visual c + + 확장 코드를 유지 관리 해야 하는 사람에 게이 기능을 문서화 하지만 #을 사용 하 여 새 ADO 코드 작성**가져올**합니다.
@@ -43,5 +43,5 @@ Visual c + +를 사용 하 여 ADO를 프로그래밍 하는 기본 방법은 �
 
 -   [Visual c + + 확장 예제를 사용 하 여 ADO](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [Visual c + + 구문 인덱스에 대 한 COM ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 확장을 사용 하 여](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual c + + 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

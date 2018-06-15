@@ -2,7 +2,6 @@
 title: 인터넷 게시 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596bd0aa66f79bc45e7e6a51fe1251b42bd1f58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fa78abc00e38c03b0d951e0b837bd4761c8edda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271722"
 ---
 # <a name="internet-publishing-scenario"></a>인터넷 게시 시나리오
 이 코드 예제에는 Microsoft OLE DB provider for Internet Publishing ADO를 사용 하는 방법을 보여 줍니다. 이 시나리오에서 사용 하는 Visual Basic 응용 프로그램을 만듭니다 **레코드 집합**, **레코드**, 및 **스트림** 게시 된 리소스의 내용을 표시 하는 개체 인터넷 공급자를 게시 합니다.  
@@ -38,6 +38,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [4단계: 세부 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인터넷 게시에 대 한 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [인터넷 게시용 OLE DB 공급자](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

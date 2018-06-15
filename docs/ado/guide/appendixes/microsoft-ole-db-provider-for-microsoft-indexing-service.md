@@ -2,7 +2,6 @@
 title: Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271312"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색할 SQL 쿼리를 실행할 수 있습니다.
@@ -82,7 +82,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|
-|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|
+|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|
@@ -114,10 +114,10 @@ MSIDXS
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
 |[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|예|
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|
+|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
 
  특정 구현 세부 정보 및 Microsoft 인덱싱 서비스용 Microsoft OLE DB Provider에 대 한 기능 정보에 대 한 참조는 [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), Windows NT Server 웹의 웹 서비스 페이지를 방문 하 여 사이트입니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [CommandType 속성 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ 레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [메서드 지원](../../../ado/reference/ado-api/supports-method.md)

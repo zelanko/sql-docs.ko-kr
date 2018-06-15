@@ -2,7 +2,6 @@
 title: 하이브리드 명령 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41497aadc8ebc0ed22b34a42e242d0720562187b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46d11110d7dfc5376799d412631bf9f77ee64fce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271712"
 ---
 # <a name="hybrid-commands"></a>하이브리드 명령
 하이브리드 주석은 부분적으로 매개 변수화 된 명령을 있습니다. 예를 들어:  
@@ -37,7 +37,7 @@ SHAPE {select * from plants}
   
  하이브리드 명령에 대 한 캐싱 동작의 일반 매개 변수가 있는 명령을 것과 같습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

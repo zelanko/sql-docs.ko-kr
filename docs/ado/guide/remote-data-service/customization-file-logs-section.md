@@ -2,7 +2,6 @@
 title: 사용자 지정 파일 기록 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37bcfdea2c98295d2869cd4bc5766e89758e2773
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274012"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **로그** 섹션의 작업 중 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목에 포함 되어는 **DataFactory**합니다.  
@@ -40,7 +40,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 |부분|Description|  
 |----------|-----------------|  
@@ -49,7 +49,7 @@ FileName
   
  로그 파일에는 사용자 이름, HRESULT, 날짜 및 시간 각 오류의 포함 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [사용자 지정 파일 UserList 섹션](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

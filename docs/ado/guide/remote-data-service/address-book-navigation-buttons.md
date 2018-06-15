@@ -2,7 +2,6 @@
 title: 주소록 탐색 단추 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3162bb0a7bd7ed54812848df214658980dc6ec8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61a43c6aef14cf59561cd433cfe5bd3c66761940
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273702"
 ---
 # <a name="address-book-navigation-buttons"></a>주소록 탐색 단추
 주소록 응용 프로그램 웹 페이지의 맨 아래에 있는 탐색 단추를 표시합니다. 데이터의 첫 번째 또는 마지막 행 또는 현재 선택 영역에 인접 한 행 중 하나를 선택 하 여 HTML 눈금 표시의 데이터를 탐색 하려면 탐색 단추를 사용할 수 있습니다.  
@@ -65,7 +65,7 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 

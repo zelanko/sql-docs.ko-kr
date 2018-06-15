@@ -2,7 +2,6 @@
 title: 만들기 및 간단한 명령 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3937908031c72940d44dd45331fa0d534b853d89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270912"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>만들기 및 간단한 명령 실행
 간단한 명령은 비지 속성으로 이루어지며 매개 변수화 되지입니다. 만들고 간단한 명령을 실행 하는 방법은 세 가지가 있습니다.  

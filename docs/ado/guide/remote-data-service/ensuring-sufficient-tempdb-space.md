@@ -2,7 +2,6 @@
 title: 충분 한 TempDB 공간 확인 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c86196fdf0320b5f3cb5028cb7d5db484c4da846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09db3f588a5631b02c3ce112dd1b10935537c311
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274132"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>충분 한 TempDB 공간 확인
 처리 하는 동안 오류가 발생 하면 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 를 Microsoft SQL Server 6.5에서 공간을 처리 해야 하는 개체는 TempDB의 크기가 증가 해야 할 수 있습니다. (임시 처리 공간을 필요로 하는 일부 쿼리에; ORDER BY 절을 사용 하 여 쿼리 정렬 해야 하는 예를 들어의 **레코드 집합**, 일부 임시 공간이 필요 합니다.)  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  이 항목에 대 한 자세한 내용은 "확장 데이터베이스 대화 상자"에 대 한 Microsoft SQL Server 엔터프라이즈 관리자 도움말 파일을 검색  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

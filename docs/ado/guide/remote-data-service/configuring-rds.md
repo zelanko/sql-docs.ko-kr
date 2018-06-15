@@ -2,7 +2,6 @@
 title: RDS 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d031882fddb2bd0b149e94b9bcb0b9d533a0551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273789"
 ---
 # <a name="configuring-rds"></a>RDS 구성
 > [!IMPORTANT]
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [안전 또는 무제한 모드에 대한 DataFactory 구성](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [관련된 기술 RDS를 사용 하 여](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 문제 해결](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

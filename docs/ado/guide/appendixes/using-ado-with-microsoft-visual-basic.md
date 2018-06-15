@@ -2,7 +2,6 @@
 title: Microsoft Visual Basic ADO를 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 842671f5859fc0522c30aec8a0d363d3f101473c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0250faf780229ec06c5fce38997bbf4eaf51cc43
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271302"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic ADO를 사용 하 여 응용 프로그램에 대 한
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성은 유사 사용할지 Visual Basic 또는 Visual Basic 응용 프로그램에 대 한 합니다. 이 항목 응용 프로그램에 대 한 Visual Basic 및 Visual Basic 모두와 함께 ADO를 사용 및 차이 인식 합니다.
@@ -118,5 +118,5 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## <a name="visual-basic-examples"></a>Visual Basic 예제
  많은 Visual Basic 예제 ADO 설명서에 포함 됩니다. 자세한 내용은 참조 [ADO 코드 예제에서는 Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Microsoft Visual c + +와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [스크립트 언어와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

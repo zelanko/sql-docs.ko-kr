@@ -2,7 +2,6 @@
 title: 연결 문자열 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc700bdc0006a4591e61e15f2796b73c194dc5a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270562"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
 연결 문자열을 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 합니다. 예를 들어:  

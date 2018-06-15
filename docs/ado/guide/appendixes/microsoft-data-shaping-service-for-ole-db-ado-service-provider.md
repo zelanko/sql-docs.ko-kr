@@ -2,7 +2,6 @@
 title: Microsoft 데이터를 셰이핑 OLE DB (ADO 서비스 공급자)에 대 한 서비스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271352"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 데이터를 셰이핑 OLE DB 개요에 대 한 서비스
 > [!IMPORTANT]
@@ -64,5 +64,5 @@ cn.Properties("Data Provider") = "MSDASQL"
 
  데이터 모양 지정에 대 한 자세한 내용은 참조 [데이터 셰이핑](../../../ado/guide/data/data-shaping-overview.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

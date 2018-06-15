@@ -2,7 +2,6 @@
 title: 오류 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e302e38ee983f8057aa2ce1be321e195abe0afbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db8900b50f4aa73fe674a6829c384a8956c93619
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270502"
 ---
 # <a name="error-handling"></a>오류 처리
 ADO 오류 발생 하는 응용 프로그램에 알리기 위해 여러 가지 방법을 사용 합니다. 이 섹션에는 ADO 및 응용 프로그램 통지 하는 방법을 사용 하는 경우 발생할 수 있는 오류의 유형을 설명 합니다. 이러한 오류를 처리 하는 방법에 대 한 제안이 결론을 내립니다.  

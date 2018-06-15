@@ -2,7 +2,6 @@
 title: 저장 프로시저는 연결 개체의 메서드로 호출 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8ee4412d5eba44d324cd11432c2bbe33e3310b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270402"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>저장 프로시저는 연결 개체의 메서드로 호출
 연결된 열기에 대 한 네이티브 메서드 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명된 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  
@@ -82,5 +82,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -2,7 +2,6 @@
 title: 'ADO 이벤트 인스턴스화: ADO 및 WFC | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89fefc8d733f515ef6f085e39b69268a808cefd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa227f5ca6b6246d61e183c03d6217ebaa70bac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270812"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스화: ADO 및 WFC
 ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕으로 하며 단순화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC 차단 ADO 이벤트, 이벤트 매개 변수는 단일 이벤트 클래스를 통합 하 고 이벤트 처리기를 호출 합니다.  
@@ -64,7 +64,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
   
 7.  완료 되 면 ADO/WFC 이벤트 처리기의 목록에서 처리기를 제거를 처리 합니다. 와 같은 이름을 가진 메서드를 사용 **removeOn * * * EventName*(*처리기*).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-WFC 구문 인덱스](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   

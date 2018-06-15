@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for 인터넷 게시 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8d3caac3bd857b790372bd6b41fc818090210a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271222"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for 인터넷 게시 개요
 Microsoft OLE DB Provider for Internet Publishing Microsoft FrontPage 또는 Microsoft Internet Information Server에 의해 처리 리소스에 액세스 하도록 ADO 수 있습니다. 리소스에는 HTML 파일 또는 Windows 2000 웹 폴더와 같은 웹 원본 파일이 포함 됩니다.
@@ -67,5 +67,5 @@ MSDAIPP.DSO
 > [!NOTE]
 >  경우 MSDAIPP 합니다. DSO 명시적으로 지정 된 공급자의 값으로는 *공급자* 연결 문자열 키워드 또는 **공급자** 사용할 수 없는 속성을 "URL =" 연결 문자열에 있습니다. 이렇게 하면 오류가 발생 합니다. 대신, URL만 지정 하면 항목에 나와 있는 것 처럼 [OLE DB Provider for Internet Publishing를 사용 하 여 ADO를 사용 하 여](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md) [인터넷 게시에 대 한 OLE DB Provider](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

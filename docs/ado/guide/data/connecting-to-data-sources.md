@@ -2,7 +2,6 @@
 title: 데이터 원본에 연결 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d082e3e90f562ef5434bbe1f84964e32ebdd52ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4262088b9f7bdf629f5ced8b7916359e3062227d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270842"
 ---
 # <a name="connecting-to-data-sources"></a>데이터 원본에 연결
 ADO **연결** 개체 DBMS, 파일 저장소 또는 쉼표로 구분 된 텍스트 파일을 포함 하 여 데이터 원본과 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우 ADO 연결 서버에는 실제 네트워크 연결 될 수 있습니다.  

@@ -2,7 +2,6 @@
 title: Visual c + +에서 오류 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33e60542f1354d829f51159b74d6a53a7b549f67
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68ce5fb8cc94b130de5171a45b65743e86eec3da
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271692"
 ---
 # <a name="handling-errors-in-visual-c"></a>Visual c + +에서 오류 처리
 COM, 대부분의 작업 함수 완료 되었는지 여부를 나타내는 HRESULT 반환 코드를 반환 합니다. #Import 지시문 주위 각 "원시" 메서드 또는 속성에 래퍼 코드를 생성 하 고 반환된 된 HRESULT를 확인 합니다. HRESULT 오류를 나타내는 래퍼 코드는 인수로 서 COM 오류를 HRESULT 반환 코드 _com_issue_errorex()를 호출 하 여 throw 합니다. COM 오류 개체에서 확인 수는 **try / catch** 블록입니다. (효율성의 찾았을 _com_error 개체에 대 한 참조를 catch).  

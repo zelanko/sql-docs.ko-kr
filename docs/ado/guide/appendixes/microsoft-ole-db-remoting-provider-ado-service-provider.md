@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Remoting Provider (ADO 서비스 공급자) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271292"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자 수 있습니다. 원격 컴퓨터에서 로컬 사용자 인 경우와 마찬가지로 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 컴퓨터에 액세스할 수는 원격 공급자에서 사용 하는 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 인 경우에 따라 원격 컴퓨터를 액세스할 수 있습니다.
@@ -73,7 +73,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
  2.0 ado, OLE DB 원격 서비스 공급자만에서 지정 될 수는 *ActiveConnection* 의 매개 변수는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **열려** 메서드. ADO 2.1 이상에서는 공급자도 지정할 수 있습니다에 *ConnectionString* 의 매개 변수는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 **열려** 메서드.
 
  해당 하는 **.rds입니다 DataControl** 개체 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성은 사용할 수 없습니다. [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **열려** 메서드 *소스* 인수 대신 사용 됩니다.
@@ -94,5 +94,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [OLE DB Remoting 공급자 개요](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)

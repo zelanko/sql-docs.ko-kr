@@ -2,7 +2,6 @@
 title: 레코드 업데이트에 대 한 필터링 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8ee03c015f7fa63980f549c8d9e7bef2df51426
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 529845297ff3c4264cc152c652b31c0bd12f5441
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270882"
 ---
 # <a name="filtering-for-updated-records"></a>업데이트 된 레코드 필터링
 UpdateBatch을 호출 하기 전에 레코드 집합을 연 이후 변경 된 레코드에만 보려는 Recordset Filter 속성 또는 UpdateBatch에 대 한 마지막 호출을 사용할 수 있습니다. 이 작업을 수행 하려면 필터를 그 다음 섹션의 코드 예제에 나와 있는 것 처럼 레코드 수가 업데이트 됩니다 확인 하려면 같음 설정 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 예제는 고 하 여 바로 전에 호출 된 UpdateBatch 레코드 집합 필터링, 사용자 레코드를 변경 합니다 (CancelBatch 메서드를 사용 하 여) 업데이트를 취소할 수 있도록 이전 UpdateBatch 예제를 확장 합니다.  
   
 ```  
@@ -58,5 +58,5 @@ UpdateBatch을 호출 하기 전에 레코드 집합을 연 이후 변경 된 �
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)

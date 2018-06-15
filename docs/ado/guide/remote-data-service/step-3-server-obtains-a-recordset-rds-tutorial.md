@@ -2,7 +2,6 @@
 title: '3 단계: 서버 가져옵니다 (RDS 자습서) 레코드 집합 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdefc86152b1a91ab20099e31a748940c5fe57ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d973dc8e4d4a85ddc1c3654a1deeed79d78ee34
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274552"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>3 단계: 서버가 가져옵니다 (RDS 자습서) 레코드 집합을
 서버 프로그램 연결 문자열 및 명령 텍스트를 사용 하 여 원하는 행에 대 한 데이터 원본을 쿼리할 수 있습니다. ADO는 일반적으로 검색 하는 데이 **레코드 집합**OLE DB를 사용할 수와 같은 다른 Microsoft 데이터 액세스 인터페이스, 하지만, 합니다.  
@@ -41,6 +41,6 @@ Dim rs as New ADODB.Recordset
 End Function  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [4 단계: 서버 반환 레코드 집합 (RDS 자습서)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
