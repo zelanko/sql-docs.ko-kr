@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 954bc27f3bfaaf14a9ccb9fd7b97ffee7b9f274c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308532"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="return-value"></a>반환 값  
 열에 대한 메타데이터를 포함하는 결합형 배열(키 및 값)입니다. 배열에 있는 필드에 대한 설명은 설명 섹션을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 다음 표에서는 getColumnMeta에서 반환된 배열에 있는 필드에 대해 설명합니다.  
   
 |NAME|VALUES|  
@@ -48,7 +48,7 @@ array PDOStatement::getColumnMeta ( $column );
 |driver:decl_type|데이터베이스의 열 값을 나타내는 데 사용되는 SQL 형식을 지정합니다. 결과 집합의 열이 함수의 결과인 경우 PDOStatement::getColumnMeta에서 이 값을 반환하지 않습니다.|  
 |flags|이 열에 대해 설정된 플래그를 지정합니다. 항상 0입니다.|  
 |NAME|데이터베이스 열의 이름을 지정합니다.|  
-|table|데이터베이스 열을 포함하는 테이블 이름을 지정합니다. 항상 비어 있습니다.|  
+|테이블|데이터베이스 열을 포함하는 테이블 이름을 지정합니다. 항상 비어 있습니다.|  
 |len|열 길이를 지정합니다.|  
 |전체 자릿수|이 열의 전체 자릿수를 지정합니다.|  
 |pdo_type|PDO::PARAM_* 상수에 의해 표시된 대로 이 열의 형식을 지정합니다. 항상 PDO::PARAM_STR(2)입니다.|  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDOStatement 클래스](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  
