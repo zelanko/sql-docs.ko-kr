@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025500"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
   입력란은 데이터 영역 안에 있는 보고서 항목 또는 개별 셀로서 텍스트, 계산 필드, 데이터베이스의 필드에 대한 포인터 또는 이 세 항목의 조합을 포함하고 있습니다. 글꼴 및 색을 혼합하고, 굵게 및 기울임꼴 스타일을 추가하고, 맞춤 및 내어쓰기와 같은 단락 스타일을 사용할 수 있습니다. 또한 입력란 전체의 형식을 지정하거나 입력란 내에 있는 특정 텍스트, 숫자, 식 또는 필드의 형식을 지정할 수 있습니다.  

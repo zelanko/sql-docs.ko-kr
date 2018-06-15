@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550904"
 ---
 #<a name="appliance-feature-switch"></a>어플라이언스 기능 스위치
 **기능 스위치가** 페이지 분석 플랫폼 시스템 AU7에 도입 된 두 개의 기능 스위치에 대 한 정보를 표시 합니다. 이 페이지를 사용 하 여를 업데이트 하거나 기능 및 설정을 분석 플랫폼 시스템에 설정/해제 합니다. 기능 스위치 값을 변경 하려면 서비스를 다시 시작 합니다.

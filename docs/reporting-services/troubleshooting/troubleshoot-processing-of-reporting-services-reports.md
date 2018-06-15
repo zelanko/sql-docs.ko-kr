@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031430"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services 보고서의 처리 문제 해결
 보고서 데이터가 검색되면 보고서 처리기는 데이터와 레이아웃 정보를 조합합니다. 식이 포함된 각 보고서 항목 속성은 조합된 데이터와 레이아웃의 컨텍스트에서 계산됩니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   

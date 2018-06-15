@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
-ms.openlocfilehash: 01d53c67e54ab9a0a4c2e5dd8ab4e5441fd8db4a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 49062b7d9ff47912ded1b53ef6682e3bf750875b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034490"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

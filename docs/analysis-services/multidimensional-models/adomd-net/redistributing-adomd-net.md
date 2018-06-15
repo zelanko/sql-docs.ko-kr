@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027300"
 ---
 # <a name="redistributing-adomdnet"></a>ADOMD.NET 재배포
   ADOMD.NET을 사용하는 응용 프로그램을 작성할 때 응용 프로그램과 함께 적합한 ADOMD.NET 버전을 재배포해야 합니다. ADOMD.NET을 재배포하려면 ADOMD.NET 설치 프로그램을 응용 프로그램의 설치 프로그램에 포함합니다.  

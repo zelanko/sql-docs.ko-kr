@@ -16,6 +16,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323374"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux에서 SQL Server 업그레이드에 대 한 저장소를 구성 합니다.
 

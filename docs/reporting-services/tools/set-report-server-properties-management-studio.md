@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029720"
 ---
 # <a name="set-report-server-properties-management-studio"></a>보고서 서버 속성 설정(Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 보고서 서버 시스템 속성을 설정하여 기능 또는 서버 기본값을 설정할 수 있습니다.  

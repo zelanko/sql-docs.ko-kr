@@ -32,6 +32,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323904"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에 압축 사용
 

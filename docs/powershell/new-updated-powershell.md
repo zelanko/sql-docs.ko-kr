@@ -15,6 +15,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323074"
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>새로 추가되었거나 최근에 업데이트됨: PowerShell 문서
 

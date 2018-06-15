@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019040"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
   차트에 시각적 효과를 주려면 차트 바깥쪽 둘레에 테두리 프레임을 사용해 보십시오. **차트 속성** 대화 상자를 사용하거나 속성 창을 사용하여 테두리 프레임을 선택할 수 있습니다. 차트 테두리 프레임은 다른 데이터 영역에 적용할 수 없습니다.  

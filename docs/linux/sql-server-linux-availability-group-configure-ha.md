@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323504"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
 

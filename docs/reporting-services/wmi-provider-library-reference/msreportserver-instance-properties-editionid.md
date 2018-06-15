@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029690"
 ---
 # <a name="msreportserverinstance-properties---editionid"></a>MSReportServer_Instance 속성 - EditionID
   보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

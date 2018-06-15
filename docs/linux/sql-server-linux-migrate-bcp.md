@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322944"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 bcp 사용 하 여 대량 복사 데이터
 

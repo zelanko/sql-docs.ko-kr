@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34320514"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스에 SQL Server Linux에서 작동 합니다.
 

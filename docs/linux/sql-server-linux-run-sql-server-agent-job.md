@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455116"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 

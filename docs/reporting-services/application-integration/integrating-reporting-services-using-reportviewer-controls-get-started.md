@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016950"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 시작하기
 

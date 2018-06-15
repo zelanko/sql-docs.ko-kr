@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323654"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 작업 시작
 

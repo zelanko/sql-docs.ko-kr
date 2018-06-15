@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026510"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>데이터 렌더링(보고서 작성기 및 SSRS)
   HTML, MHTML, Word, Excel, PDF 또는 이미지와 같은 레이아웃 렌더러를 사용하면 데이터 및 해당 구성은 변경되지 않습니다. CSV(쉼표로 구분된 값) 또는 XML과 같은 데이터 렌더러 형식을 사용하여 내보내면 시각적 레이아웃 요소는 렌더링되지 않습니다. CSV 및 XML에서는 보고서를 렌더링할 때 보고서 본문 및 해당 내용에 특정 규칙을 적용합니다. 이러한 규칙은 데이터가 해당 형식으로 렌더링되는 방법을 결정합니다.  

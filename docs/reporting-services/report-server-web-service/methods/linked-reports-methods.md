@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025490"
 ---
 # <a name="linked-reports-methods"></a>링크된 보고서 메서드
   다음 메서드를 사용하여 링크된 항목을 만들고 관리할 수 있습니다.  

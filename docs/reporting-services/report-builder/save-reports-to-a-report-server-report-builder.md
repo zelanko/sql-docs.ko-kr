@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019380"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
   보고서 작성기에서는 보고서 정의를 보고서 서버에 저장할 수 있습니다(보고서 게시라고도 함). 보고서를 보고서 서버에 저장하면 다른 사용자가 보고서를 볼 수 있습니다. 게시된 보고서를 실행할 때마다 최신 데이터를 검색하게 됩니다. 렌더링된 보고서의 정적 복사본을 저장하려면 보고서를 다른 파일 형식으로 내보내고 저장하거나, 보고서 기록 기능을 사용하여 렌더링된 보고서의 여러 버전을 저장합니다.  

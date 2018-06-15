@@ -18,6 +18,7 @@ ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34473827"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 

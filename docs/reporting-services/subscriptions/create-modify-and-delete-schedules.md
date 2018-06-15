@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035220"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
   이 항목에서는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 공유 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  기본 모드에 대한 공유 일정을 관리하려면 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 위한 관리 페이지를 사용합니다.  

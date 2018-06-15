@@ -16,6 +16,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322974"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>SMB-Linux에서 SQL Server 장애 조치 클러스터 인스턴스-를 구성 합니다.
 

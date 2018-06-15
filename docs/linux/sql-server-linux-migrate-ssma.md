@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34321914"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Linux로 데이터베이스 마이그레이션 자동화
 
