@@ -2,7 +2,6 @@
 title: ADO MD 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14021f4e91210ac76a55d3e2e2628bd3ffc99e4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e16e92b952218e01c46e4071ee1cf99720d737
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283262"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
 ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 다음 코드 예제를 사용 합니다. 이러한 예제는 SQL Server 7.0 용 Microsoft SQL Server OLAP Services와 함께 설치 된 샘플 응용 프로그램의 하위 집합.  
@@ -32,7 +32,7 @@ ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 �
   
 -   [Visual Basic의 ADO MD코드 예제, 스크립팅 버전](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD API 참조](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 컬렉션](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD 열거 상수](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

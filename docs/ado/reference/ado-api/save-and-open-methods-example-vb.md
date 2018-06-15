@@ -2,7 +2,6 @@
 title: 저장 및 열기 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6248fa2dd504e808f5ae2685ba70d46f373a6309
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281392"
 ---
 # <a name="save-and-open-methods-example-vb"></a>저장 하 고 (VB) 메서드 예제 열기
 이 세 가지 예제를 보여 주는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 및 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 방법을 함께 사용할 수 있습니다.  
@@ -100,7 +100,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [지 속성 레코드 집합에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   

@@ -2,7 +2,6 @@
 title: WillChangeRecord 및 RecordChangeComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77d02d1a5b5d643c49fcbbd33057d6c709f1949a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: baef6471c753f7a85590a6dd46efb59657fbe9dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282842"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트 (ADO)
 **WillChangeRecord** 이벤트 하나 이상의 레코드 (행) 전에 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 변경 합니다. **RecordChangeComplete** 하나 후 이벤트를 호출 하거나 더 많은 레코드를 변경 합니다.  
@@ -64,13 +64,13 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. **레코드 집합** 이 이벤트가 발생 하는 것에 대 한 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **WillChangeRecord** 또는 **RecordChangeComplete** 다음으로 인해 행의 변경된 된 첫 번째 필드에 대 한 이벤트가 발생할 수 있습니다 **레코드 집합** 작업: [ 업데이트](../../../ado/reference/ado-api/update-method.md), [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)합니다. 값은 **레코드 집합** [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 발생할 이벤트를 발생 하는 작업을 결정 합니다.  
   
  중에서 **WillChangeRecord** 이벤트에는 **레코드 집합** [필터](../../../ado/reference/ado-api/filter-property.md) 속성이로 설정 되어 **adFilterAffectedRecords**합니다. 이벤트를 처리 하는 동안이 속성을 변경할 수 없습니다.  
   
  설정 해야 합니다는 **adStatus** 매개 변수를 **adStatusUnwantedEvent** 각각의 가능한에 대 한 **adReason** 값 완전히 포함 된 모든 이벤트에 대 한 이벤트 알림을 중지 하려면 **adReason** 매개 변수입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

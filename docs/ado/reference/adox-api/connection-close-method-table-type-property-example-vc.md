@@ -2,7 +2,6 @@
 title: 연결 닫기 메서드를 테이블 형식 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63760975712c15318331db4b4ad0a001a3232da2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285282"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close 메서드 연결, 테이블 형식 속성 예제 (VC + +)
 설정의 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 해야 "닫기" 카탈로그입니다. 연결된 컬렉션은 비어 있게 됩니다. 카탈로그의 스키마 개체에서 생성 된 모든 개체가 분리 됩니다. 캐시 된 경우 해당 개체에 속성을 사용할 수 있지만 공급자에 대 한 호출을 요구 하는 속성을 읽는 중에 실패 합니다.  
@@ -146,5 +146,5 @@ void CloseConnectionX() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성(ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

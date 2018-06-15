@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 보기) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8d713be4cf193ba7cacf1957bdf51937b9ed4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285212"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드 (ADOX 뷰)
 새 [보기](../../../ado/reference/adox-api/view-object-adox.md) 개체 및 필터를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  
@@ -44,7 +44,7 @@ Views.Append Name, Command
  *Command*  
  ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들 뷰를 나타내는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이름 및 특성에 지정 된 데이터 소스에서 새 뷰를 만듭니다는 **명령** 개체입니다.  
   
  사용자 지정 하는 명령 텍스트를 뷰가 아닌 프로시저를 나타내는 경우 동작 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
@@ -55,7 +55,7 @@ Views.Append Name, Command
 ## <a name="applies-to"></a>적용 대상  
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [뷰 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

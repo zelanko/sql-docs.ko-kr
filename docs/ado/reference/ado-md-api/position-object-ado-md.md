@@ -2,7 +2,6 @@
 title: ADO MD 개체의 위치 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44035b2df230ecbbf3ef9bbe757a706e4884e104
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 844997df808dbb1c61939164d72a9b2c601a9823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284572"
 ---
 # <a name="position-object-ado-md"></a>ADO MD 위치 개체
 축 상에 지점을 정의 하는 하나 이상의 서로 다른 차원의 멤버의 집합을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  속성과 컬렉션을 사용 하 여 한 **위치** 개체는 다음을 수행할 수 있습니다.  
   
 -   사용 하 여는 **서 수** 의 서 수 위치를 반환 하는 **위치** 따라는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md)합니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [축 개체 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

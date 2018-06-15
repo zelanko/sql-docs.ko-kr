@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: node-js
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 313adb458786f009cd2cbd4fa86c09d7d5302b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f918eead7fb0af9d28cd85b173e3e076c5ba9416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288962"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>1 단계: Node.js 개발을 위한 개발 환경 구성
 Node.js 드라이버를 사용 하 여 SQL Server에 대 한 응용 프로그램을 개발 하기 위해 필수 구성 요소 개발 환경을 구성 해야 합니다.  가장 일반적인 방법은 번거로운 모듈을 설치 하는 노드 패키지 관리자 (npm)를 사용 하는 것에 직접 번거로운 모듈을 다운로드할 수 있습니다 하지만 [Github](https://github.com/pekim/tedious) 하려는 경우.  
@@ -29,8 +29,8 @@ Node.js 드라이버에서는 SQL Server 및 Azure SQL 데이터베이스에 기
 ## <a name="windows"></a>Windows  
   
 1. **Node.js 런타임 및 npm 패키지 관리자를 설치 합니다.**  
-a. 로 이동 [Node.js](https://nodejs.org/en/download/)  
-b. 적절 한 Windows installer msi 링크를 클릭 합니다.   
+1. 로 이동 [Node.js](https://nodejs.org/en/download/)  
+2. 적절 한 Windows installer msi 링크를 클릭 합니다.   
 c. 를 다운로드 한 후 실행 Node.js를 설치 하는 msi  
   
 2. **Cmd.exe를 엽니다.**  
@@ -81,8 +81,8 @@ c. 를 다운로드 한 후 실행 Node.js를 설치 하는 msi
 ## <a name="mac"></a>Mac  
   
 1. **Node.js 런타임 및 npm 패키지 관리자를 설치 합니다.**  
-a. 로 이동 [Node.js](https://nodejs.org/en/download/)  
-b. 적절 한 Mac 운영 체제 설치 관리자 링크를 클릭 합니다.  
+1. 로 이동 [Node.js](https://nodejs.org/en/download/)  
+2. 적절 한 Mac 운영 체제 설치 관리자 링크를 클릭 합니다.  
 c. 를 다운로드 한 후 실행 dmg Node.js를 설치 하려면  
   
 2. **열기 터미널**  

@@ -2,7 +2,6 @@
 title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78c815f75b5e30713e0b7f9e5b7ec83c4c3eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288293"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 기능이 더 많은 버전의 개체에 요청된 된 인터페이스에 대 한 포인터를 반환합니다.  
@@ -53,13 +53,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>반환 값  
  여부를 나타내는 HRESULT 값에 대 한 호출에서 **InvokeService** 메서드 성공 했습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  RDS 커서 엔진 구현 **InvokeService** 입력된 행 집합 (또는 여러 결과 개체)는 입력된 행 집합에서 커서 엔진 채우고 다음 자신에 대 한 포인터를 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [IRDSService 인터페이스(RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 메서드](../../../ado/reference/rds-api/rds-methods.md)
 
 

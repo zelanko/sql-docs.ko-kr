@@ -2,7 +2,6 @@
 title: Parameters 컬렉션, 명령 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91cbb561b62c084c20f8d8a217d54542bc4ceef7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286622"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, 명령 속성 예제 (VB)
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 프로시저에 대 한 매개 변수 정보를 검색할 개체입니다.  
@@ -79,7 +79,7 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command 속성 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

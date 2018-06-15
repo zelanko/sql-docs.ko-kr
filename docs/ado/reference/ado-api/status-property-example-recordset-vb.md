@@ -2,7 +2,6 @@
 title: 상태 속성 예제 (레코드 집합) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e6b2c1473f12db8bdaca18abfe1b33bbb9c01fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f31aa0ab4086e6c02c85ff08fa214a58467d6fa2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281972"
 ---
 # <a name="status-property-example-recordset-vb"></a>상태 속성 예제 (레코드 집합) (VB)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  
@@ -101,5 +101,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Status 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

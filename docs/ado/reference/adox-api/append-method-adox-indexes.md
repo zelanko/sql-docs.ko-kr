@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25f75f89181f2020238f3a113b7a9908c6a88d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22f3dbde110252950694431040bd943c59344938
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284742"
 ---
 # <a name="append-method-adox-indexes"></a>Append 메서드 (ADOX 인덱스)
 새로 추가 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체는 [인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md) 컬렉션입니다.  
@@ -43,7 +43,7 @@ Indexes.Append Index [,Columns]
  *열*  
  (선택 사항) A **Variant** 인덱싱할 열 이름을 지정 하는 값입니다. *열* 있는 값에 해당 하는 매개 변수는 [이름](../../../ado/reference/adox-api/name-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 또는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *열* 매개 변수는 열 이름이 나 열 이름의 배열을 나타낼 수 있습니다.  
   
  공급자 만들기 인덱스를 지원 하지 않는 경우 오류가 발생 합니다.  
@@ -51,7 +51,7 @@ Indexes.Append Index [,Columns]
 ## <a name="applies-to"></a>적용 대상  
  [Indexes 컬렉션(ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인덱스 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -2,7 +2,6 @@
 title: 메서드를 지원 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a24ac211293847ffbb068055826abca3514abb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282582"
 ---
 # <a name="supports-method"></a>메서드를 지원
 지정 된 있는지 여부를 결정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 특정 종류의 기능을 지원 합니다.  
@@ -44,7 +44,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A **긴** 하나 이상의 구성 된 식 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **지원** 어떤 유형의 기능을 확인 하는 **레코드 집합** 개체를 지원 합니다. 경우는 **레코드 집합** 개체에 있는 해당 상수는 기능을 지원 *CursorOptions*, **지원** 메서드 반환 **True**. 그렇지 않으면 반환 **False**합니다.  
   
 > [!NOTE]
@@ -53,7 +53,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 예제 (VB)를 지원합니다.](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [지원 메서드 예제 (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 속성(ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

@@ -2,7 +2,6 @@
 title: Visual Basic에서 ADO MD 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21077ec666353488a76e63007689e1001535534f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b47d49cbea9c2caf7130e2c5c004b113f4aab942
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283282"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Visual Basic에서 ADO MD 코드 예제
 다음 예제에는 서비스 팩 3 Microsoft Visual Basic 버전 5.0 또는 Visual Basic 버전 6.0 필요합니다.  

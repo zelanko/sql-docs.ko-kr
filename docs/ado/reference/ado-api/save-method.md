@@ -2,7 +2,6 @@
 title: Save 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281442"
 ---
 # <a name="save-method"></a>Save 메서드
 저장 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  (선택 사항) A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) 되는 형식을 지정 하는 값은 **레코드 집합** (XML 또는 ADTG) 저장 하는 것입니다. 기본값은 **adPersistADTG**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [Save 메서드](../../../ado/reference/ado-api/save-method.md) 열린에 에서만 메서드를 호출할 수 **레코드 집합**합니다. 사용 하 여는 [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 이후 복원 하는 메서드는 **레코드 집합** 에서 *대상*합니다.  
   
  경우는 [Filter 속성](../../../ado/reference/ado-api/filter-property.md) 속성에 적용 되는 **레코드 집합**, 필터 액세스할 수 있는 행만 저장 됩니다. 경우는 **레코드 집합** 계층형 현재 자식 다음 **레코드 집합** 및 자식의 부모를 포함 하 여 저장 됩니다 **레코드 집합**합니다. 경우 자식의 Save 메서드 **레코드 집합** 가 자식 및 모든 자식 저장 되지만 부모를 호출 합니다.  
@@ -97,7 +97,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [저장 하 고 (VB) 메서드 예제 열기](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [저장 및 열기 메서드 예제 (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

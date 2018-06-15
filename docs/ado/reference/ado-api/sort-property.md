@@ -2,7 +2,6 @@
 title: 정렬 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281912"
 ---
 # <a name="sort-property"></a>정렬 속성
 에 있는 하나 이상의 필드 이름 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 정렬 된 각 필드를 오름차순 또는 내림차순 정렬 되는지 합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 에서 이름을 필드를 나타내는 값의 **레코드 집합** 을 정렬할 합니다. 각 이름에 쉼표를 구분 하 고 필요에 따라 다음 빈와 키워드를 **ASC**, 필드를 오름차순으로 정렬 하 또는 **DESC**, 필드를 내림차순으로 정렬입니다. 기본적으로 없는 키워드가 지정 된 필드를 오름차순 정렬 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성에 필요는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성에 설정할을 **adUseClient**합니다. 임시 인덱스에 지정 된 각 필드에 대해 생성 됩니다는 **정렬** 인덱스가 아직 없는 경우 속성을 사용 합니다.  
   
  데이터는 실제로 다시 정렬 되지 않습니다 되지만 인덱스로 지정 된 순서로 단순히 액세스 하는 정렬 작업이 효율적입니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정렬 속성 예제 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [정렬 속성 예제 (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [동적 속성 (ADO)를 최적화 합니다.](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

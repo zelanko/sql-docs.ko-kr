@@ -2,7 +2,6 @@
 title: Execute21 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1136e547d464f511aff92f4a6805da0262c7ed35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfe6de22f60ff43ab41144f0ee2e6e0fbb667766
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288332"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드 (RDS)
 요청을 실행 하 고 ADO 2.1에서에서 사용 하기 위해 ADO 레코드 집합을 만듭니다.  
@@ -73,7 +73,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  매개 변수 정의의 안전 배열을 포함 하는 variant입니다. 경우는 *GetInfo* 옵션에 지정 되었습니다 *lExecuteOptions*,이 매개 변수는 사용 하는 OLE DB 공급자에서 가져온 매개 변수 정의 반환 합니다. 그렇지 않으면이 매개 변수는 비어 있을 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *HandlerString* 매개 변수는 null 일 수 있습니다. 이 경우 수행 해야 할 작업 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP.handler" 처리기 문자열로 제공 하는 Microsoft 처리기 (Msdfmap.dll)을 사용 해야 함을 나타냅니다. "MASDFMAP.handler,sample.ini" 처리기 문자열로 Msdfmap.dll 처리기를 사용 해야 함을 "sample.ini" 인수를 처리기에 전달 해야 한다고 나타냅니다. MSDFMAP.dll는 인수를 사용 하 여 sample.ini 연결 및 쿼리 문자열을 검사 하는 방향으로 해석 합니다.  
   
 > [!NOTE]

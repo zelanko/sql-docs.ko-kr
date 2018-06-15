@@ -2,7 +2,6 @@
 title: '스트림 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aa55ff740718604a36100a9fa563423859122a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fea3e137b670eacf3a769d4f5cb7bd89648788f6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282542"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>스트림 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="methods"></a>메서드  
@@ -95,5 +95,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

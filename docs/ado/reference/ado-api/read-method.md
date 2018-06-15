@@ -1,8 +1,7 @@
 ---
 title: Read 메서드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53e3f6c3b780d9d78697fb33dfea5574457a6b2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 371574fdaa0f6f9f82a40f8caf5f622633f4fa19
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280812"
 ---
 # <a name="read-method"></a>Read 메서드
 이진 파일에서 지정 된 바이트 수를 읽고 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="return-value"></a>반환 값  
  **읽기** 메서드는 지정된 된 수의 바이트 또는에서 전체 스트림을 읽습니다는 **스트림** 개체 하 고 결과 데이터를 반환할는 **Variant**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우 *NumBytes* 보다 많은 바이트 수에 남아 있는 **스트림**, 남아 있는 바이트만 반환 됩니다. 로 지정 된 길이 일치 하도록 읽은 데이터는 채워지지 않습니다 *NumBytes*합니다. 왼쪽에서 읽을 바이트가 없을 경우 null 값을 가진 variant 반환 됩니다. **읽기** 뒤로 읽는 데 사용할 수 없습니다.  
   
 > [!NOTE]
@@ -53,5 +53,5 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ReadText 메서드](../../../ado/reference/ado-api/readtext-method.md)

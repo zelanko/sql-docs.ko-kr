@@ -2,7 +2,6 @@
 title: Create 메서드 예 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2352ccaad2020012bea2d182e38907a726dadbb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ceaa8da952df38091b9ddfeb7b02ba1acee55e75
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285592"
 ---
 # <a name="create-method-example-vb"></a>Create 메서드 예 (VB)
 다음 코드에 있는 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다는 [만들기](../../../ado/reference/adox-api/create-method-adox.md) 메서드.  
@@ -53,6 +53,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

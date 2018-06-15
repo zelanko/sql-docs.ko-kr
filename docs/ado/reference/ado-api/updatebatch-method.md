@@ -2,7 +2,6 @@
 title: UpdateBatch 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282812"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
 모든 보류 중인 일괄 처리 업데이트를 디스크에 기록 합니다.  
@@ -44,7 +44,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  (선택 사항) A **부울** 나타내듯이 현지 변경 여부를 지정 하는 값은 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 적용 해야 합니다. 이 값 설정 하는 경우 **True**, **상태** 업데이트가 완료 된 후 각 레코드의 속성 변경 되지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **UpdateBatch** 수정 하는 경우 메서드는 **레코드 집합** 일괄 업데이트 모드에서 변경한 모든 내용을 전송 하는 개체는 **레코드 집합** 를 기본 데이터베이스 개체입니다.  
   
  경우는 **레코드 집합** 를 호출 하기 전에 로컬로 하나 이상의 레코드의 여러 변경 내용을 캐시할 수 있습니다, 개체 지원 일괄 처리 업데이트는 **UpdateBatch** 메서드. 현재 레코드를 편집 하거나 호출 하는 경우 새 레코드를 추가 하는 경우는 **UpdateBatch** 메서드, ADO를 자동으로 호출 된 [업데이트](../../../ado/reference/ado-api/update-method.md) 하기 전에 현재 레코드에 보류 중인 변경 내용을 저장 하는 메서드 공급자에 게 일괄 처리 된 변경 내용을 전송 합니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  
@@ -63,7 +63,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [UpdateBatch 및 CancelBatch 메서드 예제 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 및 CancelBatch 방법 예 (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [CancelBatch 메서드 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

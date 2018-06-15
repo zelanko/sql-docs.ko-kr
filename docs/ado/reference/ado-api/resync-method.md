@@ -2,7 +2,6 @@
 title: 메서드를 다시 동기화 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 187f1397cbdb4e6ccdfc39b573f301fce1a957ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96853ed76d4fa94092ecedd54978ee9cfbd25497
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281422"
 ---
 # <a name="resync-method"></a>Resync 메서드
 현재에서 데이터를 새로 고칩니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션은 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 기본 데이터베이스에서 개체입니다.  
@@ -46,7 +46,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  (선택 사항) A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 원본 값을 덮어쓸지 여부를 지정 하는 값입니다. 기본값은 **adResyncAllValues**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>레코드 집합  
  사용 하 여는 **Resync** 메서드 현재에서 레코드를 다시 동기화를 **레코드 집합** 내부 데이터베이스와 합니다. 정적 또는 정방향 전용 커서를 사용 하는 기본 데이터베이스의 변경 내용을 보려는 경우 유용 합니다.  
@@ -74,7 +74,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 |-|-|  
 |[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 예제 (VB)를 다시 동기화](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync 메서드 예제 (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

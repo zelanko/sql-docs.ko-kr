@@ -2,7 +2,6 @@
 title: 업데이트 및 CancelUpdate 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04fdb58b71c2ba69eb8893ba8c3589b2b803b312
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282752"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>업데이트 및 CancelUpdate 메서드 예제 (VB)
 이 예제에서는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
@@ -124,7 +124,7 @@ End Sub
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CancelUpdate 메서드 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update 메서드](../../../ado/reference/ado-api/update-method.md)

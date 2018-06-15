@@ -2,7 +2,6 @@
 title: Members 컬렉션 ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18a3fac9cff0a41c9d1e7dc820d68ae77c294d4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284653"
 ---
 # <a name="members-collection-ado-md"></a>(ADO MD) members 컬렉션
 포함 된 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 한 수준이 나 축의 위치 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **멤버** 컬렉션 다음과 같은 유형의 멤버를 포함 하는 데 사용 됩니다.  
   
 -   큐브의 수준을 구성 하는 멤버입니다. 에 들어 있습니다는 **멤버** 의 컬렉션을 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체입니다. 예를 들어에서 샘플을 사용 하 여 [개 및 데이터](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), 캐나다, 일본, 영국 및 독일 국가 수준의 4 개 멤버 됩니다.  
@@ -52,6 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [멤버 예 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

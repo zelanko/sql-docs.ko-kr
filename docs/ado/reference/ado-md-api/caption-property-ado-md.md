@@ -2,7 +2,6 @@
 title: ADO MD 속성 캡션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8206c3b0c912b880ec0d9fee96f7695b9e95de70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9761bf41421c2f52e51ff51e3e8f27ad1d214c40
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283302"
 ---
 # <a name="caption-property-ado-md"></a>ADO MD caption 속성
 표시할 때 사용할 텍스트 캡션을 나타냅니다는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  
@@ -40,6 +40,6 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[Level 개체(ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description 속성(ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

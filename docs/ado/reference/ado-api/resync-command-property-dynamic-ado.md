@@ -2,7 +2,6 @@
 title: 명령 속성-동적 (ADO)를 다시 동기화 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281378"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>명령 속성-동적 (ADO)를 다시 동기화
 지정 된 사용자가 제공한 명령 문자열의 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 명명 된 테이블의 데이터를 새로 고치려면 메서드 문제는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 명령 문자열에 해당 하는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 여러 기본 테이블에서 실행 하는 JOIN 연산의 결과입니다. 영향을 받는 행에 따라 달라 집니다는 *AffectRecords* 의 매개 변수는 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드. 표준 **다시 동기화** 경우 메서드가 실행 되는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 **Resync Command** 속성이 설정 되지 않은 합니다.  
   
  명령 문자열은 **Resync Command** 속성 매개 변수가 있는 명령 또는 저장된 프로시저를 새로 고치는 행을 고유 하 게 식별 하 고 행으로 동일한 수와 열 순서를 포함 하는 단일 행을 반환 새로 고쳐집니다. 각 기본 키 열에 대 한 매개 변수를 포함 하는 명령 문자열의 **고유 테이블**, 그렇지 않으면 런타임에 오류가 반환 됩니다. 매개 변수를 새로 고칠 수 있는 행의 기본 키 값을 사용 하 여 자동으로 채워집니다.  

@@ -2,7 +2,6 @@
 title: RecordCount 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280892"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 속성 (ADO)
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 반환 된 **긴** 의 레코드 수를 나타내는 값은 **레코드 집합**합니다.
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
 사용 하 여는 **RecordCount** 속성을 레코드에 있는 한 **레코드 집합** 개체입니다. 속성 공급자 또는 커서 유형을 지원 하지 않는 경우 또는 ADO 레코드의 수를 확인할 수 없는 경우-1을 반환 **RecordCount**합니다. 읽기는 **RecordCount** 닫힌된 속성 **레코드 집합** 하면 오류가 발생 합니다.
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 
 [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [필터 및 RecordCount 속성 예제 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
 [필터 및 RecordCount 속성 예제 (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   

@@ -2,7 +2,6 @@
 title: Delete 메서드 (ADOX 컬렉션) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -35,11 +34,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c059ef4390f504363c9cfaa7f42bb99c6799a2da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285882"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 메서드 (ADOX 컬렉션)
 컬렉션에서 개체를 제거 합니다.  
@@ -55,7 +55,7 @@ Collection.Delete Name
  *이름*  
  A **Variant** 이름 또는 삭제할 개체의 서 수 위치 (인덱스)를 지정 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  오류가 발생 합니다는 *이름* 컬렉션에 존재 하지 않습니다.  
   
  에 대 한 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 및 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션, 공급자가 테이블 또는 사용자를 삭제 각각 지원 하지 않는 경우 오류가 발생 합니다. 에 대 한 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 및 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션, **삭제** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
@@ -68,6 +68,6 @@ Collection.Delete Name
 |[Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
 |[Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [프로시저 삭제 (VB) 메서드 예제](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete 메서드 예제(VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

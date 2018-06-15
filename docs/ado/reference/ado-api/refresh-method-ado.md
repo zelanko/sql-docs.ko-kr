@@ -2,7 +2,6 @@
 title: Refresh 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af7917817022b83ae5a8da4955ba3c08d05b0819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c52fd39b749f7e5c46bf58a943729319cfa78439
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281252"
 ---
 # <a name="refresh-method-ado"></a>Refresh 메서드 (ADO)
 공급자에 게,에서 사용할 수 있는 개체를 반영 하도록 컬렉션 및 관련 개체를 업데이트 합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **새로 고침** 메서드 호출을 컬렉션에 따라 다른 작업을 수행 합니다.  
   
 ### <a name="parameters"></a>매개 변수  
@@ -69,7 +69,7 @@ collection.Refresh
 |[Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)|[테이블 컬렉션](../../../ado/reference/adox-api/tables-collection-adox.md)|[사용자 컬렉션](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[뷰 컬렉션](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 예제를 (VB)를 새로 고칩니다.](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [새로 메서드 예제 (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count 속성 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

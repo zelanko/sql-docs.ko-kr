@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado-net
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a20f0b0add4807d14f6b3fe69f46648929571c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b276101f507217c6c398a7d30dff4bf97ba4803e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288852"
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>2 단계: ADO.NET 개발에 대 한 SQL 데이터베이스 만들기
 

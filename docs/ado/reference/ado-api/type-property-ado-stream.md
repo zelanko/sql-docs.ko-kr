@@ -2,7 +2,6 @@
 title: Type 속성 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97c244062e7b84da33ae8d437f0f09a1e3dfd302
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b334a6f6feab4e8a9a491624a5a3a43d2bd333ff
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282774"
 ---
 # <a name="type-property-ado-stream"></a>Type 속성 (ADO 스트림)
 에 포함 된 데이터의 유형을 나타냅니다는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) (이진 또는 텍스트)입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) 값에 포함 된 데이터의 형식을 지정 하는 **스트림** 개체입니다. 기본값은 **adTypeText**합니다. 그러나 처음에 새 이진 데이터를 작성 한 경우 빈 **스트림**, **형식** 로 변경 됩니다 **adTypeBinary**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **형식** 현재 위치가의 시작 부분에 있는 경우에 속성은 읽기/쓰기는 **스트림** ([위치](../../../ado/reference/ado-api/position-property-ado.md) 은 0), 다른 위치에서 읽기 전용입니다.  
   
  **형식** 속성 읽기 및 쓰기에 어떤 방법을 사용 해야 결정는 **스트림**합니다. 텍스트에 대 한 **스트림을**를 사용 하 여 [ReadText](../../../ado/reference/ado-api/readtext-method.md) 및 [WriteText](../../../ado/reference/ado-api/writetext-method.md)합니다. 이진 파일에 대해 **스트림을**를 사용 하 여 [읽기](../../../ado/reference/ado-api/read-method.md) 및 [쓰기](../../../ado/reference/ado-api/write-method.md)합니다.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RecordType 속성 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

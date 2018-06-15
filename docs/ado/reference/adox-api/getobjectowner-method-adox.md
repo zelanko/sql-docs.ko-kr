@@ -2,7 +2,6 @@
 title: GetObjectOwner 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c25e4171602d760a54c70ed9bba80d5d6eac96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06f3cb14603c7799e7084af407df437b12be4769
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285922"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 메서드 (ADOX)
 에 있는 개체의 소유자 반환는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다.  
@@ -50,12 +50,12 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *ObjectTypeId*  
  (선택 사항) A **Variant** OLE DB 사양에 정의 되지 공급자 개체 형식에 대 한 GUID를 지정 하는 값입니다. 경우에이 매개 변수는 필수 *ObjectType* 로 설정 되어 **adPermObjProviderSpecific**, 그렇지 않으면 사용 되지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  공급자 개체 소유자 반환을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [GetObjectOwner 및 SetObjectOwner 메서드 예제 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [SetObjectOwner 메서드](../../../ado/reference/adox-api/setobjectowner-method.md)

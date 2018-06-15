@@ -2,7 +2,6 @@
 title: 레코드 집합 (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc427b6344522654acf3fe1c2fdceeaa27624aed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e65765bea5be30fe41f341d743af1669be94731
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281212"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>레코드 집합 (ADO-WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -166,5 +166,5 @@ public void addOnWillMove(RecordsetEventHandler handler)
 public void removeOnWillMove(RecordsetEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

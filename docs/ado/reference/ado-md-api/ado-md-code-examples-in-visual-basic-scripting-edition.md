@@ -2,7 +2,6 @@
 title: Visual Basic Scripting Edition에서에서 ADO MD 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8af56e1a67775e6caa491d56d1736ac3d5e9c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2aefeda6b4ddc08bce593d7c868dee304b7a25c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283242"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition에서에서 ADO MD 코드 예제
 다음 예에서는 Microsoft 인터넷 정보 서버 4.0에 대 한 Microsoft ASP Active Server Pages ()를 해야 합니다.  

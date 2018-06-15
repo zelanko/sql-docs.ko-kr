@@ -2,7 +2,6 @@
 title: RowPosition 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2566a5965b0170fddf5dfd08744db1bb141a0d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281342"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 속성 (ADO)
 OLE DB를 가져오거나 설정 합니다. **RowPosition** 에/에서 개체는 **ADORecordsetConstruction** 개체입니다. 사용 하는 경우 **put_RowPosition** 설정 하는 **RowPosition** 결과 개체 **레코드 집합** 개체에서 사용 하 여 **RowPosition** 개체를 현재 행을 결정 합니다.  
@@ -52,7 +52,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>반환 값  
  이 속성 메서드는 S_OK와 E_FAIL을 포함 하는 표준 HRESULT 값을 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  하는 경우,이 속성이 설정 되어는 **행 집합** 개체에 **RowPosition** 개체 간에 차이가 있는 **행 집합** 개체에 **레코드 집합**전자 재정의 후자 개체입니다. 현재는 동일한 동작이 적용 됩니다. **장** 의 **RowPosition** 도 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

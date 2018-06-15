@@ -2,7 +2,6 @@
 title: Seek 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281622"
 ---
 # <a name="seek-method"></a>Seek 메서드
 인덱스를 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 신속 하 게 지정된 된 값과 일치 하 고 해당 행에는 현재 행 위치를 변경 하는 행을 찾을 수 있습니다.  
@@ -44,7 +44,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md) 인덱스의 열과 해당 간의 비교의 유형을 지정 하는 값 *KeyValues*합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **Seek** 메서드와 함께 [인덱스](../../../ado/reference/ado-api/index-property.md) 기본 공급자에서 인덱스를 지 원하는 경우 속성은 **레코드 집합** 개체입니다. 사용 하 여는 [지원](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 기본 공급자에서 지원 하는지 여부를 확인할 수 있는 방법은 **Seek**, 및 **Supports(adIndex)** 공급자 인덱스를 지원 하는지 여부를 결정 하는 방법입니다. (예를 들어는 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) 지원 **Seek** 및 **인덱스**.)  
   
  경우 **Seek** 않습니다 찾을 원하는 행을 오류가 발생 하 고 행의 끝에 배치 되는 **레코드 집합**합니다. 설정의 **인덱스** 속성을이 메서드를 실행 하기 전에 원하는 인덱스입니다.  
@@ -56,7 +56,7 @@ recordset.Seek KeyValues, SeekOption
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 및 속성 예제 (VB) 인덱스 검색](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Seek 메서드 및 속성 예제 인덱스 (VC + +)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   

@@ -2,7 +2,6 @@
 title: MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315ebd2a4de1a98634a5077096c0909550d979e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b57fef531fd66e9e649cba77b88d666281b273f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288322"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (RDS)
 첫 번째, 마지막으로 이동의 지정 된 다음 또는 이전 레코드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -44,13 +44,13 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  개체 변수를 나타내는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용할 수는 **이동** 있는 메서드는 **.rds입니다 DataControl** 웹 페이지에 데이터 바인딩된 컨트롤의 데이터 레코드를 탐색 하는 개체입니다. 예를 들어, 표시는 **레코드 집합** 에 바인딩하여 표에 **.rds입니다 DataControl** 개체입니다. 그런 다음 사용자가을 첫 번째 이동, 마지막, 다음을 클릭할 수 있는 First, Last, 다음을와 이전 단추를 포함할 수 또는 표시 된의 이전 레코드 **레코드 집합**합니다. 호출 하 여이 작업을 수행는 **MoveFirst**, **MoveLast**, **MoveNext**, 및 **MovePrevious** 의 메서드는 **.rds입니다 DataControl** 개체 First, Last, 다음을와 이전 하는 단추를 각각. [주소록 예제](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) 이 작업을 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord 메서드(ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

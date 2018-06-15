@@ -2,7 +2,6 @@
 title: Source 속성 (ADO 레코드) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,11 +24,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bff992c2c2406c7ea6df95ca92f67da3bf52e3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281982"
 ---
 # <a name="source-property-ado-record"></a>Source 속성 (ADO 레코드)
 데이터 원본이 나가 나타내는 개체를 나타냅니다는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **Variant** 가 나타내는 엔터티를 나타내는 값의 **레코드**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **소스** 속성에서 반환 된 *소스* 의 인수는 **레코드** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 또는 상대 URL 문자열을 포함할 수 있습니다. 절대 URL을 설정 하지 않고 사용할 수는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 직접 열어서는 **레코드** 개체입니다. 암시적 **연결** 개체가 경우에 생성 됩니다.  
   
  **소스** 속성에 대 한 참조를 포함할 수도 있습니다 **레코드 집합**, 열립니다는 **레코드** 의 현재 행을 나타내는 개체는  **레코드 집합**합니다.  
@@ -54,6 +54,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Source 속성 (ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

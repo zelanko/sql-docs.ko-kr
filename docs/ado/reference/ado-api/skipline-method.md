@@ -2,7 +2,6 @@
 title: SkipLine 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac4551bfe1859e49cfd88326b1223cbac3fc9a23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5a2c6c5808abdcb13acb00c967ef35eeb943148
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282052"
 ---
 # <a name="skipline-method"></a>SkipLine 메서드
 텍스트를 읽을 때 한 줄 전체를 건너뜁니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 Stream.SkipLine  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  및 다음 선 구분 기호가까지 모든 문자는 무시 됩니다. 기본적으로는 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 은 **adCRLF**합니다. 지난 건너뛸 하려고 하면 [EOS](../../../ado/reference/ado-api/eos-property.md), 현재 위치에 유지 됩니다 **EOS**합니다.  
   
  **SkipLine** 메서드 텍스트 스트림 함께 사용 됩니다 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 은 **adTypeText**).  

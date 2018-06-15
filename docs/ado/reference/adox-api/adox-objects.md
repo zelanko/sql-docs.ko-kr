@@ -2,7 +2,6 @@
 title: ADOX 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,22 +17,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2278420958e856b290f013f33869ff0f46270609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5665c90c4dd1935f529c275d2feccb68e67cafea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284872"
 ---
 # <a name="adox-objects"></a>ADOX 개체
 ## <a name="adox-object-summary"></a>ADOX 개체 요약  
   
-|개체|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Catalog](../../../ado/reference/adox-api/catalog-object-adox.md)|데이터 원본의 스키마 카탈로그를 정의 하는 컬렉션을 포함 합니다.|  
 |[열](../../../ado/reference/adox-api/column-object-adox.md)|테이블, 인덱스 또는 키에서 열을 나타냅니다.|  
 |[그룹](../../../ado/reference/adox-api/group-object-adox.md)|보안된 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|데이터베이스 테이블에서 인덱스를 나타냅니다.|  
-|[Key](../../../ado/reference/adox-api/key-object-adox.md)|데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.|  
+|[키](../../../ado/reference/adox-api/key-object-adox.md)|데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.|  
 |[프로시저](../../../ado/reference/adox-api/procedure-object-adox.md)|저장된 프로시저를 나타냅니다.|  
 |[테이블](../../../ado/reference/adox-api/table-object-adox.md)|열, 인덱스 및 키를 포함 하 여 데이터베이스 테이블을 나타냅니다.|  
 |[사용자](../../../ado/reference/adox-api/user-object-adox.md)|보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  각 개체는 해당 컬렉션에 포함 될 수 있습니다. 예를 들어 한 **테이블** 개체에 포함 될 수 있는 한 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션입니다. 자세한 내용은 참조 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md) 또는 특정 컬렉션 항목입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX 개체 모델](../../../ado/reference/adox-api/adox-object-model.md)   

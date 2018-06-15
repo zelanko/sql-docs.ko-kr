@@ -2,7 +2,6 @@
 title: put_OLEDBCommand 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04efb030e38f6afe212aca5591c7098b072e517b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5de6710cc300312478d5f734334a1c29faf44920
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280852"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand 메서드
 이 메서드는 아무런 작업도 수행 하 고 항상 S_OK를 반환 합니다.  

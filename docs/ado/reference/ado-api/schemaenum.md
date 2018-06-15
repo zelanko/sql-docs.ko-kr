@@ -2,7 +2,6 @@
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281562"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 검색 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  항목에서 각 ADO 상수를 찾을 수 함수 및 열에 대 한 자세한 내용은 반환 [부록 b: 스키마 행 집합](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) OLE DB 프로그래머 참조 합니다. 각 항목의 이름은 다음 표에서의 설명 섹션에 있는 괄호에 나열 됩니다.  
   
  항목에서 각 ADO MD 상수를 찾을 수 함수 및 열에 대 한 자세한 내용은 반환 [OLAP 개체와 스키마 행 집합에 대 한 OLE DB](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) OLE DB의 온라인 분석 처리 (OLAP) 설명서에 대 한 합니다. 각 항목의 이름은 다음 표의 설명 열에 대 한 괄호 안에 나열 됩니다.  
@@ -38,10 +38,10 @@ ms.lasthandoff: 05/03/2018
   
  상수에 대 한 스키마와 비슷한 결과 생성 하는 ADO **adSchemaDBInfoKeywords** 및 **adSchemaDBInfoLiterals**합니다. ADO 만듭니다는 **레코드 집합**, 후 각 행에서 각각 반환 값으로 채우는 **IDBInfo::GetKeywords** 및 **IDBInfo::GetLiteralInfo** 메서드. 이러한 메서드에 대 한 추가 정보를 찾을 수는 [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 프로그래머 참조 섹션에 있습니다.  
   
-|상수|Value|Description|제약 조건 열|  
+|상수|값|Description|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|카탈로그에 정의 된 지정된 된 사용자가 소유 하 고 있는 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
-|**adSchemaCatalogs**|1.|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
+|**adSchemaCatalogs**|1|DBMS에서 액세스 가능한 카탈로그와 관련 된 물리적 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 집합을 반환 합니다.<br /><br /> (CHARACTER_SETS 행 집합)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 check 제약을 반환 합니다.<br /><br /> (CHECK_CONSTRAINTS) 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA 제약 조건 이름|  
 |**adSchemaCollations**|3|문자 데이터 정렬을 카탈로그에 정의 된 지정된 된 사용자에 액세스할 수 있는 반환 합니다.<br /><br /> (데이터 정렬 행 집합)|COLLATION_CATALOG COLLATION_SCHEMA 데이터 정렬 이름|  

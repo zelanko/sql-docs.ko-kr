@@ -2,7 +2,6 @@
 title: 축 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 689bc6f49df65025bea7df44110cf02b4ec09ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283372"
 ---
 # <a name="axis-object-ado-md"></a>축 개체 (ADO MD)
 선택한 멤버를 하나 이상의 차원 포함 하는 셀 집합의 필터 축을 또는 위치 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **축** 개체에 포함 될 수는 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션에서 반환 된 또는 [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) 속성은 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
   
  컬렉션과의 속성을 사용 하 여 프로그램 **축** 개체를 다음을 수행할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Axes 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [ADO MD 위치 컬렉션](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

@@ -2,7 +2,6 @@
 title: ADOX 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284600"
 ---
 # <a name="adox-properties"></a>ADOX 속성
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|ADO 나타냅니다 **연결** 카탈로그 속해 있는 개체입니다.|  
 |[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
-|[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
+|[클러스터](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|ADO 지정 **명령** 만들거나 프로시저를 실행 하는 데 사용할 수 있습니다.|  
 |[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체가 만들어진 날짜를 나타냅니다.|  
@@ -52,6 +52,6 @@ ms.lasthandoff: 05/03/2018
 |[고유](../../../ado/reference/adox-api/unique-property-adox.md)|인덱스 키를 고유 해야 하는지 여부를 나타냅니다.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|기본 키가 업데이트 될 때 수행 된 작업을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

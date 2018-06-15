@@ -2,7 +2,6 @@
 title: Stat 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26dd4f3fa7de49f51c32fd97e184ee356cb16f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282022"
 ---
 # <a name="stat-method"></a>Stat 메서드
 에 대 한 정보를 검색 한 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -46,12 +46,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  이 메서드가 반환 하지 않도록 지정 일부 멤버 STATSTG 구조에서 메모리 할당 작업을 저장 합니다. 값은 STATFLAG 열거형에서 가져옵니다. STATFLAG 열거형에는 두 개의 값  
   
-|상수|Value|  
+|상수|값|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1.|  
+|STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  STATSTG 구조의 다음 필드 ADO 스트림 개체에 대 한 구현 Stat 메서드 버전을 채웁니다.  
   
  *pwcsName*  

@@ -2,7 +2,6 @@
 title: 멤버 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284042"
 ---
 # <a name="member-object-ado-md"></a>멤버 개체 (ADO MD)
 멤버, 수준 또는 열 집합의 축 따라 위치의 멤버의 자식을 큐브에서 수준의 멤버를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  속성을 **멤버** 에 사용 되는 컨텍스트에 따라 달라 집니다. A **멤버** 의 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 에 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 에 [자식](../../../ado/reference/ado-md-api/children-property-ado-md.md) 속성을 반환 하는 **멤버** 에 다음 하위 수준의 멤버는 계층에서 현재 **멤버**합니다. 에 대 한는 **멤버** 의 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md), **자식** 컬렉션은 항상 비어 있습니다. 또한는 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성에만 적용 됩니다 **멤버** 의 **수준**합니다.  
   
  A **멤버** 의 **위치** 두 가지 유용한 속성을 표시할 때에 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) 및 [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)합니다. 이러한 속성에 액세스 되는 경우 오류가 발생 합니다는 **멤버** 의 **수준**합니다.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
 |ChildrenCardinality|멤버의 자식 수입니다.|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [(ADO MD) members 컬렉션](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

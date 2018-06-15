@@ -2,7 +2,6 @@
 title: DateCreated 및 DateModified 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c11dda38d56782937a1f286d5fe8e05555cd8f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cbaf7c7384a015bb98213ad25fc2125de808e08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285552"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 및 DateModified 속성 예제 (VB)
 이 예제에서는 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 추가 하 여 속성 [열](../../../ado/reference/adox-api/column-object-adox.md) 기존의 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 및 새 **테이블**합니다. DateOutput 절차는이 예제를 실행 하려면 필요 합니다.  
@@ -98,7 +98,7 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DateCreated 속성 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 속성 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [프로시저 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   

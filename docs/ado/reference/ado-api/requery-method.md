@@ -2,7 +2,6 @@
 title: Requery 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63c63ce0a4fd42b5cfe784793d76c68a5f23d083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0473cd2c2e8faae5f5ca5805a4cf4e141225f9f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281312"
 ---
 # <a name="requery-method"></a>Requery 메서드
 데이터를 업데이트 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.  
@@ -44,7 +44,7 @@ recordset.Requery Options
 > [!NOTE]
 >  경우 *옵션* 로 설정 된 **adAsyncExecute**,이 작업은 비동기적으로 실행 및 [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) 것으로 결론 때 이벤트를 발생 합니다. **ExecuteOpenEnum** 값 **adExecuteNoRecords** 또는 **adExecuteStream** 으로 쓰일 수 없습니다 **Requery**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **Requery** 의 전체 내용을 새로 고치려면 메서드는 **레코드 집합** 원래 명령을 다시 실행 하 고 데이터를 두 번째로 검색 하 여 데이터 원본에서 개체입니다. 이 메서드를 호출 하는 것은 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 및 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 연속적으로 메서드. 현재 레코드를 편집 하거나 새 레코드를 추가, 오류가 발생 합니다.  
   
  반면는 **레코드 집합** 개체가 열려, 커서의 특성을 정의 하는 속성 ([모두](../../../ado/reference/ado-api/cursortype-property-ado.md), [LockType](../../../ado/reference/ado-api/locktype-property-ado.md), [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 등)은 읽기 전용입니다. 따라서는 **Requery** 메서드만 현재 커서를 새로 고칠 수 있습니다. 커서 속성을 변경 하 고 결과 확인 하려면 사용 해야 합니다는 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 메서드 속성 읽기/쓰기를 다시 수 있도록 합니다. 속성 설정 및 호출을 변경할 수 있습니다는 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 커서를 다시 열입니다.  
@@ -52,7 +52,7 @@ recordset.Requery Options
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [실행, Requery, 및 메서드 예제 (VB)를 지웁니다.](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [실행, Requery, 및 메서드 (VBScript) 예제를 지웁니다.](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [실행 하 고 다시 쿼리, 메서드 예제 (VC + +)을 선택 취소](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

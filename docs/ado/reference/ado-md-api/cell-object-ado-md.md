@@ -2,7 +2,6 @@
 title: ADO MD 개체 셀 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22227f22f42e5848b0826028a855b31b4b82443a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f82bfdf0e1b61d3b6fdab096af77f8b843178384
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283432"
 ---
 # <a name="cell-object-ado-md"></a>ADO MD cell 개체
 셀 집합에 포함 된 축 좌표의 교집합에서 데이터를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **셀** 개체를 반환 된 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성은 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다.  
   
  컬렉션과의 속성을 사용 하 여 한 **셀** 개체를 다음을 수행할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |BackColor|셀을 표시할 때 사용 되는 배경색입니다.|  
 |FontFlags|글꼴 효과 자세하게 비트 마스크입니다.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset 개체 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [ADO MD 위치 컬렉션](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

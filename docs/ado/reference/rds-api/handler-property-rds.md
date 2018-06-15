@@ -2,7 +2,6 @@
 title: 처리기 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5cba5a709933f89cb7bb19666140053cd6cfc94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab8e1c2fdfe518a7ab1f331e6961ed6b84b1b33e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288356"
 ---
 # <a name="handler-property-rds"></a>처리기 속성 (RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타냅니다는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수는 *처리기*합니다.  
@@ -46,7 +46,7 @@ DataControl.Handler = String
  *문자열*  
  A **문자열** 쉼표로 구분 된 모든 처리기 및 모든 매개 변수 이름을 포함 하는 값 (예를 들어 `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성은 지원 [사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)를 설정 해야 하는 기능에는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**합니다.  
   
  처리기 및 해당 매개 변수의 이름이 있는 경우 쉼표로 구분 됩니다 (","). 있는 경우 세미콜론 예기치 않은 동작이 발생 합니다 (";") 내에서 아무 곳 이나 표시 되는 *문자열*합니다. 이 있으면 자신만 처리기를 작성할 수 있습니다는 **예기치 않은** 인터페이스입니다.  
@@ -58,7 +58,7 @@ DataControl.Handler = String
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [처리기 속성 예제 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

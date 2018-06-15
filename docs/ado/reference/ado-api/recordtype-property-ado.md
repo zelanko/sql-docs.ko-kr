@@ -2,7 +2,6 @@
 title: RecordType 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4398151744ef0804ba8b96baaf4d88ba3cc97fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7467783bf9cd27462d4c178fdc4e50d34f34974
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281382"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 속성 (ADO)
 유형을 나타내는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
@@ -34,12 +34,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **RecordType** 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Type 속성 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)

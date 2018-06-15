@@ -2,7 +2,6 @@
 title: 개체 (ADO) 레코드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd0c6e6e5ad0e9d5ff059e0e9f4125137fb08fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be0a2d0f3124f4f0718fd9f8063f23eb46c9deb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280882"
 ---
 # <a name="record-object-ado"></a>Record 개체 (ADO)
 행을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) , 데이터 공급자 또는 파일 또는 디렉터리와 같은 반 구조화 된 데이터 공급자를 반환 하는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **레코드** 개체의 데이터를 한 행을 나타내며 한 행으로 개념적 비슷하지만 몇 **레코드 집합**합니다. 공급자 기능에 따라 **레코드** 한 행 대신 공급자에서 직접 개체를 반환할 수 있습니다 **레코드 집합**, 예를 들어 경우 하나의 행을 선택 하는 SQL 쿼리 실행 됩니다. 또는, **레코드** 에서 직접 개체를 가져올 수는 **레코드 집합** 개체입니다. 또는, **레코드** 반 구조화 된 데이터를 Microsoft Exchange OLE DB 공급자와 같은 공급자에서 직접 반환 될 수 있습니다.  
   
  와 연결 된 필드를 볼 수는 **레코드** 개체는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에는 **레코드** 개체입니다. ADO를 포함 하는 개체 값 열을 사용 하면 **레코드 집합**, **SafeArray**, 및에서 스칼라 값의 **필드** 컬렉션 **레코드** 개체입니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Record 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [레코드 및 스트림](../../../ado/guide/data/records-and-streams.md)   

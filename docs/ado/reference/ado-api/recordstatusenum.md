@@ -2,7 +2,6 @@
 title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b46c441bf8b54103c8a3b277e1ef21f18cdfca6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281232"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트 및 다른 대량 작업과 관련 된 레코드의 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|작업이 취소 된 레코드가 저장 되지 않았음을 나타냅니다.|  
 |**adRecCantRelease**|0x400|기존 레코드 잠 겼으 새 레코드가 저장 되지 않았음을 나타냅니다.|  

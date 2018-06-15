@@ -2,7 +2,6 @@
 title: InternetTimeout 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19ad83e5c268804aa1b24b47ded15d1f687a89bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38db2a80bfbf4087739bbebda3c625250ec9c3aa
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288374"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 속성 예제 (VB)
 > [!IMPORTANT]
@@ -79,7 +79,7 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [데이터 공간 개체 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout 속성(RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)

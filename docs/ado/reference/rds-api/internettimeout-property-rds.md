@@ -2,7 +2,6 @@
 title: InternetTimeout 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 401410dee3c7968c1547e3efa70fe61521b29d6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a95ec64f7ed35ab3701fd0ad286829d9f87bec44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288274"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 속성 (RDS)
 요청이 시간 초과 전까지 대기 하는 시간 (밀리초)의 수를 나타냅니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **긴** 시간이 초과 (밀리초)는 요청 수를 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  HTTP 또는 HTTPS 프로토콜에 보낸 요청에만이 속성이 적용 됩니다.  
   
  3 계층 환경에서 요청을 실행 하는 데 몇 분 정도 걸릴 수 있습니다. 이 속성을 사용 하 여 장기 실행 요청에 대 한 추가 시간을 지정 합니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [InternetTimeout 속성 예제 (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout 속성 예제(VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  

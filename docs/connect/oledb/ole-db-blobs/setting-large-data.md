@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 21ef0411470ada12c41e151665d172a02a8c29f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 077901a09880baf622295d8243427ec85b38a95e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305902"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -722,7 +722,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../oledb/features/using-large-value-types.md)  
   

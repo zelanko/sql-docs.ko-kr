@@ -2,7 +2,6 @@
 title: CreateObject 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287572"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드 (RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들고에 대 한 포인터를 반환 합니다. 인터넷을 통해 요청 및 데이터를 보낼 비즈니스 개체와의 통신에 대 한 서버 쪽 스텁에 프록시 패키징하고 데이터입니다. In-process 구성 요소 개체에 대 한 프록시가 사용 되, 개체에 대 한 포인터만 제공 됩니다.  
@@ -53,13 +53,13 @@ ms.lasthandoff: 05/03/2018
  *awebsrvr* 또는 *컴퓨터 이름*  
  A **문자열** 서버 비즈니스 개체의 인스턴스를 만들 위치 인터넷 정보 서비스 (IIS) 웹 서버를 식별 하는 URL을 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *HTTP 프로토콜* 는 표준 웹 프로토콜입니다. *HTTPS* 는 안전한 웹 프로토콜입니다. 사용 하 여는 *DCOM 프로토콜이* HTTP 없이 로컬 영역 네트워크를 실행 하는 경우. *in process* 프로토콜 로컬 동적 연결 라이브러리 (DLL) 이며 네트워크를 사용 하지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataFactory 개체, 쿼리 방법 및 CreateObject 메서드 예제 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [DataSpace 개체 및 CreateObject 메서드 예 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [CreateRecordset 메서드(RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)

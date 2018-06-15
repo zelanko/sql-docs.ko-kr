@@ -2,7 +2,6 @@
 title: Cellset 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bc353f4980eb9cfc4b6446a6f508120c3fc4fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dbe45239a811c10bd20def4d2c34f6251c658f2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283592"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -47,5 +47,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

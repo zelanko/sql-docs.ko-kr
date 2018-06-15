@@ -2,7 +2,6 @@
 title: Cellset 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,23 +19,24 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32af1f621f3470dc0a9175708719965eef5fc71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6437c17c80c85e535f6b1807f68c2755e1362d3c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283392"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체 (ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 기타 셀 집합에서 선택 된 셀의 컬렉션입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  내에서 데이터는 **셀 집합** 직접 배열 유사 액세스를 사용 하 여 검색 됩니다. 해당 멤버에 대 한 데이터를 가져올 특정 멤버에 접근할 수 있습니다. 예를 들어 다음 코드 캡션을 반환 하는 첫 번째 멤버의 첫 번째 위치에 명명 된 셀 집합의 첫 번째 축에서 `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  집합에서 현재 셀의 개념이 없습니다. 대신,는 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성 검색 특정 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 셀 집합에서 개체입니다. 인수는 **항목** 속성 셀 검색할 됩니다. 셀의 서 수 고유 값을 지정할 수 있습니다. 셀 집합의 각 축 따라 해당 위치 번호를 사용 하 여 셀을 검색할 수도 있습니다. 셀을 검색 하는 방법에 대 한 자세한 내용은 참조는 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성입니다.  
   
  컬렉션, 메서드 및 속성의는 **셀 집합** 개체를 다음을 수행할 수 있습니다.  
@@ -63,7 +63,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axes 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

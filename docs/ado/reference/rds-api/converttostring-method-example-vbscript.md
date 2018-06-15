@@ -2,7 +2,6 @@
 title: ConvertToString 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56a067cd5e58120d2dbcbd21a821810d6d773961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db50af8d67fee0687386c31f5ba301fc3f3ef84b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287562"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 메서드 예제 (VBScript)
 > [!IMPORTANT]
@@ -97,7 +97,7 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ConvertToString 메서드 (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

@@ -2,7 +2,6 @@
 title: 공급자 및 DefaultDatabase 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e36bb5c4e874ff658768dbb6aa07fc900486ce4b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe65e3e4e68af0fee63bb3202bcb0e4b6c95b5b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280822"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>공급자 및 DefaultDatabase 속성 예제 (VB)
 이 예제에서는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다양 한 공급자를 사용 하 여 개체입니다. 또한 사용 하 여는 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) 속성을 Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 합니다.  
@@ -108,7 +108,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 속성](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 속성(ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

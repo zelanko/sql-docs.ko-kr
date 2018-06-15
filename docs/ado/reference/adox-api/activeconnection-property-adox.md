@@ -2,7 +2,6 @@
 title: ActiveConnection 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284582"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection 속성 (ADOX)
 ADO 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 속한 합니다.  
@@ -38,13 +38,13 @@ ADO 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ad
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 된 **연결** 개체 또는 **문자열** 연결에 대 한 정의 포함 하 합니다. 활성 반환 **연결** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  기본값은 null 개체 참조입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [명령 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [테이블 형식 속성 예제 (VB) 연결 Close 메서드](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

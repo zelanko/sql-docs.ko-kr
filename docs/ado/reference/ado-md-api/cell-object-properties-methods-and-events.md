@@ -2,7 +2,6 @@
 title: 개체 속성, 메서드 및 이벤트 셀 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fd5b5bb096b5c7457f8d725f05c60393f0aaab8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ff7312d49e57251504e06c288522d32323034cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283342"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>셀 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -41,5 +41,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cell 개체(ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)

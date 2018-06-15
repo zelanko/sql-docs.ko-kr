@@ -2,7 +2,6 @@
 title: Status 속성 (ADO 필드) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1514ffc90b09c35df70a6bf32ee55b47dae3a71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70baf781839fe9a606f1aed2c26676dffe102d69
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282012"
 ---
 # <a name="status-property-ado-field"></a>Status 속성 (ADO 필드)
 상태를 표시 한 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) 값입니다. 기본값은 **adFieldOK**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>레코드 필드 상태  
  값으로 변경 한 **필드** 의 필드 컬렉션의 개체는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체는 개체의 될 때까지 캐시 됩니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 합니다. 해당 시점에 오류가 발생 하는 필드의 값을 변경, OLE DB 오류가 발생 **DB_E_ERRORSOCCURRED** (2147749409). Status 속성 중 아무 메서드나는 **필드** 개체에 **필드** 오류의 원인이 된 컬렉션에서 값이 포함 됩니다는 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) 의 원인을 설명 하는 문제가 있습니다.  
@@ -51,6 +51,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [상태 속성 예제 (필드) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status 속성 예제(VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

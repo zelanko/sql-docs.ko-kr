@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e798b7e4afd6ddf0e2238acff56adcff0a3cfb5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb07f83de6f08202b80da6a56bcf781510eb237f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288812"
 ---
 # <a name="url-property-rds"></a>URL 속성 (RDS)
 상대 또는 절대 URL이 포함 된 문자열을 나타냅니다.  
@@ -47,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  개체 변수를 나타내는 **DataControl** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  URL을 생성 하 고 반환할 수 있는 Active Server Page (.asp) 파일을 식별 하는 일반적으로 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 따라서 사용자를 가져올 수는 **레코드 집합** 를 서버 쪽을 호출할 필요 없이 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체 또는 사용자 지정 비즈니스 개체를 프로그래밍 합니다.  
   
  경우는 **URL** 속성이 설정 되어 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) 변경 내용을 URL에서 지정한 위치에 전송 됩니다.  
@@ -55,7 +55,7 @@ Run time: DataControl.URL="Server"
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [URL 속성 예제(VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

@@ -2,7 +2,6 @@
 title: SortOrderEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d0c42a5e6a45951bf95b60f6a1825b228e273e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19b231a0d9450fc1c1a92b80f2acfcf39d3b5d2d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286831"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 인덱싱된 열에 대 한 정렬 순서를 지정합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1.|기본. 열에 대 한 정렬 순서는 오름차순입니다.|  
+|**adSortAscending**|1|기본. 열에 대 한 정렬 순서는 오름차순입니다.|  
 |**adSortDescending**|2|열에 대 한 정렬 순서는 내림차순입니다.|  
   
 ## <a name="applies-to"></a>적용 대상  

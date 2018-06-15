@@ -2,7 +2,6 @@
 title: 컨트롤 (ADO) 레코드 집합 기본 테이블에 변경 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76bf7ee2916e6fa4277154d7261f40b9b5959ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8351eb10101219b09450055526f0cb6a47a95b5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282702"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>고유 테이블, 고유 고유한 스키마 카탈로그 속성 동적 (ADO)
 특정 기본 테이블에 제어 수정 밀접 하 게 할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 여러 기본 테이블에서 조인 작업으로 만든입니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 값은 테이블, 스키마 또는 카탈로그의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  원하는 기본 테이블은 고유 하 게 해당 카탈로그, 스키마 및 테이블 이름으로 식별 됩니다. 때는 **고유 테이블** 속성을 설정의 값은 **고유한 스키마** 또는 **고유한 카탈로그** 속성 기본 테이블을 찾는 데 사용 됩니다. 알고리즘은 의도 한 있지만 필수는 해당 하나 또는 둘 다는 **고유한 스키마** 및 **고유한 카탈로그** 하기 전에 속성을 설정할 수는 **고유 테이블** 속성을 설정 합니다.  
   
  기본 키의 **고유 테이블** 전체의 기본 키로 처리 됩니다 **레코드 집합**합니다. 기본 키를 필요한 모든 메서드에 사용 되는 키입니다.  
@@ -54,5 +54,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

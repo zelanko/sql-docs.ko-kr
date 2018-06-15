@@ -2,7 +2,6 @@
 title: 정렬 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ce33e051391f787ca26d4b46cfaeddbd8bc3ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281892"
 ---
 # <a name="sort-property-example-vb"></a>정렬 속성 예제 (VB)
 사용 하 여이 예제는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성은 **레코드 집합** 에서 파생 된 ***작성자*** 의 테이블 ***Pubs*** 데이터베이스입니다. 보조 유틸리티 루틴 각 행을 출력합니다.  
@@ -113,6 +113,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 속성](../../../ado/reference/ado-api/sort-property.md)

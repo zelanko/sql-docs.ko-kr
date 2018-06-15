@@ -2,7 +2,6 @@
 title: 레코드 집합 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b150dc9d60620cc50a5560415e72f0197ae78d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281248"
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체 (ADO)
 기본 테이블이 나 실행 된 명령의 결과에서 레코드의 전체 집합을 나타냅니다. 언제 든 지는 **레코드 집합** 개체가 현재 레코드로 집합 내에서 단일 레코드로 참조 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하면 **레코드 집합** 공급자에서 데이터를 조작 하는 개체입니다. 거의 전적으로 사용 하 여 데이터를 조작 하는 ADO를 사용 하면 **레코드 집합** 개체입니다. 모든 **레코드 집합** 개체 레코드 (행)으로 구성 하 고 필드 (열)입니다. 공급자가 지 원하는 기능에 따라 일부 **레코드 집합** 메서드 또는 속성을 사용할 수 있습니다.  
   
  ADODB 합니다. 레코드 집합을 만드는 데 사용할 해야 ProgID는 **레코드 집합** 개체입니다. 오래 된 ADOR 참조 하는 기존 응용 프로그램입니다. 을 다시 컴파일하지 않고 작동 하도록 ProgID 레코드 집합은 계속 되지만 새로운 개발 ADODB 참조 해야 합니다. 레코드 집합입니다.  
@@ -80,7 +80,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [레코드 집합 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

@@ -2,7 +2,6 @@
 title: CubeDef 예 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c32d65bdc183eebe83d337ddce6c40a66157c120
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3137358ce25a42f55f918247463e3b33423dca73
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283562"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef 예 (VBScript)
 이 예제에서는 웹 페이지에서 큐브 메타 데이터를 표시 합니다.  

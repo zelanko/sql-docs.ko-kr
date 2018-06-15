@@ -2,7 +2,6 @@
 title: Version 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9198d706b668b2185924ed7141344cd2352ab005
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f67d4737bdf7e7eee528f190855047aea06a18a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282694"
 ---
 # <a name="version-property-ado"></a>Version 속성 (ADO)
 ADO 버전 번호를 나타냅니다.  
@@ -34,7 +34,7 @@ ADO 버전 번호를 나타냅니다.
 ## <a name="return-value"></a>반환 값  
  반환 된 **문자열** 버전을 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **버전** ADO 구현의 버전 번호를 반환 하는 속성입니다.  
   
  공급자의 버전을에서 동적 속성으로 사용할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
@@ -42,6 +42,6 @@ ADO 버전 번호를 나타냅니다.
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [버전 속성 예제 (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version 속성 예제(VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

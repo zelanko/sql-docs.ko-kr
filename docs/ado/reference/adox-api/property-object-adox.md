@@ -2,7 +2,6 @@
 title: Property 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80af9304927f526422650f63264f06539cb14b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db31ab407ee6268d14797ea3f50a9056c287f314
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286878"
 ---
 # <a name="property-object-adox"></a>Property 개체 (ADOX)
 ADOX 개체의 특성을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ADOX 개체에는 두 가지 유형의 속성: 기본 제공 및 동적입니다.  
   
  기본 제공 속성은 해당 속성이 MyObject.Property 구문을 사용 하 여 모든 새 개체를 즉시 사용할 수 있습니다. 개체의 속성 개체로 표시 되지 않습니다 [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)이므로 해당 값을 변경할 수 있지만 해당 특성을 수정할 수 없습니다.  

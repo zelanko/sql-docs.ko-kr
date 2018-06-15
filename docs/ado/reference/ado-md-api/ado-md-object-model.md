@@ -2,7 +2,6 @@
 title: ADO MD 개체 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4461c8b6465ddf272830726898d29fbc9ff7c007
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0b7a7213732cc9d244cc59244def04e1f302861
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283222"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 개체 모델
 이 항목에서는 개체를 표시 하 고 ADO MD. 관련 된 하는 방법을 설명합니다  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md), [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층구조](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md), 및 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 각 개체에는 표준 ADO는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD API 참조](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 코드 예제](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 컬렉션](../../../ado/reference/ado-md-api/ado-md-collections.md)   

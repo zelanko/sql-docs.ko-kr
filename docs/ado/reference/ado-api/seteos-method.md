@@ -2,7 +2,6 @@
 title: SetEOS 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c845e565786c02af64c20d72c917ae302c6e156c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8821b58e5e111ad879c34f0d3d8177404945a72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281612"
 ---
 # <a name="seteos-method"></a>SetEOS 메서드
 다음 위치를 스트림의 끝을 설정 합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 Stream.SetEOS  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **SetEOS** 의 값이 업데이트는 [EOS](../../../ado/reference/ado-api/eos-property.md) 현재 함으로써 속성 [위치](../../../ado/reference/ado-api/position-property-ado.md) 스트림의 끝입니다. 모든 바이트 또는 현재 위치를 다음 문자는 잘립니다.  
   
  때문에 [쓰기](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), 및 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 기존에서 모든 추가 값을 잘라내지 않습니다 **스트림** 개체를 이러한을 잘라낼 수 있습니다 새 스트림 끝 위치를 설정 하 여 문자 또는 바이트 **SetEOS**합니다.  

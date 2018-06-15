@@ -2,7 +2,6 @@
 title: 키 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07b51f604cd8099d3b11f7e748199dfe6a438abd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286842"
 ---
 # <a name="key-object-adox"></a>키 개체 (ADOX)
 데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 코드에서는 새 **키**:  
   
 ```  
@@ -52,7 +52,7 @@ Dim obj As New Key
   
 -   [Key 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

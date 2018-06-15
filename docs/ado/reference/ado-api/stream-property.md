@@ -2,7 +2,6 @@
 title: 스트림 속성이 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85df7a816f04d6247cb0524e354546322dbf3066
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282552"
 ---
 # <a name="stream-property"></a>스트림 속성
 OLE DB를 가져오거나 설정 합니다. **스트림** 에/에서 개체는 **ADOStreamConstruction** 개체입니다.  

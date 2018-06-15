@@ -2,7 +2,6 @@
 title: Value 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,11 +20,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a7a96d3b663afb8c30eea502e475487ae0572d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282832"
 ---
 # <a name="value-property-ado"></a>Value 속성 (ADO)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
 설정 하거나 반환는 **Variant** 개체의 값을 나타내는 값입니다. 기본값에 따라 다릅니다는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다.
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
 사용 하 여는 **값** 속성을 설정 하거나 데이터를 반환할 **필드** 개체를 설정 하거나 매개 변수 값을 반환할 **매개 변수** 개체를 설정 하거나 속성 설정을 반환 하려면 또는 **속성** 개체입니다. 여부는 **값** 속성은 읽기/쓰기 또는 읽기 전용 다양 한 요소에 따라 다릅니다. 자세한 내용은 해당 개체 항목을 참조 하십시오.
 
@@ -52,7 +52,7 @@ ADO 설정 하 고 사용 하 여 긴 이진 데이터를 반환할 수 있습�
 |-|-|-|  
 |[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [값 속성 예제 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
 [값 속성 예제 (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 

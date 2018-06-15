@@ -2,7 +2,6 @@
 title: Open 메서드 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6fb508318c54e4b82a4efd301b889baadad6edc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69f746be975d56c4cb6ff6bcb4fd85905acd71bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284542"
 ---
 # <a name="open-method-ado-md"></a>ADO MD open 메서드
 다차원 쿼리 결과 검색 하 고 결과를 반환 된 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
@@ -44,13 +44,13 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  (선택 사항) A **Variant** 계산 되는 중 하나를 지정 하는 문자열에 유효한 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 변수 이름 또는 연결에 대 한 정의 개체입니다. *ActiveConnection* 를 열 때 사용할 연결을 지정 하는 인수는 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. 이 인수에 대 한 연결 정의 전달 하는 경우 ADO는 지정된 된 매개 변수를 사용 하 여 새 연결을 엽니다. *ActiveConnection* 인수에 해당 하는 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 속성입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **열** 오류가 발생 매개 변수 중 하나가 생략 되 고 속성 값이 설정 된 열려고 전에 **셀 집합**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ADO MD ActiveConnection 속성](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Close 메서드 (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   

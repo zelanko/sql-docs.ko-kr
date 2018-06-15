@@ -2,7 +2,6 @@
 title: DateCreated 및 DateModified 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a841fd18a072480380f775102660054d8866346b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7919bd3e51ad685416ff35d99cb961988334dd15
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285612"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 및 DateModified 속성 예제 (VC + +)
 이 예제에서는 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 추가 하 여 속성 [열](../../../ado/reference/adox-api/column-object-adox.md) 기존의 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 및 새 **테이블**합니다. DateOutput 절차는이 예제를 실행 하려면 필요 합니다.  
@@ -118,7 +118,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated 속성 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 속성 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   

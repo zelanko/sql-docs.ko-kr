@@ -2,7 +2,6 @@
 title: 지원 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e89dde5395bcf58a5958effceb26ae4d07bde0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282652"
 ---
 # <a name="supports-method-example-vc"></a>지원 메서드 예제 (VC + +)
 사용 하 여이 예제는 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 함수는이 예제를 실행 하려면 필요 합니다.  
@@ -229,6 +229,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)

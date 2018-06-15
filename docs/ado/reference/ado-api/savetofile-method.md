@@ -2,7 +2,6 @@
 title: SaveToFile 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9beb8a1e2bfcc307c93b293a35dcac26cf0847a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281602"
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
 이진 내용을 저장 한 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 파일에 있습니다.  
@@ -47,7 +47,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  기존 파일을 덮어쓰면 (때 **adSaveCreateOverwrite** 설정), **SaveToFile** 새 다음에 나오는 원래 기존 파일의 모든 바이트를 자릅니다 [EOS](../../../ado/reference/ado-api/eos-property.md)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **SaveToFile** 의 내용을 복사 하는 데 사용 될 수 있습니다는 **스트림** 로컬 파일에는 개체입니다. 내용이 나 속성의 변경 내용이 없는지는 **스트림** 개체입니다. **스트림** 개체가 호출 하기 전에 열려 있어야 **SaveToFile**합니다.  
   
  이 메서드는의 연결을 변경 하지 않습니다는 **스트림** 원본의 개체입니다. **스트림** 개체 원래 URL과 연결 됩니다 또는 **레코드** 를 열 때 해당 원본이 있습니다.  
@@ -57,6 +57,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)

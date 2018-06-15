@@ -2,7 +2,6 @@
 title: ConvertToString 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da21cb2208e11ffa502b3788e36a1bc034ae1c33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 495ff412b2865cfbda4576f3b4631b850e2d37e3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287582"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 메서드 (RDS)
 변환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) MIME 나타내는 문자열을 레코드 집합 데이터를 합니다.  
@@ -44,7 +44,7 @@ DataFactory.ConvertToString(Recordset)
  *레코드 집합*  
  개체 변수를 나타내는 **레코드 집합** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  .Asp 파일을 사용 하 여 **ConvertToString** 포함 하는 **레코드 집합** 클라이언트 컴퓨터에 전송 하는 서버에서 생성 된 HTML 페이지에 있습니다.  
   
  **ConvertToString** 이 처음 로드는 **레코드 집합** 커서 서비스에 테이블을 선택한 다음 스트림을 MIME 형식으로 생성 합니다.  
@@ -57,7 +57,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ConvertToString 메서드 예제 (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [ConvertToString 메서드 예제(VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

@@ -2,7 +2,6 @@
 title: Write 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b4da5ba900cdd3456bbfe611ea0fe1021e23d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283232"
 ---
 # <a name="write-method"></a>Write 메서드
 이진 데이터를 쓰는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -41,7 +41,7 @@ Stream.Write Buffer
  *Buffer*  
  A **Variant** 쓸 바이트의 배열을 포함 하는 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정 된 바이트는 **스트림** 각 바이트 사이 공백 넣지 않고 개체입니다.  
   
  현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 바이트 기록된 된 데이터를 다음으로 설정 됩니다. **쓰기** 메서드 나머지 스트림에서 데이터를 잘라내지 않습니다. 이러한 접두사 바이트 truncate 하려면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
@@ -54,5 +54,5 @@ Stream.Write Buffer
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [WriteText 메서드](../../../ado/reference/ado-api/writetext-method.md)

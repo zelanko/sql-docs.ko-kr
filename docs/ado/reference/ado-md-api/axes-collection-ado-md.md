@@ -2,7 +2,6 @@
 title: 축 컬렉션 ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04ffa05b5912b00a59389b7f2d5e6665541662eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb59a31000f2ea393ceceaea28262a9935bc5c6d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283312"
 ---
 # <a name="axes-collection-ado-md"></a>Axes 컬렉션 (ADO MD)
 포함 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 셀 집합을 정의 하는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체에 포함 되어 있는 **축** 컬렉션입니다. 한 번의 **셀 집합** 은 열이 컬렉션은 하나 이상 포함 **축**합니다. 참조는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 사용 하는 방법에 대 한 자세한 설명은 **축** 개체입니다.  
   
 > [!NOTE]
@@ -48,6 +48,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axis 개체(ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

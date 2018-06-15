@@ -2,7 +2,6 @@
 title: Update 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282762"
 ---
 # <a name="update-method"></a>Update 메서드
 현재 행에 수행한 변경 내용을 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션은 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ record.Fields.Update
  *값*  
  (선택 사항) A **Variant** 단일 값을 나타내는 또는 **Variant** 하나 이상의 새 레코드의 필드에 대 한 값을 나타내는 배열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>레코드 집합  
  사용 하 여는 **업데이트** 의 현재 레코드에 변경 내용을 저장 하는 메서드는 **레코드 집합** 호출 이후 개체는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드의 모든 필드 값을 변경 이후 또는 기존 레코드입니다. **레코드 집합** 개체 업데이트를 지원 해야 합니다.  
@@ -76,7 +76,7 @@ record.Fields.Update
 |-|-|  
 |[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [업데이트 및 CancelUpdate 메서드 예제 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [업데이트 및 CancelUpdate 메서드 예제 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

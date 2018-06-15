@@ -2,7 +2,6 @@
 title: 동적 속성 (ADO) 이름 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281412"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>동적 속성 (ADO) Name 모양 변경
 에 대 한 이름을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 값의 이름을 **레코드 집합**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  동안 때까지 또는 연결의 이름을 유지는 **레코드 집합** 닫혀 있습니다.  
   
  **Name 모양 변경** 속성은 주로 다시 셰이핑의 함께 사용 된 [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 서비스 공급자입니다. 이름은 다시 모양 지정에 참여 하도록 고유 해야 합니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 데이터를 셰이핑 OLE DB (ADO 서비스 공급자)에 대 한 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

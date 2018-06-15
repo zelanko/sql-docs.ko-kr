@@ -2,7 +2,6 @@
 title: Query 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9f676540c7076a68c006aeeb1c6d120e889c7b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 682743135ddb0a7eddff18e0c659f0a7a7b9931f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288362"
 ---
 # <a name="query-method-rds"></a>Query 메서드 (RDS)
 유효한 SQL 쿼리 문자열을 사용 하 여 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -47,16 +47,16 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *연결*  
  A **문자열** 서버 연결 정보를 포함 하는 값입니다. 이 비슷합니다는 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.  
   
- *데이터 집합 속성*  
+ *쿼리*  
  A **문자열** SQL 쿼리 포함 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  쿼리는 데이터베이스 서버의 SQL 언어를 사용 해야 합니다. 실행 된 쿼리에 동안 오류가 발생 하는 경우 결과 상태가 반환 됩니다. **쿼리** 메서드 모든 구문 검사를 수행 하지 않습니다는 **쿼리** 문자열입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

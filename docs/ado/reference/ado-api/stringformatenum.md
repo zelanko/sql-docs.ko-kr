@@ -2,7 +2,6 @@
 title: StringFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13c4f80064a06299a6049330fcf85c8e0827e619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282592"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 검색할 때 형식을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 문자열입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|행을 구분 *RowDelimiter*, 별로 열 *ColumnDelimiter*, 및 null 값으로 *NullExpr*합니다. 세 매개 변수는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드에만 사용할 수는 *StringFormat* 의 **adClipString**합니다.|  
   

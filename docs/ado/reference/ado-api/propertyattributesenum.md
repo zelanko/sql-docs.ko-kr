@@ -2,7 +2,6 @@
 title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db96074b46b31a826d8abc22da15f66d2af3a52f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31260a4336954a2efa0cf001d244b7ad7ff7d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280802"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 특성을 지정 하는 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|속성 공급자가 지원 되지 않습니다 나타냅니다.|  
-|**adPropRequired**|1.|사용자 데이터 원본이 초기화 되기 전에이 속성의 값을 지정 해야 함을 나타냅니다.|  
+|**adPropRequired**|1|사용자 데이터 원본이 초기화 되기 전에이 속성의 값을 지정 해야 함을 나타냅니다.|  
 |**adPropOptional**|2|사용자 데이터 원본이 초기화 되기 전에이 속성에 대 한 값을 지정할 필요가 없습니다 것을 나타냅니다.|  
 |**adPropRead**|512|사용자 속성을 읽을 수를 나타냅니다.|  
 |**adPropWrite**|1024|사용자 속성을 설정할 수를 나타냅니다.|  

@@ -2,7 +2,6 @@
 title: 컬렉션 속성, 메서드 및 이벤트 테이블 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e87a10f0fc316b1b9f496ecd9b2ef3d610b73bc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a559aa919117b4e1ead484f8539f4e5c2ae6481
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287182"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>테이블 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  
@@ -39,5 +39,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

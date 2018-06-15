@@ -2,7 +2,6 @@
 title: WillExecute 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282882"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트 (ADO)
 **WillExecute** 이벤트는 연결에서 보류 중인 명령이 실행 되기 전에 호출 됩니다.  
@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) 이 이벤트 알림이 적용 되는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **WillExecute** 연결 이벤트가 발생할 수 있습니다.  [Execute 메서드 (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [메서드 실행 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md), 또는 [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 *pConnection* 해야 하는 매개 변수 항상에 대 한 유효한 참조를 포함 한 **연결** 개체입니다. 이벤트로 인해 이면 **Connection.Execute**, *pRecordset* 및 *pCommand* 매개 변수를 설정 **Nothing**합니다. 이벤트로 인해 이면 **Recordset.Open**, *pRecordset* 매개 변수는 참조는 **레코드 집합** 개체 및 *pCommand* 로 설정 된 **Nothing**합니다. 이벤트로 인해 이면 **Command.Execute**, *pCommand* 매개 변수는 참조는 **명령** 개체 및 *pRecordset* 로 설정 된 **Nothing**합니다.  
   
  **WillExecute** 검사 하 고 보류 중인 실행 매개 변수를 수정할 수 있습니다. 이 이벤트는 보류 중인 명령을 취소 요청을 반환할 수 있습니다.  
@@ -72,7 +72,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  원래 설정으로 인해 새 소스 문자열의 언어와 다른 경우는 [Dialect 속성](../../../ado/reference/ado-api/dialect-property.md) 속성 (에 상응 하는 **CommandStream**)을 설정 하 여 올바른 언어를 지정 해야 합니다 **언어** 참조 하는 명령 개체의 속성 *pCommand*합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

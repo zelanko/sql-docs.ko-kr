@@ -2,7 +2,6 @@
 title: 개체 속성, 메서드 및 이벤트를 배치 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53f7c1fc05f0e1015549c537de198327cc49bc7e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7090f68a0f6d92ed3fe43df0e86a9a75a406e11
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284632"
 ---
 # <a name="position-object-properties-methods-and-events"></a>개체 속성, 메서드 및 이벤트를 배치 합니다.
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -36,5 +36,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Position 개체(ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
