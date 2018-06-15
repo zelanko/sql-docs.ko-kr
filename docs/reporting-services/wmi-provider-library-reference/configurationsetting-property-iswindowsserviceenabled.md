@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030660"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>ConfigurationSetting 속성 - IsWindowsServiceEnabled
   보고서 서버 Windows 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  

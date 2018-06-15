@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018260"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃
 이제 [에서](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services 모바일 보고서를 만들었으므로 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]해당 보고서의 휴대폰 또는 태블릿 버전의 레이아웃을 지정할 수 있습니다.  

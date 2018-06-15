@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029700"
 ---
 # <a name="configurationsetting-property---installationid"></a>ConfigurationSetting 속성 - InstallationID
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  

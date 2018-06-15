@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031630"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting 메서드 - SetVirtualDirectory
   지정한 응용 프로그램에 가상 디렉터리 이름을 설정합니다.  

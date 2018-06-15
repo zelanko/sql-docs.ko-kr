@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024150"
 ---
 # <a name="report-builder-functions---level-function"></a>보고서 작성기 함수 - Level 함수
   재귀 계층의 현재 수준을 반환합니다.  

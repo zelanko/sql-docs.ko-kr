@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024000"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>계기 패널에 표시기 및 계기 포함(보고서 작성기 및 SSRS)
   계기 패널은 하나 이상의 계기 및 표시기가 포함되는 최상위 컨테이너입니다. 표시기는 계기 패널에서 계기에 포함하거나 계기 옆에 배치할 수 있습니다.  

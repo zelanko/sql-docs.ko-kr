@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031400"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>보고서 서버 명령 프롬프트 유틸리티(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버를 관리하는 데 사용할 수 있는 몇 가지 명령줄 유틸리티가 포함되어 있습니다. 이러한 유틸리티는 보고서 서버를 설치할 때 자동으로 설치됩니다.  

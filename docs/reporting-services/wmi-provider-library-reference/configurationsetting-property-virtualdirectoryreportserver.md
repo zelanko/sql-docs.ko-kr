@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030890"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 속성 - VirtualDirectoryReportServer
   보고서 서버 응용 프로그램에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
