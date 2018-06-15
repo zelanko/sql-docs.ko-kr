@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538383"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>AD 노드 디렉터리 서비스의 로그온 모드 (DSRM)-분석 플랫폼 시스템 복원 대 관리자 암호 설정
 디렉터리 서비스 복원 모드 DSRM ()은 Active Directory 도메인 서비스 (AD DS)를 복구 하기 위한 부팅 모드입니다. AD DS를 복원 해야 하는 경우 또는 AD DS에 실패 한 어플라이언스 AD 노드에 로그온 사용 됩니다. DSRM에 대 한 암호 어플라이언스 하드웨어 공급 업체 사이트에서 설치 하는 동안 초기화 이며 기기 관리자가 변경할 수 있습니다. 분석 플랫폼 시스템에 두 개의 AD DS (도메인 컨트롤러); ***appliance_domain *-AD01** 및 ***appliance_domain *-AD02**합니다. 각 AD 기기 노드에 대 한 다음 단계를 사용 하 여 DSRM 암호를 변경 합니다.  

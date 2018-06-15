@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024760"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 클래스
   AMO(Analysis Management Objects) OLAP 클래스를 사용하면 큐브 및 차원과 KPI(핵심 성과 지표), 동작, 자동 관리 캐싱 등의 관련 개체를 손쉽게 만들고 수정, 삭제 및 처리할 수 있습니다.  

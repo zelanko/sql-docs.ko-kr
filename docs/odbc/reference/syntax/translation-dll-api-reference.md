@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917338"
 ---
 # <a name="translation-dll-api-reference"></a>변환 DLL API 참조
 이 섹션에는 두 개의 구성 된 DLL API 번역의 구문을 설명: **SQLDriverToDataSource** 및 **SQLDataSourceToDriver**합니다. 이러한 함수는 드라이버에 대 한 번역을 수행 하는 DLL에 포함 되어야 합니다.  

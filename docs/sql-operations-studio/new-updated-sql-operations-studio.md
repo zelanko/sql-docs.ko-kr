@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32686523"
 ---
 # <a name="new-and-recently-updated-sql-operations-studio-docs"></a>신규 / 최근에 업데이트: SQL 작업 Studio docs
 

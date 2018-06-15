@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025410"
 ---
 # <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>메모, 도형, Excel 서비스에서 지원 되지 않는 다른 개체
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
