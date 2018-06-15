@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907868"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문을 실행합니다.
 > [!IMPORTANT]  

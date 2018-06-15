@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908138"
 ---
 # <a name="default-data-source"></a>기본 데이터 원본
 드라이버는 데이터 소스에 없는 응용 프로그램이 명시적으로 하나 지정 하지 않으면 특정 한 경우에는 기본 데이터 소스 라는 선택할 수 있습니다.  

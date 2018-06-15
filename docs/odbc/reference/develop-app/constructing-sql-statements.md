@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908748"
 ---
 # <a name="constructing-sql-statements"></a>SQL 문 구성
 다음 세 가지 방법 중 하나에 SQL 문을 생성할 수 있습니다: 개발, 런타임 시 생성 또는 사용자가 직접 입력 하는 동안 하드 코딩 합니다.  

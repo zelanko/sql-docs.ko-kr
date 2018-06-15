@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911558"
 ---
 # <a name="schema-views"></a>스키마 뷰
 ODBC 카탈로그 함수를 호출 하 여 또는 INFORMATION_SCHEMA 뷰를 사용 하 여 응용 프로그램 DBMS에서 메타 데이터 정보를 검색할 수 있습니다. 뷰는 ANSI sql-92 표준에서 정의 됩니다.  

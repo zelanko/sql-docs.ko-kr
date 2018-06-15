@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914348"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 *낙관적 동시성* 이라는 낙관적 가정에서 이름을 파생 트랜잭션 간의 충돌 됩니다는 거의 발생 하지 않으면 충돌이 발생 한 다른 트랜잭션의 업데이트 또는 읽기 시간 사이 데이터의 행을 삭제 하는 경우를 라고 합니다. 시간과 현재 트랜잭션에 의해 업데이트 또는 삭제 됩니다. 반대 되 *비관적 동시성* 잠금, 또는에 응용 프로그램 개발자가 이러한 충돌은 일반적입니다.  

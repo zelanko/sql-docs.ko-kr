@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910258"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption 매핑
 경우는 ODBC 2. *x* 응용 프로그램 호출 **SQLSetConnectOption** ODBC 3 *.x* 드라이버에 대 한 호출  

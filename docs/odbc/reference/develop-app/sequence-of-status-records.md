@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911098"
 ---
 # <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스
 둘 이상의 상태 레코드가 반환 되는 경우 드라이버 관리자와 드라이버 등급을 매기고 다음 규칙에 따라 합니다. 가장 높은 순위 인 레코드는 첫 번째 레코드입니다. 레코드 (드라이버 관리자, 드라이버, 게이트웨이 및 등)의 소스 간주 되지 않습니다 레코드의 순위를 지정 합니다.  

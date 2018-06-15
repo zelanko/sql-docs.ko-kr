@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909958"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용할 수 있는 SQL 문 구성
 이전 섹션에서 설명 했 듯이 상호 운용 가능한 응용 프로그램에서 ODBC SQL 문법을 사용 해야 합니다. 그러나이 문법을 사용 하 여 다음 다양 한 추가 문제 상호 운용 가능한 응용 프로그램에서 직면 됩니다. 예를 들어 응용 프로그램이 수행 하는 모든 데이터 원본에서 지원 되지 않는 외부 조인과 같은 기능을 사용 하려는 경우  

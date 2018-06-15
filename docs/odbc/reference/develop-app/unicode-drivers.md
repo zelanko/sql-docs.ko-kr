@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914888"
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 유니코드 드라이버 또는 ANSI 드라이버는 드라이버 수 있는지 여부를 전적으로의 데이터 소스 특성에 따라 달라 집니다. 데이터 소스에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 여야 합니다. 데이터 원본에서만 ANSI 데이터를 지 원하는 경우 드라이버는 ANSI 드라이버를 유지 해야 합니다.  

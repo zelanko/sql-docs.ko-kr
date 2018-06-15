@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909349"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos이 있는 행 집합의 행 삭제
 삭제 작업의 **SQLSetPos** 은 데이터 원본 테이블의 하나 이상의 선택 된 행을 삭제 합니다. 행을 삭제 하려면 **SQLSetPos**, 응용 프로그램 호출 **SQLSetPos** 와 *작업* SQL_DELETE로 설정 하 고 *RowNumber* 로 설정는 삭제할 행의 수입니다. 경우 *RowNumber* 가 0 이면 행 집합의 모든 행이 삭제 됩니다.  

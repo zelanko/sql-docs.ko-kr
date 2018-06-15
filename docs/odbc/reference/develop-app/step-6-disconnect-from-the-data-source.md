@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915008"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>6 단계: 데이터 소스에서 연결 끊기
 마지막 단계는 다음 그림에 나와 있는 것 처럼 데이터 소스에서 연결을 끊으려면입니다. 응용 프로그램 호출 하 여 모든 문 핸들을 해제 하는 첫째, **SQLFreeHandle**합니다. 자세한 내용은 참조 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  

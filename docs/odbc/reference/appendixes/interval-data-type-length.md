@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906184"
 ---
 # <a name="interval-data-type-length"></a>간격 데이터 형식의 길이입니다.
 다음 규칙은 문자에서 간격 데이터 형식의 길이 확인 하는 데 사용 됩니다. 길이 문자 수로 표시 됩니다. 바이트 수가 경우 문자 집합에 따라 달라 집니다. 길이 함께 추가 하는 다음 값에 포함 됩니다.  

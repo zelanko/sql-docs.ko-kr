@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908418"
 ---
 # <a name="commit-mode"></a>커밋 모드
 ODBC의 트랜잭션은 두 가지 모드 중 하나가 될 수 있습니다: 자동 커밋 모드 또는 수동 커밋 모드입니다.  

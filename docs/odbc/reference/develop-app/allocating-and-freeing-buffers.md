@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907968"
 ---
 # <a name="allocating-and-freeing-buffers"></a>할당 하 고 버퍼를 해제 합니다.
 모든 버퍼가 할당 되 고 응용 프로그램에 의해 해제 됩니다. 버퍼를 연기 하지 되는 경우 함수에 대 한 호출 기간 동안 다만 필요 합니다. 예를 들어 **SQLGetInfo** 가리키는 버퍼에 특정 옵션과 관련 된 값을 반환 된 *InfoValuePtr* 인수입니다. 이 버퍼에 대 한 호출 직후 해제할 수 있도록 **SQLGetInfo**다음 코드 예제에 나온 것 처럼:  

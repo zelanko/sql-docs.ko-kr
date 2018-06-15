@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908938"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>포함 된 SQL 프로그램 컴파일
 포함된 된 SQL 프로그램에는 다양 한 SQL 및 호스트 언어 문 포함 된, 호스트 언어에 대 한 컴파일러에 직접 전송할 수 없습니다. 대신 다중 단계 프로세스를 통해 컴파일됩니다. 이 프로세스 다른 제품으로 있지만 단계는 대략 모든 제품에 대해 동일 합니다.  

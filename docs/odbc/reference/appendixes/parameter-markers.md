@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907108"
 ---
 # <a name="parameter-markers"></a>매개 변수 표식
 Sql-92 사양에 따라 응용 프로그램은 다음 위치에 매개 변수 표식에 배치할 수 없습니다. 보다 포괄적인 목록에 대 한 SQL 92 사양을 참조 하십시오.  

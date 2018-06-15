@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907508"
 ---
 # <a name="sql-to-c-binary"></a>C: 이진 SQL
 이진 ODBC SQL 데이터 형식에 대 한 식별자는.  

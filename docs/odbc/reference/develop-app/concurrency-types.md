@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911858"
 ---
 # <a name="concurrency-types"></a>동시성 유형
 ODBC는 커서의 감소 동시성 문제를 해결 하려면 네 가지 유형의 커서 동시성을 제공 합니다.  

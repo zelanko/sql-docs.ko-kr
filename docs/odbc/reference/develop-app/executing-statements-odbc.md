@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911288"
 ---
 # <a name="executing-statements-odbc"></a>ODBC 문 실행
 ODBC 응용 프로그램에서는 SQL 문을 실행 하 여 데이터베이스에 대 한 거의 모든 액세스를 수행 합니다. 이벤트의 일반적인 순서 문 핸들을 할당, 문 특성 설정, 문을 실행 하 여 모든 결과 검색 및 문 핸들 것입니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906868"
 ---
 # <a name="parameter-data-types"></a>매개 변수 데이터 형식
 각 매개 변수에 지정 된 경우에 **SQLBindParameter** 가 없습니다 내장 데이터 형식이 있을 경우 SQL 데이터 형식의 SQL 문의 매개 변수를 사용 하 여 정의 합니다. 따라서 다른 피연산자는 문에서 해당 데이터 형식을 유추할 수 있는 경우에 매개 변수 표식은 SQL 문에 포함할 수 있습니다. 와 같은 산술 식의 예를 들어? + 열 1을 나타내는 명명 된 열의 데이터 형식에서 COLUMN1, 매개 변수의 데이터 형식을 유추할 수 있습니다. 응용 프로그램 데이터 형식을 확인할 수 없는 경우 매개 변수 표식을 사용할 수 없습니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905928"
 ---
 # <a name="c-to-sql-binary"></a>C에서 SQL로: 이진
 다음은 이진 ODBC C 데이터 형식에 대 한 식별자가입니다.  

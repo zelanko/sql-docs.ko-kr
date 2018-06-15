@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909708"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 문에서 사용 되는 요소
 다음과 같은 요소가 앞에 나열 된 SQL 문에서 사용 됩니다.  

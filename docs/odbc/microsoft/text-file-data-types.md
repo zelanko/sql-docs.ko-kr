@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907688"
 ---
 # <a name="text-file-data-types"></a>텍스트 파일 데이터 형식
 다음 표에서 텍스트 데이터 형식은 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. 참고 일부 ODBC SQL 데이터 형식이 텍스트 ODBC 드라이버에서 지원 됩니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912038"
 ---
 # <a name="direct-execution-odbc"></a>ODBC 직접 실행
 직접 실행은 문을 실행 하는 가장 간단한 방법은 합니다. 문이 실행을 위해 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 해당 액세스 계획을 실행 합니다.  

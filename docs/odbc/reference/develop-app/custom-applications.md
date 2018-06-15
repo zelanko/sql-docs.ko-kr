@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908388"
 ---
 # <a name="custom-applications"></a>사용자 지정 응용 프로그램
 사용자 지정 응용 프로그램은 일반적으로 몇 가지 Dbms에 대 한 특정 작업을 수행 합니다. 예를 들어 응용 프로그램 단일 DBMS에서 데이터를 검색할 수 있습니다 및 보고서를 생성 또는 여러 Dbms 간에 데이터를 전송할 수 있습니다. 어떻게 이러한 응용 프로그램의 공통점은 이러한 Dbms 응용 프로그램 기록 하기 전에 알려진 응용 프로그램의 수명 기간 동안 변경 되지 않을입니다.  

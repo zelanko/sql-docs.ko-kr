@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907588"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 매핑
 **SQLBindParam** 진정으로 호출할 수 없습니다 사용 되지 않는 있는 ODBC 되지 않은; 하지만 중복 된 기능 여전히 나타냅니다-ISO 및 Open 그룹 – 호환 응용 프로그램은 사용 하기 때문에 내보낼 드라이버 관리자를 사용 해야 합니다. 때문에 **SQLBindParameter** 의 모든 기능을 포함 **SQLBindParam**, **SQLBindParam** 위쪽에 매핑할 수 **SQLBindParameter** (기본 드라이버는 ODBC 3 경우 *.x* 드라이버). ODBC 3 *.x* 드라이버를 구현 하지 않아도 **SQLBindParam**합니다.  

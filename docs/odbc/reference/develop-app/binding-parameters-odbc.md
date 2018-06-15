@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909304"
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
 SQL 문의 각 매개 변수에 연결, 해야 또는 *바인딩되는 경우,* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 해당 변수를 설명 응용 프로그램 변수에 매개 변수를 바인딩할 때-주소, C 데이터 형식 등에-driver. 매개 변수 자체에 대해서도 설명 — SQL 데이터 형식, 정밀도 및 등입니다. 드라이버는 해당 문에 대 한 유지 관리 하 고는 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911119"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations 있는 행 삽입
 데이터 삽입 **SQLBulkOperations** 사용 하 여 데이터를 업데이트 하는 것과 비슷합니다 **SQLBulkOperations** 바인딩된 응용 프로그램 버퍼에서 데이터를 사용 하기 때문에 있습니다.  

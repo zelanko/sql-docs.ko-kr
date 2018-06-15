@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912718"
 ---
 # <a name="environment-transitions"></a>환경이 전환
 ODBC 환경은 다음 세 가지 상태입니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911048"
 ---
 # <a name="mixed-cursors"></a>혼합된 커서
 혼합 커서가 키 집합 커서와 동적 커서입니다. 결과 집합은 너무 커서 합리적으로 전체 결과 집합에 대 한 키를 저장할 때 사용 됩니다. 혼합 된 커서는 전체 결과 집합 보다 작은 하지만 행 집합 보다 큰 키 집합을 만들어 구현 됩니다.  

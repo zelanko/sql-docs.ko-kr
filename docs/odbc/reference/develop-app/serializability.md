@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913628"
 ---
 # <a name="serializability"></a>순차성
 트랜잭션을 여야 가장 바람직합니다 *직렬화 가능*합니다. 에 트랜잭션을 동시에 실행의 결과 동일한 결과를 직렬로 실행 하는 경우 직렬화 가능 트랜잭션이 있다고-즉, 하나씩 있습니다. 중요 하지 않습니다 트랜잭션 실행 먼저는 결과 트랜잭션의 모든 혼합을 반영 하지 않습니다.  

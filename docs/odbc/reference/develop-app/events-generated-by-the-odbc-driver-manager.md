@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913038"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 드라이버 관리자에 의해 생성 된 이벤트
 > [!IMPORTANT]  

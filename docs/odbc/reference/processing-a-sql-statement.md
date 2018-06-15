@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916538"
 ---
 # <a name="processing-a-sql-statement"></a>SQL 문 처리
 프로그래밍 방식으로 SQL을 사용 하는 기술을 다루기 전에 SQL 문을 처리 되는 방식에 대해 설명 하는 데 필요한는 합니다. 단계는 각 기법에서는 서로 다른 시간에 수행 하지만 세 가지 기술 모두에 공통적으로 적용 합니다. 다음 그림에서는 단계와 관련 된이 섹션의 나머지 부분에서 설명 하는 SQL 문 처리 합니다.  

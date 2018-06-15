@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907268"
 ---
 # <a name="numeric-literal-syntax"></a>숫자 리터럴 구문
 Odbc에서 숫자 리터럴을에 다음 구문이 사용 됩니다.  

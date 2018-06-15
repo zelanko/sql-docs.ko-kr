@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905798"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>간격 및 숫자 데이터 형식에 대 한 지침
 다음 섹션에서는 주소 간격 및 숫자 데이터 형식입니다.  

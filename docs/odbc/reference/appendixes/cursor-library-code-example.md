@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907048"
 ---
 # <a name="cursor-library-code-example"></a>커서 라이브러리 코드 예제
 > [!IMPORTANT]  

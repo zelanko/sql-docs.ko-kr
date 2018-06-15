@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914298"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>런타임 시 구성 하는 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 런타임 시 SQL 문을 작성 합니다. 예를 들어 스프레드시트에서 데이터를 검색할 열을 선택 하는 사용자를 허용 수 있습니다.:  

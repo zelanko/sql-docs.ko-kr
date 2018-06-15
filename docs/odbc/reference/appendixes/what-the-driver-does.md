@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914098"
 ---
 # <a name="what-the-driver-does"></a>드라이버에서 수행 하는 작업
 다음 표에서 요약 함수 및 문 특성 ODBC 3 *.x* 드라이버 블록 및 스크롤 가능 커서에 대해 구현 해야 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905637"
 ---
 # <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR 열 크기 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

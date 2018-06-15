@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907358"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 매핑
 응용 프로그램 호출 하는 경우 **SQLError** ODBC 3 *.x* 드라이버에 대 한 호출  

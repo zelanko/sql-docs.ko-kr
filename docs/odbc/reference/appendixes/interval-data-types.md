@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909568"
 ---
 # <a name="interval-data-types"></a>Interval 데이터 형식
 간격은 두 날짜 및 시간 간의 차이로 정의 됩니다. 간격으로 두 가지 방법 중 하나로 표현 됩니다. 하나는 *년-월* 간격 연도 및 월의 정수가 측면에서 표현 하는 간격입니다. 다른 하나는 한 *하루 시간* 간격 (일), 분 및 초 측면에서 표현 하는 간격입니다. 이러한 두 가지 유형의 간격으로 고유 하 고 월 일 수가 다양 한 여러 있을 수 있으므로 혼합할 수 없습니다.  

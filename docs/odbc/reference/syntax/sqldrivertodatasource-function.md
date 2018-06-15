@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918488"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 함수
 **SQLDriverToDataSource** ODBC 드라이버에 대 한 번역을 지원 합니다. 이 함수는 ODBC 사용 응용 프로그램; 의해 호출 되지 않습니다. 응용 프로그램 요청 통해 번역 **SQLSetConnectAttr**합니다. 관련 된 드라이버의 *ConnectionHandle* 에 지정 된 **SQLSetConnectAttr** 드라이버에서 데이터 원본에 전송 하는 모든 데이터의 번역을 수행 하려면 지정된 된 DLL을 호출 합니다. ODBC 초기화 파일의 기본 변환 DLL을 지정할 수 있습니다.  

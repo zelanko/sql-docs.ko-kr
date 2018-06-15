@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908008"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Binary에서 데이터 전송
 안전 하 게 응용 프로그램 같은 DBMS와 하드웨어 플랫폼을 사용 하는 두 개의 데이터 원본 간에 데이터 (지정 된 DBMS에 의해 사용 되는 내부 형식)를 전송할 수 있습니다. 지정된 된 데이터 부분에 대 한 원본 및 대상 데이터 원본에서 동일한 SQL 데이터 형식 이어야 합니다. C 데이터 형식은 SQL_C_BINARY 합니다.  

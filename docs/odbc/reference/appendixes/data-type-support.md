@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905838"
 ---
 # <a name="data-type-support"></a>데이터 형식 지원
 ODBC 드라이버는 SQL_CHAR 및 SQL_VARCHAR 중 하나 이상을 지원 해야 합니다. 다른 데이터 형식에 대 한 지원 드라이버의 또는 데이터 원본 sql-92 규칙 수준에 따라 결정 됩니다. 응용 프로그램 호출 해야 **SQLGetTypeInfo** 드라이버에서 지 원하는 데이터 형식을 확인 하려면.  

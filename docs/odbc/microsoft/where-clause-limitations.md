@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910658"
 ---
 # <a name="where-clause-limitations"></a>여기서 절 제한 사항
 절 WHERE 절에는 최대 수는 40입니다.  

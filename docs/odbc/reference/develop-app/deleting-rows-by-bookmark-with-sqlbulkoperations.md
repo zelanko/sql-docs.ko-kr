@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909138"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations 사용 하 여 책갈피에서 행 삭제
 책갈피를 하 여 행을 삭제할 때 **SQLBulkOperations** 은 데이터 원본 테이블의 하나 이상의 선택 된 행을 삭제 합니다. 행 바인딩된 책갈피 열에서 책갈피도 식별 됩니다.  

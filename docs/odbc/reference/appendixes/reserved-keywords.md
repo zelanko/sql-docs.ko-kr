@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912827"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
 다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어; 최소 SQL 문법을 강요 하지 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하려면 이러한 키워드를 사용 하 여를 하지 않아야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917068"
 ---
 # <a name="using-data-sources"></a>데이터 원본 사용
 호출 프로그램으로 기술 지원 담당자 또는 데이터 원본 일반적으로 최종 사용자가 만든는 *ODBC 관리자*합니다. ODBC 관리자를 사용 하도록 드라이버에 대 한 사용자를 해당 드라이버를 호출 합니다. 드라이버는 데이터 원본에 연결 하는 데 필요한 정보를 요청 하는 대화 상자를 표시 합니다. 사용자가 정보를 입력 한 후 드라이버가 시스템에 저장 합니다.  

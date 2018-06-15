@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908598"
 ---
 # <a name="sql-to-c-time"></a>SQL에서 c: 시간
 ODBC SQL 데이터 형식은 시간에 대 한 식별자:  

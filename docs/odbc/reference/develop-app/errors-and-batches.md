@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909358"
 ---
 # <a name="errors-and-batches"></a>오류 및 일괄 처리
 SQL 문의 일괄 처리를 실행 하는 동안 오류가 발생 하는 경우 다음 네 가지 결과 중 하나 작성할 수 있으며 (각 가능한 결과 데이터 원본에 따른 특정 및 일괄 처리에 포함 된 문을에 종속 될 수 있습니다.)  

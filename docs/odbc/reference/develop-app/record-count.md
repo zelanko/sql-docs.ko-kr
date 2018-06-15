@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911338"
 ---
 # <a name="record-count"></a>Record Count
 설명자의 SQL_DESC_COUNT 헤더 필드는 데이터를 포함 하는 번호가 가장 큰 레코드의 1부터 시작 하는 인덱스입니다. 이 필드는 모든 열 또는 바인딩된 매개 변수 수는 없습니다. 설명자가 할당 되 면 SQL_DESC_COUNT의 초기 값은 0입니다.  

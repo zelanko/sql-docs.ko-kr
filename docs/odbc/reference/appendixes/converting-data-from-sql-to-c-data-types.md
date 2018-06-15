@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914068"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL에서 C 데이터 형식으로 데이터를 변환
 응용 프로그램 호출 하는 경우 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData**, 드라이버는 데이터 원본에서 데이터를 검색 합니다. 하는 경우 필요에 따라 데이터를 변환할 드라이버 검색 하 고 데이터 형식으로 지정 된 데이터 형식에서는 *TargetType* 인수 **SQLBindCol** 또는 **SQLGetData 합니다.** 마지막으로, 데이터에서 가리키는 위치에 저장 된 *TargetValuePtr* 인수에 **SQLBindCol** 또는 **SQLGetData** (및는 카드가의 SQL_DESC_DATA_PTR 필드가).  

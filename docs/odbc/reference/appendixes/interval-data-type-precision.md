@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906588"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 유형 정밀도
 간격 데이터 형식의 전체 자릿수는 전체 자릿수, 간격 정밀도 및 초의 전체 자릿수를 유도 하는 간격을 포함 합니다.  

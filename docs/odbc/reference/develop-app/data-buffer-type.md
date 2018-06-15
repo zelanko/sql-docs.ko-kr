@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910479"
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 종류
 버퍼의 C 데이터 형식은 응용 프로그램에 의해 지정 됩니다. 을 단일 변수로 경우가이 응용 프로그램 변수를 할당 합니다. 일반적인 메모리 사용-메모리 즉, void 형식의 포인터에서 가리키는-이 응용 프로그램 메모리를 특정 형식으로 캐스팅 때 발생 합니다. 드라이버는이 이와 같은 두 가지 방법으로 검색 됩니다.  

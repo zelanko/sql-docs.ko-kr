@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906418"
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
 응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**, 드라이버는 출력 또는 입력된 버퍼의 C 데이터 형식을 가정 열 또는 매개 변수 버퍼 바인딩되는 변수의 SQL 데이터 형식에 해당 합니다.  

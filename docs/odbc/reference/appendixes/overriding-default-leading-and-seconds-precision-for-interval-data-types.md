@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907848"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>기본 선행 및 초의 전체 자릿수가 Interval 데이터 형식에 대 한 재정의
 호출 하 여는 카드가의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 된 경우 **SQLBindCol** 또는 **SQLSetDescField**의 SQL_DESC_PRECISION 필드 (간격 (초)을 포함 합니다. 전체 자릿수)는 다음과 같은 기본값으로 설정 됩니다.  

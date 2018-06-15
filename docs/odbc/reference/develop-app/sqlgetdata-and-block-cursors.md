@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910858"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData 및 블록 커서
 **SQLGetData** 단일 행의 단일 열에서 작동 하 고 여러 행에서에서 데이터를 포함 하는 배열을 가져올 수 없습니다. 기본 사용 하기 때문에 이것이 **SQLGetData** 부분으로 긴 데이터를 인출 하는 것 이며 한 번에 둘 이상의 행에 대 한 할 거의 없거나 전혀 없이 이유입니다.  

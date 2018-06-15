@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911518"
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수에 문자열에 따옴표를 드라이버 선행 및 후행 공백을 제거 하 고 따옴표 안에 문자열 리터럴로 처리 합니다. 문자열에 따옴표가 사용 되지 드라이버 제거 후행 공백 및 접기 문자열을 대문자로 합니다. SQL_ERROR 및 SQLSTATE HY009 반환 식별자 인수는 null 포인터를 설정 (잘못 된 null 포인터)를 사용 하는 경우가 아니면 인수가 카탈로그 이름을 카탈로그는 지원 되지 않습니다.  

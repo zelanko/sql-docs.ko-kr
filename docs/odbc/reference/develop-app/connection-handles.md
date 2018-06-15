@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909558"
 ---
 # <a name="connection-handles"></a>연결 핸들
 A *연결* 드라이버 및 데이터 원본으로 구성 됩니다. 연결 핸들 각 연결을 식별합니다. 연결 핸들에는 드라이버를 사용할 뿐 아니라 해당 드라이버와 함께 사용 하는 데이터 원본을 정의 합니다. ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드의 세그먼트 내 연결 핸들 다음과 같은 연결 정보를 포함 하는 구조를 식별 합니다.  

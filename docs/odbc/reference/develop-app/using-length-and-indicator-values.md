@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916668"
 ---
 # <a name="using-length-and-indicator-values"></a>길이 표시기 값을 사용 하 여
 길이/표시기 버퍼 데이터 버퍼 또는 데이터가 NULL 인지 여부를 나타내는 SQL_NULL_DATA 등 특별 한 표시기에 있는 데이터의 바이트 길이 전달 하는 데 사용 됩니다. 사용 되는 함수에 따라 길이/표시기 버퍼는 SQLINTEGER 또는 SQLSMALLINT 되도록 정의 됩니다. 따라서을 설명 하는 하나의 인수가 필요 합니다. 데이터 버퍼가 nondeferred 입력된 버퍼 경우이 인수 자체 데이터의 바이트 길이 또는 표시기 값을 포함 합니다. 종종 라는 *StrLen_or_Ind* 또는 비슷한 이름입니다. 예를 들어 다음 코드 호출 **SQLPutData** 버퍼를 전달할 데이터의 전체; 바이트 길이 (*ValueLen*) 때문에 직접 전달 데이터 버퍼 (*ValuePtr*)은 입력된 버퍼입니다.  

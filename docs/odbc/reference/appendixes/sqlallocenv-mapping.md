@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907068"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 매핑
 응용 프로그램 호출 하는 경우 **SQLAllocEnv** ODBC 3 *.x* 드라이버에 대 한 호출 **SQLAllocEnv**(*phenv*) 에매핑된**SQLAllocHandle** 다음과 같습니다.  

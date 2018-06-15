@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914108"
 ---
 # <a name="mapping-deprecated-functions"></a>사용 되지 않는 함수와 매핑
 이 섹션에서는 어떻게 사용 되지 않는 함수를 설명 ODBC 3으로 매핑되는 *.x* ODBC 3의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *.x* 드라이버는 ODBC 2와 함께 사용 됩니다. *x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑이 수행합니다. 때문에 각 ODBC 2. *x* 함수는 다음 목록에는 해당 ODBC 3에 매핑된 *.x* ODBC 3에서 호출 된 경우 작동 *.x* 드라이버에서 ODBC 3 *.x*드라이버는 ODBC 2를 구현 하지 않아도 됩니다. *x* 함수입니다.  

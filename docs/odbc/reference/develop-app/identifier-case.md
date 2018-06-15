@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908855"
 ---
 # <a name="identifier-case"></a>식별자 대/소문자
 SQL 문 및 카탈로그 함수 인수 식별자와 따옴표 붙은 식별자 일 수 대/소문자 구분 또는 응용 프로그램이 호출 하 여 확인할 수 있는, **SQLGetInfo** SQL_IDENTIFIER_CASE 및 SQL_QUOTED_ IDENTIFIER_CASE 옵션입니다.  

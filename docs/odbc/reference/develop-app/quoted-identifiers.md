@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911528"
 ---
 # <a name="quoted-identifiers"></a>따옴표 붙은 식별자
 SQL 문 특수 문자 또는 일치 키워드를 포함 하는 식별자에 포함 되어야 합니다 *식별자 인용 문자*; 이러한 문자로 묶인 식별자 라고 *따옴표 붙은 식별자*(라고도 *구분 식별자* s Q l-92에). Accounts Payable 식별자 다음에 인용 된 예를 들어 **선택** 문:  

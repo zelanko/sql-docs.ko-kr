@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906098"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>부록 f: ODBC 커서 라이브러리
 > [!IMPORTANT]  

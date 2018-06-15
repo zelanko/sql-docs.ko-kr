@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913908"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 커서 라이브러리 오류 코드
 > [!IMPORTANT]  

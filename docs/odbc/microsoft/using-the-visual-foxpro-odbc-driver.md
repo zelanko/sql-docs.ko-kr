@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905375"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버를 사용 하 여
 이 섹션에서는 다음 항목 Microsoft® Visual FoxPro® ODBC 드라이버를 사용 하는 방법에 설명 합니다.  

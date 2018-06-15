@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907768"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>열 크기를 10 진수 숫자, 8 진수 길이 전송 하 고, 표시 크기-ODBC
 데이터 형식 열 (또는 매개 변수) 크기, 소수 자릿수, 길이, 특징 및 크기를 표시 합니다. 다음과 같은 ODBC 함수가 데이터 원본에는 SQL 문의 매개 변수에 대 한 또는 SQL 데이터 형식에 대 한 이러한 특성을 반환합니다. 각 ODBC 함수를 다음과 같이 다양 한 이러한 특성을 반환합니다.  

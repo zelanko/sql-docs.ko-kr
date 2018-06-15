@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912714"
 ---
 # <a name="rules-for-conversions"></a>변환에 대 한 규칙
 숫자 리터럴을 포함 하는 변환은이 섹션의 규칙이 적용 됩니다. 이러한 규칙을 위해 다음 용어 정의 됩니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905528"
 ---
 # <a name="literals-in-odbc"></a>ODBC의 리터럴
 다음 섹션의 구문이 간격 및 ODBC의 숫자 리터럴을 사용 됩니다. 이 구문은 제공 높이기 위해 숫자 또는 간격 유형이 문자열 형식의 문자 또는 문자 문자열 형식으로 숫자 또는 간격 유형 변환이 수행 될 때 드라이버 작성자로 합니다. 자세한 내용은 참조 [간격 리터럴](../../../odbc/reference/appendixes/interval-literals.md) 및 [숫자 리터럴을](../../../odbc/reference/appendixes/numeric-literals.md) 부록 d: 데이터 형식에서입니다.  

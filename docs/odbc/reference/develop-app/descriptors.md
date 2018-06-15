@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908818"
 ---
 # <a name="descriptors"></a>설명자
 설명자 핸들 동적 매개 변수 또는 열에 대 한 정보를 포함 하는 데이터 구조를 참조 합니다.  

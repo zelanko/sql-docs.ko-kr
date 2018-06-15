@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911398"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>사용자가 입력 한 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 SQL 문을 직접 입력할 수 있습니다. 예를 들어:  

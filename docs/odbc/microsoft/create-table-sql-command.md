@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905088"
 ---
 # <a name="create-table---sql-command"></a>테이블-SQL 명령을 만들려면
 지정된 된 필드가 있는 테이블을 만듭니다.  

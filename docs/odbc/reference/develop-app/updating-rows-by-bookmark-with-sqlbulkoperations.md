@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915485"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations 사용 하 여 책갈피에서 업데이트 행
 책갈피를 하 여 행을 업데이트할 때 **SQLBulkOperations** 은 데이터 원본 테이블의 하나 이상의 행을 업데이트 합니다. 행 바인딩된 책갈피 열에서 책갈피도 식별 됩니다. 행 (열에 대 한 길이/표시기 버퍼의 값이 SQL_COLUMN_IGNORE) 제외 바인딩된 각 열에 대 한 응용 프로그램 버퍼에서 데이터를 사용 하 여 업데이트 됩니다. 바인딩되지 않은 열을 업데이트 되지 않습니다.  

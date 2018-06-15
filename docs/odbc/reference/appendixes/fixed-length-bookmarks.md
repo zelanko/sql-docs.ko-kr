@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907828"
 ---
 # <a name="fixed-length-bookmarks"></a>고정 길이의 책갈피
 ODBC 3 경우 *.x* 드라이버는 ODBC 2 함께 사용할 수 있어야 합니다. *x* 응용 프로그램 사용 하 여 고정 길이의 책갈피, 드라이버에서 다음을 지원 해야 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32841508"
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes 메서드 (long, 바이트)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

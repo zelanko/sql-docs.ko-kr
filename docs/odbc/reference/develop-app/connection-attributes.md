@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909818"
 ---
 # <a name="connection-attributes"></a>연결 특성
 연결 특성은 연결의 특성입니다. 예를 들어 트랜잭션이 연결 수준에서 발생하기 때문에 트랜잭션 격리 수준은 연결 특성입니다. 마찬가지로, 로그인 제한 시간 또는 시간 초과 하기 전에 연결 하는 동안 대기할 시간 (초) 연결 특성입니다.  

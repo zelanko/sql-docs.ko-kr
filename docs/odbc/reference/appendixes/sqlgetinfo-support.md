@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912488"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 지원
 경우는 ODBC 2. *x* 응용 프로그램 호출 **SQLGetInfo** ODBC 3 *.x* 드라이버는 *정보 항목* 인수는 다음 표에 지원 되어야 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910868"
 ---
 # <a name="appendix-c-sql-grammar"></a>부록 c: SQL 문법
 이 부록의 내용에는 다음 항목이 포함 되어 있습니다.  

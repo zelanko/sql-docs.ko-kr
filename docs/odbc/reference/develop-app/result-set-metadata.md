@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911708"
 ---
 # <a name="result-set-metadata"></a>결과 집합 메타 데이터
 *메타 데이터* 는 다른 데이터를 설명 하는 데이터입니다. 예를 들어 결과 집합 메타 데이터는 결과 집합은 결과 집합의 열 수, 열, 이름, 전체 자릿수, null 허용 여부, 및 등의 데이터 형식 등을 설명합니다.  

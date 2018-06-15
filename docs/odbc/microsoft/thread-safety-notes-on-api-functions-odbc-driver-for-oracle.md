@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905636"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>API 함수 (ODBC Driver for Oracle)의 스레드 보안 메모
 > [!IMPORTANT]  

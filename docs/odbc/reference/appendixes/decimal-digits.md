@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907788"
 ---
 # <a name="decimal-digits"></a>10 진수
 *10 진수* decimal 및 numeric 데이터 형식 소수점 오른쪽 자릿수 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수 눈금 정의 되지 않습니다 소수점 오른쪽 자릿수 하지 고정 되어 있으므로. 초 구성 요소가 포함 된 날짜/시간 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수의 수로 정의 됩니다.  

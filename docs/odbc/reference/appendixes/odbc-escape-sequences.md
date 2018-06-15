@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906878"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 이스케이프 시퀀스
 다음과 같은 이스케이프 시퀀스는 ODBC에서 사용 됩니다. 이 섹션의 문법에 정의 된 몇 가지 요소를 사용 하 여 [SQL 문에 사용 되는 요소](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)합니다.  

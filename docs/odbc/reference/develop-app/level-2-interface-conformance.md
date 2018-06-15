@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912638"
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 규칙
 수준 2 인터페이스 규칙 수준은 Level 1 인터페이스 규칙 – 수준 기능 및 다음 기능에 포함 되어 있습니다.  

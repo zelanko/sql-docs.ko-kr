@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912988"
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 일부 인수 카탈로그에서 함수가 *TableName* 인수 **SQLTables**, 검색 패턴을 사용할 합니다. 이 인수는 검색 패턴을 사용할 SQL_ATTR_METADATA_ID 문 특성이 SQL_FALSE;로 설정 된 경우 이 특성은 SQL_TRUE로 설정 하는 경우 검색 패턴을 허용 하지 않는 식별자 인수 않은 것입니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913008"
 ---
 # <a name="retrieving-results-basic"></a>결과 (기본) 검색
 A *결과 집합* 는 특정 조건에 일치 하는 데이터 원본에 있는 행의 집합입니다. 해당 하는 쿼리 생성 되며를 테이블 형식으로 응용 프로그램에 사용할 수 있는 개념적 테이블입니다. **선택** 문, 카탈로그 함수 및 일부 절차 결과 집합을 만듭니다. 다음 예제에서는 첫 번째 SQL 문을 모든 행 및 Orders 테이블의 모든 열을 포함 한 결과 집합을 만든 두 번째 SQL 문은 Orders 테이블의 행에 대 한 OrderID, 영업 사원, 및 상태 열을 포함 한 결과 집합을 만듭니다. 상태는 OPEN입니다.  

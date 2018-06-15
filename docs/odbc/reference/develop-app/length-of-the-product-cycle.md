@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910068"
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 마지막 문의 시간입니다. 일반적으로 상호 운용 가능한 응용 프로그램을 개발 noninteroperable 하나 개발 보다 오래 걸립니다. 이유는 응용 프로그램 해야 DBMS 기능을 확인, 다른 Dbms에 대 한 동일한 작업을 다르게 수행, 다른 하지만 일부 Dbms에서 지 원하는 기능을 해결 등입니다.  

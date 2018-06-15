@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910618"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL에서 c: 날짜-시간 간격
 주간 시간 간격 ODBC SQL 데이터 형식에 대 한 식별자는.  

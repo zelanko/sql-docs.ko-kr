@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906187"
 ---
 # <a name="odbc-appendixes"></a>ODBC 부록
 Microsoft ODBC 인터페이스와 관련 된 기술 세부 정보는 다음 부록에 포함 됩니다.  

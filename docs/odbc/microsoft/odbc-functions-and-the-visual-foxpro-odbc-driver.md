@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905078"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 및 ODBC 함수
 이 단원의 항목에서는 ODBC API 함수에 대 한 간단한 요약 및 모든 Visual FoxPro 관련 세부 정보를 제공 합니다.  

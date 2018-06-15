@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911088"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>환경, 연결 및 문 특성
 ODBC 환경, 연결 또는 문이 연관 된 특성의 수를 정의 합니다.  

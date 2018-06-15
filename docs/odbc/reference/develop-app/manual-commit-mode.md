@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911688"
 ---
 # <a name="manual-commit-mode"></a>수동 커밋 모드
 *수동 커밋 모드로* 응용 프로그램에 명시적으로 호출 하 여 트랜잭션을 완료 해야 **SQLEndTran** 커밋하거나 롤백 합니다. 이 대부분의 관계형 데이터베이스에 대 한 기본 트랜잭션 모드입니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916898"
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 다양 한 상황에서 잘 작동 하는 정적 SQL 이지만 한 응용 프로그램에는 데이터 액세스 확인할 수 없는 사전에 있습니다. 예를 들어 스프레드시트 스프레드시트 보냅니다는 DBMS에 데이터를 검색 하는 쿼리를 입력할 수 있습니다. 이 쿼리 내용 분명히 알 수 없으므로 프로그래머에 게 스프레드시트 프로그램 기록 되는 경우.  

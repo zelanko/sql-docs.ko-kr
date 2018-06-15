@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908968"
 ---
 # <a name="determining-cursor-capabilities"></a>커서 기능을 결정 하
 다음 네 가지 옵션 **SQLGetInfo** 커서의 종류는 지원 하 고, 이와 관련 된 기능에 설명 합니다.  

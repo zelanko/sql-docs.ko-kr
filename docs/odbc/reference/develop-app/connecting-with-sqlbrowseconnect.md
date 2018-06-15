@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909910"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect를 사용 하 여 연결
 **SQLBrowseConnect**처럼 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 사용 하 여 **SQLBrowseConnect**, 응용 프로그램 런타임 시 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 응용 프로그램에서는 다음 두 가지 작업이 가능해집니다.  

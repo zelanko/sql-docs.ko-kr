@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914428"
 ---
 # <a name="using-microsoft-component-services"></a>Microsoft 구성 요소 서비스를 사용 하 여
 > [!IMPORTANT]  

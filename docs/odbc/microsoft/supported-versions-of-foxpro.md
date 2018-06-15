@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905478"
 ---
 # <a name="supported-versions-of-foxpro"></a>FoxPro의 지원 되는 버전
 FoxPro 테이블에 저장 된 데이터에 액세스 하기 위해 Microsoft® Visual FoxPro® ODBC Driver를 사용할 수 있습니다. FoxPro 데이터의 다음 버전이 지원 됩니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913498"
 ---
 # <a name="system-functions"></a>시스템 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 시스템 함수를 나열 합니다. 호출 하 여 **SQLGetInfo** 와 *정보 유형* SQL_SYSTEM_FUNCTIONS의 응용 프로그램이 드라이버를 통해 지원 되는 시스템 함수 확인할 수 있습니다.  

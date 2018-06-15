@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906248"
 ---
 # <a name="loading-by-ordinal"></a>서 수로 로드합니다.
 Odbc 2. *x*, 서 수로 로드 연결 프로세스의 성능을 향상 시키기 위해 수행할 수 없습니다. ODBC 2입니다. *x* 드라이버와 서 수 199 더미 함수를 내보냅니다; 서 수로, 이름으로 ODBC 함수의 주소를 확인할 드라이버 관리자를 감지할 때. 이 기능은 ODBC 2 여전히 지원 됩니다. *x* 드라이버 하지만 ODBC 3에 대 한 지원 되지 않습니다 *.x* 드라이버입니다.

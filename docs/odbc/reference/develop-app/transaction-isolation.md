@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914778"
 ---
 # <a name="transaction-isolation"></a>트랜잭션 격리
 *트랜잭션 격리* 여러 동시 트랜잭션 간의 상호 작용의 정도를 나타냅니다. 이 중요 한 이유를 보려면 먼저 연속성의 개념을 확인 해야 합니다.  

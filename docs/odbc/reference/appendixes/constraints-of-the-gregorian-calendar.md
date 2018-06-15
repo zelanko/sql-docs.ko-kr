@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905438"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>일반 달력의 제약 조건
 Date 및 datetime 데이터 형식 및 간격 데이터 형식의 후행 필드는 일반 달력의 제약 조건에 따라야 합니다. 이러한 제약 조건은 다음과 같습니다.  

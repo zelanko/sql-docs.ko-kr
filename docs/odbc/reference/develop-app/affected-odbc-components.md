@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910138"
 ---
 # <a name="affected-odbc-components"></a>영향을 받는 ODBC 구성 요소
 이전 버전과 호환성 새 버전의 드라이버 관리자를 도입 하 여 응용 프로그램, 드라이버 관리자 및 드라이버 영향을 설명 합니다. 하나 또는 둘 모두에서 이전 버전에 유지 하는 경우 응용 프로그램 및 드라이버가 결정 됩니다. 세 종류가 있습니다, 따라서 이전 버전과의 호환성을 고려 하는 다음 표에 나와 있는 것 처럼 합니다.  

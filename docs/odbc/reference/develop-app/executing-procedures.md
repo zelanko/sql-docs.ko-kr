@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910778"
 ---
 # <a name="executing-procedures"></a>프로시저 실행
 ODBC는 프로시저를 실행 하기 위한 표준 이스케이프 시퀀스를 정의 합니다. 이 시퀀스 및이 사용 하는 코드 예제에서는 구문에 대 한 참조 [프로시저 호출](../../../odbc/reference/develop-app/procedure-calls.md)합니다.  

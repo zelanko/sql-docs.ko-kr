@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911368"
 ---
 # <a name="features-to-watch-for"></a>기능에 대 한 조사식을
 이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여 하기 위해 수행 하는 기능을 설명 합니다. 실제로 이러한 기능에 따라 크게 다릅니다 지원 및 Dbms; 지원 방식으로 실패 하는 코드는 상호 운용 가능한 응용 프로그램에서 문제가 발생할 수 있습니다.  

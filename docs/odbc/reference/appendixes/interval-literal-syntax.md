@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907348"
 ---
 # <a name="interval-literal-syntax"></a>간격 리터럴 구문
 ODBC의 간격 리터럴에 다음 구문을 사용 됩니다.  

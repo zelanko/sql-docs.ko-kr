@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911278"
 ---
 # <a name="odbc-in-windows"></a>Windows에서 ODBC
 다음 항목은 Microsoft® Windows NT/Windows 2000 및 Microsoft Windows® 95/98 운영 체제에서 실행 되는 ODBC에만 적용 됩니다.  

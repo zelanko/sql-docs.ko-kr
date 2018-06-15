@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905538"
 ---
 # <a name="bookmark-c-data-type"></a>책갈피 C 데이터 형식
 책갈피 C 데이터 형식에는 응용을 프로그램이 책갈피를 검색할 수 있습니다. 책갈피 C 형식; 길이가 가변적 일 수 있는 책갈피 값을 검색 하는 데에 사용 됩니다. 또한 다른 데이터 형식으로 변환 되지 해야 합니다. 응용 프로그램 검색 결과의 열 0에서 사용 하 여 설정 하는 책갈피 **SQLBulkOperations** (작업과 SQL_ADD의), **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData**합니다. 자세한 내용은 참조 [책갈피](../../../odbc/reference/develop-app/bookmarks-odbc.md)합니다.  

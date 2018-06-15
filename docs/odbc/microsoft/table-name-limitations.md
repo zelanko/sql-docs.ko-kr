@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911268"
 ---
 # <a name="table-name-limitations"></a>테이블 이름 제한 사항
 테이블 이름 (예: 공백) 모든 유효한 문자를 포함할 수 있습니다. 테이블 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 이름은 역 따옴표 (')에 포함 하 여 구분 되어야 합니다.  

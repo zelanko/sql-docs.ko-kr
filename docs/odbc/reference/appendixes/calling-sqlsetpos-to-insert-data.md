@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905288"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>데이터를 삽입 하는 SQLSetPos 호출
 경우는 ODBC 2. *x* ODBC 3을 사용 하는 응용 프로그램 *.x* 드라이버 호출 **SQLSetPos** 와 *작업* SQL_ADD, 드라이버 관리자의 인수 이 호출으로 매핑되지 않는 **SQLBulkOperations**합니다. ODBC 3 경우 *.x* 드라이버를 호출 하는 응용 프로그램 작업 해야 **SQLSetPos** 드라이버와 SQL_ADD, 해당 작업을 지원 해야 합니다.  

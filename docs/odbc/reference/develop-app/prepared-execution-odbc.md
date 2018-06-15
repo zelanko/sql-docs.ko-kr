@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913178"
 ---
 # <a name="prepared-execution-odbc"></a>준비 된 실행 ODBC
 준비 된 실행은 문을 두 번 이상 실행 하는 효율적인 방법입니다. 문은 먼저 컴파일 또는 *준비* 액세스 계획으로 합니다. 액세스 계획이 하나를 실행 하거나 나중에 번 더입니다. 액세스 계획에 대 한 자세한 내용은 참조 [SQL 문 처리](../../../odbc/reference/processing-a-sql-statement.md)합니다.  

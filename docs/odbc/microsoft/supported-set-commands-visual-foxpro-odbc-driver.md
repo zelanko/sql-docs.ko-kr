@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907128"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>지원 되는 집합 명령 (Visual FoxPro ODBC 드라이버)
 응용 프로그램에 다음 Visual FoxPro 보낼 수 **설정** 데이터 원본에 대 한 명령:  

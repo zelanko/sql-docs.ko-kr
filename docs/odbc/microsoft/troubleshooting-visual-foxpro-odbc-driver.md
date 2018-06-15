@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905376"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>(Visual FoxPro ODBC 드라이버) 문제 해결
 다음 섹션에서는 성능을 개선 하 고 Visual FoxPro ODBC 드라이버를 사용 하는 동안 발생 하는 문제를 해결 하는 방법에 설명 합니다.  

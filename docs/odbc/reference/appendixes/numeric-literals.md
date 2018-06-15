@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906448"
 ---
 # <a name="numeric-literals"></a>숫자 리터럴
 숫자 리터럴은 숫자 데이터 값은 문자열에 저장 된 경우 사용 됩니다. 숫자 SQL 데이터를 SQL_C_CHAR 문자열로의 변환 또는 SQL_CHAR 또는 SQL_VARCHAR 문자열로 숫자 C 데이터 변환에 대 한 대상에 저장 된 항목을 지정 하는 숫자 리터럴 구문을 사용 됩니다. 숫자 SQL 데이터를 SQL_C_CHAR 문자열로 저장 하는 숫자 또는 SQL_CHAR 문자열로 숫자 C 데이터에 저장 된 숫자의 변환의 경우 원본에 저장 된 항목의 유효성을 검사 하는이 구문이 사용 됩니다.  

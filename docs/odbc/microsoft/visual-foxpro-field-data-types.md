@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905348"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 필드 데이터 형식
 다음 표에서에 대 한 값을 보여 줍니다.는 *FieldType* ALTER TABLE 및 CREATE TABLE에서 인수를 나타내고 여부 *nFieldWidth* 및 *nPrecision* 인수는 필수.  

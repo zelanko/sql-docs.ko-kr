@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913078"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 검색 예
 다음 예제에서는 어떻게 **SQLBrowseConnect** SQL Server에 대 한 드라이버를 사용할 수 있는 연결을 검색 하는 데 사용 될 수 있습니다. 첫째, 응용 프로그램 연결 핸들을 요청합니다.  
