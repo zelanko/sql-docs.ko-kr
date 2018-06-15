@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852908"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Azure Active Directory를 사용 하 여 ODBC 드라이버
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

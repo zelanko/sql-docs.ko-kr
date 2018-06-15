@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025090"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO 보완 클래스 및 메서드 프로그래밍
   이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  

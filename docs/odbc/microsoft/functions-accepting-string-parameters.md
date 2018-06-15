@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900458"
 ---
 # <a name="functions-accepting-string-parameters"></a>문자열 매개 변수를 수락 하는 함수
 문자열 매개 변수를 사용 하는 모든 함수를 유니코드로 변환 됩니다. ("W"에 대 한 형식의 함수를 내보냅니다.) 바이트 수는 해당 되는 ODBC Api에 대 한 문자의 수로 변환 됩니다. 이 다음 기능에 적용 됩니다.  

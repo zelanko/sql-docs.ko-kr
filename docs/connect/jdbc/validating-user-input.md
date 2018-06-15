@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851228"
 ---
 # <a name="validating-user-input"></a>사용자 입력 유효성 검사
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

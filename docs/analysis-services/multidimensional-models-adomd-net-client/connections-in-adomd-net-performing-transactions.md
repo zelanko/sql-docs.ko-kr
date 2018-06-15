@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025000"
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connections in ADOMD.NET에서 트랜잭션 수행
   ADOMD.NET에서는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 개체를 사용하여 지정된 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체의 트랜잭션 컨텍스트를 관리할 수 있습니다. 이 기능을 사용하면 같은 컨텍스트 내에서 여러 명령을 실행할 수 있습니다. 각 명령이 실행되는 동안 읽는 데이터의 변경 없이 각 명령은 같은 데이터를 읽게 됩니다.  

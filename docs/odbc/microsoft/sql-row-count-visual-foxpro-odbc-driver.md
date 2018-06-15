@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900698"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 행 개수 (Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

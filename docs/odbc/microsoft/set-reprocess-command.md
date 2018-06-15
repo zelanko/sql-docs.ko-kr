@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903588"
 ---
 # <a name="set-reprocess-command"></a>SET 빈도로 명령
 실패 한 잠금 시도 후 파일이 나 레코드를 잠그는 수 시간 또는 방법에 대 한 long을 지정 합니다.  

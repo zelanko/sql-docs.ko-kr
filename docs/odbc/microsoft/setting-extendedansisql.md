@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900878"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL 설정
 ExtendedAnsiSQL 특성을 추가 하 여 연결 문자열에서 특성을 제어할 수 있습니다.  

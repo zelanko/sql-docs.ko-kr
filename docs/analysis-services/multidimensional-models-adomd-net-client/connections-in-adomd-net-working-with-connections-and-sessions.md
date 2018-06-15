@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027140"
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET-연결 및 세션 작업
   XMLA(XML for Analysis)에서 세션은 분석 데이터 액세스 동안 상태 저장 작업에 필요한 지원을 제공합니다. 세션은 분석 데이터 원본에 대한 명령 및 트랜잭션의 범위와 컨텍스트를 지정합니다. 세션 관리에 사용되는 XMLA 요소로는 [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)및 [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)이 있습니다.  

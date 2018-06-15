@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901172"
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
 ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 기술 정보를 찾을 수 있습니다. 드라이버 설치가 루틴 중이 파일에 액세스할 수는 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  

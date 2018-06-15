@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900268"
 ---
 # <a name="identifiers-limitations"></a>식별자 제한 사항
 식별자에 공백 또는 특수 기호가 있으면, 식별자 백 따옴표로 묶어야 합니다. 유효한 이름은는 첫 번째 문자 공백이 되지 않아야 하는 최대 64 자의 문자열입니다. 유효한 이름은 제어 문자 또는 특수 문자를 포함할 수 없습니다: ' &#124; # *? [ ] . ! $ .  

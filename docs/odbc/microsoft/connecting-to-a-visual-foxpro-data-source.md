@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898108"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본에 연결
 Microsoft Office 응용 프로그램 또는 SQL API를 사용 하 여 Visual FoxPro 데이터 원본에 연결할 수 있습니다.  

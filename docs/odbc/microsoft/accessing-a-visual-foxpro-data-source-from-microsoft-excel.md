@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899448"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스
 설치 된 Microsoft 쿼리를 사용 하도록 설정한 경우 Visual FoxPro 데이터에 연결 되는 Microsoft Excel에서 데이터 원본을 만들 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898416"
 ---
 # <a name="from-clause-limitations"></a>절 제한 사항
 FROM 절에 테이블의 최대 수는 16입니다.

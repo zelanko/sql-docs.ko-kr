@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914148"
 ---
 # <a name="binding-arrays-of-parameters"></a>바인딩 매개 변수 배열
 응용 프로그램의 매개 변수 배열을 사용 하는 SQL 문의 매개 변수를 배열을 바인딩합니다. 두 바인딩 스타일 가지가 있습니다.  

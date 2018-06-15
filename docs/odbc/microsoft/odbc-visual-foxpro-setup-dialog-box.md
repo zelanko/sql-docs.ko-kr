@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904618"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설정 대화 상자
 **ODBC Visual FoxPro 설정** 대화 상자를 사용 하면 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  

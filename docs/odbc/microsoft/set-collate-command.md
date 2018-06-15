@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904048"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업의 문자 필드에 대 한 데이터 정렬 순서를 지정합니다.  

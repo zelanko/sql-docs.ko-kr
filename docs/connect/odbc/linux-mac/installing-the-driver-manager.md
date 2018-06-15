@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853198"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900628"
 ---
 # <a name="data-type-limitations"></a>데이터 형식 제한 사항
 Microsoft ODBC 데스크톱 데이터베이스 드라이버 데이터 형식에 대해 다음과 같은 제한 사항이 적용:  

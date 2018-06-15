@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903008"
 ---
 # <a name="other-excel-driver-programming-details"></a>다른 Excel 드라이버 프로그래밍 정보
 > [!NOTE]  

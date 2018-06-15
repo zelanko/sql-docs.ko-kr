@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866528"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>실행 명령줄에서 데이터 마이그레이션 길잡이
-데이터 마이그레이션 도우미를 설치 버전 2.1 이상에서 때도 설치 됩니다. dmacmd.exe에 *% ProgramFiles %\\Microsoft 데이터 마이그레이션 길잡이\\* 합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 하 고 JSON 또는 CSV 파일에 결과 출력 합니다. 여러 데이터베이스 또는 대규모 데이터베이스에 액세스할 때 특히 유용 합니다. 
+데이터 마이그레이션 도우미를 설치 버전 2.1 이상에서 때도 설치 됩니다. dmacmd.exe에 *% ProgramFiles %\\Microsoft 데이터 마이그레이션 길잡이\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 하 고 JSON 또는 CSV 파일에 결과 출력 합니다. 여러 데이터베이스 또는 대규모 데이터베이스에 액세스할 때 특히 유용 합니다. 
 
 > [!NOTE]
 > 만 평가 실행 하는 Dmacmd.exe 지원 합니다. 이 이번에는 마이그레이션이 지원 되지 않습니다.

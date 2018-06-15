@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900198"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
 데이터 소스와 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  

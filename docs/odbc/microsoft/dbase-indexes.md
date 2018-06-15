@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900108"
 ---
 # <a name="dbase-indexes"></a>dBASE 인덱스
 ODBC dBASE 드라이버가 자동으로 열리고 dBASE IV 인덱스 파일을 업데이트 합니다. 사용 해야 합니다는 **인덱스 선택** dBASE 파일 dBASE III.ndx 파일과 연결 하려면 ODBC 데이터 원본 관리자를 통해 표시 되는 대화 상자.  

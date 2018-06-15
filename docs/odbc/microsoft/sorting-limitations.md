@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901278"
 ---
 # <a name="sorting-limitations"></a>제한 사항 정렬
 GROUP BY 절, ORDER BY 절, SELECT DISTINCT 문을 또는 외부 조인에서 정렬 키의 최대 길이 255 바이트입니다. 정렬 행에 모든 정렬 키의 최대 길이 65, 500 바이트입니다.

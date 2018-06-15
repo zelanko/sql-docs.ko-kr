@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899978"
 ---
 # <a name="setting-tracing-options"></a>추적 옵션 설정
 **추적** 탭은 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하는 ODBC 함수 호출을 추적 하는 방법을 구성할 수 있습니다.  

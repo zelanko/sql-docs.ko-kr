@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897146"
 ---
 # <a name="and-predicate-limitations"></a>및 조건자 제한 사항
 최대 40 개로 사용할 수 있습니다.

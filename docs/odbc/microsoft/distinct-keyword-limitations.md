@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897578"
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT 키워드의 제한 사항
 긴 텍스트 필드 (Microsoft Access) 또는 메모 필드 (dBASE)에 대해 지원 되지 않습니다.

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869648"
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>(데이터 마이그레이션 길잡이) 평가 보고서 통합
 

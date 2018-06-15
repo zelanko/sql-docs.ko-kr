@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914358"
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 sql-92 left, right 및 완전 외부 조인 구문을 지원합니다. 외부 조인에 대 한 이스케이프 시퀀스는  

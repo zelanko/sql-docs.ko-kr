@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911968"
 ---
 # <a name="gateways-diagnostic-example"></a>게이트웨이 진단 예제
 게이트웨이 아키텍처는 드라이버는 ODBC를 지 원하는 게이트웨이에 요청을 보냅니다. 게이트웨이 DBMS에는 요청을 보냅니다. 드라이버 관리자와 교류 하는 구성 요소 이므로 드라이버 포맷 하 고 반환에 대 한 인수 **SQLGetDiagRec**합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899269"
 ---
 # <a name="like-predicate-limitations"></a>마찬가지로 조건자 제한 사항
 데이터 열에 255 자 보다 긴 경우 LIKE 비교가에서는 처음 255 자만에 대해서만 기반 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899108"
 ---
 # <a name="create-table-statement-limitations"></a>만들 테이블 문 제한 사항
 Microsoft Access, Microsoft Excel 또는 Paradoxdriver 사용 될 때 지정 되지 않은 (또는 0으로 지정) 텍스트 또는 이진 열의 길이, 열 길이 255로 설정 됩니다.  

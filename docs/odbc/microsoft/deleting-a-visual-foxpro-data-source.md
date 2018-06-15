@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899426"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본 삭제
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본을 삭제 하려면  

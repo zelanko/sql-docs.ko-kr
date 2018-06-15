@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32867208"
 ---
 # <a name="configuration-settings-for-data-migration-assistant"></a>데이터 마이그레이션 길잡이 대 한 구성 설정
 

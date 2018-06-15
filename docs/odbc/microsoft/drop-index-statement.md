@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900249"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX 문
 DROP INDEX 문의 구문은 "DROP INDEX on a b"를 "a"는 인덱스의 이름 및 "b"는 테이블의 이름을 Microsoft Access, dBASE 또는 Paradox 드라이버를 사용 하는 경우 (하지 DROP INDEX *인덱스 이름*).  

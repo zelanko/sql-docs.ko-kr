@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911788"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C 데이터 변환 예제
 다음 표에 표시 된 예제 드라이버 C 데이터를 SQL 데이터를 변환 하는 방법을 보여 줍니다.  

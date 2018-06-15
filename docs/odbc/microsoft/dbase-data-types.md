@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901288"
 ---
 # <a name="dbase-data-types"></a>dBASE 데이터 형식
 다음 표에서 dBASE 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. Note 일부 ODBC SQL 데이터 형식이 지원 됩니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901718"
 ---
 # <a name="managing-data-sources"></a>데이터 소스 관리
 드라이버의 설치 프로그램에서 ODBC 드라이버를 설치한 후에 대 한 하나 이상의 데이터 원본을 정의할 수 있습니다. 데이터 원본 이름 (DSN)에서 데이터에 대 한 고유한 설명을 제공 해야 예를 들어 *급여* 또는 *Accounts Payable*합니다. 현재 설치 된 모든 드라이버에 대해 정의 된 사용자 및 시스템 데이터 원본은 나열 됩니다는 **사용자 DSN** 또는 **시스템 DSN** 의 탭에서 **ODBC 데이터 원본 관리자**대화 상자. 지정된 된 디렉터리의 파일 데이터 원본에 나열 됩니다는 **파일 DSN** ; 탭에 표시 되는 디렉터리를 입력의 **찾는 위치** 상자에 **파일 DSN** 탭 합니다.  

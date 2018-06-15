@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32868218"
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>데이터 마이그레이션 길잡이 사용 하 여 온-프레미스 SQL Server로 마이그레이션
 

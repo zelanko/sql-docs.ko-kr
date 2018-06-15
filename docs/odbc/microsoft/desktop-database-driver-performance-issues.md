@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901138"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>데스크톱 데이터베이스 드라이버 성능 문제
 기존 ANSI 응용 프로그램 호환성을 위해, Microsoft 액세스 4.0 또는 더 높은 데이터 원본에 대 한 SQL_WCHAR, SQL_WVARCHAR 및 SQL_WLONGVARCHAR 데이터 형식은 SQL_CHAR, SQL_VARCHAR, 및 SQL_LONGVARCHAR로 노출 됩니다. 데이터 소스를 넓은 CHAR 데이터 형식을 반환 하지 않지만 데이터 여전히로 보내야 합니다 Jet 와이드 문자 형식으로 합니다. 변환을 수행 됩니다 SQL_C_CHAR 매개 변수 또는 결과 열 ANSI 응용 프로그램에서 SQL_CHAR 데이터 형식에 바인딩된 경우를 이해 하는 것이 유용 합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900942"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 프로그래머&#39;s 참조
 > [!IMPORTANT]  

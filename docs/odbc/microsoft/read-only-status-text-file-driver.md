@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898988"
 ---
 # <a name="read-only-status-text-file-driver"></a>읽기 전용 상태 (텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하면 데이터 원본 테이블은 읽기 전용입니다. 그러나 응용 프로그램 텍스트 테이블에 대 한 삽입을 수행할 수 있습니다.

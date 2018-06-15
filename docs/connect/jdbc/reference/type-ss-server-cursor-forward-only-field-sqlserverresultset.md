@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32848678"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

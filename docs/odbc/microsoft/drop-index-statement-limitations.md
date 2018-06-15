@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898038"
 ---
 # <a name="drop-index-statement-limitations"></a>DROP INDEX 문의 제한 사항
 Microsoft Excel 또는 텍스트 드라이버에 대 한 DROP INDEX 문은 지원 되지 않습니다.

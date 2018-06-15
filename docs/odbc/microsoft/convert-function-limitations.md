@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898458"
 ---
 # <a name="convert-function-limitations"></a>함수 제한 사항으로 변환
 변환 오류 결과 NULL로 설정 되 고 영향을 받는 열에 입력 합니다.  

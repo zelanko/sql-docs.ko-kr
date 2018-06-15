@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026420"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  SSMS의 왼쪽 또는 오른쪽 창에서 이동할 데이터베이스를 찾습니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리…**를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리…** 를 선택합니다.  
   
 3.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   

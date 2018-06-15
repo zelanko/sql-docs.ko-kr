@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911388"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>설명자 필드에 값 검색
 응용 프로그램에서 호출할 수 **SQLGetDescField** 설명자 레코드의 단일 필드를 가져올 수 있습니다. **SQLGetDescField** ODBC에 정의 된 모든 설명자 필드에 시작 및 끝 드라이버에서 정의 된 필드에도 응용 프로그램 액세스를 제공 합니다.  

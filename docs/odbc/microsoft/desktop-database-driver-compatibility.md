@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899768"
 ---
 # <a name="desktop-database-driver-compatibility"></a>데스크톱 데이터베이스 드라이버 호환성
 유니코드는 소프트웨어 문자 인코딩 메서드는 2 바이트의 고정된 폭을 가진 것으로 모든 문자를 처리 합니다. 이 메서드는 1 바이트의 문자를 나타내기 때문에 256 자로 제한 Windows ANSI 문자 인코딩을 하는 대신 사용 됩니다. 해당 문자가 표현 되지 않는 많은 언어를 수용 유니코드 65000 개 문자를 나타낼 수 있습니다, 때문에 ANSI 인코딩으로 합니다.  
