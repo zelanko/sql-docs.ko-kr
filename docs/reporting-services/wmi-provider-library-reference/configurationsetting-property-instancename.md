@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030170"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 속성 - InstanceName
   특정 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 읽기 전용입니다.  

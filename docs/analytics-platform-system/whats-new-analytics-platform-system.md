@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550644"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하십시오. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 확장 온-프레미스 어플라이언스입니다. 

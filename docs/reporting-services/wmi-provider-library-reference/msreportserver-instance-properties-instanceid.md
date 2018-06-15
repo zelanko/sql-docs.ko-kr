@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029710"
 ---
 # <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 속성 - InstanceID
   이 개체는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

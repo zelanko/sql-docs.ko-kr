@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550050"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 바이러스 백신 소프트웨어
 데이터 센터 바이러스 백신 소프트웨어를 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 다음이 지침을 사용 합니다. 데이터 센터의 절대적인 요구 하는 경우 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34468499"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>전체 텍스트 및 의미 체계 검색 동적 관리 뷰 함수
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

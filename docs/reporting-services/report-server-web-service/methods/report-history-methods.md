@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024050"
 ---
 # <a name="report-history-methods"></a>보고서 기록 메서드
   다음 메서드를 사용하여 항목 기록 스냅숏을 만들고 관리할 수 있습니다.  

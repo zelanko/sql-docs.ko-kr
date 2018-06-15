@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028630"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 속성 - 보고서 서버 시스템 속성
   다음 시스템 속성 이름은 예약되어 있습니다. 동일한 이름의 사용자 정의 속성을 만들 수 없습니다. 이러한 속성 중 상당수는 웹 서비스 메서드를 사용하여 읽거나 수정할 수 있습니다.  

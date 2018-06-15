@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022970"
 ---
 # <a name="report-model-connection-ssrs"></a>보고서 모델 연결(SSRS)
   보고서 모델의 데이터를 포함하려면 데이터 원본으로 보고서 모델을 기반으로 하는 데이터 집합이 있어야 합니다. 다른 보고서 데이터 원본과는 달리 보고서 모델용 데이터 확장 프로그램은 없습니다. 보고서 작성기에서는 보고서 서버에서 모델을 찾아 직접 선택하면 됩니다. 보고서 디자이너에서는 보고서 모델 URL을 지정합니다.  
