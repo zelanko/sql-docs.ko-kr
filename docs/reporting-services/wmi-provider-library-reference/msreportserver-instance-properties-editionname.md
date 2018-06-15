@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030800"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>MSReportServer_Instance 속성 - EditionName
   사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다. 읽기 전용입니다.  

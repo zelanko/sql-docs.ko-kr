@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34016080"
 ---
 # <a name="client-libraries-data-providers-used-for-analysis-services-connections"></a>Analysis Services 연결에 사용 되는 클라이언트 라이브러리 (데이터 공급자)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

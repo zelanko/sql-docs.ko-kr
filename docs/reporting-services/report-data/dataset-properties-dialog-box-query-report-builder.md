@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020830"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>데이터 집합 속성 대화 상자, 쿼리(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **쿼리** 를 선택하여 보고서 서버에서 공유 데이터 집합을 선택하거나 포함된 데이터 집합을 만들 수 있습니다. 포함된 데이터 집합의 경우 데이터 원본을 선택하고 쿼리를 작성해야 합니다.  

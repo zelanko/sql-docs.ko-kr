@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030530"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting 속성 - SendUsingSMTPServer
   보고서 서버의 메일 구성에 있는 **SendUsing** 요소가 **true**로 설정되어 있는지 여부를 지정합니다.  

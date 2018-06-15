@@ -30,9 +30,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b82c0fdd7eadcf32c23be6c833e69868dde08e8
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078040"
 ---
 # <a name="sqlservr-application"></a>sqlservr 응용 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

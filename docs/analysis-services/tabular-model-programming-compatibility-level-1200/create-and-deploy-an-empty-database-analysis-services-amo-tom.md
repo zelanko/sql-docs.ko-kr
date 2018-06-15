@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34038582"
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>만들기 및 배포 (Analysis Services AMO-TOM) 빈 데이터베이스
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
