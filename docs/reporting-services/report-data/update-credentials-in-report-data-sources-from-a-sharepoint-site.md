@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021750"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   이 항목에서는 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본 및 보고서에 포함된 데이터 원본을 업데이트하는 방법에 대해 설명합니다.  

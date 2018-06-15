@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020600"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 생성(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 부모와 자식 간의 관계가 데이터 집합의 필드로 표현되는 재귀 데이터를 표시하려면 자식 필드를 기반으로 데이터 영역 그룹 식을 설정하고 부모 필드를 기반으로 Parent 속성을 설정합니다.  

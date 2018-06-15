@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023030"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  의 페이지를 매긴 보고서에서 입력란, 이미지, 차트 및 계기에 하이퍼링크 동작을 추가하는 방법을 알아봅니다. 링크를 통해 다른 보고서, 보고서의 책갈피 또는 정적 또는 동적 URL로 이동할 수 있습니다. 

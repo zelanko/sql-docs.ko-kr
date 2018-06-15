@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023730"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)
   차트에 있는 계열의 각 데이터 요소에 도구 설명을 추가하여 그룹 이름, 데이터 요소 값 또는 계열 합계에 대한 백분율 같은 데이터 요소에 대한 정보를 표시할 수 있습니다. 사용자가 렌더링된 페이지가 매겨진 보고서의 데이터 요소를 마우스로 가리키면 이 정보가 표시됩니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32968438"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>주석이 추가된 XDR 스키마(SQLXML 4.0에서는 더 이상 사용되지 않음)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

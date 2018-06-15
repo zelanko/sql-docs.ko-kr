@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021820"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
 단계별 보고서는 아래 예제와 같이 동일한 열의 부모 그룹 아래에 들여 쓴 정보 행 또는 자식 그룹을 표시하는 페이지가 매겨진  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 한 유형입니다.  

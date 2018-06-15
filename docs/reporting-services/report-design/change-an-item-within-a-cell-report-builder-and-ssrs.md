@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019520"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 입력란, 선 또는 이미지와 같은 비컨테이너 항목만 새 보고서 항목으로 대체할 수 있습니다. 예를 들어 테이블을 입력란으로 끌어 테이블로 입력란을 대체할 수 있습니다.  

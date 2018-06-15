@@ -27,9 +27,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077545"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ tablediff
  지원되는 매개 변수 목록을 반환합니다.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *source_server_name***\\*** instance_name*을 지정합니다.  
+ 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *source_server_name***\\***instance_name*을 지정합니다.  
   
  **-sourcedatabase** *source_database*  
  원본 데이터베이스의 이름입니다.  
@@ -110,7 +111,7 @@ tablediff
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *destination_server_name***\\*** instance_name*을 지정합니다.  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *destination_server_name***\\***instance_name*을 지정합니다.  
   
  **-destinationdatabase** *subscription_database*  
  대상 데이터베이스의 이름입니다.  

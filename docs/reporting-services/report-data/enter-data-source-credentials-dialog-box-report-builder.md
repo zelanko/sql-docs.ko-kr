@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018680"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>데이터 원본 자격 증명 입력 대화 상자(보고서 작성기)
   **데이터 원본 자격 증명 입력** 대화 상자를 사용하여 데이터 원본에서 데이터를 가져오기 위한 자격 증명을 제공할 수 있습니다.  

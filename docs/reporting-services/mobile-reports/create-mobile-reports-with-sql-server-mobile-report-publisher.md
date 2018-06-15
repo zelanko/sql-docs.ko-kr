@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018640"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 

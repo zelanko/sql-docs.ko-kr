@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016990"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
 부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019100"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
   미리 정의된 색상표를 선택하거나 사용자 지정 색상표를 정의하여 차트의 색상표를 변경할 수 있습니다. 사용자 지정 색상표는 이를 지정한 보고서에 대해서만 적용됩니다.  

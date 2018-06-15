@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027460"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  

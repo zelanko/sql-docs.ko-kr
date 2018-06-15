@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016080"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>분석 및 보고에 대한 Microsoft BI(Business Intelligence) 도구 선택
 적절한 비즈니스 인텔리전스 도구를 선택하는 것은 엄청날 수 있습니다. 다른 Microsoft 제품에 대해 알아보고 필요한 사항에 가장 맞는 하나를 찾아보세요.

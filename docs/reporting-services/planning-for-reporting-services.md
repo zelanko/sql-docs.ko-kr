@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018540"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services에 대한 계획
   다음 항목을 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 더 잘 이해할 수 있습니다. 사용자의 요구에 가장 적합한 방식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 환경을 설치 및 구성하는 방법을 자세히 알아보십시오.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028420"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체
   이 항목에서는 **SharePoint 모드 배포의 일부인** MSRS 2011 웹 서비스 SharePoint 모드 **및** MSRS 2011 Windows 서비스 SharePoint 모드 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 성능 개체에 대한 성능 카운터를 설명합니다.  

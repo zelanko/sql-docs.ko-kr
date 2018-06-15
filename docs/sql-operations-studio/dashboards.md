@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235583"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>대시보드 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

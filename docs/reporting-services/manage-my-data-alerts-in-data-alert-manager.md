@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017840"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
 

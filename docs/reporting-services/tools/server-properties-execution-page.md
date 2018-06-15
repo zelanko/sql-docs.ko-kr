@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031940"
 ---
 # <a name="server-properties-execution-page"></a>서버 속성(실행 페이지)
   이 페이지를 사용하여 보고서 실행 제한 시간 값을 설정할 수 있습니다. 이 값은 현재 보고서 서버 인스턴스에서 처리하는 모든 보고서에 적용됩니다. 개별 보고서에 대해 이 값을 다시 정의할 수 있습니다. 보고서 서버에서 수행되는 모든 보고서 처리와 보고서 서버가 보고서에 사용되는 데이터를 검색할 때 데이터베이스에서 수행되는 쿼리 처리를 감안하여 값을 지정해야 합니다.  

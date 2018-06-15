@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014890"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL 액세스를 사용하여 Reporting Services 통합 - 웹 응용 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 URL 액세스는 네트워크를 통해 개별 보고서에 액세스할 수 있도록 특별히 디자인되었습니다. 이런 유형의 액세스는 보고서 보기와 탐색을 사용자 지정 웹 응용 프로그램으로 통합하는 데 알맞습니다. 웹 응용 프로그램에서 URL 액세스를 사용하려면 다음 작업을 수행할 수 있습니다.  

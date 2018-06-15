@@ -33,9 +33,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078210"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -249,7 +250,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
- 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\*** instance_name*을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+ 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **-S** *database_name*  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  

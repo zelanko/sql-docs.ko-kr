@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016350"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
   **Connection** 개체는 데이터 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  

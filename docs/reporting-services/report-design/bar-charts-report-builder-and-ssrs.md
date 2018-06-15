@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021830"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)
   가로 막대형 차트는 계열을 가로 막대 집합으로 표시합니다. 일반 가로 막대형 차트는 세로 막대 집합으로 계열을 표시하는 세로 막대형 차트 및 시작점과 끝점이 다양한 가로 막대 집합으로 계열을 표시하는 범위형 가로 막대 차트와 밀접하게 연관되어 있습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019420"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 집합의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.

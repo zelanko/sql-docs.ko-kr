@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019110"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
   페이지 머리글 또는 바닥글에 정적 텍스트, 이미지, 선, 사각형 및 테두리를 추가할 수 있습니다. 머리글 또는 바닥글에 변수나 계산된 데이터를 포함하려면 입력란에 식 및 데이터 바인딩된 이미지를 배치합니다.  

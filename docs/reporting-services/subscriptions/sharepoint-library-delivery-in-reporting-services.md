@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032280"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  

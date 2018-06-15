@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023900"
 ---
 # <a name="report-builder-functions---inscope-function"></a>보고서 작성기 함수 - InScope 함수
   항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023400"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 계기 범위가 계기에서 값의 중요한 하위 섹션을 나타내는 계기 눈금의 영역입니다. 계기 범위를 사용하여 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타낼 수 있습니다. 범위는 시작 값과 끝 값으로 정의됩니다.  

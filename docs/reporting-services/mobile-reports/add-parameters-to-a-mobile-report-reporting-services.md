@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018390"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>모바일 보고서에 매개 변수 추가 | Reporting Services
 작성자와 보고서를 읽는 사람이 보고서를 필터링할 수 있도록 매개 변수가 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 작성할 수 있습니다. 매개 변수가 있는 보고서는 [원본 보고서에서 드릴스루](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)의 대상이 될 수도 있습니다. 

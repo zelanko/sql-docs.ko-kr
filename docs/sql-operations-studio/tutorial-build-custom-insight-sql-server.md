@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235757"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 빌드 사용자 지정 통찰력 위젯
 
