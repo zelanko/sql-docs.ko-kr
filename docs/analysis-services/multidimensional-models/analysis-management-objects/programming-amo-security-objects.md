@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023190"
 ---
 # <a name="programming-amo-security-objects"></a>AMO 보안 개체 프로그래밍
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 AMO 보안 개체를 사용하는 보안 개체를 프로그래밍하거나 응용 프로그램을 실행하려면 Server Administrator 그룹 또는 Database Administrator 그룹의 멤버여야 합니다. Server Administrator와 Database Administrator는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 제공하는 액세스 수준입니다.  

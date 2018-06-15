@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027413"
 ---
 # <a name="connections-in-adomdnet"></a>ADOMD.NET에서 연결
   ADOMD.NET을 사용 하 여는 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 개체와 같은 분석 데이터 원본 연결을 열려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스. 연결이 더 이상 필요하지 않으면 명시적으로 연결을 닫아야 합니다.  
