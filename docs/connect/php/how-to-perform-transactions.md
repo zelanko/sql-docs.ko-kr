@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307662"
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ PDO_SQLSRV 드라이버는 트랜잭션을 수행하기 위해 세 가지 메서
   
 이 항목의 나머지 부분에서는 SQLSRV 드라이버를 사용하여 트랜잭션을 수행하는 방법을 설명하고 예로 보여 줍니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 트랜잭션을 실행하는 단계는 다음과 같이 요약할 수 있습니다.  
   
 1.  사용 하 여 트랜잭션을 시작 **sqlsrv_begin_transaction**합니다.  
@@ -153,10 +153,10 @@ function perform_trans_ops($conn, $orderId)
 ?>  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
 트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램에 대 한 모든 호출에 검사 권장는 **sqlsrv** 오류에 대 한 함수를 그에 따라 처리 합니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [트랜잭션 (데이터베이스 엔진)](https://msdn.microsoft.com/library/ms190612.aspx)

@@ -3,7 +3,6 @@ title: SQL Server 용 PHP 드라이버와 함께 상시 암호화를 사용 하 
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 93b14d81411e3045d9d6f3a67ce03db281f41f68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f5035dc42b130afe7da8c27a1c6036e79e2fa0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309912"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 용 PHP 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 
 Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. 상시 암호화 지원 드라이버와 같은 SQL Server 용 ODBC 드라이버에서 투명 하 게 암호화 하 고 클라이언트 응용 프로그램의 중요 한 데이터를 해독 합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. SQL Server 용 PHP 드라이버는 ODBC Driver for SQL Server 중요 한 데이터 암호화를 사용 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
  -   데이터베이스에서 상시 암호화를 구성합니다. 이 구성에는 상시 암호화 키를 프로 비전 하 고 선택한 데이터베이스 열에 대 한 암호화를 설정 해야 합니다. 데이터베이스에 상시 암호화가 구성되지 않은 경우 [상시 암호화 시작](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)의 지침을 따르세요. 특히, 데이터베이스 열 마스터 키 (CMK), 열 암호화 키 (CEK), 및 해당 CEK를 사용 하 여 암호화 하는 하나 이상의 열을 포함 하는 테이블에 대 한 메타 데이터 정의 포함 해야 합니다.
  -   ODBC Driver for SQL Server 버전 17 이상인 개발 컴퓨터에 설치 되어 있는지 확인 합니다. 자세한 내용은 참조 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.
@@ -286,7 +286,7 @@ PDO_SQLSRV에만 해당:
  
 PHP 드라이버에는 또한 SQL Server 및 데이터베이스에 대 한 ODBC 드라이버에 의해 적용 되는 제한을 상속 합니다. 참조 [상시 암호화를 사용 하는 경우 ODBC 드라이버의 제한 사항](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 및 [기능 정보 항상 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PHP SQL 드라이버 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 드라이버 API 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)  

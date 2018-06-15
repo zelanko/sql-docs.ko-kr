@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18e2bce52e855c14c0113f37b15e5f81f957fe21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21e1d96c2b891ae02ca747b22f1a1a96066f385
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309022"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>반환 값  
 메서드 호출에 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 PDO::rollback은 PDO::ATTR_AUTOCOMMIT의 값에 영향을 받지도 않고 영향을 주지도 않습니다.  
   
 PDO::rollback을 사용하는 예제는 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 을 참조하세요.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

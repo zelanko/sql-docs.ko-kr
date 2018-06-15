@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 587dc6b38daa7a79471e568d7c90dadbbb9adfd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310192"
 ---
 # <a name="using-directional-parameters"></a>방향 매개 변수 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDO_SQLSRV 드라이버를 사용 하는 경우 사용할 수 있습니다 [pdos
 |[방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|출력 매개 변수를 사용하여 저장 프로시저를 호출하는 방법과 해당 값을 검색하는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 입력 및 출력 매개 변수 검색](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|입출력 매개 변수를 사용하여 저장 프로시저를 호출하는 방법과 해당 값을 검색하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
 
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

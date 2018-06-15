@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288462"
 ---
 # <a name="server-property-rds"></a>서버 속성 (RDS)
 인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.  
@@ -120,13 +120,13 @@ DataControl.Server=""
  *DataControl*  
  개체 변수를 나타내는 **.rds입니다 DataControl** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서버는 위치에는 **.rds입니다 DataControl** (즉, 쿼리 또는 업데이트) 요청이 처리 됩니다. 기본적으로 모든 요청이 처리 되는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체 [MSDFMAP 합니다. 처리기](../../../ado/guide/remote-data-service/datafactory-customization.md) 구성 요소 및 [MSDFMAP 합니다. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) 지정된 된 서버에서 파일입니다. 이전 구문과 새 설정을 조정 하는 서버를 변경 하는 경우 사용자에 게 유의 **MSDFMAP 합니다. INI** 파일입니다. 호환성 문제는 성공 하는 요청에 다른 오류가 발생 한 서버에서 발생할 수 있습니다. 서버 속성을 빈 문자열로 설정 되어 있으면 "", 로컬 컴퓨터에서 이러한 개체를 사용 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서버 속성 (VBScript) 예제](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [속성 (RDS) 연결](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL 속성](../../../ado/reference/rds-api/sql-property.md)   

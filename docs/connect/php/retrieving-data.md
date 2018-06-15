@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 433635c8260ca4ae2d3a3132f093f8eb5341fad0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309192"
 ---
 # <a name="retrieving-data"></a>데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -80,10 +80,10 @@ PDO_SQLSRV 드라이버는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.
 |[커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|SQLSRV 드라이버를 사용하는 경우에 순서에 관계없이 액세스할 수 있는 행으로 결과 집합을 만드는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|날짜 및 시간 형식을 문자열로 검색하는 방법을 설명합니다.|  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [데이터 검색](../../connect/php/retrieving-data.md)  

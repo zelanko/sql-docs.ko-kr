@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b3f6112d56dbb8989438730f50b11e733f71ed7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d8de0d865584fc45f5da732b5bdf79c6edef650
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307472"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>설명서의 코드 예제 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,6 +54,6 @@ ms.lasthandoff: 05/03/2018
   
     오류 및 경고 처리에 대한 자세한 내용은 [오류 및 경고 처리](../../connect/php/handling-errors-and-warnings.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
   

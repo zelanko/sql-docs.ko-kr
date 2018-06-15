@@ -2,7 +2,7 @@
 title: 메타 데이터 검색 | Microsoft Docs
 description: OLE DB 드라이버에서 SQL Server에 대 한 메타 데이터 검색
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 978e6eb5ed864e77fbd6600848d2ce77c0e92d2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3980b8064b565dc09ebb79e9d81be9c6f85fc21a
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611638"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   메타 데이터 검색 개선 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] OLE DB Driver for SQL Server 응용 프로그램을 해당 열을 허용 또는 쿼리 실행에서 반환 된 매개 변수 메타 데이터는 동일 하거나 하기 전에 지정한 메타 데이터 형식과 호환 쿼리를 실행 합니다. 쿼리 실행 후 반환된 메타데이터가 쿼리를 실행하기 전에 지정한 메타데이터 형식과 호환되지 않는 경우 오류가 발생합니다.  
   
@@ -29,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 용 OLE DB 드라이버를 사용 하 여 응용 프로그램을 개발 하지만 서버 버전에 연결 하는 경우 보다 이전 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 메타 데이터 검색 기능이 서버 버전에 해당 됩니다.  
   
-## <a name="remarks"></a>주의   
+## <a name="remarks"></a>Remarks   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 다음 OLE DB 멤버 함수의 기능이 개선되어 메타데이터 검색 기능이 향상되었습니다.  
   
 -   IColumnsInfo::GetColumnInfo  
@@ -46,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

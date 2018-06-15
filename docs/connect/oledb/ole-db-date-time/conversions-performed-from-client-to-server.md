@@ -2,10 +2,10 @@
 title: 서버에 클라이언트에서 변환이 수행 | Microsoft Docs
 description: 클라이언트에서 서버로 수행 되는 변환
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a61001b562c982d4a6b5734f5840bf3b7e22b4ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b697052bf9de21671201ae840f828c0fc73481d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666363"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 문서에서는 간에 수행 되는 날짜/시간 변환 설명 SQL Server 용 OLE DB Driver로 작성 된 클라이언트 응용 프로그램 및 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (또는 이상).  
   
@@ -35,14 +38,14 @@ ms.lasthandoff: 05/03/2018
 |대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1, 2|1, 3, 4|4, 12|1, 12|1, 12|1, 12|1, 5, 12|1, 12|1, 12|1, 12<br /><br /> datetime2(0)|  
-|DBDATE|1.|-|-|1, 6|1, 6|1, 6|1, 5, 6|1, 10|1, 10|1.<br /><br /> date|  
-|DBTIME|-|1.|1.|1, 7|1, 7|1, 7|1, 5, 7|1, 10|1, 10|1.<br /><br /> Time(0)|  
-|DBTIME2|-|1, 3|1.|1, 7, 10, 14|1, 7, 10, 15|1, 7, 10|1, 5, 7, 10|1, 10, 11|1, 10, 11|1.<br /><br /> Time(7)|  
+|DBDATE|1|-|-|1, 6|1, 6|1, 6|1, 5, 6|1, 10|1, 10|1<br /><br /> 날짜|  
+|DBTIME|-|1|1|1, 7|1, 7|1, 7|1, 5, 7|1, 10|1, 10|1<br /><br /> Time(0)|  
+|DBTIME2|-|1, 3|1|1, 7, 10, 14|1, 7, 10, 15|1, 7, 10|1, 5, 7, 10|1, 10, 11|1, 10, 11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1, 2|1, 3, 4|1, 4, 10|1, 10, 14|1, 10, 15|1, 10|1, 5, 10|1, 10,11|1, 10, 11|1, 10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1, 2, 8|1, 3, 4, 8|1, 4, 8, 10|1, 8, 10, 14|1, 8, 10, 15|1, 8, 10|1, 10|1, 10, 11|1, 10, 11|1, 10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1, 2|1, 3, 4|1, 4, 13|1, 13|1, 13|1, 13|1, 5, 13|1, 13|1, 10|1, 13<br /><br /> datetime2(3)|  
 |BYTES|-|-|-|-|-|-|-|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
-|VARIANT|1.|1|1.|1, 10|1, 10|1, 10|1, 10|해당 사항 없음|해당 사항 없음|1, 10|  
+|VARIANT|1|1|1|1, 10|1, 10|1, 10|1, 10|해당 사항 없음|해당 사항 없음|1, 10|  
 |SSVARIANT|1, 16|1, 16|1, 16|1, 10, 16|1, 10, 16|1, 10, 16|1, 10, 16|해당 사항 없음|해당 사항 없음|1, 16|  
 |BSTR|1, 9|1, 9|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |STR|1, 9|1, 9|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|1, 9, 10|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 |------------|-------------|  
 |-|변환이 지원되지 않습니다. 에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 바인딩이 확인 되 면 iaccessor:: Createaccessor를 호출할 때 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |해당 사항 없음|이 오류에는 이 작업을 적용할 수 없습니다.|  
-|1.|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
+|1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
 |4|날짜 구성 요소가 무시됩니다.|  
@@ -78,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [바인딩 및 변환 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb23a63d77461cb13784c515bd0638af277e63b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308272"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>예외  
 PDOException입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 Pdo:: query를 사용 하 여 실행 하는 쿼리는 준비 된 문을 실행할 수 있습니다 또는 pdo:: SQLSRV_ATTR_DIRECT_QUERY의 설정에 따라 직접 합니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.  
   
 Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT; exec의 동작을도 영향을 줍니다. 자세한 내용은 참조 [pdo:: setattribute](../../connect/php/pdo-setattribute.md)합니다.  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

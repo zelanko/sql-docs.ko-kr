@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306782"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server 테이블 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  DBCOLUMNDESC의 열 속성이 나타내는 의미는 다음과 같습니다.  
   
-|속성 ID|설명|  
+|속성 ID|Description|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 만든 열에 identity 속성을 설정 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 ID 속성은 테이블 내의 단일 열에 대해서만 유효합니다. VARIANT_TRUE로 단일 열에서 OLE DB Driver for SQL Server가 서버에서 테이블을 만들려고 할 때 오류를 생성 하는 보다 더 많은 대 한 속성을 설정 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성에 대 한 에서만 유효는 **정수**, **숫자**, 및 **10 진수** 는 소수 자릿수가 0 인 경우 형식입니다. 다른 데이터 형식의 열에서이 속성을 variant_true로 설정 된 OLE DB Driver for SQL Server가 서버에서 테이블을 만들려고 할 때 오류가 생성 됩니다.<br /><br /> DBPROP_COL_AUTOINCREMENT 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE는 OLE DB Driver for SQL Server가 DB_S_ERRORSOCCURRED를 반환 및 *dwOption* dbprop_col_nullable이 dbpropoptions_required가 아니면 합니다. DBPROP_COL_AUTOINCREMENT 및 DBPROP_COL_NULLABLE이 모두 VARIANT_TRUE DB_E_ERRORSOCCURRED가 반환 및 *dwOption* 이 dbpropoptions_required 이면 dbprop_col_nullable 합니다. 열이 정의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identity 속성과 고 DBPROP_COL_NULLABLE *dwStatus* 멤버가 DBPROPSTATUS_CONFLICTING으로 설정 됩니다.|  
 |DBPROP_COL_DEFAULT|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: 만듭니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열에 대 한 DEFAULT 제약 조건입니다.<br /><br /> *vValue* DBPROP 멤버 많은 형식 중 하나일 수 있습니다. *vValue.vt* 멤버에는 열의 데이터 형식과 호환 되는 유형을 지정 해야 합니다. 예를 들어 DBTYPE_WSTR로 정의된 열의 기본값으로 BSTR N/A를 정의하는 것은 서로 호환되므로 가능합니다. 동일한 기본 DBTYPE_R8는 OLE DB Driver for SQL Server가 서버에서 테이블을 만들려고 할 때 오류가 생성으로 정의 된 열에서 정의 합니다.|  
@@ -220,7 +220,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 및 인덱스](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

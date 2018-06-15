@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11352389bb76440bfec32eae185d64550c249fc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 152ada5137bd1e803f4cfe3ef9d34d30f90acfe7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308888"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,6 +75,6 @@ ms.lasthandoff: 05/03/2018
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [서버에 연결](../../connect/php/connecting-to-the-server.md)  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307231"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,18 +33,18 @@ ms.lasthandoff: 05/03/2018
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|지원되지 않음|  
 |Boolean|bit|bit|  
-|정수|int|int|  
-|부동|float(24)|지원되지 않음|  
+|정수|ssNoversion|ssNoversion|  
+|float|float(24)|지원되지 않음|  
 |String(8000바이트보다 작은 길이)|varchar(<string length>)|varchar(<string length>)|  
 |문자열(8,000바이트를 초과하는 길이)|varchar(max)|varchar(max)|  
 |리소스|지원되지 않습니다.|지원되지 않습니다.|  
 |Stream(인코딩: 이진 아님)|varchar(max)|varchar(max)|  
 |Stream(인코딩: 이진)|varbinary|varbinary|  
 |Array|지원되지 않습니다.|지원되지 않습니다.|  
-|개체|지원되지 않습니다.|지원되지 않습니다.|  
-|DateTime(1)|datetime|지원되지 않습니다.|  
+|Object|지원되지 않습니다.|지원되지 않습니다.|  
+|DateTime(1)|DATETIME|지원되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [데이터 형식 변환](../../connect/php/converting-data-types.md)

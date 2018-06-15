@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f46806b705a069164d01accf4efd2169563442db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97944a4756600d62cc770e337c5477b1ee748e6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307982"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
@@ -34,7 +34,7 @@ Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 S
 * [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>설명서  
-* [시작 하기](getting-started-with-the-php-sql-driver.md)
+* [시작](getting-started-with-the-php-sql-driver.md)
 * [개요](overview-of-the-php-sql-driver.md)
 * [프로그래밍 가이드](programming-guide-for-php-sql-driver.md) 
 * [Security Considerations](security-considerations-for-php-sql-driver.md)

@@ -2,7 +2,7 @@
 title: SQL Server 2005 Native Client에서 응용 프로그램 업데이트 | Microsoft Docs
 description: SQL Server 2005 Native Client에서 응용 프로그램 업데이트
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: faea11704538aea426d5c1c6fdbe8018893dcdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a03e3ec34c29821a6b29d3174b11c5376511e6
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612068"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 응용 프로그램 업데이트
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,5 +48,5 @@ ms.lasthandoff: 05/03/2018
 |에 빈 문자열을 삽입 한 **sql_variant** 오류를 생성 하는 날짜/시간 유형으로 바인딩된 합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0에서는에 빈 문자열을 삽입 한 **sql_variant** 바운드 날짜/시간 유형 오류를 생성 하지 않았습니다. OLE DB Driver for SQL Server는 잘못이 상황에서 오류를 생성합니다.|  
 |트리거가 실행될 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 다른 결과를 반환할 수 있습니다.|에 도입 된 변경 내용은 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 응용 프로그램 트리거를 실행할 때 발생 하는 문에서 반환 하는 다른 결과가 발생할 수 있습니다 **NOCOUNT OFF** 가 적용 됩니다. 이 경우 응용 프로그램에서 오류가 발생할 수 있습니다. 이 오류를 해결 하려면 설정 **NOCOUNT ON** 트리거의 합니다.|  
 
-## <a name="see-also"></a>관련 항목:   
+## <a name="see-also"></a>관련 항목   
  [SQL Server용 OLE DB 드라이버](../../oledb/oledb-driver-for-sql-server.md)

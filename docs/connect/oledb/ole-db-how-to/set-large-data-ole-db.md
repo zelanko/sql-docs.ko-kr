@@ -2,10 +2,10 @@
 title: 대형 데이터 설정 (OLE DB) | Microsoft Docs
 description: 대형 데이터 설정 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c163f7628aa81135ecacc41c1c95f975cc46ff27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d04b6165e3c023bcd3df9c5617c700d253491ad
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665493"
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 BLOB 데이터를 설정하고 테이블을 만들어 예제 레코드를 추가한 다음 행 집합에서 해당 레코드를 인출하고 BLOB 필드의 값을 설정하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
-3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. 설정의 **wType** dbtype_iunknown으로 DBBINDING 구조에는 요소 및 **pObject** 요소 만든 DBOBJECT 구조를 가리키도록 합니다.  
+3.  DBBINDING 구조의 배열을 사용하여 각 열에 대해 하나씩 바인딩 집합을 만듭니다. DBBINDING 구조의 **wType** 요소를 DBTYPE_IUNKNOWN으로 설정하고 **pObject** 요소를 앞에서 만든 DBOBJECT 구조를 가리키도록 설정합니다.  
   
 4.  구조의 DBBINDINGS 배열에 있는 바인딩 정보를 사용하여 접근자를 만듭니다.  
   

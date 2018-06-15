@@ -2,7 +2,7 @@
 title: 클라이언트 연결의 서비스 사용자 이름 (SPN) 지원 | Microsoft Docs
 description: 클라이언트 연결의 이름 SPN (서비스 사용자) 지원
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612328"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], 모든 프로토콜에서 상호 인증을 사용 하도록 서비스 사용자 이름 (Spn)에 대 한 지원이 확장 되었습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Spn 대해서만 지원 되었습니다 Kerberos TCP를 통한 때 기본에 대 한 SPN의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Active Directory에 등록 된 인스턴스가 있습니다.  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  이 기능을 보여 주는 예제 응용 프로그램에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 기능 예제](http://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

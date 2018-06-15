@@ -1,7 +1,7 @@
 ---
 title: SQL Server 용 OLE DB 드라이버에 대 한 지원 정책 | Microsoft Docs
 description: OLE DB Driver for SQL Server에 대 한 지원 정책
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -14,14 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7660feb4b041804c33465b47d738085eecf4ca4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93bea39ced15c0656fc29d459cfede83028d3e3a
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612128"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server에 대 한 지원 정책
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,5 +46,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="ole-db-support-policies"></a>OLE DB 지원 정책  
 응용 프로그램은 Windows 운영 체제에 포함 된 OLE DB 공급자 (SQLOLEDB)를 사용할 수 있습니다. 그러나 유지 관리 모드에 하 고 더 이상 업데이트 합니다. 대신 사용 해야 OLE DB Driver SQL Server (MSOLEDBSQL)에 대 한 합니다.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

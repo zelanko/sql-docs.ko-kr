@@ -2,7 +2,6 @@
 title: Item 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -50,11 +49,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94826364231c295986d762361d6b946cba7e0b8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279252"
 ---
 # <a name="item-property-ado"></a>Item 속성 (ADO)
 이름 또는 서 수는 컬렉션의 특정 멤버를 나타냅니다.  
@@ -72,7 +72,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant** 은 이름 또는 컬렉션에 있는 개체의 서 수를 계산 되는 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **항목** 속성을 컬렉션에서 특정 개체를 반환 합니다. 경우 **항목** 에 해당 하는 컬렉션에서 개체를 찾을 수 없습니다는 *인덱스* 인수, 오류가 발생 합니다. 또한 일부 컬렉션; 명명 된 개체를 지원 하지 않습니다. 이러한 컬렉션에 대 한 서 수 참조를 사용 해야 합니다.  
   
  **항목** 속성은 모든 컬렉션에 대 한 기본 속성; 따라서 다음 구문 형식은 서로 전환이 가능 합니다.  
@@ -94,6 +94,6 @@ collection (Index)
 |[Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [항목 속성 예제 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 속성 예제(VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

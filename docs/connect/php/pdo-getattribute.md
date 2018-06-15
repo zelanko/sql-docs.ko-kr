@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e0fc4e6cf98af6b688fe3752b7b57eda134341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308152"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,19 +39,19 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="return-value"></a>반환 값  
 성공하면 연결 옵션, 미리 정의된 PDO 특성 또는 사용자 지정 드라이버 특성의 값을 반환하고, 실패하면 null을 반환합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 다음 표에는 지원되는 특성 목록이 나와 있습니다.  
   
-|Attribute|처리기|지원되는 값|Description|  
+|attribute|처리기|지원되는 값|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|특정 사례에 열 이름이 있는지 여부를 지정합니다. PDO::CASE_LOWER는 열 이름을 소문자로 지정하고, PDO::CASE_NATURAL은 열 이름을 데이터베이스에서 반환된 대로 유지하며, PDO::CASE_UPPER는 열 이름을 대문자로 지정합니다.<br /><br />기본값은 PDO::CASE_NATURAL입니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열 배열|드라이버 및 관련 라이브러리의 버전을 설명합니다. 다음 요소로 배열을 반환 합니다: ODBC 버전 (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL 이름과 버전, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*. *MinorVer*. *BuildNumber*. *수정 버전*)|  
-|PDO::ATTR_DRIVER_NAME|PDO|문자열|항상 "sqlsrv"를 반환합니다.|  
-|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|나타냅니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*. *MinorVer*. *BuildNumber*. *수정 버전*)|  
+|PDO::ATTR_DRIVER_NAME|PDO|String|항상 "sqlsrv"를 반환합니다.|  
+|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|나타냅니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*. *MinorVer*. *BuildNumber*. *수정 버전*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|드라이버에서 오류를 처리하는 방법을 지정합니다.<br /><br />PDO::ERRMODE_SILENT(기본값)에서는 오류 코드 및 정보를 설정합니다.<br /><br />PDO::ERRMODE_WARNING은 E_WARNING을 발생시킵니다.<br /><br />PDO::ERRMODE_EXCEPTION은 예외를 발생시킵니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
 |PDO::ATTR_SERVER_INFO|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|3개 요소 배열|현재 데이터베이스, SQL Server 버전 및 SQL Server 인스턴스를 반환합니다.|  
-|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|SQL Server 버전을 나타냅니다 (*주요*. *사소한*. *BuildNumber*)|  
+|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|SQL Server 버전을 나타냅니다 (*주요*. *사소한*. *BuildNumber*)|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1부터 PHP 메모리 제한까지입니다.|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10, 240 기술 자료 (10MB).<br /><br />클라이언트 쪽 커서에 대 한 자세한 내용은 참조 [커서 유형 &#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)합니다.|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|직접 또는 준비된 쿼리 실행을 지정합니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.|  
@@ -91,7 +91,7 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

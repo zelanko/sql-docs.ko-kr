@@ -2,10 +2,10 @@
 title: 매개 변수 및 행 집합 메타 데이터 | Microsoft Docs
 description: 매개 변수 및 행 집합 메타 데이터
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ee8dc8c918f36c3d6dc8626254c87ced79c253ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92be2b0f5ed0ae3911bd5593f82c6e493075646e
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666373"
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타 데이터-매개 변수 및 행 집합
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 문서에서는 다음과 같은 형식 및 형식 멤버에 관련 된 향상 된 OLE DB 날짜 및 시간 기능에 대 한 정보를 제공 합니다.  
   
@@ -42,11 +45,11 @@ ms.lasthandoff: 05/03/2018
   
 |매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|지우기|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
+|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  값 범위가 연속되지 않을 수도 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
@@ -59,11 +62,11 @@ ms.lasthandoff: 05/03/2018
 |*pwszDataSourceType*<br /><br /> (공급자별로 다름)|*pwszDataSourceType*<br /><br /> (OLE DB 일반)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|무시됨|  
-|date|DBTYPE_DBDATE|6|무시됨|  
+|날짜|DBTYPE_DBDATE|6|무시됨|  
 ||DBTYPE_DBTIME|10|무시됨|  
-|time|DBTYPE_DBTIME2|10|0..7|  
+|Time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|무시됨|  
-|datetime||16|무시됨|  
+|DATETIME||16|무시됨|  
 |datetime2 또는 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 05/03/2018
 |바인딩 유형|*pwszDataSourceType*<br /><br /> (공급자별로 다름)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|날짜|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -87,11 +90,11 @@ ms.lasthandoff: 05/03/2018
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|지우기|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
+|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  DBCOLUMN_FLAGS에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
@@ -121,11 +124,11 @@ ms.lasthandoff: 05/03/2018
   
 |매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
  *dwFlags*, DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 날짜/시간 형식에 대 한 true 및 다음과 같은 플래그는 항상 false:  
@@ -146,7 +149,7 @@ ms.lasthandoff: 05/03/2018
   
  새 플래그 DBCOLUMNFLAGS_SS_ISVARIABLESCALE에 제공 된 *dwFlags* 응용 프로그램을 하는 열의 서버 유형을 확인할 수 있도록 여기서 *wType* 이 dbtype_dbtimestamp 인 합니다. *bScale* 서버 유형을 확인을 사용 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
   
   

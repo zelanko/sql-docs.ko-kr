@@ -2,10 +2,10 @@
 title: 사용 하 여 향상 된 날짜 및 시간 기능 (OLE DB) | Microsoft Docs
 description: 향상 된 날짜 및 시간 기능 (OLE DB)를 사용 하 여
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 524ea1ef15da4143ddd44643b47aca5618dbdbb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1875ed56ee92fbb02013cfd3df0477453a272be5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665843"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상 된 날짜 및 시간 기능 (OLE DB)를 사용 하 여
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 예제에서는 새로운 네 가지 날짜 및 시간 형식(**date**, **time**, **datetime2**및 **datetimeoffset**)을 사용하여 매개 변수가 있는 명령을 실행하고 행 집합 결과를 검색합니다.  
   

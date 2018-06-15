@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d93c7a83880e81331f6322386fa3ccbc983fc4ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad752273420523a9f8a72db01b8c3053a5b05bfb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306132"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  이전에 무효화 된 대량 복사 행 집합에서 호출 되는 **irowsetfastload:: Commit** 메서드.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  OLE DB Driver for SQL Server 대량 복사 행 집합은 지연 업데이트 모드 행 집합으로 동작합니다. 행 집합을 통해 행 데이터를 삽입 하는 사용자, 삽입 된 행은 처리 되는 동일한 방식으로 삽입 지 원하는 행 집합에서 보류 중인 **IRowsetUpdate**합니다.  
   
  소비자를 호출 해야는 **커밋** 작성 된 행을 삽입된 하는 대량 복사 행 집합에 대 한 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 동일한 방식으로 테이블의 **irowsetupdate:: Update** 메서드는 보류 중인 행을 제출 하는 데 사용 됩니다는 SQL Server의 인스턴스입니다.  
@@ -62,7 +62,7 @@ HRESULT Commit(
   
  소비자를 호출 하 여 삽입 된 행 일괄 처리 수 있습니다는 **커밋** 메서드는 *fDone* 인수가 FALSE로 설정 합니다. 때 *fDone*가 TRUE로 설정 된 행 집합은 유효 하지 않게 합니다. 잘못 된 대량 복사 행 집합 지원는 **ISupportErrorInfo** 인터페이스 및 **irowsetfastload:: Release** 메서드.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

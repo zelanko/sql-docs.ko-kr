@@ -2,10 +2,10 @@
 title: SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기 | Microsoft Docs
 description: OLE DB Driver for SQL Server 응용 프로그램 만들기
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9990a169beca3f676a19d3f12aadd5d7cf6a671
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665313"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 응용 프로그램에 대 한 OLE DB 드라이버 만들기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 응용 프로그램을 만드는 다음 단계를 따르십시오.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [데이터 원본에 대 한 연결을 설정합니다.](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
+-   [데이터 원본에 대한 연결 설정](../../oledb/ole-db-driver/establishing-a-connection-to-a-data-source.md)  
   
 -   [명령 실행](../../oledb/ole-db-driver/executing-a-command.md)  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server용 OLE DB 드라이버에서 OLE DB와 함께 OUTPUT 절 사용](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -2,7 +2,7 @@
 title: SQL Server 용 OLE DB 드라이버와 응용 프로그램을 구축 | Microsoft Docs
 description: 사용한 응용 프로그램 작성 OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -19,14 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 48d5ea2a58b2a9466b5a32387143a4540c321355
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612118"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버 빌딩 응용 프로그램
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -57,6 +58,6 @@ ms.lasthandoff: 05/03/2018
  [SQL Server용 OLE DB 드라이버에 대한 지원 정책](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  다양 한 데이터 액세스 구성 요소가 사용 하 여 서로 다른 버전의 OLE DB Driver for SQL Server에 설명 합니다.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

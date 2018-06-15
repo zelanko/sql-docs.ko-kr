@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44f0da4f969f145e66eb309f2cc90d7f5981d7f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309002"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>섹션 내용  
 SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.  
   
-|함수|Description|  
+|기능|Description|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|트랜잭션을 시작합니다.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|문을 취소하고 문에 대한 모든 보류 중인 결과를 삭제합니다.|  
@@ -61,7 +61,7 @@ SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.
 ## <a name="reference"></a>참조  
 [PHP 매뉴얼](http://php.net/manual)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

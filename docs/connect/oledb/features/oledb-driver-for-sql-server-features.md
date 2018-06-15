@@ -2,7 +2,7 @@
 title: SQL Server 기능에 대 한 OLE DB 드라이버 | Microsoft Docs
 description: OLE DB Driver SQL Server 기능에 대 한
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612358"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB Driver for SQL Server 기능
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server용 OLE DB 드라이버의 LocalDB 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  SQL Server에서 지 원하는 LocalDB 기능에 대 한 OLE DB Driver를 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [SQL Server용 OLE DB 드라이버 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  

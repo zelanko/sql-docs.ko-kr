@@ -2,7 +2,7 @@
 title: 큰 값 형식을 사용 하 여 | Microsoft Docs
 description: SQL Server 용 OLE DB Driver 큰 값 형식 사용
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c610ff761a2b1af3ee4f0feda402346efc1dcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612098"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과 하는 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 도입는 **max** 지정자에 대 한 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식을 저장할 수 있도록 값의 2 ^31-1 바이트 수입니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수를 지정할 수 있습니다 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 데이터 형식입니다.  
   
@@ -694,7 +697,7 @@ _ExitProcessResultSet:
  OLE DB Driver for SQL Server 큰 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 참조 [and OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)합니다.  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

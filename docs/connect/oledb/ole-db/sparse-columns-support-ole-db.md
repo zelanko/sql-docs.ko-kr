@@ -2,10 +2,10 @@
 title: 스파스 열 지원 (OLE DB) | Microsoft Docs
 description: 스파스 열 지원 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d505ef702a1fda4b3896b51efb23c2b3b761bf33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5acd9fc1a368f9f7701468887263129495b046e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611928"
 ---
 # <a name="sparse-columns-support-ole-db"></a>스파스 열 지원(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 항목에서는 스파스 열에 대 한 SQL Server 지원에 대 한 OLE DB 드라이버에 대 한 정보를 제공 합니다. 스파스 열에 대 한 자세한 내용은 참조 [OLE DB Driver for SQL Server의에서 스파스 열 지원](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)합니다. 샘플을 보려면 [표시 열 및 스파스 열의 카탈로그 메타 데이터 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)합니다.  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |IOpenRowset::OpenRowset|Iopenrowset:: Openrowset와 icommand:: Execute, 같은 열이 있는 행 집합 반환을 **선택 \***  동일한 테이블에 대 한 쿼리 합니다.|  
 |ITableDefinition|이 인터페이스 또는 스파스 열에 변경 내용이 없는지 **column_set** 열입니다. 스키마를 수정해야 하는 응용 프로그램에서는 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 직접 실행해야 합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

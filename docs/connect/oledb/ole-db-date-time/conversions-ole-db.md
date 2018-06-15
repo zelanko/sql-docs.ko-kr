@@ -2,10 +2,10 @@
 title: 바인딩 및 변환 (OLE DB) | Microsoft Docs
 description: 바인딩 및 변환 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 79887c62b3cd26c194bf140b29b836bf9140eb85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666023"
 ---
 # <a name="conversions-ole-db"></a>변환 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 섹션에서는 간을 변환 하는 방법을 설명 **datetime** 및 **datetimeoffset** 값입니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 05/03/2018
  [서버에서 클라이언트로 수행되는 변환](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  사이 수행 하는 날짜/시간 변환에 설명 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (또는 이상) SQL Server 용 OLE DB Driver로 작성 된 클라이언트 응용 프로그램 및입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 & #40; OLE db& #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [날짜 및 시간 기능 향상 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

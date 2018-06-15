@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619520"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>바인딩 (명명 된 매개 변수) 이름으로 매개 변수
 특정 Dbms 프로시저 호출에서 위치에 따라이 대신 이름으로 저장된 프로시저에 매개 변수를 지정 하는 응용 프로그램을 허용 합니다. 이러한 매개 변수가 호출 *명명 된 매개 변수*합니다. ODBC는 명명 된 매개 변수 사용을 지원합니다. Odbc에서 명명 된 매개 변수 저장된 프로시저에 대 한 호출에만 사용 되 고 다른 SQL 문에서 사용할 수 없습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 이 절차에서는 첫 번째 매개 변수 @title_id의 기본 값은 1입니다. 응용 프로그램 동적 매개 변수를 하나만 지정 되도록이 프로시저를 호출 하려면 다음 코드를 사용할 수 있습니다. 이 매개 변수는 명명된 된 매개 변수 이름으로 "@quote"입니다.  
+ 이 절차에서는 첫 번째 매개 변수 @title_id의 기본 값은 1입니다. 응용 프로그램 동적 매개 변수를 하나만 지정 되도록이 프로시저를 호출 하려면 다음 코드를 사용할 수 있습니다. 이 매개 변수는 명명된 된 매개 변수 이름으로 "\@견적"입니다.  
   
 ```  
 // Prepare the procedure invocation statement.  

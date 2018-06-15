@@ -2,7 +2,7 @@
 title: Multiple Active Result Sets MARS ()를 사용 하 여 | Microsoft Docs
 description: MARS(Multiple Active Result Sets) 사용
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612088"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에 액세스 하는 응용 프로그램에서 여러 활성 결과 집합은 (MARS)에 대 한 지원 도입는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 응용 프로그램이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 응용 프로그램에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 응용 프로그램에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB Driver for SQL Server 연결에서 활성 문 수를 제한 하지 않습니다.  
   
- 여러 개의 다중 문 일괄 처리가 필요 없거나 저장 프로시저를 동시에 실행할 필요가 없는 일반적인 응용 프로그램의 경우에는 MARS 구현 방법을 몰라도 MARS를 활용할 수 있습니다. 하지만 요구 사항이 복잡한 응용 프로그램에서는 MARS 구현 방법을 고려해야 합니다.  
+ 일반적인 응용 프로그램 단일 다중 문 일괄 처리 또는 저장된 프로시저를 동시에 실행은 MARS 구현 방법을 몰라도 MARS에서 도움이 될 것 보다 더 필요가 없습니다. 하지만 요구 사항이 복잡한 응용 프로그램에서는 MARS 구현 방법을 고려해야 합니다.  
   
  MARS를 사용하면 단일 연결 내에서 여러 요청의 실행을 인터리브할 수 있습니다. 즉, 일괄 처리를 실행할 수 있으며 해당 일괄 처리가 실행되는 동안 요청을 실행할 수 있습니다. 하지만 MARS는 병렬 실행이 아니라 인터리브로 정의된다는 것에 주의하십시오.  
   
- MARS 인프라에서는 다중 일괄 처리를 인터리브 방식으로 실행할 수 있습니다. 하지만 실행은 잘 정의된 지점에서만 전환할 수 있습니다. 또한 대부분의 문은 일괄 처리 내에서 개별적으로 실행되어야 합니다. 때때로 이라고 하는 클라이언트에 행을 반환 하는 문 *포인트를 생성*, 예를 들어 클라이언트에 전송 되 고 행 완료 되기 전에 실행을 인터리브할 수 있습니다.  
+ 실행 잘 정의 된 지점 에서만 전환할 수 있지만 MARS 인프라에서는 다중 일괄 처리를 인터리브 방식에서으로 실행 합니다. 또한 대부분의 문은 일괄 처리 내에서 개별적으로 실행되어야 합니다. 때때로 이라고 하는 클라이언트에 행을 반환 하는 문은 *포인트 yield*, 예를 들어 클라이언트에 전송 되 고 행 완료 되기 전에 실행을 인터리브할 수 있습니다:  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  ADO의 MARS를 사용 하 여 예제를 보려면 [OLE DB Driver for SQL Server를 사용 하 여 ADO를 사용 하 여](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)합니다.  
   
 ## <a name="in-memory-oltp"></a>메모리 내 OLTP  
- 메모리 내 OLTP는 쿼리를 사용 하 여 MARS를 지원 하 고 고유 하 게 컴파일된 저장된 프로시저입니다. MARS 요청 데이터를 완전히 각 결과 행을 인출 하는 새 결과 집합에서 요청을 보내기 전에 집합을 검색 하지 않고도 여러 쿼리를 사용 하도록 설정 합니다. 열려 있는 여러 결과에서 성공적으로 읽을 수는 MARS를 사용 해야 하는 집합 연결을 사용 합니다.  
+ 메모리 내 OLTP는 쿼리를 사용 하 여 MARS를 지원 하 고 고유 하 게 컴파일된 저장된 프로시저입니다. MARS 요청 데이터를 완전히 각 결과 행을 인출 하는 새 결과 집합에서 요청을 보내기 전에 집합을 검색 하지 않고도 여러 쿼리를 사용 하도록 설정 합니다. 여러 개 열려 있는 결과 집합에서 성공적으로 읽으려면, MARS가 활성화 된 연결을 사용 해야 합니다.  
   
  MARS가 기본적으로 해제 되어 있으면 추가 하 여 명시적으로 활성화 해야 `MultipleActiveResultSets=True` 연결 문자열에 있습니다. 다음 예제에서는 SQL Server의 인스턴스에 연결 하 고 MARS를 사용 한다고 지정 하는 방법을 보여 줍니다.  
   
@@ -207,7 +210,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

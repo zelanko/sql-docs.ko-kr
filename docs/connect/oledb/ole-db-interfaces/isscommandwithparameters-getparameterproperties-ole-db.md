@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c969100441cfc901ded13e7d1cdc7c551db23d42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305612"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>반환 코드 값  
  **GetParameterProperties** 메서드는 핵심 OLE DB 동일한 오류 코드 반환 **icommandproperties:: Getproperties** 메서드는 DB_S_ERRORSOCCURRED 및 db_e_errorsoccured가 제외 될 수 없습니다 발생합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **Isscommandwithparameters:: Getparameterproperties** 메서드는 기준으로 일관성 있게 동작 **GetParameterInfo**합니다. 경우 [isscommandwithparameters:: Setparameterproperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 또는 **SetParameterInfo** 호출 하지 않은 또는 cParams를 0으로 호출 된 **GetParameterInfo**매개 변수 정보를 파생 하 고 반환 합니다. 경우 **isscommandwithparameters:: Setparameterproperties** 또는 **SetParameterInfo** 매개 변수가 하나 이상에 대 한 호출 된 **isscommandwithparameters:: Getparameterproperties**  메서드는 해당 매개 변수에 대해서만 속성을 반환 **isscommandwithparameters:: Setparameterproperties** 가 호출 되었습니다. 경우 **isscommandwithparameters:: Setparameterproperties** 이후에 호출 **isscommandwithparameters:: Getparameterproperties** 또는 **GetParameterInfo**, 에 대 한 후속 호출 **isscommandwithparameters:: Getparameterproperties** 해당 매개 변수에 대해 재정의 된 값을 반환 **isscommandwithparameters:: Setparameterproperties** 메서드가 호출 되었습니다.  
   
  SSPARAMPROPS 구조는 다음과 같이 정의됩니다.  
@@ -71,7 +71,7 @@ HRESULT GetParameterProperties(
 |*cPropertySets*|DBPROPSET 수가 구조체에 *rgPropertySets*합니다.|  
 |*rgPropertySets*|DBPROPSET 구조의 배열을 반환할 메모리에 대한 포인터입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [ISSCommandWithParameters & #40; OLE db& #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

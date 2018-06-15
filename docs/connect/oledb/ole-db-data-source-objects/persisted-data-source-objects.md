@@ -2,10 +2,10 @@
 title: 지속형 데이터 원본 개체 | Microsoft Docs
 description: 지속형 데이터 원본 개체
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b67e2f2f4e588fabfe5f901e20401316081d3c18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665613"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 지원으로 지속형된 데이터 원본 개체는 **IPersistFile** 인터페이스입니다.  
   
@@ -232,7 +235,7 @@ HRESULT InitFromPersistedDS
   
  **ipersistfile:: Save** 메서드 호출 전후 **idbinitialize:: Initialize**합니다. 성공적인 반환 후에 메서드를 호출 **idbinitialize:: Initialize** 유효한 데이터 원본 지정이 지속 되도록 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터 원본 개체 & #40; OLE db& #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

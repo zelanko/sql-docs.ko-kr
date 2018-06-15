@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 444d51aeae49e9e626b0666904584bae8e2de6b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305382"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  중단할 명령이 저장된 프로시저에 있으면 저장된 프로시저 (및 모든 프로시저를 해당 프로시저를 호출한)의 실행 저장된 프로시저 호출을 포함 하는 명령 일괄 처리가 종료 됩니다. 서버가 결과 집합을 클라이언트로 전송 중이면 전송이, 전송이 중지 됩니다. 클라이언트는 결과 집합을 사용 하지 않으려고, 하는 경우 호출 **issabort:: Abort** 행 집합 릴리스를 신속 하 게 행 집합을 해제 하지만 트랜잭션이 롤백됩니다 열려 있는 트랜잭션이 있고 XACT_ABORT가 ON 면 **issabort:: Abort** 라고  
   
  후 **issabort:: Abort** S_OK를 관련된 된 반환 **IMultipleResults** 불안정 한 상태가 입력 하 고 모든 메서드 호출에 DB_E_CANCELED를 반환 하는 인터페이스 ( 는여정의된메서드를제외하고**IUnknown** 인터페이스) 해제 될 때까지 합니다. 경우는 **IRowset** 에서 가져온 **IMultipleResults** 를 호출 하기 전에 **중단**도 사용할 수 없는 상태로 전환 하 고 모든 메서드 호출에 DB_E_CANCELED를 반환 (정의한 메서드를 제외 하 고는 **IUnknown** 인터페이스 및 **irowset:: Releaserows**)을 성공적으로 호출한 후에 해제 될 때까지 **issabort:: Abort**합니다.  

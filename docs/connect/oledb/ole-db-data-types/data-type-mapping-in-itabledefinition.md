@@ -2,10 +2,10 @@
 title: ITableDefinition의 데이터 형식 매핑 | Microsoft Docs
 description: ITableDefinition의 데이터 형식 매핑
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ade365add5b89069e86f67d82dfa84638bcb71f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666353"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   사용 하 여 테이블을 만들 때는 **itabledefinition:: Createtable** 함수에는 OLE DB Driver for SQL Server 소비자를 지정할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 *pwszTypeName* 의 멤버는 전달 되는 DBCOLUMNDESC 배열입니다. OLE DB 데이터 형식 매핑, 나타내는 소비자 데이터 형식의 열 이름으로 지정 하는 경우는 *wType* DBCOLUMNDESC 구조의 멤버는 무시 됩니다.  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  새 테이블을 만들 때만 OLE DB 데이터 형식 열거형 값을 위의 테이블에 지정 된 된 OLE DB Driver for SQL Server에 매핑합니다. 다른 OLE DB 데이터 형식의 열로 테이블을 만들려고 하면 오류가 생성됩니다.  
 
-## <a name="see-also"></a>참고 항목  
- [데이터 형식 & #40; OLE db& #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 형식 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

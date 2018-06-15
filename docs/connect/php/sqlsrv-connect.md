@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ caps.latest.revision: 67
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0156e099cac8984cf1e2661e1d1226579c246439
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8398a169e12f597e7baec9fe42495c59b19d6903
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309082"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ## <a name="return-value"></a>반환 값  
 PHP 연결 리소스입니다. 연결을 만들 수 없고 열 수 없으면 **false** 가 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 *UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)

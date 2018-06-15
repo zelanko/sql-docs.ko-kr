@@ -10,14 +10,13 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: dma
 ms.date: 04/30/2018
-ms.openlocfilehash: d462c46dff9e2fd34983522f69e4f802d8861b35
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f44619fe8814297b9bde8611d0e1e517c10fe8b7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773289"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312862"
 ---
 # <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server에 대 한 데이터 마이그레이션 길잡이 (DMA)
 

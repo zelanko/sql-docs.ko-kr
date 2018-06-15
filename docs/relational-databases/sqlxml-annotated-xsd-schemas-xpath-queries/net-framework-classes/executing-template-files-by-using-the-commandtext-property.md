@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a97f18ab83742d3adde940c4f528f50e4ac347d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619500"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ class Test
   
 5.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
   
- 서식 파일에는 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
+ 서식 파일에는 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "\@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
   
  다음은 하나의 매개 변수를 사용하는 업데이트된 템플릿입니다.  
   

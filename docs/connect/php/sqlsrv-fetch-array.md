@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308972"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,11 +45,11 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [선택 사항]: 미리 정의 된 상수입니다. 이 매개 변수는 다음 표에 나열된 값 중 하나를 사용할 수 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|데이터의 다음 행이 숫자형 배열로 반환됩니다.|  
 |SQLSRV_FETCH_ASSOC|데이터의 다음 행이 결합형 배열로 반환됩니다. 배열 키는 결과 집합의 열 이름입니다.|  
-|SQLSRV_FETCH_BOTH|데이터의 다음 행이 숫자형 배열과 결합형 배열 둘 다로 반환됩니다. 이 값은 기본값입니다.|  
+|SQLSRV_FETCH_BOTH|데이터의 다음 행이 숫자형 배열과 결합형 배열 둘 다로 반환됩니다. 이것은 기본값입니다.|  
   
 *행* [선택 사항]: 버전 1.1에에서 추가 합니다. 다음 값 중 하나로 스크롤 가능 커서를 사용하는 결과 집합에서 액세스할 행을 지정합니다. (때 *행* 지정 된 *fetchtype* 명시적으로 지정 해야 기본값을 지정 하는 경우에 합니다.)  
   
@@ -69,7 +69,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* 매개 변수의 값을 기반으로, 반환된 **배열** 은 숫자로 인덱싱된 **배열**, 결합형 **배열**또는 둘 다일 수 있습니다. 기본적으로 숫자 키와 결합형 키가 둘 다 있는 **배열** 이 반환됩니다. 반환된 배열에 있는 값의 데이터 형식은 기본 PHP 데이터 형식입니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 이름이 없는 열이 반환되면 배열 요소에 대한 결합형 키는 빈 문자열("")입니다. 예를 들어 값을 데이터베이스 테이블에 삽입하고 서버 생성 기본 키를 검색하는 다음 Transact-SQL 문을 고려해 보겠습니다.  
   
 ```
@@ -184,7 +184,7 @@ sqlsrv_close( $conn);
   
 이름이 없는 필드가 검색되는 경우 배열 요소에 대한 결합형 키는 빈 문자열("")입니다. 자세한 내용은 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [데이터 검색](../../connect/php/retrieving-data.md)

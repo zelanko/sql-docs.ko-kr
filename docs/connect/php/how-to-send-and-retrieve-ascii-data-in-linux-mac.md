@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 6fc7e9ad59182c2dede32917b7e54cd353119826
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307682"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>방법: Send 및 Linux와 macOS에서 ASCII 데이터 검색 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -166,7 +166,7 @@ try {
 ?>  
 ```  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
 [U t F-8 데이터로 작업](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
 [데이터 업데이트 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

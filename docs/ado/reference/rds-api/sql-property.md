@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5ddbfa6b69f4859f61130e8ec1c9b758c40cf64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c14edf35af65a9e9a64bbc89bb0cc9eb14a1d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288932"
 ---
 # <a name="sql-property"></a>SQL 속성
 검색 하는 데 쿼리 문자열을 나타내고는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -47,7 +47,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  개체 변수를 나타내는 **.rds입니다 DataControl** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  일반적으로이 명령은 SQL 문 (데이터베이스 서버의 언어 사용)와 같은 `"Select * from NewTitles"`합니다. 레코드 일치 하 고 정확 하 게 업데이트 되도록 업데이트할 수 있는 쿼리 긴 이진 필드 또는 계산된 된 필드 이외의 다른 필드를 포함 해야 합니다.  
   
  **SQL** 속성은 사용자 지정 서버 쪽 비즈니스 개체는 클라이언트에 대 한 데이터를 검색 하는 경우 선택 사항입니다.  
@@ -55,7 +55,7 @@ Run time: DataControl.SQL = "QueryString"
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL 속성 (VBScript) 예제](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [속성 (RDS) 연결](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Query 메서드 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   

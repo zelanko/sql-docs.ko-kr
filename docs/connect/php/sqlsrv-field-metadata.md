@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43cb1b1a028d645c6c1de6e89c292c475eb00dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309392"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_field_metadata( resource $stmt)
   
 |Key|Description|  
 |-------|---------------|  
-|이름|필드에 해당하는 열의 이름입니다.|  
+|속성|필드에 해당하는 열의 이름입니다.|  
 |형식|SQL 형식에 해당하는 숫자 값입니다.|  
 |크기|문자 형식 필드(char(n), varchar(n), nchar(n), nvarchar(n), XML)의 문자 수입니다. 이진 형식 필드(binary(n), varbinary(n), UDT)의 바이트 수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |전체 자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
@@ -58,33 +58,33 @@ sqlsrv_field_metadata( resource $stmt)
   
 |SQL Server 2008 데이터 형식|형식|최소/최대 전체 자릿수|최소/최대 소수 자릿수|크기|  
 |-----------------------------|--------|----------------------|------------------|--------|  
-|bigint|SQL_BIGINT(-5)|||8|  
+|BIGINT|SQL_BIGINT(-5)|||8|  
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT(-7)||||  
 |char|SQL_CHAR(1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE(91)|10/10|0/0||  
-|datetime|SQL_TYPE_TIMESTAMP(93)|23/23|3/3||  
-|datetime2|SQL_TYPE_TIMESTAMP(93)|19/27|0/7||  
+|날짜|SQL_TYPE_DATE(91)|10/10|0/0||  
+|DATETIME|SQL_TYPE_TIMESTAMP(93)|23/23|3/3||  
+|Datetime2|SQL_TYPE_TIMESTAMP(93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET(-155)|26/34|0/7||  
-|decimal|SQL_DECIMAL(3)|1/38|0/전체 자릿수 값||  
-|float|SQL_FLOAT(6)|4/8|||  
+|Decimal|SQL_DECIMAL(3)|1/38|0/전체 자릿수 값||  
+|FLOAT|SQL_FLOAT(6)|4/8|||  
 |image|SQL_LONGVARBINARY(-4)|||2GB|  
-|int|SQL_INTEGER(4)||||  
+|ssNoversion|SQL_INTEGER(4)||||  
 |money|SQL_DECIMAL(3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR(-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR(-10)|||1GB|  
-|numeric|SQL_NUMERIC(2)|1/38|0/전체 자릿수 값||  
-|nvarchar|SQL_WVARCHAR(-9)|||0 < *n* < 4000 <sup>1</sup>|  
-|real|SQL_REAL(7)|4/4|||  
+|NUMERIC|SQL_NUMERIC(2)|1/38|0/전체 자릿수 값||  
+|NVARCHAR|SQL_WVARCHAR(-9)|||0 < *n* < 4000 <sup>1</sup>|  
+|REAL|SQL_REAL(7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP(93)|16/16|0/0||  
-|smallint|SQL_SMALLINT(5)|||2bytes|  
+|SMALLINT|SQL_SMALLINT(5)|||2bytes|  
 |Smallmoney|SQL_DECIMAL(3)|10/10|4/4||  
 |text|SQL_LONGVARCHAR(-1)|||2GB|  
-|time|SQL_SS_TIME2(-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8바이트|  
+|Time|SQL_SS_TIME2(-154)|8/16|0/7||  
+|TIMESTAMP|SQL_BINARY (-2)|||8바이트|  
 |tinyint|SQL_TINYINT(-6)|||1바이트|  
 |udt|SQL_SS_UDT(-151)|||변수|  
-|uniqueidentifier|SQL_GUID(-11)|||16|  
+|UNIQUEIDENTIFIER|SQL_GUID(-11)|||16|  
 |varbinary|SQL_VARBINARY(-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR(12)|||0 < *n* < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML(-152)|||0|  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

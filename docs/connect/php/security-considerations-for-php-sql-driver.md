@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ca4c8bfa2973d78e6d3da90a42ed5c7988a109f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453207bf1a9e8a843cbaf5f19d77180453b6c43e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308782"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>보안 고려 사항 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,6 +56,6 @@ SQL 주입 공격 및 관련된 보안 고려 사항에 대 한 자세한 내용
 ## <a name="secure-logs-for-deployed-application"></a>배포된 응용 프로그램에 대한 보안 로그  
 배포된 응용 프로그램에 대해 로그가 보안 위치에 기록되거나 해당 로깅이 해제되었는지 확인합니다. 그러면 로그 파일에 기록된 정보에 최종 사용자가 액세스할 가능성이 차단됩니다. 자세한 내용은 [Logging Activity](../../connect/php/logging-activity.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
   

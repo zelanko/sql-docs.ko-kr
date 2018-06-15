@@ -2,10 +2,10 @@
 title: SQL Server 메시지 결과 | Microsoft Docs
 description: SQL Server 메시지 결과
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9ab76565bac6a1fbf41dd5f8372776ea8625975
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87dbfd1740223f6d3d2116ada8d8c0c109aba15f
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665518"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 메시지 결과
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 실행할 때 영향을 받는 행의 개수 또는 SQL Server 행 집합에 대 한 OLE DB 드라이버를 생성 하지 않습니다.  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB 드라이버에서 쿼리 텍스트의 동적 지정을 허용 하는 SQL Server 소비자의 반환 코드, 유무는 반환 값에 관계 없이 모든 멤버 함수 실행 후 오류 인터페이스를 확인 해야 **IRowset** 또는 **IMultipleResults** 인터페이스 참조 또는 영향을 받는 행 수입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [오류](../../oledb/ole-db-errors/errors.md)  
   
   

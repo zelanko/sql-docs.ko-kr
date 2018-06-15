@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c1eae99587a1f447b809becee9509d5a04136e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8b98b10ee285c8e6be4e34214689eeaa7d7049f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309802"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>시스템 요구 사항을 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -213,7 +213,7 @@ Windows에서는 다음 버전의 드라이버 포함 되어 있습니다.
 |php_sqlsrv_55_nts.dll<br />php_pdo_sqlsrv_55_nts.dll|5.5|아니요|php5.dll|  
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|예|php5ts.dll|  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

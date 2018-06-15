@@ -2,10 +2,10 @@
 title: RPC로 저장된 프로시저를 실행 하 고 출력 처리 | Microsoft Docs
 description: RPC로 저장 프로시저를 실행 하 고 출력 처리
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b6b4612bbbf5b1b4b530a4edadbed0879f77a1d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74ff0256020e67a40a5da5809f83615e0e8114e3
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666153"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC로 저장된 프로시저를 실행 하 고 출력 처리
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 응용 프로그램에서 사용할 수 없습니다. 명령이 여러 결과 반환 하는 경우 출력 매개 변수 데이터를 사용할 수 있는 경우 **imultipleresults:: Getresult** DB_S_NORESULT를 반환 하거나는 **IMultipleResults** 인터페이스는 완전히 해제 중 먼저 발생 합니다.  
   
@@ -398,7 +401,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [처리 결과 방법 도움말 항목 & #40; OLE db& #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

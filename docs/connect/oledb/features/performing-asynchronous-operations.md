@@ -2,7 +2,7 @@
 title: 비동기 작업을 수행 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버와 비동기 작업을 수행합니다.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -23,21 +23,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9fb93482f6eca98b8ee2921ea158cf7f71165c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ba220d754eb3ebc31a719cb840e93378438e09c
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612138"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하면 응용 프로그램에서 비동기 데이터베이스 작업을 수행할 수 있습니다. 비동기 처리는 호출 스레드를 차단하지 않고 메서드를 즉시 반환할 수 있도록 합니다. 이를 통해 개발자는 명시적으로 스레드를 만들거나 동기화를 처리하지 않고도 보다 강력하고 유연한 다중 스레딩을 구현할 수 있습니다. 데이터베이스 연결을 초기화하거나 명령의 실행 결과를 초기화할 때 응용 프로그램에서는 비동기 처리를 요청합니다.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>데이터베이스 연결 열기 및 닫기  
  OLE DB Driver for SQL Server를 사용할 때 데이터 원본 개체를 비동기적으로 초기화 하도록 설계 된 응용 프로그램 호출 하기 전에 DBPROP_INIT_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 **idbinitialize:: Initialize** . 공급자를 호출 하 여 즉시 반환 하는이 속성이 설정 된 경우 **초기화** 작업이 즉시 완료 하면 s_ok이 고 또는 DB_S_ASYNCHRONOUS를 초기화 하는 비동기식으로 계속 됩니다. 응용 프로그램에 대해 쿼리할 수는 **IDBAsynchStatus** 또는 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스 데이터 원본 개체에 대 한 다음 호출 **idbasynchstatus:: Getstatus** 또는 [ Issasynchstatus:: Waitforasynchcompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 초기화 상태를 가져올 수 있습니다.  
   
- 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. **ISSAsynchStatus** 인터페이스를 지원하는 공급자는 VARIANT_TRUE 값을 사용하여 이 속성을 구현해야 합니다.  
+ 또한 SSPROP_ISSAsynchStatus 속성이 DBPROPSET_SQLSERVERROWSET 속성 집합에 추가되었습니다. 지 원하는 공급자는 **ISSAsynchStatus** 인터페이스 variant_true 값으로이 속성을 구현 해야 합니다.  
   
  **Idbasynchstatus:: Abort** 또는 [issasynchstatus:: Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 비동기 취소 하기 위해 호출할 수 **초기화** 호출 합니다. 소비자는 비동기 데이터 원본 초기화를 명시적으로 요청해야 합니다. 그렇지 않으면 **idbinitialize:: Initialize** 데이터 원본 개체가 완전히 초기화 될 때까지 반환 하지 않습니다.  
   
@@ -189,9 +192,9 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server 기능](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [행 집합 속성 및 동작](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus & #40; OLE db& #41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

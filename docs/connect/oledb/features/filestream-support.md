@@ -2,7 +2,7 @@
 title: FILESTREAM 지원 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버에서 FILESTREAM 지원
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9774e55a9366f99ad96fb5c2165abb3992f6e03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ffb296ea9c64890293a924c135d2674f04e216a7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611575"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 부터는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], OLE DB Driver for SQL Server의 향상 된 FILESTREAM 기능을 지원 합니다. 샘플을 보려면 [Filestream 및 OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)합니다.  
 
@@ -61,13 +64,13 @@ SQL Server 용 OLE DB 드라이버를 사용 하 여 클라이언트가 컴파�
   
 SQLOLEDB 또는 보다 먼저 발표 된 다른 공급자를 사용 하는 클라이언트는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **varbinary (max)** 매핑됩니다 이미지에 있습니다.  
   
-## <a name="comments"></a>설명
+## <a name="comments"></a>주석
 - 보내고 받을 **varbinary (max)** 2GB 보다 큰 값을 응용 프로그램에서 사용 **DBTYPE_IUNKNOWN** 매개 변수와 결과 바인딩에 있습니다. 매개 변수에 대 한 공급자 및 ISequentialStream을 반환 하는 결과에 ISequentialStream 대 iunknown:: Queryinterface를 호출 해야 합니다.  
 
 -  OLE DB에 대 한 검사 ISequentialStream 값에 관련 완화 될 것입니다. 때 *wType* 은 **DBTYPE_IUNKNOWN** 에 **DBBINDING** 구조체 수 길이 검사 생략 하거나 사용 하지 않도록 설정 **DBPART_LENGTH** *dwPart* 또는 데이터의 길이 설정 하 여 (오프셋 *obLength* 데이터 버퍼에)를 ~ 0입니다. 이렇게 하면 공급자는 값의 길이를 검사하지 않고 스트림을 통해 사용할 수 있는 모든 데이터를 요청하고 반환합니다. 이러한 변경 사항은 모든 LOB(큰 개체) 형식과 XML에 적용되지만, 이는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상의 서버에 연결된 경우에만 해당됩니다. 이 기능은 개발자에게 더 나은 융통성을 제공할 뿐만 아니라 기존 응용 프로그램 및 하위 서버를 위한 일관성과 이전 버전과의 호환성을 유지할 수 있게 도와줍니다.  이 변경 사항은 irowset:: Getdata, icommand:: Execute, 및 irowsetfastload:: Insertrow 주로 데이터를 전송 하는 모든 인터페이스에 적용 합니다.
  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e03aa5a887f25e9909ff2c755cfbfa598166475
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306702"
 ---
 # <a name="rowsets"></a>행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
   
- 소비자가 사용 하 여 세션을 만든 후의 **idbcreatesession:: Createsession** 메서드를 소비자 하나를 사용할 수는 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스에는 행 집합을 만들 수 있습니다. OLE DB Driver for SQL Server 두이 인터페이스를 지원합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
+ 소비자가 사용 하 여 세션을 만든 후의 **idbcreatesession:: Createsession** 메서드를 소비자 중 하나를 사용할 수는 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스는 행 집합을 만드는 세션입니다. OLE DB Driver for SQL Server 두이 인터페이스를 지원합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
   
 -   호출 하 여 행 집합을 만듭니다는 **iopenrowset:: Openrowset** 메서드.  
   
@@ -51,23 +51,23 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [IOpenRowset를 사용 하 여 행 집합 만들기](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
+-   [IOpenRowset을 사용하여 행 집합 만들기](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Icommand:: Execute를 사용 하 여 행 집합 만들기](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [ICommand::Execute를 사용하여 행 집합 만들기](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [행 집합 속성 및 동작](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [행 집합 및 SQL Server 커서](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [행 인출](../../oledb/ole-db-rowsets/fetching-rows.md)  
+-   [행 페치](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
--   [IRow와 단일 행 인출](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [IRow를 사용하여 단일 행 페치](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [책갈피](../../oledb/ole-db-rowsets/bookmarks.md)  
   
 -   [행 집합의 데이터 업데이트](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

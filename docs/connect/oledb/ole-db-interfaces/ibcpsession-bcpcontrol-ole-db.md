@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a902d1768d53940f56f1b2460969c7f0105ba7d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5cbb702a20f0c5b6f28be67e9277ef74620f1f7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305782"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **BCPControl** 메서드 수의 일괄 처리 크기 및 데이터 파일에서 복사할 첫 번째 및 마지막 행에는 대량 복사를 취소 하기 전에 허용 되는 오류 수를 포함 하 여 대량 복사 작업에 대 한 다양 한 제어 매개 변수를 설정 합니다.  
   
  또한 이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터를 대량 복사할 때 사용할 SELECT 문을 지정하는 데도 사용됩니다. 설정할 수 있습니다는 **eOption** 인수를 bcp_option_hints로 설정 하 고 **iValue** 인수 SELECT 문이 포함 된 와이드 문자열에 대 한 포인터입니다.  
@@ -51,7 +51,7 @@ HRESULT BCPControl(
 |------------|-----------------|  
 |BCP_OPTION_ABORT|이미 진행 중인 대량 복사 작업을 중지합니다. 호출할 수 있습니다는 **BCPControl** 메서드는 *eOption* 실행 대량 복사 작업을 중지 하려면 다른 스레드에서 BCP_OPTION_ABORT의 인수입니다. *iValue* 인수는 무시 됩니다.|  
 |BCP_OPTION_BATCH|일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCP_OPTION_BATCH는 기본값으로 다시 설정됩니다.|  
-|BCP_OPTION_DELAYREADFMT|부울, 경우에는 true로 설정 하면 [ibcpsession:: Bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 에서 실행 시 읽습니다. False (기본값) 이면 ibcpsession:: Bcpreadfmt 즉시 되는 경우에 서식 파일을 읽습니다. 시퀀스 오류가 발생 합니다 **BCP_OPTION_DELAYREADFMT** 가 true 호출 ibcpsession:: Bcpcolumns 또는 ibcpsession:: Bcpcolfmt 합니다.<br /><br /> 호출 하는 경우에 시퀀스 오류가 발생 합니다 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` 호출한 후 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 및 ibcpsession:: Bcpwritefmt 합니다.<br /><br /> 자세한 내용은 [Metadata Discovery](../../oledb/features/metadata-discovery.md)를 참조하십시오.|  
+|BCP_OPTION_DELAYREADFMT|부울, 경우에는 true로 설정 하면 [ibcpsession:: Bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) 에서 실행 시 읽습니다. False (기본값) 이면 ibcpsession:: Bcpreadfmt 즉시 되는 경우에 서식 파일을 읽습니다. 시퀀스 오류가 발생 합니다 **BCP_OPTION_DELAYREADFMT** 가 true 호출 ibcpsession:: Bcpcolumns 또는 ibcpsession:: Bcpcolfmt 합니다.<br /><br /> 호출 하는 경우에 시퀀스 오류가 발생 합니다 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` 호출한 후 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 및 ibcpsession:: Bcpwritefmt 합니다.<br /><br /> 자세한 내용은 참조 [메타 데이터 검색](../../oledb/features/metadata-discovery.md)합니다.|  
 |BCP_OPTION_FILECP|*iValue* 인수 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> BCP_FILECP_ACP: 파일의 데이터가 클라이언트의 Microsoft Windows® 코드 페이지에 있습니다.<br /><br /> BCP_FILECP_OEMCP: 파일의 데이터가 클라이언트의 OEM 코드 페이지에 있습니다(기본값).<br /><br /> BCP_FILECP_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.|  
 |BCP_OPTION_FILEFMT|데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])이 될 수 있습니다. 120 기본값입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다.  예를 들어 데이터를 가져오려면 텍스트 열에서 얻은 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 으로 서버는 **varchar (max)** 열에는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상의 서버 80을 지정 해야 합니다. 마찬가지로, 데이터를 내보낼 때 80을 지정 하는 경우는 **varchar (max)** 열에 저장 됩니다 텍스트 열에 저장 되는 것 처럼는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 서식을 지정 하 고 텍스트 열으로 가져올 수는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 서버입니다.|  
 |BCP_OPTION_FIRST|복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.|  
@@ -87,7 +87,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   

@@ -13,11 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 31c8d15941956e4476156718404159deabac9776
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611438"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 함께 사용 하 여 Active Directory 인증 자습서:
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/19/2018
 > * TRANSACT-SQL에서 AD 기반 로그인을 만들으십시오
 > * 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 AD 인증을 구성 하기 전에 해야 합니다.
 
@@ -75,7 +76,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**

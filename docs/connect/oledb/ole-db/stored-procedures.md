@@ -2,10 +2,10 @@
 title: 저장 프로시저 | Microsoft Docs
 description: 저장 프로시저
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,16 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 65a78fddd455df4b04c06086beca808658879aed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611548"
 ---
 # <a name="stored-procedures"></a>저장 프로시저
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  저장된 프로시저 ([저장 프로시저 & #40; 데이터베이스 엔진 & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md))는 실행 개체는 데이터베이스에 저장 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  저장된 프로시저 ([Stored Procedures &#40;데이터베이스 엔진&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md))는 실행 개체는 데이터베이스에 저장 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
   
 -   저장 프로시저  
   
@@ -40,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [실행 저장 프로시저 & #40; OLE db& #41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [저장된 프로시저를 실행 &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [호출 하는 저장된 프로시저 & #40; OLE db& #41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [저장된 프로시저를 호출 &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

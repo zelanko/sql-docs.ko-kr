@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9995acd8fb7259738f5d1985bf24583237ea3526
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c7ff83fa1f75e5cf309daaa45b34663cef42a7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305892"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,14 +69,14 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  지정된 접근자는 행 접근자가 아니거나, 소비자가 소유한 메모리를 지정하지 않았습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  소비자 데이터를 변환 하는 오류는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열의 데이터 형식을 SQL Server 용 OLE DB 드라이버에서 반환 되는 E_FAIL 값 발생 합니다. 데이터를 전송 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 **InsertRow** 메서드 또는 경우에 **커밋** 메서드. 소비자 응용 프로그램이 호출할 수는 **InsertRow** 메서드는 데이터 유형 변환 오류가 있는지 알림을 받기 전에 오류가 있는 데이터를 여러 번입니다. 때문에 **커밋** 메서드를 사용 하면 모든 데이터가 올바르게 지정 되어 있는지는 소비자가 소비자가 사용할 수는 **커밋** 메서드 적절 하 게 필요에 따라 데이터 유효성 검사 합니다.  
   
  OLE DB 드라이버에서 SQL Server 대량 복사 행 집합은 쓰기 전용입니다. OLE DB Driver for SQL Server 소비자의 행 집합 쿼리를 허용 하는 없는 메서드를 노출 합니다. 처리를 종료 하는 소비자를 해제할 수 있습니다 해당 참조에는 [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) 호출 하지 않고 인터페이스는 **커밋** 메서드. 행 집합에 있는 소비자가 삽입한 행에 액세스하여 해당 값을 변경하거나 행 집합에서 개별적으로 행을 제거하는 기능은 없습니다.  
   
  대량 복사된 행은 서버에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 맞게 형식이 지정됩니다. 행 형식은 연결이나 세션에 대해 설정된 모든 옵션(예: ANSI_PADDING)의 영향을 받습니다. 이 옵션에 기본적으로 SQL Server 용 OLE DB 드라이버를 통해 설정 된 모든 연결에 대해 설정 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a84db386be38765d27565f461fadc39badc3ca2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308552"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*이름*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다
 시퀀스 이름을 제공 하는 경우 시퀀스에 대 한 식별자의 문자열 가장 최근에 추가 합니다.
 메서드 호출이 실패 하는 경우 빈 문자열이 반환 됩니다.
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
 버전 2.0과 사이의 4.3, 선택적 매개 변수는 테이블 이름이 며, 반환 값은 제공된 된 테이블에 가장 최근에 추가 된 행의 ID입니다.
 5.0 이상에서는 선택적 매개 변수는 시퀀스 이름으로 간주 하 고 반환 값은 가장 최근에 추가 된 제공 된 시퀀스 이름에 대 한 시퀀스.
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [PDO 클래스](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

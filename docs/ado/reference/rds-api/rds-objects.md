@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4425704de152325e65de05bc31cb5976b4a2239c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05c8918e45867c149e27a7d9e3739a04e476f65d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288912"
 ---
 # <a name="rds-objects"></a>RDS 개체
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|클라이언트 측 프록시는 중간 계층에 있는 사용자 지정 비즈니스 개체를 만듭니다.<br /><br /> **DataSpace** 개체는 스크립팅 작업에 안전 합니다.|  
 |[IRDSService 인터페이스(RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|노출 된 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 기능이 더 많은 버전의 개체에 요청된 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 메서드.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS API 참조](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

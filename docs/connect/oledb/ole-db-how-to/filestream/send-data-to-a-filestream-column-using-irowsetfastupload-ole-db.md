@@ -2,9 +2,10 @@
 title: IRowsetFastUpload (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기 | Microsoft Docs
 description: IRowsetFastUpload (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -13,15 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 605adbe64ae5cba48ef56395ec882814476b7641
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305832"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666193"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  
   

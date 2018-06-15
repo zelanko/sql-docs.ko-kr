@@ -2,10 +2,10 @@
 title: 명령 준비 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 사용 하 여 명령 준비
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3fadd6d85159607ad9450567ac8f042689da5fa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666063"
 ---
 # <a name="preparing-commands"></a>명령 준비
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server; 단일 명령으로 여러 번 실행 액세스에 최적화 된 명령 준비를 지원 그러나 명령 준비 오버 헤드를 생성 하 고 두 번 이상 실행할 명령을 준비 하는 소비자 필요 하지 않습니다. 일반적으로 4번 이상 실행할 명령을 준비해야 합니다.  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  명령 개체 최대 하나의 임시 저장된 프로시저에 **tempdb**합니다. 기존 임시 저장 프로시저는 특정 명령 개체의 현재 명령 텍스트를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [도구](../../oledb/ole-db-commands/commands.md)  
   
   

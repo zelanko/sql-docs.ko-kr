@@ -2,7 +2,6 @@
 title: LineSeparator 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3c82ab9eccb144f3b8615b8c813eb84f9150024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76534a2925954c18d54ca7b14a3811d2544e233f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279292"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 속성 (ADO)
 텍스트에 줄 구분 기호로 사용할 이진 문자 나타냅니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) 에 사용 되는 줄 구분 기호 문자를 나타내는 값의 **스트림**합니다. 기본값은 **adCRLF**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **LineSeparator** 텍스트의 콘텐츠를 읽을 때 줄을 해석 하는 데 사용 **스트림**합니다. 선으로 건너뛸 수 있습니다는 [SkipLine](../../../ado/reference/ado-api/skipline-method.md) 메서드.  
   
  **LineSeparator** 텍스트에만 사용 됩니다 **스트림** 개체 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 은 **adTypeText**). 이 속성은 무시 **형식** 은 **adTypeBinary**합니다.  
@@ -40,5 +40,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

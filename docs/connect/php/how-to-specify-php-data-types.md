@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fdd7d2eee34303c466da0445233109b707c6645
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307602"
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -108,7 +108,7 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 함수는 쿼리를 실행하기 전에 형식 정보를 포함하여 필드 정보를 얻는 방법을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)

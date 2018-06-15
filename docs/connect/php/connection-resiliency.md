@@ -3,7 +3,6 @@ title: 유휴 연결 복원 력
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307262"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원 력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,14 +24,14 @@ ms.lasthandoff: 05/03/2018
 
 연결 복원 력 연결 문자열에 추가할 수 있는 두 개의 연결 키워드를 사용 하 여 구현 됩니다: **ConnectRetryCount** 및 **ConnectRetryInterval**합니다.
 
-|키워드|값|기본값|Description|
+|키워드|값|Default|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| 0에서 255 사이의 정수|1.|까지 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 나누는 경우 연결을 다시 시도 하는 단일 이루어집니다. 0은 의미 없는 재연결을 시도 하는 값입니다.|
-|**ConnectRetryInterval**| 1에서 60 (포함) 사이의 정수|1.| 연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결에 따라 즉시 다시 연결 하려고 시도 하며 다음 대기할 **ConnectRetryInterval** 초 후에 다시 시도 합니다. 이 키워드는 무시 됩니다 **ConnectRetryCount** 은 0과 같습니다.
+|**ConnectRetryCount**| 0에서 255 사이의 정수|1|까지 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 나누는 경우 연결을 다시 시도 하는 단일 이루어집니다. 0은 의미 없는 재연결을 시도 하는 값입니다.|
+|**ConnectRetryInterval**| 1에서 60 (포함) 사이의 정수|1| 연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결에 따라 즉시 다시 연결 하려고 시도 하며 다음 대기할 **ConnectRetryInterval** 초 후에 다시 시도 합니다. 이 키워드는 무시 됩니다 **ConnectRetryCount** 은 0과 같습니다.
 
 하는 경우의 제품 **ConnectRetryCount** 곱한 **ConnectRetryInterval** 보다 크면 **LoginTimeout**, 클라이언트 중단 한 번 연결 하려고 하는 다음  **LoginTimeout** ;에 도달 하면 될 때까지 다시 연결 하 고, 그러지 계속 됩니다 **ConnectRetryCount** 에 도달 합니다.
 
-#### <a name="remarks"></a>주의
+#### <a name="remarks"></a>Remarks
 
 연결 복원 력 연결이 유휴 상태일 때 적용 됩니다. 예를 들어 트랜잭션 실행 회 시도-트리거되지 않는다고 하는 동안 발생 하는 실패 하지 않으면 정상적으로 실패 합니다. 다음 상황에서 복구할 수 없는 세션 상태 라는 회 시도 트리거하지 않습니다.
 
@@ -131,5 +131,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 [Windows ODBC 드라이버의 연결 복원](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307702"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,40 +37,40 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
   
 |SQL Server 형식|기본 PHP 형식|기본 인코딩|  
 |-------------------|--------------------|--------------------|  
-|bigint|문자열|8 비트 문자<sup>1</sup>|  
+|BIGINT|String|8 비트 문자<sup>1</sup>|  
 |BINARY|스트림<sup>2</sup>|이진<sup>3</sup>|  
 |bit|정수|8 비트 문자<sup>1</sup>|  
-|char|문자열|8 비트 문자<sup>1</sup>|  
-|date<sup>4</sup>|날짜/시간|해당 사항 없음|  
-|datetime<sup>4</sup>|날짜/시간|해당 사항 없음|  
-|datetime2<sup>4</sup>|날짜/시간|해당 사항 없음|  
-|datetimeoffset<sup>4</sup>|날짜/시간|해당 사항 없음|  
-|decimal|문자열|8 비트 문자<sup>1</sup>|  
-|float|부동|8 비트 문자<sup>1</sup>|  
+|char|String|8 비트 문자<sup>1</sup>|  
+|date<sup>4</sup>|DATETIME|해당 사항 없음|  
+|datetime<sup>4</sup>|DATETIME|해당 사항 없음|  
+|datetime2<sup>4</sup>|DATETIME|해당 사항 없음|  
+|datetimeoffset<sup>4</sup>|DATETIME|해당 사항 없음|  
+|Decimal|String|8 비트 문자<sup>1</sup>|  
+|FLOAT|float|8 비트 문자<sup>1</sup>|  
 |geography|스트림|이진<sup>3</sup>|  
 |geometry|스트림|이진<sup>3</sup>|  
 |image<sup>5</sup>|스트림<sup>2</sup>|이진<sup>3</sup>|  
-|int|정수|8 비트 문자<sup>1</sup>|  
-|money|문자열|8 비트 문자<sup>1</sup>|  
-|NCHAR|문자열|8 비트 문자<sup>1</sup>|  
-|numeric|문자열|8 비트 문자<sup>1</sup>|  
-|nvarchar|문자열|8 비트 문자<sup>1</sup>|  
+|ssNoversion|정수|8 비트 문자<sup>1</sup>|  
+|money|String|8 비트 문자<sup>1</sup>|  
+|NCHAR|String|8 비트 문자<sup>1</sup>|  
+|NUMERIC|String|8 비트 문자<sup>1</sup>|  
+|NVARCHAR|String|8 비트 문자<sup>1</sup>|  
 |nvarchar(MAX)|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
 |ntext<sup>6</sup>|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
-|real|부동|8 비트 문자<sup>1</sup>|  
-|smalldatetime|날짜/시간|8 비트 문자<sup>1</sup>|  
-|smallint|정수|8 비트 문자<sup>1</sup>|  
-|smallmoney|문자열|8 비트 문자<sup>1</sup>|  
-|sql_variant<sup>7</sup>|문자열|8 비트 문자<sup>1</sup>|  
+|REAL|float|8 비트 문자<sup>1</sup>|  
+|smalldatetime|DATETIME|8 비트 문자<sup>1</sup>|  
+|SMALLINT|정수|8 비트 문자<sup>1</sup>|  
+|SMALLMONEY|String|8 비트 문자<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|8 비트 문자<sup>1</sup>|  
 |텍스트<sup>8</sup>|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
-|time<sup>4</sup>|날짜/시간|해당 사항 없음|  
-|timestamp|문자열|8 비트 문자<sup>1</sup>|  
-|tinyint|정수|8 비트 문자<sup>1</sup>|  
+|time<sup>4</sup>|DATETIME|해당 사항 없음|  
+|TIMESTAMP|String|8 비트 문자<sup>1</sup>|  
+|TINYINT|정수|8 비트 문자<sup>1</sup>|  
 |UDT|스트림<sup>2</sup>|이진<sup>3</sup>|  
-|uniqueidentifier|String<sup>9</sup>|8 비트 문자<sup>1</sup>|  
+|UNIQUEIDENTIFIER|String<sup>9</sup>|8 비트 문자<sup>1</sup>|  
 |varbinary|스트림<sup>2</sup>|이진<sup>3</sup>|  
 |varbinary(MAX)|스트림<sup>2</sup>|이진<sup>3</sup>|  
-|varchar|문자열|8 비트 문자<sup>1</sup>|  
+|varchar|String|8 비트 문자<sup>1</sup>|  
 |varchar(MAX)|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|
 |xml|스트림<sup>2</sup>|8 비트 문자<sup>1</sup>|  
   
@@ -111,7 +111,7 @@ SQL Server 2008의 새로운 않은 열 (예: 테이블 반환 매개 변수)의
   
 부분 형식 지원이란 열 형식에 대해 프로그래밍 방식으로 쿼리할 수 없다는 의미입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

@@ -2,7 +2,7 @@
 title: 날짜 및 시간 기능 향상 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버에서 날짜 및 시간 개선
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d39d7862dc470dfaada9b01f3717662dc2c9c94b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 622df9211c29c60cfdb42034f6284164f8d9af3b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611608"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 항목에서는 OLE DB 드라이버에 추가 된 날짜 및 시간 데이터 형식에 대 한 SQL Server 지원에 대 한 설명 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]합니다.  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>기존 변환과 일관된 클라이언트 쪽 변환이 포함된 Date/Time/Datetime/Datetimeoffset 데이터 사용  
  변환에서 제공 하는 모든 날짜 및 시간 형식 간 변환을 포함 하도록 일관 된 방식으로 확장 됩니다 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

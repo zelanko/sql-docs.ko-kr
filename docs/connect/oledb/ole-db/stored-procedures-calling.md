@@ -2,10 +2,10 @@
 title: 저장된 프로시저 (OLE DB) 호출 | Microsoft Docs
 description: 저장 프로시저 호출(OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6f4ee66e9f1eaf37f78e3a0a4a326655554c58f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dae3bfeae19e302d7e6320dcd61695d5d79d1e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612288"
 ---
 # <a name="stored-procedures---calling"></a>저장된 프로시저-호출
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. OLE DB Driver for SQL Server를 사용할 때 매개 변수는 저장된 프로시저를 통해 전달할 수 있습니다.  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- RPC 이스케이프 시퀀스를 보여 주는 샘플 응용 프로그램을 참조 하세요. [저장 프로시저 & #40; 실행 RPC 구문 & #41;를 사용 하 여 처리 반환 코드 및 출력 매개 변수 사용 & #40; OLE db& #41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ RPC 이스케이프 시퀀스를 보여 주는 샘플 응용 프로그램을 참조 하십시오. [저장 프로시저를 실행할 &#40;RPC 구문을 사용 하 여&#41; 프로세스 반환 코드 및 출력 매개 변수 및 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)합니다.  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 문  
  ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스는 저장된 프로시저를 호출 하기 위한 기본 메서드 대신 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문. OLE DB Driver for SQL Server의 RPC 메커니즘을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 명령 처리를 최적화 합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
@@ -130,7 +133,7 @@ ms.lasthandoff: 05/03/2018
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [저장된 프로시저](../../oledb/ole-db/stored-procedures.md)  
+## <a name="see-also"></a>관련 항목  
+ [저장 프로시저](../../oledb/ole-db/stored-procedures.md)  
   
   

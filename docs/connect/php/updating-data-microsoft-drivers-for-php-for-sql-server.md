@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca9f235b5d4d96c2d5ad335e7b9c1ad4236c8bc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64ade4d758d7ee5c87283750259641f59959731a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310062"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>데이터 업데이트(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 |[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)|서버에 데이터를 스트림하는 방법을 설명합니다.|  
 |[방법: 트랜잭션 수행](../../connect/php/how-to-perform-transactions.md)|**sqlsrv** 함수를 사용하여 트랜잭션을 수행하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)

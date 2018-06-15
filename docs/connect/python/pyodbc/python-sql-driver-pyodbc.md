@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c841c711a79f788c30b36b40994df805228e2f92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a747f9edc3a816d3b82eb22cb47aff6167638ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309792"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 pyodbc
 

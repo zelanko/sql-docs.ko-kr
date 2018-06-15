@@ -5,8 +5,6 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.prod_service: drivers
-ms.component: php
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -15,11 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92be589df4038d152f07445d7cd5fa4ffafc935b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308752"
 ---
 # <a name="support-for-localdb"></a>LocalDB에 대 한 지원
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 05/03/2018
 
 LocalDB는 경량 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용할 수 있었던 이후 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]합니다. 이 항목에서는 LocalDB 인스턴스의 데이터베이스에 연결하는 방법에 대해 설명합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
 LocalDB 설치 및 LocalDB 인스턴스를 구성 하는 방법을 비롯 한 LocalDB에 대 한 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에 온라인 설명서 항목 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB 합니다.
 
@@ -82,6 +81,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 LocalDB를 설치 하는 방법에 지침은 참조는 [LocalDB 설명서](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)합니다. Sqlcmd.exe를 사용 하 여 LocalDB 인스턴스에서 데이터를 수정 하는 경우는 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)합니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [서버에 연결](../../connect/php/connecting-to-the-server.md)

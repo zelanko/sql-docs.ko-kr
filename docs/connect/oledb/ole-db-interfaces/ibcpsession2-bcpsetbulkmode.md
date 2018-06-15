@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,16 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304902"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ibcpsession2:: Bcpsetbulkmode 제공 하는 대신 [ibcpsession:: Bcpcolfmt & #40; OLE db& #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 열 형식을 지정 하는 데 있습니다. Ibcpsession:: Bcpcolfmt를 개별 열 형식 특성을 설정 하는 달리 ibcpsession2:: Bcpsetbulkmode 모든 특성을 설정 합니다.  
+  Ibcpsession2:: Bcpsetbulkmode 제공 하는 대신 [ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 열 형식을 지정 하는 데 있습니다. Ibcpsession:: Bcpcolfmt를 개별 열 형식 특성을 설정 하는 달리 ibcpsession2:: Bcpsetbulkmode 모든 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>인수  
- *속성*  
+ *property*  
  BYTE 유형의 상수입니다. 상수 목록은 주의 섹션의 표를 참조하십시오.  
   
  *pField*  
@@ -68,14 +68,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|잘못된 인수입니다.|  
 |**E_OUTOFMEMORY**|메모리 부족 오류가 발생했습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  Ibcpsession2:: Bcpsetbulkmode 쿼리 또는 테이블 밖으로 대량 복사할 데 사용할 수 있습니다. 호출 호출 하기 전에 해야 ibcpsession2:: Bcpsetbulkmode 대량 쿼리 문 복사 하를 사용 하면 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 쿼리 문을 지정할 수 있습니다.  
   
  단일 명령 텍스트에서 RPC 호출 구문을 일괄 처리 쿼리 구문(예:`{rpc func};SELECT * from Tbl`)과 결합하지 마십시오.  이렇게 하면 icommandprepare:: Prepare 오류를 반환 하 여 사용자가 메타 데이터를 검색 하지 못하도록 합니다. 단일 명령 텍스트에서 저장 프로시저 실행 및 일괄 처리 쿼리를 결합해야 할 경우 ODBC CALL 구문(예:`{call func}; SELECT * from Tbl`)을 사용합니다.  
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|property|설명|  
+|property|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP에서 – c 옵션에 해당합니다. EXE가 있는 ibcpsession:: Bcpcolfmt를 *eUserDataType* 속성이로 설정 **BCP_TYPE_SQLCHARACTER**합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의 – w 옵션에 해당합니다. EXE 및와 ibcpsession:: Bcpcolfmt *eUserDataType* 속성이로 설정 **BCP_TYPE_SQLNCHAR**합니다.|  
@@ -364,7 +364,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [IBCPSession2 & #40; OLE db& #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

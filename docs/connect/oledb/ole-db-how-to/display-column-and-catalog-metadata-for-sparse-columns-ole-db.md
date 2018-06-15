@@ -2,10 +2,10 @@
 title: 열 및 표시 (OLE DB) 스파스 열의 카탈로그 메타 데이터 | Microsoft Docs
 description: 스파스 열 (OLE DB)에 대 한 열 및 카탈로그 메타 데이터 표시
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 78e9231b348df486355b1b816faf52b9a5eda1e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665603"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 예제에서는 세 개의 열(스파스 열, 스파스 열이 아닌 열, 열 집합 열)이 포함된 테이블을 만듭니다. 그런 다음 열 및 스파스가 아닌 열과 열 집합 열의 카탈로그 메타데이터를 보여 주는 OLE DB 플래그를 표시합니다.  
   

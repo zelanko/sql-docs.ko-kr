@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1bd6c32f7a0eaa0937c937abac3f135fd19f143c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f6b4f1bde4b123ba2a8a807a5bd91abe12cdad2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307722"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,9 +58,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server 인덱스 삭제](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로그래밍에 대 한 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [DROP table& #40; Transact SQL & #41;](../../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  
   

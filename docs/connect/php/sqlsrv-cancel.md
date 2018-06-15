@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c6173e20a99622a42264591c3a83024fda5d2bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308982"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -95,10 +95,10 @@ sqlsrv_cancel( $stmt);
 ?>  
 ```  
   
-## <a name="comments"></a>설명  
+## <a name="comments"></a>주석  
 준비 되 고의 조합을 사용 하 여 실행 하는 문을 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 여 다시 실행 될 수 **sqlsrv_execute** 를호출한후**sqlsrv_cancel**합니다. 로 실행 되는 문 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 호출한 후에 다시 실행할 수 없습니다 **sqlsrv_cancel**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [서버에 연결](../../connect/php/connecting-to-the-server.md)

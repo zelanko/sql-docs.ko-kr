@@ -2,7 +2,7 @@
 title: SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버를 사용 하 여 | Microsoft Docs
 description: SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버를 사용 하 여
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -24,14 +24,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d958d4b1f12f5a109c5727832eb764fd2b497d70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f228442c31d754265769645a640b1eb1285c5897
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612148"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>OLE DB 드라이버를 사용 하 여 SQL Server 헤더 및 라이브러리 파일
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -82,7 +83,7 @@ include "msoledbsql.h";
   
  자세한 내용은 참조 공연 [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

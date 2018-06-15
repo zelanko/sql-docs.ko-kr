@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309152"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 반환된 개체의 값 데이터 형식이 기본 PHP 데이터 형식이 됩니다. 기본 PHP 데이터 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
 클래스 이름이 선택적 *$className* 매개 변수로 지정된 경우 이 클래스 형식의 개체가 인스턴스화됩니다. 클래스에 이름이 결과 집합의 필드 이름과 일치하는 속성이 있는 경우 해당 결과 집합 값이 속성에 적용됩니다. 결과 집합 필드 이름이 클래스 속성과 일치하지 않는 경우 결과 집합 필드 이름을 사용하는 속성이 개체에 추가되고 결과 집합 값이 속성에 적용됩니다.  
   
 다음 규칙은 *$className* 매개 변수로 클래스를 지정할 때 적용됩니다.  
@@ -245,7 +245,7 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [데이터 검색](../../connect/php/retrieving-data.md)  
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  

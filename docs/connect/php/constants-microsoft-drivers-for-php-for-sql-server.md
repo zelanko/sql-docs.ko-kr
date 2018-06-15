@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307012"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -78,9 +78,9 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 ### <a name="err-constants"></a>ERR 상수  
 다음 표에서 경우를 지정 하는 데 사용 되는 상수를 나열 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 오류, 경고 또는 둘 다 반환 합니다.  
   
-|Value|Description|  
+|값|Description|  
 |---------|---------------|  
-|SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다. 이 값은 기본값입니다.|  
+|SQLSRV_ERR_ALL|마지막 **sqlsrv** 함수 호출 시 생성된 오류 및 경고가 반환됩니다. 이것은 기본값입니다.|  
 |SQLSRV_ERR_ERRORS|마지막 **sqlsrv** 함수 호출 시 생성된 오류가 반환됩니다.|  
 |SQLSRV_ERR_WARNINGS|마지막 **sqlsrv** 함수 호출 시 생성된 경고가 반환됩니다.|  
   
@@ -90,7 +90,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV 상수|Description|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** 는 데이터의 다음 행을 결합형 배열로 반환합니다.|  
-|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자와 결합형 키를 모두 가진 배열로 반환합니다. 이 값은 기본값입니다.|  
+|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자와 결합형 키를 모두 가진 배열로 반환합니다. 이것은 기본값입니다.|  
 |SQLSRV_FETCH_NUMERIC|**sqlsrv_fetch_array** 는 데이터의 다음 행을 숫자로 인덱싱된 배열로 반환합니다.|  
   
 ### <a name="logging-constants"></a>로깅 상수  
@@ -140,10 +140,10 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV 상수|PHP 데이터 형식|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|정수|  
-|SQLSRV_PHPTYPE_DATETIME|날짜/시간|  
-|SQLSRV_PHPTYPE_FLOAT|부동|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM ($인코딩<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($인코딩<sup>1</sup>)|문자열|  
+|SQLSRV_PHPTYPE_STRING ($인코딩<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 및 **SQLSRV_PHPTYPE_STRING** 은 스트림 인코딩을 지정 하는 매개 변수를 허용 합니다. 다음 표에는 허용 가능한 매개 변수인 SQLSRV 상수 및 해당 인코딩에 대한 설명이 있습니다.  
   
@@ -163,38 +163,38 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
   
 |SQLSRV 상수|SQL Server 데이터 형식|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|ssNoversion|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
-|SQLSRV_SQLTYPE_TIMESTAMP|timestamp|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  
@@ -267,6 +267,6 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
   
 이러한 상수를 사용하는 방법에 대한 자세한 내용은 [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   
