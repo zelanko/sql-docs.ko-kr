@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028570"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  

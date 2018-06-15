@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036150"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 

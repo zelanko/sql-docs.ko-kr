@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024010"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  

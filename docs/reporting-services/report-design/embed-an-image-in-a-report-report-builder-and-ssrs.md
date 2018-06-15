@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021350"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>보고서에 이미지 포함(보고서 작성기 및 SSRS)
   보고서에 포함 이미지를 포함할 수 있습니다. 이미지를 포함하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의 즉, 보고서를 정의하는 파일의 크기도 늘어납니다. 보고서에 포함된 이미지는 보고서 데이터 창에 나열됩니다.  

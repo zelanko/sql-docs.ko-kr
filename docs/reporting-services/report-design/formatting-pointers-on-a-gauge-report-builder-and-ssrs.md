@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023590"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 계기 포인터는 계기의 현재 값을 나타냅니다.   

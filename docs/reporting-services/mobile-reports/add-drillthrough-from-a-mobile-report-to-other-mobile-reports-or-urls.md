@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019887"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 

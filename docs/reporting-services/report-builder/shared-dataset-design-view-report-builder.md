@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021370"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 집합 디자인 뷰 (보고서 작성기)
   보고서에서 데이터 집합은 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 집합은 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 집합을 만들 수 있습니다. 공유 데이터 집합 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  

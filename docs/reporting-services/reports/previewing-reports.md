@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028730"
 ---
 # <a name="previewing-reports"></a>보고서 미리 보기
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 디자인할 때 프로덕션 환경에 게시하기 전에 보고서를 미리 볼 수 있습니다. 이 작업은 보고서 디자이너에서 미리 보기 모드로 전환하거나, 보고서 디자이너에서 미리 보기 창을 사용하거나, 테스트 환경의 보고서 서버에 보고서를 게시하여 수행할 수 있습니다.  

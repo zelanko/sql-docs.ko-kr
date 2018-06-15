@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036470"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  

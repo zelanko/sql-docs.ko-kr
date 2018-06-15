@@ -21,6 +21,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34332184"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -22,6 +22,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34333864"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

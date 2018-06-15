@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022290"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
