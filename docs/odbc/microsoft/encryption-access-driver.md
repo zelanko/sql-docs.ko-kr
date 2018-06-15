@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899398"
 ---
 # <a name="encryption-access-driver"></a>암호화 (Access 드라이버)
 (이 컨트롤의 경우에만 사용할 수 있는 버전 4입니다. *x* 형식이 선택 되어 있습니다.)  

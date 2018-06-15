@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897968"
 ---
 # <a name="fixed-width-text-file"></a>고정 너비 텍스트 파일
 텍스트 드라이버를 사용 하는 경우 고정 너비 텍스트 파일의 마지막 열에는 가변 길이 수 있습니다.

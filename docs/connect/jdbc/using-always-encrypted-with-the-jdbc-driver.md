@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853038"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC 드라이버와 함께 상시 암호화를 사용 하 여
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

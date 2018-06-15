@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897678"
 ---
 # <a name="correlation-names"></a>상관 관계 이름
 상관 관계 이름은 완벽 하 게 지원 테이블 목록 내 포함 합니다. 예를 들어 다음 문자열 E1 Emp 라는 테이블에 대 한 상관 관계 이름입니다.  
