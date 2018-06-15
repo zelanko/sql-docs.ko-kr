@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201875"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>PREDICT 문 모니터링에 대 한 확장된 이벤트
 
