@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027706"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>중첩된 데이터 영역(보고서 작성기 및 SSRS)
   일반적으로 데이터 요약을 간결하게 표시하거나 데이터를 테이블이나 행렬 이외에 시각적인 방식으로도 표시하려는 경우 차트와 같은 한 데이터 영역을 행렬과 같은 다른 데이터 영역에 중첩할 수 있습니다.  

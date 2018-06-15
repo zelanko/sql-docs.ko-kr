@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015070"
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
   *rs:Format* URL 매개 변수를 사용하여 선택적으로 보고서를 렌더링할 형식을 지정할 수 있습니다.  HTML4.0 및 HTM5 형식(렌더링 확장 프로그램)은 브라우저에서 렌더링하고 다른 형식의 경우 브라우저는 로컬 파일에 보고서 출력을 저장하라는 메시지가 나타납니다.  

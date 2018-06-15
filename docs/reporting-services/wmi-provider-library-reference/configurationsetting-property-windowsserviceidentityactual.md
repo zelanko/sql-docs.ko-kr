@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031320"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting 속성 - WindowsServiceIdentityActual
   보고서 서버의 Windows 서비스가 실행되고 있는 ID입니다. 읽기 전용입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030840"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
   지정된 보고서 서버 데이터베이스 버전 문자열의 표시 이름을 가져옵니다.  

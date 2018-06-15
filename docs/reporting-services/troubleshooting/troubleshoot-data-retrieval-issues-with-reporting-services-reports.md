@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032330"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결
 보고서 처리의 첫 번째 단계는 데이터 집합 쿼리를 실행하여 각 데이터 집합에 대한 보고서 데이터를 검색하는 것입니다. 보고서를 로컬로 미리 볼 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 데이터를 컴퓨터로 읽어 들여야 합니다. 보고서 서버에서 보고서를 실행할 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 보고서 서버에서 데이터를 검색해야 합니다. 이 항목을 사용하여 보고서 데이터 검색 관련 문제를 해결할 수 있습니다.   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015250"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
 데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 응용 프로그램을 빌드하고 실행합니다.  

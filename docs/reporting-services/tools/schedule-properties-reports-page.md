@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029740"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 일정 속성 페이지를 사용하여 특정 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  

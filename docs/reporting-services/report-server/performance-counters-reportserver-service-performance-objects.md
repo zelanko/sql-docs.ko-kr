@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027720"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
   이 항목에서는 **배포에 포함된** ReportServer:Service **및** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 성능 개체의 성능 카운터에 대해 설명합니다.  

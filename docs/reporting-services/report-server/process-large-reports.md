@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028050"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035570"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting 멤버
   MSReportServer_ConfigurationSetting 클래스에는 다음 속성 및 메서드가 포함되어 있습니다.  

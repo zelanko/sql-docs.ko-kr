@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020030"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
   SharePoint 모드에서 실행되는 보고서 서버의 경우 다음 세 가지 방법으로 SharePoint 웹 응용 프로그램에서 보고서를 인쇄할 수 있습니다.  

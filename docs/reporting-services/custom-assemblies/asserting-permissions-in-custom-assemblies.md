@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015550"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>사용자 지정 어셈블리에서 권한 어설션
   기본적으로 사용자 지정 어셈블리 코드는 제한된 **Execution** 권한 집합으로 실행됩니다. 경우에 따라 보안 시스템 내에서 보호된 리소스(파일, 레지스트리 등)에 대한 보안 호출을 하는 사용자 지정 어셈블리를 구현하고자 할 수 있습니다. 이렇게 하려면 다음 작업을 수행해야 합니다.  

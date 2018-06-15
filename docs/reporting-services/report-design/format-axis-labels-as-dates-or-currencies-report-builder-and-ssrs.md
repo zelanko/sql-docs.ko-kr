@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023250"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
 올바른 형식의 DateTime 값을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 축에 표시하면 차트에 이러한 값이 일로 자동 표시됩니다. X축에 대해 월 또는 시간 간격과 같은 날짜/시간 간격을 지정하려면 축 레이블의 서식을 지정하고 축 간격 유형을 올바른 날짜 또는 시간 간격으로 설정해야 합니다.  

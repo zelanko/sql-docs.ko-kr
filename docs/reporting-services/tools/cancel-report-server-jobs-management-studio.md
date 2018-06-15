@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029410"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>보고서 서버 작업 취소(Management Studio)
   **보고서 서버 작업 취소** 대화 상자를 사용하여 진행 중인 보고서를 보거나 취소할 수 있습니다. 이 대화 상자에는 현재 보고서 서버에서 실행 중인 모든 작업이 표시됩니다. 현재 처리 중인 작업을 일시 중지하거나 다시 시작할 수는 없지만 완료하는 데 오랜 시간이 걸릴 경우 모든 작업 또는 개별 작업을 취소할 수 있습니다.  

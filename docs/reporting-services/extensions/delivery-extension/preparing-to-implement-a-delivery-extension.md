@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018070"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 우선 배달 확장 프로그램을 사용할 방식, 배달 확장 프로그램에 필요한 설정, 보고서 알림을 배달하기 위해 구현할 특정 기능 등을 결정해야 합니다.  

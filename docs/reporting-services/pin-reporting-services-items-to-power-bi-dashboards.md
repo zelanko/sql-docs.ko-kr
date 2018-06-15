@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022900"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI 대시보드에 Reporting Services 항목 고정
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 을 통해 사용자는 보고서 뷰어 도구 모음의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 새 타일로 고정합니다.   고정하려면 먼저 관리자가 보고서 서버를 Azure Active Directory 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]과 통합해야 합니다.  

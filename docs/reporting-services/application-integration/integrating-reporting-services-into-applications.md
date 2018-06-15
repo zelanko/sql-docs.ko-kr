@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017300"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>응용 프로그램에 Reporting Services 통합
 

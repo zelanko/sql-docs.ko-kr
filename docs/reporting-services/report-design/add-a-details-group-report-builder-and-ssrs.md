@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019760"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>세부 정보 그룹 추가(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합의 정보 데이터는 그룹 식이 없는 그룹으로 지정됩니다. 행렬에 대한 세부 데이터를 표시하거나, 테이블이나 목록에서 삭제한 세부 데이터를 다시 추가하거나, 추가적인 세부 정보 그룹을 추가하려면 기존 테이블릭스 데이터 영역에 세부 정보 그룹을 추가합니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  

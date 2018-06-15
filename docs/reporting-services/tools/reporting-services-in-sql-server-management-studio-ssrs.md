@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031470"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio의 Reporting Services(SSRS)
   보고서 서버 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 다음을 수행할 수 있습니다.  

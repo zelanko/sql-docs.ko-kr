@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019331"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화 | Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]의 많은 차트 종류에서 열 또는 행을 기준으로 데이터를 구성할 수 있습니다. 이 단계별 지침을 따릅니다.

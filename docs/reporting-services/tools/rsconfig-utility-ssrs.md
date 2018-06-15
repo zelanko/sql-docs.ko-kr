@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034500"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  

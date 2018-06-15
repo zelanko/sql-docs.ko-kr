@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021430"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   보고서 작성기에서 매개 변수를 사용하여 페이지가 매겨진 보고서의 작성하는 경우 매개 변수 창을 사용자 지정할 수 있습니다. 보고서 디자인 보기에서 매개 변수 창의 특정 열과 행에 매개 변수를 끌어 놓을 수 있습니다. 열을 추가하거나 제거하여 창 레이아웃을 변경할 수 있습니다.  

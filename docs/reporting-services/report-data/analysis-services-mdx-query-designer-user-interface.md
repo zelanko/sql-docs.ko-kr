@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022400"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리 및 DMX(Data Mining Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 MDX 쿼리 디자이너에 대해 설명합니다. DMX 쿼리 디자이너에 대한 자세한 내용은 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.  

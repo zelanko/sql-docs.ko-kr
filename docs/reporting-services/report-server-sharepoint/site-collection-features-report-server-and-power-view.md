@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025830"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
 

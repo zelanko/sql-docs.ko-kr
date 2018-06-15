@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019350"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>차트 종류 변경(보고서 작성기 및 SSRS)
 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 차트를 삽입하면 **차트 종류 선택** 대화 상자가 나타납니다. 이 대화 상자를 취소하면 세로 막대형 차트가 기본적으로 추가됩니다.  

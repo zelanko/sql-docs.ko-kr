@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026080"
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
   보고서 처리 상태에 대한 정보를 보려면 로그 파일을 사용하거나 보고서 관리자에서 보고서와 함께 표시되는 상태 정보를 참조할 수 있습니다.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025590"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Reporting Services 보고서 뷰어 웹 파트와 필터 또는 문서 웹 파트 연결
 

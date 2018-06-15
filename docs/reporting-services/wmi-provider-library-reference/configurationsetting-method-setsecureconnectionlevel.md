@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031440"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting 메서드 - SetSecureConnectionLevel
   보고서 서버의 보안 연결 수준을 설정합니다.  

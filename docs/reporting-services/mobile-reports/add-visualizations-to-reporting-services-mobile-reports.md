@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021690"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 시각화 추가
 차트는 데이터 시각화의 필수적인 부분입니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에서 여러 시나리오를 처리할 수 있는 차트에 대해 알아보세요. 

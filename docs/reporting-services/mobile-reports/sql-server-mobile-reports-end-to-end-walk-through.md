@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022690"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.

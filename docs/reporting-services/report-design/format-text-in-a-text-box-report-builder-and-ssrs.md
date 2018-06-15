@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023500"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
   입력란에 있는 텍스트 부분의 서식을 개별적으로 지정하고 한 입력란 내에 자리 표시자 텍스트와 정적 텍스트를 함께 사용할 수 있습니다. 여러 서식을 함께 사용하고 자리 표시자 텍스트를 추가하는 이 기능을 통해 보고서의 텍스트에 대한 편지 병합 또는 템플릿을 만들 수 있습니다. 자리 표시자를 사용하여 모든 식을 개별적으로 정의하고 서식을 지정할 수 있습니다.  

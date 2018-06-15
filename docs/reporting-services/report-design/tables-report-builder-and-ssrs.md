@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028910"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블을 사용하여 정보 데이터나 그룹화된 데이터 또는 두 데이터의 조합을 페이지가 매겨진 보고서에 표시할 수 있습니다.   

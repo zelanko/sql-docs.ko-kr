@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031360"
 ---
 # <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance 메서드 - GetReportServerUrls
   사용자가 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 액세스하는 데 사용할 수 있는 URL 목록을 반환합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33043180"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치 
 

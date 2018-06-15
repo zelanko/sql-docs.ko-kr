@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021040"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 집합 필드 컬렉션 참조(보고서 작성기)
   보고서의 각 데이터 집합에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 집합 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 집합을 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  

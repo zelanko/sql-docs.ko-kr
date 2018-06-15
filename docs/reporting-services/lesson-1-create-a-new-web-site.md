@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017360"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
 이 단원에서는 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 배웁니다.  

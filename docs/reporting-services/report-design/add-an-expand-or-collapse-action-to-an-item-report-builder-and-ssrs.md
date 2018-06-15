@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020880"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
   사용자가 보고서 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다. 사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다. 표시 유형을 설정하면 HTML 보고서 뷰어에서 사용할 수 있으며 이를 *드릴다운* 동작이라고도 합니다.  

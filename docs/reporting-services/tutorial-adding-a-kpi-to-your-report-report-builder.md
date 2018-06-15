@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036390"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 KPI(핵심 성과 지표)를 추가합니다.  

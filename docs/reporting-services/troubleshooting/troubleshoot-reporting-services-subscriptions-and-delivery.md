@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033200"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services 구독 및 배달 문제 해결
   

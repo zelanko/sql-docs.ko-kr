@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031680"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 메서드 - RemoveURL
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033700"
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
   SQL Server Reporting Services(SSRS)에서 보고서 서버의 URL 액세스를 사용하면 URL 요청을 통해 보고서 서버에 명령을 보낼 수 있습니다. 예를 들어 기본 모드 보고서 서버 또는 SharePoint 라이브러리에서 보고서 렌더링을 사용자 지정할 수 있습니다. 특정 보고서 매개 변수 값 집합을 사용하여 보고서를 보거나 보고서의 관심 있는 특정 페이지를 본 경우 미리 정의된 URL 액세스 매개 변수를 사용하여 이 정보를 URL에 캡슐화할 수 있습니다. 또한 렌더링 형식 및 보고서 뷰어의 디자인에 대한 매개 변수를 포함하여 보고서 서버에서 보고서를 처리하는 방식을 사용자 지정할 수 있습니다. 그런 다음 이 URL을 전자 메일이나 웹 페이지에 직접 붙여넣어 다른 사용자가 브라우저에서 같은 방식으로 보고서에 액세스하도록 할 수 있습니다.  

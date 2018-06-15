@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033960"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 응용 프로그램 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  

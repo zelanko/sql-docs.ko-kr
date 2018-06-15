@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027810"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  

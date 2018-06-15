@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023120"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 

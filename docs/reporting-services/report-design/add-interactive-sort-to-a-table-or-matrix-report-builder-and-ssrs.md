@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022470"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하면 사용자가 테이블 및 행렬에서 행 및 열의 정렬 순서를 변경할 수 있습니다. 이 기능은 HTML처럼 사용자 상호 작용을 지원하는 랜더링 형식에서만 지원됩니다.  

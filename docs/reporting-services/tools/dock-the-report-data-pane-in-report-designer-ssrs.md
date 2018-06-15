@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029230"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>보고서 디자이너에서 보고서 데이터 창 도킹(SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너에 있는 보고서 데이터 창에는 데이터 원본, 데이터 집합, 필드, 매개 변수 및 이미지를 비롯하여 보고서에 사용할 수 있는 데이터 개체의 계층 뷰가 표시됩니다. 이 뷰의 데이터 원본은 포함된 데이터 원본이거나 솔루션 탐색기에 표시되는 공유 데이터 원본에 대한 참조일 수 있습니다.  

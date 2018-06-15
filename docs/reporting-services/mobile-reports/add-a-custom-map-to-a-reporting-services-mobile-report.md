@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018500"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서의 사용자 지정 지도 추가
 사용자 지정 지도에는 다음과 같은 두 개의 파일이 필요합니다.  

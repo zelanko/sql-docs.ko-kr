@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026296"
 ---
 # <a name="publishing-data-sources-and-reports"></a>데이터 원본 및 보고서 게시
   보고서를 게시하기 전에 미리 보기를 수행하여 보고서가 실행되었을 때의 모습을 확인해야 합니다. 만족스러운 결과가 나올 때까지 디자인을 계속 다듬을 수 있습니다.  

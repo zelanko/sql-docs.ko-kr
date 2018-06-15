@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035970"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 응용 프로그램에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  

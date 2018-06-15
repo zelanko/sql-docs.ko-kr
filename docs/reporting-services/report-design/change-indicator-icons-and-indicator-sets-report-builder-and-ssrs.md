@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021130"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공하는 미리 구성된 표시기 집합이 항상 데이터를 효율적으로 나타내고 전달된 보고서에서 제대로 작동하는 것은 아닙니다. 이 항목에서는 표시기 아이콘 모양을 변경하고 더 많거나 더 적은 표시기 아이콘 또는 다른 표시기 아이콘을 포함하도록 표시기 집합을 변경하는 절차에 대해 설명합니다.  

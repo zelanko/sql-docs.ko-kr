@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019430"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   이 항목에서는 페이지를 매긴 보고서를 Excel로 내보낼 때 Excel 2003 행 제한을 해결하는 방법을 설명합니다. 테이블만 포함하는 보고서에 대한 해결 방법입니다.  

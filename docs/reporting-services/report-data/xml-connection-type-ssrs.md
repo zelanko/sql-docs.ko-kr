@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023130"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
   보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  

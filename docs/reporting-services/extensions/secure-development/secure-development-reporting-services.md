@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015120"
 ---
 # <a name="secure-development-reporting-services"></a>안전한 개발(Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 엄격한 제약을 받는 관리자 정의 보안 컨텍스트에서 코드를 실행할 수 있는 강력한 보안 시스템을 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 코드 액세스 보안 또는 증명 정보 기반 보안이라고 하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 시스템을 사용합니다. 코드 액세스 보안 하에서는 사용자가 안전하게 리소스에 액세스할 수 있지만 사용자가 실행하는 코드를 신뢰할 수 없는 경우 리소스에 대한 액세스가 거부됩니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34467510"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL 및 병렬 데이터 웨어하우스 동적 관리 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

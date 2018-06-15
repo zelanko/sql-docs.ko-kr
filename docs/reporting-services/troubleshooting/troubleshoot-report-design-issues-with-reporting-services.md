@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032380"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Reporting Services의 보고서 디자인 문제 해결
 보고서 디자인 문제는 보고서 제작 응용 프로그램의 디자인 뷰에서 보고서 레이아웃을 만들 때 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.   

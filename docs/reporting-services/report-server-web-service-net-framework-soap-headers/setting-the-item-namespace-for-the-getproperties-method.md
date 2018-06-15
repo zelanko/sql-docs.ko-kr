@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024280"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 서로 다른 항목 식별자인 항목의 전체 경로 또는 항목의 ID를 기준으로 항목 속성을 검색할 수 있습니다.  

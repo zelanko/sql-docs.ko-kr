@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025730"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
   보고서 관리자를 사용하여 보고서 서버에 게시된 보고서를 볼 수 있습니다. 기본적으로 모든 보고서는 HTML로 열립니다. 보고서가 열린 후 다른 응용 프로그램 형식으로 내보내어 볼 수 있습니다. 보고서에 대화형 기능이 포함되어 있거나 보고서가 대화형 데이터를 포함한 보고서 작성기 보고서인 경우 해당 링크를 클릭하여 추가 보고서 또는 데이터를 볼 수 있습니다.  

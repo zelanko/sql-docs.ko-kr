@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036170"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035740"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  

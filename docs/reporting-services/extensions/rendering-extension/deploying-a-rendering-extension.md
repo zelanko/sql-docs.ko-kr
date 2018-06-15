@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018080"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 렌더링 확장 프로그램을 작성하고 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업을 수행하려면 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가합니다.  

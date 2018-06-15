@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021840"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
 너무 많은 조각이 있는 원형 차트는 복잡하게 보일 수 있습니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 원형 차트의 많은 작은 조각을 하나의 단일 조각으로 수집하는 방법을 알아봅니다.

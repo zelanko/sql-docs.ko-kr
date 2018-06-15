@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019450"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>데이터 집합 속성 대화 상자, 필터
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  

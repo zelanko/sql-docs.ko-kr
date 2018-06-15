@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026920"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>보고서 뷰어의 로컬 모드와 연결된 모드
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028870"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 집합의 명명된 데이터 집합입니다. 기본적으로 그룹은 보고서 데이터 집합의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 집합의 서로 다른 뷰를 지정합니다.  

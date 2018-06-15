@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017090"
 ---
 # <a name="html-device-information-settings"></a>HTML 장치 정보 설정
 다음 표에서는 HTML 형식으로 렌더링하기 위한 장치 정보 설정을 보여 줍니다.  

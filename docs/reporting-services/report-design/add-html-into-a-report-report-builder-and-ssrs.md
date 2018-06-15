@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019050"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>보고서에 HTML 추가(보고서 작성기 및 SSRS)
   자리 표시자를 사용하여 데이터 집합의 필드에서 보고서에 사용할 HTML을 가져올 수 있습니다. 기본적으로 자리 표시자는 일반 텍스트를 나타내므로 자리 표시자 태그 형식을 HTML로 변경해야 합니다. 자세한 내용은 [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)를 참조하세요.  

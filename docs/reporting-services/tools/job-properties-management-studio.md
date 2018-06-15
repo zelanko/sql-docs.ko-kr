@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031200"
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
   **작업 속성** 페이지를 사용하여 진행 중인 보고서 또는 구독을 취소하기 전에 이에 대한 정보를 볼 수 있습니다.  

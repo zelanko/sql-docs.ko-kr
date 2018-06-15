@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024730"
 ---
 # <a name="report-builder-functions---first-function"></a>보고서 작성기 함수 - First 함수
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

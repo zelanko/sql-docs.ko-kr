@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034910"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
 

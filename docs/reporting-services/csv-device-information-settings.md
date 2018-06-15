@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015680"
 ---
 # <a name="csv-device-information-settings"></a>CSV 장치 정보 설정
   CSV 렌더링 확장 프로그램에 대한 장치 정보 설정을 통해 구분 기호 및 한정자를 변경하고 줄 바꿈 처리를 지정할 수 있습니다. 출력에 파일 확장명과 인코딩 및 머리글 행도 포함하여 제출할 수 있습니다. 구분 기호는 특수 문자일 수 있기 때문에 설정이 XML로 작성된 경우 CDATA 섹션에서 인코딩해야 합니다.  

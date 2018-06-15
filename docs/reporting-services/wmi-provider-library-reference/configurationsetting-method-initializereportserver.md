@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030410"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 메서드 - InitializeReportServer
   지정된 보고서 서비스 인스턴스를 초기화합니다.  

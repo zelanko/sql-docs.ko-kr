@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022270"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션 - DataSources 및 데이터 집합 참조(보고서 작성기)
   **DataSources** 컬렉션은 보고서에 사용되는 모든 데이터 원본을 나타냅니다. 마찬가지로 **DataSets** 컬렉션은 보고서의 모든 데이터 원본에 대한 모든 데이터 집합을 나타냅니다. **보고서 데이터** 창을 사용하여 참조하는 데이터 원본 아래에 구성된 보고서 데이터 집합을 계층적으로 볼 수 있습니다. 이러한 컬렉션에 대한 참조를 추가할 경우 보고서를 미리 볼 때 값이 표시되지 않습니다. 이러한 컬렉션은 보고서가 보고서 서버에 게시된 다음에만 사용할 수 있습니다.  

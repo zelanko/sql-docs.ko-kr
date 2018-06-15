@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016910"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 

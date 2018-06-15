@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018090"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  

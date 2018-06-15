@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030930"
 ---
 # <a name="configurationsetting-method---generatedatabasecreationscript"></a>ConfigurationSetting 메서드 - GenerateDatabaseCreationScript
   보고서 서버 데이터베이스를 만드는 데 사용할 수 있는 SQL 스크립트를 생성합니다.  

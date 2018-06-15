@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029390"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
   이 페이지를 사용하여 시스템 수준의 역할 정의를 만들 수 있습니다. 시스템 역할 정의는 보고서 서버 전체에 적용되는 시스템 수준 태스크 집합을 지정합니다.  

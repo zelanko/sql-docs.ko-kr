@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030771"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다. 이 섹션의 오류 메시지 항목에서는 오류 메시지, 가능한 원인 및 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023610"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에서 페이지를 매긴 보고서를 설명하는 데 사용된 몇 가지 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)을 참조하세요.  

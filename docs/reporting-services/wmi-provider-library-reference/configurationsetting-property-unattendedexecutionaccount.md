@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030630"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>ConfigurationSetting 속성 - UnattendedExecutionAccount
   보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 사용자 계정을 반환합니다. 읽기 전용입니다.  

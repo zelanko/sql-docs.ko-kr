@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014450"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL 액세스를 사용하여 Reporting Services 통합
   URL 액세스를 사용하여 보고서 서버 URL을 통해 보고서에 액세스할 수 있습니다. URL 요청을 통해 특정 보고서 서버는 물론 보고서 서버 데이터베이스의 보고서, 리소스 및 기타 항목에 액세스할 수 있습니다. 또한 사용자를 위해 보고서 보기 및 탐색 환경을 사용자 지정할 수도 있습니다. URL의 쿼리 문자열에는 장치 정보 설정, 보고서를 대상으로 하는 보고서 매개 변수 및 선택한 렌더링 출력이 포함됩니다. 보고서 서버에서 URL 요청을 처리하는 방법은 매개 변수, 매개 변수 접두사, URL을 통해 액세스하는 항목의 형식 등에 따라 다릅니다.  

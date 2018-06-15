@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019604"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
   

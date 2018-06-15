@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027800"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
 

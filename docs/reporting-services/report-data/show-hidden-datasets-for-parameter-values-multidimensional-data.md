@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019150"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시
   보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 집합(숨겨진 데이터 집합이라고도 함)이 포함될 수도 있습니다. 이러한 데이터 집합은 다음과 같은 방법으로 생성됩니다.  

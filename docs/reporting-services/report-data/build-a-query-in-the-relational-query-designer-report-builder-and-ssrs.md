@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020770"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
   쿼리 디자이너를 사용하면 보고서 데이터 집합에 사용하기 위해 외부 데이터 원본에서 검색할 데이터를 지정할 수 있습니다. 마법사에서 쿼리를 작성하거나 데이터 집합 쿼리를 만들 때 쿼리 디자이너를 사용할 수 있습니다.  

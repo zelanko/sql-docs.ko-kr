@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029170"
 ---
 # <a name="delete-an-item-management-studio"></a>항목 삭제(Management Studio)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버 인스턴스에 연결된 경우 역할 정의 및 공유 일정을 삭제할 수 있습니다. 보고서 서버의 보고서, 모델 또는 기타 항목을 삭제할 수 없습니다. 보고서 서버 내용을 삭제하려면 보고서 관리자를 대신 사용합니다. 또는 보고서 서버가 SharePoint 통합 모드용으로 구성된 경우 계정이 들어 있는 SharePoint 라이브러리의 항목 관리 기능을 사용합니다.  

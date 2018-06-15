@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021100"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역(테이블, 매트릭스 또는 목록)에 대해 페이지를 매긴 보고서의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다.

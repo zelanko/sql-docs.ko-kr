@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014710"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL 파일에서 어셈블리 참조
   보고서 정의 파일에서 사용자 지정 코드 어셈블리를 사용할 수 있도록 지원하기 위해 두 가지 RDL(Report Definition Language) 요소인 **CodeModules** 요소와 **Classes** 요소가 RDL 사양에 포함되었습니다.  

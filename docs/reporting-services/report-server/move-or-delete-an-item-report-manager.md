@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025900"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
   보고서 서버에 게시하는 보고서 및 보고서 관련 항목은 폴더에 저장됩니다. 항목을 다른 폴더로 이동할 수 있으며 해당 항목에 대한 참조는 보고서 서버에서 자동으로 유지 관리됩니다. 항목을 삭제하기 전에 해당 항목에 다른 항목이 종속되어 있는지 확인하십시오.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015890"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
   렌더링 확장 프로그램은 실제 데이터와 결합된 보고서 정의에서 결과를 가져오고 결과 데이터를 사용 가능한 형식으로 렌더링합니다. 결합된 데이터의 변환과 형식 지정은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>을 구현하는 CLR(공용 언어 런타임) 클래스를 사용하여 수행됩니다. 이것은 개체 모델을 뷰어, 프린터 또는 기타 출력 대상에서 사용할 수 있는 출력 형식으로 변환합니다.  

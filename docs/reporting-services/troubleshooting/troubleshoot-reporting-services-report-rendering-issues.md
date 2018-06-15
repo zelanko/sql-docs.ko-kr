@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033320"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 보고서 렌더링 문제 해결
 보고서 데이터와 레이아웃 정보가 조합되면 컴파일된 보고서가 보고서 렌더러로 전송됩니다. 예를 들어 보고서를 로컬로 미리 볼 때는 HTML 렌더러를 사용하여 컴파일된 보고서를 표시합니다. 이 항목을 사용하여 보고서 렌더링 관련 문제를 해결할 수 있습니다.   

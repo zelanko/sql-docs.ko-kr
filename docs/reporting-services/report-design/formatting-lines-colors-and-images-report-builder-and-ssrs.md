@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023360"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용하면 선, 색, 데이터 영역, 이미지 및 다른 보고서 항목의 서식을 지정할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032488"
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
   이 페이지를 사용하여 게시된 보고서 및 구독의 공유 일정을 만들 수 있습니다. 보고서별 일정 또는 구독별 일정 대신 공유 일정을 사용할 수 있습니다. 공유 일정이 항목별 일정과 구분되는 두 가지 주요 기능은 중앙화된 일정 정보, 그리고 예약된 작업을 일시 중지했다가 재개하는 기능입니다.  

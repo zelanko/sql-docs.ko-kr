@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025960"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>보고서 작성기 함수 - 집계 함수
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  

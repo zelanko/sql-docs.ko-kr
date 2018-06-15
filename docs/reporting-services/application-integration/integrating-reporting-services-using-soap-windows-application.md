@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015570"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP를 사용하여 Reporting Services 통합 - Windows 응용 프로그램
   Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. 서비스를 호출하는 코드를 작성하기만 하면 Windows 응용 프로그램에서 웹 서비스에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 웹 서비스의 속성 및 메서드를 표시하고 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 응용 프로그램을 만들 수 있는 프록시 클래스를 생성할 수 있습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028890"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>단위 설정 및 구성(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 표시기는 백분율과 숫자의 두 가지 측정 단위 중 하나를 사용합니다.   

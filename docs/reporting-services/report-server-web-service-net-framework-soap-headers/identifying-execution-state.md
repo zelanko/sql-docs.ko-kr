@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025680"
 ---
 # <a name="identifying-execution-state"></a>실행 상태 식별
   HTTP(Hypertext Transfer Protocol)는 연결 없는 상태 비저장 프로토콜이므로 다양한 요청이 동일한 클라이언트에서 나온 것인지 여부 또는 단일 브라우저 인스턴스에서 페이지나 사이트를 계속 사용 중인지 여부를 자동으로 나타내지 않습니다. 다수의 세션에서 논리적 연결이 만들어져 서버와 클라이언트 간의 상태가 HTTP를 통해 유지됩니다. 특정 세션과 관련된 사용자별 정보를 세션 상태라고 합니다.  

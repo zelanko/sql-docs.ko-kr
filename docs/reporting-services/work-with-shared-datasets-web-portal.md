@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033340"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합 사용 - 웹 포털
 

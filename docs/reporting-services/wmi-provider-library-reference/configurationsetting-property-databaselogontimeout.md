@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030050"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>ConfigurationSetting 속성 - DatabaseLogonTimeout
   보고서 서버 데이터베이스에 대한 로그온 시도가 실패할 때까지 기다리는 시간(초)을 지정합니다. **0** 값은 무한 대기 시간을 나타냅니다. 읽기 전용입니다.  

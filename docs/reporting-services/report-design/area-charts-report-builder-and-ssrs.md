@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019860"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>영역형 차트(보고서 작성기 및 SSRS)
   영역형 차트에서 계열은 선으로 연결된 일련의 점(선 아래 영역이 모두 채워짐)으로 표시됩니다. 영역형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  

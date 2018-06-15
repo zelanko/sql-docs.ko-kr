@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014630"
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 IDeliveryReportServerInformation 인터페이스 사용
   <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스는 보고서 서버에 대한 정보를 검색하는 데 사용할 수 있는 여러 가지 속성을 표시합니다. 이 정보를 사용하여 알림 및 보고서를 배달할 수 있습니다. 배달 확장 프로그램 클래스를 구현하는 경우 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 인터페이스에서 필요한 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 속성을 구현합니다. <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> 속성은 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> 인터페이스를 구현하는 개체를 반환합니다. 이 개체로부터 보고서 서버에서 현재 지원하는 렌더링 확장 프로그램 목록을 구할 수 있습니다.  

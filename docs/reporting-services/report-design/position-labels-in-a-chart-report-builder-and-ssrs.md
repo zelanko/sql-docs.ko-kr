@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026810"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>차트의 레이블 위치 지정(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 차트 종류마다 셰이프가 다르므로 데이터 요소 레이블은 차트에서 방해가 되지 않을 최적의 위치에 배치됩니다. 레이블의 기본 위치는 차트 종류에 따라 달라집니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035530"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 모든 방법을 사용할 수는 없습니다. 다음 테이블에는 가능한 방법과 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  

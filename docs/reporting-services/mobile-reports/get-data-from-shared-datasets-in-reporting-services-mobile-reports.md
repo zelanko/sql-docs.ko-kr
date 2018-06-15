@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018397"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
 SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018480"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 디자인 화면에 갤러리 요소를 추가하면 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서 해당 요소에 대해 시뮬레이션 데이터를 즉시 생성합니다. 이 데이터는 모바일 보고서를 만들 때 다양하고 유용한 목적으로 활용할 수 있습니다.   

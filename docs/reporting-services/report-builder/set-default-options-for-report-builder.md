@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018730"
 ---
 # <a name="set-default-options-for-report-builder"></a>보고서 작성기에 대한 기본 옵션 설정
   보고서 작성기에서 다양한 유용한 기본값을 설정하여 보고서 작성을 쉽고 빠르게 할 수 있습니다.  예를 들어 기본 보고서 서버를 설정하거나 변경할 수 있는 경우 보고서 작성기는 별도로 지정하지 않는 한 보고서를 동일한 보고서 서버에 자동으로 저장합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031690"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>ConfigurationSetting 속성 - ConnectionPoolSize
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신하기 위해 보고서 서버에서 사용하는 연결 풀 크기입니다. 읽기 전용입니다.  

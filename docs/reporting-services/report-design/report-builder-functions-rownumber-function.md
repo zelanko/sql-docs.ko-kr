@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024060"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>보고서 작성기 함수 - RowNumber 함수
   지정한 범위에서 행 개수의 실행 개수를 반환합니다.  

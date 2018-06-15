@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030030"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  

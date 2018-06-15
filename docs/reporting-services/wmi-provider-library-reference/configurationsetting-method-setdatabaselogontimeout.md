@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029900"
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>ConfigurationSetting 메서드 - SetDatabaseLogonTimeout
   보고서 서버 데이터베이스 연결에 대한 기본 제한 시간 값을 지정합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014010"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 장치 정보 설정
   Atom 렌더링 확장 프로그램의 장치 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  

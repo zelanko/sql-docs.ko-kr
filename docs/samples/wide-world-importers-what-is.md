@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032650"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 하기 위해 wide World Importers 샘플 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

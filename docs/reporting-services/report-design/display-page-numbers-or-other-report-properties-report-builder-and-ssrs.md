@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020150"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022390"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 형식(.xlsx)으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  

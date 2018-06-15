@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023410"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
   보고서를 렌더링한 다음 스크롤할 때 행 및 열 레이블이 화면에서 사라지지 않도록 하려면 행 또는 열 머리글을 고정할 수 있습니다.  

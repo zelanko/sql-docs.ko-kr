@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029310"
 ---
 # <a name="new-user-role-management-studio"></a>새 사용자 역할(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의를 만들 수 있습니다. 항목 수준의 역할 정의란 폴더, 보고서, 모델, 리소스 및 공유 데이터 원본과 관련하여 사용자가 수행할 수 있는 태스크를 열거하는 작업의 명명된 모음입니다. 항목 수준의 역할 정의의 예로 보고서 최종 사용자가 폴더를 이동하고 보고서를 보는 데 필요한 동작 종류를 식별하는 미리 정의된 브라우저 역할을 들 수 있습니다.  

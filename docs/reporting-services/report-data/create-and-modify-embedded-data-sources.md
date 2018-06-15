@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020390"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>포함된 데이터 원본 만들기 및 수정
   포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다.  

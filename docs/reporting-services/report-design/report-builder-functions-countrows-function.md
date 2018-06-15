@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024380"
 ---
 # <a name="report-builder-functions---countrows-function"></a>보고서 작성기 함수 - CountRows 함수
   Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.  

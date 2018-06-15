@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023420"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>행 삽입 또는 삭제(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 테이블릭스 데이터 영역의 행을 추가하거나 삭제할 수 있습니다. 테이블릭스 데이터 영역은 테이블, 행렬 또는 목록일 수 있습니다. 차트 및 계기 데이터 영역에는 다음 절차가 적용되지 않습니다.  

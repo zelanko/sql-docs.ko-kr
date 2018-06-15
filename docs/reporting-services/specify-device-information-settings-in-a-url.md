@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029010"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>URL에 장치 정보 설정 지정
   장치 정보 설정은 렌더링 확장 프로그램에 전달되는 매개 변수입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 서버 웹 서비스의 메서드를 사용하여 보고서를 렌더링하는 경우 **DeviceInfo** XML 요소가 입력 매개 변수로 전달됩니다. **DeviceInfo** 요소의 자식 요소는 다양한 렌더링 확장 프로그램의 장치 정보 설정마다 다릅니다. *rc:tag=value* 매개 변수 문자열을 사용하여 URL에 장치 정보 설정을 포함시킬 수 있습니다. 여기서 *tag* 는 액세스되는 장치 정보 설정 요소의 이름입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 장치 정보 설정에 대한 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
