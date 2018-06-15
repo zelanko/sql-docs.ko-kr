@@ -2,7 +2,6 @@
 title: 메서드를 추가, 속성 예제 (VB) 이름 열과 테이블 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 922e2cf68402fe47a358d46ba2209b8506a46e3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e3f480ab34c22a720f4ed8b0d51870f209fb7f6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285342"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>테이블 및 열 이름 속성 예제 (VB) 메서드 추가
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  
@@ -70,7 +70,7 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   

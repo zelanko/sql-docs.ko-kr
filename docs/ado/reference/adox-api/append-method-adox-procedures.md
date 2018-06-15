@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 프로시저) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83e3973bccfd0466ed7d912b4fc4d1c63b6da7a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc5721f8806481de872d0c3e1de7d47a3720dfa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284862"
 ---
 # <a name="append-method-adox-procedures"></a>Append 메서드 (ADOX 프로시저)
 새로 추가 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 개체는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션입니다.  
@@ -44,7 +44,7 @@ Procedures.Append Name, Command
  *Command*  
  ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 를 만들고 추가 하는 절차를 나타내는 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이름 및 특성에 지정 된 데이터 소스에 새 프로시저를 만듭니다는 **명령** 개체입니다.  
   
  사용자 지정 하는 명령 텍스트는 프로시저를 사용 하지 않고 뷰를 나타내는 경우 동작은 사용 중인 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
@@ -55,7 +55,7 @@ Procedures.Append Name, Command
 ## <a name="applies-to"></a>적용 대상  
  [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 예제 (VB)를 추가 하는 절차](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -2,7 +2,6 @@
 title: FilterCriterion 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adc1d9d22b94ab3b6e03bddf37fa6058f4ccaca3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015cf292a4b9cd0720e379b83d5fcf254c841c8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288259"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 속성 (RDS)
 필터 값에 사용 하는 계산 연산자를 나타냅니다.  
@@ -44,7 +44,7 @@ DataControl.FilterCriterion = String
  *문자열*  
  A **문자열** 의 계산 연산자를 지정 하는 값은 [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) 레코드에 있습니다. 다음 중 하나를 사용할 수 있습니다: <, \<=, >, > =, =, 또는 <> 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**, 및 [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)속성 정렬 및 필터링 기능에서 클라이언트 쪽 캐시를 제공 합니다. 특정 열의 값으로 레코드의 순서 정렬 기능입니다. 전체 동안 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 필터링 기능은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 캐시에 유지 됩니다. [재설정](../../../ado/reference/rds-api/reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 교체 **레코드 집합** 와 업데이트할 수 있는 **레코드 집합**합니다.  
   
  "! =" 연산자에 대해 올바르지 않습니다. **FilterCriterion**대신 "<>"를 사용 합니다.  
@@ -54,7 +54,7 @@ DataControl.FilterCriterion = String
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, 및 SortDirection 속성 및 Reset 메서드 예제 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterColumn 속성 (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [FilterValue 속성 (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

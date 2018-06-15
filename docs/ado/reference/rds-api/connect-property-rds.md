@@ -2,7 +2,6 @@
 title: 연결 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b517d0d6a04d74901c51e43bce4b8c45b61280e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b27c5586ec1854f54a6d074c60ace87f1fb31e65
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287382"
 ---
 # <a name="connect-property-rds"></a>속성 (RDS) 연결
 쿼리 및 업데이트 작업은 실행 하는 데이터베이스 이름을 나타냅니다.  
@@ -53,7 +53,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 속성 (VBScript) 예제](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [Query 메서드 (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh (RDS) 메서드](../../../ado/reference/rds-api/refresh-method-rds.md)   

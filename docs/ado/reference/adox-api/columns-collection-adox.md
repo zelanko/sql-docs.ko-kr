@@ -2,7 +2,6 @@
 title: Columns 컬렉션 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,16 +22,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f3210bf977a27e945f2faa8e80e8a7c72cbe5cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65b5ae6a15ee5da44c2876c75dc21e658b50fed6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285202"
 ---
 # <a name="columns-collection-adox"></a>Columns 컬렉션 (ADOX)
 모든 포함 [열](../../../ado/reference/adox-api/column-object-adox.md) 테이블, 인덱스 또는 키의 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) 에 대 한 메서드는 **열** 컬렉션이 ADOX에 대해 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 열을 사용 하 여 컬렉션에 추가 **Append** 메서드.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Columns 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 및 열 이름 속성 예제 (VB) 메서드 추가](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [테이블 형식 속성 예제 (VB) 연결 Close 메서드](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

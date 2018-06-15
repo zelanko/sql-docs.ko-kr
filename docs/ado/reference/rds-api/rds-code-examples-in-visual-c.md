@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bfb9b2699b70f2459aac022266b0e437a1291ce4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51795587d9cab1d9c221359f296378849e1380b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288212"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual c + +의 RDS 코드 예제
 다음 코드 예제를 사용 하 여 Microsoft Visual c + +에서 작성 하는 경우 RDS 속성을 사용 하는 방법을 알아봅니다.  

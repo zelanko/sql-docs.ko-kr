@@ -2,7 +2,6 @@
 title: IndexNulls 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58d587f1fd454f5a44b2dc7e16aae4296983cc34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11141a152d680ff843387de3a5998aff007eef06
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286532"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제 (VB)
 이 예제에서는 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드에서는 새 인덱스를 만들고의 값을 설정 **IndexNulls** (목록 1 이라는 목록 상자)에서 사용자 입력에 기반 합니다. 그런 다음 **인덱스** 에 추가 되는 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반는 **직원** 테이블 및 **레코드 집합** 열릴 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블와는 **Null** 인덱싱된 필드의 값입니다. 설정에 따라이 새 레코드의 표시 여부는 **IndexNulls** 속성입니다.  
@@ -112,6 +112,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [IndexNulls 속성(ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

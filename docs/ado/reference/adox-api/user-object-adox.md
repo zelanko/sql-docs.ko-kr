@@ -2,7 +2,6 @@
 title: 사용자 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 703f62b3a14511bc34aa7f01306ae557db9d07e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 206d8fb122b9c2f28370a56f3a4acaeabebf111b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287372"
 ---
 # <a name="user-object-adox"></a>사용자 개체 (ADOX)
 보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. **사용자** 에 대 한 컬렉션은 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 사용자만 나타냅니다.  
   
  속성, 컬렉션, 및의 메서드는 **사용자** 개체를 할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [User 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [그룹 컬렉션 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

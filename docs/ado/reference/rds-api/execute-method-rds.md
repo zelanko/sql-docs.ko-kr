@@ -2,7 +2,6 @@
 title: Execute 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c050ef685d6e3ef566d78307db2c10c2c01c23e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 488b4056ca768cfae943558aefc9922bd1a16368
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288194"
 ---
 # <a name="execute-method-rds"></a>Execute 메서드 (RDS)
 요청을 실행 하 고 2.5 이상 ADO에서 사용 하기 위해 ADO 레코드 집합을 만듭니다.  
@@ -81,7 +81,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  실행에서 반환 된 정보 오류에 대 한 포인터입니다. NULL 인 경우에 오류 정보가 반환 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *HandlerString* 매개 변수는 null 일 수 있습니다. 이 경우 어떻게 될까요 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP.handler" 처리기 문자열로 제공 하는 Microsoft 처리기 (Msdfmap.dll)을 사용 해야 함을 나타냅니다. "MASDFMAP.handler,sample.ini" 처리기 문자열로 Msdfmap.dll 처리기를 사용 해야 함을 "sample.ini" 인수를 처리기에 전달 해야 한다고 나타냅니다. MSDFMAP.dll는 인수를 사용 하 여 sample.ini 연결 및 쿼리 문자열을 검사 하는 방향으로 해석 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

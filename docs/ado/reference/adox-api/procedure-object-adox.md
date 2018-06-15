@@ -2,7 +2,6 @@
 title: 프로시저 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd25aeeac87c3bd3bc8aa7b1405815f987d44266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4decbe11233f64db4fd51ef0c3a2b923355c375
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286732"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체 (ADOX)
 저장된 프로시저를 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체는 **프로시저** 개체를 추가, 삭제 또는 저장된 프로시저 수정에 사용할 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **프로시저** 개체를 알거나 공급자의 "CREATE PROCEDURE" 구문을 사용 하지 않고도 저장된 프로시저를 만들 수 있습니다.  
   
  속성으로는 **프로시저** 개체를 할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Procedure 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [명령 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters 컬렉션, 명령 속성 예제 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [메서드 예제 (VB)를 추가 하는 절차](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

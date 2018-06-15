@@ -2,7 +2,6 @@
 title: ADOX 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284802"
 ---
 # <a name="adox-methods"></a>ADOX 메서드
 |||  
@@ -43,6 +43,6 @@ ms.lasthandoff: 05/03/2018
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|카탈로그에 있는 개체의 소유자를 지정합니다.|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|개체에 그룹 또는 사용자에 대 한 사용 권한을 지정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -2,7 +2,6 @@
 title: Hierarchy 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284062"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체 (ADO MD)
 한 가지 방식을 보여의 멤버는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 집계 되거나 "롤업 합니다." 차원은 하나 이상의 계층 구조에 따라 집계 될 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  컬렉션과의 속성을 사용 하 여 한 **계층** 개체를 다음을 수행할 수 있습니다.  
   
 -   식별 된 **계층** 와 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 및 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) 속성.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |AllMember|계층에서 rollup의 최상위 수준의 멤버입니다.|  
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CubeDef 예 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [차원 개체 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchies 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   

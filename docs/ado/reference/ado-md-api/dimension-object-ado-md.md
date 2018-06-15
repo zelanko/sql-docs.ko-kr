@@ -2,7 +2,6 @@
 title: ADO MD 개체 차원 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fa6ce43c85ae474a9482e9fb76277960fe1a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283912"
 ---
 # <a name="dimension-object-ado-md"></a>차원 개체 (ADO MD)
 하나 이상의 멤버 계층 구조를 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  컬렉션과의 속성을 사용 하 여 한 **차원** 개체를 다음을 수행할 수 있습니다.  
   
 -   식별 된 **차원** 와 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 및 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) 속성입니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **속성** 컬렉션 공급자를 제공 하는 속성을 포함 합니다. 다음 표에서 사용할 수 있는 속성을 나열 합니다. 실제 속성 목록은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록은 대 한 공급자에 대 한 설명서를 참조 하십시오.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브 속해 있는 카탈로그의 이름입니다.|  
 |CubeName|큐브의 이름입니다.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CubeDef 예 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [ADO MD CubeDef 개체](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [ADO MD 차원 컬렉션](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   

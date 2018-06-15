@@ -2,7 +2,6 @@
 title: CancelUpdate 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 209d0c496f3c9467acb947e44165b91a6619af7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8769760499f89af5bfca07daaca03969667677fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287422"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 메서드 (RDS)
 현재 또는 새 행에 대해 모든 변경 내용을 취소 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -41,13 +41,13 @@ DataControl.CancelUpdate
  *DataControl*  
  개체 변수를 나타내는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  OLE DB 유지 원래 값의 복사본 및 캐시의 변경 내용 모두에 대 한 커서 서비스입니다. 호출 하는 경우 **CancelUpdate**의 변경 내용 캐시 비어 있는 경우 다시 설정 되 고 원본 데이터가 있는 바인딩된 모든 컨트롤 새로 고쳐집니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CancelUpdate 메서드 예제 (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [주소록 명령 단추](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Cancel 메서드 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

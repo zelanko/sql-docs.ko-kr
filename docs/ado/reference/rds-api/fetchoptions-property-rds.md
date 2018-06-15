@@ -2,7 +2,6 @@
 title: FetchOptions 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288136"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 속성 (RDS)
 비동기 인출의 유형을 나타냅니다.  
@@ -42,13 +42,13 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  이러한 상수를 사용 하는 각 클라이언트 실행 파일에 대 한 선언을 제공 해야 합니다. 잘라내기 및 RDS 라이브러리에 대 한 기본 설치 폴더에 있는 파일, Adcvbs.inc에서에서 원하는 상수 선언을 붙여넣기 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  웹 응용 프로그램에서은 일반적으로 사용 하려는 **adcFetchAsync** (기본값), 더 나은 성능을 제공 하기 때문에 있습니다. 컴파일된 클라이언트 응용 프로그램에서은 일반적으로 사용 하려는 **adcFetchBackground**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ExecuteOptions 및 FetchOptions 속성 예 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 메서드(RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

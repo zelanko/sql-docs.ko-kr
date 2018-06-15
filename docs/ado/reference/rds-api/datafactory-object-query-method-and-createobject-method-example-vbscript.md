@@ -2,7 +2,6 @@
 title: 문자열과 CreateObject (VBScript)를 사용 하 여 만들기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdc216ec2fb9f3e55b4e84fd5f263c5b80a25385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f48cf01641920635f9c7cfa020b118462832dae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287632"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 개체, 쿼리 방법 및 CreateObject 메서드 예제 (VBScript)
 > [!IMPORTANT]
@@ -140,7 +140,7 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CreateObject 메서드 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [데이터 공간 개체 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   

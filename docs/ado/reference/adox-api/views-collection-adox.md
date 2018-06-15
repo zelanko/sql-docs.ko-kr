@@ -2,7 +2,6 @@
 title: 뷰 컬렉션 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5f72f87ad913e1c423c99a917fc601a67028bb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6feb1cf590598724a4464d6cbcb2a6d555fb088a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287292"
 ---
 # <a name="views-collection-adox"></a>뷰 컬렉션 (ADOX)
 모든 포함 [보기](../../../ado/reference/adox-api/view-object-adox.md) 카탈로그의 개체가 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [Append](../../../ado/reference/adox-api/append-method-adox-views.md) 에 대 한 메서드는 **뷰** 컬렉션이 ADOX에 대해 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 뷰를 사용 하 여 컬렉션에 추가 **Append** 메서드.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Views 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [뷰 및 필드 컬렉션 예제 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [뷰 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [뷰 컬렉션, CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

@@ -2,7 +2,6 @@
 title: GetPermissions 및 SetPermissions 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 423f75c8b30ae3c6cfea773dea661d6054ed67dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015600eae66b8a1dfb95451e1e7cfb02244b3738
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286062"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 및 SetPermissions 메서드 예제 (VB)
 이 예제에서는 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 및 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드. 다음 코드를 관리자로 Orders 테이블에 대 한 전체 액세스를 제공합니다.  
@@ -98,7 +98,7 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [SetPermissions 메서드 (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   

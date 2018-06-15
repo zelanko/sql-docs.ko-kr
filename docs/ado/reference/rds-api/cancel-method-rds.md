@@ -2,7 +2,6 @@
 title: Cancel 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66d237b7d191ae55ec3fa6fe319f4eeba0f3bdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80949ad39f2b4befb6f050d7a664f4c4f9dcbd4e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287305"
 ---
 # <a name="cancel-method-rds"></a>Cancel 메서드 (RDS)
 실행을 취소는 보류 중인 비동기 메서드 호출 합니다.  
@@ -37,13 +37,13 @@ ms.lasthandoff: 05/03/2018
 RDS.DataControl.Cancel  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  호출 하는 경우 **취소**, [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 로 자동 설정 됩니다 **adcReadyStateLoaded**, 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 비어 있게 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cancel 메서드 (VBScript) 예제](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel 메서드 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [CancelBatch 메서드 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

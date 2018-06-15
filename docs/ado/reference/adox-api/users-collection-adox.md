@@ -2,7 +2,6 @@
 title: 사용자 컬렉션 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a9b34813f614248669b77113491c9383ef477a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7a075a12efcf401a5ba2458a90f410b3eb2586b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287232"
 ---
 # <a name="users-collection-adox"></a>사용자 컬렉션 (ADOX)
 모든 포함 저장 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 의 개체는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 또는 [그룹](../../../ado/reference/adox-api/group-object-adox.md)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **사용자** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. **사용자** 에 대 한 컬렉션은 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹에는 구성원 자격이 있는 사용자만 나타냅니다.  
   
  [Append](../../../ado/reference/adox-api/append-method-adox-users.md) 에 대 한 메서드는 **사용자** 컬렉션이 ADOX에 대해 고유 합니다. 다음 작업을 수행할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Users 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

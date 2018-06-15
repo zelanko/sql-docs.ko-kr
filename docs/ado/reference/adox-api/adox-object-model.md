@@ -2,7 +2,6 @@
 title: ADOX 개체 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3ed90b40a5d069ef1b6d6911f74a4ef3c63e7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284752"
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
 다음 다이어그램에는 개체를 표시 하 고 ADOX 관련 된 하는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하십시오. 또는 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 및 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  각각의 [테이블](../../../ado/reference/adox-api/table-object-adox.md), [인덱스](../../../ado/reference/adox-api/index-object-adox.md), 및 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체 역시 표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 코드 예제](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)   

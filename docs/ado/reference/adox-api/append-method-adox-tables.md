@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 테이블) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81715fa9955f9fbd9bef2f74880f53f7764974fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58c1636b77e8ddc618c18ba7e3c667a43533dbe9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285222"
 ---
 # <a name="append-method-adox-tables"></a>Append 메서드 (ADOX 테이블)
 새로 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체는 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션입니다.  
@@ -41,13 +41,13 @@ Tables.Append Table
  *테이블*  
  A **Variant** 값에 대 한 참조를 포함 하는 **테이블** 추가할 또는을 만든 추가 테이블의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  공급자는 테이블을 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 및 열 이름 속성 예제 (VB) 메서드 추가](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [ParentCatalog 속성 예제 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   

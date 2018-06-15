@@ -2,7 +2,6 @@
 title: 특성 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a275c6f39d2e16afcf53b753380e9f1ad20684a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285382"
 ---
 # <a name="attributes-property-example-vb"></a>특성 속성 예제 (VB)
 이 예제에서는 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 을 빈 문자열입니다. 이 경우 사용자는 데이터가 적용 되지 않은 레코드와 위치 데이터 알 수 없는 레코드 구별할 수 있습니다.  
@@ -129,7 +129,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

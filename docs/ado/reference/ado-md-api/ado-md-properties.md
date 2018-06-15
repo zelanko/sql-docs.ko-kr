@@ -2,7 +2,6 @@
 title: ADO MD 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c342d5f4b44c855ec729dfbb41341f337e14a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283352"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
 |||  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|컬렉션을 반환 **멤버** 를 현재 **멤버** 은 계층의 부모입니다.|  
 |[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[깊이](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|사이 있는 수준 수를 나타내는 **수준** 및 계층 구조의 루트입니다.|  
-|[설명](../../../ado/reference/ado-md-api/description-property-ado-md.md)|현재 개체의 텍스트 설명을 반환 합니다.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|현재 개체의 텍스트 설명을 반환 합니다.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|축에는 차원 수를 나타냅니다.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|축에서 멤버 바로 다음에 오는 자식이 없는지 여부를 나타냅니다.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|현재 셀 집합에 대 한 필터 정보를 나타냅니다.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|현재 개체에 대 한 명확한 이름을 나타냅니다.|  
 |[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|현재 셀의 값을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD API 참조](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD 코드 예제](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD 컬렉션](../../../ado/reference/ado-md-api/ado-md-collections.md)   

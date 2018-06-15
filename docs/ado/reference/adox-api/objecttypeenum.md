@@ -2,7 +2,6 @@
 title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,22 +19,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3654a63d4fc327a2fd3ea6d8ff60c59fba75404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286762"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한 또는 소유권을 설정 하는 데이터베이스 개체의 유형을 지정 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|개체에는 열입니다.|  
 |**adPermObjDatabase**|3|개체는 데이터베이스입니다.|  
 |**adPermObjProcedure**|4|개체는 프로시저입니다.|  
 |**adPermObjProviderSpecific**|-1|개체는 공급자에 의해 정의 된 형식입니다. 경우 오류가 발생 합니다는 *ObjectType* 매개 변수는 **adPermObjProviderSpecific** 및 *ObjectTypeId* 제공 되지 않았습니다.|  
-|**adPermObjTable**|1.|개체는 테이블입니다.|  
+|**adPermObjTable**|1|개체는 테이블입니다.|  
 |**adPermObjView**|5|뷰는 개체가입니다.|  
   
 ## <a name="applies-to"></a>적용 대상  

@@ -2,7 +2,6 @@
 title: WriteText 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283192"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
 에 지정 된 텍스트 문자열을 쓰고는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ Stream.WriteText Data, Options
  *옵션*  
  (선택 사항) A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) 지정된 된 문자열의 끝에 줄 구분 기호 문자를 작성 해야 하는지 여부를 지정 하는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  지정 된 문자열에 기록 되는 **스트림** 중간 공백이 나 각 문자열 사이 문자 없이 개체입니다.  
   
  현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 기록된 된 데이터를 뒤의 문자로 설정 됩니다. **WriteText** 메서드 나머지 스트림에서 데이터를 잘라내지 않습니다. 이러한 문자를 truncate 하려면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
@@ -57,5 +57,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Write 메서드](../../../ado/reference/ado-api/write-method.md)

@@ -2,7 +2,6 @@
 title: NumericScale 및 전체 자릿수 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ad5c520771d13760d3592060150c38b48bae38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0776d768a8cbfa8d1ac252cdc90a07bc9fae8f07
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284892"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 코드 예: NumericScale 및 전체 자릿수 속성 예제 (VB)
 이 예제에서는 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다. 이 코드에 대 한 해당 값이 표시는 **Order Details** 목차는 *Northwind* 데이터베이스입니다.  
@@ -79,7 +79,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale 속성 (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision 속성(ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

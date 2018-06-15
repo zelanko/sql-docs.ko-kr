@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b032e25ee5d4c85638cacfbe160240bf4c1853f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5224892252ed6591345e5b2626b13919fcac1ec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288264"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>SourceRecordset 속성 (RDS) 레코드 집합
 나타냅니다는 **레코드 집합** 사용자 지정 비즈니스 개체에서 반환 된 개체입니다.  
@@ -47,7 +47,7 @@ Recordset = DataControl.Recordset
  *레코드 집합*  
  개체 변수를 나타내는 **레코드 집합** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  설정할 수 있습니다는 **SourceRecordset** 속성을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 사용자 지정 비즈니스 개체를 반환 합니다.  
   
  이러한 속성 사용자 지정 프로세스를 사용 하 여 바인딩 프로세스를 처리 하는 응용 프로그램을 사용 합니다. 에 래핑된 행 집합을 받게는 **레코드 집합** 와 직접 상호 작용할 수 있도록는 **레코드 집합**, 속성 설정 등의 작업을 수행 하거나을 반복 하는 **레코드 집합** .  
@@ -59,7 +59,7 @@ Recordset = DataControl.Recordset
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 및 SourceRecordset 속성 예 (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [CreateRecordset 메서드 (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Query 메서드(RDS)](../../../ado/reference/rds-api/query-method-rds.md)

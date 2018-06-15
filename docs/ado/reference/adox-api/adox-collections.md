@@ -2,7 +2,6 @@
 title: ADOX 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9c1cec7121d41286ad1cb266703f1c94866f228
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 405d7b0d944342ba4e426ef7ecb14458c8a97eb6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284661"
 ---
 # <a name="adox-collections"></a>ADOX 컬렉션
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |[사용자가](../../../ado/reference/adox-api/users-collection-adox.md)|모든 포함 저장 **사용자** 카탈로그 또는 그룹의 개체입니다.|  
 |[뷰](../../../ado/reference/adox-api/views-collection-adox.md)|모든 포함 **보기** 카탈로그의 개체가 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 개체 모델](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md)   

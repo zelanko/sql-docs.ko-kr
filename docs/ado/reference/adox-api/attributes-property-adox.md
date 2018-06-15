@@ -2,7 +2,6 @@
 title: 특성 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6412d06a833f85ff8cde592479112a739e4bbc7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cff8bb0f88581fae43ceb3d8af9ef57eb3a1e479
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285182"
 ---
 # <a name="attributes-property-adox"></a>특성 속성 (ADOX)
 열 특징을 설명 합니다.  
@@ -40,5 +40,5 @@ ms.lasthandoff: 05/03/2018
   
 - [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Attributes 속성 예제(VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

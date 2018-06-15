@@ -2,7 +2,6 @@
 title: Item 속성 (ADO MD Cellset) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f22f8195a082ffe1333efe46a270fb1e18057ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64de692b36cd2abda06402e5c0d55c250b9632f5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284082"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 속성 (ADO MD Cellset)
 셀을 검색 한 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 좌표를 사용 하 여 합니다.  
@@ -48,7 +48,7 @@ Cell = Cellset.Item ( Positions)
   
 -   서 수 위치  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **항목** 반환 하는 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 내에서 개체는 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. 경우는 **항목** 속성에 해당 하는 셀을 찾을 수 없습니다는 *위치* 인수, 오류가 발생 합니다.  
   
  **항목** 속성은 기본 속성에 대 한는 **셀 집합** 개체입니다. 다음 구문 형식은 서로 전환이 가능 합니다.  
@@ -58,7 +58,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *위치* 인수는 반환할 셀을 지정 합니다. 셀 서 수 위치 별로 또는 각 축 위치를 지정할 수 있습니다. 각 축 따라 위치에 따라 셀을 지정할 때 위치 숫자 값 또는 각 위치에 대 한 멤버의 이름을 지정할 수 있습니다.  
   
  서 수 위치는에서 하나의 셀을 고유 하 게 식별 하는 숫자는 **셀 집합**합니다. 이론적으로 셀은 번호가 매겨집니다는 **셀 집합** 처럼는 **셀 집합** 된는 *p*-차원 배열 여기서 *p* 축의 수입니다. 셀은 행 중심의 순서로 번호가 매겨집니다. 다음은 셀의 서 수를 계산 하는 것에 대 한 수식:  
@@ -71,6 +71,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>적용 대상  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

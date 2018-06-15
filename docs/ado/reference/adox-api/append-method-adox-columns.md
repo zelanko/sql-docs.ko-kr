@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 열) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e53965f9a8c5602459a08f5c47e5719741bb648
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1bdaa9f13104ca2f56dd44c4b3a08dfd3c424c3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284832"
 ---
 # <a name="append-method-adox-columns"></a>Append 메서드 (ADOX 열)
 새로 추가 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체는 [열](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션입니다.  
@@ -53,7 +53,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 ## <a name="applies-to"></a>적용 대상  
  [Columns 컬렉션(ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 및 열 이름 속성 예제 (VB) 메서드 추가](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 속성 예제 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   

@@ -2,7 +2,6 @@
 title: ChangePassword 메서드 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 111f549f419404b8174d90e3d1298a7c3789913d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285198"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드 (ADOX)
 암호를 변경 하면는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
@@ -44,7 +44,7 @@ User.ChangePassword OldPassword, NewPassword
  *새 암호*  
  A **문자열** 새 암호를 지정 하는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  보안상의 이유로 새 암호 외에도 이전 암호를 지정 해야 합니다.  
   
  공급자 트러스트를 받을 대상 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  
@@ -52,5 +52,5 @@ User.ChangePassword OldPassword, NewPassword
 ## <a name="applies-to"></a>적용 대상  
  [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Groups 및 Users Append, ChangePassword 메서드 예제(VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

@@ -2,7 +2,6 @@
 title: 명령 및 CommandText 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ddeaf3cdf7d98fdc12efb0d9aa90815e0b3338e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69d06e6c85adbcff80d418419d8d081d8cf33134
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285398"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>명령 및 CommandText 속성 예제 (VC + +)
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/adox-api/command-property-adox.md) 프로시저의 텍스트를 업데이트 하는 속성입니다.  
@@ -94,5 +94,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Command 속성(ADOX)](../../../ado/reference/adox-api/command-property-adox.md)

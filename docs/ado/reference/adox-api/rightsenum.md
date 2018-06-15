@@ -2,7 +2,6 @@
 title: RightsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e6e0e4d3b3a0148b92febfa4e5474774cfcbec79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32cd777bad44e0784943aab1c0a4c9ba665f7247
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286855"
 ---
 # <a name="rightsenum"></a>RightsEnum
 권한이 나 그룹 또는 사용자에 대 한 사용 권한이 개체에 지정합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&AMP; H4000)|사용자 또는 그룹에는이 형식의 새 개체를 만들 수 있는 권한이 있습니다.|  
 |**adRightDelete**|65536 (&AMP; H10000)|사용자 또는 그룹에는 개체에서 데이터를 삭제할 수 있는 권한이 있습니다. 와 같은 개체에 대 한 **테이블**, 사용자가을 레코드의 데이터 값을 삭제할 수 있습니다.|  

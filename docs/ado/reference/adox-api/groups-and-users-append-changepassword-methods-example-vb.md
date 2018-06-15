@@ -2,7 +2,6 @@
 title: 그룹 및 사용자 추가, ChangePassword 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ad64050af9fd606008064c0ff96ab1d90a926bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de70dad95da30fb9f64bc587486beef808a164d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285982"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>그룹 및 사용자 추가, ChangePassword 메서드 예제 (VB)
 이 예제에서는 [추가](../../../ado/reference/adox-api/append-method-adox-groups.md) 방식의 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md),으로 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 방식의 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 새 를추가하여[그룹](../../../ado/reference/adox-api/group-object-adox.md) 와 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 시스템에 있습니다. 새 **그룹** 에 추가 되 고 **그룹** 새 컬렉션 **사용자**합니다. 따라서 새 **사용자** 에 추가 되 고 **그룹**합니다. 또한는 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드는 지정 하는 데 사용 되는 **사용자** 암호입니다.  
@@ -126,7 +126,7 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

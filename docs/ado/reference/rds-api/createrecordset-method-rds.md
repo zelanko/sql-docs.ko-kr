@@ -2,7 +2,6 @@
 title: CreateRecordset 메서드 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddc77ab08c04495cd269d4c602e33adcf0eec16f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287622"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드 (RDS)
 비어 있는 만듭니다 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -50,9 +50,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** 특성의 각 열을 정의 하는 배열을 **레코드 집합** 생성 합니다. 각 열 정의는 4 개의 필수 특성와 하나의 선택적 특성의 배열을 포함합니다.  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
-|이름|열 머리글의 이름입니다.|  
+|속성|열 머리글의 이름입니다.|  
 |형식|정수 데이터 형식입니다.|  
 |크기|데이터 형식에 관계 없이 문자 너비의 정수입니다.|  
 |Null 허용 여부|부울 값입니다.|  
@@ -60,7 +60,7 @@ object.CreateRecordset(ColumnInfos)
   
  열 배열의 집합을 정의 하는 배열에 그룹화 한 다음는 **레코드 집합**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  서버 쪽 비즈니스 개체가 결과 채울 수 **레코드 집합** 비-OLE DB 데이터 공급자의 데이터로 같은 운영 체제 파일을 포함 하는 주식 시세 합니다.  
   
  다음 표에 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 에서 지 원하는 값의 **CreateRecordset** 메서드. 나열 된 번호는 참조 번호 필드를 정의 하는 데 사용 합니다.  
@@ -108,7 +108,7 @@ object.CreateRecordset(ColumnInfos)
 |-|-|  
 |[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CreateRecordset 메서드 예제 (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset 메서드 예제 (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
  [CreateObject 메서드(RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)

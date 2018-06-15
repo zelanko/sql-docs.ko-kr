@@ -2,7 +2,6 @@
 title: DefinedSize 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcc6b8902f55945f41cfe380e522389055cf961c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97cc77e64c76b0805315de247aeb4ce1ffdce4f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285572"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 속성 예제 (VB)
 이 예제에서는 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 코드의 FirstName 열 크기를 다시 정의 됩니다는 **직원** 목차는 *Northwind* 데이터베이스입니다. 그런 다음는 FirstName의 값에 변경 내용을 [필드](../../../ado/reference/ado-api/field-object.md) 의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 따라는 **직원** 테이블이 표시 됩니다. 기본적으로 FirstName 필드는 공백으로 채워집니다 다시 정의 하면 후 참고는 **DefinedSize** 속성입니다.  
@@ -153,6 +153,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize 속성(ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

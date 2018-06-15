@@ -2,7 +2,6 @@
 title: RelatedTable 속성 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 363f6ee1ceb90bf7328122d8e1e2e192a966ec6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8482cd8694058b1f3e4a29d0c1aed25640515d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286809"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 속성 (ADOX)
 관련된 테이블의 이름을 나타냅니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **문자열** 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  기본값은 빈 문자열("")입니다.  
   
  다음 외래 키가 있으면 **RelatedTable** 키가 포함 된 테이블의 이름입니다.  
@@ -44,5 +44,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

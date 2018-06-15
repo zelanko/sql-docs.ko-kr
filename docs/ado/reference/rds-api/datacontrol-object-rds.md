@@ -2,7 +2,6 @@
 title: DataControl 개체 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 587557a35fc80966151602eb965ab0a756596415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287592"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체 (RDS)
 데이터 쿼리 바인딩하여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 표시 하려면 하나 이상의 컨트롤 (예: 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자)에 **레코드 집합** 웹 페이지에는 데이터입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  에 대 한 클래스 ID는 **.rds입니다 DataControl** 개체는 BD96C556-65A3-11 D 0 983A 00C04FC29E33 합니다.  
   
 > [!NOTE]
@@ -112,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [DataControl 개체(RDS) 속성, 메서드 및 이벤트](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataControl 개체 예제(VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

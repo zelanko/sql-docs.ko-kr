@@ -2,7 +2,6 @@
 title: 뷰 추가 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ebc01d7267771811a191e056eb576c1b843fe7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72a8c9518ce11a8c4180e6661944df6983e01167
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287342"
 ---
 # <a name="views-append-method-example-vb"></a>뷰 추가 (VB) 메서드 예제
 다음 코드에서는 사용 하는 방법을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-views.md) 데이터 원본에서 새 보기를 만드는 방법.  
@@ -65,7 +65,7 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append 메서드 (ADOX 뷰)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

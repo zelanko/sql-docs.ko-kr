@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c4f2b3a0cf70d068e1f6a7124e7152c8329ebd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 784103c416947b57ebea358f911dfee4996a515e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288522"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드 (RDS)
 보류 중인 변경 내용을 로컬로 캐시 된 및 업데이트할 수 있는 전송 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 지정 된 데이터 원본에는 [연결](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성입니다.  
@@ -50,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *레코드 집합*  
  개체 변수를 나타내는 **레코드 집합** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  [연결](../../../ado/reference/rds-api/connect-property-rds.md), [서버](../../../ado/reference/rds-api/server-property-rds.md), 및 [SQL](../../../ado/reference/rds-api/sql-property.md) 사용 하기 전에 속성을 설정 해야 합니다는 **SubmitChanges** 메서드는  **.RDS DataControl** 개체입니다.  
   
  호출 하는 경우는 [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) 메서드를 호출한 후 **SubmitChanges** 동일한 컴퓨터에 대해 **레코드 집합** 개체는 **CancelUpdate** 변경 내용을 이미 커밋 되었는지 호출이 실패 합니다.  
@@ -67,7 +67,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory 개체(RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SubmitChanges 메서드 예제 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [주소록 명령 단추](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate 메서드 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

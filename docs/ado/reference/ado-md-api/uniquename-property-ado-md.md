@@ -2,7 +2,6 @@
 title: UniqueName 속성 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ab9eb8efebcc010117ba1de551737c50d82b1bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f10b9371e4fbbfa41e9274cb34fe0eb954a7433b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284552"
 ---
 # <a name="uniquename-property-ado-md"></a>ADO MD UniqueName 속성
 현재 개체에 대 한 명확한 이름을 나타냅니다.  
@@ -43,5 +43,5 @@ ms.lasthandoff: 05/03/2018
 |[Dimension 개체(ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy 개체(ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
 |[Level 개체(ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member 개체(ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Name 속성(ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

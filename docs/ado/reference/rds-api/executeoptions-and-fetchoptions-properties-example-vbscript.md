@@ -2,7 +2,6 @@
 title: ExecuteOptions 및 FetchOptions 속성 예 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e848a71bdf1080cf320e9d9255e5a60827ffabc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14defde3a35bcccd35c741f7f9b681e9197a8a23
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288222"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예 (VBScript)
 > [!IMPORTANT]
@@ -173,7 +173,7 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ExecuteOptions 속성 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions 속성(RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 

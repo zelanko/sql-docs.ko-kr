@@ -2,7 +2,6 @@
 title: 데이터 공간 개체 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4624cf678df777a33e39a2d5438cbdc613ff7e02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ccaa8f0999e54dce15cc40d5ef773dd16473658
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288239"
 ---
 # <a name="dataspace-object-rds"></a>데이터 공간 개체 (RDS)
 > [!IMPORTANT]
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [DataSpace 개체(RDS) 속성, 메서드 및 이벤트](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataSpace 개체 및 CreateObject 메서드 예제(VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

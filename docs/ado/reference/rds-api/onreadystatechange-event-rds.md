@@ -2,7 +2,6 @@
 title: onReadyStateChange 이벤트 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 152acad43fbecebc5ee7808284a1d1fba90e1380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66de98fbc8c78b194ce41f0f26bb5f1ed6c351c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288125"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 이벤트 (RDS)
 **onReadyStateChange** 라고 이벤트 때마다의 값은 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성 변경 합니다.  
@@ -40,13 +40,13 @@ onReadyStateChange
 #### <a name="parameters"></a>매개 변수  
  없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ReadyState** 속성은의 진행 상태를 반영는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체에 데이터를 비동기적으로 검색 하는 대로 해당 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 사용 하 여는 **onReadyStateChange** 의 변화를 모니터링 하는 이벤트는 **ReadyState** 발생할 때마다 속성입니다. 이 속성의 값을 주기적으로 검사 보다 더 효율적입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
 

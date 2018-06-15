@@ -2,7 +2,6 @@
 title: 취소 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50b4e8768ce0cb8b393f6c2c9d9077d69b08bb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aaa6af81c27e812886b28c877e77b7497642550
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287272"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel 메서드 (VBScript) 예제
 > [!IMPORTANT]
@@ -72,7 +72,7 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cancel 메서드(ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
 
 

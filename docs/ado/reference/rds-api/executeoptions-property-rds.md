@@ -2,7 +2,6 @@
 title: ExecuteOptions 속성 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44be9cb2b46b91d536d5a90cbb589365ad7d2c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288162"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성 (RDS)
 비동기 실행을 사용할지 여부를 나타냅니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  이러한 상수를 사용 하는 각 실행 파일에 대 한 선언을 제공 해야 합니다. 잘라내기 및 RDS 라이브러리에 대 한 기본 설치 폴더에 있는 파일, Adcvbs.inc에서에서 원하는 상수 선언을 붙여넣기 수 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우 **ExecuteOptions** 로 설정 되어 **adcExecAsync**, 다음이 비동기적으로 실행 한 다음 **새로 고침** 에서 호출 된 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합**합니다.  
   
  호출 하려고 하면 [재설정](../../../ado/reference/rds-api/reset-method-rds.md), [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), 또는 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 다른 비동기 작업이 변경 될 수 있는 반면는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합** 를 실행 하면 오류가 발생 합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ExecuteOptions 및 FetchOptions 속성 예 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel 메서드(RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

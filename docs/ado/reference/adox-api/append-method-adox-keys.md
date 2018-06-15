@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 키) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e974721f602c4a361af5f4bd582929b217caa38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eaef312977613409453dfa1d876674d6b95c927
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284822"
 ---
 # <a name="append-method-adox-keys"></a>Append 메서드 (ADOX 키)
 새로 추가 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체는 [키](../../../ado/reference/adox-api/keys-collection-adox.md) 컬렉션입니다.  
@@ -38,7 +38,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Key*  
+ *키*  
  **키** 만들고 추가 하는 키의 이름 또는 추가할 개체입니다.  
   
  *KeyType*  
@@ -53,13 +53,13 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *RelatedColumn*  
  (선택 사항) A **문자열** 외래 키에 대 한 관련 열의 이름을 지정 하는 값입니다. *RelatedColumn* 의 값에 해당 하는 매개 변수는 **이름** 속성은 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *열* 매개 변수는 열 이름이 나 열 이름의 배열을 나타낼 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [키 추가 방법, 키 형식, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

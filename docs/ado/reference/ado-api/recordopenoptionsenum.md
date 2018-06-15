@@ -2,7 +2,6 @@
 title: 함께 사용할 수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7372e17fb7e18cec3cbb25a1850433e41e918a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0795d6eb942f10a97be1acda77954ae43fd4f2e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281262"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 열기에 대 한 옵션을 지정 된 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다. 사용 하 여 이러한 값을 결합할 수 있습니다 또는 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|필드와 연결 된 공급자에 게 알립니다는 **레코드** 처음 검색할 필요는 없지만 필드에 액세스 하는 첫 번째 시도에서 검색할 수 있습니다. 이 플래그가 없는 것으로 표시 된 기본 동작을 모두 검색 하는 것은 **레코드** 필드 개체입니다.|  
 |**adDelayFetchStream**|0x4000|기본 스트림을 연결 된 공급자에 게 알립니다는 **레코드** 처음 검색할 필요 합니다. 이 플래그가 없는 것으로 표시 된 기본 동작을 연결 된 기본 스트림을 검색 하는 것은 **레코드** 개체입니다.|  

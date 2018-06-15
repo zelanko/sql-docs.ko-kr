@@ -2,7 +2,6 @@
 title: 인덱스를 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8e5398c07a4abc449974dd890820ab7195830c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05663e8ef19fa6c825c49fe34865999fa9de461f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285992"
 ---
 # <a name="index-object-adox"></a>Index 개체 (ADOX)
 데이터베이스 테이블에서 인덱스를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 코드에서는 새 **인덱스**:  
   
 ```  
@@ -65,7 +65,7 @@ Dim obj As New Index
   
 -   [Index 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인덱스 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls 속성 예제 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey 및 고유한 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

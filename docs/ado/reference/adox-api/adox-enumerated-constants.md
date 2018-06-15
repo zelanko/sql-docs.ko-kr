@@ -2,7 +2,6 @@
 title: ADOX 열거형 상수의 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284782"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 디버깅을 지원 하기 ADOX 열거 상수에는 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADOX의 릴리스에서 변경 될 수 있습니다. 코드는 실제 값이 아닌 열거 된 상수의 이름 뒤에 의존 해야 합니다.  
@@ -41,6 +41,6 @@ ms.lasthandoff: 05/03/2018
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|시 따라야 하는 규칙 지정는 **키** 삭제 됩니다.|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|인덱싱된 열에 대 한 정렬 순서를 지정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

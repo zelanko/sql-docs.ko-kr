@@ -2,7 +2,6 @@
 title: Append 메서드 (ADOX 그룹) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dc48bab9fa037ab4844bf3e1ab247365bf41070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecd80b3c2affcbbed7bbd50f7e130fa84d1e86ea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284902"
 ---
 # <a name="append-method-adox-groups"></a>Append 메서드 (ADOX 그룹)
 새로 추가 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체는 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션입니다.  
@@ -41,7 +41,7 @@ Groups.Append Group
  *그룹*  
  **그룹** 추가할 개체 또는 그룹을 만든 추가의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **그룹** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 모든 카탈로그의 그룹 계정을 나타냅니다. **그룹** 에 대 한 컬렉션은 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 유일한 사용자가 속한 그룹을 나타냅니다.  
   
  공급자는 그룹 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
@@ -52,7 +52,7 @@ Groups.Append Group
 ## <a name="applies-to"></a>적용 대상  
  [Groups 컬렉션(ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [그룹 및 사용자 추가, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
