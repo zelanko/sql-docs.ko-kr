@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915708"
 ---
 # <a name="driver-tasks"></a>드라이버 작업
 드라이버에서 수행 하는 특정 작업은 다음과 같습니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911158"
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스는 데이터베이스에 데이터가 저장 되는 요약 된 구조가 있습니다. 예를 들어 판매 주문 간단한 데이터베이스에는 ID 열을 사용 하 여 테이블을 연결를 다음 그림에 표시 되는 구조는 있습니다.  

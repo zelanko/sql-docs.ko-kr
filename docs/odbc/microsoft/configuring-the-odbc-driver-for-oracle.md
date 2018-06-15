@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899618"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Oracle에 대 한 ODBC 드라이버 구성
 > [!IMPORTANT]  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234580"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>만들고 신속 하 게 스크립트를 만드는 TRANSACT-SQL (T-SQL)에서 코드 조각을 사용합니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

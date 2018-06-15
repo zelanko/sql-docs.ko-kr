@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912008"
 ---
 # <a name="setting-descriptor-fields"></a>설명자 필드 설정
 응용 프로그램이 호출할 수는 설명자 필드를 수정 하려면 **SQLSetDescField**합니다. 일부 필드는 읽기 전용 이며 설정할 수 없습니다. (참조는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명 합니다.)  

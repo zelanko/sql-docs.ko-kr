@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914018"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 및 SQLColAttribute
 **SQLDescribeCol** 및 **SQLColAttribute** 결과 집합 메타 데이터를 검색 하는 데 사용 됩니다. 이 두 기능 간의 차이점은 **SQLDescribeCol** 정보 (열 이름, 데이터 형식, 정밀도, 배율 및 null 허용 여부)을 하는 동안 동일한 5 가지 구성 요소는 항상 반환 **SQLColAttribute** 는 단일 응용 프로그램에서 요청 된 정보를 반환 합니다. 그러나 **SQLColAttribute** 반환할 메타 데이터를 열의 대/소문자 구분을 포함 하 여 보다 다양 한 선택, 크기, 업데이트 가능성 및 검색 기능은 표시 수 있습니다.  

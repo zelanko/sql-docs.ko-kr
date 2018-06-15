@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32942428"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

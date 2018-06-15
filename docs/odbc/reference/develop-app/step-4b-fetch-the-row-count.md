@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915258"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>4b 단계: 인출 된 행 수
 다음 단계는 다음 그림에 나와 있는 것 처럼 인출할 행 수입니다.  

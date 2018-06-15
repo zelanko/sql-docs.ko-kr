@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946698"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>프로 파일링 ODBC 드라이버 성능 데이터-장기 실행 쿼리 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

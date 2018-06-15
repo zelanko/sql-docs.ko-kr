@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916378"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 서비스 공급자 인터페이스 (SPI) 참조
 일반적으로, ODBC (API) 응용 프로그래밍 인터페이스를 정의합니다. 내 드라이버 관리자와 드라이버를 모두 구현 해야 및 응용 프로그램에서 API에 포함 된 함수를 호출할 수 있습니다.  

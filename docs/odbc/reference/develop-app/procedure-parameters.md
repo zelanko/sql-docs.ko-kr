@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913478"
 ---
 # <a name="procedure-parameters"></a>프로시저 매개 변수
 프로시저 호출에서 매개 변수 입력 될 수, 입/출력 또는 출력 매개 변수입니다. 이 다른 모든 SQL 문의 입력된 매개 변수가 항상 이며의 매개 변수에서 다릅니다.  

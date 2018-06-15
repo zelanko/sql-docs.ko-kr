@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914908"
 ---
 # <a name="types-of-descriptors"></a>설명자의 유형
 설명자를 다음 중 하나를 설명 하기 위해 사용 됩니다.  

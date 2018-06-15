@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32930853"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  **데이터베이스** 노드를 확장합니다.  
   
-4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **SQL Azure에 데이터베이스 배포…**를 선택합니다.  
+4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **SQL Azure에 데이터베이스 배포…** 를 선택합니다.  
   
 5.  다음 마법사 대화 상자를 완료합니다.  
   

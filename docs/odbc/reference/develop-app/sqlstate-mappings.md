@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914388"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 매핑(SQLSTATE Mappings)
 이 항목에서는 ODBC 2에 대 한 SQLSTATE 값을 설명 합니다. *x* 및 ODBC 3. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.  

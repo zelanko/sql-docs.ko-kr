@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869008"
 ---
 # <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>Power BI (데이터 마이그레이션 길잡이)를 사용 하 여 보고서에 통합된 하면 평가
 

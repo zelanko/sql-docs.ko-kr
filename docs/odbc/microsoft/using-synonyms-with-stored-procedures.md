@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914528"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>동의어를 사용 하 여 저장된 프로시저와 함께
 > [!IMPORTANT]  

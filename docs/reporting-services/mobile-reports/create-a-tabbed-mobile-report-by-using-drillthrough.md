@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018459"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>드릴스루를 사용하여 탭 모바일 보고서 만들기
 드릴스루 보고서 및 매개 변수를 사용하여 탭으로 구성된 보고서 모양으로 작업되는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서를 만드는 방법에 대해 알아봅니다.

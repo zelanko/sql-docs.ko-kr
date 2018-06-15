@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915184"
 ---
 # <a name="static-sql"></a>정적 SQL
 에 표시 된 포함 된 SQL [포함 된 SQL 예제](../../odbc/reference/embedded-sql-example.md) 정적 SQL 라고 합니다. 프로그램의 SQL 문에 정적; 정적 SQL 라고 즉, 프로그램 실행 될 때마다를 변경 하지 마십시오. 이전 섹션에서 설명한 대로 이러한 문은 프로그램의 나머지를 컴파일할 때 컴파일됩니다.  

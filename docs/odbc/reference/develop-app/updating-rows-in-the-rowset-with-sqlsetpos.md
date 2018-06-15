@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916338"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos와 행 집합의 행 업데이트
 업데이트 작업과 **SQLSetPos** 은 데이터 원본 ()를 제외 길이/표시기 버퍼의 값 SQL_COLUMN_IGNORE 응용 프로그램 버퍼의 데이터를 바인딩된 각 열에 대 한 사용 하는 테이블의 하나 이상의 선택 된 행을 업데이트 합니다. 바인딩되지 않은 열을 업데이트 하지 않습니다.  

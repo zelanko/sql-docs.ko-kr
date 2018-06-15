@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911918"
 ---
 # <a name="retrieving-bookmarks"></a>책갈피를 검색합니다.
 응용 프로그램 책갈피를 사용할 경우를 준비 하거나 문을 실행 하기 전에 SQL_UB_VARIABLE로 SQL_ATTR_USE_BOOKMARKS 문 특성을 설정 합니다. 빌드 및 응용 프로그램 좋은 보장할 수 있는 경우에 책갈피를 사용할 수 해야 하므로 책갈피는 비용이 많이 드는 작업 수를 유지 관리 중 사용 되므로이 작업이 필요 합니다.  

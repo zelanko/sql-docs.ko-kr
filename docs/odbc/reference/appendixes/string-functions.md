@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914048"
 ---
 # <a name="string-functions"></a>문자열 함수
 다음 표에서 문자열 조작 함수를 나열합니다. 응용 프로그램에서 호출 하 여 드라이버를 통해 지원 되는 문자열 함수를 확인할 수 **SQLGetInfo** 와 *정보 유형* SQL_STRING_FUNCTIONS입니다.  

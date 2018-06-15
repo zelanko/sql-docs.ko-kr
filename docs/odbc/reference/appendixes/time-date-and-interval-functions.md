@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914268"
 ---
 # <a name="time-date-and-interval-functions"></a>시간, 날짜 및 간격 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 날짜 및 시간 함수를 나열 합니다. 응용 프로그램에서 호출 하 여 드라이버를 통해 지원 되는 날짜 및 시간 함수를 확인할 수 **SQLGetInfo** 와 *정보 유형* SQL_TIMEDATE_FUNCTIONS입니다.  
