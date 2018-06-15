@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: connect
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02eb4c8fd8d1e3ff115c8ed1273183802f1d06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 609604e890052d742c99d8e12604abe7ce9e5259
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309742"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 솔루션을 만드는 데이터 중심 웹 서버, 엔터프라이즈 서버 및 클라우드 데스크톱 및 모바일 장치에서 Microsoft SQL 데이터 플랫폼을 사용 합니다.  

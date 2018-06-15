@@ -2,7 +2,6 @@
 title: Microsoft SQL 데이터베이스에 대 한 연결 라이브러리 | Microsoft Docs
 description: 다양 한 클라이언트 프로그래밍 언어의 Microsoft SQL Server 및 Azure SQL 데이터베이스에 연결 하는 모듈에 대 한 다운로드 링크를 제공 합니다.
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310102"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 

@@ -2,10 +2,10 @@
 title: 큰 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs
 description: 큰 CLR 사용자 정의 형식(OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611988"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   이 항목에서는 OLE DB에서 OLE DB Driver 큰 공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt)를 지원 하도록 SQL Server에 대 한 변경 내용을 설명 합니다.  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 매개 변수 및 행 집합의 데이터 형식 매핑을 보여 줍니다.  
   
-|SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|Value|  
+|SQL Server 데이터 형식|OLE DB 데이터 형식|메모리 레이아웃|값|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE] (바이트 배열\)|132 (oledb.h)|  
   
@@ -128,14 +131,14 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|지원됨 (2), (5)|해당 사항 없음|지원 되는 (3), (5)|해당 사항 없음|  
 |DBTYPE_STR|지원됨 (2), (5)|해당 사항 없음|지원 되는 (3), (5)|해당 사항 없음|  
 |DBTYPE_IUNKNOWN|지원 되는 (6)|해당 사항 없음|지원 되는 (6)|해당 사항 없음|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|지원됨 (5)|해당 사항 없음|지원 되는 (3), (5)|해당 사항 없음|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|지원됨 (5)|해당 사항 없음|지원 되는 (3), (5)|해당 사항 없음|  
 |DBTYPE_VARIANT (VT_BSTR)|지원됨 (2), (5)|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
   
 ### <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
-|1.|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
+|1|서버 이외의 유형이 DBTYPE_UDT로 지정 **icommandwithparameters:: Setparameterinfo** 접근자 유형이 DBTYPE_UDT 인 이며 문이 실행 될 때 오류가 발생 합니다.  오류는 DB_E_ERRORSOCCURRED이고 매개 변수 상태는 DBSTATUS_E_BADACCESSOR가 됩니다.<br /><br /> UDT가 아닌 서버 매개 변수에 대해 UDT 유형의 매개 변수를 지정하는 것은 오류입니다.|  
 |2|데이터가 16진수 문자열에서 이진 데이터로 변환됩니다.|  
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
 |4|유효성 검사 사용 시 발생할 수 **CreateAccessor** 또는 **GetNextRows**합니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  
@@ -174,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
  때 **DataTypeCompatibility** "80"으로 설정 됩니다 (SSPROP_INIT_DATATYPECOMPATIBILITY), 큰 UDT 유형이 하위 수준 클라이언트에 대 한 나타나는 동일한 방식으로 클라이언트에 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [큰 CLR 사용자 정의 형식](../../oledb/features/large-clr-user-defined-types.md)  
   
   

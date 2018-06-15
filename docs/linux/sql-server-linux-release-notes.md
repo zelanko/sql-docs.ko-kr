@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611978"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
 
@@ -215,12 +216,13 @@ SQL Server 2017의 GA (일반 공급) 릴리스입니다. 이 릴리스에 대 �
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | 타사 연결을 통해 분산된 쿼리 |
+| &nbsp; | SQL Server 이외의 데이터 원본에 연결 된 서버 |
 | &nbsp; | 시스템 확장 저장된 프로시저 (XP_CMDSHELL 등). |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
-| &nbsp; | 버퍼 풀 확장 |
+| &nbsp; | Buffer Pool Extension |
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, 큐 판독기, SSIS, SSAS, SSRS |
-| &nbsp; | 경고 |
+| &nbsp; | , |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | 변경 데이터 캡처 |
 | &nbsp; | Managed Backup |

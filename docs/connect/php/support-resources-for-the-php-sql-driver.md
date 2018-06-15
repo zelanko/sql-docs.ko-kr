@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec95033698d9deb98145f8953ff73fcf096d3fcc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 125d571c30a201aa3934ea8e4d1e69b2cc88b263
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309862"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>지원 리소스에 대해 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,6 +57,6 @@ PHP 설명서 방문 [ http://www.php.net/docs.php ](http://www.php.net/docs.php
 ## <a name="microsoft-customer-support"></a>Microsoft 고객 지원  
 에 관련 된 지원 질문은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 문의할 수 있습니다 [Microsoft 지원](https://support.microsoft.com/contactus/)에 요청 또는 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)
   
