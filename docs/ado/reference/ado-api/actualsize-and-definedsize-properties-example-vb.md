@@ -2,7 +2,6 @@
 title: ActualSize 및 DefinedSize 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de2cbd9ce55e5418e614c150c54c752b1a1f4988
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0930056c01586cfa68bdfcac5cab4a415ef87578
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275022"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 및 DefinedSize 속성 예제 (VB)
 사용 하 여이 예제는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 된 크기 및 필드의 실제 크기를 표시 합니다.  
@@ -91,7 +91,7 @@ End Sub
 'EndActualSizeVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActualSize 속성 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 속성](../../../ado/reference/ado-api/definedsize-property.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)
