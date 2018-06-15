@@ -2,7 +2,6 @@
 title: 책갈피 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276202"
 ---
 # <a name="bookmark-property-ado"></a>책갈피 속성 (ADO)
 현재 레코드를 고유 하 게 식별 하는 책갈피를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 현재 레코드를 설정 하거나는 **레코드 집합** 유효한 책갈피로 식별 되는 레코드에는 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **Variant** 유효한 책갈피로 계산 되는 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **책갈피** 속성을 현재 레코드의 위치를 저장 하 고 언제 든 지 해당 레코드를 반환 합니다. 책갈피에만 사용할 수 있는 **레코드 집합** 책갈피 기능을 지 원하는 개체입니다.  
   
  열 때는 **레코드 집합** 개체 이면 각 레코드의 고유 책갈피입니다. 현재 레코드에 대 한 책갈피를 저장 하려면 형식의 값을 할당할는 **책갈피** 변수에 속성입니다. 언제 든 지 다른 레코드로 이동한 후에 해당 레코드를 신속 하 게 반환 하려면 설정는 **레코드 집합** 개체의 **책갈피** 속성을 해당 변수의 값입니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [BOF, EOF, 및 책갈피 속성 예제 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF, 및 책갈피 속성 예제 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)

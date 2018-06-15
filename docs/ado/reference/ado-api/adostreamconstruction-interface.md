@@ -2,7 +2,6 @@
 title: ADOStreamConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55e7f81233b7cc5cbdf79ea2a71858b3376f46f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5e698ecebee93e6b78d884b0b2978750db63e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275692"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 **ADOStreamConstruction** 인터페이스 사용 하는 ADO 생성 **스트림** OLE DB에서 개체 **IStream** C/c + + 응용 프로그램의 개체입니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  OLE DB를 제공 **IStream** 개체 (`pStream`), ADO의 생성 **스트림** 개체 (`adoStr`) 다음 세 가지 기본 작업입니다.  
   
 1.  ADO 만들기 **스트림** 개체:  
@@ -76,5 +76,5 @@ adoStrConstruct->put_Stream(pUnk);
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)

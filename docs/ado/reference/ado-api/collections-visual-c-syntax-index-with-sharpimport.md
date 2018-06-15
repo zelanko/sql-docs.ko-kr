@@ -2,7 +2,6 @@
 title: '컬렉션 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92ffc11b2011ff5f37aee25266d0f229b1dfd617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276532"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual c + + 구문 인덱스 #import 사용)
 컬렉션 특정 공용 메서드와 속성을 상속 한다는 알아야는 것이 유용 합니다.  
@@ -100,7 +100,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

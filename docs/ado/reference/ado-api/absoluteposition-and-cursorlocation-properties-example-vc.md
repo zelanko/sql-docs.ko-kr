@@ -2,7 +2,6 @@
 title: AbsolutePosition 및 앞 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 043b3d527ebf7d9dc81cb3ac43915b523789fcfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dafee71e3b5fd70116260ad542a80085aaa845b7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275132"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 및 앞 속성 예제 (VC + +)
 이 예제에서는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 하 여 **AbsolutePosition** 클라이언트 커서를 커서를 설정 하 여 속성입니다.  
@@ -261,7 +261,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [앞 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -2,7 +2,6 @@
 title: ADO 열거형 상수의 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 151b4e88b3f094cd44ac7078e5d16e0b0730a9e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 688cc5fb5a6b6ce0912432b8496dd1e28cb034db
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275502"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 돕기 위해, ADO 열거 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADO의 릴리스에서 변경 될 수 있습니다. 코드는 실제 값이 아닌 각 열거 된 상수의 이름 뒤에 의존 해야 합니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|검색할 때 형식을 지정는 **레코드 집합** 문자열입니다. 트랜잭션 특성을 지정 하는 **연결** 개체입니다.|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|트랜잭션 특성을 지정 하는 **연결** 개체입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

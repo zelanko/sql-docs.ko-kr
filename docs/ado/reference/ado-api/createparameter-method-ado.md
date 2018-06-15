@@ -2,7 +2,6 @@
 title: CreateParameter 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ebc66b72724eea326683634cde7f122a815f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277252"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드 (ADO)
 새 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 속성을 지정 합니다.  
@@ -47,7 +47,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *형식*  
  (선택 사항) A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값의 데이터 형식을 지정 하는 **매개 변수** 개체입니다.  
   
- *방향*  
+ *Direction*  
  (선택 사항) A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 의 유형을 지정 하는 값 **매개 변수** 개체입니다.  
   
  *크기*  
@@ -56,7 +56,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  (선택 사항) A **Variant** 에 대 한 값을 지정 하는 **매개 변수** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **CreateParameter** 만드는 새 메서드를 **매개 변수** 지정 된 이름, 유형, 방향, 크기 및 값 개체입니다. 인수에 전달 된 값에 해당 요소에 기록 됩니다 **매개 변수** 속성입니다.  
   
  이 메서드는 자동으로 추가 하지 않습니다는 **매개 변수** 개체는 **매개 변수** 의 컬렉션은 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 이렇게 하면 추가 하는 경우 ADO에서 해당 값은 유효성을 검사 하는 추가 속성을 설정할 수 있습니다는 **매개 변수** 개체 컬렉션입니다.  
@@ -68,7 +68,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추가 및 CreateParameter 메서드 예제 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [추가 및 CreateParameter 메서드 예제 (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   

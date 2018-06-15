@@ -2,7 +2,6 @@
 title: 'ADO #import 인 Visual c + + 구문 인덱스 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9af0435791391ffcf3224a0246fc7a7f12598dcf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275532"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO #import 인 Visual c + + 구문 인덱스
 이 인덱스는 Microsoft Visual c + +에 따라 ADO 언어 참조에 대 한 상호 참조 및 **#import** 지시문입니다.  
@@ -61,5 +61,5 @@ ms.lasthandoff: 05/03/2018
   
 -   [레코드 집합 이벤트](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [COM용 Visual C++ 구문 인덱스에 대한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

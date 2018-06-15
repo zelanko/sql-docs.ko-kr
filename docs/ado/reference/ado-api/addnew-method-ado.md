@@ -2,7 +2,6 @@
 title: AddNew 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21161d5755fc31be78aced4a7f4350dbf901fd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275212"
 ---
 # <a name="addnew-method-ado"></a>AddNew 메서드 (ADO)
 업데이트할 수 있는 작업에 대 한 새 레코드를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -47,7 +47,7 @@ recordset.AddNew FieldList, Values
  *값*  
  (선택 사항) 단일 값 또는 새 레코드의 필드에 대 한 값의 배열입니다. 경우 *Fieldlist* 배열 *값* 배열을 수도 있어야 같은 멤버의 숫자, 그렇지 않으면 오류가 발생 합니다. 필드 이름은 순서에는 각 배열에 있는 필드 값의 순서와 일치 해야 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **AddNew** 메서드를 만들고 새 레코드를 초기화 합니다. 사용 하 여는 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 **adAddNew** (한 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 값) 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드 집합**개체입니다.  
   
  호출한 후의 **AddNew** 새 레코드 현재 레코드가 메서드와 호출한 후 유지 되는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드. 이후 새 레코드에 추가 됩니다는 **레코드 집합**에 대 한 호출 **MoveNext** 의 끝을 지나서 이동 합니다는 업데이트 이후에 **레코드 집합**되므로 **EOF**  True입니다. 경우는 **레코드 집합** 개체 책갈피를 지원 하지 않으면, 다른 레코드로 이동 되 면 새 레코드에 액세스할 수 있습니다. 커서 유형에 따라 호출 해야 할 수 있습니다는 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드 새 레코드에 액세스할 수 있도록 합니다.  
@@ -89,7 +89,7 @@ rs.Update
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AddNew 메서드 예제 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew 메서드 예제 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew 메서드 예제 (VC + +)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

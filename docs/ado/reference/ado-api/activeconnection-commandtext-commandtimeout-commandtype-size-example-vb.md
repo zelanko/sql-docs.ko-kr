@@ -2,7 +2,6 @@
 title: 저장 프로시저 속성 (VB) 예 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19439095b70900e3b462ef4832fb8454ad34d640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 221201c9b82314c821d93ff8291676a5d52b2210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274972"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VB)
 사용 하 여이 예제는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), 및 [방향](../../../ado/reference/ado-api/direction-property.md) 저장된 프로시저를 실행 하는 속성입니다.  
@@ -137,7 +137,7 @@ End Sub
 'EndActiveConnectionVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   

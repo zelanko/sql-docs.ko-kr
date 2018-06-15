@@ -2,7 +2,6 @@
 title: Visual c + + 구문 인덱스에 대 한 COM ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0db41cef5c6eb47c28f2eb8dd14a683153c3ecd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28753a50e8fea591c266db27e8121256869b1d6e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275512"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Visual c + + 구문 인덱스에 대 한 COM ADO
 이 인덱스는 Microsoft Visual c + +에 따라 ADO 언어 참조에 대 한 상호 참조 합니다.  
@@ -54,6 +54,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [스트림 개체](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO #import 인 Visual c + + 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ADO(ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)

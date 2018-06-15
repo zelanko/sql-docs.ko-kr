@@ -2,7 +2,6 @@
 title: 불일치 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f17b1bbb0793e06a5ecbbec393fd87ebcdbc311e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276802"
 ---
 # <a name="comparebookmarks-method-ado"></a>불일치 메서드 (ADO)
 두 개의 책갈피를 비교 하 고 상대 값의 표시를 반환 합니다.  
@@ -48,7 +48,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  두 번째 행의 책갈피입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  책갈피는 동일 하 게 적용 해야 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 **레코드 집합** 개체 및 해당 [복제](../../../ado/reference/ado-api/clone-method-ado.md)합니다. 서로 다른 책갈피를 안정적으로 비교할 수 없으므로 **레코드 집합** 동일한 원본이 나 명령에서 생성 된 경우에 개체입니다. 도 책갈피를 비교할 수는 **레코드 집합** 개체의 기본 공급자는 비교를 지원 하지 않습니다.  
   
  책갈피 행을 고유 하 게 식별 하는 **레코드 집합** 개체입니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 해당 책갈피를 현재 행의 속성입니다.  
@@ -62,7 +62,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [불일치 예제 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [예제에서는 불일치 (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark 속성(ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

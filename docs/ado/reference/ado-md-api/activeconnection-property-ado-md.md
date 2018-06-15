@@ -2,7 +2,6 @@
 title: ADO MD ActiveConnection 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a26da86e21799aa18f3c3a4b190eb1636401e5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c030a9c1106338975a799a6057bd3eb876b5aa72
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283202"
 ---
 # <a name="activeconnection-property-ado-md"></a>ADO MD ActiveConnection 속성
 어떤 ado 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 카탈로그 현재 속한 또는 현재 셀 집합 개체입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **Variant** 연결을 정의 하는 문자열을 포함 하는 또는 **연결** 개체입니다. 기본값은 비어 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  유효한 ADO에이 속성을 설정할 수 **연결** 개체 또는 유효한 연결 문자열입니다. 이 속성은 연결 문자열을 설정 하면 공급자 만들며 새 **연결** 이 정의 사용 하 여 연결을 엽니다.  
   
  사용 하는 경우는 *ActiveConnection* 의 인수는 [열고](../../../ado/reference/ado-md-api/open-method-ado-md.md) 여 메서드를 한 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체는 **ActiveConnection** 속성은 인수의 값을 상속 합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[Catalog 개체(ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [셀 집합 예제 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 메서드(ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

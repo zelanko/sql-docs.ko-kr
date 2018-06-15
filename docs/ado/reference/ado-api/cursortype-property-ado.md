@@ -2,7 +2,6 @@
 title: 모두 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83302f195c18aee51f0f7fb4c5bfe2d59ae4e882
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e516d185e1d143033003cd82d11273f2908ad12c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277362"
 ---
 # <a name="cursortype-property-ado"></a>모두 속성 (ADO)
 사용 되는 커서 유형을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 값입니다. 기본값은 **adOpenForwardOnly**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **모두** 속성을 열 때 사용 해야 하는 커서의 유형을 지정 하는 **레코드 집합** 개체입니다.  
   
  설정만 **adOpenStatic** 경우 지원 되는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이로 설정 되어 **adUseClient**합니다. 지원 되지 않는 값을 설정 하는 경우 다음 오류가 발생 하지 될 수 있습니다. 가장 가까운 지원 **모두** 대신 사용 됩니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모두, LockType, 및 EditMode 속성 예제 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [모두, LockType, 및 EditMode 속성 예제 (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)

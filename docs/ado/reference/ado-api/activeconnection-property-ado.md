@@ -2,7 +2,6 @@
 title: ActiveConnection 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b37e3e062bcc8239b2231db66052e9cdaf9e812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6988f743abe5a6a0bf875da0b7e52bed23f7500
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275162"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성 (ADO)
 나타내는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 지정 된 개체 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 현재 속해 합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 연결이 닫힌 경우 또는 연결에 대 한 정의 포함 하는 값 **Variant** 현재 포함 된 **연결** 경우 개체는 연결이 열려 있습니다. 기본값은 null 개체 참조입니다. 참조는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **ActiveConnection** 속성을 확인는 **연결** 개체는 지정 된 **명령** 개체는 실행 또는 지정 된  **레코드 집합** 열립니다.  
   
 ## <a name="command"></a>Command  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|-|  
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

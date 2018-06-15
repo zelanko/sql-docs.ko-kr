@@ -2,7 +2,6 @@
 title: AddNew 메서드 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1fdd85812306dc3986fd43109c481df6a044a77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc30b40f64dac9ff3cb06d51d420eb787803070b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275302"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 메서드 예제 (JScript)
 사용 하 여이 예제는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정 된 이름의 새 레코드를 만듭니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **붙여 넣고 AddNewJS.asp**합니다.  
@@ -138,6 +138,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

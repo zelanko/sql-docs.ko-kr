@@ -2,7 +2,6 @@
 title: 모두, LockType, 및 EditMode 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 207ef59f8dd2263fcc3f32aee1ba63270bdcda61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277322"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>모두, LockType, 및 EditMode 속성 예제 (VB)
 이 예제에서는 설정 된 [모두](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성 열기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 또한의 값을 표시는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건에서 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -126,7 +126,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모두 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   

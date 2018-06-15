@@ -2,7 +2,6 @@
 title: 범위란 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af576e7aab76c6e505b2346a74924d8b2ec843e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7da84b8922306f5aa7c51fa10fe023eec06a5414
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277312"
 ---
 # <a name="copyrecord-method-ado"></a>범위란 메서드 (ADO)
 복사로 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -59,7 +59,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>반환 값  
  A **문자열** 일반적으로 값을 반환 하는 값 *대상*합니다. 그러나 반환 된 정확한 값은 공급자에 따라 다릅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  값 *소스* 및 *대상* 않아야 고, 그렇지 않으면 동일 하면 런타임 오류가 발생 합니다. 서버, 경로 또는 리소스 이름 중 하나 이상 달라 야 합니다.  
   
  모든 자식 항목 (예를 들어 하위 디렉터리) *소스* 복사한 재귀적으로 아니라면 **adCopyNonRecursive** 지정 됩니다. 재귀 작업에서 *대상* 의 하위 아니어야 *소스*, 그렇지 않으면 작업을 완료 하지 못합니다.  

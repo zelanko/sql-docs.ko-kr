@@ -2,7 +2,6 @@
 title: CommandStream 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff08261349b73b7aef5c8b9fe1375b288941d41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276702"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 속성 (ADO)
 에 대 한 입력으로 사용 되는 스트림과 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환에 대 한 입력으로 사용 되는 스트림과 **명령** 개체입니다. 이 스트림에 대 한 형식은 공급자별; 자세한 내용은 해당 공급자의 설명서를 참조 하십시오. 이 속성은 비슷합니다는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성의 입력에 대 한 문자열을 지정 하는 데 사용 된 **명령**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **CommandStream** 및 **CommandText** 함께 사용할 수 없습니다. 사용자 설정 하는 경우는 **CommandStream** 속성에는 **CommandText** 속성이 빈 문자열로 설정 됩니다 (""). 사용자가을 설정 하는 경우는 **CommandText** 속성에는 **CommandStream** 속성으로 설정 됩니다 **Nothing**합니다.  
   
  동작에서 **Command.Parameters.Refresh** 및 **Command.Prepare** 공급자에 의해 정의 된 메서드가 있습니다. 스트림에서 매개 변수의 값을 새로 고칠 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [언어 속성](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

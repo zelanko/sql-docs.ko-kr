@@ -2,7 +2,6 @@
 title: ADO 구문 인덱스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d685b68c9ff400b2a702ecddcc7a475389534e7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de0ee4141e1c8d57a58a94b29866c764cb86a056
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275602"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 구문 인덱스
 ADO 메서드 및 속성을 호출 하기 위한 구문을 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 사용 합니다. 그러나 프로그래밍 언어 및 방법에 따라 보다 구체적인 예제에 대 한 다음 섹션을 참조 하세요.  
@@ -31,7 +31,7 @@ ADO 메서드 및 속성을 호출 하기 위한 구문을 개발 환경에 따�
   
 -   [#import 인 Visual c + + 구문 인덱스 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) ADO 속성과 메서드를 사용 하는 경우에서는 **#import** Microsoft Visual c + + 컴파일러 지시문입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Visual Basic ADO를 사용 하 여](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual c + +와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [스크립트 언어로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

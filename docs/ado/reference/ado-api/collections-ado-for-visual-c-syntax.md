@@ -2,7 +2,6 @@
 title: 컬렉션 (Visual c + + 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60bcd8f05c88e20fade932287a429e315f1d8e40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276562"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>컬렉션 (Visual c + + 구문에 대 한 ADO)
 ## <a name="parameters"></a>매개 변수  
@@ -144,7 +144,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item 속성(ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

@@ -1,9 +1,8 @@
 ---
 title: ADO 동적 속성 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.service: ''
-ms.component: reference
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93d699a75045afde3b03a9f977657d0d6db87933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275452"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
 동적 속성에 추가할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 소스는 중 하나는 데이터 공급자와 같은 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |[고유 테이블, 고유한 스키마, 고유한 카탈로그](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**고유 테이블** 는 업데이트, 삽입 및 삭제는 사용할 수는 기본 테이블의 이름을 지정 합니다.<br /><br /> **고유한 스키마** 스키마 또는 테이블의 소유자의 이름을 지정 합니다.<br /><br /> **고유한 카탈로그** 카탈로그 또는 테이블을 포함 하는 데이터베이스의 이름을 지정 합니다.|  
 |[다시 동기화를 업데이트 합니다.](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|지정 여부는 **UpdateBatch** 메서드 뒤 암시적 **다시 동기화** 메서드 작업 그리고 있다면 해당 작업의 범위입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

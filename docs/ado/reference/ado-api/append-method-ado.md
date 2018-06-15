@@ -2,7 +2,6 @@
 title: Append 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275902"
 ---
 # <a name="append-method-ado"></a>Append 메서드 (ADO)
 컬렉션에 개체를 추가합니다. 컬렉션의 경우 [필드](../../../ado/reference/ado-api/fields-collection-ado.md), 새 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션에 추가 하기 전에 개체를 만들 수 있습니다.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *fields*  
  A **필드** 컬렉션입니다.  
   
- *개체*  
+ *object*  
  개체 변수 추가 되는 개체를 나타내는입니다.  
   
  *이름*  
@@ -62,7 +62,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  (선택 사항) A **Variant** 새 필드의 값을 나타내는입니다. 지정 하지 않으면 값이 null 인 필드가 추가 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Parameters 컬렉션  
  설정 해야 합니다는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성은 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체에 추가 하기 전에 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다. 가변 길이 데이터 형식을 선택 하는 경우 설정 해야는 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md) 속성을 0 보다 큰 값입니다.  
@@ -94,7 +94,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Parameters 컬렉션(ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추가 및 CreateParameter 메서드 예제 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [추가 및 CreateParameter 메서드 예제 (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

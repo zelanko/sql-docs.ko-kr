@@ -2,7 +2,6 @@
 title: 특성 및 이름 속성 예 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4ea31a718fad93c01f32dab8dcbe5b7ea7e7f9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48d96c2afe1018b64933fb96ba8c36d08a93d4e1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275972"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>특성 및 이름 속성 예 (VB)
 값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 및 **속성** 개체입니다.  
@@ -130,7 +130,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   

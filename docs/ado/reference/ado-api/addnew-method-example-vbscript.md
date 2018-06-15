@@ -2,7 +2,6 @@
 title: AddNew 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c259168a8d66805968eb9d446b52e802b32d670
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a67a9dd7ba9e280da6b361d7473ae8c6f6d2cac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275252"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew 메서드 예제 (VBScript)
 사용 하 여이 예제는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정 된 이름의 새 레코드를 만듭니다.  
@@ -216,6 +216,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

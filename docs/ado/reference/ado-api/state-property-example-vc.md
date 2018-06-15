@@ -2,7 +2,6 @@
 title: 상태 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09b7a4ae167ff9b17195a981f2b5180d45f342c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ddff0c9348d99a73d7cd82193bb828eeba91f9e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282002"
 ---
 # <a name="state-property-example-vc"></a>State 속성 예제 (VC + +)
 사용 하 여이 예제는 [상태](../../../ado/reference/ado-api/state-property-ado.md) 비동기 연결을 여는 동안 비동기 명령이 실행 되는 메시지를 표시 하는 속성입니다.  
@@ -139,5 +139,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [State 속성(ADO)](../../../ado/reference/ado-api/state-property-ado.md)

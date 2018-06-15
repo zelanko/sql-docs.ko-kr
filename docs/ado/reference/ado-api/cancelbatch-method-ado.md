@@ -2,7 +2,6 @@
 title: CancelBatch 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241bf36ab3ee4babf8d4e306b9d27a350985cb20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276252"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 메서드 (ADO)
 보류 중인 일괄 처리 업데이트를 취소합니다.  
@@ -41,7 +41,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  (선택 사항) [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 레코드를 나타내는 값의 **CancelBatch** 메서드에 영향을 줍니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **CancelBatch** 메서드 내에서 보류 중인 업데이트를 취소 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 업데이트 모드에서입니다. 경우는 **레코드 집합** 즉시 업데이트 모드에 호출 **CancelBatch** 없이 **adAffectCurrent** 오류가 발생 합니다.  
   
  현재 레코드를 편집 하거나 호출 하는 경우 새 레코드를 추가 하는 경우 **CancelBatch**, ADO 첫 번째 호출에서 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 캐시 된 변경 내용을 취소할 메서드. 변경 내용을 보류 중인 모든 그 이후에 **레코드 집합** 취소 됩니다.  
@@ -53,7 +53,7 @@ recordset.CancelBatchAffectRecords
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [UpdateBatch 및 CancelBatch 메서드 예제 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch 및 CancelBatch 방법 예 (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Cancel 메서드 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

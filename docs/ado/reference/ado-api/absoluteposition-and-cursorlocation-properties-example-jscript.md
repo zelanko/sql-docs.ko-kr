@@ -2,7 +2,6 @@
 title: AbsolutePosition 및 앞 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 811645c4d0b642f811b3dca3af0913b31d496b77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42804caabae25b5c3617b6a17bcb74a77531bbe1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274882"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 및 앞 속성 예제 (JScript)
 이 예제에서는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 하 여 **AbsolutePosition** 클라이언트 커서를 커서를 설정 하 여 속성입니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **AbsolutePositionJS.asp**합니다.  
@@ -131,7 +131,7 @@ BODY {
 <!-- EndAbsolutePositionJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [앞 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

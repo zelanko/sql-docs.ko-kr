@@ -6,8 +6,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275642"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO-WFC 구문 인덱스
 ADO 언어 참조에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 사용 합니다. 이 인덱스는 ADO에 대 한 Windows Foundation Class (ADO/WFC)에 따라 ADO 언어 참조 항목에 대 한 상호 참조 합니다. 구문에 차이가 발생 하는 경우 언어 참조 항목의 구문 목록 대신이 인덱스에 함수 시그니처가 사용 합니다.  
@@ -52,6 +52,6 @@ ADO 언어 참조에는 Microsoft Visual Basic 프로그래밍 언어 ADO 메서
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 처리](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ADO(ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)

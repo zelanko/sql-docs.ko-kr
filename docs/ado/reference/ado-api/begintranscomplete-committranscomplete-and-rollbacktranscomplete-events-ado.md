@@ -2,7 +2,6 @@
 title: BeginTrans, CommitTrans RollbackTrans 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9754baa574a21916e981c91aad56385adfb16e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276062"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete, 및 RollbackTransComplete 이벤트 (ADO)
 이러한 이벤트에서 연결 된 작업 후 호출 되는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체가 실행을 완료 합니다.  
@@ -66,12 +66,12 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  **연결** 이 이벤트가 발생 한 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  Visual c + +에서 여러 **연결** 동일한 이벤트 처리 메서드를 공유할 수 있습니다. 메서드를 사용 하 여 반환 된 **연결** 이벤트를 발생 시킨 개체를 결정 하는 개체입니다.  
   
  경우는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성 **adXactCommitRetaining** 또는 **adXactAbortRetaining**, 커밋 또는 트랜잭션을 롤백 후 새 트랜잭션을 시작 합니다. 사용 하 여 **BeginTransComplete** 이벤트를 모두 무시 하지만 첫 번째 트랜잭션 시작 이벤트입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   

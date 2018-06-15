@@ -2,7 +2,6 @@
 title: Cancel 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9538bfe7e0c98cf89c052ba3244482def661ef3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ec9158cc318b8c89ce0ea64a73190cb6f48de46
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276312"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드 (ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  
@@ -40,14 +40,14 @@ ms.lasthandoff: 05/03/2018
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **취소** 메서드는 비동기 메서드 호출의 실행을 종료:는 메서드를 호출 하는, 즉는 **adAsyncConnect**, **adAsyncExecute**, 또는 **adAsyncFetch** 옵션입니다.  
   
  다음 표에서 사용 하는 경우 종료 되는 작업은 **취소** 메서드는 특정 유형의 개체를 합니다.  
   
 |경우 *개체* 되는|이 메서드에 대 한 마지막 비동기 호출을 종료|  
 |----------------------|-------------------------------------------------------------|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-connection.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|[범위란](../../../ado/reference/ado-api/copyrecord-method-ado.md), [참여할 수 있는](../../../ado/reference/ado-api/deleterecord-method-ado.md), [범위란](../../../ado/reference/ado-api/moverecord-method-ado.md), 또는 [열기](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
@@ -60,7 +60,7 @@ object.Cancel
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cancel 메서드 예제 (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Cancel 메서드 (VBScript) 예제](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel 메서드 예제 (VC + +)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   

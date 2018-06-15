@@ -2,7 +2,6 @@
 title: 명령 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf4a875b8ffbae9442f415fcf56d72809900da81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42d1e3e442de94bd9cc062fc903a694c20a9a547
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276642"
 ---
 # <a name="command-object-ado"></a>Command 개체 (ADO)
 데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **명령** 의 레코드를 반환 하 고 데이터베이스를 쿼리 하는 개체는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 대량 작업을 실행 하거나 데이터베이스의 구조를 조작 합니다. 일부 공급자의 기능에 따라 **명령** 컬렉션, 메서드 또는 속성 참조 될 때 오류를 생성할 수 있습니다.  
   
  컬렉션, 메서드 및 속성의는 **명령** 개체를 다음을 수행할 수 있습니다.  
@@ -80,7 +80,7 @@ objCmd(0)
   
 -   [명령 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

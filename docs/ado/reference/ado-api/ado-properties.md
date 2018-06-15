@@ -2,7 +2,6 @@
 title: ADO 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275582"
 ---
 # <a name="ado-properties"></a>ADO 속성
 |||  
@@ -51,12 +51,12 @@ ms.lasthandoff: 05/03/2018
 |[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|로 나타낼 수 있는 데이터를 포함 하는 개체를 나타냅니다는 **레코드 집합** 개체입니다.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|에 대 한 기본 데이터베이스를 나타내지는 **연결** 개체입니다.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|데이터 용량 나타냅니다는 **필드** 개체입니다.|  
-|[설명](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 된 **오류** 개체입니다.|  
 |[언어](../../../ado/reference/ado-api/dialect-property.md)|구문 및 구문 분석 하는 공급자가 사용 되는 일반 규칙 나타냅니다는 **CommandText** 또는 **CommandStream** 속성입니다.|  
-|[방향](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
+|[Direction](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부는 **매개 변수** 입력된 매개 변수, 출력 매개 변수 또는 둘 다 나타냅니다 또는 저장된 프로시저에서 반환 값 매개 변수가 없는 경우.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|현재 레코드의 편집 상태를 나타냅니다.|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|현재 위치가 스트림 끝에 있는지 여부를 나타냅니다.|  
-|[필터](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  
+|[Assert](../../../ado/reference/ado-api/filter-property.md)|데이터에 대 한 필터 나타냅니다는 **레코드 집합**합니다.|  
 |[HelpContext 및 도움말 파일](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|도움말 파일 및 관련 된 항목을 나타냅니다는 **오류** 개체입니다.<br /><br /> **HelpContextID** 로 컨텍스트 ID를 반환는 **긴** 도움말 파일의 항목에 대 한 값입니다.<br /><br /> **HelpFile** 반환는 **문자열** 도움말 파일의 확인 된 경로를 계산 하는 값입니다.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|현재에 적용 된 인덱스의 이름을 표시 한 **레코드 집합** 개체입니다.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|에 대 한 격리 수준을 나타냅니다는 **연결** 개체입니다.|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 |[Value](../../../ado/reference/ado-api/value-property-ado.md)|에 할당 된 값을 나타냅니다는 **필드**, **매개 변수**, 또는 **속성** 개체입니다.|  
 |[버전](../../../ado/reference/ado-api/version-property-ado.md)|ADO 버전 번호를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

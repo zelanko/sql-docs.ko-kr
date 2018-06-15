@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e73a70fbd5d02a829f8f69770a79155c94a4316d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28b08f410491ad9357dd313ad763a2f6e98a4141
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308792"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대 한 릴리스 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -86,5 +86,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="whats-new-in-version-20"></a>버전 2.0의 새로운 기능  
 버전 2.0에서는 PDO_SQLSRV 드라이버에 대한 지원이 추가되었습니다. 자세한 내용은 [PDO_SQLSRV 드라이버 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)를 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Microsoft Drivers for PHP for SQL Server의 개요](../../connect/php/overview-of-the-php-sql-driver.md)

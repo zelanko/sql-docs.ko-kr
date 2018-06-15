@@ -2,7 +2,6 @@
 title: ADO API 참조 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275312"
 ---
 # <a name="ado-api-reference"></a>ADO API 참조
 ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목이 포함 되어 있습니다. Windows Foundation 클래스 (WFC) 및 Microsoft Visual c + +에서 사용 되는 ADO 구문 인덱스의 목록이 포함 되어 있습니다.  
@@ -48,7 +48,7 @@ ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속�
   
 -   [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   

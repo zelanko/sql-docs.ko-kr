@@ -2,7 +2,6 @@
 title: ActiveCommand 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa86180edc4117e89863bb232a2faa95d010272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e85286a885ab8edcfb08b029f7a1fd77c8d3f4a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274968"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성 (ADO)
 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만든 연결 된 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 **Variant** 를 포함 하는 **명령** 개체입니다. 기본값은 null 개체 참조입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ActiveCommand** 속성은 읽기 전용입니다.  
   
  경우는 **명령** 개체 현재를 만드는 데 사용 되지 **레코드 집합**는 **Null** 개체 참조가 반환 됩니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveCommand 속성 예제 (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
  [ActiveCommand 속성 예제 (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [ActiveCommand 속성 예제 (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   

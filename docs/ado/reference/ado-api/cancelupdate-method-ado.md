@@ -2,7 +2,6 @@
 title: CancelUpdate 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a5b570920e0a9b44263c0ae8783da1eee99040
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14557cb420d3a878ae6fa6e7cd70cce45fa6bd71
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276322"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 메서드 (ADO)
 현재 또는 새 행에 대해 모든 변경 내용을 취소는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 호출 하기 전에 [업데이트 ](../../../ado/reference/ado-api/update-method.md) 메서드.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>레코드 집합  
  사용 하 여는 **CancelUpdate** 메서드를 현재 행에 대해 변경 내용을 취소 하거나 새로 추가 된 행을 삭제 합니다. 호출한 후 현재 행 또는 새 행 변경 내용을 취소할 수 없습니다는 **업데이트** 메서드를 변경으로 롤백할 수 있는 트랜잭션의 일부인 경우가 아니면는 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드 또는 일부 일괄 업데이트 합니다. 일괄 처리 업데이트의 경우 취소할 수 있습니다는 **업데이트** 와 **CancelUpdate** 또는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드.  
@@ -54,7 +54,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 |-|-|  
 |[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [업데이트 및 CancelUpdate 메서드 예제 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [업데이트 및 CancelUpdate 메서드 예제 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

@@ -2,7 +2,6 @@
 title: AppendChunk 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275912"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드 (ADO)
 데이터는 큰 텍스트 또는 이진 데이터를 추가 [필드](../../../ado/reference/ado-api/field-object.md), 또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  
@@ -38,13 +38,13 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *개체*  
+ *object*  
  A **필드** 또는 **매개 변수** 개체입니다.  
   
  *데이터*  
  A **Variant** 개체에 추가할 데이터를 포함 하 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **AppendChunk** 에서 메서드는 **필드** 또는 **매개 변수** 긴 이진 또는 문자 데이터로 채울 개체입니다. 시스템 메모리가 제한 된 상황에서 사용할 수 있습니다는 **AppendChunk** 메서드 긴 값으로 아니라 전체에서를 합니다.  
   
 ## <a name="field"></a>필드  
@@ -68,7 +68,7 @@ object.AppendChunk Data
 |-|-|  
 |[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AppendChunk 및 GetChunk 메서드 예제 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 및 GetChunk 방법 예 (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [특성 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

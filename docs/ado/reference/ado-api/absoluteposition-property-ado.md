@@ -2,7 +2,6 @@
 title: AbsolutePosition 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc46a659ea191e6bb1437cb16b0e7704cf8e5ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 615bbf4f771d6d3b12edfec3184ef0ee091fbe08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274992"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 속성 (ADO)
 서 수 위치를 나타내며는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 레코드입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  64 비트 코드에 대 한 64 비트 값을 저장 하기 위해 제공 하는 데이터 형식을 사용 합니다. 예를 들어 Long 또는 다른를 사용할 수 있습니다 DBORDINAL와 같은 64 비트 길이 값입니다. 사용 하지 마십시오 **PositionEnum** 값을 32 비트 길이 제한 되기 때문입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  설정 하는 데는 **AbsolutePosition** 속성, ADO 필요를 사용 하는 OLE DB 공급자를 구현 하는 [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) 인터페이스입니다.  
   
  에 액세스 하는 **AbsolutePosition** 속성의는 **레코드 집합** 정방향 전용 사용 하 여 열린 된 동적 커서에는 오류를 발생 시킵니다. 또는 **adErrFeatureNotAvailable**합니다. 다른 커서 유형으로 올바른 위치 반환할으로 지 원하는 OLE DB 공급자는 **IRowsetScroll:IRowsetLocate** 인터페이스입니다. 공급자를 지원 하지 않는 경우는 **IRowsetScroll** 인터페이스의 속성이로 설정 되어 **adPosUnknown**합니다. 지원 하는지 여부를 확인 하 여 공급자에 대 한 설명서를 참조 **IRowsetScroll**합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AbsolutePosition 및 앞 속성 예제 (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition 및 앞 속성 예제 (VC + +)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

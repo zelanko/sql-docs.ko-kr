@@ -2,7 +2,6 @@
 title: 장 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70994b65ae07523171774ac6a84d3cfc259a5584
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81173778a8c183ec92ddb9eb435f8e7c9f50a4eb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276282"
 ---
 # <a name="chapter-property-ado"></a>장 속성 (ADO)
 OLE DB를 가져오거나 설정 합니다. **장** 에/에서 개체는 [ADORecordsetConstruction 인터페이스](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Chapter** 설정 하는 **장** 개체, 행의 하위 집합 ADO로 변경 됩니다 [Recordset 개체](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이 설정의 현재 장은 **행 집합**개체입니다. 이 속성은 읽기/쓰기가 가능합니다.  

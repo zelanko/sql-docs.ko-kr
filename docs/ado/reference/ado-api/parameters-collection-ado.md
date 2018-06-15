@@ -2,7 +2,6 @@
 title: Parameters 컬렉션 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9976679454881af9279dc74ff86eacdb01d2a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280671"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션 (ADO)
 모든 포함 된 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **명령** 개체에는 **매개 변수** 컬렉션으로 이루어져 **매개 변수** 개체입니다.  
   
  사용 하는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 에서 메서드는 **명령** 개체의 **매개 변수** 공급자 매개 변수 정보는 저장된 프로시저 또는 매개 변수가 있는 쿼리를 검색 하는 컬렉션 에 지정 된 된 **명령** 개체입니다. 일부 공급자; 매개 변수가 있는 쿼리 또는 저장된 프로시저 호출을 지원 하지 않습니다. 호출의 **새로 고침** 에서 메서드는 **매개 변수** 컬렉션 이러한 공급자를 사용 하는 경우 오류가 반환 됩니다.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [매개 변수 컬렉션의 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

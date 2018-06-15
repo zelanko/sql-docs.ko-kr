@@ -2,7 +2,6 @@
 title: CopyTo 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32e889ea84c02a544ccad53cd9c274c360994bfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15537df53441d0204a62d19ae38b9105c456cddb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277172"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드 (ADO)
 지정한 개수의 문자 또는 바이트 복사 (에 따라 [형식](../../../ado/reference/ado-api/type-property-ado-stream.md))에 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 다른 **스트림** 개체입니다.  
@@ -47,7 +47,7 @@ Stream.CopyTo DestStream, NumChars
  *NumChars*  
  (선택 사항) **정수** 소스에서 현재 위치에서 복사 될 문자 또는 바이트 수를 지정 하는 값 **스트림** 대상 **스트림**합니다. 기본값은-1로, 모든 문자 또는 바이트를 현재 위치에서 복사 되도록 지정 [EOS](../../../ado/reference/ado-api/eos-property.md)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 지정한 수의 문자 또는 지정 된 현재 위치에서 시작 하 여 바이트 복사는 [위치](../../../ado/reference/ado-api/position-property-ado.md) 속성입니다. 지정된 된 숫자 바이트까지 사용할 수 있는 수보다 큰 경우 **EOS**, 다음만 문자 또는 바이트를 현재 위치에서 **EOS** 복사 됩니다. 하는 경우의 값 *NumChars* 1 이거나 생략 하면 모든 문자 또는 현재 위치에서 시작 하는 바이트 복사 됩니다.  
   
  기존 문자 또는 대상 스트림은 바이트, 복사가 종료 되는 지점 이후의 모든 내용이 그대로 유지 하 고 잘리지 않습니다. **위치** 은 바이트 바로 다음의 마지막 바이트가 복사 합니다. 이러한 접두사 바이트 truncate 하려면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  

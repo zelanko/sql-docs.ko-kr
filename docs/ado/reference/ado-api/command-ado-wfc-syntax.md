@@ -2,7 +2,6 @@
 title: 명령 (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e5b50a3e7b05d77c582a3b02c1f9b366dbc066
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c57cd9a65cdbf3662f7ed7499d979753d9ecd0b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276612"
 ---
 # <a name="command-ado---wfc-syntax"></a>명령 (ADO-WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -73,5 +73,5 @@ public com.ms.wfc.data.Parameters getParameters()
 public AdoProperties getProperties()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)

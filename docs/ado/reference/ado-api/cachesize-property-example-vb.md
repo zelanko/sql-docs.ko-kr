@@ -2,7 +2,6 @@
 title: CacheSize 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41a30b36b35fbaa2c14ee2f5139b32260cf88153
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ec1c60d08f1870b75d1cc0f27954040a643c218
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276182"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 속성 예제 (VB)
 사용 하 여이 예제는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 집합과 30 개의 레코드가 캐시 없는 수행 합니다.  
@@ -123,6 +123,6 @@ End Sub
 'EndCacheSizeVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CacheSize 속성 (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

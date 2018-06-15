@@ -2,7 +2,6 @@
 title: ADO 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1573eaca943c1bb018e279f5360f72480610a5d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 764e47be93509356de38fc90b7b67a1c85e7ff00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275522"
 ---
 # <a name="ado-events"></a>ADO 이벤트
 |||  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|이 연결에서 실행 하 고 사용자 검사 하 고 보류 중인 실행 매개 변수를 수정할 수 있는 기회를 제공 하는 보류 중인 명령이 바로 전에 호출 됩니다.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove** 라고 이벤트 *전에* 보류 중인 작업의 현재 위치를 변경 합니다.는 **레코드 집합**합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

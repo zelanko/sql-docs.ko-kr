@@ -2,7 +2,6 @@
 title: BOF, EOF 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276152"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성 (ADO)
 -   **BOF** 현재 레코드 위치에 있는 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  **BOF** 및 **EOF** 속성 반환 **부울** 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **BOF** 및 **EOF** 속성을 확인 여부는 **레코드 집합** 개체의 범위를 벗어났는지 여부 또는 레코드에 포함 되어는 **레코드 집합**  레코드 간을 이동할 때 개체입니다.  
   
  **BOF** 속성에서 반환 **True** (-1) 현재 레코드 위치는 첫 번째 레코드 바로 앞 이면 및 **False** 현재 레코드 위치는 첫 번째 이후인 경우 (0) 레코드입니다.  
@@ -53,9 +53,9 @@ ms.lasthandoff: 05/03/2018
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> < 0 이동|Move 0|MoveNext<br /><br /> > 0 이동|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|허용함|오류|오류|허용함|  
-|**BOF**=**False**, **EOF**=**True**|허용함|허용함|오류|오류|  
-|둘 다 **True**|오류|오류|오류|오류|  
+|**BOF**=**True**, **EOF**=**False**|허용함|Error|Error|허용함|  
+|**BOF**=**False**, **EOF**=**True**|허용함|허용함|Error|Error|  
+|둘 다 **True**|Error|Error|Error|Error|  
 |둘 다 **False**|허용함|허용함|허용함|허용함|  
   
  허용는 **이동** 메서드 메서드는 레코드를 제대로 찾는 것은 보증 하지 않습니다; 지정 된 호출만 의미 **이동** 메서드 오류가 발생 하지 것입니다.  
@@ -72,6 +72,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [BOF, EOF, 및 책갈피 속성 예제 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF, 및 책갈피 속성 예제 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

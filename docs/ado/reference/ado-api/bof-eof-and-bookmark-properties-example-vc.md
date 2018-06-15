@@ -2,7 +2,6 @@
 title: BOF, EOF, 및 책갈피 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309c33960737c855c4399832db5275461c5bf513
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276082"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF, 및 책갈피 속성 예제 (VC + +)
 사용 하 여이 예제의 첫 번째 함수는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성 레코드에 플래그입니다. 사용자는 **레코드 집합** 나중 돌아갑니다.  
@@ -209,7 +209,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [BOF, EOF 속성 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [책갈피 속성 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

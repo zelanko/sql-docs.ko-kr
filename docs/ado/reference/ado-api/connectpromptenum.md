@@ -2,7 +2,6 @@
 title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f01de20cabf1ec5d7cefdb645fb1fc08b69d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277242"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 요구 하는 대화 상자를 표시할지 여부를 지정 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1.|항상 메시지를 표시합니다.|  
+|**adPromptAlways**|1|항상 메시지를 표시합니다.|  
 |**adPromptComplete**|2|자세한 정보가 필요한 경우 메시지를 표시 합니다.|  
 |**adPromptCompleteRequired**|3|자세한 정보가 필요 하지만 선택적 매개 변수를 사용할 수 없습니다 경우 메시지를 표시 합니다.|  
 |**adPromptNever**|4|표시 하지 않습니다.|  

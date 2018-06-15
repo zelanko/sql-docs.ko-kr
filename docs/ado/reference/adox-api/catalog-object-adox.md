@@ -2,7 +2,6 @@
 title: 카탈로그 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae03190406dd6a37a7670fe749d76762e6e6674d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285242"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체 (ADOX)
 컬렉션을 포함 ([테이블](../../../ado/reference/adox-api/tables-collection-adox.md), [뷰](../../../ado/reference/adox-api/views-collection-adox.md), [사용자](../../../ado/reference/adox-api/users-collection-adox.md), [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md))를 데이터 원본의 스키마 카탈로그에 설명 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  수정할 수는 **카탈로그** 개체를 제거 하거나, 기존 개체를 수정 하 여 개체입니다. 일부 공급자의 일부를 지원 하지는 **카탈로그** 개체 또는 스키마 정보를 보는 지원할 수 있습니다.  
   
  속성 및 메서드는 **카탈로그** 개체를 할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Catalog 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [카탈로그 ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [명령 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [테이블 형식 속성 예제 (VB) 연결 Close 메서드](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

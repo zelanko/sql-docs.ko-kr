@@ -2,7 +2,6 @@
 title: Clone 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276432"
 ---
 # <a name="clone-method-ado"></a>Clone 메서드 (ADO)
 복제를 만들어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.  
@@ -50,7 +50,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  (선택 사항) A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 원래 잠금 유형을 지정 하는 값 **레코드 집합**, 읽기 전용 또는 **레코드 집합**합니다. 유효한 값은 **adLockUnspecified** 또는 **adLockReadOnly**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **복제** 메서드를 여러 개 만듭니다 중복 **레코드 집합** 개체, 특히 여러 레코드의 지정한 집합의 현재 레코드를 유지 관리 하려는 경우. 사용 하 여는 **복제** 메서드 만들고 새 열 보다 더 효율적입니다. **레코드 집합** 원본과 동일한 정의 사용 하는 개체입니다.  
   
  [필터](../../../ado/reference/ado-api/filter-property.md) 원래 속성 **레코드 집합**를 복제본에 적용 되지 것입니다 있는 경우. 설정의 **필터** 새 속성 **레코드 집합** 결과를 필터링 합니다. 모든 기존 복사 하는 가장 간단한 방법은 **필터** 값은 다음과 같이, 직접 할당할 수 있습니다.  
@@ -88,7 +88,7 @@ rsNew.Filter = rsOriginal.Filter
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Clone 메서드 예제 (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone 메서드 예제 (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone 메서드 예제(VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   

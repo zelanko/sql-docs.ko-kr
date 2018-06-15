@@ -2,7 +2,6 @@
 title: ADO 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275563"
 ---
 # <a name="ado-methods"></a>ADO 메서드
 |||  
@@ -78,12 +78,12 @@ ms.lasthandoff: 05/03/2018
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|텍스트 스트림의 읽을 때 한 줄 전체를 건너뜁니다.|  
 |[stat](../../../ado/reference/ado-api/stat-method.md)|열린 스트림에 대 한 통계 정보를 가져옵니다.|  
 |[지원](../../../ado/reference/ado-api/supports-method.md)|지정 된 있는지 여부를 결정 **레코드 집합** 개체는 특정 종류의 기능을 지원 합니다.|  
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|현재 행에 수행한 변경 내용을 저장 하는 **레코드 집합** 개체 또는 **필드** 컬렉션은 **레코드** 개체입니다.|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|현재 행에 수행한 변경 내용을 저장 하는 **레코드 집합** 개체 또는 **필드** 컬렉션은 **레코드** 개체입니다.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|모든 보류 중인 일괄 처리 업데이트를 디스크에 기록 합니다.|  
 |[쓰기](../../../ado/reference/ado-api/write-method.md)|이진 데이터를 쓰는 **스트림** 개체입니다.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|에 지정 된 텍스트 문자열을 쓰고는 **스트림** 개체입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

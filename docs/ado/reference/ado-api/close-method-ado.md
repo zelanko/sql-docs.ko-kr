@@ -2,7 +2,6 @@
 title: Close 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5779f0fdd140ee4fbb95f7d8db339ee4d0b9b8af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1cf9ee921355368dc9aaffb2905fb79eced5b7d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276488"
 ---
 # <a name="close-method-ado"></a>Close 메서드 (ADO)
 열려 있는 개체와 모든 종속 개체를 닫습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 object.Close  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **닫습니다** 을 닫는 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체 모든 연결 된 시스템 리소스를 해제 합니다. 개체를 닫아도 제거 되지 않고 메모리;에서 으로 설정 하 고 나중에 다시 열 수 있습니다. 메모리에서 개체를 완전히 제거 하려면 개체를 닫고 다음 개체 변수를 설정 *Nothing* (Visual Basic)에서는 합니다.  
   
 ## <a name="connection"></a>연결  
@@ -64,7 +64,7 @@ object.Close
 |[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 및 Close 메서드 예제 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 및 Close 메서드 (VBScript) 예제](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open 및 Close 메서드 예제 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

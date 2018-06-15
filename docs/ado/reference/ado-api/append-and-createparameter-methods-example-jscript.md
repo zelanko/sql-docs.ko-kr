@@ -2,7 +2,6 @@
 title: 추가 및 CreateParameter 메서드 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5b7a1e196dd452b5bf6dd407c6dc7e10d237497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275812"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>추가 및 CreateParameter 메서드 예제 (JScript)
 사용 하 여이 예제는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수가 있는 저장된 프로시저를 실행 하는 메서드. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **붙여 넣고 AppendJS.asp**합니다.  
@@ -145,7 +145,7 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   

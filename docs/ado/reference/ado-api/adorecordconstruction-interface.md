@@ -2,7 +2,6 @@
 title: ADORecordConstruction 인터페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275632"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 **ADORecordConstruction**인터페이스 사용 하는 ADO 생성 **레코드** OLE DB에서 개체 **행** C/c + + 응용 프로그램의 개체입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  OLE DB를 제공 **행** 개체 (`pRow`), ADO의 생성 **레코드** 개체 (`adoR`), 다음 세 가지 기본 작업입니다.  
   
 1.  ADO 만들기 **레코드** 개체:  

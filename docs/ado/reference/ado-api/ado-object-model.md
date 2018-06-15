@@ -2,7 +2,6 @@
 title: ADO 개체 모델 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b282ebb1ba7ce6b2ad80c95891aade57df93758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc3332a971f32de99f923f3ffff0f5ad904a4261
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275552"
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
 다음 그림은 ADO 개체 및 해당 컬렉션을 보여 줍니다.  
   
  ![ADO 개체 모델](../../../ado/reference/ado-api/media/ado_object_model.gif "ADO_object_model")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

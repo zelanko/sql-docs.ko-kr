@@ -2,7 +2,6 @@
 title: Clone 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d470f46bca9a022b55d50870a8db406bd918d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d948e6add3650f887d2530d91691f5a955d026e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276492"
 ---
 # <a name="clone-method-example-vc"></a>Clone 메서드 예제 (VC + +)
 사용 하 여이 예제는 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만들고 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 배치 하는 사용자 지정할 수 있도록 합니다.  
@@ -223,5 +223,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

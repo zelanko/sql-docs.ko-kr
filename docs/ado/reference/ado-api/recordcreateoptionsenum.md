@@ -2,7 +2,6 @@
 title: RecordCreateOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3109e7e7116fac22e007c65167bb718edf2b29b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281172"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 지정 기존 여부 **레코드** opened 또는 새 **레코드** 에 대해 생성는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 값은 AND 연산자로 결합할 수 있습니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|새 **레코드** 로 지정 된 노드에서 *소스* 매개 변수는 기존을 여는 대신 **레코드**합니다. 소스를 가리키는 경우 기존 노드에 런타임 오류가 발생 하지 않는 한 **adCreateCollection** 결합 된 **adOpenIfExists** 또는 **adCreateOverwrite**합니다.|  
 |**adCreateNonCollection**|0|새 **레코드** 형식의 [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)합니다.|  

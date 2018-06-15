@@ -2,7 +2,6 @@
 title: ActiveCommand 속성 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a45371bc6ab4a03df228632a081f9b3cc791aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4272cda6ce23406661c216944a155b2de6d61349
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275012"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 속성 예제 (JScript)
 이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **ActiveCommandJS.asp**합니다.  
@@ -129,7 +129,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

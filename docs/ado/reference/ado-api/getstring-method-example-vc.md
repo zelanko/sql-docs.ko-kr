@@ -2,7 +2,6 @@
 title: GetString 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5743aff49b884f16f5b9a3de9fc4a56bcf0f0fb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278902"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 메서드 예제 (VC + +)
 이 예제에서는 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  
@@ -187,6 +187,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [GetString 메서드 (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

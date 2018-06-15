@@ -2,7 +2,6 @@
 title: BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80ae8b47737573aa7ff0c81bafd882ca162a157f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42f43c3dfc508ac6885f0e42811af26d89cd6692
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275982"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 (ADO)
 이러한 트랜잭션 메서드 내에서 처리 하는 트랜잭션 관리는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다음과 같이 개체:  
@@ -56,7 +56,7 @@ object.RollbackTrans
  **BeginTrans** 반환 하는 함수를 호출할 수는 **긴** 트랜잭션의 중첩 수준을 나타내는 변수입니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *개체*  
+ *object*  
  A **연결** 개체입니다.  
   
 ## <a name="connection"></a>연결  
@@ -79,7 +79,7 @@ object.RollbackTrans
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes 속성(ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
