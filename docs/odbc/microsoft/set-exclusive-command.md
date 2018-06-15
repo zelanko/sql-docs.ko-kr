@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900378"
 ---
 # <a name="set-exclusive-command"></a>SET 단독 명령
 네트워크에서 배타적으로 또는 공유 사용 하기 위해 테이블 파일을 열지 여부를 지정 합니다.  

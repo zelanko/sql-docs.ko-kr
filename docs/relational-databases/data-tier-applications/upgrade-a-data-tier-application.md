@@ -35,6 +35,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32933348"
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  **관리** 노드, **데이터 계층 응용 프로그램** 노드를 차례로 확장합니다.  
   
-3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 업그레이드…**를 선택합니다.  
+3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 업그레이드…** 를 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   

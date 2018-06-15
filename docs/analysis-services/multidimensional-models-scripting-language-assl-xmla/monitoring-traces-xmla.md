@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021520"
 ---
 # <a name="monitoring-traces-xmla"></a>추적 모니터링(XMLA)
   사용할 수는 [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) XML for Analysis (XMLA)의 인스턴스에 정의 된 기존 추적을 모니터링 하려면 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. **Subscribe** 명령 행 집합으로 추적 결과 반환 합니다.  

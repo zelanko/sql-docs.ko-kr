@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900528"
 ---
 # <a name="read-only-status-excel-driver"></a>읽기 전용 상태 (Excel 드라이버)
 Microsoft Excel 드라이버를 사용 하면 데이터 원본 테이블 읽기 전용으로 기본적으로 열리고 한 번에 한 명의 사용자만 열 수 있습니다. 그러나 테이블을 확보 하더라도 읽기 전용 상태 응용 프로그램을 수행할 수는 삽입 및 업데이트 Microsoft Excel 테이블에 대 한 합니다.  

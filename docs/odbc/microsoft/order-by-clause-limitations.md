@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899542"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 절 제한 사항
 SELECT 문의 GROUP BY 절과 ORDER BY 절이 모두 있으면 ORDER BY 절 또는 GROUP BY 절의 식은 결과 집합의 열만 포함 될 수 있습니다.

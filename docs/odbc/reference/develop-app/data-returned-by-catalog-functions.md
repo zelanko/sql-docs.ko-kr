@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910578"
 ---
 # <a name="data-returned-by-catalog-functions"></a>카탈로그 함수에서 반환 된 데이터
 각 카탈로그 함수는 데이터를 결과 집합으로 반환 합니다. 이 결과 집합은 다른 결과 집합에서 다르지 않습니다. 일반적으로 생성 되는 미리 정의 된 의해 매개 변수화 **선택** 드라이버에 하드 코드 또는 데이터 원본에 프로시저에서 저장 된 문입니다. 결과 집합에서 데이터를 검색 하는 방법에 대 한 정보를 참조 하십시오. [는 결과 집합 생성 된?](../../../odbc/reference/develop-app/was-a-result-set-created.md)합니다.  

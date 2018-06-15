@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908948"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 확인
 드라이버 관리자는 완전히 또는 부분적으로 다양 한 기능을 구현 하 고 오류 및 해당 함수에는 경고의 전체 또는 일부 따라서 검사 합니다.  

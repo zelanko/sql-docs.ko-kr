@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899888"
 ---
 # <a name="odbc-errors"></a>ODBC 오류
 오류가 발생 하면 Microsoft ODBC 데스크톱 데이터베이스 드라이버는 원시 오류 번호, SQLSTATE (ODBC 오류 코드) 및 오류 메시지를 반환 합니다.  

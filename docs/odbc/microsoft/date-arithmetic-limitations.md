@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898018"
 ---
 # <a name="date-arithmetic-limitations"></a>날짜 산술 제한 사항
 날짜 계산 뺀 날짜 데이터 형식에서 날짜 데이터 형식에 대 한 지원 되지 않습니다.

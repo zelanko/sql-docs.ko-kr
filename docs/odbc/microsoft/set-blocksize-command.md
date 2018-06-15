@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901818"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 명령
 메모 필드의 저장에 대 한 디스크 공간이 할당 되는 방식을 지정 합니다.  

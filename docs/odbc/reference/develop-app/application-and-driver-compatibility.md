@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906858"
 ---
 # <a name="application-and-driver-compatibility"></a>응용 프로그램 및 드라이버 호환성
 ODBC 응용 프로그램 및 드라이버에는 여러 가지 버전 뿐 아니라 범주에 속합니다. 일부 드라이버;와 호환 되지 않는 일부 응용이 프로그램 다른 경우 응용 프로그램 또는 드라이버의 형식이 서로 이전 버전과 호환성 문제에는 영향을 주지를 가질 수 있습니다.  

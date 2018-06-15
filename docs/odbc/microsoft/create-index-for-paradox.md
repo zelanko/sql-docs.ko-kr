@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902038"
 ---
 # <a name="create-index-for-paradox"></a>에는 인덱스 만들기
 ODBC Paradox 드라이버에 대 한 CREATE INDEX 문의 구문은 다음과 같습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909088"
 ---
 # <a name="c-to-sql-date"></a>C에서 SQL로: 날짜
 다음은 날짜 ODBC C 데이터 형식에 대 한 식별자가입니다.  

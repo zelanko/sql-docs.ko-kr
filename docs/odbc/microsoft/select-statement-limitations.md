@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900668"
 ---
 # <a name="select-statement-limitations"></a>SELECT 문의 제한 사항
 SELECT 문에서 비 집계 열과 집계 함수 열을 혼합할 수 없습니다.  

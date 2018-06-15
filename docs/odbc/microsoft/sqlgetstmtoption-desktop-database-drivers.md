@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902438"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (데스크톱 데이터베이스 드라이버)
 반환 된 책갈피는 *fOption* SQL_GETBOOKMARK의만 쿼리가 열려 있는 동안 올바르며 쿼리를 다시 발급 하는 경우 무효화 됩니다. 영구 책갈피 지원 되지 않습니다.

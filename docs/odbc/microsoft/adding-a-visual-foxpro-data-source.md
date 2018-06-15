@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899050"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 소스 추가
 Visual FoxPro 데이터의 응용 프로그램에 액세스 하려면 데이터 원본에 있어야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  

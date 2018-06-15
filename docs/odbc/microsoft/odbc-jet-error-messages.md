@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901418"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 오류 메시지
 데이터 소스에서 발생 하는 오류에 대 한 ODBC 드라이버는 ODBC 파일 라이브러리에서를 반환 하는 오류 메시지를 반환 합니다. ODBC 드라이버 또는 드라이버 관리자에서 발생 하는 오류에 대 한 오류 메시지 텍스트에 따라 드라이버 반환 SQLSTATE 연관 됩니다.  

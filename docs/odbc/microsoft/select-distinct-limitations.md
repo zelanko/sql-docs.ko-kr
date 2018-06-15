@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901490"
 ---
 # <a name="select-distinct-limitations"></a>서로 다른 제한 사항 선택
 DISTINCT 키워드 이진 데이터에 적용 되지 않습니다.

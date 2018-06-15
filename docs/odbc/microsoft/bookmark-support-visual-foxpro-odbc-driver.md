@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902008"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>책갈피 지원 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버는 간단한 책갈피를 지원 합니다. 호출 하는 경우 [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) 는 SQL_BOOKMARK_PERSISTENCE와 *정보 항목*, 반환 값은 SQL_BP_SCROLL 합니다.  

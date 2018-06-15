@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900808"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  

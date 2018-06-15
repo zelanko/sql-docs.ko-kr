@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34039147"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>테이블 형식 모델 프로그래밍에 대 한 호환성 수준 1200 이상
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

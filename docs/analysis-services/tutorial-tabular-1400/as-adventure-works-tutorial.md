@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044577"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>테이블 형식 모델링 (1400 호환성 수준)
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909798"
 ---
 # <a name="connecting-directly-to-drivers"></a>드라이버에 직접 연결
 설명한 대로 [데이터 원본이 나 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)이 섹션의 앞부분에 나오는 데이터 소스를 전혀 사용 하지 않으려는 일부 응용 프로그램입니다. 대신, 드라이버에 직접 연결 하려고 합니다. **SQLDriverConnect** 데이터 소스를 지정 하지 않고 드라이버에 직접 연결 하는 응용 프로그램에 대 한 방법을 제공 합니다. 개념적으로 임시 데이터 원본에서 런타임에 생성 됩니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898968"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 날짜, 시간 및 타임 스탬프 리터럴
 상호 운용성을 극대화 응용 프로그램 escape 절 구문을 사용 하 여 ODBC 정규 형식 날짜 리터럴을 전달 해야 합니다.  

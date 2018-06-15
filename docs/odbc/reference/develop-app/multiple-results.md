@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913848"
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 문제가 원본에서 반환 되는 데이터는 문이 실행 된 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합을 행 합니다. *행* 는 업데이트에 의해 영향을 받는 행의 수, 삭제 또는 insert 문이 됩니다. 에 설명 된 일괄 처리, [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 개의 결과 생성할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899535"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>여러 hstmts (Paradox 드라이버)
 Paradox ODBC 드라이버 사용 되는 경우 여러 개를 사용 하려는 경우 *hstmt* 테이블에서 쿼리를 실행 하는 테이블에는 고유 인덱스 (기본 키 Paradox) 있어야 합니다.

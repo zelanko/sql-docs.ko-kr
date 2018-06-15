@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901438"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>추가 하 고 설치를 사용 하 여 데이터 원본 수정
 > [!IMPORTANT]  

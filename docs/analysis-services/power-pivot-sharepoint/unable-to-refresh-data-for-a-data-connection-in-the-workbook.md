@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037427"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

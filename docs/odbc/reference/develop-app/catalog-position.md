@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910008"
 ---
 # <a name="catalog-position"></a>카탈로그 위치
 데이터 원본에 데이터 원본의 식별자 및 식별자의 나머지 부분에서 어떻게 분리 되는지에서 카탈로그 이름의 위치 달라 집니다. 예를 들어 Xbase 데이터 원본에 카탈로그 이름이 디렉터리와, Microsoft® Windows®에서 구별 (즉, 파일 이름) 테이블 이름에 백슬래시가 (\\). 다음 그림에서는이 문제를 보여 줍니다.  

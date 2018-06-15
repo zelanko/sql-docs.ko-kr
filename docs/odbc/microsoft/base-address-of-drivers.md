@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897058"
 ---
 # <a name="base-address-of-drivers"></a>드라이버의 기본 주소
 각 ODBC 데스크톱 데이터베이스 드라이버 0x04c0000의 기준 주소와 연결 되었습니다.
