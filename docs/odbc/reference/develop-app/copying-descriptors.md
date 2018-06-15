@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907748"
 ---
 # <a name="copying-descriptors"></a>설명자 복사
 **SQLCopyDesc** 다른 설명자에 하나의 설명자 필드를 복사 하려면 함수를 호출 합니다. 필드는 IPD 또는 응용 프로그램 설명자에만 속하지만 IRD에 복사할 수 있습니다. 설명자의 모든 형식에서 필드를 복사할 수 있습니다. 소스와 대상 설명자에 대해 정의 된 필드에만 복사 됩니다. **SQLCopyDesc** 설명자의 할당 유형을 변경할 수 없으므로 SQL_DESC_ALLOC_TYPE 필드를 복사 하지 않습니다. 복사한 필드 기존 필드를 덮어씁니다.  

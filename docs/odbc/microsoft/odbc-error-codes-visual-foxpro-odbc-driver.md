@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904288"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드 (Visual FoxPro ODBC 드라이버)
 다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값에서 제공 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 ODBC API의 다른 SQLSTATE 값 매핑된 **SQLExecDirect** 및 **SQLPrepare** Visual FoxPro 엔진에 액세스 하는 유일한 함수입니다.  

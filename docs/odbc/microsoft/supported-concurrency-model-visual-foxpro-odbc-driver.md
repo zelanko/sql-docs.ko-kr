@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902574"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>지원 되는 동시성 모델 (Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버가 지 원하는 *읽기 전용 동시성*합니다. 응용 프로그램에서 호출할 수 [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY의 SQL_CONCURRENCY 옵션을 사용 합니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913288"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>연결 정보에 대 한 사용자에 게 확인
 응용 프로그램을 사용 하는 경우 **SQLConnect** 및 연결 정보를 묻는 메시지를 필요로 하는 사용자 이름과 암호 같은 해야 자체입니다. 응용 프로그램을 "디자인"을 제어할 수 있으며, 드라이버 관련 코드를 포함 하도록 응용 프로그램을 강제로 수 있습니다. 이 응용 프로그램 사용자에 게 드라이버 관련 연결 정보 해야 할 때 발생 합니다. 이 응용 프로그램을 작성할 때 존재 하지 않는 드라이버를 포함 하는 모든 드라이버와 함께 작동 하도록 설계 된 일반 응용 프로그램에 대 한는 불가능 한 상황을 표시 합니다.  

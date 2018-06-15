@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910706"
 ---
 # <a name="establishing-a-connection"></a>연결 설정
 환경 및 연결 핸들을 할당 하 고 모든 연결 특성 설정, 후 응용 프로그램 데이터 원본이 나 드라이버에 연결할 준비가 되었습니다. 세 가지 다른 함수가이 작업을 수행 하는 응용 프로그램 צ ְ ײ: **SQLConnect** (인터페이스 규칙 수준은 기본), **SQLDriverConnect** (기본), 및 **SQLBrowseConnect**(수준 1). 세 개의 각 옵션은 서로 다른 시나리오에에서 사용할 하도록 설계 되었습니다. 에 연결 하기 전에 응용 프로그램을 사용할 수 있는 이러한 함수 중 확인할 수는 **ConnectFunctions** 반환한 키워드 **SQLDrivers**합니다.  

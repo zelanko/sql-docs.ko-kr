@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912418"
 ---
 # <a name="scrollable-cursor-types"></a>스크롤 가능 커서 유형
 스크롤 가능 커서는 네 가지 유형의 정적, 동적, 키 집합 커서 및 혼합 됩니다. 정적 커서 없는 변경 내용을 거의 검색 되지만 상대적으로 경제적인 구현 하는 합니다. 동적 커서는 모든 변경 내용을 검색 하지만 구현 하는 데 큰 비용이 듭니다. 키 집합 커서와 혼합 커서는 중간으로 대부분의 변경 내용을 검색 하지만 동적 커서 보다 더 적은 비용으로에 두 유형의 합니다.  

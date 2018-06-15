@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904968"
 ---
 # <a name="about-drivers-and-data-sources"></a>드라이버 및 데이터 원본에 대 한
 *드라이버* ODBC 요청을 처리 하 고 응용 프로그램에 데이터를 반환 하는 구성 요소입니다. 필요한 경우 드라이버는 데이터 원본에서 인식 하는 형식으로 응용 프로그램의 요청을 수정 합니다. 드라이버의 설치 프로그램을 사용 하 여를 추가 하 여 드라이버를 컴퓨터에서 삭제 해야 합니다.  

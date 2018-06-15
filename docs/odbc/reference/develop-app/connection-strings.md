@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909278"
 ---
 # <a name="connection-strings"></a>연결 문자열
 연결 문자열을 연결 구성에 사용 되는 정보를 포함 합니다. 전체 연결 문자열을 연결을 설정 하는 데 필요한 모든 정보를 포함 합니다. 연결 문자열은 일련의 세미콜론으로 구분 하는 키워드/값 쌍입니다. (연결 문자열의 전체 구문을 참조 하십시오.는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.) 연결 문자열에서 사용 됩니다.  

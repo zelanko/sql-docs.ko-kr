@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908698"
 ---
 # <a name="general-error-checks"></a>일반 오류 검사
 드라이버 관리자는 하나의 일반 오류를 확인합니다. 다음과 같은 오류가 발생할 경우 SQL_ERROR 항상 반환: 함수는 드라이버에서 지원 되어야 합니다.

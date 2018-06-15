@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912428"
 ---
 # <a name="statement-attributes"></a>문 특성
 문 특성은 문이의 특성입니다. 예를 들어 설명의 결과 함께 사용할 커서를 설정 및 사용 하 여 책갈피 어떤 종류의 여부는 문 특성입니다.  

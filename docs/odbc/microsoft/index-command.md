@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904418"
 ---
 # <a name="index-command"></a>INDEX 명령
 표시 하 고 액세스할 논리적 순서에 따라 테이블 레코드 인덱스 파일을 만듭니다.  

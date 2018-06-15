@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913728"
 ---
 # <a name="result-generating-and-result-free-statements"></a>결과 생성 하 고 결과 필요 없는 문
 SQL 문은 다음과 같은 5 개의 범주로 느슨하게 나눌 수 있습니다.  

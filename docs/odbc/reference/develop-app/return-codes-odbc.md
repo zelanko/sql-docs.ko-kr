@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913218"
 ---
 # <a name="return-codes-odbc"></a>ODBC 반환 코드
 ODBC에서 각 함수 라고 하는 코드를 반환 합니다. 해당 *코드를 반환* 전반적인 성공 또는 실패는 함수의 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  

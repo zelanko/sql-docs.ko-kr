@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913938"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>긴 데이터와 SQLSetPos SQLBulkOperations
 행을 업데이트 하는 경우 긴 데이터를 보낼 수 SQL 문에서 매개 변수가 있는 경우 처럼 **SQLBulkOperations** 또는 **SQLSetPos** 와 행을 삽입할 때 또는 **SQLBulkOperations**. 데이터를 여러 번 호출 된 부분으로 보내집니다 **SQLPutData**합니다. 열을 데이터 전송에 실행 시 라고 *실행 시 데이터 열*합니다.  

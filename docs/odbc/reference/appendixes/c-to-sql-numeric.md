@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906988"
 ---
 # <a name="c-to-sql-numeric"></a>C에서 SQL로: 숫자
 숫자 ODBC C 데이터 형식에 대 한 식별자는.  

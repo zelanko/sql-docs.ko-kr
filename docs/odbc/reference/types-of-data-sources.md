@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917228"
 ---
 # <a name="types-of-data-sources"></a>유형의 데이터 원본
 데이터 원본에 두 가지: 데이터 원본 및 파일 데이터 원본 컴퓨터. 데이터 원본에 대 한 유사한 정보를 포함 되어 있지만이 정보가 저장 되는 방식과 다릅니다. 이러한 차이 때문에 다소 다른 방법에서 사용 됩니다.  

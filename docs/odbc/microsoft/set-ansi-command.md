@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904328"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
 길이가 다른 문자열 간의 비교를 적용 하는 방법을 결정은 = Visual FoxPro SQL 명령에는 연산자입니다.  

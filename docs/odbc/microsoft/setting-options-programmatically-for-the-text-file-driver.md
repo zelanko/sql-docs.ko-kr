@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904598"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>프로그래밍 방식으로 텍스트 파일 드라이버에 대 한 옵션 설정
 |옵션|Description|메서드|  

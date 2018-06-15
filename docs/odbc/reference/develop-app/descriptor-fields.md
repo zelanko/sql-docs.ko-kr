@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912578"
 ---
 # <a name="descriptor-fields"></a>설명자 필드
 설명자 포함 *헤더* 및 *레코드* 완전히 열 또는 매개 변수를 설명 하는 필드입니다.  

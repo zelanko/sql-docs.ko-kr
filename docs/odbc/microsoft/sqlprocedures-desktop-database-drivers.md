@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903868"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (데스크톱 데이터베이스 드라이버)
 **SQLProcedures** 하나 이상의 인수에 있는 해당 절차에 대 한 행만 반환 됩니다. 인수가 없어야 하는 프로시저는 뷰도 처리 됩니다.  

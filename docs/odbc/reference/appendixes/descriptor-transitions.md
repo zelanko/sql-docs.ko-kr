@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907698"
 ---
 # <a name="descriptor-transitions"></a>설명자 전환
 ODBC 설명자는 다음 세 가지 상태입니다.  

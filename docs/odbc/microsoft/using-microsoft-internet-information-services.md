@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905508"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Microsoft 인터넷 정보 서비스를 사용 하 여
 > [!IMPORTANT]  

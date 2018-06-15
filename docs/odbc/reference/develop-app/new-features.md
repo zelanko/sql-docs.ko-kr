@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913348"
 ---
 # <a name="new-features"></a>새로운 기능
 ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니다. ODBC 3입니다. *x* 작업 하는 ODBC 2 응용 프로그램 *.x* 드라이버가이 기능을 사용할 수 없게 됩니다. ODBC 3입니다. *x* 는 ODBC 2 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다 *.x* 드라이버입니다.  

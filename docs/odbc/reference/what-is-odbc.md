@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917420"
 ---
 # <a name="what-is-odbc"></a>ODBC 란?
 ODBC에 대 한 많은 오해 컴퓨팅 환경에 존재합니다. 최종 사용자에 게는 Microsoft® Windows® 제어판에 있는 아이콘 응용 프로그램 프로그래머를 데이터 액세스 루틴을 포함 하는 라이브러리입니다. 봄으로써을 상상한 적이 모든 데이터베이스 액세스 문제에 대 한 대답입니다.  

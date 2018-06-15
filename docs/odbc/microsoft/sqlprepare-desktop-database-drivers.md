@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904198"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (데스크톱 데이터베이스 드라이버)
 잘못 된 수의 열을 사용 하 여 준비 된 문을는 문 준비 될 때가 아니라 실행 시 오류가 반환 됩니다.

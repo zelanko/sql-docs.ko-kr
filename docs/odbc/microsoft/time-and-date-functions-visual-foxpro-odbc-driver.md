@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908708"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서; Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 날짜 및 시간 함수를 보여 줍니다. Visual FoxPro 문법 동일한 기능에 대 한 ODBC 구문을 다를 경우 해당 Visual FoxPro 나열 됩니다.  

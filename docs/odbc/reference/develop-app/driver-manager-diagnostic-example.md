@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909208"
 ---
 # <a name="driver-manager-diagnostic-example"></a>드라이버 관리자 진단 예제
 드라이버 관리자는 진단 메시지를 생성할 수도 수 있습니다. 예를 들어, 응용 프로그램에 잘못 된 방향 옵션을 전달 하는 경우 **SQLDataSources**, 드라이버 관리자 형식과 다음 값이 반환 될 수 있습니다 **SQLGetDiagRec**:  

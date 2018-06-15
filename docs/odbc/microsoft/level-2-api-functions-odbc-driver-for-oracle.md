@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903828"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>수준 2 API 함수 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

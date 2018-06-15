@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914338"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>부록 a: ODBC 오류 코드
 이 항목에서는 ODBC 3에 대 한 SQLSTATE 값을 설명 합니다. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)합니다.  

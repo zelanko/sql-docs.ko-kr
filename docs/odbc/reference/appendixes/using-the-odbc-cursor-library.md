@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912018"
 ---
 # <a name="using-the-odbc-cursor-library"></a>ODBC 커서 라이브러리를 사용 하 여
 > [!IMPORTANT]  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907718"
 ---
 # <a name="closing-the-cursor"></a>커서 닫기
 호출 응용 프로그램은 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 커서를 닫습니다. 예를 들어:  

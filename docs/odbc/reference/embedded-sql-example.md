@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916358"
 ---
 # <a name="embedded-sql-example"></a>포함 된 SQL 예제
 다음 코드는 간단한 포함 된 SQL 프로그램을 C 언어로 작성 된 프로그램은 아니지만 많은 중는 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 사용자 요청 하 고, 고객 번호, 영업 사원, 및는 주문 상태를 검색 하 고, 검색 된 정보 화면에 표시 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902548"
 ---
 # <a name="delete---sql-command"></a>DELETE-SQL 명령
 삭제에 대 한 레코드를 표시합니다.  

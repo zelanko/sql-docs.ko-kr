@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918928"
 ---
 # <a name="the-odbc-solution"></a>ODBC 솔루션
 그런 다음 문제 ODBC는 데이터베이스 액세스를 표준화 어떻게 것인가입니다. 아키텍처 요구 사항 두 가지가 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908348"
 ---
 # <a name="argument-value-checks"></a>인수 값 검사
 드라이버 관리자는 다음과 같은 유형의 인수를 확인합니다. 다른 설명이 없는 한 드라이버 관리자는 오류 인수 값에 대 한 SQL_ERROR를 반환 합니다.  

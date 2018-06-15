@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914488"
 ---
 # <a name="appendix-e-scalar-functions"></a>부록 e: 스칼라 함수
 ODBC이 부록의이 내용의 해당 섹션에서 제공 되는 이러한 함수 형식의 각각에 대 한 세부 정보가 포함 된 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에 관련 된 구문을 포함합니다.  

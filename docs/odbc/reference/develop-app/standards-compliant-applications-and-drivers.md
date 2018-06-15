@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913788"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>표준 호환 응용 프로그램 및 드라이버
 표준 호환 응용 프로그램 또는 드라이버는 준수 하는 Open 그룹 CAE 사양 "데이터 관리:: SQL 호출 수준 인터페이스 (CLI)," 및 ISO/IEC 9075 하나-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  

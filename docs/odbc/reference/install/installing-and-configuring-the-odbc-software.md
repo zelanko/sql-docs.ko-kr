@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914878"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>ODBC 소프트웨어 설치 및 구성
 > [!NOTE]  

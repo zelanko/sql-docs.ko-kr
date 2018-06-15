@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910548"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>커서의 특성 1 정보 형식 매핑
 때 ODBC 3. *x* 응용 프로그램 호출 **SQLGetInfo** ODBC 2에서 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 정보 유형 사용 하 여 드라이버 (동적, 정방향 전용, 키 집합-드라이버 또는 정적 커서의 경우) 드라이버 관리자에서 반환 된 비트 설정은 ODBC 2에 따라 달라 집니다. *x* 드라이버 반환 해당 ODBC 2. *x* 정보 유형입니다. 다음 표에 나와 있는 것 처럼 비트가 설정 됩니다.  

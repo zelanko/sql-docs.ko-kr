@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912538"
 ---
 # <a name="row-status-array"></a>행 상태 배열이
 데이터 뿐만 아니라 **SQLFetch** 및 **SQLFetchScroll** 행 집합의 각 행의 상태를 제공 하는 배열을 반환할 수 있습니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR 문 특성을 통해 지정 됩니다. 이 배열은 응용 프로그램에 의해 할당 되 고 SQL_ATTR_ROW_ARRAY_SIZE 문 특성에 의해 지정 된 만큼의 요소에 있어야 합니다. 값 배열에 의해 설정 된 **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, 및 **SQLSetPos 합니다.** 값의 상태는 행 및 해당 상태의 마지막으로 인출 된 후에 변경 되었는지 여부를 설명 합니다.  

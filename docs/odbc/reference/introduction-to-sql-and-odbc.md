@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915213"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 및 ODBC 소개
 다른 또는, 다른 유형의 데이터베이스 관리 시스템 (Dbms)에 대 한 액세스의 일정 한 방법을 제공 ODBC 만들어졌습니다. 이 소개에서는 개발의 ODBC와 관련 된 개념을 설명 합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912438"
 ---
 # <a name="compatibility-matrix"></a>호환성 매트릭스
 다음 표에서 응용 프로그램 및 드라이버를이 섹션에서는 이전에 정의 된 유형의의 호환성을 설명 합니다.  

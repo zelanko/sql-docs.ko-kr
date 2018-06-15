@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908588"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>ODBC 연결 핸들 할당
 응용 프로그램은 데이터 원본이 나 드라이버에 연결할 수, 먼저 다음과 같이 연결 핸들을 할당 해야 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904658"
 ---
 # <a name="set-exact-command"></a>SET 정확한 명령
 길이가 다른 두 개의 문자열 비교에 대 한 규칙을 지정 합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912800"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>데이터 길이, 버퍼 길이 및 잘림
 *데이터 길이* 작업은 데이터의 바이트 길이 응용 프로그램의 데이터 버퍼에 저장 될 것으로 그다지 데이터 원본에 저장 됩니다. 데이터 원본에 보다 데이터 버퍼에 서로 다른 형식에는 데이터는 대개 저장 되므로 이러한 구분은 중요 합니다. 따라서 데이터 원본에 전송 되는 데이터, 데이터 원본 형식으로 변환 하기 전에 데이터의 바이트 길이 이것이입니다. 데이터 원본에서 검색 중인 데이터, 데이터 버퍼 종류와 잘림을 모두 수행 되기 전의 변환 후 데이터의 바이트 길이입니다.  

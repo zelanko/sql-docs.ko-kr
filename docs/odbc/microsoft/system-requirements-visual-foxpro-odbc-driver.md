@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909248"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>시스템 요구 사항 (Visual FoxPro ODBC 드라이버)
 설치에 대 한 시스템 요구 사항의 최소 운영 체제 및 드라이버를 성공적으로 설치 하는 데 필요한 디스크 공간을 제공 합니다. 드라이버를 설치한 후 Visual FoxPro 데이터에 액세스 하는 데 사용할 특정 응용 프로그램 소프트웨어를 선택할 수 있습니다.  

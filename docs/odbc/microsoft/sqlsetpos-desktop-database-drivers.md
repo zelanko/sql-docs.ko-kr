@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904908"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (데스크톱 데이터베이스 드라이버)
 에 대 한 대량 모델 의미 **SQLSetPos** 으로 호출 하는 *irow* 인수를 0으로 지원 됩니다.  

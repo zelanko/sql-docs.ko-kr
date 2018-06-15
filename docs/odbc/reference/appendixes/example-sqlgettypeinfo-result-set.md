@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914458"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합 예제
 응용 프로그램이 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식 특성에서 지원 되는 데이터 유형을 확인 하려면. 다음 표에서에서 반환 된 결과 집합 예를 보여 줍니다. **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  

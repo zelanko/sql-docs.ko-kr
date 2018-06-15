@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910738"
 ---
 # <a name="developing-applications"></a>응용 프로그램 개발
 이 섹션에는 드라이버는 ODBC 인터페이스와 구현 하는 드라이버를 사용 하는 응용 프로그램을 개발 하는 방법에 대 한 정보가 포함 되어 있습니다.  

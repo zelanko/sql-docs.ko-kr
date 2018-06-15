@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912318"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성
 드라이버는 다음에 대 한 드라이버 관련 값을 할당할 수 있습니다.  

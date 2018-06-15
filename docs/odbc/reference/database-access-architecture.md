@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908118"
 ---
 # <a name="database-access-architecture"></a>데이터베이스 액세스 아키텍처
 ODBC의 개발에 질문 중 하나가 표준화를 위한 데이터베이스 액세스 아키텍처의 어느 부분이 되었습니다. 프로그래밍 인터페이스는 이전 섹션에서 설명한 SQL-SQL, SQL 포함 된 모듈 및 Cli-은이 아키텍처의 한 부분일 뿐입니다. 사실, 않았기 때문에 ODBC가 개인용 컴퓨터-> 기반 응용 프로그램 미니 컴퓨터 및 Dbms 메인프레임을 연결 하는 데 주로 사용, 또한 다양 한 네트워크 구성 요소 중 일부는 표준화 될 수 없습니다.  

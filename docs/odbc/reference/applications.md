@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909578"
 ---
 # <a name="applications"></a>응용 프로그램
 *응용 프로그램* 데이터에 액세스 하는 ODBC API를 호출 하는 프로그램입니다. 여러 유형의 응용 프로그램을 사용할 수 있지만 대부분이이 가이드 전체에서 예제로 사용 되는 세 범주로 분류 됩니다.  

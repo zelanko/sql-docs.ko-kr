@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903148"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE 문
 Microsoft Access, dBASE 또는 Paradoxdriver 사용 되는 ALTER TABLE 문의 add 및 drop 테이블 제약 조건 정의 절과 함께 지원 됩니다. (ALTER TABLE 문은 Microsoft Excel 또는 텍스트 드라이버에 대 한 지원 되지 않습니다.)  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907038"
 ---
 # <a name="display-size"></a>표시 크기
 표시 열 크기가 문자 형식에서 데이터를 표시 하는 데 필요한 문자의 최대 수입니다. 다음 표에서 각 ODBC SQL 데이터 형식에 대 한 표시 크기를 정의합니다.  

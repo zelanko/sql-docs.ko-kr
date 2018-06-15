@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913068"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공합니다. 이 설명서에서 Sqlstate 기반으로 ISO/IEF CLI 사양에서 ODBC IM로 시작 하는 이러한 SQLSTATEs 관련이 있지만 합니다.  

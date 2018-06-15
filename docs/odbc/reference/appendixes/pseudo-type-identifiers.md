@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906798"
 ---
 # <a name="pseudo-type-identifiers"></a>의사 (pseudo) 유형 식별자
 ODBC 응용 프로그램 프로그래밍 편의 위해 다양 한 의사 (pseudo) 유형 식별자를 정의합니다. 이러한 식별자는 실제로 실제 데이터 형식에 맞지 않는 이지만 대신는 상황에 따라 기존 데이터 형식으로 확인 합니다.  
