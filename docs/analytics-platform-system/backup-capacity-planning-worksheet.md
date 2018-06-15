@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539143"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>백업 서버 용량 계획 워크시트-병렬 데이터 웨어하우스
 이 용량 계획 워크시트 및 복원 작업을 SQL Server PDW 데이터베이스 백업을 수행 하기 위한 백업 서버에 대 한 요구 사항을 확인할 수 있습니다. 이 대화 상자를 사용 하 여 구매 새롭거나 프로 비전 기존 백업 서버에 대 한 계획을 만들 수 있습니다.  

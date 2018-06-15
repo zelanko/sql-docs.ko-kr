@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538593"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>SCOM 관리 팩-분석 플랫폼 시스템 가져오기
 Analytics Platform System (APS)에 대 한 System Center Operations Manager (SCOM) 관리 팩을 가져오려면 다음이 단계를 수행 합니다. 관리 팩은 SCOM의 병렬 데이터 웨어하우스를 모니터링 해야 합니다. 

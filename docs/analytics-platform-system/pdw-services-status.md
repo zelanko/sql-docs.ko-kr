@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539003"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 병렬 데이터 웨어하우스 서비스 상태
 병렬 데이터 웨어하우스 **서비스 상태** 페이지 Microsoft 분석 플랫폼 시스템 구성 관리자에서 모든 SQL Server PDW 서비스의 현재 상태를 표시 하 고 PDW 서비스 중지 및 시작 하는 기능을 제공 합니다. 이것이 PDW 서비스 시작 및 중지에 대 한 지원 되는 유일한 방법입니다. 개별 구성 요소 또는 서비스를 시작할 수 없습니다 독립적으로 확인 합니다.  

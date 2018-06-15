@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538903"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>사용자 IHV를 가져올 정보
 새 SQL Server PDW 어플라이언스를 제공 하는 독립 하드웨어 공급 업체 (IHV) 때 어플라이언스 수행한 어플라이언스 하드웨어 및 구성에 대 한 정보를 수행할 수도 됩니다. 어플라이언스를 관리 하려면이 정보가 필요 합니다.  

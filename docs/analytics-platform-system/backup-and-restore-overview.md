@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544815"
 ---
 # <a name="backup-and-restore"></a>백업 및 복원
 데이터 백업 및 복원 작동 병렬 데이터 웨어하우스 (PDW)에 대 한 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 다른 어플라이언스에 하나의 기기에서 데이터베이스를 복사 하려면 사용할 수 있습니다.  

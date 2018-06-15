@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538543"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 데이터베이스-병렬 데이터 웨어하우스
 SQL Server PDW 마스터 데이터베이스 수준의 어플라이언스에 로그인 정보 및 데이터베이스 카탈로그에 저장합니다. 제어 노드에 있는 SQL Server 마스터 데이터베이스. 따라서 SQL Server에 제공 하는 마스터 SQL Server PDW에 유사한 기능을 제공 합니다.  

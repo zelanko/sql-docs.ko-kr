@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544735"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>백업 및 하드웨어 개요-병렬 데이터 웨어하우스를 로드 합니다.
 종단 간 데이터 웨어하우징 솔루션 Analytics Platform System (APS)와 병렬 데이터 웨어하우스 (PDW)를 배포 하려면 데이터 웨어하우스를 백업 하 고 데이터를 로드 하기 위한 계획을 만들 필요 합니다. 이 가이드를 사용 하 여를 확보 하 고 비즈니스 요구 사항을 충족 하는 백업 하 고 로드할 서버를 구성 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796516"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 Property 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 는 열려 있지 않은 각종 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 또한 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션. 자세히가 특정 공급자에 나열 된 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션.  

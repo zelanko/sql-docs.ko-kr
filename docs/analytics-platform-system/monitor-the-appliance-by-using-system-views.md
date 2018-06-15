@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539063"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>시스템 뷰-분석 플랫폼 시스템 기기 모니터
 이 문서에서는 SQL Server PDW 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.  

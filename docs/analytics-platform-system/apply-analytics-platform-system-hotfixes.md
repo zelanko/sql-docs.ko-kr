@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544875"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스 적용
 이 문서에는 분석 플랫폼 시스템 소프트웨어에 핫픽스를 적용 하는 방법을 설명 합니다.  

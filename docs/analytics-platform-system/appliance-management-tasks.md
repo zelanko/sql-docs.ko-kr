@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538833"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 기기 관리 작업
 이 가이드에서는 Analytics Platform System (APS)에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.  

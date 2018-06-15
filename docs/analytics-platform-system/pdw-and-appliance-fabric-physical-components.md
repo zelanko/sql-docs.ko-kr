@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538883"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>어플라이언스 물리적 구성 요소-분석 플랫폼 시스템
 이름 및 PDW 및 어플라이언스 패브릭 물리적 구성 요소에 대 한 설명입니다. 

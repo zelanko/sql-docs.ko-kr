@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539383"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>분석 플랫폼 시스템에 병렬 데이터 웨어하우스 방화벽 구성
 **방화벽** SQL Server PDW 구성 관리자의 페이지를 사용 하도록 설정 하거나 허용 하거나 분석 플랫폼 시스템 어플라이언스에서 특정 포트에 액세스할 수 없도록 하는 방화벽 규칙을 사용 하지 않도록 수 있습니다.  

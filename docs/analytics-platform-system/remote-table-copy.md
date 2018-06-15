@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538723"
 ---
 # <a name="remote-table-copy"></a>원격 테이블 복사
 원격 (비 어플라이언스) SMP SQL Server 데이터베이스에 SQL Server PDW 데이터베이스에서 테이블을 복사 하려면 원격 테이블 복사 기능을 사용 하는 방법을 설명 합니다. SQL Server PDW에 대 한 허브 및 스포크 시나리오를 사용 하도록 설정 하려면 원격 테이블 복사본을 사용 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539513"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Windows Server Update Services (WSUS)를 구성 합니다.
 이 지침에서는 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 분석 플랫폼 시스템에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 이미 설치 되었습니다.  

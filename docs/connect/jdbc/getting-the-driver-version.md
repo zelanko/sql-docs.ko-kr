@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32827928"
 ---
 # <a name="getting-the-driver-version"></a>드라이버 버전 가져오기
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

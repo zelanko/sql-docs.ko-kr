@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538613"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다.
 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.  

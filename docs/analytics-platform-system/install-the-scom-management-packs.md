@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544685"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 SQL Server Operations Manager (SCOM) 관리 팩을 설치 합니다.
 다음 단계를 다운로드 하 여 SQL Server PDW에 대 한 System Center Operations Manager (SCOM) 관리 팩을 설치 합니다. 관리 팩은 SCOM에서 SQL Server PDW 모니터링 해야 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020230"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 클라이언트 프로그래밍
   ADOMD.NET 클라이언트 구성 요소 내에 있는 **Microsoft.AnalysisServices.AdomdClient** 네임 스페이스 (microsoft.analysisservices.adomdclient.dll). 이러한 클라이언트 구성 요소가 클라이언트에 대 한 기능 및 중간 계층 응용 프로그램을 쉽게 쿼리 데이터와 메타 데이터는 분석 데이터 저장소에서 제공와 같은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  

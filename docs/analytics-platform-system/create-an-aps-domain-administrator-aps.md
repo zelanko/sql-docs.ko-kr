@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545119"
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS 도메인 관리자 만들기
 일부 작업에는 분석 플랫폼 시스템 도메인 관리자 권한이 필요 합니다. 이 추가 기기 도메인 관리자를 만드는 방법을 설명 합니다.  

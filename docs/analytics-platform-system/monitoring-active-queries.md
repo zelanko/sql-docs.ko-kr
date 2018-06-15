@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538703"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>활성 쿼리-병렬 데이터 웨어하우스를 모니터링합니다.
 이 문서에서는 활성 쿼리를 모니터링 하려면 관리 콘솔 및 SQL Server PDW 시스템 뷰를 사용 하는 방법을 보여 줍니다. 참조 [관리 콘솔을 사용 하 여 어플라이언스에 모니터링](monitor-the-appliance-by-using-the-admin-console.md) 및 [시스템 뷰](tsql-system-views.md) 이러한 도구에 대 한 내용은 합니다.  

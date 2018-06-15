@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539613"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 병렬 데이터 웨어하우스에 대 한 시스템 뷰
 시스템 뷰에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).

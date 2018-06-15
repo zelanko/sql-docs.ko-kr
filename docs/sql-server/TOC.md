@@ -9,11 +9,11 @@
 ## [SQL Server의 버전별 계산 용량 제한](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [사용자 환경 개선 프로그램](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [SQL Server를 구성하여 Microsoft에 피드백 보내기](sql-server-customer-feedback.md)
-### 파트너
-#### [모니터링](partner-monitor-sql-server.md)
-#### [고가용성 및 재해 복구](partner-hadr-sql-server.md)
-#### [관리](partner-management-sql-server.md)
-#### [개발](partner-dev-sql-server.md)
+## 파트너
+### [모니터링](partner-monitor-sql-server.md)
+### [고가용성 및 재해 복구](partner-hadr-sql-server.md)
+### [관리](partner-management-sql-server.md)
+### [개발](partner-dev-sql-server.md)
 
 # [새로운 또는 업데이트 된 문서](new-updated-sql-server.md)
 

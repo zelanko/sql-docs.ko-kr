@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544935"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 인증서 프로 비전이-분석 플랫폼 시스템
 **PDW 인증서 프로 비전이** 분석 플랫폼 시스템의 페이지 **Configuration Manager** 가져오거나 PDW 영역에 사용 된 인증서를 제거 합니다. 를 사용 하 여 연결을 암호화할 인증서를 도와 보안 통신 하는 제어 노드에 SQL Server 클라이언트에는 SQL Server PDW 드라이버를 사용 하는 도구를 통해는 [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md), Integration Services를 로드 합니다.  

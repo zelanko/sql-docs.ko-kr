@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544785"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 구성 관리자를 시작 합니다.
 시작 하기 위한 지침을 제공 하는이 항목의 **Configuration Manager** 분석 플랫폼 시스템 어플라이언스에 대 한 합니다.  

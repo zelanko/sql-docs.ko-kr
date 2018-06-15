@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539443"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 서버 용량 계획 워크시트 로드
 이 용량 계획 워크시트를 사용 하면 로드 서버에 대 한 SQL Server PDW 데이터 로드 요구 사항을 확인할 수 있습니다. 이 대화 상자를 사용 하 여 구입 하거나 기존 서버를 로드 하는 프로 비전에 대 한 계획을 만들 수 있습니다.  

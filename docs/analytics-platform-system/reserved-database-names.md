@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539453"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스 예약 된 데이터베이스 이름
 예약 된 데이터베이스 이름은 SQL Server PDW에서 사용자 데이터베이스에 할당 될 수 없는 이름이입니다.  

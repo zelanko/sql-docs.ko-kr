@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539313"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 네트워크 구성
 Analytics Platform System (APS) 어플라이언스 작성 및 수정 프로그램 집합의 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소를 사용 하 여 구성 합니다. 어플라이언스의 배달에는 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소를 구성 해야 합니다.  

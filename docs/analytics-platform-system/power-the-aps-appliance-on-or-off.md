@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538763"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 기기를 끄거나 전원
 이 항목에서는 전원을 켜거나 전원을 끄고 병렬 데이터 웨어하우스를 실행 하 고 필요에 따라 HDInsight 지역이 실행 하 여 분석 플랫폼 Systemappliance 하는 방법을 설명 합니다. 사용 하 여이 항목 분석 플랫폼 시스템 기기를 이동할 때 전원 기기에서 치명적인 정전 후.  

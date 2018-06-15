@@ -13,5 +13,6 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31434289"
 ---
 ![예](media/yes.png)SQL Server Reporting Services(2016 이상)

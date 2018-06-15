@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32833208"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>상시 암호화는 JDBC 드라이버에 대 한 API 참조
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

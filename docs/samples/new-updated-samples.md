@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32685403"
 ---
 # <a name="new-and-recently-updated-samples-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server에 대 한 샘플
 

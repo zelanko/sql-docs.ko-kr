@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539093"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>분석 플랫폼 시스템 어플라이언스 용 하드웨어 설치
 이 문서에서는 이동, 압축 풀기 및 SQL Server PDW 장치에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 문서는 알림 전용 하며 프로세스를 쉽게 이해할 수 있도록 합니다. 장치 포장을 푼, 설치와를 설정 된 전에 확인 합니다. 고객 참여는 데이터와 같이 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 가운데 맞춤 합니다.  

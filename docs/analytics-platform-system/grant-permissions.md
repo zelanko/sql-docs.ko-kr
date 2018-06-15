@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539473"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 사용 권한을 부여 T-SQL
 병렬 데이터 웨어하우스 데이터베이스 작업에 대 한 Grant T-SQL 권한입니다.

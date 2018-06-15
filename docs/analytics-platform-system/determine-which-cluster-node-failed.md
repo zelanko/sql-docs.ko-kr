@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544745"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>클러스터 확인 분석 플랫폼 시스템에 대 한 노드 실패 했습니다.
 이 항목에는 클러스터 장애 조치가 발생 한 것 이며 클러스터 장애 조치 경고가 발생 했습니다 후 실패 한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제를 해결 하기 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 해야 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539463"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 잠금 동작
 병렬 데이터 웨어하우스 사용 하는 방법을 잠금 트랜잭션 무결성을 보장 하 고 여러 사용자가 동시에 데이터에 액세스 하는 데이터베이스의 일관성을 유지 하기 위해에 대해 알아봅니다.  

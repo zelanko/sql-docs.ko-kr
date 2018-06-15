@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539763"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>분석 플랫폼 시스템에 관리 콘솔 경고 이해
 어플라이언스에 경고가 표시 **관리 콘솔** 및 **System Center Operations Manager** (SCOM)입니다. 추가 확인이 필요한 경고를 식별 하려면이 목록을 경고를 사용 하세요.  

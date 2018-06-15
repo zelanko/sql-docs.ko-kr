@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538753"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>분석 플랫폼 시스템에 소프트웨어 처리
 이 섹션에는 소프트웨어 서비스 분석 플랫폼 시스템 기기, WSUS 및 분석 플랫폼 시스템 핫픽스를 포함 하 여에 대 한 요구 사항을 요약 합니다.  

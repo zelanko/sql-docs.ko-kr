@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538863"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 tempdb 데이터베이스
 **tempdb** 사용자 데이터베이스에 대 한 로컬 임시 테이블을 저장 하는 SQL Server PDW 시스템 데이터베이스입니다. 임시 테이블 쿼리 성능 향상을 위해 종종 사용 됩니다. 예를 들어 임시 테이블을 사용 하 여 스크립트를 모듈화 할 수 있으며 계산 된 데이터를 다시 사용.  

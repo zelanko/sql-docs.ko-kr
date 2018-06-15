@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538973"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>병렬 데이터 웨어하우스 SSIS 대상 어댑터를 사용 하는 스크립트 태스크 만들기
 이 SSIS 패키지 스크립트 코드는 SSIS PDW 대상 어댑터를 사용 하기 위한 코드 예제입니다.  Integration Services 스크립트 태스크를 사용 하면 SSIS 제어 흐름의 컨텍스트 내에서.Net 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 수행할 수 있습니다. 

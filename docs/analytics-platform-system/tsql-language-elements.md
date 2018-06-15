@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539573"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-SQL 언어 요소
 T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).

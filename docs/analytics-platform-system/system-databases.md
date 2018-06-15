@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538353"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>시스템 데이터베이스의 병렬 데이터 웨어하우스 (PDW)
 시스템 데이터베이스는 SQL Server PDW 사용 하 여 사용자, 데이터베이스 및 임시 데이터를 관리 하는 데이터베이스입니다. 다음 시스템 데이터베이스를 포함 하는 SQL Server PDW: 마스터 및 tempdb입니다.  

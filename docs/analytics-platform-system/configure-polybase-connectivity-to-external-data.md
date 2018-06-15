@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539683"
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>외부 데이터 연결 PolyBase 구성
 PolyBase에서 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 원본에 연결 하는 데 병렬 데이터 웨어하우스 구성 하는 방법에 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob 저장소, 병렬 데이터 웨어하우스를 비롯 한 여러 원본의 데이터를 통합 하는 쿼리를 실행 합니다.  
@@ -89,7 +90,7 @@ PolyBase에서 Hadoop 또는 Microsoft Azure 저장소 blob 데이터에 외부 
   
     외부 Hadoop 1.3에 연결 하는 경우이 단계를 건너뜁니다.  
   
-    Hadoop 2.0 이후부터 yarn-site.xml 파일은 Hadoop YARN 프레임 워크에 대 한 구성 설정을 포함 합니다. 이 파일이 컨트롤 노드 아래에 있는 **C:\program files\Microsoft SQL Server 병렬 데이터 Warehouse\100\Hadoop\conf\\** 합니다.  
+    Hadoop 2.0 이후부터 yarn-site.xml 파일은 Hadoop YARN 프레임 워크에 대 한 구성 설정을 포함 합니다. 이 파일이 컨트롤 노드 아래에 있는 **C:\program files\Microsoft SQL Server 병렬 데이터 Warehouse\100\Hadoop\conf\\**합니다.  
   
     PolyBase 쿼리는 외부 Hadoop 2.0 클러스터에 대해 Windows 또는 Linux를 실행 하려면 yarn.application.classpath 속성 및 외부 Hadoop 클러스터에 yarn-site.xml 설정을 사용 하 여 일치 하는 값을 구성 해야 합니다. 이 구성은 외부 Hadoop 클러스터에는 기본 설정을 사용 하는 경우에 필요 합니다.  
   

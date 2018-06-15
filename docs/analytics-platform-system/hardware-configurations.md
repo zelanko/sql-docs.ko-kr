@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544725"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>하드웨어 구성-분석 플랫폼 시스템
 Analytics Platform System (APS) 하드웨어의 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위와 구성 됩니다. 어플라이언스는 저장소에 대 한 SQL Server 병렬 데이터 Wareouse (PDW) 수 테라바이트에 달하는에서 6 페타바이트 규모의 데이터를 조정합니다.  

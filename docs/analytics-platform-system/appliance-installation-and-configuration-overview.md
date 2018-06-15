@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538623"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>어플라이언스에 설치 및 구성을 분석 플랫폼 시스템에 대 한
 Analytics Platform System (APS)를 설정 하 고 새 어플라이언스를 사용 하 여 시작 하는 초기 단계 기기 단계적으로 안내 합니다.  

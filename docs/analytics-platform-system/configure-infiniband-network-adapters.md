@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539023"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 InfiniBand 네트워크 어댑터 구성
 하는 제어 노드에 병렬 데이터 웨어하우스 (PDW)에 연결 하는 데 비 어플라이언스 클라이언트 서버에 InfiniBand 네트워크 어댑터를 구성 하는 방법에 설명 합니다. 로드, 백업, 및 기타 프로세스 활성 InfiniBand 네트워크에 자동으로 연결 되도록 하 고 고가용성을 위해 기본 연결에 대 한 다음이 지침을 사용 합니다.  

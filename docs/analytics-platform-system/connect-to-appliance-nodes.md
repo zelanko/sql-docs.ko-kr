@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539543"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>분석 플랫폼 시스템에 어플라이언스 노드에 연결
 이 문서에서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 다양 한 방법에 설명 합니다.  

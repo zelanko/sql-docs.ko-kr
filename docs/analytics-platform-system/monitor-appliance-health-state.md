@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539053"
 ---
 # <a name="monitor-appliance-health-state"></a>모니터 어플라이언스 상태
 이 문서에서는 관리 콘솔을 사용 하 여 또는 병렬 데이터 웨어하우스 동적 관리 뷰를 직접 쿼리하여 분석 플랫폼 시스템 어플라이언스의 상태를 모니터링 하는 방법에 설명 합니다. 

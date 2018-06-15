@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538793"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 작업 관리 작업
 분석 플랫폼 시스템에서 관리 작업을 작업 합니다.

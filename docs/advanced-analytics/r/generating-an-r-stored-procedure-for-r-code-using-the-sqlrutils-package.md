@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202605"
 ---
 # <a name="generate-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Sqlrutils 패키지를 사용 하 여 R 코드에 대 한 R 저장 프로시저 생성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

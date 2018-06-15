@@ -5,4 +5,5 @@ ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/15/2018
+ms.locfileid: "29901471"
 ---

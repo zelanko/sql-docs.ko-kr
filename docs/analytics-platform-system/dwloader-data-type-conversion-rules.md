@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539713"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>데이터 형식 변환 규칙 dwloader-병렬 데이터 웨어하우스
 이 항목에서는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 설명 하는 [dwloader 명령줄 로더](dwloader.md) PDW에 데이터를 로드할 때 지원 합니다. 암시적 데이터 변환이 입력된 데이터에 SQL Server PDW 대상 테이블에서 데이터 형식이 일치 하지 않을 때 발생 합니다. SQL Server PDW로 성공적으로 로드 데이터를 확인 하 여 로드 프로세스를 디자인 하는 경우이 정보를 사용 합니다.  

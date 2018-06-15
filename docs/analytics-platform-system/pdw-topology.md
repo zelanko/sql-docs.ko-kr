@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538713"
 ---
 # <a name="pdw-topology"></a>PDW 토폴로지
 SQL Server PDW 구성 요소에 대 한 이름 및 네트워크 정보를 표시합니다. 사용 하 여는 **어플라이언스 토폴로지 네트워크 구성을** 네트워크 IP 주소를 변경 하는 페이지입니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32607514"
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>새로 추가되었거나 최근에 업데이트됨: 관계형 데이터베이스 문서
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203615"
 ---
 # <a name="components-in-sql-server-to-support-r"></a>R 지원 하도록 SQL Server의 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +98,7 @@ SQL Satellite는 확장 이벤트를 사용하여 모니터링할 수 있습니�
 
 ![rsql_indb780-01](media/script_in-db-r.png)
 
-1. R 런타임에 대한 요청은 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 전달된 매개 변수  _@language='R'_에 의해 표시됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 실행 패드 서비스에 이 요청을 보냅니다.
+1. R 런타임에 대한 요청은 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 전달된 매개 변수  _@language='R'_ 에 의해 표시됩니다. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 실행 패드 서비스에 이 요청을 보냅니다.
 2. 실행 패드 서비스가 적절한 시작 관리자(이 경우 RLauncher)를 시작합니다.
 3. RLauncher가 외부 R 프로세스를 시작합니다.
 4. BxlServer는 R 런타임과 함께 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]과 데이터 교환 및 작업 결과 저장소를 관리합니다.

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538783"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스를 제거 합니다. 
 다음 단계에서는 이전에 설치한 분석 플랫폼 시스템 핫픽스를 제거 하는 방법에 설명 합니다.  

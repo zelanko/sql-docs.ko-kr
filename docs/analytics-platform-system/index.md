@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544975"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 데이터 웨어하우징 및 빅 데이터 분석을 위해 설계된 데이터 플랫폼인 Microsoft APS(Analytics Platform System)는 완벽한 데이터 통합, 고속 쿼리 처리, 확장성이 우수한 저장소, 종단 간 비즈니스 인텔리전스 솔루션에 대한 간단한 유지 관리를 제공합니다.  

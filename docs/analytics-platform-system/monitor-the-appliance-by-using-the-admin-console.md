@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544985"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>관리 콘솔-분석 플랫폼 시스템으로 어플라이언스에 모니터
 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램은 합니다. 사용자가 Internet Explorer를 통해 관리 콘솔에 연결 합니다.  

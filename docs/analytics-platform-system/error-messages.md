@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539073"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 오류 메시지
 

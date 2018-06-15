@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539503"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 Microsoft 원격 분석 피드백 보내기
 분석 플랫폼 시스템에 관리 콘솔 데이터를 Microsoft로 전송 하는 선택적 원격 분석 기능이 있습니다. 

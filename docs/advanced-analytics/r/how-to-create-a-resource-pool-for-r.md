@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203505"
 ---
 # <a name="create-a-resource-pool-for-machine-learning-in-sql-server"></a>SQL Server의 기계 학습에 대 한 리소스 풀 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,13 +63,13 @@ SQL Server의 컴퓨터 학습 작업 관리를 위해 특별히 리소스 풀�
 
 ## <a name="modify-server-resource-usage"></a>서버 리소스 사용 수정
 
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 다음 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량을 '최대 서버 메모리' 설정 값의 **60%**로 제한합니다.
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 다음 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량을 '최대 서버 메모리' 설정 값의 **60%** 로 제한합니다.
 
     ```sql
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  마찬가지로, 다음 문을 실행하여 외부 프로세스의 메모리 사용을 총 컴퓨터 리소스의 **40%**로 제한합니다.
+2.  마찬가지로, 다음 문을 실행하여 외부 프로세스의 메모리 사용을 총 컴퓨터 리소스의 **40%** 로 제한합니다.
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);

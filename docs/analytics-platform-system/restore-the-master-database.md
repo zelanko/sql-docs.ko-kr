@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538403"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system"></a>분석 플랫폼 시스템에 있는 master 데이터베이스 복원
 **마스터 복원** SQL Server PDW 구성 관리자의 페이지를 사용 하면 백업에서 master 데이터베이스를 복원할 수 있습니다.  

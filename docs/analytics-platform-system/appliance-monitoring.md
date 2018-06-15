@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538673"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>어플라이언스 분석 플랫폼 시스템에 대 한 모니터링
 이 어플라이언스 모니터링 가이드 도구 및 분석 플랫폼 시스템 기기를 모니터링 하기 위한 작업을 설명 합니다.  

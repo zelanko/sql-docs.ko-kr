@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538553"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 업데이트 제거
 이 문서에서는 분석 플랫폼 시스템 기기에서 이전에 설치 된 Microsoft 업데이트를 제거 하는 방법을 설명 합니다.  

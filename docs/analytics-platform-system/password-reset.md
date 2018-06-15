@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539423"
 ---
 # <a name="password-reset---analytics-platform-system"></a>암호 재설정-분석 플랫폼 시스템
 **암호 재설정** 페이지 분석 플랫폼 시스템에서 사용 하는 관리자 계정에 대 한 암호를 변경할 수 있습니다.  

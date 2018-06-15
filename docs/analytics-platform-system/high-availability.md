@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539593"
 ---
 # <a name="analytics-platform-system-high-availability"></a>분석 플랫폼 시스템에 대 한 고가용성 정보
 Analytics Platform System (APS)의 고가용성을 위해 구성 하는 방법에 대해 알아봅니다.  

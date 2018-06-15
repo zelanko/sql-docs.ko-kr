@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204215"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 기계 학습 또는 R 서버에 대 한 업그레이드 및 설치 FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +94,7 @@ Microsoft R Server 시험판 버전을 설치한 경우 먼저 제거해야 최�
 
 2.  구성 요소 **추가**, **복구**또는 **제거** 옵션이 있는 대화 상자에서 **제거**를 선택합니다.
   
-3.  **기능 선택** 페이지의 **공유 기능**에서 **R 서버(독립 실행형)**를 선택합니다. **다음**을 클릭한 다음 **마침** 을 클릭하여 방금 선택한 구성 요소를 제거합니다.
+3.  **기능 선택** 페이지의 **공유 기능**에서 **R 서버(독립 실행형)** 를 선택합니다. **다음**을 클릭한 다음 **마침** 을 클릭하여 방금 선택한 구성 요소를 제거합니다.
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R 서비스 및 R Server (독립 실행형) side-by-side-오류 
 
@@ -117,7 +118,7 @@ SQL Server 2016의 이전 버전의 경우에 따라 같은 시간에 R Server (
 
 3. 서버를 다시 시작합니다.
 
-4. SQL Server 설치 프로그램을 실행 하 고 전용 R Services (In-database) 기능을 추가 합니다. 선택 하지 않으면 **R Server (독립 실행형)**합니다.
+4. SQL Server 설치 프로그램을 실행 하 고 전용 R Services (In-database) 기능을 추가 합니다. 선택 하지 않으면 **R Server (독립 실행형)** 합니다.
 
 일반적으로 권장 R Services (In-database)와 R Server (독립 실행형) 설치 하지 않으면 같은 컴퓨터에 있습니다. 그러나 서버에 충분 한 용량을 가정할 서버 독립 실행형 R 개발 도구로 유용할 수 있습니다 발견할 수 있습니다. 다른 시나리오를 R Server의 화 기능을 사용 하 고 싶을 데이터 이동 없이 SQL Server 데이터에 액세스 해야 하는입니다.
 

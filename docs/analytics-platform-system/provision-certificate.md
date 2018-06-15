@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539493"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>분석 플랫폼 시스템에 프로 비전 인증서
 **PDW 인증서 프로 비전이** 분석 플랫폼 시스템의 페이지**Configuration Manager** 가져오거나 PDW에서 사용 하는 인증서를 제거 합니다. 

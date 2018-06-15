@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203565"
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>실시간 점수 매기기 또는 SQL Server의 기본 점수 매기기를 수행 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 
 **SQL을 사용 하 여**
 
-사용 하 여 모델 학습 시킬 수 SQL 코드에서 `sp_execute_external_script`, 직접 학습된 된 모델에 테이블 형식의 열을 삽입할 **varbinary (max)**합니다.
+사용 하 여 모델 학습 시킬 수 SQL 코드에서 `sp_execute_external_script`, 직접 학습된 된 모델에 테이블 형식의 열을 삽입할 **varbinary (max)** 합니다.
 
 간단한 예제를 보려면 [이 자습서](../tutorials/rtsql-create-a-predictive-model-r.md)
 

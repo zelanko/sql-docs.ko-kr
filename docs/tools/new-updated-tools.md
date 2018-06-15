@@ -14,9 +14,10 @@ ms.component: tools
 ms.date: 04/28/2018
 ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32739165"
 ---
 # <a name="new-and-recently-updated-tools-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server 용 도구
 

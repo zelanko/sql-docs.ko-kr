@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544925"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-분석 플랫폼 시스템
 원격 클라이언트 컴퓨터 및 비 어플라이언스 소프트웨어 구성 요소 분석 플랫폼 시스템의이 문서에 설명 합니다.  

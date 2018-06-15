@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538993"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>획득 및 병렬 데이터 웨어하우스에 대 한 로드 서버를 구성 합니다.
 이 문서를 획득 하 고 데이터 로드 병렬 데이터 웨어하우스 (PDW)를 전송 하기 위한 기기 비 Windows 시스템으로 로드 서버를 구성 하는 방법을 설명 합니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539583"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>획득 및 병렬 데이터 웨어하우스에 대 한 백업 서버를 구성 합니다.
 이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하기 위해 백업 서버로 기기 비 Windows 시스템을 구성 하는 방법을 설명 합니다.  
