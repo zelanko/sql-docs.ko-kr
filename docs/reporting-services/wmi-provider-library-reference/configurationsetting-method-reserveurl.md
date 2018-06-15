@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030690"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 메서드 - ReserveURL
   지정된 응용 프로그램에 대한 URL 예약을 추가합니다.  
