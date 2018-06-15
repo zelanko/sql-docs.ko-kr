@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919048"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 *트랜잭션 격리 수준* 는 트랜잭션 격리 성공 범위의 측정값입니다. 특히, 트랜잭션 격리 수준은 다음과 같은 현상이의 유무 의해 정의 됩니다.  

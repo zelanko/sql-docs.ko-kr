@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921948"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 참조
 이 섹션의 항목은 알파벳 순서로 각 ODBC 기능에 설명 합니다. 각 함수는 C 언어 기능을 프로그래밍으로 정의 됩니다. 설명은 다음과 같습니다.  

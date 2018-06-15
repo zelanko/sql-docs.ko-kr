@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920878"
 ---
 # <a name="what39s-new-in-odbc-38"></a>어떤&#39;의 새로운 ODBC 3.8
 Windows 8에는 업데이트 된 버전의 ODBC 3.8 포함 되어 있습니다. Windows 8에서 ODBC 3.8는 다음과 같은 기능이 포함 되어 있습니다.  

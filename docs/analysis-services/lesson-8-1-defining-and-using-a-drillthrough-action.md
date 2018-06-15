@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018050"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>8-1-정의 하 고 드릴스루 동작을 사용 하 여 단원
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  **최대 행 수** 상자에 **10**을 입력합니다.  
   
-9. **캡션** 상자에 **Drillthrough to Order Details…**를 입력합니다.  
+9. **캡션** 상자에 **Drillthrough to Order Details…** 를 입력합니다.  
   
     이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 응용 프로그램 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   

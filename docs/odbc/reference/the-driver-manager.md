@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918528"
 ---
 # <a name="the-driver-manager"></a>드라이버 관리자
 *드라이버 관리자* 은 응용 프로그램 및 드라이버 간의 통신을 관리 하는 라이브러리입니다. 예를 들어 Microsoft® Windows® 플랫폼 드라이버 관리자는 Microsoft가 작성 하 고 재배포 가능 MDAC 2.8 s p 1 SDK의 사용자가 재배포할 수 있는 동적 연결 라이브러리 (DLL)입니다.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023350"
 ---
 # <a name="amo-security-classes"></a>AMO 보안 클래스
   이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  

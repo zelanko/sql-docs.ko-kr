@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917148"
 ---
 # <a name="testing-interoperable-applications"></a>상호 운용 가능한 응용 프로그램 테스트
 상호 운용 가능한 응용 프로그램 테스트 계산은 아무리 잘는 시간이 많이 걸리는 비즈니스 및 새 드라이버 시장에 지속적으로 표시 되기 때문에 최악의 불가능 합니다. 그러나 테스트는 적절 한 수준의 수는 없습니다. 해당 드라이버를 지원 하도록 보장 됩니다에 대 한 제한 된 또는 낮은 상호 운용성와 응용 프로그램을 테스트만 필요 합니다. 그러나 이러한 완벽 하 게 테스트 해야 이러한 드라이버에 대 한 합니다.  

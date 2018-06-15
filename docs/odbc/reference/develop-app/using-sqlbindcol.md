@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917478"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol를 사용 하 여
 응용 프로그램 호출 하 여 열을 바인딩하는 **SQLBindCol**합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 응용 프로그램이 다음을 지정합니다.  

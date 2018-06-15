@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021600"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 데이터 마이닝 클래스
   데이터 마이닝 클래스는 데이터 마이닝 개체를 만들고, 수정하고, 삭제하고, 처리하는 데 사용됩니다. 데이터 마이닝 개체 작업에는 데이터 마이닝 구조 만들기, 데이터 마이닝 모델을 만들기 및 모델 처리가 포함됩니다.  

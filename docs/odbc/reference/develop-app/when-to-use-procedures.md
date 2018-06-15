@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917378"
 ---
 # <a name="when-to-use-procedures"></a>프로시저를 사용 하는 경우
 모든 프로시저를 사용 하 여 있다는 사실에 기반으로 SQL 문을에서 이동 데이터 원본에 응용 프로그램, 다양 한 프로시저를 사용 하 여 장점이 있습니다. 응용 프로그램에서 남아 상호 운용 가능한 프로시저 호출입니다. 이러한 이점 중 하나:  

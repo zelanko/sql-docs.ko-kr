@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921158"
 ---
 # <a name="writing-odbc-3x-drivers"></a>쓰기 ODBC 3.x 드라이버
 다음 표에서 ODBC 3에서 함수 지원을 보여 줍니다. *x* 드라이버 및 ODBC 응용 프로그램 및 ODBC 3에 대해 함수를 호출할 때 드라이버 관리자에 의해 수행 매핑. *x* 드라이버입니다.  

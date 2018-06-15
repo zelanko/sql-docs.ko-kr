@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023140"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* id와 컨텍스트 메서드 호출 간에 클라이언트의 서버에서 유지 하는 조건입니다. *상태 비저장* 는 서버 기억 하지 id와 클라이언트의 컨텍스트 메서드 호출이 완료 된 후 상태입니다.  

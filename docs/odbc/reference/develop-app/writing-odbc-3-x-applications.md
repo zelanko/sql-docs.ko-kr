@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919149"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x 응용 프로그램 작성
 경우는 ODBC 2. *x* 응용 프로그램은 ODBC 3으로 업그레이드 됩니다. *x*, 모두 ODBC 2와 함께 작동 되도록 작성 합니다. *x* 및 3. *x* 드라이버입니다. 응용 프로그램이 ODBC 3을 모두 활용 하려면 조건부 코드를 통합 해야 합니다. *x* 기능입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921688"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;s 참조
 *ODBC Programmer's Reference* 다음 섹션이 포함 되어 있습니다.  

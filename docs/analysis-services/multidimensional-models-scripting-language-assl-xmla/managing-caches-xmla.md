@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022770"
 ---
 # <a name="managing-caches-xmla"></a>캐시 관리(XMLA)
   사용할 수는 [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) 명령을 XML for Analysis (XMLA) 지정 된 차원 또는 파티션의 캐시를 지웁니다. 캐시를 지우면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 개체에 대 한 캐시를 다시 작성 해야 합니다.  

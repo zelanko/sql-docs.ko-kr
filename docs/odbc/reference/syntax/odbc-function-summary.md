@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921848"
 ---
 # <a name="odbc-function-summary"></a>ODBC 함수 요약
 다음 표에서 ODBC 함수를 그룹화 하는 작업의 유형별로 목록과 규칙 지정 및 각 함수의 용도에 대 한 간략 한 설명을 포함 되어 있습니다. 규칙에 따라 지정에 대 한 자세한 내용은 참조 [ODBC 및 표준 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
