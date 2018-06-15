@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906598"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 문의 제한 사항
 테이블을 업데이트할 Paradox 드라이버에 대 한 테이블에 고유 인덱스 (기본 키 Paradox) 있어야 합니다. Borland 데이터베이스 엔진을 구현 하지 않고 Paradox 드라이버를 사용 하는 경우 Paradox 테이블을 업데이트 하는 것이 불가능 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900956"
 ---
 # <a name="set-unique-command"></a>고유한 명령 집합
 중복 인덱스 키 값을 가진 레코드는 인덱스 파일에서 유지 관리 하는지 여부를 지정 합니다.  

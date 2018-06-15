@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914258"
 ---
 # <a name="function-conformance"></a>기능 규칙
 다음 표에서이 잘 정의 된 규칙 수준과 각 ODBC 함수를 나타냅니다.  

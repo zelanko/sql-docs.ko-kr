@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899608"
 ---
 # <a name="installing-and-configuring"></a>설치 및 구성
 Visual FoxPro ODBC 드라이버를 다운로드 하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트](http://go.microsoft.com/fwlink/?LinkId=121318)합니다.  

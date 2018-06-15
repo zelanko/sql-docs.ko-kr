@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915038"
 ---
 # <a name="standard-database-access-architectures"></a>표준 데이터베이스 액세스 아키텍처
 이전 섹션에서 설명한 데이터베이스 액세스 구성 요소를 살펴본 것으로 확인 그 중 두-프로그래밍 인터페이스 및 데이터 스트림 프로토콜-표준화 해야 합니다. 다른 두 가지 구성 요소-IPC 메커니즘 및 네트워크 프로토콜-뿐만 아니라 너무 낮은 수준에 있어야 하지만 둘 다 네트워크 및 운영 체제에 따라 달라 집니다. 또한 세 번째 접근는-게이트웨이-제공 하는 기능은 표준화 합니다.  

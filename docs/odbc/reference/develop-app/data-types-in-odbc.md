@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910728"
 ---
 # <a name="data-types-in-odbc"></a>ODBC의 데이터 형식
 두 데이터 형식 집합을 사용 하 여 ODBC: SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식은 데이터 원본에 사용 됩니다 하 고 응용 프로그램의 C 코드에서 C 데이터 형식은 사용 됩니다.  

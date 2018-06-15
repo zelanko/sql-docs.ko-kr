@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911438"
 ---
 # <a name="environment-handles"></a>환경 핸들
 *환경* 에이 데이터에 액세스할 수 있는 전역 컨텍스트는는 환경에 연결 된와 같은 전역 특성에는 모든 정보:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913388"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  

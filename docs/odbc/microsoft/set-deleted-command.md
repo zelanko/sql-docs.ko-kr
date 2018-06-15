@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901688"
 ---
 # <a name="set-deleted-command"></a>삭제 된 명령 집합
 삭제 표시 된 레코드가 처리 여부 및 다른 명령에서 사용 하기 위해 사용할 수 있는 여부를 지정 합니다.  

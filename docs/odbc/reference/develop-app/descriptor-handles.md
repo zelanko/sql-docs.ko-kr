@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912628"
 ---
 # <a name="descriptor-handles"></a>설명자 핸들
 A *설명자* 응용 프로그램 또는 드라이버에서 인식 되는 SQL 문의 매개 변수 또는 결과 집합의 열에 설명 하는 메타 데이터의 컬렉션 (라고도 *구현*). 따라서 설명자를 4 개의 역할 중 하나를 작성할 수 있습니다.  

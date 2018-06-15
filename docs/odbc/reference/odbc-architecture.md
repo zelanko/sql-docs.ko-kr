@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916132"
 ---
 # <a name="odbc-architecture"></a>ODBC 아키텍처
 ODBC 아키텍처에는 네 가지 구성 요소에 있습니다.  

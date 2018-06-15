@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907148"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 버퍼의 데이터는 카드가의 SQL_DESC_CONCISE_TYPE 필드에 지정 된 형식의 될 것임을 나타내려면 SQL_ARD_TYPE 유형 식별자를 사용 합니다. SQL_ARD_TYPE에 입력 된 *TargetType* 에 대 한 호출의 인수 **SQLGetData** 특정 데이터 형식 및 응용 프로그램 데이터를 변경 하는 버퍼의 설명자를 변경 하 여 입력을 사용 하도록 설정 하는 대신 필드입니다. 이 값의 데이터 형식에 연결 된  *\*TargetValuePtr* 버퍼 설명자 필드입니다. (SQL_ARD_TYPE에 대 한 호출에 입력 되지 않은 **SQLBindCol** 또는 **SQLBindParameter** 바운드 버퍼의 형식이 SQL_DESC_TYPE와 SQL_DESC_CONCISE_TYPE 필드에 이미 연결 되어 있고 변경할 수 있습니다 언제 든 지 이러한 필드 중 하나를 변경 하 여.)  

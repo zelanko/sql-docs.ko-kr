@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916238"
 ---
 # <a name="odbc-subkey"></a>ODBC 하위 키
 ODBC 하위 키 아래의 값 ODBC 추적 옵션을 지정합니다. 이 옵션이 설정 하 여 표시 된 ODBC 데이터 원본 관리자 대화 상자의 추적 탭을 통해 **SQLManageDataSources**합니다. ODBC 하위 키 자체는 선택 사항입니다. 다음 표에 나와 있는 것 처럼 이러한 값의 형식은입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914658"
 ---
 # <a name="tracing"></a>추적
 ODBC 드라이버 관리자에 대 한 ODBC 응용 프로그램 기록 하 고 로그 파일에 변환 된 하는 함수 호출의 시퀀스를 허용 하는 추적 기능을 있습니다. DLL 및 드라이버 관리자와 드라이버는 응용 프로그램 및 드라이버 관리자 간의 호출을 캡처하는 추적으로 추적을 수행 합니다. 추적의이 메서드는 ODBC 2에서 수행 하는 추적을 대신 *.x* ODBC 2에서 수행 하는 드라이버 관리자와 추적 *.x* ODBC Spy 여 합니다.  

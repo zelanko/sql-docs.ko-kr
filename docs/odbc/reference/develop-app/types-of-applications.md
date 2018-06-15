@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916228"
 ---
 # <a name="types-of-applications"></a>응용 프로그램의 종류
 ODBC 응용 프로그램을 다음과 같이 분류할 수 있습니다.  

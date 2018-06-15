@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914738"
 ---
 # <a name="step-5-commit-the-transaction"></a>5 단계: 트랜잭션 커밋
 다음 단계는 다음 그림에 나와 있는 것 처럼, 트랜잭션 커밋입니다.  

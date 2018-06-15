@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915250"
 ---
 # <a name="uses-of-catalog-data"></a>카탈로그 데이터의 용도
 응용 프로그램 카탈로그 데이터는 여러 가지 방법으로 사용합니다. 몇 가지 일반적인 용도 다음과 같습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916588"
 ---
 # <a name="setup-program"></a>설치 프로그램
 > **참고:** Windows XP 및 Windows Server 2003부터 **ODBC Windows 운영 체제에 포함 되어**합니다. 이전 버전의 Windows에서 ODBC만 명시적으로 설치 해야 합니다.  

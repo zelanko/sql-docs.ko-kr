@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904588"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일 (텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 스키마 정보 파일을 사용 하 여 텍스트 파일의 형식이 결정 됩니다. 스키마 정보 파일은 항상 Schema.ini 라는 하며 텍스트 데이터 소스와 같은 디렉터리에 항상 유지 됩니다. 스키마 정보 파일 IISAM 파일, 열 이름 및 데이터 형식 정보 및 기타 여러 가지 데이터 특성의 일반 형식에 대 한 정보를 제공합니다. Schema.ini 파일은 항상 고정 길이 데이터에 액세스 하기 위해 필요 합니다. 날짜/시간, 통화 또는 10 진수 데이터 또는 테이블의 데이터를 처리 하 여 더 많은 제어 하려는 텍스트 테이블에 포함 되어 있는 경우 Schema.ini 파일을 사용 해야 합니다.  

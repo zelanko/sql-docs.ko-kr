@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904458"
 ---
 # <a name="insert-statement-limitations"></a>INSERT 문의 제한 사항
 삽입된 된 데이터가 너무 길어 열에 맞지 않으면 경고 없이 오른쪽에서 잘립니다.  

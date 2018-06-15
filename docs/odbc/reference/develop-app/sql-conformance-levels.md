@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913298"
 ---
 # <a name="sql-conformance-levels"></a>SQL 받는 규칙 수준
 드라이버에서 지 원하는 SQL 92 문법의 수준에 대 한 호출에서 반환 된 값으로 표시 됩니다 **SQLGetInfo** SQL_SQL_CONFORMANCE 정보 유형을 사용 합니다. 이 드라이버는 SQL 92에 정의 된 항목, FIPS 전환, 중간, 또는 전체 수준이에 맞는지 여부를 나타냅니다.  

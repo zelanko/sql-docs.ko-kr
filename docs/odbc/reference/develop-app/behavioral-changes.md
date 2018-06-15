@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910918"
 ---
 # <a name="behavioral-changes"></a>동작 변경 내용
 동작 변경 내용이 있는 변경 내용이 반영은 *구문* 인터페이스의 똑같이 유지 하지만 *의미 체계* 변경 되었습니다. 이러한 변경 내용을 ODBC 2에서 사용 되는 기능입니다. *x* ODBC 3에 동일한 기능 다르게 동작 합니다. *x*합니다.  

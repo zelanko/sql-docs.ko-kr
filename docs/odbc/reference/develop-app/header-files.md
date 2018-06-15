@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912398"
 ---
 # <a name="header-files"></a>헤더 파일
 헤더 파일 Sql.h 함수 및 기능 ODBC 핵심 인터페이스 규칙 수준에 대 한 프로토타입이 포함 되어 있습니다. Sqlext.h 헤더 파일에는 함수 및 기능 수준 1 및 수준 2 API 받는 규칙 수준에 대 한 프로토타입이 포함 됩니다. 형식 정 및 SQL 데이터 형식에 대 한 표시기 Sqltypes.h 헤더 파일에 포함 되어 있습니다.  

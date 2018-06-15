@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917128"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 소개
 이 섹션 구조적 쿼리 언어 및 ODBC에 대 한 간략 한 시도한 기록을 제공 하 고 ODBC 인터페이스에 대 한 개념 정보를 제공 합니다.  

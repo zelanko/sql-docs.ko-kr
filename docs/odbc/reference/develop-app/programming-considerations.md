@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913419"
 ---
 # <a name="programming-considerations"></a>프로그래밍 고려 사항
 이 섹션에서는 다양 한 ODBC 응용 프로그램 및 드라이버를 작성 하는 관련 된 항목에 간략하게 설명 합니다.  

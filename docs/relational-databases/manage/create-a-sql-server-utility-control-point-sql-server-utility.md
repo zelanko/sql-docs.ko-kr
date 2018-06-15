@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32947548"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +150,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  연결이 암호화되어 있으면 암호화 연결이 사용됩니다. 연결이 암호화되어 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 암호화된 연결을 사용하여 다시 연결합니다.  
   
- 계속하려면 **연결…**을 클릭합니다.  
+ 계속하려면 **연결…** 을 클릭합니다.  
   
 ##  <a name="Agent_configuration"></a> 유틸리티 컬렉션 집합 계정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합을 실행할 Windows 도메인 계정을 지정합니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정으로 사용됩니다. 또는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정을 사용할 수 있습니다. 유효성 검사 요구 사항을 통과하려면 계정을 지정할 때 다음 지침을 따릅니다.  

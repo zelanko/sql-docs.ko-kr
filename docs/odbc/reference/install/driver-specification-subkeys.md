@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920398"
 ---
 # <a name="driver-specification-subkeys"></a>드라이버 사양 하위 키
 ODBC 드라이버 하위 키에 나열 된 각 드라이버에는 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 드라이버 하위 키 아래에서 해당 값으로 동일한 이름을 있습니다. 드라이버 및 드라이버 설치 Dll 반환한 드라이버 키워드 값의 전체 경로 나열 하는 값이 하위이 키 아래 **SQLDrivers**, 사용 횟수입니다. 다음 표에 표시 된은 값의 형식입니다.  

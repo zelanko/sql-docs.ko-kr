@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908678"
 ---
 # <a name="update---sql-command"></a>업데이트-SQL 명령
 새 값이 포함 된 테이블에서 레코드를 업데이트합니다.  

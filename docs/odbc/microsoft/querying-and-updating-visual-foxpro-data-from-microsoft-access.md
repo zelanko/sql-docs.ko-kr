@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904068"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Microsoft Access에서 Visual FoxPro 데이터 쿼리 및 업데이트
 쿼리 하 고 링크 테이블 옵션을 사용 하 여 Microsoft Access 데이터베이스에서 Visual FoxPro 데이터베이스에 저장 된 데이터를 업데이트할 수 있습니다.  

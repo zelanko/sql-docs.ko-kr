@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908998"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>영향을 받는 행 수를 결정합니다.
 응용 프로그램 업데이트, 삭제 또는 행을 삽입, 후 호출할 수 **SQLRowCount** 행의 수가 영향을 받았는지 확인 합니다. **SQLRowCount** 여부 행 된 업데이트, 삭제 또는 삽입을 실행 하 여이 값을 반환 합니다.는 **업데이트**, **삭제**, 또는 **삽입** 문 실행 위치를 지정 하 여 업데이트 또는 delete 문의 하거나 호출 **SQLSetPos**합니다.  

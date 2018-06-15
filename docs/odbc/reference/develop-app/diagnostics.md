@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910168"
 ---
 # <a name="diagnostics"></a>진단
 Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드 진단 레코드는 함수에 대 한 자세한 정보를 제공 하는 동안 전반적인 성공 또는 실패는 함수를 나타냅니다. 하나 이상의 진단 레코드-헤더 레코드-함수가 성공 하는 경우에 반환 됩니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910938"
 ---
 # <a name="sql-92-cast-function"></a>S Q l 92 CAST 함수
 **캐스트** s Q l-92에 정의 된 함수는 동일는 **변환** ODBC에 정의 된 함수입니다. 해당 하는 함수의 구문은 다음과 같습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900818"
 ---
 # <a name="sqlmoreresults-desktop-database-drivers"></a>SQLMoreResults (데스크톱 데이터베이스 드라이버)
 이 함수는 SQL_NO_DATA_FOUND 항상 반환합니다.

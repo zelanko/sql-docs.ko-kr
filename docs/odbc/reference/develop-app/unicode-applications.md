@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916198"
 ---
 # <a name="unicode-applications"></a>유니코드 응용 프로그램
 두 가지 방법 중 하나에서 유니코드 응용 프로그램으로 응용 프로그램을 다시 컴파일할 수 있습니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911798"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>커서 및 준비 된 문을에 트랜잭션이 미치는 영향
 커밋 또는 롤백 트랜잭션이 커서 및 액세스 계획에 다음과 같은 결과가 나타납니다.  

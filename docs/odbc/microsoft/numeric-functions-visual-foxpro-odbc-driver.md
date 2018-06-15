@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902098"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>숫자 함수 (Visual FoxPro ODBC 드라이버)
 다음 표에서 설명; Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 숫자 함수 Visual FoxPro 문법 동일한 기능에 대 한 ODBC 구문을 다를 경우 해당 Visual FoxPro 나열 됩니다.  

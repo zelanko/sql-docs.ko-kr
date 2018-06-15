@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911848"
 ---
 # <a name="descriptor-field-conformance"></a>설명자 필드 규칙
 다음 표에서이 잘 정의 된 각 ODBC 설명자 헤더 필드의 규칙 수준과 보여 줍니다.  

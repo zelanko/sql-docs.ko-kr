@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903118"
 ---
 # <a name="paradox-data-types"></a>Paradox 데이터 형식
 ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식을 매핑합니다. 다음 표에서 모든 Paradox 데이터 형식을 나열 하 고 ODBC SQL 데이터 형식에 매핑되는지를 보여 줍니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916388"
 ---
 # <a name="registry-entries-for-data-sources"></a>데이터 원본에 대 한 레지스트리 항목
 > [!NOTE]  

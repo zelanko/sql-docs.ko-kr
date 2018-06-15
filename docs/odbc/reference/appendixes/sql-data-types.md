@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914188"
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
 각 DBMS 자체 SQL 형식을 정의합니다. 각 ODBC 드라이버 관련된 DBMS 정의 하는 SQL 데이터 유형만 표시 합니다. ODBC 정의 SQL 형식 식별자에 드라이버를 매핑하는 방법에 대 한 정보 DBMS SQL가 입력 하 고 호출을 통해 반환 되는 드라이버 매핑되는 방법을 DBMS SQL 형식 자체 드라이버별 SQL 유형 식별자 **SQLGetTypeInfo**합니다. 열 및 매개 변수를 호출 하 여 데이터 형식을 설명 하는 경우 또한 드라이버 SQL 데이터 형식을 반환 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  

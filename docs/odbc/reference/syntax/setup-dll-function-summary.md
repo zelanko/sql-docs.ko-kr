@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915938"
 ---
 # <a name="setup-dll-function-summary"></a>설치 프로그램 DLL 함수 요약
 다음 표에서 설치 프로그램 DLL 함수를 설명합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 [설치 DLL API 참조](../../../odbc/reference/syntax/setup-dll-api-reference.md)합니다.  

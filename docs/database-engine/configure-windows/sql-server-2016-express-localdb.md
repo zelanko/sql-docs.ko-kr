@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870158"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
   
 ## <a name="description"></a>Description  
- **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** 입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
+ **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  응용 프로그램에 **LocalDB**를 포함하는 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서 [로컬 데이터 개요](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스 만들기](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) 및 [연습: SQL Server LocalDB 데이터베이스의 데이터에 연결(Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)을 참조하세요.  
   

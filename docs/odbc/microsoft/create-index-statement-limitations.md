@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898938"
 ---
 # <a name="create-index-statement-limitations"></a>인덱스 문에 제한 만들기
 Microsoft Excel 또는 텍스트 드라이버에 대 한 CREATE INDEX 문이 지원 되지 않습니다.  

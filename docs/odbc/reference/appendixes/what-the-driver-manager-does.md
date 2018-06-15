@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914238"
 ---
 # <a name="what-the-driver-manager-does"></a>드라이버 관리자에서 수행 하는 작업
 다음 표에서 요약 방식을 ODBC 3 *.x* 드라이버 관리자 ODBC 2에 대 한 호출을 매핑합니다. *x* 고 ODBC 3 *.x* 드라이버입니다.  

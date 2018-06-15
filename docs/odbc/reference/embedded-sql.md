@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915964"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 DBMS SQL 문을 보내기 위한 첫 번째 방법을 포함 된 SQL입니다. SQL 변수 및 흐름 제어 문을 사용 하지 않으므로, C 또는 COBOL 등 기존의 프로그래밍 언어로 작성 된 프로그램에 추가할 수 있는 데이터베이스 하위 언어와 자주 사용 됩니다. 이것은 포함 된 SQL의 중심 아이디어: 호스트 프로그래밍 언어로 작성 된 프로그램에서 SQL 문을 배치 합니다. 간단히 말해서 다음 기술 호스트 언어의 SQL 문을 포함 하는 데 사용 됩니다.  

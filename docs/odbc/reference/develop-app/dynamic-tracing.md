@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909888"
 ---
 # <a name="dynamic-tracing"></a>동적 추적
 추적을 사용 하도록 설정 또는 실행 하는 응용 프로그램의 한 지점에서 사용 하지 않도록 설정 수 있습니다. 따라서 응용을 프로그램을 여러 개의 함수 호출을 추적할 수 있습니다.  

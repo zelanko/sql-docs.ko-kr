@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902838"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>하드웨어 및 소프트웨어 요구 사항 (ODBC)
 이 항목에서는 ODBC 데스크톱 데이터베이스 드라이버를 사용 하기 위한 요구 사항을 나열 합니다.  

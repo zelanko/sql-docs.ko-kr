@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913398"
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  

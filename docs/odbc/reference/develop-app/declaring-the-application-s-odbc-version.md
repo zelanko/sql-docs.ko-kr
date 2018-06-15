@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912188"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램을 선언&#39;s ODBC 버전
 응용 프로그램이 할당 한 연결을 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 이 특성은 응용 프로그램이 ODBC 2 따르는지를 알려 줍니다. *x* 또는 ODBC 3. *x* 사양에 다음 항목을 사용 하는 경우:  

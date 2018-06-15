@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901238"
 ---
 # <a name="set-null-command"></a>SET NULL 명령
 결정 null 값은 및 지원 되는 ALTER TABLE-SQL, CREATE TABLE-SQL INSERT-방법을 SQL 명령입니다.  

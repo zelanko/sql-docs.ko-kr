@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909968"
 ---
 # <a name="sql-minimum-grammar"></a>최소 SQL 문법
 이 섹션에서는 ODBC 드라이버가 지원 해야 하는 최소 SQL 구문을 설명 합니다. 이 섹션에 설명 된 구문은 SQL 92의 항목 수준 구문의 하위 집합입니다.  

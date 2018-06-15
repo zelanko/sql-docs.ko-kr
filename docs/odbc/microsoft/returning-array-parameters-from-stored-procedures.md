@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903739"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>저장된 프로시저에서 배열 매개 변수 반환
 > [!IMPORTANT]  

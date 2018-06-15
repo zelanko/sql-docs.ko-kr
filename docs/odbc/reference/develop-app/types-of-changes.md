@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916556"
 ---
 # <a name="types-of-changes"></a>유형의 변경
 ODBC 3에서 세 가지 유형의 변경 내용 수행 됩니다. *x* (및 ODBC의 모든 버전). 이러한 각 이전 버전과 호환성을 다르게 영향을 받으며를 다른 방식으로 처리 됩니다. 이러한 변경 내용은 다음 표에 설명 되어 있습니다.  

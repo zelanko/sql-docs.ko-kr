@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914708"
 ---
 # <a name="configuring-data-sources"></a>데이터 소스 구성
 데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자가 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램 수 있습니다.  

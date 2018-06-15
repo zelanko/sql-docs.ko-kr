@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911508"
 ---
 # <a name="hard-coded-sql-statements"></a>하드 코드 된 SQL 문
 일반적으로 고정 된 작업을 수행 하는 응용 프로그램에 하드 코드 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템 목록 열기 판매 주문 다음 호출을 사용 될 수 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911648"
 ---
 # <a name="ordinary-arguments"></a>일반 인수
 카탈로그 함수 문자열 인수는 일반 인수를 리터럴 문자열로 처리 됩니다. 검색 패턴은 문자열도 아니고 값 목록이 일반 인수를 허용합니다. 일반 인수는 대/소문자는 중요, 및 문자열에 인용 문자는 문자 그대로 해석 됩니다. 이 인수 SQL_ATTR_METADATA_ID 문 특성은 SQL_FALSE;로 설정 하는 경우 일반 인수도 간주 됩니다. 로 간주 됩니다 식별자 인수 대신이 특성은 SQL_TRUE로 설정 하는 경우.  

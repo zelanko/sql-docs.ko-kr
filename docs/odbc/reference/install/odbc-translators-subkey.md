@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915098"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기가 하위 키
 설치 된 변환기가 ODBC 변환기 하위 키 아래 값을 나열합니다. 이러한 값의 서식은 다음 표에 표시 됩니다.  

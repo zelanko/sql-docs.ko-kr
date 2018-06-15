@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915848"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>비동기 함수 완료
 Windows 8 SDK ODBC 비동기 작업이 완료 되는 알림으로"완료" 하는 경우 응용 프로그램에 알리기 위해 하는 메커니즘을 추가 합니다. (참조 [비동기 실행 (알림 방법)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) 자세한 정보에 대 한 합니다.) 이 항목에서는 드라이버 개발자를 위한 일부의 문제를 설명 합니다.  

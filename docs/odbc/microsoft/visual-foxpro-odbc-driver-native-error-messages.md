@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914158"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 드라이버 원시 오류 메시지
 다음 표에서 네이티브 Visual FoxPro ODBC 드라이버에 오류 메시지를 보여 줍니다.  

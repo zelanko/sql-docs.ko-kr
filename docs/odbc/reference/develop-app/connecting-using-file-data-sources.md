@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911328"
 ---
 # <a name="connecting-using-file-data-sources"></a>파일 데이터 원본을 사용 하 여 연결
 파일 데이터 원본에 대 한 연결 정보는.dsn 파일에 저장 됩니다. 결과적으로, 연결 문자열을 단일 사용자가 반복적으로 사용할 또는 적절 한 드라이버가 설치 되어 있는 경우 여러 사용자가 공유할 수 있습니다. 드라이버 이름 (또는 다른 데이터 원본 이름을 공유할 수 없는 파일 데이터 원본의 경우)을 포함 하는 파일 및에서 사용할 수 있는 연결 문자열이 필요에 따라 **SQLDriverConnect**합니다. 드라이버 관리자에 대 한 호출에 대 한 연결 문자열을 작성 **SQLDriverConnect** .dsn 파일의 키워드에서입니다.  

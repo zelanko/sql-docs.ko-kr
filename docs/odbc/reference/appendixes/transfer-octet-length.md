@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909762"
 ---
 # <a name="transfer-octet-length"></a>8 진수 길이 전송 합니다.
 열의 전송 8 진수 길이의 기본 C 데이터 형식에 데이터를 전송할 때 응용 프로그램에 반환 된 바이트의 최대 수입니다. 문자 데이터에 대 한 전송 8 진수 길이 null 종결 문자에 대 한 공간이 포함 되지 않습니다. 열의 전송 8 진수 길이 보다 데이터 원본에 데이터를 저장 하는 데 필요한 바이트 수가 달라질 수 있습니다.  

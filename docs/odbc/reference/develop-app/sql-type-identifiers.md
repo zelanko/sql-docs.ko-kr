@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912528"
 ---
 # <a name="sql-type-identifiers"></a>SQL 유형 식별자
 각 데이터 원본 자체 SQL 데이터 형식을 정의합니다. ODBC 형식 식별자를 정의 하 고 각 형식 식별자에 매핑될 수 있는 SQL 데이터 형식의 일반적인 특성을 설명 합니다. 드라이버 관련 odbc SQL 형식 식별자에 매핑되는 데이터 원본에서 각 데이터 형식 방법을 이며합니다  

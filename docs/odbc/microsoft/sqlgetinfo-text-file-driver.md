@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904568"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (텍스트 파일 드라이버)
 > [!NOTE]  

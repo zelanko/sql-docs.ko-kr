@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913968"
 ---
 # <a name="sending-long-data"></a>Long 데이터를 전송합니다.
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 254 자 같은 특정 크기에 대 한 이진 데이터입니다. 긴 텍스트 문서 또는 비트맵 항목이 나타내는 하는 경우와 같은 메모리에 긴 데이터의 전체 항목을 저장 하려면 하지 못할 수도 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 데이터 원본에 전송으로 파트를 지정 된 드라이버 **SQLPutData** 문이 실행 되는 경우. 매개 변수를 실행 시 데이터 보내집니다 라고 *실행 시 데이터 매개 변수*합니다.  

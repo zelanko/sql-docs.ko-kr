@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909328"
 ---
 # <a name="checking-feature-support-and-variability"></a>기능 지원 및 변경 사항 확인
 기능 지원 및 가변성을 확인 하려면 응용 프로그램 일반적으로 호출 **SQLGetInfo**, **SQLGetFunctions**, 및 **SQLGetTypeInfo**합니다. 좋은 시작 지점은 드라이버의 API 및 SQL 문법 규칙 수준입니다. 이러한 광범위 한 수준의 기능 지원 설명합니다. 응용 프로그램이 호출할 수 **SQLGetInfo** 지원 또는 필요한 기능의 가변성을 결정 하는 다른 옵션과 **SQLGetFunctions** 확인 하려면 여부는 반환 된 다음 필요한 함수 규칙 수준, 사용할 수 및 **SQLGetTypeInfo** 를 어떤 SQL 데이터 형식이 지원 되는지 확인 합니다.  

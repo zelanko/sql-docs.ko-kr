@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915818"
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 고유 하 게 하는 DBMS에서 유니코드로에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 응용 프로그램 데이터를 유니코드 버퍼에 바인딩할 수 있도록 제공 됩니다. 드라이버 관리자 유니코드 C 형식 있도록 (SQL_C_WCHAR)에서 데이터를 변환할 수는 ANSI 드라이버로 함수입니다.  

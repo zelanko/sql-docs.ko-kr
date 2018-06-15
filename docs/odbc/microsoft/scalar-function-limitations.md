@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901378"
 ---
 # <a name="scalar-function-limitations"></a>스칼라 함수 제한 사항
 스칼라 함수는 ODBC 정식 형식을 사용 하 여만 지원 됩니다.

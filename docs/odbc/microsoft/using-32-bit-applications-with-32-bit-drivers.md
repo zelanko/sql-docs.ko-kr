@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906438"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 비트 응용 프로그램을 사용 하 여 32 비트 드라이버와
 32 비트 드라이버와 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  

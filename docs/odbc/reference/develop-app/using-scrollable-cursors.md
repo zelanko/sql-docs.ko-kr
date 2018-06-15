@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915188"
 ---
 # <a name="using-scrollable-cursors"></a>스크롤 가능 커서를 사용 하 여
 스크롤 가능 커서를 사용 하 여 이러한 세 가지 단계로 구성 됩니다.  

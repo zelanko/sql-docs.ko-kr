@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916918"
 ---
 # <a name="installer-dll-api-reference-function"></a>설치 관리자 DLL API 참조 함수
 이 섹션에는 설치 관리자 API DLL에서에서 함수 구문을 설명합니다. 20 함수의 DLL API 설치 관리자 구성 됩니다. 이러한 함수 중 3 개 **SQLGetTranslator**, **SQLRemoveDSNFromIni**, 및 **SQLWriteDSNToIni**, 설치 프로그램 Dll에 의해서만 호출 됩니다. 다른 함수는 설치 및 관리 프로그램에 의해 호출 됩니다.  

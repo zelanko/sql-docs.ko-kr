@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899188"
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름은 유효한 모든 문자 (예: 공백)을 포함할 수 있습니다. 열 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있으면 역 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  

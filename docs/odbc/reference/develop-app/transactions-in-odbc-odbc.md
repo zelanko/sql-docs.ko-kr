@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915486"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC의 트랜잭션
 ODBC의 트랜잭션은 연결 수준 완료 즉, 응용 프로그램에 트랜잭션이 완료 되 면 커밋 또는 해당 연결에서 모든 문 핸들을 통해 수행 된 모든 작업을 롤백합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915428"
 ---
 # <a name="step-2-initialize-the-application"></a>2 단계: 응용 프로그램 초기화
 다음 그림에 나와 있는 것 처럼 응용 프로그램을 초기화 하는 두 번째 단계가입니다. 정확 하 게 수행 되는 동작과 여기 응용 프로그램에 따라 달라 집니다.  

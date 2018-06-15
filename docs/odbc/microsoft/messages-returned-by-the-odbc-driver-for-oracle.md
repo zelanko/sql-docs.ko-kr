@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899658"
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>Oracle에 대 한 ODBC 드라이버에서 반환 되는 메시지
 > [!IMPORTANT]  

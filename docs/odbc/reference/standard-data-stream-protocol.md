@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915228"
 ---
 # <a name="standard-data-stream-protocol"></a>표준 데이터 스트림 프로토콜
 표준 데이터 스트림 프로토콜은 한 가지 방법은 데이터 유형이 다른 Dbms에 액세스할 수 있습니다. 사실, 표준 데이터 스트림을 프로토콜은 이미: ANSI/ISO 원격 데이터베이스 액세스 RDA () 표준 ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615))는 IBM DRDA 분산 관계형 데이터베이스 아키텍처 () 및 ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). 두 시스템 프라미스 서 표시, 모두 오늘 구현 광범위 하 게 됩니다.

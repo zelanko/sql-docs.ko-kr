@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913048"
 ---
 # <a name="interoperability"></a>상호 운용성
 *상호 운용성* 지원은 서로 다른 여러 Dbms와 함께 작동 하도록 단일 응용 프로그램의 기능입니다. 일반, 상호 운용 가능한 응용 프로그램을 작성할 필요가 ODBC의 개발에 중요 한 요인 중 하나 였습니다. 그러나 상호 운용성은 뒤에 "하지 상호 운용 가능"에서 간단한 경로가 아닙니다 "완전히 상호 운용 가능 합니다."를 경로 분기가 여러 개 및 각 균형을 맞추는 기능, 속도, 코드 복잡성 및 개발 시간이 필요 합니다.  

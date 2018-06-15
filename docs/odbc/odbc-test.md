@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914508"
 ---
 # <a name="odbc-test"></a>ODBC 테스트
 Microsoft® ODBC 테스트는 ODBC 드라이버 및 ODBC 드라이버 관리자를 테스트 하는 데 사용할 수 있는 ODBC 사용 응용 프로그램입니다. ANSI 및 유니코드 지원 버전 ODBC 테스트의 ODBC 3.51에 포함 되어 있습니다. 해당 파일은 다음과 같습니다.  

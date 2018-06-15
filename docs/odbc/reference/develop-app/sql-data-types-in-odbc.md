@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912368"
 ---
 # <a name="sql-data-types-in-odbc"></a>Odbc에서 SQL 데이터 형식
 SQL 데이터 유형은 데이터 원본에 저장 되어 있는 데이터 형식입니다.  

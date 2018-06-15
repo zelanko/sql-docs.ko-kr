@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909398"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect를 사용 하 여 연결
 **SQLDriverConnect** 연결 문자열을 사용 하 여 데이터 원본에 연결 하는 데 사용 됩니다. **SQLDriverConnect** 대신 사용 됩니다 **SQLConnect** 이유는 다음과 같습니다.  

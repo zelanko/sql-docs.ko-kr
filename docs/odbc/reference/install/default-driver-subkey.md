@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915738"
 ---
 # <a name="default-driver-subkey"></a>기본 드라이버의 하위 키
 기본 하위 키에서 기본 데이터 원본을 사용 하는 드라이버를 설명 하는 단일 값을 포함 합니다. 이 값의 형식은 다음 표에 표시 됩니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915829"
 ---
 # <a name="odbc-reference"></a>ODBC 참조
 다음 항목은 구문 및 모든 ODBC 함수에 대 한 의미 체계 정보를 포함 합니다.  

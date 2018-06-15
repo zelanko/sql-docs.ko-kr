@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914478"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버
 Microsoft Visual FoxPro에 데이터베이스 생성 및 응용 프로그램 개발을 위한 강력한 개체 지향 환경입니다. Microsoft Visual FoxPro ODBC 드라이버 응용 프로그램을을 열고, 쿼리, Visual FoxPro 및 데이터베이스 연결 열기 (ODBC) 인터페이스를 통해 FoxPro의 이전 버전에서 데이터를 업데이트할 수 있습니다.  

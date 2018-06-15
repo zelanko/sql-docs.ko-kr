@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903238"
 ---
 # <a name="set-path-command"></a>SET 경로 명령
 파일 검색에 대 한 경로 지정합니다. 드라이버 관련 정보는 주의 참조 하세요.  

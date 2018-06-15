@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901305"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 연결 풀링 옵션 설정
 연결 풀링은 사용할 때마다 다시 설정에 필요 하지 않은 연결 풀에서 연결을 사용 하도록 응용 프로그램입니다. 사용할 수는 **연결 풀링** 탭은 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하도록 설정 하 고 성능 모니터링을 사용 하지 않도록 설정 합니다. 연결 제한 시간을 설정 하는 드라이버 이름을 두 번 클릭 합니다.  

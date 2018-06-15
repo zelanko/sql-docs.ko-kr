@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902888"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (데스크톱 데이터베이스 드라이버)
 고유 인덱스 반환 됩니다 (있는 경우)에서 SQL_BEST_ROWID 플래그를 *fColType*합니다. SQL_ROWVER 플래그에 대 한 결과 집합이 반환 됩니다.  

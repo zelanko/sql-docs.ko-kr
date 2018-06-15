@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905692"
 ---
 # <a name="using-connection-strings"></a>연결 문자열을 사용 하 여
 Visual FoxPro 데이터 원본에 연결 하는 연결 문자열을 사용할 수 있습니다.  

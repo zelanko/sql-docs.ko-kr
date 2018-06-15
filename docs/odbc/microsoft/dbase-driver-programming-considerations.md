@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898448"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  

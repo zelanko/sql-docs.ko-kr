@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912148"
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 모든 ODBC 응용 프로그램에 대 한 첫 번째 작업은 드라이버 관리자; 로드 이 과정은 운영 체제 따라 다릅니다. 예를 들어 Microsoft® Windows NT® 서버/Windows 2000 Server, Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98을 실행 하는 컴퓨터에서 응용 프로그램 중 하나에 연결 드라이버 관리자 라이브러리 또는 호출  **LoadLibrary** 드라이버 관리자 DLL을 로드할 수 있습니다.  

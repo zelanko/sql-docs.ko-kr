@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903108"
 ---
 # <a name="odbc-component-files"></a>ODBC 구성 요소 파일
 ODBC 데스크톱 데이터베이스 드라이버 4.0의 각 구성 요소에는 ODBC 드라이버 파일이 필요 합니다.  

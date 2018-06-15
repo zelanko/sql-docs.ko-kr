@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915608"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>1 단계: 데이터 원본에 연결
 첫 번째 단계는 응용 프로그램에서 데이터 원본에 연결 하는 것입니다. 필요한 함수를 포함 하 여이 단계는 다음 그림에 표시 됩니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912198"
 ---
 # <a name="retrieving-results-advanced"></a>검색 결과 (고급)
 응용 프로그램에서 오프셋 바인딩된 데이터 버퍼 주소 및 해당 길이/표시기 추가 되어 있는지를 지정할 수 때 버퍼 주소 **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos** 호출 됩니다. 추가 하는이 코드의 결과 이러한 작업에 사용 되는 주소를 결정 합니다.  

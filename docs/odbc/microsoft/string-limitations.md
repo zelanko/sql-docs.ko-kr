@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902658"
 ---
 # <a name="string-limitations"></a>문자열 제한 사항
 SQL 문의 문자열의 최대 길이 65, 000 자입니다.  

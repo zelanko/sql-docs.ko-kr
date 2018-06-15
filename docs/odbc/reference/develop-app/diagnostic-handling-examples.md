@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908198"
 ---
 # <a name="diagnostic-handling-examples"></a>진단 처리 예제
 다음 예제에서는 ODBC 연결의 다양 한 구성 요소는 진단 메시지를 생성할 수 있습니다 및 다양 한 드라이버와 응용 프로그램에 진단을 반환할 수 있습니다 보여 **SQLGetDiagRec**합니다.  

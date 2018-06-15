@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919130"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.8 드라이버에 3.5 드라이버를 업그레이드합니다.
 이 항목에서는 ODBC 3.8 드라이버에 ODBC 3.5 드라이버 업그레이드 시 고려 사항 및 지침을 제공 합니다.  

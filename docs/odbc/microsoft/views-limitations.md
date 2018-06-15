@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908176"
 ---
 # <a name="views-limitations"></a>뷰 제한 사항
 지원 되지 dBASE, 텍스트, Microsoft Excel 또는 Paradox, 드라이버.

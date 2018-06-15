@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912308"
 ---
 # <a name="executing-a-statement"></a>문 실행
 네 가지 방법으로 컴파일되는 경우 데이터베이스 엔진 및 사용자 정의 하 여 (준비)에 따라 문을 실행 하려면:  

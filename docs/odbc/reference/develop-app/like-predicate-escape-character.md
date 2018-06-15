@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911868"
 ---
 # <a name="like-predicate-escape-character"></a>마찬가지로 조건자 이스케이프 문자
 에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 임의 문자 및 밑줄 (_) 하나의 문자를 찾습니다. 실제 백분율 기호는 하거나에 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 야 백분율 기호 또는 밑줄 합니다. 정의 하는 이스케이프 시퀀스는 **같은** 조건자 이스케이프 문자는:  

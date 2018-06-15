@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911728"
 ---
 # <a name="c-data-types-in-odbc"></a>Odbc에서 C 데이터 형식
 ODBC 응용 프로그램 변수 및 해당 되는 형식 id에서 사용 되는 C 데이터 형식을 정의 합니다. 이러한 문 매개 변수 및 결과 집합 열에 바인딩된 버퍼에서 사용 됩니다. 예를 들어, 응용 프로그램에서 문자 형식으로 결과 집합 열에서 데이터를 검색 하려고 합니다. SQLCHAR 사용 하 여 변수를 선언 * 데이터 입력 하 고이 변수를 SQL_C_CHAR의 형식 식별자를 가진 결과 집합 열에 바인딩합니다. C 데이터 형식 및 유형 식별자의 전체 목록은 참조 하십시오. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  

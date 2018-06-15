@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913088"
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 규칙
 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 트랜잭션과 같은 추가 기능을 포함 하는 핵심 인터페이스 규칙에 따라 수준 기능 수준 1 인터페이스 규칙 수준에 포함 되어 있습니다. 수준 1 드라이버 인터페이스 –와 호환 되는 핵심 인터페이스 규칙 수준에서 기능 외에도 다음을 수행 하는 응용 프로그램 수 있습니다.  

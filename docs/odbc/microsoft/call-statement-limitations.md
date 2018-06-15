@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897658"
 ---
 # <a name="call-statement-limitations"></a>호출 문 제한 사항
 (Microsoft Access 드라이버를 사용할 경우에이 제한이 적용 됩니다.)  

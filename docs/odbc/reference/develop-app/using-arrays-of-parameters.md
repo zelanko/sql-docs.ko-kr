@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919298"
 ---
 # <a name="using-arrays-of-parameters"></a>매개 변수 배열을 사용 하 여
 매개 변수를 호출 하 여 응용 프로그램의 배열을 사용 하 **SQLSetStmtAttr** 와 *특성* SQL_ATTR_PARAMSET_SIZE 매개 변수 집합의 수를 지정할 수의 인수입니다. 호출 **SQLSetStmtAttr** 와 *특성* SQL_ATTR_PARAMS_PROCESSED_PTR 드라이버 처리 하는 매개 변수 집합의 수를 반환할 수 있는 변수의 주소를 지정할 수의 인수 포함 하 여 오류를 설정합니다. 호출 **SQLSetStmtAttr** 와 *특성* 매개 변수 값의 각 행에 대 한 상태 정보를 반환 하는 배열을 가리키는 SQL_ATTR_PARAM_STATUS_PTR의 인수입니다. 드라이버는 이러한 주소 문에 대 한 유지 관리 하는 구조에 저장 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911078"
 ---
 # <a name="text-file-format-text-file-driver"></a>텍스트 파일 형식 (텍스트 파일 드라이버)
 텍스트 ODBC 드라이버에는 구분 되 고 고정 너비 텍스트 파일을 모두 지원합니다. 선택적 헤더 줄과 0 개 이상의 텍스트 줄의 텍스트 파일로 구성 됩니다.  

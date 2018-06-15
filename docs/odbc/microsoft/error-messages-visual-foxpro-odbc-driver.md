@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902314"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>오류 메시지 (Visual FoxPro ODBC 드라이버)
 오류가 발생 하면 Visual FoxPro 드라이버에서 다음 정보를 반환 합니다.  

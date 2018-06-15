@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915558"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램을 실행 하 여 테이블에 변경 내용을 확인는 **업데이트**, **삭제**, 및 **삽입** 문. 이러한 문은 최소 SQL 문법의 규칙 수준과의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  

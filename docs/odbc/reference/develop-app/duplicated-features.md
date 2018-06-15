@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913371"
 ---
 # <a name="duplicated-features"></a>중복 된 기능
 다음 ODBC 2입니다. *x* 함수 ODBC 3에 의해 복제 된 했습니다. *x* 함수입니다. 결과적으로 ODBC 2. *x* ODBC 3에서 함수는 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 함수는 대체 함수 라고 합니다.  

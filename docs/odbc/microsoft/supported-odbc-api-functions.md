@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913338"
 ---
 # <a name="supported-odbc-api-functions"></a>지원 되는 ODBC API 함수
 평준화의 목적은 어떤 기능을 사용할 수에 드라이버에서 응용 프로그램에 알리기 위해 하는 것입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심과 수준 1 기능을 지원 합니다.  

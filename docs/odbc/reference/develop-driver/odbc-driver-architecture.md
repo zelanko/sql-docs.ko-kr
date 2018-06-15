@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917328"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 드라이버 아키텍처
 드라이버 작성자 응용 프로그램 특정 DBMS SQL을 사용할 수 있는지 여부를 드라이버 아키텍처 수에 영향을 알고 있어야 합니다.  

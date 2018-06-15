@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909108"
 ---
 # <a name="fetching-data"></a>데이터 페치
 결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하기는 프로세스 라고 *인출*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  

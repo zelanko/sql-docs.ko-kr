@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914868"
 ---
 # <a name="using-data-buffers"></a>데이터 버퍼를 사용 하 여
 데이터 버퍼 라는 세 가지의 정보로 설명 됩니다: 유형, 주소 및 바이트 길이입니다. 함수가이 가지 정보 중 필요한 이미 알고 있지 않는 때마다 응용 프로그램 전달 된 인수가 있습니다.  

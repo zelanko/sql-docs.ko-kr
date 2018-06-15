@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912268"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations 가진 행을 인출합니다.
 에를 호출 하 여 책갈피를 사용 하 여 행 집합에 데이터를 따라 다시 인출 수 수 **SQLBulkOperations 합니다.** 가져와야 하는 행 바인딩된 책갈피 열에 있는 책갈피로 식별 됩니다. 열 값이 SQL_COLUMN_IGNORE는 페치 되지 않습니다.  

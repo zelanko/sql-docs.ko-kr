@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917138"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  

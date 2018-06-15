@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901220"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버와 함께 사용할 파일
 ODBC 데스크톱 데이터베이스 드라이버는 Microsoft Jet 데이터베이스 엔진, 설치 가능한 ISAM 파일 및 Microsoft ODBC 파일에 사용 됩니다. 모든 제품의 재배포를 위해 필요 하며 일부는 핵심 구성 요소입니다.  

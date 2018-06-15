@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913328"
 ---
 # <a name="binding-parameter-markers"></a>바인딩 매개 변수 표식
 응용 프로그램 호출 하 여 매개 변수를 바인딩할 **SQLBindParameter**합니다. **SQLBindParameter** 한 번에 하나의 매개 변수를 바인딩합니다. 응용 프로그램이 다음을 지정합니다.  

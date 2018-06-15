@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870728"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>SQL Server 마이그레이션 평가 수행
 단계별 지침을 통해 온-프레미스 SQL Server, 데이터 마이그레이션 길잡이 사용 하 여 Azure SQL 데이터베이스 또는 Azure VM에서 실행 중인 SQL Server로 마이그레이션하기 위한 첫 번째 평가 수행할 수 수 있습니다.

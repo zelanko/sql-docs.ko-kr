@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916018"
 ---
 # <a name="driver-architecture"></a>드라이버 아키텍처
 드라이버 아키텍처는 SQL 문에 있는 소프트웨어 프로세스에 따라 두 가지 범주에 해당 됩니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916868"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 및 표준 CLI
 ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (이러한 표준의 각각의 상위 집합 ODBC 기능에는 있습니다.)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909928"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio Analyzer를 사용 하도록 설정
 > [!IMPORTANT]  

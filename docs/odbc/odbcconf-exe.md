@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914308"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF 합니다. EXE
 ODBCCONF.exe는 ODBC 드라이버 및 데이터 원본 이름을 구성할 수 있는 명령줄 도구입니다.  

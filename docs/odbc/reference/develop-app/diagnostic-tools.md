@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909718"
 ---
 # <a name="diagnostic-tools"></a>진단 도구
 ODBC 응용 프로그램에서 문제를 진단 하는 두 개의 시설 지원할 수 있습니다. ODBC 관리자에서 사용 가능 하 고 구현 된 드라이버 관리자에서 둘 다 있습니다. *추적* 함수 호출의 시퀀스를 로그 파일에 기록 하는 수단을 제공 합니다. Visual Studio Analyzer 분산된 환경에 구성 요소와의 상호 작용에 대 한 정보 분석을 허용합니다.  

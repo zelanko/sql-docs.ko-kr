@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911808"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>함수 매핑 드라이버 관리자에서
 드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 진입점을 지원 합니다. 데코 레이트 되지 않은 함수 (**SQLDriverConnect**)은 ANSI 형식 함수입니다. 유니코드 형식으로 데코레이팅되 어는 *W* (**: SQLDriverConnectW**.)  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913888"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>위치 지정된 Update 및 Delete 문을 시뮬레이션
 데이터 원본 위치 지정된 업데이트를 지원 하지 않으며 delete 문의 하는 경우 이러한 드라이버 시뮬레이션할 수 있습니다. 예를 들어 ODBC 커서 라이브러리 시뮬레이션 위치 지정된 update 및 delete 문을 합니다. 위치 지정된 update 및 delete 문을 시뮬레이트하기 위한 일반적인 전략 검색 결과 프로토콜로 위치 지정 된 문을 변환 하는 것입니다. 대체 하 여 이렇게는 **WHERE CURRENT OF** 절은 검색 결과를 **여기서** 현재 행을 식별 하는 절.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915578"
 ---
 # <a name="using-concise-functions"></a>간결 하 게 함수를 사용 하 여
 일부 ODBC 함수 설명자를 암시적으로 액세스할을 수 있습니다. 응용 프로그램 작성자 사실을 알 수 있을 호출 보다 편리 하 게 **SQLSetDescField** 또는 **SQLGetDescField**합니다. 이 함수가 호출 될 *간결한* 다양 한을 설정 하거나 가져오기 설명자 필드를 비롯 한 함수를 수행 하기 때문에 작동 합니다. 일부 간결 하 게 함수를 사용 하는 응용 프로그램을 설정 하거나 단일 함수 호출에서 여러 관련된 설명자 필드를 검색 합니다.  

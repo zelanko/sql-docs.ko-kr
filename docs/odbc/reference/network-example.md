@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915158"
 ---
 # <a name="network-example"></a>네트워크 예
 다음이 그림은 이전 구성 들의 각각이 단일 네트워크에 나타날 수 방법을 보여줍니다.  

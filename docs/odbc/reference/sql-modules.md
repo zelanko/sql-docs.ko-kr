@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915548"
 ---
 # <a name="sql-modules"></a>SQL 모듈
 DBMS SQL 문을 보내기 위한 두 번째 방법은 모듈을 통해 것입니다. 짧게 모듈은 호스트 프로그래밍 언어에서에서 호출 된 프로시저의 그룹으로 구성 됩니다. 각 프로시저는 단일 SQL 문 있어서 데이터가 하 고 프로시저에서 매개 변수를 통해 전달 됩니다.  

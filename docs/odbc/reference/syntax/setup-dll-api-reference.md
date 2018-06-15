@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916508"
 ---
 # <a name="setup-dll-api-reference"></a>설치 프로그램 DLL API 참조
 이 섹션에서는 드라이버 설치는 두 개의 구성 된 DLL API의 구문을 설명 (**ConfigDriver** 및 **ConfigDSN**). **ConfigDriver** 및 **ConfigDSN** 별도의 DLL을 설치 하거나 드라이버 DLL에에서 있을 수 있습니다.  

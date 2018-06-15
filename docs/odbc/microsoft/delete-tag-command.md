@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900418"
 ---
 # <a name="delete-tag-command"></a>태그 명령 삭제
 복합 인덱스 (.cdx) 파일에서 태그 또는 태그를 제거합니다.  

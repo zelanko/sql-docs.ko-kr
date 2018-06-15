@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915508"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>작성 하 고 SQL 문을 실행 하는 3 단계:
 다음 그림에 나와 있는 것 처럼 작성 하 고 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 메서드는 매우 달라 집니다. 응용 프로그램 사용자 입력에 따라 SQL 문을 작성, SQL 문을 입력 하 라는 하거나 하드 코드 된 SQL 문을 사용 될 수 있습니다. 자세한 내용은 참조 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  

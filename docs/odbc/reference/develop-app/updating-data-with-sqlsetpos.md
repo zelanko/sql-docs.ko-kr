@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916208"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos 사용 하 여 업데이트 데이터
 응용 프로그램을 업데이트 하거나 삭제 된 행 집합의 모든 행 **SQLSetPos**합니다. 호출 **SQLSetPos** 편리 하 게 하는 대신 하면 작성 하 고 SQL 문을 실행 합니다. 데이터 소스 위치 지정 된 SQL 문을 지원 하지 않는 경우에 위치 지정된 업데이트를 지 원하는 ODBC 드라이버를 수 있습니다. 함수 호출을 사용 하 여 완전 한 데이터베이스 액세스를 얻기 위한 패러다임의 일부인 것입니다.  

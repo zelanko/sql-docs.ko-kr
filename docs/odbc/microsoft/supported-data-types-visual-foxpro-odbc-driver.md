@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914448"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>지원 되는 데이터 형식 (Visual FoxPro ODBC 드라이버)
 ODBC API 및 Microsoft 쿼리에서 드라이버에서 지 원하는 데이터 형식의 목록을 표시 합니다.  

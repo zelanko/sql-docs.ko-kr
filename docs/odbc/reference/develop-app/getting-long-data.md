@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913248"
 ---
 # <a name="getting-long-data"></a>긴 데이터 가져오기
 Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 255 자 같은 특정 크기에 대 한 이진 데이터입니다. 이 데이터 만큼 작지 않아서 몇 천 문자의 파트 설명 등의 단일 버퍼에 저장 될 수 있습니다. 그러나 너무 길어 긴 텍스트 문서 또는 비트맵 처럼 메모리에 저장할 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없습니다, 때문에 사용 하 여 파트에서 드라이버에서 검색 된 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  

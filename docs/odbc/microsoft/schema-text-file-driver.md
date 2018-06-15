@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899638"
 ---
 # <a name="schema-text-file-driver"></a>스키마 (텍스트 파일 드라이버)
 테이블의 형식으로 OEM를 사용 하 여 소스 파일의로 작성 된 테이블의 첫 번째 행에 열 이름이 포함 되는지 여부를 검사할 열 유형을 결정 하는 행 수를 포함 하 여 데이터 원본에 각 테이블 (텍스트 파일)에 대 한 정보를 포함 하는 스키마 또는 ANSI 코드 페이지 및 각 열 이름, 데이터 형식 및 너비입니다.

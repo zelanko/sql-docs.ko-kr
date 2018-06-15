@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910838"
 ---
 # <a name="initialization-of-descriptor-fields"></a>설명자 필드의 초기화
 응용 프로그램 행 설명자를 할당할 때 해당 필드에 표시 된 대로 초기 값을 수신 하는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다. SQL_DESC_TYPE 필드의 초기 값은 SQL_DEFAULT 합니다. 이 응용 프로그램에 표시 하기 위해 데이터베이스 데이터의 표준 처리를 제공합니다. 응용 프로그램 설명자 레코드의 필드를 설정 하 여 데이터의 서로 다른 처리를 지정할 수 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908498"
 ---
 # <a name="data-buffer-address"></a>데이터 버퍼 주소입니다.
 응용 프로그램이 종종 명명 된 인수에서 드라이버를 데이터 버퍼의 주소를 전달 *ValuePtr* 또는 비슷한 이름입니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, 응용 프로그램의 주소를 지정 된 *날짜* 변수:  

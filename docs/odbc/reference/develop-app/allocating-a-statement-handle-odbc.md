@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908908"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>ODBC 문 핸들 할당
 응용 프로그램에서 문을 실행 하려면, 먼저 다음과 같이 문 핸들을 할당 해야 합니다.  

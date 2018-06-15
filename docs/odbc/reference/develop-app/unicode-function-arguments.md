@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917958"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
 ODBC 3.5 (또는 이상) 드라이버 관리자는 해당 인수에 문자열 또는 대 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 지원 합니다. 유니코드 함수 함수로 구현 됩니다 (의 접미사와 함께 *W*), 매크로로 하지 않습니다. ANSI 함수 (또는의 접미사 없이 호출할 수 있는 *A*)는 현재 ODBC API 함수에 동일 합니다.  

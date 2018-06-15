@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915748"
 ---
 # <a name="step-4a-fetch-the-results"></a>4a 단계: 결과 인출 합니다.
 다음 그림에 나와 있는 것 처럼 결과 인출 하는 다음 단계가입니다.  

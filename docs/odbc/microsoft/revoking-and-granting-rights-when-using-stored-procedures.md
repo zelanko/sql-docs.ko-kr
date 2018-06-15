@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904138"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>저장된 프로시저를 사용 하는 경우 호출 및 권한 부여 권한
 > [!IMPORTANT]  

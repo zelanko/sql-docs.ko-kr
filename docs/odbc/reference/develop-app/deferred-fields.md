@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910268"
 ---
 # <a name="deferred-fields"></a>지연 된 필드
 값 *필드 지연* 시간을 설정 하지만 드라이버는 지연 된 효과 대 한 변수의 주소를 저장 하는 경우에 사용 되지 않습니다. 변수의 내용을에 대 한 호출 시 드라이버는 응용 프로그램 매개 변수 설명자에 대 한 사용 **SQLExecDirect** 또는 **SQLExecute**합니다. 응용 프로그램 행 설명자를 사용 하는 드라이버 변수의 내용을 인출 시간에 사용합니다.  

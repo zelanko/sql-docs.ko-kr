@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911778"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>드라이버 관리자&#39;연결 과정에서 s 역할
 응용 프로그램 직접 호출 하지 않습니다 드라이버 기능인 기억 합니다. 대신, 동일한 이름 가진 드라이버 관리자 함수를 호출 하 고 드라이버 관리자 드라이버 함수를 호출 합니다. 일반적으로 거의 즉시 전파 됩니다. 예를 들어 응용 프로그램 호출 **SQLExecute** 드라이버 관리자를 호출 하는 드라이버 관리자와 후 몇 가지 오류 검사 **SQLExecute** 드라이버에서입니다.  

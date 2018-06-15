@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916408"
 ---
 # <a name="network-database-access"></a>네트워크 데이터베이스 액세스
 네트워크를 통해 데이터베이스에 액세스 하는 여러 독립적인, 각각 및 프로그래밍 인터페이스 아래에 있는 구성 요소 필요 합니다. 이러한 구성 요소는 다음 그림에 표시 됩니다.  

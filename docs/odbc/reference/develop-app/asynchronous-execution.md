@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907458"
 ---
 # <a name="asynchronous-execution"></a>비동기 실행
 ODBC 문 및 연결 작업을 모두에 대 한 비동기 작업을 지원합니다. 비동기 작업이 완료 되 면을 결정 하는 방법은 두 가지가 있습니다.  

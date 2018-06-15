@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910358"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>가져오기 및 설명자 필드를 설정 합니다.
 이 섹션에는 검색 하거나 설명자 필드에서 값을 설정 하는 응용 프로그램 צ ְ ײ 메서드에 대해 설명 합니다.  

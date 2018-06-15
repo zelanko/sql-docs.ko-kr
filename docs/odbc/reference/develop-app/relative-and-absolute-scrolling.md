@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914128"
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
 대부분의 스크롤 옵션의 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음 인출 지원 이전, 첫 번째 및 마지막 행 집합으로도 같이 상대 인출 (행 집합을 인출할 *n* 현재 행 집합의 시작 부분부터 행)과 절대 인출 (페치를 시작 하는 행 집합 행에서 *n*). 경우 *n* 는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행으로 시작 하는 행 집합을 인출 하는 – 1 행의 절대 인출을 의미 합니다.  

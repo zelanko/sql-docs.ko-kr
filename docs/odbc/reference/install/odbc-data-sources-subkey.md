@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915468"
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC 데이터 원본 하위 키
 ODBC 데이터 소스 하위 키 아래의 값에는 데이터 원본을 나열 합니다. 다음 표에 나와 있는 것 처럼 이러한 값의 형식은입니다.  

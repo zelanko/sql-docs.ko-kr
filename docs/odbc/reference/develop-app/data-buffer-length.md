@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910208"
 ---
 # <a name="data-buffer-length"></a>데이터 버퍼 길이
 응용 프로그램 데이터 버퍼의 바이트 길이 드라이버에 전달 명명 된 인수로 *BufferLength* 또는 비슷한 이름입니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, 응용 프로그램의 길이 지정 된 *ValuePtr* 버퍼 (**sizeof (***ValuePtr***)**):  

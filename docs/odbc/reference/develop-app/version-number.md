@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917308"
 ---
 # <a name="version-number"></a>버전 번호
 각각 서로 다른 기능 ODBC의 여러 버전이 있습니다. 응용 프로그램을 호출 하 여 특정 드라이버 및 ODBC 버전 드라이버 관리자 지원 확인 **SQLGetInfo** SQL_ODBC_VER 및 SQL_DRIVER_ODBC_VER 옵션입니다.

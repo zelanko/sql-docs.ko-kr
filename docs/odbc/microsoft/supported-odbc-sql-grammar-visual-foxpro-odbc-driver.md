@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906918"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>지원 되는 ODBC SQL 문법 (Visual FoxPro ODBC 드라이버)
 Microsoft Visual FoxPro ODBC 드라이버가 다음을 지원합니다.  

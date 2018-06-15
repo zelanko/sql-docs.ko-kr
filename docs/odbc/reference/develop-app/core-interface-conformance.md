@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913988"
 ---
 # <a name="core-interface-conformance"></a>핵심 인터페이스 규칙
 모든 ODBC 드라이버 이상 핵심 수준 통해 인터페이스를 준수 합니다. 핵심 수준에서 기능 대부분의 제네릭 상호 운용 가능한 응용 프로그램에서 필요한 것 이므로, 드라이버는 이러한 응용 프로그램 작업할 수 있습니다. 핵심 수준에서 기능 ISO CLI 사양에 정의 된 기능 하 고 Open 그룹 CLI 사양에 정의 된 nonoptional 기능에도 해당 합니다. 핵심 수준 인터페이스 – 준수 ODBC 드라이버는 다음과 같은 작업을 수행 하는 응용 프로그램을 허용 합니다.  

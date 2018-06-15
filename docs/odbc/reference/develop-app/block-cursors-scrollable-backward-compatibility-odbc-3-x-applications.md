@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913998"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>블록 커서, 스크롤 가능 커서 및 ODBC 3.x 응용 프로그램에 대 한 이전 버전과 호환성
 둘 다의 존재 여부 **SQLFetchScroll** 및 **SQLExtendedFetch** 사이 API 응용 프로그래밍 인터페이스 (), 일련의 함수는 ODBC의 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 일련의 함수는 드라이버 구현 합니다. 이 분할은 ODBC 3에서 요구 사항이 균형을 조정 해야 합니다. *x*를 사용 하 여 **SQLFetchScroll**는 표준을 준수 하 고 ODBC 2와 호환 되어야 합니다. *x*를 사용 하 여 **SQLExtendedFetch**합니다.  

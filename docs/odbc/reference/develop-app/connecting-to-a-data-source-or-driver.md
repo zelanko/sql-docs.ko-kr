@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908568"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>연결에 대 한 데이터 원본이 나 드라이버
 응용 프로그램은 임의 개수의 드라이버 및 데이터 원본에 연결할 수 있습니다. 이러한 다양 한 드라이버 및 데이터 원본, 동일한 드라이버 및 다양 한 데이터 원본 또는 데이터 원본 및 동일한 드라이버에도 여러 연결 될 수 있습니다.  

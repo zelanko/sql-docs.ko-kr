@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915088"
 ---
 # <a name="unicode"></a>유니코드
 유니코드 문자 여러 언어에 대 한 인코딩을 정의 합니다.  

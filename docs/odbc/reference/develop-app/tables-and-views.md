@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914898"
 ---
 # <a name="tables-and-views"></a>테이블 및 뷰
 ODBC 함수에서 테이블 및 뷰는 서로 전환이 가능 합니다. 용어 *테이블* 테이블 및 뷰는 예외에 대 한 사용 용어 *보기* 명시적으로 사용 됩니다.

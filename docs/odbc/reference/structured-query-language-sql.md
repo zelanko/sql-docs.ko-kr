@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916639"
 ---
 # <a name="structured-query-language-sql"></a>SQL(구조적 쿼리 언어)(Structured Query Language)
 일반적인 DBMS를 사용 하면 저장, 액세스 및를 구성 하 고 효율적인 방식으로 데이터를 수정할 수 있습니다. 원래, Dbms의 사용자에 게 프로그래머 했습니다. 저장 된 데이터에 액세스 하는 프로그램 COBOL와 같은 프로그래밍 언어로 작성 필요 합니다. 이러한 프로그램 배경이 사용자에 게 친숙 한 인터페이스를 보여 쓴 종종를 잘 알고 있는 프로그래머의 서비스 필요한 데이터 자체에 대 한 액세스. 데이터에 대 한 임시 액세스는 큰 의미가 없습니다.  

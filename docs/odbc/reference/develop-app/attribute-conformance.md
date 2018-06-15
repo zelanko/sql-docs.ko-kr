@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913738"
 ---
 # <a name="attribute-conformance"></a>특성 규칙
 다음 표에서이 잘 정의 된 각 ODBC 환경 특성의 규칙 수준과 보여 줍니다.  
