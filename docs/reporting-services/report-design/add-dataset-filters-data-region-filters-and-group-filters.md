@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022620"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 집합을 사용하는 경우와 같이 데이터 집합 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
