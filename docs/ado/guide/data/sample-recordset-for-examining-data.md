@@ -2,7 +2,6 @@
 title: 레코드 집합 데이터를 검사 하기 위한 샘플 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca05161aad6aaaf79f1e1af85d7e83d55e6997ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a6bb3eb784c3979dd136f237c5d153547d30027
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272492"
 ---
 # <a name="sample-recordset-for-examining-data"></a>데이터를 검사 하기 위한 샘플 레코드 집합
 첫째, 살펴보겠습니다는 **레코드 집합** Microsoft SQL Server에서 기본 Northwind 샘플 데이터에 대해 실행에서 다음 SQL 쿼리를 사용 하 여 반환 된 개체입니다.  

@@ -2,7 +2,6 @@
 title: ParameterDirectionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd6f885b4e69ce73262961cf545eed2fa5a1c4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f66aebdd140d1ce3fe505dfd40fd5f412de7cd9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280578"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 지정 여부는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 는 입력된 매개 변수, 출력 매개 변수, 둘 다는 출력 매개 변수 또는 저장된 프로시저에서 반환 값 및 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1.|기본. 매개 변수는 입력된 매개 변수를 나타냅니다.|  
+|**adParamInput**|1|기본. 매개 변수는 입력된 매개 변수를 나타냅니다.|  
 |**adParamInputOutput**|3|매개 변수는 입력 및 출력 매개 변수를 나타냅니다.|  
 |**adParamOutput**|2|매개 변수는 출력 매개 변수를 나타냅니다.|  
 |**adParamReturnValue**|4|매개 변수를 반환 값을 나타냅니다.|  

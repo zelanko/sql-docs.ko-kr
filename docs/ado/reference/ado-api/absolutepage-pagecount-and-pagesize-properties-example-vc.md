@@ -2,7 +2,6 @@
 title: AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57a4221f353295c98dae1dbbd87ef6e3ca4400e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3ebfacd674d2b4c1815445712e60484c75f9844
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274774"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +)
 사용 하 여이 예제는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 이름을 표시 하 고 고용 날짜에서 속성을는 ***직원*** 테이블을 한 번에 5 개 레코드입니다.  
@@ -182,7 +182,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 속성 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

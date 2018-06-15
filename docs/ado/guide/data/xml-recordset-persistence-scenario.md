@@ -2,7 +2,6 @@
 title: XML 레코드 집합 지 속성 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0676644c7429d73d551b65fa56c2203025734b38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c16d37a0ded8b8a4a24666a426e123505eeff8f0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273412"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지 속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP Active Server Pages () 응용 프로그램에 만들어집니다.  
@@ -116,6 +116,6 @@ ms.lasthandoff: 05/03/2018
   
  Default.htm 파일을 닫고 XMLResponse.asp 저장 한 같은 폴더에 저장 합니다. Internet Explorer 4.0을 사용 하 여 열거나 나중 URL http://*sqlserver*/XMLPersist/default.htm은 결과 확인 합니다. 데이터 바인딩된 DHTML 테이블에 표시 됩니다. URL http:// 이제 열 *sqlserver* /XMLPersist/XMLResponse.asp은 결과 확인 합니다. XML이 표시 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)   
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -2,7 +2,6 @@
 title: COMPUTE 절 셰이프 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272832"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 부모를 생성 하는 셰이프 COMPUTE 절 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어져 **레코드 집합**선택적 요소 내용이 장, 새로 만들었거나, 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **레코드 집합** 또는 이전에 모양의 **레코드 집합**; 및 모든 열을 자식 **레코드 집합** 에 나열 된 절에 의해 선택 사항입니다.  
@@ -83,12 +83,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |State|City|모집단|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
+|또는|Medford|200,000|  
+|또는|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|샌디에고|600,000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|또는|Corvallis|300,000|  
   
  이제이 shape 명령을 실행 합니다.  
   
@@ -112,7 +112,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|자식 1에 대 한 참조|CA|  
 |1,200,000|자식 2에 대 한 참조|WA|  
-|1,100,000|Child3에 대 한 참조|OR|  
+|1,100,000|Child3에 대 한 참조|또는|  
   
 ## <a name="child1"></a>Child1  
   
@@ -132,11 +132,11 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |State|City|모집단|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|또는|Medford|200,000|  
+|또는|Portland|400,000|  
+|또는|Corvallis|300,000|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   

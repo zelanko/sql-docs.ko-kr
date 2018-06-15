@@ -2,7 +2,6 @@
 title: RDS 시나리오 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf193da58e2f849981a9d1f0c11885dfc40e7be2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfd70ea9f926732be2a9bac2de198a0865e98760
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274272"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [주소록 탐색 단추](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주소록 응용 프로그램에 대 한 시스템 요구 사항](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

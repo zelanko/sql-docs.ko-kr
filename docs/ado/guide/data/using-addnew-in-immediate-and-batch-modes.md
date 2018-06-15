@@ -2,7 +2,6 @@
 title: 즉시에서 AddNew 및 일괄 처리 모드를 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c66b250780e3b12ae9590796a062426f89920de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54a57f3ae4d5c7ffb7ec1a8de47567ec904cadc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273282"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>즉시에서 AddNew 및 일괄 처리 모드를 사용 하 여
 동작은 **AddNew** 방법은의 업데이트 모드에 따라는 **레코드 집합** 개체와 전달 하는지 여부를 *FieldList* 및 *값*인수입니다.  

@@ -2,7 +2,6 @@
 title: PersistFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,20 +19,21 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 141590f2755323422f44aacb4617905191d3a154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280612"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 저장 하는 형식을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Microsoft Advanced 데이터 테이블 그램 (ADTG) 형식을 나타냅니다.|  
-|**adPersistADO**|1.|ADO의 Extensible Markup Language (XML) 형식 사용될지를 나타냅니다. 이 값 adPersistXML 동일 이며 이전 버전과 호환성에 대 한 포함 합니다.|  
-|**adPersistXML**|1.|Extensible Markup Language (XML) 형식을 나타냅니다.|  
+|**adPersistADO**|1|ADO의 Extensible Markup Language (XML) 형식 사용될지를 나타냅니다. 이 값 adPersistXML 동일 이며 이전 버전과 호환성에 대 한 포함 합니다.|  
+|**adPersistXML**|1|Extensible Markup Language (XML) 형식을 나타냅니다.|  
 |**adPersistProviderSpecific**|2|공급자가 유지할 나타냅니다는 **레코드 집합** 자체 형식을 사용 하 여 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  

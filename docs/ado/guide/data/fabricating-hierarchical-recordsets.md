@@ -2,7 +2,6 @@
 title: 계층적 레코드 집합 구성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e9301ec9204b5d2d6768f7487f279dd5f1eb0f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271532"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>계층적 레코드 집합 구성
 다음 예제에서는 데이터 셰이핑 부모, 자식 및 손자에 대 한 열을 정의 하는 문법을 사용 하 여 데이터 원본 없이 계층적 레코드 집합을 구성 하는 방법을 보여 줍니다. **레코드 집합**합니다.  
@@ -58,7 +58,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  즉시는 **레코드 집합** 되었습니다을 채우거 채워진, 조작 하거나 수 파일에 저장 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   

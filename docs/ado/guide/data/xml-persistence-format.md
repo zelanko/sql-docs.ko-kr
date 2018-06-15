@@ -2,7 +2,6 @@
 title: XML 지 속성 형식 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449353a8a7d8e5109d65e6f4f06ac646946e54a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273302"
 ---
 # <a name="xml-persistence-format"></a>XML 지 속성 형식
 ADO 혹시 계속 될 XML 스트림에 대 한 utf-8 인코딩을 사용 합니다.  
   
  ADO XML 형식의 스키마 section 다음 데이터 섹션에 두 개의 섹션으로 구분 됩니다. 다음은 Northwind 데이터베이스에서 Shippers 테이블에 대 한 예제 XML 파일입니다. 다음 예제는 XML의 다양 한 부분 설명 되어 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -74,5 +74,5 @@ xmlns:z="#RowsetSchema">
   
  데이터 섹션에는 운송 업체에 대 한 정보를 포함 하는 3 개의 행에 있습니다. 빈 행 집합에 대 한 데이터 섹션 비어 있을 수 있지만 \<rs: 데이터 > 태그가 있어야 합니다. 데이터가 없는 작성할 수 태그 줄임 간단 하 게 \<rs: 데이터 / >입니다. 모든 태그 "rs" 접두사로 urn: 스키마에 의해 정의 된 네임 스페이스 임을 나타냅니다.-microsoft-com:rowset 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

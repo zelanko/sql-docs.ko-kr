@@ -2,7 +2,6 @@
 title: 레코드 및 스트림 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62066ab92b6acaa393036a7b4be01499fa830dd3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272422"
 ---
 # <a name="records-and-streams"></a>레코드 및 스트림
 ADO 현재 제공 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 관계형 데이터베이스와 같은 데이터 원본의 정보에에서 액세스 하는 주요 수단으로 하는 개체입니다. 그러나 일부 공급자는 지원의 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체 변수로 대체 또는 보조 개체는 공급자에서 데이터를 조작할 수 있습니다. 에 사양에 대 한 **레코드** 동작을 공급자의 설명서를 참조 하십시오.  

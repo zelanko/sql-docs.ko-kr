@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271632"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 ADO 또는 RDS 프로그래머가 이상적인 것 모든 데이터에서 원본에서 OLE DB 인터페이스를 제공 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 하지만 점점 더 많은 데이터베이스 공급 업체 OLE DB 인터페이스를 구현 하는 경우 일부 데이터 원본은이 방식으로 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템 ODBC를 통해 액세스할 수 있습니다.
@@ -84,7 +84,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
  사용 하는 경우는 **DSN** 또는 **FileDSN**, Windows 제어판의 ODBC 데이터 원본 관리자를 통해 정의 해야 합니다. Microsoft Windows 2000에서 ODBC 관리자 관리 도구에 있습니다. 이전 버전의 Windows에서 ODBC 관리자 아이콘 이름은 **32 비트 ODBC** 또는 그냥 **ODBC**합니다.
 
  설정 하는 대신 한 **DSN**, ODBC 드라이버를 지정할 수 있습니다 (**드라이버 =**), "SQL server;" 서버 이름 (**서버 =**); 및 데이터베이스 이름 (**데이터베이스 =**).
@@ -187,7 +187,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
-|[필터](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[Assert](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
@@ -204,26 +204,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |메서드|ForwardOnly|Dynamic|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니오|사용자 계정 컨트롤|예|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니오|사용자 계정 컨트롤|예|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[업데이트](../../../ado/reference/ado-api/update-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
+|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
 
  * Microsoft Access 데이터베이스에 지원 되지 않습니다.
 
@@ -434,5 +434,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  특정 구현 및 ODBC 용 Microsoft OLE DB Provider에 대 한 기능 정보에 대 한 자세한 내용은 참조는 [OLE DB 프로그래머 참조](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) 하거나 MSDN에서 데이터 액세스 및 저장소 개발자 센터 웹 사이트를 방문 하십시오.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [개체 (ADO) 명령](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [실행 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [(ADO) 레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) [메서드 지원](../../../ado/reference/ado-api/supports-method.md)

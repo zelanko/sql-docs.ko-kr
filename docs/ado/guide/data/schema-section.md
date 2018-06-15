@@ -2,7 +2,6 @@
 title: 스키마 섹션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf1d4edb2e7a79b7db8c7e0ab9c8767e603ec1f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae6bf8cf6fed293864ccebc6a9e7c80e48d23184
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272502"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제와 같이 ADO 업데이트에 대 한 가능한 한 데이터 값의 의미 체계를 유지 하기 위해 각 열에 대 한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열과 소속 된 행 집합의 이름을 합니다. 다음은 최소한의 스키마의 예가입니다.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
  마찬가지로, 있기 때문에 없는 별칭에 대해 정의 `CompanyName` 이전 예에서 `CompanyName` 문서 전체에서 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 가진 열에는 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식은 하기 위한 최선의 가이드의 데이터 형식 섹션을 참조 하십시오.는 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체에서 직접 dt: type 특성을 지정 하거나 열 정의의 중첩 요소로 방법 사용 합니다. 예를 들면 다음과 같습니다.  
+ Dt: type 특성을 가진 열에는 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식은 하기 위한 최선의 가이드의 데이터 형식 섹션을 참조 하십시오.는 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체에서 직접 dt: type 특성을 지정 하거나 열 정의의 중첩 요소로 방법 사용 합니다. 예:  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -178,5 +178,5 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB에 대 한 자세한 내용은 OLE DB에 대 한 XML 문서의 스키마 내에서 사용 하기 위해 사용할 수 있는 구문에 대 한 참조의 정의 ":-microsoft-com:rowset" 및 OLE DB 프로그래머 가이드입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

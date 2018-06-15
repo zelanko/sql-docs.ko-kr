@@ -2,7 +2,6 @@
 title: 오류 예측 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5978768e515f4fc6cf6986dc23e7cec1379c69c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b171309accefd6586c90389574ae702632b8fae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271502"
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류가 발생 하지 않도록은 적어도 오류 처리 중요 합니다. 이 마지막 섹션에는 응용 프로그램 오류가 발생 하기 위해 취할 수 예방 조치의 짧은 목록을 포함 합니다.  

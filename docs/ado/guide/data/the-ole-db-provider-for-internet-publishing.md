@@ -2,7 +2,6 @@
 title: 인터넷 게시에 대 한 OLE DB Provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd7a8d2fd50cd5eb1317cdb102f9052197a925a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee7efbcd02903e8bba38ecfa177ed7e095e0f5e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273032"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시에 대 한 OLE DB Provider
 ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체가 사용 하 여 Microsoft OLE DB Provider for Internet Publishing (게시 공급자 인터넷) 액세스 하 고 리소스를 조작할 웹 폴더 또는 파일 Microsoft FrontPage 처리합니다. ADO와 원본을 지정할 수 있습니다는 **레코드**, **스트림**, 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) url은 URL 이어야 합니다. 수 다음 업로드, 다운로드, 이동, 복사 및 리소스를 삭제 또는 리소스 속성을 직접 조작 합니다.  

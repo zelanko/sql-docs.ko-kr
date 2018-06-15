@@ -2,7 +2,6 @@
 title: 집계 함수, CALC 함수 및 NEW 키워드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271552"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정 다음 기능을 지원 합니다. 작업을 수행할 열을 포함 하는 장에 할당 된 이름은 *장 별칭*합니다.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
  새 필드가 10 진수 형식은 (OLE DB DBTYPE_DECIMAL, 또는 ADO, adDecimal)의 경우 전체 자릿수 및 소수 자릿수 값을 지정 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

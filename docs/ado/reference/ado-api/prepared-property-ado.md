@@ -2,7 +2,6 @@
 title: 속성 (ADO)를 준비 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a5f02d8c1536192832622e26fa4e128a7c04c66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70557d20239eedef30abc280de563a03b39b4a81
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280582"
 ---
 # <a name="prepared-property-ado"></a>준비 된 속성 (ADO)
 컴파일된 버전을 저장할지 여부를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 실행 하기 전에.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **부울** 값으로 설정 **True**, 명령을 준비할 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **Prepared** 속성에 지정 된 쿼리 준비 된 (또는 컴파일된) 버전을 저장 하는 공급자에 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 하기 전에 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 첫 번째 실행 합니다. 명령의 첫 번째 실행 속도가 느려질 수 있습니다이 있지만 공급자 명령의 컴파일된 버전 성능이 향상 됩니다. 후속 실행에 대 한 사용 하는 명령을 컴파일한, 합니다.  
   
  속성이 **False**, 공급자는 실행의 **명령** 컴파일된 버전을 만들지 않고 직접 개체입니다.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [준비 속성 예제 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared 속성 예제(VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

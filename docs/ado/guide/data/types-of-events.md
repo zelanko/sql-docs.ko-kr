@@ -2,7 +2,6 @@
 title: 유형의 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d093fbea3d4c4c6410f19b842ba8907aaa2229e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2438d332e7276dcd06de0bf15984329d7c34469
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273112"
 ---
 # <a name="types-of-events"></a>이벤트 유형
 이벤트의 두 기본 유형이 있습니다. "이벤트에 는" 작업이 시작 되기 전에 호출 되는, 일반적으로 이름에 "는"를 포함-예를 들어 **WillChangeRecordset** 또는 **WillConnect**합니다. 이벤트가 완료 된 후 일반적으로 호출 된 이벤트에 이름에 "Complete"는 포함-예를 들어 **RecordChangeComplete** 또는 **ConnectComplete**합니다. 예외가-와 같은 **InfoMessage** -하지만 연결된 작업이 완료 된 후 발생 합니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="other-events"></a>다른 이벤트  
  다른 이벤트 처리기-즉, 이벤트를 폼의 이름이 없는 **합니다 * 이벤트*** 또는 ***이벤트 * 완료** -는 작업이 완료 된 후에 호출 됩니다. 이러한 이벤트는 **연결 끊기**, **EndOfRecordset**, 및 **InfoMessage**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)   
  [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   

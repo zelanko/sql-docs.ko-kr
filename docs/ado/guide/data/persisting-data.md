@@ -2,7 +2,6 @@
 title: 데이터를 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272202"
 ---
 # <a name="persisting-data"></a>데이터 유지
 (예: 랩톱을 사용 하 여) 휴대용 컴퓨팅 연결 되거나 연결이 끊긴 상태에서 실행할 수 있는 응용 프로그램에 대 한 필요 하 게 되었습니다. ADO는 커서를 저장 하는 기능을 개발자에 게 제공 하 여이 대 한 지원을 추가 했습니다 **레코드 집합** 디스크에 나중에 다시 로드 합니다.  
@@ -116,7 +116,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [레코드 집합 지속성에 대한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)  

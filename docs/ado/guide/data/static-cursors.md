@@ -2,7 +2,6 @@
 title: 정적 커서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a837ce0d285f24772be5a88e29c0929e398e6582
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfd82f9b97f58e6ab75f3ac394e4ef40a6996415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272892"
 ---
 # <a name="static-cursors"></a>정적 커서
 정적 커서는 결과 집합을 커서가 처음 열릴 때 항상 표시 합니다. 구현에 따라 정적 커서는 읽기 전용 또는 읽기/쓰기 및 앞으로 및 뒤로 스크롤을 제공 합니다. 정적 커서 일반적으로 변경 내용을 멤버 자격, 순서 또는 커서가 열린 후에 결과 집합의 값을 검색 하지 않습니다. 이렇게 하려면 필요 하지 않지만 정적 커서는 자신의 업데이트, 삭제 및 삽입을 검색할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  응용 프로그램에 변경 데이터를 감지 하 스크롤 필요 필요가 없는 경우 정적 커서가 적합 하 고 있습니다. 사용 하 여는 **adOpenStatic CursorTypeEnum** ado에서 정적 커서를 사용 하도록 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정방향 전용 커서](../../../ado/guide/data/forward-only-cursors.md)   
  [키 집합 커서](../../../ado/guide/data/keyset-cursors.md)   
  [동적 커서](../../../ado/guide/data/dynamic-cursors.md)

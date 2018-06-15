@@ -2,7 +2,6 @@
 title: 네임 스페이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a3aca2aee11ed1f78fb33ca286b171a28f62d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 419d11660d88f102cfa92628f4ee16fb89d8c422
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272092"
 ---
 # <a name="namespaces"></a>네임스페이스
 다음 4 개의 네임 스페이스를 사용 하는 ADO의 XML 지 속성 형식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 4 개의 네임 스페이스를 사용 하는 ADO의 XML 지 속성 형식입니다.  
   
 |접두사|Description|  
@@ -49,5 +49,5 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
   
  사용자 이름일으로이 이름은 XML 문서 전체에서 일관 되 게 사용 하려면이 옵션을 정의할 수 있습니다. ADO를 항상 "s", "rs", "dt" 작성 되며 "z" 하지만 이러한 접두사 이름은 없습니다 로드 구성 요소에 하드 코딩 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

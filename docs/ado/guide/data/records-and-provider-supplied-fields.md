@@ -2,7 +2,6 @@
 title: 레코드 및 필드 공급자가 제공한 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272572"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 필드 공급자 제공
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 열릴, 소스에서 현재 열린 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 절대 URL 또는 열린와 함께에서 상대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="resource-recordset-columns"></a>리소스 레코드 집합 열  
  A *리소스 레코드 집합* 다음 열으로 구성 됩니다.  
   
-|열 이름|유형|Description|  
+|열 이름|형식|Description|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|읽기 전용입니다. 리소스의 URL을 나타냅니다.|  
 |RESOURCE_PARENTNAME|AdVarWChar|읽기 전용입니다. 부모 레코드의 절대 URL을 나타냅니다.|  
@@ -80,6 +80,6 @@ ms.lasthandoff: 05/03/2018
 |RESOURCE_DISPLAYNAME|AdVarWChar|읽기 전용입니다. 리소스의 표시 이름을 나타냅니다.|  
 |RESOURCE_ISROOT|adBoolean|읽기 전용입니다. True 이면 리소스 컬렉션 또는 구조화 된 문서 루트입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

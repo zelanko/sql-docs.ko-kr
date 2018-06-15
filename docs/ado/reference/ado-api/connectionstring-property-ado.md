@@ -2,7 +2,6 @@
 title: ConnectionString 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b34a524380439dba07d12aa74ef24a870ab8ccc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a7804257f705e05b1ac5cfdcdb034de4fd20cec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277042"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성 (ADO)
 데이터 원본에 대 한 연결을 설정 하는 데 사용 되는 정보를 나타냅니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **ConnectionString** 계열이 포함 된 자세한 연결 문자열을 전달 하 여 데이터 원본을 지정 하려면 속성 *인수* *= value* 문 구분 하 여 세미콜론입니다.  
   
  ADO 지원에 대 한 다섯 가지 인수는 **ConnectionString** 속성; ADO에서 처리 없이 공급자에 게 직접 다른 인수 전달 합니다. 인수 ADO에서 지 원하는 다음과 같습니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

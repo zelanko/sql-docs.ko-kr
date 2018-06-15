@@ -2,7 +2,6 @@
 title: 매개 변수가 있는 중간 계산 명령 사용 하 여 명령 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2affa34fd504397b045e100ec8f07232d6dfec7e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253f961c066932cc6d5913fab0fb8e649d9c80cd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272302"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간으로 매개 변수화 된 명령을 계산 명령
 일반적으로 매개 변수가 있는 shape APPEND 명령에는 부모 만드는 **레코드 집합** 쿼리 명령 및 절 자식 **레코드 집합** 매개 변수가 있는 쿼리 명령- 즉, 매개 변수 자리 표시자를 포함 하는 명령 (매개 변수 "?"). 명령의 결과로 만들어지는 셰이핑된 **레코드 집합** 부모는 상위 수준 차지 하는 두 개의 수준이 및 자식 하위 수준을 차지 합니다.  
@@ -33,5 +33,5 @@ ms.lasthandoff: 05/03/2018
   
  장애가 만들려고 명령을 shapeCOMPUTE의 그룹화 성능과 집계 함수를 호출 하는이 기능에 대해 사용 하는 일반적인 **레코드 집합** 자식에 대 한 분석 정보를 사용 하 여 개체 **레코드 집합** . 또한 매개 변수가 있는 shape 명령 이기 때문에 될 때마다 부모 장 열에 액세스 하는 새 자식 **레코드 집합** 검색 될 수 있습니다. 중첩 된 자식에서 파생 되므로은 또한 다시 계산 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)

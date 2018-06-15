@@ -2,7 +2,6 @@
 title: 원격 데이터 액세스를 위한 솔루션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44b68255004047c9008fa8e79fccc4f047419e46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df366a09a146f54bca5f6fec056fe8c7865a0808
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274522"
 ---
 # <a name="solutions-for-remote-data-access"></a>원격 데이터 액세스를 위한 솔루션
 ## <a name="the-issue"></a>문제  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="the-solution"></a>솔루션  
  프로그래밍 모델을 정의 하는 RDS-일련의 액세스 하 고 데이터 소스를 업데이트 하는 데 필요한 활동-인터넷 정보 서비스 (IIS)와 같은 매개 자를 통해 데이터에 대 한 액세스 권한을 얻으려고 합니다. Rds.의 전체 기능을 요약 하는 프로그래밍 모델  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [기본 RDS 프로그래밍 모델](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   

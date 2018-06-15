@@ -2,7 +2,6 @@
 title: 작업 매개 변수가 있는 명령의 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272172"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수가 있는 명령 작업을
 큰 자식을 사용 하는 경우 **레코드 집합**, 특히 부모의 크기에 비해 **레코드 집합**만 몇 가지 자식 장 액세스할 필요 하지만 보다 효율적으로 사용할 찾을 수 있습니다는 매개 변수가 있는 명령입니다.  
@@ -92,7 +92,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  WHERE 절을 사용 하 여 매개 변수에 사용할 수 없습니다 SQL 데이터 형식을 text, ntext 및 image에 대 한 시기나 하는 오류가 발생 합니다 다음과 같은 설명이 포함 된: `Invalid operator for data type`합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

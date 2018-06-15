@@ -2,7 +2,6 @@
 title: XML에서 계층적 레코드 집합 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64be59db3e65386eaaa267e954f63d0cf063e146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272062"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML에서 계층적 레코드 집합
 ADO는 계층적 레코드 집합 개체의 지 속성을 XML로 수 있습니다. 계층적 Recordset 개체 부모 레코드 집합에에서 있는 필드의 값이 다른 레코드 집합입니다. 이러한 필드는 특성 대신 XML 스트림을에 자식 요소로 표시 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다음 예제에서는이 사례를 보여 줍니다.  
   
 ```  
@@ -128,5 +128,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   자식 레코드에 둘 이상의 부모 레코드에 대 한 참조가 있는 경우 다음 레코드 집합을 다시 열 때 자식 레코드 집합이 포함 될 수 있습니다 중복 레코드입니다. 그러나 이러한 중복 사용자 기본 자식 행 집합와 직접 통신 하는 경우에 표시 됩니다. 자식 (즉, ADO를 통해 이동 하는 유일한 방법은) 레코드 집합을 탐색 하는 장 사용 하는 경우에 중복 항목은 표시 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -2,7 +2,6 @@
 title: 준비 및 실행 명령을 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d0736e2c4f0a09ec43f2e910cc7fd8c9263fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272242"
 ---
 # <a name="preparing-and-executing-commands"></a>준비 및 명령 실행
 명령은 데이터 원본에 대 한 작업을 수행 하는 공급자에 실행 하는 명령입니다. SQL 문은 예를 들어 Microsoft SQL 데이터 공급자에 명령입니다. ADO, 명령은 일반적으로 표현 된 **명령** 간단한 명령을 통해도 실행할 수 있지만 개체 **연결** 또는 **레코드 집합** 개체입니다.  

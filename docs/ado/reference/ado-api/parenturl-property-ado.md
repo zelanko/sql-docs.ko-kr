@@ -2,7 +2,6 @@
 title: ParentURL 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a7a476352519f4756e4e8f19166aac3c84d7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280684"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성 (ADO)
 부모를 가리키는 절대 URL 문자열을 나타내고 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 현재 **레코드** 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 **문자열** 부모 URL을 나타내는 값 **레코드**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ParentURL** 속성 여는 데 사용 하는 소스에 따라 다릅니다.는 **레코드** 개체입니다. 예를 들어는 **레코드** 에서 참조 하는 디렉터리의 상대 경로 이름을 포함 하는 원본으로 열 수는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성입니다.  
   
  가정 폴더 "first"에서 "두 번째" 포함 되어 있습니다. 열기는 **레코드** 다음 구문을 사용 하 여 개체:  

@@ -2,7 +2,6 @@
 title: RDS 사용량 및 보안 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc65be00af43f9ad891d01ad00e506fcd178872d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274242"
 ---
 # <a name="rds-usage-and-security"></a>RDS 사용량 및 보안
 이 단원의 정보를 사용 하 여 서버를 설정 및 RDS를 신속 하 게 사용 합니다. 이 섹션에서는 일부 RDS와 다른 기술 간의 키 관계에 설명 RDS를 구현 하는 경우 수행 해야 할 수 있는 특정 구성 단계 및 솔루션을 설정할 때 발생할 수 있는 문제를 식별할 수 있는 RDS 솔루션입니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [RDS 문제 해결](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)

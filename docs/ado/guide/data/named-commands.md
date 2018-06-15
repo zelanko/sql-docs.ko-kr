@@ -2,7 +2,6 @@
 title: 명령 이름은 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,14 +17,15 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272004"
 ---
 # <a name="named-commands"></a>명명 된 명령
-[만들기 및 실행 하는 간단한 명령](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법으로: 명명된 된 명령을 확인 하 고 호출 하는이 명령에서 직접 명명 된는 **연결** 개체 (에 할당 된는 **ActiveConnection** 의 속성은 **명령** 개체). 명령 이름 지정에 이름을 할당 의미는 **이름** 속성은 **명령** 개체입니다. 예를 들면 다음과 같습니다.  
+[만들기 및 실행 하는 간단한 명령](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법으로: 명명된 된 명령을 확인 하 고 호출 하는이 명령에서 직접 명명 된는 **연결** 개체 (에 할당 된는 **ActiveConnection** 의 속성은 **명령** 개체). 명령 이름 지정에 이름을 할당 의미는 **이름** 속성은 **명령** 개체입니다. 예:  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -93,5 +93,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -2,7 +2,6 @@
 title: ADO 용어 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271602"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어 설명
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 
  일반적으로 사용자에 데이터를 표시 하는 사용자 로부터 입력을 처리 하는 분산된 시스템의 논리적 계층 A 계층 이며 클라이언트 라고도 함는 *프런트 엔드*합니다. 일반적으로 클라이언트 계층 입력을 기반으로 서버에서 데이터를 요청 하 고 서식을 지정 하 고 결과 표시 합니다. 참고 항목 *중간 계층*, *데이터 원본 계층*, *배포 응용 프로그램*합니다.
 
- COM (구성 요소 개체 모델) A 이진 표준 개체 또는 존재 하는 컴퓨터에서 개발 된 언어에 상관 없이 네트워크 환경에서 상호 운용할 수 있도록 합니다. COM 기반 기술에는 ActiveX 컨트롤, 자동화 및 개체 (OLE) 연결과 포함 됩니다. COM 응용 프로그램을 호스트 하 고 다른 구성 요소에 해당 기능을 노출 하는 개체 수 있습니다. 개체 표시 방식을 프로세스 간에 및 네트워크를 통해 이러한 인터페이스의 작동 방식 모두를 정의 합니다. 또한 COM 개체의 수명 주기를 정의합니다.
+ COM (구성 요소 개체 모델) A 이진 표준 개체 또는 존재 하는 컴퓨터에서 개발 된 언어에 상관 없이 네트워크 환경에서 상호 운용할 수 있도록 합니다. COM 기반 기술에는 ActiveX 컨트롤, 자동화 및 개체 (OLE) 연결과 포함 됩니다. COM을 이용하면 개체의 기능을 다른 구성요소나 응용 프로그램 호스팅으로 노출이 가능합니다. 이는 객체 자신을 노출시키는 것과 프로세스 및 네트워크를 통한 노출 작동 방식 모두를 정의 합니다. 또한 COM은 개체의 수명 주기를 정의합니다.
 
  COM 구성 요소 이진 파일-.dll,.ocx, 및 일부.exe 파일과 같은-개체를 제공 하는 COM 표준을 지 원하는 합니다. 이러한 파일 하나 이상의 클래스 팩터리, COM 클래스, 레지스트리 항목 메커니즘, 로딩 코드 등에 대 한 코드를 포함합니다.
 
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
  커서 레코드 탐색, 데이터의 updateability 및 다른 사용자가 데이터베이스에 대 한 변경 내용의 표시 유형을 제어 하는 데이터베이스 요소입니다.
 
-## <a name="d"></a>D
+## <a name="d"></a>d
  바인딩 개체 또는 데이터 원본에 응용 프로그램의 컨트롤을 연결 하는 데이터입니다. 데이터 원본에 연결 된 컨트롤 이라고는 *데이터 바인딩된 컨트롤*합니다.
 
  데이터 바인딩된 컨트롤의 내용이 데이터베이스에서 값과 연결 합니다. 표 컨트롤에 바인딩되는 예를 들어는 **레코드 집합** 개체 일 수 업데이트 될 때의 행은 **레코드 집합** 업데이트 됩니다. 새 값을 검색 하는 경우는 **레코드 집합**, 새 값은 표에 표시 됩니다.

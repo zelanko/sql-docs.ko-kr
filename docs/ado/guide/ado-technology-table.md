@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f343cd75bed65062975f75e9560eabb43ee9212
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af9be3799708422734034f5ffe49d54bc1958037
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271572"
 ---
 # <a name="products-and-technologies-table"></a>제품 및 기술 테이블
 다음 표에서 Microsoft 제품, 도구 및 ADO Programmer's Guide에 설명 된 기술을 나열 합니다. 가능한 경우이 가이드의 관련 항목에 링크를 제공 합니다.
 
-|Microsoft 제품 또는 기술|참조|
+|Microsoft 제품 또는 기술|References|
 |-------------------------------------|----------------|
 |Access/Jet|[레코드 집합 작업](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX 기본 사항](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB Provider for Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory 서비스 인터페이스 ADSI)|[Microsoft Active Directory 서비스에 대 한 Microsoft OLE DB Provider](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

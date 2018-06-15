@@ -2,7 +2,6 @@
 title: 다차원 스키마 및 데이터 개요 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7dad7be35de7e15ae560f56c3ad51f7222be53b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2d17b02ff9f340a432e2d096a07a6cf5328c5de
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273542"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -87,7 +87,7 @@ Hamburg, Munich, Stuttgart}
   
  이 예제에서는 또한 또 다른 특성을 설명 합니다: 주 수준의 년 주 계층의 일부 구성원이 연도 분기 계층 구조의 모든 수준에 표시 되지 않습니다. 따라서 계층 차원의 모든 멤버를 포함 하지 않아야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (다차원) ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

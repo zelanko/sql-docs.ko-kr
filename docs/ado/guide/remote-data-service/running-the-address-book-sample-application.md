@@ -2,7 +2,6 @@
 title: 주소 주소록 샘플 응용 프로그램을 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ae87cba1c56924f841e00ba8fcdd1e66eff5d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34611cf13d72d962902bb6e143324d0c2771c1ab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274302"
 ---
 # <a name="running-the-address-book-sample-application"></a>주소 주소록 샘플 응용 프로그램 실행
 > [!IMPORTANT]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  다음 제목이 "프로그램 관리자," 모든 사용자를 나열가 자신의 전자 메일 이름에 따라 사용자를 검색 하거나 기존 레코드를 편집 같이 주소록 샘플 응용 프로그램에서 다양 한 시나리오를 시도할 수 있습니다. 클릭 **찾을** 데이터 표에 사용 가능한 모든 이름으로 채울 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주소록 데이터 바인딩 개체](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

@@ -2,7 +2,6 @@
 title: DataMember 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c96975a53637c3b5ddcf97008f17d714ff6eaca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d194cea2dd1a7bbabf8acd2e9d89945772eddd31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277412"
 ---
 # <a name="datamember-property"></a>DataMember 속성
 검색할 수 있는 데이터 멤버의 이름을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 으로 참조 되는 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 값입니다. 이름은 대/소문자 구분 아닙니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성은 데이터 환경을 사용 하 여 데이터 바인딩된 컨트롤을 만들려면 사용 합니다. 데이터 환경 컬렉션을 포함 하는 데이터 (데이터 원본)로 나타낼 수 있는 개체 (데이터 멤버) 라는 유지 관리는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
   
  **DataMember** 및 **DataSource** 속성을 함께 사용 되어야 합니다.  
@@ -50,5 +50,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataSource 속성(ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)

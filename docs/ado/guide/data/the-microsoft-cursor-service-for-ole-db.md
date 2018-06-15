@@ -2,7 +2,6 @@
 title: OLE DB에 대 한 Microsoft 커서 서비스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e01e5d06c798d0418f72ce02004cfeb83baedd05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acb0604f051aa532e0f1d0081972a49d037d3181
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272922"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB에 대 한 Microsoft 커서 서비스
 클라이언트 쪽 커서를 선택 하거나 설정 하면는 **앞** 속성을 **adUseClient**, OLE DB에 대 한 Microsoft 커서 서비스를 호출 하는 합니다. 또한 표시는 "클라이언트 커서"는 엔진을 ADO의 컨텍스트에서 동일한 작업에 대 한 참조가 있습니다. 이 서비스는 데이터 공급자의 커서 지원 기능을 보완합니다. 결과적으로, 모든 데이터 공급자의 기능을 비교적 안정적으로 인식할 수 있습니다.  
@@ -31,5 +31,5 @@ ms.lasthandoff: 05/03/2018
   
  커서 서비스에는 항상에서 일괄 처리 업데이트 지원할을 수 있습니다. 또한 데이터 공급자는 정적 커서와 같은 기능이 적은 커서를 제공할 수 때 동적 커서 등 더욱 강력한 커서 유형 시뮬레이션 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB (ADO 서비스 구성 요소)에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)

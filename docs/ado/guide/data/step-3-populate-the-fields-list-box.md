@@ -2,7 +2,6 @@
 title: '3 단계: 필드 목록 상자 채우기 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db988df4840e089564b056694bf8186694075fe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e88957f03b821ee350a575080bd4f0fd40ce466b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272712"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>3 단계: 필드 목록 상자 채우기
 필드 목록 상자를 채우려면의 Click 이벤트 처리기에 다음 코드를 삽입 `lstMain`:  
@@ -60,7 +60,7 @@ End Sub
   
  코드가 없는 리소스가 있는 경우 구조적된 문서 구현 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
  [2 단계: 기본 목록 상자를 초기화 합니다.](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [4단계: 세부 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

@@ -1,11 +1,8 @@
 ---
 title: 모양 변경 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cd2fa8e2d514edd61e102c136049b5a568f6d2d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272472"
 ---
 # <a name="reshaping"></a>모양 변경
 A **레코드 집합** 만든 도형의 절에 의해 명령을 할당할 수 있습니다는 *별칭* 이름 (일반적으로 AS 키워드가). 모양의의 별칭 **레코드 집합** 완전히 다른 명령에서 참조할 수 있습니다. 즉, 다시 사용할 수 있습니다, 또는 *변형*, 이전에 모양의 **레코드 집합** 새 shape 명령에서 합니다. 이 기능을 지원 하려면 ADO에는 속성을 제공 [이름 변형](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)합니다.  
@@ -47,5 +45,5 @@ rs2.Open "SHAPE {select * from Employees} " & _
 > [!NOTE]
 >  기존 열을 추가할 수 없습니다 **레코드 집합**, 매개 변수가 있는 변형 **레코드 집합** 또는 **레코드 집합** 모든 중간 COMPUTE 절에 개체 또는 수행 작업을 집계 **레코드 집합** 에서 하위는 **레코드 집합** 모양을 변경할 되 고 있습니다. **레코드 집합** 모양을 변경할 되 고 새 셰이프 명령을 둘 다 사용 해야 동일한 [연결](../../../ado/reference/ado-api/connection-object-ado.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)

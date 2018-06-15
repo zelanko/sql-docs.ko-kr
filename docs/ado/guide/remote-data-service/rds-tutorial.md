@@ -2,7 +2,6 @@
 title: RDS 자습서 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40ab51d55e33549c2ecc5a615f00f396dd9bb6c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca0329dc201d50335983c9078f85e31f8302d0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274252"
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 RDS 프로그래밍 모델을 사용 하 여를 쿼리하고 데이터 소스를 업데이트 합니다. 먼저,이 작업을 수행 하는 데 필요한 단계에 설명 합니다. 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO에 대 한 Windows Foundation Class (ADO/WFC) 특징으로)에서 반복 됩니다.  
@@ -72,6 +72,6 @@ ms.lasthandoff: 05/03/2018
   
 -   [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [1 단계: 서버 프로그램 (RDS 자습서) 지정](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

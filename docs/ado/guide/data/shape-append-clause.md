@@ -2,7 +2,6 @@
 title: APPEND 절 셰이프 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272582"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령 APPEND 절은 **레코드 집합**합니다. 대부분의 경우 이러한 열은 장 열을 참조 하는 자식 **레코드 집합**합니다.  
@@ -68,7 +68,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *child-recordset*  
  -   공급자 명령을 중괄호 ("{}")를 반환 하는 **레코드 집합** 개체. 기본 데이터 공급자에는 명령이 실행 될 하 고 해당 공급자의 요구 사항에 해당 구문에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어 같아야 합니다.  
   
@@ -99,7 +99,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  APPEND 키워드 다음 절은 실제로 목록, 여기서 각 절은 쉼표로 구분 하 고 부모에 추가할 다른 열을 정의 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  SHAPE 명령의 일환으로 사용자 입력 으로부터 공급자 명령을 생성할 때 셰이프는 사용자가 제공한 공급자 명령을 불투명 문자열로 처리 하며 공급자에 정확 하 게 전달 합니다. 예를 들어 다음 SHAPE 명령에서  
   
 ```  
@@ -124,7 +124,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [중간에 셰이프 COMPUTE 절](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

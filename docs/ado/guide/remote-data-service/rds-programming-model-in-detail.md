@@ -2,7 +2,6 @@
 title: RDS 프로그래밍 모델을 상세히 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e11dbaf046124e837b6ef33b8eb98219371ae18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcfed19cda8ce9675b656add6f1a15e0912efe31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274432"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 프로그래밍 모델 세부 정보
 다음은 RDS 프로그래밍 모델의 주요 요소입니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  RDS에 두 개의 추가 이벤트를 제공 하는 Microsoft Internet Explorer: **onDataSetChanged**, 않는다는 의미는 **레코드 집합** 기능 이지만 여전히 행 검색 및  **onDataSetComplete**, 않는다는 의미는 **레코드 집합** 행 검색을 완료 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDS 프로그래밍 모델 개체와 사용](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

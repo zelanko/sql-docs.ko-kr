@@ -2,7 +2,6 @@
 title: 연결 속성 예 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 220f826cae321e928c9ebe6a807ed428c3beb133
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f32ca41bca8a2583102360c99483a14b72d2a2cc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277062"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout, 및 상태 속성 예제 (VB)
 이 예제에서는 여러 가지를 사용 하 여는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 열고는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 제한 시간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. 우편 번호 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -130,7 +130,7 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString 속성 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [ConnectionTimeout 속성 (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

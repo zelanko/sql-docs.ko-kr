@@ -2,7 +2,6 @@
 title: 공급자 오류 정보 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4f551876f97f04f99bd8f2e722cd9e8a89f264
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272342"
 ---
 # <a name="provider-errors"></a>공급자 오류 정보
 공급자 오류가 발생 하는 경우에-2147467259 런타임에 오류가 반환 됩니다. 이 오류를 받으면 확인는 **오류** 활성의 컬렉션 **연결** 하나 이상의 오류가 발생 한 문제를 설명 하는 포함 하는 개체입니다.  

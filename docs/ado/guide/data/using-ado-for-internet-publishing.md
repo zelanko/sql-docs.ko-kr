@@ -2,7 +2,6 @@
 title: ADO를 사용 하 여 인터넷 게시를 위해 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4adf31cd66246cd078bb31dc99ac5e8025f04636
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273212"
 ---
 # <a name="using-ado-for-internet-publishing"></a>ADO를 사용 하 여 인터넷 게시에 대 한
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO 사용 하 여 다른 유형의 데이터에 액세스 하는 특정 예제를 보여 줍니다. 이 섹션의 예는 인터넷 게시 공급자를 사용 하 여 특정 다르지만 원리 비슷해야 전자 메일 저장소 공급자와 같은 다른 유형의 데이터를 다른 공급자와 함께 ADO를 사용 하는 경우.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [레코드 및 공급자 제공 필드](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [스트림 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO 기록](../../../ado/guide/ado-history.md)

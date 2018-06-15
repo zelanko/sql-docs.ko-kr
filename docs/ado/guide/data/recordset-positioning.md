@@ -2,7 +2,6 @@
 title: 레코드 집합 위치 지정 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c65a8da00ea92feadc21d0fd1ce3a28967d9a259
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d8b53039bc978ae7ffabdd378ac3ca86daf66c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272382"
 ---
 # <a name="recordset-positioning"></a>레코드 집합 위치 지정
 사용 하 여는 **AbsolutePosition** 레코드로 이동 하는 속성의 서 수 위치에 따라는 **레코드 집합** 개체 또는 현재 레코드의 서 수 위치를 결정 합니다. 공급자는이 속성을 사용할 수에 대 한 적절 한 기능을 지원 해야 합니다.  

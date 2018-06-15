@@ -2,7 +2,6 @@
 title: Visual c + + 확장을 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271592"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -118,12 +118,12 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*클래스*|바인딩 항목 및 C/c + + 변수는 정의 된 클래스입니다.|
 |*Ordinal*|하나를 계산 하는 서 수는 **레코드 집합** C/c + + 변수에 해당 하는 필드입니다.|
-|*DataType*|C/c + + 변수의 해당 ADO 데이터 형식 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값은 **레코드 집합** 필드가 필요한 경우이 데이터 형식으로 변환 됩니다.|
+|*데이터 형식*|C/c + + 변수의 해당 ADO 데이터 형식 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값은 **레코드 집합** 필드가 필요한 경우이 데이터 형식으로 변환 됩니다.|
 |*Buffer*|C/c + + 변수 이름 여기서는 **레코드 집합** 필드 저장 됩니다.|
 |*크기*|최대 크기의 바이트 *버퍼*합니다. 경우 *버퍼* 에 다양 한 길이의 문자열을 포함 종결 0에 대 한 공간을 허용 합니다.|
 |*상태*|나타내는 변수의 이름입니다 여부의 내용을 *버퍼* 올바른지 여부와 필드를 변환 하는 과정 *DataType* 성공적으로 합니다.<br /><br /> 이 변수에 대 한 가장 중요 한 두 값이 **adFldOK**, 즉, 변환 작업이 성공적 및 **adFldNull**, VT_NULL 유형의 VARIANT 것 필드의 값 즉 및 뿐만 아니라 빈 합니다.<br /><br /> 가능한 값에 대 한 *상태* "상태 값" 합니다. 다음 표에 나열 된|
 |*수정*|부울 플래그입니다. TRUE 이면 ADO 해당 업데이트 하도록 허용 된 **레코드 집합** 필드에 포함 된 값을 가진 *버퍼*합니다.<br /><br /> 부울 설정 *수정* 바인딩된 필드를 업데이트 하는 ADO를 사용 하도록 설정 하려면 TRUE이 고 FALSE 이면 필드를 검사 하지만 변경 되지 수 매개 변수입니다.|
-|*정밀도*|숫자 변수로 나타낼 수 있는 자릿수의 수입니다.|
+|*전체 자릿수*|숫자 변수로 나타낼 수 있는 자릿수의 수입니다.|
 |*소수 자릿수*|소수 자릿수는 숫자 변수 수입니다.|
 |*길이*|에 있는 데이터의 실제 길이 포함 하는 4 바이트 변수의 이름을 *버퍼*합니다.|
 
@@ -132,10 +132,10 @@ Update(CADORecordBinding *binding)
 
  데이터를 설정할 때 *상태* 로 설정할 수 있습니다 **adFldNull** 나타내려면는 **레코드 집합** 필드를 설정 해야 null로 합니다.
 
-|상수|Value|Description|
+|상수|값|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null이 아닌 필드 값이 반환 되었습니다.|
-|**adFldBadAccessor**|1.|바인딩 올바르지 않습니다.|
+|**adFldBadAccessor**|1|바인딩 올바르지 않습니다.|
 |**adFldCantConvertValue**|2|부호 불일치 또는 데이터 오버플로가 아닌 다른 이유로 값을 변환할 수 없습니다.|
 |**adFldNull**|3|필드를 가져올 때 null 값을 반환 되었음을 나타냅니다.<br /><br /> 필드를 설정할 때 표시로 필드를 설정 해야 **NULL** 필드 인코딩할 수 없는 경우 **NULL** 자체 (예를 들어 문자 배열 또는 정수).|
 |**adFldTruncated**|4|가변 길이 데이터 또는 숫자로 이루어진 잘렸습니다.|
@@ -149,5 +149,5 @@ Update(CADORecordBinding *binding)
 |**adFldBadStatus**|12|잘못 된 상태 매개 변수를 업데이트 하는 경우.|
 |**adFldDefault**|13|를 업데이트할 때 기본값이 사용 되었습니다.|
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
  [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

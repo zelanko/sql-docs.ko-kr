@@ -2,7 +2,6 @@
 title: 매개 변수가 없는 명령 작업을 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8aa3ed637aa9206921f6da91f0218f67faf0154a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272282"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>매개 변수가 없는 명령 작업을
 매개 변수가 없는 명령에 대 한 모든 공급자 명령이 실행 됩니다 및 **레코드 집합** 명령 실행 중에 만들어집니다. 이 명령은 동기적으로 실행 되는 경우 모든는 **레코드 집합** 완전히 채울 수 있습니다. 비동기 채우기 모드를 선택한 경우의 채워진된 상태는 **레코드 집합** 채우기 모드와의 크기에 따라 달라 집니다는 **레코드 집합**합니다.  
@@ -45,7 +45,7 @@ SHAPE {SELECT * FROM Customers}
   
  계층적 구조를 탐색 하는 방법에 대 한 내용은 **레코드 집합**, 참조 [계층적 레코드 집합에서 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

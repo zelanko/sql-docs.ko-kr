@@ -2,7 +2,6 @@
 title: ReadText 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26221c32339aab70311a6ca9254bb5d514724070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280782"
 ---
 # <a name="readtext-method"></a>ReadText 메서드
 지정한 텍스트의 문자 수를 읽습니다 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>반환 값  
  **ReadText** 메서드는 지정된 된 수의 문자, 전체 행 또는에서 전체 스트림을 읽습니다는 **스트림** 개체를 결과 문자열을 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우 *NumChar* 스트림에 남아 보다 많은 수의 문자, 나머지 문자만 반환 됩니다. 로 지정 된 길이 일치 하도록 읽기 문자열은 채워지지 *NumChar*합니다. 왼쪽에서 읽을 문자가 더 인 경우 값이 null 인 variant 반환 됩니다. **ReadText** 뒤로 읽는 데 사용할 수 없습니다.  
   
 > [!NOTE]
@@ -55,5 +55,5 @@ String = Stream.ReadText ( NumChars)
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Read 메서드](../../../ado/reference/ado-api/read-method.md)

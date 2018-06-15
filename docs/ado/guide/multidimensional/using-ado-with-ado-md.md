@@ -2,7 +2,6 @@
 title: ADO MD와 함께 ADO를 사용 하 여 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a999350e2aed86e74bb0bfaea77c05207a21a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d6aed08b40b25eb0f725697eb6fac8908894ebd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273538"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD와 함께 ADO 사용
 ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이터 원본에 연결, 명령을 실행 하 고, 테이블 형식 데이터와 스키마 메타 데이터를 테이블 형식으로 검색 하 고 공급자 오류 정보 보기에 대 한 개체를 제공 합니다. ADO MD는 다차원 데이터를 검색 하 고 다차원 스키마 메타 데이터를 보기 위한 개체를 제공 합니다.  
@@ -48,7 +48,7 @@ ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이�
   
  ADO 개체 및 메서드에 대 한 자세한 내용은 참조는 [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (다차원) ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   

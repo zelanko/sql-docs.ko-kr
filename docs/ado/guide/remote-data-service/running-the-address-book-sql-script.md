@@ -2,7 +2,6 @@
 title: 주소 주소록 SQL 스크립트를 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 375de59f8746b80982576dc56e401ffe368186e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91fb86db608d05db660f31a9bb66b82dbf7df6d7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274372"
 ---
 # <a name="running-the-address-book-sql-script"></a>주소 주소록 SQL 스크립트를 실행합니다.
 > [!IMPORTANT]
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  를 실행 한 후 닫습니다는 **쿼리**, **쿼리 분석기**, 및 **엔터프라이즈 관리자** windows 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주소록 예제 응용 프로그램 실행](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

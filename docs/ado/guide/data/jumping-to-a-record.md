@@ -2,7 +2,6 @@
 title: 레코드 점프 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4364db29f8d4476c6f4238b970f0e56240ef0f06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da5573ef2f96947f9d8660d8d3461df879398e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272032"
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하면에서 앞 이나 뒤로 이동할 수는 **레코드 집합** 지정된 된 수의 다음 구문을 사용 하 여 레코드:  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **이동** 모든 메서드는 지원 **레코드 집합** 개체입니다.  
   
  경우는 *NumRecords* 인수가 0 보다 큰 레코드의 현재 위치를 앞으로 이동 (이 끝날 무렵는 **레코드 집합**). 경우 *NumRecords* 가 현재 레코드 위치 이동 합니다. 0 보다 작은 (의 시작 부분 쪽는 **레코드 집합**).  

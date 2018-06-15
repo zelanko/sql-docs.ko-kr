@@ -2,7 +2,6 @@
 title: 잠금을 이란? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273292"
 ---
 # <a name="what-is-a-lock"></a>잠금을 이란?
 잠금는 기준인 DBMS 다중 사용자 환경에서 한 행에 액세스를 제한 하는 프로세스입니다. 행 또는 열을 배타적으로 잠겨 잠금이 해제 될 때까지 잠긴된 데이터에 액세스 하려면 다른 사용자가 허용 되지 않습니다. 이렇게 하면 두 명의 사용자가 행의 동일한 열에 동시에 업데이트 수 없습니다.  

@@ -2,7 +2,6 @@
 title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f35019573f17e49fea3bdec7bfe6afc17b844f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b89e379d85002fc58deb36a1b95d1b7457d4c8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277092"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 데이터 수정에 대 한 사용할 수 있는 사용 권한을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)열고는 [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 대 한 값을 지정 하는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 속성은  **레코드** 및 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adModeRead**|1.|읽기 전용 권한을 나타냅니다.|  
+|**adModeRead**|1|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  
 |**adModeRecursive**|0x400000|다른와 함께 사용할 *\*ShareDeny\** 값 (**adModeShareDenyNone**, **adModeShareDenyWrite**, 또는 **adModeShareDenyRead**) 현재 공유 제한이 모든 하위 레코드를 전파 하는 데 **레코드**합니다. 경우에 없는 아무런 영향을 미치지는 **레코드** 자식을 포함 하지 않습니다. 함께 사용 하는 경우 런타임 오류가 발생 **adModeShareDenyNone** 만 합니다. 하지만,와 함께 사용할 수 **adModeShareDenyNone** 다른 값과 결합 하는 경우. 사용할 수는 예를 들어 "**adModeRead** 또는 **adModeShareDenyNone** 또는 **adModeRecursive**"입니다.|  
 |**adModeShareDenyNone**|16|다른 사용자가 모든 권한으로 연결을 열 수 있습니다. 다른 사용자의 읽기 또는 쓰기 액세스가 거부될 수 있습니다.|  

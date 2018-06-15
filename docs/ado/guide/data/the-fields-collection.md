@@ -2,7 +2,6 @@
 title: Fields 컬렉션 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb5d538f9c8cf8ae28f1397aac32555da1b33ecc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272872"
 ---
 # <a name="the-fields-collection"></a>Fields 컬렉션
 **필드** 컬렉션은 ADO의 내장 컬렉션 중 하나입니다. 컬렉션은 하나의 단위로 참조할 수 있는 항목의 정렬된 된 집합. ADO 컬렉션에 대 한 자세한 내용은 참조 [The ADO 개체 모델](../../../ado/guide/data/ado-objects-and-collections.md)합니다.  
@@ -117,5 +117,5 @@ objField = objRecordset.Fields(0)
   
  용도 **필드 추가** 메서드 간에 다릅니다는 **레코드 집합** 개체 및 **레코드** 개체입니다. 에 대 한 자세한 내용은 **레코드** 개체, 참조 [레코드 및 스트림](../../../ado/guide/data/records-and-streams.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계층적 레코드 집합 구성](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

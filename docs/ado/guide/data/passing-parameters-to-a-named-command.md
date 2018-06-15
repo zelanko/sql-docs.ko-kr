@@ -2,7 +2,6 @@
 title: 명명 된 명령에 매개 변수를 전달 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94f5d5fb25406b581ccd1bdadbaef5934360c7de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272362"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명 된 명령에 매개 변수 전달
 로 전달 됩니다 명령의 결과 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에로 전달 된 *에* 명명 된 명령에는 변수입니다.  
@@ -96,5 +96,5 @@ objConn.GetOrdersOf "12345", objRs
   
  -유효 하지만 이러한 레코드가 데이터베이스에 존재 하기 때문에 설정 하는 빈 결과 생성 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

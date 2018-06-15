@@ -2,7 +2,6 @@
 title: Open 메서드 (ADO 레코드 집합) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9689d9068af961c5935c9447acb07bea4dc38b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280622"
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드 (ADO 레코드 집합)
 커서를 열고는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -59,7 +59,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **ExecuteOpenEnum** 값 **adExecuteNoRecords** 또는 **adExecuteStream** 으로 쓰일 수 없습니다 **열려**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ADO에 대 한 기본 커서 **레코드 집합** 는 서버에 있는 읽기 전용, 정방향 전용 커서입니다.  
   
  사용 하 여는 **열려** 메서드를 한 **레코드 집합** 개체는 기본 테이블, 쿼리 또는 이전에 저장 된 결과에서 레코드를 나타내는 커서를 열고 **레코드 집합**합니다.  
@@ -108,7 +108,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 및 Close 메서드 예제 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 및 Close 메서드 (VBScript) 예제](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open 및 Close 메서드 예제 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

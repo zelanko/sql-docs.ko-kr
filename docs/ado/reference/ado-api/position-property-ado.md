@@ -2,7 +2,6 @@
 title: Position 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280692"
 ---
 # <a name="position-property-ado"></a>Position 속성 (ADO)
 내에서 현재 위치를 나타내기는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **긴** 스트림의 현재 위치부터에서의 바이트 수에 오프셋을 지정 하는 값입니다. 기본값은 스트림의 첫 번째 바이트를 나타내는 0입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  스트림의 끝 지점으로 현재 위치를 이동할 수 있습니다. 스트림의 끝을 넘어 현재 위치를 지정 하는 경우는 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 **스트림** 개체를 적절 하 게 증가 합니다. 이러한 방식으로 추가 된 새 바이트 null이 됩니다.  
   
 > [!NOTE]
@@ -47,5 +47,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Charset 속성(ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

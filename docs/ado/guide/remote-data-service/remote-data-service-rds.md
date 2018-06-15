@@ -2,7 +2,6 @@
 title: 원격 데이터 서비스 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79a4ecd6a588820282cdb28918c4890c134b11a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77ed3a34c1177419e557d458cfdc03a6aca23cf5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274362"
 ---
 # <a name="remote-data-service-rds"></a>원격 데이터 서비스 (RDS)
 원격 데이터 서비스 (RDS)에 있는 클라이언트 응용 프로그램 또는 웹 페이지에는 서버에서 데이터를 이동할 클라이언트에서 데이터를 조작 하 고 사용할 수는 단일 왕복에서 서버에 업데이트를 반환 하는 ADO의 기능입니다.  

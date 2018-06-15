@@ -2,7 +2,6 @@
 title: 스트림 및 지 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0302de0cc9ac87c55ae0e6c8d44557b517d79d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd1ab20fbd539a0e944060837d1e32c8655b5e1f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272952"
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *계속 되 면*, **레코드 집합** 파일인 및 [열고](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드 복원은 **레코드 집합** 파일에 해당 합니다.  
@@ -164,7 +164,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)

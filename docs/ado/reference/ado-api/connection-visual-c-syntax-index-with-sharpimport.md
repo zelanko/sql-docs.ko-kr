@@ -2,7 +2,6 @@
 title: '연결 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1ea17eadc602cf56e4dfaabfc6e262e62b5675a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba9e8475ad1bdc39383d8187bf8e568d229714a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277104"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>(Visual c + + 구문 인덱스 #import와) 연결
 ## <a name="methods"></a>메서드  
@@ -91,5 +91,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

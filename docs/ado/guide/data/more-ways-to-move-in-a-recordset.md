@@ -2,7 +2,6 @@
 title: 레코드 집합에서 이동 하는 방법 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21c9c99d9e168d73a333fe001b56dcdf845339f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894ab6b4daba13d6d57dda178f45bf07fc8a8f8d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272132"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동 하는 방법
 다음 네가지 메서드는, 이동 또는 스크롤할에 하는 데 사용 되는 **레코드 집합**: [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)합니다. (이 중에서 사용할 수 없는 정방향 전용 커서입니다.)  

@@ -2,7 +2,6 @@
 title: '2 단계: 서버 프로그램 (RDS 자습서) 호출 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e093828f0f1591800a7f8cc7e2b6958e8807c81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b736bb5e6cdb7f35d9cdcc5f39f060cbcf1b64b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274592"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>2 단계: 서버 프로그램 (RDS 자습서) 호출
 클라이언트에 대 한 메서드를 호출 하는 경우 *프록시*, 서버에서 실제 프로그램 메서드를 실행 합니다. 이 단계에서는 서버에서 쿼리를 실행 합니다.  
@@ -67,6 +67,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [3 단계: 서버가 가져옵니다 (RDS 자습서) 레코드 집합을](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
