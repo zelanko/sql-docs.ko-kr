@@ -2,7 +2,6 @@
 title: ConnectComplete와 연결 끊기 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee97139616af7b632ec2008f916b76d87d7f4bae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ac6301a8ed8ab0c84f26225e20c2bfd971ff761
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276842"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 연결 끊기 이벤트 (ADO) 및
 **ConnectComplete** 이벤트 연결이 시작 된 후 호출 됩니다. **연결 끊기** 이벤트 연결이 종료 된 후 호출 됩니다.  
@@ -55,6 +55,6 @@ Disconnect adStatus, pConnection
  *pConnection*  
  **연결** 이 이벤트에 적용 되는 개체입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

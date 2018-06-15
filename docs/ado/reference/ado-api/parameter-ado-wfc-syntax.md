@@ -2,7 +2,6 @@
 title: 매개 변수 (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed007c9dfea10578a642fbb01469eeb6ad2a56da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280592"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>매개 변수 (ADO-WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -98,5 +98,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

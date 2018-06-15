@@ -2,7 +2,6 @@
 title: PageSize 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbd3b9e335d32cd1d93d8c079bca39b535096049
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aea2e9510f80f8cd0d15bfbc2f7f544055b65884
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280062"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 속성 (ADO)
 레코드 수를 구성 나타냅니다에서 한 페이지는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **긴** 페이지에 있는 레코드 수를 나타내는 값입니다. 기본값은 **10**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **PageSize** 속성을 데이터의 논리 페이지를 구성 하는 레코드 수를 지정 합니다. 페이지 크기를 설정 하면 사용 하 여 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성을 특정 페이지의 첫 번째 레코드로 이동 합니다. 이 특정 레코드 수가 한 번에 보기를 사용자 데이터의 페이지 수 있도록 하려는 경우 웹 서버 시나리오에서 유용 합니다.  
   
  언제 든 지가이 속성을 설정할 수 있습니다 및 특정 페이지의 첫 번째 레코드의 위치를 계산 하는 것에 대 한 해당 값이 사용 됩니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AbsolutePage, PageCount, 및 PageSize 속성 예제 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount, 및 PageSize 속성 예제 (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

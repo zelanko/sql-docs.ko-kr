@@ -2,7 +2,6 @@
 title: MaxRecords 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fc309cebef284d20dd738c3ba5ed39c5997f3f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279332"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제 (VC + +)
 사용 하 여이 예제는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성 열을 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 10 개의 가장 비싼 책 제목을 포함 하는 ***타이틀*** 테이블입니다.  
@@ -180,6 +180,6 @@ void PrintComError(_com_error &e) {
 **장기간된 데이터 Deprivation: 4 개의 사례 연구---19.99**  
 **Sushi, 누구나? ---14.99**  
 **Buckingham 전송 사용---11.95의에서 연도 50 개**   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MaxRecords 속성 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

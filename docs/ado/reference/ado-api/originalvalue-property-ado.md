@@ -2,7 +2,6 @@
 title: OriginalValue 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 503a1f8dae4140337ecae9410dc91570fedc8df9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c77c1badaa812efb13767b8f30afa37341bc07c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280030"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 속성 (ADO)
 값을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 는 전의 레코드에서 변경 작업을 수행 합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 **Variant** 변경 작업 이전의 필드의 값을 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **OriginalValue** 속성을 현재 레코드에서 필드에 대 한 원래 필드 값을 반환 합니다.  
   
  *즉시 업데이트 모드* (있는 공급자 변경 기록의 데이터 원본에 호출한 후의 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드), **OriginalValue** 속성 반환 변경 전에 존재 하는 필드 값 (즉, 마지막 이후 **업데이트** 메서드 호출). 이 동일 값는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드 사용 하 여 대체는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성입니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OriginalValue 및 UnderlyingValue 속성 예제 (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)

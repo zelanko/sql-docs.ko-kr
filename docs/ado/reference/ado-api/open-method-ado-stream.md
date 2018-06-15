@@ -2,7 +2,6 @@
 title: Open 메서드 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44493854720564e241817c1b482339f9c5cbbd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2014c35383f1bc8dc30505cb26c602f7a22161
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280552"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드 (ADO 스트림)
 열립니다는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 이진 또는 텍스트 데이터 스트림을 조작 하는 개체입니다.  
@@ -53,7 +53,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *암호*  
  (선택 사항) A **문자열** , 필요한 경우 액세스 하는 암호를 포함 하는 값은 **스트림** 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  경우는 **레코드** 개체 source 매개 변수로 전달 됩니다는 *UserID* 및 *암호* 때문에 매개 변수가 사용 되지 않는에 대 한 액세스는 **레코드** 개체는 이미 사용할 수 있습니다. 마찬가지로,는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 **레코드** 으로 전송 되는 개체는 **스트림** 개체입니다. 때 *소스* 를 지정 하지 않으면는 **스트림** 열려 있으며 데이터가 포함 되지 않은 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 영 (0). 이 작성 된 모든 데이터가 손실 되지 않도록 하려면 **스트림** 때는 **스트림** 가 닫힌 경우 저장는 **스트림** 와 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 또는 [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) 메서드 또는 다른 메모리 위치에 저장 합니다.  
   
  *OpenOptions* 값 **adOpenStreamFromRecord** 의 내용을 식별 하는 *소스* 매개 변수를 이미 열려 있는 **레코드**개체입니다. 기본 동작은 처리할 *소스* 파일 등의 트리 구조에서 노드로 직접 연결 되는 URL로 합니다. 해당 노드와 연결 된 기본 스트림이 열립니다.  
@@ -65,7 +65,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 메서드 (ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

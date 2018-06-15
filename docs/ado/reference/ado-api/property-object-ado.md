@@ -2,7 +2,6 @@
 title: Property 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b646b698f8d14e6440368dbffb6e472360c2832d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4256e213e6ce9d6c96b55bda013fbf79f1a49cda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280762"
 ---
 # <a name="property-object-ado"></a>Property 개체 (ADO)
 공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ADO 개체에는 두 가지 유형의 속성: 기본 제공 및 동적입니다.  
   
  기본 제공 속성은 즉시 사용할 수 및 ADO에서 구현 된 이러한 속성 new를 사용 하 여 개체는 `MyObject.Property` 구문입니다. 로 표시 되지 않습니다 **속성** 개체는 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 되므로 해당 값을 변경할 수 있지만 해당 특성을 수정할 수 없습니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Property 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   

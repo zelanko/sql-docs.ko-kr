@@ -2,7 +2,6 @@
 title: GetString 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 373ef70e69d528d41fc2631610a7f31f72c3eec7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278882"
 ---
 # <a name="getstring-method-ado"></a>GetString 메서드 (ADO)
 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 문자열입니다.  
@@ -47,7 +47,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NumRows*  
  (선택 사항) 식을 변환할 수는 행 개수는 **레코드 집합**합니다. 경우 *NumRows* 를 지정 하지 않으면에 있는 행의 총 개수 보다 큰 경우 또는 **레코드 집합**, 다음의 모든 행은 **레코드 집합** 변환 됩니다.  
   
- *ColumnDelimiter*  
+ *columnDelimiter*  
  (선택 사항) 그렇지 않으면 탭 문자를 지정 하는 경우 열 간에 사용 되는 구분 기호입니다.  
   
  *RowDelimiter*  
@@ -56,7 +56,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NullExpr*  
  (선택 사항) 그렇지 않으면 빈 문자열을 지정 하는 경우 null 값을 대신 사용 하는 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  스키마 데이터가 아니라 행 데이터를 문자열에 저장 됩니다. 따라서 한 **레코드 집합** 이 문자열을 사용 하 여 다시 열 수 없습니다.  
   
  이 메서드는 해당 하는 RDO **GetClipString** 메서드.  
@@ -64,5 +64,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [GetString 메서드 예제(VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

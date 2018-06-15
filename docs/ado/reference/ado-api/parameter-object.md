@@ -2,7 +2,6 @@
 title: Parameter 개체가 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280712"
 ---
 # <a name="parameter-object"></a>Parameter 개체
 매개 변수 또는 연결 된 인수를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 매개 변수가 있는 쿼리 또는 저장된 프로시저에 따라 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  대부분의 공급자는 매개 변수가 있는 명령을 지원 합니다. 명령을 원하는 작업 정의 되어 있는 한 번은 이지만 변수 (또는 매개 변수)는 명령의 일부 세부 정보를 변경 하는 데 사용 합니다. 예를 들어 SQL SELECT 문을 WHERE 절 및 정렬 기준 절에 대 한 열 이름을 정의 하는 다른 일치 하는 조건을 정의 하는 매개 변수를 사용할 수 없습니다.  
   
  **매개 변수**  /out 인수 및 반환 값의 저장 프로시저 또는 개체 매개 변수가 있는 쿼리와 관련 된 매개 변수를 나타냅니다. 기능 공급자, 일부 컬렉션, 메서드 또는 속성에 따라 한 **매개 변수** 개체를 사용할 수 없습니다.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [매개 변수 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

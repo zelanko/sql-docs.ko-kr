@@ -2,7 +2,6 @@
 title: IsolationLevel 및 모드 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42663a71291a107bad179ad9ef3c614ed75b40be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279178"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 모드 속성 예제 (VC + +)
 사용 하 여이 예제는 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 단독 연결을 열려면 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 수행 하는 트랜잭션은 다른 트랜잭션의 격리에서 엽니다.  
@@ -247,6 +247,6 @@ void PrintComError(_com_error &e) {
 **Onions, Leeks와 마늘: 지중해-trad_cook의 비밀 요리**  
 **Buckingham 전송 사용-trad_cook의에서 연도 50 개**  
 **Sushi, 누구나? -trad_cook**   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

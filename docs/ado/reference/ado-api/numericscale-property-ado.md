@@ -2,7 +2,6 @@
 title: NumericScale 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 575618ad1760cdca6c32e1b8e2797070583506de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad1cceb73749530faf08e96eecef235905971e5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279932"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 속성 (ADO)
 숫자 값의 소수 자릿수를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 또는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **바이트** 소수 자릿수는 숫자 값의 수를 나타내는 값을 해결 됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **NumericScale** 속성을 소수점 오른쪽 자릿수는 숫자에 대 한 값을 나타낼 때를 **매개 변수** 또는 **필드** 개체입니다.  
   
  에 대 한 **매개 변수** 개체는 **NumericScale** 속성은 읽기/쓰기가 가능 합니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[Field 개체](../../../ado/reference/ado-api/field-object.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [NumericScale 및 전체 자릿수 속성 예제 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 및 전체 자릿수 속성 예 (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [Precision 속성(ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

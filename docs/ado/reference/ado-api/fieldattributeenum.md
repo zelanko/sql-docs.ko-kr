@@ -2,7 +2,6 @@
 title: 파생 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8fcfaf0f67ae0b44a7bb99a457edc479587cf44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36f972b9fb1f9592c6a9809b415e5570990a9057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278632"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 하나 이상의 특성을 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|공급자 필드 값을 캐시 하는 캐시에서 후속 읽기 했는지 나타냅니다.|  
 |**adFldFixed**|0x10|고정 길이 데이터 필드에 포함 되어 있음을 나타냅니다.|  

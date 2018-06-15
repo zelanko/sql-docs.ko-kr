@@ -2,7 +2,6 @@
 title: Move 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596576b742eed097d0f7f89f5c13b70adb99477
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4cd82d1e3e18c408afb1771a5f0f3fa1557b8ae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279372"
 ---
 # <a name="move-method-ado"></a>Move 메서드 (ADO)
 현재 레코드의 위치를 이동 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -44,7 +44,7 @@ recordset.Move NumRecords, Start
  *시작*  
  (선택 사항) A **문자열** 값 또는 **Variant** 하는 책갈피를 반환 합니다. 사용할 수도 있습니다는 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **이동** 모든 메서드는 지원 **레코드 집합** 개체입니다.  
   
  경우는 *NumRecords* 인수가 0 보다 큰 레코드의 현재 위치를 앞으로 이동 (이 끝날 무렵는 **레코드 집합**). 경우 *NumRecords* 가 현재 레코드 위치 이동 합니다. 0 보다 작은 (의 시작 부분 쪽는 **레코드 집합**).  
@@ -67,7 +67,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Move 메서드 예제 (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Move 메서드 (VBScript) 예제](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Move 메서드 예제 (VC + +)](../../../ado/reference/ado-api/move-method-example-vc.md)   

@@ -2,7 +2,6 @@
 title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f139ca30fc6fa8a23d93934e6b7cf5bd665ead69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b6b6bff2c99d13811616a9d1ae5040e904656a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278102"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 공급자가 명령을 실행할 방법을 지정 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|명령을 비동기적으로 실행 해야 나타냅니다.<br /><br /> 이 값을 함께 사용할 수는 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 값 **adCmdTableDirect**합니다.|  
 |**adAsyncFetch**|0x20|나머지 행에 지정 된 초기 수량 후 나타냅니다는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 비동기적으로 검색 해야 합니다.|  

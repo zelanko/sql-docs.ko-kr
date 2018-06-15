@@ -2,7 +2,6 @@
 title: ParameterAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d9e1da870fc405e3a7d59c554f01396ffaf2623
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 67473647635f9a6b89f767bcbaf1b4bde42cafef
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280722"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 특성을 지정 하는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|매개 변수에 부호 있는 값 하는지를 나타냅니다.|  
 |**adParamNullable**|64|매개 변수가 null 값을 허용 나타냅니다.|  

@@ -2,7 +2,6 @@
 title: NamedParameters 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,22 +19,23 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ae6f8714e555698f2627f83a8629073738b0e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d66b740bbe042510de019571639e796787caaf42
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279632"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 속성 (ADO)
 매개 변수 이름 공급자에 전달 해야 하는지 여부를 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성이 true 이면 ADO의 값을 전달는 **이름** 속성의 각 매개 변수에 **매개 변수** 에 대 한 컬렉션은 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다. 공급자는 매개 변수 이름에서 매개 변수를 사용 하 여는 **CommandText** 또는 **CommandStream** 속성입니다. 이 속성이 false 이면 (기본값) 이면 매개 변수 이름은 무시 되 고 매개 변수에 값과 일치 하도록 매개 변수 순서를 사용 하는 공급자는 **CommandText** 또는 **CommandStream** 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandStream 속성 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [Parameters 컬렉션(ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

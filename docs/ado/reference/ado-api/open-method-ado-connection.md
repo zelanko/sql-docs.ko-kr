@@ -2,7 +2,6 @@
 title: Open 메서드 (ADO 연결) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280012"
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드 (ADO 연결)
 데이터 원본에 대 한 연결을 엽니다.  
@@ -51,7 +51,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *옵션*  
  (선택 사항) A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 후이 메서드를 반환할지 여부를 결정 하는 값 (동기) (비동기) 연결이 설정 되기 전에 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하는 **열려** 메서드를 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 데이터 원본에 물리적 연결을 설정 하는 개체입니다. 이 메서드가 성공적으로 완료 된 후 연결이 라이브 및 것에 대해 명령을 실행 하 고 결과 처리할 수 있습니다.  
   
  선택적를 사용 하 여 *ConnectionString* 계열을 포함 하는 연결 문자열 중 하나를 지정 하려면 인수 *인수* *= value* 세미콜론으로 구분 하는 문 또는 URL로 식별 된 리소스 파일 또는 디렉터리입니다. **ConnectionString** 속성에 사용 되는 값을 자동으로 상속 된 *ConnectionString* 인수입니다. 설정 하거나 따라서 할 수 있습니다는 **ConnectionString** 속성은 **연결** 또는 사용을 열기 전에 개체는 *ConnectionString* 인수를 설정 하거나 재정의 하는 동안 현재 연결 매개 변수는 **열려** 메서드를 호출 합니다.  
@@ -69,7 +69,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 및 Close 메서드 예제 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 및 Close 메서드 (VBScript) 예제](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open 및 Close 메서드 예제 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

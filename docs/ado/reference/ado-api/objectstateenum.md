@@ -2,7 +2,6 @@
 title: ObjectStateEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a8d7ba4da1908d2434049c8a71039a259bab8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279985"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 개체 개방 명령을 실행 하거나 데이터를 검색 하는 데이터 원본에 연결 하는지를 지정 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|개체가 닫혀 나타냅니다.|  
-|**adStateOpen**|1.|해당 개체가 열려 임을 나타냅니다.|  
+|**adStateOpen**|1|해당 개체가 열려 임을 나타냅니다.|  
 |**adStateConnecting**|2|개체가 연결을 나타냅니다.|  
 |**adStateExecuting**|4|개체의 명령을 실행 하 고 나타냅니다.|  
 |**adStateFetching**|8|개체의 행이 검색 되 고 있는지를 나타냅니다.|  

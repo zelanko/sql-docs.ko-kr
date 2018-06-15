@@ -2,7 +2,6 @@
 title: DataSource 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73ef6b92c614d29252a34314125055d1f0d6bcf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277472"
 ---
 # <a name="datasource-property-ado"></a>DataSource 속성 (ADO)
 로 나타낼 수 있는 데이터를 포함 하는 개체를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 속성은 데이터 환경을 사용 하 여 데이터 바인딩된 컨트롤을 만들려면 사용 합니다. 데이터 환경 컬렉션을 포함 하는 데이터 (데이터 원본)로 나타낼 수 있는 개체 (데이터 멤버) 라는 유지 관리는 **레코드 집합** 개체*합니다.*  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md) 및 **DataSource** 속성을 함께에서 사용 해야 합니다.  
@@ -47,5 +47,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset.
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DataMember 속성](../../../ado/reference/ado-api/datamember-property.md)

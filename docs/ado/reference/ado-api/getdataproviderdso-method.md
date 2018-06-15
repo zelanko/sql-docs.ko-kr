@@ -2,7 +2,6 @@
 title: GetDataProviderDSO 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 687ba2301edfbd944bc9feafdbce2c528b26b58c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40cf12ab80faf3c32da98c1fb97b7ec7d9ca373f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278822"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 메서드
 Shape 공급자에서 기본 OLE DB 데이터 원본 개체를 검색합니다.  
@@ -39,7 +39,7 @@ HRESULT GetDataProviderDSO(
  *ppDataProviderDSOIUnknown*  
  [out]  내부 OLE DB 데이터 원본 개체의 IUnknown을 반환 하는 포인터에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 인터페이스 포인터를 addref 하지 않습니다. 호출자에 게 포인터를 계획, 호출자에 게 필요한 addref를 수행 해야 하 고 해제 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

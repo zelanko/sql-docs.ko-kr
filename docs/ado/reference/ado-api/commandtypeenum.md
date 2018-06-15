@@ -2,7 +2,6 @@
 title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276922"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 명령 인수를 해석 하는 방법을 지정 합니다.  
   
  사용자가 제공한 유효성을 검사 해야 *CommandString* 을 방지 하기 위해 응용 프로그램 사용자 기회를 실행 하도록 ADO에 대 한 잠재적으로 위험한 명령을 삽입 하는 값입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|명령 유형 인수를 지정 하지 않습니다.|  
-|**adCmdText**|1.|평가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 명령 또는 저장된 프로시저의 텍스트 정의 호출 합니다.|  
+|**adCmdText**|1|평가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 명령 또는 저장된 프로시저의 텍스트 정의 호출 합니다.|  
 |**adCmdTable**|2|평가 **CommandText** 열이 있는 모든는 내부적으로 생성 된 SQL 쿼리에 의해 반환 된 테이블 이름으로 합니다.|  
 |**adCmdStoredProc**|4|평가 **CommandText** 로 저장된 프로시저 이름을 입력 합니다.|  
 |**adCmdUnknown**|8|기본. 나타냅니다에 명령 유형에 **CommandText** 속성 알 수 없습니다.<br /><br /> ADO를 해석 하는 몇 차례 시도 하면 명령의 형식을 알려지지 않은 경우는 **CommandText**합니다.<br /><br /> -   **CommandText** 명령 또는 저장 프로시저 호출의 텍스트 정의로 해석 됩니다. 이 같은 동작 **adCmdText**합니다.<br />-   **CommandText** 저장된 프로시저의 이름입니다. 이 같은 동작 **adCmdStoredProc**합니다.<br />-   **CommandText** 테이블의 이름으로 해석 됩니다. 모든 열은 내부적으로 생성 된 SQL 쿼리에 의해 반환 됩니다. 이 같은 동작 **adCmdTable**합니다.|  

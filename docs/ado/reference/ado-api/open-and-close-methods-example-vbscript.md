@@ -2,7 +2,6 @@
 title: 열기 및 닫기 방법 예 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87c8e2c897155c4dc8416dbfdd8ba68ae9191271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279962"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 (VBScript) 예제
 사용 하 여이 예제는 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에 대 한 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  
@@ -165,7 +165,7 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Close 메서드 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

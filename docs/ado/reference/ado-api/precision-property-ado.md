@@ -2,7 +2,6 @@
 title: 전체 자릿수 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca18d73cbe121301f2df5e97967c51ca4bc7568a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 630bae40ab9e473656abeb3fa8cdb79de89e258c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280642"
 ---
 # <a name="precision-property-ado"></a>전체 자릿수 속성 (ADO)
 숫자 값에 대 한 전체 자릿수 수준을 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 한 숫자 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **바이트** 값을 나타내기 위해 사용 되는 최대 자릿수를 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **정밀도** 숫자에 대 한 값을 나타내는 데 사용 되는 최대 자릿수를 결정 하는 속성 **매개 변수** 또는 **필드** 개체입니다.  
   
  에 값은 읽기/쓰기는 **매개 변수** 개체입니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [NumericScale 및 전체 자릿수 속성 예제 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 및 전체 자릿수 속성 예 (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale 속성(ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

@@ -2,7 +2,6 @@
 title: 범위란 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279622"
 ---
 # <a name="moverecord-method-ado"></a>범위란 메서드 (ADO)
 이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -59,7 +59,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>반환 값  
  **문자열** 값입니다. 일반적으로 값 *대상* 반환 됩니다. 그러나 반환 된 정확한 값은 공급자에 따라 다릅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  값 *소스* 및 *대상* 않아야 고, 그렇지 않으면 동일 하면 런타임 오류가 발생 합니다. 최소한 서버, 경로 및 리소스 이름은 달라 야 합니다.  
   
  이 메서드를 인터넷 게시 공급자를 사용 하 여 파일에 대 한 모든 하이퍼텍스트 링크를 이동 하 여 다르게 지정 되지 않는 파일을 업데이트 *옵션*합니다. 이 메서드는 실패 하는 경우 *대상* 하지 않으면 (예를 들어 파일 또는 디렉터리), 기존 개체를 식별 **adMoveOverWrite** 지정 됩니다.  
@@ -77,7 +77,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

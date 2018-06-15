@@ -2,7 +2,6 @@
 title: 연결 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba405d7993c5f9c327d5789cfa3bf3c9ccfba2b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08a8c8fd224d2405674b30969cf44f672831f1c5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276992"
 ---
 # <a name="connection-object-ado"></a>연결 개체 (ADO)
 데이터 원본에 대해 열린 연결을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **연결** 개체 데이터 소스와 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템에 해당 하는 실제 네트워크 연결 서버에 수도 있습니다. 공급자, 일부 컬렉션, 메서드 또는 속성을 지 원하는 기능에 따라 한 **연결** 개체를 사용할 수 없습니다.  
   
  컬렉션, 메서드 및 속성의는 **연결** 개체를 다음을 수행할 수 있습니다.  
@@ -98,7 +98,7 @@ cnn. "parameter"
   
 -   [연결 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

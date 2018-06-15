@@ -2,7 +2,6 @@
 title: Delete 메서드 (ADO 필드 컬렉션) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277552"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete 메서드 (ADO 필드 컬렉션)
 개체를 삭제는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션입니다.  
@@ -41,13 +41,13 @@ Fields.Delete Field
  *필드*  
  A **Variant** 를 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 삭제할 개체입니다. 이 매개 변수 이름을 일 수는 **필드** 개체나의 서 수 위치는 **필드** 개체 자체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  호출 된 **Fields.Delete** 열린 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하면 런타임 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Delete 메서드 (ADO Parameters 컬렉션)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord 메서드(ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

@@ -2,7 +2,6 @@
 title: GetRows 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a22412b6ffdcbc2884292f482996973dd99158a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278872"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 메서드 예제 (VC + +)
 사용 하 여이 예제는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 행에서 지정 된 수를 검색 하는 메서드는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 결과 데이터 배열을 채우는 합니다. **GetRows** 메서드는 수의 행 보다 작으면 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가을 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -247,7 +247,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [BOF, EOF 속성 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [(ADO) 메서드](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

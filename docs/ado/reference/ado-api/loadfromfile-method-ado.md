@@ -2,7 +2,6 @@
 title: LoadFromFile 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade472c2b209c3e2d03a172eb66ad7a550f31ef5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 859c4cd31c3a2da8ff42fed470e5651ac568619b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279282"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 메서드 (ADO)
 에 기존 파일의 내용을 로드는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
@@ -40,7 +40,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A **문자열** 에 로드 될 파일의 이름을 포함 하는 값은 **스트림**합니다. *FileName* 모든 유효한 경로 UNC 형식에서 이름을 포함할 수 있습니다. 지정된 된 파일이 없는 경우 런타임 오류가 발생 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  이 메서드는 로컬 파일의 내용을 로드 데 사용할 수는 **스트림** 개체입니다. 서버에 로컬 파일의 콘텐츠를 업로드 데 될 수 있습니다.  
   
  **스트림** 개체를 호출 하기 전에 열려 있어야 이미 **LoadFromFile**합니다. 이 메서드는의 바인딩을 변경 되지 않습니다는 **스트림** 개체는 여전히 URL에서 지정한 개체에 바인딩할 수 또는 **레코드** 입니다는 **스트림** 원래 열.  

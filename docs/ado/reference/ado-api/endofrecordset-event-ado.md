@@ -2,7 +2,6 @@
 title: EndOfRecordset 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f035d61d2e8526c21960761be2db5a900666083c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ee224162242cb4494556ac1099631d0d73283d1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277952"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 이벤트 (ADO)
 **EndOfRecordset** 이벤트의 끝을 지나서 행으로 이동 하 려 할 때 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -51,11 +51,11 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. **레코드 집합** 이 이벤트가 발생 하는 것에 대 한 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **EndOfRecordset** 경우 이벤트가 발생할 수 있습니다는 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 작업이 실패 합니다.  
   
  끝을 지나서 이동 하려고 시도 하는 경우이 이벤트 처리기가 호출 된 **레코드 집합** 개체를 호출한 결과로 아마도 **MoveNext**합니다. 하지만이 이벤트에 있는 동안 수는 데이터베이스에서 더 많은 레코드 검색을의 끝에 추가 된 **레코드 집합**합니다. 이 경우에 설정 *fMoreData* VARIANT_TRUE 이면 및에서 반환을 **EndOfRecordset**합니다. 그런 다음 호출 **MoveNext** 다시 하 새로 검색된 된 레코드에 액세스 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

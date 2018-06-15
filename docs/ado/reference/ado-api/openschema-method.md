@@ -2,7 +2,6 @@
 title: OpenSchema 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52eaf3a58ae7f6eeaddecb943b5a129dec5e44e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 780e708d5e852601333fb319291e1e9db9450c39
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280532"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  
@@ -50,7 +50,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  OLE DB 사양에 정의 되지 않은 공급자 스키마 쿼리에 대 한 GUID입니다. 경우에이 매개 변수는 필수 *QueryType* 로 설정 되어 **adSchemaProviderSpecific**, 그렇지 않으면 사용 되지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **OpenSchema** 메서드는 테이블의 열 데이터 원본에 테이블은 같은 데이터 원본에 대 한 정보를 반환 하 고 데이터 형식을 지원 합니다.  
   
  *QueryType* 인수는 반환 되는 열 (스키마)을 나타내는 GUID입니다. OLE DB 사양에 스키마의 전체 목록이 있습니다.  
@@ -73,7 +73,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OpenSchema 메서드 예제 (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [OpenSchema 메서드 예제 (VC + +)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

@@ -2,7 +2,6 @@
 title: '속성 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac5f566d4e5fef862802b86d79708db86c0c700b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f228cc91f07c850448b4edfd61bde2aa909778c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280754"
 ---
 # <a name="property-visual-c-syntax-index-with-import"></a>속성 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="properties"></a>속성  
@@ -46,5 +46,5 @@ void PutValue( const _variant_t & pval );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)

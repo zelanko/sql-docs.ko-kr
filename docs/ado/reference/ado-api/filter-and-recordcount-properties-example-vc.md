@@ -2,7 +2,6 @@
 title: 필터 및 RecordCount 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1462aea811bafb1b2d3dad0380488317beb33867
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278622"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>필터 및 RecordCount 속성 예제 (VC + +)
 사용 하 여이 예제는 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존에 적용 된 지정 된 조건에 따라 **레코드 집합**합니다. 사용 하 여는 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 두에서 레코드의 수를 표시 하는 속성 **레코드 집합**합니다. FilterField 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -306,7 +306,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

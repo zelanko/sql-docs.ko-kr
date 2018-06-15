@@ -2,7 +2,6 @@
 title: 필터 및 RecordCount 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21e800cb39d13abe904e02ff2ca23a1eb8936ee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278680"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>필터 및 RecordCount 속성 예제 (VB)
 이 예에서는 열린는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 게시자 테이블에는 ***Pubs*** 데이터베이스입니다. 다음 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 특정 국가/지역에 해당 게시자에 표시 된 레코드의 수를 제한 하는 속성입니다. **RecordCount** 속성 필터링 되 고 필터링 되지 않은 레코드 집합 간의 차이 표시 하는 데 사용 됩니다.  
@@ -118,7 +118,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

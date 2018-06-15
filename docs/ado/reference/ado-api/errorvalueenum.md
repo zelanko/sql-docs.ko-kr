@@ -2,7 +2,6 @@
 title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce91ab8f23db46f82bbcbbe2c39210d47f597f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 842c452e9289a9197f93009167943b92e0143012
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278545"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO에서 런타임 오류가 유형을 지정합니다.  
@@ -40,7 +40,7 @@ ADO에서 런타임 오류가 유형을 지정합니다.
 > [!NOTE]
 >  OLE DB 오류 ADO 응용 프로그램에 전달할 수 있습니다. 일반적으로 이러한 수로 식별할 수의 Windows 기능 코드 *4*합니다. 예를 들어 0x800***4***합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|변경할 수 없습니다는 **ActiveConnection** 속성은 **레코드 집합** 있는 개체는 **명령** 소스로 개체입니다.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|서버 작업을 완료할 수 없습니다.|  
@@ -129,5 +129,5 @@ ADO에서 런타임 오류가 유형을 지정합니다.
 ## <a name="applies-to"></a>적용 대상  
  [Number 속성(ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 오류 코드](../../../ado/guide/appendixes/ado-error-codes.md)

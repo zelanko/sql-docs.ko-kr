@@ -2,7 +2,6 @@
 title: '매개 변수 (Visual c + + 구문 있는 인덱스 #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b4945a32dc37cbcda1961cd4687b425bc39004
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab74a56e784eb8ac866f4744e3ae1933a7ae9835
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280542"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (Visual c + + 구문 인덱스 #import 사용)
 ## <a name="methods"></a>메서드  
@@ -73,5 +73,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

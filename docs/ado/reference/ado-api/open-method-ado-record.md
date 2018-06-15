@@ -2,7 +2,6 @@
 title: Open 메서드 (ADO 레코드) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa486265426f52dfd5986c6d173bcd1ffdb45210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280512"
 ---
 # <a name="open-method-ado-record"></a>Open 메서드 (ADO 레코드)
 기존 엽니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 또는 개체를 나타내는 새 항목을 만듭니다는 **레코드**, 예: 파일 또는 디렉터리입니다.  
@@ -59,7 +59,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *암호*  
  (선택 사항) A **문자열** , 필요한 경우를 확인 하는 암호를 포함 하는 값 *UserName*합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  *소스* 될 수 있습니다.  
   
 -   URL입니다. URL에 대 한 프로토콜은 http, 인터넷 공급자가 기본적으로 호출 됩니다. URL 실행 스크립트를 포함 하는 노드를 가리키는 경우 (예: 프로그램. ASP 페이지)는 **레코드** 대신 실행 된 원본이 들어 있는 내용을 기본적으로 열립니다. 사용 하 여 *옵션* 이 동작을 수정 하는 인수입니다.  
@@ -80,7 +80,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
