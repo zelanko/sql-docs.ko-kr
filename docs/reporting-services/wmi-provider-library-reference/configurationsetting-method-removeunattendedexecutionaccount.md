@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030450"
 ---
 # <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>ConfigurationSetting 메서드 - RemoveUnattendedExecutionAccount
   보고서 서버 구성 파일에서 무인 실행 계정 항목을 삭제합니다.  

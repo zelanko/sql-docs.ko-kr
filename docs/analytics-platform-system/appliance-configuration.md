@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550724"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 구성 검사 목록
 사용자가 자신의 환경에 대 한 분석 플랫폼 시스템을 구성 하는 데 필요한 작업에 대 한 검사 목록을 제공 합니다. 어플라이언스를 사용 하려면 먼저 이러한 구성 작업은 필요 합니다.  

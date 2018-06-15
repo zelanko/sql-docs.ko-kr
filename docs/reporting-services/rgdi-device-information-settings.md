@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025460"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 장치 정보 설정
   다음 표는 RGDI 형식으로 렌더링하기 위한 장치 정보 설정을 나열합니다.  
