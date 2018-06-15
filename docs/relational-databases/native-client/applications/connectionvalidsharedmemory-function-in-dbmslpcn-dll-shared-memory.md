@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32949638"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>공유 메모리 dbmslpcn.dll ConnectionValidSharedMemory 함수
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
