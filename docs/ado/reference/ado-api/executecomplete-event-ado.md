@@ -2,7 +2,6 @@
 title: ExecuteComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8c0b33fe31499999cc73d2ebc03ef0d32ace70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0af3666e4f5aecf897bdd6b93f756c2d251fa40
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278172"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 이벤트 (ADO)
 **ExecuteComplete** 이벤트는 명령이 실행이 완료 된 후 호출 됩니다.  
@@ -58,9 +58,9 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  A [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 작업을 실행 하는 연결입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **ExecuteComplete** 이벤트로 인해 발생할 수 있습니다는 **연결.** [실행](../../../ado/reference/ado-api/execute-method-ado-connection.md), **명령입니다.** [실행](../../../ado/reference/ado-api/execute-method-ado-command.md), **레코드 집합.** [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md), **레코드 집합.** [Requery](../../../ado/reference/ado-api/requery-method.md), 또는 **레코드 집합.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

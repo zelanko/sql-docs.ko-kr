@@ -2,7 +2,6 @@
 title: 항목 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3beaf6111b432427d2a40f9f0362c6a9084a5246
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279262"
 ---
 # <a name="item-property-example-vb"></a>항목 속성 예제 (VB)
 이 예제에서는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성이 컬렉션의 멤버에 액세스 합니다. 열고는 ***작성자*** 목차는 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  
@@ -138,7 +138,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item 속성 (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

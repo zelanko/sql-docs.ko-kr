@@ -2,7 +2,6 @@
 title: 필드 컬렉션 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4eebfb3b3e401585829446872545063448ec87d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278492"
 ---
 # <a name="fields-collection-ado"></a>Fields 컬렉션 (ADO)
 모든 포함 된 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  A **레코드 집합** 개체에는 **필드** 컬렉션으로 이루어져 **필드** 개체입니다. 각 **필드** 의 열에 해당 하는 개체는 **레코드 집합**합니다. 채울 수 있습니다는 **필드** 열기 전에 컬렉션의 **레코드 집합** 호출 하 여는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드는 컬렉션에 있습니다.  
   
 > [!NOTE]
@@ -49,5 +49,5 @@ ms.lasthandoff: 05/03/2018
   
 -   [필드 컬렉션의 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)

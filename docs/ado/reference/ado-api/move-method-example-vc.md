@@ -2,7 +2,6 @@
 title: 이동 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c8e79dce97a46b216a50094b3e87fe944d0185e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6805360b98e694a3daf84a60d3f6757a12252e0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279562"
 ---
 # <a name="move-method-example-vc"></a>Move 메서드 예제 (VC + +)
 사용 하 여이 예제는 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드 레코드 포인터를 사용자 입력에 기반 합니다.  
@@ -261,5 +261,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Move 메서드(ADO)](../../../ado/reference/ado-api/move-method-ado.md)

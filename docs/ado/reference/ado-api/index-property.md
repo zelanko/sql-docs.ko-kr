@@ -2,7 +2,6 @@
 title: Index 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279182"
 ---
 # <a name="index-property"></a>Index 속성
 현재에 적용 된 인덱스의 이름을 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 값 인덱스의 이름입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  명명 된 인덱스는 **인덱스** 속성 이전에 선언 되어 있어야 기본 기본 테이블에는 **레코드 집합** 개체입니다. 즉, 인덱스 선언 해야 프로그래밍 방식으로 둘 중 하나는 ADOX로 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 기본 테이블을 만들 때 또는 합니다.  
   
  인덱스를 설정할 수 없는 경우 런타임 오류가 발생 합니다. **인덱스** 다음과 같은 속성을 설정할 수 없습니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메서드 및 속성 예제 (VB) 인덱스 검색](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)

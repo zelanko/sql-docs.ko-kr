@@ -2,7 +2,6 @@
 title: 개체 필드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49960f2763b402a291531a2ab010ef6a0682107f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b815da825f777b51a43a90af26eba955050b785
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278472"
 ---
 # <a name="field-object"></a>Field 개체
 일반 데이터 형식과 데이터의 열을 나타냅니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  각 **필드** 의 열에 해당 하는 개체는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하면는 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성 **필드** 개체를 설정 하거나 현재 레코드에 대 한 데이터를 반환 합니다. 기능에 따라 공급자가 제공 컬렉션, 메서드 또는 속성의 일부는 **필드** 개체를 사용할 수 없습니다.  
   
  컬렉션, 메서드 및 속성의는 **필드** 개체를 다음을 수행할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [필드 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

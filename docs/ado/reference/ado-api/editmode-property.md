@@ -2,7 +2,6 @@
 title: EditMode 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e31414c353a1157d25da420428502772872cb35e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fd943679fc15cde9a3349b455decc778889b0c6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277932"
 ---
 # <a name="editmode-property"></a>EditMode 속성
 현재 레코드의 편집 상태를 나타냅니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>반환 값  
  반환 된 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ADO 현재 레코드와 연결 된 편집 버퍼를 유지 관리 합니다. 이 속성에는이 버퍼에 변경 사항이 있는지 여부 또는 새 레코드를 만들어졌는지를 나타냅니다. 사용 하 여는 **EditMode** 속성을 현재 레코드의 편집 상태를 확인 합니다. 편집 프로세스가 중단 된 보류 중인 변경 내용에 대 한 테스트 하 고 사용 해야 하는지 여부를 확인할 수는 [업데이트](../../../ado/reference/ado-api/update-method.md) 또는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
   
  *즉시 업데이트 모드* 는 **EditMode** 속성으로 다시 설정 됩니다 **adEditNone** 을 성공적으로 호출한 후에 **업데이트** 메서드는 . 호출할 때 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 삭제 되지 않습니다 성공적으로 데이터 소스에서 레코드를 (예를 들어 참조 무결성 위반)로 인해는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 남아 있으며 편집 모드 (**EditMode** = **adEditInProgress**). 따라서 **CancelUpdate** 현재 레코드를 이동 하기 전에 호출 되어야 합니다 (예를 들어 [이동](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), 또는 [닫습니다](../../../ado/reference/ado-api/close-method-ado.md) ).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모두, LockType, 및 EditMode 속성 예제 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [모두, LockType, 및 EditMode 속성 예제 (VC + +)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

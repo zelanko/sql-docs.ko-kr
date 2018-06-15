@@ -2,7 +2,6 @@
 title: 속성 필터링 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278762"
 ---
 # <a name="filter-property"></a>필터 속성
 데이터에 대 한 필터 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 값입니다.  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>Remarks
 
 사용 하 여는 **필터** 속성을 선택적으로의 레코드 숨기는 **레코드 집합** 개체입니다. 필터링 된 **레코드 집합** 현재 커서 됩니다. 현재를 기준으로 값을 반환 하는 기타 속성도 **커서** 영향을 받는 같은 [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), 및 [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)합니다. 설정의 **필터** 속성 특정 새 값을 새 값을 충족 하는 첫 번째 레코드를 현재 레코드를 이동 합니다.
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/03/2018
 
 [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
 
 [필터 및 RecordCount 속성 예제 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [필터 및 RecordCount 속성 예제 (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

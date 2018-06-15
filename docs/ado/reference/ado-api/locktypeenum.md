@@ -2,7 +2,6 @@
 title: LockTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 672e2c781dfa25eb44b0531e44885a58fe25cc48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279222"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 중 레코드에 적용 되는 잠금 유형을 지정 합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금 레코드를 나타냅니다. 공급자 사용 낙관적 잠금 호출 하는 경우에 레코드 잠금는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.|  
 |**adLockPessimistic**|2|레코드 별로 비관적 잠금을 나타냅니다. 공급자가 제대로 편집 하는 레코드의 일반적으로 데이터 소스에서 레코드를 편집한 후 즉시 잠금을 설정 하면 필요한 합니다.|  
-|**adLockReadOnly**|1.|읽기 전용 레코드를 나타냅니다. 데이터를 변경할 수 없습니다.|  
+|**adLockReadOnly**|1|읽기 전용 레코드를 나타냅니다. 데이터를 변경할 수 없습니다.|  
 |**adLockUnspecified**|-1|잠금 유형을 지정 하지 않습니다. 복제를 복제본에서 원본과 동일한 잠금 유형으로 만들어집니다.|  
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  

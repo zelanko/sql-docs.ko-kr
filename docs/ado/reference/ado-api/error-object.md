@@ -2,7 +2,6 @@
 title: Error 개체 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278422"
 ---
 # <a name="error-object"></a>Error 개체
 공급자 관련 단일 작업에 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  ADO 개체를 관련 된 모든 작업 공급자 오류가 하나 이상 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치 되는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 의 컬렉션은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 다른 ADO 작업에서 오류를 생성 하는 경우는 **오류** 컬렉션의 선택을 취소 하 고 새로운 집합이 **오류** 개체에 배치 됩니다는 **오류** 컬렉션입니다.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Error 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [설명, HelpContext, 도움말 파일, NativeError, 숫자, 소스 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

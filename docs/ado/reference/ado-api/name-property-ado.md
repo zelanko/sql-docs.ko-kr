@@ -2,7 +2,6 @@
 title: Name 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1990ae16694a9ddee3747850773a4c361881a307
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 834a04e01587be21938d461ac1645802bad624d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279582"
 ---
 # <a name="name-property-ado"></a>Name 속성 (ADO)
 개체의 이름을 나타냅니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환는 **문자열** 개체의 이름을 나타내는 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **이름** 속성을 할당 하는 이름 또는의 이름을 검색 한 **명령**, **속성**, **필드**, 또는 **매개 변수**  개체입니다.  
   
  에 값은 읽기/쓰기는 **명령** 개체에서 읽기 전용 및는 **속성** 개체입니다.  
@@ -51,6 +51,6 @@ ms.lasthandoff: 05/03/2018
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field 개체](../../../ado/reference/ado-api/field-object.md)|  
 |[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 및 이름 속성 예 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [특성 및 이름 속성 예 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

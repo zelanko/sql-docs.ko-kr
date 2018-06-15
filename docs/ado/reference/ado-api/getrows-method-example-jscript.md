@@ -2,7 +2,6 @@
 title: GetRows 메서드 예제 (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad6b509232d807fc60b8d6a40587f6bfe3eeb16f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278832"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 메서드 예제 (JScript)
 사용 하 여이 예제는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 모든 행을 검색 하는 메서드는 *Custiomers* 테이블에서 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 배열을 결과 데이터를 채우는 데 합니다. **GetRows** 메서드 수의 행 보다 적은 두 가지 경우에 반환 됩니다: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가을 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 잘라내어 하십시오로 저장 **GetRowsJS.asp**합니다.  
@@ -162,6 +162,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [(ADO) 메서드](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

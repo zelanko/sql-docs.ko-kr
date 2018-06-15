@@ -2,7 +2,6 @@
 title: FetchComplete 이벤트 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59c3adb6b0ad683b40dac2cf4547800bf7398067
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d8024a302d76ad01aa3044c675fc2a42c7c7ed
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278152"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트 (ADO)
 **FetchComplete** 이벤트 긴 비동기 작업의 모든 레코드에 검색 된 후 호출 됩니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -49,9 +49,9 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 레코드를 검색 된 개체입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하도록 **FetchComplete** 와 Microsoft Visual Basic, Visual Basic 6.0 이상이 필요 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

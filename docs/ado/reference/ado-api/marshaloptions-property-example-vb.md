@@ -2,7 +2,6 @@
 title: 마샬링 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b04608d3e8cad81d04769b42341cbd97303c38ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9c2109bedd19bceb90469d5880342dec2780afc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279312"
 ---
 # <a name="marshaloptions-property-example-vb"></a>마샬링 예제 (VB)
 사용 하 여이 예제는 [마샬링](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성을 서버에 다시 전송 되는 행 지정할-모든 행 또는 행만 수정 합니다.  
@@ -135,6 +135,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마샬링 속성 (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

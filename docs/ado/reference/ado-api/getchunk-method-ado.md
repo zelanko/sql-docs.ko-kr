@@ -2,7 +2,6 @@
 title: GetChunk 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38397b5573cfb7ddb10a7454833f4e9b512b769b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278792"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 메서드 (ADO)
 큰 텍스트 또는 이진 데이터의 내용 중 일부 또는 모두 반환 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -44,7 +44,7 @@ variable = field.GetChunk(Size)
  *크기*  
  A **긴** 검색할 문자 또는 바이트의 수와 같은 식입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하 여는 **GetChunk** 에서 메서드는 **필드** 긴 이진 또는 문자 데이터의 일부 또는 전체를 검색 하는 개체입니다. 시스템 메모리가 제한 된 상황에서 사용할 수 있습니다는 **GetChunk** 메서드,으로 아니라 전체에서 긴 값을 조작 합니다.  
   
  데이터를 한 **GetChunk** 호출이 반환에 할당 된 *변수*합니다. 경우 *크기* 나머지 데이터를 보다 크면는 **GetChunk** 메서드 패딩 없이 나머지 데이터만 반환 *변수* 빈 공백을 사용 하 여 합니다. 필드가 비어 있으면는 **GetChunk** 메서드는 null 값을 반환 합니다.  
@@ -61,7 +61,7 @@ variable = field.GetChunk(Size)
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AppendChunk 및 GetChunk 메서드 예제 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk 및 GetChunk 방법 예 (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk 메서드 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

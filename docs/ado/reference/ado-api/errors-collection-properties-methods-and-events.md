@@ -2,7 +2,6 @@
 title: 오류 컬렉션 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05b5e0e9b8a636de88d2c459a33a7aeecaaca7d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fd36576791ff0636da77b2b1ace9448667369f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278072"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>오류 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  
@@ -37,5 +37,5 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Errors 컬렉션(ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

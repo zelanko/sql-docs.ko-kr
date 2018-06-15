@@ -2,7 +2,6 @@
 title: Delete 메서드 (ADO 레코드 집합) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb1071d48cb6c4c1652cc5caab96de97beefae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46ffdefd753d10067c2c120690fd900ddd114abd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277572"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 메서드 (ADO 레코드 집합)
 현재 레코드 또는 레코드의 그룹을 삭제합니다.  
@@ -44,7 +44,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** 및 **adAffectAllChapters** 에 유효한 인수가 **삭제**합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  사용 하는 **삭제** 현재 레코드 또는 그룹에 있는 레코드의 메서드를 표시 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 삭제 합니다. 경우는 **레코드 집합** 개체 허용 하지 않습니다 레코드 삭제 오류가 발생 합니다. 즉시 업데이트 모드에 있는 경우 삭제는 데이터베이스에 즉시 수행 합니다. 레코드를 호출한 후 편집 모드에 유지 됩니다 (위반으로 인해 데이터베이스 무결성 예를 들어) 레코드를 성공적으로 삭제할 수 없으면, [업데이트](../../../ado/reference/ado-api/update-method.md)합니다. 즉,와 업데이트를 취소 해야 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 현재 레코드를 이동 하기 전에 (예: [닫기](../../../ado/reference/ado-api/close-method-ado.md), [이동](../../../ado/reference/ado-api/move-method-ado.md), 또는 [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  레코드 캐시에서 삭제에 대 한 표시 되 고 호출 하는 경우 발생 하는 실제 삭제 일괄 업데이트 모드에 있는 경우는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드. 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 속성이 삭제 된 레코드를 볼 수 있습니다.  
@@ -60,7 +60,7 @@ recordset.Delete AffectRecords
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [삭제 (VB) 메서드 예제](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [삭제 메서드 (VBScript) 예제](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [삭제 메서드 예제 (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

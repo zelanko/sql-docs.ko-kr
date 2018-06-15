@@ -2,7 +2,6 @@
 title: Find 메서드 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278722"
 ---
 # <a name="find-method-ado"></a>Find 메서드 (ADO)
 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 지정된 된 조건을 만족 시키는 행에 대 한 합니다. 필요에 따라 검색, 시작 행 및 행 시작에서 오프셋의 방향을 지정할 수 있습니다. 조건이 충족 되 면 검색 된 레코드로; 현재 행의 위치가 설정 됩니다. 그렇지 위치의 끝 (또는 시작)으로 설정 되 고 **레코드 집합**합니다.  
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *시작*  
  (선택 사항) A **Variant** 검색을 위한 시작 위치로 서 작동 하는 책갈피입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  에 단일 열 이름만 지정할 수 있습니다 *조건*합니다. 이 메서드는 여러 열 검색을 지원 하지 않습니다.  
   
  비교 연산자 *조건* 될 수 있습니다 "**>**"(보다 큼),"**\<**" (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), "(같지 않음)," <> 또는 "좋아요" (패턴 일치).  
@@ -70,7 +70,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [(VB) 메서드 예제 찾기](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Index 속성](../../../ado/reference/ado-api/index-property.md)   
  [동적 속성 (ADO)를 최적화 합니다.](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

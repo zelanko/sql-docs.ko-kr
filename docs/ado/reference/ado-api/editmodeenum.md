@@ -2,7 +2,6 @@
 title: EditModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba6822bfbb45ee547b87c56388b55d95195a7b63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a98b8dd5b82665aa7416bba67c8a04e46a75babb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277982"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 레코드의 편집 상태를 지정합니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|편집 작업이 진행에서 중인지를 나타냅니다.|  
-|**adEditInProgress**|1.|현재 레코드의 데이터가 수정 되었지만 저장 안 됨을 나타냅니다.|  
+|**adEditInProgress**|1|현재 레코드의 데이터가 수정 되었지만 저장 안 됨을 나타냅니다.|  
 |**adEditAdd**|2|나타냅니다는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 호출 하 고 복사 버퍼의 현재 레코드는 데이터베이스에 저장 되지 않은 새 레코드입니다.|  
 |**adEditDelete**|4|현재 레코드 삭제 했을 나타냅니다.|  
   

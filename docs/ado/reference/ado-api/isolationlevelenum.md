@@ -2,7 +2,6 @@
 title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22b958066b681f70187dc5e49fcd36752f510b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fbf9db6b578bc886862069ddc31bc07f18d673b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279162"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 에 대 한 트랜잭션 격리 수준을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
-|상수|Value|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|나타내지만, 지정 된 것 보다 공급자 다른 격리 수준을 사용 하는 수준을 확인할 수 없습니다.|  
 |**adXactChaos**|16|보류 중인 변경 내용이 격리 수준이 더 높은 트랜잭션에서 없습니다 덮어쓸 수 있다는 것을 나타냅니다.|  
