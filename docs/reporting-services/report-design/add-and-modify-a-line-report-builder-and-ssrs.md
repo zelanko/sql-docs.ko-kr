@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020470"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>선 추가 및 수정(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 섹션을 분리할 그래픽 요소가 필요한 경우에는 보고서에 선을 추가할 수 있습니다. 색이나 스타일과 같은 선 속성을 편집하여 선의 모양을 사용자 지정할 수 있습니다. 예를 들어 보고서에 회사 지정 색을 넣기를 원할 수 있습니다.    

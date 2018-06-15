@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028880"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블릭스 데이터 영역은 행과 열로 구성된 셀에 페이지를 매긴 보고서 데이터를 표시하는 일반화된 레이아웃 보고서 항목입니다. 보고서 데이터는 데이터 원본에서 검색된 상태 그대로의 정보 데이터이거나 지정한 그룹으로 구성된 집계 정보 데이터일 수 있습니다. 각 테이블릭스 셀에는 입력란이나 이미지 같은 보고서 항목이나 테이블릭스 영역, 차트 또는 계기 같은 다른 데이터 영역이 들어 있을 수 있습니다. 한 셀에 여러 보고서 항목을 추가하려면 먼저 컨테이너 역할을 할 사각형을 추가한 다음 이 사각형에 보고서 항목을 추가합니다.  

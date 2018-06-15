@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024580"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>데이터 영역 렌더링(보고서 작성기 및 SSRS)
   모든 보고서 항목에 적용되는 일반적인 렌더링 동작 이외에도 데이터 영역에는 고유한 페이지 매김 및 렌더링 동작이 추가로 적용됩니다. 데이터 영역과 관련된 렌더링 규칙에는 데이터 영역을 늘리는 방법, 모퉁이 셀이나 머리글 셀 같은 특수 셀의 렌더링 방법, 오른쪽에서 왼쪽으로 읽어야 하는 자료에 대한 데이터 영역의 렌더링 방법 등이 포함됩니다. 이 항목에서는 데이터 영역의 여러 부분이 어떻게 렌더링되는지 설명합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030140"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>ConfigurationSetting 속성 - IsInitialized
   보고서 서버 인스턴스가 초기화되었는지 여부를 나타냅니다. 읽기 전용입니다.  

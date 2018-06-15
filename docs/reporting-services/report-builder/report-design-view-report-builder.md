@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022310"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  

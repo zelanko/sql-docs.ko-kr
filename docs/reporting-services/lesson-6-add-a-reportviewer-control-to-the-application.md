@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015836"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 응용 프로그램에 ReportViewer 컨트롤 추가
 보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 응용 프로그램에 ReportViewer 컨트롤을 추가합니다. ASP.NET 보고서 웹 사이트를 사용하는 경우 default.aspx 페이지에 ReportViewer 컨트롤이 추가됩니다.   

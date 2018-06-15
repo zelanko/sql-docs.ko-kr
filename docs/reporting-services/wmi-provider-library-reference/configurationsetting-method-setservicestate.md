@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031580"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 메서드 - SetServiceState
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  

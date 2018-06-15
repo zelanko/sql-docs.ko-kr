@@ -28,9 +28,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33075550"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

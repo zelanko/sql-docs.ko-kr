@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014440"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
 

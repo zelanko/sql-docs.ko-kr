@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014100"
 ---
 # <a name="removing-a-data-processing-extension"></a>데이터 처리 확장 프로그램 제거
   데이터 처리 확장 프로그램을 제거하려면 구성 파일에서 데이터 처리 확장 프로그램에 대한 **Extension** 요소를 제거하면 됩니다. 보고서 서버 및 보고서 디자이너에 대한 항목을 만든 경우에는 RSReportServer.config 파일과 RSReportDesigner.config 파일 모두에서 **Extension** 요소를 제거합니다. 구성 정보를 제거한 후에는 구성 요소에서 데이터 처리 확장 프로그램을 사용할 수 없습니다.  

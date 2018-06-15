@@ -21,9 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b57c45e33341fdb1d0ccc54a7749538bbc3f8163
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33070010"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

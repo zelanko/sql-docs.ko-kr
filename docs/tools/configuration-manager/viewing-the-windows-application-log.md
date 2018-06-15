@@ -25,9 +25,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0275da15c00b2b3d12515a1422b299e017e67345
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33068310"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows 응용 프로그램 로그 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,6 +16,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550024"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 Pacemaker 클러스터 배포
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035380"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.

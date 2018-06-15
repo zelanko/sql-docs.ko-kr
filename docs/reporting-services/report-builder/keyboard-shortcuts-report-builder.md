@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020630"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  

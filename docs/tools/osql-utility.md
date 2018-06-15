@@ -32,9 +32,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074720"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +102,7 @@ C:\>osql
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name***\\*** instance_name*을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
  **-H** *wksta_name*  
  워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  

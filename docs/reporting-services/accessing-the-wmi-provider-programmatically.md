@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33013920"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>WMI공급자에 프로그래밍 방식으로 액세스
 

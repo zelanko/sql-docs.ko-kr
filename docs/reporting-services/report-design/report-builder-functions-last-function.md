@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025000"
 ---
 # <a name="report-builder-functions---last-function"></a>보고서 작성기 함수 - Last 함수
   지정된 식의 지정된 범위에서 마지막 값을 반환합니다.  

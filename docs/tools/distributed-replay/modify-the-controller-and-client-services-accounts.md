@@ -18,9 +18,10 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7eb9b2256a5441eebebd2097c7f382ac46636ee8
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33071610"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

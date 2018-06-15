@@ -18,9 +18,10 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca10ddba5eb8d566ec97124e4870c0f53e01c4dd
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33074980"
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
   
     1.  32비트 컴퓨터의 기본 설치 경로는 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  64비트 컴퓨터의 기본 설치 경로는 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** 입니다.  
+    2.  64비트 컴퓨터의 기본 설치 경로는 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**입니다.  
   
 9. 작업이 완료되면 **다음**을 클릭합니다.  
   

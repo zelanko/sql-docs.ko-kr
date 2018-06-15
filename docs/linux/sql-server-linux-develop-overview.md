@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454959"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux에서 SQL Server 용 응용 프로그램 개발을 시작 하는 방법
 

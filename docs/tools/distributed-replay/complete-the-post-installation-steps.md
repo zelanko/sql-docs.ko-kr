@@ -18,9 +18,10 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 12bdc7fbea96f7af42f7b2a1f175e58fc03c0b6c
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33068670"
 ---
 # <a name="complete-the-post-installation-steps"></a>설치 후 단계 완료
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

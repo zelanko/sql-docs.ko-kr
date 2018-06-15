@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024360"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>보고서 작성기 함수 - CountDistinct 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 고유 값의 수를 반환합니다.  

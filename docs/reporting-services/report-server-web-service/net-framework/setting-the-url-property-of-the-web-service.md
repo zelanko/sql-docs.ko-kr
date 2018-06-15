@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024980"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>웹 서비스의 URL 속성 설정
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 언제든지 응용 프로그램이 현재 지정된 보고서 서버 웹 서비스의 기준 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  

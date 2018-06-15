@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020790"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>식 참조(보고서 작성기 및 SSRS)
   보고서 식은 기본 제공 함수 및 기본 제공 컬렉션에 대한 다양한 참조를 지원합니다. 식에 올바른 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 구문이 있어야만 보고서를 게시하거나 처리할 수 있습니다.  

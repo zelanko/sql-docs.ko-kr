@@ -16,6 +16,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455457"
 ---
 # <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>고가용성을 위해 Kubernetes에서 SQL Server 컨테이너 구성
 
