@@ -2,10 +2,10 @@
 title: SSVARIANT 구조 | Microsoft Docs
 description: OLE DB Driver for SQL Server에에서 SSVARIANT 구조
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,20 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd7d6ce87ac49c060347287d4b7a081ea5bb41
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666383"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **SSVARIANT** msoledbsql.h에 정의 된 구조를 SQL Server 용 OLE DB 드라이버에서 DBTYPE_SQLVARIANT 값에 해당 합니다.  
   
  **SSVARIANT** 는 판별 구조체입니다. Vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값에 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다. 따라서는 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  때 DataTypeCompat = = 80, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 다음 vt 값에 표시 됩니다는 예를 들어 **SSVARIANT** VT_SS_WVARSTRING으로 나타납니다.  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -82,7 +85,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |알려지지 않은 유형|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 형식 & #40; OLE db& #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 형식 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   
