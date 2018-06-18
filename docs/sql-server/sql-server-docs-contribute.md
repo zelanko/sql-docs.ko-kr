@@ -2,8 +2,6 @@
 title: SQL Server 설명서에 기여하는 방법 | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288762"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 - [GitHub 계정 만들기](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [콘텐츠 제작 도구 설치](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [로컬로 Git 리포지토리 설정](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/full-workflow)
+- [도구를 사용하여 참여](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 설명서에 중요한 변경 내용이 있는 끌어오기 요청을 제출하는 경우 GitHub에서 온라인 **기여 CLA(라이선스 규약)** 를 제출하도록 요청하는 메시지를 받습니다. 끌어오기 요청을 수락되도록 하려면 온라인 양식을 완료해야 합니다.
 
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 리포지토리는 콘텐츠를 구성하기 위해 여러 개의 표준 폴더를 사용합니다.
 
-| Folder | Description |
+| Folder | 설명 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 게시된 모든 SQL Server 콘텐츠를 포함합니다. 하위 폴더는 논리적으로 다양한 영역의 콘텐츠를 구성합니다. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | include 파일을 포함합니다. 이러한 파일은 하나 이상의 다른 항목에 포함될 수 있는 콘텐츠의 블록입니다. |
@@ -138,5 +137,3 @@ GitHub에서 [sql-docs 리포지토리](https://github.com/MicrosoftDocs/sql-doc
 문서를 찾고, 변경 내용을 전송하고, SQL Server 커뮤니티에 도움을 주세요. 
 
 감사합니다.
-
-
