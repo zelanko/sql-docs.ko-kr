@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5191250a1113be8bd5a613325aaceb31b176abce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312242"
 ---
 # <a name="register-mirrored-database"></a>미러된 데이터베이스 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  표에는 다음 열이 있습니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**등록**|등록할 각 데이터베이스를 검사합니다. 데이터베이스가 현재 모니터링되고 있는 경우 해당 확인란은 선택된 상태로 비활성화되어 있습니다.<br /><br /> 참고: 데이터베이스 등록을 취소하려면 **미러된 데이터베이스 등록** 대화 상자를 닫고 탐색 트리에서 데이터베이스를 선택한 다음 **동작** 메뉴에서 **등록 취소** 를 선택합니다.|  
 |**데이터베이스 백업**|선택한 서버 인스턴스에 있는 미러된 데이터베이스의 이름입니다.|  

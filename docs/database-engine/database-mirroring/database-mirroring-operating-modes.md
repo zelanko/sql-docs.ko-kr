@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11b084df985c6a81e2f5171c4bf79d34b5b27726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26507d69e601d09b60ef8b794f755d24efceebcb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312112"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ViewWitness"></a> 보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  
   
-|요소|열|Description|  
+|요소|열|설명|  
 |------------|-------------|-----------------|  
 |트랜잭션 보안|**mirroring_safety_level** 또는 **mirroring_safety_level_desc**|다음 중 하나에 해당되는 미러 데이터베이스상의 업데이트를 위한 트랜잭션 보안 설정<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = 데이터베이스가 온라인이 아닙니다.|  
 |미러링 모니터의 존재 여부|**mirroring_witness_name**|데이터베이스 미러링 모니터의 서버 이름 또는 미러링 모니터가 존재하지 않음을 나타내는 NULL|  

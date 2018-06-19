@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,24 +23,25 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88bbb9d536694df7e33ea0190c91319e4c2bbe37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29f7f6b3e0537c1c13f11389adf95c3d35736d8e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312612"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 끝점에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 끝점에 대한 개요를 보려면 [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [인증](#Authentication)  
   
 -   [데이터 암호화](#DataEncryption)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="Authentication"></a> 인증  
  인증은 사용자가 올바른지 여부를 확인하는 과정입니다. 데이터베이스 미러링 끝점 간 연결에는 인증이 필요합니다. 파트너나 미러링 모니터 서버의 연결 요청은 반드시 인증되어야 합니다.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
  필요에 따라 CREATE ENDPOINT 문 또는 ALTER ENDPOINT 문의 ALGORITHM 옵션에 다음 값 중 하나를 지정하여 끝점에서 사용할 수 있는 암호화 알고리즘을 제어할 수 있습니다.  
   
-|ALGORITHM 값|Description|  
+|ALGORITHM 값|설명|  
 |---------------------|-----------------|  
 |RC4|끝점이 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> **\*\* 경고 \*\*** RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
 |AES|끝점이 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다.|  

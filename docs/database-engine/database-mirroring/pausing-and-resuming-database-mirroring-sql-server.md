@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,11 +20,12 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 274e4f448a6332473b7fa72f01d395920e61c70a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea26b72cf351f44000f042102b31cc3329b44ece
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311912"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>데이터베이스 미러링 일시 중지 및 재개(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  강제 서비스에 따라 원래 주 서버가 다시 연결되면 미러링이 일시 중지됩니다. 이 경우 미러링을 재개하면 원래 주 서버의 데이터가 손실될 수 있습니다. 데이터 손실 위험을 관리하는 방법은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)를 참조하세요.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [로그 잘림에 대한 일시 중지 및 재개의 영향](#EffectOnLogTrunc)  
   
 -   [꽉 찬 트랜잭션 로그 방지](#AvoidFullLog)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="EffectOnLogTrunc"></a> 로그 잘림에 대한 일시 중지 및 재개의 영향  
  일반적으로 데이터베이스에서 자동 검사점을 수행하면 다음 로그 백업 이후 해당 트랜잭션 로그가 이 검사점까지 잘립니다. 데이터베이스 미러링 세션이 일시 중지된 동안에는 주 서버가 현재 로그 레코드를 미러 서버로 보내기 위해 대기 중이므로 모두 활성 상태로 유지됩니다. 보내지 않은 로그 레코드는 세션이 재개되어 주 서버에서 해당 로그 레코드를 미러 서버로 보낼 때까지 주 데이터베이스의 트랜잭션 로그에 누적됩니다.  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,18 +23,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5072c118781098c2ce9039fe6937c902a3385ce3
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312925"
 ---
 # <a name="connecting-tasks-programmatically"></a>프로그래밍 방식으로 태스크 연결
   개체 모델에서 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 클래스가 나타내는 선행 제약 조건은 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 개체가 실행되는 순서를 설정합니다. 선행 제약 조건을 사용하면 패키지의 컨테이너 및 태스크 실행이 이전 태스크 또는 컨테이너의 실행 결과에 따라 결정되도록 할 수 있습니다. 선행 제약 조건은 컨테이너 개체에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 개체 쌍 간에 설정됩니다. 두 개의 실행 개체 사이에 제약 조건을 만든 후 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성을 설정하여 제약 조건에 정의된 두 번째 실행 파일을 실행하기 위한 조건을 지정합니다.  
   
  다음 표에서 설명하는 것처럼 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A> 속성에 지정하는 값에 따라 단일 선행 제약 조건에 제약 조건과 식을 모두 사용할 수 있습니다.  
   
-|EvalOp 속성 값|Description|  
+|EvalOp 속성 값|설명|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|실행 결과에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거형에서 원하는 값으로 설정합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|식의 값에 따라 제약 조건이 지정된 컨테이너 또는 태스크의 실행 여부가 결정되도록 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 속성을 설정합니다.|  

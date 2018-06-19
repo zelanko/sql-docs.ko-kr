@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70f7975e2bf6408239bd4d4fe7c07af169e0bf29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78335b05976d63c1da39a69766fd44e073ad4e54
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310322"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  값은 신뢰도 수준에 따라 다음 5개의 탭에 표시됩니다.  
   
-|탭|Description|  
+|탭|설명|  
 |---------|-----------------|  
 |**제안**|DQS에서 신뢰도 수준이 *자동 제안 임계값* 보다 높고 *자동 수정 임계값* 보다 낮은 제안 값을 검색한 도메인 값을 표시합니다.<br /><br /> 제안 값은 원래 값에 대해 **다음으로 수정** 열에 표시됩니다. 상단 표의 값에 대해 **승인** 또는 **거부** 열에 있는 라디오 단추를 클릭하여 해당 값의 모든 인스턴스에 대해 제안을 허용하거나 거부할 수 있습니다. 이 경우 허용된 값은 **수정됨** 탭으로 이동하고, 거부된 값은 **잘못됨** 탭으로 이동합니다.|  
 |**새로 만들기**|DQS에 정보가 부족하여 다른 탭에 매핑할 수 없는 유효한 도메인을 표시합니다. 또한 이 탭에는 신뢰도 수준이 *자동 제안 임계값* 보다 낮지만 유효한 것으로 표시될 수 있는 값도 포함됩니다.<br /><br /> 값이 올바르다고 생각되면 **승인** 열의 라디오 단추를 클릭하고, 그렇지 않으면 **거부** 열의 라디오 단추를 클릭합니다. 허용된 값은 **올바름** 탭으로 이동하고, 거부된 값은 **잘못됨** 탭으로 이동합니다. 올바른 값을 **다음으로 수정** 열의 원래 값에 대한 대체 값으로 직접 입력한 다음 **승인** 열의 라디오 단추를 클릭하여 변경 내용을 적용할 수도 있습니다. 이 경우 값이 **수정됨** 탭으로 이동합니다.|  

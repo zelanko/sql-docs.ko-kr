@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de49a676fe066941b9575a45cedc4ab6de04a825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fbdc64df58381f91e7729d2a8213b111e944d0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311462"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Excel 파일을 저장할 이름과 위치를 지정하라는 메시지가 나타납니다. 내보낸 Excel 파일에는 다음과 같은 시트가 있습니다.  
   
-    |시트 이름|Description|  
+    |시트 이름|설명|  
     |----------------|-----------------|  
     |동작|작업 표에서와 같이 작업에 대한 정보(열)가 포함됩니다.|  
     |프로세스|**작업 단계** 탭에서와 같이 작업의 프로세스에 대한 정보(열)가 포함됩니다.|  

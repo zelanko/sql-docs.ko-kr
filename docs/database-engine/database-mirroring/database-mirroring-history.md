@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 512f75d4210ba8d873917552c3eb42c831367b4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61eb214df285ef51e20dd8308b430d0b43f22417
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311672"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **기록**  
  기록 목록을 표시합니다. 열 머리글을 클릭하면 해당 열을 기준으로 표가 정렬됩니다. 목록에는 다음 열이 있습니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**기록된 시간**|기록 행의 타임스탬프입니다.|  
 |**역할**|이 데이터베이스에 대한 서버 인스턴스의 현재 미러링 역할(주 서버 또는 미러 서버)입니다.|  

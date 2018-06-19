@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b1103a3528674c8541aa04569e0d63a17ddcefc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a90d530044eb24193f899f0926b392bec8dfe92
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310132"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  도메인 규칙을 만들 때 대체 방법 중 하나를 선택할 수 있습니다. 예를 들어 값이 A, B 또는 C 문자로 시작하는지 확인하려면 복잡한 조건이 하나 있는 단순한 규칙(예: 파이프 문자가 있는 정규식)을 만들거나 단순한 조건이 여러 개 포함된 복잡한 규칙을 만들면 됩니다. 첫 번째 규칙의 예는 "값이 다음을 포함 정규식 (^A|^B|^C)"입니다. 두 번째 규칙의 예는 "'값이 다음으로 시작 A' OR '값이 다음으로 시작 B' OR '값이 다음으로 시작 C'"입니다.  
   
-|조건|Description|예제|  
+|조건|설명|예제|  
 |---------------|-----------------|-------------|  
 |길이가 다음 값과 같음|피연산자에 지정된 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 크거나 같음|피연산자에 지정된 문자 수 또는 그보다 큰 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, BBAA<br /><br /> 유효하지 않은 값: AA|  

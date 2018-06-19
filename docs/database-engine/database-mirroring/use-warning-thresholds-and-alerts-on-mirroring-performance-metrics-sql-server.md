@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -22,11 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bbcd46741c92b04a5db85047cff04c3c1a9e678
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312452"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [미러된 데이터베이스에 대해 경고 사용](#UseAlerts)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> 성능 메트릭 및 경고 임계값  
  다음 표에서는 경고를 구성할 수 있는 성능 메트릭을 보여 주고 해당 경고 임계값과 데이터베이스 미러링 모니터 레이블에 대해 나열합니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
      다음 시스템 저장 프로시저 집합을 사용하면 관리자가 한 번에 한 파트너의 미러된 데이터베이스에 대해 경고 임계값을 설정하고 관리할 수 있습니다.  
   
-    |절차|Description|  
+    |절차|설명|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|지정한 미러링 성능 메트릭에 대해 경고 임계값을 추가하거나 변경합니다.|  
     |[sp_dbmmonitorhelpalert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|여러 가지 주요 데이터베이스 미러링 모니터 성능 메트릭 중 하나 또는 모두에 대한 경고 임계값 정보를 반환합니다.|  

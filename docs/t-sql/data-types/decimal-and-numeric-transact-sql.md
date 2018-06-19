@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249566"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ p(전체 자릿수)
 >  Informatica는 지정된 전체 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 *s* (소수 자릿수)  
-소수점 오른쪽에 저장할 소수 자릿수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. 소수 자릿수 값은 0에서 *p* 사이여야 합니다. 소수 자릿수는 전체 자릿수를 지정한 경우에만 지정할 수 있습니다. 기본 소수 자릿수는 0입니다. 따라서 0 <= *s* \<= *p*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.
+소수점 오른쪽에 저장할 소수 자릿수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 합니다. 소수 자릿수는 전체 자릿수를 지정한 경우에만 지정할 수 있습니다. 기본 소수 자릿수는 0입니다. 따라서 0 <= *s* \<= *p*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.
   
 |전체 자릿수|저장소 크기(바이트)|  
 |---|---|

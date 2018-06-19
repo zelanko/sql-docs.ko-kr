@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,11 +17,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cca36cb11728e9a50f37d0d9e9945535e327e971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f96a4b6fcf71d97511cb8bd0daf95c047d36078d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312162"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.lasthandoff: 05/03/2018
   
  데이터베이스 미러링 모니터링 작업인 **데이터베이스 미러링 모니터 작업**은 데이터베이스 미러링 모니터와 별개로 백그라운드에서 작동합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 1분마다 **데이터베이스 미러링 모니터 작업** 을 호출하고 작업에서는 미러링 상태를 업데이트하는 저장 프로시저를 호출합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 미러링 세션을 시작하는 경우 **데이터베이스 미러링 모니터 작업** 은 자동으로 생성됩니다. 그러나 ALTER DATABASE *<database_name>* SET PARTNER만 사용하여 미러링을 시작할 경우에는 저장 프로시저를 실행하여 작업을 만들어야 합니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [미러링 상태 모니터링](#MonitoringStatus)  
   
 -   [미러된 데이터베이스에 대한 추가 정보 원본](#AdditionalSources)  
   
--   [관련 태스크](#RelatedTasks)  
+-   [관련 작업](#RelatedTasks)  
   
 ##  <a name="MonitoringStatus"></a> 미러링 상태 모니터링  
  서버 인스턴스에 있는 하나 이상의 미러된 데이터베이스에 대한 모니터링을 설정하고 관리하려면 데이터베이스 미러링 모니터 서버 또는 **dbmmonitor** 시스템 저장 프로시저를 사용합니다. 미러링 세션 중에 미러된 데이터베이스를 모니터링하여 데이터 흐름 여부와 상태를 확인할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/03/2018
   
      다음 표에서는 데이터베이스 미러링 모니터와 별도로 데이터베이스 미러링 모니터링을 관리하고 사용하기 위한 저장 프로시저를 설명합니다.  
   
-    |절차|Description|  
+    |절차|설명|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|서버 인스턴스의 모든 미러된 데이터베이스에 대한 상태 정보를 정기적으로 업데이트하는 작업을 만듭니다.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|데이터베이스 미러링 모니터링 매개 변수의 값을 변경합니다.|  

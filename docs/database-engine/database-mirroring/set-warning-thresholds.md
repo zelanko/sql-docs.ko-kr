@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51f4f099935d92f95be67b0964e9ed3a52bc764f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 631f734e2ade09264c62bfb6392f2f7b3edd8fcd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312322"
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **경고**  
  지원되는 경고를 나열합니다.  
   
-|경고|Description|  
+|경고|설명|  
 |-------------|-----------------|  
 |**보내지 않은 로그가 임계값을 초과하는 경우 경고**|임계값은 주 서버의 Send Queue에 있는 보내지 않은 로그의 크기(KB)를 나타냅니다.|  
 |**복원되지 않은 로그가 임계값을 초과하는 경우 경고**|임계값은 미러 서버 인스턴스에 있는 Redo Queue의 크기(KB)를 나타냅니다.|  
