@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d2881d0c23d378dcc9da0ffaf122adbadc0e22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b929d81b37523eebbea7a63f8c066b9bd923890f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311902"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  열은 다음과 같습니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**서버 인스턴스**|**상태** 행에 해당 상태가 표시되는 서버 인스턴스의 이름입니다.|  
 |**현재 역할**|서버 인스턴스의 현재 역할( **주 서버** 또는 **미러 서버**)입니다.|  
