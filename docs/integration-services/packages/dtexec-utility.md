@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2583631f47e2f986e238880acb3e420515eeda60
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335687"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
@@ -106,7 +105,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  패키지를 실행하면 **dtexec** 에서 종료 코드를 반환할 수 있습니다. 종료 코드는 ERRORLEVEL 변수를 채우는 데 사용되며 이 변수의 값은 배치 파일 내의 분기 논리 또는 조건문에서 테스트될 수 있습니다. 다음 표에서는 **dtexec** 종료 시 유틸리티에서 설정할 수 있는 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|패키지가 성공적으로 실행되었습니다.|  
 |1|패키지가 실패했습니다.|  
