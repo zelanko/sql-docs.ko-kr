@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e14a87d5398f3d47274708e5c411b5259314d883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 122409bc6f4f03dff871a72f7a70aca83e557308
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402025"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  계층 멤버 권한은 할당 대상 모델 버전과 해당 버전의 모든 이후 복사본에 적용되며, 할당 대상 버전보다 이전 버전에는 적용되지 않습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트** 에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트** 로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  

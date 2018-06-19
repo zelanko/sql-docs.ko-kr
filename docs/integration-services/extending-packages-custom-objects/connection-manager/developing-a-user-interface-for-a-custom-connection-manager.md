@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -20,11 +19,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ca5c61b48c7bc5376b66ff51f34368362c8e9a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ab030542b0197bb7055160fc186df80fe66b6e7
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335887"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>사용자 지정 연결 관리자의 사용자 인터페이스 개발
   기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공한 후 연결 관리자의 사용자 지정 사용자 인터페이스를 만들 수 있습니다. 사용자 지정 사용자 인터페이스를 만들지 않은 경우 사용자는 속성 창에서만 연결 관리자를 구성할 수 있습니다.  

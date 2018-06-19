@@ -3,12 +3,10 @@ title: SQL Server Audit 레코드 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +16,12 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: da1a84464eed7a273508cccbc073bddb0b98f752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2bd68fbbb292b1b9c42144c8bd702fb05a66f5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971648"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697714"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,34 +29,34 @@ ms.locfileid: "32971648"
   
  감사는 0개 이상의 감사 동작 항목으로 구성되어 있으며 이들은 감사 *대상*에 기록됩니다. 이진 파일, Windows 응용 프로그램 이벤트 로그 또는 Windows 보안 이벤트 로그가 감사 대상이 될 수 있습니다. 대상에 전달된 레코드에는 다음 표에 설명된 요소가 포함될 수 있습니다.  
   
-|열 이름|Description|형식|항상 사용 가능 여부|  
+|열 이름|설명|형식|항상 사용 가능 여부|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|**datetime2**|예|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|**int**|예|  
 |**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
 |**succeeded**|감사 이벤트를 트리거하는 동작의 사용 권한 검사가 성공했는지 아니면 실패했는지 여부를 나타냅니다. |**bit**<br /> –1 = 성공, <br />0 = 실패|예|  
-|**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|아니오|  
-|**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />–1 = True, <br />0 = False|아니오|  
+|**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|아니요|  
+|**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />–1 = True, <br />0 = False|아니요|  
 |**session_id**|이벤트가 발생한 세션의 ID입니다.|**int**|예|  
 |**server_principal_id**|동작을 수행한 로그인 컨텍스트의 ID입니다.|**int**|예|  
-|**database_principal_id**|동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다.|**int**|아니오|  
-|**object_ id**|감사가 수행된 엔터티의 주 ID이며 이 ID는 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|**int**|아니오|  
+|**database_principal_id**|동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다.|**int**|아니요|  
+|**object_ id**|감사가 수행된 엔터티의 주 ID이며 이 ID는 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|**int**|아니요|  
 |**target_server_principal_id**|감사 가능한 동작이 적용되는 서버 보안 주체입니다.|**int**|예|  
-|**target_database_principal_id**|감사 가능한 동작이 적용되는 데이터베이스 보안 주체입니다.|**int**|아니오|  
+|**target_database_principal_id**|감사 가능한 동작이 적용되는 데이터베이스 보안 주체입니다.|**int**|아니요|  
 |**class_type**|감사가 수행되는 감사 가능한 엔터티의 형식입니다.|**varchar(2)**|예|  
 |**session_server_principal_name**|세션의 서버 보안 주체입니다.|**sysname**|예|  
 |**server_principal_name**|현재 로그인입니다.|**sysname**|예|  
 |**server_principal_sid**|현재 로그인 SID입니다.|**varbinary**|예|  
-|**database_principal_name**|현재 사용자입니다.|**sysname**|아니오|  
-|**target_server_principal_name**|동작의 대상 로그인입니다.|**sysname**|아니오|  
-|**target_server_principal_sid**|대상 로그인의 SID입니다.|**varbinary**|아니오|  
-|**target_database_principal_name**|동작의 대상 사용자입니다.|**sysname**|아니오|  
+|**database_principal_name**|현재 사용자입니다.|**sysname**|아니요|  
+|**target_server_principal_name**|동작의 대상 로그인입니다.|**sysname**|아니요|  
+|**target_server_principal_sid**|대상 로그인의 SID입니다.|**varbinary**|아니요|  
+|**target_database_principal_name**|동작의 대상 사용자입니다.|**sysname**|아니요|  
 |**server_instance_name**|감사가 수행된 서버 인스턴스의 이름입니다. 표준 machine\instance 형식을 사용합니다.|**nvarchar(120)**|예|  
-|**database_name**|동작이 수행된 데이터베이스 컨텍스트입니다.|**sysname**|아니오|  
-|**schema_name**|동작이 수행된 스키마 컨텍스트입니다.|**sysname**|아니오|  
-|**object_name**|감사가 수행된 대상 엔터티의 이름입니다. 이 이름은 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체<br /><br /> TSQL 문(있는 경우)|**sysname**|아니오|  
-|**statement**|TSQL 문(있는 경우)|**nvarchar(4000)**|아니오|  
-|**additional_information**|이벤트에 대한 추가 정보이며 XML로 저장됩니다.|**nvarchar(4000)**|아니오|  
+|**database_name**|동작이 수행된 데이터베이스 컨텍스트입니다.|**sysname**|아니요|  
+|**schema_name**|동작이 수행된 스키마 컨텍스트입니다.|**sysname**|아니요|  
+|**object_name**|감사가 수행된 대상 엔터티의 이름입니다. 이 이름은 다음이 될 수 있습니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체<br /><br /> TSQL 문(있는 경우)|**sysname**|아니요|  
+|**statement**|TSQL 문(있는 경우)|**nvarchar(4000)**|아니요|  
+|**additional_information**|이벤트에 대한 추가 정보이며 XML로 저장됩니다.|**nvarchar(4000)**|아니요|  
   
 ## <a name="remarks"></a>Remarks  
  일부 동작은 적용되지 않을 수 있는 열 값을 채우지 않습니다.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4f3866b56645b9e484f07ac775f4b642defc5d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a91a00dad5cb2299aaa11e14d0e952c1b363ec3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35399875"
 ---
 # <a name="hdfs-file-source"></a>HDFS 파일 원본
   SSIS 패키지는 HDFS 파일 원본 구성 요소를 통해 HDFS 파일에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다. ORC 원본은 지원되지 않습니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="options"></a>변수  
  **Hadoop 파일 원본 편집기** 대화 상자의 **일반** 탭에서 다음 옵션을 구성합니다.  
   
-|필드|Description|  
+|필드|설명|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 HDFS 파일이 호스트되는 위치를 나타냅니다.|  
 |**파일 경로**|HDFS 파일의 이름을 지정합니다.|  

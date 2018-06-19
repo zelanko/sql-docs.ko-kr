@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cac7056cb11a4d501effb0336496e63e25969292
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0ae7336f2b957d5cd846c0b5546bdaf2e3945ce
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400817"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|사용자는 리프 멤버, 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 리프 멤버를 만들고 만드는 동안 특성 값을 할당할 수 있습니다.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|사용자는 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 멤버를 만들 때 값을 할당할 수 있습니다.|  

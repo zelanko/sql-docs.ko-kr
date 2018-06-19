@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,18 +19,19 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d5d676ed2b32827c16b70dab4c447d7029ed806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e9360b346ed267fcaad61ef6c06b9408c837b8d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402985"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
   이 섹션에서는 식 언어가 제공하는 연산자 및 식 계산기에 사용되는 연산자 우선 순위 및 계산 방향에 대해 설명합니다.  
   
  다음 표에서는 이 섹션의 연산자에 대한 항목을 나열합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)|식의 데이터 형식을 다른 데이터 형식으로 변환합니다.|  
 |[&#40;&#41;&#40;괄호&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|식의 계산 순서를 식별합니다.|  

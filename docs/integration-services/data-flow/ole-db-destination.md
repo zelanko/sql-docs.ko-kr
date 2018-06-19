@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfed499dd91ae4113671bf88f23e5ac1b0d8792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406915"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  **OLE DB 대상 편집기** 대화 상자에 표시된 빠른 로드 옵션 외에도 **고급 편집기** 대화 상자의 FastLoadOptions 속성에 옵션을 입력하여 다음과 같은 대량 로드 옵션을 사용하도록 OLE DB 대상을 구성할 수 있습니다.  
   
-|빠른 로드 옵션|Description|  
+|빠른 로드 옵션|설명|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값**>** 형식으로 입력합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  **데이터 액세스 모드**  
  대상으로 데이터를 로드하는 방법을 지정합니다. DBCS(더블바이트 문자 집합) 데이터는 빠른 로드 옵션 중 하나를 사용하여 로드해야 합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다.|  
 |테이블 또는 뷰 - 빠른 로드|빠른 로드 옵션을 사용하여 OLE DB 대상의 테이블 또는 뷰로 데이터를 로드합니다. 대량 삽입에 최적화된 빠른 로드 데이터 액세스 모드에 대한 자세한 내용은 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)을 참조하십시오.|  

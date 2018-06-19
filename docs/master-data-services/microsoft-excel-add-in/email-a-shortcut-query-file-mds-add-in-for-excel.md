@@ -1,14 +1,12 @@
 ---
 title: 바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22212ddc6cc612eb398be3eba212ddd64426a3c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11cd8d7a72f4aaf6c2bfccb3bfb9b41dcc2a7f42
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335937"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
 

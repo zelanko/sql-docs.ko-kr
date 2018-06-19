@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb70afd25086bdee1c671f514cc5fc77cedc56d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5377d170dc3a733d7e47dff9082493a744036e9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406685"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  

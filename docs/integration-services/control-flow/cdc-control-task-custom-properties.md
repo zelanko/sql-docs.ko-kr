@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
@@ -16,16 +14,17 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76b11c452724a324118e07a7b494d1ff0a2ab1c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18c212529f41739f1e2562b9d21e078a7915d8ef
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404385"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 제어 태스크 사용자 지정 속성
   다음 표에서는 CDC 제어 태스크의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |연결|ADO.NET 연결|변경 테이블과 CDC 상태(동일한 데이터베이스에 저장되어 있는 경우)에 액세스하기 위한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 데이터베이스에 대한 ADO.NET 연결입니다.<br /><br /> CDC에 사용할 수 있고 선택한 변경 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결해야 합니다.|  
 |TaskOperation|Integer(열거형)|CDC 제어 태스크에 대해 선택한 작업입니다. 가능한 값은 **초기 로드 시작 표시**, **초기 로드 끝 표시**, **CDC 시작 표시**, **처리 범위 가져오기**, **처리된 범위 표시**및 **CDC 상태 다시 설정**입니다.<br /><br /> **CDC(Oracle이 아님)에서 작업할 때**MarkCdcStart **,** MarkInitialLoadStart **또는** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택하는 경우 연결 관리자에서 지정하는 사용자가  **db_owner** 또는 **sysadmin**이어야 합니다.<br /><br /> 이러한 작업에 대한 자세한 내용은 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 및 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  

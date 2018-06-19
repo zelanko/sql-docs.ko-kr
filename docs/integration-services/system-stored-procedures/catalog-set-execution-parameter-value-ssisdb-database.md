@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
@@ -16,11 +14,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 169f6158795b7289a1df7ed7651369936d9ad404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409075"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  *object_type* 매개 변수를 50으로 설정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|InclusionThresholdSetting<br /><br /> 로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
 |1|Basic<br /><br /> 사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  

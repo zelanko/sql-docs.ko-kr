@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 786d9b2e0d3a3f00d3f9e00496d8a11e9d2c18c1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402995"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 CDC 상태 변수 값의 구성 요소를 자세히 설명합니다.  
   
-|구성 요소|Description|  
+|구성 요소|설명|  
 |---------------|-----------------|  
 |**\<상태 이름 >**|현재 CDC 상태의 이름입니다.|  
 |**CS**|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에는 가능한 CDC 상태 값에 대한 설명이 나와 있습니다.  
   
-|State|Description|  
+|State|설명|  
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 **MarkInitialLoadStart** 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  

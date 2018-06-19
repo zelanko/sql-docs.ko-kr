@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6552bb3f8b4294fed3a14eaaf71dab1575380dad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b49a83a389c0d9fec7a843e005946faccbef5a86
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405115"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
 **열 매핑** 대화 상자의 **매핑** 목록에서 성공하지 않을 수 있는 데이터 형식 매핑을 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **데이터 형식 매핑 검토** 페이지를 표시합니다. 이 페이지에서는 원본 데이터가 대상과 호환되도록 하기 위해 마법사에서 수행해야 하는 데이터 형식 변환에 대한 세부 정보를 검토합니다. 이 정보에는 오류 또는 잘림이 발생할 수 있는 변환에서 성공할 것으로 예상되는 데이터 형식 변환을 구별하는 시각적 표시가 포함됩니다. 각 변환에 대해 마법사에서 제안하는 변환을 적용할지 여부를 결정하고 발생할 수 있는 오류를 처리하는 방법을 지정합니다.   
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **테이블** 목록의 열에 대해 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |(원본 아이콘)|데이터 형식 변환에 대한 성공 확률을 나타냅니다.<br /> - **녹색** 확인 표시 아이콘은 마법사에서 이 테이블에 대한 모든 데이터 형식 변환이 성공할 것으로 예상함을 나타냅니다.<br />- **노란색** 경고 아이콘은 마법사에서 수행할 개별 변환을 검토해야 함을 나타냅니다. 이러한 변환을 검토하려면 테이블을 선택한 다음 **데이터 형식 매핑** 목록의 개별 열에 대해 변환을 검토합니다.<br />- **빨간색** 오류 아이콘은 마법사에서 이 테이블에 대한 일부 변환을 안정적으로 수행할 수 없음을 나타냅니다.|  
 |**원본**|원본 테이블의 이름입니다.|  
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 
 다음 표에서는 **데이터 형식 매핑** 목록의 열에 대해 설명합니다. 
 
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |(변환 아이콘)|데이터 형식 변환에 대한 성공 확률을 나타냅니다.<br /> - **녹색** 확인 표시 아이콘은 마법사에서 이 열에 대한 데이터 형식 변환이 성공할 것으로 예상함을 나타냅니다.<br />- **노란색** 경고 아이콘은 마법사에서 수행할 변환을 검토해야 함을 나타냅니다. 변환을 검토하려면 열을 두 번 클릭하여 **열 변환 정보** 대화 상자를 표시합니다. 자세한 내용은 [열 변환 정보 대화 상자](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)를 참조하세요.<br />- **빨간색** 오류 아이콘은 마법사에서 변환을 안정적으로 수행할 수 없음을 나타냅니다.|  
 |**원본 열**|원본 열의 이름입니다.|  

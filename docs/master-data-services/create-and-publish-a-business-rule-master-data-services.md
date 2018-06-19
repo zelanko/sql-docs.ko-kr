@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e42860278fc478cb6d139ee8e94ab24668e67a26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c2c75fbe8251d66bc094f0e59681bcc160dba7a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400825"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>비즈니스 규칙 만들기 및 게시(Master Data Services)
 
@@ -107,11 +107,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 비즈니스 규칙에 대해 열이 6개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |상태|**저장** 을 클릭하면 비즈니스 규칙이 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 비즈니스 규칙을 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |속성|비즈니스 규칙 이름입니다.|  
-|Description|비즈니스 규칙 설명입니다.|  
+|설명|비즈니스 규칙 설명입니다.|  
 |비즈니스 규칙 상태|규칙이 정의되지 않았습니다./활성/제외됨/변경 보류 중/제외 보류 중/삭제 보류 중 하나입니다.|  
 |제외됨|비즈니스 규칙을 제외할지 여부를 지정합니다.|  
 |알림|전자 메일 알림을 보내도록 선택한 사용자 또는 그룹을 지정합니다.|  

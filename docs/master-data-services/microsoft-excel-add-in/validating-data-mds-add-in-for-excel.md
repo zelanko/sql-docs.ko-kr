@@ -1,14 +1,12 @@
 ---
 title: 데이터 유효성 검사(Excel용 MDS 추가 기능) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
@@ -16,11 +14,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab8cf0017260edd45a7538191689cd47198f8a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335787"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>데이터 유효성 검사(Excel용 MDS 추가 기능)
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  추가 상태에 대한 자세한 내용은 [유효성 검사 상태&#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)를 참조하세요.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |유효성 검사 실패|행에 있는 하나 이상의 값이 MDS 관리자가 정의한 비즈니스 규칙에 대한 유효성 검사에 실패했습니다.|  
 |유효성 검사 성공|행의 모든 값이 비즈니스 규칙에 대한 유효성 검사에 통과했습니다.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="input-statuses"></a>입력 상태  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 입력 상태는 다음과 같습니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |Error|행에 있는 하나 이상의 값이 길이 또는 데이터 형식 같은 시스템 요구 사항을 충족하지 않습니다. MDS 저장소에서 값이 업데이트되지 않습니다.|  
 |새 행|행의 값이 아직 MDS 저장소에 게시되지 않았습니다.|  

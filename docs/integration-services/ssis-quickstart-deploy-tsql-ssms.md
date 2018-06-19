@@ -1,23 +1,21 @@
 ---
 title: Transact-SQL(SSMS)을 사용하여 SSIS 프로젝트 배포 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 4453198895cbc67d412019a9ff0f4e9463a496f6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455166"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402565"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL을 사용하여 SSMS에서 SSIS 프로젝트 배포
 

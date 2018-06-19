@@ -10,13 +10,13 @@ ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: ssis
 ms.date: 04/28/2018
-ms.openlocfilehash: f1d0c96c7ee0a835c1fc1cf6db6e3cf1e03ca9d6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 865a5c79c3726b36faed32d24c07c37ea4837ba2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406185"
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>새로운 기능 및 최근에 업데이트된 기능: SQL Server Integration Services
 

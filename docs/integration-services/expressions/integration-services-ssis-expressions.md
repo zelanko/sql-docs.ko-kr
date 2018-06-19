@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9987da3e1fc745a5ba823fe56e93f2185a30ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408365"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services(SSIS) 식
   식은 하나의 데이터 값으로 계산되는 기호(식별자, 리터럴, 함수 및 연산자)의 조합입니다. 간단한 식으로는 단일 상수, 변수 또는 함수가 있습니다. 그러나 식이 여러 개의 연산자와 함수를 사용하고 여러 개의 열과 변수를 참조하는 경우가 더 많습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 식은 CASE 문의 조건 정의, 데이터 열의 값 만들기 및 업데이트, 변수에 값 할당, 런타임에 속성 업데이트 또는 채우기, 선행 제약 조건에 제약 조건 정의, For Loop 컨테이너에 사용되는 식 제공 등에 사용할 수 있습니다.  

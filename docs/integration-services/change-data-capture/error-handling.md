@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd409daab0e317cff3ad474bda2963115caa1c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f39b2ff34a821b00e8dd9cc2d003ad3b354df7d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405375"
 ---
 # <a name="error-handling"></a>오류 처리
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 Oracle CDC 인스턴스가 상태 테이블에 보고할 수 있는 다양한 상태 코드에 대해 설명합니다.  
   
-|상태|활성 상태 코드|오류 상태 코드|Description|하위 상태|  
+|상태|활성 상태 코드|오류 상태 코드|설명|하위 상태|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 예기치 않게 중지되었음을 나타냅니다.|ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 실행되고 있지 않을 때 Oracle CDC Service 기본 인스턴스에 의해 설정됩니다.|  
 |error|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다.|MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  

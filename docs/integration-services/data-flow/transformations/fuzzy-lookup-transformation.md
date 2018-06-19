@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -39,11 +37,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d43876a38188ce181c80bd625c50128bbc608c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406065"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 일치 인덱스 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|새 인덱스를 만들어 저장하고 유지 관리합니다. 변환은 참조 테이블에 트리거를 설치하여 참조 테이블 및 인덱스 테이블이 계속 동기화되도록 유지합니다.|  
 |**GenerateAndPersistNewIndex**|새 인덱스를 만들고 저장하지만 유지 관리하지 않습니다.|  

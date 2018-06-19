@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 688dd10c3aa1ad8b985aa3b140bc81115310cb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403235"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="mapping-operations"></a>매핑 작업  
  다음 표에서는 문자표 변환이 지원하는 매핑 작업을 설명합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |바이트 반전|바이트 순서를 반대로 바꿉니다.|  
 |전자|반자 문자를 전자 문자에 매핑합니다.|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **대상**  
  문자열 작업 결과를 기존 열을 사용하여 내부에 저장할지, 아니면 수정된 데이터를 새 열로 저장할지를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |새 열|새 열에 데이터를 저장합니다. **출력 별칭**의 열 이름을 할당합니다.|  
 |내부 변경|수정된 데이터를 기존 열에 저장합니다.|  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  **연산**  
  열 데이터에 적용할 문자열 함수를 목록에서 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |소문자|소문자로 변환합니다.|  
 |대문자|대문자로 변환합니다.|  

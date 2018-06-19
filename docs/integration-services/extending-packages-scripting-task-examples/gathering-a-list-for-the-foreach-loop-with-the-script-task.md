@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +22,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946701968facce4f76a53a2ad5a72c96b03dd026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1fa5494f175315ece0f497a6afe69b98a6df026
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400935"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
   Foreach from Variable 열거자는 변수에서 해당 열거자에 전달된 목록의 항목을 열거하고 각 항목에 대해 동일한 태스크를 수행합니다. 스크립트 태스크에서 사용자 지정 코드를 사용하여 이러한 용도로 사용할 목록을 채울 수 있습니다. 이 열거자에 대한 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 예에서는 **System.IO** 네임스페이스에서 메서드를 사용하여 컴퓨터에서 만든 날짜 또는 수정한 날짜가 사용자가 변수에 지정한 일 수를 경과하지 않았거나 경과한 Excel 통합 문서의 목록을 수집합니다. 이 예에서는 C 드라이브의 디렉터리에서 확장명이 .xls인 파일을 재귀적으로 검색하고 각 파일을 마지막으로 수정한 날짜를 검사하여 목록에 포함할 파일인지 확인합니다. 그런 다음 조건에 맞는 파일을 **ArrayList**에 추가하고 이 **ArrayList**를 Foreach 루프 컨테이너에서 나중에 사용할 수 있도록 변수에 저장합니다. Foreach 루프 컨테이너는 Foreach from Variable 열거자를 사용하도록 구성됩니다.  
   
 > [!NOTE]  

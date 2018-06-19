@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2df3cf58c2b8140870ca39b03c75abf2e077928e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff68c0634886c148325129a9c17394ba1dc43802
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401475"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 하이브 태스크
   Hadoop 하이브 태스크를 사용하여 Hadoop 클러스터에서 하이브 스크립트를 실행합니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="options"></a>변수  
  **Hadoop 하이브 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
-|필드|Description|  
+|필드|설명|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 WebHCat 서비스가 호스트되는 위치를 나타냅니다.|  
 |**SourceType**|쿼리의 원본 유형을 지정합니다. 사용 가능한 값은 **ScriptFile** 및 **DirectInput**입니다.|  

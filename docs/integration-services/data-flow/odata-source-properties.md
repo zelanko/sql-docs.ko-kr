@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
@@ -16,17 +14,18 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c1035a694f53c274e47a89b45fc7b62022a7b21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acfc6c1305e493aeb24b1d2c92bbebd424ac42c7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400895"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
 데이터 흐름에서 **OData 원본**을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  
 
 ## <a name="properties"></a>속성 
-|속성|Description|  
+|속성|설명|  
 |-|-|  
 |CollectionName|OData 서비스에서 검색할 컬렉션의 이름입니다. **CollectionName** 속성은 **UseResourcePath** 가 False인 경우 사용됩니다.<br /><br /> 이 속성에는 식이 적용될 수 있으며 값을 런타임에 설정할 수 있습니다. 그러나 컬렉션의 메타데이터가 디자인 타임에 있던 메타데이터와 일치하지 않는 경우 유효성 검사 오류가 발생하여 데이터 흐름 실행이 실패합니다.|  
 |DefaultStringLength|이 값은 최대 길이가 없는 문자열 열의 기본 길이를 지정합니다.<br /><br /> **기본값:** 4000|  

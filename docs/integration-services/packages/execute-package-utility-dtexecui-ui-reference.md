@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b68b33eeb18b07c19bf367be9fdcb27b45e632c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401455"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|값|Description|  
+|값|설명|  
 |**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** *username* 및 **/PASSWORD** *password* options to the comm및 prompt.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  

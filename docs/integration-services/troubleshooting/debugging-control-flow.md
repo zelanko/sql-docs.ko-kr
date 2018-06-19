@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405305"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 및 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 제어 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 모든 태스크 및 컨테이너에 설정할 수 있는 10개의 중단 조건을 제공합니다. **중단점 설정** 대화 상자에서 다음 조건에 따라 중단점을 설정할 수 있습니다.  
   
-|중단 조건|Description|  
+|중단 조건|설명|  
 |---------------------|-----------------|  
 |태스크나 컨테이너가 **OnPreExecute** 이벤트를 받을 때|태스크가 실행되려는 순간에 호출됩니다. 이 이벤트는 작업이 실행되기 바로 전에 태스크나 컨테이너에 의해 발생합니다.|  
 |태스크나 컨테이너가 **OnPostExecute** 이벤트를 받을 때|태스크의 실행 논리가 완료되자 마자 호출됩니다. 이 이벤트는 작업이 실행된 바로 후에 태스크나 컨테이너에 의해 발생합니다.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 적중 횟수 유형에 대해 설명합니다.  
   
-|적중 횟수 유형|Description|  
+|적중 횟수 유형|설명|  
 |--------------------|-----------------|  
 |항상|중단점에 도달하면 실행이 항상 일시 중지됩니다.|  
 |다음과 같은 적중 횟수|중단점이 발생한 횟수가 적중 횟수와 같으면 실행이 일시 중지됩니다.|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 이러한 창에 대해 설명합니다.  
   
-|창|Description|  
+|창|설명|  
 |------------|-----------------|  
 |중단점|패키지에 있는 중단점을 나열하고 중단점을 설정 및 해제할 수 있는 옵션을 제공합니다.|  
 |출력|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능에 대한 상태 메시지를 표시합니다.|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **적중 횟수 형식**  
  중단점이 적용되는 시기를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**항상**|중단점에 도달하면 실행이 항상 일시 중지됩니다.|  
 |**다음과 같은 적중 횟수**|중단점이 발생한 횟수가 적중 횟수와 같으면 실행이 일시 중지됩니다.|  

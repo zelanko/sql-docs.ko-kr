@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 920d2b8ab5eb2d0635fbdac7170fbe5d2ecfe8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401955"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 작업 중에 기록된 메시지를 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|메시지의 고유 식별자(ID)입니다.|  
 |operation_id|**bigint**|작업의 고유 ID입니다.|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  이 뷰는 다음과 같은 메시지 유형을 표시합니다.  
   
-|**message_type** 값|Description|  
+|**message_type** 값|설명|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|Error|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|설명|  
 |-------------------------------|-----------------|  
 |10|T-SQL 및 CLR 저장 프로시저와 같은 API 항목|  
 |20|패키지(ISServerExec.exe)를 실행하는 데 사용되는 외부 프로세스|  
