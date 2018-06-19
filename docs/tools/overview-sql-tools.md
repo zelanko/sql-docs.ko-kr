@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709031"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>쿼리를 실행 하 고 데이터베이스 관리 도구  
 
-| 도구 | Description |
+| 도구 | 설명 |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 실행 하는 경우 항상 데이터베이스 관리를 위한 무료, 간단한 도구입니다. 이 미리 보기 릴리스에서 확장 된 TRANSACT-SQL 편집기와 데이터베이스의 작동 상태에 대 한 사용자 지정 가능한 정보를 포함 하 여 데이터베이스 관리 기능을 제공 합니다. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows, macOS 등 및 Linux에서 실행**합니다.|
 | [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 관리. **Windows에서 실행 되는 SSMS**합니다.|
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="additional-tools"></a>추가 도구
 
-| 도구 | Description |
+| 도구 | 설명 |
 |:--|:--|
 | [구성 관리자](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 구성 관리자 SQL Server 서비스를 구성 하 고 네트워크 연결을 구성을 사용 하 고 있습니다. Windows에서 실행 되는 configuration Manager|
 |[mssql conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql conf를 사용 하 여 Linux에서 실행 중인 SQL Server를 구성 합니다.|

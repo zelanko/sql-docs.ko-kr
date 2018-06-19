@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582135"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ sqlcmd
  서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
  **-M** *multisubnet_failover*  
- SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [! 포함[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [만들기 및 가용성 그룹의 구성을 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치 클러스터링 및 Always On 가용성 그룹 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, 및 [ 활성 보조: 읽기 가능한 보조 복제본 (Always On 가용성 그룹)] (https://msdn.microsoft.com/library/ff878253.aspx합니다.  
+ SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [! 포함[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [만들기 및 가용성 그룹의 구성을 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치 클러스터링 및 Always On 가용성 그룹 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), 및 [활성 보조: 읽기 가능한 보조 복제본 (Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)합니다.  
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
