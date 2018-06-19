@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 459c0f0589ada677bd21419b965d589b43d5771b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65fe8847533cc7522489ac45ac343d7c469530ae
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312252"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

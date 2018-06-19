@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f179b9474d715ad0e94cb0261af35c4829f947c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 012333e2584041c42c3901ef22be90f7591fdffb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322272"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 삭제 및 다시 만들기
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  

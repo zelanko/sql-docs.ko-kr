@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58f7dc0824493b69378254b88893c8a6640420f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dce545850e631a99b00a8b559f3224396019832
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311922"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3812692b30c5ff4436403d22de834e9fe8d6d73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d55619b72797f330e00336685d8066373de98c79
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322202"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
