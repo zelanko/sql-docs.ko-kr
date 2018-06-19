@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6135e7e65c10d375d6a59529bd1beb3369a8d084
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5e265f00931bd06609f288d3c30f733548f39
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408875"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
   설명서의 이 섹션에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와 관련된 몇 가지 오류와 이벤트에 대한 정보가 포함되어 있습니다. 또한 오류 메시지의 원인 및 해결 방법 정보도 포함되어 있습니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="error-messages"></a>오류 메시지  
   
-|오류의 심볼 이름|Description|  
+|오류의 심볼 이름|설명|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|캐시 변환이 메모리 내 캐시에 데이터를 쓰려고 하고 있기 때문에 패키지를 실행할 수 없음을 나타냅니다. 그러나 캐시 연결 관리자가 메모리 내 캐시에 캐시 파일을 이미 로드했습니다.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|지정한 연결이 실패하여 패키지를 실행할 수 없음을 나타냅니다.|  
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlispackage"></a>이벤트(SQLISPackage)  
  자세한 내용은 [Integration Services 패키지에서 기록하는 이벤트](../integration-services/performance/events-logged-by-an-integration-services-package.md)를 참조하세요.  
   
-|이벤트|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |SQLISPackage_12288|패키지가 시작되었음을 나타냅니다.|  
 |SQLISPackage_12289|패키지가 성공적으로 실행되었음을 나타냅니다.|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="events-sqlisservice"></a>이벤트(SQLISService)  
  자세한 내용은 [Integration Services 서비스에서 기록하는 이벤트](../integration-services/service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
   
-|이벤트|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |SQLISService_256|시비스가 시작되려고 함을 나타냅니다.|  
 |SQLISService_257|시비스가 시작되었음을 나타냅니다.|  

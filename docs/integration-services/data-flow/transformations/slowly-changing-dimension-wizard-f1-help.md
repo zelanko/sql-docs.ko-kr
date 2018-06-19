@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbf758b1e5c13013b85dd7b3b55daaf411e00c6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b668cb557860ab765bff0ba6d64f2f408483f4d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407615"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>느린 변경 차원 마법사 F1 도움말
   **느린 변경 차원 마법사** 를 사용하여 다양한 유형의 느린 변경 차원으로 데이터를 로드하도록 구성할 수 있습니다. 이 섹션에서는 **느린 변경 차원 마법사**페이지에 대한 F1 도움말을 제공합니다. 다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  

@@ -1,23 +1,21 @@
 ---
 title: .NET 코드가 있는 SSIS 프로젝트 실행(C#) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 256e8b022406a589bc31d595e4cc3b3fb052570d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455247"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410485"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 이 빠른 시작에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여줍니다.

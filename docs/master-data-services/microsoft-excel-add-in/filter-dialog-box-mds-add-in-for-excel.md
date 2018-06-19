@@ -1,14 +1,12 @@
 ---
 title: 필터 대화 상자(Excel용 MDS 추가 기능) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e775f606b81fd849f7089f15116d4bd0f4c514d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408565"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="columns"></a>열  
  **열** 섹션에서는 Excel에 표시할 특성(열)을 확인할 수 있습니다.  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |특성 유형|특성 유형은 사용하려는 멤버 유형을 설명합니다. 대부분의 경우 **리프**입니다. 멤버 형식에 대한 자세한 내용은 [멤버&#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)를 참조하세요.|  
 |명시적 계층|**통합** 특성 유형을 선택한 경우 통합 멤버가 속하는 계층을 선택합니다. 자세한 내용은 [명시적 계층&#40;Master Data Services&#41;](../../master-data-services/explicit-hierarchies-master-data-services.md)을 참조하세요.|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rows"></a>행  
  **행** 섹션에서는 Excel에 표시할 멤버(행)를 확인할 수 있습니다. 이렇게 하려면 표시되는 행을 필터링할 조건을 정의합니다.  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |attribute|필터링할 특성을 표시합니다. 나열된 특성이 없으면 추가되지 않았기 때문입니다.<br /><br /> 참고: 워크시트에 표시하지 않으려는 특성으로 필터링할 수 있습니다.|  
 |연산자|선택한 특성 유형에 해당하는 연산자를 표시합니다. 자세한 내용은 [필터 연산자&#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md)를 참조하세요.|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="summary"></a>요약  
  **요약** 섹션을 사용하여 데이터를 로드하기 전에 로드할 데이터 양에 대한 세부 정보를 표시합니다.  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |Model|모델의 이름입니다.|  
 |버전 옵션|버전의 이름입니다.|  

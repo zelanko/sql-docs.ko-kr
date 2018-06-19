@@ -3,12 +3,9 @@ title: Azure Key Vault를 사용한 확장 가능 키 관리(SQL Server) | Micro
 ms.custom: ''
 ms.date: 07/22/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Connector, about
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 caps.latest.revision: 66
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 81cb6d551d9e734435b36cd9d1fc4427c4f83eae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d9a6276f2f166613a2f99f33fa10aabe78247ec
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966818"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699234"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

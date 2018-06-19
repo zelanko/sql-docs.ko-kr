@@ -21,12 +21,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca31c161bbfa87eb87bb99222389c6a7d92109a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063568"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701004"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,16 +45,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>인수 
+*expression*  
+모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 식은 연결 중 `NVARCHAR` 또는 `VARCHAR` 형식으로 변환됩니다. 문자열이 아닌 형식은 `NVARCHAR` 형식으로 변환됩니다.
 
 *separator*  
 연결된 문자열의 구분 기호로 사용되는 [ 또는 ](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 `NVARCHAR`식`VARCHAR`입니다. 리터럴 또는 변수일 수 있습니다. 
 
-*expression*  
-모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 식은 연결 중 `NVARCHAR` 또는 `VARCHAR` 형식으로 변환됩니다. 문자열이 아닌 형식은 `NVARCHAR` 형식으로 변환됩니다.
-
-
 <order_clause>   
 또는 `WITHIN GROUP` 절을 사용하여 연결된 결과의 순서를 지정합니다.
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -77,7 +76,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 
 ## <a name="remarks"></a>Remarks  
- 
 `STRING_AGG`는 행의 모든 식을 하나의 문자열로 연결하는 집계 함수입니다. 식 값은 문자열 형식으로 암시적으로 변환된 다음, 연결됩니다. 문자열에 대한 암시적 변환은 데이터 형식 변환에 대한 기존 규칙을 따릅니다. 데이터 형식 변환에 대한 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하십시오. 
 
 입력 식이 `VARCHAR` 형식인 경우 구분 기호의 형식은 `NVARCHAR`가 될 수 없습니다. 
@@ -85,7 +83,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 Null 값이 무시되고 해당 구분 기호는 추가되지 않습니다. null 값의 자리 표시자를 반환하려면 예제 B와 같이 `ISNULL` 함수를 사용하세요.
 
 `STRING_AGG`는 모든 호환성 수준에서 사용할 수 있습니다.
-
 
 ## <a name="examples"></a>예 
 
@@ -105,7 +102,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>2. NULL 값 없이 쉼표로 구분된 이름 목록 생성   
 다음 예는 null 값을 '해당 없음'으로 대체하고 하나의 결과 셀에 쉼표로 구분된 이름을 반환합니다.  
 ```sql
@@ -114,15 +110,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>3. 쉼표로 구분된 값 생성 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -137,10 +130,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>4. 뉴스 기사 및 관련 태그 반환 
-
 기사와 태그가 다른 테이블로 구분됩니다. 개발자들은 각 기사당 관련 태그가 모두 포함된 하나의 행을 반환하려고 합니다. 다음 쿼리를 사용합니다. 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -159,7 +150,6 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>5. 도시별 이메일 목록 생성
-
 다음 쿼리는 직원의 이메일 주소를 찾고 도시별로 그룹화합니다. 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -177,7 +167,6 @@ GROUP BY town;
 이메일 열에 반환된 이메일은 특정 도시에서 근무하는 사람들에게 이메일을 전송하는 데 직접 사용할 수 있습니다. 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>6. 도시별 이메일 정렬 목록 생성   
-   
 다음 쿼리는 이전 예와 유사한 방식으로 직원의 이메일 주소를 찾고 도시별로 그룹화한 다음, 이메일을 사전순으로 정렬합니다.   
 ```sql
 SELECT town, 
@@ -192,7 +181,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>참고 항목  
  [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

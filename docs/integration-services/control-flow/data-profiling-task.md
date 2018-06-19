@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3bd2f1d9050d0b83a918914246ecc2d51cbd997
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409165"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  개별 열을 분석하는 5개 프로필은 다음과 같습니다.  
   
-|개별 열을 분석하는 프로필|Description|  
+|개별 열을 분석하는 프로필|설명|  
 |----------------------------------------------|-----------------|  
 |열 길이 분포 프로필|선택한 열에 있는 문자열 값의 모든 고유 길이, 그리고 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 문자로 이루어진 미국 주 코드의 열을 프로파일링하여 두 문자보다 긴 값을 검색할 수 있습니다.|  
 |열 Null 비율 프로필|선택한 열의 Null 값 비율을 보고합니다.<br /><br /> 이 프로필을 사용하면 열에 포함된 지나치게 높은 null 값 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 우편 번호 열을 프로파일링하여 허용 불가능한 수준의 누락된 코드 비율을 검색할 수 있습니다.|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  다음의 3개 프로필은 여러 열 또는 열과 테이블 간의 관계를 분석합니다.  
   
-|여러 열을 분석하는 프로필|Description|  
+|여러 열을 분석하는 프로필|설명|  
 |--------------------------------------------|-----------------|  
 |후보 키 프로필|하나의 열 또는 열 집합이 선택한 테이블의 키 또는 근사 키인지 보고합니다.<br /><br /> 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터의 문제를 식별할 수 있습니다.|  
 |함수 종속성 프로필|한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다.<br /><br /> 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제도 식별할 수 있습니다. 예를 들어 미국 우편 번호를 포함하는 열과 미국의 주를 포함하는 열 간의 종속성을 프로파일링할 수 있습니다. 우편 번호가 같으면 주도 동일해야 하므로 프로필에서 이러한 종속성 위반을 검색할 수 있습니다.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>데이터 프로파일링 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 데이터 프로파일링 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|태스크 상태에 대한 설명 정보를 제공합니다. 메시지에는 다음 정보가 포함됩니다.<br /><br /> 처리 요청 시작<br /><br /> 쿼리 시작<br /><br /> 쿼리 끝<br /><br /> 계산 요청 마침|  
   

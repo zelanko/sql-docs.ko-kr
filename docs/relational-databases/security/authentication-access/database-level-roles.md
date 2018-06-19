@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +42,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2a6b17efe0fd6cc836af208f3d53d4252d3c1ce
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973378"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700985"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +73,7 @@ ms.locfileid: "32973378"
   
  다음 표에서는 고정 데이터베이스 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다. **공용** 데이터베이스 역할을 제외하고 고정 데이터베이스 역할에 할당된 사용 권한은 변경할 수 없습니다.   
   
-|고정 데이터베이스 역할 이름|Description|  
+|고정 데이터베이스 역할 이름|설명|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]에서 데이터베이스를 삭제할 수도 있습니다. [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 일부 유지 관리 작업은 서버 수준 권한이 필요하여 **db_owners**으로 수행할 수 없습니다.|  
 |**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 멤버는 역할 멤버 자격을 수정하고 사용 권한을 관리할 수 있습니다. 이 역할에 보안 주체를 추가하면 원하지 않는 권한 상승이 설정될 수 있습니다.|  
@@ -95,7 +93,7 @@ ms.locfileid: "32973378"
 
 이러한 데이터베이스 역할은 가상 master 데이터베이스에만 존재합니다. 해당 권한은 master에서 수행된 작업으로 제한됩니다. master에서 데이터베이스 사용자만 이러한 역할에 추가할 수 있습니다. 이 역할에는 로그인을 추가할 수 없습니다. 하지만 로그인을 기반으로 사용자를 만들어 해당 사용자를 역할에 추가할 수는 있습니다. 마스터에서 포함된 데이터베이스 사용자도 역할에 추가할 수 있습니다.
 
-|역할 이름|Description|  
+|역할 이름|설명|  
 |--------------------|-----------------|
 **dbmanager** | 데이터베이스를 만들고 삭제할 수 있습니다. 데이터베이스를 만드는 dbmanager 역할의 멤버는 해당 데이터베이스 소유자가 되어 사용자가 dbo 사용자로 데이터베이스에 연결할 수 있게 합니다. dbo 사용자는 해당 데이터베이스에서 모든 데이터베이스 사용 권한을 가집니다. dbmanager 역할의 멤버는 소유하지 않은 데이터베이스에 액세스할 권한이 반드시 필요하지는 않습니다.
 **loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.  
@@ -106,7 +104,7 @@ ms.locfileid: "32973378"
 ## <a name="msdb-roles"></a>msdb 역할  
  msdb 데이터베이스에는 다음 표에서 보여 주는 특수한 용도의 역할이 포함되어 있습니다.  
   
-|msdb 역할 이름|Description|  
+|msdb 역할 이름|설명|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|이러한 데이터베이스 역할의 멤버는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 관리 및 사용할 수 있습니다. 이전 버전에서 업그레이드된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 대신 DTS(데이터 변환 서비스)를 사용하여 명명된 이전 버전의 역할이 포함될 수 있습니다. 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|이러한 데이터베이스 역할의 멤버는 데이터 수집기를 관리 및 사용할 수 있습니다. 자세한 내용은 [Data Collection](../../../relational-databases/data-collection/data-collection.md)을 참조하세요.|  
@@ -123,7 +121,7 @@ ms.locfileid: "32973378"
 
 R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관리에 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)를 참조하세요.
 
-|역할 이름 |Description|  
+|역할 이름 |설명|  
 |-------------|-----------------|
 |**rpkgs-users** |사용자가 rpkgs-shared 역할의 멤버가 설치한 모든 공유 패키지를 사용하도록 허용합니다.|
 |**rpkgs-private** |rpkgs-users 역할과 동일한 권한으로 공유 패키지에 액세스할 수 있습니다. 이 역할의 멤버는 비공개로 범위가 지정된 패키지를 설치, 제거 및 사용할 수도 있습니다.|
@@ -132,7 +130,7 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 ## <a name="working-with-database-level-roles"></a>데이터베이스 수준 역할 작업  
  다음 표에서는 데이터베이스 수준 역할 작업을 위한 명령, 뷰 및 함수에 대해 설명합니다.  
   
-|기능|형식|Description|  
+|기능|형식|설명|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|메타데이터|고정 데이터베이스 역할의 목록을 반환합니다.|  
 |[sp_dbfixedrolepermission&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|메타데이터|고정 데이터베이스 역할에 대한 사용 권한을 표시합니다.|  

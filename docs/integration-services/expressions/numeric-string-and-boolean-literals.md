@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408915"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>숫자, 문자열 및 부울 리터럴
  식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식 계산기는 정수, 10진수 및 부동 소수점 상수와 같은 다양한 숫자 리터럴을 지원합니다. 또한 식 계산기의 값 처리 방법을 지정하는 long 및 float 접미사와 숫자 리터럴의 과학적 표기법을 지원합니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 숫자 리터럴의 접미사를 보여 줍니다.  
   
-|접미사|Description|  
+|접미사|설명|  
 |------------|-----------------|  
 |L 또는 l|숫자 리터럴(Long)|  
 |U 또는 u|부호 없는 숫자 리터럴|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 숫자 식 요소와 해당 정규식을 나열합니다.  
   
-|식 요소|정규식|Description|  
+|식 요소|정규식|설명|  
 |------------------------|------------------------|-----------------|  
 |D로 표현된 자릿수|[0-9]|모든 자릿수|  
 |E로 표현된 과학적 표기법|[Ee][+-]?{D}+|대문자 또는 소문자 e, 선택적 + 또는 -, D로 정의된 하나 이상의 자릿수|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 정규식 언어를 사용한 유효한 숫자 리터럴을 설명합니다.  
   
-|정규식|Description|  
+|정규식|설명|  
 |------------------------|-----------------|  
 |{D}+{IS}|한 자릿수 이상의 정수 숫자 리터럴(D) 및 선택적인 Long 및/또는 부호 없는 접미사(IS).  예: 457, 785u, 986L, 7945ul|  
 |{D}+{E}{FS}|한 자릿수 이상의 비정수 숫자 리터럴(D), 과학적 표기법 및 Long 또는 float 접미사.  예: 4E8l, 13e-2f, 5E+L|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  이스케이프 시퀀스가 필요한 다른 문자가 문자열에 포함될 수 있습니다. 다음 표에서는 문자열 리터럴의 이스케이프 시퀀스를 보여 줍니다.  
   
-|이스케이프 시퀀스|Description|  
+|이스케이프 시퀀스|설명|  
 |---------------------|-----------------|  
 |\a|경고|  
 |\b|백스페이스|  

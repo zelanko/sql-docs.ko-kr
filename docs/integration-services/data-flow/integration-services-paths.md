@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f825acb27b39a78a7997d34505e99704f0f14b27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe52410b491848001fc7e0861e27732d36bc173
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410635"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
@@ -157,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 경로의 구성 가능한 속성에 대해 설명합니다. 데이터 흐름 엔진은 여기에 나열되지 않은 추가 읽기 전용 속성에도 값을 할당합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 **AsNeeded**, **SourceName**, **PathName**및 **Never**입니다. 기본값은 **AsNeeded**입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  

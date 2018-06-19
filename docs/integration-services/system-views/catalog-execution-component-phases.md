@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
@@ -16,18 +14,19 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec2754c1a9ced1ada44d4d461e8f3e76c4bc6c66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be325de5a80c6245b52f6c867bd841746cbbe797
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410045"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   각 실행 단계에서 데이터 흐름 구성 요소에 의해 소비된 시간을 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|단계의 고유 ID(식별자)입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 ID입니다.|  
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
  다음 예에서는 catalog.execution_component_phases 뷰를 사용하여 모든 단계에서 특정 패키지가 실행하는 데 걸린 총 시간(**active_time**)과 패키지에 대해 경과된 총 시간(**total_time**)을 찾습니다.  
   
 > [!WARNING]  
->  catalog.execution_component_phases 뷰는 패키지 실행의 로깅 수준이 성능 또는 자세히로 설정된 경우에 이 정보를 제공합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
+>  catalog.execution_component_phases 뷰는 패키지 실행의 로깅 수준이 성능 또는 자세히로 설정된 경우에 이 정보를 제공합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
   
 ```sql
 use SSISDB  

@@ -1,14 +1,12 @@
 ---
 title: 성능 카운터 | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 08/27/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b04d580014de1b5c248d299c2da1fce385326ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db10ccfd3a7487db61a03752111aa14702448d23
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411175"
 ---
 # <a name="performance-counters"></a>성능 카운터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|Description|  
+|성능 카운터|설명|  
 |-------------------------|-----------------|  
 |BLOB bytes read|데이터 흐름 엔진이 모든 원본에서 읽어 온 BLOB(Binary Large Object) 데이터의 바이트 수입니다.|  
 |BLOB bytes written|데이터 흐름 엔진이 모든 대상에 기록한 전체 BLOB 데이터의 바이트 수입니다.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e38b45781566ac04acdfb7584f8f10ed249d44c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411665"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
@@ -95,7 +94,7 @@ ms.lasthandoff: 05/03/2018
  **도구 모음**  
  도구 모음을 사용하여 데이터 집합을 관리하고, 표시할 창을 선택하고, 쿼리 함수를 제어할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**다이어그램 창 표시/숨기기**|**다이어그램** 창을 표시하거나 숨깁니다.|  
 |**표 형태 창 표시/숨기기**|**표 형태** 창을 표시하거나 숨깁니다.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **쿼리 정의**  
  쿼리 정의에서는 쿼리를 정의 및 테스트할 수 있는 도구 모음 및 창을 사용할 수 있습니다.  
   
-|창|Description|  
+|창|설명|  
 |----------|-----------------|  
 |**다이어그램** 창|쿼리를 다이어그램에 표시합니다. 다이어그램은 쿼리에 포함된 테이블과 이러한 테이블의 조인 방법을 보여 줍니다. 쿼리 출력에 열을 추가하거나 제거하려면 테이블에서 해당 열의 옆에 있는 확인란을 선택하거나 선택을 취소합니다.<br /><br /> 쿼리에 테이블을 추가하면 쿼리 작성기에서 테이블의 키에 따라 테이블을 기반으로 테이블 간의 조인을 만듭니다. 조인을 추가하려면 한 테이블의 필드를 다른 테이블의 필드로 끌어 놓습니다. 조인을 관리하려면 해당 조인을 마우스 오른쪽 단추로 클릭한 다음 메뉴 옵션을 선택합니다.<br /><br /> **다이어그램** 창을 마우스 오른쪽 단추로 클릭하여 테이블을 추가 또는 제거하고, 모든 테이블을 선택하고, 창을 표시하거나 숨길 수 있습니다.|  
 |**표 형태** 창|쿼리를 표에 표시합니다. 이 창을 사용하여 쿼리에서 열을 추가 및 제거하고 각 열의 설정을 변경할 수 있습니다.|  

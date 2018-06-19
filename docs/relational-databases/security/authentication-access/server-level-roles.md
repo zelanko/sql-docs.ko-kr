@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +27,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f7cf3212ac6e046e41f46d1d3d6232250182c1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453d0e7158f19fd958eca3bd611a2670279fe946
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972078"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696384"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32972078"
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  
  다음 표에서는 고정 서버 수준 역할과 해당 기능을 보여 줍니다.  
   
-|고정 서버 수준 역할|Description|  
+|고정 서버 수준 역할|설명|  
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다.|  
 |**serveradmin**|**serveradmin** 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.|  
@@ -83,7 +81,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>서버 수준 역할 작업  
  다음 표에서는 서버 수준 역할을 통해 사용할 수 있는 명령, 뷰 및 함수를 보여 줍니다.  
   
-|기능|형식|Description|  
+|기능|형식|설명|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|메타데이터|서버 수준 역할의 목록을 반환합니다.|  
 |[sp_helpsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|메타데이터|서버 수준 역할의 멤버에 대한 정보를 반환합니다.|  

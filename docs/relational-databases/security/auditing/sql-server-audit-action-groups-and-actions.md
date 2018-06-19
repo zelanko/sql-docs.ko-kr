@@ -3,12 +3,10 @@ title: SQL Server 감사 동작 그룹 및 동작 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +25,12 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11b8b1a668c5e071dbec3291337b9ef9174010f8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973678"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698814"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ ms.locfileid: "32973678"
   
  다음 표에서는 서버 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
   
-|동작 그룹 이름|Description|  
+|동작 그룹 이름|설명|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|응용 프로그램 역할의 암호가 변경될 때마다 발생하는 이벤트입니다. [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)와 동일합니다.|  
 |AUDIT_CHANGE_GROUP|모든 감사가 생성, 수정 또는 삭제되거나 모든 감사 사양이 생성, 수정 또는 삭제될 때마다 발생하는 이벤트입니다. 감사에 대한 모든 변경 내용은 자체적으로 감사됩니다. [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)와 동일합니다.|  
@@ -133,7 +131,7 @@ ms.locfileid: "32973678"
   
  다음 표에서는 데이터베이스 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
   
-|동작 그룹 이름|Description|  
+|동작 그룹 이름|설명|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|응용 프로그램 역할의 암호가 변경될 때마다 발생하는 이벤트입니다. [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)와 동일합니다.|  
 |AUDIT_CHANGE_GROUP|모든 감사가 생성, 수정 또는 삭제되거나 모든 감사 사양이 생성, 수정 또는 삭제될 때마다 발생하는 이벤트입니다. 감사에 대한 모든 변경 내용은 자체적으로 감사됩니다. [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)와 동일합니다.|  
@@ -147,7 +145,7 @@ ms.locfileid: "32973678"
 |DATABASE_OPERATION_GROUP|쿼리 알림 구독 또는 검사점 설정과 같은 데이터베이스 작업이 수행되면 발생하는 이벤트입니다. [Audit Database Operation Event Class](../../../relational-databases/event-classes/audit-database-operation-event-class.md)와 동일합니다.|  
 |DATABASE_OWNERSHIP_CHANGE_GROUP|ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 변경 작업에 필요한 권한을 확인하면 발생하는 이벤트입니다. [Audit Change Database Owner Event Class](../../../relational-databases/event-classes/audit-change-database-owner-event-class.md)와 동일합니다.|  
 |DATABASE_PERMISSION_CHANGE_GROUP|데이터베이스 사용 권한 부여와 같은 데이터베이스 전용 이벤트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 모든 사용자가 문 사용 권한에 대해 GRANT, REVOKE 또는 DENY를 실행할 때마다 발생하는 이벤트입니다. [Audit Database Scope GDR Event Class](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)와 동일합니다.|  
-|DATABASE_PRINCIPAL_CHANGE_GROUP|사용자 같은 보안 주체가 데이터베이스에서 생성, 변경 또는 삭제되면 발생하는 이벤트입니다. [Audit Database Principal Management Event Class](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md)와 동일합니다. 또한 더 이상 사용되지 않는 sp_grantdbaccess, sp_revokedbaccess, sp_adduser 및 sp_dropuser 저장 프로시저에 대해 발생하는 [Audit Add DB User 이벤트 클래스](../../../relational-databases/event-classes/audit-add-db-user-event-class.md)와 동일합니다.<br /><br /> 이 이벤트는 더 이상 사용되지 않는 sp_addrole 및 sp_droprole 저장 프로시저를 사용하여 데이터베이스 역할을 추가 또는 제거할 때마다 발생합니다. [Audit Add Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-role-event-class.md)와 동일합니다.|  
+|DATABASE_PRINCIPAL_CHANGE_GROUP|사용자 같은 보안 주체가 데이터베이스에서 생성, 변경 또는 삭제되면 발생하는 이벤트입니다. [Audit Database Principal Management Event Class](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md)와 동일합니다. 또한 더 이상 사용되지 않는 sp_grantdbaccess, sp_revokedbaccess, sp_adduser 및 sp_dropuser 저장 프로시저에 대해 발생하는 [Audit Add DB User 이벤트 클래스](../../../relational-databases/event-classes/audit-add-db-user-event-class.md)와 동일합니다.<br /><br /> 이 이벤트는 더 이상 사용되지 않는 sp_addrole 및 sp_droprole 저장 프로시저를 사용하여 데이터베이스 역할을 추가 또는 제거할 때마다 발생합니다. [Audit Add Role Event Class](../../../relational-databases/event-classes/audit-add-role-event-class.md)와 동일합니다.|  
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|데이터베이스 범위 내에 EXECUTE AS \<user>와 같은 가장이 있으면 발생하는 이벤트입니다. [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)와 동일합니다.|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|데이터베이스 역할에서 로그인이 추가 또는 제거될 때마다 발생하는 이벤트입니다. 이 이벤트 클래스는 sp_addrolemember, sp_changegroup 및 sp_droprolemember 저장 프로시저에서 사용됩니다. [Audit Add Member to DB Role 이벤트 클래스](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)와 동일합니다.|  
 |DBCC_GROUP|보안 주체가 모든 DBCC 명령을 실행할 때마다 발생하는 이벤트입니다. [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)와 동일합니다.|  
@@ -163,7 +161,7 @@ ms.locfileid: "32973678"
 ## <a name="database-level-audit-actions"></a>데이터베이스 수준 감사 동작  
  데이터베이스 수준 동작은 데이터베이스 스키마 및 스키마 개체(예: 테이블, 뷰, 저장 프로시저, 함수, 확장 저장 프로시저, 큐, 동의어)에 대한 특정 동작을 직접 감사할 수 있습니다. 유형, XML 스키마 컬렉션, 데이터베이스 및 스키마는 감사되지 않습니다. 스키마 개체 감사는 스키마 및 데이터베이스에 구성될 수 있습니다. 이 경우 지정된 스키마 또는 데이터베이스에 포함된 모든 스키마 개체의 이벤트가 감사됩니다. 다음 표에서는 데이터베이스 수준 감사 동작에 대해 설명합니다.  
   
-|작업|Description|  
+|작업|설명|  
 |------------|-----------------|  
 |SELECT|SELECT를 실행할 때마다 발생하는 이벤트입니다.|  
 |UPDATE|UPDATE를 실행할 때마다 발생하는 이벤트입니다.|  
@@ -183,7 +181,7 @@ ms.locfileid: "32973678"
 ## <a name="audit-level-audit-action-groups"></a>감사 수준 감사 동작 그룹  
  감사 프로세스의 동작을 감사할 수도 있습니다. 이는 서버 범위 또는 데이터베이스 범위일 수 있습니다. 데이터베이스 범위에서는 데이터베이스 감사 사양에 대해서만 발생합니다. 다음 표에서는 감사 수준 감사 동작 그룹에 대해 설명합니다.  
   
-|동작 그룹 이름|Description|  
+|동작 그룹 이름|설명|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|다음 명령 중 하나를 실행할 때마다 발생하는 이벤트입니다.<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

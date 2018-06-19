@@ -3,12 +3,10 @@ title: SQL Server Audit(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +20,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5ea0c892f7012a17f56514e0af46bd54fdee6f63
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708251"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695894"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

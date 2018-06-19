@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daae51399d0366cf11f751c7abc17601c8d5e2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409295"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 검사점을 구현하기 위해 설정하는 패키지 속성을 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |CheckpointFileName|검사점 파일의 이름을 지정합니다.|  
 |CheckpointUsage|검사점 사용 여부를 지정합니다.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="checkpoint-usage"></a>검사점 사용  
  CheckpointUsage 속성은 다음 값으로 설정할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**안 함**|검사점 파일을 사용하지 않고 패키지가 패키지 워크플로의 처음부터 시작되도록 지정합니다.|  
 |**항상**|검사점 파일을 항상 사용하고 패키지가 이전의 실행 오류 지점부터 다시 시작하도록 지정합니다. 검사점 파일을 찾을 수 없는 경우 패키지는 실패합니다.|  

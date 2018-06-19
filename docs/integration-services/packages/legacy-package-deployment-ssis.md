@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -37,11 +35,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778901dae6c0504d84eb7cb93667d0ac4024e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408505"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  
   
-|형식|Description|  
+|형식|설명|  
 |----------|-----------------|  
 |XML 구성 파일|구성을 포함하는 XML 파일입니다. XML 파일은 여러 구성을 포함할 수 있습니다.|  
 |환경 변수|환경 변수는 구성을 포함합니다.|  
@@ -220,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  다음 표에서는 **패키지 구성 도우미** 대화 상자 구성 목록의 열에 대해 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |**구성 이름**|구성의 이름입니다.|  
 |**구성 유형**|구성의 유형입니다.|  
@@ -322,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 유형**  
  다음 옵션을 사용하여 구성을 저장할 원본 유형을 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**XML 구성 파일**|구성을 XML 파일로 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**환경 변수**|환경 변수 중 하나에 구성을 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -339,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**구성 파일 이름**|마법사에서 생성하는 구성 파일의 경로를 입력합니다.|  
 |**찾아보기**|**구성 파일 위치 선택** 대화 상자를 사용하여 마법사에서 생성하는 구성 파일의 경로를 지정할 수 있습니다. 파일이 없으면 마법사에서 새 파일을 생성합니다.|  
@@ -347,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -359,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -374,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**부모 변수**|구성 정보를 포함하는 부모 패키지의 변수를 지정합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -389,7 +388,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**대량 삽입 태스크 편집기**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
 |**구성 테이블**|기존 테이블을 선택하거나 **새로 만들기** 를 클릭하여 새 테이블을 만드는 SQL 문을 작성합니다.|  
@@ -398,7 +397,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -483,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  다음 표에서는 배포 유틸리티 속성을 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |AllowConfigurationChange|배포 도중 구성의 업데이트를 허용할지 여부를 지정하는 값입니다.|  
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 **True** 로 설정합니다.|  

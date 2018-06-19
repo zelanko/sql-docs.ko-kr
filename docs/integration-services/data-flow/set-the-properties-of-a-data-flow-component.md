@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409205"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
   원본, 대상 및 변환을 비롯한 데이터 흐름 구성 요소 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
@@ -128,11 +127,11 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|구성 요소의 CLSID입니다.|  
 |ContactInfo|String|구성 요소 개발자의 연락처 정보입니다.|  
-|Description|String|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
+|설명|String|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
 |ID|정수|구성 요소의 인스턴스를 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|구성 요소를 식별합니다.|  
 |IsDefaultLocale|Boolean|구성 요소가 속해 있는 데이터 흐름 태스크의 로캘이 구성 요소에 사용되는지 여부를 나타냅니다.|  
@@ -148,9 +147,9 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|Description|String|입력에 대한 설명입니다.|  
+|설명|String|입력에 대한 설명입니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |HasSideEffects|Boolean|구성 요소가 다운스트림 구성 요소에 연결되어 있지 않은 경우 및 **RunInOptimizedMode** 가 **true**일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타냅니다.|  
@@ -168,10 +167,10 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|Description|String|입력 열에 대해 설명합니다.|  
+|설명|String|입력 열에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
@@ -192,10 +191,10 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|경로에서 출력이 분리될 경우 데이터 흐름 엔진이 출력을 삭제할지 여부를 결정하는 값입니다.|  
-|Description|String|출력에 대해 설명합니다.|  
+|설명|String|출력에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |ExclusionGroup|정수|함께 사용할 수 없는 출력 그룹을 식별하는 값입니다.|  
@@ -213,10 +212,10 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|Description|String|출력 열에 대해 설명합니다.|  
+|설명|String|출력 열에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다. 기본값은 **Fail component**입니다.|  
 |ExternalMetadataColumnID|정수|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
@@ -236,9 +235,9 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 데이터 흐름 구성 요소의 외부 메타데이터 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|Description|String|외부 열에 대해 설명합니다.|  
+|설명|String|외부 열에 대해 설명합니다.|  
 |ID|정수|열을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|열을 식별하는 문자열입니다.|  
 |속성|String|외부 열의 이름입니다.|  
@@ -250,7 +249,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 출력 열 및 외부 메타데이터 열의 데이터 형식 속성에 대해 설명합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |CodePage|정수|유니코드가 아닌 문자열 데이터에 대한 코드 페이지를 지정합니다.|  
 |DataType|Integer(열거형)|열의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  

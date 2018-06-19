@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
@@ -16,18 +14,19 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3261353ee8cbfe3fb97f83d3b0de426384c35566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106b9a3e90a9a7ce872ea215e15287283adfadd2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408845"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** 카탈로그에 표시된 모든 프로젝트에 대한 자세한 정보를 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|프로젝트의 고유 식별자(ID)입니다.|  
 |folder_id|**bigint**|프로젝트가 있는 폴더의 고유 ID입니다.|  

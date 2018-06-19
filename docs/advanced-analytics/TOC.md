@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# 설치 
+# Install 
 
 ## [데이터베이스 내 분석](install/sql-machine-learning-services-windows-install.md)
 ## [독립 실행형 서버](install/sql-machine-learning-standalone-windows-install.md)
@@ -69,13 +69,13 @@
 #### [로컬 계산 컨텍스트에서 데이터 분석](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [SQL Server와 XDF 파일 간에 데이터 이동](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [간단한 시뮬레이션 만들기](tutorials/deepdive-create-a-simple-simulation.md)
-### [저장된 프로시저 및 함수에 포함 된 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1-데이터 가져오기 및 스크립트](tutorials/sqldev-download-the-sample-data.md)
-#### [2-환경 설정](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3-저장된 프로시저에서 R을 사용 하 여 데이터를 시각화 합니다.](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4-R T-SQL 함수에서 사용 하 여 데이터 기능 만들기](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5-학습 하 고 SQL에 저장](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6-결과 예측 합니다.](tutorials/sqldev-operationalize-the-model.md)
+### [저장 프로시저 및 함수의 포함 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 - 데이터 및 스크립트 가져오기](tutorials/sqldev-download-the-sample-data.md)
+#### [2 - 환경 설정](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 - 저장 프로시저에서 R을 사용하여 데이터 시각화](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 - T-SQL 함수에서 R을 사용하여 데이터 기능 만들기](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 - 학습 및 SQL에 저장](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 - 결과 예측](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: T-SQL을 사용하여 Python 실행](tutorials/run-python-using-t-sql.md)
@@ -104,8 +104,8 @@
 #### [RevoScaleR 사용](r/use-revoscaler-to-manage-r-packages.md)
 ##### [원격 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
 ##### [R 패키지 동기화](r/package-install-uninstall-and-sync.md)
-#### [MiniCRAN 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
-#### [R 패키지를 사용 하기 위한 팁](r/packages-installed-in-user-libraries.md)
+#### [miniCRAN 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
+#### [R 패키지 사용 팁](r/packages-installed-in-user-libraries.md)
 
 ## 데이터 탐색 및 모델링
 ### [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)
@@ -134,7 +134,7 @@
 ### [SQL Server Machine Learning Services의 사용자 계정 풀 수정](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [SQLRUserGroup을 데이터베이스 사용자로 추가](r/add-sqlrusergroup-to-database.md)
 ### [웹 서비스를 사용하여 모델 배포 및 사용](operationalization-with-mrsdeploy.md)
-### [관리 및 모니터링 솔루션](r/managing-and-monitoring-r-solutions.md
+### [솔루션 관리 및 모니터링](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning Services를 위한 리소스 거버넌스](r/resource-governance-for-r-services.md)
 ### [기계 학습을 위한 리소스 풀 만들기](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning Services를 위한 확장 이벤트](r/extended-events-for-sql-server-r-services.md)
@@ -161,7 +161,7 @@
 ### [데이터 컬렉션](data-collection-ml-troubleshooting-process.md)
 ### [설치 및 업그레이드 오류](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [실행 패드 및 외부 스크립트 실행 오류](common-issues-external-script-execution.md)
-### [R 스크립트 오류](r-script-execution-errors.md)
+### [R 스크립팅 오류](r-script-execution-errors.md)
 
 ## 블로그
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
@@ -170,4 +170,4 @@
 
 ## 포럼
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [기계 학습 서버](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

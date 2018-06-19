@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43d77d15fb417d201e07d389d00df0be7aad145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 646c2baeb42bbfc122455bd9c5981f0399d781b8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407105"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
   **SAP BW 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 원본의 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템에서 데이터를 추출하기 위한 실행 모드와 매개 변수도 선택합니다.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **실행 모드**  
  원본에서 데이터를 추출하는 방법을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**P - 프로세스 체인 트리거**|프로세스 체인을 트리거합니다. 이 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 추출 프로세스를 시작합니다.|  
 |**W - 알릴 때까지 대기**|SAP Netweaver BW 시스템에서 데이터 추출 시작 알림을 기다립니다. 이 경우 SAP Netweaver BW 시스템은 추출 프로세스를 시작합니다.|  

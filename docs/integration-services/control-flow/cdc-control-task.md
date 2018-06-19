@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43fdab0290f413abf8a33a1da8664f3ae70e45e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f620c9fbf9ad7f1233236f9da193ecf730144f06
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407495"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
   CDC 제어 태스크는 CDC(변경 데이터 캡처) 패키지의 수명 주기를 제어하는 데 사용됩니다. 이 태스크를 사용하면 초기 로드 패키지와의 CDC 패키지 동기화, CDC 패키지 실행 시 처리되는 LSN(로그 시퀀스 번호) 범위의 관리가 처리됩니다. 또한 CDC 제어 태스크는 오류 시나리오 및 복구를 다룹니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 작업은 초기 로드와 변경 처리의 동기화를 처리합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |ResetCdcState|이 작업은 현재 CDC 컨텍스트에 연결된 영구 CDC 상태를 다시 설정하는 데 사용됩니다. 이 작업을 실행하면 LSN 타임스탬프 `sys.fn_cdc_get_max_lsn` 테이블의 현재 최대 LSN이 다음 처리 범위의 시작 부분이 됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.|  
 |MarkInitialLoadStart|이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 사용됩니다. 이 작업을 수행하려면 `sys.fn_cdc_get_max_lsn`을 호출하기 위해 원본 데이터베이스에 대한 연결이 필요합니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkInitialLoadStart를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  처리 범위를 관리하는 데에는 다음과 같은 작업이 사용됩니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |GetProcessingRange|이 작업은 CDC 원본 데이터 흐름을 사용하는 데이터 흐름을 호출하기 전에 사용됩니다. 이 작업은 호출될 때 CDC 원본 데이터 흐름에서 읽는 LSN의 범위를 설정합니다. 범위는 데이터 흐름을 처리하는 동안 CDC 원본에서 사용되는 SSIS 패키지 변수에 저장됩니다.<br /><br /> 저장된 상태에 대한 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.|  
 |MarkProcessedRange|: 이 작업은 각 CDC 실행 후(CDC 데이터 흐름이 성공적으로 완료된 후) CDC 실행 중에 완전히 처리된 마지막 LSN을 기록하기 위해 실행됩니다. 다음에 GetProcessingRange를 실행하면 이 위치가 처리 범위의 시작 부분이 됩니다.|  

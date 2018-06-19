@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411545"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **cdc.xdbcdc_config** 테이블 열에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
 |connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 사용 가능한 옵션에 대해 설명합니다.  
   
-|속성|Default|최소값|최대값|정적|Description|  
+|속성|Default|최소값|최대값|정적|설명|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |추적|False|-|-|False|사용 가능한 값은<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|트랜잭션에 대해 할당된 메모리 청크의 크기(KB)입니다. 트랜잭션 하나가 둘 이상의 청크를 할당할 수 있습니다. [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) 테이블의 memory_limit 열을 참조하세요.|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **cdc.xdbcdc_state** 테이블 열에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |상태|현재 Oracle CDC 인스턴스에 대한 현재 상태 코드입니다. 상태는 CDC의 현재 상태를 설명합니다.|  
 |sub_status|현재 상태에 대한 추가 정보를 제공하는 두 번째 수준 상태입니다.|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 cdc.xdbcdc_trace 테이블 열에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |TIMESTAMP|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
 |유형|다음 값 중 하나가 포함됩니다.<br /><br /> error<br /><br /> INFO<br /><br /> 추적|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **cdc.xdbcdc_staged_transactions** 테이블 열에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |transaction_id|준비 중인 트랜잭션의 고유 트랜잭션 식별자입니다.|  
 |seq_num|현재 트랜잭션에 대한 **xcbcdc_staged_transactions** 행의 번호입니다(0부터 시작).|  

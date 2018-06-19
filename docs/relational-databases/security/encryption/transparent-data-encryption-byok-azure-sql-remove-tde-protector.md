@@ -12,18 +12,17 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.date: 08/07/2017
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d83d696accde5d192c151703bb461edae06bc084
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d498331b409732ab741b59122567959c1175f249
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966948"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699714"
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 제거
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

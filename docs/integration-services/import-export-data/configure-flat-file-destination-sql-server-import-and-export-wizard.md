@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee1fcffe26a8f17d5a8c0fd4e547e98b95d30c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408525"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
   플랫 파일 대상을 선택한 경우 테이블을 복사하도록 지정하거나 쿼리를 지정한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **플랫 파일 대상 구성**을 표시합니다. 이 페이지에서 대상 플랫 파일에 대한 서식 옵션을 지정합니다. 필요에 따라 개별 열의 매핑을 검토하고 샘플 데이터를 미리 봅니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  **행 구분 기호**  
  출력의 행을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 행 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|행을 캐리지 리턴으로 구분합니다.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  **열 구분 기호**  
  출력의 열을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 열 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|열을 캐리지 리턴으로 구분합니다.|  

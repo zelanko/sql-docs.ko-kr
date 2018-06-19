@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c749048ddfe4bad75f1bf34d40d806fbe1bb1403
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d5bffa202a2193ad0ba29dfa06843277687fd1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403425"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 WriteOption 속성에서 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |추가|기존 파일에 데이터를 추가합니다. 추가된 데이터의 메타데이터가 해당 파일 형식과 일치해야 합니다.|  
 |항상 만들기|항상 새 파일을 만듭니다.|  

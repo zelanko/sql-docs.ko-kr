@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 64afad9735943432a3b310d82a561ee35880bb42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adea15599d8f6829fff35213d1737d60cb2a2763
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410365"
 ---
 # <a name="validation-master-data-services"></a>유효성 검사(Master Data Services)
 
@@ -34,8 +34,8 @@ ms.lasthandoff: 05/03/2018
 |유효성 검사 유형|표준 결정자|발생 시기|MasterData 관리자 웹 UI에 표시|Excel용 추가 기능에 표시|MDS 저장소에 데이터 저장 여부|  
 |---------------------|-----------------------------|--------------------|---------------------------------------------------|-------------------------------------------|------------------------------------------|  
 |비즈니스 규칙 유효성 검사|MDS 관리자|사용자가 데이터를 추가하거나 편집할 때 자동으로<br /><br /> 사용자가 비즈니스 규칙을 적용할 때 수동으로<br /><br /> 관리자가 **웹 응용 프로그램의** 버전 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 비즈니스 규칙에 대해 버전의 유효성을 검사할 때 수동으로|유효성 검사 오류|ValidationStatus|예|  
-|데이터 형식 및 내용 유효성 검사|MDS 관리자(특성의 길이 또는 데이터 형식과 같은 모델 개체를 만들 때)|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니오|  
-|데이터 형식 및 내용 유효성 검사|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니오|  
+|데이터 형식 및 내용 유효성 검사|MDS 관리자(특성의 길이 또는 데이터 형식과 같은 모델 개체를 만들 때)|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니요|  
+|데이터 형식 및 내용 유효성 검사|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|사용자가 데이터를 추가하거나 편집할 때 자동으로|입력 오류|InputStatus|아니요|  
   
 ## <a name="related-tasks"></a>관련 작업  
   

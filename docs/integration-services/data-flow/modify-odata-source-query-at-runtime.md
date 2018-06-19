@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e910db3700fe505ea072e211826a7a7a307d876f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4dfabab76c036bc74e2085475d0c77e1500dac3f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410715"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 제공
  데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 *식*을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provide-the-query-as-a-parameter"></a>쿼리를 매개 변수로 제공  
  다음 절차는 OData 원본 구성 요소에서 패키지의 매개 변수로 사용하는 쿼리를 노출하는 방법을 보여 줍니다.  
   
-1.  **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…**옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
+1.  **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
   
 2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
   

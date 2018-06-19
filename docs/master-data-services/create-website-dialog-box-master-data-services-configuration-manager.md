@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410035"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>웹 사이트 만들기 대화 상자(Master Data Services 구성 관리자)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>웹 사이트  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**웹 사이트 이름**|웹 사이트 이름을 입력하거나 기본 이름을 사용합니다. 이 이름은 IIS에서 사이트를 식별하는 데에만 사용되는 이름이며, 웹 브라우저에서 사이트에 액세스하는 데 사용되지 않습니다.<br /><br /> 이름은 로컬 컴퓨터의 IIS에 있는 모든 사이트 간에 고유해야 합니다.|  
 |**프로토콜**|**http**를 표시합니다. 클라이언트와 서버 간에 암호화된 채널을 통한 통신이 필요하지 않은 경우 HTTP(Hypertext Transfer Protocol)를 사용합니다.<br /><br /> **참고**: [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서는 HTTPS 사이트를 만들 수 없습니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 프로토콜로서, 기밀한 데이터 또는 개인 데이터를 교환하거나 사용자가 개인 정보를 전송하기 전에 서버의 ID를 확인하도록 하려는 경우에 유용합니다. 서버와 클라이언트 간에 암호화된 채널을 통해 정보를 전송해야 하는 경우 IIS 관리자와 같은 IIS 도구를 사용하여 HTTPS 바인딩으로 사이트를 구성하고 웹 사이트 바인딩을 서버 인증서와 연결해야 합니다. 이러한 작업은 웹 브라우저에서 웹 사이트를 열기 위해 반드시 필요한 작업입니다. 서버 인증서에 대한 자세한 내용은 [TechNet의](http://go.microsoft.com/fwlink/?LinkId=163220) IIS 7에서 서버 인증서 구성 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 참조하십시오.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>응용 프로그램 풀  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**이름**|새 응용 프로그램 풀의 고유 이름을 입력하거나 제공된 기본 이름을 사용합니다. 이 웹 사이트의 루트 웹 응용 프로그램은 이 응용 프로그램 풀에서 실행됩니다.<br /><br /> 응용 프로그램 풀은 한 응용 프로그램 풀의 응용 프로그램이 다른 응용 프로그램 풀의 응용 프로그램에 영향을 주지 못하도록 하는 경계를 제공합니다.|  
 |**User name**|Active Directory의 도메인 및 사용자 이름을 입력합니다. 이 계정은 웹 응용 프로그램이 실행되는 응용 프로그램 풀의 ID입니다.<br /><br /> 이 계정은 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 [데이터베이스 로그인, 사용자 및 역할&#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)을 참조하세요. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 **MDSTempDir**에 대한 사용 권한이 부여되는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  

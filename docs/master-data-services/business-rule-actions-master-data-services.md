@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 961a4d045bc2ff82271ae6793069dc81f64575b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e097e0ad00b0ee10799fb8194051ce51ec55935
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411835"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="default-value-actions"></a>기본값 동작  
  **기본값** 동작은 지정한 특성의 기본값을 설정합니다. 사용 권한이 있는 사용자는 이러한 기본값을 변경할 수 있습니다.  
   
-|값 이름|Description|  
+|값 이름|설명|  
 |----------------|-----------------|  
 |**기본값**|선택한 특성이 **기본적으로** 특정 특성 또는 특정 특성 값으로 설정되거나, 비어 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**생성되는 값을 기본값으로 설정**|선택한 특성은 **생성되는 값을 기본값으로 설정** 합니다. 이 값은 입력하는 시작 값과 증분 값에 따라 결정됩니다.<br /><br /> 이 동작은 텍스트 및 숫자 값에 유효합니다.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-value-actions"></a>값 변경 동작  
  **값 변경** 동작은 지정된 특성 또는 특성 값을 업데이트합니다. 사용자는 새 값에 따른 동작이 True인 경우에만 이러한 값을 변경할 수 있습니다.  
   
-|값 이름|Description|  
+|값 이름|설명|  
 |----------------|-----------------|  
 |**같음**|선택한 특성이 정의된 특성 값 또는 다른 특성으로 변경되거나, 비어 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**연결된 값과 같음**|선택한 특성이 연결된 값으로 변경됩니다. 이 값은 지정하는 여러 특성에 따라 결정됩니다.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  단, **필수** 및 **잘못됨** 동작은 예외입니다. 이러한 동작은 값 변경 동작과 함께 실행되어야 데이터의 유효성이 성공적으로 검사되고 버전이 커밋될 수 있습니다.  
   
-|유효성 검사 이름|Description|  
+|유효성 검사 이름|설명|  
 |---------------------|-----------------|  
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**잘못됨**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="external-action"></a>외부 동작  
  **외부** 동작은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]외부 응용 프로그램과 상호 작용합니다.  
   
-|동작 이름|Description|  
+|동작 이름|설명|  
 |-----------------|-----------------|  
 |**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](http://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
   

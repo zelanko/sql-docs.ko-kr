@@ -12,15 +12,16 @@ ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e5b34e72447d74875e67a0f1a71fb749a8c3d416
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402535"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server에서 Azure SQL Data Warehouse로 데이터 로드
 
-SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server에서 [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index.md)로 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
+SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server에서 [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index)로 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 
 이 자습서에서는 다음을 수행합니다.
 

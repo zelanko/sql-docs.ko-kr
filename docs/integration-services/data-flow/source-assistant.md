@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c86b1de022402bf4802da644977cc0e07532c345
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96b9c897ddb8cb508d4ce95ee133a8060ec818e0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411105"
 ---
 # <a name="source-assistant"></a>원본 길잡이
   원본 길잡이 구성 요소는 원본 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="add-new-source-dialog-box"></a>새 원본 추가 대화 상자
 다음 표에서는 **새 원본 추가** 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |유형|연결할 원본 유형을 선택합니다.|  
 |연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만듭니다.|  

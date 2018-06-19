@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeaf5354106c548a8c0b107a99a9b0778be8006d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409985"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
  대상으로 데이터를 로드하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 이름 - 일괄 처리|일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 다음 옵션을 사용할 수 있습니다.|  
 ||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블이나 뷰를 선택합니다.<br /><br /> 이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(\*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.<br /><br /> **일괄 처리 크기**: 대량 로드에 대한 일괄 처리 크기를 입력합니다. 일괄 처리로 로드되는 행의 개수입니다.|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>잘림  
  ODBC 대상에서 흐름 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  오류에 대한 설명을 표시합니다.  
   
 #### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  

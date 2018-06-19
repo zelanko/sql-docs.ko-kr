@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bcc97264a76c0a558b010c0ca2f0cf9c5595feda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 235e7bf226544e415ecc32264c0c627d33f95aa5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405485"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.  

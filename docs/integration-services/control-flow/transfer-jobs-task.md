@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d86f9b5ddd0456faa92348f6bce99edc37bb029b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c06201f3c1512fb45f249983b24a275aaff4377
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409605"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  
@@ -114,7 +113,7 @@ ms.lasthandoff: 05/03/2018
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|모든 작업을 복사합니다.|  
 |**False**|지정한 작업만 복사합니다.|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버에 이름이 동일한 작업이 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 덮어씁니다.|  
@@ -143,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 서버에서 작업을 활성화합니다.|  
 |**False**|대상 서버에서 작업을 비활성화합니다.|  

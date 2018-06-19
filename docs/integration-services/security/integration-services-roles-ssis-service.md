@@ -1,14 +1,12 @@
 ---
 title: Integration Services 역할(SSIS 서비스) | Microsoft Docs
-ms.custom: ''
+ms.custom: security
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4ff7652fb572a5981f32bb71b5fdfb713befc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6570b3514a0accefb46648d0e1af0b21621abe7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409045"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지에 대한 액세스를 보호하는 데 사용할 수 있는 특정 고정 데이터베이스 수준 역할을 제공합니다. 사용 가능한 역할은 패키지를 SSIS 카탈로그 데이터베이스(SSISDB)에 저장하는지 아니면 msdb 데이터베이스에 저장하는지에 따라 달라집니다.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="read-and-write-actions"></a>읽기 및 쓰기 작업  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]내에서 Windows 및 고정 데이터베이스 수준 역할의 읽기/쓰기 동작에 대해 설명합니다.  
   
-|Role|읽기 동작|쓰기 동작|  
+|역할|읽기 동작|쓰기 동작|  
 |----------|-----------------|------------------|  
 |**msdb**<br /><br /> 로 구분하거나 여러<br /><br /> **sysadmin**|자체 패키지를 열거합니다.<br /><br /> 모든 패키지를 열거합니다.<br /><br /> 자체 패키지를 봅니다.<br /><br /> 모든 패키지를 봅니다.<br /><br /> 자체 패키지를 실행합니다.<br /><br /> 모든 패키지를 실행합니다.<br /><br /> 자체 패키지를 내보냅니다.<br /><br /> 모든 패키지를 내보냅니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 모든 패키지를 실행합니다.|패키지를 가져옵니다.<br /><br /> 자체 패키지를 삭제합니다.<br /><br /> 모든 패키지를 삭제합니다.<br /><br /> 자체 패키지 역할을 변경합니다.<br /><br /> 모든 패키지 역할을 변경합니다.<br /><br /> <br /><br /> **\*\* 경고 \*\*** db_ssisadmin 및 dc_admin 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 db_ssisadmin 및 dc_admin 역할에 sysadmin 멤버만 추가합니다.|  
 |**db_ssisadmin**|자체 패키지를 열거합니다.<br /><br /> 모든 패키지를 열거합니다.<br /><br /> 자체 패키지를 봅니다.<br /><br /> 자체 패키지를 실행합니다.<br /><br /> 자체 패키지를 내보냅니다.|패키지를 가져옵니다.<br /><br /> 자체 패키지를 삭제합니다.<br /><br /> 자체 패키지 역할을 변경합니다.|  

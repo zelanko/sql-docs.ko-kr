@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508deeca800867cfb24afc636d035f34f00ee98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f7d21248c998d4d2d1be7470c77d2c7e18c05d1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410605"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **데이터 형식의** 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  

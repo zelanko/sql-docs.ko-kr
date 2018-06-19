@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
@@ -16,18 +14,19 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c42400a8f9c455a390fad9caac5a5ff2f41d0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5de2d2b10c1def40790e590ead2d9b7c0c0d2ef7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408185"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 속성을 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|카탈로그 속성의 이름입니다.|  
 |property_value|**nvarchar(256)**|카탈로그 속성 값입니다.|  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  이 뷰는 각 카탈로그 속성에 대한 행을 표시합니다.
   
-|속성 이름|Description|  
+|속성 이름|설명|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|패키지에 대한 server-wide 기본 실행 모드 – `Server` (0) 또는 `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|중요한 데이터를 암호화하는 데 사용되는 암호화 알고리즘의 유형입니다. 지원되는 값은 `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` 및 `AES_256`입니다. 참고: 이 속성을 변경하려면 단일 사용자 모드에서 카탈로그 데이터베이스를 실행해야 합니다.|

@@ -3,12 +3,9 @@ title: 다른 SQL Server로 TDE 보호 데이터베이스 이동 | Microsoft 문
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 34f7225842dd6dcc789cbd6d09fa6cfee70b60f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8b05786cf5a1584513c248d539b7d059b7d2bf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973848"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701344"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +218,7 @@ ms.locfileid: "32973848"
      **상태**  
      다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
-    |아이콘|상태 텍스트|Description|  
+    |아이콘|상태 텍스트|설명|  
     |----------|-----------------|-----------------|  
     |(아이콘 없음)|(텍스트 없음)|연결 작업이 시작되지 않았거나 이 개체에 대해 보류 중입니다. 대화 상자가 열려 있는 경우에 표시되는 기본 설정입니다.|  
     |녹색, 오른쪽 방향 삼각형|진행 중|연결 작업이 시작되었지만 아직 완료되지 않았습니다.|  

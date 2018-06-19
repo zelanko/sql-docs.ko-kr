@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
@@ -16,16 +14,17 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4dbce50af5c97ec3912ff7251bc56d2e3ea6db9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87ed7a12ae763b0ad40fb0750506ca1ee2be30fe
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408355"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   다음 표에서는 ODBC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |연결|ODBC 연결|원본 데이터베이스에 액세스하기 위한 ODBC 연결입니다.|  
 |AccessMode|Integer(열거형)|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 테이블 이름(0) 및 SQL 명령(1)입니다.<br /><br /> 기본값은 테이블 이름(0)입니다.|  

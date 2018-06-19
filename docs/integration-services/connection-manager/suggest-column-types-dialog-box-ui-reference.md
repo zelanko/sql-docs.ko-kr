@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 701c59d20963141cd4a8abba7f2e4c7895069483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ae4d20627b44b0e0ce71b03b94701b9334b911c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409335"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>열 유형 제안 대화 상자 UI 참조
   **열 유형 제안** 대화 상자를 사용하여 파일 내용의 샘플링을 기반으로 플랫 파일 연결 관리자에 있는 열의 데이터 형식과 길이를 식별할 수 있습니다.  

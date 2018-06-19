@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402615"
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>필터 연산자  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**같음**|지정된 조건과 정확히 같은 특성 값을 반환합니다. 예를 들어 **Mountain-100**을 필터링하려면 **Mountain-100**을 입력해야 합니다.|  
 |**같지 않음**|지정된 조건과 같지 않은 특성 값을 반환합니다. 필터 조건은 결과에서 생략할 특성 값과 정확히 같아야 합니다. 예를 들어 **Mountain-100**과 일치하는 결과를 생략하려면 **Mountain-100**을 입력해야 합니다.<br /><br /> <br /><br /> 참고: “Is not equal” 절을 사용하여 특성에 필터 조건을 적용하면 특성이 Null인 멤버가 필터 조건을 전달하고 SET ANSI_NULLS가 데이터베이스 문자열에서 ON으로 설정된 경우 결과가 반환됩니다. 이 동작을 중지하려면 데이터베이스 설정에서 SET ANSI_NULLS를 OFF로 설정합니다. SET ANSI_NULLS가 OFF로 설정된 경우 데이터 값이 Null이면 Null 값에 대한 모든 데이터 비교가 TRUE로 평가되고 멤버가 “Is not equal” 절을 전달하지 않는 결과가 발생합니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.|  

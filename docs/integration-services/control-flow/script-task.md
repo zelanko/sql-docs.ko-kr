@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bfc9c5c3ed25112bf1eace6086b72d37dfacacc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91549780097dc18bef5b6a4fe2d97cdbff4a44f4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409555"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="configuring-the-script-task-in-the-designer"></a>디자이너에서 스크립트 태스크 구성  
  다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 **ScriptTaskLogEntry** 이벤트에 대해 설명합니다. **SSIS 로그 구성** 대화 상자의 **세부 정보** 탭에는 **ScriptTaskLogEntry** 이벤트가 로깅 대상으로 선택되어 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|스크립트에서 로깅을 구현한 결과를 보고합니다. 이 태스크는 **Log** 개체의 **Dts** 메서드를 호출할 때마다 로그 항목을 기록합니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c4314afd154ff063d960f77ba282b7cf3f28b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5f634370b7e8b2c21de17c70b1c98a21e20f3c7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405695"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
   **단일 테이블 빠른 프로필 형식** 을 사용하여 데이터 프로파일링 태스크를 구성하고 기본 설정으로 단일 테이블이나 뷰를 빠르게 프로파일링할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
  **계산**  
  계산할 프로필을 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**열 Null 비율 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 Null 비율 프로필을 계산합니다.<br /><br /> 이 프로필은 선택한 열에 있는 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)을 참조하세요.|  
 |**열 통계 프로필**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 계산합니다.<br /><br /> 이 프로필은 숫자 열의 최소값, 최대값, 평균, 표준 편차 및 **datetime** 열의 최소값, 최대값과 같은 통계를 보고합니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 이 프로필의 설정에 대한 자세한 내용은 [열 통계 프로필 요청&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)을 참조하세요.|  

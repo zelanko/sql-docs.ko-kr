@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772147"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513018"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -152,7 +150,7 @@ ms.locfileid: "34772147"
   
      -또는-  
   
-     명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
+     명령 프롬프트의 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 에서 **isdeploymentwizard.exe**를 실행합니다. 64비트 컴퓨터의 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**에는 도구의 32비트 버전도 있습니다.  
   
 2.  **원본 선택** 페이지에서 **프로젝트 배포 파일** 을 클릭하여 프로젝트 배포 파일을 선택합니다.  
   
