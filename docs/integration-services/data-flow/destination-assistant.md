@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2167b2baba2c1dd866808fc190690b862e9d9e04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 218958cb1cc21aeca393b44a337640e64d918a41
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332877"
 ---
 # <a name="destination-assistant"></a>대상 길잡이
   대상 길잡이 구성 요소는 대상 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="add-new-destination-dialog-box"></a>새 대상 추가 대화 상자
 다음 표에서는 **새 대상 추가** 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |유형|연결할 대상 유형을 선택합니다.|  
 |연결 관리자|기존 연결 관리자를 선택하거나 **\<새로 만들기>** 를 클릭하여 새 연결 관리자를 만듭니다.|  

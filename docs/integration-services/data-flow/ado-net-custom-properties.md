@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d16d06518a5b58f768f4e87a4361d99b3e2796af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50c968acabb2432118d60bd19fb81c72fbe41d19
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334667"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 ADO.NET 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|SQL 명령이 종료되기 전의 제한 시간(초)을 지정하는 값입니다. 값 0은 명령의 제한 시간이 없음을 나타냅니다.|  
 |SqlCommand|String|ADO.NET 원본이 데이터 추출에 사용하는 SQL 문입니다.<br /><br /> 패키지가 로드되면 ADO.NET 원본이 사용할 SQL 문으로 이 속성을 동적으로 업데이트할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md) 및 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다. 이러한 속성은 **ADO NET 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |BatchSize|정수|일괄 처리를 통해 서버로 전송되는 행 수입니다. 값 **0** 은 일괄 처리 크기가 내부 버퍼 크기와 일치함을 나타냅니다. 이 속성의 기본값은 **0**입니다.|  
 |CommandTimeOut|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.|  

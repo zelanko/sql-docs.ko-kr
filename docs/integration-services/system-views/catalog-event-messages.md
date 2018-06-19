@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
@@ -16,18 +14,19 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc606c489ee5b783eb9fedbde53e33ddba9789a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de53ddb2b38e2a3423ea15acab63169e38b9d4e3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330437"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   작업 중 기록된 메시지에 대한 정보를 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|이벤트 메시지의 고유 ID입니다.|  
 |Operation_id|BIGINT|작업의 유형입니다.<br /><br /> 작업 유형에 대한 목록은 [catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)를 참조하세요.|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|설명|  
 |-------------------------------|-----------------|  
 |10|T-SQL 및 CLR 저장 프로시저와 같은 API 항목|  
 |20|패키지(ISServerExec.exe)를 실행하는 데 사용되는 외부 프로세스|  

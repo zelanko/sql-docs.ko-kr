@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f1da805d3a40a37501fdcb89f126d148c38df341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13a9965e7b56bf5bf3aec58f38d3e90fda387bed
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335067"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>서버 구성(MDS Configuration Manager)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="server-configuration"></a>서버 구성  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**인터넷 정보 서비스**|로컬 컴퓨터에 설치된 인터넷 정보 서비스(IIS) 버전을 표시합니다. Master Data Services 구성 마법사를 사용하려면 IIS 버전 7.0 이상이 필요합니다.|  
 |**MDS 제품 버전**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 제품 버전을 표시합니다.|  

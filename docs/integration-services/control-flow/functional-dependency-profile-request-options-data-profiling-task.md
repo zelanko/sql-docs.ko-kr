@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1117cc82dee86fa845dc817a7c98eaefe7e4548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1490e786bd2799d6ea2abb1c821b155777f1356f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403895"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **함수 종속성 프로필 요청** 의 옵션을 설정할 수 있습니다. 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Zip Code/Postal Code 열과 US State 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 이 프로필이 종속성 위반을 검색할 수 있습니다.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
 |**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
 |**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **ThresholdSetting**  
  임계값 설정을 지정합니다. 이 속성의 기본값은 **Specified**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 함수 종속성 수준은 해당 값에 관계없이 보고됩니다.|  
 |**Specified**|**FDStrengthThreshold**에 지정된 임계값을 사용합니다. 함수 종속성 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fd7ff134e77d9260ff402c48087945af5fc1a86d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334887"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 -   로그 형식은 CSV입니다. 다음 표에서는 로그 형식에 대해 설명합니다.  
   
-    |요소|Description|  
+    |요소|설명|  
     |-------------|-----------------|  
     |Time|추적 항목이 생성된 시간입니다.|  
     |CorrelationID|요청마다 상관 관계 ID 하나가 할당됩니다. 하나의 요청에 의해 트리거되는 모든 추적은 같은 상관 관계 ID를 공유합니다.<br /><br /> UI에서 오류가 발생하면 오류 메시지에 상관 관계 ID가 표시됩니다.|  

@@ -3,7 +3,6 @@ title: SQL Server Reporting Services(2017 이상) 설치 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.custom: ''
@@ -13,11 +12,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3504d97184804512f70c35c36c5c1c0e528c30ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 868c812a854c39b1c75a3bc89d792eabe04483f8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322572"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services(2017 이상) 설치
 
@@ -100,7 +100,7 @@ Windows 서비스는 설치의 일부로 만들어집니다. **SQL Server Report
 
 URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.
 
-|부분|Description|
+|부분|설명|
 |----------|-----------------|
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `http://<computername>/reportserver`, `http://localhost/reportserver` 또는`http://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|

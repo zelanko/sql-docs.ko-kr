@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 026b01925fbcf0ec615da77793dff7f84221322f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332187"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>함수 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Remarks  
  다음 표에서는 dm_execution_performance_counter 함수에서 반환된 카운터 이름 값을 보여 줍니다.  
   
-|카운터 이름|Description|  
+|카운터 이름|설명|  
 |------------------|-----------------|  
 |BLOB bytes read|데이터 흐름 엔진이 모든 원본에서 읽는 BLOB(Binary Large Object) 데이터의 바이트 수입니다.|  
 |BLOB bytes written|데이터 흐름 엔진이 모든 대상에 기록하는 BLOB 데이터의 바이트 수입니다.|  
@@ -61,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>반환 값  
  dm_execution_performance_counters 함수는 진행 중인 실행에 대해 다음과 같은 열이 있는 테이블을 반환합니다. 반환되는 정보는 실행에 포함된 모든 패키지에 대한 정보입니다. 진행 중인 실행이 없는 경우 빈 테이블이 반환됩니다.  
   
-|열 이름|열 유형|Description|Remarks|  
+|열 이름|열 유형|설명|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL**은 유효한 값이 아닙니다.|패키지를 포함한 실행의 고유 식별자입니다.||  
 |counter_name|**nvarchar(128)**|카운터의 이름입니다.|값의 **설명** 섹션을 참조하세요.|  

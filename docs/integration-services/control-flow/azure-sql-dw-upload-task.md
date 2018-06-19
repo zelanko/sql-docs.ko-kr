@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 5677005fb992816e537c7780a62636c57f92b80d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332527"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
 **Azure SQL DW 업로드 태스크** 를 통해 SSIS 패키지에서 로컬 데이터를 Azure SQL DW(Data Warehouse)의 테이블에 업로드할 수 있습니다. 현재 지원되는 원본 데이터 파일 형식은 UTF8 인코딩 방식의 구분 기호로 분리된 텍스트입니다. 업로드 절차는 [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Azure SQL Data Warehouse 로드 패턴 및 전략)에 설명된 것처럼 효율적인 PolyBase 방법을 따릅니다. 특히 데이터는 Azure Blob Storage에 먼저 업로드되고 그 다음으로 Azure SQL DW에 업로드됩니다. 그러므로 이 태스크를 사용하려면 Azure Blob Storage 계정이 필요합니다.

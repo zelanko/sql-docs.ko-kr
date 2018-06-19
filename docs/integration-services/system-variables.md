@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331637"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>패키지의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|Description|  
+|시스템 변수|데이터 형식|설명|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|태스크 실행을 중지해야 함을 나타내기 위해 태스크가 표시할 수 있는 Windows 이벤트 개체에 대한 핸들입니다.|  
 |**ContainerStartTime**|DateTime|컨테이너의 시작 시간입니다.|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>컨테이너의 시스템 변수  
  다음 표에서는 For 루프, Foreach 루프 및 시퀀스 컨테이너에 대해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|Description|컨테이너|  
+|시스템 변수|데이터 형식|설명|컨테이너|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|컨테이너에서 사용되는 로캘입니다.|For 루프 컨테이너<br /><br /> Foreach 루프 컨테이너<br /><br /> 시퀀스 컨테이너|  
   
 ## <a name="system-variables-for-tasks"></a>태스크의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 태스크에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|Description|  
+|시스템 변수|데이터 형식|설명|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|태스크 이름입니다.|  
 |**LocaleId**|Int32|태스크에서 사용되는 로캘입니다.|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>이벤트 처리기의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 이벤트 처리기에 대해 제공하는 시스템 변수에 대해 설명합니다. 일부 변수는 특정 이벤트 처리기에서만 사용할 수 있습니다.  
   
-|시스템 변수|데이터 형식|Description|이벤트 처리기|  
+|시스템 변수|데이터 형식|설명|이벤트 처리기|  
 |---------------------|---------------|-----------------|-------------------|  
 |**취소**|Boolean|오류, 경고 또는 쿼리 취소가 발생할 때 이벤트 처리기 실행이 중지되는지 여부를 나타냅니다.|OnError 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기<br /><br /> OnQueryCancel 이벤트 처리기|  
 |**ErrorCode**|Int32|오류 식별자입니다.|OnError 이벤트 처리기<br /><br /> OnInformation 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기|  

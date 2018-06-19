@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcde5a88ef2c1588ec0cd8495a7276a002f9ca5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf2cfae75152389455ec9ec5efa51d438ea1f738
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401425"
 ---
 # <a name="percentage-sampling-transformation"></a>비율 샘플링 변환
   비율 샘플링 변환은 변환 입력 행의 비율을 선택하여 샘플 데이터 집합을 만듭니다. 샘플 데이터 집합은 입력을 대표하는 결과 샘플을 만들기 위해 변환 입력에서 임의로 선택한 행입니다.  

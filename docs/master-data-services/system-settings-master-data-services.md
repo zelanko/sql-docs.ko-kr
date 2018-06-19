@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19f244d7febe15f03b5510ba484b985044ad3548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330137"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="General"></a> 일반 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**데이터베이스 연결 제한 시간**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 연결을 완료하는 데 허용하는 시간(초)입니다. 연결이 이 시간 안에 완료되지 않으면 해당 연결이 취소되고 오류가 반환됩니다. 기본값은 **60** 초(1분)입니다.|  
 |**데이터베이스 명령 제한 시간**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 명령을 완료하는 데 허용하는 시간(초)입니다. 명령이 이 시간 안에 완료되지 않으면 해당 명령이 취소되고 오류가 반환됩니다. 기본값은 **3600** 초(60분)입니다.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Versions"></a> 버전 관리 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**커밋된 버전만 복사**|**CopyOnlyCommittedVersion**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 사용자가 **커밋됨**상태의 모델만 복사할 수 있는지, 아니면 모든 상태의 버전을 복사할 수 있는지 결정합니다. 기본값은 **예** 또는 **1**로, 사용자가 **커밋됨** 상태의 버전만 복사할 수 있음을 나타냅니다. 사용자가 모든 버전을 복사할 수 있도록 하려면 **아니요** 또는 **2** 로 변경합니다.|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Staging"></a> 준비 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**모든 준비 트랜잭션 기록**|**StagingTransactionLogging**|SQL Server 2008 R2에만 적용됩니다. 준비 레코드가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 로드될 때 트랜잭션을 기록할지 여부를 결정합니다. 기본값은 **해제** 또는 **2**입니다. 기록할 수 있도록 설정하려면 **설정** 또는 **1** 로 변경합니다.|  
 |**준비 일괄 처리 간격**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **통합 관리** 기능 영역에서 **일괄 처리 시작** 을 선택한 후 일괄 처리가 처리될 때까지의 시간(초)입니다. 기본값은 **60** 초(1분)입니다.|  
@@ -85,23 +85,23 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Explorer"></a> 탐색기 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
-|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **…추가…**가 표시되기 전에 각 계층 노드에 표시되는 최대 멤버 수입니다.(!!) 표시됩니다. 다음 멤버 그룹을 표시하려면 **…추가…** 를 클릭합니다. 기본값은 **50**입니다.|  
+|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **…추가…** 가 표시되기 전에 각 계층 노드에 표시되는 최대 멤버 수입니다.(!!) 표시됩니다. 다음 멤버 그룹을 표시하려면 **…추가…** 를 클릭합니다. 기본값은 **50**입니다.|  
 |**기본적으로 계층에 이름 표시**|**ShowNamesInHierarchy**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 계층을 볼 때 선택되는 기본 설정을 결정합니다.<br /><br /> 기본값은 **예** 또는 **1**로, 각 멤버의 이름 및 코드가 표시됨을 나타냅니다. 코드만 표시하려면 **아니요** 또는 **2** 로 변경합니다.|  
 |**목록의 도메인 기반 특성 수**|**DBAListRowLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 표의 도메인 기반 특성 값을 두 번 클릭할 때 목록에 표시되는 특성 수입니다. 기본값은 **50**입니다. 멤버 수가 50개보다 많으면 검색 가능한 대화 상자가 대신 표시됩니다.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **일치** 필터 조건을 사용할 때 사용되는 유사성 수준입니다. 기본값은 **0.3**입니다. 검색 조건과 보다 일치하는 항목을 반환하려면 **1** 에 가까운 값으로 설정합니다. 정확하게 일치하는 항목을 반환하려면 **1** 로 설정합니다.|  
   
 ##  <a name="xls"></a> Excel용 추가 기능 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |웹 사이트 홈 페이지에 Excel용 추가 기능 텍스트 표시|ShowAddInText|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에 사용자가 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 다운로드할 수 있는 링크를 표시합니다.|  
 |웹 사이트 홈 페이지의 Excel용 추가 기능 설치 경로|AddInURL|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 에 대한 링크가 표시되는 경우 해당 링크를 클릭하면 사용자가 이동하는 위치입니다.|  
   
 ##  <a name="BusinessRules"></a> 비즈니스 규칙 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**새 비즈니스 규칙 증가값**|**BusinessRuleDefaultPriorityIncrement**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **시스템 관리** 기능 영역에서 각 비즈니스 규칙의 우선 순위가 증가되는 단위입니다. 기본값은 **10**입니다.|  
 |**비즈니스 규칙을 적용할 멤버 수**|**BusinessRuleRealtimeMemberCount**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 비즈니스 규칙을 적용할 최대 멤버 수입니다. [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 비즈니스 규칙을 적용할 활성 워크시트에 있는 최대 멤버 수입니다. 기본값은 **10000**입니다.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Notifications"></a> 알림 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: `http://constoso/mds`)입니다.|  
 |**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> 보안 설정  
   
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 **계층 멤버** 탭에 설정된 해당 사용자 및 그룹 권한이 적용되는 빈도(초)입니다. 기본값은 **3600**초(60분)입니다.|  
   

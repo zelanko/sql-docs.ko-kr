@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
@@ -16,11 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f79aea129b92293209452bb3dfbd92185e381f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10497442b6047c96d73d10ca3815ba0b62c788cf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408065"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사의 단계
 이 문서에서는 SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터를 가져오고 내보내는 일련의 단계를 설명합니다. 마법사에 표시되는 각 페이지나 대화 상자를 설명하는 설명서의 개별 페이지에 대한 링크도 포함되어 있습니다.

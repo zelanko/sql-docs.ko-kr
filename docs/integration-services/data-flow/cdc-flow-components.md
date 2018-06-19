@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
@@ -16,11 +14,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a95bd32614faeb7cade10a701819b3109d72dca4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c453a98b91e001fbb15ec608513a8803981a26e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334917"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  
@@ -174,7 +173,7 @@ CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/s
 ## <a name="cdc-state"></a>CDC 상태  
  각 CDC 그룹에는 특정 형식의 문자열로 표현된 상태가 연결되어 있습니다. 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)을 참조하세요. 다음 표에서는 가능한 CDC 상태 값을 보여 줍니다.  
   
-|State|Description|  
+|State|설명|  
 |-----------|-----------------|  
 |0-(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전에 존재하는 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  
 |1-ILSTART(초기 로드 시작)|초기 로드 패키지가 시작될 때 존재하는 상태입니다. 이 상태는 CDC 제어 태스크에 대한 **MarkInitialLoadStart** 작업 호출 이후에 발생합니다.<br /><br /> CDC 제어 태스크 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.|  

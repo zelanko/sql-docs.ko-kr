@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a8e1f5981bdaf8cec7b263a9894ce3d1c4c7b04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331197"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="operations"></a>작업  
  집계 변환은 다음과 같은 연산을 지원합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |Group By|데이터 집합을 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)를 참조하세요.|  
 |합계|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 [SUM&#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)을 참조하세요.|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **키 배율**  
  고급 디스플레이에서 필요에 따라 집계가 쓸 수 있는 키의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키** 속성을 모두 설정하면 **키** 의 값이 우선 적용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Unspecified|키 배율 속성을 사용하지 않습니다.|  
 |낮음|집계에서 약 500,000개의 키를 쓸 수 있습니다.|  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
  **연산**  
  다음 표를 참조하여 사용 가능한 연산 목록에서 선택합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |**Group By**|데이터 집합을 그룹으로 나눕니다. 모든 데이터 형식의 열을 그룹화할 수 있습니다. 자세한 내용은 GROUP BY를 참조하십시오.|  
 |**Sum**|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 SUM을 참조하십시오.|  
@@ -193,7 +192,7 @@ ms.lasthandoff: 05/03/2018
  **Count Distinct Scale**  
  필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. **CountDistinctScale** 과 **CountDistinctKeys** 를 모두 지정하면 **CountDistinctKeys** 가 우선 적용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Unspecified|**CountDistinctScale** 속성을 사용하지 않습니다.|  
 |낮음|집계에서 약 500,000개의 고유한 값을 쓸 수 있습니다.|  
@@ -215,7 +214,7 @@ ms.lasthandoff: 05/03/2018
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Unspecified|**키 배율** 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 키를 쓸 수 있습니다.|  
@@ -228,7 +227,7 @@ ms.lasthandoff: 05/03/2018
  **고유 수 배율**  
  필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. **고유 수 배율** 과 **고유 키 수** 를 모두 지정하면 **고유 키 수** 가 우선 적용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Unspecified|CountDistinctScale 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 고유한 값을 쓸 수 있습니다.|  

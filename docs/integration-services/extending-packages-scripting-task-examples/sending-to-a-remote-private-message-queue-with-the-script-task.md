@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +23,12 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ca6b64970565612f18b3dcb21258d8345bd2485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba1eba420deda38251b2370c8b7da162b398a951
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330017"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기
   개발자는 메시지 큐(MSMQ)를 통해 메시지를 주고 받는 방법으로 신속하고 안전하게 응용 프로그램과 통신할 수 있습니다. 메시지 큐는 로컬 컴퓨터나 원격 컴퓨터에 있을 수 있으며 공개 큐이거나 개인 큐일 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 MSMQ 연결 관리자와 메시지 큐 태스크에서 원격 컴퓨터의 개인 큐로 메시지를 보낼 수 없습니다. 그러나 스크립트 태스크를 사용하면 원격 개인 메시지 큐에 메시지를 쉽게 보낼 수 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 예에서는 기존 MSMQ 연결 관리자와 System.Messaging 네임스페이스의 개체 및 메서드를 사용하여 패키지 변수에 들어 있는 텍스트를 원격 개인 메시지 큐에 보냅니다. MSMQ 연결 관리자의 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) 메서드에 대한 호출은 **Send** 메서드가 이 작업을 수행하는 **MessageQueue** 개체를 반환합니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  

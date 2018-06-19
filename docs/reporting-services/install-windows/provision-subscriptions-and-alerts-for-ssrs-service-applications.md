@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -21,11 +20,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3747bdba5ef54790a600b976c930ceeecd789c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322282"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 응용 프로그램에 대한 구독 및 경고 프로비전
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독 및 데이터 경고에는 SQL Server 에이전트가 필요하며 SQL Server 에이전트에 대한 사용 권한 구성이 필요합니다. SQL Server 에이전트가 필요하고 SQL Server 에이전트 실행 확인을 나타내는 오류 메시지가 표시되는 경우 사용 권한을 업데이트하거나 확인해야 합니다. 이 항목의 범위는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이며, 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 사용하여 SQL Server 에이전트의 사용 권한을 업데이트하는 세 가지 방법에 대해 설명합니다. 이 항목의 단계에 사용하는 자격 증명에는 서비스 응용 프로그램, msdb 및 master 데이터베이스의 개체를 위한 RSExecRole에 실행 권한을 부여하기에 충분한 사용 권한이 있어야 합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  ![서비스 응용 프로그램 DB에 대한 SQL 에이전트 권한](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "서비스 응용 프로그램 DB에 대한 SQL 에이전트 권한")  
   
-||Description|  
+||설명|  
 |------|-----------------|  
 |**1**|Reporting Services 서비스 응용 프로그램 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진의 인스턴스입니다.|  
 |**2**|SQL 데이터베이스 엔진의 인스턴스에 대한 SQL Server 에이전트의 인스턴스입니다.|  

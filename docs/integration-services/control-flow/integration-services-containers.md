@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333277"
 ---
 # <a name="integration-services-containers"></a>Integration Services 컨테이너
   컨테이너는 패키지에 구조를 제공하고 태스크에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 개체입니다. 패키지의 반복 제어 흐름을 지원하고 태스크와 컨테이너를 의미 있는 작업 단위로 그룹화합니다. 컨테이너는 태스크 외에도 다른 컨테이너를 포함할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>컨테이너 유형  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 빌드를 위해 4가지 컨테이너 유형을 제공합니다. 다음 표에서는 각 컨테이너 유형을 나열합니다.  
   
-|컨테이너|Description|  
+|컨테이너|설명|  
 |---------------|-----------------|  
 |[Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)|열거자를 사용하여 제어 흐름을 반복적으로 실행합니다.|  
 |[For 루프 컨테이너](../../integration-services/control-flow/for-loop-container.md)|조건을 테스트하여 제어 흐름을 반복적으로 실행합니다.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>컨테이너 속성 요약  
  모든 컨테이너 유형에는 공통된 속성 집합이 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공되는 그래픽 도구를 사용하여 패키지를 만들 경우 속성 창에는 Foreach 루프, For 루프 및 시퀀스 컨테이너에 대한 다음 속성이 나열됩니다. 태스크 호스트 컨테이너 속성은 태스크 호스트가 캡슐화하는 태스크를 구성하는 과정의 일부로 구성됩니다. 이 태스크를 구성할 때 태스크 호스트 속성을 설정합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**DelayValidation**|컨테이너의 유효성 검사가 런타임까지 지연되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>가 될 때까지 태스크를 반복합니다.|  
 |**설명**|컨테이너 설명입니다. 이 속성에는 문자열이 포함되지만 비워 둘 수 있습니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>가 될 때까지 태스크를 반복합니다.|  

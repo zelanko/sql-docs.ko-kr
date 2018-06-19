@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7ff7d1fcaa85ac4b53b1cde391bfb5dd6cbaf91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6918b56ec5335a25b9f0606b4646222df7ce9ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330897"
 ---
 # <a name="ftp-task"></a>FTP 태스크
   FTP 태스크는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리합니다. 예를 들어 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 원격 서버 또는 인터넷 위치에서 데이터 파일을 다운로드할 수 있습니다. FTP 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-ftp-operations"></a>미리 정의된 FTP 작업  
  FTP 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |파일 보내기|로컬 컴퓨터의 파일을 FTP 서버로 보냅니다.|  
 |파일 받기|FTP 서버의 파일을 로컬 컴퓨터에 저장합니다.|  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|태스크에서 FTP 서버에 대한 연결을 시작했음을 나타냅니다.|  
 |**FTPOperation**|태스크에서 수행하는 FTP 작업의 시작 부분과 유형을 보고합니다.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **IsRemotePathVariable**  
  원격 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **RemoteVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **RemotePath**가 표시됩니다.|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  **IsLocalPathVariable**  
  로컬 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **LocalVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **LocalPath**가 표시됩니다.|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **연산**  
  수행할 FTP 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 보내기**|파일을 보냅니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  
 |**파일 받기**|파일을 받습니다. 이 값을 선택하면 동적 옵션 **LocalVariable**, **LocalPathRemoteVariable** 및 **RemotePath**가 표시됩니다.|  

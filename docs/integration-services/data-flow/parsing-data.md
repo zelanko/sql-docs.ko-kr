@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00a315fb09417886c13e1f102673851ca961ab16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd4bc0bfa30ee2df9b66de66f7002233426fa8f6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407425"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -91,7 +90,7 @@ ms.lasthandoff: 05/03/2018
   
 -   다음 표에 나열된 ISO 8601 형식  
   
-    |형식|Description|  
+    |형식|설명|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|네 자리 연도, 두 자리 월 및 두 자리 일이 포함된 기본 및 하이픈으로 연결된 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
     |YYYY-MM|네 자리 연도와 두 자리 연도의 기본 및 하이픈으로 연결된 축약 형식입니다. 하이픈으로 연결된 형식에서 날짜 부분은 하이픈(-)으로 구분됩니다.|  
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
 -   다음 표에 나열된 ISO 8601 시간 형식  
   
-    |형식|Description|  
+    |형식|설명|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|두 자리 시간, 두 자리 분 및 두 자리 초의 기본 및 확장 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
     |HHMI<br /><br /> HH:MI|두 자리 시간과 두 자리 분의 기본 및 확장 잘림 형식입니다. 확장 형식에서 시간 부분은 콜론(:)으로 구분됩니다.|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
   
 -   다음 표에 나열된 표준 시간대를 지정하는 시간 형식  
   
-    |형식|Description|  
+    |형식|설명|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|현지 시간을 얻기 위해 UTC(Coordinated Universal Time)에 더한 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
     |-HH:MI<br /><br /> -HHMI|현지 시간을 얻기 위해 UTC에서 뺀 시간과 분을 나타내는 기본 및 확장 형식입니다.|  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
   
 -   다음 표에 나열된 소수 부분을 포함하는 시간 형식  
   
-    |형식|Description|  
+    |형식|설명|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n은 시간의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 12.750은 12:45를 나타냅니다.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n은 분의 소수 부분을 나타내는 0에서 9999999 사이의 값입니다. 대괄호는 이 값이 선택 사항임을 나타냅니다.<br /><br /> 예를 들어 값 1220.500은 12:20:30을 나타냅니다.|  

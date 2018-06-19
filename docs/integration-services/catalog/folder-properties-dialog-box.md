@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7900eb74181b04de940793b2ae2d384a1a4e2e0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 901f654ff2586dbb9b18304aed4a91664c444d4c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35327978"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
   폴더에는 **SSISDB** 카탈로그의 프로젝트 및 환경이 포함됩니다. 각 폴더는 폴더 내용에 적용되는 사용 권한을 정의합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 권한에 대한 자세한 내용은 [catalog.grant_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)을 참조하세요.  

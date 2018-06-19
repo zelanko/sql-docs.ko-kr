@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e51d79c8d365bb1ba5b28feec4ab19ce445e234a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403865"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
@@ -41,10 +40,10 @@ ms.lasthandoff: 05/03/2018
   
 |추가|잘라내기|파일 존재 여부|결과|  
 |------------|--------------|-----------------|-------------|  
-|False|False|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|False|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|False|True|아니오|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|True|아니오|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
+|False|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|False|True|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|True|아니요|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
 |False|False|예|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
 |False|True|예|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
 |True|False|예|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  

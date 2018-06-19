@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a48f3114c4207d11dab84a1706af2f3e1971f9cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333657"
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
   파티션 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션을 로드하고 처리합니다. 파티션에 대한 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **처리 방법**  
  처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |추가(증분)|파티션의 증분 처리를 수행합니다.|  
 |전체|파티션의 전체 처리를 수행합니다.|  
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
  **키 오류 동작**  
  사용할 수 없는 키 값이 있는 레코드의 처리 방법을 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|사용할 수 없는 키 값을 Unknown 값으로 변환합니다.|  
 |**DiscardRecord**|레코드를 삭제합니다.|  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
  **오류 시 수행할 동작**  
  **오류 발생 시 중지**를 선택한 경우 오류 임계값에 도달했을 때 수행할 동작을 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**StopProcessing**|처리를 중지합니다.|  
 |**StopLogging**|오류 기록을 중지합니다.|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **키를 찾을 수 없는 경우**  
  키를 찾을 수 없을 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  **중복 키**  
  중복 키 오류가 발생할 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **Null 키가 알 수 없는 상태로 변환된 경우**  
  Null 키가 Unknown 값으로 변환된 경우 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -171,7 +170,7 @@ ms.lasthandoff: 05/03/2018
  **Null 키가 허용되지 않는 경우**  
  Null 키가 허용되지 않는데 Null 키가 있는 경우에 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  

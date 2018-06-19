@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86a4674fff0795918fe89a26b62b5b15524d543e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333477"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 테이블 형식 모델, 큐브, 차원 및 마이닝 모델과 같은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리합니다.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **관련 항목:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**Object Name**|지정한 개체 이름을 나열합니다.|  
 |**형식**|지정한 개체의 유형을 나열합니다.|  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
  **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **일괄 처리 설정 요약**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**처리 순서**|개체가 순차적으로 또는 일괄 처리 방식으로 처리되는지 여부를 지정합니다. 병렬 처리가 사용되면 동시에 처리할 개체 수를 지정합니다.|  
 |**트랜잭션 모드**|순차적 처리를 위한 트랜잭션 모드를 지정합니다.|  

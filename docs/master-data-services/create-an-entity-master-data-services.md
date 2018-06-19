@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2e9851921d808339681080d5df0c9439212a3db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410465"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 엔터티에 대해 열이 13개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |----------|-----------------|  
 |상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
 |속성|엔터티 이름입니다.|  
-|Description|엔터티 설명입니다.|  
+|설명|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
 |트랜잭션 로그 유형|엔터티의 트랜잭션 로그 유형입니다.|  
 |코드 자동 생성|코드 자동 생성을 사용할지 여부를 지정합니다.|  

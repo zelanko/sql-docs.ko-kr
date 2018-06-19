@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
@@ -16,11 +14,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c91b11067d29b93eda91fa20d70ea5b5b95eef3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66f3e926072e79fbe18774cc3f9ab300a91d7ba5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329167"
 ---
 # <a name="catalogexecutables"></a>catalog.executables
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  실행 개체는 사용자가 패키지의 제어 흐름에 추가하는 태스크 또는 컨테이너입니다.  
   
-|열 이름|**Data type**|Description|  
+|열 이름|**Data type**|설명|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|해당 실행에 대한 고유 식별자입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 식별자입니다.|  

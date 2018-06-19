@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
@@ -16,16 +14,17 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 093b6da73d55129b1a21e36dfad4fac3c899c296
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 716b80d50d8498f2a3325bd4719ddf0a7f1e9946
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334487"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   다음 표에서는 ODBC 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |연결|ODBC 연결|대상 데이터베이스에 액세스하기 위한 ODBC 연결입니다.|  
 |BatchSize|정수|대량 로드에 대한 일괄 처리 크기입니다. 일괄 처리로 로드되는 행의 개수입니다. 행 단위 매개 변수 바인딩이 지원되는 경우에만 유효합니다. 행 단위 매개 변수 바인딩이 지원되지 않는 경우에는 일괄 처리 크기가 1입니다.|  

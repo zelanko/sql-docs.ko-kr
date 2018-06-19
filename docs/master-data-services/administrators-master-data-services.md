@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c1a75f5d3c6f4a9f9eadcec5ad6f48e809f9f3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000322cdd3178c08e08a4bf6c7db47ecffbb5882
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401325"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="comparing-administrator-types"></a>관리자 유형 비교  
   
-|관리자 유형|Description|  
+|관리자 유형|설명|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 슈퍼 사용자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 할당된 사용 권한은 관리자의 액세스 권한 아무런 영향을 주지 않습니다.<br /><br /> 명시적으로 할당된 기능 영역 권한 또는 그룹에서 상속된 권한에 따라 슈퍼 사용자로 지정될 수 있습니다.<br /><br /> 모든 모델에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 모든 기능 영역에 대한 액세스 권한을 자동으로 가집니다.|  
 |모델 관리자|명시적으로 할당된 관리 권한 또는 그룹에서 상속된 사용 권한에 따라 모델 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 모델의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.|  

@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +23,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41a6469d736bf62a7c2485197110a58c042a0780
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb06b6fb91104c5f48b215d2c260eddd8219d8b5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334327"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail 태스크에서는 일반 텍스트 형식의 메일 메시지만 지원합니다. 그러나 스크립트 태스크와 .NET Framework의 메일 기능을 사용하여 HTML 메일 메시지를 쉽게 보낼 수도 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 예에서는 **System.Net.Mail** 네임스페이스를 사용하여 HTML 메일 메시지를 구성하고 보냅니다. 스크립트는 패키지 변수에서 전자 메일의 받는 사람, 보내는 사람, 제목 및 본문을 가져오고 이를 사용하여 새 **MailMessage**를 만든 다음 해당 **IsBodyHtml** 속성을 **True**로 설정합니다. 그런 다음 다른 패키지 변수에서 SMTP 서버 이름을 가져오고 **System.Net.Mail.SmtpClient**의 인스턴스를 초기화한 다음 **Send** 메서드를 호출하여 HTML 메시지를 보냅니다. 이 예제에서는 다른 스크립트에서 다시 사용할 수 있도록 메시지 보내기 기능을 서브루틴에 캡슐화합니다.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하지 않도록 구성하려면  

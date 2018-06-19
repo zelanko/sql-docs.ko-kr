@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0eb452faf4039c82e0bf3d4dedfa8f2ae49b56b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dfdf9ba43d247d21500ee986e52c5e3ae141a0c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401605"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 Excel 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|정수|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **행 집합 열기**, **변수를 사용한 행 집합 열기**, **SQL 명령**및 **변수를 사용한 SQL 명령**입니다. 기본값은 **행 집합 열기**입니다.|  
 |CommandTimeout|정수|명령이 종료되기 전의 제한 시간(초)입니다.  값 0은 제한 시간이 없음을 나타냅니다.<br /><br /> **참고** 이 속성은 **Excel 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 Excel 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|대상에서 해당 대상 데이터베이스에 액세스하는 방법을 지정하는 값입니다.<br /><br /> 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **OpenRowset** (0) - 테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수를 사용한 OpenRowset** (1)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **FastLoad를 사용한 OpenRowset** (3)—테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수와 FastLoad를 사용한 OpenRowset** (4)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **SQL 명령** (2)—SQL 문을 제공합니다.|  
 |CommandTimeOut|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 참고: 이 속성은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  

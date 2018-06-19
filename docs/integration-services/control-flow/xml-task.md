@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfddb1861284e64267e310b98f0011e49284a8c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9726b86fd0d441b8e99a155b10abbd3804a7143
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331237"
 ---
 # <a name="xml-task"></a>XML 태스크
   XML 태스크는 XML 데이터를 통한 작업 시 사용됩니다. 패키지는 이 태스크를 사용하여 XML 문서를 검색하고, XSLT(Extensible Stylesheet Language Transformations) 스타일시트 및 XPath 식을 통해 문서에 작업을 적용하고, 여러 문서를 병합하거나 업데이트된 문서를 파일 및 변수에 대해 유효성을 검사하고, 비교 및 저장할 수 있습니다.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-xml-operations"></a>미리 정의된 XML 작업  
  XML 태스크에는 XML 문서 작업을 위해 미리 정의된 일련의 작업이 포함됩니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |Diff|두 개의 XML 문서를 비교합니다. 원본 XML 문서를 기본 문서로 사용하는 비교 작업은 원본 XML 문서를 보조 XML 문서와 비교하고, 차이점을 검색하고, 해당 차이점을 XML Diffgram 문서에 기록합니다. 이 작업에는 비교를 사용자 지정하기 위한 속성이 포함됩니다.|  
 |병합|두 개의 XML 문서를 병합합니다. 원본 XML 문서를 기본 문서로 사용하는 병합 작업은 보조 문서의 내용을 기본 문서에 추가합니다. 이 작업에서는 기본 문서 내의 병합 위치를 지정할 수 있습니다.|  
@@ -73,7 +72,7 @@ ms.lasthandoff: 05/03/2018
   
  비교 작업에는 XML 비교를 사용자 지정하는 일련의 옵션이 포함됩니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**IgnoreComments**|열 노드가 비교되는지 여부를 지정하는 값입니다.|  
 |**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션을 **true**로 설정하면 로컬 이름이 같지만 네임스페이스가 다른 두 요소는 동일한 것으로 간주됩니다.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 XML 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**XMLOperation**|태스크에서 수행한 작업에 대한 정보를 제공합니다.|  
   
@@ -150,7 +149,7 @@ ms.lasthandoff: 05/03/2018
  **OperationType**  
  목록에서 작업 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**유효성 검사**|DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마와 비교하여 XML 문서의 유효성을 검사합니다. 이 옵션을 선택하면 아래의 **Validate**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**XSLT**|XML 문서에 대해 XSL 변환을 수행합니다. 이 옵션을 선택하면 아래의 **XSLT**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **SourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -198,7 +197,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -206,7 +205,7 @@ ms.lasthandoff: 05/03/2018
  **ValidationType**  
  유효성 검사 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**DTD**|DTD(문서 유형 정의)를 사용합니다.|  
 |**XSD**|XSD(XML 스키마 정의) 스키마를 사용합니다. 이 옵션을 선택하면 아래의 **ValidationType**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -223,7 +222,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -261,7 +260,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -269,7 +268,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -307,7 +306,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -315,7 +314,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  두 번째 XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -338,7 +337,7 @@ ms.lasthandoff: 05/03/2018
  **XPathOperation**  
  XPath 결과 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Evaluation**|XPath 함수의 결과를 반환합니다.|  
 |**노드 목록**|선택한 노드를 XML 조각으로 반환합니다.|  
@@ -350,7 +349,7 @@ ms.lasthandoff: 05/03/2018
  **XPathStringSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -387,7 +386,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -395,7 +394,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  두 번째 XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -418,7 +417,7 @@ ms.lasthandoff: 05/03/2018
  **DiffAlgorithm**  
  문서를 비교할 때 사용할 비교 알고리즘을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**자동**|XML 태스크에서 처리 속도가 빠른 알고리즘을 사용할 것인지 아니면 정확도가 높은 알고리즘을 사용할 것인지 결정합니다.|  
 |**빠름**|빠르지만 정확도가 떨어지는 비교 알고리즘을 사용합니다.|  
@@ -427,7 +426,7 @@ ms.lasthandoff: 05/03/2018
  **DiffOptions**  
  비교 작업에 적용할 비교 옵션을 설정합니다. 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|XML 선언을 비교할지 여부를 지정합니다.|  
 |**IgnoreDTD**|DTD(문서 유형 정의)를 무시할지 여부를 지정합니다.|  
@@ -462,7 +461,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -470,7 +469,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -508,7 +507,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
@@ -516,7 +515,7 @@ ms.lasthandoff: 05/03/2018
  **SecondOperandType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  

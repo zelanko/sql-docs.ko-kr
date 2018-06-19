@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
@@ -16,11 +14,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c62c28da819aa4293258784648b1af88a333e156
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 769ce099fc299900c93e11222f58389b2c43249b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332537"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **dbo.xdbcdc_trace** 테이블에 포함된 항목에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |TIMESTAMP|추적 레코드가 기록된 정확한 UTC 타임스탬프입니다.|  
 |유형|다음 값 중 하나가 포함됩니다.<br /><br /> error<br /><br /> INFO<br /><br /> 추적|  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **dbo.xdbcdc_databases** 테이블에 포함된 항목에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 Oracle 데이터베이스의 이름입니다.|  
 |config_version|해당 CDC 데이터베이스 **xdbcdc_config** 테이블의 마지막 변경에 대한 타임스탬프(UTC) 또는 이 테이블의 현재 행에 대한 타임스탬프(UTC)입니다.<br /><br /> UPDATE 트리거는 이 항목에 대한 GETUTCDATE()의 값을 적용합니다. **config_version** 을 사용하여 CDC Service에서 구성 변경 또는 설정/해제를 확인해야 할 CDC 인스턴스를 식별할 수 있습니다.|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **dbo.xdbcdc_databases** 테이블에 포함된 캡처 상태에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |cdc_service_name|Oracle CDC Service의 이름(Windows 서비스 이름)입니다.|  
 |cdc_service_sql_login|Oracle CDC Service에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. cdc_service라는 새 SQL 사용자가 만들어지고 이 로그인 이름에 연결된 다음 서비스에서 처리되는 각 CDC 데이터베이스에 대한 db_ddladmin, db_datareader 및 db_datawriter 고정 데이터베이스 역할의 멤버로 추가됩니다.|  

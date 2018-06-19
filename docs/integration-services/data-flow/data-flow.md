@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 035775f1d8fdb146e1334ff73de38800de3c1d6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334607"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sources-available-for-download"></a>다운로드할 수 있는 원본  
  다음 표는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 기타 원본을 보여 줍니다.  
   
-|원본|Description|  
+|원본|설명|  
 |------------|-----------------|  
 |Oracle 원본|Oracle 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=789384)다운로드 페이지를 참조하십시오.|  
 |SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 기능 팩](http://go.microsoft.com/fwlink/?LinkID=746297)다운로드 페이지를 참조하세요.|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="destinations-available-for-download"></a>다운로드할 수 있는 대상  
  다음 표는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 기타 대상을 보여 줍니다.  
   
-|원본|Description|  
+|원본|설명|  
 |------------|-----------------|  
 |Oracle 대상|Oracle 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=789384)다운로드 페이지를 참조하십시오.|  
 |SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 기능 팩](http://go.microsoft.com/fwlink/?LinkID=746297)다운로드 페이지를 참조하세요.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2135360e8289cd48e9a77dea289325791287db4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409655"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
   식 언어에는 식에 사용할 함수 집합이 포함되어 있습니다. 식은 단일 함수를 사용할 수도 있지만 일반적으로 연산자와 함수를 결합하여 여러 개의 함수를 사용합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  식 언어는 다음 수치 연산 함수를 제공합니다.  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[ABS&#40;SSIS 식&#41;](../../integration-services/expressions/abs-ssis-expression.md)|숫자 식의 절대값을 양수로 반환합니다.|  
 |[EXP&#40;SSIS 식&#41;](../../integration-services/expressions/exp-ssis-expression.md)|밑이 e인 지정한 식의 지수를 반환합니다.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  식 계산기는 다음 문자열 함수를 제공합니다.  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[CODEPOINT&#40;SSIS 식&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|문자 식에서 가장 왼쪽 문자의 유니코드 코드 값을 반환합니다.|  
 |[FINDSTRING&#40;SSIS 식&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|식에서 지정한 문자열 항목의 인덱스(1부터 시작)를 반환합니다.|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  식 계산기는 다음 날짜 및 시간 함수를 제공합니다.  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|지정한 날짜에 날짜 또는 시간 간격을 더하여 새로운 DT_DBTIMESTAMP 값을 반환합니다.|  
 |[DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  식 계산기는 다음 Null 함수를 제공합니다.  
   
-|함수|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[ISNULL&#40;SSIS 식&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|식이 Null인지 여부에 따라 부울 결과를 반환합니다.|  
 |[NULL&#40;SSIS 식&#41;](../../integration-services/expressions/null-ssis-expression.md)|요청한 데이터 형식의 Null 값을 반환합니다.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2814b4d8ccab39bc3aa5d480a51c2cd9b575cc2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e703c56c79ed853454aa629a37ac6df0c160b59
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333237"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 완료
   **느린 변경 차원 마법사 완료** 대화 상자를 사용하여 마법사가 느린 변경 차원에 대한 지원 기능을 구성하기 전에 선택한 내용을 확인할 수 있습니다.  

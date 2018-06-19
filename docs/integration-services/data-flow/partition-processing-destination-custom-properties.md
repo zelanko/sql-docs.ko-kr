@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
@@ -16,18 +14,19 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27b5da3f65e9d2ee3366519b4a35b1fd71ae641a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40c164dafe2cc5a7bee4842534465743b4da66ac
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404215"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
   파티션 처리 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 파티션 처리 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성|데이터 형식|Description|  
+|속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결 문자열입니다.|  
 |KeyDuplicate|Integer(열거형)|UseDefaultConfiguration이 **False**일 때 중복 키 오류를 처리하는 방법을 나타내는 값입니다. 가능한 값은 **IgnoreError** (0), **ReportAndContinue** (1) 및 **ReportAndStop** (2)입니다. 이 속성의 기본값은 **IgnoreError** (0)입니다.|  

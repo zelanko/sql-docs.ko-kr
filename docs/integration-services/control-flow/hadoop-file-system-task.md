@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41f16479cfe4f69133afdfe98dffc2d5e1e947b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcfab1333cc93562ed72608cb7fa66d29456c077
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401595"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 파일 시스템 태스크
   Hadoop 파일 시스템 태스크에서는 SSIS 패키지가 Hadoop 클러스터에서/클러스터로/클러스터 내에서 파일을 복사할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="options"></a>변수  
  **Hadoop 파일 시스템 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
-|필드|Description|  
+|필드|설명|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 대상 파일이 호스트되는 위치를 나타냅니다.|  
 |**Hadoop 파일 경로**|HDFS의 파일 또는 디렉터리 경로를 지정합니다.|  

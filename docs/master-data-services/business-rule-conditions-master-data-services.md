@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 328aa233b750404e28984dec5d93bb7070a0bcc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc7113fefba29b709ab9c0488ca6643ff6c85c28
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333857"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="business-rule-conditions"></a>비즈니스 규칙 조건  
   
-|조건 이름|Description|  
+|조건 이름|설명|  
 |--------------------|-----------------|  
 |**같음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**같지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
@@ -16,18 +14,19 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8afc79fecdf3731bc1579dc354a16162f0bfe3f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45085c7ed2a5a2915e6ac7c6a96c952910698dac
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329007"
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 뷰는 지정된 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 뷰의 정보를 사용하여 구성 요소에 대한 데이터 처리량을 계산할 수 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|데이터의 고유 ID(식별자)입니다.|  
 |execution_id|**bigint**|실행 인스턴스의 고유 ID입니다.|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   기본적으로 실행이 시작되면 전송되는 행의 수에 대한 정보는 기록되지 않습니다.  
   
--   지정된 패키지 실행에 대해 이 데이터를 보려면 로깅 수준을 **Verbose**로 설정합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
+-   지정된 패키지 실행에 대해 이 데이터를 보려면 로깅 수준을 **Verbose**로 설정합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  

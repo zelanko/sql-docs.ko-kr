@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 01ba15a21ee1e103b8ff88d7593d299c62758a84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fca9f6a5d0389ec61aca30357b71e52041d59e7
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333897"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>통합 멤버 준비 테이블(Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TableColumns"></a> 테이블 열  
  다음 표에서는 통합 준비 테이블에 나오는 각 필드의 용도에 대해 설명합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**ID**|자동으로 할당된 식별자입니다. 이 필드에 값을 입력하지 마십시오. 일괄 처리를 처리하지 않은 경우 이 필드가 비어 있습니다.|  
 |**ImportType**<br /><br /> 필수|준비된 데이터가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 이미 존재하는 데이터와 일치하는 경우 수행할 작업을 결정합니다.<br /><br /> **0**: 새 멤버를 만듭니다. 준비된 데이터가 NULL이 아닌 경우에만 기존 MDS 데이터를 준비된 데이터로 바꿉니다. NULL 값은 무시됩니다. 특성 값을 NULL로 변경하려면 **~NULL~** 을 사용합니다.<br /><br /> **1**: 새 멤버만 만듭니다. 기존 MDS 데이터는 업데이트할 수 없습니다.<br /><br /> **2**: 새 멤버를 만듭니다. 기존 MDS 데이터를 준비된 데이터로 바꿉니다. NULL 값을 가져오는 경우 NULL 값이 기존 MDS 값을 덮어씁니다.<br /><br /> **3**: 코드 값을 기반으로 멤버를 비활성화합니다. 모든 특성, 계층 및 컬렉션 멤버 자격, 트랜잭션이 유지 관리되지만 더 이상 UI에서 사용할 수는 없습니다. 멤버가 다른 멤버의 도메인 기반 특성 값으로 사용되는 경우 비활성화할 수 없습니다.<br /><br /> **4**: 코드 값을 기반으로 멤버를 영구적으로 삭제합니다. 모든 특성, 계층 및 컬렉션 멤버 자격, 트랜잭션이 영구적으로 삭제됩니다. 멤버가 다른 멤버의 도메인 기반 특성 값으로 사용되는 경우 삭제할 수 없습니다.|  

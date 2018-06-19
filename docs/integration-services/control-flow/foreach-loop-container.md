@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -36,11 +34,12 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7a04bc86317e2ceb04a4b2ae1e7fcff40470e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331457"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -203,7 +202,7 @@ ms.lasthandoff: 05/03/2018
  **Enumerator**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -344,7 +343,7 @@ ms.lasthandoff: 05/03/2018
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 05/03/2018
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
 |**Node**|XPath 작업에서 반환한 노드를 열거합니다.|  
@@ -374,7 +373,7 @@ ms.lasthandoff: 05/03/2018
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -397,7 +396,7 @@ ms.lasthandoff: 05/03/2018
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  

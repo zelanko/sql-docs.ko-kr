@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ea32972cf0c3f71d3eaf027fe729afcd12d8f24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1b6a884fa31a6e2ea90889c750ee5306ebc5e1c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400795"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
   조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 집합은 캐시 파일에 저장됩니다.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4e09e7241c3fd6c40e8d6a8d6d0b0532426355cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6965c60178eec6405e249ff2801e139fa1e3244
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407275"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>숫자 특성 만들기(Master Data Services)
 
@@ -46,12 +46,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-information"></a>특성 정보  
  생성되는 각 특성에 대해 열이 7개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |상태|특성 상태입니다.<br /><br /> 저장을 클릭하면 특성이 업데이트 중임을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |속성|특성 이름입니다.|  
 |표시 이름|특성 표시 이름입니다.|  
-|Description|특성 설명입니다.|  
+|설명|특성 설명입니다.|  
 |표시 픽셀 폭|특성 폭입니다.|  
 |유형 및 속성|특성의 유형 및 데이터 형식 정보입니다.|  
 |변경 내용 추적 설정|특성의 변경 내용 추적을 사용할지 여부를 지정하고 그룹 번호를 괄호 안에 표시합니다.|  

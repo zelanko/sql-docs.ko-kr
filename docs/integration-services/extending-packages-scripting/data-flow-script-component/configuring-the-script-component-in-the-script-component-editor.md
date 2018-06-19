@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,11 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95da332536e968324a61e2001462e4bdae527d24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329357"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
   스크립트 구성 요소에서 사용자 지정 코드를 작성하려면, 먼저 만들려는 데이터 흐름 구성 요소의 유형(원본, 변환 또는 대상)을 선택한 다음, **스크립트 변환 편집기**에서 구성 요소의 메타데이터 및 속성을 구성해야 합니다.  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: xml
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88d4e3527330c57b3053a80b4885bbd919a6905
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407205"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소 비교
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너의 제어 흐름 창에서 사용할 수 있는 스크립트 태스크와 데이터 흐름 창에서 사용할 수 있는 스크립트 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 서로 매우 다른 용도로 사용됩니다. 태스크는 일반적인 용도의 제어 흐름 도구인 반면 구성 요소는 데이터 흐름에서 원본, 변환 또는 대상으로 사용됩니다. 이러한 차이에도 불구하고 스크립트 태스크와 스크립트 구성 요소는 사용하는 코딩 도구와 개발자가 사용할 수 있는 패키지의 개체에서 약간의 유사성이 있습니다. 이러한 유사점과 차이점을 이해하면 태스크와 구성 요소 모두를 보다 효율적으로 사용할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소의 유사점  
  스크립트 태스크와 스크립트 구성 요소는 모두 다음과 같은 일반적인 기능이 있습니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |두 개의 디자인 타임 모드|태스크에서든 구성 요소에서든 코드를 작성하려면 먼저 편집기에서 속성을 지정한 다음 개발 환경으로 전환합니다.|  
 |VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)|태스크와 구성 요소는 모두 동일한 VSTA IDE를 사용하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#에서 작성된 코드를 지원합니다.|  

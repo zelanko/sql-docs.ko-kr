@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331227"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 **/SQL**, **/FILE**및 **/DTS** 옵션으로 식별됩니다.  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>매개 변수  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |/?|명령 프롬프트 옵션을 표시합니다.|  
 |/C[opy] *location;destinationPathandPackageName*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에 대해 Copy 동작을 지정합니다. 이 매개 변수를 사용하려면 먼저 **/FI**, **/SQ**또는 **/DT** 옵션을 사용하여 패키지 위치를 지정해야 합니다. 그런 다음 대상 위치 및 대상 패키지 이름을 지정합니다. *destinationPathandPackageName* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 복사할 대상 위치를 지정합니다. 대상 *location* 이 **SQL**인 경우 명령에 *DestUser*, *DestPassword* 및 *DestServer* 인수도 지정해야 합니다.<br /><br /> **Copy** 동작을 수행할 때 대상 위치에 기존 패키지가 있을 경우 **dtutil** 에서 패키지를 삭제할 것인지 묻는 메시지를 표시합니다. **Y** 로 응답하면 패키지를 덮어쓰고 **N** 으로 응답하면 프로그램을 종료합니다. 명령에 *Quiet* 인수가 포함된 경우 메시지가 표시되지 않으며 기존 패키지를 덮어씁니다.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil 종료 코드  
  **dtutil** 은 구문 오류가 있거나, 잘못된 인수가 사용되었거나, 잘못된 옵션 조합이 지정된 경우 경고를 표시하는 종료 코드를 설정합니다. 그 이외의 경우 이 유틸리티는 "작업이 완료되었습니다"라는 메시지를 표시합니다. 다음 표에는 **dtutil** 유틸리티가 종료 시 설정할 수 있는 값이 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|유틸리티가 성공적으로 실행되었습니다.|  
 |1|유틸리티가 실패했습니다.|  

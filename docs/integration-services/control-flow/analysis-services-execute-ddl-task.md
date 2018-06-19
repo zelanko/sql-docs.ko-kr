@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f33b2da7660c4e230bb20e38b309d73b2f07bcf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3372e5756c7c23660daad1e5a5e42ee775fe8b49
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405395"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크는 큐브 및 차원과 같은 다차원 개체와 마이닝 모델을 만들거나 삭제 또는 변경할 수 있는 DDL(데이터 정의 언어) 문을 실행합니다. 예를 들어 DDL 문은 **Adventure Works** 큐브에 파티션을 만들거나 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]에 포함된 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 차원을 삭제할 수 있습니다.  
@@ -261,7 +260,7 @@ ms.lasthandoff: 05/03/2018
  **SourceType**  
  DDL 문의 원본 유형을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 **SourceDirect** 입력란에 저장된 DDL 문으로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
 |**파일 연결**|원본을 DDL 문이 포함된 파일로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  

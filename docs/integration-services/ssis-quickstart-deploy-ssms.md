@@ -1,23 +1,21 @@
 ---
 title: SSMS를 사용하여 SSIS 프로젝트 배포 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455353"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332087"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 SSIS 프로젝트 배포
 이 빠른 시작에서는 SSMS(SQL Server Management Studio)를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Integration Services 배포 마법사를 실행하여 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다. 

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87639875b3ae15a514cb44ac5fd8d5fe8997188c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c537b18e067dc52e3c764a8f79ae4c77db5639ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333447"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
   master 저장 프로시저 전송 태스크는 **인스턴스의** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 간에 하나 이상의 사용자 정의 저장 프로시저를 전송합니다. **master** 데이터베이스에서 저장 프로시저를 전송하려면 프로시저 소유자가 dbo여야 합니다.  
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**FailTask**|대상 서버의 **master** 데이터베이스에 같은 이름의 저장 프로시저가 이미 있는 경우 태스크가 실패합니다.|  
 |**Overwrite**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 덮어씁니다.|  
@@ -127,7 +126,7 @@ ms.lasthandoff: 05/03/2018
  **TransferAllStoredProcedures**  
  원본 서버의 **master** 데이터베이스에 있는 모든 사용자 정의 저장 프로시저를 대상 서버로 복사할지 여부를 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|**master** 데이터베이스의 모든 사용자 정의 저장 프로시저를 복사합니다.|  
 |**False**|지정한 저장 프로시저만 복사합니다.|  

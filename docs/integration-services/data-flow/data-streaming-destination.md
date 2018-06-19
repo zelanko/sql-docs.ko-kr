@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ecccceb9edd410f06fedeb53136d1fab200096e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc33ebe8c38299e8b3375cc6f19aec47d859c76f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332807"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은 **SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
@@ -72,7 +71,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>구성 요소 속성 탭  
  이 탭에는 다음과 같은 편집 가능 필드가 있습니다.  
   
-|필드|Description|  
+|필드|설명|  
 |-----------|-----------------|  
 |속성|패키지에 포함된 데이터 스트리밍 대상 구성 요소의 이름입니다.|  
 |ValidateExternalMetadata|디자인 타임에 외부 데이터 원본을 사용하여 구성 요소의 유효성을 검사하는지 여부를 나타냅니다. false로 설정하면 외부 데이터 원본에 대한 유효성 검사가 런타임까지 연기됩니다.|  

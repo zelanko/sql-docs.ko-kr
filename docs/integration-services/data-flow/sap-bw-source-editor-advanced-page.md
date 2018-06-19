@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e8f5dbf87ec79db858d550636c542173cb66883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac66951374390b1d2b148295c1097dc5faee6a91
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403835"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
   **SAP BW 원본 편집기** 의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  **문자열 변환**  
  문자열 변환을 위해 적용할 규칙을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**자동 문자열 변환**|SAP Netweaver BW 시스템이 유니코드 시스템이면 모든 문자열을 **nvarchar** 로 변환하고, 그렇지 않으면 모든 문자열을 **varchar**로 변환합니다.|  
 |**VarChar로 문자열 변환**|모든 문자열을 **varchar**로 변환합니다.|  

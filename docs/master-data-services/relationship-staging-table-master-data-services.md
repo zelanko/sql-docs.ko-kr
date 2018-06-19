@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac87515c37a6b5ea0356d47b9a60167787ee5d95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb81e8c1ac664474cf9482bb76b27e7f3f2fdc54
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335317"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TableColumns"></a> 테이블 열  
  다음 표에서는 간계 준비 테이블에 나오는 각 필드의 용도에 대해 설명합니다.  
   
-|열 이름|Description|값|  
+|열 이름|설명|값|  
 |-----------------|-----------------|-----------|  
 |**ID**|자동으로 할당된 식별자입니다.|이 필드에 값을 입력하지 마십시오. 일괄 처리를 처리하지 않은 경우 이 필드가 비어 있습니다.|  
 |**RelationshipType**|필수<br /><br /> 설정하려는 관계의 유형입니다.|가능한 값은<br /><br /> **1**: 부모<br /><br /> **2**: 형제(같은 수준)|  

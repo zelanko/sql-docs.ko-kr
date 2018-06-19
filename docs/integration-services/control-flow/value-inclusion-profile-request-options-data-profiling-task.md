@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c0aa5259be671931cbbe9766302123ad5282d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce52ec0c887d20e195d5cdc5e9d0995a33f4be5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333187"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **값 포함 프로필 요청** 의 옵션을 설정할 수 있습니다. 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 따라서 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인할 수 있습니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 값 포함 프로필을 사용하여 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
 |**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
 |**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
@@ -130,7 +129,7 @@ ms.lasthandoff: 05/03/2018
  **None**  
  프로필의 출력을 구체화하기 위한 임계값 설정을 선택합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 키 수준은 해당 값에 관계없이 보고됩니다.|  
 |**Specified**|**InclusionStrengthThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 이 값이 임계값보다 큰 경우에만 보고됩니다.|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **None**  
  상위 집합 임계값을 지정합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**없음**|임계값을 지정하지 않습니다. 포함 수준은 상위 집합 열의 키 수준에 관계없이 보고됩니다.|  
 |**Specified**|**SupersetColumnsKeyThreshold**에 지정된 임계값을 사용합니다. 포함 수준은 상위 집합 열의 키 수준이 임계값보다 큰 경우에만 보고됩니다.|  

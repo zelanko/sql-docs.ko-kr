@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404275"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 변환
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 패키지의 데이터 흐름에서 데이터를 집계, 병합, 배포 및 수정하는 구성 요소입니다. 변환은 조회 작업을 수행하고 예제 데이터 집합을 생성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에 포함되는 변환과 이러한 변환의 작동 방식에 대해 설명합니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>비즈니스 인텔리전스 변환  
  다음 변환은 데이터 정리, 텍스트 마이닝 및 데이터 마이닝 예측 쿼리 실행과 같은 비즈니스 인텔리전스 작업을 수행합니다.  
   
-|변환|Description|  
+|변환|설명|  
 |--------------------|-----------------|  
 |[느린 변경 차원 변환](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|느린 변경 차원의 업데이트를 구성하는 변환입니다.|  
 |[유사 항목 그룹화 변환](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|열 데이터의 값을 표준화하는 변환입니다.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>행 변환  
  다음 변환은 열 값을 업데이트하고 새 열을 만듭니다. 변환은 변환 입력의 각 행에 적용됩니다.  
   
-|변환|Description|  
+|변환|설명|  
 |--------------------|-----------------|  
 |[문자표 변환](../../../integration-services/data-flow/transformations/character-map-transformation.md)|문자 데이터에 문자열 함수를 적용하는 변환입니다.|  
 |[열 복사 변환](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|입력 열의 복사본을 변환 출력에 추가하는 변환입니다.|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>행 집합 변환  
  다음 변환은 새 행 집합을 만듭니다. 행 집합에는 집계 및 정렬 값, 예제 행 집합 또는 피벗된 행 집합과 피벗되지 않은 행 집합이 포함될 수 있습니다.  
   
-|변환|Description|  
+|변환|설명|  
 |--------------------|-----------------|  
 |[집계 변환](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|AVERAGE, SUM 및 COUNT와 같은 집계를 수행하는 변환입니다.|  
 |[정렬 변환](../../../integration-services/data-flow/transformations/sort-transformation.md)|데이터를 정렬하는 변환입니다.|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>분할 및 조인 변환  
  다음 변환은 행을 여러 출력에 배포하고, 변환 입력의 복사본을 만들고, 여러 입력을 하나의 출력으로 조인하고, 조회 작업을 수행합니다.  
   
-|변환|Description|  
+|변환|설명|  
 |--------------------|-----------------|  
 |[조건부 분할 변환](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|데이터 행을 여러 출력으로 라우팅하는 변환입니다.|  
 |[멀티캐스트 변환](../../../integration-services/data-flow/transformations/multicast-transformation.md)|데이터 집합을 여러 출력에 배포하는 변환입니다.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>변환 감사  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 감사 정보를 추가하고 행 개수를 세기 위한 다음과 같은 변환이 포함됩니다.  
   
-|변환|Description|  
+|변환|설명|  
 |--------------------|-----------------|  
 |[감사 변환](../../../integration-services/data-flow/transformations/audit-transformation.md)|환경 정보를 패키지의 데이터 흐름에서 사용할 수 있도록 만드는 변환입니다.|  
 |[행 개수 변환](../../../integration-services/data-flow/transformations/row-count-transformation.md)|변환을 통과하는 행 개수를 세고 최종 개수를 변수에 저장하는 변환입니다.|  

@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323142"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999899"
 ---
 # <a name="page-compression-implementation"></a>페이지 압축 구현
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "34323142"
   
  다음 그림에서는 접두사 압축 이전의 간단한 테이블 페이지를 보여 줍니다.  
   
- ![접두사 압축 이전 페이지](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "접두사 압축 이전 페이지")  
+ ![접두사 압축 이전 페이지](media/skt-tblcompression1c.gif "접두사 압축 이전 페이지")  
   
  다음 그림에서는 접두사 압축 다음의 동일한 페이지를 보여 줍니다. 접두사는 헤더로 이동하고 열 값은 접두사의 참조로 변경됩니다.  
   
- ![접두사 압축 이후 페이지](../../relational-databases/data-compression/media/tblcompression2.gif "접두사 압축 이후 페이지")  
+ ![접두사 압축 이후 페이지](media/tblcompression2.gif "접두사 압축 이후 페이지")  
   
  첫 행의 첫 열에서 값 4b는 처음 4자리 접두사(aaab)가 해당 열에 대해 존재함을 나타내며 문자 b도 나타냅니다. 이것은 원래 값인 결과 값 aaabb를 만듭니다.  
   
 ## <a name="dictionary-compression"></a>사전 압축  
  접두사 압축이 완료된 후에 사전 압축이 적용됩니다. 사전 압축은 페이지에서 반복된 값을 검색하여 CI 영역에 저장합니다. 접두사 압축과 달리 사전 압축은 한 개의 열로 제한되지 않습니다. 사전 압축은 페이지에서 발생하는 반복된 값을 교체할 수 있습니다. 다음 그림에서는 사전 압축 다음의 동일한 페이지를 보여 줍니다.  
   
- ![사전 압축 이후 페이지](../../relational-databases/data-compression/media/tblcompression3.gif "사전 압축 이후 페이지")  
+ ![사전 압축 이후 페이지](media/tblcompression3.gif "사전 압축 이후 페이지")  
   
  값 4b는 페이지의 다른 열에서 참조되었습니다.  
   

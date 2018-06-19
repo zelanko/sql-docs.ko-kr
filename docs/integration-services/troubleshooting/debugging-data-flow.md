@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef378deb499c8cc96c4199fd15c3f87d8a6c0c7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f788d37fbe08b3ef6872e8b3101b16929b65105
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334027"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 색 구분 기능에 대해 설명합니다.  
   
-|색|Description|  
+|색|설명|  
 |-----------|-----------------|  
 |색 없음|데이터 흐름 엔진의 호출을 대기 중입니다.|  
 |노란색|변환 수행, 데이터 추출 또는 데이터 로드 중입니다.|  

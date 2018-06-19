@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d19c71d2bc62499294e8ba7b16b3072bfb46df8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329687"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
   느린 변경 차원 변환은 데이터 웨어하우스 차원 테이블의 레코드 업데이트 및 삽입을 조정합니다. 예를 들어 이 변환을 사용하면 AdventureWorks OLTP 데이터베이스의 Production.Products 테이블의 데이터로 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 데이터베이스의 DimProduct 테이블의 레코드를 삽입 및 업데이트하는 변환 출력을 구성할 수 있습니다.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 변환 출력과 이후의 데이터 흐름 요구 사항에 대해 설명합니다. 요구 사항은 느린 변경 차원 마법사에서 만드는 데이터 흐름을 설명합니다.  
   
-|출력|Description|데이터 흐름 요구 사항|  
+|출력|설명|데이터 흐름 요구 사항|  
 |------------|-----------------|----------------------------|  
 |**변경 특성 업데이트 내용 출력**|조회 테이블의 레코드가 업데이트됩니다. 이 출력은 변경 특성 행에 대해 사용됩니다.|OLE DB 명령 변환은 UPDATE 문을 사용하여 레코드를 업데이트합니다.|  
 |**고정 특성 출력**|변경되지 않아야 하는 행의 값이 조회 테이블의 값과 일치하지 않습니다. 이 출력은 고정 특성 행에 대해 사용됩니다.|기본 데이터 흐름이 생성되지 않습니다. 고정 특성 열의 변경 내용이 발견되어도 계속되도록 변환이 구성된 경우에는 이러한 행을 캡처하는 데이터 흐름을 만들어야 합니다.|  

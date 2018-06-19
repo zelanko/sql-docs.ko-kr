@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c67cbfeb3797c2e0d9fb5758078dad96f290d4e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332577"
 ---
 # <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>데이터 액세스 모드  
  원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 이름|ODBC 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다. 이 옵션을 선택할 경우 다음 목록에서 값을 선택합니다.|  
 ||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블 또는 뷰를 선택하거나 테이블을 식별할 수 있는 정규식을 입력합니다.|  
@@ -175,7 +174,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>잘림  
  ODBC 원본에서 흐름의 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>설명  
  사용되지 않습니다.  
   
 #### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  

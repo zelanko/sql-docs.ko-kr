@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 465a881b9a999331596bcbbc2329406e0ff5fe65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f22b22f3134122b733a9d2f233054445d1898c3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333517"
 ---
 # <a name="file-connection-manager"></a>파일 연결 관리자
   파일 연결 관리자를 사용하면 패키지에서 기존 파일 또는 폴더를 참조하거나 런타임에 파일 또는 폴더를 만들 수 있습니다. 예를 들어 Excel 파일을 참조할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 구성 요소는 파일에 있는 정보를 사용하여 작업을 수행합니다. 예를 들어 SQL 실행 태스크에서는 해당 태스크가 실행하는 SQL 문이 포함된 파일을 참조할 수 있습니다. 다른 구성 요소는 파일에 대한 작업을 수행합니다. 예를 들어 파일 시스템 태스크는 파일을 참조하여 새 위치로 복사할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 **FileUsageType**값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|파일 연결 관리자에서 기존 파일을 사용합니다.|  
 |**1.**|파일 연결 관리자에서 파일을 만듭니다.|  
@@ -80,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  **사용 유형**  
  **파일 연결 관리자** 가 기존 파일 또는 폴더에 연결하는지 또는 새 파일 또는 폴더에 연결하는지 여부를 지정합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |파일 만들기|런타임에 새 파일을 만듭니다.|  
 |기존 파일|기존 파일을 사용합니다.|  

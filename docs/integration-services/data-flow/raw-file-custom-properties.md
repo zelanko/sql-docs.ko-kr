@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66bcdd48830e2cf5b5311c34d4a8dc72b4f07ce2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc381b7698340f1fa91e01d9b8520c01f9d3128
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329177"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 원시 파일 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|원시 데이터에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **파일 이름** (0) 및 **변수를 사용한 파일 이름** (1)입니다. 기본값은 **파일 이름** (0)입니다.|  
 |FileName|String|원본 파일의 경로 및 파일 이름입니다.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 원시 파일 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|FileName 속성에 파일 이름이 포함되어 있는지, 아니면 파일 이름이 포함된 변수의 이름이 포함되어 있는지를 지정하는 값입니다. 옵션은 **파일 이름** (0) 및 **변수를 사용한 파일 이름** (1)입니다.|  
 |FileName|String|원시 파일 대상에서 쓰는 파일의 이름입니다.|  

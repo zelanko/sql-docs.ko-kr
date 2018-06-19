@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328337"
 ---
 # <a name="ado-net-source"></a>ADO.NET 원본
   ADO.NET 원본은 .NET 공급자의 데이터를 사용하며 데이터 흐름에서 해당 데이터를 사용할 수 있도록 합니다.  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **데이터 액세스 모드**  
  원본에서 데이터를 선택하는 방법을 지정합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |테이블 또는 뷰|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
 |SQL 명령|SQL 쿼리를 사용하여 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터 원본에서 데이터를 검색합니다.|  

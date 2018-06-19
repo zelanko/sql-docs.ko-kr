@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +28,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc93afccb18193412047e30694ead989cdb666a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5dc5b28ede5347a0889023432fae12bbb03690a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329417"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Drawing.Printing** 네임스페이스에서는 프린터 작업을 위한 클래스를 제공합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 예에서는 서버에 설치된 프린터 중 미국에서 사용하는 Legal 크기 용지를 지원하는 프린터를 찾습니다. 지원되는 용지 크기를 확인하는 코드는 전용 함수에 캡슐화되어 있습니다. 각 프린터에 대한 설정을 확인할 때 스크립트의 진행률을 추적할 수 있도록 스크립트에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 사용하여 Legal 크기 용지를 사용하는 프린터에 대한 정보 메시지를 발생시키거나 Legal 크기 용지를 사용하지 않는 프린터에 대해 경고를 발생시킵니다. 이러한 메시지는 디자이너에서 패키지를 실행할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) IDE의 **출력** 창에 나타납니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  

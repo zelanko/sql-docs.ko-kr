@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6ece524c8ee7565b692902b5f8d1e7dbcbd5db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333547"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="built-in-connection-managers"></a>기본 제공 연결 관리자  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 연결 관리자 유형을 보여 줍니다.  
   
-|형식|Description|항목|  
+|형식|설명|항목|  
 |----------|-----------------|-----------|  
 |ADO|ADO(ActiveX Data Objects) 개체에 연결합니다.|[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|.NET 공급자를 사용하여 데이터 원본에 연결합니다.|[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  다음 표에 나열된 연결 관리자는 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 및 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]에서만 작동합니다.  
   
-|형식|Description|항목|  
+|형식|설명|항목|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<version info\> 서버에 연결합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
 |SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](http://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fd155c0d1e196c31b340c6364ce66db4acefb49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f69d97d9772fbb969da1fc6ccb52840fba98c9b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334617"
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>dBASE 또는 다른 DBF 파일에 연결
   OLE DB 연결 관리자를 사용하고 Microsoft OLE DB Provider for Jet 4.0을 선택하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 dBASE 또는 다른 .DBF 데이터베이스에 연결할 수 있습니다.  

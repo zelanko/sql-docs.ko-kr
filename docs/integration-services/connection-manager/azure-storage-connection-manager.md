@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aa90babcd036279f70f6ff9c7b2b5342ef342b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25338d4e05ab8c6cb7a4008230a340dc339e9bbd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409955"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 저장소 연결 관리자
   SSIS 패키지는 **Azure 저장소 연결 관리자** 를 통해 속성으로 지정된 값(저장소 계정 이름 및 계정 키)을 사용하여 Azure 저장소 계정에 연결할 수 있습니다.  

@@ -3,12 +3,10 @@ title: OData 연결 관리자 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
@@ -19,11 +17,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 124877025d9e01c7d00f8693093a4227680c145d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333507"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
  OData 연결 관리자를 사용하여 OData 데이터 원본에 연결합니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 데이터 원본에 연결하고 서비스에서 데이터를 사용합니다. 자세한 내용은 [OData Source](../../integration-services/data-flow/odata-source.md)를 참조하십시오.  
@@ -64,7 +63,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
   
 |||  
 |-|-|  
-|속성|Description|  
+|속성|설명|  
 |Url|서비스 문서에 대한 URL입니다.|  
 |UserName|필요한 경우 인증에 사용할 사용자 이름입니다.|  
 |암호|필요한 경우 인증에 사용할 암호입니다.|  

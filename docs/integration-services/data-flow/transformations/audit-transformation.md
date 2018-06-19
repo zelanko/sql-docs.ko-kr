@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331077"
 ---
 # <a name="audit-transformation"></a>감사 변환
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 이 정보를 제공하는 시스템 변수를 포함합니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>시스템 변수  
  다음 표에서는 감사 변환에 사용할 수 있는 시스템 변수를 설명합니다.  
   
-|시스템 변수|인덱스|Description|  
+|시스템 변수|인덱스|설명|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|패키지의 실행 인스턴스를 식별하는 GUID입니다.|  
 |**PackageID**|1|패키지의 고유 식별자입니다.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **감사 유형**  
  감사 정보를 제공할 사용 가능한 시스템 변수를 선택합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**실행 인스턴스 GUID**|패키지의 실행 인스턴스를 고유하게 식별하는 GUID를 삽입합니다.|  
 |**패키지 ID**|패키지를 고유하게 식별하는 GUID를 삽입합니다.|  

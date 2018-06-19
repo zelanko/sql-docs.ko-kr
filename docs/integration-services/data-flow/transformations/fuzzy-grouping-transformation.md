@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401625"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **숫자**  
  열 데이터 비교 시 선행 및 후행 숫자의 의미를 지정합니다. 예를 들어 선행 숫자가 의미가 있을 경우 "123 Main Street"는 "456 Main Street"와 그룹화되지 않습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Neither**|선행 및 후행 숫자 모두 의미가 없습니다.|  
 |**Leading**|선행 숫자만 의미가 있습니다.|  

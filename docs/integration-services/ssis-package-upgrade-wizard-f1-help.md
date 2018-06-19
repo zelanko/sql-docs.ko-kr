@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5a99d26e02695c8c805e30f7a3bc9afb972178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329187"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
   SSIS 패키지 업그레이드 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](으)로 만든 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 현재 릴리스에 대한 패키지 형식으로 업그레이드할 수 있습니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  **패키지 원본**  
  업그레이드할 패키지를 포함하는 저장소 위치를 선택합니다. 이 옵션에는 다음 표에 나열된 값이 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 시스템**|업그레이드할 패키지가 로컬 컴퓨터의 폴더에 있음을 나타냅니다.<br /><br /> 이러한 패키지를 업그레이드하기 전에 마법사가 원래 패키지를 백업하도록 하려면 원래 패키지를 파일 시스템에 저장해야 합니다. 자세한 내용은 방법 도움말 항목을 참조하십시오.|  
 |**SSIS 패키지 저장소**|업그레이드할 패키지가 패키지 저장소에 있음을 나타냅니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 관리하는 파일 시스템 폴더 집합으로 구성됩니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](../integration-services/service/package-management-ssis-service.md)를 참조하세요.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
  **패키지 원본**  
  업그레이드 패키지를 저장할 위치를 지정합니다. 이 옵션에는 다음 표에 나열된 값이 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**파일 시스템**|업그레이드된 패키지를 로컬 컴퓨터의 폴더에 저장함을 나타냅니다.|  
 |**SSIS 패키지 저장소**|업그레이드된 패키지를 Integration Services 패키지 저장소에 저장함을 나타냅니다. 패키지 저장소는 Integration Services 서비스에서 관리하는 파일 시스템 폴더 집합으로 구성됩니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](../integration-services/service/package-management-ssis-service.md)를 참조하세요.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  

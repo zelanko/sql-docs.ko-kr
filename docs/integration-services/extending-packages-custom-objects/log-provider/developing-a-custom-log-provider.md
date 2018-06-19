@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,11 +23,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8153378f073254bbab3a9f1261dd90223c5f00ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fde17ae47c43051075ad627f68fc54fe02fbd5f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330767"
 ---
 # <a name="developing-a-custom-log-provider"></a>사용자 지정 로그 공급자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 패키지 실행 중 발생하는 이벤트를 캡처할 수 있게 해 주는 광범위한 로깅 기능이 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 XML, 텍스트, 데이터베이스, Windows 이벤트 로그 등의 형식으로 로그를 만들고 저장하는 데 사용할 수 있는 다양한 로그 공급자가 포함되어 있습니다. 제공된 로그 공급자 및 출력 형식이 개발자의 요구 사항을 완전하게 충족시키지 못할 경우 사용자 지정 로그 공급자를 만들 수 있습니다.  

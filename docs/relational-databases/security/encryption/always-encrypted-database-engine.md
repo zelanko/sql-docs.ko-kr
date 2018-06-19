@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 caps.latest.revision: 58
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c888fca8204c90b5d2ecf24838da19c2acf5624e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8af118eb32b3c4fdacf53922b1a6a465010eeb2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973458"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695934"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,10 +84,10 @@ ms.locfileid: "32973458"
 
 |태스크|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니오|
+|열 마스터 키, 열 암호화 키 및 암호화된 열 암호화 키를 해당 열 마스터 키로 프로비전|예|예|아니요|
 |데이터베이스에 키 메타데이터 만들기|예|예|예|
 |암호화된 열이 있는 새 테이블 만들기|예|예|예|
-|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니오|
+|선택한 데이터베이스 열에 있는 기존 데이터 암호화|예|예|아니요|
 
 > [!NOTE]
 > 데이터베이스를 호스트하는 컴퓨터와 다른 컴퓨터의 보안 환경에서 키 프로비저닝 또는 데이터 암호화 도구를 실행해야 합니다. 그러지 않으면 중요한 데이터나 키가 서버 환경에 누출되어 상시 암호화 사용의 이점이 줄어듭니다.  

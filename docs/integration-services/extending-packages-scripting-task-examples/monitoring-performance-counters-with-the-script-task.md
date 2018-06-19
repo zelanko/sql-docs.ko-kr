@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -26,11 +26,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26f47abcc2a4bb41e8f053252f8e10983809fcd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92deb05966457cc37bfd8d46a0736e06b3d5fd35
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328467"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  다음 예에서는 사용자 지정 성능 카운터를 만들고 해당 카운터를 증가시킵니다. 이 예에서는 먼저 성능 카운터가 이미 있는지 여부를 확인합니다. 성능 카운터가 만들어지지 않은 경우 스크립트에서는 **PerformanceCounterCategory** 개체의 **Create** 메서드를 호출하여 성능 카운터를 만듭니다. 성능 카운터를 만든 후에는 스크립트에서 해당 카운터를 증가시킵니다. 마지막으로, 성능 카운터가 더 이상 필요하지 않은 경우 성능 카운터에서 **Close** 메서드를 호출하는 모범 사례를 따릅니다.  
   
 > [!NOTE]  

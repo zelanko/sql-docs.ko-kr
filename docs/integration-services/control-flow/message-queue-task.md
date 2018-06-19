@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd0aac2e3a0be8bba0bba6ff4e263c42f929ec17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332487"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>메시지 큐 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|태스크에서 메시지 큐 열기를 완료했음을 나타냅니다.|  
 |**MSMQBeforeOpen**|태스크에서 메시지 큐 열기를 시작했음을 나타냅니다.|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 05/03/2018
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
@@ -185,7 +184,7 @@ ms.lasthandoff: 05/03/2018
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
@@ -204,7 +203,7 @@ ms.lasthandoff: 05/03/2018
  **필터**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
@@ -225,7 +224,7 @@ ms.lasthandoff: 05/03/2018
  **Assert**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
@@ -251,7 +250,7 @@ ms.lasthandoff: 05/03/2018
  **Compare**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|메시지를 비교하지 않습니다.|  
 |**정확히 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
@@ -265,7 +264,7 @@ ms.lasthandoff: 05/03/2018
  **Compare**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**InclusionThresholdSetting**|메시지를 비교하지 않습니다.|  
 |**정확히 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  

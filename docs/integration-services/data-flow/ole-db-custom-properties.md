@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9060dfbc8a5dfd7732bdd29c6bec37c5a877069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b8600b4edf5c9d81467d9ea9b8dfedfdce99466
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401505"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 OLE DB 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|정수|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **행 집합 열기**, **변수를 사용한 행 집합 열기**, **SQL 명령**및 **변수를 사용한 SQL 명령**입니다. 기본값은 **행 집합 열기**입니다.|  
 |AlwaysUseDefaultCodePage|Boolean|각 열에 대해 **DefaultCodePage** 속성의 값을 사용할지, 아니면 각 열의 로캘에서 코드 페이지를 파생시킬지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  여기에 나열된 FastLoad 옵션(FastLoadKeepIdentity, FastLoadKeepNulls 및 FastLoadOptions)은 Microsoft OLE DB Provider for SQL Server(SQLOLEDB)에 구현된 **IRowsetFastLoad** 인터페이스에 의해 노출되는 이름이 비슷한 속성에 해당합니다. 자세한 내용을 보려면 MSDN Library에서 IRowsetFastLoad를 검색하십시오.  
   
-|속성 이름|데이터 형식|Description|  
+|속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|대상에서 해당하는 대상 데이터베이스에 액세스하는 방법을 지정하는 값입니다.<br /><br /> 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> <br /><br /> **OpenRowset** (0) - 테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수를 사용한 OpenRowset** (1)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **FastLoad를 사용한 OpenRowset** (3)—테이블 또는 뷰의 이름을 제공합니다.<br /><br /> **변수와 FastLoad를 사용한 OpenRowset** (4)—테이블 또는 뷰의 이름이 포함된 변수의 이름을 제공합니다.<br /><br /> **SQL 명령** (2)—SQL 문을 제공합니다.|  
 |AlwaysUseDefaultCodePage|Boolean|각 열에 대해 **DefaultCodePage** 속성의 값을 사용할지, 아니면 각 열의 로캘에서 코드 페이지를 파생시킬지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다.|  

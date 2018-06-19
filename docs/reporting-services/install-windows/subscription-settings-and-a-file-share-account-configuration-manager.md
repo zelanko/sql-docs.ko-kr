@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f556e8d26ab7652edfdef620d30de00bd0a0b7db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0501fa856c7fff5ecccc4ca0c59d0ba39e2bce65
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322632"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>구독 설정 및 파일 공유 계정(구성 관리자)
   **구성 관리자의** 구독 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정을 사용하면 보고서를 파일 공유로 전달하는 여러 구독에서 단일 자격 증명 집합을 사용할 수 있습니다. 자격 증명을 변경해야 하는 경우 파일 공유 계정에 대한 구성을 변경하면 각각의 개별 구독을 업데이트할 필요가 없습니다.  

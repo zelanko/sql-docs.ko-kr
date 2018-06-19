@@ -1,14 +1,12 @@
 ---
 title: '개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능) | Microsoft Docs'
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
@@ -16,11 +14,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8991e2967ddbbe96650bba363c701d00c554885
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9af12b09b1bcfb74990fcfcd5471e4e9e0b74569
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328947"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능)
 

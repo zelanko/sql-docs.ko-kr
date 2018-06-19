@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 482e2bd27acedaed01acf4ef3d324af5b7e09b65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b70c19790ca3f9a09b2e18217f48190889c74624
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333137"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
   데이터 마이닝 모델 학습 대상은 데이터 마이닝 모델 알고리즘을 통해 대상에서 수신하는 데이터를 전달함으로써 데이터 마이닝 모델을 학습합니다. 동일 데이터 마이닝 구조를 기반으로 모델을 작성한 경우에는 하나의 대상에서 여러 데이터 마이닝 모델의 성향을 습득할 수 있습니다. 자세한 내용은 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 및 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)를 참조하세요.  

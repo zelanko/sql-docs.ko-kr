@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63b354be996722779bc44f27115eb8ed6f0f79a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2913492a72dc0c384fa6885664db1038a178e64e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331377"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
   파일 시스템 태스크는 파일 시스템의 파일 및 디렉터리에 대해 작업을 수행합니다. 예를 들어 파일 시스템 태스크를 사용하면 패키지가 디렉터리와 파일을 만들거나 이동 또는 삭제할 수 있습니다. 파일 시스템 태스크를 사용하여 파일과 디렉터리의 특성을 설정할 수도 있습니다. 예를 들어 파일 시스템 태스크는 파일에 숨김 또는 읽기 전용 특성을 설정할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-file-system-operations"></a>미리 정의된 파일 시스템 작업  
  파일 시스템 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|연산|설명|  
 |---------------|-----------------|  
 |디렉터리 복사|폴더를 다른 위치에 복사합니다.|  
 |파일 복사|파일을 다른 위치에 복사합니다.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>파일 시스템 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|Description|  
+|로그 항목|설명|  
 |---------------|-----------------|  
 |**FileSystemOperation**|태스크에서 수행하는 작업을 보고합니다. 이 로그 항목은 파일 시스템 작업이 시작될 때 기록되며 원본 및 대상에 대한 정보를 포함합니다.|  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationConnection**이 표시됩니다.|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **연산**  
  수행할 파일 시스템 작업을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**디렉터리 복사**|디렉터리를 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
 |**파일 복사**|파일을 복사합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  

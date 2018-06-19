@@ -1,14 +1,12 @@
 ---
 title: Excel용 Master Data Services 추가 기능의 속성 설정 | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f0afa753c2439eb55236d25bf518b6069c31750d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b6d9615762bb81ed883276bfe442831c837795b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335097"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ||||  
 |-|-|-|  
-|탭 및 섹션|설정|Description|  
+|탭 및 섹션|설정|설명|  
 |설정: 게시|게시할 때 **게시 및 주석** 대화 상자 표시|**게시** 를 클릭한 후 모든 변경 내용에 대한 단일 주석을 입력하거나 각 변경 내용에 대한 개별 주석을 입력할 수 있도록 **게시 및 주석**대화 상자를 표시하려면 선택합니다.<br /><br /> **게시 및 주석** 대화 상자를 표시하지 않고 게시 프로세스가 시작되도록 지정하려면 선택을 취소합니다. 이 경우 주석을 입력할 수 없습니다.|  
 |설정: 버전|버전 선택|Excel 추가 기능으로 로드할 마스터 데이터의 버전을 선택합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **없음** 은 기본 버전을 설정하지 않습니다.<br /><br /> **내림차순** 은 가장 오래된 버전을 기본값으로 설정하고, **오름차순** 은 최신 버전을 기본값으로 설정합니다.|  
 |설정: 로깅|자세한 로깅 설정|MDS에서 Excel 추가 기능으로 마스터 데이터를 로드하는 프로세스에 대한 로깅을 설정하여 서비스의 모든 명령에 대한 결과가 기록되도록 합니다.|  
