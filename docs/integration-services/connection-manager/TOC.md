@@ -1,8 +1,5 @@
 # [개요](integration-services-ssis-connections.md)  
 # [데이터 원본](data-sources.md)  
-# [Access 데이터베이스에 연결](connect-to-an-access-database.md)  
-# [dBASE 또는 다른 DBF 파일에 연결](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Excel 통합 문서에 연결](connect-to-an-excel-workbook.md)  
 # [ADO 연결 관리자](ado-connection-manager.md)  
 # [ADO.NET 연결 관리자](ado-net-connection-manager.md)  
 # [Analysis Services 연결 관리자](analysis-services-connection-manager.md)  

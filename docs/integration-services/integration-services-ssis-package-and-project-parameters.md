@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44b3ace5dca858f1216d1e1d5298be8c26a444b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404375"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  다음 표에서는 값 유형을 나열합니다.  
   
-|값 이름|Description|값 유형|  
+|값 이름|설명|값 유형|  
 |----------------|-----------------|-------------------|  
 |실행 값|특정 패키지 실행 인스턴스에 할당되는 값입니다. 이 할당은 다른 모든 값을 재정의하지만 단일 패키지 실행 인스턴스에만 적용됩니다.|리터럴|  
 |서버 값|프로젝트를 Integration Services 서버에 배포한 후 프로젝트 범위 내에서 매개 변수에 지정된 값입니다. 이 값은 디자인 기본값을 재정의합니다.|리터럴 또는 환경 변수 참조|  
@@ -121,14 +120,14 @@ ms.lasthandoff: 05/03/2018
   
 3.  목록 자체에서 또는 **속성**창에서 **이름**, **데이터 형식**, **값**, **구분** 및 **필수** 속성의 값을 입력합니다. 다음 표에서는 이러한 속성을 설명합니다.  
   
-    |속성|Description|  
+    |속성|설명|  
     |--------------|-----------------|  
     |속성|매개 변수의 이름입니다.|  
     |이름|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
     |구분|중요한 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
     > **참고:** 프로젝트를 카탈로그에 배포하면 몇 가지 추가 속성이 프로젝트와 연결됩니다. 카탈로그의 모든 매개 변수에 대한 모든 속성을 보려면 [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰를 참조하세요.  
   
@@ -152,14 +151,14 @@ ms.lasthandoff: 05/03/2018
   
 4.  **이름**, **데이터 형식**, **값**, **구분**및 **필수** 속성의 값을 입력합니다.  
   
-    |속성|Description|  
+    |속성|설명|  
     |--------------|-----------------|  
     |속성|매개 변수의 이름입니다.|  
     |이름|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
     |구분|중요한 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
 5.  프로젝트를 저장하여 매개 변수 변경 내용을 저장합니다. 매개 변수 값은 프로젝트 파일의 구성에 저장됩니다. 매개 변수 값의 모든 변경 사항을 디스크에 커밋하려면 프로젝트 파일을 저장합니다.  
   
