@@ -15,11 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619540"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -226,7 +227,7 @@ SMO:
 
 - 서버 데이터 정렬이 대/소문자를 구분하는 경우에 SMO가 AvailabilityReplica 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS는 다음과 같은 오류 메시지를 표시할 수 있습니다. "다중 식별자 "a.delimited"를 바인딩할 수 없습니다."
 - DatabaseScopedConfigurationCollection 클래스에서 데이터 정렬을 잘못 처리하는 문제가 해결되었습니다.(결과적으로 터키어 로캘로 ma 컴퓨터에서 실행되는 SSMS는 대/소문자를 구분하는 데이터 정렬로 서버에서 실행되는 데이터베이스를 마우스 오른쪽 단추로 클릭할 때 다음과 같은 오류를 표시할 수 있습니다. "레거시 카디널리티 추정은 범위가 잘못 지정된 구성입니다.")
-- JobServer 클래스에서 SMO가 SQL 2005 서버에서 SQL 에이전트 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS가 다음과 같은 오류를 throw합니다. "지역 변수에 기본값을 할당할 수 없습니다. 스칼라 변수 "@ServiceStartMode"를 선언해야 하고 궁극적으로 개체 탐색기에서 SQL 에이전트 노드가 표시되지 않았습니다.)
+- JobServer 클래스에서 SMO가 SQL 2005 서버에서 SQL 에이전트 속성을 페치할 수 없는 문제가 해결되었습니다.(결과적으로 SSMS가 다음과 같은 오류를 throw합니다. "지역 변수에 기본값을 할당할 수 없습니다. 스칼라 변수 “\@ServiceStartMode”를 선언해야 하고 궁극적으로 개체 탐색기에서 SQL 에이전트 노드가 표시되지 않았습니다.)
 
 템플릿: 
 
@@ -720,7 +721,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 루트 노드를 새로 고치고 나면 등록된 서버에서 아이콘을 표시하지 않음.
 - Azure v12 서버에서 [데이터베이스 만들기]에 대한 스크립트 단추를 누르면 스크립트가 실행된 후 "No action to be scripted"(스크립팅할 동작이 없습니다.) 메시지를 표시함.
 - SSMS [서버에 연결] 대화 상자에서 새로운 각 연결에 대해 "추가 속성" 탭을 지우지 않음.
-- [Generate Tasks] (작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
+- [Generate Tasks]\(작업 생성) 스크립트에서 Azure SQL DB에 대한 [데이터베이스 만들기] 스크립트를 생성하지 않음.
 - 뷰 디자이너의 스크롤 막대가 사용하지 않도록 설정된 것으로 보임.
 - Always Encrypted AVK 키 경로에 버전 ID가 포함되지 않음.
 - 쿼리 창의 엔진 버전 쿼리 수 줄임. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
