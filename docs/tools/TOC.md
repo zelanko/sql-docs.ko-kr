@@ -2,7 +2,7 @@
 # [SQL Server 도구 및 유틸리티 개요](../tools/overview-sql-tools.md)
 # [새로운 또는 업데이트 된 문서](new-updated-tools.md)
 
-# [SQL Operations Studio(미리 보기)](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -30,3 +30,7 @@
 ## [sqlps 유틸리티](sqlps-utility.md)  
 ## [sqlservr 응용 프로그램](sqlservr-application.md)  
 ## [tablediff 유틸리티](tablediff-utility.md)
+
+# sqlpackage
+## [install sqlpackage](sqlpackage-download.md)
+## [sqlpackage ref](sqlpackage.md)

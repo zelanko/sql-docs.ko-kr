@@ -1,0 +1,12 @@
+# [트랜잭션 복제](transactional-replication.md)
+## [트랜잭션 복제에 대한 게시 유형](publication-types-for-transactional-replication.md)
+## [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
+## [Queued Updating Conflict Detection and Resolution](updatable-subscriptions-queued-updating-conflict-resolution.md)
+## [@loopback_detection](peer-to-peer-transactional-replication.md)
+## [피어 투 피어 복제에서 충돌 검색](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+## [양방향 트랜잭션 복제](bidirectional-transactional-replication.md)
+## [Article Options for Transactional Replication](article-options-for-transactional-replication.md)
+## [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional-articles-specify-how-changes-are-propagated.md)
+## [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](transactional-articles-regenerate-to-reflect-schema-changes.md)
+## [트랜잭션 복제에서 저장 프로시저 실행 게시](publishing-stored-procedure-execution-in-transactional-replication.md)
+
