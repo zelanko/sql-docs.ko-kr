@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf05d99617114059dac55794b68ca7bf2222ca4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0262e1ffee1998fe661e7f6f950c05159fc695dd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948958"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698224"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,12 +76,12 @@ HRESULT Abort(
   
  초기화 단계에서 비동기적으로 취소된 행 집합에서**ISSAsynchStatus::Abort** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  행 집합이나 데이터 원본 개체의 초기화를 중단하면 행 집합이나 데이터 원본 개체가 좀비 상태로 유지되어 **IUnknown** 메서드가 아닌 모든 메서드에서 E_UNEXPECTED를 반환할 수 있습니다. 이 경우 소비자가 사용할 수 있는 유일한 동작은 행 집합이나 데이터 원본 개체를 해제하는 것입니다.  
   
  **ISSAsynchStatus::Abort** 를 호출하고 DBASYNCHOP_OPEN이 아닌 *eOperation* 값을 전달하면 S_OK가 반환됩니다. 작업이 완료 또는 취소된 것은 아닙니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [비동기 작업 수행](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

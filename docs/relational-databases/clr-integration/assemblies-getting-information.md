@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2e7ce156858640e6b41dfa186839761b400e9fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918978"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697464"
 ---
 # <a name="assemblies---getting-information"></a>어셈블리-정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "32918978"
   
 -   [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [어셈블리 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>관련 항목  
+ [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)   
  [어셈블리 구현](../../relational-databases/clr-integration/assemblies-implementing.md)  
   

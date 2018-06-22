@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42a8ca545116bda764ed96a3093683d6e7d52bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919268"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698294"
 ---
 # <a name="altering-an-assembly"></a>어셈블리 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CLR 통합 어셈블리 관리](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [어셈블리 만들기](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [어셈블리 삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   

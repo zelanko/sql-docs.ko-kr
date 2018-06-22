@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74efcf16e4844b5ee70f6d3ed8226682057969ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946658"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694554"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32946658"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  다른 작업이 호출 될 수는 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 호출한 후 인터페이스는 **BCPDone** 메서드. 호출 하는 것만 가능은 [ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 새 대량 복사 작업을 시작 하려면 메서드. 이 호출 비슷합니다는 [irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -470,7 +468,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
