@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ea08f88f69929d052361866ec27d5aff70eec9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9d6382a84fff4cab3baf07703ccc4a28c6daebb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945338"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702104"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Text 및 image 열-사용 데이터 실행 시 매개 변수 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -230,7 +228,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [관리 텍스트 및 이미지 열에 대 한 방법 도움말 항목 & #40; ODBC & #41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>관련 항목  
+ [관리 text 및 image 열 방법 도움말 항목 &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   
