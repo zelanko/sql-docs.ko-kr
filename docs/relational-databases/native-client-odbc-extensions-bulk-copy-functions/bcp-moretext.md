@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e64f445788e35563120c357b93395fcfede50410
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edfe93e41d5a9398649550b10b11f6db64ca7afc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946298"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695774"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  와 함께에서이 함수를 사용할 수 있습니다 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 및 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, 다양 한 더 작은 청크로 SQL Server에 가변 길이 데이터 값을 복사 합니다. **bcp_moretext** 다음 SQL Server 데이터 형식의 열을 사용할 수 있습니다: **텍스트**, **ntext**, **이미지**, **varchar (max)** , **nvarchar (max)**, **varbinary (max)**, 사용자 정의 형식 (UDT) 및 XML입니다. **bcp_moretext** 데이터 변환을 지원 하지 않으며, 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
  경우 **bcp_bind** 으로 NULL이 아닌 호출 *pData* 에서 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext**, **bcp_sendrow** 보냅니다 길이 관계 없이 전체 데이터 값입니다. 그러나 If, **bcp_bind** 에 NULL *pData* 지원 되는 데이터 형식에 대 한 매개 변수 **bcp_moretext** 는 에서성공적인반환후에즉시데이터를복사하는데사용할수**bcp_sendrow** 나타내는 데이터가 있는 바인딩된 모든 열이 처리 되었습니다.  
@@ -172,7 +170,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

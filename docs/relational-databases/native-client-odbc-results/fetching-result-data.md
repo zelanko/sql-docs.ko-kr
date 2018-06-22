@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946818"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695875"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,11 +64,11 @@ ms.locfileid: "32946818"
   
  SQL_C_DEFAULT를 사용하여 C 변수의 형식을 지정할 때는 주의를 기울여야 합니다. SQL_C_DEFAULT는 C 변수 형식이 열이나 매개 변수의 SQL 데이터 형식과 일치하도록 지정합니다. 에 대해 SQL_C_DEFAULT를 지정 하는 경우는 **ntext**, **nchar**, 또는 **nvarchar** 열에서 비유니코드 데이터는 응용 프로그램에 반환 됩니다. 유니코드 데이터를 처리하도록 응용 프로그램이 코딩되지 않은 경우 이로 인해 여러 가지 문제가 발생할 수 있습니다. 같은 종류의 문제가 발생할 수 있습니다는 **uniqueidentifier** (SQL_GUID) 데이터 형식입니다.  
   
- **텍스트**, **ntext**, 및 **이미지** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지와 함께 처리 하 여 일반적으로 **SQLGetData** 대신 **SQLBindCol**합니다. 서버 커서를 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 바인딩되지 않은 대 한 데이터를 전송 하지 않도록 최적화 되어 **텍스트**, **ntext**, 또는 **이미지** 열에는 행 인출 되는 시간입니다. **텍스트**, **ntext**, 또는 **이미지** 데이터 실제로에서 검색 되지 않는 서버 응용 프로그램 문제까지 **SQLGetData** 열에 대 한 합니다.  
+ **텍스트**, **ntext**, 및 **이미지** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지와 함께 처리 하 여 일반적으로 **SQLGetData** 대신 **SQLBindCol**합니다. 서버 커서를 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 바인딩되지 않은 대 한 데이터를 전송 하지 않도록 최적화 되어 **텍스트**, **ntext**, 또는 **이미지** 열에는 행 인출 되는 시간입니다. **텍스트**, **ntext**, 또는 **이미지** 데이터 실제로에서 검색 되지 않는 서버 응용 프로그램 문제까지 **SQLGetData** 에 열입니다.  
   
  이 최적화를 응용 프로그램에 적용할 수 있도록 없는 **텍스트**, **ntext**, 또는 **이미지** 데이터는 사용자가 커서를 위나 아래로 스크롤 하는 동안 표시 됩니다. 응용 프로그램을 호출할 수 있는 행을 선택한 후 **SQLGetData** 검색 하는 **텍스트**, **ntext**, 또는 **이미지** 데이터입니다. 이렇게 하면 전송에서 **텍스트**, **ntext**, 또는 **이미지** 데이터 행에 대 한 사용자 선택 하지 못하는 및 전송 매우 많은 양의 데이터를 저장할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [결과 처리 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

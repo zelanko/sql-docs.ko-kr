@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: afe4fd0360b6ba50db7e007e6c3e6fbc78c3060f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad8307d9423b25d01a802b65fbd66d0c20ac31c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918150"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696024"
 ---
 # <a name="context-connection"></a>컨텍스트 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +55,10 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [일반 vs입니다. 컨텍스트 연결](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
+ [일반 연결과 컨텍스트 연결 비교](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
  일반 연결과 컨텍스트 연결의 차이를 설명합니다.  
   
- [일반 연결 및 컨텍스트 연결에 대 한 제한](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  
+ [일반 연결 및 컨텍스트 연결에 대한 제한 사항](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  
  일반 연결 및 컨텍스트 연결에 대한 제한 사항을 설명합니다.  
   
   

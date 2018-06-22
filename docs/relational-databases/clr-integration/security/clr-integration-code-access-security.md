@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc9d9c90e260fe3da8640189a8a16af15b984769
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931248"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702934"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,14 +112,14 @@ ms.locfileid: "32931248"
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**코드 액세스 보안 권한**|실행 전용|실행 및 외부 리소스 액세스|제한 없음(P/Invoke 포함)|  
 |**프로그래밍 모델 제한 사항**|예|예|제한 없음|  
-|**안정성 요구 사항**|예|사용자 계정 컨트롤|아니요|  
-|**로컬 데이터 액세스**|예|사용자 계정 컨트롤|예|  
-|**네이티브 코드를 호출 하는 기능**|아니요|아니오|예|  
+|**안정성 요구 사항**|예|예|아니요|  
+|**로컬 데이터 액세스**|예|예|예|  
+|**네이티브 코드를 호출 하는 기능**|아니요|아니요|예|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [CLR 통합 프로그래밍 모델 제한 사항](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [CLR 호스팅된 환경](../../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
+ [CLR 호스팅 환경](../../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
   
   

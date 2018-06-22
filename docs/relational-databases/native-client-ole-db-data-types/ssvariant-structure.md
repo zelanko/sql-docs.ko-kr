@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -21,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feb71f4bd7cb6c2a18bfebad46eac4d50db34bcb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aca0528c2b829a1dc13030bf9a7add9c8be7e797
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947498"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702804"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 구조
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +34,7 @@ ms.locfileid: "32947498"
   
  **SSVARIANT** 는 판별 구조체입니다. Vt 멤버의 값에 따라 소비자는 읽을 멤버를 결정할 수 있습니다. vt 값에 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 따라서는 **SSVARIANT** 구조는 모든 SQL Server 형식을 보유할 수 있습니다. 표준 OLE DB 형식에 대 한 데이터 구조에 대 한 자세한 내용은 참조 [유형 표시기](http://go.microsoft.com/fwlink/?LinkId=122171)합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  때 DataTypeCompat = = 80, 여러 **SSVARIANT** 하위 유형이 문자열이 됩니다. 다음 vt 값에 표시 됩니다는 예를 들어 **SSVARIANT** VT_SS_WVARSTRING으로 나타납니다.  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -86,7 +84,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |알려지지 않은 유형|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 형식 & #40; OLE db& #41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 형식 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

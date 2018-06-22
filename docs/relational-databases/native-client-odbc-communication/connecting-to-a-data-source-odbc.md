@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-communication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -29,12 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4daa642cbd60846cc4211de5e33cdad8e7a6d8db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6934876b3772ba8124ca4adfc87a4bad89346e64
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946348"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698704"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>데이터 원본에 연결(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -120,7 +119,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  오류 처리에 대 한 응용 프로그램의 함수가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 호출 해야 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다. 사용 되지 않는 모든 메시지에는 적용 한 다음 해야는 *pfNative* 코드가 5701 또는 5703 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server와 통신 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

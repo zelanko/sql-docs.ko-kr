@@ -2,7 +2,7 @@
 title: SQL Server 정보에 대 한 더 많은 OLE DB 드라이버를 찾기 | Microsoft Docs
 description: SQL Server 정보에 대 한 자세한 OLE DB 드라이버를 찾을 수 있는 위치
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 088c6853cb190e9e19cc8edc032e5fd2baa787dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca26d61ca49a0e7e3baa0e4f8304311d90668a6
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853578"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689786"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대 한 더 많은 OLE DB 드라이버를 찾기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -43,7 +43,7 @@ ms.locfileid: "32853578"
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)  
   
   

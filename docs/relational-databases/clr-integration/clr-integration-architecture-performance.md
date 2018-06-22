@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921968"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703004"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 통합 아키텍처-성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +81,7 @@ ms.locfileid: "32921968"
 ### <a name="scalable-memory-usage"></a>확장 가능한 메모리 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 관리되는 가비지 수집의 원활한 수행과 확장을 위해서는 대량의 단일 할당을 피해야 합니다. 88KB보다 큰 할당은 대형 개체 힙에 배치되므로 많은 수의 작은 할당보다 가비지 수집의 성능 및 확장성이 크게 떨어집니다. 예를 들어 대형 다차원 배열을 할당해야 하는 경우에는 분산된 가변 배열로 할당하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

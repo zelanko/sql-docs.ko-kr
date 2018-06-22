@@ -69,7 +69,8 @@
 ## [SMO(SQL Server 관리 개체) 프로그래밍 가이드 +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Windows Management Instrumentation](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [구성 관리용 WMI 공급자 개념 +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [데이터베이스 엔진 자습서](database-engine-tutorials.md)
 ## [자습서: 데이터베이스 엔진 시작](tutorial-getting-started-with-the-database-engine.md)
 ### [1단원: 데이터베이스 엔진에 연결](lesson-1-connecting-to-the-database-engine.md)

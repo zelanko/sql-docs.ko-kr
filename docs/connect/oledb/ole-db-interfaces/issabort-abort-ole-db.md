@@ -2,9 +2,10 @@
 title: 'Issabort:: Abort (OLE DB) | Microsoft Docs'
 description: ISSAbort::Abort(OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305382"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690266"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   현재 행 집합 및 현재 명령과 연결된 일괄 처리되는 명령을 취소합니다.  
   
@@ -43,9 +46,9 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 중단할 명령이 저장된 프로시저에 있으면 저장된 프로시저 (및 모든 프로시저를 해당 프로시저를 호출한)의 실행 저장된 프로시저 호출을 포함 하는 명령 일괄 처리가 종료 됩니다. 서버가 결과 집합을 클라이언트로 전송 중이면 전송이, 전송이 중지 됩니다. 클라이언트는 결과 집합을 사용 하지 않으려고, 하는 경우 호출 **issabort:: Abort** 행 집합 릴리스를 신속 하 게 행 집합을 해제 하지만 트랜잭션이 롤백됩니다 열려 있는 트랜잭션이 있고 XACT_ABORT가 ON 면 **issabort:: Abort** 라고  
+ 중단할 명령이 저장된 프로시저에 있으면 저장된 프로시저 (및 모든 프로시저를 해당 프로시저를 호출한)의 실행 저장된 프로시저 호출을 포함 하는 명령 일괄 처리가 종료 됩니다. 서버가 결과 집합을 클라이언트로 전송 중이면 전송이, 전송이 중지 됩니다. 클라이언트는 결과 집합을 사용 하지 않으려고, 하는 경우 호출 **issabort:: Abort** 행 집합 릴리스를 신속 하 게 행 집합을 해제 하지만 트랜잭션이 롤백됩니다 열려 있는 트랜잭션이 있고 XACT_ABORT가 ON 될 때 **Issabort:: Abort** 라고  
   
- 후 **issabort:: Abort** S_OK를 관련된 된 반환 **IMultipleResults** 불안정 한 상태가 입력 하 고 모든 메서드 호출에 DB_E_CANCELED를 반환 하는 인터페이스 ( 는여정의된메서드를제외하고**IUnknown** 인터페이스) 해제 될 때까지 합니다. 경우는 **IRowset** 에서 가져온 **IMultipleResults** 를 호출 하기 전에 **중단**도 사용할 수 없는 상태로 전환 하 고 모든 메서드 호출에 DB_E_CANCELED를 반환 (정의한 메서드를 제외 하 고는 **IUnknown** 인터페이스 및 **irowset:: Releaserows**)을 성공적으로 호출한 후에 해제 될 때까지 **issabort:: Abort**합니다.  
+ 후 **issabort:: Abort** S_OK를 관련된 된 반환 **IMultipleResults** 불안정 한 상태가 입력 하 고 모든 메서드 호출에 DB_E_CANCELED를 반환 하는 인터페이스 ( 는여정의된메서드를제외하고**IUnknown** 인터페이스) 해제 될 때까지 합니다. 경우는 **IRowset** 에서 가져온 **IMultipleResults** 를 호출 하기 전에 **중단**도 사용할 수 없는 상태로 전환 하 고 (호출 하는 모든 메서드에 DB_E_CANCELED를 반환 정의한 메서드를 제외 하 고는 **IUnknown** 인터페이스 및 **irowset:: Releaserows**)을 성공적으로 호출한 후에 해제 될 때까지 **issabort:: Abort** .  
   
 > [!NOTE]  
 >  부터는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]서버 XACT_ABORT 상태가에 있으면, 실행, **issabort:: Abort** 종료 되 고에 연결 된 경우 모든 현재 암시적 또는 명시적 트랜잭션을 롤백하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 현재 트랜잭션이 중단되지 않습니다.  

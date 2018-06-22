@@ -2,9 +2,10 @@
 title: 테이블 및 인덱스 | Microsoft Docs
 description: 생성, 변경 및 droping 테이블 및 OLE DB 드라이버를 사용 하 여 SQL Server에 대 한 인덱스
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,15 +23,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5f6b4f1bde4b123ba2a8a807a5bd91abe12cdad2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 962efa70c583bdb9aa9537826800c1c166350dc4
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307722"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689346"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 노출 된 **IIndexDefinition** 및 **ITableDefinition** 인터페이스를 만들려면 소비자가 변경 하 고 삭제할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 및 인덱스입니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
   

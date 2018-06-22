@@ -1,0 +1,45 @@
+---
+title: MSSQLSERVER_5554 | Microsoft 문서
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- 5554 (Database Engine error)
+ms.assetid: 7134bbe5-d240-4a98-85ce-b13cc8ae9b0e
+caps.latest.revision: 11
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: a340576c20387fa0620815759aa966e59d139897
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36080188"
+---
+# <a name="mssqlserver5554"></a>MSSQLSERVER_5554
+    
+## <a name="details"></a>설명  
+  
+|||  
+|-|-|  
+|제품 이름|MSSQLSERVER|  
+|이벤트 ID|5554|  
+|이벤트 원본|MSSQLSERVER|  
+|구성 요소|SQLEngine|  
+|심볼 이름|FS_MINIVER_OVERFLOW|  
+|메시지 텍스트|단일 파일에 대한 총 버전 수가 파일 시스템에 설정된 최대치에 도달했습니다.|  
+  
+## <a name="explanation"></a>설명  
+ MARS(Multiple Active Result Set) 또는 트리거 시나리오에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 운영 체제에서 지정하는 미니 버전을 사용합니다.  
+  
+## <a name="user-action"></a>사용자 동작  
+ 동일 트랜잭션의 데이터를 반복해서 업데이트하려 하지 마십시오.  
+  
+  

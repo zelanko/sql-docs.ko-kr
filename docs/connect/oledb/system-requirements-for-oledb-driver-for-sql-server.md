@@ -2,7 +2,7 @@
 title: SQL Server 용 OLE DB 드라이버에 대 한 시스템 요구 사항 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버에 대 한 요구 사항
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e109f228d8b902e5c34b4ed5731b80e315fffe3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859338"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689466"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server 용 OLE DB 드라이버에 대 한 시스템 요구 사항
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -73,15 +73,15 @@ ms.locfileid: "32859338"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<8kb =)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|varchar|텍스트|  
-|nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
+|varchar(max)|varchar|varchar|varchar|텍스트 모드|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
-|date|varchar|date|date|Varchar|  
-|datetime2|varchar|datetime2|datetime2|Varchar|  
+|날짜|varchar|날짜|날짜|Varchar|  
+|Datetime2|varchar|Datetime2|Datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
-|time|varchar|time|time|Varchar|  
+|Time|varchar|Time|Time|Varchar|  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [SQL Server용 OLE DB 드라이버 설치](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

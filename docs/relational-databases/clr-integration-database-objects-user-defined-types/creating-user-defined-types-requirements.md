@@ -3,11 +3,9 @@ title: 사용자 정의 형식 요구 사항을 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +23,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d4bccc8ae83d25f848011421d057ad8cb0a7016
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9029a944bc45acf2b0fb121b4a295f74d5534210
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922398"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695386"
 ---
 # <a name="creating-user-defined-types---requirements"></a>사용자 정의 형식-요구 사항 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +90,7 @@ ms.locfileid: "32922398"
 ## <a name="userdefined-serialization"></a>UserDefined 직렬화  
  **UserDefined** 형식에 대 한 설정에서 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 특성은 이진 형식에 대해 전체 개발자 제어 합니다. 지정 하는 경우는 **형식** 특성의 속성으로 **UserDefined**, 사용자 코드에서 다음을 수행 해야 합니다.  
   
--   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본값은 **false**입니다.  
+-   선택적 지정 **IsByteOrdered** 특성의 속성입니다. 기본 값은 **false**입니다.  
   
 -   지정 된 **MaxByteSize** 속성은 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**합니다.  
   
@@ -171,7 +169,7 @@ ms.locfileid: "32922398"
   
  FOR XML 쿼리에서는 UDT가 직렬화되지 않습니다. Udt의 XML 직렬화를 표시 하는 FOR XML 쿼리를 실행 하려면 각 UDT 열을 명시적으로 변환 된 **xml** SELECT 문에서 데이터 형식입니다. 열을 명시적으로 변환할 수 있습니다 **varbinary**, **varchar**, 또는 **nvarchar**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

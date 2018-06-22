@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e63cefdf59a3198ff1f71b96ce36ebc11dae592b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f65388880319ade0eb7bbfead37224afce98c134
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948088"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699774"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32948088"
   
 |SQL Server 2005 형식|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (이상) 형식|ODBC 클라이언트 형식|결과 변환(SQL에서 C로 변환)|매개 변수 변환(C에서 SQL로 변환)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|날짜/시간|날짜|SQL_C_TYPE_DATE|확인|확인 (1)|  
+|DATETIME|Date|SQL_C_TYPE_DATE|확인|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
@@ -50,7 +48,7 @@ ms.locfileid: "32948088"
 |||SQL_C_TYPE_TIMESTAMP|실패 - 시간 리터럴이 잘못되었습니다.|확인 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
-|Smalldatetime|날짜|SQL_C_TYPE_DATE|확인|확인|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
@@ -60,7 +58,7 @@ ms.locfileid: "32948088"
   
 |기호|의미|  
 |------------|-------------|  
-|1.|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 계속 동작합니다.|  
+|1|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 계속 동작합니다.|  
 |2|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동한 응용 프로그램이 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 작동하지 않을 수 있습니다.|  
   
  여기서는 다음과 같이 일반적인 스키마 변경 사항만 고려되었습니다.  
@@ -74,10 +72,10 @@ ms.locfileid: "32948088"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns, SQLProcedureColumns 및 SQLSpecialColumns가 반환하는 열 메타데이터  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
   
-|열 유형|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|열 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -91,9 +89,9 @@ ms.locfileid: "32948088"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo가 반환하는 데이터 형식 메타데이터  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
   
-|열 유형|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|열 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -105,7 +103,7 @@ ms.locfileid: "32948088"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -117,7 +115,7 @@ ms.locfileid: "32948088"
 ## <a name="down-level-server-behavior"></a>하위 수준 서버 동작  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 서버 인스턴스에 연결되어 있는 경우 새로운 서버 형식 또는 관련된 메타데이터 코드 및 설명자 필드를 사용하려고 하면 SQL_ERROR가 반환됩니다. SQLSTATE HY004 및 "연결에서 서버 버전의 SQL 데이터 형식이 잘못되었습니다."라는 메시지가 포함된 진단 레코드 또는 07006 및 "제한된 데이터 형식 특성을 위반했습니다."라는 메시지가 포함된 진단 레코드가 생성됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [날짜 및 시간 기능 향상 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>관련 항목  
+ [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

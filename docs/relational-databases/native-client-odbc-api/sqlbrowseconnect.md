@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400097362ec6364d7a7b0d6f13cd3e62bb4d6b87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a61a74fc85bd13e442694dde91f279704d9a12d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948128"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701294"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "32948128"
   
 ## <a name="level-3"></a>수준 3  
   
-|키워드|목록 반환 여부|선택 사항 여부|설명|  
+|키워드|목록 반환 여부|선택 사항 여부|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|예|예|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.|  
 |LANGUAGE|예|예|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 국가별 언어입니다.|  
@@ -60,7 +59,7 @@ ms.locfileid: "32948128"
   
  호출 하 여 설정 되는 다음 특성을 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 반환한 결과 집합 결정 **SQLBrowseConnect**합니다.  
   
-|Attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|SQL_MORE_INFO_YES로 설정 된 경우 **SQLBrowseConnect** 서버 속성의 확장된 문자열을 반환 합니다.<br /><br /> 반환 되는 확장된 문자열의 예 **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> 이 문자열에서 세미콜론은 서버에 대한 다양한 정보 부분을 구분합니다. 서로 다른 서버 인스턴스를 구분하려면 쉼표를 사용합니다.|  
 |SQL_COPT_SS_BROWSE_SERVER|서버 이름을 지정 하는 경우 **SQLBrowseConnect** 지정 된 서버에 대 한 정보를 반환 합니다. SQL_COPT_SS_BROWSE_SERVER가 NULL로 설정 된 경우 **SQLBrowseConnect** 도메인의 모든 서버에 대 한 정보를 반환 합니다.<br /><br /> <br /><br /> 네트워크 문제로 인해 유의 **SQLBrowseConnect** 모든 서버 로부터 때 맞춰 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 각 요청이 있을 때마다 다를 수 있습니다.|  
@@ -72,7 +71,7 @@ ms.locfileid: "32948128"
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>SPN(서비스 사용자 이름)에 대한 SQLBrowseConnect 지원  
  연결이 열릴 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD를 연결을 여는 데 사용하는 인증 방법으로 설정합니다.  
   
- Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 & #40; Spn & #41; 클라이언트 연결 & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
   
 ## <a name="change-history"></a>변경 내역  
   
@@ -80,7 +79,7 @@ ms.locfileid: "32948128"
 |---------------------|  
 |SQL_COPT_SS_BROWSE_CACHE_DATA에 대한 설명을 포함시켰습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLBrowseConnect 함수](http://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

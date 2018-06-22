@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-text-image-columns
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - ODBC data-at-execution
 - image columns [ODBC]
 ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54889e3ae30bb0fb3d2b7f08dfba542ae771ce24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 56cf9e564eb21d0036b61be0fde1404ed1dee486
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948308"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694634"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>실행 시 데이터 및 text, ntext 또는 image 열
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "32948308"
 
   ODBC 실행 시 데이터는 응용 프로그램에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰를 검색할 때 **텍스트**, **ntext**, 또는 **이미지** 열, 응용 프로그램 못할를 단순히 거 대 한 버퍼를 할당, 열 버퍼에 바인딩하고 인출 행입니다. 매우 큰 업데이트할 때 **텍스트**, **ntext**, 또는 **이미지** 열을 응용 프로그램 못할 수 단순히 거 대 한 버퍼를 할당할 매개 변수 표식 SQL에 바인딩 문, 다음 문을 실행 합니다. 이러한 경우에는 응용 프로그램 사용 해야 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 또는 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 실행 시 데이터 옵션에 해당 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [text 및 image 열 관리](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
   

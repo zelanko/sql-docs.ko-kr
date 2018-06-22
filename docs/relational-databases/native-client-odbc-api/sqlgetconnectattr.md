@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36e0a367dfbdacb16dbd37ddbae68789f82b8781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948568"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698984"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32948568"
 > [!NOTE]  
 >  표준 ODBC 연결 특성 SQL_ATTR_CONNECTION_DEAD는 가장 최근 연결 상태를 반환합니다. 이 상태는 현재 연결 상태가 아닐 수도 있습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|서버에 대한 연결이 손실되었습니다.|  
 |SQL_CD_FALSE|연결이 열려 있으며 문 처리에 사용할 수 있습니다.|  
@@ -56,7 +55,7 @@ ms.locfileid: "32948568"
   
  자세한 내용은 참조 [확장 이벤트 로그의 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|연결하지 못했습니다.|  
 |SQL_SUCCESS|연결이 성공했습니다. 출력 버퍼에서 클라이언트 연결 ID를 찾습니다.|  
@@ -64,7 +63,7 @@ ms.locfileid: "32948568"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 특성은 현재 드라이버 성능 통계가 포함된 SQLPERF 구조에 대한 포인터를 반환합니다. 성능 로깅이 사용되지 않는 경우**SQLGetConnectAttr** 에서 NULL을 반환합니다. SQLPERF 구조의 통계는 드라이버에서 동적으로 업데이트되지 않습니다. 성능 통계를 새로 고쳐야 할 때마다 **SQLGetConnectAttr** 을 호출합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |NULL|성능 로깅이 사용되지 않습니다.|  
 |다른 모든 값|SQLPERF 구조에 대한 포인터입니다.|  
@@ -75,7 +74,7 @@ ms.locfileid: "32948568"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 특성은 사용자 데이터 포인터를 검색합니다. 사용자 데이터는 클라이언트 소유의 메모리에 저장되고 연결별로 기록됩니다. 사용자 데이터 포인터가 설정되지 않은 경우 NULL 포인터인 SQL_UD_NOTSET가 반환됩니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|사용자 데이터 포인터가 설정되어 있지 않습니다.|  
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
@@ -87,12 +86,12 @@ ms.locfileid: "32948568"
   
  SQL_COPT_SS_SERVER_SPN 또는 SQL_COPT_SS_FAILOVER_PARTNER가 설정되지 않은 경우 기본값(빈 문자열)이 반환됩니다.  
   
- Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 & #40; Spn & #41; 클라이언트 연결 & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Spn에 대 한 자세한 내용은 참조 [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLGetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET quoted_identifier& #40; Transact SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  

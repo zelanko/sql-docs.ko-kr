@@ -2,9 +2,10 @@
 title: 행 집합의 데이터 업데이트 | Microsoft Docs
 description: SQL Server 용 OLE DB 드라이버를 사용 하 여 행 집합의 데이터 업데이트
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6ae4adba438d1465a572971021c82dd004eca211
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306362"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689906"
 ---
 # <a name="updating-data-in-rowsets"></a>행 집합의 데이터 업데이트
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 드라이버에서 SQL Server 업데이트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 소비자는 해당 데이터를 포함 하는 수정 가능한 행 집합을 업데이트 한 경우. 수정 가능한 행 집합을 소비자 하나에 대 한 지원을 요청할 때 만들어집니다는 **IRowsetChange** 또는 **IRowsetUpdate** 인터페이스입니다.  
   

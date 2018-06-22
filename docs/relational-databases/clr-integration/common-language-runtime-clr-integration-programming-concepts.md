@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -21,12 +19,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41c8382d933a02d26ca47bfc76acc4d2563fce62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923448"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703324"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR(공용 언어 런타임) 통합 프로그래밍 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +40,13 @@ ms.locfileid: "32923448"
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
- [공용 언어 런타임 & #40; CLR & #41; 통합 개요](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [공용 언어 런타임 &#40;CLR&#41; 통합 개요](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  CLR에 대한 간략한 개요를 제공하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 기술을 사용하는 방법과 그 이유에 대해 설명합니다. 또한 CLR을 사용하여 데이터베이스 개체를 만들 경우의 이점에 대해서도 설명합니다.  
   
  [어셈블리&#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 어셈블리를 사용하여 함수, 저장 프로시저, 트리거, 사용자 정의 집계, [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 작성되지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)] .NET Framework CLR(공용 언어 런타임)로 호스팅되는 관리 코드 언어 중 하나로 작성된 사용자 정의 형식을 배포하는 방법을 설명합니다.  
   
- [공용 언어 런타임 & #40; 데이터베이스 개체 작성 CLR & #41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [공용 언어 런타임 사용 하 여 데이터베이스 개체 작성 &#40;CLR&#41; 통합](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  CLR을 사용하여 작성할 수 있는 개체 유형에 대해 설명하고 CLR 데이터베이스 개체를 작성하기 위한 요구 사항을 살펴봅니다.  
   
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -66,14 +64,14 @@ ms.locfileid: "32923448"
  [CLR 통합 어셈블리 관리](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  CLR 통합 어셈블리를 만들고 삭제하는 방법에 대해 설명합니다.  
   
- [관리 되는 데이터베이스 개체 모니터링 및 문제 해결](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
+ [관리되는 데이터베이스 개체 모니터링 및 문제 해결](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  
   
- [사용 시나리오 및 공용 언어 런타임 & #40;에 대 한 예제 CLR & #41; 통합](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  CLR 개체를 사용하는 사용 시나리오 및 코드 예제에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [어셈블리 & #40; 데이터베이스 엔진 & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>관련 항목  
+ [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

@@ -2,9 +2,10 @@
 title: 데이터를 테이블 반환 매개 변수 삽입 | Microsoft Docs
 description: OLE DB Driver for SQL Server를 사용 하 여 데이터를 테이블 반환 매개 변수 삽입
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8806d301eeaa25f00b8e3a3fe3553fb08e7005a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e3d0e0fedb2c64c4c5ac9e5e9515016f256e44a1
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306462"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689326"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server 소비자가 테이블 반환 매개 변수 행에 대 한 데이터를 지정 하는 두 가지 모델 지원: 밀어넣기 모델과 끌어오기 모델입니다. 끌어오기 모델을 보여 주는 샘플은 사용할 수 있습니다. 참조 [SQL Server 데이터 프로그래밍 예제](http://msftdpprodsamples.codeplex.com/)합니다.  
   

@@ -3,11 +3,9 @@ title: .NET Framework의 SQL Server 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 58efbce895ad0e06521c59941dc49826629343b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917856"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702054"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.locfileid: "32917856"
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
- [Null 허용 여부 및 3 값 논리 비교](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
+ [Null 허용 여부 및 3개의 값 논리 비교](../../relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md)  
  CLR(공용 언어 런타임) 통합 데이터 형식에서 NULL 값이 처리되는 방법에 대해 설명합니다.  
   
  [데이터 정렬 및 CLR 통합 데이터 형식](../../relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md)  
  CLR 통합에서 데이터 정렬이 처리되는 방법에 대해 설명합니다.  
   
- [큰 개체 & #40; 처리 LOB & #41; CLR에서 매개 변수](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
+ [큰 개체 처리 &#40;LOB&#41; CLR에서 매개 변수](../../relational-databases/clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 사이에서 LOB 형식을 전달하는 방법에 대해 설명합니다.  
   
  [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)  

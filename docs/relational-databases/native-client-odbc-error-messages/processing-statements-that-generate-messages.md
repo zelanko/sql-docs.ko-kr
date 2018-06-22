@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-error-messages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - ODBC error handling, statements generating messages
 - SQLExecDirect function
 ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9475afda740b4c2b2d6b279c0ea0a454fd397bf0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ff2141bb8b84fa27d9aefe00f3a48281d5c017e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946708"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703744"
 ---
 # <a name="processing-statements-that-generate-messages"></a>메시지를 생성하는 문 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +152,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  PRINT 또는 RAISERROR 문 (예: SELECT 문), SQL 문 다음에 오는 경우 PRINT 또는 RAISERROR 정보 때 반환 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)결과에 위치 오류를 포함 하는 설정입니다. **SQLMoreResults** 메시지의 심각도 따라 SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 메시지를 호출 하 여 검색 **SQLGetDiagRec** sql_no_data가 반환 될 때까지 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [오류 및 메시지 처리](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   
