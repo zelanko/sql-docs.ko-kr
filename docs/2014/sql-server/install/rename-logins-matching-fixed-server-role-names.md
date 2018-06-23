@@ -1,0 +1,73 @@
+---
+title: 고정된 서버 역할 이름과 일치 하는 로그인 이름 바꾸기 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- user-defined login names [SQL Server]
+- fixed server roles [SQL Server]
+- renamed logins [SQL Server]
+- logins [SQL Server], names
+ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
+caps.latest.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 54223b28e681115df1b4ecf11f4fb96d13c68fd9
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36090106"
+---
+# <a name="rename-logins-matching-fixed-server-role-names"></a>고정 서버 역할 이름과 일치하는 로그인 이름을 바꿉니다.
+  업그레이드 관리자가 고정 서버 역할 이름과 일치하는 하나 이상의 사용자 정의 로그인 이름을 검색했습니다. 고정 서버 역할 이름은 예약되어 있습니다. 업그레이드하기 전에 로그인 이름을 바꾸십시오  
+  
+## <a name="component"></a>구성 요소  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+  
+## <a name="description"></a>Description  
+ 다음과 같은 고정 서버 역할 이름은 예약되어 있으므로 사용자 정의 로그인 이름으로 사용할 수 없습니다.  
+  
+-   **sysadmin**  
+  
+-   **serveradmin**  
+  
+-   **setupadmin**  
+  
+-   **securityadmin**  
+  
+-   **processadmin**  
+  
+-   **dbcreator**  
+  
+-   **diskadmin**  
+  
+-   **bulkadmin**  
+  
+## <a name="corrective-action"></a>수정 동작  
+ 업그레이드하기 전에 다음 단계를 수행합니다.  
+  
+1.  다음 문을 실행하여 로그인의 SID(보안 ID)를 기록합니다.  
+  
+    ```  
+    SELECT name, sid   
+    FROM master.dbo.syslogins   
+    WHERE name IN('sysadmin', 'serveradmin','setupadmin', 'securityadmin','processadmin', 'dbcreator','diskadmin','bulkadmin')  
+    ```  
+  
+2.  로그인을 삭제합니다.  
+  
+3.  사용 하 여는 **sp_addlogin** 시스템 프로시저를 새 로그인을 만듭니다. 1 단계에서 반환 된 SID를 지정 된 **@sid** 각 해당 로그인에 대 한 매개 변수입니다.  
+  
+## <a name="see-also"></a>관련 항목  
+ [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+  
+  
