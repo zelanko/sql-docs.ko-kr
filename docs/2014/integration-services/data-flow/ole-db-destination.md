@@ -24,18 +24,15 @@ caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 5ead833d28c31a1c34da1ce6e2182cbaa418f156
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36082313"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324707"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
-  
-> [!NOTE]  
->  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../connection-manager/connect-to-an-excel-workbook.md)을 참조하세요.  
   
  OLE DB 대상은 데이터 로드를 위한 5가지 데이터 액세스 모드를 제공합니다.  
   
