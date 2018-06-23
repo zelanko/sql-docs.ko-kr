@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d32ef0b368c0e3c5a0de1cbb9c0a2f60110050
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466330"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262337"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34466330"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|리소스 관리자 풀과 연관된 경우 리소스 풀의 ID입니다.|  
-|**memory_broker_type**|**nvarchar(60)**|메모리 Broker의 유형입니다. 세 가지 유형의 메모리 broker에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 아래와 해당 설명을 나열 합니다.<br /><br /> **MEMORYBROKER_FOR_CACHE** : 캐시 된 개체에서 사용 하기 위해 할당 된 메모리입니다.<br /><br /> **MEMORYBROKER_FOR_STEAL** : 버퍼 풀에서 빼앗긴 메모리입니다. 현재 소유자가 이 메모리를 해제하기 전까지 이 메모리는 다른 구성 요소에서 다시 사용할 수 없습니다.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : 현재 요청을 실행 하 여 나중에 사용 하기 위해 예약한 메모리입니다.|  
+|**memory_broker_type**|**nvarchar(60)**|메모리 Broker의 유형입니다. 세 가지 유형의 메모리 broker에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 아래와 해당 설명을 나열 합니다.<br /><br /> **MEMORYBROKER_FOR_CACHE** : 캐시 된 개체 (하지 버퍼 풀 캐시)에서 사용 하기 위해 할당 된 메모리입니다.<br /><br /> **MEMORYBROKER_FOR_STEAL** : 버퍼 풀에서 빼앗긴 메모리입니다. 현재 소유자가 이 메모리를 해제하기 전까지 이 메모리는 다른 구성 요소에서 다시 사용할 수 없습니다.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : 현재 요청을 실행 하 여 나중에 사용 하기 위해 예약한 메모리입니다.|  
 |**allocations_kb**|**bigint**|이 유형의 Broker에 할당된 메모리 양(KB)입니다.|  
 |**allocations_kb_per_sec**|**bigint**|초당 메모리 할당 비율(KB)입니다. 메모리 할당 취소의 경우 이 값은 음수가 될 수 있습니다.|  
 |**predicted_allocations_kb**|**bigint**|Broker에서 할당된 메모리의 예상 양입니다. 이 값은 메모리 양 패턴에 기반합니다.|  
@@ -54,12 +54,12 @@ ms.locfileid: "34466330"
 |**last_notification**|**nvarchar(60)**|현재 설정 및 사용량 패턴에 따라 권장되는 메모리 사용량입니다. 유효한 값은 다음과 같습니다.<br /><br /> 증가<br /><br /> 축소<br /><br /> 안정|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요 `VIEW SERVER STATE` 권한.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요는 `VIEW DATABASE STATE` 데이터베이스에는 권한이 있습니다.   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 
   [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
