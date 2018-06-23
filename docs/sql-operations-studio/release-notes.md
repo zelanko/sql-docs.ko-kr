@@ -2,7 +2,7 @@
 title: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보 | Microsoft Docs
 description: Microsoft SQL 작업 Studio (미리 보기) 릴리스 정보
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473827"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271014"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 작업 Studio (미리 보기) 릴리스 정보
 
-**[년 5 월 공개 미리 보기 다운로드](download.md)**
+**[6 월 공개 미리 보기 다운로드](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>6 월 2018 (년 6 월 공개 미리 보기)
+
+릴리스 날짜: 2018 년 6 월 20,  
+버전: 0.30.6
+
+*년 6 월 공개 미리 보기* 다음과 같은 주요 기능과 포함:  
+
+- **SQL 작업 Studio에 대 한 SQL Server Profiler *미리 보기***  초기 릴리스를 확장 합니다.
+- 새 **SQL 데이터 웨어하우스** 확장 프로그램에서 데이터 웨어하우스에 insights의 표시가 풍부한 사용자 지정 가능한 대시보드 위젯 포함 되어 있습니다. 이 주요 시나리오를 관리 하 고 튜닝은 일관 된 성능을 위해 최적화 되도록 하 여 데이터 웨어하우스를 잠금 해제 합니다.
+- **데이터 "필터링 및 정렬" 편집** 지원 합니다.
+- **SQL 작업 Studio에 대 한 SQL Server 에이전트 *미리 보기***  작업 및 작업 기록에 대 한 향상 된 확장 보기.
+- 향상 된 **마법사 및 대화 상자 UI 작성기 프레임 워크** 확장성 Api입니다.
+- 플랫폼 코드와 소스 코드 통합 업데이트 [년 3 월 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) 및 [년 4 월 2018 (1.23)](https://code.visualstudio.com/updates/v1_23) 를 해제 합니다.
+- GitHub 문제를 수정 합니다.
+  - 기능 요청 ([1204 발급](https://github.com/Microsoft/sqlopsstudio/issues/1204)): 하십시오 데이터를 결과 표 자동 맞춤 열 너비를 확인 및/또는 동일한 쿼리를 다시 실행 되는 경우 수동으로 변경 해야 합니다.
+  - 해결 [1398 발급](https://github.com/Microsoft/sqlopsstudio/issues/1398): 메시지 보내기 및 연결 된 계정을 비어 있을 때 추가 계정 계정 단추 표시 추가 해야 합니다.
+  - 해결 [1399 발급](https://github.com/Microsoft/sqlopsstudio/issues/1399): 보기 축소 되는 경우 연결 된 계정 탭 끊어지면 합니다.
+  - 해결 [1374 발급](https://github.com/Microsoft/sqlopsstudio/issues/1374): 디스크에서.sql 파일을 열 때 SQL 도구 서비스가 충돌 합니다.
+  - 해결 [1372 발급](https://github.com/Microsoft/sqlopsstudio/issues/1372): 누락 된 SQL 키워드 "BETWEEN"입니다.
+  - 해결 [1395 발급](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' 키워드는 SQL 도구 서비스 충돌 합니다.
+  - 해결 [1496 발급](https://github.com/Microsoft/sqlopsstudio/issues/1496): 개체 탐색기에서 상황에 맞는 메뉴 옵션을 "새 프로파일러"는 아무 작업도 수행 합니다.
+  - 해결 [1495 발급](https://github.com/Microsoft/sqlopsstudio/issues/1495): 쿼리 편집기 "설명" 쿼리 계획 손상 되었습니다.
+
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/sqlopsstudio/releases)합니다.
 
 
 ## <a name="may-2018-may-public-preview"></a>년 5 월 2018 (월 공개 미리 보기)
@@ -47,8 +74,6 @@ ms.locfileid: "34473827"
    - 해결 [1215 발급](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent 확장 및 상태 표시줄
    - 해결 [1316 발급](https://github.com/Microsoft/sqlopsstudio/issues/1316): windows가 크기 변경 후 크기를 조정할 SQL 에이전트 하지 않음
 
-
-자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/sqlopsstudio/releases)합니다.
 
 
 

@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237881"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262317"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@server_name =** ] **'***server***'**  
- 작업의 대상 서버 이름입니다. *서버* 은 **nvarchar (30)**, N'(LOCAL) 기본값 '. *서버*일 수 있습니다 **(LOCAL)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
+ 작업의 대상 서버 이름입니다. *서버* 은 **nvarchar (30)**, N'(LOCAL) 기본값 '. *서버* 일 수 있습니다 **(LOCAL)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -63,12 +63,12 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>결과 집합  
  InclusionThresholdSetting  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  **@automatic_post** 에 있는 **sp_add_jobserver**, 되지만 인수에서 표시 되지 않으면 합니다. **@automatic_post** 내부 용도로 예약 되어 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -114,7 +114,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_apply_job_to_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
