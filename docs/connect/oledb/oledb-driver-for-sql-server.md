@@ -1,11 +1,11 @@
 ---
-title: OLE DB Driver for SQL Server | Microsoft Docs
-description: OLE DB Driver for SQL Server
+title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+description: SQL Server용 Microsoft OLE DB 드라이버
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: OLE DB Driver
+ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,15 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7aef3dc362cfd83d1767f759b30cddde263d319f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fba5146cd663c2d7c312bb6a5c689162c1489ac
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859458"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240825"
 ---
-# <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -89,7 +89,7 @@ OLE db [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/0
  추가 도움말 및 외부 리소스에 대 한 링크를 포함 하 여 SQL Server 용 OLE DB 드라이버에 대 한 추가 리소스를 제공 합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [OLE DB 방법 도움말 항목](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
